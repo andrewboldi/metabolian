@@ -23,10 +23,23 @@ async function ensureViewer() {
   return viewer;
 }
 
+// Resolve the current AlphaFold model URL via the prediction API so we don't
+// break when the DB bumps model versions (it is on v6 as of 2026).
+async function alphaFoldUrl(acc: string): Promise<string> {
+  try {
+    const r = await fetch(`https://alphafold.ebi.ac.uk/api/prediction/${acc}`);
+    if (r.ok) {
+      const j = await r.json();
+      if (j?.[0]?.pdbUrl) return j[0].pdbUrl as string;
+    }
+  } catch { /* fall through to a best-effort direct URL */ }
+  return `https://alphafold.ebi.ac.uk/files/AF-${acc}-F1-model_v6.pdb`;
+}
+
 async function loadStructure(source: { kind: "alphafold" | "pdb"; id: string }) {
   status(`Fetching ${source.kind === "alphafold" ? "AlphaFold model" : "PDB " + source.id}…`);
   const url = source.kind === "alphafold"
-    ? `https://alphafold.ebi.ac.uk/files/AF-${source.id}-F1-model_v4.pdb`
+    ? await alphaFoldUrl(source.id)
     : `https://files.rcsb.org/download/${source.id}.pdb`;
   try {
     const res = await fetch(url);
