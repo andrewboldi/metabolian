@@ -100,6 +100,26 @@ for (const f of mplFiles) {
       }
     }
   }
+  // Connectivity gate: every reaction must physically touch both of the cells it
+  // claims to connect. A stub ending in empty canvas reads as biochemistry that
+  // does not exist, so it fails the build.
+  const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
+  const dangling = [];
+  for (const r of ir.reactions) {
+    const from = nodeById.get(r.from), to = nodeById.get(r.to);
+    if (!from || !to) { dangling.push(`${r.enzyme || r.kind}: unknown endpoint`); continue; }
+    const touches = (p, n) => p[0] >= n.x - 14 && p[0] <= n.x + n.w + 14 && p[1] >= n.y - 14 && p[1] <= n.y + n.h + 14;
+    const a = r.points[0], b = r.points[r.points.length - 1];
+    if (!touches(a, from) || !touches(b, to)) {
+      dangling.push(`${r.enzyme || r.kind} (${from.metabolite}->${to.metabolite})`);
+    }
+  }
+  if (dangling.length) {
+    console.error(`❌ ${f}: ${dangling.length} reaction(s) not touching their cells: ${dangling.slice(0, 4).join(", ")}`);
+    process.exitCode = 1;
+    continue;
+  }
+
   if (overlaps.length) {
     console.error(`❌ ${f}: ${overlaps.length} overlapping cell(s): ${overlaps.slice(0, 5).join(", ")}`);
     process.exitCode = 1;

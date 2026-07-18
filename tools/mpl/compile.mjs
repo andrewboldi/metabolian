@@ -166,7 +166,7 @@ export function layout(ast) {
         id: `${ast.id}__branchlink__${b.from}__${first.id}`,
         kind: "branch-link", enzyme: null, ec: null, reversible: true,
         from: anchor.id, to: target.id,
-        points: elbow(anchor, target),
+        points: routeEdge(anchor, target),
         in: [], out: [], flags: [],
       });
     }
@@ -293,18 +293,44 @@ export function layout(ast) {
       });
       return;
     }
-    const x = from.x + NODE_W / 2;
     reactions.push({
       id: `${ast.id}__${step.enzyme}__${from.metabolite}__${to.metabolite}`,
       kind: "flux",
       enzyme: step.enzyme, ec: step.ec, reversible: step.reversible,
       committed: step.flags.includes("committed") || step.flags.includes("irreversible"),
       from: from.id, to: to.id,
-      points: [[x, from.y + NODE_H], [x, to.y]],
+      points: routeEdge(from, to),
       in: step.in, out: step.out, flags: step.flags,
       // cofactors enter/leave on alternating sides of the arrow
       side: (reactions.length % 2 === 0) ? "right" : "left",
     });
+  }
+
+  /**
+   * Orthogonal route between two cells that always TOUCHES both boxes. Handles
+   * same-column, same-row and offset cases; never emits a stub that ends in
+   * empty canvas (the cause of the dangling-arrow class of defects).
+   */
+  function routeEdge(from, to) {
+    const fcx = from.x + NODE_W / 2, fcy = from.y + NODE_H / 2;
+    const tcx = to.x + NODE_W / 2, tcy = to.y + NODE_H / 2;
+    const dx = tcx - fcx, dy = tcy - fcy;
+
+    if (Math.abs(dx) < 10) {                       // same column -> straight vertical
+      return dy >= 0
+        ? [[fcx, from.y + NODE_H], [fcx, to.y]]
+        : [[fcx, from.y], [fcx, to.y + NODE_H]];
+    }
+    if (Math.abs(dy) < 10) {                       // same row -> straight horizontal
+      return dx >= 0
+        ? [[from.x + NODE_W, fcy], [to.x, fcy]]
+        : [[from.x, fcy], [to.x + NODE_W, fcy]];
+    }
+    // offset -> leave vertically, cross in the gutter between the rows, enter vertically
+    const exitY = dy >= 0 ? from.y + NODE_H : from.y;
+    const entryY = dy >= 0 ? to.y : to.y + NODE_H;
+    const midY = Math.round((exitY + entryY) / 2);
+    return [[fcx, exitY], [fcx, midY], [tcx, midY], [tcx, entryY]];
   }
 
   /** Right-angle elbow between two cells (never diagonal). */

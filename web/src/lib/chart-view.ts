@@ -85,13 +85,21 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     }
     layerGrid.append(s("rect", { class: "grid-frame", x: b.x, y: b.y, width: b.w, height: b.h }));
   }
+  const anchorUse = new Map<string, number>();
   for (const c of (master as any).connectors || []) {
+    // Several pathways can leave from the same metabolite; fan the stubs and
+    // labels apart or they superimpose into unreadable garble.
+    const key = `${Math.round(c.x)}:${Math.round(c.y)}`;
+    const n = anchorUse.get(key) || 0;
+    anchorUse.set(key, n + 1);
     const g = s("g", { class: "connector lod-normal" });
-    const len = 54;
+    const len = 54 + n * 26;
+    const yOff = n * 15;
     const x2 = c.x + c.dir * len;
-    g.append(s("line", { class: "connector-line", x1: c.x, y1: c.y, x2, y2: c.y, "marker-end": "url(#arrow-flux)" }));
+    const y = c.y + yOff;
+    g.append(s("line", { class: "connector-line", x1: c.x, y1: c.y, x2, y2: y, "marker-end": "url(#arrow-flux)" }));
     g.append(s("text", {
-      class: "connector-label", x: x2 + c.dir * 6, y: c.y - 4,
+      class: "connector-label", x: x2 + c.dir * 6, y: y - 4,
       "text-anchor": c.dir > 0 ? "start" : "end",
     }, [`${c.label} ${c.ref}`]));
     layerRegions.append(g);
@@ -114,6 +122,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   }
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
+  const enzymeLabels: { name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number; chars: number }[] = [];
   const nodeEls = new Map<string, SVGGElement>();
   const edgeEls: { el: SVGElement; rxn: ChartRxn }[] = [];
 
@@ -190,6 +199,51 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     layerNodes.append(g);
     nodeEls.set(n.id, g);
   }
+
+  // ---------- enzyme label placement ----------
+  // Labels must not cross a metabolite cell or another label. Try each candidate
+  // placement around the reaction midpoint and take the first clear one.
+  (function placeEnzymeLabels() {
+    const FONT = 10, EC_H = 11;
+    const cells = ir.nodes.map((n) => ({ x: n.x - 4, y: n.y - 4, w: n.w + 8, h: n.h + 8 }));
+    const taken: { x: number; y: number; w: number; h: number }[] = [];
+    const hit = (b: { x: number; y: number; w: number; h: number }, list: typeof taken) =>
+      list.some((o) => !(b.x + b.w <= o.x || o.x + o.w <= b.x || b.y + b.h <= o.y || o.y + o.h <= b.y));
+
+    for (const L of enzymeLabels) {
+      const w = L.chars * FONT * 0.52;
+      const h = FONT + (L.ec ? EC_H : 0);
+      const candidates = [
+        { dx: 14, dy: -2, anchor: "start" }, { dx: -14, dy: -2, anchor: "end" },
+        { dx: 14, dy: -18, anchor: "start" }, { dx: -14, dy: -18, anchor: "end" },
+        { dx: 14, dy: 16, anchor: "start" }, { dx: -14, dy: 16, anchor: "end" },
+        { dx: 0, dy: -22, anchor: "middle" }, { dx: 0, dy: 24, anchor: "middle" },
+      ];
+      let placed = false;
+      for (const c of candidates) {
+        const x = L.mx + c.dx, y = L.my + c.dy;
+        const bx = c.anchor === "start" ? x : c.anchor === "end" ? x - w : x - w / 2;
+        const box = { x: bx, y: y - FONT, w, h };
+        if (hit(box, cells) || hit(box, taken)) continue;
+        L.name.setAttribute("x", String(x));
+        L.name.setAttribute("y", String(y));
+        L.name.setAttribute("text-anchor", c.anchor);
+        if (L.ec) {
+          L.ec.setAttribute("x", String(x));
+          L.ec.setAttribute("y", String(y + EC_H));
+          L.ec.setAttribute("text-anchor", c.anchor);
+        }
+        taken.push(box);
+        placed = true;
+        break;
+      }
+      // Nowhere clear: keep it out of the way and only reveal when zoomed in.
+      if (!placed) {
+        L.name.classList.remove("lod-normal");
+        L.name.classList.add("lod-detail");
+      }
+    }
+  })();
 
   // ---------- pan / zoom ----------
   let k = 1, tx = 0, ty = 0;
@@ -355,8 +409,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     k = Math.min(6, Math.max(0.08, nk));
     const targetX = cx ?? ir.bounds.x + ir.bounds.w / 2;
     const targetY = cy ?? ir.bounds.y + ir.bounds.h / 2;
+    // centre in the CLEAR area, not the raw rect — the HUD and help bar float over it
+    const insetTop = 108, insetBottom = 72;
     tx = r.width / 2 - targetX * k;
-    ty = r.height / 2 - targetY * k;
+    ty = insetTop + (r.height - insetTop - insetBottom) / 2 - targetY * k;
     apply();
   }
 
