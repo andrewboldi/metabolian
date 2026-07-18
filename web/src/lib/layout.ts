@@ -1,5 +1,17 @@
 // Shared chrome: header/nav/footer injected into every page. Keeps markup DRY
 // and nav consistent. Call mountChrome(activeRouteId) from each page entry.
+
+// Self-hosted fonts (no external CDN → no CSP/privacy issues, no layout shift).
+// Only the weights actually used across the site; the browser fetches on demand.
+import "@fontsource/space-grotesk/500.css";
+import "@fontsource/space-grotesk/600.css";
+import "@fontsource/space-grotesk/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/500.css";
+
 import { initTheme, toggleTheme } from "./theme";
 import { asset, el } from "./util";
 
