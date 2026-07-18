@@ -131,7 +131,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   }
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
-  const enzymeLabels: { name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number; chars: number }[] = [];
+  const enzymeLabels: { name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number; chars: number; full: string }[] = [];
   // cofactor labels are fixed to their arc geometry, so they act as obstacles
   // that enzyme names must route around rather than being moved themselves
   const cofactorBoxes: { x: number; y: number; w: number; h: number }[] = [];
@@ -168,7 +168,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const ecEl = r.ec ? s("text", { class: "enz-ec lod-detail", x: tx, y: my + 10, "text-anchor": anchor }, [`EC ${r.ec}`]) : null;
       if (ecEl) g.append(ecEl);
       // register with the anti-collision placer that runs once everything exists
-      enzymeLabels.push({ name, ec: ecEl, mx, my, chars: shownName.length });
+      enzymeLabels.push({ name, ec: ecEl, mx, my, chars: shownName.length, full });
       // cofactors enter/leave on a curved side-entry, Michal-style
       const elen = r.points.reduce((acc, p, i) => i ? acc + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0, 0);
       const cof = cofactorSide(r, mx, my, -dir, elen);
@@ -253,8 +253,23 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     const hit = (b: { x: number; y: number; w: number; h: number }, list: typeof taken) =>
       list.some((o) => !(b.x + b.w <= o.x || o.x + o.w <= b.x || b.y + b.h <= o.y || o.y + o.h <= b.y));
 
+    const CH = FONT * 0.52;               // mean glyph advance
+    /** How much room a label has before it runs into something, from x outward. */
+    const channel = (x: number, y: number, anchor: string) => {
+      let limit = 320;
+      for (const o of [...cells, ...taken]) {
+        if (y + 2 < o.y || y - FONT - 2 > o.y + o.h) continue;   // not on this band
+        if (anchor === "start" && o.x > x) limit = Math.min(limit, o.x - x - 5);
+        else if (anchor === "end" && o.x + o.w < x) limit = Math.min(limit, x - (o.x + o.w) - 5);
+        else if (anchor === "middle") {
+          if (o.x > x) limit = Math.min(limit, (o.x - x - 5) * 2);
+          else if (o.x + o.w < x) limit = Math.min(limit, (x - (o.x + o.w) - 5) * 2);
+        }
+      }
+      return Math.max(0, limit);
+    };
+
     for (const L of enzymeLabels) {
-      const w = L.chars * FONT * 0.52;
       const h = FONT + (L.ec ? EC_H : 0);
       const candidates = [
         { dx: 14, dy: -2, anchor: "start" }, { dx: -14, dy: -2, anchor: "end" },
@@ -262,8 +277,27 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         { dx: 14, dy: 16, anchor: "start" }, { dx: -14, dy: 16, anchor: "end" },
         { dx: 0, dy: -22, anchor: "middle" }, { dx: 0, dy: 24, anchor: "middle" },
       ];
-      let placed = false;
+      // Pick the placement offering the widest clear channel, then truncate the
+      // text TO THAT CHANNEL. Truncating to a fixed character budget is what let
+      // long names overrun their neighbour regardless of where they were placed.
+      let best: { c: typeof candidates[0]; avail: number } | null = null;
       for (const c of candidates) {
+        const avail = channel(L.mx + c.dx, L.my + c.dy, c.anchor);
+        if (!best || avail > best.avail) best = { c, avail };
+      }
+      const chosen = best!.c;
+      const maxChars = Math.max(3, Math.floor(best!.avail / CH));
+      const text = L.full.length > maxChars
+        ? L.full.slice(0, Math.max(2, maxChars - 1)).replace(/[\s(,\-]+$/, "") + "…"
+        : L.full;
+      // setting textContent would drop the <title> child that carries the full
+      // name on hover — rebuild the node explicitly
+      L.name.replaceChildren(document.createTextNode(text), s("title", {}, [L.full]));
+      if (L.ec) L.ec.classList.add("lod-detail");
+      const w = text.length * CH;
+
+      let placed = false;
+      for (const c of [chosen, ...candidates]) {
         const x = L.mx + c.dx, y = L.my + c.dy;
         const bx = c.anchor === "start" ? x : c.anchor === "end" ? x - w : x - w / 2;
         const box = { x: bx, y: y - FONT, w, h };

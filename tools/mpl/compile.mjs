@@ -150,6 +150,25 @@ export function layout(ast) {
   }
   function claim(node) { placed.push({ x: node.x, y: node.y, w: node.w, h: node.h }); return node; }
 
+  /**
+   * Nearest free slot to (x,y), searched over a bounded 2-D neighbourhood.
+   * freeX slid horizontally on every collision, so an effector in a congested
+   * band could march a dozen columns out and stretch the whole sheet.
+   */
+  function freeSlotNear(x, y, dir) {
+    if (!hits({ x, y, w: NODE_W, h: NODE_H })) return { x, y };
+    for (let ring = 1; ring <= 6; ring++) {
+      for (const dy of [0, -1, 1, -2, 2]) {
+        for (const dxs of [dir, -dir]) {
+          const cx = x + dxs * ring * COL_GAP;
+          const cy = y + dy * Math.round(ast.spacing * 0.8);
+          if (!hits({ x: cx, y: cy, w: NODE_W, h: NODE_H })) return { x: cx, y: cy };
+        }
+      }
+    }
+    return { x: x + dir * 7 * COL_GAP, y };
+  }
+
   /** Keep a column clear of a cyclic pathway's ring so chords are never crossed. */
   function outsideRing(x, dir) {
     if (!ast.cycle) return x;
@@ -218,11 +237,18 @@ export function layout(ast) {
       const mid = rx.points[Math.floor(rx.points.length / 2)];
       const side = mid[0] >= (coreBox.x0 + coreBox.x1) / 2 ? 1 : -1;
       y = Math.round(mid[1] - NODE_H / 2);
-      x = freeX(outsideCore(mid[0] + side * COL_GAP, side), y, side);
+      // Sit next to the controlled step. Do NOT clamp outside the whole spine
+      // block — that flings effectors to the far margin and inflates the sheet;
+      // freeX already slides them clear of any actual cell.
+      // ...but stay within a band beside the core, so one distant target cannot
+      // stretch the whole sheet. Short lines AND a compact bbox.
+      const lo = coreBox.x0 - COL_GAP * 1.6, hi = coreBox.x1 + COL_GAP * 1.6;
+      const slot = freeSlotNear(Math.max(lo, Math.min(hi, mid[0] + side * COL_GAP)), y, side);
+      x = slot.x; y = slot.y;
     } else {
       const col = Math.floor(i / effRows), row = i % effRows;
-      y = effBaseY + row * ast.spacing;
-      x = freeX(effBaseX + effDir * col * COL_GAP, y, effDir);
+      const slot = freeSlotNear(effBaseX + effDir * col * COL_GAP, effBaseY + row * ast.spacing, effDir);
+      x = slot.x; y = slot.y;
     }
     const node = {
       id: `${ast.id}:${id}`, metabolite: id,

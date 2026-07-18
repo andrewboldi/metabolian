@@ -5,124 +5,1764 @@
   "category": "lipid-metabolism",
   "summary": "Mitochondrial spiral that activates a fatty acid, imports it via the carnitine shuttle, and iteratively removes two-carbon units as acetyl-CoA, generating FADH2 and NADH.",
   "description": "Mitochondrial β-oxidation is the principal route for oxidizing long-chain fatty acids to fuel ATP synthesis, especially in fasting, exercise, and in heart, liver, and skeletal muscle. A fatty acid is first activated in the cytosol to a fatty acyl-CoA at the cost of two high-energy phosphate bonds (ATP → AMP + PPi). Because acyl-CoA cannot cross the inner mitochondrial membrane, it is handed to carnitine by carnitine palmitoyltransferase 1 (CPT1) on the outer membrane — the committed, rate-limiting, malonyl-CoA-regulated step — shuttled across by the carnitine–acylcarnitine translocase, and reconverted to acyl-CoA by CPT2 in the matrix. Each turn of the β-oxidation spiral then runs four reactions — FAD-linked oxidation (acyl-CoA dehydrogenase), hydration (enoyl-CoA hydratase), NAD+-linked oxidation (3-hydroxyacyl-CoA dehydrogenase), and thiolytic cleavage (3-ketoacyl-CoA thiolase) — shortening the chain by two carbons and releasing one acetyl-CoA, one FADH2, and one NADH. For palmitoyl-CoA (C16) shown here, the cycle repeats seven times to yield 8 acetyl-CoA, 7 FADH2, and 7 NADH. Long-chain steps are carried out by very-long-chain acyl-CoA dehydrogenase (VLCAD) and the membrane-bound trifunctional protein (HADHA/HADHB); medium- and short-chain intermediates are handled by soluble matrix isozymes (MCAD/SCAD, ECHS1, HADH, ACAA2). The FADH2 electrons enter the respiratory chain via electron-transfer flavoprotein (ETF) and ETF-ubiquinone oxidoreductase; acetyl-CoA is oxidized in the TCA cycle or, in fasting liver, converted to ketone bodies.",
-  "organisms": ["human"],
-  "tissues": ["liver", "skeletal muscle", "cardiac muscle", "kidney", "brown adipose"],
-  "keywords": ["fatty acid oxidation", "beta-oxidation", "acetyl-CoA", "carnitine shuttle", "CPT1", "malonyl-CoA", "FADH2", "NADH", "ketogenesis", "PPAR-alpha"],
+  "organisms": [
+    "human"
+  ],
+  "tissues": [
+    "liver",
+    "skeletal muscle",
+    "cardiac muscle",
+    "kidney",
+    "brown adipose"
+  ],
+  "keywords": [
+    "fatty acid oxidation",
+    "beta-oxidation",
+    "acetyl-CoA",
+    "carnitine shuttle",
+    "CPT1",
+    "malonyl-CoA",
+    "FADH2",
+    "NADH",
+    "ketogenesis",
+    "PPAR-alpha"
+  ],
   "provenance": {
     "curator": "metabolian-agent (fatty-acid-beta-oxidation module)",
     "confidence": "high",
     "sources": [
-      { "db": "KEGG", "id": "hsa00071", "url": "https://www.kegg.jp/pathway/hsa00071" },
-      { "db": "Reactome", "id": "R-HSA-77289", "url": "https://reactome.org/content/detail/R-HSA-77289" },
-      { "db": "PubMed", "id": "20195903", "url": "https://pubmed.ncbi.nlm.nih.gov/20195903" },
-      { "db": "textbook", "id": "Lehninger Principles of Biochemistry, 8e, Ch. 17 (Fatty Acid Catabolism)" }
+      {
+        "db": "KEGG",
+        "id": "hsa00071",
+        "url": "https://www.kegg.jp/pathway/hsa00071"
+      },
+      {
+        "db": "Reactome",
+        "id": "R-HSA-77289",
+        "url": "https://reactome.org/content/detail/R-HSA-77289"
+      },
+      {
+        "db": "PubMed",
+        "id": "20195903",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20195903"
+      },
+      {
+        "db": "textbook",
+        "id": "Lehninger Principles of Biochemistry, 8e, Ch. 17 (Fatty Acid Catabolism)"
+      }
     ],
     "lastReviewed": "2026-07-18"
   },
   "references": [
-    { "title": "Lehninger Principles of Biochemistry, 8th ed.", "year": 2021 },
-    { "pmid": "20195903", "title": "A general introduction to the biochemistry of mitochondrial fatty acid β-oxidation", "year": 2010 },
-    { "pmid": "9063439", "title": "The mitochondrial carnitine palmitoyltransferase system. From concept to molecular analysis", "year": 1997 }
+    {
+      "title": "Lehninger Principles of Biochemistry, 8th ed.",
+      "year": 2021
+    },
+    {
+      "pmid": "20195903",
+      "title": "A general introduction to the biochemistry of mitochondrial fatty acid β-oxidation",
+      "year": 2010
+    },
+    {
+      "pmid": "9063439",
+      "title": "The mitochondrial carnitine palmitoyltransferase system. From concept to molecular analysis",
+      "year": 1997
+    }
   ],
   "compartments": [
-    { "id": "cytosol", "name": "Cytosol", "go": "GO:0005829", "description": "Fatty acid activation to acyl-CoA occurs on the cytosolic face of the outer mitochondrial membrane." },
-    { "id": "omm", "name": "Mitochondrial outer membrane", "go": "GO:0005741", "description": "Site of acyl-CoA synthetase (ACSL1) and CPT1." },
-    { "id": "ims", "name": "Mitochondrial intermembrane space", "go": "GO:0005758", "description": "Acylcarnitine formed by CPT1 is presented here for translocation." },
-    { "id": "imm", "name": "Mitochondrial inner membrane", "go": "GO:0005743", "description": "Site of the carnitine–acylcarnitine translocase, CPT2, and the membrane-bound oxidation machinery." },
-    { "id": "matrix", "name": "Mitochondrial matrix", "go": "GO:0005759", "description": "Site of the β-oxidation spiral." },
-    { "id": "nucleus", "name": "Nucleus", "go": "GO:0005634", "description": "Site of PPARα-driven transcription of β-oxidation genes." }
+    {
+      "id": "cytosol",
+      "name": "Cytosol",
+      "go": "GO:0005829",
+      "description": "Fatty acid activation to acyl-CoA occurs on the cytosolic face of the outer mitochondrial membrane."
+    },
+    {
+      "id": "omm",
+      "name": "Mitochondrial outer membrane",
+      "go": "GO:0005741",
+      "description": "Site of acyl-CoA synthetase (ACSL1) and CPT1."
+    },
+    {
+      "id": "ims",
+      "name": "Mitochondrial intermembrane space",
+      "go": "GO:0005758",
+      "description": "Acylcarnitine formed by CPT1 is presented here for translocation."
+    },
+    {
+      "id": "imm",
+      "name": "Mitochondrial inner membrane",
+      "go": "GO:0005743",
+      "description": "Site of the carnitine–acylcarnitine translocase, CPT2, and the membrane-bound oxidation machinery."
+    },
+    {
+      "id": "matrix",
+      "name": "Mitochondrial matrix",
+      "go": "GO:0005759",
+      "description": "Site of the β-oxidation spiral."
+    },
+    {
+      "id": "nucleus",
+      "name": "Nucleus",
+      "go": "GO:0005634",
+      "description": "Site of PPARα-driven transcription of β-oxidation genes."
+    }
   ],
   "metabolites": [
-    { "id": "palmitate", "name": "Palmitate (hexadecanoate)", "formula": "C16H32O2", "charge": 0, "class": "long-chain fatty acid", "roles": ["fuel"], "xrefs": { "kegg": "C00249", "chebi": "CHEBI:15756" } },
-    { "id": "palmitoyl_coa", "name": "Palmitoyl-CoA", "formula": "C37H66N7O17P3S", "charge": 0, "class": "long-chain acyl-CoA", "roles": ["fuel", "building-block"], "xrefs": { "kegg": "C00154", "chebi": "CHEBI:15525" } },
-    { "id": "coa", "name": "Coenzyme A", "formula": "C21H36N7O16P3S", "charge": 0, "class": "thiol cofactor", "roles": ["cofactor", "coenzyme"], "xrefs": { "kegg": "C00010", "chebi": "CHEBI:15346" } },
-    { "id": "atp", "name": "ATP", "formula": "C10H12N5O13P3", "charge": -4, "roles": ["coenzyme", "fuel"], "xrefs": { "kegg": "C00002", "chebi": "CHEBI:30616" } },
-    { "id": "amp", "name": "AMP", "formula": "C10H12N5O7P", "charge": -2, "roles": ["coenzyme", "signaling"], "xrefs": { "kegg": "C00020", "chebi": "CHEBI:456215" } },
-    { "id": "ppi", "name": "Diphosphate (PPi)", "formula": "HP2O7", "charge": -3, "class": "inorganic diphosphate", "xrefs": { "kegg": "C00013" } },
-    { "id": "carnitine", "name": "L-Carnitine", "formula": "C7H15NO3", "charge": 0, "class": "carnitine", "roles": ["cofactor"], "xrefs": { "kegg": "C00318", "chebi": "CHEBI:16347" } },
-    { "id": "palmitoylcarnitine", "name": "L-Palmitoylcarnitine", "formula": "C23H45NO4", "charge": 0, "class": "acylcarnitine", "roles": ["building-block"], "xrefs": { "kegg": "C02990", "chebi": "CHEBI:17490" } },
-    { "id": "fad", "name": "FAD", "formula": "C27H33N9O15P2", "charge": 0, "roles": ["coenzyme", "electron-carrier"], "xrefs": { "kegg": "C00016", "chebi": "CHEBI:16238" } },
-    { "id": "fadh2", "name": "FADH2", "formula": "C27H35N9O15P2", "charge": 0, "roles": ["coenzyme", "electron-carrier"], "xrefs": { "kegg": "C01352", "chebi": "CHEBI:17877" } },
-    { "id": "nad", "name": "NAD+", "formula": "C21H26N7O14P2", "charge": -1, "roles": ["coenzyme", "electron-carrier"], "xrefs": { "kegg": "C00003", "chebi": "CHEBI:57540" } },
-    { "id": "nadh", "name": "NADH", "formula": "C21H27N7O14P2", "charge": -2, "roles": ["coenzyme", "electron-carrier"], "xrefs": { "kegg": "C00004", "chebi": "CHEBI:57945" } },
-    { "id": "hplus", "name": "Proton (H+)", "formula": "H", "charge": 1, "xrefs": { "kegg": "C00080", "chebi": "CHEBI:15378" } },
-    { "id": "h2o", "name": "Water", "formula": "H2O", "charge": 0, "xrefs": { "kegg": "C00001", "chebi": "CHEBI:15377" } },
-    { "id": "trans_hexadecenoyl_coa", "name": "trans-Hexadec-2-enoyl-CoA", "synonyms": ["(2E)-hexadecenoyl-CoA", "trans-Δ2-palmitenoyl-CoA"], "formula": "C37H64N7O17P3S", "charge": 0, "class": "2-enoyl-CoA", "xrefs": { "kegg": "C05272", "chebi": "CHEBI:28935" } },
-    { "id": "hydroxyhexadecanoyl_coa", "name": "(S)-3-Hydroxyhexadecanoyl-CoA", "synonyms": ["L-3-hydroxypalmitoyl-CoA"], "formula": "C37H66N7O18P3S", "charge": 0, "class": "3-hydroxyacyl-CoA", "xrefs": { "kegg": "C05258", "chebi": "CHEBI:27402" } },
-    { "id": "oxopalmitoyl_coa", "name": "3-Oxopalmitoyl-CoA", "synonyms": ["3-ketopalmitoyl-CoA", "3-oxohexadecanoyl-CoA"], "formula": "C37H64N7O18P3S", "charge": 0, "class": "3-oxoacyl-CoA", "xrefs": { "kegg": "C05259", "chebi": "CHEBI:15491" } },
-    { "id": "myristoyl_coa", "name": "Myristoyl-CoA (tetradecanoyl-CoA)", "formula": "C35H62N7O17P3S", "charge": 0, "class": "long-chain acyl-CoA", "roles": ["fuel"], "xrefs": { "kegg": "C02593", "chebi": "CHEBI:15532" } },
-    { "id": "acetyl_coa", "name": "Acetyl-CoA", "formula": "C23H38N7O17P3S", "charge": 0, "class": "acyl-CoA", "roles": ["fuel", "building-block", "coenzyme"], "xrefs": { "kegg": "C00024", "chebi": "CHEBI:15351" } },
-    { "id": "malonyl_coa", "name": "Malonyl-CoA", "formula": "C24H38N7O19P3S", "charge": 0, "class": "acyl-CoA", "roles": ["signaling", "building-block"], "xrefs": { "kegg": "C00083", "chebi": "CHEBI:15531" } }
+    {
+      "id": "palmitate",
+      "name": "Palmitate (hexadecanoate)",
+      "formula": "C16H32O2",
+      "charge": 0,
+      "class": "long-chain fatty acid",
+      "roles": [
+        "fuel"
+      ],
+      "xrefs": {
+        "kegg": "C00249",
+        "chebi": "CHEBI:15756"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H66N7O17P3S",
+      "charge": 0,
+      "class": "long-chain acyl-CoA",
+      "roles": [
+        "fuel",
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00154",
+        "chebi": "CHEBI:15525"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A",
+      "formula": "C21H36N7O16P3S",
+      "charge": 0,
+      "class": "thiol cofactor",
+      "roles": [
+        "cofactor",
+        "coenzyme"
+      ],
+      "xrefs": {
+        "kegg": "C00010",
+        "chebi": "CHEBI:15346"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "roles": [
+        "coenzyme",
+        "fuel"
+      ],
+      "xrefs": {
+        "kegg": "C00002",
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "roles": [
+        "coenzyme",
+        "signaling"
+      ],
+      "xrefs": {
+        "kegg": "C00020",
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HP2O7",
+      "charge": -3,
+      "class": "inorganic diphosphate",
+      "xrefs": {
+        "kegg": "C00013"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "class": "carnitine",
+      "roles": [
+        "cofactor"
+      ],
+      "xrefs": {
+        "kegg": "C00318",
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "palmitoylcarnitine",
+      "name": "L-Palmitoylcarnitine",
+      "formula": "C23H45NO4",
+      "charge": 0,
+      "class": "acylcarnitine",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C02990",
+        "chebi": "CHEBI:17490"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00016",
+        "chebi": "CHEBI:16238"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H35N9O15P2",
+      "charge": 0,
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C01352",
+        "chebi": "CHEBI:17877"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00003",
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00004",
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "kegg": "C00080",
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "kegg": "C00001",
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "trans_hexadecenoyl_coa",
+      "name": "trans-Hexadec-2-enoyl-CoA",
+      "synonyms": [
+        "(2E)-hexadecenoyl-CoA",
+        "trans-Δ2-palmitenoyl-CoA"
+      ],
+      "formula": "C37H64N7O17P3S",
+      "charge": 0,
+      "class": "2-enoyl-CoA",
+      "xrefs": {
+        "kegg": "C05272",
+        "chebi": "CHEBI:28935"
+      }
+    },
+    {
+      "id": "hydroxyhexadecanoyl_coa",
+      "name": "(S)-3-Hydroxyhexadecanoyl-CoA",
+      "synonyms": [
+        "L-3-hydroxypalmitoyl-CoA"
+      ],
+      "formula": "C37H66N7O18P3S",
+      "charge": 0,
+      "class": "3-hydroxyacyl-CoA",
+      "xrefs": {
+        "kegg": "C05258",
+        "chebi": "CHEBI:27402"
+      }
+    },
+    {
+      "id": "oxopalmitoyl_coa",
+      "name": "3-Oxopalmitoyl-CoA",
+      "synonyms": [
+        "3-ketopalmitoyl-CoA",
+        "3-oxohexadecanoyl-CoA"
+      ],
+      "formula": "C37H64N7O18P3S",
+      "charge": 0,
+      "class": "3-oxoacyl-CoA",
+      "xrefs": {
+        "kegg": "C05259",
+        "chebi": "CHEBI:15491"
+      }
+    },
+    {
+      "id": "myristoyl_coa",
+      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
+      "formula": "C35H62N7O17P3S",
+      "charge": 0,
+      "class": "long-chain acyl-CoA",
+      "roles": [
+        "fuel"
+      ],
+      "xrefs": {
+        "kegg": "C02593",
+        "chebi": "CHEBI:15532"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H38N7O17P3S",
+      "charge": 0,
+      "class": "acyl-CoA",
+      "roles": [
+        "fuel",
+        "building-block",
+        "coenzyme"
+      ],
+      "xrefs": {
+        "kegg": "C00024",
+        "chebi": "CHEBI:15351"
+      }
+    },
+    {
+      "id": "malonyl_coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H38N7O19P3S",
+      "charge": 0,
+      "class": "acyl-CoA",
+      "roles": [
+        "signaling",
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00083",
+        "chebi": "CHEBI:15531"
+      }
+    }
   ],
   "enzymes": [
-    { "id": "acsl1", "name": "Long-chain-fatty-acid–CoA ligase 1 (ACSL1)", "gene": "ACSL1", "ec": ["6.2.1.3"], "organism": "human", "cofactors": ["Mg2+"], "family": "ATP-dependent AMP-binding / acyl-CoA synthetase (ACSL) family", "compartment": "omm", "xrefs": { "uniprot": "P33121", "alphafold": "P33121" } },
-    { "id": "cpt1a", "name": "Carnitine O-palmitoyltransferase 1, liver isoform (CPT1A)", "gene": "CPT1A", "ec": ["2.3.1.21"], "organism": "human", "family": "carnitine/choline acetyltransferase family", "compartment": "omm", "description": "Committed, rate-limiting step of mitochondrial fatty-acid oxidation; allosterically inhibited by malonyl-CoA.", "xrefs": { "uniprot": "P50416", "alphafold": "P50416" } },
-    { "id": "cact", "name": "Carnitine–acylcarnitine translocase (CACT / SLC25A20)", "gene": "SLC25A20", "organism": "human", "family": "mitochondrial carrier (SLC25) family", "compartment": "imm", "description": "Antiporter exchanging matrix carnitine for intermembrane-space acylcarnitine.", "xrefs": { "uniprot": "O43772", "alphafold": "O43772" } },
-    { "id": "cpt2", "name": "Carnitine O-palmitoyltransferase 2 (CPT2)", "gene": "CPT2", "ec": ["2.3.1.21"], "organism": "human", "family": "carnitine/choline acetyltransferase family", "compartment": "imm", "xrefs": { "uniprot": "P23786", "alphafold": "P23786" } },
-    { "id": "acadvl", "name": "Very-long-chain acyl-CoA dehydrogenase (VLCAD)", "gene": "ACADVL", "ec": ["1.3.8.9"], "organism": "human", "cofactors": ["FAD"], "family": "acyl-CoA dehydrogenase family", "compartment": "imm", "description": "Membrane-bound flavoprotein catalyzing the first oxidation of long-chain (C14–C20) acyl-CoAs.", "xrefs": { "uniprot": "P49748", "alphafold": "P49748" } },
-    { "id": "hadha", "name": "Trifunctional enzyme subunit alpha (MTPα; LCEH + LCHAD)", "gene": "HADHA", "ec": ["4.2.1.17", "1.1.1.211"], "organism": "human", "cofactors": ["NAD+"], "family": "mitochondrial trifunctional protein / enoyl-CoA hydratase + 3-hydroxyacyl-CoA dehydrogenase", "compartment": "imm", "description": "Alpha subunit of the trifunctional protein: long-chain enoyl-CoA hydratase and long-chain 3-hydroxyacyl-CoA dehydrogenase activities (steps 2 and 3 for long-chain substrates).", "xrefs": { "uniprot": "P40939", "alphafold": "P40939" } },
-    { "id": "hadhb", "name": "Trifunctional enzyme subunit beta (MTPβ; LCKAT)", "gene": "HADHB", "ec": ["2.3.1.16"], "organism": "human", "family": "thiolase family / mitochondrial trifunctional protein", "compartment": "imm", "description": "Beta subunit of the trifunctional protein: long-chain 3-ketoacyl-CoA thiolase activity (step 4 for long-chain substrates).", "xrefs": { "uniprot": "P55084", "alphafold": "P55084" } },
-    { "id": "acadm", "name": "Medium-chain acyl-CoA dehydrogenase (MCAD)", "gene": "ACADM", "ec": ["1.3.8.7"], "organism": "human", "cofactors": ["FAD"], "family": "acyl-CoA dehydrogenase family", "compartment": "matrix", "description": "Soluble matrix flavoprotein; first oxidation of medium-chain (C6–C12) acyl-CoAs. Deficiency (MCADD) is the most common inherited fatty-acid oxidation disorder.", "xrefs": { "uniprot": "P11310", "alphafold": "P11310" } },
-    { "id": "acadl", "name": "Long-chain acyl-CoA dehydrogenase (LCAD)", "gene": "ACADL", "ec": ["1.3.8.8"], "organism": "human", "cofactors": ["FAD"], "family": "acyl-CoA dehydrogenase family", "compartment": "matrix", "xrefs": { "uniprot": "P28330", "alphafold": "P28330" } },
-    { "id": "acads", "name": "Short-chain acyl-CoA dehydrogenase (SCAD)", "gene": "ACADS", "ec": ["1.3.8.1"], "organism": "human", "cofactors": ["FAD"], "family": "acyl-CoA dehydrogenase family", "compartment": "matrix", "xrefs": { "uniprot": "P16219", "alphafold": "P16219" } },
-    { "id": "echs1", "name": "Enoyl-CoA hydratase, short chain (crotonase, ECHS1)", "gene": "ECHS1", "ec": ["4.2.1.17"], "organism": "human", "family": "enoyl-CoA hydratase/isomerase (crotonase) family", "compartment": "matrix", "description": "Soluble short-chain enoyl-CoA hydratase (step 2 for shorter-chain intermediates).", "xrefs": { "uniprot": "P30084", "alphafold": "P30084" } },
-    { "id": "hadh", "name": "3-Hydroxyacyl-CoA dehydrogenase, short chain (HADH)", "gene": "HADH", "ec": ["1.1.1.35"], "organism": "human", "cofactors": ["NAD+"], "family": "3-hydroxyacyl-CoA dehydrogenase family", "compartment": "matrix", "description": "Soluble medium/short-chain 3-hydroxyacyl-CoA dehydrogenase (step 3 for shorter-chain intermediates).", "xrefs": { "uniprot": "Q16836", "alphafold": "Q16836" } },
-    { "id": "acaa2", "name": "3-Ketoacyl-CoA thiolase, mitochondrial (ACAA2)", "gene": "ACAA2", "ec": ["2.3.1.16"], "organism": "human", "family": "thiolase family", "compartment": "matrix", "description": "Soluble medium/short-chain 3-ketoacyl-CoA thiolase (step 4 for shorter-chain intermediates).", "xrefs": { "uniprot": "P42765", "alphafold": "P42765" } },
-    { "id": "etfa", "name": "Electron transfer flavoprotein subunit alpha (ETFA)", "gene": "ETFA", "organism": "human", "cofactors": ["FAD"], "family": "ETF alpha family", "compartment": "matrix", "description": "FAD-bearing subunit of ETF; accepts electrons from acyl-CoA dehydrogenases.", "xrefs": { "uniprot": "P13804", "alphafold": "P13804" } },
-    { "id": "etfb", "name": "Electron transfer flavoprotein subunit beta (ETFB)", "gene": "ETFB", "organism": "human", "cofactors": ["AMP"], "family": "ETF beta family", "compartment": "matrix", "xrefs": { "uniprot": "P38117", "alphafold": "P38117" } },
-    { "id": "etfdh", "name": "Electron transfer flavoprotein-ubiquinone oxidoreductase (ETF-QO)", "gene": "ETFDH", "ec": ["1.5.5.1"], "organism": "human", "cofactors": ["FAD", "[4Fe-4S] cluster"], "family": "ETF-QO family", "compartment": "imm", "description": "Passes electrons from reduced ETF to ubiquinone, linking β-oxidation to the respiratory chain.", "xrefs": { "uniprot": "Q16134", "alphafold": "Q16134" } },
-    { "id": "pparalpha", "name": "Peroxisome proliferator-activated receptor alpha (PPARα)", "gene": "PPARA", "organism": "human", "family": "nuclear hormone receptor (NR1C1)", "compartment": "nucleus", "description": "Fatty-acid-activated nuclear receptor / transcription factor that induces the fatty-acid oxidation gene program during fasting.", "xrefs": { "uniprot": "Q07869", "alphafold": "Q07869" } },
-    { "id": "acc2", "name": "Acetyl-CoA carboxylase 2 (ACC2 / ACACB)", "gene": "ACACB", "ec": ["6.4.1.2"], "organism": "human", "cofactors": ["biotin", "Mn2+"], "family": "biotin-dependent carboxylase family", "compartment": "omm", "description": "Mitochondria-associated isoform that produces the malonyl-CoA pool inhibiting CPT1.", "xrefs": { "uniprot": "O00763", "alphafold": "O00763" } },
-    { "id": "ampk", "name": "AMP-activated protein kinase, catalytic subunit α2 (AMPK / PRKAA2)", "gene": "PRKAA2", "ec": ["2.7.11.1"], "organism": "human", "family": "CAMK Ser/Thr protein kinase family", "compartment": "cytosol", "description": "Cellular energy sensor; phosphorylates and inhibits ACC, lowering malonyl-CoA and activating fatty-acid oxidation.", "xrefs": { "uniprot": "P54646", "alphafold": "P54646" } }
+    {
+      "id": "acsl1",
+      "name": "Long-chain-fatty-acid–CoA ligase 1 (ACSL1)",
+      "gene": "ACSL1",
+      "ec": [
+        "6.2.1.3"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "Mg2+"
+      ],
+      "family": "ATP-dependent AMP-binding / acyl-CoA synthetase (ACSL) family",
+      "compartment": "omm",
+      "xrefs": {
+        "uniprot": "P33121",
+        "alphafold": "P33121"
+      }
+    },
+    {
+      "id": "cpt1a",
+      "name": "Carnitine O-palmitoyltransferase 1, liver isoform (CPT1A)",
+      "gene": "CPT1A",
+      "ec": [
+        "2.3.1.21"
+      ],
+      "organism": "human",
+      "family": "carnitine/choline acetyltransferase family",
+      "compartment": "omm",
+      "description": "Committed, rate-limiting step of mitochondrial fatty-acid oxidation; allosterically inhibited by malonyl-CoA.",
+      "xrefs": {
+        "uniprot": "P50416",
+        "alphafold": "P50416"
+      }
+    },
+    {
+      "id": "cact",
+      "name": "Carnitine–acylcarnitine translocase (CACT / SLC25A20)",
+      "gene": "SLC25A20",
+      "organism": "human",
+      "family": "mitochondrial carrier (SLC25) family",
+      "compartment": "imm",
+      "description": "Antiporter exchanging matrix carnitine for intermembrane-space acylcarnitine.",
+      "xrefs": {
+        "uniprot": "O43772",
+        "alphafold": "O43772"
+      }
+    },
+    {
+      "id": "cpt2",
+      "name": "Carnitine O-palmitoyltransferase 2 (CPT2)",
+      "gene": "CPT2",
+      "ec": [
+        "2.3.1.21"
+      ],
+      "organism": "human",
+      "family": "carnitine/choline acetyltransferase family",
+      "compartment": "imm",
+      "xrefs": {
+        "uniprot": "P23786",
+        "alphafold": "P23786"
+      }
+    },
+    {
+      "id": "acadvl",
+      "name": "Very-long-chain acyl-CoA dehydrogenase (VLCAD)",
+      "gene": "ACADVL",
+      "ec": [
+        "1.3.8.9"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "FAD"
+      ],
+      "family": "acyl-CoA dehydrogenase family",
+      "compartment": "imm",
+      "description": "Membrane-bound flavoprotein catalyzing the first oxidation of long-chain (C14–C20) acyl-CoAs.",
+      "xrefs": {
+        "uniprot": "P49748",
+        "alphafold": "P49748"
+      }
+    },
+    {
+      "id": "hadha",
+      "name": "Trifunctional enzyme subunit alpha (MTPα; LCEH + LCHAD)",
+      "gene": "HADHA",
+      "ec": [
+        "4.2.1.17",
+        "1.1.1.211"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "NAD+"
+      ],
+      "family": "mitochondrial trifunctional protein / enoyl-CoA hydratase + 3-hydroxyacyl-CoA dehydrogenase",
+      "compartment": "imm",
+      "description": "Alpha subunit of the trifunctional protein: long-chain enoyl-CoA hydratase and long-chain 3-hydroxyacyl-CoA dehydrogenase activities (steps 2 and 3 for long-chain substrates).",
+      "xrefs": {
+        "uniprot": "P40939",
+        "alphafold": "P40939"
+      }
+    },
+    {
+      "id": "hadhb",
+      "name": "Trifunctional enzyme subunit beta (MTPβ; LCKAT)",
+      "gene": "HADHB",
+      "ec": [
+        "2.3.1.16"
+      ],
+      "organism": "human",
+      "family": "thiolase family / mitochondrial trifunctional protein",
+      "compartment": "imm",
+      "description": "Beta subunit of the trifunctional protein: long-chain 3-ketoacyl-CoA thiolase activity (step 4 for long-chain substrates).",
+      "xrefs": {
+        "uniprot": "P55084",
+        "alphafold": "P55084"
+      }
+    },
+    {
+      "id": "acadm",
+      "name": "Medium-chain acyl-CoA dehydrogenase (MCAD)",
+      "gene": "ACADM",
+      "ec": [
+        "1.3.8.7"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "FAD"
+      ],
+      "family": "acyl-CoA dehydrogenase family",
+      "compartment": "matrix",
+      "description": "Soluble matrix flavoprotein; first oxidation of medium-chain (C6–C12) acyl-CoAs. Deficiency (MCADD) is the most common inherited fatty-acid oxidation disorder.",
+      "xrefs": {
+        "uniprot": "P11310",
+        "alphafold": "P11310"
+      }
+    },
+    {
+      "id": "acadl",
+      "name": "Long-chain acyl-CoA dehydrogenase (LCAD)",
+      "gene": "ACADL",
+      "ec": [
+        "1.3.8.8"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "FAD"
+      ],
+      "family": "acyl-CoA dehydrogenase family",
+      "compartment": "matrix",
+      "xrefs": {
+        "uniprot": "P28330",
+        "alphafold": "P28330"
+      }
+    },
+    {
+      "id": "acads",
+      "name": "Short-chain acyl-CoA dehydrogenase (SCAD)",
+      "gene": "ACADS",
+      "ec": [
+        "1.3.8.1"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "FAD"
+      ],
+      "family": "acyl-CoA dehydrogenase family",
+      "compartment": "matrix",
+      "xrefs": {
+        "uniprot": "P16219",
+        "alphafold": "P16219"
+      }
+    },
+    {
+      "id": "echs1",
+      "name": "Enoyl-CoA hydratase, short chain (crotonase, ECHS1)",
+      "gene": "ECHS1",
+      "ec": [
+        "4.2.1.17"
+      ],
+      "organism": "human",
+      "family": "enoyl-CoA hydratase/isomerase (crotonase) family",
+      "compartment": "matrix",
+      "description": "Soluble short-chain enoyl-CoA hydratase (step 2 for shorter-chain intermediates).",
+      "xrefs": {
+        "uniprot": "P30084",
+        "alphafold": "P30084"
+      }
+    },
+    {
+      "id": "hadh",
+      "name": "3-Hydroxyacyl-CoA dehydrogenase, short chain (HADH)",
+      "gene": "HADH",
+      "ec": [
+        "1.1.1.35"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "NAD+"
+      ],
+      "family": "3-hydroxyacyl-CoA dehydrogenase family",
+      "compartment": "matrix",
+      "description": "Soluble medium/short-chain 3-hydroxyacyl-CoA dehydrogenase (step 3 for shorter-chain intermediates).",
+      "xrefs": {
+        "uniprot": "Q16836",
+        "alphafold": "Q16836"
+      }
+    },
+    {
+      "id": "acaa2",
+      "name": "3-Ketoacyl-CoA thiolase, mitochondrial (ACAA2)",
+      "gene": "ACAA2",
+      "ec": [
+        "2.3.1.16"
+      ],
+      "organism": "human",
+      "family": "thiolase family",
+      "compartment": "matrix",
+      "description": "Soluble medium/short-chain 3-ketoacyl-CoA thiolase (step 4 for shorter-chain intermediates).",
+      "xrefs": {
+        "uniprot": "P42765",
+        "alphafold": "P42765"
+      }
+    },
+    {
+      "id": "etfa",
+      "name": "Electron transfer flavoprotein subunit alpha (ETFA)",
+      "gene": "ETFA",
+      "organism": "human",
+      "cofactors": [
+        "FAD"
+      ],
+      "family": "ETF alpha family",
+      "compartment": "matrix",
+      "description": "FAD-bearing subunit of ETF; accepts electrons from acyl-CoA dehydrogenases.",
+      "xrefs": {
+        "uniprot": "P13804",
+        "alphafold": "P13804"
+      }
+    },
+    {
+      "id": "etfb",
+      "name": "Electron transfer flavoprotein subunit beta (ETFB)",
+      "gene": "ETFB",
+      "organism": "human",
+      "cofactors": [
+        "AMP"
+      ],
+      "family": "ETF beta family",
+      "compartment": "matrix",
+      "xrefs": {
+        "uniprot": "P38117",
+        "alphafold": "P38117"
+      }
+    },
+    {
+      "id": "etfdh",
+      "name": "Electron transfer flavoprotein-ubiquinone oxidoreductase (ETF-QO)",
+      "gene": "ETFDH",
+      "ec": [
+        "1.5.5.1"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "FAD",
+        "[4Fe-4S] cluster"
+      ],
+      "family": "ETF-QO family",
+      "compartment": "imm",
+      "description": "Passes electrons from reduced ETF to ubiquinone, linking β-oxidation to the respiratory chain.",
+      "xrefs": {
+        "uniprot": "Q16134",
+        "alphafold": "Q16134"
+      }
+    },
+    {
+      "id": "pparalpha",
+      "name": "Peroxisome proliferator-activated receptor alpha (PPARα)",
+      "gene": "PPARA",
+      "organism": "human",
+      "family": "nuclear hormone receptor (NR1C1)",
+      "compartment": "nucleus",
+      "description": "Fatty-acid-activated nuclear receptor / transcription factor that induces the fatty-acid oxidation gene program during fasting.",
+      "xrefs": {
+        "uniprot": "Q07869",
+        "alphafold": "Q07869"
+      }
+    },
+    {
+      "id": "acc2",
+      "name": "Acetyl-CoA carboxylase 2 (ACC2 / ACACB)",
+      "gene": "ACACB",
+      "ec": [
+        "6.4.1.2"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "biotin",
+        "Mn2+"
+      ],
+      "family": "biotin-dependent carboxylase family",
+      "compartment": "omm",
+      "description": "Mitochondria-associated isoform that produces the malonyl-CoA pool inhibiting CPT1.",
+      "xrefs": {
+        "uniprot": "O00763",
+        "alphafold": "O00763"
+      }
+    },
+    {
+      "id": "ampk",
+      "name": "AMP-activated protein kinase, catalytic subunit α2 (AMPK / PRKAA2)",
+      "gene": "PRKAA2",
+      "ec": [
+        "2.7.11.1"
+      ],
+      "organism": "human",
+      "family": "CAMK Ser/Thr protein kinase family",
+      "compartment": "cytosol",
+      "description": "Cellular energy sensor; phosphorylates and inhibits ACC, lowering malonyl-CoA and activating fatty-acid oxidation.",
+      "xrefs": {
+        "uniprot": "P54646",
+        "alphafold": "P54646"
+      }
+    }
   ],
   "genes": [
-    { "id": "g_cpt1a", "symbol": "CPT1A", "name": "carnitine palmitoyltransferase 1A (liver)" },
-    { "id": "g_acadm", "symbol": "ACADM", "name": "acyl-CoA dehydrogenase medium chain" },
-    { "id": "g_hadha", "symbol": "HADHA", "name": "hydroxyacyl-CoA dehydrogenase trifunctional multienzyme complex subunit alpha" }
+    {
+      "id": "g_cpt1a",
+      "symbol": "CPT1A",
+      "name": "carnitine palmitoyltransferase 1A (liver)"
+    },
+    {
+      "id": "g_acadm",
+      "symbol": "ACADM",
+      "name": "acyl-CoA dehydrogenase medium chain"
+    },
+    {
+      "id": "g_hadha",
+      "symbol": "HADHA",
+      "name": "hydroxyacyl-CoA dehydrogenase trifunctional multienzyme complex subunit alpha"
+    }
   ],
   "complexes": [
-    { "id": "tfp", "name": "Mitochondrial trifunctional protein (MTP/TFP)", "subunits": [{ "enzyme": "hadha", "stoichiometry": 4 }, { "enzyme": "hadhb", "stoichiometry": 4 }], "description": "α4β4 hetero-octamer bound to the inner membrane; carries out the last three steps of long-chain β-oxidation.", "provenance": { "confidence": "high", "sources": [{ "db": "UniProt", "id": "P40939" }, { "db": "PubMed", "id": "20195903" }] } },
-    { "id": "etf", "name": "Electron transfer flavoprotein (ETF)", "subunits": [{ "enzyme": "etfa", "stoichiometry": 1 }, { "enzyme": "etfb", "stoichiometry": 1 }], "description": "αβ heterodimer that shuttles electrons from acyl-CoA dehydrogenases to ETF-ubiquinone oxidoreductase.", "provenance": { "confidence": "high", "sources": [{ "db": "UniProt", "id": "P13804" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } }
+    {
+      "id": "tfp",
+      "name": "Mitochondrial trifunctional protein (MTP/TFP)",
+      "subunits": [
+        {
+          "enzyme": "hadha",
+          "stoichiometry": 4
+        },
+        {
+          "enzyme": "hadhb",
+          "stoichiometry": 4
+        }
+      ],
+      "description": "α4β4 hetero-octamer bound to the inner membrane; carries out the last three steps of long-chain β-oxidation.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "UniProt",
+            "id": "P40939"
+          },
+          {
+            "db": "PubMed",
+            "id": "20195903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "etf",
+      "name": "Electron transfer flavoprotein (ETF)",
+      "subunits": [
+        {
+          "enzyme": "etfa",
+          "stoichiometry": 1
+        },
+        {
+          "enzyme": "etfb",
+          "stoichiometry": 1
+        }
+      ],
+      "description": "αβ heterodimer that shuttles electrons from acyl-CoA dehydrogenases to ETF-ubiquinone oxidoreductase.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "UniProt",
+            "id": "P13804"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    }
   ],
   "reactions": [
-    { "id": "bo1", "name": "Fatty acid activation (long-chain acyl-CoA synthetase)", "ec": "6.2.1.3", "equation": "Palmitate + CoA + ATP -> Palmitoyl-CoA + AMP + PPi + H+", "substrates": [{ "metabolite": "palmitate" }, { "metabolite": "coa" }, { "metabolite": "atp" }], "products": [{ "metabolite": "palmitoyl_coa" }, { "metabolite": "amp" }, { "metabolite": "ppi" }, { "metabolite": "hplus" }], "catalysts": [{ "enzyme": "acsl1", "role": "catalyst" }], "cofactors": [{ "metabolite": "atp", "role": "adenylylation; cleaved to AMP + PPi (two high-energy bonds)" }], "reversibility": "irreversible", "pathwayStep": 1, "compartment": "cytosol", "xrefs": { "kegg": "R01280", "rhea": "30754" }, "provenance": { "confidence": "high", "notes": "Made effectively irreversible in vivo by subsequent hydrolysis of PPi to 2 Pi by inorganic pyrophosphatase.", "sources": [{ "db": "KEGG", "id": "R01280" }, { "db": "Rhea", "id": "30754" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "bo2", "name": "Carnitine palmitoyltransferase I (CPT1) — committed, rate-limiting step", "ec": "2.3.1.21", "equation": "Palmitoyl-CoA + L-Carnitine -> L-Palmitoylcarnitine + CoA", "substrates": [{ "metabolite": "palmitoyl_coa" }, { "metabolite": "carnitine" }], "products": [{ "metabolite": "palmitoylcarnitine" }, { "metabolite": "coa" }], "catalysts": [{ "enzyme": "cpt1a", "role": "rate-limiting" }], "reversibility": "reversible", "rateLimiting": true, "pathwayStep": 2, "compartment": "omm", "xrefs": { "kegg": "R01923", "rhea": "12664" }, "provenance": { "confidence": "high", "notes": "Kinetically controlled (not thermodynamically irreversible); flux is governed by allosteric inhibition by malonyl-CoA.", "sources": [{ "db": "KEGG", "id": "R01923" }, { "db": "Rhea", "id": "12664" }, { "db": "PubMed", "id": "9063439" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "bo3", "name": "Carnitine–acylcarnitine translocase (antiport)", "equation": "L-Palmitoylcarnitine[IMS] + L-Carnitine[matrix] <=> L-Palmitoylcarnitine[matrix] + L-Carnitine[IMS]", "substrates": [{ "metabolite": "palmitoylcarnitine", "compartment": "ims" }, { "metabolite": "carnitine", "compartment": "matrix" }], "products": [{ "metabolite": "palmitoylcarnitine", "compartment": "matrix" }, { "metabolite": "carnitine", "compartment": "ims" }], "catalysts": [{ "enzyme": "cact", "role": "transporter" }], "reversibility": "reversible", "transport": true, "pathwayStep": 3, "compartment": "imm", "provenance": { "confidence": "high", "sources": [{ "db": "UniProt", "id": "O43772" }, { "db": "Reactome", "id": "R-HSA-77289" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "bo4", "name": "Carnitine palmitoyltransferase II (CPT2)", "ec": "2.3.1.21", "equation": "L-Palmitoylcarnitine + CoA -> Palmitoyl-CoA + L-Carnitine", "substrates": [{ "metabolite": "palmitoylcarnitine" }, { "metabolite": "coa" }], "products": [{ "metabolite": "palmitoyl_coa" }, { "metabolite": "carnitine" }], "catalysts": [{ "enzyme": "cpt2", "role": "catalyst" }], "reversibility": "reversible", "pathwayStep": 4, "compartment": "matrix", "xrefs": { "kegg": "R01923", "rhea": "12664" }, "provenance": { "confidence": "high", "notes": "Regenerates matrix acyl-CoA and frees carnitine for return by the translocase.", "sources": [{ "db": "KEGG", "id": "R01923" }, { "db": "Rhea", "id": "12664" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "bo5", "name": "Acyl-CoA dehydrogenase (β-oxidation step 1: FAD-linked oxidation)", "ec": "1.3.8.9", "equation": "Palmitoyl-CoA + FAD -> trans-Hexadec-2-enoyl-CoA + FADH2", "substrates": [{ "metabolite": "palmitoyl_coa" }, { "metabolite": "fad" }], "products": [{ "metabolite": "trans_hexadecenoyl_coa" }, { "metabolite": "fadh2" }], "catalysts": [{ "enzyme": "acadvl", "role": "catalyst" }], "cofactors": [{ "metabolite": "fad", "role": "electron acceptor; FADH2 electrons pass to ETF" }], "reversibility": "reversible", "pathwayStep": 5, "compartment": "matrix", "xrefs": { "kegg": "R01279", "rhea": "30750" }, "provenance": { "confidence": "high", "notes": "Introduces a trans-Δ2 double bond. Chain-length isozymes: VLCAD (C14–C20), MCAD (C6–C12), SCAD (C4–C6).", "sources": [{ "db": "KEGG", "id": "R01279" }, { "db": "Rhea", "id": "30750" }, { "db": "Reactome", "id": "R-HSA-77286" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "bo6", "name": "Enoyl-CoA hydratase (β-oxidation step 2: hydration)", "ec": "4.2.1.17", "equation": "trans-Hexadec-2-enoyl-CoA + H2O -> (S)-3-Hydroxyhexadecanoyl-CoA", "substrates": [{ "metabolite": "trans_hexadecenoyl_coa" }, { "metabolite": "h2o" }], "products": [{ "metabolite": "hydroxyhexadecanoyl_coa" }], "catalysts": [{ "enzyme": "hadha", "role": "catalyst" }], "reversibility": "reversible", "pathwayStep": 6, "compartment": "matrix", "xrefs": { "kegg": "R04738", "rhea": "31166" }, "provenance": { "confidence": "high", "notes": "Stereospecific hydration to the L-(S)-3-hydroxy isomer. Long-chain activity by the trifunctional protein (HADHA); short-chain by ECHS1.", "sources": [{ "db": "KEGG", "id": "R04738" }, { "db": "Rhea", "id": "31166" }, { "db": "Reactome", "id": "R-HSA-77286" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "bo7", "name": "3-Hydroxyacyl-CoA dehydrogenase (β-oxidation step 3: NAD+-linked oxidation)", "ec": "1.1.1.211", "equation": "(S)-3-Hydroxyhexadecanoyl-CoA + NAD+ -> 3-Oxopalmitoyl-CoA + NADH + H+", "substrates": [{ "metabolite": "hydroxyhexadecanoyl_coa" }, { "metabolite": "nad" }], "products": [{ "metabolite": "oxopalmitoyl_coa" }, { "metabolite": "nadh" }, { "metabolite": "hplus" }], "catalysts": [{ "enzyme": "hadha", "role": "catalyst" }], "cofactors": [{ "metabolite": "nad", "role": "electron acceptor" }], "reversibility": "reversible", "pathwayStep": 7, "compartment": "matrix", "xrefs": { "kegg": "R04737", "rhea": "31162" }, "provenance": { "confidence": "high", "notes": "Long-chain activity (LCHAD, EC 1.1.1.211) by the trifunctional protein (HADHA); medium/short-chain (EC 1.1.1.35) by HADH.", "sources": [{ "db": "KEGG", "id": "R04737" }, { "db": "Rhea", "id": "31162" }, { "db": "Reactome", "id": "R-HSA-77286" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "bo8", "name": "3-Ketoacyl-CoA thiolase (β-oxidation step 4: thiolytic cleavage)", "ec": "2.3.1.16", "equation": "3-Oxopalmitoyl-CoA + CoA -> Myristoyl-CoA + Acetyl-CoA", "substrates": [{ "metabolite": "oxopalmitoyl_coa" }, { "metabolite": "coa" }], "products": [{ "metabolite": "myristoyl_coa" }, { "metabolite": "acetyl_coa" }], "catalysts": [{ "enzyme": "hadhb", "role": "catalyst" }], "reversibility": "irreversible", "pathwayStep": 8, "compartment": "matrix", "xrefs": { "kegg": "R03991", "rhea": "18164" }, "provenance": { "confidence": "high", "notes": "Strongly exergonic thiolysis that drives the spiral forward; releases acetyl-CoA and a fatty acyl-CoA two carbons shorter (myristoyl-CoA), which re-enters at step 1. For palmitoyl-CoA, 7 cycles yield 8 acetyl-CoA, 7 FADH2, 7 NADH. Long-chain activity by the trifunctional protein (HADHB); medium/short-chain by ACAA2.", "sources": [{ "db": "KEGG", "id": "R03991" }, { "db": "Rhea", "id": "18164" }, { "db": "Reactome", "id": "R-HSA-77286" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } }
+    {
+      "id": "bo1",
+      "name": "Fatty acid activation (long-chain acyl-CoA synthetase)",
+      "ec": "6.2.1.3",
+      "equation": "Palmitate + CoA + ATP -> Palmitoyl-CoA + AMP + PPi + H+",
+      "substrates": [
+        {
+          "metabolite": "palmitate"
+        },
+        {
+          "metabolite": "coa"
+        },
+        {
+          "metabolite": "atp"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoyl_coa"
+        },
+        {
+          "metabolite": "amp"
+        },
+        {
+          "metabolite": "ppi"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "acsl1",
+          "role": "catalyst"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "atp",
+          "role": "adenylylation; cleaved to AMP + PPi (two high-energy bonds)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 1,
+      "compartment": "cytosol",
+      "xrefs": {
+        "kegg": "R01280",
+        "rhea": "30754"
+      },
+      "provenance": {
+        "confidence": "high",
+        "notes": "Made effectively irreversible in vivo by subsequent hydrolysis of PPi to 2 Pi by inorganic pyrophosphatase.",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01280"
+          },
+          {
+            "db": "Rhea",
+            "id": "30754"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo2",
+      "name": "Carnitine palmitoyltransferase I (CPT1) — committed, rate-limiting step",
+      "ec": "2.3.1.21",
+      "equation": "Palmitoyl-CoA + L-Carnitine -> L-Palmitoylcarnitine + CoA",
+      "substrates": [
+        {
+          "metabolite": "palmitoyl_coa"
+        },
+        {
+          "metabolite": "carnitine"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoylcarnitine"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cpt1a",
+          "role": "rate-limiting"
+        }
+      ],
+      "reversibility": "irreversible",
+      "rateLimiting": true,
+      "pathwayStep": 2,
+      "compartment": "omm",
+      "xrefs": {
+        "kegg": "R01923",
+        "rhea": "12664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "notes": "Kinetically controlled (not thermodynamically irreversible); flux is governed by allosteric inhibition by malonyl-CoA. CPT1 is the committed, rate-limiting step of mitochondrial fatty-acid import; physiologically irreversible (and flagged rateLimiting), so it must not be drawn double-headed.",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01923"
+          },
+          {
+            "db": "Rhea",
+            "id": "12664"
+          },
+          {
+            "db": "PubMed",
+            "id": "9063439"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo3",
+      "name": "Carnitine–acylcarnitine translocase (antiport)",
+      "equation": "L-Palmitoylcarnitine[IMS] + L-Carnitine[matrix] <=> L-Palmitoylcarnitine[matrix] + L-Carnitine[IMS]",
+      "substrates": [
+        {
+          "metabolite": "palmitoylcarnitine",
+          "compartment": "ims"
+        },
+        {
+          "metabolite": "carnitine",
+          "compartment": "matrix"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoylcarnitine",
+          "compartment": "matrix"
+        },
+        {
+          "metabolite": "carnitine",
+          "compartment": "ims"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cact",
+          "role": "transporter"
+        }
+      ],
+      "reversibility": "reversible",
+      "transport": true,
+      "pathwayStep": 3,
+      "compartment": "imm",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "UniProt",
+            "id": "O43772"
+          },
+          {
+            "db": "Reactome",
+            "id": "R-HSA-77289"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo4",
+      "name": "Carnitine palmitoyltransferase II (CPT2)",
+      "ec": "2.3.1.21",
+      "equation": "L-Palmitoylcarnitine + CoA -> Palmitoyl-CoA + L-Carnitine",
+      "substrates": [
+        {
+          "metabolite": "palmitoylcarnitine"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoyl_coa"
+        },
+        {
+          "metabolite": "carnitine"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cpt2",
+          "role": "catalyst"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "compartment": "matrix",
+      "xrefs": {
+        "kegg": "R01923",
+        "rhea": "12664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "notes": "Regenerates matrix acyl-CoA and frees carnitine for return by the translocase.",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01923"
+          },
+          {
+            "db": "Rhea",
+            "id": "12664"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo5",
+      "name": "Acyl-CoA dehydrogenase (β-oxidation step 1: FAD-linked oxidation)",
+      "ec": "1.3.8.9",
+      "equation": "Palmitoyl-CoA + FAD -> trans-Hexadec-2-enoyl-CoA + FADH2",
+      "substrates": [
+        {
+          "metabolite": "palmitoyl_coa"
+        },
+        {
+          "metabolite": "fad"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_hexadecenoyl_coa"
+        },
+        {
+          "metabolite": "fadh2"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "acadvl",
+          "role": "catalyst"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "fad",
+          "role": "electron acceptor; FADH2 electrons pass to ETF"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 5,
+      "compartment": "matrix",
+      "xrefs": {
+        "kegg": "R01279",
+        "rhea": "30750"
+      },
+      "provenance": {
+        "confidence": "high",
+        "notes": "Introduces a trans-Δ2 double bond. Chain-length isozymes: VLCAD (C14–C20), MCAD (C6–C12), SCAD (C4–C6). Acyl-CoA dehydrogenase is FAD-linked and passes electrons one-way to ETF/ETF-QO; physiologically irreversible.",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01279"
+          },
+          {
+            "db": "Rhea",
+            "id": "30750"
+          },
+          {
+            "db": "Reactome",
+            "id": "R-HSA-77286"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo6",
+      "name": "Enoyl-CoA hydratase (β-oxidation step 2: hydration)",
+      "ec": "4.2.1.17",
+      "equation": "trans-Hexadec-2-enoyl-CoA + H2O -> (S)-3-Hydroxyhexadecanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_hexadecenoyl_coa"
+        },
+        {
+          "metabolite": "h2o"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyhexadecanoyl_coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hadha",
+          "role": "catalyst"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "compartment": "matrix",
+      "xrefs": {
+        "kegg": "R04738",
+        "rhea": "31166"
+      },
+      "provenance": {
+        "confidence": "high",
+        "notes": "Stereospecific hydration to the L-(S)-3-hydroxy isomer. Long-chain activity by the trifunctional protein (HADHA); short-chain by ECHS1.",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04738"
+          },
+          {
+            "db": "Rhea",
+            "id": "31166"
+          },
+          {
+            "db": "Reactome",
+            "id": "R-HSA-77286"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo7",
+      "name": "3-Hydroxyacyl-CoA dehydrogenase (β-oxidation step 3: NAD+-linked oxidation)",
+      "ec": "1.1.1.211",
+      "equation": "(S)-3-Hydroxyhexadecanoyl-CoA + NAD+ -> 3-Oxopalmitoyl-CoA + NADH + H+",
+      "substrates": [
+        {
+          "metabolite": "hydroxyhexadecanoyl_coa"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxopalmitoyl_coa"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hadha",
+          "role": "catalyst"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nad",
+          "role": "electron acceptor"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "compartment": "matrix",
+      "xrefs": {
+        "kegg": "R04737",
+        "rhea": "31162"
+      },
+      "provenance": {
+        "confidence": "high",
+        "notes": "Long-chain activity (LCHAD, EC 1.1.1.211) by the trifunctional protein (HADHA); medium/short-chain (EC 1.1.1.35) by HADH.",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04737"
+          },
+          {
+            "db": "Rhea",
+            "id": "31162"
+          },
+          {
+            "db": "Reactome",
+            "id": "R-HSA-77286"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bo8",
+      "name": "3-Ketoacyl-CoA thiolase (β-oxidation step 4: thiolytic cleavage)",
+      "ec": "2.3.1.16",
+      "equation": "3-Oxopalmitoyl-CoA + CoA -> Myristoyl-CoA + Acetyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "oxopalmitoyl_coa"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myristoyl_coa"
+        },
+        {
+          "metabolite": "acetyl_coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hadhb",
+          "role": "catalyst"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 8,
+      "compartment": "matrix",
+      "xrefs": {
+        "kegg": "R03991",
+        "rhea": "18164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "notes": "Strongly exergonic thiolysis that drives the spiral forward; releases acetyl-CoA and a fatty acyl-CoA two carbons shorter (myristoyl-CoA), which re-enters at step 1. For palmitoyl-CoA, 7 cycles yield 8 acetyl-CoA, 7 FADH2, 7 NADH. Long-chain activity by the trifunctional protein (HADHB); medium/short-chain by ACAA2.",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R03991"
+          },
+          {
+            "db": "Rhea",
+            "id": "18164"
+          },
+          {
+            "db": "Reactome",
+            "id": "R-HSA-77286"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    }
   ],
   "regulations": [
-    { "id": "reg_malonylcoa_cpt1", "type": "allosteric-inhibition", "regulator": { "kind": "metabolite", "id": "malonyl_coa" }, "target": { "kind": "enzyme", "id": "cpt1a" }, "effect": "negative", "mechanism": "Malonyl-CoA — the product of acetyl-CoA carboxylase and the committed intermediate of fatty-acid synthesis — allosterically inhibits CPT1, blocking acyl-CoA entry into the mitochondrion. This reciprocally coordinates β-oxidation with lipogenesis: when malonyl-CoA is high (fed state), fat is synthesized rather than burned.", "provenance": { "confidence": "high", "sources": [{ "db": "PubMed", "id": "9063439" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "reg_nadh_hadha", "type": "inhibition", "regulator": { "kind": "metabolite", "id": "nadh" }, "target": { "kind": "enzyme", "id": "hadha" }, "effect": "negative", "mechanism": "A high mitochondrial NADH/NAD+ ratio (e.g., when the respiratory chain is saturated) causes product inhibition of the 3-hydroxyacyl-CoA dehydrogenase step, slowing β-oxidation to match electron-transport-chain capacity.", "provenance": { "confidence": "medium", "sources": [{ "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "reg_acetylcoa_thiolase", "type": "feedback-inhibition", "regulator": { "kind": "metabolite", "id": "acetyl_coa" }, "target": { "kind": "enzyme", "id": "hadhb" }, "effect": "negative", "mechanism": "A high acetyl-CoA/CoA ratio inhibits 3-ketoacyl-CoA thiolase (product inhibition), coupling β-oxidation flux to downstream demand for acetyl-CoA in the TCA cycle and ketogenesis.", "provenance": { "confidence": "medium", "sources": [{ "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "reg_ampk_acc2", "type": "phosphorylation", "regulator": { "kind": "enzyme", "id": "ampk" }, "target": { "kind": "enzyme", "id": "acc2" }, "effect": "negative", "mechanism": "AMPK, activated by a rising AMP/ATP ratio (low energy charge), phosphorylates and inhibits acetyl-CoA carboxylase 2. This lowers malonyl-CoA, relieving CPT1 inhibition and switching on fatty-acid oxidation when the cell needs ATP.", "provenance": { "confidence": "high", "sources": [{ "db": "UniProt", "id": "P54646" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "reg_fattyacid_pparalpha", "type": "activation", "regulator": { "kind": "metabolite", "id": "palmitate" }, "target": { "kind": "enzyme", "id": "pparalpha" }, "effect": "positive", "mechanism": "Long-chain fatty acids and their CoA/acyl derivatives are endogenous agonist ligands of PPARα, so abundant fatty acid feeds forward to induce the transcriptional program for its own oxidation.", "provenance": { "confidence": "medium", "sources": [{ "db": "PubMed", "id": "20195903" }] } },
-    { "id": "reg_pparalpha_cpt1a_gene", "type": "transcriptional-activation", "regulator": { "kind": "enzyme", "id": "pparalpha" }, "target": { "kind": "gene", "id": "g_cpt1a" }, "effect": "positive", "mechanism": "During fasting, activated PPARα induces transcription of CPT1A, raising the capacity for mitochondrial fatty-acid import.", "provenance": { "confidence": "high", "sources": [{ "db": "PubMed", "id": "20195903" }] } },
-    { "id": "reg_pparalpha_acadm_gene", "type": "transcriptional-activation", "regulator": { "kind": "enzyme", "id": "pparalpha" }, "target": { "kind": "gene", "id": "g_acadm" }, "effect": "positive", "mechanism": "MCAD (ACADM) is a classic PPARα target gene; its induction coordinately raises β-oxidation enzyme levels in the fasted, fatty-acid-rich state.", "provenance": { "confidence": "high", "sources": [{ "db": "PubMed", "id": "20195903" }] } }
+    {
+      "id": "reg_malonylcoa_cpt1",
+      "type": "allosteric-inhibition",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "malonyl_coa"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "cpt1a"
+      },
+      "effect": "negative",
+      "mechanism": "Malonyl-CoA — the product of acetyl-CoA carboxylase and the committed intermediate of fatty-acid synthesis — allosterically inhibits CPT1, blocking acyl-CoA entry into the mitochondrion. This reciprocally coordinates β-oxidation with lipogenesis: when malonyl-CoA is high (fed state), fat is synthesized rather than burned.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "9063439"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_nadh_hadha",
+      "type": "inhibition",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "nadh"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hadha"
+      },
+      "effect": "negative",
+      "mechanism": "A high mitochondrial NADH/NAD+ ratio (e.g., when the respiratory chain is saturated) causes product inhibition of the 3-hydroxyacyl-CoA dehydrogenase step, slowing β-oxidation to match electron-transport-chain capacity.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_acetylcoa_thiolase",
+      "type": "feedback-inhibition",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "acetyl_coa"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hadhb"
+      },
+      "effect": "negative",
+      "mechanism": "A high acetyl-CoA/CoA ratio inhibits 3-ketoacyl-CoA thiolase (product inhibition), coupling β-oxidation flux to downstream demand for acetyl-CoA in the TCA cycle and ketogenesis.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_ampk_acc2",
+      "type": "phosphorylation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "ampk"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "acc2"
+      },
+      "effect": "negative",
+      "mechanism": "AMPK, activated by a rising AMP/ATP ratio (low energy charge), phosphorylates and inhibits acetyl-CoA carboxylase 2. This lowers malonyl-CoA, relieving CPT1 inhibition and switching on fatty-acid oxidation when the cell needs ATP.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "UniProt",
+            "id": "P54646"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_fattyacid_pparalpha",
+      "type": "activation",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "palmitate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "pparalpha"
+      },
+      "effect": "positive",
+      "mechanism": "Long-chain fatty acids and their CoA/acyl derivatives are endogenous agonist ligands of PPARα, so abundant fatty acid feeds forward to induce the transcriptional program for its own oxidation.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "20195903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_pparalpha_cpt1a_gene",
+      "type": "transcriptional-activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "pparalpha"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "g_cpt1a"
+      },
+      "effect": "positive",
+      "mechanism": "During fasting, activated PPARα induces transcription of CPT1A, raising the capacity for mitochondrial fatty-acid import.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "20195903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_pparalpha_acadm_gene",
+      "type": "transcriptional-activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "pparalpha"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "g_acadm"
+      },
+      "effect": "positive",
+      "mechanism": "MCAD (ACADM) is a classic PPARα target gene; its induction coordinately raises β-oxidation enzyme levels in the fasted, fatty-acid-rich state.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "20195903"
+          }
+        ]
+      }
+    }
   ],
   "relations": [
-    { "id": "rel_tfp_hadha", "type": "complex-formation", "source": { "kind": "enzyme", "id": "hadha" }, "target": { "kind": "complex", "id": "tfp" }, "note": "Alpha subunit of the mitochondrial trifunctional protein." },
-    { "id": "rel_tfp_hadhb", "type": "complex-formation", "source": { "kind": "enzyme", "id": "hadhb" }, "target": { "kind": "complex", "id": "tfp" }, "note": "Beta subunit of the mitochondrial trifunctional protein." },
-    { "id": "rel_etf_etfa", "type": "complex-formation", "source": { "kind": "enzyme", "id": "etfa" }, "target": { "kind": "complex", "id": "etf" }, "note": "FAD-bearing alpha subunit of ETF." },
-    { "id": "rel_etf_etfb", "type": "complex-formation", "source": { "kind": "enzyme", "id": "etfb" }, "target": { "kind": "complex", "id": "etf" }, "note": "Beta subunit of ETF." },
-    { "id": "rel_iso_vlcad_lcad", "type": "isozyme", "source": { "kind": "enzyme", "id": "acadvl" }, "target": { "kind": "enzyme", "id": "acadl" }, "note": "Chain-length-specific acyl-CoA dehydrogenases (very-long vs long chain)." },
-    { "id": "rel_iso_lcad_mcad", "type": "isozyme", "source": { "kind": "enzyme", "id": "acadl" }, "target": { "kind": "enzyme", "id": "acadm" }, "note": "Chain-length-specific acyl-CoA dehydrogenases (long vs medium chain)." },
-    { "id": "rel_iso_mcad_scad", "type": "isozyme", "source": { "kind": "enzyme", "id": "acadm" }, "target": { "kind": "enzyme", "id": "acads" }, "note": "Chain-length-specific acyl-CoA dehydrogenases (medium vs short chain)." },
-    { "id": "rel_iso_echs1_hadha", "type": "isozyme", "source": { "kind": "enzyme", "id": "echs1" }, "target": { "kind": "enzyme", "id": "hadha" }, "note": "Enoyl-CoA hydratase activity: soluble short-chain (ECHS1) vs long-chain trifunctional protein (HADHA)." },
-    { "id": "rel_iso_hadh_hadha", "type": "isozyme", "source": { "kind": "enzyme", "id": "hadh" }, "target": { "kind": "enzyme", "id": "hadha" }, "note": "3-Hydroxyacyl-CoA dehydrogenase activity: soluble short/medium-chain (HADH) vs long-chain trifunctional protein (HADHA)." },
-    { "id": "rel_iso_acaa2_hadhb", "type": "isozyme", "source": { "kind": "enzyme", "id": "acaa2" }, "target": { "kind": "enzyme", "id": "hadhb" }, "note": "3-Ketoacyl-CoA thiolase activity: soluble medium-chain (ACAA2) vs long-chain trifunctional protein (HADHB)." },
-    { "id": "rel_gene_cpt1a", "type": "gene-encodes", "source": { "kind": "gene", "id": "g_cpt1a" }, "target": { "kind": "enzyme", "id": "cpt1a" }, "note": "CPT1A gene encodes carnitine palmitoyltransferase 1A." },
-    { "id": "rel_gene_acadm", "type": "gene-encodes", "source": { "kind": "gene", "id": "g_acadm" }, "target": { "kind": "enzyme", "id": "acadm" }, "note": "ACADM gene encodes MCAD." },
-    { "id": "rel_gene_hadha", "type": "gene-encodes", "source": { "kind": "gene", "id": "g_hadha" }, "target": { "kind": "enzyme", "id": "hadha" }, "note": "HADHA gene encodes the trifunctional protein alpha subunit." },
-    { "id": "rel_et_vlcad_etf", "type": "electron-transfer", "source": { "kind": "enzyme", "id": "acadvl" }, "target": { "kind": "complex", "id": "etf" }, "note": "FADH2 electrons pass from acyl-CoA dehydrogenases to electron transfer flavoprotein.", "provenance": { "confidence": "high", "sources": [{ "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "rel_et_etf_etfdh", "type": "electron-transfer", "source": { "kind": "complex", "id": "etf" }, "target": { "kind": "enzyme", "id": "etfdh" }, "note": "ETF transfers electrons to ETF-ubiquinone oxidoreductase, then to the ubiquinone pool.", "provenance": { "confidence": "high", "sources": [{ "db": "UniProt", "id": "Q16134" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "rel_ct_acetylcoa_tca", "type": "crosstalk", "source": { "kind": "metabolite", "id": "acetyl_coa" }, "target": { "kind": "pathway", "id": "citric-acid-cycle" }, "note": "Each spiral turn releases acetyl-CoA, which is oxidized to CO2 in the TCA cycle.", "provenance": { "confidence": "high", "sources": [{ "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "rel_ct_acetylcoa_ketogenesis", "type": "crosstalk", "source": { "kind": "metabolite", "id": "acetyl_coa" }, "target": { "kind": "pathway", "id": "ketone-body-metabolism" }, "note": "In fasting liver, β-oxidation-derived acetyl-CoA is diverted to ketone-body synthesis.", "provenance": { "confidence": "high", "sources": [{ "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "rel_ct_fadh2_oxphos", "type": "crosstalk", "source": { "kind": "metabolite", "id": "fadh2" }, "target": { "kind": "pathway", "id": "oxidative-phosphorylation" }, "note": "FADH2 (via ETF/ETF-QO) and NADH feed electrons into the respiratory chain for ATP synthesis.", "provenance": { "confidence": "high", "sources": [{ "db": "Reactome", "id": "R-HSA-77289" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "rel_ct_malonylcoa_fasyn", "type": "crosstalk", "source": { "kind": "metabolite", "id": "malonyl_coa" }, "target": { "kind": "pathway", "id": "fatty-acid-synthesis" }, "note": "Malonyl-CoA, made by acetyl-CoA carboxylase in fatty-acid synthesis, is the key inhibitor of CPT1 — the node that reciprocally coordinates synthesis and oxidation.", "provenance": { "confidence": "high", "sources": [{ "db": "PubMed", "id": "9063439" }, { "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } },
-    { "id": "rel_ct_acetylcoa_glycolysis", "type": "crosstalk", "source": { "kind": "metabolite", "id": "acetyl_coa" }, "target": { "kind": "pathway", "id": "glycolysis" }, "note": "Glucose–fatty-acid (Randle) cycle: acetyl-CoA and NADH from β-oxidation inhibit pyruvate dehydrogenase and (via citrate) PFK-1, sparing glucose when fatty acids are plentiful.", "provenance": { "confidence": "high", "sources": [{ "db": "textbook", "id": "Lehninger 8e, Ch. 17" }] } }
+    {
+      "id": "rel_tfp_hadha",
+      "type": "complex-formation",
+      "source": {
+        "kind": "enzyme",
+        "id": "hadha"
+      },
+      "target": {
+        "kind": "complex",
+        "id": "tfp"
+      },
+      "note": "Alpha subunit of the mitochondrial trifunctional protein."
+    },
+    {
+      "id": "rel_tfp_hadhb",
+      "type": "complex-formation",
+      "source": {
+        "kind": "enzyme",
+        "id": "hadhb"
+      },
+      "target": {
+        "kind": "complex",
+        "id": "tfp"
+      },
+      "note": "Beta subunit of the mitochondrial trifunctional protein."
+    },
+    {
+      "id": "rel_etf_etfa",
+      "type": "complex-formation",
+      "source": {
+        "kind": "enzyme",
+        "id": "etfa"
+      },
+      "target": {
+        "kind": "complex",
+        "id": "etf"
+      },
+      "note": "FAD-bearing alpha subunit of ETF."
+    },
+    {
+      "id": "rel_etf_etfb",
+      "type": "complex-formation",
+      "source": {
+        "kind": "enzyme",
+        "id": "etfb"
+      },
+      "target": {
+        "kind": "complex",
+        "id": "etf"
+      },
+      "note": "Beta subunit of ETF."
+    },
+    {
+      "id": "rel_iso_vlcad_lcad",
+      "type": "isozyme",
+      "source": {
+        "kind": "enzyme",
+        "id": "acadvl"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "acadl"
+      },
+      "note": "Chain-length-specific acyl-CoA dehydrogenases (very-long vs long chain)."
+    },
+    {
+      "id": "rel_iso_lcad_mcad",
+      "type": "isozyme",
+      "source": {
+        "kind": "enzyme",
+        "id": "acadl"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "acadm"
+      },
+      "note": "Chain-length-specific acyl-CoA dehydrogenases (long vs medium chain)."
+    },
+    {
+      "id": "rel_iso_mcad_scad",
+      "type": "isozyme",
+      "source": {
+        "kind": "enzyme",
+        "id": "acadm"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "acads"
+      },
+      "note": "Chain-length-specific acyl-CoA dehydrogenases (medium vs short chain)."
+    },
+    {
+      "id": "rel_iso_echs1_hadha",
+      "type": "isozyme",
+      "source": {
+        "kind": "enzyme",
+        "id": "echs1"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hadha"
+      },
+      "note": "Enoyl-CoA hydratase activity: soluble short-chain (ECHS1) vs long-chain trifunctional protein (HADHA)."
+    },
+    {
+      "id": "rel_iso_hadh_hadha",
+      "type": "isozyme",
+      "source": {
+        "kind": "enzyme",
+        "id": "hadh"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hadha"
+      },
+      "note": "3-Hydroxyacyl-CoA dehydrogenase activity: soluble short/medium-chain (HADH) vs long-chain trifunctional protein (HADHA)."
+    },
+    {
+      "id": "rel_iso_acaa2_hadhb",
+      "type": "isozyme",
+      "source": {
+        "kind": "enzyme",
+        "id": "acaa2"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hadhb"
+      },
+      "note": "3-Ketoacyl-CoA thiolase activity: soluble medium-chain (ACAA2) vs long-chain trifunctional protein (HADHB)."
+    },
+    {
+      "id": "rel_gene_cpt1a",
+      "type": "gene-encodes",
+      "source": {
+        "kind": "gene",
+        "id": "g_cpt1a"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "cpt1a"
+      },
+      "note": "CPT1A gene encodes carnitine palmitoyltransferase 1A."
+    },
+    {
+      "id": "rel_gene_acadm",
+      "type": "gene-encodes",
+      "source": {
+        "kind": "gene",
+        "id": "g_acadm"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "acadm"
+      },
+      "note": "ACADM gene encodes MCAD."
+    },
+    {
+      "id": "rel_gene_hadha",
+      "type": "gene-encodes",
+      "source": {
+        "kind": "gene",
+        "id": "g_hadha"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hadha"
+      },
+      "note": "HADHA gene encodes the trifunctional protein alpha subunit."
+    },
+    {
+      "id": "rel_et_vlcad_etf",
+      "type": "electron-transfer",
+      "source": {
+        "kind": "enzyme",
+        "id": "acadvl"
+      },
+      "target": {
+        "kind": "complex",
+        "id": "etf"
+      },
+      "note": "FADH2 electrons pass from acyl-CoA dehydrogenases to electron transfer flavoprotein.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_et_etf_etfdh",
+      "type": "electron-transfer",
+      "source": {
+        "kind": "complex",
+        "id": "etf"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "etfdh"
+      },
+      "note": "ETF transfers electrons to ETF-ubiquinone oxidoreductase, then to the ubiquinone pool.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "UniProt",
+            "id": "Q16134"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_ct_acetylcoa_tca",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citric-acid-cycle"
+      },
+      "note": "Each spiral turn releases acetyl-CoA, which is oxidized to CO2 in the TCA cycle.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_ct_acetylcoa_ketogenesis",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ketone-body-metabolism"
+      },
+      "note": "In fasting liver, β-oxidation-derived acetyl-CoA is diverted to ketone-body synthesis.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_ct_fadh2_oxphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fadh2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxidative-phosphorylation"
+      },
+      "note": "FADH2 (via ETF/ETF-QO) and NADH feed electrons into the respiratory chain for ATP synthesis.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Reactome",
+            "id": "R-HSA-77289"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_ct_malonylcoa_fasyn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "malonyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acid-synthesis"
+      },
+      "note": "Malonyl-CoA, made by acetyl-CoA carboxylase in fatty-acid synthesis, is the key inhibitor of CPT1 — the node that reciprocally coordinates synthesis and oxidation.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "9063439"
+          },
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_ct_acetylcoa_glycolysis",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycolysis"
+      },
+      "note": "Glucose–fatty-acid (Randle) cycle: acetyl-CoA and NADH from β-oxidation inhibit pyruvate dehydrogenase and (via citrate) PFK-1, sparing glucose when fatty acids are plentiful.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "textbook",
+            "id": "Lehninger 8e, Ch. 17"
+          }
+        ]
+      }
+    }
   ]
 }

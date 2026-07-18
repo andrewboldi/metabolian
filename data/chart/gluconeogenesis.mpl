@@ -9,6 +9,7 @@
 pathway gluconeogenesis "Gluconeogenesis (glucose synthesis from pyruvate)" {
   grid B4
   spacing 152
+  wrap 5   # wrap 4 puts PEP in the aldolase corridor; 5 lays out clean and matches the viewport aspect
 
   spine at 0,0 {
     pyruvate
