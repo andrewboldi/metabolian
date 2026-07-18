@@ -1,14 +1,17 @@
-# Urea cycle — drawn as Michal drew the ornithine ring: one closed vertical spine
+# Urea cycle — drawn as Michal drew the ornithine ring: a true closed loop
 # carrying ornithine round through citrulline, argininosuccinate and arginine and
-# back to ornithine. The two nitrogen entries hang off opposite sides — ammonia
+# back to ornithine (arginase releasing urea). The two nitrogen entries hang off opposite sides — ammonia
 # via CPS1 on the left, aspartate via ASS1 on the right — and the N-acetylglutamate
 # arm sits furthest left, feeding the switch that turns CPS1 on at all.
 
 pathway urea-cycle "Urea cycle (Krebs–Henseleit ornithine cycle)" {
   grid C4
   spacing 210
+  radius 300
 
-  spine at 0,0 {
+  # the ornithine ring proper — four members, closed by arginase regenerating
+  # ornithine, drawn as a loop the way Michal draws it
+  cycle at 0,0 {
     ornithine
     -> otc [2.1.3.3] +carbamoyl_p -pi
     citrulline
@@ -16,8 +19,7 @@ pathway urea-cycle "Urea cycle (Krebs–Henseleit ornithine cycle)" {
     argininosuccinate
     <-> asl [4.3.2.1] -hplus
     arginine
-    -> arg1 [3.5.3.1] +h2o
-    ornithine
+    -> arg1 [3.5.3.1] +h2o -urea
   }
 
   # first nitrogen: ammonia and bicarbonate fixed into carbamoyl phosphate in the
