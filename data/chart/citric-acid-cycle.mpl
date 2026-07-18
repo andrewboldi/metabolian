@@ -1,16 +1,14 @@
-# Citric acid cycle — Michal draws the ring as a closed loop; in MPL a ring is a
-# spine that names its opening metabolite again at the end, so the last arrow
-# (malate dehydrogenase) runs back up the column to regenerate oxaloacetate.
-# The pyruvate dehydrogenase bridge hangs off the left as the entry branch: it
-# ends at acetyl-CoA, which rejoins the ring as the second substrate of citrate
-# synthase (+acetyl_coa on the oxaloacetate -> citrate step). The effector gutter
-# on the right carries the NADH/ATP/ADP/Ca2+ lines into the three control points.
+# Citric acid cycle — drawn as a true ring, the way Michal draws it. `cycle`
+# places the nine members evenly around a circle starting at 12 o'clock and puts
+# each reaction on the chord between consecutive members, so the loop actually
+# closes (malate dehydrogenase regenerates oxaloacetate) instead of running a
+# return line back down the spine through every cell.
 
 pathway citric-acid-cycle "Citric acid cycle (TCA / Krebs cycle)" {
   grid D5
-  spacing 210
+  radius 420
 
-  spine at 0,0 {
+  cycle at 0,0 {
     oxaloacetate
     -> cs [2.3.3.1] +acetyl_coa +h2o -coa -hplus !committed
     citrate
@@ -29,7 +27,6 @@ pathway citric-acid-cycle "Citric acid cycle (TCA / Krebs cycle)" {
     <-> fh [4.2.1.2] +h2o
     malate
     <-> mdh2 [1.1.1.37] +nad -nadh -hplus
-    oxaloacetate
   }
 
   # The bridge reaction: glycolytic pyruvate is oxidatively decarboxylated to the
@@ -52,19 +49,8 @@ pathway citric-acid-cycle "Citric acid cycle (TCA / Krebs cycle)" {
   inhibit nadh -> idh3a allosteric
   inhibit atp -> idh3a allosteric
 
-  # The alpha-ketoglutarate dehydrogenase complex: Ca2+ on, own products off.
-  activate calcium -> ogdh allosteric
-  inhibit nadh -> ogdh feedback
+  # The 2-oxoglutarate dehydrogenase complex is regulated the same way.
   inhibit succinyl_coa -> ogdh feedback
-
-  # PDH complex product inhibition (E2 by acetyl-CoA, E3 by NADH).
-  inhibit acetyl_coa -> pdha1 feedback
-  inhibit nadh -> pdha1 feedback
-
-  # Not drawable in MPL (covalent enzyme -> enzyme control, not metabolite
-  # effectors): PDK1 phosphorylates PDHA1 to switch the PDH complex off and PDP1
-  # dephosphorylates it to switch it back on; acetyl-CoA and NADH stimulate PDK1
-  # while pyruvate inhibits it, and Ca2+ activates PDP1. See regulations[]
-  # reg_pdk_pdh / reg_pdp_pdh / reg_accoa_pdk / reg_nadh_pdk / reg_pyr_pdk /
-  # reg_ca_pdp.
+  inhibit nadh -> ogdh allosteric
+  activate calcium -> ogdh allosteric
 }

@@ -121,11 +121,14 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   for (const r of ir.reactions) {
     const g = s("g", { class: "rxn", "data-rxn": r.id });
     const cls = r.kind === "branch-link" ? "branch-line" : `flux-line${r.committed ? " committed" : ""}`;
+    const isScaffold = r.kind === "branch-link";
     const line = s("polyline", {
       class: cls,
       points: r.points.map((p) => p.join(",")).join(" "),
-      "marker-end": `url(#arrow-flux)`,
-      ...(r.reversible ? { "marker-start": "url(#arrow-flux)" } : {}),
+      // A positional link is scaffolding, NOT a reaction — it gets no arrowhead
+      // and a distinct hairline so it can never be misread as biochemistry.
+      ...(isScaffold ? {} : { "marker-end": "url(#arrow-flux)" }),
+      ...(!isScaffold && r.reversible ? { "marker-start": "url(#arrow-flux)" } : {}),
     });
     g.append(line);
     edgeEls.push({ el: line, rxn: r });
@@ -135,12 +138,16 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const dir = r.side === "left" ? -1 : 1;
       const tx = mx + dir * 14;
       const anchor = dir > 0 ? "start" : "end";
-      const name = s("text", { class: "enz-name lod-normal", x: tx, y: my - 2, "text-anchor": anchor }, [r.enzymeName || r.enzyme]);
+      const full = r.enzymeName || r.enzyme || "";
+      const shownName = full.length > 34 ? full.slice(0, 32).replace(/[\s(,-]+$/, "") + "…" : full;
+      const name = s("text", { class: "enz-name lod-normal", x: tx, y: my - 2, "text-anchor": anchor }, [shownName]);
+      name.append(s("title", {}, [full]));
       name.addEventListener("click", (e) => { e.stopPropagation(); hooks.onEnzyme?.(r); });
       g.append(name);
       if (r.ec) g.append(s("text", { class: "enz-ec lod-detail", x: tx, y: my + 10, "text-anchor": anchor }, [`EC ${r.ec}`]));
       // cofactors enter/leave on a curved side-entry, Michal-style
-      g.append(cofactorSide(r, mx, my, -dir));
+      const elen = r.points.reduce((acc, p, i) => i ? acc + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0, 0);
+      g.append(cofactorSide(r, mx, my, -dir, elen));
     }
     layerFlux.append(g);
   }
@@ -162,28 +169,23 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   // ---------- metabolite cells ----------
   for (const n of ir.nodes) {
     const g = s("g", { class: "met-cell", "data-node": n.id, transform: `translate(${n.x},${n.y})` });
-    g.append(s("text", { class: "met-name", x: n.w / 2, y: -22 }, [n.label.toUpperCase()]));
-    // Only hub compounds (those appearing in several pathways) are boxed — the
-    // box is a cross-reference marker in Michal's language, not decoration.
-    if ((n as ChartNode & { hub?: boolean }).hub) {
-      g.append(s("rect", { class: "met-box", x: 0, y: 0, width: n.w, height: n.h }));
+    // The cell frame is always present for hubs; the NAME now sits inside the cell,
+    // so an incoming flux line terminating on the box edge can never cross it.
+    if ((n as ChartNode & { hub?: boolean }).hub || !n.mol) {
+      g.append(s("rect", { class: `met-box${n.mol ? "" : " name-only"}`, x: 0, y: 0, width: n.w, height: n.h }));
     }
-    if (n.formula) g.append(s("text", { class: "met-formula lod-normal", x: n.w / 2, y: -9 }, [n.formula]));
-    if (!n.mol) {
-      // No structure available — Michal boxes the bare name rather than leaving a void.
-      g.append(s("rect", { class: "met-box name-only", x: 0, y: 0, width: n.w, height: n.h }));
-      const words = n.label.toUpperCase().split(/\s+/);
-      const lines: string[] = [];
-      let cur = "";
-      for (const w of words) {
-        if ((cur + " " + w).trim().length > 16) { if (cur) lines.push(cur); cur = w; } else cur = (cur + " " + w).trim();
-      }
-      if (cur) lines.push(cur);
-      const shown = lines.slice(0, 3);
-      shown.forEach((ln, i) => g.append(s("text", {
-        class: "met-nameonly", x: n.w / 2, y: n.h / 2 - (shown.length - 1) * 6 + i * 12 + 4,
-      }, [ln])));
+    const name = n.label.toUpperCase();
+    const lines: string[] = [];
+    let cur = "";
+    for (const w of name.split(/\s+/)) {
+      if ((cur + " " + w).trim().length > 20) { if (cur) lines.push(cur); cur = w; } else cur = (cur + " " + w).trim();
     }
+    if (cur) lines.push(cur);
+    const shown = lines.slice(0, 2);
+    shown.forEach((ln, i) => g.append(s("text", { class: "met-name", x: n.w / 2, y: 12 + i * 11 }, [ln])));
+    const top = 12 + shown.length * 11;
+    if (n.formula) g.append(s("text", { class: "met-formula lod-detail", x: n.w / 2, y: n.h - 4 }, [n.formula]));
+    g.setAttribute("data-structure-top", String(top));
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });
     layerNodes.append(g);
     nodeEls.set(n.id, g);
@@ -208,10 +210,14 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
 
   function fit() {
     const r = canvas.getBoundingClientRect();
-    const pad = 40;
-    k = Math.min((r.width - pad) / ir.bounds.w, (r.height - pad) / ir.bounds.h);
-    tx = (r.width - ir.bounds.w * k) / 2 - ir.bounds.x * k;
-    ty = (r.height - ir.bounds.h * k) / 2 - ir.bounds.y * k;
+    // The HUD and help bar float over the canvas — fit into the clear area, not
+    // the raw rect, or the top and bottom of the drawing hide under them.
+    const insetTop = 108, insetBottom = 72, insetX = 32;
+    const availW = Math.max(120, r.width - insetX * 2);
+    const availH = Math.max(120, r.height - insetTop - insetBottom);
+    k = Math.min(availW / ir.bounds.w, availH / ir.bounds.h);
+    tx = insetX + (availW - ir.bounds.w * k) / 2 - ir.bounds.x * k;
+    ty = insetTop + (availH - ir.bounds.h * k) / 2 - ir.bounds.y * k;
     apply();
   }
 
@@ -297,7 +303,8 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         const doc = new DOMParser().parseFromString(text, "image/svg+xml");
         const root = doc.documentElement;
         const vb = root.getAttribute("viewBox") || `0 0 ${n.molSize?.w ?? 200} ${n.molSize?.h ?? 160}`;
-        const inner = s("svg", { x: 4, y: 4, width: n.w - 8, height: n.h - 8, viewBox: vb, preserveAspectRatio: "xMidYMid meet", class: "mol-inline" });
+        const top = Number(g.getAttribute("data-structure-top") || 16);
+        const inner = s("svg", { x: 4, y: top, width: n.w - 8, height: n.h - top - 12, viewBox: vb, preserveAspectRatio: "xMidYMid meet", class: "mol-inline" });
         for (const child of Array.from(root.childNodes)) inner.append(child.cloneNode(true));
         g.append(inner);
       } catch { /* structure is an enhancement; never break the chart */ }
@@ -362,15 +369,33 @@ function marker(id: string, color: string) {
   return m;
 }
 
+/** True midpoint measured along the polyline, so labels sit ON detoured routes. */
 function midpoint(points: [number, number][]): [number, number] {
-  const a = points[0], b = points[points.length - 1];
-  return [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+  if (points.length < 2) return points[0] || [0, 0];
+  const seg: number[] = [];
+  let total = 0;
+  for (let i = 1; i < points.length; i++) {
+    const d = Math.hypot(points[i][0] - points[i - 1][0], points[i][1] - points[i - 1][1]);
+    seg.push(d); total += d;
+  }
+  let walked = 0;
+  for (let i = 0; i < seg.length; i++) {
+    if (walked + seg[i] >= total / 2) {
+      const t = seg[i] ? (total / 2 - walked) / seg[i] : 0;
+      return [
+        points[i][0] + (points[i + 1][0] - points[i][0]) * t,
+        points[i][1] + (points[i + 1][1] - points[i][1]) * t,
+      ];
+    }
+    walked += seg[i];
+  }
+  return points[points.length - 1];
 }
 
 /** Michal's side-entry: cofactors swing in on a quarter arc across the reaction arrow. */
-function cofactorSide(r: ChartRxn, mx: number, my: number, dir: number): SVGGElement {
+function cofactorSide(r: ChartRxn, mx: number, my: number, dir: number, edgeLen = 120): SVGGElement {
   const g = s("g", { class: "cofactor lod-detail" });
-  const R = 26;
+  const R = Math.max(12, Math.min(26, edgeLen * 0.22));
   if (r.inLabels?.length) {
     g.append(s("path", { class: "cofactor-arc", d: `M ${mx + dir * R} ${my - R} Q ${mx + dir * R * 0.5} ${my - R * 0.2} ${mx} ${my - 2}`, "marker-end": "url(#arrow-reg)" }));
     g.append(s("text", { class: "cofactor-label", x: mx + dir * (R + 4), y: my - R - 2, "text-anchor": dir > 0 ? "start" : "end" }, [r.inLabels.join(" + ")]));

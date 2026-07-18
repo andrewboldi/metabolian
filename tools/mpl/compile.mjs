@@ -62,13 +62,15 @@ export function parse(src) {
   const title = str(next());
   expect("{");
 
-  const ast = { id, title, grid: null, spacing: DEFAULT_SPACING, spine: null, branches: [], regulation: [] };
+  const ast = { id, title, grid: null, spacing: DEFAULT_SPACING, spine: null, cycle: null, cycleRadius: 340, branches: [], regulation: [] };
 
   while (peek() && peek() !== "}") {
     const kw = next();
     if (kw === "grid") ast.grid = next();
     else if (kw === "spacing") ast.spacing = Number(next());
     else if (kw === "spine") ast.spine = parseChain();
+    else if (kw === "cycle") { ast.cycle = parseChain(); ast.cycleRadius = ast.cycleRadius || 340; }
+    else if (kw === "radius") ast.cycleRadius = Number(next());
     else if (kw === "branch") {
       expect("from");
       const from = next();
@@ -123,6 +125,7 @@ export function parse(src) {
  * orthogonally. Returns the IR the renderer draws.
  */
 export function layout(ast) {
+  const spineOriginX = () => (ast.spine || ast.cycle || { at: { x: 0 } }).at.x;
   const nodes = [];      // metabolite cells
   const reactions = [];  // reaction steps (arrow + enzyme label + cofactors)
   const byMetabolite = new Map(); // metabolite id -> node (first placement wins)
@@ -146,7 +149,8 @@ export function layout(ast) {
   }
   function claim(node) { placed.push({ x: node.x, y: node.y, w: node.w, h: node.h }); return node; }
 
-  placeChain(ast.spine, ast.spine.at.x, ast.spine.at.y, "spine");
+  if (ast.cycle) placeCycle(ast.cycle, ast.cycle.at.x, ast.cycle.at.y, ast.cycleRadius);
+  if (ast.spine) placeChain(ast.spine, ast.spine.at.x, ast.spine.at.y, "spine");
 
   for (const b of ast.branches) {
     const anchor = byMetabolite.get(b.from);
@@ -170,10 +174,10 @@ export function layout(ast) {
 
   // Effectors that only appear as regulators (citrate, AMP, F2,6BP …) are not on
   // any chain, so give them their own gutter column to the left of the pathway.
-  const spineX = ast.spine.at.x;
+  const spineX = (ast.spine || ast.cycle).at.x;
   const branchLeft = ast.branches.some((b) => b.side === "left");
   const effDir = branchLeft ? 1 : -1;   // put effectors opposite the branches
-  let effectorY = ast.spine.at.y + ast.spacing;
+  let effectorY = (ast.spine || ast.cycle).at.y + ast.spacing;
   for (const r of ast.regulation) {
     if (byMetabolite.has(r.from)) continue;
     const x = freeX(spineX + effDir * COL_GAP, effectorY, effDir);
@@ -214,6 +218,35 @@ export function layout(ast) {
     nodes, reactions, regulation,
   };
 
+  /** Lay a cyclic pathway out as a ring, the way the poster draws the TCA. */
+  function placeCycle(chain, cx, cy, radius) {
+    const mets = chain.steps.filter((s) => s.kind === "metabolite");
+    const n = mets.length;
+    if (!n) return;
+    const ring = [];
+    mets.forEach((step, i) => {
+      const a = -Math.PI / 2 + (i * 2 * Math.PI) / n;   // start at 12 o'clock
+      const x = Math.round(cx + radius * Math.cos(a) - NODE_W / 2);
+      const y = Math.round(cy + radius * Math.sin(a) - NODE_H / 2);
+      let node = byMetabolite.get(step.id);
+      if (!node) {
+        node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x, y, lane: "cycle", w: NODE_W, h: NODE_H };
+        nodes.push(claim(node));
+        byMetabolite.set(step.id, node);
+      }
+      ring.push(node);
+    });
+    // reactions sit between consecutive ring members and CLOSE the ring
+    let ri = 0;
+    const rxns = chain.steps.filter((s) => s.kind === "reaction");
+    for (let i = 0; i < ring.length; i++) {
+      const step = rxns[ri++];
+      if (!step) break;
+      const from = ring[i], to = ring[(i + 1) % ring.length];
+      finishReaction(step, from, to, true);
+    }
+  }
+
   function placeChain(chain, x0, y0, lane) {
     let y = y0;
     let prevNode = null;
@@ -222,7 +255,7 @@ export function layout(ast) {
       if (step.kind === "metabolite") {
         let node = byMetabolite.get(step.id);
         if (!node) {
-          const dir = lane === "spine" ? 1 : (x0 < ast.spine.at.x ? -1 : 1);
+          const dir = lane === "spine" ? 1 : (x0 < spineOriginX() ? -1 : 1);
           const nx = lane === "spine" ? x0 : freeX(x0, y, dir);
           node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x: nx, y, lane, w: NODE_W, h: NODE_H };
           nodes.push(claim(node));
@@ -240,7 +273,26 @@ export function layout(ast) {
     }
   }
 
-  function finishReaction(step, from, to) {
+  function finishReaction(step, from, to, onRing = false) {
+    if (onRing) {
+      const fx = from.x + NODE_W / 2, fy = from.y + NODE_H / 2;
+      const tx2 = to.x + NODE_W / 2, ty2 = to.y + NODE_H / 2;
+      const dx = tx2 - fx, dy = ty2 - fy;
+      const len = Math.hypot(dx, dy) || 1;
+      const ux = dx / len, uy = dy / len;
+      const inset = NODE_H * 0.62;
+      reactions.push({
+        id: `${ast.id}__${step.enzyme}__${from.metabolite}__${to.metabolite}`,
+        kind: "flux", enzyme: step.enzyme, ec: step.ec, reversible: step.reversible,
+        committed: step.flags.includes("committed") || step.flags.includes("irreversible"),
+        from: from.id, to: to.id,
+        points: [[Math.round(fx + ux * inset), Math.round(fy + uy * inset)],
+                 [Math.round(tx2 - ux * inset), Math.round(ty2 - uy * inset)]],
+        in: step.in, out: step.out, flags: step.flags,
+        side: (reactions.length % 2 === 0) ? "right" : "left",
+      });
+      return;
+    }
     const x = from.x + NODE_W / 2;
     reactions.push({
       id: `${ast.id}__${step.enzyme}__${from.metabolite}__${to.metabolite}`,
