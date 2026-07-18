@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { buildStamp } from "./lib/stamp.mjs";
 import { forceSimulation, forceManyBody, forceLink, forceCenter, forceCollide } from "d3-force";
+import { checkReaction } from "./lib/balance.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -72,7 +73,14 @@ for (const mod of modules) {
   for (const e of mod.enzymes || []) local.enzyme[e.id] = upsertNode(enzKey(e), "enzyme", e.name, e, mod.id);
   for (const g of mod.genes || []) local.gene[g.id] = upsertNode(geneKey(g), "gene", g.symbol, g, mod.id);
   for (const c of mod.complexes || []) local.complex[c.id] = upsertNode(`cpx:${mod.id}:${c.id}`, "complex", c.name, c, mod.id);
-  for (const r of mod.reactions || []) local.reaction[r.id] = upsertNode(rxnKey(r, mod.id), "reaction", r.name || r.id, r, mod.id);
+  const metById = new Map((mod.metabolites || []).map((m) => [m.id, m]));
+  for (const r of mod.reactions || []) {
+    if (!r.transport && !r.spontaneous) {
+      const b = checkReaction(r, metById);
+      if (b.checkable) r.balanced = { mass: b.massOk, charge: b.chargeOk };
+    }
+    local.reaction[r.id] = upsertNode(rxnKey(r, mod.id), "reaction", r.name || r.id, r, mod.id);
+  }
 
   // pathway node (for crosstalk targets)
   upsertNode(`pathway:${mod.id}`, "pathway", mod.name, { id: mod.id, name: mod.name, category: mod.category }, mod.id);

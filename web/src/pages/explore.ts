@@ -212,6 +212,13 @@ function openDrawer(node: cytoscape.NodeSingular, _reg: ArrowRegistry) {
 function reactionDetail(p: Record<string, any>): HTMLElement[] {
   const out: HTMLElement[] = [];
   if (p.equation) out.push(el("div.reaction-eq", {}, [p.equation]));
+  if (p.balanced) {
+    const ok = p.balanced.mass && p.balanced.charge !== false;
+    out.push(el("span.chip", {
+      title: "Atoms and charge conserved across the reaction",
+      style: `align-self:flex-start;color:${ok ? "var(--edge-activate)" : "var(--edge-feedback)"};border-color:${ok ? "color-mix(in oklab,var(--edge-activate) 45%,transparent)" : "color-mix(in oklab,var(--edge-feedback) 45%,transparent)"}`,
+    }, [ok ? "✓ mass & charge balanced" : "⚠ balance check: review"]));
+  }
   const kv = el("dl.kv");
   const add = (k: string, v: string) => { kv.append(el("dt", {}, [k]), el("dd", {}, [v])); };
   if (p.reversibility) add("direction", p.reversibility);

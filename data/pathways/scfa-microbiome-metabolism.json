@@ -1,0 +1,2673 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "scfa-microbiome-metabolism",
+  "name": "Short-chain fatty acid production by gut microbiota",
+  "category": "microbiome-host",
+  "summary": "Anaerobic fermentation of dietary fibre by gut bacteria to acetate, propionate and butyrate, and the host pathways these short-chain fatty acids feed and signal to.",
+  "description": "Colonic bacteria ferment non-digestible carbohydrate to the short-chain fatty acids (SCFAs) acetate, propionate and butyrate in an approximate 60:20:20 molar ratio, reaching 50-130 mM in the proximal colon. Hexoses are catabolised by microbial glycolysis to phosphoenolpyruvate and pyruvate, the branch point for every SCFA route.\n\n**Acetate** is made from acetyl-CoA via phosphotransacetylase and acetate kinase (with substrate-level ATP), and additionally by hydrogenotrophic acetogens that run the reductive Wood-Ljungdahl pathway, consuming H2/CO2. **Butyrate** is built by condensing two acetyl-CoA and reducing the C4 chain (thiolase, 3-hydroxybutyryl-CoA dehydrogenase, crotonase, and the electron-bifurcating butyryl-CoA dehydrogenase/EtfAB complex), then released either by butyryl-CoA:acetate CoA-transferase (the dominant colonic route, coupling butyrate output to acetate uptake) or by phosphotransbutyrylase/butyrate kinase. **Propionate** is produced chiefly by the succinate (methylmalonyl-CoA) pathway of Bacteroidetes and some Firmicutes — a reductive-TCA branch to succinate followed by the B12-dependent methylmalonyl-CoA mutase and the mmdA decarboxylase — and, in a minority of taxa, by the acrylate pathway from lactate. A third, propanediol pathway (from deoxy-sugars such as fucose and rhamnose) also yields propionate but is not detailed here.\n\nSCFAs are largely absorbed by the host: butyrate fuels colonocyte beta-oxidation, propionate is gluconeogenic in the liver, and acetate is lipogenic. All three act as signals — agonising the free fatty acid receptors FFAR2/GPR43 and FFAR3/GPR41 and (butyrate) HCAR2/GPR109A, and butyrate additionally inhibits host class-I histone deacetylases — linking the microbiome to host metabolism, immunity and epigenetics.\n\nEnzymes are drawn from characterised representative fermenters (Clostridium acetobutylicum for the butyryl-CoA pathway, Roseburia hominis for the terminal CoA-transferase, Escherichia coli for the acetate and succinate-pathway steps, Anaerotignum/Clostridium propionicum for the acrylate pathway); gut Bacteroidetes and Firmicutes carry orthologues of each.",
+  "organisms": [
+    "gut microbiota",
+    "human"
+  ],
+  "tissues": [
+    "colon lumen",
+    "colonic epithelium",
+    "liver"
+  ],
+  "keywords": [
+    "short-chain fatty acids",
+    "SCFA",
+    "acetate",
+    "propionate",
+    "butyrate",
+    "gut microbiome",
+    "fermentation",
+    "dietary fibre",
+    "butyryl-CoA",
+    "methylmalonyl-CoA pathway",
+    "electron bifurcation",
+    "FFAR2",
+    "FFAR3",
+    "GPR109A",
+    "cross-feeding"
+  ],
+  "provenance": {
+    "curator": "metabolian research agent (scfa-microbiome-metabolism)",
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "KEGG",
+        "id": "map00650",
+        "url": "https://www.kegg.jp/pathway/map00650"
+      },
+      {
+        "db": "KEGG",
+        "id": "map00640",
+        "url": "https://www.kegg.jp/pathway/map00640"
+      },
+      {
+        "db": "KEGG",
+        "id": "map00720",
+        "url": "https://www.kegg.jp/pathway/map00720"
+      },
+      {
+        "db": "PubMed",
+        "id": "27928878"
+      },
+      {
+        "db": "PubMed",
+        "id": "24553467"
+      },
+      {
+        "db": "PubMed",
+        "id": "27259147"
+      },
+      {
+        "db": "PubMed",
+        "id": "19222573"
+      }
+    ],
+    "lastReviewed": "2026-07-18"
+  },
+  "references": [
+    {
+      "pmid": "27928878",
+      "title": "Formation of propionate and butyrate by the human colonic microbiota",
+      "year": 2017,
+      "doi": "10.1111/1462-2920.13589"
+    },
+    {
+      "pmid": "24553467",
+      "title": "Phylogenetic distribution of three pathways for propionate production within the human gut microbiota",
+      "year": 2014,
+      "doi": "10.1038/ismej.2014.14"
+    },
+    {
+      "pmid": "27259147",
+      "title": "From dietary fiber to host physiology: short-chain fatty acids as key bacterial metabolites",
+      "year": 2016,
+      "doi": "10.1016/j.cell.2016.05.041"
+    },
+    {
+      "pmid": "19222573",
+      "title": "Diversity, metabolism and microbial ecology of butyrate-producing bacteria from the human large intestine",
+      "year": 2009,
+      "doi": "10.1111/j.1574-6968.2009.01514.x"
+    },
+    {
+      "pmid": "22800682",
+      "title": "Energy conservation via electron bifurcating ferredoxin reduction and proton/Na+ translocating ferredoxin oxidation",
+      "year": 2013,
+      "doi": "10.1016/j.bbabio.2012.07.002"
+    },
+    {
+      "pmid": "16633129",
+      "title": "Colonic health: fermentation and short chain fatty acids",
+      "year": 2006
+    }
+  ],
+  "compartments": [
+    {
+      "id": "bact_cyto",
+      "name": "Bacterial cytoplasm",
+      "description": "Cytoplasm of anaerobic gut bacteria where fermentation and SCFA formation occur."
+    },
+    {
+      "id": "bact_mem",
+      "name": "Bacterial cytoplasmic membrane",
+      "description": "Site of menaquinol-linked fumarate reductase and ion-motive-force generation."
+    },
+    {
+      "id": "lumen",
+      "name": "Gut lumen",
+      "description": "Colonic lumen where SCFAs accumulate."
+    },
+    {
+      "id": "host_epi",
+      "name": "Host colonic epithelium",
+      "description": "Apical/basolateral membranes bearing SCFA-sensing GPCRs."
+    },
+    {
+      "id": "host_nuc",
+      "name": "Host colonocyte nucleus",
+      "description": "Site of histone-deacetylase activity modulated by butyrate."
+    }
+  ],
+  "metabolites": [
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "class": "alpha-keto acid",
+      "roles": [
+        "fuel",
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00022",
+        "chebi": "CHEBI:15361"
+      },
+      "description": "Central fermentation node produced by microbial glycolysis (EMP) of dietary-fibre–derived hexoses; branch point to acetate, butyrate, propionate and lactate."
+    },
+    {
+      "id": "pep",
+      "name": "Phosphoenolpyruvate",
+      "formula": "C3H5O6P",
+      "class": "enol phosphate",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00074",
+        "chebi": "CHEBI:18021"
+      },
+      "description": "High-energy glycolytic intermediate; carboxylated to oxaloacetate to launch the succinate pathway of propionate formation."
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H38N7O17P3S",
+      "class": "acyl-CoA thioester",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00024",
+        "chebi": "CHEBI:15351"
+      },
+      "description": "Two-carbon thioester; hub for acetate excretion and the condensation start of butyrate synthesis."
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A",
+      "formula": "C21H36N7O16P3S",
+      "class": "thiol cofactor",
+      "roles": [
+        "coenzyme"
+      ],
+      "xrefs": {
+        "kegg": "C00010",
+        "chebi": "CHEBI:15346"
+      }
+    },
+    {
+      "id": "acetyl_p",
+      "name": "Acetyl phosphate",
+      "formula": "C2H5O5P",
+      "class": "acyl phosphate",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00227",
+        "chebi": "CHEBI:15350"
+      },
+      "description": "High-energy acyl phosphate; substrate-level phosphorylation donor for acetate + ATP."
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "class": "short-chain fatty acid",
+      "roles": [
+        "fuel",
+        "signaling",
+        "waste"
+      ],
+      "xrefs": {
+        "kegg": "C00033",
+        "chebi": "CHEBI:30089"
+      },
+      "description": "Most abundant colonic SCFA (~60 mol%); FFAR2 agonist and systemic lipogenic/acetyl-CoA substrate."
+    },
+    {
+      "id": "acetoacetyl_coa",
+      "name": "Acetoacetyl-CoA",
+      "formula": "C25H40N7O18P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00332",
+        "chebi": "CHEBI:15345"
+      },
+      "description": "First C4 intermediate of the butyryl-CoA pathway, formed by head-to-tail condensation of two acetyl-CoA."
+    },
+    {
+      "id": "hydroxybutyryl_coa",
+      "name": "(S)-3-Hydroxybutanoyl-CoA",
+      "formula": "C25H42N7O18P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C01144",
+        "chebi": "CHEBI:15453"
+      }
+    },
+    {
+      "id": "crotonoyl_coa",
+      "name": "Crotonoyl-CoA",
+      "formula": "C25H40N7O17P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00877",
+        "chebi": "CHEBI:15473"
+      }
+    },
+    {
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "formula": "C25H42N7O17P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00136",
+        "chebi": "CHEBI:15517"
+      },
+      "description": "Immediate precursor of butyrate; source of the CoA/acetate transfer that dominates colonic butyrate release."
+    },
+    {
+      "id": "butyryl_p",
+      "name": "Butanoyl phosphate",
+      "formula": "C4H9O5P",
+      "class": "acyl phosphate",
+      "xrefs": {
+        "kegg": "C02527",
+        "chebi": "CHEBI:17260"
+      }
+    },
+    {
+      "id": "butyrate",
+      "name": "Butyrate",
+      "formula": "C4H7O2",
+      "charge": -1,
+      "class": "short-chain fatty acid",
+      "roles": [
+        "fuel",
+        "signaling"
+      ],
+      "xrefs": {
+        "kegg": "C00246",
+        "chebi": "CHEBI:17968"
+      },
+      "description": "Preferred energy substrate of colonocytes; FFAR3/HCAR2 agonist and class-I histone-deacetylase inhibitor."
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H4O5",
+      "class": "alpha-keto acid",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00036",
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "malate",
+      "name": "(S)-Malate",
+      "formula": "C4H6O5",
+      "class": "dicarboxylic acid",
+      "xrefs": {
+        "kegg": "C00149",
+        "chebi": "CHEBI:15589"
+      }
+    },
+    {
+      "id": "fumarate",
+      "name": "Fumarate",
+      "formula": "C4H4O4",
+      "class": "dicarboxylic acid",
+      "roles": [
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00122",
+        "chebi": "CHEBI:29806"
+      },
+      "description": "Terminal electron acceptor of anaerobic fumarate respiration in the succinate pathway."
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H6O4",
+      "class": "dicarboxylic acid",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00042",
+        "chebi": "CHEBI:15741"
+      },
+      "description": "Free intermediate of the succinate (methylmalonyl-CoA) propionate pathway; itself an excreted metabolite and host FFAR/SUCNR1 signal."
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H40N7O19P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00091",
+        "chebi": "CHEBI:15380"
+      }
+    },
+    {
+      "id": "r_methylmalonyl_coa",
+      "name": "(R)-Methylmalonyl-CoA",
+      "formula": "C25H40N7O19P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C01213",
+        "chebi": "CHEBI:15465"
+      }
+    },
+    {
+      "id": "s_methylmalonyl_coa",
+      "name": "(S)-Methylmalonyl-CoA",
+      "formula": "C25H40N7O19P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00683",
+        "chebi": "CHEBI:15466"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA (propanoyl-CoA)",
+      "formula": "C24H40N7O17P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00100",
+        "chebi": "CHEBI:15539"
+      },
+      "description": "Immediate precursor of propionate in all three propionate pathways."
+    },
+    {
+      "id": "propionate",
+      "name": "Propionate",
+      "formula": "C3H5O2",
+      "charge": -1,
+      "class": "short-chain fatty acid",
+      "roles": [
+        "fuel",
+        "signaling"
+      ],
+      "xrefs": {
+        "kegg": "C00163",
+        "chebi": "CHEBI:17272"
+      },
+      "description": "Gluconeogenic SCFA cleared largely by the liver; FFAR2/FFAR3 agonist that lowers hepatic lipogenesis and modulates satiety."
+    },
+    {
+      "id": "lactate",
+      "name": "(R)-Lactate (D-lactate)",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "class": "alpha-hydroxy acid",
+      "roles": [
+        "fuel"
+      ],
+      "xrefs": {
+        "kegg": "C00256",
+        "chebi": "CHEBI:16004"
+      },
+      "description": "Fermentation intermediate; substrate of the acrylate pathway and of cross-feeding lactate utilisers."
+    },
+    {
+      "id": "lactoyl_coa",
+      "name": "(R)-Lactoyl-CoA",
+      "formula": "C24H40N7O18P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00827",
+        "chebi": "CHEBI:15529"
+      }
+    },
+    {
+      "id": "acryloyl_coa",
+      "name": "Acryloyl-CoA (propenoyl-CoA)",
+      "formula": "C24H38N7O17P3S",
+      "class": "acyl-CoA thioester",
+      "xrefs": {
+        "kegg": "C00894",
+        "chebi": "CHEBI:15513"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00003",
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00004",
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "fd_ox",
+      "name": "Oxidized ferredoxin",
+      "class": "iron-sulfur electron carrier",
+      "roles": [
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00139",
+        "chebi": "CHEBI:17908"
+      },
+      "description": "Low-potential 1-electron carrier; reoxidation (via Rnf/Ech) couples fermentation to ion-motive-force generation."
+    },
+    {
+      "id": "fd_red",
+      "name": "Reduced ferredoxin",
+      "class": "iron-sulfur electron carrier",
+      "roles": [
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00138",
+        "chebi": "CHEBI:17513"
+      }
+    },
+    {
+      "id": "quinone",
+      "name": "Quinone (menaquinone pool)",
+      "class": "quinone",
+      "roles": [
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C15602",
+        "chebi": "CHEBI:16509"
+      },
+      "description": "Membrane quinone; in gut anaerobes this is the menaquinone pool that couples fumarate reduction to the respiratory chain."
+    },
+    {
+      "id": "quinol",
+      "name": "Quinol (menaquinol)",
+      "class": "quinol",
+      "roles": [
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C15603",
+        "chebi": "CHEBI:17594"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "roles": [
+        "coenzyme",
+        "fuel"
+      ],
+      "xrefs": {
+        "kegg": "C00002",
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "roles": [
+        "coenzyme"
+      ],
+      "xrefs": {
+        "kegg": "C00008",
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "kegg": "C00009",
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "roles": [
+        "waste"
+      ],
+      "xrefs": {
+        "kegg": "C00011",
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2",
+      "name": "Dihydrogen (H2)",
+      "formula": "H2",
+      "charge": 0,
+      "roles": [
+        "fuel",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00282",
+        "chebi": "CHEBI:18276"
+      },
+      "description": "Fermentation end product and interspecies electron shuttle; consumed by hydrogenotrophic acetogens and methanogens."
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "kegg": "C00001",
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "kegg": "C00080",
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "pfor",
+      "name": "Pyruvate:ferredoxin oxidoreductase",
+      "gene": "por",
+      "organism": "Desulfovibrio africanus",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P94692",
+        "alphafold": "P94692",
+        "ec": [
+          "1.2.7.1"
+        ],
+        "pdb": [
+          "1B0P"
+        ]
+      },
+      "ec": [
+        "1.2.7.1"
+      ],
+      "family": "2-oxoacid:ferredoxin oxidoreductase family",
+      "cofactors": [
+        "thiamine diphosphate",
+        "[4Fe-4S] clusters"
+      ],
+      "description": "Oxidatively decarboxylates pyruvate to acetyl-CoA, reducing ferredoxin; the structurally characterised reference PFOR. Gut Firmicutes/Bacteroidetes carry orthologues."
+    },
+    {
+      "id": "pta",
+      "name": "Phosphate acetyltransferase (phosphotransacetylase)",
+      "gene": "pta",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P0A9M8",
+        "alphafold": "P0A9M8",
+        "ec": [
+          "2.3.1.8"
+        ]
+      },
+      "ec": [
+        "2.3.1.8"
+      ]
+    },
+    {
+      "id": "acka",
+      "name": "Acetate kinase",
+      "gene": "ackA",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P0A6A3",
+        "alphafold": "P0A6A3",
+        "ec": [
+          "2.7.2.1"
+        ]
+      },
+      "ec": [
+        "2.7.2.1"
+      ],
+      "description": "Generates acetate + ATP by substrate-level phosphorylation from acetyl phosphate."
+    },
+    {
+      "id": "acs",
+      "name": "CO dehydrogenase / acetyl-CoA synthase (alpha subunit)",
+      "gene": "acsB",
+      "organism": "Moorella thermoacetica",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P27988",
+        "alphafold": "P27988",
+        "ec": [
+          "2.3.1.169"
+        ]
+      },
+      "ec": [
+        "2.3.1.169"
+      ],
+      "family": "Wood-Ljungdahl acetyl-CoA synthase",
+      "cofactors": [
+        "Ni-[4Fe-4S] A-cluster"
+      ],
+      "description": "Signature enzyme of reductive acetogenesis; assembles acetyl-CoA from a CODH-derived carbonyl and a methyl group. Gut acetogens (e.g. Blautia hydrogenotrophica) use the homologous complex."
+    },
+    {
+      "id": "thl",
+      "name": "Acetyl-CoA acetyltransferase (thiolase)",
+      "gene": "thlA",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P45359",
+        "alphafold": "P45359",
+        "ec": [
+          "2.3.1.9"
+        ]
+      },
+      "ec": [
+        "2.3.1.9"
+      ],
+      "family": "thiolase family",
+      "description": "Condenses two acetyl-CoA to acetoacetyl-CoA; committed step of butyrate synthesis."
+    },
+    {
+      "id": "hbd",
+      "name": "3-Hydroxybutyryl-CoA dehydrogenase (BHBD)",
+      "gene": "hbd",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52041",
+        "alphafold": "P52041",
+        "ec": [
+          "1.1.1.157"
+        ]
+      },
+      "ec": [
+        "1.1.1.157"
+      ],
+      "family": "3-hydroxyacyl-CoA dehydrogenase family",
+      "description": "NADH-dependent in vivo (reduces acetoacetyl-CoA)."
+    },
+    {
+      "id": "crt",
+      "name": "Crotonase (3-hydroxybutyryl-CoA dehydratase)",
+      "gene": "crt",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52046",
+        "alphafold": "P52046",
+        "ec": [
+          "4.2.1.150",
+          "4.2.1.55"
+        ]
+      },
+      "ec": [
+        "4.2.1.150",
+        "4.2.1.55"
+      ],
+      "family": "crotonase (enoyl-CoA hydratase) superfamily"
+    },
+    {
+      "id": "bcd",
+      "name": "Butyryl-CoA dehydrogenase",
+      "gene": "bcd",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52042",
+        "alphafold": "P52042",
+        "ec": [
+          "1.3.8.1"
+        ]
+      },
+      "ec": [
+        "1.3.8.1"
+      ],
+      "family": "acyl-CoA dehydrogenase family",
+      "cofactors": [
+        "FAD"
+      ],
+      "description": "Flavoenzyme that, with EtfAB, performs flavin-based electron bifurcation to reduce crotonyl-CoA and ferredoxin using NADH."
+    },
+    {
+      "id": "etfa",
+      "name": "Electron transfer flavoprotein, alpha subunit",
+      "gene": "etfA",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52039",
+        "alphafold": "P52039"
+      },
+      "family": "electron transfer flavoprotein family",
+      "cofactors": [
+        "FAD"
+      ]
+    },
+    {
+      "id": "etfb",
+      "name": "Electron transfer flavoprotein, beta subunit",
+      "gene": "etfB",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52040",
+        "alphafold": "P52040"
+      },
+      "family": "electron transfer flavoprotein family"
+    },
+    {
+      "id": "ptb",
+      "name": "Phosphate butyryltransferase (phosphotransbutyrylase)",
+      "gene": "ptb",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P58255",
+        "alphafold": "P58255",
+        "ec": [
+          "2.3.1.19"
+        ]
+      },
+      "ec": [
+        "2.3.1.19"
+      ]
+    },
+    {
+      "id": "buk",
+      "name": "Butyrate kinase",
+      "gene": "buk1",
+      "organism": "Clostridium acetobutylicum ATCC 824",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "Q45829",
+        "alphafold": "Q45829",
+        "ec": [
+          "2.7.2.7"
+        ]
+      },
+      "ec": [
+        "2.7.2.7"
+      ],
+      "description": "Generates butyrate + ATP; minority terminal route in the human colon."
+    },
+    {
+      "id": "but",
+      "name": "Butyryl-CoA:acetate CoA-transferase",
+      "gene": "but",
+      "organism": "Roseburia hominis A2-183",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "G2SYC0",
+        "alphafold": "G2SYC0",
+        "ec": [
+          "2.8.3.8"
+        ]
+      },
+      "ec": [
+        "2.8.3.8"
+      ],
+      "family": "CoA-transferase family III",
+      "description": "Dominant colonic butyrate-forming enzyme; transfers CoA from butyryl-CoA to acetate, coupling butyrate release to acetate cross-feeding."
+    },
+    {
+      "id": "pck",
+      "name": "Phosphoenolpyruvate carboxykinase (ATP)",
+      "gene": "pckA",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P22259",
+        "alphafold": "P22259",
+        "ec": [
+          "4.1.1.49"
+        ]
+      },
+      "ec": [
+        "4.1.1.49"
+      ],
+      "description": "In the succinate pathway operates in the carboxylating direction, fixing CO2 onto PEP to give oxaloacetate; nucleotide specificity is organism-dependent."
+    },
+    {
+      "id": "mdh",
+      "name": "Malate dehydrogenase",
+      "gene": "mdh",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P61889",
+        "alphafold": "P61889",
+        "ec": [
+          "1.1.1.37"
+        ]
+      },
+      "ec": [
+        "1.1.1.37"
+      ]
+    },
+    {
+      "id": "fum",
+      "name": "Fumarate hydratase, class I (anaerobic)",
+      "gene": "fumB",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P14407",
+        "alphafold": "P14407",
+        "ec": [
+          "4.2.1.2"
+        ]
+      },
+      "ec": [
+        "4.2.1.2"
+      ]
+    },
+    {
+      "id": "frd",
+      "name": "Fumarate reductase, flavoprotein subunit",
+      "gene": "frdA",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_mem",
+      "xrefs": {
+        "uniprot": "P00363",
+        "alphafold": "P00363",
+        "ec": [
+          "1.3.5.4",
+          "1.3.5.1"
+        ]
+      },
+      "ec": [
+        "1.3.5.4",
+        "1.3.5.1"
+      ],
+      "family": "succinate:quinone oxidoreductase family",
+      "cofactors": [
+        "FAD",
+        "[Fe-S] clusters"
+      ],
+      "description": "Menaquinol-dependent fumarate reductase; the energy-conserving reductive step that pulls flux toward succinate."
+    },
+    {
+      "id": "scpc",
+      "name": "Propionyl-CoA:succinate CoA-transferase",
+      "gene": "scpC",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52043",
+        "alphafold": "P52043",
+        "ec": [
+          "2.8.3.27"
+        ]
+      },
+      "ec": [
+        "2.8.3.27"
+      ],
+      "family": "CoA-transferase family",
+      "description": "Releases propionate while regenerating succinyl-CoA, closing the methylmalonyl-CoA cycle (gene ygfH/scpC)."
+    },
+    {
+      "id": "mcm",
+      "name": "Methylmalonyl-CoA mutase",
+      "gene": "scpA",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P27253",
+        "alphafold": "P27253",
+        "ec": [
+          "5.4.99.2"
+        ]
+      },
+      "ec": [
+        "5.4.99.2"
+      ],
+      "family": "B12-dependent isomerase (methylmalonyl-CoA mutase) family",
+      "cofactors": [
+        "adenosylcobalamin (vitamin B12)"
+      ],
+      "description": "Cobalamin radical isomerase interconverting succinyl-CoA and (R)-methylmalonyl-CoA; the B12 requirement links propionate output to microbial/host cobalamin status (gene sbm/scpA)."
+    },
+    {
+      "id": "mce",
+      "name": "Methylmalonyl-CoA epimerase",
+      "gene": "epi",
+      "organism": "Cereibacter sphaeroides (Rhodobacter sphaeroides)",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "Q3IZP4",
+        "alphafold": "Q3IZP4",
+        "ec": [
+          "5.1.99.1"
+        ]
+      },
+      "ec": [
+        "5.1.99.1"
+      ],
+      "family": "vicinal oxygen chelate (VOC) superfamily",
+      "description": "Epimerises (R)- to (S)-methylmalonyl-CoA; a characterised bacterial methylmalonyl-CoA epimerase (gut Bacteroidetes carry orthologues)."
+    },
+    {
+      "id": "mmd",
+      "name": "Methylmalonyl-CoA decarboxylase",
+      "gene": "scpB",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52045",
+        "alphafold": "P52045",
+        "ec": [
+          "4.1.1.-"
+        ]
+      },
+      "ec": [
+        "4.1.1.-"
+      ],
+      "description": "Decarboxylates (S)-methylmalonyl-CoA to propionyl-CoA (gene ygfG/scpB). The gut-propionate marker gene mmdA encodes the homologous, often Na+-translocating, methylmalonyl-CoA decarboxylase (EC 7.2.4.3)."
+    },
+    {
+      "id": "ldh",
+      "name": "D-Lactate dehydrogenase (fermentative)",
+      "gene": "ldhA",
+      "organism": "Escherichia coli K-12",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "P52643",
+        "alphafold": "P52643",
+        "ec": [
+          "1.1.1.28"
+        ]
+      },
+      "ec": [
+        "1.1.1.28"
+      ],
+      "description": "Reduces pyruvate to D-(R)-lactate, the entry substrate of the acrylate pathway."
+    },
+    {
+      "id": "pct",
+      "name": "Propionate CoA-transferase",
+      "gene": "pct",
+      "organism": "Anaerotignum propionicum (Clostridium propionicum)",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "ec": [
+          "2.8.3.1"
+        ]
+      },
+      "ec": [
+        "2.8.3.1"
+      ],
+      "family": "CoA-transferase family I",
+      "description": "Activates (R)-lactate to (R)-lactoyl-CoA using propionyl-CoA, releasing propionate. Structure identifier not asserted (UniProt accession not verified)."
+    },
+    {
+      "id": "lcd",
+      "name": "Lactoyl-CoA dehydratase, alpha subunit",
+      "gene": "lcdA",
+      "organism": "Anaerotignum propionicum (Clostridium propionicum)",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "G3KIM4",
+        "alphafold": "G3KIM4",
+        "ec": [
+          "4.2.1.54"
+        ]
+      },
+      "ec": [
+        "4.2.1.54"
+      ],
+      "family": "2-hydroxyacyl-CoA dehydratase family",
+      "cofactors": [
+        "[4Fe-4S] cluster",
+        "FMN"
+      ],
+      "description": "Radical (R)-lactyl-CoA dehydratase forming acryloyl-CoA."
+    },
+    {
+      "id": "lcdb",
+      "name": "Lactoyl-CoA dehydratase, beta subunit",
+      "gene": "lcdB",
+      "organism": "Anaerotignum propionicum (Clostridium propionicum)",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "G3KIM3",
+        "alphafold": "G3KIM3",
+        "ec": [
+          "4.2.1.54"
+        ]
+      },
+      "ec": [
+        "4.2.1.54"
+      ],
+      "family": "2-hydroxyacyl-CoA dehydratase family"
+    },
+    {
+      "id": "acr",
+      "name": "Acryloyl-CoA reductase (NADH)",
+      "gene": "acrC",
+      "organism": "Anaerotignum propionicum (Clostridium propionicum)",
+      "compartment": "bact_cyto",
+      "xrefs": {
+        "uniprot": "G3KIM8",
+        "alphafold": "G3KIM8",
+        "ec": [
+          "1.3.1.95"
+        ]
+      },
+      "ec": [
+        "1.3.1.95"
+      ],
+      "family": "acyl-CoA dehydrogenase family",
+      "cofactors": [
+        "FAD"
+      ],
+      "description": "Reduces acryloyl-CoA to propionyl-CoA; electron-bifurcating with its ETF in vivo."
+    },
+    {
+      "id": "ffar2",
+      "name": "Free fatty acid receptor 2 (GPR43)",
+      "gene": "FFAR2",
+      "organism": "Homo sapiens",
+      "compartment": "host_epi",
+      "xrefs": {
+        "uniprot": "O15552",
+        "alphafold": "O15552"
+      },
+      "family": "class A GPCR",
+      "description": "Host Gi/Gq receptor; acetate>propionate agonism drives GLP-1/PYY secretion, neutrophil chemotaxis and colonic Treg expansion."
+    },
+    {
+      "id": "ffar3",
+      "name": "Free fatty acid receptor 3 (GPR41)",
+      "gene": "FFAR3",
+      "organism": "Homo sapiens",
+      "compartment": "host_epi",
+      "xrefs": {
+        "uniprot": "O14843",
+        "alphafold": "O14843"
+      },
+      "family": "class A GPCR",
+      "description": "Host Gi receptor; propionate>butyrate agonism modulates gut hormone release, sympathetic tone and energy expenditure."
+    },
+    {
+      "id": "hcar2",
+      "name": "Hydroxycarboxylic acid receptor 2 (GPR109A)",
+      "gene": "HCAR2",
+      "organism": "Homo sapiens",
+      "compartment": "host_epi",
+      "xrefs": {
+        "uniprot": "Q8TDS4",
+        "alphafold": "Q8TDS4"
+      },
+      "family": "class A GPCR",
+      "description": "Host Gi receptor for butyrate (and beta-hydroxybutyrate/niacin); anti-inflammatory signalling in colon and immune cells."
+    },
+    {
+      "id": "hdac1",
+      "name": "Histone deacetylase 1",
+      "gene": "HDAC1",
+      "organism": "Homo sapiens",
+      "compartment": "host_nuc",
+      "xrefs": {
+        "uniprot": "Q13547",
+        "alphafold": "Q13547",
+        "ec": [
+          "3.5.1.98"
+        ]
+      },
+      "ec": [
+        "3.5.1.98"
+      ],
+      "family": "class I histone deacetylase family",
+      "cofactors": [
+        "Zn2+"
+      ],
+      "description": "Representative class-I HDAC inhibited by butyrate, linking microbial fermentation to host epigenetic (histone-acetylation) regulation."
+    }
+  ],
+  "complexes": [
+    {
+      "id": "bcd_etf",
+      "name": "Butyryl-CoA dehydrogenase/electron-transfer flavoprotein complex (Bcd-EtfAB)",
+      "subunits": [
+        {
+          "enzyme": "bcd",
+          "stoichiometry": 4
+        },
+        {
+          "enzyme": "etfa",
+          "stoichiometry": 1
+        },
+        {
+          "enzyme": "etfb",
+          "stoichiometry": 1
+        }
+      ],
+      "description": "Cytoplasmic flavin-based electron-bifurcating complex that couples exergonic crotonyl-CoA reduction to endergonic ferredoxin reduction, both driven by NADH.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "22800682"
+          },
+          {
+            "db": "PubMed",
+            "id": "19222573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lcd_cplx",
+      "name": "Lactoyl-CoA dehydratase (LcdAB)",
+      "subunits": [
+        {
+          "enzyme": "lcd",
+          "stoichiometry": 1
+        },
+        {
+          "enzyme": "lcdb",
+          "stoichiometry": 1
+        }
+      ],
+      "description": "Oxygen-sensitive radical dehydratase of the acrylate pathway (activator subunit LcdC omitted).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ]
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "rxn_pfor",
+      "name": "Oxidative decarboxylation of pyruvate to acetyl-CoA",
+      "equation": "Pyruvate + CoA + 2 oxidized ferredoxin -> Acetyl-CoA + CO2 + 2 reduced ferredoxin + 2 H+",
+      "substrates": [
+        {
+          "metabolite": "pyruvate"
+        },
+        {
+          "metabolite": "coa"
+        },
+        {
+          "metabolite": "fd_ox",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetyl_coa"
+        },
+        {
+          "metabolite": "co2"
+        },
+        {
+          "metabolite": "fd_red",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01196"
+          },
+          {
+            "db": "PubMed",
+            "id": "27928878"
+          }
+        ]
+      },
+      "ec": "1.2.7.1",
+      "catalysts": [
+        {
+          "enzyme": "pfor",
+          "role": "committed-step"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "coa",
+          "role": "acyl acceptor"
+        },
+        {
+          "metabolite": "fd_ox",
+          "role": "electron acceptor"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R01196"
+      }
+    },
+    {
+      "id": "rxn_pta",
+      "name": "Acetyl-CoA : phosphate acetyltransferase",
+      "equation": "Acetyl-CoA + Pi + 2 H+ <=> Acetyl phosphate + CoA",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa"
+        },
+        {
+          "metabolite": "pi"
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetyl_p"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00230"
+          },
+          {
+            "db": "PubMed",
+            "id": "27928878"
+          }
+        ]
+      },
+      "ec": "2.3.1.8",
+      "catalysts": [
+        {
+          "enzyme": "pta"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00230"
+      }
+    },
+    {
+      "id": "rxn_acka",
+      "name": "Acetate kinase (substrate-level phosphorylation)",
+      "equation": "Acetyl phosphate + ADP -> Acetate + ATP + 2 H+",
+      "substrates": [
+        {
+          "metabolite": "acetyl_p"
+        },
+        {
+          "metabolite": "adp"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate"
+        },
+        {
+          "metabolite": "atp"
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00315"
+          },
+          {
+            "db": "PubMed",
+            "id": "27928878"
+          }
+        ]
+      },
+      "ec": "2.7.2.1",
+      "catalysts": [
+        {
+          "enzyme": "acka"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00315"
+      }
+    },
+    {
+      "id": "rxn_acetogenesis",
+      "name": "Reductive acetogenesis (net Wood-Ljungdahl pathway)",
+      "equation": "2 CO2 + 4 H2 -> Acetate + H+ + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate"
+        },
+        {
+          "metabolite": "hplus"
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "direction-forward",
+      "pathwayStep": 4,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          },
+          {
+            "db": "PubMed",
+            "id": "16633129"
+          }
+        ],
+        "notes": "Net of the multi-step Wood-Ljungdahl (reductive acetogenesis) pathway; the CODH/ACS complex is the signature enzyme. Hydrogenotrophic acetogens (e.g. Blautia hydrogenotrophica) use H2 as reductant, providing a colonic H2 sink and extra acetate."
+      },
+      "catalysts": [
+        {
+          "enzyme": "acs",
+          "role": "catalyst"
+        }
+      ]
+    },
+    {
+      "id": "rxn_thl",
+      "name": "Thiolase: condensation of two acetyl-CoA",
+      "equation": "2 Acetyl-CoA <=> Acetoacetyl-CoA + CoA",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetyl_coa"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00238"
+          },
+          {
+            "db": "PubMed",
+            "id": "19222573"
+          }
+        ]
+      },
+      "ec": "2.3.1.9",
+      "catalysts": [
+        {
+          "enzyme": "thl",
+          "role": "committed-step"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00238"
+      },
+      "rateLimiting": true
+    },
+    {
+      "id": "rxn_hbd",
+      "name": "3-Hydroxybutyryl-CoA dehydrogenase",
+      "equation": "Acetoacetyl-CoA + NADH + H+ -> (S)-3-Hydroxybutanoyl-CoA + NAD+",
+      "substrates": [
+        {
+          "metabolite": "acetoacetyl_coa"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxybutyryl_coa"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01975"
+          },
+          {
+            "db": "PubMed",
+            "id": "19222573"
+          }
+        ],
+        "notes": "Enzyme (BHBD, EC 1.1.1.157) is NADH-dependent in vivo; KEGG R01975 captures the NAD-linked mass transformation (KEGG classes that reaction under EC 1.1.1.35)."
+      },
+      "ec": "1.1.1.157",
+      "catalysts": [
+        {
+          "enzyme": "hbd"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nadh",
+          "role": "electron donor"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R01975"
+      }
+    },
+    {
+      "id": "rxn_crt",
+      "name": "Crotonase (dehydration)",
+      "equation": "(S)-3-Hydroxybutanoyl-CoA <=> Crotonoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "hydroxybutyryl_coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "crotonoyl_coa"
+        },
+        {
+          "metabolite": "h2o"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R03026"
+          },
+          {
+            "db": "PubMed",
+            "id": "19222573"
+          }
+        ]
+      },
+      "ec": "4.2.1.150",
+      "catalysts": [
+        {
+          "enzyme": "crt"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R03026"
+      }
+    },
+    {
+      "id": "rxn_bcd",
+      "name": "Butyryl-CoA dehydrogenase (electron-bifurcating, Bcd-EtfAB)",
+      "equation": "Crotonoyl-CoA + 2 NADH + 2 oxidized ferredoxin -> Butyryl-CoA + 2 NAD+ + 2 reduced ferredoxin",
+      "substrates": [
+        {
+          "metabolite": "crotonoyl_coa"
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fd_ox",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyryl_coa"
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fd_red",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 8,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01175"
+          },
+          {
+            "db": "PubMed",
+            "id": "22800682"
+          }
+        ],
+        "notes": "Physiological flavin-based electron bifurcation: one NADH reduces crotonyl-CoA, the second reduces low-potential ferredoxin (Buckel & Thauer). KEGG R01175 lists the simplified FAD-coupled half-reaction (EC 1.3.8.1)."
+      },
+      "ec": "1.3.8.1",
+      "catalysts": [
+        {
+          "enzyme": "bcd_etf",
+          "role": "rate-limiting"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nadh",
+          "role": "electron donor"
+        },
+        {
+          "metabolite": "fd_ox",
+          "role": "bifurcation electron acceptor"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R01175"
+      },
+      "rateLimiting": true
+    },
+    {
+      "id": "rxn_but",
+      "name": "Butyryl-CoA:acetate CoA-transferase",
+      "equation": "Butyryl-CoA + Acetate -> Butyrate + Acetyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "butyryl_coa"
+        },
+        {
+          "metabolite": "acetate"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyrate"
+        },
+        {
+          "metabolite": "acetyl_coa"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01179"
+          },
+          {
+            "db": "PubMed",
+            "id": "27928878"
+          }
+        ],
+        "notes": "Dominant colonic butyrate-forming route; consumes exogenous acetate, so butyrate output is coupled to acetate cross-feeding."
+      },
+      "ec": "2.8.3.8",
+      "catalysts": [
+        {
+          "enzyme": "but"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R01179"
+      }
+    },
+    {
+      "id": "rxn_ptb",
+      "name": "Phosphate butyryltransferase",
+      "equation": "Butyryl-CoA + Pi + 2 H+ <=> Butanoyl phosphate + CoA",
+      "substrates": [
+        {
+          "metabolite": "butyryl_coa"
+        },
+        {
+          "metabolite": "pi"
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyryl_p"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01174"
+          },
+          {
+            "db": "PubMed",
+            "id": "19222573"
+          }
+        ]
+      },
+      "ec": "2.3.1.19",
+      "catalysts": [
+        {
+          "enzyme": "ptb"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R01174"
+      }
+    },
+    {
+      "id": "rxn_buk",
+      "name": "Butyrate kinase (substrate-level phosphorylation)",
+      "equation": "Butanoyl phosphate + ADP -> Butyrate + ATP + 2 H+",
+      "substrates": [
+        {
+          "metabolite": "butyryl_p"
+        },
+        {
+          "metabolite": "adp"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyrate"
+        },
+        {
+          "metabolite": "atp"
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01688"
+          },
+          {
+            "db": "PubMed",
+            "id": "19222573"
+          }
+        ],
+        "notes": "Alternative (buk) terminal route; less prevalent than butyryl-CoA:acetate CoA-transferase in the human colon."
+      },
+      "ec": "2.7.2.7",
+      "catalysts": [
+        {
+          "enzyme": "buk"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R01688"
+      }
+    },
+    {
+      "id": "rxn_pck",
+      "name": "Phosphoenolpyruvate carboxykinase (carboxylating direction)",
+      "equation": "Phosphoenolpyruvate + CO2 + ADP <=> Oxaloacetate + ATP + H+",
+      "substrates": [
+        {
+          "metabolite": "pep"
+        },
+        {
+          "metabolite": "co2"
+        },
+        {
+          "metabolite": "adp"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate"
+        },
+        {
+          "metabolite": "atp"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00341"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ],
+        "notes": "OAA-forming CO2 fixation that launches the succinate pathway; direction and nucleotide (ATP vs GTP) are organism-dependent."
+      },
+      "ec": "4.1.1.49",
+      "catalysts": [
+        {
+          "enzyme": "pck"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00341"
+      }
+    },
+    {
+      "id": "rxn_mdh",
+      "name": "Malate dehydrogenase (reductive)",
+      "equation": "Oxaloacetate + NADH + H+ -> (S)-Malate + NAD+",
+      "substrates": [
+        {
+          "metabolite": "oxaloacetate"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malate"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00342"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ]
+      },
+      "ec": "1.1.1.37",
+      "catalysts": [
+        {
+          "enzyme": "mdh"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nadh",
+          "role": "electron donor"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00342"
+      }
+    },
+    {
+      "id": "rxn_fum",
+      "name": "Fumarase (dehydration of malate)",
+      "equation": "(S)-Malate <=> Fumarate + H2O",
+      "substrates": [
+        {
+          "metabolite": "malate"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fumarate"
+        },
+        {
+          "metabolite": "h2o"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01082"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ]
+      },
+      "ec": "4.2.1.2",
+      "catalysts": [
+        {
+          "enzyme": "fum"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R01082"
+      }
+    },
+    {
+      "id": "rxn_frd",
+      "name": "Fumarate reductase (menaquinol-dependent)",
+      "equation": "Fumarate + Quinol -> Succinate + Quinone",
+      "substrates": [
+        {
+          "metabolite": "fumarate"
+        },
+        {
+          "metabolite": "quinol"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "succinate"
+        },
+        {
+          "metabolite": "quinone"
+        }
+      ],
+      "reversibility": "direction-forward",
+      "pathwayStep": 15,
+      "compartment": "bact_mem",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R02164"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ],
+        "notes": "Anaerobic fumarate respiration; the energy-conserving reductive step. KEGG R02164 is written with a generic quinone (EC 1.3.5.1); in gut anaerobes the carrier is menaquinone and the enzyme runs as fumarate reductase (EC 1.3.5.4)."
+      },
+      "ec": "1.3.5.4",
+      "catalysts": [
+        {
+          "enzyme": "frd"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "quinol",
+          "role": "electron donor"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R02164"
+      }
+    },
+    {
+      "id": "rxn_scpc",
+      "name": "Propionyl-CoA:succinate CoA-transferase (propionate release)",
+      "equation": "Propionyl-CoA + Succinate -> Succinyl-CoA + Propionate + H+",
+      "substrates": [
+        {
+          "metabolite": "propionyl_coa"
+        },
+        {
+          "metabolite": "succinate"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "succinyl_coa"
+        },
+        {
+          "metabolite": "propionate"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 16,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R11773"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ],
+        "notes": "Liberates propionate while charging succinate to succinyl-CoA, so the CoA carrier cycles within the pathway."
+      },
+      "ec": "2.8.3.27",
+      "catalysts": [
+        {
+          "enzyme": "scpc"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R11773"
+      }
+    },
+    {
+      "id": "rxn_mcm",
+      "name": "Methylmalonyl-CoA mutase (B12-dependent)",
+      "equation": "Succinyl-CoA <=> (R)-Methylmalonyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_methylmalonyl_coa"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00833"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ],
+        "notes": "Adenosylcobalamin radical rearrangement; entry to the methylmalonyl-CoA branch and a cobalamin-dependent control point."
+      },
+      "ec": "5.4.99.2",
+      "catalysts": [
+        {
+          "enzyme": "mcm",
+          "role": "committed-step"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00833"
+      }
+    },
+    {
+      "id": "rxn_mce",
+      "name": "Methylmalonyl-CoA epimerase",
+      "equation": "(R)-Methylmalonyl-CoA <=> (S)-Methylmalonyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "r_methylmalonyl_coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_methylmalonyl_coa"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 18,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R02765"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ]
+      },
+      "ec": "5.1.99.1",
+      "catalysts": [
+        {
+          "enzyme": "mce"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R02765"
+      }
+    },
+    {
+      "id": "rxn_mmd",
+      "name": "Methylmalonyl-CoA decarboxylase (mmdA marker)",
+      "equation": "(S)-Methylmalonyl-CoA -> Propionyl-CoA + CO2",
+      "substrates": [
+        {
+          "metabolite": "s_methylmalonyl_coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa"
+        },
+        {
+          "metabolite": "co2"
+        }
+      ],
+      "reversibility": "direction-forward",
+      "pathwayStep": 19,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00923"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ],
+        "notes": "Decarboxylation to propionyl-CoA; the alpha subunit gene mmdA is the diagnostic marker for the succinate-pathway propionate producers of the human gut (often Na+-translocating, EC 7.2.4.3)."
+      },
+      "ec": "4.1.1.-",
+      "catalysts": [
+        {
+          "enzyme": "mmd",
+          "role": "rate-limiting"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00923"
+      },
+      "rateLimiting": true
+    },
+    {
+      "id": "rxn_ldh",
+      "name": "D-Lactate dehydrogenase",
+      "equation": "Pyruvate + NADH + H+ -> (R)-Lactate + NAD+",
+      "substrates": [
+        {
+          "metabolite": "pyruvate"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lactate"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 20,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R00704"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ]
+      },
+      "ec": "1.1.1.28",
+      "catalysts": [
+        {
+          "enzyme": "ldh"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nadh",
+          "role": "electron donor"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R00704"
+      }
+    },
+    {
+      "id": "rxn_pct",
+      "name": "Propionate CoA-transferase (lactate activation / propionate release)",
+      "equation": "(R)-Lactate + Propionyl-CoA -> (R)-Lactoyl-CoA + Propionate",
+      "substrates": [
+        {
+          "metabolite": "lactate"
+        },
+        {
+          "metabolite": "propionyl_coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lactoyl_coa"
+        },
+        {
+          "metabolite": "propionate"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 21,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          },
+          {
+            "db": "PubMed",
+            "id": "27928878"
+          }
+        ],
+        "notes": "CoA-transfer that activates (R)-lactate and releases propionate, cycling the CoA carrier in the acrylate pathway (e.g. Megasphaera elsdenii, Coprococcus catus)."
+      },
+      "ec": "2.8.3.1",
+      "catalysts": [
+        {
+          "enzyme": "pct"
+        }
+      ]
+    },
+    {
+      "id": "rxn_lcd",
+      "name": "Lactoyl-CoA dehydratase",
+      "equation": "(R)-Lactoyl-CoA <=> Acryloyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "lactoyl_coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acryloyl_coa"
+        },
+        {
+          "metabolite": "h2o"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 22,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R02963"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ]
+      },
+      "ec": "4.2.1.54",
+      "catalysts": [
+        {
+          "enzyme": "lcd_cplx"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R02963"
+      }
+    },
+    {
+      "id": "rxn_acr",
+      "name": "Acryloyl-CoA reductase",
+      "equation": "Acryloyl-CoA + NADH + H+ -> Propionyl-CoA + NAD+",
+      "substrates": [
+        {
+          "metabolite": "acryloyl_coa"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "reversibility": "direction-forward",
+      "pathwayStep": 23,
+      "compartment": "bact_cyto",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R10161"
+          },
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ],
+        "notes": "Reduces acryloyl-CoA to propionyl-CoA; electron-bifurcating with its ETF partner in Anaerotignum (Clostridium) propionicum."
+      },
+      "ec": "1.3.1.95",
+      "catalysts": [
+        {
+          "enzyme": "acr"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nadh",
+          "role": "electron donor"
+        }
+      ],
+      "xrefs": {
+        "kegg": "R10161"
+      }
+    }
+  ],
+  "regulations": [
+    {
+      "id": "reg_acetate_ffar2",
+      "type": "hormonal-signal",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "acetate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "ffar2"
+      },
+      "effect": "signal",
+      "mechanism": "Acetate (and propionate) agonise FFAR2/GPR43 on enteroendocrine, immune and adipose cells, stimulating GLP-1/PYY release and colonic regulatory-T-cell expansion.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_propionate_ffar2",
+      "type": "hormonal-signal",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "ffar2"
+      },
+      "effect": "signal",
+      "mechanism": "Propionate is a potent FFAR2 agonist; signalling suppresses hepatic lipogenesis and promotes satiety.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_propionate_ffar3",
+      "type": "hormonal-signal",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "ffar3"
+      },
+      "effect": "signal",
+      "mechanism": "Propionate (and butyrate) activate FFAR3/GPR41, modulating gut-hormone secretion, sympathetic tone and energy expenditure.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_butyrate_ffar3",
+      "type": "hormonal-signal",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "butyrate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "ffar3"
+      },
+      "effect": "signal",
+      "mechanism": "Butyrate agonism of FFAR3 contributes to intestinal gluconeogenesis induction and neural signalling.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_butyrate_hcar2",
+      "type": "hormonal-signal",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "butyrate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hcar2"
+      },
+      "effect": "signal",
+      "mechanism": "Butyrate is the physiological ligand of HCAR2/GPR109A on colonic epithelium and immune cells, driving anti-inflammatory (IL-10, Treg) programmes.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_butyrate_hdac1",
+      "type": "inhibition",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "butyrate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hdac1"
+      },
+      "effect": "negative",
+      "mechanism": "Butyrate inhibits class-I histone deacetylases in host cells, increasing histone acetylation and reprogramming transcription (differentiation, apoptosis, anti-inflammatory genes).",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_scfa_glycolysis",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycolysis"
+      },
+      "note": "Microbial glycolysis (Embden-Meyerhof-Parnas) of dietary-fibre–derived hexoses supplies the pyruvate/PEP that feeds all three SCFA branches.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27928878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_acetate_fas",
+      "type": "microbiome-host",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acid-synthesis"
+      },
+      "note": "Absorbed acetate is activated to acetyl-CoA and used for de novo lipogenesis and cholesterol synthesis in host liver and adipose tissue.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_acetate_tca",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citric-acid-cycle"
+      },
+      "note": "Acetate-derived acetyl-CoA is oxidised in the host TCA cycle.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_butyrate_box",
+      "type": "microbiome-host",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acid-beta-oxidation"
+      },
+      "note": "Colonocytes take up butyrate and derive ~60-70% of their energy from its mitochondrial beta-oxidation, sparing luminal oxygen and reinforcing gut anaerobiosis.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_butyrate_ketone",
+      "type": "microbiome-host",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ketone-body-metabolism"
+      },
+      "note": "Butyrate oxidation in colonocytes feeds acetoacetyl-CoA/ketogenesis, and butyrate itself is a beta-hydroxybutyrate mimic at HCAR2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_propionate_gng",
+      "type": "microbiome-host",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gluconeogenesis"
+      },
+      "note": "Portal propionate is a gluconeogenic substrate in host liver and intestine (via propionyl-CoA -> methylmalonyl-CoA -> succinyl-CoA -> OAA).",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "27259147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rel_succinate_tca",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "succinyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citric-acid-cycle"
+      },
+      "note": "The succinate propionate pathway runs the reductive TCA branch (OAA-malate-fumarate-succinate-succinyl-CoA), sharing intermediates with the host citric-acid cycle.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "24553467"
+          }
+        ]
+      }
+    }
+  ]
+}
