@@ -132,6 +132,9 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
   const enzymeLabels: { name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number; chars: number }[] = [];
+  // cofactor labels are fixed to their arc geometry, so they act as obstacles
+  // that enzyme names must route around rather than being moved themselves
+  const cofactorBoxes: { x: number; y: number; w: number; h: number }[] = [];
   const nodeEls = new Map<string, SVGGElement>();
   const edgeEls: { el: SVGElement; rxn: ChartRxn }[] = [];
 
@@ -168,7 +171,13 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       enzymeLabels.push({ name, ec: ecEl, mx, my, chars: shownName.length });
       // cofactors enter/leave on a curved side-entry, Michal-style
       const elen = r.points.reduce((acc, p, i) => i ? acc + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0, 0);
-      g.append(cofactorSide(r, mx, my, -dir, elen));
+      const cof = cofactorSide(r, mx, my, -dir, elen);
+      g.append(cof);
+      for (const t of Array.from(cof.querySelectorAll("text"))) {
+        const lx = Number(t.getAttribute("x")), ly = Number(t.getAttribute("y"));
+        const w = (t.textContent || "").length * 4.5;
+        cofactorBoxes.push({ x: t.getAttribute("text-anchor") === "end" ? lx - w : lx, y: ly - 9, w, h: 11 });
+      }
     }
     layerFlux.append(g);
   }
@@ -195,8 +204,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     const isProtein = (n as ChartNode & { isProtein?: boolean }).isProtein;
     if (isProtein) {
       g.append(s("rect", { class: "enz-box", x: 0, y: 18, width: n.w, height: 40, rx: 8 }));
-    } else if ((n as ChartNode & { hub?: boolean }).hub || !n.mol) {
-      g.append(s("rect", { class: `met-box${n.mol ? "" : " name-only"}`, x: 0, y: 0, width: n.w, height: n.h }));
+    } else if ((n as ChartNode & { hub?: boolean }).hub) {
+      g.append(s("rect", { class: "met-box", x: 0, y: 0, width: n.w, height: n.h }));
+    } else if (!n.mol) {
+      // no structure to draw — this box exists only to hold the name, so it must
+      // appear and vanish WITH the name instead of leaving a hollow rectangle
+      g.append(s("rect", { class: "met-box name-only lod-normal", x: 0, y: 0, width: n.w, height: n.h }));
     }
     const name = n.label.toUpperCase();
     const lines: string[] = [];
@@ -224,7 +237,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   (function placeEnzymeLabels() {
     const FONT = 10, EC_H = 11;
     const cells = ir.nodes.map((n) => ({ x: n.x - 4, y: n.y - 4, w: n.w + 8, h: n.h + 8 }));
-    const taken: { x: number; y: number; w: number; h: number }[] = [];
+    const taken: { x: number; y: number; w: number; h: number }[] = [...cofactorBoxes];
     const hit = (b: { x: number; y: number; w: number; h: number }, list: typeof taken) =>
       list.some((o) => !(b.x + b.w <= o.x || o.x + o.w <= b.x || b.y + b.h <= o.y || o.y + o.h <= b.y));
 

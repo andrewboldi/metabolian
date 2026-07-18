@@ -49,7 +49,15 @@ async function resolve(m) {
   }
 
   // 3) by name, trying a couple of light normalizations
-  const variants = [m.name, m.name.replace(/\s*\(.*?\)\s*/g, " ").trim(), (m.synonyms || [])[0]].filter(Boolean);
+  // Names are often "Formal name (common synonym)" — try the bare name, the
+  // parenthetical synonym on its own, and any declared synonyms.
+  const paren = [...m.name.matchAll(/\(([^)]+)\)/g)].map((x) => x[1].trim());
+  const variants = [
+    m.name,
+    m.name.replace(/\s*\(.*?\)\s*/g, " ").trim(),
+    ...paren,
+    ...(m.synonyms || []),
+  ].filter(Boolean).filter((v, i, a) => v.length > 2 && a.indexOf(v) === i);
   for (const v of variants) {
     const j = await pubchem(`compound/name/${encodeURIComponent(v)}/${props}`);
     const s = pickSmiles(j);
@@ -68,7 +76,8 @@ for (const f of readdirSync(DATA).filter((f) => f.endsWith(".json"))) {
   }
 }
 
-const todo = [...metabolites.entries()].filter(([k]) => !cache[k] || (!cache[k].smiles && !cache[k].unresolved));
+const RETRY = process.env.RETRY_UNRESOLVED === "1";
+const todo = [...metabolites.entries()].filter(([k]) => !cache[k] || (!cache[k].smiles && (RETRY || !cache[k].unresolved)));
 console.log(`${metabolites.size} unique metabolites; ${todo.length} to resolve; ${Object.keys(cache).length} cached.`);
 
 let ok = 0, fail = 0, n = 0;
