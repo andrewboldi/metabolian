@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { compile } from "./mpl/compile.mjs";
 import { metKey } from "./lib/metkey.mjs";
+import { condensedRows } from "./lib/condensed.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -36,7 +37,17 @@ const SMILES = existsSync(join(ROOT, "data", "smiles.json"))
  * one. A uniform cell wastes most of the sheet on small metabolites, which is
  * where the density gap against the poster comes from.
  */
+/** Michal's condensed column, where the molecule can be rendered that way faithfully. */
+function condensedFor(smiles) {
+  try { return condensedRows(smiles); } catch { return null; }
+}
+
 function cellSize(smiles) {
+  const cond = condensedFor(smiles);
+  if (cond) {
+    const wide = Math.max(...cond.rows.map((r) => r.length));
+    return { w: Math.max(76, wide * 7.2 + 20), h: cond.rows.length * 13 + 26, condensed: cond.rows };
+  }
   if (!smiles) return { w: 108, h: 46 };            // name-only box
   const heavy = (smiles.match(/(Cl|Br|[BCNOPSFI])/gi) || []).length;
   if (heavy <= 6) return { w: 92, h: 60 };
@@ -106,7 +117,10 @@ for (const f of mplFiles) {
       n.gene = pe?.gene || null;
       n.uniprot = pe?.xrefs?.uniprot || null;
     }
-    n.mol = mol ? mol.file : null;
+    const sm = m ? SMILES[metKey(m)]?.smiles : null;
+    const cond = sm ? condensedFor(sm) : null;
+    n.condensed = cond ? cond.rows : null;
+    n.mol = cond ? null : (mol ? mol.file : null);   // a condensed column replaces the drawing
     n.molSize = mol ? { w: mol.w, h: mol.h } : null;
   }
 

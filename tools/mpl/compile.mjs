@@ -429,7 +429,10 @@ export function layout(ast, sizes = {}) {
       : ast.wrap ? ast.wrap
       : metCount > 6 ? Math.max(3, Math.round(Math.sqrt((metCount * COL_GAP) / ast.spacing)))
       : Infinity;
+    const ROW_GAP = 52;          // room for the arrow, enzyme name and cofactor arcs
+    const COL_PAD = 58;
     let placedInCol = 0, col = 0;
+    let colX = x0, colMaxW = 0;
     let y = y0;
     let prevNode = null;
     let pendingReaction = null;
@@ -437,14 +440,16 @@ export function layout(ast, sizes = {}) {
       if (step.kind === "metabolite") {
         if (placedInCol >= rows) {          // wrap to the next column, reversing flow
           col++; placedInCol = 0;
-          y = col % 2 === 0 ? y0 : y0 + (rows - 1) * ast.spacing;
+          colX += colMaxW + COL_PAD;
+          colMaxW = 0;
+          y = col % 2 === 0 ? y0 : y0 + (rows - 1) * (NODE_H + ROW_GAP);
         }
         let node = byMetabolite.get(step.id);
-        const colX = x0 + col * COL_GAP;
         if (!node) {
           const dir = lane === "spine" ? 1 : (x0 < spineOriginX() ? -1 : 1);
           const sz0 = sizeOf(step.id);
           const nx = lane === "spine" ? colX : freeX(colX, y, dir, sz0.w, sz0.h);
+          colMaxW = Math.max(colMaxW, sz0.w);
           const sz = sizeOf(step.id);
           node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x: nx, y, lane, w: sz.w, h: sz.h };
           nodes.push(claim(node));
@@ -456,7 +461,9 @@ export function layout(ast, sizes = {}) {
         }
         prevNode = node;
         placedInCol++;
-        y += (col % 2 === 0 ? 1 : -1) * ast.spacing;
+        // advance by THIS cell's height so a small metabolite does not reserve a
+        // large metabolite's worth of paper
+        y += (col % 2 === 0 ? 1 : -1) * (node.h + ROW_GAP);
       } else {
         pendingReaction = step;
       }

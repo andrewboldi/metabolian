@@ -236,6 +236,13 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       x: n.w / 2, y: (isProtein ? 34 : 12) + i * 11,
     }, [ln])));
     const top = 12 + shown.length * 11;
+    // Michal's condensed column: stacked atom rows instead of a skeletal drawing
+    const cond = (n as ChartNode & { condensed?: string[] }).condensed;
+    if (cond?.length) {
+      cond.forEach((row, i) => g.append(s("text", {
+        class: "cond-row", x: n.w / 2, y: top + 12 + i * 13,
+      }, [row])));
+    }
     if (n.formula) g.append(s("text", { class: "met-formula lod-detail", x: n.w / 2, y: n.h - 4 }, [n.formula]));
     g.setAttribute("data-structure-top", String(top));
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });

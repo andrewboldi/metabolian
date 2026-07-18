@@ -7,6 +7,7 @@
 pathway cholesterol-biosynthesis "Cholesterol biosynthesis (mevalonate pathway)" {
   grid C4
   spacing 152
+  wrap 7   # keeps the DHCR24 branch clear of the HMG-CoA corridor
 
   spine at 0,0 {
     acetyl_coa
