@@ -12,6 +12,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { buildStamp } from "./lib/stamp.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -121,7 +122,7 @@ const stats = {
 const edgeTypeCounts = {};
 for (const e of edgeList) edgeTypeCounts[e.type] = (edgeTypeCounts[e.type] || 0) + 1;
 
-const master = { version: "1.0.0", generated: BUILD_STAMP(), pathways: pathwaySummaries, nodes: nodeList, edges: edgeList, stats, edgeTypeCounts };
+const master = { version: "1.0.0", generated: buildStamp(), pathways: pathwaySummaries, nodes: nodeList, edges: edgeList, stats, edgeTypeCounts };
 
 // glossary: metabolites + enzymes with descriptions
 const glossary = nodeList
@@ -157,12 +158,6 @@ for (const mod of modules) {
   const subNodes = nodeList.filter((n) => keep.has(n.id));
   const subEdges = edgeList.filter((e) => e.pathway === mod.id);
   writeFileSync(join(OUT_DIR, "pathways", `${mod.id}.json`), JSON.stringify({ id: mod.id, name: mod.name, nodes: subNodes, edges: subEdges }));
-}
-
-function BUILD_STAMP() {
-  // Deterministic-ish: use SOURCE_DATE_EPOCH if provided, else file-agnostic label.
-  const epoch = process.env.SOURCE_DATE_EPOCH;
-  return epoch ? new Date(Number(epoch) * 1000).toISOString() : "build";
 }
 
 console.log(`Built master graph: ${stats.pathways} pathways, ${stats.nodes} nodes, ${stats.edges} edges.`);
