@@ -159,8 +159,12 @@ for (const f of mplFiles) {
   for (const g of ir.regulation || []) {
     for (let i = 1; i < g.points.length; i++) {
       const [p, q] = [g.points[i - 1], g.points[i]];
-      const lo = { x: Math.min(p[0], q[0]) + 6, y: Math.min(p[1], q[1]) + 6 };
-      const hi = { x: Math.max(p[0], q[0]) - 6, y: Math.max(p[1], q[1]) - 6 };
+      // Shrink ONLY along the segment's long axis. Insetting both axes made every
+      // axis-aligned segment degenerate (hi < lo) so the check silently skipped
+      // every horizontal and vertical regulation line.
+      const lo = { x: Math.min(p[0], q[0]), y: Math.min(p[1], q[1]) };
+      const hi = { x: Math.max(p[0], q[0]), y: Math.max(p[1], q[1]) };
+      if (hi.x - lo.x >= hi.y - lo.y) { lo.x += 6; hi.x -= 6; } else { lo.y += 6; hi.y -= 6; }
       if (hi.x < lo.x || hi.y < lo.y) continue;
       const blocker = ir.nodes.find((n) => n.metabolite !== g.from && n.metabolite !== g.to &&
         !(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y));

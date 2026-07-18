@@ -173,6 +173,18 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const elen = r.points.reduce((acc, p, i) => i ? acc + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0, 0);
       const cof = cofactorSide(r, mx, my, -dir, elen);
       g.append(cof);
+      // Effectors with no clean corridor are tagged onto the step itself, the way
+      // the poster annotates a regulated reaction in tight space.
+      const tags = (r as ChartRxn & { tags?: { effect: string; label: string; x: number; y: number }[] }).tags;
+      (tags || []).forEach((tag, ti) => {
+        const color = tag.effect === "activate" ? "#13A950" : "#F14C1C";
+        const ty = tag.y + 14 + ti * 12;
+        const tg = s("g", { class: "eff-tag lod-detail" });
+        tg.append(s("circle", { cx: tag.x - dir * 10, cy: ty - 3, r: 5, fill: "#fff", stroke: color, "stroke-width": 1.2 }));
+        tg.append(s("text", { x: tag.x - dir * 10, y: ty, fill: color, class: "eff-glyph" }, [tag.effect === "activate" ? "+" : "–"]));
+        tg.append(s("text", { x: tag.x - dir * 10 + 9, y: ty, fill: color, class: "eff-label" }, [tag.label]));
+        g.append(tg);
+      });
       for (const t of Array.from(cof.querySelectorAll("text"))) {
         const lx = Number(t.getAttribute("x")), ly = Number(t.getAttribute("y"));
         const w = (t.textContent || "").length * 4.5;

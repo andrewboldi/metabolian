@@ -197,17 +197,36 @@ export function layout(ast) {
   const spineX = (ast.spine || ast.cycle).at.x;
   const branchLeft = ast.branches.some((b) => b.side === "left");
   const effDir = branchLeft ? 1 : -1;   // put effectors opposite the branches
+  // Michal parks an effector next to the step it modulates. Doing the same keeps
+  // regulation edges short instead of sending them on canvas-spanning detours.
+  const targetOf = new Map();
+  for (const r of ast.regulation) {
+    if (byMetabolite.has(r.from) || targetOf.has(r.from)) continue;
+    const rx = reactions.find((x) => x.enzyme === r.to);
+    if (rx) targetOf.set(r.from, rx);
+  }
   const effectorsNeeded = ast.regulation.filter((r) => !byMetabolite.has(r.from))
     .map((r) => r.from).filter((v, i, a) => a.indexOf(v) === i);
   const effRows = Math.max(3, Math.ceil(Math.sqrt(effectorsNeeded.length * 1.4)));
   const effBaseX = outsideCore(outsideRing(spineX + effDir * COL_GAP, effDir), effDir);
   const effBaseY = (ast.spine || ast.cycle).at.y;
   effectorsNeeded.forEach((id, i) => {
-    const col = Math.floor(i / effRows), row = i % effRows;
-    const x = freeX(effBaseX + effDir * col * COL_GAP, effBaseY + row * ast.spacing, effDir);
+    const rx = targetOf.get(id);
+    let x, y;
+    if (rx) {
+      // sit beside the reaction this effector controls
+      const mid = rx.points[Math.floor(rx.points.length / 2)];
+      const side = mid[0] >= (coreBox.x0 + coreBox.x1) / 2 ? 1 : -1;
+      y = Math.round(mid[1] - NODE_H / 2);
+      x = freeX(outsideCore(mid[0] + side * COL_GAP, side), y, side);
+    } else {
+      const col = Math.floor(i / effRows), row = i % effRows;
+      y = effBaseY + row * ast.spacing;
+      x = freeX(effBaseX + effDir * col * COL_GAP, y, effDir);
+    }
     const node = {
       id: `${ast.id}:${id}`, metabolite: id,
-      x, y: effBaseY + row * ast.spacing, lane: "effector", w: NODE_W, h: NODE_H,
+      x, y, lane: "effector", w: NODE_W, h: NODE_H,
     };
     nodes.push(claim(node));
     byMetabolite.set(id, node);
@@ -256,6 +275,30 @@ export function layout(ast) {
     return Math.max(...nodes.map((n) => n.y + n.h)) + 64;
   }
 
+  /** Horizontal bands near y that are worth trying for a regulation approach. */
+  function bandCandidates(y) {
+    const out = [];
+    for (const n of nodes) { out.push(n.y - 20, n.y + n.h + 20); }
+    out.sort((a, b) => Math.abs(a - y) - Math.abs(b - y));
+    return out.slice(0, 10);
+  }
+
+  /** A regulation route may touch its own effector cell but nothing else. */
+  function regClear(points, src) {
+    for (let i = 1; i < points.length; i++) {
+      const [x1, y1] = points[i - 1], [x2, y2] = points[i];
+      const lo = { x: Math.min(x1, x2), y: Math.min(y1, y2) };
+      const hi = { x: Math.max(x1, x2), y: Math.max(y1, y2) };
+      if (hi.x - lo.x >= hi.y - lo.y) { lo.x += 8; hi.x -= 8; } else { lo.y += 8; hi.y -= 8; }
+      if (hi.x < lo.x || hi.y < lo.y) continue;
+      for (const n of nodes) {
+        if (n === src) continue;
+        if (!(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y)) return false;
+      }
+    }
+    return true;
+  }
+
   function firstBlocker(points, from, to) {
     for (let i = 1; i < points.length; i++) {
       const [x1, y1] = points[i - 1], [x2, y2] = points[i];
@@ -282,11 +325,19 @@ export function layout(ast) {
     if (!src || !dst) continue;
     const n = perTarget.get(r.to) || 0;
     perTarget.set(r.to, n + 1);
-    regulation.push({
-      effect: r.effect, kind: r.kind, from: r.from, to: r.to,
-      points: regulationRoute(src, dst, n, targetCount.get(r.to) || 1),
-      glyph: r.effect === "inhibit" ? "inhibit" : "activate",
-    });
+    const pts = regulationRoute(src, dst, n, targetCount.get(r.to) || 1);
+    if (pts) {
+      regulation.push({
+        effect: r.effect, kind: r.kind, from: r.from, to: r.to,
+        points: pts,
+        glyph: r.effect === "inhibit" ? "inhibit" : "activate",
+      });
+    } else if (dst.points) {
+      // No clean corridor exists. The poster's own device in tight spots: tag the
+      // step with the effector name and a +/- glyph instead of a crossing line.
+      const mid = dst.points[Math.floor(dst.points.length / 2)];
+      (dst.tags ||= []).push({ effect: r.effect, label: r.from, x: mid[0], y: mid[1] });
+    }
   }
 
   // Bounds must contain every drawn thing — cells AND routed edges — or "Fit"
@@ -520,11 +571,27 @@ export function layout(ast) {
       dx = dst.x + NODE_W / 2;
       dy = dst.y + NODE_H / 2;
     }
-    const goesLeft = sx <= dx;
-    // stagger the gutter and the approach height so co-targeted lines stay distinct
+    // Try progressively wider gutters on both sides and keep the first route that
+    // crosses nothing. Regulation used to take a fixed gutter and plough through
+    // whatever happened to be in the way.
     const spread = index * 26;
-    const gutter = goesLeft ? Math.min(src.x, dx) - 70 - spread : Math.max(src.x + NODE_W, dx) + 70 + spread;
-    return [[sx, sy], [gutter, sy], [gutter, dy], [dx, dy]];
+    const sides = sx <= dx ? [-1, 1] : [1, -1];
+    for (const g of [70, 104, 146, 196, 254, 320]) {
+      for (const side of sides) {
+        const gutter = side < 0
+          ? Math.min(src.x, dx) - g - spread
+          : Math.max(src.x + NODE_W, dx) + g + spread;
+        // direct: gutter then straight in
+        const direct = [[sx, sy], [gutter, sy], [gutter, dy], [dx, dy]];
+        if (regClear(direct, src)) return direct;
+        // or drop into a clear horizontal band, run in, then step to the target
+        for (const band of bandCandidates(dy)) {
+          const pts = [[sx, sy], [gutter, sy], [gutter, band], [dx, band], [dx, dy]];
+          if (regClear(pts, src)) return pts;
+        }
+      }
+    }
+    return null;   // caller renders a compact effector tag instead of a long line
   }
 }
 
