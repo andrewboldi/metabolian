@@ -55,12 +55,47 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   svg.append(defs);
 
   const viewport = s("g", { class: "viewport" });
+  const layerGrid = s("g", { class: "layer-grid" });
+  const layerRegions = s("g", { class: "layer-regions" });
   const layerFlux = s("g", { class: "layer-flux" });
   const layerReg = s("g", { class: "layer-reg" });
   const layerNodes = s("g", { class: "layer-nodes" });
-  viewport.append(layerFlux, layerReg, layerNodes);
+  viewport.append(layerGrid, layerRegions, layerFlux, layerReg, layerNodes);
   svg.append(viewport);
   canvas.append(svg);
+
+  // ---------- master chart: coordinate ruler + pathway regions ----------
+  const master = ir as ChartIR & {
+    isMaster?: boolean;
+    regions?: { id: string; title: string; x: number; y: number; w: number; h: number; ref: string }[];
+    grid?: { cols: { label: string; x: number; w: number }[]; rows: { label: string; y: number; h: number }[] };
+  };
+  if (master.isMaster && master.grid) {
+    const b = ir.bounds;
+    for (const c of master.grid.cols) {
+      layerGrid.append(s("line", { class: "grid-line", x1: c.x, y1: b.y, x2: c.x, y2: b.y + b.h }));
+      layerGrid.append(s("text", { class: "grid-label", x: c.x + c.w / 2, y: b.y + 26 }, [c.label]));
+      layerGrid.append(s("text", { class: "grid-label", x: c.x + c.w / 2, y: b.y + b.h - 10 }, [c.label]));
+    }
+    for (const r of master.grid.rows) {
+      layerGrid.append(s("line", { class: "grid-line", x1: b.x, y1: r.y, x2: b.x + b.w, y2: r.y }));
+      layerGrid.append(s("text", { class: "grid-label", x: b.x + 18, y: r.y + r.h / 2 }, [r.label]));
+      layerGrid.append(s("text", { class: "grid-label", x: b.x + b.w - 18, y: r.y + r.h / 2 }, [r.label]));
+    }
+    layerGrid.append(s("rect", { class: "grid-frame", x: b.x, y: b.y, width: b.w, height: b.h }));
+  }
+  for (const reg of master.regions || []) {
+    const g = s("g", { class: "region", "data-region": reg.id });
+    g.append(s("rect", { class: "region-frame", x: reg.x - 40, y: reg.y - 40, width: reg.w + 80, height: reg.h + 80, rx: 4 }));
+    // Roche-style boxed section title
+    const label = s("g", { class: "region-title" });
+    const tw = Math.max(160, reg.title.length * 9.2);
+    label.append(s("rect", { x: reg.x - 40, y: reg.y - 84, width: tw, height: 30, rx: 3 }));
+    label.append(s("text", { x: reg.x - 30, y: reg.y - 64 }, [reg.title]));
+    label.append(s("text", { class: "region-ref", x: reg.x - 30 + tw - 14, y: reg.y - 64 }, [reg.ref]));
+    g.append(label);
+    layerRegions.append(g);
+  }
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
   const nodeEls = new Map<string, SVGGElement>();

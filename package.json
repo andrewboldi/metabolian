@@ -9,7 +9,7 @@
   },
   "scripts": {
     "data:validate": "node tools/validate.mjs",
-    "data:build": "node tools/build-graph.mjs && node tools/build-chart.mjs",
+    "data:build": "node tools/build-graph.mjs && node tools/build-chart.mjs && node tools/build-master.mjs",
     "prebuild": "npm run data:validate && npm run data:build",
     "predev": "npm run data:build",
     "dev": "vite",
@@ -18,7 +18,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "node --test tools/*.test.mjs",
-    "chart:build": "node tools/build-chart.mjs",
+    "chart:build": "node tools/build-chart.mjs && node tools/build-master.mjs",
     "mol:build": "node tools/render-molecules.mjs"
   },
   "devDependencies": {

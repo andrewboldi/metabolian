@@ -26,11 +26,17 @@ for (const f of readdirSync(PATHWAY_DIR).filter((f) => f.endsWith(".json"))) {
   for (const e of mod.enzymes || []) if (!enzymes.has(e.id)) enzymes.set(e.id, e);
 }
 
-rmSync(OUT, { recursive: true, force: true });
+// `node tools/build-chart.mjs <id>` compiles a single chart (used by authors so
+// parallel work never clobbers a shared output directory).
+const only = process.argv[2] || null;
+if (!only) rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 
 const charts = [];
-for (const f of readdirSync(MPL_DIR).filter((f) => f.endsWith(".mpl")).sort()) {
+const mplFiles = readdirSync(MPL_DIR).filter((f) => f.endsWith(".mpl")).sort()
+  .filter((f) => !only || f === `${only}.mpl`);
+if (only && !mplFiles.length) { console.error(`No such chart: data/chart/${only}.mpl`); process.exit(1); }
+for (const f of mplFiles) {
   const src = readFileSync(join(MPL_DIR, f), "utf8");
   let ir;
   try {
@@ -87,5 +93,12 @@ for (const f of readdirSync(MPL_DIR).filter((f) => f.endsWith(".mpl")).sort()) {
   console.log(`✅ ${f} — ${ir.nodes.length} nodes (${withMol} with structures), ${ir.reactions.length} reactions, ${ir.regulation.length} regulation`);
 }
 
-writeFileSync(join(OUT, "index.json"), JSON.stringify({ charts }, null, 2));
+if (only && existsSync(join(OUT, "index.json"))) {
+  const prev = JSON.parse(readFileSync(join(OUT, "index.json"), "utf8")).charts || [];
+  const merged = [...prev.filter((c) => !charts.some((n) => n.id === c.id)), ...charts]
+    .sort((a, b) => a.id.localeCompare(b.id));
+  writeFileSync(join(OUT, "index.json"), JSON.stringify({ charts: merged }, null, 2));
+} else {
+  writeFileSync(join(OUT, "index.json"), JSON.stringify({ charts }, null, 2));
+}
 console.log(`Compiled ${charts.length} chart(s) -> web/public/chart/`);

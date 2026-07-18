@@ -58,3 +58,14 @@
 .mol-preview { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: .5rem; }
 .mol-preview svg { width: 100%; height: auto; }
 #mol3d { width: 100%; height: 300px; position: relative; background: #0b0f14; border-radius: var(--radius); border: 1px solid var(--line); }
+
+/* ---- master wall chart: coordinate ruler + pathway regions ---- */
+.grid-line { stroke: #d9d5c8; stroke-width: 1; }
+.grid-frame { fill: none; stroke: #8a8574; stroke-width: 2; }
+.grid-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 15px; fill: #8a8574; text-anchor: middle; dominant-baseline: middle; }
+.region-frame { fill: none; stroke: #c9c4b4; stroke-width: 1; stroke-dasharray: 6 5; }
+.region-title rect { fill: #fdece4; stroke: #d4581f; stroke-width: 1.2; }
+.region-title text { font-family: "Inter", system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #b0410d; dominant-baseline: middle; }
+.region-title .region-ref { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; fill: #d4581f; font-weight: 500; }
+/* at far-out zoom the section titles carry the map, not the molecules */
+[data-lod="overview"] .region-title text { font-size: 22px; }
