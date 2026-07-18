@@ -317,20 +317,62 @@ export function layout(ast) {
     const dx = tcx - fcx, dy = tcy - fcy;
 
     if (Math.abs(dx) < 10) {                       // same column -> straight vertical
-      return dy >= 0
+      const direct = dy >= 0
         ? [[fcx, from.y + NODE_H], [fcx, to.y]]
         : [[fcx, from.y], [fcx, to.y + NODE_H]];
+      return clear(direct, from, to) ? direct : detourX(from, to);
     }
     if (Math.abs(dy) < 10) {                       // same row -> straight horizontal
-      return dx >= 0
+      const direct = dx >= 0
         ? [[from.x + NODE_W, fcy], [to.x, fcy]]
         : [[from.x, fcy], [to.x + NODE_W, fcy]];
+      return clear(direct, from, to) ? direct : detourY(from, to);
     }
     // offset -> leave vertically, cross in the gutter between the rows, enter vertically
     const exitY = dy >= 0 ? from.y + NODE_H : from.y;
     const entryY = dy >= 0 ? to.y : to.y + NODE_H;
     const midY = Math.round((exitY + entryY) / 2);
-    return [[fcx, exitY], [fcx, midY], [tcx, midY], [tcx, entryY]];
+    const z = [[fcx, exitY], [fcx, midY], [tcx, midY], [tcx, entryY]];
+    return clear(z, from, to) ? z : detourY(from, to);
+  }
+
+  /** True when no segment of the route crosses a cell other than its endpoints. */
+  function clear(points, from, to) {
+    const pad = 6;
+    for (let i = 1; i < points.length; i++) {
+      const [x1, y1] = points[i - 1], [x2, y2] = points[i];
+      const lo = { x: Math.min(x1, x2) - pad, y: Math.min(y1, y2) - pad };
+      const hi = { x: Math.max(x1, x2) + pad, y: Math.max(y1, y2) + pad };
+      for (const n of nodes) {
+        if (n === from || n === to) continue;
+        if (!(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y)) return false;
+      }
+    }
+    return true;
+  }
+
+  /** Route over/under the obstructing row. */
+  function detourY(from, to) {
+    const fcx = from.x + NODE_W / 2, tcx = to.x + NODE_W / 2;
+    const above = Math.min(from.y, to.y) - 46;
+    const below = Math.max(from.y + NODE_H, to.y + NODE_H) + 46;
+    for (const [lane, fromEdge, toEdge] of [[above, from.y, to.y], [below, from.y + NODE_H, to.y + NODE_H]]) {
+      const pts = [[fcx, fromEdge], [fcx, lane], [tcx, lane], [tcx, toEdge]];
+      if (clear(pts, from, to)) return pts;
+    }
+    return [[fcx, from.y + NODE_H], [fcx, below], [tcx, below], [tcx, to.y + NODE_H]];
+  }
+
+  /** Route left/right of the obstructing column. */
+  function detourX(from, to) {
+    const fcy = from.y + NODE_H / 2, tcy = to.y + NODE_H / 2;
+    const left = Math.min(from.x, to.x) - 56;
+    const right = Math.max(from.x + NODE_W, to.x + NODE_W) + 56;
+    for (const [lane, fromEdge, toEdge] of [[right, from.x + NODE_W, to.x + NODE_W], [left, from.x, to.x]]) {
+      const pts = [[fromEdge, fcy], [lane, fcy], [lane, tcy], [toEdge, tcy]];
+      if (clear(pts, from, to)) return pts;
+    }
+    return [[from.x + NODE_W, fcy], [right, fcy], [right, tcy], [to.x + NODE_W, tcy]];
   }
 
   /** Right-angle elbow between two cells (never diagonal). */

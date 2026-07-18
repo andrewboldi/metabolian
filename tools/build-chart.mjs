@@ -120,6 +120,25 @@ for (const f of mplFiles) {
     continue;
   }
 
+  // Routing gate: a reaction line may not run through a cell it does not connect.
+  const crossings = [];
+  for (const r of ir.reactions) {
+    const a = nodeById.get(r.from), b = nodeById.get(r.to);
+    for (let i = 1; i < r.points.length; i++) {
+      const [p, q] = [r.points[i - 1], r.points[i]];
+      const lo = { x: Math.min(p[0], q[0]), y: Math.min(p[1], q[1]) };
+      const hi = { x: Math.max(p[0], q[0]), y: Math.max(p[1], q[1]) };
+      const blocker = ir.nodes.find((n) => n !== a && n !== b &&
+        !(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y));
+      if (blocker) { crossings.push(`${r.enzyme || r.kind} through ${blocker.metabolite}`); break; }
+    }
+  }
+  if (crossings.length) {
+    console.error(`❌ ${f}: ${crossings.length} reaction(s) routed through unrelated cells: ${crossings.slice(0, 4).join(", ")}`);
+    process.exitCode = 1;
+    continue;
+  }
+
   if (overlaps.length) {
     console.error(`❌ ${f}: ${overlaps.length} overlapping cell(s): ${overlaps.slice(0, 5).join(", ")}`);
     process.exitCode = 1;
