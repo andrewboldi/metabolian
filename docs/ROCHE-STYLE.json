@@ -1,0 +1,814 @@
+{
+  "styleGuide": {
+    "name": "Roche Biochemical Pathways — SVG Render Spec v1",
+    "provenance": "Merged from tile analyses r0c0, r0c1, r0c2 of a 6x5 tiling of the 4th-edition Part-1 sheet. Tile = 1192 x 1019 px; full sheet = 7152 x 5095 px. ALL numbers below are in native sheet px at that resolution. To render at another size, scale everything by k = targetWidth / 7152; stroke widths scale too but clamp to a 0.75 px minimum so hairlines never vanish.",
+    "canvas": {
+      "width": 7152,
+      "height": 5095,
+      "background": "#FFFFFF",
+      "noFills": "There is no tint, gradient, drop shadow, or filled area anywhere in the pathway body. Every box, ring, brace and arrow is stroke-only on white. The ONLY filled shapes in the entire sheet are: arrowheads, the masthead navy footer band (#254991), and white knockout haloes.",
+      "outerFrame": {
+        "stroke": "#231F20",
+        "width": 6,
+        "insetTop": 130,
+        "insetLeft": 118,
+        "note": "A 6-7 px black rule caps the sheet on all four sides; a second 2 px black rule closes the locator-letter margin band 37 px inside it."
+      }
+    },
+    "referenceGrid": {
+      "purpose": "Map-style locator only. NEVER semantic. Pathways cross it freely.",
+      "cellWidth": 578,
+      "cellHeight": 475,
+      "columns": 12,
+      "rows": 10,
+      "columnLabels": "A..L, single caps, cap height 14-20 px, regular/light weight, #231F20, centred over each column, repeated at top AND bottom inside the frame.",
+      "rowLabels": "1..10, same size, centred on each row, repeated at left AND right inside the frame.",
+      "divisionRules": {
+        "stroke": "#D9DCD7",
+        "width": 1,
+        "z": "bottom-most layer — drawn UNDER everything; all content overprints it"
+      }
+    },
+    "renderOrder": [
+      "1. grid hairlines (#D9DCD7)",
+      "2. chrome panels (masthead card, Notes panel, legend panel) — rounded rects, the only rounded rectangles on the sheet",
+      "3. region-boundary dashed rounded boxes (#EF2D47 dashed)",
+      "4. flux edges + cofactor hooks (black, blue, red, green, magenta) — hooks share their parent edge's colour",
+      "5. curly braces and node boxes (black, square corners)",
+      "6. structural formulas (bonds then atom glyphs, glyphs painted with a white knockout halo)",
+      "7. all type (metabolite names, enzyme names, cofactor labels, notes)",
+      "8. regulation layer (#F14C1C) — arrows, circled +/-, effector names, section-title plates: ALWAYS on top",
+      "9. arrowheads last within each colour group so they are never clipped"
+    ],
+    "criticalSignatures": [
+      "Colour, not weight, does the semantic work. Almost nothing is bold.",
+      "Cofactor hooks are tapered quarter-turn arcs that merge tangentially into the shaft — never T-junctions, never straight ticks (except degenerate stubs in tight space).",
+      "Arrowheads are barbed darts with a CONCAVE swept-back trailing edge, not isoceles triangles.",
+      "Crossings are plain overprints — no hop arcs, no gaps, no knockouts on line-line crossings. Legibility comes from ink colour. Knockouts are used ONLY where a line passes under an atom glyph.",
+      "Structures are always drawn explicitly (Fischer column or Haworth/heterocycle polygon); a metabolite is never a shape-with-a-label.",
+      "Rounded corners exist only on (a) chrome panels, (b) diagonal→orthogonal fillets on long connectors, (c) cofactor hook elbows. Orthogonal→orthogonal corners are SQUARE. Node boxes are SQUARE."
+    ],
+    "metaboliteNodeSpec": {
+      "anatomy": "A node is a vertically stacked, horizontally centred group in strict order: NAME BLOCK → optional (ABBREVIATION) → STRUCTURE (→ optional BOX around the structure only).",
+      "namePlacement": {
+        "position": "always ABOVE the structure, centred on the node's x-anchor",
+        "gapNameToStructure": 6,
+        "gapNameToBoxTop": 8,
+        "outsideBox": true,
+        "note": "The name is NEVER inside the box. Green carbon-count numerals also stay outside, to the left."
+      },
+      "nameType": {
+        "case": "ALL CAPS",
+        "capHeight": 8,
+        "weight": 400,
+        "fill": "#231F20",
+        "tracking": "+0.04em",
+        "lineHeight": 12.5,
+        "align": "center",
+        "maxLines": 3,
+        "breaking": "hyphenate at chemical prefixes and RETAIN the hyphen at line end: '5-DEHYDRO-4-DEOXY-' / 'D-GLUCARATE'"
+      },
+      "nameEmphasis": "Vitamins, hub compounds and headline end-products only: same 8 px cap height, weight 700, black. A parenthetical synonym goes on a second bold line: 'L-ASCORBATE' / '(VITAMIN C)'. Never enlarge — weight only.",
+      "abbreviation": "Short form in parentheses on its own line directly under the name, identical face and size: (GAR), (FGAR), (PRPP).",
+      "structureModes": {
+        "fischer": {
+          "useWhen": "acyclic compounds — sugar acids, amino acids, open-chain intermediates",
+          "geometry": "A vertical column of literal atom-text rows, one carbon per row: 'COOH', 'H-C-OH', 'HO-C-H', 'C=O'. The central carbon letters share one x-anchor which IS the node's x-anchor.",
+          "rowPitch": 11.8,
+          "atomCapHeight": 7.5,
+          "bondStroke": 1.2,
+          "horizontalBondLength": 4.5,
+          "verticalBondTick": "4-5 px vertical stroke centred in the inter-row gap (this is why the backbone reads as dotted)",
+          "doubleBond": "two stacked 4-5 px horizontal strokes, 2.5 px apart",
+          "terminalHydrogen": "gets its own half-row"
+        },
+        "haworth": {
+          "useWhen": "furanoses, pyranoses drawn in ring form",
+          "geometry": "explicit flattened polygon ~55 x 30 px (furanose) / ~62 x 34 px (pyranose); ring O at the top apex, C1' right, C4' left; straight solid bonds; the FRONT (lower) ring edge drawn ~2x bolder (2.4 px vs 1.2 px) to fake perspective; every ring H lettered on a short vertical stub above its carbon, every OH hanging on a vertical stub below; exocyclic groups lettered ('P-O-H2C')."
+        },
+        "heterocycle": {
+          "useWhen": "imidazole, purine, pteridine ring systems",
+          "geometry": "explicit hexagon / fused-hexagon polygons, every atom lettered (C, N, CH, HN, H2N), double bonds as two parallel 1.2 px lines 2.5 px apart"
+        },
+        "lactoneBracket": {
+          "useWhen": "a lactone/ring drawn in Fischer form",
+          "geometry": "Ring is NOT a polygon. Close it with an orthogonal black bracket to the LEFT of the Fischer column: horizontal out from the upper ring carbon, 90° down, 90° back in to the lower ring carbon. SQUARE corners, no fillets, stroke 1.2 px. The ring heteroatom glyph 'O' sits ON the vertical leg inside a white knockout halo."
+        }
+      },
+      "boxing": {
+        "semantics": "SEMANTIC, NOT DECORATIVE (legend remark 5). Box a compound if and only if it occurs in SEVERAL places on the sheet — the box is a cross-reference / hub marker. Do NOT box coenzymes or compounds with trivial structures, and do NOT box purely local intermediates inside a running chain.",
+        "stroke": "#231F20",
+        "strokeWidth": 1.5,
+        "corners": "SQUARE — radius 0. Rounded-corner boxes are reserved for enzyme nodes in Part 2 (black = inactive, blue = active) and must not appear in Part 1 pathway content.",
+        "fill": "none",
+        "paddingX": 6,
+        "paddingY": 8,
+        "shape": "Rectilinear Manhattan POLYGON, not necessarily a rectangle. It tightly wraps the drawn formula and STEPS in/out to admit irregular substituents (jut out for a -CHO, notch in around a ribose, notch where a spine passes). Adjacent boxes tessellate with only 10-20 px of clear paper.",
+        "nameOnlyBox": "A compound with no drawn structure is boxed around its bare 2-3-line centred name, padding 5 px: 'OXID./GLUTA-/THIONE', 'GLYCINE', 'PROTEINS', 'THF'.",
+        "coenzymeBox": "A coenzyme structure drawn in crimson still gets a BLACK-stroked box (black box = 'occurs elsewhere'), with crimson ink inside.",
+        "orangeBox": "An ORANGE-stroked box around a compound name denotes an excretory or terminal end-product of metabolism (legend remark 7). Stroke #F14C1C, 1.5 px, square corners."
+      },
+      "carbonNumerals": {
+        "fill": "#13A950",
+        "capHeight": 6.5,
+        "placement": "immediately LEFT of the Fischer column (outside the box if boxed), aligned to the highest- and lowest-numbered backbone carbons only, e.g. '6' at the top row and '1' at the bottom row",
+        "purpose": "lets the reader track individual carbons across a pathway and see decarboxylations"
+      },
+      "coProductGrouping": {
+        "brace": "A thin black CURLY BRACE spans the two co-products: a horizontal rule (length = span of both structures, typically 150-160 px) with rounded upturned ends and a central V cusp, stroke 1.5 px, offset 10 px beyond the structures on the arrow's side.",
+        "plus": "A black '+' at metabolite-name cap height (8 px) sits between the two grouped structures at their vertical mid-height.",
+        "attachment": "The reaction arrowhead terminates exactly ON the brace's cusp apex — never on either compound individually."
+      },
+      "attachment": {
+        "clearance": "Arrows stop 8-12 px clear of structure ink or box border; they never touch type.",
+        "spineException": "On a threaded spine the shaft enters a box's left edge and exits its right edge at the box's vertical mid-height, and in the densest chains the arrowhead tip may touch the reacting atom (e.g. the ribose C1' vertex) directly."
+      }
+    },
+    "cofactorNotation": {
+      "principle": "A side substrate/product NEVER touches the arrowhead and NEVER meets the shaft at a T. It attaches mid-shaft via a tapered quarter-turn hook that merges tangentially into the shaft.",
+      "geometry": {
+        "forHorizontalShaft": "The hook starts just under its label 25-35 px above the shaft as a vertical stroke, descends, and turns 90° through a rounded elbow of radius 10-14 px to become tangent to the shaft, merging flush.",
+        "forVerticalShaft": "Identical construction rotated 90°: leaves the shaft, turns, runs out horizontally to its label. Multiple side-exits stack down the shaft in reaction order.",
+        "rotationalSense": "Both inbound and outbound hooks bend in the SAME sense — the foot always points DOWNSTREAM. An in/out pair therefore reads as one shallow continuous wave along the shaft.",
+        "sideOfShaft": "Both hooks of a pair normally sit on the SAME side (above, for a left-to-right arrow): substrate on the upstream half, product on the downstream half, reading left to right.",
+        "taper": "REQUIRED SIGNATURE: variable-width / calligraphic stroke — full shaft width where it meets the shaft (2-3 px), tapering to ~1.2 px at the label end. Implement as a filled path, not a stroked one. A constant-width curve looks wrong.",
+        "colour": "ALWAYS inherited from the parent reaction arrow: black hooks on black arrows, crimson on crimson, blue on blue, green on green.",
+        "degenerate": "On steeply diagonal or space-starved lines the arc collapses to a straight 10-15 px stub with the same head/no-head semantics."
+      },
+      "directionEncoding": {
+        "substrateConsumed": "NO arrowhead. The hook simply descends from the label and merges into the shaft.",
+        "productReleased": "The hook rises off the shaft tangentially in the flux direction and terminates in a small filled barbed head (~10 px long x 9 px wide, ≈60% of the main flux head) pointing AT the label.",
+        "reversibleShaft": "BOTH sides carry outward-pointing heads, because each is the product of one direction."
+      },
+      "labelInk": {
+        "rule": "Hook colour follows the ARROW; label colour follows the SEMANTIC CLASS.",
+        "coenzymeCrimson": {
+          "colour": "#EF2D47",
+          "members": "ATP, ADP, AMP, GTP, GDP, NAD+, NADH+H+, NADP+, NADPH+H+, NAD(P)+, FAD, FADH2, THF, 10-formyl-THF, CoASH, PPi-as-coenzyme"
+        },
+        "participantBlack": {
+          "colour": "#231F20",
+          "members": "H2O, H2O2, O2, CO2, NH3, Pi, PPi, and all stoichiometry numerals/fractions"
+        },
+        "activatorOrange": {
+          "colour": "#F14C1C",
+          "members": "Mg++, Mn++, Zn++, Co++, Fe++, K+, Cu++, GSH, PyrP, R-SH, molybdopterin",
+          "noHook": "Metal ions and similar activators get NO hook at all — set as free text immediately beside the shaft, typically just below it between the cofactor labels and the enzyme name (legend remark 4)."
+        },
+        "mixedLabel": "A label may split ink mid-string: 'ADP' crimson + ' + Pi' black.",
+        "riderCofactor": "A prosthetic/metal cofactor may ride UNDER its substrate on the same hook in orange: '1/2 O2' black with 'Cu++' orange directly beneath."
+      },
+      "labelType": {
+        "case": "ALL CAPS",
+        "capHeight": 7,
+        "weight": 400,
+        "lineHeight": 9.5
+      },
+      "typographicDetails": {
+        "subscripts": "true subscripts at 60-65% size on a baseline drop: H2O, CO2, NH3",
+        "superscripts": "true superscripts at 60-65% size raised to cap top: NAD+, Mg++, K+",
+        "medialPlus": "EXCEPTION: the plus joining a reduced cofactor to its proton ('NADPH + H+') is set at FULL cap height and noticeably heavier than the superscript charge",
+        "stoichiometry": "leading numeral or stacked fraction, black, same size: '2 H2O', '1/2 O2'",
+        "omissions": "H+ and OH- are omitted from equations entirely except inside NADH+H+ / NADPH+H+ (legend remark 8). Organic phosphate is '-P', inorganic 'Pi', pyrophosphate 'PPi' (remark 9)."
+      },
+      "pairedLines": "When two antiparallel lines run as a bus, each carries its OWN hooks in its OWN colour, nested ~4 px apart so cofactor ownership is unambiguous."
+    },
+    "enzymeLabelSpec": {
+      "fill": "#254991",
+      "case": "ALL CAPS",
+      "capHeight": 7,
+      "weight": 400,
+      "tracking": "+0.12em — distinctly more open than metabolite names (+0.04em). This open tracking is a strong visual signature; the advance/cap ratio for the identical string runs 1.00 vs 0.88.",
+      "lineHeight": 9.5,
+      "maxLines": 4,
+      "sizeRule": "always 85-90% of the metabolite-name cap height so the enzyme never competes with the compound",
+      "placement": {
+        "horizontalArrow": "block CENTRED under the arrow, first baseline ~8 px below the shaft, centred on the arrow's midpoint",
+        "verticalArrow": "block set to the RIGHT of the shaft, top-aligned with the arrow, internally centred",
+        "diagonalArrow": "block set horizontally in the open wedge beside the line, never rotated",
+        "tightJunction": "block LEFT-ALIGNED and SPLIT AROUND the arrow — some lines above the shaft, the rest below, hyphenating mid-word to hold a narrow column",
+        "sharedLabel": "a parallel pair of reaction lines shares ONE enzyme label centred beneath both"
+      },
+      "noEcNumbers": "NO EC NUMBERS ANYWHERE. Enzymes are identified by trivial name only.",
+      "parenthesesRule": "An enzyme name NOT in the 'Recommended Names' of Enzyme Nomenclature 1984 + supplements is printed IN PARENTHESES. Parentheses are the chart's marker for a non-standard name (legend remark 1).",
+      "nonEnzymatic": "A spontaneous step carries the blue mixed-case word 'non-enzymatic' in the exact slot the enzyme name would occupy.",
+      "noteReference": "Blue, parenthesised, Mixed case, cap 6 px, appended as the last line of the enzyme block: '(Note 37)'. Where space forces it, the note may instead be set rotated (~60°) running alongside the line it annotates."
+    },
+    "regulationSpec": {
+      "principle": "Regulation is a separate ORANGE (#F14C1C) layer laid over the flux graph and visually quarantined from it. It never carries flux.",
+      "glyph": {
+        "shape": "open circle containing a '+' cross or a short thick '-' bar",
+        "diameter": 9.5,
+        "circleStroke": 1,
+        "fill": "none — never filled, never boxed",
+        "colour": "#F14C1C (both circle and sign)",
+        "meaning": "circled + = INCREASE of enzymatic activity; circled - = DECREASE of enzymatic activity (legend remark 4)"
+      },
+      "glyphPlacement": {
+        "rule": "ALWAYS at the pointer's HEAD end, never at the label. It annotates the ARROW, not the enzyme name.",
+        "offset": "one glyph-diameter (≈10 px) above or below the shaft, or immediately lateral to the arrowhead where space demands",
+        "stacking": "where several regulation arrows share a bus, the glyphs stack in a tidy vertical column at one constant x just before the target"
+      },
+      "arrow": {
+        "stroke": "#F14C1C",
+        "widthFast": 1.5,
+        "widthSlow": 1.5,
+        "dashFast": "none (solid) = FAST regulation: allosteric / direct effector action on flux",
+        "dashSlow": "10 6 (a longer, looser dash than any flux dash) = SLOW regulation: induction or repression of enzyme SYNTHESIS",
+        "head": "slim swept-back barbed dart, 14 px long x 10 px wide, filled",
+        "routing": "a single straight run — dead perpendicular to the target where the effector sits directly above/beside a spine, dead horizontal from a gutter, or a free-angle diagonal for long annotation pointers. Terminates ON or just short of the target shaft, never on enzyme text."
+      },
+      "effectorLabels": {
+        "colour": "#F14C1C regardless of the compound's normal ink class — a metabolite acting as a regulator switches to orange",
+        "case": "ALL CAPS",
+        "capHeight": 7,
+        "layout": "multiple effectors on one arrow are set as a comma-separated, LEFT-ALIGNED ragged-right stack feeding a single arrow",
+        "parenthesised": "an effector in parentheses — '(ATP)' — is effective in only ONE group or species of organisms (legend remark 4)",
+        "romanNumerals": "a roman numeral beside a regulation arrow means only ONE of several isoenzymes catalysing the step is regulated that way"
+      },
+      "preferredDirection": "A short orange SOLID arrow ~30 px long set parallel and adjacent to (not touching, ~6 px above) a double-headed reversible shaft marks the PREFERRED direction.",
+      "occurrenceAnnotation": "Species/occurrence notes ('not in man') use the same orange pointer but with plain text and NO circled sign.",
+      "clinicalAnnotation": "Free text in orange SENTENCE case, cap 7 px, ragged-right, reaching its target with one long free-angle diagonal orange arrow ('Regulation defective in some cases of primary gout', 'deficient in histidinemia').",
+      "otherOrangeItems": "metal-ion activators, hormones (ACTH, FSH, LH, HCG), section-title plates, excretory end-product boxes — all share this ink and this top layer."
+    },
+    "sectionTitles": {
+      "form": "A small ORANGE title plate ~180 x 30 px with ~14 px left padding, sitting below/beside the pathway it names. There are NO tinted panels, no captioned containers, and no coloured section bars anywhere in the pathway body.",
+      "type": {
+        "colour": "#F14C1C",
+        "case": "Sentence case",
+        "weight": 700,
+        "capHeight": 9.5,
+        "note": "Sentence case is diagnostic — section titles are the ONLY pathway text that is not ALL CAPS, and the only bold text in the pathway area."
+      },
+      "regionIdentity": "Region identity is otherwise carried entirely by (a) the printed reference grid, (b) physical clustering of nodes, (c) blue parenthetical '(Note n)' tags, and (d) crimson dashed rounded boxes loosely enclosing a functional region (stroke #EF2D47, 1.5 px, dash 8 4, corner radius 20) — these may run across tile boundaries."
+    },
+    "chromePanels": {
+      "masthead": "White rounded rect, 3 px #254991 border, corner radius 25, at (156,169). Headline 'Metabolic Pathways' in a very heavy condensed grotesque, #231F20, cap 57 px, left-aligned x=213. Subtitles same face, cap 24 px, weight 700, #979596. Full-width #254991 footer band 127 px tall whose bottom corners follow the card radius, URL reversed in white bold cap 32 px. NOTHING in the pathway body ever uses this face.",
+      "notesPanel": "'Notes for Part 1' — rounded rect, 2 px #231F20, radius 23. Body: Mixed case, cap 6 px, black, hanging-indent numbered list '1)' '2)'. Heading bold Mixed case at the same size.",
+      "legendPanel": "'General Remarks for Part 1 and 2' (12 numbered conventions) + a two-column 'Abbreviations for Part 1' glossary colour-coded by ink class. Same rounded-rect chrome.",
+      "rule": "Bulk text is parked in one large rectangular reservation rather than flowed around the graph. Rounded corners appear ONLY here."
+    },
+    "arrowheadGeometry": {
+      "shape": "solid FILLED barbed dart with a CONCAVE swept-back trailing edge (stealth/barb, not a plain isoceles triangle)",
+      "mainFlux": {
+        "length": 20,
+        "width": 22,
+        "halfAngle": 20,
+        "concavity": "trailing notch cuts ~30% of the head length back toward the tip"
+      },
+      "thinFlux": {
+        "length": 10,
+        "width": 7.5,
+        "note": "1.2 px hairline reactions use this smaller head"
+      },
+      "hookHead": {
+        "scale": 0.6,
+        "length": 10,
+        "width": 9
+      },
+      "regulationHead": {
+        "length": 14,
+        "width": 10,
+        "note": "slimmer and more swept-back than flux heads"
+      },
+      "reversibility": "A reversible reaction is ONE straight shaft with a dart head at BOTH ends — never two antiparallel curved half-arrows (legend remark 3)."
+    },
+    "implementationNotes": [
+      "Define each arrowhead as an SVG <marker> with markerUnits='userSpaceOnUse' and overflow='visible'; set fill='context-stroke' (or duplicate per colour) so heads always match their shaft.",
+      "Draw cofactor hooks as filled <path> outlines (two offset arcs joined at the ends) to achieve the taper — stroked paths cannot vary width.",
+      "Give every metabolite node a stable id and expose the name block, structure group and box as separate <g> children so the web atlas can hit-test the whole node while styling parts.",
+      "Snap every shaft to integer + 0.5 px coordinates at 1x to keep hairlines crisp; disable shape-rendering smoothing on the grid rules (shape-rendering='crispEdges').",
+      "White knockout haloes on atom glyphs: paint the glyph twice — once with stroke='#FFFFFF' stroke-width='3' paint-order='stroke', then the fill.",
+      "Do NOT implement line-jump/hop crossings. The chart has none; adding them will read as wrong."
+    ]
+  },
+  "palette": {
+    "structureBlack": {
+      "hex": "#231F20",
+      "role": "Primary K-only print black. Metabolite names, ALL structural formulas and bonds, default reaction arrows, node box rules, curly braces, ring-closure brackets, inorganic co-substrate labels (H2O, CO2, O2, Pi, PPi, NH3), notes/legend body text, outer chart frame, grid letters, masthead headline."
+    },
+    "enzymeBlue": {
+      "hex": "#254991",
+      "role": "Enzyme and protein names EXCLUSIVELY, plus: animal-specific reaction arrows, long-distance cross-region connectors, blue parenthetical '(Note n)' references, the blue lane of a two-lane organism bus, masthead card border and footer band, Roche logo panel frame.",
+      "antialiasTints": [
+        "#7189B7",
+        "#B2BFD8"
+      ]
+    },
+    "coenzymeRed": {
+      "hex": "#EF2D47",
+      "role": "Crimson/carmine. Stoichiometric coenzyme labels (ATP, ADP, NAD+, NADH+H+, NADP+, NADPH+H+, NAD(P)+, FAD, THF, CoASH), coenzyme STRUCTURES drawn entirely in this ink, arrows for reactions in unicellular organisms + fungi, the crimson lane of a two-lane bus, region-boundary dashed rounded boxes.",
+      "antialiasTints": [
+        "#F57687",
+        "#F9B5BE"
+      ]
+    },
+    "regulationOrange": {
+      "hex": "#F14C1C",
+      "role": "Vermillion. Everything regulatory or non-stoichiometric: effector/regulator names, regulation arrows (solid=fast, dashed=slow), circled + / - glyphs, metal-ion and similar activators (Mg++, Mn++, Zn++, Co++, Fe++, K+, Cu++, GSH, PyrP), hormones, occurrence notes ('not in man'), clinical annotations, section-title plates, excretory end-product boxes, preferred-direction marker.",
+      "antialiasTints": [
+        "#F68A6B",
+        "#FAC0AF"
+      ]
+    },
+    "plantGreen": {
+      "hex": "#13A950",
+      "role": "Higher-plant-specific reaction arrows, the green lane of a two-lane organism bus, distinctly-coloured traceable alternate routes, and the small carbon-count numerals beside Fischer structures."
+    },
+    "longRangeMagenta": {
+      "hex": "#B5197F",
+      "role": "RESERVED. No magenta ink was confirmed in the analysed tiles — long-range cross-sheet connectors are drawn in enzymeBlue #254991, and traceability is bought with green/red. Use this token ONLY for a renderer-specific long-range/cross-page connector class that has no Roche equivalent, and prefer #254991 for fidelity."
+    },
+    "sectionTitleOrange": {
+      "hex": "#F14C1C",
+      "role": "Same ink as regulationOrange — the chart does not distinguish them by hue, only by typographic treatment (Sentence case, bold, cap 9.5 px)."
+    },
+    "gridGray": {
+      "hex": "#D9DCD7",
+      "role": "1 px reference-grid column/row division hairlines. Drawn beneath everything. Scan-variant #D9DAD8 / #B1B0B0 / #E3E3E3 observed — normalise to #D9DCD7."
+    },
+    "mastheadGray": {
+      "hex": "#979596",
+      "role": "Masthead subtitle type ONLY. Never used in the pathway body."
+    },
+    "background": {
+      "hex": "#FFFFFF",
+      "role": "Paper. Also the ink of knockout haloes where a heteroatom glyph interrupts a bond or a line must cross type."
+    }
+  },
+  "typographyScale": {
+    "family": {
+      "body": "A neutral grotesque, Helvetica / Univers / Akzidenz class. No serifs anywhere in the chart body. Recommended stack: 'Helvetica Neue', Helvetica, 'Nimbus Sans', Arial, sans-serif.",
+      "masthead": "A much heavier CONDENSED grotesque, used only in the masthead card. Recommended: 'Helvetica Neue Condensed Black', 'Archivo Black', 'Oswald', sans-serif.",
+      "rule": "One family for the entire pathway body. Casing and colour do the semantic work; weight is varied almost never — only for hub-compound names and section titles."
+    },
+    "capUnit": "1 CAP = 8 px = the metabolite-name cap height at native sheet scale (7152 px wide). All other sizes are expressed relative to it.",
+    "scale": [
+      {
+        "token": "metaboliteName",
+        "capHeightPx": 8,
+        "cap": 1,
+        "weight": 400,
+        "case": "ALL CAPS",
+        "fill": "#231F20",
+        "tracking": "+0.04em",
+        "lineHeightPx": 12.5,
+        "align": "center"
+      },
+      {
+        "token": "metaboliteNameHub",
+        "capHeightPx": 8,
+        "cap": 1,
+        "weight": 700,
+        "case": "ALL CAPS",
+        "fill": "#231F20",
+        "tracking": "+0.04em",
+        "lineHeightPx": 12.5,
+        "align": "center",
+        "use": "vitamins, named end-products, pathway hub compounds only — same size, heavier weight"
+      },
+      {
+        "token": "metaboliteAbbrev",
+        "capHeightPx": 8,
+        "cap": 1,
+        "weight": 400,
+        "case": "ALL CAPS in parentheses",
+        "fill": "#231F20",
+        "use": "(GAR), (PRPP) — own line under the name"
+      },
+      {
+        "token": "structureAtom",
+        "capHeightPx": 7.5,
+        "cap": 0.94,
+        "weight": 400,
+        "fill": "#231F20 (or #EF2D47 inside a coenzyme structure)",
+        "rowPitchPx": 11.8,
+        "subscripts": "60-65% size, baseline drop",
+        "superscripts": "60-65% size, raised to cap top"
+      },
+      {
+        "token": "enzymeName",
+        "capHeightPx": 7,
+        "cap": 0.88,
+        "weight": 400,
+        "case": "ALL CAPS",
+        "fill": "#254991",
+        "tracking": "+0.12em",
+        "lineHeightPx": 9.5,
+        "align": "center"
+      },
+      {
+        "token": "cofactorLabel",
+        "capHeightPx": 7,
+        "cap": 0.88,
+        "weight": 400,
+        "case": "ALL CAPS",
+        "fill": "by class — #EF2D47 coenzyme / #231F20 participant / #F14C1C activator",
+        "lineHeightPx": 9.5
+      },
+      {
+        "token": "carbonNumeral",
+        "capHeightPx": 6.5,
+        "cap": 0.81,
+        "weight": 400,
+        "fill": "#13A950",
+        "placement": "left of the top and bottom backbone carbons, outside any box"
+      },
+      {
+        "token": "noteReference",
+        "capHeightPx": 6,
+        "cap": 0.75,
+        "weight": 400,
+        "case": "Mixed case, parenthesised",
+        "fill": "#254991",
+        "use": "(Note 37) — last line of the enzyme block, or rotated ~60° alongside its line"
+      },
+      {
+        "token": "regulatorName",
+        "capHeightPx": 7,
+        "cap": 0.88,
+        "weight": 400,
+        "case": "ALL CAPS",
+        "fill": "#F14C1C",
+        "align": "left, ragged right"
+      },
+      {
+        "token": "annotationText",
+        "capHeightPx": 7,
+        "cap": 0.88,
+        "weight": 400,
+        "case": "Sentence case",
+        "fill": "#F14C1C",
+        "align": "left, ragged right",
+        "use": "clinical/occurrence notes: 'not in man', 'deficient in histidinemia'"
+      },
+      {
+        "token": "sectionTitle",
+        "capHeightPx": 9.5,
+        "cap": 1.19,
+        "weight": 700,
+        "case": "Sentence case",
+        "fill": "#F14C1C",
+        "use": "the largest and only bold text in the pathway area; the only pathway text that is not ALL CAPS"
+      },
+      {
+        "token": "legendBody",
+        "capHeightPx": 6,
+        "cap": 0.75,
+        "weight": 400,
+        "case": "Mixed case",
+        "fill": "#231F20",
+        "layout": "hanging-indent numbered list '1)' '2)'; heading bold Mixed case at the same size"
+      },
+      {
+        "token": "gridLocator",
+        "capHeightPx": 18,
+        "cap": 2.25,
+        "weight": 300,
+        "case": "single CAP or numeral",
+        "fill": "#231F20",
+        "placement": "centred in the margin band just inside the frame, repeated on all four sides"
+      },
+      {
+        "token": "mastheadHeadline",
+        "capHeightPx": 57,
+        "weight": 900,
+        "family": "condensed",
+        "fill": "#231F20"
+      },
+      {
+        "token": "mastheadSubtitle",
+        "capHeightPx": 24,
+        "weight": 700,
+        "family": "condensed",
+        "fill": "#979596"
+      },
+      {
+        "token": "mastheadUrl",
+        "capHeightPx": 32,
+        "weight": 700,
+        "family": "condensed",
+        "fill": "#FFFFFF"
+      }
+    ],
+    "specialGlyphs": {
+      "medialPlus": "The '+' joining a reduced cofactor to its proton ('NADPH + H+') is FULL cap height and noticeably heavier than the adjacent superscript charge. Do not typeset it as a normal plus.",
+      "coProductPlus": "The black '+' between two grouped co-products is set at metabolite-name cap height (8 px).",
+      "fractions": "Stoichiometric fractions ('1/2 O2') are stacked, black, at label size.",
+      "hyphenation": "Line breaks in names and enzyme names RETAIN the hyphen at line end. Break at chemical prefixes; mid-word breaks are acceptable in tight columns."
+    }
+  },
+  "edgeSemantics": [
+    {
+      "class": "flux.default",
+      "color": "#231F20",
+      "dash": "none",
+      "width": 3,
+      "arrowhead": "barbed dart 20x22 at target end",
+      "meaning": "General biochemical reaction found across organisms; solid = anabolic or bidirectional/amphibolic direction. The default edge."
+    },
+    {
+      "class": "flux.default.thin",
+      "color": "#231F20",
+      "dash": "none",
+      "width": 1.2,
+      "arrowhead": "barbed dart 10x7.5 at target end",
+      "meaning": "Same semantics as flux.default, drawn hairline in dense local chains where a 3 px shaft would not fit."
+    },
+    {
+      "class": "flux.default.reversible",
+      "color": "#231F20",
+      "dash": "none",
+      "width": 3,
+      "arrowhead": "barbed dart at BOTH ends",
+      "meaning": "Reversible reaction (legend remark 3). ONE straight shaft, two heads — never two antiparallel half-arrows."
+    },
+    {
+      "class": "flux.default.catabolic",
+      "color": "#231F20",
+      "dash": "9 3",
+      "width": 3,
+      "arrowhead": "barbed dart at target end",
+      "meaning": "General pathway, CATABOLIC direction. Dashing is a metabolic-direction code, NOT an uncertainty code."
+    },
+    {
+      "class": "flux.animal",
+      "color": "#254991",
+      "dash": "none",
+      "width": 2.5,
+      "arrowhead": "barbed dart at target end (both ends if reversible)",
+      "meaning": "Reaction observed in, or likely in, ANIMALS."
+    },
+    {
+      "class": "flux.animal.catabolic",
+      "color": "#254991",
+      "dash": "9 3",
+      "width": 2,
+      "arrowhead": "barbed dart at target end",
+      "meaning": "Animal-specific CATABOLIC route."
+    },
+    {
+      "class": "flux.microbial",
+      "color": "#EF2D47",
+      "dash": "none",
+      "width": 2.5,
+      "arrowhead": "barbed dart at target end",
+      "meaning": "Reaction in UNICELLULAR ORGANISMS + FUNGI. Also used at hairline width (1.2 px) purely to keep a line traceable through a congested corridor."
+    },
+    {
+      "class": "flux.microbial.catabolic",
+      "color": "#EF2D47",
+      "dash": "9 3",
+      "width": 2,
+      "arrowhead": "barbed dart at target end",
+      "meaning": "Unicellular/fungal CATABOLIC route; also carries plant/bacterial alternate branches that leave the mainstream mammalian flux."
+    },
+    {
+      "class": "flux.plant",
+      "color": "#13A950",
+      "dash": "none",
+      "width": 2.5,
+      "arrowhead": "barbed dart at target end",
+      "meaning": "Reaction in HIGHER PLANTS."
+    },
+    {
+      "class": "flux.plant.catabolic",
+      "color": "#13A950",
+      "dash": "9 3",
+      "width": 2,
+      "arrowhead": "barbed dart at target end",
+      "meaning": "Higher-plant CATABOLIC route."
+    },
+    {
+      "class": "flux.longRange",
+      "color": "#254991",
+      "dash": "none",
+      "width": 2,
+      "arrowhead": "barbed dart at one or both ends",
+      "meaning": "Long-distance / cross-region connector, coloured so the eye can trace it through congested areas. Routed as diagonal + orthogonal segments joined by a 13 px fillet."
+    },
+    {
+      "class": "bus.organismPair",
+      "color": "#13A950 + #EF2D47 (or #254991 + #EF2D47)",
+      "dash": "matches the pair's own class — both lanes share dash phase",
+      "width": "2.5 each, lanes 4-5 px apart centre-to-centre (visually touching)",
+      "arrowhead": "each lane carries its OWN head",
+      "meaning": "The same reaction attested in two organism classes (plants + unicellular, or animals + unicellular). Lanes share one route and ONE centred enzyme label, hold their offset exactly through concentric corners, and split only at the destination. Each lane carries its own cofactor hooks in its own ink, nested ~4 px apart."
+    },
+    {
+      "class": "bus.redoxShuttle",
+      "color": "per lane (typically #13A950 and #EF2D47)",
+      "dash": "none",
+      "width": 2.5,
+      "arrowhead": "one head per lane, pointing opposite ways",
+      "meaning": "A two-substrate redox exchange (e.g. ascorbate/glutathione) drawn NOT as a ring but as a narrow two-lane ladder: two antiparallel adjacent arrows ~10 px apart, each with its own right-angled approach."
+    },
+    {
+      "class": "cofactor.hook.in",
+      "color": "inherited from parent shaft",
+      "dash": "none",
+      "width": "tapered: parent width at the shaft → 1.2 px at the label",
+      "arrowhead": "NONE",
+      "meaning": "Side SUBSTRATE consumed. Quarter-turn arc, elbow radius 10-14 px, merging tangentially into the shaft on the upstream half."
+    },
+    {
+      "class": "cofactor.hook.out",
+      "color": "inherited from parent shaft",
+      "dash": "none",
+      "width": "tapered: parent width at the shaft → 1.2 px at the label",
+      "arrowhead": "small barbed dart 10x9 pointing AT the label",
+      "meaning": "Side PRODUCT released. Leaves the shaft tangentially in the flux direction on the downstream half."
+    },
+    {
+      "class": "cofactor.hook.stub",
+      "color": "inherited from parent shaft",
+      "dash": "none",
+      "width": 1.2,
+      "arrowhead": "small dart if outgoing, none if incoming",
+      "meaning": "Degenerate hook — a straight 10-15 px stub used on steep diagonals or in space-starved runs. Same semantics as the arc form."
+    },
+    {
+      "class": "regulation.fast",
+      "color": "#F14C1C",
+      "dash": "none",
+      "width": 1.5,
+      "arrowhead": "slim swept-back dart 14x10",
+      "meaning": "FAST regulation — allosteric / direct effector action on flux. Terminates on or just short of the target shaft, with a circled +/- at the head."
+    },
+    {
+      "class": "regulation.slow",
+      "color": "#F14C1C",
+      "dash": "10 6",
+      "width": 1.5,
+      "arrowhead": "slim swept-back dart 14x10",
+      "meaning": "SLOW regulation — induction or repression of enzyme SYNTHESIS. The long loose dash is deliberately distinct from every flux dash (9 3)."
+    },
+    {
+      "class": "regulation.preferredDirection",
+      "color": "#F14C1C",
+      "dash": "none",
+      "width": 1.5,
+      "arrowhead": "small dart, one end",
+      "meaning": "A short (~30 px) arrow set parallel to and ~6 px above a double-headed reversible shaft, not touching it, marking the preferred direction."
+    },
+    {
+      "class": "annotation.pointer",
+      "color": "#F14C1C",
+      "dash": "none",
+      "width": 1.5,
+      "arrowhead": "slim dart, no circled sign",
+      "meaning": "Free-angle single-segment diagonal from a clinical/occurrence note to the step it qualifies. The ABSENCE of a circled +/- is what distinguishes it from a regulation edge."
+    },
+    {
+      "class": "brace.coProduct",
+      "color": "#231F20",
+      "dash": "none",
+      "width": 1.5,
+      "arrowhead": "none — the reaction arrow terminates ON the brace cusp",
+      "meaning": "Groups two or more co-products under one arrow terminus. Horizontal rule ~156 px with rounded upturned ends and a central V cusp."
+    },
+    {
+      "class": "structure.bond",
+      "color": "#231F20 (or #EF2D47 in a coenzyme structure)",
+      "dash": "none",
+      "width": 1.2,
+      "arrowhead": "none",
+      "meaning": "Structural-formula bond. Double bonds are two parallel 1.2 px lines 2.5 px apart. Haworth front (lower) ring edges are drawn at 2.4 px for pseudo-perspective."
+    },
+    {
+      "class": "box.node",
+      "color": "#231F20",
+      "dash": "none",
+      "width": 1.5,
+      "arrowhead": "none",
+      "meaning": "Cross-reference/hub marker around a metabolite structure or bare name. SQUARE corners, no fill, rectilinear Manhattan polygon that steps around substituents."
+    },
+    {
+      "class": "box.endProduct",
+      "color": "#F14C1C",
+      "dash": "none",
+      "width": 1.5,
+      "arrowhead": "none",
+      "meaning": "Orange-stroked name box = excretory or terminal end-product of metabolism (legend remark 7)."
+    },
+    {
+      "class": "box.region",
+      "color": "#EF2D47",
+      "dash": "8 4",
+      "width": 1.5,
+      "arrowhead": "none",
+      "meaning": "Dashed rounded box (radius 20) loosely enclosing a functional region such as purine nucleotide interconversion. May span tile boundaries. Purely a soft grouping cue."
+    },
+    {
+      "class": "grid.rule",
+      "color": "#D9DCD7",
+      "dash": "none",
+      "width": 1,
+      "arrowhead": "none",
+      "meaning": "Reference-grid column/row division. Locator furniture only, drawn beneath everything, shape-rendering crispEdges."
+    },
+    {
+      "class": "frame.outer",
+      "color": "#231F20",
+      "dash": "none",
+      "width": 6,
+      "arrowhead": "none",
+      "meaning": "Sheet border rule; a second 2 px black rule closes the locator-letter margin band 37 px inside it."
+    }
+  ],
+  "layoutPrinciples": [
+    "SHELVES / SPINES ARE THE BACKBONE OF THE COMPOSITION. A linear pathway is drawn as one dead-straight horizontal spine held at a single constant y for its entire run — hundreds of px, often the full width of a tile. Metabolite units are threaded onto it like beads. Never let a chain drift off its y.",
+    "TIER PITCH. Parallel pathway bands stack at a vertical pitch of ~150-190 px (measured 185 px between metabolite tiers, ~150 px between adjacent spines). Within a tier all metabolite NAME blocks are TOP-ALIGNED to a shared y even though the structures hanging below them have different heights.",
+    "FIVE-BAND HORIZONTAL STACK AROUND EVERY SPINE — rigidly maintained, so that scanning horizontally at any one y-offset reads a homogeneous class of information. Top to bottom: (1) metabolite names, ~40 px above the shaft; (2) cofactor/co-substrate labels, 25-35 px above; (3) THE SHAFT with its hooks; (4) enzyme name, first baseline 8 px below; (5) section-title plates and spill-over annotations, ~35 px further down.",
+    "NODE PITCH. Horizontal node-to-node pitch is 135-200 px (mean ~160). The gap between adjacent structures is 99-162 px and is exactly one reaction arrow. THE ENZYME LABEL BLOCK SETS THE PITCH: the run must be wide enough for the longest label line. Compute pitch as max(minGap 100, longestEnzymeLineWidth + 20).",
+    "REACTION AXIS. Within a tier, ALL reaction arrows share one y, and that y passes through the vertical mid-height of the flanking structures. Tier-to-tier links are dead vertical on a shared backbone x. Alignment to these implicit rails is exact, not approximate.",
+    "ROUTING IS MIXED ORTHOGONAL + DIAGONAL, NOT STRICT MANHATTAN. Use orthogonal runs wherever a route must travel alongside other content; use a straight 30-45° diagonal to cross open paper economically. Never emit a stepped orthogonal staircase — the chart has none.",
+    "CORNER RULES. (a) Diagonal→orthogonal transitions get a genuine ROUNDED FILLET, radius 10-15 px. (b) Orthogonal→orthogonal corners are SHARP RIGHT ANGLES, radius 0. (c) Cofactor hook elbows are rounded, radius 10-14 px. Applying a fillet to an orthogonal corner is the single most common way to get this wrong.",
+    "Y-JUNCTIONS FOR MULTI-SUBSTRATE / MULTI-PRODUCT STEPS. One shaft runs into a BARE vertex (no dot, no glyph), then 2-3 arms leave at roughly ±40°, each ending in its own arrowhead. Heads on ALL arms means the whole junction is reversible.",
+    "PARALLEL BUS RUNS. Co-routed lines hold a constant 4-5 px gutter (10 px for a redox ladder) and MAINTAIN THAT OFFSET EXACTLY THROUGH CORNERS — concentric turns, inner lane taking the tighter radius. They split only at the destination and share one centred enzyme label.",
+    "REGULATION GUTTER. Regulation is banished to a dedicated gutter beside the pathway (typically ~120 px wide on the left). Orange effector name-stacks are LEFT-ALIGNED in a column, their arrows run dead-parallel to each other, and every arrow terminates on the SAME target shaft with arrowheads landing in a clean vertical line. Circled +/- glyphs form their own tidy column at a constant x just before the target.",
+    "CROSSINGS ARE PLAIN OVERPRINTS. No jump arcs, no gaps, no knockouts, no z-jogs. Separation is bought by INK COLOUR and by differing dash phase. This is precisely why blue/red/green route colours exist — when two black routes would collide, recolour one rather than bridging it. Grid hairlines always pass behind.",
+    "BOX COLLISIONS. Where a route would collide with a node box, either deflect the route around the box, or NOTCH the box's rectilinear outline to admit it. Never draw a route through a box's interior.",
+    "GLYPH PRECEDENCE. Where a line must cross an atom glyph, the glyph wins via a white knockout halo (3 px stroke of #FFFFFF painted under the fill). This is the ONLY use of knockouts.",
+    "CLEARANCE. Arrows stop 8-12 px clear of structure ink or box border and never touch type. Adjacent node boxes tessellate with 10-20 px of clear paper. Enzyme labels sit 2-8 px from their arrows.",
+    "BAND SEPARATION. Density inside a band is extreme; between bands leave 25-40 px of clean white. Vertical clearance from a spine's enzyme labels to the section-title plate below is ~35 px. Whitespace exists ONLY between bands and where a pathway genuinely has none — chart real estate is used to the millimetre.",
+    "BRANCHED (NON-SPINE) REGIONS run at roughly half the density of a spine: a coarse ~150 px vertical and ~200 px horizontal rhythm, nodes placed on an implicit grid, joined by long polylines mixing orthogonal and diagonal runs.",
+    "CYCLE RINGS. A true metabolic ring (TCA, urea) is the spine convention bent around a closed polygon: straight segments on shared axes, SQUARE orthogonal corners (or filleted where a diagonal meets an orthogonal), metabolite name+structure units seated ON the ring path at the vertices, cofactor hooks projecting radially OUTWARD from the ring, enzyme names immediately alongside their own segment. NOTE: no closed cycle appeared in the analysed tiles — this rule is extrapolated from the primitives and must be verified against a TCA/urea tile before shipping.",
+    "REDOX COUPLES ARE NOT RINGS. A coupled redox pair is drawn as an offset parallel pair or a two-lane antiparallel ladder, never as a circular curved-arrow pair.",
+    "REVERSIBILITY IS NOT A LOOP. One shaft, two heads, optionally with a short parallel orange preferred-direction marker above it.",
+    "BULK TEXT IS PARKED, NOT FLOWED. Notes, remarks and abbreviation glossaries occupy one large rectangular reservation (a rounded-rect chrome panel); the graph never flows around prose. Pathway drawing resumes abruptly at the panel edge with no transitional margin.",
+    "THE GRID IS NOT A LAYOUT CONSTRAINT. Snap content to the shelf/spine rails, NOT to the reference grid. Pathway content ignores the grid entirely for routing; the grid is purely a printed locator system for the index."
+  ],
+  "regionalMap": [
+    {
+      "tile": "r0c0",
+      "sheetRegion": "top-left corner, grid columns A-B, rows 1-2",
+      "occupants": [
+        "Masthead title card (consumes ~75% of the tile: rows 1 and most of row 2)",
+        "D-glucarate (saccharate) catabolism — bacterial branch: D-glucarate → 5-dehydro-4-deoxy-D-glucarate / 2-dehydro-3-deoxy-D-glucarate → pyruvate + tartronate semialdehyde",
+        "Glucuronate / gulonate pathway: D-glucuronolactone → L-gulonolactone; L-gulonate ⇄ L-gulonolactone; 3-dehydro-L-gulonate",
+        "L-ascorbate (vitamin C) biosynthesis: L-gulonolactone → 2-dehydro-L-gulonolactone → L-ascorbate ('not in man')",
+        "L-ascorbate oxidation / glutathione redox couple (green+red paired bus)"
+      ],
+      "density": "atypically low — the masthead dominates; the bottom band is at normal density"
+    },
+    {
+      "tile": "r0c1",
+      "sheetRegion": "top edge, grid columns C-D, rows 1-2",
+      "occupants": [
+        "Roche identity panel (column C chrome)",
+        "Legend panel (column D): 'General Remarks for Part 1 and 2' (12 numbered conventions) + two-column 'Abbreviations for Part 1' + 2017 copyright colophon",
+        "L-ascorbate degradation (lower left): L-dehydroascorbate → 2,3-dioxo-L-gulonate → L-lyxonate + L-xylonate; branch to L-threonate ⇄ 3-dehydrothreonate; terminal oxalate; 2-glutathione redox shuttle at the left edge",
+        "De novo purine biosynthesis, first half (spine at y=844): PRPP → 5-P-β-D-ribosylamine → GAR → FGAR",
+        "10-formyl-THF one-carbon donor node (crimson structure in a black box) above the purine spine",
+        "Purine feedback-inhibition cluster (AMP, ADP, (ATP), GMP, GDP, IMP; azaserine, 6-diazo-5-oxo-L-norleucine; primary-gout annotation) in the left regulation gutter x=520-640",
+        "Histidine metabolism, second parallel spine ~150 px below the purine spine",
+        "Orange section-title plates: 'Purine biosynthesis', 'Histidine metabolism'"
+      ],
+      "density": "top ~57% is administrative chrome; pathway drawing begins abruptly at y≈730"
+    },
+    {
+      "tile": "r0c2",
+      "sheetRegion": "top edge, grid columns E-F, rows 1-2",
+      "occupants": [
+        "Chart apparatus band y=130-168 (column letters E, F) and a 'Notes for Part 1' rounded panel y=167-715 holding numbered notes 1-49; last column of the abbreviations glossary at x<170",
+        "De novo purine biosynthesis, second half (spine y=844.5, full tile width): FGAM → AIR → CAIR → SAICAR → AICAR → FAICAR → IMP",
+        "10-formyl-THF / THF node feeding the formyltransferase step",
+        "Purine nucleotide interconversion / GMP branch at the right edge (x>1083): IMP dehydrogenase drawn as a vertical arrow, XMP / xanthine phosphoribosyltransferase — enclosed in a crimson dashed rounded box that CONTINUES into tile r0c3",
+        "Histidine biosynthesis, bottom-left band: phosphoribulosyl-formimino-AICAR-P → D-erythro-imidazole-glycerol-P → imidazole acetol-P → L-histidinol-P → L-histidinol → L-histidine, with a green+crimson two-lane glutamine/glutamate/2-oxoglutarate bus",
+        "Histidine degradation, bottom-right band: L-histidine → urocanate → 4-imidazolone-5-propionate → N-formimino-L-glutamate; branch to hydantoin propionate (blue+crimson dashed two-lane)",
+        "L-histidine anabolic sinks: L-histidinyl-tRNA → PROTEINS; histamine methyltransferase stub at the bottom edge"
+      ],
+      "density": "a full third of the tile is apparatus; bands 3 and 4 are at maximum pathway density"
+    },
+    {
+      "tile": "r0c3..r0c5",
+      "sheetRegion": "top edge, grid columns G-L, rows 1-2",
+      "occupants": [
+        "NOT ANALYSED. Inferred continuation: the crimson dashed purine-nucleotide-interconversion region opens in r0c3 (IMP → XMP → GMP / IMP → adenylosuccinate → AMP), followed by purine catabolism toward uric acid."
+      ],
+      "confidence": "inference — verify before implementing"
+    },
+    {
+      "tile": "r1c0",
+      "sheetRegion": "grid column A, rows 2-3",
+      "occupants": [
+        "Continuation of the aldehyde-dehydrogenase step whose regulator callout ('BARBITAL, PENTAN-1-OL', circled-plus induction marker) stems down from r0c0",
+        "A blue-dashed-over-red-dashed paired bus under 'ALDEHYDE DEHYDROGENASE' with blue and red cofactor hooks nested at NAD+ / NADH+H+"
+      ],
+      "confidence": "partial — observed only as the bottom-edge spill-over from r0c0"
+    },
+    {
+      "tile": "r1c1..r4c5",
+      "sheetRegion": "grid rows 3-10, all columns",
+      "occupants": [
+        "NOT ANALYSED in the supplied findings. r4c0 was noted as exhibiting the sheet's true steady-state density: the same tier/shelf logic packed 4-5 tiers deep with 40-60 px of vertical air between a tier's last structure row and the next tier's name block, and grid locator labels repeating along the bottom (A/B) and left (9/10) edges."
+      ],
+      "confidence": "structural note only; contents unknown"
+    },
+    {
+      "globalObservation": "Pathways are laid out in horizontal bands that run across tile boundaries and are read left-to-right. Related pathways stack vertically (purine biosynthesis directly above histidine metabolism, sharing PRPP as the branch point). Administrative chrome — masthead, Roche panel, legend, notes — is concentrated along the entire top edge of the sheet (row 1 and part of row 2), leaving rows 3-10 as continuous pathway territory."
+    }
+  ],
+  "palette_note": "All hex values are print-scan sampled; antialias tints listed under each ink are scan artefacts and must NOT be emitted by the renderer."
+}

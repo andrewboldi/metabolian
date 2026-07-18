@@ -25,19 +25,42 @@ if (!charts.length) {
   process.exit(1);
 }
 
-// Shelf-pack: fill a row until it exceeds the target width, then start a new row.
-const totalArea = charts.reduce((s, c) => s + c.bounds.w * c.bounds.h, 0);
-const targetW = Math.sqrt(totalArea * TARGET_ASPECT);
+// Pack into balanced columns (masonry): each region goes to the currently
+// shortest column. We try every column count and keep the one whose finished
+// canvas is closest to a wall-chart aspect — dense, not a ragged strip.
+const ordered = [...charts].sort((a, b) => b.bounds.h - a.bounds.h);
 
-const ordered = [...charts].sort((a, b) => b.bounds.h - a.bounds.h); // tall regions first packs tighter
-const regions = [];
-let cx = 0, cy = 0, rowH = 0;
-for (const c of ordered) {
-  if (cx > 0 && cx + c.bounds.w > targetW) { cx = 0; cy += rowH + GAP; rowH = 0; }
-  regions.push({ chart: c, ox: cx - c.bounds.x, oy: cy - c.bounds.y, x: cx, y: cy, w: c.bounds.w, h: c.bounds.h });
-  cx += c.bounds.w + GAP;
-  rowH = Math.max(rowH, c.bounds.h);
+function packInto(colCount) {
+  const colX = [];
+  const colH = new Array(colCount).fill(0);
+  const colW = new Array(colCount).fill(0);
+  const out = [];
+  for (const c of ordered) {
+    let ci = 0;
+    for (let i = 1; i < colCount; i++) if (colH[i] < colH[ci]) ci = i;
+    out.push({ chart: c, col: ci, y: colH[ci] });
+    colH[ci] += c.bounds.h + GAP;
+    colW[ci] = Math.max(colW[ci], c.bounds.w);
+  }
+  let x = 0;
+  for (let i = 0; i < colCount; i++) { colX[i] = x; x += colW[i] + GAP; }
+  const W = Math.max(0, x - GAP);
+  const H = Math.max(...colH) - GAP;
+  for (const r of out) {
+    r.x = colX[r.col] + (colW[r.col] - r.chart.bounds.w) / 2; // centre in its column
+    r.w = r.chart.bounds.w; r.h = r.chart.bounds.h;
+    r.ox = r.x - r.chart.bounds.x; r.oy = r.y - r.chart.bounds.y;
+  }
+  return { out, W, H };
 }
+
+let best = null;
+for (let c = 2; c <= Math.min(10, charts.length); c++) {
+  const p = packInto(c);
+  const score = Math.abs(p.W / Math.max(p.H, 1) - TARGET_ASPECT);
+  if (!best || score < best.score) best = { ...p, score, cols: c };
+}
+const regions = best.out;
 
 const master = {
   id: "_master",

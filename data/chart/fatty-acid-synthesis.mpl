@@ -4,7 +4,7 @@
 # Claisen condensation; ACC's effectors sit in the right-hand gutter.
 
 pathway fatty-acid-synthesis "De novo fatty acid synthesis (palmitate)" {
-  grid C4
+  grid D4
   spacing 210
 
   spine at 0,0 {

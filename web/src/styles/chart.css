@@ -5,28 +5,28 @@
 
 .chart-shell { display: grid; grid-template-columns: 1fr; height: calc(100vh - 58px); overflow: hidden; position: relative; }
 
-#chart-canvas { position: absolute; inset: 0; background: #fdfdfb; cursor: grab; touch-action: none; }
+#chart-canvas { position: absolute; inset: 0; background: #FFFFFF; cursor: grab; touch-action: none; }
 #chart-canvas.dragging { cursor: grabbing; }
 #chart-canvas svg { width: 100%; height: 100%; display: block; }
 
 /* ---- ink classes (Michal's palette) ---- */
 .ink-structure { stroke: #111; fill: none; }
-.flux-line { stroke: #111; stroke-width: 1.6; fill: none; }
+.flux-line { stroke: #231F20; stroke-width: 1.6; fill: none; }
 .flux-line.committed { stroke-width: 2.6; }
-.branch-line { stroke: #111; stroke-width: 1.3; fill: none; stroke-dasharray: none; }
-.cofactor-arc { stroke: #c8102e; stroke-width: 1.1; fill: none; }
-.reg-line { stroke: #c8102e; stroke-width: 1.2; fill: none; stroke-dasharray: 5 3; }
-.reg-line.activate { stroke: #1a7f37; }
+.branch-line { stroke: #231F20; stroke-width: 1.3; fill: none; stroke-dasharray: none; }
+.cofactor-arc { stroke: #EF2D47; stroke-width: 1.1; fill: none; }
+.reg-line { stroke: #F14C1C; stroke-width: 1.2; fill: none; stroke-dasharray: 5 3; }
+.reg-line.activate { stroke: #13A950; }
 
-.met-name { font-family: "Inter", system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111; letter-spacing: 0.01em; text-anchor: middle; }
+.met-name { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: 11px; font-weight: 400; fill: #231F20; letter-spacing: 0.04em; text-anchor: middle; }
 .met-formula { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9px; fill: #555; text-anchor: middle; }
-.enz-name { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #0b5cad; text-transform: uppercase; letter-spacing: 0.02em; cursor: pointer; }
+.enz-name { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #254991; text-transform: uppercase; letter-spacing: 0.02em; cursor: pointer; }
 .enz-name:hover { fill: #d43900; text-decoration: underline; }
-.enz-ec { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 8.5px; fill: #6b7f95; }
-.cofactor-label { font-family: "Inter", system-ui, sans-serif; font-size: 9px; fill: #c8102e; }
+.enz-ec { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 8.5px; fill: #254991; opacity: .75; }
+.cofactor-label { font-family: "Inter", system-ui, sans-serif; font-size: 9px; fill: #EF2D47; }
 .reg-glyph text { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 700; text-anchor: middle; }
 
-.met-box { fill: #fff; stroke: #111; stroke-width: 1; }
+.met-box { fill: none; stroke: #231F20; stroke-width: 1.5; }
 .met-cell { cursor: pointer; }
 .met-cell:hover .met-box { stroke: #d43900; stroke-width: 1.8; }
 
@@ -60,14 +60,15 @@
 #mol3d { width: 100%; height: 300px; position: relative; background: #0b0f14; border-radius: var(--radius); border: 1px solid var(--line); }
 
 /* ---- master wall chart: coordinate ruler + pathway regions ---- */
-.grid-line { stroke: #d9d5c8; stroke-width: 1; }
+.grid-line { stroke: #D9DCD7; stroke-width: 1; }
 .grid-frame { fill: none; stroke: #8a8574; stroke-width: 2; }
-.grid-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 15px; fill: #8a8574; text-anchor: middle; dominant-baseline: middle; }
+.grid-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: var(--grid-size, 15px); fill: #8a8574; text-anchor: middle; dominant-baseline: middle; }
 .region-frame { fill: none; stroke: #c9c4b4; stroke-width: 1; stroke-dasharray: 6 5; }
-.region-title rect { fill: #fdece4; stroke: #d4581f; stroke-width: 1.2; }
-.region-title text { font-family: "Inter", system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #b0410d; dominant-baseline: middle; }
-.region-title .region-ref { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; fill: #d4581f; font-weight: 500; }
-/* at far-out zoom the section titles carry the map, not the molecules */
-[data-lod="overview"] .region-title text { font-size: 22px; }
-.connector-line { stroke: #111; stroke-width: 1.4; }
-.connector-label { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #b0410d; }
+.region-title rect { fill: none; stroke: #F14C1C; stroke-width: 1.5; }
+.region-title text { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: var(--title-size, 15px); font-weight: 400; fill: #F14C1C; letter-spacing: .04em; dominant-baseline: middle; }
+.region-title .region-ref { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; fill: #F14C1C; font-weight: 400; }
+/* the boxed plate only makes sense once the title is at its drawn size */
+[data-lod="overview"] .region-title rect, [data-lod="normal"] .region-title rect { display: none; }
+[data-lod="overview"] .region-ref { display: none; }
+.connector-line { stroke: #254991; stroke-width: 1.4; }
+.connector-label { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #254991; }

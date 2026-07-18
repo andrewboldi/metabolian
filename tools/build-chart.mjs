@@ -15,14 +15,30 @@ const PATHWAY_DIR = join(ROOT, "data", "pathways");
 const MOL_INDEX = join(ROOT, "web", "public", "mol", "index.json");
 const OUT = join(ROOT, "web", "public", "chart");
 
+// Michal writes cofactors in their conventional short form — "ADP + Pi", never
+// "Adenosine diphosphate + Orthophosphate". Density depends on this.
+const SHORT = {
+  atp: "ATP", adp: "ADP", amp: "AMP", gtp: "GTP", gdp: "GDP", utp: "UTP", udp: "UDP",
+  ctp: "CTP", itp: "ITP", nad: "NAD+", nadh: "NADH+H+", nadp: "NADP+", nadph: "NADPH+H+",
+  fad: "FAD", fadh2: "FADH2", fmn: "FMN", coa: "CoA-SH", coash: "CoA-SH",
+  pi: "Pi", ppi: "PPi", h2o: "H2O", hplus: "H+", co2: "CO2", o2: "O2", nh3: "NH3",
+  nh4: "NH4+", hco3: "HCO3-", h2o2: "H2O2", q: "Q", qh2: "QH2", thf: "THF",
+  sam: "SAM", sah: "SAH", glutathione: "GSH", gssg: "GSSG", acetylcoa: "acetyl-CoA",
+};
+const short = (id, fallback) => SHORT[id] || SHORT[id.replace(/[_-]/g, "")] || fallback;
+
 const molIndex = existsSync(MOL_INDEX) ? JSON.parse(readFileSync(MOL_INDEX, "utf8")) : {};
 
 // index every metabolite / enzyme across all modules so a chart can reference them
 const metabolites = new Map();
 const enzymes = new Map();
+const occurrences = new Map(); // metabolite id -> how many pathways use it
 for (const f of readdirSync(PATHWAY_DIR).filter((f) => f.endsWith(".json"))) {
   const mod = JSON.parse(readFileSync(join(PATHWAY_DIR, f), "utf8"));
-  for (const m of mod.metabolites || []) if (!metabolites.has(m.id)) metabolites.set(m.id, m);
+  for (const m of mod.metabolites || []) {
+    if (!metabolites.has(m.id)) metabolites.set(m.id, m);
+    occurrences.set(m.id, (occurrences.get(m.id) || 0) + 1);
+  }
   for (const e of mod.enzymes || []) if (!enzymes.has(e.id)) enzymes.set(e.id, e);
 }
 
@@ -55,6 +71,9 @@ for (const f of mplFiles) {
     n.charge = m?.charge ?? null;
     n.xrefs = m?.xrefs || {};
     const mol = m ? molIndex[metKey(m)] : null;
+    // Michal boxes a compound only when it occurs in several places on the sheet —
+    // the box is a cross-reference marker, never decoration.
+    n.hub = (occurrences.get(n.metabolite) || 0) >= 2;
     n.mol = mol ? mol.file : null;
     n.molSize = mol ? { w: mol.w, h: mol.h } : null;
   }
@@ -66,8 +85,8 @@ for (const f of mplFiles) {
     r.gene = e?.gene || null;
     r.uniprot = e?.xrefs?.uniprot || e?.xrefs?.alphafold || null;
     r.pdb = e?.xrefs?.pdb?.[0] || null;
-    r.inLabels = (r.in || []).map((id) => metabolites.get(id)?.name || id);
-    r.outLabels = (r.out || []).map((id) => metabolites.get(id)?.name || id);
+    r.inLabels = (r.in || []).map((id) => short(id, metabolites.get(id)?.name || id));
+    r.outLabels = (r.out || []).map((id) => short(id, metabolites.get(id)?.name || id));
   }
 
   // Layout quality gate: a readable chart has no overlapping cells. This fails

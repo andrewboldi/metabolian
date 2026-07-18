@@ -96,6 +96,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     layerRegions.append(g);
   }
 
+  const regionLabels: { el: SVGGElement; reg: any; short: string }[] = [];
   for (const reg of master.regions || []) {
     const g = s("g", { class: "region", "data-region": reg.id });
     g.append(s("rect", { class: "region-frame", x: reg.x - 40, y: reg.y - 40, width: reg.w + 80, height: reg.h + 80, rx: 4 }));
@@ -103,10 +104,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     const label = s("g", { class: "region-title" });
     const tw = Math.max(160, reg.title.length * 9.2);
     label.append(s("rect", { x: reg.x - 40, y: reg.y - 84, width: tw, height: 30, rx: 3 }));
-    label.append(s("text", { x: reg.x - 30, y: reg.y - 64 }, [reg.title]));
+    const titleText = s("text", { x: reg.x - 30, y: reg.y - 64 }, [reg.title]);
+    label.append(titleText);
     label.append(s("text", { class: "region-ref", x: reg.x - 30 + tw - 14, y: reg.y - 64 }, [reg.ref]));
     g.append(label);
     layerRegions.append(g);
+    regionLabels.push({ el: label, reg, short: reg.title.replace(/\s*\(.*$/, "") });
   }
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
@@ -158,8 +161,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   // ---------- metabolite cells ----------
   for (const n of ir.nodes) {
     const g = s("g", { class: "met-cell", "data-node": n.id, transform: `translate(${n.x},${n.y})` });
-    g.append(s("text", { class: "met-name", x: n.w / 2, y: -22 }, [n.label]));
-    g.append(s("rect", { class: "met-box", x: 0, y: 0, width: n.w, height: n.h, rx: 2 }));
+    g.append(s("text", { class: "met-name", x: n.w / 2, y: -22 }, [n.label.toUpperCase()]));
+    // Only hub compounds (those appearing in several pathways) are boxed — the
+    // box is a cross-reference marker in Michal's language, not decoration.
+    if ((n as ChartNode & { hub?: boolean }).hub) {
+      g.append(s("rect", { class: "met-box", x: 0, y: 0, width: n.w, height: n.h }));
+    }
     if (n.formula) g.append(s("text", { class: "met-formula lod-normal", x: n.w / 2, y: -9 }, [n.formula]));
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });
     layerNodes.append(g);
@@ -174,6 +181,11 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     if (svg.getAttribute("data-lod") !== lod) {
       svg.setAttribute("data-lod", lod);
     }
+    // Map-style labels: region titles and grid letters hold a constant on-screen
+    // size so the sheet stays navigable when zoomed all the way out.
+    svg.style.setProperty("--title-size", `${Math.min(220, Math.max(14, 17 / k))}px`);
+    svg.style.setProperty("--grid-size", `${Math.min(180, Math.max(12, 15 / k))}px`);
+    declutterLabels(lod);
     scheduleLoad();
     hooks.onZoom?.(k, lod);
   };
@@ -218,6 +230,31 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const endDrag = () => { dragging = false; canvas.classList.remove("dragging"); };
   canvas.addEventListener("pointerup", endDrag);
   canvas.addEventListener("pointercancel", endDrag);
+
+  /** Map-style label decluttering — the most important label in an area wins. */
+  function declutterLabels(lod: string) {
+    if (!regionLabels.length) return;
+    // The CSS size is in chart units (17/k) so it renders at a constant ~17px on
+    // screen; collision must therefore be measured with the SCREEN size.
+    const chartFont = Math.min(220, Math.max(14, 17 / k));
+    const fontPx = chartFont * k;
+    const boxes: { x: number; y: number; w: number; h: number }[] = [];
+    const ordered = [...regionLabels].sort((a, b) => b.reg.w * b.reg.h - a.reg.w * a.reg.h);
+    for (const item of ordered) {
+      const text = lod === "overview" ? item.short : item.reg.title;
+      const t = item.el.querySelector("text");
+      if (t && t.textContent !== text) t.textContent = text;
+      const sx = (item.reg.x - 30) * k + tx;
+      const sy = (item.reg.y - 64) * k + ty;
+      const w = text.length * fontPx * 0.55;
+      const h = fontPx * 1.25;
+      const box = { x: sx, y: sy - h * 0.8, w, h };
+      const clash = boxes.some((b) =>
+        !(box.x + box.w <= b.x || b.x + b.w <= box.x || box.y + box.h <= b.y || b.y + b.h <= box.y));
+      item.el.style.display = clash ? "none" : "";
+      if (!clash) boxes.push(box);
+    }
+  }
 
   let loadTimer = 0;
   function scheduleLoad() {
@@ -305,7 +342,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
 
 function marker(id: string, color: string) {
   const m = s("marker", { id, viewBox: "0 0 10 10", refX: 9, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto-start-reverse" });
-  m.append(s("path", { d: "M0,1 L10,5 L0,9 z", fill: color }));
+  m.append(s("path", { d: "M0,0.5 L10,5 L0,9.5 L2.8,5 Z", fill: color }));
   return m;
 }
 
