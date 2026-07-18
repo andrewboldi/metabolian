@@ -13,6 +13,7 @@ import { readFileSync, readdirSync, writeFileSync, mkdirSync, rmSync } from "nod
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { buildStamp } from "./lib/stamp.mjs";
+import { forceSimulation, forceManyBody, forceLink, forceCenter, forceCollide } from "d3-force";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -119,6 +120,29 @@ for (const mod of modules) {
 
 const nodeList = [...nodes.values()];
 const edgeList = [...edges.values()];
+
+// Precompute a static force-directed layout at build time so the client renders
+// instantly (no expensive on-load layout → low TBT) and every visit sees the
+// same, learnable map. The explorer's "Re-layout" still runs fcose on demand.
+precomputeLayout(nodeList, edgeList);
+
+function precomputeLayout(nodeList, edgeList) {
+  const sim = nodeList.map((n) => ({ id: n.id }));
+  const byId = new Map(sim.map((n) => [n.id, n]));
+  const links = edgeList.filter((e) => byId.has(e.source) && byId.has(e.target)).map((e) => ({ source: e.source, target: e.target }));
+  const s = forceSimulation(sim)
+    .force("charge", forceManyBody().strength(-55).distanceMax(600))
+    .force("link", forceLink(links).id((d) => d.id).distance(48).strength(0.55))
+    .force("center", forceCenter(0, 0))
+    .force("collide", forceCollide(11))
+    .stop();
+  for (let i = 0; i < 340; i++) s.tick();
+  for (const n of nodeList) {
+    const p = byId.get(n.id);
+    n.x = Math.round(p.x * 2.6);
+    n.y = Math.round(p.y * 2.6);
+  }
+}
 
 const stats = {
   pathways: modules.length,

@@ -1,0 +1,2991 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "bile-acid-synthesis",
+  "name": "Bile acid synthesis (classic and alternative pathways)",
+  "category": "lipid-metabolism",
+  "summary": "Hepatic conversion of cholesterol into the primary bile acids cholic acid and chenodeoxycholic acid via ring hydroxylation/reduction, CYP27A1 side-chain oxidation, peroxisomal beta-oxidation and glycine/taurine conjugation; the major route of cholesterol catabolism, rate-limited by CYP7A1 and controlled by FXR feedback.",
+  "description": "Bile acid synthesis is the principal pathway for catabolizing cholesterol (~50% of the ~0.5 g/day cholesterol turned over) and for producing the amphipathic detergents that emulsify dietary lipids and lipid-soluble vitamins.\n\n**Classic (neutral) pathway.** Initiated in the endoplasmic reticulum by **CYP7A1 (cholesterol 7alpha-hydroxylase)** — the rate-limiting, committed step. HSD3B7 then oxidizes/isomerizes the A-ring to the 3-oxo-Delta4 intermediate. **CYP8B1 (sterol 12alpha-hydroxylase)** is the branch point: 12alpha-hydroxylation commits flux to **cholic acid (CA)**, whereas skipping it yields **chenodeoxycholic acid (CDCA)**, so CYP8B1 sets the CA:CDCA ratio. AKR1D1 (Delta4-3-oxosteroid 5beta-reductase) and AKR1C4 (3alpha-hydroxysteroid dehydrogenase) fix the 5beta (cis) A/B ring junction and the 3alpha-hydroxyl. The C27 side chain is then oxidized by mitochondrial **CYP27A1** to a C27 acid (THCA/DHCA), activated to a CoA thioester (bile acyl-CoA synthetase, SLC27A5), racemized 25R->25S by AMACR, and shortened by one round of **peroxisomal beta-oxidation** (ACOX2 -> D-bifunctional protein HSD17B4 -> SCPx thiolase) that removes propionyl-CoA to give choloyl-CoA / chenodeoxycholoyl-CoA.\n\n**Alternative (acidic) pathway.** Begins with **CYP27A1** 27-hydroxylation of cholesterol (in many extrahepatic tissues and macrophages), followed by **CYP7B1** oxysterol 7alpha-hydroxylation; it feeds mainly CDCA and is quantitatively minor in healthy adult human liver but important in the neonate and in cholestasis.\n\n**Conjugation.** BAAT amidates the CoA thioesters with glycine or taurine (glyco:tauro ~3:1 in humans), giving conjugated bile salts that are fully ionized at duodenal pH.\n\n**Regulation.** Reabsorbed bile acids activate the nuclear receptor **FXR (NR1H4)**, which (i) induces **SHP (NR0B2)** to inhibit LRH-1/HNF4alpha and repress CYP7A1 and CYP8B1, and (ii) induces intestinal **FGF19 (FGF15)** that signals through hepatic FGFR4/beta-Klotho to repress CYP7A1 — the dominant postprandial feedback in humans. Oxysterols activate **LXRalpha**, which induces CYP7A1 in rodents (but not humans, which lack a functional LXRE in the CYP7A1 promoter). Beyond digestion, bile acids are signaling molecules acting on FXR and the membrane receptor TGR5 to regulate their own synthesis, lipid, glucose and energy metabolism, and they are extensively transformed by the gut microbiome (deconjugation and 7alpha-dehydroxylation to the secondary bile acids deoxycholate and lithocholate).",
+  "organisms": [
+    "human"
+  ],
+  "tissues": [
+    "liver",
+    "ileum",
+    "macrophage"
+  ],
+  "keywords": [
+    "bile acid",
+    "cholic acid",
+    "chenodeoxycholic acid",
+    "cholesterol catabolism",
+    "CYP7A1",
+    "CYP8B1",
+    "CYP27A1",
+    "FXR",
+    "FGF19",
+    "classic pathway",
+    "alternative pathway",
+    "bile salt",
+    "taurine conjugation",
+    "glycine conjugation",
+    "enterohepatic circulation"
+  ],
+  "provenance": {
+    "curator": "metabolian bile-acid-synthesis module (AI-authored, citation-grounded)",
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "KEGG",
+        "id": "hsa00120",
+        "url": "https://www.kegg.jp/pathway/hsa00120"
+      },
+      {
+        "db": "KEGG",
+        "id": "map00120",
+        "url": "https://www.kegg.jp/pathway/map00120"
+      },
+      {
+        "db": "Reactome",
+        "id": "R-HSA-192105",
+        "url": "https://reactome.org/content/detail/R-HSA-192105"
+      },
+      {
+        "db": "PubMed",
+        "id": "12543708",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12543708/"
+      },
+      {
+        "db": "review",
+        "id": "Chiang JYL, Bile acid metabolism and signaling, Compr Physiol 2013 (PMID 23897684)"
+      },
+      {
+        "db": "textbook",
+        "id": "Lehninger Principles of Biochemistry, 8e, Ch. 21 (Lipid biosynthesis / bile acids)"
+      }
+    ],
+    "lastReviewed": "2026-07-18"
+  },
+  "references": [
+    {
+      "pmid": "12543708",
+      "title": "The enzymes, regulation, and genetics of bile acid synthesis (Russell DW)",
+      "year": 2003
+    },
+    {
+      "pmid": "23897684",
+      "title": "Bile acid metabolism and signaling (Chiang JYL)",
+      "year": 2013
+    },
+    {
+      "pmid": "19346330",
+      "title": "Bile acids: regulation of synthesis (Chiang JYL)",
+      "year": 2009
+    },
+    {
+      "pmid": "11030332",
+      "title": "A regulatory cascade of the nuclear receptors FXR, SHP-1, and LRH-1 represses bile acid biosynthesis (Goodwin B et al.)",
+      "year": 2000
+    },
+    {
+      "pmid": "16213224",
+      "title": "Fibroblast growth factor 15 functions as an enterohepatic signal to regulate bile acid homeostasis (Inagaki T et al.)",
+      "year": 2005
+    },
+    {
+      "pmid": "9630215",
+      "title": "Cholesterol and bile acid metabolism are impaired in mice lacking the nuclear oxysterol receptor LXR alpha (Peet DJ et al.)",
+      "year": 1998
+    },
+    {
+      "pmid": "23602448",
+      "title": "Pleiotropic roles of bile acids in metabolism (de Aguiar Vallim TQ, Tarling EJ, Edwards PA)",
+      "year": 2013
+    },
+    {
+      "pmid": "27320064",
+      "title": "Intestinal crosstalk between bile acids and microbiota and its impact on host metabolism (Wahlstrom A et al.)",
+      "year": 2016
+    }
+  ],
+  "compartments": [
+    {
+      "id": "endoplasmic-reticulum",
+      "name": "Endoplasmic reticulum",
+      "go": "GO:0005783",
+      "description": "Microsomal P450s (CYP7A1, CYP8B1, CYP7B1), HSD3B7 and bile acyl-CoA synthetase."
+    },
+    {
+      "id": "cytosol",
+      "name": "Cytosol",
+      "go": "GO:0005829",
+      "description": "AKR1D1 (5beta-reductase) and AKR1C4 (3alpha-HSD) ring-reduction steps."
+    },
+    {
+      "id": "mitochondrion",
+      "name": "Mitochondrion",
+      "go": "GO:0005739",
+      "description": "Inner-membrane CYP27A1 performs sterol side-chain (C27) oxidation."
+    },
+    {
+      "id": "peroxisome",
+      "name": "Peroxisome",
+      "go": "GO:0005777",
+      "description": "AMACR racemization, ACOX2/HSD17B4/SCPx beta-oxidative side-chain shortening and BAAT conjugation."
+    },
+    {
+      "id": "nucleus",
+      "name": "Nucleus",
+      "go": "GO:0005634",
+      "description": "FXR/SHP/LRH-1/HNF4alpha/LXRalpha transcriptional control of CYP7A1 and CYP8B1."
+    },
+    {
+      "id": "plasma-membrane",
+      "name": "Plasma membrane",
+      "go": "GO:0005886",
+      "description": "Hepatic FGFR4/beta-Klotho receptor for the enterokine FGF19."
+    },
+    {
+      "id": "extracellular",
+      "name": "Extracellular / portal blood",
+      "go": "GO:0005615",
+      "description": "Secreted FGF19 traveling from ileum to liver."
+    }
+  ],
+  "metabolites": [
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "synonyms": [
+        "Cholest-5-en-3beta-ol"
+      ],
+      "formula": "C27H46O",
+      "charge": 0,
+      "class": "sterol",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00187",
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "xrefs": {
+        "kegg": "C00007",
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "xrefs": {
+        "kegg": "C00001",
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "charge": 1,
+      "xrefs": {
+        "kegg": "C00080",
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00005",
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00006",
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00003",
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "roles": [
+        "coenzyme",
+        "electron-carrier"
+      ],
+      "xrefs": {
+        "kegg": "C00004",
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H16N5O13P3",
+      "charge": -4,
+      "roles": [
+        "coenzyme",
+        "fuel"
+      ],
+      "xrefs": {
+        "kegg": "C00002",
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H14N5O7P",
+      "charge": -2,
+      "roles": [
+        "coenzyme"
+      ],
+      "xrefs": {
+        "kegg": "C00020",
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "roles": [
+        "waste"
+      ],
+      "xrefs": {
+        "kegg": "C00013",
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A",
+      "formula": "C21H36N7O16P3S",
+      "class": "thiol coenzyme",
+      "roles": [
+        "coenzyme"
+      ],
+      "xrefs": {
+        "kegg": "C00010",
+        "chebi": "CHEBI:15346"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H40N7O17P3S",
+      "class": "acyl-CoA thioester",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00100",
+        "chebi": "CHEBI:15539"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "roles": [
+        "waste"
+      ],
+      "xrefs": {
+        "kegg": "C00027",
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "class": "amino acid",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00037",
+        "chebi": "CHEBI:15428"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "synonyms": [
+        "2-Aminoethanesulfonic acid"
+      ],
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "class": "aminosulfonate",
+      "roles": [
+        "building-block"
+      ],
+      "xrefs": {
+        "kegg": "C00245",
+        "chebi": "CHEBI:15891"
+      }
+    },
+    {
+      "id": "hydroxycholesterol_7a",
+      "name": "7alpha-Hydroxycholesterol",
+      "synonyms": [
+        "Cholest-5-ene-3beta,7alpha-diol"
+      ],
+      "formula": "C27H46O2",
+      "charge": 0,
+      "class": "oxysterol",
+      "xrefs": {
+        "kegg": "C03594",
+        "chebi": "CHEBI:17500"
+      }
+    },
+    {
+      "id": "c7a_hydroxy_4_cholesten_3_one",
+      "name": "7alpha-Hydroxycholest-4-en-3-one",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "class": "C27 bile acid intermediate",
+      "xrefs": {
+        "kegg": "C05455",
+        "chebi": "CHEBI:17899"
+      }
+    },
+    {
+      "id": "dihydroxy_4_cholesten_3_one_7a12a",
+      "name": "7alpha,12alpha-Dihydroxy-4-cholesten-3-one",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "class": "C27 bile acid intermediate",
+      "xrefs": {
+        "kegg": "C17339",
+        "chebi": "CHEBI:28477"
+      }
+    },
+    {
+      "id": "dihydroxy_5b_cholestan_3_one_7a12a",
+      "name": "7alpha,12alpha-Dihydroxy-5beta-cholestan-3-one",
+      "formula": "C27H46O3",
+      "charge": 0,
+      "class": "C27 bile acid intermediate",
+      "xrefs": {
+        "kegg": "C05453",
+        "chebi": "CHEBI:2288"
+      }
+    },
+    {
+      "id": "triol_ca",
+      "name": "5beta-Cholestane-3alpha,7alpha,12alpha-triol",
+      "synonyms": [
+        "3alpha,7alpha,12alpha-Trihydroxy-5beta-cholestane"
+      ],
+      "formula": "C27H48O3",
+      "charge": 0,
+      "class": "C27 bile acid intermediate",
+      "xrefs": {
+        "kegg": "C05454",
+        "chebi": "CHEBI:16496"
+      }
+    },
+    {
+      "id": "thca",
+      "name": "3alpha,7alpha,12alpha-Trihydroxy-5beta-cholestanoate (THCA)",
+      "formula": "C27H46O5",
+      "charge": 0,
+      "class": "C27 bile acid",
+      "xrefs": {
+        "kegg": "C04722",
+        "chebi": "CHEBI:18402"
+      }
+    },
+    {
+      "id": "thca_coa_25r",
+      "name": "(25R)-3alpha,7alpha,12alpha-Trihydroxy-5beta-cholestanoyl-CoA",
+      "formula": "C48H80N7O20P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C15613",
+        "chebi": "CHEBI:37642"
+      }
+    },
+    {
+      "id": "thca_coa_25s",
+      "name": "(25S)-3alpha,7alpha,12alpha-Trihydroxy-5beta-cholestanoyl-CoA",
+      "formula": "C48H80N7O20P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C17343",
+        "chebi": "CHEBI:81017"
+      }
+    },
+    {
+      "id": "thca_enoyl_coa",
+      "name": "(24E)-3alpha,7alpha,12alpha-Trihydroxy-5beta-cholest-24-enoyl-CoA",
+      "formula": "C48H78N7O20P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C05460",
+        "chebi": "CHEBI:27505"
+      }
+    },
+    {
+      "id": "thca_24oh_coa",
+      "name": "(24R,25R)-3alpha,7alpha,12alpha,24-Tetrahydroxy-5beta-cholestanoyl-CoA",
+      "formula": "C48H80N7O21P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C15614",
+        "chebi": "CHEBI:52050"
+      }
+    },
+    {
+      "id": "thca_24oxo_coa",
+      "name": "3alpha,7alpha,12alpha-Trihydroxy-5beta-24-oxocholestanoyl-CoA",
+      "formula": "C48H78N7O21P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C05467",
+        "chebi": "CHEBI:27379"
+      }
+    },
+    {
+      "id": "choloyl_coa",
+      "name": "Choloyl-CoA",
+      "synonyms": [
+        "Cholyl-CoA"
+      ],
+      "formula": "C45H74N7O20P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C01794",
+        "chebi": "CHEBI:15519"
+      }
+    },
+    {
+      "id": "cholate",
+      "name": "Cholic acid (cholate)",
+      "synonyms": [
+        "3alpha,7alpha,12alpha-Trihydroxy-5beta-cholan-24-oate"
+      ],
+      "formula": "C24H40O5",
+      "charge": 0,
+      "class": "bile acid",
+      "roles": [
+        "signaling"
+      ],
+      "xrefs": {
+        "kegg": "C00695",
+        "chebi": "CHEBI:16359"
+      }
+    },
+    {
+      "id": "glycocholate",
+      "name": "Glycocholate",
+      "formula": "C26H43NO6",
+      "charge": 0,
+      "class": "bile salt",
+      "xrefs": {
+        "kegg": "C01921",
+        "chebi": "CHEBI:17687"
+      }
+    },
+    {
+      "id": "taurocholate",
+      "name": "Taurocholate",
+      "formula": "C26H45NO7S",
+      "charge": 0,
+      "class": "bile salt",
+      "xrefs": {
+        "kegg": "C05122",
+        "chebi": "CHEBI:28865"
+      }
+    },
+    {
+      "id": "c7a_hydroxy_5b_cholestan_3_one",
+      "name": "7alpha-Hydroxy-5beta-cholestan-3-one",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "class": "C27 bile acid intermediate",
+      "xrefs": {
+        "kegg": "C05451",
+        "chebi": "CHEBI:2290"
+      }
+    },
+    {
+      "id": "diol_cdca",
+      "name": "5beta-Cholestane-3alpha,7alpha-diol",
+      "synonyms": [
+        "3alpha,7alpha-Dihydroxy-5beta-cholestane"
+      ],
+      "formula": "C27H48O2",
+      "charge": 0,
+      "class": "C27 bile acid intermediate",
+      "xrefs": {
+        "kegg": "C05452",
+        "chebi": "CHEBI:28047"
+      }
+    },
+    {
+      "id": "dhca",
+      "name": "3alpha,7alpha-Dihydroxy-5beta-cholestanoate (DHCA)",
+      "formula": "C27H46O4",
+      "charge": 0,
+      "class": "C27 bile acid",
+      "xrefs": {
+        "kegg": "C04554",
+        "chebi": "CHEBI:16577"
+      }
+    },
+    {
+      "id": "dhca_coa_25r",
+      "name": "(25R)-3alpha,7alpha-Dihydroxy-5beta-cholestanoyl-CoA",
+      "formula": "C48H80N7O19P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C17345",
+        "chebi": "CHEBI:81018"
+      }
+    },
+    {
+      "id": "dhca_coa_25s",
+      "name": "(25S)-3alpha,7alpha-Dihydroxy-5beta-cholestanoyl-CoA",
+      "formula": "C48H80N7O19P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C17346",
+        "chebi": "CHEBI:81019"
+      }
+    },
+    {
+      "id": "dhca_enoyl_coa",
+      "name": "(24E)-3alpha,7alpha-Dihydroxy-5beta-cholest-24-enoyl-CoA",
+      "formula": "C48H78N7O19P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C05447",
+        "chebi": "CHEBI:27393"
+      }
+    },
+    {
+      "id": "dhca_24oh_coa",
+      "name": "(24R,25R)-3alpha,7alpha,24-Trihydroxy-5beta-cholestanoyl-CoA",
+      "formula": "C48H80N7O20P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C05448",
+        "chebi": "CHEBI:27403"
+      }
+    },
+    {
+      "id": "dhca_24oxo_coa",
+      "name": "3alpha,7alpha-Dihydroxy-5beta-24-oxocholestanoyl-CoA",
+      "formula": "C48H78N7O20P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C05449",
+        "chebi": "CHEBI:28533"
+      }
+    },
+    {
+      "id": "chenodeoxycholoyl_coa",
+      "name": "Chenodeoxycholoyl-CoA",
+      "formula": "C45H74N7O19P3S",
+      "class": "bile acyl-CoA",
+      "xrefs": {
+        "kegg": "C05337",
+        "chebi": "CHEBI:28701"
+      }
+    },
+    {
+      "id": "chenodeoxycholate",
+      "name": "Chenodeoxycholic acid (chenodeoxycholate)",
+      "synonyms": [
+        "3alpha,7alpha-Dihydroxy-5beta-cholan-24-oate",
+        "CDCA"
+      ],
+      "formula": "C24H40O4",
+      "charge": 0,
+      "class": "bile acid",
+      "roles": [
+        "signaling"
+      ],
+      "xrefs": {
+        "kegg": "C02528",
+        "chebi": "CHEBI:16755"
+      }
+    },
+    {
+      "id": "glycochenodeoxycholate",
+      "name": "Glycochenodeoxycholate",
+      "formula": "C26H43NO5",
+      "charge": 0,
+      "class": "bile salt",
+      "xrefs": {
+        "kegg": "C05466",
+        "chebi": "CHEBI:36274"
+      }
+    },
+    {
+      "id": "taurochenodeoxycholate",
+      "name": "Taurochenodeoxycholate",
+      "formula": "C26H45NO6S",
+      "charge": 0,
+      "class": "bile salt",
+      "xrefs": {
+        "kegg": "C05465",
+        "chebi": "CHEBI:16525"
+      }
+    },
+    {
+      "id": "hydroxycholesterol_27",
+      "name": "27-Hydroxycholesterol",
+      "synonyms": [
+        "Cholest-5-ene-3beta,26-diol",
+        "26-Hydroxycholesterol"
+      ],
+      "formula": "C27H46O2",
+      "charge": 0,
+      "class": "oxysterol",
+      "roles": [
+        "signaling"
+      ],
+      "xrefs": {
+        "kegg": "C15610",
+        "chebi": "CHEBI:17703"
+      }
+    },
+    {
+      "id": "dihydroxycholesterol_7a27",
+      "name": "7alpha,27-Dihydroxycholesterol",
+      "synonyms": [
+        "Cholest-5-ene-3beta,7alpha,26-triol"
+      ],
+      "formula": "C27H46O3",
+      "charge": 0,
+      "class": "oxysterol",
+      "xrefs": {
+        "kegg": "C06341",
+        "chebi": "CHEBI:18431"
+      }
+    },
+    {
+      "id": "dihydroxy_4_cholesten_3_one_7a26",
+      "name": "7alpha,26-Dihydroxy-4-cholesten-3-one",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "class": "C27 bile acid intermediate",
+      "xrefs": {
+        "kegg": "C17336",
+        "chebi": "CHEBI:48825"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "cyp7a1",
+      "name": "Cholesterol 7alpha-hydroxylase",
+      "gene": "CYP7A1",
+      "ec": [
+        "1.14.14.23"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "heme",
+        "O2",
+        "NADPH--cytochrome P450 reductase"
+      ],
+      "family": "cytochrome P450 (CYP7 family)",
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "uniprot": "P22680",
+        "alphafold": "P22680",
+        "pdb": [
+          "3DAX",
+          "3SN5",
+          "3V8D"
+        ]
+      }
+    },
+    {
+      "id": "hsd3b7",
+      "name": "3beta-hydroxy-Delta5-C27-steroid dehydrogenase/isomerase (3beta-HSD type 7)",
+      "gene": "HSD3B7",
+      "ec": [
+        "1.1.1.181"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "NAD+"
+      ],
+      "family": "3beta-hydroxysteroid dehydrogenase family",
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "uniprot": "Q9H2F3",
+        "alphafold": "Q9H2F3"
+      }
+    },
+    {
+      "id": "cyp8b1",
+      "name": "Sterol 12alpha-hydroxylase",
+      "gene": "CYP8B1",
+      "ec": [
+        "1.14.14.139"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "heme",
+        "O2",
+        "NADPH--cytochrome P450 reductase"
+      ],
+      "family": "cytochrome P450 (CYP8 family)",
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "uniprot": "Q9UNU6",
+        "alphafold": "Q9UNU6",
+        "pdb": [
+          "7LYX",
+          "8EOH"
+        ]
+      }
+    },
+    {
+      "id": "akr1d1",
+      "name": "Delta4-3-oxosteroid 5beta-reductase (AKR1D1)",
+      "gene": "AKR1D1",
+      "ec": [
+        "1.3.1.3"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "NADPH"
+      ],
+      "family": "aldo-keto reductase family",
+      "compartment": "cytosol",
+      "xrefs": {
+        "uniprot": "P51857",
+        "alphafold": "P51857",
+        "pdb": [
+          "3BUR",
+          "3CAQ",
+          "3CAS"
+        ]
+      }
+    },
+    {
+      "id": "akr1c4",
+      "name": "3alpha-hydroxysteroid dehydrogenase (AKR1C4)",
+      "gene": "AKR1C4",
+      "ec": [
+        "1.1.1.50"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "NADPH"
+      ],
+      "family": "aldo-keto reductase family",
+      "compartment": "cytosol",
+      "xrefs": {
+        "uniprot": "P17516",
+        "alphafold": "P17516",
+        "pdb": [
+          "2FVL"
+        ]
+      }
+    },
+    {
+      "id": "cyp27a1",
+      "name": "Sterol 27-hydroxylase, mitochondrial",
+      "gene": "CYP27A1",
+      "ec": [
+        "1.14.15.15"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "heme",
+        "O2",
+        "adrenodoxin",
+        "adrenodoxin reductase",
+        "NADPH"
+      ],
+      "family": "cytochrome P450 (CYP27 family)",
+      "compartment": "mitochondrion",
+      "xrefs": {
+        "uniprot": "Q02318",
+        "alphafold": "Q02318"
+      }
+    },
+    {
+      "id": "cyp7b1",
+      "name": "Oxysterol 7alpha-hydroxylase",
+      "gene": "CYP7B1",
+      "ec": [
+        "1.14.14.29"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "heme",
+        "O2",
+        "NADPH--cytochrome P450 reductase"
+      ],
+      "family": "cytochrome P450 (CYP7 family)",
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "uniprot": "O75881",
+        "alphafold": "O75881"
+      }
+    },
+    {
+      "id": "slc27a5",
+      "name": "Bile acyl-CoA synthetase (VLCS/FATP5)",
+      "gene": "SLC27A5",
+      "ec": [
+        "6.2.1.7"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "ATP",
+        "Mg2+",
+        "CoA"
+      ],
+      "family": "fatty acid transport protein / acyl-CoA synthetase family",
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "uniprot": "Q9Y2P5",
+        "alphafold": "Q9Y2P5"
+      }
+    },
+    {
+      "id": "amacr",
+      "name": "Alpha-methylacyl-CoA racemase (AMACR)",
+      "gene": "AMACR",
+      "ec": [
+        "5.1.99.4"
+      ],
+      "organism": "human",
+      "family": "CoA-transferase/racemase family",
+      "compartment": "peroxisome",
+      "xrefs": {
+        "uniprot": "Q9UHK6",
+        "alphafold": "Q9UHK6"
+      }
+    },
+    {
+      "id": "acox2",
+      "name": "Branched-chain acyl-CoA oxidase (ACOX2)",
+      "gene": "ACOX2",
+      "ec": [
+        "1.3.3.6",
+        "1.17.99.3"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "FAD"
+      ],
+      "family": "acyl-CoA oxidase family",
+      "compartment": "peroxisome",
+      "xrefs": {
+        "uniprot": "Q99424",
+        "alphafold": "Q99424"
+      }
+    },
+    {
+      "id": "hsd17b4",
+      "name": "D-bifunctional protein (17beta-HSD type 4 / MFE-2)",
+      "gene": "HSD17B4",
+      "ec": [
+        "4.2.1.107",
+        "1.1.1.-"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "NAD+"
+      ],
+      "family": "multifunctional enzyme type 2 / SDR family",
+      "compartment": "peroxisome",
+      "xrefs": {
+        "uniprot": "P51659",
+        "alphafold": "P51659"
+      }
+    },
+    {
+      "id": "scp2",
+      "name": "Sterol carrier protein 2 / SCPx 3-ketoacyl-CoA thiolase",
+      "gene": "SCP2",
+      "ec": [
+        "2.3.1.176"
+      ],
+      "organism": "human",
+      "cofactors": [
+        "CoA"
+      ],
+      "family": "thiolase family",
+      "compartment": "peroxisome",
+      "xrefs": {
+        "uniprot": "P22307",
+        "alphafold": "P22307"
+      }
+    },
+    {
+      "id": "baat",
+      "name": "Bile acid-CoA:amino acid N-acyltransferase (BAAT)",
+      "gene": "BAAT",
+      "ec": [
+        "2.3.1.65"
+      ],
+      "organism": "human",
+      "family": "acyltransferase / BAAT family",
+      "compartment": "peroxisome",
+      "xrefs": {
+        "uniprot": "Q14032",
+        "alphafold": "Q14032"
+      }
+    },
+    {
+      "id": "fxr",
+      "name": "Farnesoid X receptor (FXR)",
+      "gene": "NR1H4",
+      "organism": "human",
+      "family": "nuclear receptor superfamily",
+      "compartment": "nucleus",
+      "xrefs": {
+        "uniprot": "Q96RI1",
+        "alphafold": "Q96RI1"
+      }
+    },
+    {
+      "id": "shp",
+      "name": "Small heterodimer partner (SHP)",
+      "gene": "NR0B2",
+      "organism": "human",
+      "family": "nuclear receptor superfamily (atypical)",
+      "compartment": "nucleus",
+      "xrefs": {
+        "uniprot": "Q15466",
+        "alphafold": "Q15466"
+      }
+    },
+    {
+      "id": "lxra",
+      "name": "Liver X receptor alpha (LXRalpha)",
+      "gene": "NR1H3",
+      "organism": "human",
+      "family": "nuclear receptor superfamily",
+      "compartment": "nucleus",
+      "xrefs": {
+        "uniprot": "Q13133",
+        "alphafold": "Q13133"
+      }
+    },
+    {
+      "id": "lrh1",
+      "name": "Liver receptor homolog-1 (LRH-1)",
+      "gene": "NR5A2",
+      "organism": "human",
+      "family": "nuclear receptor superfamily",
+      "compartment": "nucleus",
+      "xrefs": {
+        "uniprot": "O00482",
+        "alphafold": "O00482"
+      }
+    },
+    {
+      "id": "hnf4a",
+      "name": "Hepatocyte nuclear factor 4-alpha (HNF4alpha)",
+      "gene": "HNF4A",
+      "organism": "human",
+      "family": "nuclear receptor superfamily",
+      "compartment": "nucleus",
+      "xrefs": {
+        "uniprot": "P41235",
+        "alphafold": "P41235"
+      }
+    },
+    {
+      "id": "fgf19",
+      "name": "Fibroblast growth factor 19 (FGF19; FGF15 in rodents)",
+      "gene": "FGF19",
+      "organism": "human",
+      "family": "fibroblast growth factor family",
+      "compartment": "extracellular",
+      "xrefs": {
+        "uniprot": "O95750",
+        "alphafold": "O95750"
+      }
+    },
+    {
+      "id": "fgfr4",
+      "name": "Fibroblast growth factor receptor 4 (FGFR4)",
+      "gene": "FGFR4",
+      "ec": [
+        "2.7.10.1"
+      ],
+      "organism": "human",
+      "family": "receptor tyrosine kinase family",
+      "compartment": "plasma-membrane",
+      "xrefs": {
+        "uniprot": "P22455",
+        "alphafold": "P22455"
+      }
+    }
+  ],
+  "genes": [
+    {
+      "id": "cyp7a1_gene",
+      "symbol": "CYP7A1",
+      "name": "cytochrome P450 family 7 subfamily A member 1",
+      "xrefs": {
+        "entrez": "1581",
+        "ec": [
+          "1.14.14.23"
+        ]
+      }
+    },
+    {
+      "id": "cyp8b1_gene",
+      "symbol": "CYP8B1",
+      "name": "cytochrome P450 family 8 subfamily B member 1",
+      "xrefs": {
+        "entrez": "1582",
+        "ec": [
+          "1.14.14.139"
+        ]
+      }
+    },
+    {
+      "id": "nr0b2_gene",
+      "symbol": "NR0B2",
+      "name": "nuclear receptor subfamily 0 group B member 2 (SHP)",
+      "xrefs": {
+        "entrez": "8431"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "bas1",
+      "name": "Cholesterol 7alpha-hydroxylation (rate-limiting, committed step of the classic pathway)",
+      "ec": "1.14.14.23",
+      "equation": "Cholesterol + O2 + NADPH + H+ -> 7alpha-Hydroxycholesterol + H2O + NADP+",
+      "substrates": [
+        {
+          "metabolite": "cholesterol"
+        },
+        {
+          "metabolite": "o2"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxycholesterol_7a"
+        },
+        {
+          "metabolite": "h2o"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cyp7a1",
+          "role": "rate-limiting"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "monooxygenase co-substrate"
+        },
+        {
+          "metabolite": "nadph",
+          "role": "reductant (via P450 reductase)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "rateLimiting": true,
+      "pathwayStep": 1,
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "kegg": "R01463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R01463"
+          },
+          {
+            "db": "textbook",
+            "id": "Russell DW, Annu Rev Biochem 2003 (PMID 12543708)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas2",
+      "name": "3beta-hydroxy-Delta5 oxidation / Delta5->Delta4 isomerization",
+      "ec": "1.1.1.181",
+      "equation": "7alpha-Hydroxycholesterol + NAD+ -> 7alpha-Hydroxycholest-4-en-3-one + NADH + H+",
+      "substrates": [
+        {
+          "metabolite": "hydroxycholesterol_7a"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c7a_hydroxy_4_cholesten_3_one"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hsd3b7"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nad",
+          "role": "electron acceptor"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 2,
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "kegg": "R04263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas3",
+      "name": "Sterol 12alpha-hydroxylation (branch-point committing to cholic acid; sets CA:CDCA ratio)",
+      "ec": "1.14.14.139",
+      "equation": "7alpha-Hydroxycholest-4-en-3-one + O2 + NADPH + H+ -> 7alpha,12alpha-Dihydroxy-4-cholesten-3-one + H2O + NADP+",
+      "substrates": [
+        {
+          "metabolite": "c7a_hydroxy_4_cholesten_3_one"
+        },
+        {
+          "metabolite": "o2"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxy_4_cholesten_3_one_7a12a"
+        },
+        {
+          "metabolite": "h2o"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cyp8b1",
+          "role": "committed-step"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "monooxygenase co-substrate"
+        },
+        {
+          "metabolite": "nadph",
+          "role": "reductant (via P450 reductase)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 3,
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "kegg": "R04826"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04826"
+          },
+          {
+            "db": "textbook",
+            "id": "Russell DW, Annu Rev Biochem 2003 (PMID 12543708)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas4",
+      "name": "Delta4-3-oxosteroid 5beta-reduction (CA branch)",
+      "ec": "1.3.1.3",
+      "equation": "7alpha,12alpha-Dihydroxy-4-cholesten-3-one + NADPH + H+ -> 7alpha,12alpha-Dihydroxy-5beta-cholestan-3-one + NADP+",
+      "substrates": [
+        {
+          "metabolite": "dihydroxy_4_cholesten_3_one_7a12a"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxy_5b_cholestan_3_one_7a12a"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "akr1d1"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 4,
+      "compartment": "cytosol",
+      "xrefs": {
+        "kegg": "R04823"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04823"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas5",
+      "name": "3-oxo -> 3alpha-hydroxy reduction (CA branch)",
+      "ec": "1.1.1.50",
+      "equation": "7alpha,12alpha-Dihydroxy-5beta-cholestan-3-one + NADPH + H+ -> 5beta-Cholestane-3alpha,7alpha,12alpha-triol + NADP+",
+      "substrates": [
+        {
+          "metabolite": "dihydroxy_5b_cholestan_3_one_7a12a"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triol_ca"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "akr1c4"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 5,
+      "compartment": "cytosol",
+      "xrefs": {
+        "kegg": "R04824"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04824"
+          },
+          {
+            "db": "KEGG",
+            "id": "R04825"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas6",
+      "name": "Sterol side-chain oxidation to the C27 acid (three sequential CYP27A1 oxidations: 26-ol -> 26-al -> 26-oate)",
+      "ec": "1.14.15.15",
+      "equation": "5beta-Cholestane-3alpha,7alpha,12alpha-triol + 3 O2 + 3 NADPH + 3 H+ -> THCA + 3 NADP+ + 4 H2O",
+      "substrates": [
+        {
+          "metabolite": "triol_ca",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cyp27a1"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "monooxygenase co-substrate"
+        },
+        {
+          "metabolite": "nadph",
+          "role": "reductant (via adrenodoxin)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 6,
+      "compartment": "mitochondrion",
+      "xrefs": {
+        "kegg": "R04807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04807"
+          },
+          {
+            "db": "KEGG",
+            "id": "R08759"
+          },
+          {
+            "db": "KEGG",
+            "id": "R08761"
+          },
+          {
+            "db": "textbook",
+            "id": "Russell DW, Annu Rev Biochem 2003 (PMID 12543708)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas7",
+      "name": "THCA activation to its CoA thioester",
+      "ec": "6.2.1.7",
+      "equation": "THCA + ATP + CoA -> (25R)-THCA-CoA + AMP + PPi",
+      "substrates": [
+        {
+          "metabolite": "thca"
+        },
+        {
+          "metabolite": "atp"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca_coa_25r"
+        },
+        {
+          "metabolite": "amp"
+        },
+        {
+          "metabolite": "ppi"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "slc27a5"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "atp",
+          "role": "adenylylation / energy source"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 7,
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "kegg": "R08733"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas8",
+      "name": "(25R)->(25S) racemization of the cholestanoyl-CoA",
+      "ec": "5.1.99.4",
+      "equation": "(25R)-THCA-CoA <=> (25S)-THCA-CoA",
+      "substrates": [
+        {
+          "metabolite": "thca_coa_25r"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca_coa_25s"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "amacr"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R08734"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas9",
+      "name": "Peroxisomal beta-oxidation step 1: acyl-CoA oxidation (24,25-dehydrogenation)",
+      "ec": "1.17.99.3",
+      "equation": "(25S)-THCA-CoA + O2 -> (24E)-3alpha,7alpha,12alpha-Trihydroxy-5beta-cholest-24-enoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "thca_coa_25s"
+        },
+        {
+          "metabolite": "o2"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca_enoyl_coa"
+        },
+        {
+          "metabolite": "h2o2"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "acox2"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "electron acceptor (-> H2O2)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 9,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R08735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas10",
+      "name": "Peroxisomal beta-oxidation step 2: 2-enoyl-CoA hydration",
+      "ec": "4.2.1.107",
+      "equation": "(24E)-3alpha,7alpha,12alpha-Trihydroxy-5beta-cholest-24-enoyl-CoA + H2O <=> (24R,25R)-3alpha,7alpha,12alpha,24-Tetrahydroxy-5beta-cholestanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "thca_enoyl_coa"
+        },
+        {
+          "metabolite": "h2o"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca_24oh_coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hsd17b4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R04813"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04813"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas11",
+      "name": "Peroxisomal beta-oxidation step 3: 24-hydroxyacyl-CoA dehydrogenation",
+      "ec": "1.1.1.-",
+      "equation": "(24R,25R)-3alpha,7alpha,12alpha,24-Tetrahydroxy-5beta-cholestanoyl-CoA + NAD+ <=> 3alpha,7alpha,12alpha-Trihydroxy-5beta-24-oxocholestanoyl-CoA + NADH + H+",
+      "substrates": [
+        {
+          "metabolite": "thca_24oh_coa"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca_24oxo_coa"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hsd17b4"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nad",
+          "role": "electron acceptor"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R04812"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04812"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas12",
+      "name": "Peroxisomal beta-oxidation step 4: thiolytic cleavage releasing propionyl-CoA -> choloyl-CoA",
+      "ec": "2.3.1.176",
+      "equation": "3alpha,7alpha,12alpha-Trihydroxy-5beta-24-oxocholestanoyl-CoA + CoA -> Choloyl-CoA + Propionyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "thca_24oxo_coa"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "choloyl_coa"
+        },
+        {
+          "metabolite": "propionyl_coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "scp2"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 12,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R03719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R03719"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas13",
+      "name": "Amidation with glycine -> glycocholate",
+      "ec": "2.3.1.65",
+      "equation": "Choloyl-CoA + Glycine -> Glycocholate + CoA",
+      "substrates": [
+        {
+          "metabolite": "choloyl_coa"
+        },
+        {
+          "metabolite": "glycine"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycocholate"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "baat"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 13,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R03718"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R03718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas14",
+      "name": "Amidation with taurine -> taurocholate",
+      "ec": "2.3.1.65",
+      "equation": "Choloyl-CoA + Taurine -> Taurocholate + CoA",
+      "substrates": [
+        {
+          "metabolite": "choloyl_coa"
+        },
+        {
+          "metabolite": "taurine"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurocholate"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "baat"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 14,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R03720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R03720"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas15",
+      "name": "Delta4-3-oxosteroid 5beta-reduction (CDCA branch)",
+      "ec": "1.3.1.3",
+      "equation": "7alpha-Hydroxycholest-4-en-3-one + NADPH + H+ -> 7alpha-Hydroxy-5beta-cholestan-3-one + NADP+",
+      "substrates": [
+        {
+          "metabolite": "c7a_hydroxy_4_cholesten_3_one"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c7a_hydroxy_5b_cholestan_3_one"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "akr1d1"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 15,
+      "compartment": "cytosol",
+      "xrefs": {
+        "kegg": "R04817"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas16",
+      "name": "3-oxo -> 3alpha-hydroxy reduction (CDCA branch)",
+      "ec": "1.1.1.50",
+      "equation": "7alpha-Hydroxy-5beta-cholestan-3-one + NADPH + H+ -> 5beta-Cholestane-3alpha,7alpha-diol + NADP+",
+      "substrates": [
+        {
+          "metabolite": "c7a_hydroxy_5b_cholestan_3_one"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diol_cdca"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "akr1c4"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 16,
+      "compartment": "cytosol",
+      "xrefs": {
+        "kegg": "R04818"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04818"
+          },
+          {
+            "db": "KEGG",
+            "id": "R04819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas17",
+      "name": "Sterol side-chain oxidation to the C27 acid (CDCA branch; sequential CYP27A1 oxidations)",
+      "ec": "1.14.15.15",
+      "equation": "5beta-Cholestane-3alpha,7alpha-diol + 3 O2 + 3 NADPH + 3 H+ -> DHCA + 3 NADP+ + 4 H2O",
+      "substrates": [
+        {
+          "metabolite": "diol_cdca",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhca",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cyp27a1"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "monooxygenase co-substrate"
+        },
+        {
+          "metabolite": "nadph",
+          "role": "reductant (via adrenodoxin)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 17,
+      "compartment": "mitochondrion",
+      "xrefs": {
+        "kegg": "R04806"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04806"
+          },
+          {
+            "db": "KEGG",
+            "id": "R08758"
+          },
+          {
+            "db": "KEGG",
+            "id": "R08760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas18",
+      "name": "DHCA activation to its CoA thioester",
+      "ec": "6.2.1.7",
+      "equation": "DHCA + ATP + CoA -> (25R)-DHCA-CoA + AMP + PPi",
+      "substrates": [
+        {
+          "metabolite": "dhca"
+        },
+        {
+          "metabolite": "atp"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhca_coa_25r"
+        },
+        {
+          "metabolite": "amp"
+        },
+        {
+          "metabolite": "ppi"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "slc27a5"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 18,
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "kegg": "R08738"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas19",
+      "name": "(25R)->(25S) racemization of the dihydroxycholestanoyl-CoA",
+      "ec": "5.1.99.4",
+      "equation": "(25R)-DHCA-CoA <=> (25S)-DHCA-CoA",
+      "substrates": [
+        {
+          "metabolite": "dhca_coa_25r"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhca_coa_25s"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "amacr"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 19,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R08739"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08739"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas20",
+      "name": "Peroxisomal beta-oxidation step 1 (CDCA branch): acyl-CoA oxidation",
+      "ec": "1.17.99.3",
+      "equation": "(25S)-DHCA-CoA + O2 -> (24E)-3alpha,7alpha-Dihydroxy-5beta-cholest-24-enoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "dhca_coa_25s"
+        },
+        {
+          "metabolite": "o2"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhca_enoyl_coa"
+        },
+        {
+          "metabolite": "h2o2"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "acox2"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "electron acceptor (-> H2O2)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 20,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R08740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas21",
+      "name": "Peroxisomal beta-oxidation step 2 (CDCA branch): 2-enoyl-CoA hydration",
+      "ec": "4.2.1.107",
+      "equation": "(24E)-3alpha,7alpha-Dihydroxy-5beta-cholest-24-enoyl-CoA + H2O <=> (24R,25R)-3alpha,7alpha,24-Trihydroxy-5beta-cholestanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "dhca_enoyl_coa"
+        },
+        {
+          "metabolite": "h2o"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhca_24oh_coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hsd17b4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 21,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R04809"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas22",
+      "name": "Peroxisomal beta-oxidation step 3 (CDCA branch): 24-hydroxyacyl-CoA dehydrogenation",
+      "ec": "1.1.1.-",
+      "equation": "(24R,25R)-3alpha,7alpha,24-Trihydroxy-5beta-cholestanoyl-CoA + NAD+ <=> 3alpha,7alpha-Dihydroxy-5beta-24-oxocholestanoyl-CoA + NADH + H+",
+      "substrates": [
+        {
+          "metabolite": "dhca_24oh_coa"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhca_24oxo_coa"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hsd17b4"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nad",
+          "role": "electron acceptor"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 22,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R04810"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas23",
+      "name": "Peroxisomal beta-oxidation step 4 (CDCA branch): thiolytic cleavage -> chenodeoxycholoyl-CoA",
+      "ec": "2.3.1.176",
+      "equation": "3alpha,7alpha-Dihydroxy-5beta-24-oxocholestanoyl-CoA + CoA -> Chenodeoxycholoyl-CoA + Propionyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "dhca_24oxo_coa"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chenodeoxycholoyl_coa"
+        },
+        {
+          "metabolite": "propionyl_coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "scp2"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 23,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R04811"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R04811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas24",
+      "name": "Amidation with glycine -> glycochenodeoxycholate",
+      "ec": "2.3.1.65",
+      "equation": "Chenodeoxycholoyl-CoA + Glycine -> Glycochenodeoxycholate + CoA",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholoyl_coa"
+        },
+        {
+          "metabolite": "glycine"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycochenodeoxycholate"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "baat"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 24,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R08744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas25",
+      "name": "Amidation with taurine -> taurochenodeoxycholate",
+      "ec": "2.3.1.65",
+      "equation": "Chenodeoxycholoyl-CoA + Taurine -> Taurochenodeoxycholate + CoA",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholoyl_coa"
+        },
+        {
+          "metabolite": "taurine"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurochenodeoxycholate"
+        },
+        {
+          "metabolite": "coa"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "baat"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 25,
+      "compartment": "peroxisome",
+      "xrefs": {
+        "kegg": "R08745"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas26",
+      "name": "Sterol 27-hydroxylation of cholesterol (initiates the acidic/alternative pathway)",
+      "ec": "1.14.15.15",
+      "equation": "Cholesterol + O2 + NADPH + H+ -> 27-Hydroxycholesterol + H2O + NADP+",
+      "substrates": [
+        {
+          "metabolite": "cholesterol"
+        },
+        {
+          "metabolite": "o2"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxycholesterol_27"
+        },
+        {
+          "metabolite": "h2o"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cyp27a1"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "monooxygenase co-substrate"
+        },
+        {
+          "metabolite": "nadph",
+          "role": "reductant (via adrenodoxin)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 26,
+      "compartment": "mitochondrion",
+      "xrefs": {
+        "kegg": "R08505"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08505"
+          },
+          {
+            "db": "textbook",
+            "id": "Russell DW, Annu Rev Biochem 2003 (PMID 12543708)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas27",
+      "name": "Oxysterol 7alpha-hydroxylation of 27-hydroxycholesterol",
+      "ec": "1.14.14.29",
+      "equation": "27-Hydroxycholesterol + O2 + NADPH + H+ -> 7alpha,27-Dihydroxycholesterol + H2O + NADP+",
+      "substrates": [
+        {
+          "metabolite": "hydroxycholesterol_27"
+        },
+        {
+          "metabolite": "o2"
+        },
+        {
+          "metabolite": "nadph"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxycholesterol_7a27"
+        },
+        {
+          "metabolite": "h2o"
+        },
+        {
+          "metabolite": "nadp"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "cyp7b1"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "o2",
+          "role": "monooxygenase co-substrate"
+        },
+        {
+          "metabolite": "nadph",
+          "role": "reductant (via P450 reductase)"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 27,
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "kegg": "R07372"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R07372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bas28",
+      "name": "3beta-HSD oxidation/isomerization of 7alpha,27-dihydroxycholesterol (acidic pathway; converges toward CDCA)",
+      "ec": "1.1.1.181",
+      "equation": "7alpha,27-Dihydroxycholesterol + NAD+ -> 7alpha,26-Dihydroxy-4-cholesten-3-one + NADH + H+",
+      "substrates": [
+        {
+          "metabolite": "dihydroxycholesterol_7a27"
+        },
+        {
+          "metabolite": "nad"
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxy_4_cholesten_3_one_7a26"
+        },
+        {
+          "metabolite": "nadh"
+        },
+        {
+          "metabolite": "hplus"
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "hsd3b7"
+        }
+      ],
+      "cofactors": [
+        {
+          "metabolite": "nad",
+          "role": "electron acceptor"
+        }
+      ],
+      "reversibility": "irreversible",
+      "pathwayStep": 28,
+      "compartment": "endoplasmic-reticulum",
+      "xrefs": {
+        "kegg": "R08724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "KEGG",
+            "id": "R08724"
+          }
+        ]
+      }
+    }
+  ],
+  "regulations": [
+    {
+      "id": "reg_cdca_fxr",
+      "type": "activation",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "fxr"
+      },
+      "effect": "positive",
+      "mechanism": "Chenodeoxycholic acid is the most potent endogenous agonist of the nuclear bile-acid receptor FXR (NR1H4); reabsorbed bile acids sensed by FXR drive the negative-feedback program.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "11030332"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acid metabolism and signaling, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_ca_fxr",
+      "type": "activation",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "cholate"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "fxr"
+      },
+      "effect": "positive",
+      "mechanism": "Cholic acid also activates FXR (less potent than CDCA), contributing to bile-acid feedback.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "12543708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_fxr_shp",
+      "type": "transcriptional-activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "fxr"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "nr0b2_gene"
+      },
+      "effect": "positive",
+      "mechanism": "Ligand-activated FXR induces transcription of the atypical orphan receptor SHP (NR0B2) in hepatocytes.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "11030332"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acid metabolism and signaling, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_shp_lrh1",
+      "type": "inhibition",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "shp"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "lrh1"
+      },
+      "effect": "negative",
+      "mechanism": "SHP heterodimerizes with and inactivates LRH-1 (NR5A2), removing a competence activator of the CYP7A1/CYP8B1 promoters.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "11030332"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acid metabolism and signaling, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_shp_hnf4a",
+      "type": "inhibition",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "shp"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "hnf4a"
+      },
+      "effect": "negative",
+      "mechanism": "SHP also antagonizes HNF4alpha transactivation, reinforcing repression of bile-acid synthetic genes.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acids: regulation of synthesis, J Lipid Res 2009 (PMID 19346330)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_lrh1_cyp7a1",
+      "type": "transcriptional-activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "lrh1"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "cyp7a1_gene"
+      },
+      "effect": "positive",
+      "mechanism": "LRH-1 binds the CYP7A1 promoter and supports its transcription; SHP-mediated inhibition of LRH-1 is a core feedback node.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "11030332"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acid metabolism and signaling, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_hnf4a_cyp7a1",
+      "type": "transcriptional-activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "hnf4a"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "cyp7a1_gene"
+      },
+      "effect": "positive",
+      "mechanism": "HNF4alpha binds the bile-acid response element of CYP7A1 and activates its transcription.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acids: regulation of synthesis, J Lipid Res 2009 (PMID 19346330)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_hnf4a_cyp8b1",
+      "type": "transcriptional-activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "hnf4a"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "cyp8b1_gene"
+      },
+      "effect": "positive",
+      "mechanism": "HNF4alpha is the dominant transcriptional activator of CYP8B1, tuning 12alpha-hydroxylation and thus the cholic-acid:CDCA ratio.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acids: regulation of synthesis, J Lipid Res 2009 (PMID 19346330)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_shp_cyp7a1",
+      "type": "transcriptional-repression",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "shp"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "cyp7a1_gene"
+      },
+      "effect": "negative",
+      "mechanism": "Net effect of the FXR/SHP cascade: repression of CYP7A1, the rate-limiting enzyme (bile-acid negative feedback).",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "11030332"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acid metabolism and signaling, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_shp_cyp8b1",
+      "type": "transcriptional-repression",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "shp"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "cyp8b1_gene"
+      },
+      "effect": "negative",
+      "mechanism": "FXR/SHP also represses CYP8B1, lowering the proportion of cholic acid made.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "review",
+            "id": "Chiang JYL, Bile acids: regulation of synthesis, J Lipid Res 2009 (PMID 19346330)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_fxr_fgf19",
+      "type": "activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "fxr"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "fgf19"
+      },
+      "effect": "positive",
+      "mechanism": "In the ileum, FXR induces the enterokine FGF19 (FGF15 in rodents), which is secreted into portal blood.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "16213224"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_fgf19_fgfr4",
+      "type": "hormonal-signal",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "fgf19"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "fgfr4"
+      },
+      "effect": "signal",
+      "mechanism": "Circulating FGF19 binds hepatic FGFR4 with the co-receptor beta-Klotho, activating ERK/JNK signaling.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "16213224"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_fgf19_cyp7a1",
+      "type": "transcriptional-repression",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "fgf19"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "cyp7a1_gene"
+      },
+      "effect": "negative",
+      "mechanism": "FGF19/FGFR4 signaling represses CYP7A1 transcription; this enterohepatic arm dominates postprandial feedback in humans.",
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "16213224"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, Compr Physiol 2013 (PMID 23897684)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_oxysterol_lxra",
+      "type": "activation",
+      "regulator": {
+        "kind": "metabolite",
+        "id": "hydroxycholesterol_27"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "lxra"
+      },
+      "effect": "positive",
+      "mechanism": "27-Hydroxycholesterol and other oxysterols are endogenous agonists of LXRalpha (NR1H3), linking cellular cholesterol/oxysterol load to bile-acid synthesis.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "9630215"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, J Lipid Res 2009 (PMID 19346330)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reg_lxra_cyp7a1",
+      "type": "transcriptional-activation",
+      "regulator": {
+        "kind": "enzyme",
+        "id": "lxra"
+      },
+      "target": {
+        "kind": "gene",
+        "id": "cyp7a1_gene"
+      },
+      "effect": "positive",
+      "mechanism": "Oxysterol-activated LXRalpha induces CYP7A1 in rodents (feed-forward disposal of cholesterol); the human CYP7A1 promoter lacks a functional LXRE, an important species difference.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "PubMed",
+            "id": "9630215"
+          },
+          {
+            "db": "review",
+            "id": "Chiang JYL, J Lipid Res 2009 (PMID 19346330)"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_cyp7a1_gene_enc",
+      "type": "gene-encodes",
+      "source": {
+        "kind": "gene",
+        "id": "cyp7a1_gene"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "cyp7a1"
+      },
+      "note": "CYP7A1 gene encodes cholesterol 7alpha-hydroxylase."
+    },
+    {
+      "id": "rel_cyp8b1_gene_enc",
+      "type": "gene-encodes",
+      "source": {
+        "kind": "gene",
+        "id": "cyp8b1_gene"
+      },
+      "target": {
+        "kind": "enzyme",
+        "id": "cyp8b1"
+      },
+      "note": "CYP8B1 gene encodes sterol 12alpha-hydroxylase."
+    },
+    {
+      "id": "rel_cholesterol_src",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cholesterol-biosynthesis"
+      },
+      "note": "Cholesterol, the obligate substrate for all bile-acid synthesis, is supplied by de novo cholesterol biosynthesis and lipoprotein-derived cholesterol; bile-acid synthesis is the major route of cholesterol catabolism/elimination."
+    },
+    {
+      "id": "rel_propionyl_betaox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acid-beta-oxidation"
+      },
+      "note": "Peroxisomal shortening of the C27 sterol side chain uses the beta-oxidation machinery (acyl-CoA oxidase, D-bifunctional protein, SCPx thiolase) and releases propionyl-CoA, which is further catabolized."
+    },
+    {
+      "id": "rel_taurine_cys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "taurine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methionine-cysteine-metabolism"
+      },
+      "note": "Taurine used for bile-acid conjugation is derived from cysteine catabolism (cysteine -> cysteinesulfinate -> hypotaurine -> taurine)."
+    },
+    {
+      "id": "rel_glycine_conj",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycine-serine-threonine-metabolism"
+      },
+      "note": "Glycine, the predominant conjugation amino acid in humans (glyco:tauro ~3:1), is drawn from serine/glycine one-carbon metabolism."
+    },
+    {
+      "id": "rel_microbiome_ca",
+      "type": "microbiome-host",
+      "source": {
+        "kind": "metabolite",
+        "id": "taurocholate"
+      },
+      "target": {
+        "kind": "metabolite",
+        "id": "cholate"
+      },
+      "note": "Gut bacterial bile-salt hydrolases (BSH) deconjugate tauro-/glyco-conjugates to free primary bile acids; anaerobic 7alpha-dehydroxylation (e.g. Clostridium scindens) then yields the secondary bile acid deoxycholate, which is reabsorbed and signals to host FXR/TGR5."
+    },
+    {
+      "id": "rel_microbiome_cdca",
+      "type": "microbiome-host",
+      "source": {
+        "kind": "metabolite",
+        "id": "taurochenodeoxycholate"
+      },
+      "target": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "note": "Microbial BSH deconjugation of taurochenodeoxycholate liberates CDCA; 7alpha-dehydroxylation converts it to lithocholic acid, the most hydrophobic/cytotoxic secondary bile acid."
+    }
+  ]
+}

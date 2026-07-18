@@ -11,7 +11,7 @@ import fcose from "cytoscape-fcose";
 cytoscape.use(fcose);
 mountChrome("explore");
 
-interface GNode { id: string; kind: string; label: string; pathways: string[]; data: Record<string, any>; }
+interface GNode { id: string; kind: string; label: string; pathways: string[]; data: Record<string, any>; x?: number; y?: number; }
 interface GEdge { id: string; type: string; source: string; target: string; pathway?: string; effect?: string; mechanism?: string; }
 interface Master { pathways: { id: string; name: string; category: string; counts: Record<string, number> }[]; nodes: GNode[]; edges: GEdge[]; stats: Record<string, number>; }
 
@@ -70,8 +70,12 @@ async function main() {
   const hint = document.querySelector<HTMLElement>(".stage__hint");
   if (hint) hint.remove();
 
+  const hasPositions = master.nodes.length > 0 && master.nodes[0].x != null;
   const elements: cytoscape.ElementDefinition[] = [
-    ...master.nodes.map((n) => ({ data: { id: n.id, kind: n.kind, label: n.label, pathways: n.pathways, payload: n.data } })),
+    ...master.nodes.map((n) => ({
+      data: { id: n.id, kind: n.kind, label: n.label, pathways: n.pathways, payload: n.data },
+      position: n.x != null ? { x: n.x, y: n.y! } : undefined,
+    })),
     ...master.edges.map((e) => ({ data: { id: e.id, source: e.source, target: e.target, type: e.type, pathway: e.pathway, effect: e.effect, mechanism: e.mechanism } })),
   ];
 
@@ -79,7 +83,9 @@ async function main() {
     container: document.getElementById("cy"),
     elements,
     style: buildStyles(reg),
-    layout: { name: "fcose", quality: "default", animate: false, nodeSeparation: 115, idealEdgeLength: 85, nodeRepulsion: 9000, packComponents: true } as any,
+    layout: hasPositions
+      ? { name: "preset", fit: true, padding: 40 }
+      : { name: "fcose", quality: "default", animate: false, nodeSeparation: 115, idealEdgeLength: 85, nodeRepulsion: 9000, packComponents: true } as any,
     minZoom: 0.15, maxZoom: 3.5, wheelSensitivity: 0.25,
     pixelRatio: Math.min(devicePixelRatio, 2),
   });
