@@ -81,6 +81,15 @@ for (const mod of modules) {
     return local[kind]?.[id];
   };
 
+  // Activate the gene layer: synthesize a gene node + gene-encodes edge for every
+  // enzyme that names its gene, even when the module didn't author explicit gene entries.
+  for (const e of mod.enzymes || []) {
+    if (!e.gene) continue;
+    const gid = "gene:" + clean(e.xrefs?.ensembl || e.gene);
+    upsertNode(gid, "gene", e.gene, { id: e.gene, symbol: e.gene, name: `${e.gene} (gene)`, xrefs: e.xrefs?.ensembl ? { ensembl: e.xrefs.ensembl } : {} }, mod.id);
+    addEdge("gene-encodes", gid, local.enzyme[e.id], mod.id);
+  }
+
   for (const r of mod.reactions || []) {
     const rId = local.reaction[r.id];
     const reversible = r.reversibility === "reversible";

@@ -32,18 +32,20 @@ function buildStyles(reg: ArrowRegistry): cytoscape.StylesheetJSON {
       "background-color": (e: any) => nodeColor[e.data("kind")] || "#8aa0b6",
       "label": "data(label)", "color": cssVar("--text"), "font-size": 9, "font-family": "Inter, sans-serif",
       "text-valign": "center", "text-halign": "center", "text-margin-y": -12,
-      "text-background-color": cssVar("--bg"), "text-background-opacity": 0.75, "text-background-padding": 2,
-      "width": 16, "height": 16, "border-width": 0, "min-zoomed-font-size": 8,
+      "text-wrap": "ellipsis", "text-max-width": 100,
+      "text-background-color": cssVar("--bg"), "text-background-opacity": 0.78, "text-background-padding": 2, "text-background-shape": "roundrectangle",
+      "width": 16, "height": 16, "border-width": 0, "min-zoomed-font-size": 9,
     } },
     { selector: 'node[kind="metabolite"]', style: { shape: "ellipse", width: 20, height: 20 } },
     { selector: 'node[kind="enzyme"]', style: { shape: "round-rectangle", width: 26, height: 15 } },
-    { selector: 'node[kind="reaction"]', style: { shape: "diamond", width: 12, height: 12, "background-opacity": 0.9 } },
+    { selector: 'node[kind="reaction"]', style: { shape: "diamond", width: 13, height: 13, "background-opacity": 0.95, "text-opacity": 0 } },
     { selector: 'node[kind="gene"]', style: { shape: "round-rectangle", width: 22, height: 12 } },
     { selector: 'node[kind="complex"]', style: { shape: "octagon", width: 24, height: 24 } },
     { selector: 'node[kind="pathway"]', style: { shape: "round-rectangle", width: 40, height: 20, "font-size": 11 } },
-    { selector: "node:selected", style: { "border-width": 3, "border-color": cssVar("--accent"), "text-background-opacity": 1 } },
+    { selector: "node:selected", style: { "border-width": 3, "border-color": cssVar("--accent"), "text-background-opacity": 1, "text-opacity": 1, "z-index": 30 } },
+    { selector: "node.hover", style: { "text-opacity": 1, "text-background-opacity": 1, "z-index": 25 } },
     { selector: "node.faded", style: { opacity: 0.12 } },
-    { selector: "node.hl", style: { "border-width": 3, "border-color": cssVar("--accent") } },
+    { selector: "node.hl", style: { "border-width": 3, "border-color": cssVar("--accent"), "text-opacity": 1 } },
     { selector: "edge", style: {
       "curve-style": "bezier", "width": 1.6, "opacity": 0.85, "target-arrow-shape": "triangle",
       "line-color": "#8aa0b6", "target-arrow-color": "#8aa0b6", "arrow-scale": 0.9,
@@ -77,7 +79,7 @@ async function main() {
     container: document.getElementById("cy"),
     elements,
     style: buildStyles(reg),
-    layout: { name: "fcose", quality: "default", animate: false, nodeSeparation: 90, idealEdgeLength: 62, nodeRepulsion: 5200 } as any,
+    layout: { name: "fcose", quality: "default", animate: false, nodeSeparation: 115, idealEdgeLength: 85, nodeRepulsion: 9000, packComponents: true } as any,
     minZoom: 0.15, maxZoom: 3.5, wheelSensitivity: 0.25,
     pixelRatio: Math.min(devicePixelRatio, 2),
   });
@@ -90,6 +92,8 @@ async function main() {
 
   cy.on("tap", "node", (evt) => openDrawer(evt.target, reg));
   cy.on("tap", (evt) => { if (evt.target === cy) { closeDrawer(); cy.elements().removeClass("faded hl"); } });
+  cy.on("mouseover", "node", (evt) => evt.target.addClass("hover"));
+  cy.on("mouseout", "node", (evt) => evt.target.removeClass("hover"));
 
   // theme re-style
   const obs = new MutationObserver(() => cy.style(buildStyles(reg)));
