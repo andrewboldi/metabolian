@@ -5,7 +5,6 @@ import { mountChrome } from "../lib/layout";
 import { getJSON, el, fmt } from "../lib/util";
 import { loadArrows, arrowSVG } from "../lib/arrows";
 
-document.documentElement.classList.add("js");
 mountChrome("");
 
 interface Index { stats: Record<string, number>; edgeTypeCounts: Record<string, number>; pathways: unknown[]; }
@@ -68,13 +67,6 @@ async function buildLegend() {
   }
 }
 
-async function reveal() {
-  const items = [...document.querySelectorAll<HTMLElement>("[data-animate]")];
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) { items.forEach((i) => (i.style.opacity = "1")); return; }
-  const { gsap } = await import("gsap");
-  gsap.to(items, { opacity: 1, y: 0, duration: 0.7, stagger: 0.08, ease: "power3.out", startAt: { y: 16 } });
-}
-
 async function startHero() {
   const canvas = document.getElementById("hero-canvas") as HTMLCanvasElement | null;
   if (!canvas) return;
@@ -83,7 +75,6 @@ async function startHero() {
 
 fillStats();
 buildLegend();
-reveal();
 // defer hero until the page is interactive so it never competes with LCP
 if ("requestIdleCallback" in window) (window as unknown as { requestIdleCallback: (cb: () => void) => void }).requestIdleCallback(startHero);
 else setTimeout(startHero, 200);

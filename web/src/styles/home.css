@@ -23,5 +23,18 @@
 .legend-cat h3 { font-size: var(--step-1); }
 .legend-cat p { font-size: var(--step--1); }
 
+/* Entrance animation is CSS-only progressive enhancement: content is visible by
+   default (robust if JS fails, good for LCP), and only animates when motion is OK.
+   The hero headline (LCP element) rises without fading so it paints immediately. */
 [data-animate] { opacity: 1; }
-.js [data-animate] { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero [data-animate], #grammar [data-animate] { opacity: 0; animation: fadeRise 0.7s var(--ease) both; }
+  #hero-title { opacity: 1; animation-name: riseOnly; }
+  .hero__inner > [data-animate]:nth-child(1) { animation-delay: 0.02s; }
+  .hero__inner > [data-animate]:nth-child(2) { animation-delay: 0.09s; }
+  .hero__inner > [data-animate]:nth-child(3) { animation-delay: 0.16s; }
+  .hero__inner > [data-animate]:nth-child(4) { animation-delay: 0.23s; }
+  .hero__inner > [data-animate]:nth-child(5) { animation-delay: 0.30s; }
+}
+@keyframes fadeRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes riseOnly { from { transform: translateY(14px); } to { transform: none; } }
