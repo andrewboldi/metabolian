@@ -179,6 +179,14 @@ function openDrawer(node: cytoscape.NodeSingular, _reg: ArrowRegistry) {
     body.append(el("a.btn", { href: `protein.html?${q.toString()}` }, ["View 3D structure →"]));
   }
 
+  const tools = externalTools(kind, p);
+  if (tools.length) {
+    body.append(el("div", { style: "margin-top:.25rem" }, [
+      el("div.drawer__kind", { style: "color:var(--text-faint);margin-bottom:.4rem" }, ["Explore further"]),
+      el("div.chips", {}, tools),
+    ]));
+  }
+
   const prov = p.provenance;
   if (prov?.confidence) {
     body.append(el("div", { style: "border-top:1px solid var(--line);padding-top:.75rem;margin-top:.5rem" }, [
@@ -205,6 +213,25 @@ function reactionDetail(p: Record<string, any>): HTMLElement[] {
   if (p.compartment) add("compartment", p.compartment);
   if (p.deltaGPrimeKjPerMol != null) add("ΔG°′", `${p.deltaGPrimeKjPerMol} kJ/mol`);
   if (kv.childElementCount) out.push(kv);
+  return out;
+}
+
+// Grounded external links to probe/pharmacology/structure resources, resolved
+// by the identifiers already on the node (from expert ideation: probe cross-links).
+function externalTools(kind: string, p: Record<string, any>): HTMLElement[] {
+  const out: HTMLElement[] = [];
+  const xr = p.xrefs || {};
+  const link = (label: string, href: string) => out.push(chip(label, href));
+  if (kind === "enzyme" && xr.uniprot) {
+    link("ChEMBL", `https://www.ebi.ac.uk/chembl/g/#browse/targets/filter/target_components.accession%3A${xr.uniprot}`);
+    link("PDBe", `https://www.ebi.ac.uk/pdbe/entry/search/index?uniprot_accession:${xr.uniprot}`);
+    link("STRING", `https://string-db.org/cgi/network?identifiers=${encodeURIComponent(p.gene || xr.uniprot)}`);
+  }
+  if (kind === "metabolite") {
+    if (xr.inchikey) link("PubChem", `https://pubchem.ncbi.nlm.nih.gov/#query=${xr.inchikey}`);
+    if (xr.hmdb) link("HMDB", `https://hmdb.ca/metabolites/${xr.hmdb}`);
+    if (xr.chebi || xr.inchikey) link("MetaboLights", `https://www.ebi.ac.uk/metabolights/search?query=${encodeURIComponent(p.name || "")}`);
+  }
   return out;
 }
 
