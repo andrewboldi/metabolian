@@ -1,0 +1,51 @@
+name: Health check
+
+# Perpetual detection loop: runs on a schedule (and on demand), validates the
+# atlas end-to-end, and files a GitHub issue automatically when something breaks
+# so maintenance work never stalls silently.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+
+      - name: Validate pathway data
+        id: validate
+        run: npm run data:validate
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build site
+        run: npm run build
+
+      - name: Dependency audit (report only)
+        run: npm audit --omit=dev || true
+
+      - name: File an issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Automated health check failed ($(date -u +%Y-%m-%d))"
+          EXISTING=$(gh issue list --state open --label health --search "Automated health check failed" --json number --jq '.[0].number' || true)
+          BODY="The scheduled health check failed on run [${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}). A maintainer or agent should investigate data validation, tests, or the build."
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh label create health --color b60205 --description "Automated health check" 2>/dev/null || true
+            gh issue create --title "$TITLE" --body "$BODY" --label health
+          fi

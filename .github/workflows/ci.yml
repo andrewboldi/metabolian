@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
       - name: Schema + referential-integrity validation
         run: npm run data:validate
+      - name: Unit tests
+        run: npm test
       - name: Build master graph
         run: npm run data:build
 
