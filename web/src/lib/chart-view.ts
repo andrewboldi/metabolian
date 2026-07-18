@@ -440,7 +440,9 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         if (g.querySelector("svg")) continue;
         const doc = new DOMParser().parseFromString(text, "image/svg+xml");
         const root = doc.documentElement;
-        const vb = root.getAttribute("viewBox") || `0 0 ${n.molSize?.w ?? 200} ${n.molSize?.h ?? 160}`;
+        // prefer the precomputed ink box so the cell shows the molecule, not padding
+        const vb = (n as ChartNode & { molView?: string }).molView
+          || root.getAttribute("viewBox") || `0 0 ${n.molSize?.w ?? 200} ${n.molSize?.h ?? 160}`;
         const top = Number(g.getAttribute("data-structure-top") || 16);
         const inner = s("svg", { x: 4, y: top, width: n.w - 8, height: n.h - top - 12, viewBox: vb, preserveAspectRatio: "xMidYMid meet", class: "mol-inline" });
         for (const child of Array.from(root.childNodes)) inner.append(child.cloneNode(true));

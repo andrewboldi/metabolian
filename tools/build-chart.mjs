@@ -88,6 +88,9 @@ for (const f of mplFiles) {
     const sizes = {};
     for (const [id, m] of metabolites) {
       const entry = SMILES[metKey(m)];
+      // Reshaping cells to each molecule's aspect was tried and measured WORSE
+      // (17.4% vs 18.2%) — it preserves area but packs badly. Keep the size
+      // buckets; the ink crop below is what makes the molecule fill the cell.
       sizes[id] = cellSize(entry?.smiles);
     }
     for (const [id] of enzymes) sizes[id] = { w: 118, h: 52 };   // protein regulator
@@ -121,6 +124,7 @@ for (const f of mplFiles) {
     const cond = sm ? condensedFor(sm) : null;
     n.condensed = cond ? cond.rows : null;
     n.mol = cond ? null : (mol ? mol.file : null);   // a condensed column replaces the drawing
+    if (n.mol && mol?.ink) n.molView = `${mol.ink.x} ${mol.ink.y} ${mol.ink.w} ${mol.ink.h}`;
     n.molSize = mol ? { w: mol.w, h: mol.h } : null;
   }
 

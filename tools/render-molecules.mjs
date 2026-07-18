@@ -7,6 +7,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from "node:fs";
 import { createRequire } from "node:module";
+import { inkExtent } from "./lib/manhattan.mjs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -65,7 +66,10 @@ async function main() {
       const svg = cleanSvg(mol.get_svg(w, h));
       const file = `${safeKey(key)}.svg`;
       writeFileSync(join(OUT, file), svg);
-      index[key] = { file, name: entry.name, w, h };
+      // RDKit pads its canvas generously; record the true ink box so a cell can
+      // be sized and cropped to the molecule rather than to that padding.
+      const ink = inkExtent(svg);
+      index[key] = { file, name: entry.name, w, h, ink: ink ? { x: ink.x, y: ink.y, w: ink.w, h: ink.h } : null };
       ok++;
     } catch {
       failed++;
