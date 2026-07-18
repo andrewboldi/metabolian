@@ -74,13 +74,35 @@ for (const f of mplFiles) {
     // Michal boxes a compound only when it occurs in several places on the sheet —
     // the box is a cross-reference marker, never decoration.
     n.hub = (occurrences.get(n.metabolite) || 0) >= 2;
+    n.isProtein = !m && enzymes.has(n.metabolite);
+    if (n.isProtein) {
+      const pe = enzymes.get(n.metabolite);
+      n.label = pe?.gene || pe?.name || n.metabolite.toUpperCase();
+      n.fullName = pe?.name || null;
+      n.gene = pe?.gene || null;
+      n.uniprot = pe?.xrefs?.uniprot || null;
+    }
     n.mol = mol ? mol.file : null;
     n.molSize = mol ? { w: mol.w, h: mol.h } : null;
+  }
+
+  // index the module's own reactions so drawn direction can be taken from data
+  const modPath = join(PATHWAY_DIR, `${ir.id}.json`);
+  const modJson = existsSync(modPath) ? JSON.parse(readFileSync(modPath, "utf8")) : null;
+  const rxnByEnzyme = new Map();
+  for (const rx of modJson?.reactions || []) {
+    for (const c of rx.catalysts || []) if (!rxnByEnzyme.has(c.enzyme)) rxnByEnzyme.set(c.enzyme, rx);
   }
 
   // enrich reactions with enzyme identity (uniprot drives the inline 3D viewer)
   for (const r of ir.reactions) {
     const e = r.enzyme ? enzymes.get(r.enzyme) : null;
+    const dataRxn = r.enzyme ? rxnByEnzyme.get(r.enzyme) : null;
+    if (dataRxn) {
+      // direction is a scientific fact, not a drafting choice
+      r.reversible = dataRxn.reversibility === "reversible";
+      if (dataRxn.rateLimiting) r.committed = true;
+    }
     r.enzymeName = e?.name || r.enzyme;
     r.gene = e?.gene || null;
     r.uniprot = e?.xrefs?.uniprot || e?.xrefs?.alphafold || null;
@@ -133,6 +155,19 @@ for (const f of mplFiles) {
       if (blocker) { crossings.push(`${r.enzyme || r.kind} through ${blocker.metabolite}`); break; }
     }
   }
+  // Regulation lines are drawn too, so they must satisfy the same rule.
+  for (const g of ir.regulation || []) {
+    for (let i = 1; i < g.points.length; i++) {
+      const [p, q] = [g.points[i - 1], g.points[i]];
+      const lo = { x: Math.min(p[0], q[0]) + 6, y: Math.min(p[1], q[1]) + 6 };
+      const hi = { x: Math.max(p[0], q[0]) - 6, y: Math.max(p[1], q[1]) - 6 };
+      if (hi.x < lo.x || hi.y < lo.y) continue;
+      const blocker = ir.nodes.find((n) => n.metabolite !== g.from && n.metabolite !== g.to &&
+        !(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y));
+      if (blocker) { crossings.push(`regulation ${g.from}->${g.to} through ${blocker.metabolite}`); break; }
+    }
+  }
+
   if (crossings.length) {
     console.error(`❌ ${f}: ${crossings.length} reaction(s) routed through unrelated cells: ${crossings.slice(0, 4).join(", ")}`);
     process.exitCode = 1;

@@ -197,18 +197,21 @@ export function layout(ast) {
   const spineX = (ast.spine || ast.cycle).at.x;
   const branchLeft = ast.branches.some((b) => b.side === "left");
   const effDir = branchLeft ? 1 : -1;   // put effectors opposite the branches
-  let effectorY = (ast.spine || ast.cycle).at.y + ast.spacing;
-  for (const r of ast.regulation) {
-    if (byMetabolite.has(r.from)) continue;
-    const x = freeX(outsideCore(outsideRing(spineX + effDir * COL_GAP, effDir), effDir), effectorY, effDir);
+  const effectorsNeeded = ast.regulation.filter((r) => !byMetabolite.has(r.from))
+    .map((r) => r.from).filter((v, i, a) => a.indexOf(v) === i);
+  const effRows = Math.max(3, Math.ceil(Math.sqrt(effectorsNeeded.length * 1.4)));
+  const effBaseX = outsideCore(outsideRing(spineX + effDir * COL_GAP, effDir), effDir);
+  const effBaseY = (ast.spine || ast.cycle).at.y;
+  effectorsNeeded.forEach((id, i) => {
+    const col = Math.floor(i / effRows), row = i % effRows;
+    const x = freeX(effBaseX + effDir * col * COL_GAP, effBaseY + row * ast.spacing, effDir);
     const node = {
-      id: `${ast.id}:${r.from}`, metabolite: r.from,
-      x, y: effectorY, lane: "effector", w: NODE_W, h: NODE_H,
+      id: `${ast.id}:${id}`, metabolite: id,
+      x, y: effBaseY + row * ast.spacing, lane: "effector", w: NODE_W, h: NODE_H,
     };
     nodes.push(claim(node));
-    byMetabolite.set(r.from, node);
-    effectorY += Math.round(ast.spacing * 0.9);
-  }
+    byMetabolite.set(id, node);
+  });
 
   repairBlockedRoutes();
 
@@ -268,6 +271,9 @@ export function layout(ast) {
 
   // regulation routed around the outside of the column it targets
   const regulation = [];
+  // count first, so each regulator can be given its own landing point along the edge
+  const targetCount = new Map();
+  for (const r of ast.regulation) targetCount.set(r.to, (targetCount.get(r.to) || 0) + 1);
   const perTarget = new Map(); // fan out lines that share a target so they never coincide
   for (const r of ast.regulation) {
     const src = byMetabolite.get(r.from);
@@ -278,7 +284,7 @@ export function layout(ast) {
     perTarget.set(r.to, n + 1);
     regulation.push({
       effect: r.effect, kind: r.kind, from: r.from, to: r.to,
-      points: regulationRoute(src, dst, n),
+      points: regulationRoute(src, dst, n, targetCount.get(r.to) || 1),
       glyph: r.effect === "inhibit" ? "inhibit" : "activate",
     });
   }
@@ -487,16 +493,33 @@ export function layout(ast) {
   }
 
   /** Regulation runs out to a gutter beside the column, then back in. */
-  function regulationRoute(src, dst, index = 0) {
+  function regulationRoute(src, dst, index = 0, total = 1) {
     const sx = src.x + NODE_W / 2, sy = src.y + NODE_H / 2;
-    const dx = (dst.points ? dst.points[0][0] : dst.x + NODE_W / 2);
-    const dy = (dst.points ? (dst.points[0][1] + dst.points[1][1]) / 2 : dst.y + NODE_H / 2);
+    // land each regulator at its own fraction along the target edge
+    let dx, dy;
+    if (dst.points) {
+      const a = dst.points[0], b = dst.points[dst.points.length - 1];
+      const f = (index + 1) / (total + 1);
+      const len = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1;
+      dx = Math.round(a[0] + (b[0] - a[0]) * f);
+      dy = Math.round(a[1] + (b[1] - a[1]) * f);
+      // a short edge cannot separate many regulators along its length alone —
+      // step them off the edge as well so the glyphs never pile up
+      if (len < total * 26) {
+        const px = -(b[1] - a[1]) / len, py = (b[0] - a[0]) / len;
+        const off = (index - (total - 1) / 2) * 24;
+        dx = Math.round(dx + px * off);
+        dy = Math.round(dy + py * off);
+      }
+    } else {
+      dx = dst.x + NODE_W / 2;
+      dy = dst.y + NODE_H / 2;
+    }
     const goesLeft = sx <= dx;
     // stagger the gutter and the approach height so co-targeted lines stay distinct
-    const spread = index * 22;
+    const spread = index * 26;
     const gutter = goesLeft ? Math.min(src.x, dx) - 70 - spread : Math.max(src.x + NODE_W, dx) + 70 + spread;
-    const approach = dy + (index ? (index % 2 ? 1 : -1) * Math.ceil(index / 2) * 13 : 0);
-    return [[sx, sy], [gutter, sy], [gutter, approach], [dx, approach]];
+    return [[sx, sy], [gutter, sy], [gutter, dy], [dx, dy]];
   }
 }
 

@@ -189,7 +189,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     const g = s("g", { class: "met-cell", "data-node": n.id, transform: `translate(${n.x},${n.y})` });
     // The cell frame is always present for hubs; the NAME now sits inside the cell,
     // so an incoming flux line terminating on the box edge can never cross it.
-    if ((n as ChartNode & { hub?: boolean }).hub || !n.mol) {
+    const isProtein = (n as ChartNode & { isProtein?: boolean }).isProtein;
+    if (isProtein) {
+      g.append(s("rect", { class: "enz-box", x: 0, y: 18, width: n.w, height: 40, rx: 8 }));
+    } else if ((n as ChartNode & { hub?: boolean }).hub || !n.mol) {
       g.append(s("rect", { class: `met-box${n.mol ? "" : " name-only"}`, x: 0, y: 0, width: n.w, height: n.h }));
     }
     const name = n.label.toUpperCase();
@@ -200,7 +203,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     }
     if (cur) lines.push(cur);
     const shown = lines.slice(0, 2);
-    shown.forEach((ln, i) => g.append(s("text", { class: "met-name", x: n.w / 2, y: 12 + i * 11 }, [ln])));
+    shown.forEach((ln, i) => g.append(s("text", {
+      class: isProtein ? "prot-name" : "met-name",
+      x: n.w / 2, y: (isProtein ? 34 : 12) + i * 11,
+    }, [ln])));
     const top = 12 + shown.length * 11;
     if (n.formula) g.append(s("text", { class: "met-formula lod-detail", x: n.w / 2, y: n.h - 4 }, [n.formula]));
     g.setAttribute("data-structure-top", String(top));
