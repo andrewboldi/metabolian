@@ -289,10 +289,15 @@ export function layout(ast) {
     });
   }
 
-  const xs = nodes.map((n) => n.x), ys = nodes.map((n) => n.y);
+  // Bounds must contain every drawn thing — cells AND routed edges — or "Fit"
+  // silently clips regulation lines that overshoot the cell bounding box.
+  const xs = [], ys = [];
+  for (const n of nodes) { xs.push(n.x, n.x + n.w); ys.push(n.y, n.y + n.h); }
+  for (const r of reactions) for (const p of r.points) { xs.push(p[0]); ys.push(p[1]); }
+  for (const g of regulation) for (const p of g.points) { xs.push(p[0]); ys.push(p[1]); }
   const pad = 44;
   const minX = Math.min(...xs, 0) - pad, minY = Math.min(...ys, 0) - pad;
-  const maxX = Math.max(...xs, 0) + NODE_W + pad, maxY = Math.max(...ys, 0) + NODE_H + pad;
+  const maxX = Math.max(...xs, 0) + pad, maxY = Math.max(...ys, 0) + pad;
 
   return {
     id: ast.id, title: ast.title, grid: ast.grid,

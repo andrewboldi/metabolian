@@ -162,7 +162,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       name.append(s("title", {}, [full]));
       name.addEventListener("click", (e) => { e.stopPropagation(); hooks.onEnzyme?.(r); });
       g.append(name);
-      if (r.ec) g.append(s("text", { class: "enz-ec lod-detail", x: tx, y: my + 10, "text-anchor": anchor }, [`EC ${r.ec}`]));
+      const ecEl = r.ec ? s("text", { class: "enz-ec lod-detail", x: tx, y: my + 10, "text-anchor": anchor }, [`EC ${r.ec}`]) : null;
+      if (ecEl) g.append(ecEl);
+      // register with the anti-collision placer that runs once everything exists
+      enzymeLabels.push({ name, ec: ecEl, mx, my, chars: shownName.length });
       // cofactors enter/leave on a curved side-entry, Michal-style
       const elen = r.points.reduce((acc, p, i) => i ? acc + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0, 0);
       g.append(cofactorSide(r, mx, my, -dir, elen));
@@ -204,7 +207,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     if (cur) lines.push(cur);
     const shown = lines.slice(0, 2);
     shown.forEach((ln, i) => g.append(s("text", {
-      class: isProtein ? "prot-name" : "met-name",
+      class: (isProtein ? "prot-name" : "met-name") + " lod-normal",
       x: n.w / 2, y: (isProtein ? 34 : 12) + i * 11,
     }, [ln])));
     const top = 12 + shown.length * 11;
