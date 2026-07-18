@@ -125,7 +125,7 @@ export function parse(src) {
  * Place a parsed pathway on a deterministic grid and route every edge
  * orthogonally. Returns the IR the renderer draws.
  */
-export function layout(ast) {
+export function layout(ast, sizes = {}) {
   const spineOriginX = () => (ast.spine || ast.cycle || { at: { x: 0 } }).at.x;
   const nodes = [];      // metabolite cells
   const reactions = [];  // reaction steps (arrow + enzyme label + cofactors)
@@ -133,6 +133,11 @@ export function layout(ast) {
 
   // Occupancy map — nothing may overlap anything else. Cells claim a rectangle
   // (plus a gutter for the name above and labels beside) before they are placed.
+  const sizeOf = (id) => {
+    const s = sizes[id];
+    return { w: s?.w || NODE_W, h: s?.h || NODE_H };
+  };
+
   const placed = [];
   const GUTTER_X = 62;  // room for enzyme names / cofactor labels beside a cell
   const GUTTER_Y = 14;  // clear paper between stacked cells
@@ -143,9 +148,9 @@ export function layout(ast) {
         r.y + r.h + GUTTER_Y <= p.y || p.y + p.h + GUTTER_Y <= r.y));
   }
   /** Slide horizontally (in `dir`) until the cell no longer collides. */
-  function freeX(x, y, dir) {
+  function freeX(x, y, dir, w = NODE_W, h = NODE_H) {
     let cx = x;
-    for (let i = 0; i < 40 && hits({ x: cx, y, w: NODE_W, h: NODE_H }); i++) cx += dir * COL_GAP;
+    for (let i = 0; i < 40 && hits({ x: cx, y, w, h }); i++) cx += dir * COL_GAP;
     return cx;
   }
   function claim(node) { placed.push({ x: node.x, y: node.y, w: node.w, h: node.h }); return node; }
@@ -155,14 +160,14 @@ export function layout(ast) {
    * freeX slid horizontally on every collision, so an effector in a congested
    * band could march a dozen columns out and stretch the whole sheet.
    */
-  function freeSlotNear(x, y, dir) {
-    if (!hits({ x, y, w: NODE_W, h: NODE_H })) return { x, y };
+  function freeSlotNear(x, y, dir, w = NODE_W, h = NODE_H) {
+    if (!hits({ x, y, w, h })) return { x, y };
     for (let ring = 1; ring <= 6; ring++) {
       for (const dy of [0, -1, 1, -2, 2]) {
         for (const dxs of [dir, -dir]) {
           const cx = x + dxs * ring * COL_GAP;
           const cy = y + dy * Math.round(ast.spacing * 0.8);
-          if (!hits({ x: cx, y: cy, w: NODE_W, h: NODE_H })) return { x: cx, y: cy };
+          if (!hits({ x: cx, y: cy, w, h })) return { x: cx, y: cy };
         }
       }
     }
@@ -195,7 +200,8 @@ export function layout(ast) {
     const anchor = byMetabolite.get(b.from);
     const dir = b.side === "left" ? -1 : 1;
     const y = (anchor ? anchor.y : 0) + ast.spacing;
-    const x = freeX(outsideCore(outsideRing((anchor ? anchor.x : 0) + dir * COL_GAP, dir), dir), y, dir);
+    const szB = sizeOf((b.chain.steps.find((s) => s.kind === "metabolite") || {}).id || "");
+    const x = freeX(outsideCore(outsideRing((anchor ? anchor.x : 0) + dir * COL_GAP, dir), dir), y, dir, szB.w, szB.h);
     placeChain(b.chain, x, y, `branch:${b.from}:${b.side}`);
     // connect the anchor into the first node of the branch with an orthogonal elbow
     const first = b.chain.steps.find((s) => s.kind === "metabolite");
@@ -243,16 +249,19 @@ export function layout(ast) {
       // ...but stay within a band beside the core, so one distant target cannot
       // stretch the whole sheet. Short lines AND a compact bbox.
       const lo = coreBox.x0 - COL_GAP * 1.6, hi = coreBox.x1 + COL_GAP * 1.6;
-      const slot = freeSlotNear(Math.max(lo, Math.min(hi, mid[0] + side * COL_GAP)), y, side);
+      const szE = sizeOf(id);
+      const slot = freeSlotNear(Math.max(lo, Math.min(hi, mid[0] + side * COL_GAP)), y, side, szE.w, szE.h);
       x = slot.x; y = slot.y;
     } else {
       const col = Math.floor(i / effRows), row = i % effRows;
-      const slot = freeSlotNear(effBaseX + effDir * col * COL_GAP, effBaseY + row * ast.spacing, effDir);
+      const szE = sizeOf(id);
+      const slot = freeSlotNear(effBaseX + effDir * col * COL_GAP, effBaseY + row * ast.spacing, effDir, szE.w, szE.h);
       x = slot.x; y = slot.y;
     }
+    const sz = sizeOf(id);
     const node = {
       id: `${ast.id}:${id}`, metabolite: id,
-      x, y, lane: "effector", w: NODE_W, h: NODE_H,
+      x, y, lane: "effector", w: sz.w, h: sz.h,
     };
     nodes.push(claim(node));
     byMetabolite.set(id, node);
@@ -394,7 +403,8 @@ export function layout(ast) {
       const y = Math.round(cy + radius * Math.sin(a) - NODE_H / 2);
       let node = byMetabolite.get(step.id);
       if (!node) {
-        node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x, y, lane: "cycle", w: NODE_W, h: NODE_H };
+        const sz = sizeOf(step.id);
+        node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x, y, lane: "cycle", w: sz.w, h: sz.h };
         nodes.push(claim(node));
         byMetabolite.set(step.id, node);
       }
@@ -433,8 +443,10 @@ export function layout(ast) {
         const colX = x0 + col * COL_GAP;
         if (!node) {
           const dir = lane === "spine" ? 1 : (x0 < spineOriginX() ? -1 : 1);
-          const nx = lane === "spine" ? colX : freeX(colX, y, dir);
-          node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x: nx, y, lane, w: NODE_W, h: NODE_H };
+          const sz0 = sizeOf(step.id);
+          const nx = lane === "spine" ? colX : freeX(colX, y, dir, sz0.w, sz0.h);
+          const sz = sizeOf(step.id);
+          node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x: nx, y, lane, w: sz.w, h: sz.h };
           nodes.push(claim(node));
           byMetabolite.set(step.id, node);
         }
@@ -453,20 +465,27 @@ export function layout(ast) {
 
   function finishReaction(step, from, to, onRing = false) {
     if (onRing) {
-      const fx = from.x + NODE_W / 2, fy = from.y + NODE_H / 2;
-      const tx2 = to.x + NODE_W / 2, ty2 = to.y + NODE_H / 2;
+      const fx = from.x + from.w / 2, fy = from.y + from.h / 2;
+      const tx2 = to.x + to.w / 2, ty2 = to.y + to.h / 2;
       const dx = tx2 - fx, dy = ty2 - fy;
       const len = Math.hypot(dx, dy) || 1;
       const ux = dx / len, uy = dy / len;
-      const inset = NODE_H * 0.62;
+      const edge = (n, ux, uy) => {
+        // where the chord leaves this cell's rectangle
+        const hx = n.w / 2, hy = n.h / 2;
+        const tx = ux ? hx / Math.abs(ux) : Infinity;
+        const ty = uy ? hy / Math.abs(uy) : Infinity;
+        return Math.min(tx, ty);
+      };
+      const tFrom = edge(from, ux, uy), tTo = edge(to, ux, uy);
       reactions.push({
         id: `${ast.id}__${step.enzyme}__${from.metabolite}__${to.metabolite}`,
         kind: "flux", enzyme: step.enzyme, ec: step.ec, reversible: step.reversible,
         committed: step.flags.includes("committed") || step.flags.includes("irreversible"),
         from: from.id, to: to.id,
         onRing: true,
-        points: [[Math.round(fx + ux * inset), Math.round(fy + uy * inset)],
-                 [Math.round(tx2 - ux * inset), Math.round(ty2 - uy * inset)]],
+        points: [[Math.round(fx + ux * tFrom), Math.round(fy + uy * tFrom)],
+                 [Math.round(tx2 - ux * tTo), Math.round(ty2 - uy * tTo)]],
         in: step.in, out: step.out, flags: step.flags,
         side: (reactions.length % 2 === 0) ? "right" : "left",
       });
@@ -491,25 +510,25 @@ export function layout(ast) {
    * empty canvas (the cause of the dangling-arrow class of defects).
    */
   function routeEdge(from, to) {
-    const fcx = from.x + NODE_W / 2, fcy = from.y + NODE_H / 2;
-    const tcx = to.x + NODE_W / 2, tcy = to.y + NODE_H / 2;
+    const fcx = from.x + from.w / 2, fcy = from.y + from.h / 2;
+    const tcx = to.x + to.w / 2, tcy = to.y + to.h / 2;
     const dx = tcx - fcx, dy = tcy - fcy;
 
     if (Math.abs(dx) < 10) {                       // same column -> straight vertical
       const direct = dy >= 0
-        ? [[fcx, from.y + NODE_H], [fcx, to.y]]
-        : [[fcx, from.y], [fcx, to.y + NODE_H]];
+        ? [[fcx, from.y + from.h], [fcx, to.y]]
+        : [[fcx, from.y], [fcx, to.y + to.h]];
       return clear(direct, from, to) ? direct : detourX(from, to);
     }
     if (Math.abs(dy) < 10) {                       // same row -> straight horizontal
       const direct = dx >= 0
-        ? [[from.x + NODE_W, fcy], [to.x, fcy]]
-        : [[from.x, fcy], [to.x + NODE_W, fcy]];
+        ? [[from.x + from.w, fcy], [to.x, fcy]]
+        : [[from.x, fcy], [to.x + to.w, fcy]];
       return clear(direct, from, to) ? direct : detourY(from, to);
     }
     // offset -> leave vertically, cross in the gutter between the rows, enter vertically
-    const exitY = dy >= 0 ? from.y + NODE_H : from.y;
-    const entryY = dy >= 0 ? to.y : to.y + NODE_H;
+    const exitY = dy >= 0 ? from.y + from.h : from.y;
+    const entryY = dy >= 0 ? to.y : to.y + to.h;
     const midY = Math.round((exitY + entryY) / 2);
     const z = [[fcx, exitY], [fcx, midY], [tcx, midY], [tcx, entryY]];
     if (clear(z, from, to)) return z;
@@ -535,35 +554,35 @@ export function layout(ast) {
 
   /** Route over/under the obstructing row. */
   function detourY(from, to) {
-    const fcx = from.x + NODE_W / 2, tcx = to.x + NODE_W / 2;
+    const fcx = from.x + from.w / 2, tcx = to.x + to.w / 2;
     for (const step of [46, 96, 148, 202, 262]) {
       const above = Math.min(from.y, to.y) - step;
-      const below = Math.max(from.y + NODE_H, to.y + NODE_H) + step;
-      for (const [lane, fromEdge, toEdge] of [[above, from.y, to.y], [below, from.y + NODE_H, to.y + NODE_H]]) {
+      const below = Math.max(from.y + from.h, to.y + to.h) + step;
+      for (const [lane, fromEdge, toEdge] of [[above, from.y, to.y], [below, from.y + from.h, to.y + to.h]]) {
         const pts = [[fcx, fromEdge], [fcx, lane], [tcx, lane], [tcx, toEdge]];
         if (clear(pts, from, to)) return pts;
       }
     }
     // Last resort: find a horizontal band that is actually clear across the span.
     const band = clearBandY(fcx, tcx, (from.y + to.y) / 2, from, to);
-    const exit = band < from.y ? from.y : from.y + NODE_H;
-    const entry = band < to.y ? to.y : to.y + NODE_H;
+    const exit = band < from.y ? from.y : from.y + from.h;
+    const entry = band < to.y ? to.y : to.y + to.h;
     return [[fcx, exit], [fcx, band], [tcx, band], [tcx, entry]];
   }
 
   /** Route left/right of the obstructing column. */
   function detourX(from, to) {
-    const fcy = from.y + NODE_H / 2, tcy = to.y + NODE_H / 2;
+    const fcy = from.y + from.h / 2, tcy = to.y + to.h / 2;
     for (const step of [56, 112, 172, 236, 300]) {
       const left = Math.min(from.x, to.x) - step;
-      const right = Math.max(from.x + NODE_W, to.x + NODE_W) + step;
-      for (const [lane, fromEdge, toEdge] of [[right, from.x + NODE_W, to.x + NODE_W], [left, from.x, to.x]]) {
+      const right = Math.max(from.x + from.w, to.x + to.w) + step;
+      for (const [lane, fromEdge, toEdge] of [[right, from.x + from.w, to.x + to.w], [left, from.x, to.x]]) {
         const pts = [[fromEdge, fcy], [lane, fcy], [lane, tcy], [toEdge, tcy]];
         if (clear(pts, from, to)) return pts;
       }
     }
-    const far = Math.max(...nodes.map((n) => n.x + n.w), from.x + NODE_W) + 64;
-    return [[from.x + NODE_W, fcy], [far, fcy], [far, tcy], [to.x + NODE_W, tcy]];
+    const far = Math.max(...nodes.map((n) => n.x + n.w), from.x + from.w) + 64;
+    return [[from.x + from.w, fcy], [far, fcy], [far, tcy], [to.x + to.w, tcy]];
   }
 
   /** Right-angle elbow between two cells (never diagonal). */
@@ -576,7 +595,7 @@ export function layout(ast) {
 
   /** Regulation runs out to a gutter beside the column, then back in. */
   function regulationRoute(src, dst, index = 0, total = 1) {
-    const sx = src.x + NODE_W / 2, sy = src.y + NODE_H / 2;
+    const sx = src.x + src.w / 2, sy = src.y + src.h / 2;
     // land each regulator at its own fraction along the target edge
     let dx, dy;
     if (dst.points) {
@@ -594,8 +613,8 @@ export function layout(ast) {
         dy = Math.round(dy + py * off);
       }
     } else {
-      dx = dst.x + NODE_W / 2;
-      dy = dst.y + NODE_H / 2;
+      dx = dst.x + dst.w / 2;
+      dy = dst.y + dst.h / 2;
     }
     // Try progressively wider gutters on both sides and keep the first route that
     // crosses nothing. Regulation used to take a fixed gutter and plough through
@@ -606,7 +625,7 @@ export function layout(ast) {
       for (const side of sides) {
         const gutter = side < 0
           ? Math.min(src.x, dx) - g - spread
-          : Math.max(src.x + NODE_W, dx) + g + spread;
+          : Math.max(src.x + src.w, dx) + g + spread;
         // direct: gutter then straight in
         const direct = [[sx, sy], [gutter, sy], [gutter, dy], [dx, dy]];
         if (regClear(direct, src)) return direct;
@@ -621,6 +640,6 @@ export function layout(ast) {
   }
 }
 
-export function compile(src) {
-  return layout(parse(src));
+export function compile(src, sizes = {}) {
+  return layout(parse(src), sizes);
 }

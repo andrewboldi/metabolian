@@ -10,6 +10,7 @@
 pathway purine-salvage-pathway "Purine salvage pathway" {
   grid G3
   spacing 152
+  wrap 4   # keeps the GTP branch clear of the salvage corridor
 
   spine at 0,0 {
     adenosine

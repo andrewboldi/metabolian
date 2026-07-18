@@ -28,6 +28,23 @@ const SHORT = {
 const short = (id, fallback) => SHORT[id] || SHORT[id.replace(/[_-]/g, "")] || fallback;
 
 const molIndex = existsSync(MOL_INDEX) ? JSON.parse(readFileSync(MOL_INDEX, "utf8")) : {};
+const SMILES = existsSync(join(ROOT, "data", "smiles.json"))
+  ? JSON.parse(readFileSync(join(ROOT, "data", "smiles.json"), "utf8")) : {};
+
+/**
+ * Michal sizes a cell to its molecule — pyruvate gets a small box, NAD+ a large
+ * one. A uniform cell wastes most of the sheet on small metabolites, which is
+ * where the density gap against the poster comes from.
+ */
+function cellSize(smiles) {
+  if (!smiles) return { w: 108, h: 46 };            // name-only box
+  const heavy = (smiles.match(/(Cl|Br|[BCNOPSFI])/gi) || []).length;
+  if (heavy <= 6) return { w: 92, h: 60 };
+  if (heavy <= 12) return { w: 118, h: 74 };
+  if (heavy <= 22) return { w: 142, h: 86 };
+  if (heavy <= 36) return { w: 168, h: 100 };
+  return { w: 196, h: 116 };
+}
 
 // index every metabolite / enzyme across all modules so a chart can reference them
 const metabolites = new Map();
@@ -56,7 +73,14 @@ for (const f of mplFiles) {
   const src = readFileSync(join(MPL_DIR, f), "utf8");
   let ir;
   try {
-    ir = compile(src);
+    // size every cell this chart will place, before layout runs
+    const sizes = {};
+    for (const [id, m] of metabolites) {
+      const entry = SMILES[metKey(m)];
+      sizes[id] = cellSize(entry?.smiles);
+    }
+    for (const [id] of enzymes) sizes[id] = { w: 118, h: 52 };   // protein regulator
+    ir = compile(src, sizes);
   } catch (e) {
     console.error(`❌ ${f}: ${e.message}`);
     process.exitCode = 1;
