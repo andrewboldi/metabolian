@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
+import { checkReaction } from "./lib/balance.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -33,6 +34,8 @@ try {
 
 let errorCount = 0;
 let moduleCount = 0;
+let massWarn = 0;
+let chargeWarn = 0;
 const seenModuleIds = new Set();
 
 for (const file of files.sort()) {
@@ -72,6 +75,24 @@ for (const file of files.sort()) {
   const rxn = mod.reactions?.length ?? 0;
   const reg = mod.regulations?.length ?? 0;
   console.log(`✅ ${file} — ${mod.metabolites.length} metabolites, ${mod.enzymes.length} enzymes, ${rxn} reactions, ${reg} regulations`);
+
+  // Balance report (warning-level — does not fail the build yet).
+  const metById = new Map((mod.metabolites || []).map((m) => [m.id, m]));
+  const bad = [];
+  for (const r of mod.reactions || []) {
+    if (r.transport || r.spontaneous) continue;
+    const res = checkReaction(r, metById);
+    if (!res.checkable) continue;
+    if (!res.massOk || res.chargeOk === false) {
+      if (!res.massOk) massWarn++;
+      if (res.chargeOk === false) chargeWarn++;
+      const bits = [];
+      if (!res.massOk) bits.push("mass " + JSON.stringify(res.massDiff));
+      if (res.chargeOk === false) bits.push(`charge ${res.chargeDiff > 0 ? "+" : ""}${res.chargeDiff}`);
+      bad.push(`   ⚠ ${r.id}: ${bits.join(", ")}`);
+    }
+  }
+  if (bad.length) console.log(bad.slice(0, 6).join("\n") + (bad.length > 6 ? `\n   … +${bad.length - 6} more` : ""));
 }
 
 function referentialErrors(mod) {
@@ -118,4 +139,5 @@ function referentialErrors(mod) {
 }
 
 console.log(`\n${moduleCount} module(s) validated, ${errorCount} error(s).`);
+if (massWarn || chargeWarn) console.log(`⚠ balance: ${massWarn} reaction(s) not mass-balanced, ${chargeWarn} not charge-balanced (warning — see docs/SCHEMA.md; usually a neutral formula paired with an anion charge).`);
 process.exit(errorCount ? 1 : 0);
