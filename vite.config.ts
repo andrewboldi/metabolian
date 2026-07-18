@@ -18,6 +18,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: page("index.html"),
+        chart: page("chart.html"),
         explore: page("explore.html"),
         pathway: page("pathway.html"),
         protein: page("protein.html"),

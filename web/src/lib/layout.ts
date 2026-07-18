@@ -16,6 +16,7 @@ import { initTheme, toggleTheme } from "./theme";
 import { asset, el } from "./util";
 
 const NAV = [
+  { id: "chart", label: "The Chart", href: "chart.html" },
   { id: "explore", label: "Explore", href: "explore.html" },
   { id: "learn", label: "Learn", href: "learn.html" },
   { id: "glossary", label: "Glossary", href: "glossary.html" },

@@ -1,0 +1,60 @@
+/* Roche-fidelity chart surface.
+   The chart is always drawn on paper — white ground, black ink, blue enzyme
+   names, red regulation — regardless of the site theme, because that IS the
+   Michal visual language. Chrome around it follows the app theme. */
+
+.chart-shell { display: grid; grid-template-columns: 1fr; height: calc(100vh - 58px); overflow: hidden; position: relative; }
+
+#chart-canvas { position: absolute; inset: 0; background: #fdfdfb; cursor: grab; touch-action: none; }
+#chart-canvas.dragging { cursor: grabbing; }
+#chart-canvas svg { width: 100%; height: 100%; display: block; }
+
+/* ---- ink classes (Michal's palette) ---- */
+.ink-structure { stroke: #111; fill: none; }
+.flux-line { stroke: #111; stroke-width: 1.6; fill: none; }
+.flux-line.committed { stroke-width: 2.6; }
+.branch-line { stroke: #111; stroke-width: 1.3; fill: none; stroke-dasharray: none; }
+.cofactor-arc { stroke: #c8102e; stroke-width: 1.1; fill: none; }
+.reg-line { stroke: #c8102e; stroke-width: 1.2; fill: none; stroke-dasharray: 5 3; }
+.reg-line.activate { stroke: #1a7f37; }
+
+.met-name { font-family: "Inter", system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #111; letter-spacing: 0.01em; text-anchor: middle; }
+.met-formula { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9px; fill: #555; text-anchor: middle; }
+.enz-name { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #0b5cad; text-transform: uppercase; letter-spacing: 0.02em; cursor: pointer; }
+.enz-name:hover { fill: #d43900; text-decoration: underline; }
+.enz-ec { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 8.5px; fill: #6b7f95; }
+.cofactor-label { font-family: "Inter", system-ui, sans-serif; font-size: 9px; fill: #c8102e; }
+.reg-glyph text { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 700; text-anchor: middle; }
+
+.met-box { fill: #fff; stroke: #111; stroke-width: 1; }
+.met-cell { cursor: pointer; }
+.met-cell:hover .met-box { stroke: #d43900; stroke-width: 1.8; }
+
+/* ---- level of detail: real semantic zoom, not just scaling ---- */
+[data-lod="overview"] .lod-detail,
+[data-lod="overview"] .lod-normal { display: none; }
+[data-lod="normal"] .lod-detail { display: none; }
+
+/* ---- tracing ---- */
+.traced .dimmed { opacity: 0.08; }
+.trace-hit { stroke: #d43900 !important; stroke-width: 3.2 !important; }
+.trace-hit-node .met-box { stroke: #d43900; stroke-width: 2.4; }
+
+/* ---- HUD ---- */
+.chart-hud { position: absolute; top: var(--sp-4); left: var(--sp-4); z-index: 5; display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;
+  background: color-mix(in oklab, var(--panel) 92%, transparent); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.4rem 0.5rem; backdrop-filter: blur(8px); }
+.chart-hud .zoom-readout { font-family: var(--font-mono); font-size: var(--step--1); color: var(--text-dim); min-width: 8ch; text-align: center; }
+.lod-badge { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+.chart-help { position: absolute; bottom: var(--sp-4); left: var(--sp-4); z-index: 5; font-size: var(--step--1); color: var(--text-faint);
+  background: color-mix(in oklab, var(--panel) 88%, transparent); border: 1px solid var(--line); border-radius: var(--radius); padding: .4rem .6rem; }
+
+/* ---- inspector (metabolite detail + inline protein structure) ---- */
+.inspector { position: absolute; top: 0; right: 0; height: 100%; width: min(420px, 94vw); z-index: 6; background: var(--panel);
+  border-left: 1px solid var(--line-strong); box-shadow: var(--shadow); transform: translateX(101%); transition: transform .3s var(--ease); overflow-y: auto; }
+.inspector[data-open="true"] { transform: none; }
+.inspector__inner { padding: var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-4); }
+.inspector__close { position: absolute; top: var(--sp-3); right: var(--sp-3); }
+.inspector h2 { font-size: var(--step-2); padding-right: 2rem; }
+.mol-preview { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: .5rem; }
+.mol-preview svg { width: 100%; height: auto; }
+#mol3d { width: 100%; height: 300px; position: relative; background: #0b0f14; border-radius: var(--radius); border: 1px solid var(--line); }
