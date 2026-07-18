@@ -5,7 +5,7 @@
 
 pathway fatty-acid-synthesis "De novo fatty acid synthesis (palmitate)" {
   grid D4
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     citrate

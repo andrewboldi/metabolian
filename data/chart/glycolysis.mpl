@@ -4,7 +4,7 @@
 
 pathway glycolysis "Glycolysis (Embden–Meyerhof–Parnas)" {
   grid B5
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     glucose

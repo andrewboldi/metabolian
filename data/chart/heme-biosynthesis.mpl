@@ -20,7 +20,7 @@
 
 pathway heme-biosynthesis "Heme biosynthesis (porphyrin pathway)" {
   grid E4
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     glycine

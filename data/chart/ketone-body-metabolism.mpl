@@ -14,7 +14,7 @@
 
 pathway ketone-body-metabolism "Ketone body metabolism (ketogenesis / ketolysis)" {
   grid C5
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     acetyl_coa

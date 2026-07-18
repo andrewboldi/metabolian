@@ -16,7 +16,7 @@
 
 pathway pyruvate-dehydrogenase-complex "Pyruvate dehydrogenase complex (pyruvate → acetyl-CoA)" {
   grid C5
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     pyruvate

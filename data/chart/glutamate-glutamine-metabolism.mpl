@@ -6,7 +6,7 @@
 
 pathway glutamate-glutamine-metabolism "Glutamate and glutamine metabolism" {
   grid C6
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     ammonia

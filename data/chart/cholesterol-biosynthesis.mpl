@@ -6,7 +6,7 @@
 
 pathway cholesterol-biosynthesis "Cholesterol biosynthesis (mevalonate pathway)" {
   grid C4
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     acetyl_coa

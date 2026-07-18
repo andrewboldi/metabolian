@@ -12,7 +12,7 @@
 
 pathway glutathione-metabolism "Glutathione synthesis and redox cycling (γ-glutamyl cycle)" {
   grid C3
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     glutamate

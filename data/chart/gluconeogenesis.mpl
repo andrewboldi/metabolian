@@ -8,7 +8,7 @@
 
 pathway gluconeogenesis "Gluconeogenesis (glucose synthesis from pyruvate)" {
   grid B4
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     pyruvate

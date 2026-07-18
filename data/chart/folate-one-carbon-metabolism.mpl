@@ -30,7 +30,7 @@
 
 pathway folate-one-carbon-metabolism "Folate and one-carbon metabolism" {
   grid F4
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     folate

@@ -16,7 +16,7 @@
 
 pathway methionine-cysteine-metabolism "Methionine cycle & transsulfuration" {
   grid D3
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     methionine

@@ -23,9 +23,9 @@
 // the same source always produces the same picture.
 
 const NODE_W = 148;   // metabolite cell width
-const NODE_H = 96;    // metabolite cell height (structure box; name sits above)
-const COL_GAP = 260;  // horizontal gap between spine and a branch column
-const DEFAULT_SPACING = 210; // vertical distance between consecutive metabolites
+const NODE_H = 88;    // metabolite cell height (name + structure live inside)
+const COL_GAP = 196;  // horizontal gap between spine and a branch column
+const DEFAULT_SPACING = 152; // vertical distance between consecutive metabolites
 
 // ---------------------------------------------------------------- tokenizer
 
@@ -133,8 +133,8 @@ export function layout(ast) {
   // Occupancy map — nothing may overlap anything else. Cells claim a rectangle
   // (plus a gutter for the name above and labels beside) before they are placed.
   const placed = [];
-  const GUTTER_X = 96;  // room for enzyme names / cofactor labels beside a cell
-  const GUTTER_Y = 26;  // room for the metabolite name drawn above the box
+  const GUTTER_X = 62;  // room for enzyme names / cofactor labels beside a cell
+  const GUTTER_Y = 14;  // clear paper between stacked cells
 
   function hits(r) {
     return placed.some((p) =>
@@ -149,6 +149,14 @@ export function layout(ast) {
   }
   function claim(node) { placed.push({ x: node.x, y: node.y, w: node.w, h: node.h }); return node; }
 
+  /** Keep a column clear of a cyclic pathway's ring so chords are never crossed. */
+  function outsideRing(x, dir) {
+    if (!ast.cycle) return x;
+    const cx = ast.cycle.at.x;
+    const clearance = ast.cycleRadius + NODE_W + 40;
+    return dir < 0 ? Math.min(x, cx - clearance) : Math.max(x, cx + clearance);
+  }
+
   if (ast.cycle) placeCycle(ast.cycle, ast.cycle.at.x, ast.cycle.at.y, ast.cycleRadius);
   if (ast.spine) placeChain(ast.spine, ast.spine.at.x, ast.spine.at.y, "spine");
 
@@ -156,7 +164,7 @@ export function layout(ast) {
     const anchor = byMetabolite.get(b.from);
     const dir = b.side === "left" ? -1 : 1;
     const y = (anchor ? anchor.y : 0) + ast.spacing;
-    const x = freeX((anchor ? anchor.x : 0) + dir * COL_GAP, y, dir);
+    const x = freeX(outsideRing((anchor ? anchor.x : 0) + dir * COL_GAP, dir), y, dir);
     placeChain(b.chain, x, y, `branch:${b.from}:${b.side}`);
     // connect the anchor into the first node of the branch with an orthogonal elbow
     const first = b.chain.steps.find((s) => s.kind === "metabolite");
@@ -180,7 +188,7 @@ export function layout(ast) {
   let effectorY = (ast.spine || ast.cycle).at.y + ast.spacing;
   for (const r of ast.regulation) {
     if (byMetabolite.has(r.from)) continue;
-    const x = freeX(spineX + effDir * COL_GAP, effectorY, effDir);
+    const x = freeX(outsideRing(spineX + effDir * COL_GAP, effDir), effectorY, effDir);
     const node = {
       id: `${ast.id}:${r.from}`, metabolite: r.from,
       x, y: effectorY, lane: "effector", w: NODE_W, h: NODE_H,
@@ -208,7 +216,7 @@ export function layout(ast) {
   }
 
   const xs = nodes.map((n) => n.x), ys = nodes.map((n) => n.y);
-  const pad = 140;
+  const pad = 44;
   const minX = Math.min(...xs, 0) - pad, minY = Math.min(...ys, 0) - pad;
   const maxX = Math.max(...xs, 0) + NODE_W + pad, maxY = Math.max(...ys, 0) + NODE_H + pad;
 

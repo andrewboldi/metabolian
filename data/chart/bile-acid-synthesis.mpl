@@ -31,7 +31,7 @@
 
 pathway bile-acid-synthesis "Bile acid synthesis (classic and alternative pathways)" {
   grid C3
-  spacing 210
+  spacing 152
 
   # CLASSIC (NEUTRAL) PATHWAY -> CHOLIC ACID.
   # CYP7A1 is the rate-limiting, committed step of all bile-acid synthesis and

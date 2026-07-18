@@ -33,7 +33,7 @@
 
 pathway sphingolipid-metabolism "Sphingolipid metabolism (ceramide and the S1P rheostat)" {
   grid B3
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     l-serine

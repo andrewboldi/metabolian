@@ -11,7 +11,7 @@
 
 pathway oxidative-phosphorylation "Oxidative phosphorylation (electron transport chain)" {
   grid E5
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     nadh

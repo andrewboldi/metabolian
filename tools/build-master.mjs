@@ -13,7 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const CHART_DIR = join(ROOT, "web", "public", "chart");
 
-const GAP = 240;          // gutter between pathway regions
+const GAP = 76;           // gutter between pathway regions (the poster tessellates)
 const TARGET_ASPECT = 1.4; // wall charts are wider than tall
 
 const files = readdirSync(CHART_DIR).filter((f) => f.endsWith(".json") && !f.startsWith("_") && f !== "index.json");
@@ -116,6 +116,72 @@ for (const r of regions) {
   }
 }
 
+// ---- the weave: adjacent pathways that share a compound are tied together with
+// a real drawn edge, the way the poster flows one pathway into the next. Distant
+// links keep the labelled off-page connector instead.
+master.ties = [];
+{
+  const cellsOf = (regId) => master.nodes.filter((n) => n.pathway === regId);
+  const all = master.nodes;
+  const clear = (pts, a, b) => {
+    for (let i = 1; i < pts.length; i++) {
+      const [p, q] = [pts[i - 1], pts[i]];
+      const lo = { x: Math.min(p[0], q[0]) - 4, y: Math.min(p[1], q[1]) - 4 };
+      const hi = { x: Math.max(p[0], q[0]) + 4, y: Math.max(p[1], q[1]) + 4 };
+      for (const n of all) {
+        if (n === a || n === b) continue;
+        if (!(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y)) return false;
+      }
+    }
+    return true;
+  };
+  const route = (a, b) => {
+    const acx = a.x + a.w / 2, acy = a.y + a.h / 2;
+    const bcx = b.x + b.w / 2, bcy = b.y + b.h / 2;
+    const cands = [];
+    // horizontal-first and vertical-first L routes between facing edges
+    const ax = bcx >= acx ? a.x + a.w : a.x, bx = bcx >= acx ? b.x : b.x + b.w;
+    const ay = bcy >= acy ? a.y + a.h : a.y, by = bcy >= acy ? b.y : b.y + b.h;
+    cands.push([[ax, acy], [bcx, acy], [bcx, by]]);
+    cands.push([[acx, ay], [acx, bcy], [bx, bcy]]);
+    // Z-routes through the gutter between the two regions
+    const midX = Math.round((ax + bx) / 2), midY = Math.round((ay + by) / 2);
+    cands.push([[ax, acy], [midX, acy], [midX, bcy], [bx, bcy]]);
+    cands.push([[acx, ay], [acx, midY], [bcx, midY], [bcx, by]]);
+    for (const c of cands) if (clear(c, a, b)) return c;
+    return null;
+  };
+
+  const seen = new Set();
+  for (let i = 0; i < master.regions.length; i++) {
+    for (let j = i + 1; j < master.regions.length; j++) {
+      const A = master.regions[i], B = master.regions[j];
+      // only tie regions that actually sit next to each other
+      const gapX = Math.max(0, Math.max(A.x, B.x) - Math.min(A.x + A.w, B.x + B.w));
+      const gapY = Math.max(0, Math.max(A.y, B.y) - Math.min(A.y + A.h, B.y + B.h));
+      if (Math.hypot(gapX, gapY) > GAP * 9) continue;
+
+      const aCells = cellsOf(A.id), bCells = cellsOf(B.id);
+      const shared = [];
+      for (const a of aCells) {
+        const b = bCells.find((x) => x.metabolite === a.metabolite);
+        if (b) shared.push([a, b]);
+      }
+      // nearest shared compounds first, and only a couple per pair so it reads
+      shared.sort((p, q) => dist(p[0], p[1]) - dist(q[0], q[1]));
+      for (const [a, b] of shared.slice(0, 3)) {
+        const key = `${A.id}|${B.id}|${a.metabolite}`;
+        if (seen.has(key)) continue;
+        const pts = route(a, b);
+        if (!pts) continue;
+        seen.add(key);
+        master.ties.push({ metabolite: a.metabolite, label: a.label, from: A.id, to: B.id, points: pts });
+      }
+    }
+  }
+  function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+}
+
 const maxX = Math.max(...regions.map((r) => r.x + r.w));
 const maxY = Math.max(...regions.map((r) => r.y + r.h));
 master.bounds = { x: -GAP, y: -GAP, w: maxX + GAP * 2, h: maxY + GAP * 2 };
@@ -157,5 +223,5 @@ idx.charts = [
 ];
 writeFileSync(idxPath, JSON.stringify(idx, null, 2));
 
-console.log(`Master chart: ${master.regions.length} pathway regions, ${master.nodes.length} nodes, ${master.reactions.length} reactions`);
+console.log(`Master chart: ${master.ties.length} shared-compound ties · ${master.regions.length} pathway regions, ${master.nodes.length} nodes, ${master.reactions.length} reactions`);
 console.log(`  canvas ${Math.round(master.bounds.w)}x${Math.round(master.bounds.h)} · regions at ${master.regions.slice(0, 6).map((r) => `${r.id}@${r.ref}`).join(", ")}…`);

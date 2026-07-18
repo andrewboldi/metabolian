@@ -6,7 +6,7 @@
 
 pathway pyrimidine-de-novo-synthesis "De novo pyrimidine nucleotide synthesis" {
   grid E3
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     glutamine

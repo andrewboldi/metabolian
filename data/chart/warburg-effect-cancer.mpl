@@ -25,7 +25,7 @@
 
 pathway warburg-effect-cancer "Warburg effect and cancer metabolic rewiring" {
   grid B6
-  spacing 210
+  spacing 152
 
   # Aerobic glycolysis: glucose in through GLUT1, out again as lactate through
   # MCT4, at a rate that no longer answers to the cell's ATP demand.

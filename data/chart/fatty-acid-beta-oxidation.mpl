@@ -6,7 +6,7 @@
 
 pathway fatty-acid-beta-oxidation "Fatty acid β-oxidation (mitochondrial)" {
   grid C3
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     palmitate

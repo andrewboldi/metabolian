@@ -85,6 +85,15 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     }
     layerGrid.append(s("rect", { class: "grid-frame", x: b.x, y: b.y, width: b.w, height: b.h }));
   }
+  // shared-compound ties: adjacent pathways flowing into one another
+  for (const t of (master as any).ties || []) {
+    const g = s("g", { class: "tie lod-normal" });
+    g.append(s("polyline", { class: "tie-line", points: t.points.map((p: number[]) => p.join(",")).join(" ") }));
+    const mid = t.points[Math.floor(t.points.length / 2)];
+    g.append(s("text", { class: "tie-label", x: mid[0] + 5, y: mid[1] - 4 }, [t.label || t.metabolite]));
+    layerRegions.append(g);
+  }
+
   const anchorUse = new Map<string, number>();
   for (const c of (master as any).connectors || []) {
     // Several pathways can leave from the same metabolite; fan the stubs and

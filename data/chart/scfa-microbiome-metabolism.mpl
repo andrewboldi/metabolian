@@ -28,7 +28,7 @@
 
 pathway scfa-microbiome-metabolism "Short-chain fatty acid production by gut microbiota" {
   grid G6
-  spacing 210
+  spacing 152
 
   # BUTYRATE — the C4 ladder. Two acetyl units are condensed and the chain is
   # then reduced twice; flavin-based electron bifurcation at Bcd/EtfAB is what

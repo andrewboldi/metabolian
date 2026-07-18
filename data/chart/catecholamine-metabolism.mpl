@@ -19,7 +19,7 @@
 
 pathway catecholamine-metabolism "Catecholamine biosynthesis and degradation" {
   grid C4
-  spacing 210
+  spacing 152
 
   # BIOSYNTHESIS (tyrosine -> adrenaline) then adrenaline's clinical degradation
   # route: COMT to metanephrine, MAO to the glycolaldehyde, ALDH2 to VMA.

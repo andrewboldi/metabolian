@@ -15,7 +15,7 @@
 
 pathway glycogen-metabolism "Glycogen synthesis and breakdown (glycogenesis & glycogenolysis)" {
   grid B6
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     utp

@@ -6,7 +6,7 @@
 
 pathway urea-cycle "Urea cycle (Krebs–Henseleit ornithine cycle)" {
   grid C4
-  spacing 210
+  spacing 152
   radius 300
 
   # the ornithine ring proper — four members, closed by arginase regenerating

@@ -13,7 +13,7 @@
 
 pathway branched-chain-amino-acid-metabolism "Branched-chain amino acid (BCAA) degradation" {
   grid D6
-  spacing 210
+  spacing 152
 
   # LEUCINE — purely ketogenic. HMG-CoA lyase splits the skeleton into the ketone
   # body acetoacetate (side product) and acetyl-CoA (the cell the spine ends on).

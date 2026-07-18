@@ -9,7 +9,7 @@
 
 pathway purine-salvage-pathway "Purine salvage pathway" {
   grid G3
-  spacing 210
+  spacing 152
 
   spine at 0,0 {
     adenosine
