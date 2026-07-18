@@ -39,8 +39,9 @@ export interface ChartHooks {
   onZoom?(k: number, lod: string): void;
 }
 
-const LOD_NORMAL = 0.55;
-const LOD_DETAIL = 1.1;
+// Tuned so a typical "Fit" view of a single pathway already shows enzyme names.
+const LOD_NORMAL = 0.26;
+const LOD_DETAIL = 0.7;
 const molCache = new Map<string, string>();
 
 export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks: ChartHooks = {}) {
@@ -168,6 +169,21 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       g.append(s("rect", { class: "met-box", x: 0, y: 0, width: n.w, height: n.h }));
     }
     if (n.formula) g.append(s("text", { class: "met-formula lod-normal", x: n.w / 2, y: -9 }, [n.formula]));
+    if (!n.mol) {
+      // No structure available — Michal boxes the bare name rather than leaving a void.
+      g.append(s("rect", { class: "met-box name-only", x: 0, y: 0, width: n.w, height: n.h }));
+      const words = n.label.toUpperCase().split(/\s+/);
+      const lines: string[] = [];
+      let cur = "";
+      for (const w of words) {
+        if ((cur + " " + w).trim().length > 16) { if (cur) lines.push(cur); cur = w; } else cur = (cur + " " + w).trim();
+      }
+      if (cur) lines.push(cur);
+      const shown = lines.slice(0, 3);
+      shown.forEach((ln, i) => g.append(s("text", {
+        class: "met-nameonly", x: n.w / 2, y: n.h / 2 - (shown.length - 1) * 6 + i * 12 + 4,
+      }, [ln])));
+    }
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });
     layerNodes.append(g);
     nodeEls.set(n.id, g);

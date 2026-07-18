@@ -72,3 +72,12 @@
 [data-lod="overview"] .region-ref { display: none; }
 .connector-line { stroke: #254991; stroke-width: 1.4; }
 .connector-label { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #254991; }
+
+/* White knockout haloes — the poster's own trick so a line never strikes
+   through a label (QA #102, #101). */
+.met-name, .met-formula, .enz-name, .enz-ec, .cofactor-label, .met-nameonly {
+  paint-order: stroke; stroke: #FFFFFF; stroke-width: 3px; stroke-linejoin: round;
+}
+.met-nameonly { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: 10px; font-weight: 400;
+  fill: #231F20; letter-spacing: .03em; text-anchor: middle; }
+.met-box.name-only { stroke: #231F20; stroke-width: 1.5; }

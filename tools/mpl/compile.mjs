@@ -188,14 +188,17 @@ export function layout(ast) {
 
   // regulation routed around the outside of the column it targets
   const regulation = [];
+  const perTarget = new Map(); // fan out lines that share a target so they never coincide
   for (const r of ast.regulation) {
     const src = byMetabolite.get(r.from);
     const dstRxn = reactions.find((x) => x.enzyme === r.to);
     const dst = dstRxn || byMetabolite.get(r.to);
     if (!src || !dst) continue;
+    const n = perTarget.get(r.to) || 0;
+    perTarget.set(r.to, n + 1);
     regulation.push({
       effect: r.effect, kind: r.kind, from: r.from, to: r.to,
-      points: regulationRoute(src, dst),
+      points: regulationRoute(src, dst, n),
       glyph: r.effect === "inhibit" ? "inhibit" : "activate",
     });
   }
@@ -261,13 +264,16 @@ export function layout(ast) {
   }
 
   /** Regulation runs out to a gutter beside the column, then back in. */
-  function regulationRoute(src, dst) {
+  function regulationRoute(src, dst, index = 0) {
     const sx = src.x + NODE_W / 2, sy = src.y + NODE_H / 2;
     const dx = (dst.points ? dst.points[0][0] : dst.x + NODE_W / 2);
     const dy = (dst.points ? (dst.points[0][1] + dst.points[1][1]) / 2 : dst.y + NODE_H / 2);
     const goesLeft = sx <= dx;
-    const gutter = goesLeft ? Math.min(src.x, dx) - 70 : Math.max(src.x + NODE_W, dx) + 70;
-    return [[sx, sy], [gutter, sy], [gutter, dy], [dx, dy]];
+    // stagger the gutter and the approach height so co-targeted lines stay distinct
+    const spread = index * 22;
+    const gutter = goesLeft ? Math.min(src.x, dx) - 70 - spread : Math.max(src.x + NODE_W, dx) + 70 + spread;
+    const approach = dy + (index ? (index % 2 ? 1 : -1) * Math.ceil(index / 2) * 13 : 0);
+    return [[sx, sy], [gutter, sy], [gutter, approach], [dx, approach]];
   }
 }
 
