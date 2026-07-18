@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore the chart — Metabolian</title>
+  <meta name="description" content="The interactive master metabolic chart. Pan, zoom, filter by pathway, search, and click any reaction, enzyme, or metabolite for detail and structures." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app-header"></div>
+  <main class="explore">
+    <aside class="rail" id="rail" aria-label="Chart controls">
+      <div class="rail__group">
+        <h2>Explore</h2>
+        <p class="muted" style="font-size:var(--step--1)">Click any node for detail. Enzymes link to their 3D structure.</p>
+      </div>
+      <div class="rail__group">
+        <h3>Search</h3>
+        <input class="search" id="node-search" type="search" placeholder="Find a metabolite or enzyme…" aria-label="Search nodes" />
+      </div>
+      <div class="rail__group">
+        <h3>Pathways</h3>
+        <div id="pathway-filter" class="rail__group"></div>
+      </div>
+      <div class="rail__group">
+        <h3>Legend</h3>
+        <p class="muted" style="font-size:var(--step--1)">Arrow colors encode relationship type — see the full <a href="index.html#grammar">grammar of metabolism</a>.</p>
+      </div>
+    </aside>
+
+    <section class="stage">
+      <div class="stage__badge">
+        <button class="icon-btn" id="rail-toggle" aria-label="Toggle controls" title="Controls">⚙</button>
+      </div>
+      <div class="stage__tools">
+        <button class="btn btn--ghost" id="tool-fit" style="padding:.4rem .7rem">Fit</button>
+        <button class="btn btn--ghost" id="tool-relayout" style="padding:.4rem .7rem">Re-layout</button>
+      </div>
+      <div id="cy"></div>
+      <p class="stage__hint">Loading the atlas…</p>
+
+      <aside class="drawer" id="drawer" data-open="false" aria-label="Node detail">
+        <button class="icon-btn drawer__close" id="drawer-close" aria-label="Close detail">✕</button>
+        <div class="drawer__inner" id="drawer-body"></div>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="/src/pages/explore.ts"></script>
+</body>
+</html>

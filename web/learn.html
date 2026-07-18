@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn — what metabolic pathways are — Metabolian</title>
+  <meta name="description" content="A friendly on-ramp to metabolism: what pathways are, anabolism vs catabolism, enzymes and EC numbers, cofactors, and how regulation works." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Learn</p>
+        <h1>What is a metabolic pathway?</h1>
+        <p class="lead">Metabolism is the chemistry of being alive — thousands of small reactions that build, break down, and rearrange molecules. A pathway is a connected sequence of those reactions. Here's how to read one.</p>
+      </div>
+    </header>
+    <div class="wrap section">
+      <div class="prose">
+        <h2>Reactions, chained together</h2>
+        <p>A single reaction turns one set of molecules (<strong>substrates</strong>) into another (<strong>products</strong>), almost always sped up by a protein catalyst called an <strong>enzyme</strong>. String reactions together — the product of one becoming the substrate of the next — and you have a pathway. <a href="explore.html">Glycolysis</a>, for instance, is ten reactions that convert glucose into pyruvate.</p>
+        <h2>Anabolism vs. catabolism</h2>
+        <ul>
+          <li><strong>Catabolism</strong> breaks large molecules down to release energy — glucose to pyruvate, fats to acetyl-CoA.</li>
+          <li><strong>Anabolism</strong> builds complex molecules up, spending energy — making fatty acids, nucleotides, and proteins.</li>
+        </ul>
+        <p>The cell's energy currency, <strong>ATP</strong>, and its electron carriers, <strong>NAD⁺/NADH</strong> and <strong>FAD/FADH₂</strong>, couple these two directions together.</p>
+        <h2>Enzymes and EC numbers</h2>
+        <p>Every enzyme has a four-part <strong>EC number</strong> classifying the reaction it catalyzes — <code>2.7.1.1</code> is hexokinase, a transferase that moves a phosphate onto glucose. In Metabolian, EC numbers, gene symbols, and UniProt accessions appear as monospace chips on every enzyme, and each one opens its <a href="protein.html">3D structure</a>.</p>
+        <h2>Cofactors and coenzymes</h2>
+        <p>Many enzymes need a non-protein helper: a metal ion like Mg²⁺, or a coenzyme like NAD⁺ derived from a vitamin. These are drawn as <span style="color:var(--edge-cofactor)">cofactor arrows</span> feeding into a reaction.</p>
+        <h2>Regulation — how flux is controlled</h2>
+        <p>Pathways aren't always on. Cells tune them through several mechanisms, and Metabolian gives each its own arrow:</p>
+        <ul>
+          <li><strong style="color:var(--edge-activate)">Activation</strong> and <strong style="color:var(--edge-inhibit)">inhibition</strong> — a molecule speeds up or slows an enzyme.</li>
+          <li><strong>Allosteric</strong> control — an effector binds away from the active site and changes the enzyme's shape.</li>
+          <li><strong style="color:var(--edge-feedback)">Feedback inhibition</strong> — a pathway's end product shuts off its own first committed step.</li>
+          <li><strong style="color:var(--edge-covalent)">Covalent modification</strong> — phosphorylation and other tags flip enzymes on or off.</li>
+          <li><strong style="color:var(--edge-genetic)">Transcriptional control</strong> — the cell makes more or less of the enzyme itself.</li>
+        </ul>
+        <p>See all of them in the <a href="index.html#grammar">grammar of metabolism</a>.</p>
+        <h2>Reading the chart</h2>
+        <p>Open the <a href="explore.html">interactive chart</a>. Round nodes are metabolites, rectangles are enzymes, small diamonds are reactions. Follow solid arrows for mass flow; colored arrows for regulation. Click anything to see its details, sources, and confidence. Search for a molecule to light up everywhere it appears.</p>
+        <div class="callout">
+          <p style="color:var(--text)">New here? Start by searching <strong>glucose</strong> in the chart and trace it step by step to pyruvate — you'll have walked the most famous pathway in biochemistry.</p>
+        </div>
+        <h2>Go deeper</h2>
+        <ul>
+          <li><a href="https://www.genome.jp/kegg/pathway.html" target="_blank" rel="noopener">KEGG PATHWAY</a> — the reference pathway maps.</li>
+          <li><a href="https://reactome.org" target="_blank" rel="noopener">Reactome</a> — curated human pathways with rich annotation.</li>
+          <li><a href="https://alphafold.ebi.ac.uk" target="_blank" rel="noopener">AlphaFold DB</a> — predicted structures for nearly every protein.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/src/pages/learn.ts"></script>
+</body>
+</html>

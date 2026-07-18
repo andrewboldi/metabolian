@@ -1,0 +1,100 @@
+/* Metabolian design tokens — "Assay" system.
+   Theme-aware. Edge color tokens mirror schema/arrows.json so the legend, the
+   graph renderer, and the docs all speak the same visual language. */
+
+:root {
+  /* type */
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, monospace;
+
+  --step--1: clamp(0.78rem, 0.74rem + 0.2vw, 0.86rem);
+  --step-0: clamp(0.94rem, 0.9rem + 0.2vw, 1rem);
+  --step-1: clamp(1.13rem, 1.05rem + 0.4vw, 1.33rem);
+  --step-2: clamp(1.5rem, 1.35rem + 0.8vw, 2rem);
+  --step-3: clamp(2rem, 1.7rem + 1.6vw, 3.2rem);
+  --step-4: clamp(2.6rem, 2rem + 3vw, 5rem);
+  --step-5: clamp(3.2rem, 2.2rem + 5vw, 7rem);
+
+  /* spacing / shape */
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 5rem; --sp-9: 8rem;
+  --radius: 4px; --radius-lg: 10px; --radius-pill: 999px;
+  --maxw: 1200px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* semantic edge palette (functional — encodes the arrow taxonomy) */
+  --edge-mass: #8aa0b6;
+  --edge-cofactor: #2fb6a8;
+  --edge-spontaneous: #9aa7b4;
+  --edge-catalysis: #4c8dff;
+  --edge-activate: #33d17a;
+  --edge-inhibit: #ff5c5c;
+  --edge-feedback: #ff7a45;
+  --edge-feedforward: #33d17a;
+  --edge-covalent: #f4a93b;
+  --edge-signal: #ffd24c;
+  --edge-transport: #22c3e6;
+  --edge-redox: #ffe14d;
+  --edge-genetic: #b57bff;
+  --edge-org: #7d8ba0;
+  --edge-crosstalk: #ff4d8d;
+  --edge-microbiome: #52d273;
+
+  /* node palette */
+  --node-metabolite: #5ad1c4;
+  --node-enzyme: #6aa4ff;
+  --node-reaction: #f4a93b;
+  --node-gene: #b57bff;
+  --node-complex: #ff7fb0;
+  --node-pathway: #9aa7b4;
+}
+
+/* ---------- dark (default: microscopy field) ---------- */
+:root, :root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0f14;
+  --bg-grid: rgba(0, 224, 198, 0.045);
+  --panel: #121821;
+  --panel-2: #182231;
+  --line: rgba(150, 180, 210, 0.14);
+  --line-strong: rgba(150, 180, 210, 0.28);
+  --text: #e6edf3;
+  --text-dim: #9fb0c0;
+  --text-faint: #6b7d8f;
+  --accent: #00e0c6;
+  --accent-ink: #05221f;
+  --accent-2: #ff4d8d;
+  --glow: 0 0 0.5rem rgba(0, 224, 198, 0.55);
+  --shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- light (cool cellular plate) ---------- */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f7f6;
+  --bg-grid: rgba(6, 90, 80, 0.05);
+  --panel: #ffffff;
+  --panel-2: #eef3f2;
+  --line: rgba(10, 40, 50, 0.12);
+  --line-strong: rgba(10, 40, 50, 0.24);
+  --text: #0c1116;
+  --text-dim: #47575f;
+  --text-faint: #7d8b92;
+  --accent: #009e8c;
+  --accent-ink: #e2fff9;
+  --accent-2: #d63a76;
+  --glow: 0 0 0.5rem rgba(0, 158, 140, 0.3);
+  --shadow: 0 12px 34px -16px rgba(10, 40, 50, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --bg: #f4f7f6; --bg-grid: rgba(6, 90, 80, 0.05); --panel: #ffffff; --panel-2: #eef3f2;
+    --line: rgba(10, 40, 50, 0.12); --line-strong: rgba(10, 40, 50, 0.24);
+    --text: #0c1116; --text-dim: #47575f; --text-faint: #7d8b92;
+    --accent: #009e8c; --accent-ink: #e2fff9; --accent-2: #d63a76;
+    --glow: 0 0 0.5rem rgba(0, 158, 140, 0.3); --shadow: 0 12px 34px -16px rgba(10, 40, 50, 0.35);
+  }
+}

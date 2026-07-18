@@ -1,0 +1,165 @@
+{
+  "$comment": "Canonical arrow (edge-type) registry for the Metabolian atlas. Consumed by BOTH the data validator and the web renderer so that every relationship type has one authoritative visual + semantic definition. This is the 'define an arrow for everything' foundation. Colors are design tokens resolved in the web theme (see web/src/styles/tokens.css).",
+  "version": "1.0.0",
+  "categories": {
+    "mass": "Mass flow — how atoms move through reactions (substrate/product/cofactor).",
+    "catalytic": "Which protein machinery drives a reaction.",
+    "regulatory": "Signals that speed up or slow down a reaction/enzyme without being consumed.",
+    "covalent": "Post-translational / covalent modification of a protein target.",
+    "transport": "Movement of species across membranes/compartments and electron flow.",
+    "genetic": "Gene → product and expression-level control.",
+    "organizational": "Grouping, isozymes, and cross-pathway links."
+  },
+  "arrows": {
+    "substrate": {
+      "label": "Substrate", "category": "mass", "from": ["metabolite"], "to": ["reaction"],
+      "effect": "consumed", "line": "solid", "head": "vee", "color": "--edge-mass",
+      "description": "Metabolite consumed by a reaction."
+    },
+    "product": {
+      "label": "Product", "category": "mass", "from": ["reaction"], "to": ["metabolite"],
+      "effect": "produced", "line": "solid", "head": "triangle", "color": "--edge-mass",
+      "description": "Metabolite produced by a reaction."
+    },
+    "reversible": {
+      "label": "Reversible conversion", "category": "mass", "from": ["metabolite", "reaction"], "to": ["metabolite", "reaction"],
+      "effect": "bidirectional", "line": "solid", "head": "triangle-both", "color": "--edge-mass",
+      "description": "Reaction that proceeds in both directions under physiological conditions."
+    },
+    "cofactor": {
+      "label": "Cofactor", "category": "mass", "from": ["metabolite"], "to": ["reaction"],
+      "effect": "assists", "line": "dashed", "head": "vee", "color": "--edge-cofactor",
+      "description": "Non-protein helper (metal ion, prosthetic group) required for catalysis."
+    },
+    "coenzyme-couple": {
+      "label": "Coenzyme couple", "category": "mass", "from": ["metabolite"], "to": ["reaction"],
+      "effect": "recycled", "line": "dashed", "head": "curve", "color": "--edge-cofactor",
+      "description": "Recycled redox/energy carrier pair (NAD+/NADH, ATP/ADP, FAD/FADH2, NADP+/NADPH)."
+    },
+    "spontaneous": {
+      "label": "Spontaneous (non-enzymatic)", "category": "mass", "from": ["metabolite"], "to": ["metabolite"],
+      "effect": "converted", "line": "solid", "head": "open", "color": "--edge-spontaneous",
+      "description": "Conversion that occurs without enzyme catalysis."
+    },
+    "catalysis": {
+      "label": "Catalyzes", "category": "catalytic", "from": ["enzyme", "complex"], "to": ["reaction"],
+      "effect": "catalyzes", "line": "solid", "head": "circle", "color": "--edge-catalysis",
+      "description": "Enzyme or enzyme complex that catalyzes the reaction."
+    },
+    "transport-catalysis": {
+      "label": "Transports", "category": "catalytic", "from": ["enzyme", "complex"], "to": ["reaction"],
+      "effect": "transports", "line": "solid", "head": "circle", "color": "--edge-transport",
+      "description": "Transporter protein that moves a species across a membrane."
+    },
+    "activation": {
+      "label": "Activation", "category": "regulatory", "from": ["metabolite", "enzyme", "complex"], "to": ["enzyme", "reaction"],
+      "effect": "positive", "line": "solid", "head": "triangle", "color": "--edge-activate",
+      "description": "Increases activity of the target enzyme/reaction."
+    },
+    "inhibition": {
+      "label": "Inhibition", "category": "regulatory", "from": ["metabolite", "enzyme", "complex"], "to": ["enzyme", "reaction"],
+      "effect": "negative", "line": "solid", "head": "tee", "color": "--edge-inhibit",
+      "description": "Decreases activity of the target enzyme/reaction."
+    },
+    "allosteric-activation": {
+      "label": "Allosteric activation", "category": "regulatory", "from": ["metabolite"], "to": ["enzyme"],
+      "effect": "positive", "line": "dashed", "head": "triangle", "color": "--edge-activate",
+      "description": "Effector binds a site distinct from the active site and increases activity."
+    },
+    "allosteric-inhibition": {
+      "label": "Allosteric inhibition", "category": "regulatory", "from": ["metabolite"], "to": ["enzyme"],
+      "effect": "negative", "line": "dashed", "head": "tee", "color": "--edge-inhibit",
+      "description": "Effector binds a distinct site and decreases activity."
+    },
+    "competitive-inhibition": {
+      "label": "Competitive inhibition", "category": "regulatory", "from": ["metabolite"], "to": ["enzyme"],
+      "effect": "negative", "line": "dotted", "head": "tee", "color": "--edge-inhibit",
+      "description": "Inhibitor competes with substrate for the active site."
+    },
+    "noncompetitive-inhibition": {
+      "label": "Non-competitive inhibition", "category": "regulatory", "from": ["metabolite"], "to": ["enzyme"],
+      "effect": "negative", "line": "dotted", "head": "tee", "color": "--edge-inhibit",
+      "description": "Inhibitor lowers Vmax regardless of substrate concentration."
+    },
+    "feedback-inhibition": {
+      "label": "Feedback inhibition", "category": "regulatory", "from": ["metabolite"], "to": ["enzyme", "reaction"],
+      "effect": "negative", "line": "solid", "head": "tee", "color": "--edge-feedback",
+      "description": "End product of a pathway inhibits an upstream committed step."
+    },
+    "feedforward-activation": {
+      "label": "Feedforward activation", "category": "regulatory", "from": ["metabolite"], "to": ["enzyme", "reaction"],
+      "effect": "positive", "line": "solid", "head": "triangle", "color": "--edge-feedforward",
+      "description": "Upstream metabolite activates a downstream step in advance."
+    },
+    "phosphorylation": {
+      "label": "Phosphorylation", "category": "covalent", "from": ["enzyme", "complex"], "to": ["enzyme"],
+      "effect": "modifies", "line": "solid", "head": "diamond", "color": "--edge-covalent",
+      "description": "Kinase adds a phosphoryl group, changing target activity."
+    },
+    "dephosphorylation": {
+      "label": "Dephosphorylation", "category": "covalent", "from": ["enzyme", "complex"], "to": ["enzyme"],
+      "effect": "modifies", "line": "dashed", "head": "diamond", "color": "--edge-covalent",
+      "description": "Phosphatase removes a phosphoryl group."
+    },
+    "covalent-modification": {
+      "label": "Covalent modification", "category": "covalent", "from": ["enzyme", "complex", "metabolite"], "to": ["enzyme", "metabolite"],
+      "effect": "modifies", "line": "solid", "head": "diamond", "color": "--edge-covalent",
+      "description": "Other PTMs: acetylation, methylation, ubiquitination, glycosylation, SUMOylation, ADP-ribosylation."
+    },
+    "hormonal-signal": {
+      "label": "Hormonal / signaling input", "category": "regulatory", "from": ["metabolite", "enzyme"], "to": ["enzyme", "reaction", "pathway"],
+      "effect": "signal", "line": "dashed", "head": "vee", "color": "--edge-signal",
+      "description": "Hormone or second messenger that reroutes flux (insulin, glucagon, cAMP, AMPK state)."
+    },
+    "transport": {
+      "label": "Transport / translocation", "category": "transport", "from": ["metabolite", "enzyme"], "to": ["compartment", "reaction"],
+      "effect": "moves", "line": "solid", "head": "vee", "color": "--edge-transport",
+      "description": "Species crosses a membrane between compartments."
+    },
+    "electron-transfer": {
+      "label": "Electron transfer", "category": "transport", "from": ["metabolite", "enzyme", "complex"], "to": ["metabolite", "enzyme", "complex"],
+      "effect": "redox", "line": "solid", "head": "vee", "color": "--edge-redox",
+      "description": "Electron flow in redox chains (ETC, ferredoxin, quinones)."
+    },
+    "gene-encodes": {
+      "label": "Gene encodes", "category": "genetic", "from": ["gene"], "to": ["enzyme"],
+      "effect": "encodes", "line": "dashed", "head": "open", "color": "--edge-genetic",
+      "description": "Gene → protein product relationship."
+    },
+    "transcriptional-activation": {
+      "label": "Transcriptional activation", "category": "genetic", "from": ["enzyme", "metabolite"], "to": ["gene"],
+      "effect": "positive", "line": "dashed", "head": "triangle", "color": "--edge-genetic",
+      "description": "Transcription factor induces expression of a gene."
+    },
+    "transcriptional-repression": {
+      "label": "Transcriptional repression", "category": "genetic", "from": ["enzyme", "metabolite"], "to": ["gene"],
+      "effect": "negative", "line": "dashed", "head": "tee", "color": "--edge-genetic",
+      "description": "Transcription factor represses expression of a gene."
+    },
+    "complex-formation": {
+      "label": "Complex subunit", "category": "organizational", "from": ["enzyme"], "to": ["complex"],
+      "effect": "assembles", "line": "solid", "head": "none", "color": "--edge-org",
+      "description": "Protein is a subunit of a larger complex."
+    },
+    "isozyme": {
+      "label": "Isozyme / paralog", "category": "organizational", "from": ["enzyme"], "to": ["enzyme"],
+      "effect": "related", "line": "dotted", "head": "none", "color": "--edge-org",
+      "description": "Enzymes catalyzing the same reaction with different tissue/kinetic profiles."
+    },
+    "pathway-membership": {
+      "label": "Pathway membership", "category": "organizational", "from": ["reaction", "metabolite", "enzyme"], "to": ["pathway"],
+      "effect": "member", "line": "dotted", "head": "none", "color": "--edge-org",
+      "description": "Element belongs to a named pathway module."
+    },
+    "crosstalk": {
+      "label": "Pathway crosstalk", "category": "organizational", "from": ["pathway", "metabolite"], "to": ["pathway", "metabolite"],
+      "effect": "links", "line": "dashed", "head": "vee-both", "color": "--edge-crosstalk",
+      "description": "A shared metabolite or signal that couples two pathways."
+    },
+    "microbiome-host": {
+      "label": "Microbiome–host exchange", "category": "organizational", "from": ["metabolite", "pathway"], "to": ["metabolite", "pathway"],
+      "effect": "links", "line": "dashed", "head": "vee-both", "color": "--edge-microbiome",
+      "description": "Metabolite produced by gut microbiota that feeds host metabolism (or vice versa)."
+    }
+  }
+}

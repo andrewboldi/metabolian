@@ -1,0 +1,46 @@
+/* Shared styles for content pages (about, learn, glossary, pathway, protein, login). */
+.page-head { padding-block: var(--sp-8) var(--sp-6); border-bottom: 1px solid var(--line); }
+.page-head h1 { max-width: 20ch; margin-top: var(--sp-3); }
+.page-head .lead { margin-top: var(--sp-4); }
+
+.prose { max-width: 72ch; }
+.prose > * + * { margin-top: var(--sp-4); }
+.prose h2 { font-size: var(--step-2); margin-top: var(--sp-7); }
+.prose h3 { font-size: var(--step-1); margin-top: var(--sp-5); }
+.prose p, .prose li { color: var(--text-dim); }
+.prose ul, .prose ol { padding-left: 1.2rem; display: grid; gap: 0.4rem; }
+.prose strong { color: var(--text); }
+.prose code { font-family: var(--font-mono); font-size: 0.9em; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 0.1em 0.4em; }
+.callout { border-left: 3px solid var(--accent); background: var(--panel); padding: var(--sp-4) var(--sp-5); border-radius: var(--radius); }
+.callout--warn { border-left-color: var(--edge-feedback); }
+
+/* glossary */
+.glossary-controls { display: flex; gap: var(--sp-3); flex-wrap: wrap; align-items: center; margin-block: var(--sp-5); position: sticky; top: 58px; background: color-mix(in oklab, var(--bg) 88%, transparent); backdrop-filter: blur(8px); padding-block: var(--sp-3); z-index: 10; }
+.glossary-controls .search { max-width: 420px; }
+.filter-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.pill { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.7rem; border: 1px solid var(--line-strong); border-radius: var(--radius-pill); background: transparent; color: var(--text-dim); cursor: pointer; }
+.pill[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.glossary-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--sp-4); margin-top: var(--sp-4); }
+.term { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-4); }
+.term__name { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); }
+.term__kind { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.1em; }
+.term__kind[data-k="metabolite"] { color: var(--node-metabolite); } .term__kind[data-k="enzyme"] { color: var(--node-enzyme); }
+.term .chips { margin-top: var(--sp-3); }
+.count-note { font-family: var(--font-mono); font-size: var(--step--1); color: var(--text-faint); }
+
+/* protein */
+.viewer-shell { display: grid; grid-template-columns: 320px 1fr; gap: 0; height: calc(100vh - 58px); }
+.viewer-rail { border-right: 1px solid var(--line); background: var(--panel); padding: var(--sp-5); overflow-y: auto; display: flex; flex-direction: column; gap: var(--sp-4); }
+#viewport { position: relative; background: radial-gradient(120% 100% at 50% 0%, var(--panel-2), var(--bg) 70%); min-height: 340px; }
+#viewport canvas { border-radius: 0 !important; }
+.viewer-status { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: var(--text-faint); text-align: center; }
+.rep-buttons { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+@media (max-width: 720px) { .viewer-shell { grid-template-columns: 1fr; height: auto; } #viewport { height: 60vh; } }
+
+/* login */
+.auth-wrap { max-width: 420px; margin-inline: auto; padding-block: var(--sp-8); }
+.auth-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-6); }
+.field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: var(--sp-4); }
+.field label { font-size: var(--step--1); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
+.field input { background: var(--bg); border: 1px solid var(--line-strong); border-radius: var(--radius); color: var(--text); padding: 0.65rem 0.8rem; font: inherit; }
+.field input:focus-visible { border-color: var(--accent); }

@@ -1,25 +1,64 @@
-From the metabolic pathways chart alone, I predicted that increased sunlight leads to lower cholesterol levels. I also predicted that increased vitamind D suipplmenet levels will lead to increased cholesterol. All of this is based on the metabolic pathways chart. 
-Sure enough, there's an observational paper that describes exactly those results! https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5434721/. Furthermore, they talked about how there are lower cholesterol levels associated with people living closer to the equator.
-What if we created an AI system that is only trained on these metabolic pathways that can provied medical, dietary, and nutritional recommendations based on preexisting conditions?
+<div align="center">
 
-we could submit this to the AI hackathon. would be very cool.
+# Metabolian
 
-I think we should start by doing a very simple example with chemical equilbirium and like two reactants.
+**A living, interactive, citation-grounded successor to the Roche Biochemical Pathways chart.**
 
-Ideally, we'd want the entire kinetics of the whole metabolic pathways.
+Explore metabolism as a graph — every reaction, enzyme, regulator, and protein structure, with the source it came from and an honest confidence level you can audit.
 
-Anyways, once we are able to represent chemical equilibrium and it is able to make recommendations based on the excess of one species over the other, extend to more reactions that also branch. Make sure to include which enzymes or catalysts are used and create a good representation for it. As for the computational representation, 
+[Live site](https://andrewboldi.github.io/metabolian/) · [Explore the chart](https://andrewboldi.github.io/metabolian/explore.html) · [Method](https://andrewboldi.github.io/metabolian/about.html) · [Original vision](docs/VISION.md)
 
-It would also be helpful to have the wikipedia descriptions for each of the substances to know what influences they have on the body.
+</div>
 
-I.e. "Given this description of the chemical {}, tell me if it has any information regarding the usefulness to human health. If there is no benefit, please state "N/A". Thank you!"
+---
 
-After making the program able to provide medical recommendations to alleviate high levels of a certain compound, check if it actually works by doing tests in a bio lab.
+## What this is
 
-Write a proposal as well describing the work, the importance, and how a lab could benefit. Ideally, I say don't publish until you do it.
+In the 1960s Gerhard Michal drew metabolism by hand for Boehringer/Roche — the legendary *Biochemical Pathways* wall chart. Metabolian rebuilds that idea for today: an open dataset of metabolic pathways in a strict, typed schema, merged into one master graph and rendered as an interactive web atlas.
 
-If you can also somehow model the human biome, that would be so insanely cool that we could try the same thing as well.
+The premise is simple: **a chart is only as good as its arrows.** Metabolian defines a distinct, color-coded arrow for every relationship in metabolism — substrate/product, catalysis, cofactor use, activation and every flavor of inhibition, allostery, feedback, covalent modification, transport, transcriptional control, and cross-pathway talk — so a glance tells you what's happening.
 
-If this is succesful, at some point we should reach out to Gerard Michal thanking him for the biochemical pathways and that he should continue expanding the poster. Suuuuper helpful even if it takes a warehouse to open it up.
+### Principles
 
-Then, based on the imbalances or compounds the algorithm recommends you to increase, you can do a cross-check with foods that contain higher amounts of those compounds or enough to balance it out. The actual computation might be difficult but yeah.
+- **Grounded, not guessed.** Every reaction and regulatory edge carries provenance (KEGG, Reactome, Rhea, UniProt, ChEBI, or a paper) and an explicit confidence level (`high` / `medium` / `low` / `hypothesis`). Nothing is presented as fact without a source.
+- **Auditable.** The data is plain JSON, validated in CI against a published schema with referential-integrity checks. You can read, diff, and challenge any of it.
+- **Not medical advice.** Metabolian is an educational and research aggregation, not a clinical reference.
+
+## Repository layout
+
+```
+schema/            The data model — the foundation everything inherits
+  pathway.schema.json   JSON Schema (draft 2020-12) for one pathway module
+  arrows.json           Canonical arrow/edge-type registry (visual + semantic)
+  types.ts              TypeScript mirror of the schema
+data/pathways/     One JSON file per pathway module (conflict-free authoring)
+tools/             Node build pipeline
+  validate.mjs          Schema + referential-integrity validation
+  build-graph.mjs       Merge modules → master graph, glossary, search index
+web/               Vite multi-page app (the interactive atlas)
+  src/lib/              Shared: layout, theme, graph arrows, hero animation
+  src/pages/            One entry per page (home, explore, glossary, …)
+docs/              Vision, schema docs, contributing
+```
+
+## Quick start
+
+```bash
+npm install
+npm run data:validate   # validate every pathway module
+npm run data:build      # merge modules into web/public/graph/*
+npm run dev             # local dev server
+npm run build           # production build → dist/
+```
+
+## Authoring a pathway
+
+Every pathway is one file: `data/pathways/<id>.json`, conforming to `schema/pathway.schema.json`. Use `data/pathways/glycolysis.json` as the reference example. Ground each reaction in a database ID, cite it in `provenance.sources`, set an honest `confidence`, and run `node tools/validate.mjs data/pathways/<id>.json` before committing. See [docs/SCHEMA.md](docs/SCHEMA.md) and [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
+
+## Tech
+
+TypeScript · Vite (multi-page, per-route code splitting) · Cytoscape.js (WebGL graph) · 3Dmol.js (AlphaFold/PDB structures) · Three.js + GSAP (ambient motion, reduced-motion respected) · GitHub Actions → GitHub Pages · Dependabot + CodeQL.
+
+## License
+
+MIT. Pathway data links to and cites third-party databases; those retain their own terms.

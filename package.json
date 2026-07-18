@@ -1,0 +1,36 @@
+{
+  "name": "metabolian",
+  "version": "0.1.0",
+  "description": "The Metabolian Atlas — an open, interactive, citation-grounded successor to the Roche Biochemical Pathways chart.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "data:validate": "node tools/validate.mjs",
+    "data:build": "node tools/build-graph.mjs",
+    "prebuild": "npm run data:validate && npm run data:build",
+    "predev": "npm run data:build",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node --test tools/*.test.mjs"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "eslint": "^9.15.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "3dmol": "^2.4.2",
+    "cytoscape": "^3.30.4",
+    "cytoscape-fcose": "^2.2.0",
+    "gsap": "^3.12.5",
+    "three": "^0.171.0"
+  }
+}

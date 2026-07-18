@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protein structure — Metabolian</title>
+  <meta name="description" content="View enzyme 3D structures from AlphaFold and the PDB. Rotate the fold that runs the reaction." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app-header"></div>
+  <main class="viewer-shell">
+    <aside class="viewer-rail">
+      <div>
+        <p class="eyebrow">Structure</p>
+        <h1 id="prot-name" style="font-size:var(--step-2);margin-top:.4rem">Protein viewer</h1>
+      </div>
+      <div class="chips" id="prot-links"></div>
+      <div>
+        <h3 style="font-family:var(--font-mono);font-size:var(--step--1);text-transform:uppercase;letter-spacing:.12em;color:var(--text-faint)">Representation</h3>
+        <div class="rep-buttons" style="margin-top:.5rem">
+          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="cartoon" aria-pressed="true">Cartoon</button>
+          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="stick" aria-pressed="false">Sticks</button>
+          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="sphere" aria-pressed="false">Spheres</button>
+          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="surface" aria-pressed="false">Surface</button>
+        </div>
+      </div>
+      <form id="load-form">
+        <div class="field">
+          <label for="acc-input">Load any structure</label>
+          <input id="acc-input" placeholder="UniProt (P04406) or PDB (1HKB)" />
+        </div>
+        <button class="btn" type="submit" style="width:100%">Load structure</button>
+      </form>
+      <p class="muted" style="font-size:var(--step--1)">Models stream from the AlphaFold Protein Structure Database and the RCSB PDB. Predicted models are colored by confidence spectrum.</p>
+      <p><a href="explore.html">← Back to the chart</a></p>
+    </aside>
+    <section id="viewport">
+      <p class="viewer-status" id="viewer-status">Loading…</p>
+    </section>
+  </main>
+  <script type="module" src="/src/pages/protein.ts"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & method — Metabolian</title>
+  <meta name="description" content="What Metabolian is, how the atlas is built, how reactions are grounded in sources, and how to contribute." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">About</p>
+        <h1>A living successor to the Biochemical Pathways chart</h1>
+        <p class="lead">In the 1960s Gerhard Michal drew metabolism by hand for Boehringer/Roche. Metabolian carries that work forward as an open, interactive graph you can query, audit, and extend.</p>
+      </div>
+    </header>
+    <div class="wrap section">
+      <div class="prose">
+        <h2 id="method">How the atlas is built</h2>
+        <p>Metabolian is a graph. Each <strong>pathway module</strong> is a structured file describing its metabolites, enzymes, reactions, and — crucially — the typed relationships between them. A build step validates every module against a strict schema, checks that every reference resolves, and merges the modules into one master graph, deduplicating shared molecules across pathways by their database identifiers.</p>
+        <div class="callout">
+          <p style="color:var(--text)"><strong>Grounded, not guessed.</strong> Metabolism is too consequential to hallucinate. Every reaction and regulatory link carries <em>provenance</em> — the database (KEGG, Reactome, Rhea, UniProt, ChEBI) or paper it came from — and an explicit confidence level: <span class="conf" data-c="high">high</span> <span class="conf" data-c="medium">medium</span> <span class="conf" data-c="low">low</span> <span class="conf" data-c="hypothesis">hypothesis</span>. You can see and check the source of anything on the chart.</p>
+        </div>
+        <h2 id="schema">The schema &amp; the grammar of arrows</h2>
+        <p>What makes a pathway chart legible is that its arrows mean something. Metabolian defines a distinct, color-coded arrow for every relationship type — substrate and product, catalysis, cofactor use, activation and the many flavors of inhibition, allostery, feedback, covalent modification, transport, transcriptional control, and cross-pathway talk. The full taxonomy is the <a href="index.html#grammar">grammar of metabolism</a>, and the same registry drives the legend, the interactive graph, and this documentation.</p>
+        <p>Reactions record substrates and products with stoichiometry and compartment, catalyzing enzymes with EC numbers, cofactors, reversibility, thermodynamics and kinetics where known, and links to KEGG/Rhea/Reactome. Enzymes carry gene symbols, UniProt accessions, and structure links so any enzyme opens directly in the <a href="protein.html">3D viewer</a> via AlphaFold and the PDB.</p>
+        <h2>Data sources</h2>
+        <ul>
+          <li><strong>KEGG</strong> — reaction and pathway reference identifiers.</li>
+          <li><strong>Reactome &amp; MetaCyc</strong> — curated human pathway structure.</li>
+          <li><strong>Rhea &amp; ChEBI</strong> — reaction and chemical ontology.</li>
+          <li><strong>UniProt</strong> — enzyme identity, gene, and cross-references.</li>
+          <li><strong>AlphaFold DB &amp; RCSB PDB</strong> — 3D protein structures.</li>
+          <li><strong>Primary literature</strong> — for newly characterized and tissue-specific reactions.</li>
+        </ul>
+        <h2>How it's engineered</h2>
+        <p>A TypeScript multi-page app built with Vite; the interactive chart renders with a WebGL-accelerated graph engine and loads heavy modules only where needed. Structures render with 3Dmol.js; the home page's ambient graph is Three.js with reduced-motion respected everywhere. Data is validated in CI on every change, and the whole site deploys to GitHub Pages.</p>
+        <div class="callout callout--warn">
+          <p style="color:var(--text)"><strong>Not medical advice.</strong> Metabolian is an educational and research aggregation. It is not a clinical reference and must not be used to make medical, dietary, or treatment decisions.</p>
+        </div>
+        <h2>Contribute</h2>
+        <p>Authoring a pathway means writing one module file against the schema, with citations and honest confidence. Issues and pull requests are welcome on <a href="https://github.com/andrewboldi/metabolian">GitHub</a>.</p>
+      </div>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/src/pages/about.ts"></script>
+</body>
+</html>

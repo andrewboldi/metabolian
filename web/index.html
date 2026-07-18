@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metabolian — A Living Chart of Metabolism</title>
+  <meta name="description" content="An open, interactive, citation-grounded atlas of metabolic pathways — a modern successor to the Roche Biochemical Pathways chart. Explore reactions, enzymes, and protein structures." />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:title" content="Metabolian — A Living Chart of Metabolism" />
+  <meta property="og:description" content="Explore every reaction, enzyme, regulator, and protein structure in an interactive successor to the Roche pathways chart." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="wrap hero__inner">
+        <p class="eyebrow" data-animate>Open metabolic atlas · v0.1</p>
+        <h1 id="hero-title" data-animate>A living chart of<br /><span class="hero__hl">metabolism.</span></h1>
+        <p class="lead" data-animate>
+          Gerhard Michal's Biochemical Pathways poster mapped metabolism by hand. Metabolian rebuilds it
+          as an interactive, queryable, citation-grounded graph — every reaction, enzyme, regulator, and
+          protein structure, with the source it came from.
+        </p>
+        <div class="hero__cta" data-animate>
+          <a class="btn" href="explore.html">Explore the chart →</a>
+          <a class="btn btn--ghost" href="learn.html">What is a pathway?</a>
+        </div>
+        <dl class="hero__stats" id="hero-stats" data-animate aria-label="Atlas size">
+          <div class="stat"><dd class="stat__num" data-stat="pathways">—</dd><dt class="stat__label">pathways</dt></div>
+          <div class="stat"><dd class="stat__num" data-stat="reactions">—</dd><dt class="stat__label">reactions</dt></div>
+          <div class="stat"><dd class="stat__num" data-stat="metabolites">—</dd><dt class="stat__label">metabolites</dt></div>
+          <div class="stat"><dd class="stat__num" data-stat="enzymes">—</dd><dt class="stat__label">enzymes</dt></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="grammar" aria-labelledby="grammar-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">The signature</p>
+          <h2 id="grammar-title">The grammar of metabolism</h2>
+          <p class="lead">A chart is only as good as its arrows. Every relationship in Metabolian has one
+            precise, color-coded stroke — so a glance tells you catalysis from inhibition, transport from transcription.</p>
+        </div>
+        <div id="legend" class="legend-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="do-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">What you can do</p>
+          <h2 id="do-title">Read metabolism like a map</h2>
+        </div>
+        <div class="grid grid--3">
+          <a class="card card--link stack" href="explore.html">
+            <h3>Trace the flux</h3>
+            <p>Follow a metabolite through every reaction that makes or consumes it. Pan, zoom, filter by pathway, and click any node for detail.</p>
+            <span class="chip chip--accent">Interactive graph</span>
+          </a>
+          <a class="card card--link stack" href="protein.html">
+            <h3>See the machinery</h3>
+            <p>Every enzyme links to its 3D structure from AlphaFold and the PDB — rotate the fold that runs the reaction.</p>
+            <span class="chip chip--accent">Protein viewer</span>
+          </a>
+          <a class="card card--link stack" href="glossary.html">
+            <h3>Look anything up</h3>
+            <p>A searchable glossary of every metabolite and enzyme, with formulae, EC numbers, and links to source databases.</p>
+            <span class="chip chip--accent">Glossary</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="grid grid--2">
+          <div class="stack">
+            <p class="eyebrow">Method</p>
+            <h2 id="method-title">Grounded, not guessed</h2>
+            <p>Metabolism is too important to hallucinate. Every reaction, regulator, and structure carries
+              provenance — the database or paper it came from — and an honest confidence level you can see and audit.
+              Where the literature disagrees, we show it rather than smoothing it over.</p>
+            <p><a href="about.html#method">How the atlas is built →</a></p>
+          </div>
+          <div class="card stack">
+            <span class="chip">confidence: high</span>
+            <p style="color:var(--text)">"Fructose-2,6-bisphosphate is the most potent allosteric activator of PFK-1."</p>
+            <p class="muted" style="font-size:var(--step--1)">Sourced to KEGG hsa00010 · Lehninger 8e · shown on the glycolysis map with an <span style="color:var(--edge-activate)">allosteric-activation</span> arrow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <script type="module" src="/src/pages/home.ts"></script>
+</body>
+</html>
