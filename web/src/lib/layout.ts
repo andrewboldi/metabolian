@@ -91,7 +91,7 @@ function mountFooter(): void {
 
 function footerCol(title: string, links: [string, string][]): HTMLElement {
   return el("div", {}, [
-    el("h4", {}, [title]),
+    el("div.footer-col-title", {}, [title]),
     el("ul", {}, links.map(([label, href]) =>
       el("li", {}, [el("a", { href: href.startsWith("http") ? href : asset(href) }, [label])]),
     )),

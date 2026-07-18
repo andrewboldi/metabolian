@@ -2,7 +2,16 @@
 // bright "flux" pulses traveling along edges. Restrained, GPU-light, and fully
 // disabled under prefers-reduced-motion. Dynamically imported so it never blocks LCP.
 
+function webglAvailable(): boolean {
+  try {
+    const c = document.createElement("canvas");
+    return !!(c.getContext("webgl2") || c.getContext("webgl"));
+  } catch { return false; }
+}
+
 export async function initHero(canvas: HTMLCanvasElement): Promise<void> {
+  // Skip entirely (no Three.js load, no console errors) where it can't or shouldn't run.
+  if (!webglAvailable()) return;
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const THREE = await import("three");
 

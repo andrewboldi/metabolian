@@ -14,6 +14,7 @@ export default defineConfig({
     emptyOutDir: true,
     target: "es2022",
     cssMinify: true,
+    sourcemap: true,
     rollupOptions: {
       input: {
         home: page("index.html"),

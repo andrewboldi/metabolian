@@ -20,8 +20,9 @@
 .filter-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .pill { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.7rem; border: 1px solid var(--line-strong); border-radius: var(--radius-pill); background: transparent; color: var(--text-dim); cursor: pointer; }
 .pill[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-.glossary-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--sp-4); margin-top: var(--sp-4); }
-.term { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-4); }
+/* Reserve height so async-injected cards fill reserved space instead of shifting layout (CLS). */
+.glossary-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--sp-4); margin-top: var(--sp-4); min-height: 75vh; align-content: start; }
+.term { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-4); content-visibility: auto; contain-intrinsic-size: auto 150px; }
 .term__name { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); }
 .term__kind { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.1em; }
 .term__kind[data-k="metabolite"] { color: var(--node-metabolite); } .term__kind[data-k="enzyme"] { color: var(--node-enzyme); }

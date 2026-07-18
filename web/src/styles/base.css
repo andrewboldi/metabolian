@@ -30,6 +30,8 @@ h3 { font-size: var(--step-2); }
 p { color: var(--text-dim); }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+/* Links inside running text must be distinguishable by more than color (WCAG). */
+p a, li a, .lead a, .prose a, dd a { text-decoration: underline; text-underline-offset: 2px; }
 img, svg, canvas { max-width: 100%; display: block; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
@@ -91,7 +93,7 @@ img, svg, canvas { max-width: 100%; display: block; }
 .site-footer { border-top: 1px solid var(--line); margin-top: var(--sp-9); padding: var(--sp-7) 0 var(--sp-6); color: var(--text-faint); }
 .site-footer a { color: var(--text-dim); }
 .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: var(--sp-6); }
-.footer-grid h4 { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-faint); margin-bottom: var(--sp-3); font-weight: 500; }
+.footer-col-title { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-faint); margin-bottom: var(--sp-3); font-weight: 500; }
 .footer-grid ul { list-style: none; padding: 0; display: grid; gap: 0.4rem; }
 
 /* section framing */
