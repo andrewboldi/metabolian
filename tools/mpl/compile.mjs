@@ -62,7 +62,7 @@ export function parse(src) {
   const title = str(next());
   expect("{");
 
-  const ast = { id, title, grid: null, spacing: DEFAULT_SPACING, spine: null, cycle: null, cycleRadius: 340, branches: [], regulation: [] };
+  const ast = { id, title, grid: null, spacing: DEFAULT_SPACING, spine: null, cycle: null, cycleRadius: 340, wrap: null, branches: [], regulation: [] };
 
   while (peek() && peek() !== "}") {
     const kw = next();
@@ -71,6 +71,7 @@ export function parse(src) {
     else if (kw === "spine") ast.spine = parseChain();
     else if (kw === "cycle") { ast.cycle = parseChain(); ast.cycleRadius = ast.cycleRadius || 340; }
     else if (kw === "radius") ast.cycleRadius = Number(next());
+    else if (kw === "wrap") ast.wrap = Number(next());
     else if (kw === "branch") {
       expect("from");
       const from = next();
@@ -160,11 +161,22 @@ export function layout(ast) {
   if (ast.cycle) placeCycle(ast.cycle, ast.cycle.at.x, ast.cycle.at.y, ast.cycleRadius);
   if (ast.spine) placeChain(ast.spine, ast.spine.at.x, ast.spine.at.y, "spine");
 
+  // The spine may now span several columns (serpentine), so branches and
+  // effectors must clear its real footprint, not just its origin column.
+  const coreNodes = nodes.filter((n) => n.lane === "spine" || n.lane === "cycle");
+  const coreBox = coreNodes.length ? {
+    x0: Math.min(...coreNodes.map((n) => n.x)),
+    x1: Math.max(...coreNodes.map((n) => n.x + n.w)),
+  } : { x0: 0, x1: NODE_W };
+  const outsideCore = (x, dir) => dir < 0
+    ? Math.min(x, coreBox.x0 - COL_GAP)
+    : Math.max(x, coreBox.x1 + COL_GAP - NODE_W);
+
   for (const b of ast.branches) {
     const anchor = byMetabolite.get(b.from);
     const dir = b.side === "left" ? -1 : 1;
     const y = (anchor ? anchor.y : 0) + ast.spacing;
-    const x = freeX(outsideRing((anchor ? anchor.x : 0) + dir * COL_GAP, dir), y, dir);
+    const x = freeX(outsideCore(outsideRing((anchor ? anchor.x : 0) + dir * COL_GAP, dir), dir), y, dir);
     placeChain(b.chain, x, y, `branch:${b.from}:${b.side}`);
     // connect the anchor into the first node of the branch with an orthogonal elbow
     const first = b.chain.steps.find((s) => s.kind === "metabolite");
@@ -188,7 +200,7 @@ export function layout(ast) {
   let effectorY = (ast.spine || ast.cycle).at.y + ast.spacing;
   for (const r of ast.regulation) {
     if (byMetabolite.has(r.from)) continue;
-    const x = freeX(outsideRing(spineX + effDir * COL_GAP, effDir), effectorY, effDir);
+    const x = freeX(outsideCore(outsideRing(spineX + effDir * COL_GAP, effDir), effDir), effectorY, effDir);
     const node = {
       id: `${ast.id}:${r.from}`, metabolite: r.from,
       x, y: effectorY, lane: "effector", w: NODE_W, h: NODE_H,
@@ -196,6 +208,62 @@ export function layout(ast) {
     nodes.push(claim(node));
     byMetabolite.set(r.from, node);
     effectorY += Math.round(ast.spacing * 0.9);
+  }
+
+  repairBlockedRoutes();
+
+  /** Nudge movable cells out of reaction corridors until every route is clear. */
+  function repairBlockedRoutes() {
+    const byId = new Map(nodes.map((n) => [n.id, n]));
+    for (let pass = 0; pass < 10; pass++) {
+      let moved = false;
+      for (const r of reactions) {
+        if (r.onRing) continue;
+        const from = byId.get(r.from), to = byId.get(r.to);
+        if (!from || !to) continue;
+        const blocker = firstBlocker(r.points, from, to);
+        if (!blocker) continue;
+        if (blocker.lane === "spine" || blocker.lane === "cycle") continue; // never move the core
+        const dir = blocker.x + blocker.w / 2 < (coreBox.x0 + coreBox.x1) / 2 ? -1 : 1;
+        blocker.x += dir * Math.round(COL_GAP * 0.75);
+        moved = true;
+      }
+      // re-route everything against the new positions
+      for (const r of reactions) {
+        if (r.onRing) continue;
+        const from = byId.get(r.from), to = byId.get(r.to);
+        if (from && to) r.points = routeEdge(from, to);
+      }
+      if (!moved) break;
+    }
+  }
+
+  /** A y where a horizontal run from x1..x2 crosses no cell (nearest to preferY). */
+  function clearBandY(x1, x2, preferY, from, to) {
+    const lo = Math.min(x1, x2) - 4, hi = Math.max(x1, x2) + 4;
+    const cands = [];
+    for (const n of nodes) { cands.push(n.y - 22, n.y + n.h + 22); }
+    cands.push(Math.min(...nodes.map((n) => n.y)) - 64, Math.max(...nodes.map((n) => n.y + n.h)) + 64);
+    cands.sort((a, b) => Math.abs(a - preferY) - Math.abs(b - preferY));
+    for (const y of cands) {
+      const blocked = nodes.some((n) => n !== from && n !== to &&
+        !(hi <= n.x || n.x + n.w <= lo) && n.y - 4 < y && y < n.y + n.h + 4);
+      if (!blocked) return Math.round(y);
+    }
+    return Math.max(...nodes.map((n) => n.y + n.h)) + 64;
+  }
+
+  function firstBlocker(points, from, to) {
+    for (let i = 1; i < points.length; i++) {
+      const [x1, y1] = points[i - 1], [x2, y2] = points[i];
+      const lo = { x: Math.min(x1, x2) - 4, y: Math.min(y1, y2) - 4 };
+      const hi = { x: Math.max(x1, x2) + 4, y: Math.max(y1, y2) + 4 };
+      for (const n of nodes) {
+        if (n === from || n === to) continue;
+        if (!(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y)) return n;
+      }
+    }
+    return null;
   }
 
   // regulation routed around the outside of the column it targets
@@ -256,15 +324,28 @@ export function layout(ast) {
   }
 
   function placeChain(chain, x0, y0, lane) {
+    const metCount = chain.steps.filter((s) => s.kind === "metabolite").length;
+    // choose a row count that makes the block roughly square in real units
+    const rows = lane !== "spine" ? Infinity
+      : ast.wrap === 0 ? Infinity
+      : ast.wrap ? ast.wrap
+      : metCount > 6 ? Math.max(3, Math.round(Math.sqrt((metCount * COL_GAP) / ast.spacing)))
+      : Infinity;
+    let placedInCol = 0, col = 0;
     let y = y0;
     let prevNode = null;
     let pendingReaction = null;
     for (const step of chain.steps) {
       if (step.kind === "metabolite") {
+        if (placedInCol >= rows) {          // wrap to the next column, reversing flow
+          col++; placedInCol = 0;
+          y = col % 2 === 0 ? y0 : y0 + (rows - 1) * ast.spacing;
+        }
         let node = byMetabolite.get(step.id);
+        const colX = x0 + col * COL_GAP;
         if (!node) {
           const dir = lane === "spine" ? 1 : (x0 < spineOriginX() ? -1 : 1);
-          const nx = lane === "spine" ? x0 : freeX(x0, y, dir);
+          const nx = lane === "spine" ? colX : freeX(colX, y, dir);
           node = { id: `${ast.id}:${step.id}`, metabolite: step.id, x: nx, y, lane, w: NODE_W, h: NODE_H };
           nodes.push(claim(node));
           byMetabolite.set(step.id, node);
@@ -274,7 +355,8 @@ export function layout(ast) {
           pendingReaction = null;
         }
         prevNode = node;
-        y += ast.spacing;
+        placedInCol++;
+        y += (col % 2 === 0 ? 1 : -1) * ast.spacing;
       } else {
         pendingReaction = step;
       }
@@ -294,6 +376,7 @@ export function layout(ast) {
         kind: "flux", enzyme: step.enzyme, ec: step.ec, reversible: step.reversible,
         committed: step.flags.includes("committed") || step.flags.includes("irreversible"),
         from: from.id, to: to.id,
+        onRing: true,
         points: [[Math.round(fx + ux * inset), Math.round(fy + uy * inset)],
                  [Math.round(tx2 - ux * inset), Math.round(ty2 - uy * inset)]],
         in: step.in, out: step.out, flags: step.flags,
@@ -341,7 +424,10 @@ export function layout(ast) {
     const entryY = dy >= 0 ? to.y : to.y + NODE_H;
     const midY = Math.round((exitY + entryY) / 2);
     const z = [[fcx, exitY], [fcx, midY], [tcx, midY], [tcx, entryY]];
-    return clear(z, from, to) ? z : detourY(from, to);
+    if (clear(z, from, to)) return z;
+    const dy2 = detourY(from, to);
+    if (clear(dy2, from, to)) return dy2;
+    return detourX(from, to);
   }
 
   /** True when no segment of the route crosses a cell other than its endpoints. */
@@ -362,25 +448,34 @@ export function layout(ast) {
   /** Route over/under the obstructing row. */
   function detourY(from, to) {
     const fcx = from.x + NODE_W / 2, tcx = to.x + NODE_W / 2;
-    const above = Math.min(from.y, to.y) - 46;
-    const below = Math.max(from.y + NODE_H, to.y + NODE_H) + 46;
-    for (const [lane, fromEdge, toEdge] of [[above, from.y, to.y], [below, from.y + NODE_H, to.y + NODE_H]]) {
-      const pts = [[fcx, fromEdge], [fcx, lane], [tcx, lane], [tcx, toEdge]];
-      if (clear(pts, from, to)) return pts;
+    for (const step of [46, 96, 148, 202, 262]) {
+      const above = Math.min(from.y, to.y) - step;
+      const below = Math.max(from.y + NODE_H, to.y + NODE_H) + step;
+      for (const [lane, fromEdge, toEdge] of [[above, from.y, to.y], [below, from.y + NODE_H, to.y + NODE_H]]) {
+        const pts = [[fcx, fromEdge], [fcx, lane], [tcx, lane], [tcx, toEdge]];
+        if (clear(pts, from, to)) return pts;
+      }
     }
-    return [[fcx, from.y + NODE_H], [fcx, below], [tcx, below], [tcx, to.y + NODE_H]];
+    // Last resort: find a horizontal band that is actually clear across the span.
+    const band = clearBandY(fcx, tcx, (from.y + to.y) / 2, from, to);
+    const exit = band < from.y ? from.y : from.y + NODE_H;
+    const entry = band < to.y ? to.y : to.y + NODE_H;
+    return [[fcx, exit], [fcx, band], [tcx, band], [tcx, entry]];
   }
 
   /** Route left/right of the obstructing column. */
   function detourX(from, to) {
     const fcy = from.y + NODE_H / 2, tcy = to.y + NODE_H / 2;
-    const left = Math.min(from.x, to.x) - 56;
-    const right = Math.max(from.x + NODE_W, to.x + NODE_W) + 56;
-    for (const [lane, fromEdge, toEdge] of [[right, from.x + NODE_W, to.x + NODE_W], [left, from.x, to.x]]) {
-      const pts = [[fromEdge, fcy], [lane, fcy], [lane, tcy], [toEdge, tcy]];
-      if (clear(pts, from, to)) return pts;
+    for (const step of [56, 112, 172, 236, 300]) {
+      const left = Math.min(from.x, to.x) - step;
+      const right = Math.max(from.x + NODE_W, to.x + NODE_W) + step;
+      for (const [lane, fromEdge, toEdge] of [[right, from.x + NODE_W, to.x + NODE_W], [left, from.x, to.x]]) {
+        const pts = [[fromEdge, fcy], [lane, fcy], [lane, tcy], [toEdge, tcy]];
+        if (clear(pts, from, to)) return pts;
+      }
     }
-    return [[from.x + NODE_W, fcy], [right, fcy], [right, tcy], [to.x + NODE_W, tcy]];
+    const far = Math.max(...nodes.map((n) => n.x + n.w), from.x + NODE_W) + 64;
+    return [[from.x + NODE_W, fcy], [far, fcy], [far, tcy], [to.x + NODE_W, tcy]];
   }
 
   /** Right-angle elbow between two cells (never diagonal). */

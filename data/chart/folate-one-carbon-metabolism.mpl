@@ -31,6 +31,7 @@
 pathway folate-one-carbon-metabolism "Folate and one-carbon metabolism" {
   grid F4
   spacing 152
+  wrap 0   # five branches on both flanks — a single spine column keeps the rejoin routes solvable
 
   spine at 0,0 {
     folate
