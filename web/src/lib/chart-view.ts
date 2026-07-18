@@ -84,6 +84,18 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     }
     layerGrid.append(s("rect", { class: "grid-frame", x: b.x, y: b.y, width: b.w, height: b.h }));
   }
+  for (const c of (master as any).connectors || []) {
+    const g = s("g", { class: "connector lod-normal" });
+    const len = 54;
+    const x2 = c.x + c.dir * len;
+    g.append(s("line", { class: "connector-line", x1: c.x, y1: c.y, x2, y2: c.y, "marker-end": "url(#arrow-flux)" }));
+    g.append(s("text", {
+      class: "connector-label", x: x2 + c.dir * 6, y: c.y - 4,
+      "text-anchor": c.dir > 0 ? "start" : "end",
+    }, [`${c.label} ${c.ref}`]));
+    layerRegions.append(g);
+  }
+
   for (const reg of master.regions || []) {
     const g = s("g", { class: "region", "data-region": reg.id });
     g.append(s("rect", { class: "region-frame", x: reg.x - 40, y: reg.y - 40, width: reg.w + 80, height: reg.h + 80, rx: 4 }));

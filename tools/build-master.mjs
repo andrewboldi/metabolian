@@ -63,6 +63,36 @@ for (const r of regions) {
   for (const g of c.regulation) master.regulation.push({ ...g, points: g.points.map(shift), pathway: c.id });
 }
 
+// Cross-pathway links, the way the poster does it: rather than dragging a line
+// across the sheet (which is how you get a ball of yarn), anchor a short arrow at
+// the shared metabolite labelled with the destination and its grid reference.
+const PATHWAY_DIR = join(ROOT, "data", "pathways");
+master.connectors = [];
+const regionById = new Map(regions.map((r) => [r.chart.id, r]));
+for (const r of regions) {
+  const src = join(PATHWAY_DIR, `${r.chart.id}.json`);
+  if (!existsSync(src)) continue;
+  let mod;
+  try { mod = JSON.parse(readFileSync(src, "utf8")); } catch { continue; }
+  for (const rel of mod.relations || []) {
+    if (rel.type !== "crosstalk" || rel.target?.kind !== "pathway") continue;
+    const target = regionById.get(rel.target.id);
+    if (!target || target.chart.id === r.chart.id) continue;
+    const node = r.chart.nodes.find((n) => n.metabolite === rel.source?.id);
+    if (!node) continue;
+    const goesRight = target.x >= r.x;
+    master.connectors.push({
+      from: r.chart.id, to: target.chart.id,
+      metabolite: node.metabolite,
+      x: node.x + r.ox + (goesRight ? node.w : 0),
+      y: node.y + r.oy + node.h / 2,
+      dir: goesRight ? 1 : -1,
+      label: target.chart.title,
+      note: rel.note || "",
+    });
+  }
+}
+
 const maxX = Math.max(...regions.map((r) => r.x + r.w));
 const maxY = Math.max(...regions.map((r) => r.y + r.h));
 master.bounds = { x: -GAP, y: -GAP, w: maxX + GAP * 2, h: maxY + GAP * 2 };
@@ -88,6 +118,10 @@ for (const reg of master.regions) {
   const ri = Math.min(ROWS - 1, Math.floor(((reg.y + reg.h / 2 - master.bounds.y) / master.bounds.h) * ROWS));
   reg.ref = `${String.fromCharCode(65 + ci)}${ri + 1}`;
 }
+
+// stamp each connector with its destination's coordinate reference
+const refById = new Map(master.regions.map((r) => [r.id, r.ref]));
+for (const c of master.connectors) c.ref = refById.get(c.to) || "";
 
 writeFileSync(join(CHART_DIR, "_master.json"), JSON.stringify(master));
 
