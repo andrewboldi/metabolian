@@ -37,6 +37,10 @@ let moduleCount = 0;
 let massWarn = 0;
 let chargeWarn = 0;
 const seenModuleIds = new Set();
+// Cross-module identity: the same compound (by ChEBI/KEGG) must describe itself
+// identically everywhere. The build merges metabolites across modules, so one
+// stale entry silently wins and the chart renders the wrong formula.
+const identity = new Map();
 
 for (const file of files.sort()) {
   const path = join(DATA_DIR, file);
@@ -93,6 +97,33 @@ for (const file of files.sort()) {
     }
   }
   if (bad.length) console.log(bad.slice(0, 6).join("\n") + (bad.length > 6 ? `\n   … +${bad.length - 6} more` : ""));
+
+  for (const m of mod.metabolites || []) {
+    const key = m.xrefs?.chebi || m.xrefs?.kegg;
+    if (!key || (!m.formula && m.charge == null)) continue;
+    const shape = `${m.formula ?? "?"} / charge ${m.charge ?? "?"}`;
+    if (!identity.has(key)) identity.set(key, new Map());
+    const byShape = identity.get(key);
+    if (!byShape.has(shape)) byShape.set(shape, []);
+    byShape.get(shape).push(file.replace(/\.json$/, ""));
+  }
+}
+
+/** Report compounds that describe themselves differently in different modules. */
+function reportIdentityConflicts() {
+  const conflicts = [...identity.entries()].filter(([, byShape]) => byShape.size > 1);
+  if (!conflicts.length) return 0;
+  console.log(`\n⚠ cross-module identity: ${conflicts.length} compound(s) described inconsistently:`);
+  for (const [key, byShape] of conflicts.slice(0, 10)) {
+    const variants = [...byShape.entries()].sort((a, b) => b[1].length - a[1].length);
+    const name = variants[0][0];
+    console.log(`   ${key}: ${variants.length} variants — majority "${name}" (${variants[0][1].length} modules)`);
+    for (const [shape, files] of variants.slice(1)) {
+      console.log(`      differs: "${shape}" in ${files.join(", ")}`);
+    }
+  }
+  if (conflicts.length > 10) console.log(`   … +${conflicts.length - 10} more`);
+  return conflicts.length;
 }
 
 function referentialErrors(mod) {
@@ -140,4 +171,5 @@ function referentialErrors(mod) {
 
 console.log(`\n${moduleCount} module(s) validated, ${errorCount} error(s).`);
 if (massWarn || chargeWarn) console.log(`⚠ balance: ${massWarn} reaction(s) not mass-balanced, ${chargeWarn} not charge-balanced (warning — see docs/SCHEMA.md; usually a neutral formula paired with an anion charge).`);
+reportIdentityConflicts();
 process.exit(errorCount ? 1 : 0);
