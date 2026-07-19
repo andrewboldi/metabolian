@@ -252,9 +252,13 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     const isProtein = (n as ChartNode & { isProtein?: boolean }).isProtein;
     if (isProtein) {
       g.append(s("rect", { class: "enz-box", x: 0, y: 18, width: n.w, height: 40, rx: 8 }));
-    } else if ((n as ChartNode & { hub?: boolean }).hub) {
+    } else if (n.mol) {
+      // One grammar for metabolite cells: every node that draws content is framed.
+      // Framing only `hub` nodes split the sheet into boxed and bare nodes and
+      // invited the reader to infer a distinction that does not exist — and bare
+      // nodes gave incoming edges no bbox to clip against.
       g.append(s("rect", { class: "met-box", x: 0, y: 0, width: n.w, height: n.h }));
-    } else if (!n.mol) {
+    } else {
       // no structure to draw — this box exists only to hold the name, so it must
       // appear and vanish WITH the name instead of leaving a hollow rectangle
       g.append(s("rect", { class: "met-box name-only lod-normal", x: 0, y: 0, width: n.w, height: n.h }));
