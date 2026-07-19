@@ -7,7 +7,7 @@
 
 pathway purine-de-novo-synthesis "De novo purine nucleotide biosynthesis" {
   grid F3
-  spacing 152
+  spacing 172
 
   spine at 0,0 {
     r5p

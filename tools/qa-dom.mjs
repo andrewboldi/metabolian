@@ -339,13 +339,12 @@ if (asJson) {
  * halo is Michal's own device, not a defect. What matters is that the label is
  * protected, which is strickenWithoutHalo.
  */
-// Budgeted against the PESSIMISTIC environment. CI has none of the fonts the
-// stylesheet asks for (there is no @font-face anywhere — see #311), so it falls
-// back to metrics wider than Inter's and measures 6 overprints where a machine
-// with Inter installed measures 3. The budget tracks the worse number, because
-// that is what a reader without the fonts actually gets. Self-hosting the fonts
-// would make this converge and let the budget drop back to 3.
-const BUDGET = { textOverlaps: 6, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 12 };
+// Zero, now that the type is self-hosted (#311) and the placer's last two
+// escape hatches exist: a fallback label drops its EC rather than print it
+// across a neighbour, and amino acids on a side arc use their three-letter code.
+// Budgets that sit above the achieved number only ratchet the wrong way, so
+// these track exactly what the atlas measures.
+const BUDGET = { textOverlaps: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 10 };
 
 // labelsOverCells is budgeted, not zeroed. Raising the placer's cell-overlap
 // weight from 1 to 3 moved the number not at all: these 12 captions have no

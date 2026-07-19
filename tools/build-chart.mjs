@@ -53,6 +53,14 @@ const SHORT = {
   formylthf: "10-CHO-THF", methylenethf: "5,10-CH₂-THF", mlthf: "5,10-CH₂-THF",
   methenylthf: "5,10-CH=THF", holoacp: "ACP-SH",
   methyl_thf: "5-CH₃-THF", methylthf: "5-CH₃-THF", mthf5: "5-CH₃-THF",
+  // Amino acids reaching a side arc get their standard three-letter code. On a
+  // side entry the species is an annotation on someone else's step, not the
+  // skeleton being followed, and "L-Glutamine + ATP + H₂O" is wide enough to
+  // print across two neighbouring cell names on the purine sheet. Cells keep
+  // the full name — this is the caption form only.
+  gln: "Gln", glutamine: "Gln", glu: "Glu", glutamate: "Glu",
+  gly: "Gly", glycine: "Gly", asp: "Asp", aspartate: "Asp",
+  alanine: "Ala", serine: "Ser", "l-serine": "Ser",
   // The rest of the ids that reach a side arc. Probing every emitted label found
   // 40 species printing 15-51 characters: the alias table was keyed on idealised
   // ids (`hco3`, `glutathione`) the modules do not use, and trimParenthetical

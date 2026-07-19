@@ -714,7 +714,23 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       if (!placed) {
         L.name.classList.remove("lod-normal");
         L.name.classList.add("lod-detail");
-        if (fallback) { commit(fallback.c, fallback.x, fallback.y); taken.push(fallback.box); }
+        if (fallback) {
+          commit(fallback.c, fallback.x, fallback.y);
+          // The least-bad spot is still a collision, and an EC number is the
+          // droppable half of an enzyme label: the name identifies the step, the
+          // number is supplementary and survives on the <title>. Retry without it
+          // — a name-only band is EC_H shorter and usually clears. This is what
+          // put EC 6.3.4.4 across a neighbouring enzyme's name: the label was
+          // parked knowingly, and its EC line did the damage.
+          if (L.ec && hit(fallback.box, taken)) {
+            const slim = { ...fallback.box, h: fallback.box.h - EC_H };
+            if (!hit(slim, taken)) {
+              L.ec.setAttribute("visibility", "hidden");
+              fallback.box = slim;
+            }
+          }
+          taken.push(fallback.box);
+        }
       }
     }
 
