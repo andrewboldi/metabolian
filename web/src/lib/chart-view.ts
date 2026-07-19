@@ -115,6 +115,8 @@ export function wrapCellName(text: string, maxChars: number, maxLines = 2): stri
 }
 
 // Tuned so a typical "Fit" view of a single pathway already shows enzyme names.
+/** A depiction narrower than this on screen is a smudge; don't materialise its paths. */
+const MIN_STRUCTURE_PX = 26;
 const LOD_NORMAL = 0.26;
 const LOD_DETAIL = 0.7;
 const molCache = new Map<string, string>();
@@ -796,6 +798,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       if (!n.mol) continue;
       const g = nodeEls.get(n.id);
       if (!g || g.querySelector("svg")) continue;
+      // Below a couple of dozen screen pixels a depiction is a smudge, not
+      // structural density — and inlining it still costs its full path count.
+      // The master sheet at fit draws ~10px cells, so it was materialising 33k
+      // <path> nodes to draw nothing legible; a single pathway at fit draws
+      // ~100px cells and is unaffected. Zooming in re-runs this and hydrates.
+      if (n.w * k < MIN_STRUCTURE_PX) continue;
       const sx = n.x * k + tx, sy = n.y * k + ty;
       if (sx > r.width + 200 || sy > r.height + 200 || sx + n.w * k < -200 || sy + n.h * k < -200) continue;
       pending.push({ n, g });

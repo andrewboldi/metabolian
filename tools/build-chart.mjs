@@ -29,10 +29,10 @@ const SHORT = {
   // `hplus` participant (73 of 83 redox steps do), so baking "+H+" into the alias
   // printed it twice — "NADPH+H+ + H+" — asserting a stoichiometry no source
   // supports. The data is the authority on protons; the renderer must not add any.
-  ctp: "CTP", itp: "ITP", nad: "NAD+", nadh: "NADH", nadp: "NADP+", nadph: "NADPH",
-  fad: "FAD", fadh2: "FADH2", fmn: "FMN", coa: "CoA-SH", coash: "CoA-SH",
-  pi: "Pi", ppi: "PPi", h2o: "H2O", hplus: "H+", co2: "CO2", o2: "O2", nh3: "NH3",
-  nh4: "NH4+", hco3: "HCO3-", h2o2: "H2O2", q: "Q", qh2: "QH2", thf: "THF",
+  ctp: "CTP", itp: "ITP", nad: "NAD⁺", nadh: "NADH", nadp: "NADP⁺", nadph: "NADPH",
+  fad: "FAD", fadh2: "FADH₂", fmn: "FMN", coa: "CoA-SH", coash: "CoA-SH",
+  pi: "Pi", ppi: "PPi", h2o: "H₂O", hplus: "H⁺", co2: "CO₂", o2: "O₂", nh3: "NH₃",
+  nh4: "NH₄⁺", hco3: "HCO₃⁻", h2o2: "H₂O₂", q: "Q", qh2: "QH₂", thf: "THF",
   sam: "SAM", sah: "SAH", glutathione: "GSH", gssg: "GSSG", acetylcoa: "acetyl-CoA",
   // Redox and one-carbon carriers recur on every second step of several sheets,
   // and their curated names are 25-51 characters — long enough to run over the
@@ -49,12 +49,12 @@ const SHORT = {
   // cannot shorten a name with no parenthetical to trim ("Ethanolamine
   // phosphate", "N,N-Dimethylglycine"). Every form below is the one the
   // textbooks and the poster print — none is invented.
-  gsh: "GSH", bicarbonate: "HCO₃⁻", oaa: "OAA", akb: "2-oxobutanoate",
-  trxox: "Trx-S₂", trxred: "Trx-(SH)₂", mdha: "MDHA", ascorbate: "ascorbate",
-  g1p: "G-1-P", r1p: "Rib-1-P", carbamoylp: "carbamoyl-P", prpp: "PRPP",
+  gsh: "GSH", bicarbonate: "HCO₃⁻", oaa: "OAA", akb: "2-Oxobutanoate",
+  trxox: "Trx-S₂", trxred: "Trx-(SH)₂", mdha: "MDHA", ascorbate: "Ascorbate",
+  g1p: "G-1-P", r1p: "Rib-1-P", carbamoylp: "Carbamoyl-P", prpp: "PRPP",
   dhf: "DHF", pbg: "PBG", ala: "ALA", cysgly: "Cys-Gly", dimethylglycine: "DMG",
   s1p: "S1P", dag: "DAG", phosphoethanolamine: "Etn-P", acetoacetylcoa: "AcAc-CoA",
-  lipidoh: "lipid-OH", lipidooh: "lipid-OOH", bh4: "BH₄", bh2: "BH₂",
+  lipidoh: "Lipid-OH", lipidooh: "Lipid-OOH", bh4: "BH₄", bh2: "BH₂",
   fe2: "Fe²⁺", fe3: "Fe³⁺", pb2: "Pb²⁺", camp: "cAMP", cgmp: "cGMP",
   tnf: "TNF-α", hydroxycholesterol27: "27-OHC",
   phosphatidylcholine: "PC", sphingomyelin: "SM",
