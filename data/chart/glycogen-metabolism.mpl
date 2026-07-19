@@ -1,11 +1,15 @@
-# Glycogen metabolism — the storage loop cut open at the nucleotide-sugar step so
-# that both arms read downhill in a single Michal spine: activation (UTP + G1P →
-# UDP-glucose), the committed synthase step into the granule, then phosphorolysis
-# straight back out through the hexose-phosphate pool to blood glucose. Glucose
-# 1-phosphate closes the loop as a red side-entry on the pyrophosphorylase arrow
-# rather than as a line dragged back up the sheet. Pyrophosphate is hydrolysed in
-# the right-hand column — that is what makes glycogenesis one-way. Allosteric
-# effectors sit in the left gutter and feed back into the two committed steps.
+# Glycogen metabolism — drawn as the ring it actually is. Glucose 1-phosphate is
+# the hub: it is activated to UDP-glucose, polymerised into the granule, and
+# released again by phosphorolysis straight back to G1P. Cutting that loop open
+# into a linear spine (the earlier drawing) forced UTP onto the axis as though it
+# were the carbon donor, and left G1P as an unconnected stub — so there was no
+# traceable route from the hexose-phosphate pool into UDP-glucose at all.
+#
+# On the ring every cell is a carbon skeleton. UTP enters ugp2 as a red side-entry
+# (it activates the sugar, it is not the sugar) and pyrophosphate leaves the same
+# way; hydrolysing that PPi in the right-hand column is what makes glycogenesis
+# one-way. The hexose-phosphate pool and the exit to blood glucose hang off G1P
+# through their own real, named steps rather than through positional scaffolding.
 #
 # Not drawn (no distinct small-molecule node to hang them on): glycogenin priming
 # and branching enzyme (both glycogen → glycogen), and the debranching enzyme's
@@ -16,14 +20,20 @@
 pathway glycogen-metabolism "Glycogen synthesis and breakdown (glycogenesis & glycogenolysis)" {
   grid B6
   spacing 152
+  radius 260
 
-  spine at 0,0 {
-    utp
-    <-> ugp2 [2.7.7.9] +g1p +hplus -ppi
+  cycle at 0,0 {
+    g1p
+    <-> ugp2 [2.7.7.9] +utp +hplus -ppi
     udpglucose
     -> gys1 [2.4.1.11] -udp !committed
     glycogen
-    <-> pygm [2.4.1.1] +pi !committed
+    -> pygm [2.4.1.1] +pi !committed
+  }
+
+  # The hexose-phosphate pool, and the liver's exit to blood glucose. Re-listing
+  # g1p makes phosphoglucomutase a real drawn step rather than a scaffold hairline.
+  branch from g1p side right {
     g1p
     <-> pgm1 [5.4.2.2]
     g6p
@@ -32,7 +42,7 @@ pathway glycogen-metabolism "Glycogen synthesis and breakdown (glycogenesis & gl
   }
 
   # the pyrophosphate split off the UTP: hydrolysing it pulls UDP-glucose synthesis
-  branch from utp side right {
+  branch from udpglucose side left {
     ppi
     -> ppa1 [3.6.1.1] +h2o -hplus
     pi
