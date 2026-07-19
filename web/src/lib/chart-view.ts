@@ -136,10 +136,15 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const layerFlux = s("g", { class: "layer-flux" });
   const layerReg = s("g", { class: "layer-reg" });
   const layerNodes = s("g", { class: "layer-nodes" });
+  // Enzyme names paint after the regulation rails. As children of layer-flux they
+  // were drawn BEFORE layer-reg, so a rail crossing a name painted straight over
+  // it and the white knockout halo — the poster's own trick — could not protect
+  // the glyphs. Above the rails, the halo breaks the line behind the text.
+  const layerEnzLabels = s("g", { class: "layer-enz-labels" });
   // Region titles paint last: they are map furniture and must sit on top of the
   // chemistry (with their knockout halo), not be struck through by it.
   const layerLabels = s("g", { class: "layer-labels" });
-  viewport.append(layerGrid, layerRegions, layerFlux, layerReg, layerNodes, layerLabels);
+  viewport.append(layerGrid, layerRegions, layerFlux, layerReg, layerNodes, layerEnzLabels, layerLabels);
   svg.append(viewport);
   canvas.append(svg);
 
@@ -242,9 +247,9 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const name = s("text", { class: "enz-name lod-normal", x: tx, y: my - 2, "text-anchor": anchor }, [shownName]);
       name.append(s("title", {}, [full]));
       name.addEventListener("click", (e) => { e.stopPropagation(); hooks.onEnzyme?.(r); });
-      g.append(name);
+      layerEnzLabels.append(name);
       const ecEl = r.ec ? s("text", { class: "enz-ec lod-detail", x: tx, y: my + 10, "text-anchor": anchor }, [`EC ${r.ec}`]) : null;
-      if (ecEl) g.append(ecEl);
+      if (ecEl) layerEnzLabels.append(ecEl);
       // register with the anti-collision placer that runs once everything exists
       enzymeLabels.push({ name, ec: ecEl, mx, my, chars: shownName.length, full });
       // cofactors enter/leave on a curved side-entry, Michal-style
@@ -336,6 +341,24 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   (function placeEnzymeLabels() {
     const FONT = 10, EC_H = 11;
     const cells = ir.nodes.map((n) => ({ x: n.x - 4, y: n.y - 4, w: n.w + 8, h: n.h + 8 }));
+    // Regulation rails and scaffolding hairlines are ink too — a label that lands
+    // on one gets struck through at its baseline. Reserve a thin corridor along
+    // every segment so names and EC numbers are placed clear of them.
+    const railBoxes: { x: number; y: number; w: number; h: number }[] = [];
+    const reserveRail = (pts: [number, number][] | undefined) => {
+      for (let i = 1; i < (pts?.length ?? 0); i++) {
+        const [x1, y1] = pts![i - 1], [x2, y2] = pts![i];
+        railBoxes.push({
+          x: Math.min(x1, x2) - 3, y: Math.min(y1, y2) - 3,
+          w: Math.abs(x2 - x1) + 6, h: Math.abs(y2 - y1) + 6,
+        });
+      }
+    };
+    for (const g of ir.regulation || []) reserveRail(g.points as [number, number][]);
+    for (const r of ir.reactions) if (r.kind === "branch-link") reserveRail(r.points as [number, number][]);
+    // Rails are a SOFT obstacle: preferred-against, never disqualifying. Treating
+    // them as hard blockers cleared the strike-throughs but demoted half the
+    // labels to detail zoom, which hides content rather than fixing it.
     const taken: { x: number; y: number; w: number; h: number }[] = [...cofactorBoxes];
     const hit = (b: { x: number; y: number; w: number; h: number }, list: typeof taken) =>
       list.some((o) => !(b.x + b.w <= o.x || o.x + o.w <= b.x || b.y + b.h <= o.y || o.y + o.h <= b.y));
@@ -415,19 +438,31 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         L.name.classList.remove("lod-normal");
         L.name.classList.add("lod-detail");
       }
-      let fallback: { c: typeof candidates[0]; x: number; y: number; box: typeof taken[0]; ovl: number } | null = null;
+      type Spot = { c: typeof candidates[0]; x: number; y: number; box: typeof taken[0]; ovl: number };
+      let onRail: Spot | null = null;   // clear of real obstacles, but crosses a rail
+      let fallback: Spot | null = null; // nothing is clear — least-bad
       for (const c of [chosen, ...candidates]) {
         const x = L.mx + c.dx, y = L.my + c.dy;
         const bx = c.anchor === "start" ? x : c.anchor === "end" ? x - w : x - w / 2;
         const box = { x: bx, y: y - FONT, w, h };
+        const spot: Spot = { c, x, y, box, ovl: overlap(box, cells) + overlap(box, taken) };
         if (!hit(box, cells) && !hit(box, taken)) {
-          commit(c, x, y);
-          taken.push(box);
-          placed = true;
-          break;
+          if (!hit(box, railBoxes)) {         // best: clear of ink entirely
+            commit(c, x, y);
+            taken.push(box);
+            placed = true;
+            break;
+          }
+          if (!onRail || spot.ovl < onRail.ovl) onRail = spot;
         }
-        const ovl = overlap(box, cells) + overlap(box, taken);
-        if (!fallback || ovl < fallback.ovl) fallback = { c, x, y, box, ovl };
+        if (!fallback || spot.ovl < fallback.ovl) fallback = spot;
+      }
+      // Clear of cells and other labels but sitting on a rail: still show it at
+      // normal zoom — a rail crossing is far less costly than a hidden enzyme.
+      if (!placed && onRail) {
+        commit(onRail.c, onRail.x, onRail.y);
+        taken.push(onRail.box);
+        placed = true;
       }
       // Nowhere clear: hold it back to detail zoom, but still park it at the
       // LEAST-colliding candidate and reserve that space. Leaving it at the
