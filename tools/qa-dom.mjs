@@ -233,6 +233,11 @@ async function run(ids) {
   const proc = spawn(findChrome(), [
     "--headless=new", "--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu",
     "--disable-dev-shm-usage", "--hide-scrollbars",
+    // A cold CI runner spends seconds on first-run setup, extension loading and
+    // GCM registration before the debugging socket answers. None of it is wanted
+    // for a measurement run, and waiting on it is what timed the attach out.
+    "--no-first-run", "--no-default-browser-check", "--disable-extensions",
+    "--disable-background-networking", "--disable-sync", "--metrics-recording-only",
     `--remote-debugging-port=${port}`, "--window-size=1600,1000", "about:blank",
   ], { stdio: ["ignore", "ignore", "pipe"] });
   // Keep stderr. Discarding it turned a CI launch failure into a bare "could not
@@ -243,7 +248,7 @@ async function run(ids) {
 
   let ws;
   try {
-    for (let i = 0; i < 80 && !ws; i++) {
+    for (let i = 0; i < 300 && !ws; i++) {
       await sleep(150);
       try {
         const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
