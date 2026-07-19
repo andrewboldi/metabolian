@@ -57,6 +57,11 @@
   background: color-mix(in oklab, var(--panel) 92%, transparent); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.4rem 0.5rem; backdrop-filter: blur(8px); }
 .chart-hud .zoom-readout { font-family: var(--font-mono); font-size: var(--step--1); color: var(--text-dim); min-width: 8ch; text-align: center; }
 .lod-badge { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+/* Onboarding hint only: it must never eat the sheet. It ignores the pointer and
+   fades away once you start reading the chart — which is exactly when it would
+   otherwise sit on top of the EC numbers you zoomed in for. */
+.chart-help { pointer-events: none; transition: opacity .4s var(--ease); }
+.chart-help[data-dismissed="true"] { opacity: 0; }
 .chart-help { position: absolute; bottom: var(--sp-4); left: var(--sp-4); z-index: 5; font-size: var(--step--1); color: var(--text-faint);
   background: color-mix(in oklab, var(--panel) 88%, transparent); border: 1px solid var(--line); border-radius: var(--radius); padding: .4rem .6rem; }
 

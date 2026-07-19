@@ -536,18 +536,29 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   // ---------- lazy structures (viewport-culled; drawn at every zoom level) ----------
   async function loadVisibleStructures() {
     const r = canvas.getBoundingClientRect();
+    const pending: { n: ChartNode; g: SVGGElement }[] = [];
     for (const n of ir.nodes) {
       if (!n.mol) continue;
       const g = nodeEls.get(n.id);
       if (!g || g.querySelector("svg")) continue;
       const sx = n.x * k + tx, sy = n.y * k + ty;
       if (sx > r.width + 200 || sy > r.height + 200 || sx + n.w * k < -200 || sy + n.h * k < -200) continue;
+      pending.push({ n, g });
+    }
+    if (!pending.length) return;
+
+    // Fetch every missing depiction as ONE parallel batch. These used to be
+    // awaited inside the loop, so a 13-structure sheet paid 13 serial network
+    // round-trips and cells sat empty for ~45s before hydrating.
+    const missing = [...new Set(pending.map((p) => p.n.mol!).filter((m) => !molCache.has(m)))];
+    await Promise.all(missing.map(async (mol) => {
+      try { molCache.set(mol, await (await fetch(`${base}mol/${mol}`)).text()); } catch { /* enhancement only */ }
+    }));
+
+    for (const { n, g } of pending) {
       try {
-        let text = molCache.get(n.mol);
-        if (!text) {
-          text = await (await fetch(`${base}mol/${n.mol}`)).text();
-          molCache.set(n.mol, text);
-        }
+        const text = molCache.get(n.mol!);
+        if (!text) continue;
         if (g.querySelector("svg")) continue;
         const doc = new DOMParser().parseFromString(text, "image/svg+xml");
         const root = doc.documentElement;

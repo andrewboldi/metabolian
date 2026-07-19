@@ -21,6 +21,15 @@ async function main() {
   picker.replaceChildren(...index.charts.map((c) => el("option", { value: c.id, ...(c.id === wanted ? { selected: "true" } : {}) }, [c.title])));
   picker.addEventListener("change", () => { location.search = `?id=${picker.value}`; });
 
+  // The help bar is an onboarding hint painted over the sheet; retire it the
+  // moment the reader starts navigating, so it can't sit on top of the EC
+  // numbers and structures they zoomed in to read.
+  const help = document.querySelector<HTMLElement>(".chart-help");
+  if (help) {
+    const dismiss = () => help.setAttribute("data-dismissed", "true");
+    for (const ev of ["wheel", "pointerdown"]) canvas.addEventListener(ev, dismiss, { once: true, passive: true });
+  }
+
   await load(wanted, canvas);
   wireHud();
 }
