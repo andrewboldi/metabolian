@@ -751,16 +751,31 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // Where such a pair survives, the EC number is the half to drop: the name
     // identifies the step and the number stays on the <title>. This is what left
     // EC 1.4.1.3 printed across FRUCTOSE-2,6-BISPHOSPHATASE on the Warburg sheet.
+    // Boxes are RECONSTRUCTED from committed attributes, never read from layout.
+    // A label demoted to .lod-detail is display:none at this moment and reports a
+    // zero box from getBBox — so a layout-based sweep compares against nothing and
+    // reports success while changing no pixel. That is precisely how EC 1.4.1.3
+    // stayed printed across FRUCTOSE-2,6-BISPHOSPHATASE through several "fixes".
+    const boxOf = (el: SVGElement, isEc: boolean): Box => {
+      const x = Number(el.getAttribute("x") || 0), y = Number(el.getAttribute("y") || 0);
+      const anchor = el.getAttribute("text-anchor");
+      const spans = Array.from(el.querySelectorAll("tspan"));
+      const strings = spans.length ? spans.map((t) => t.textContent || "") : [el.textContent || ""];
+      const meas = isEc ? measEcBox : measEnz;
+      const w = Math.max(...strings.map((t) => meas.width(t)));
+      const h = isEc ? EC_FONT + 2 : FONT * strings.length;
+      return {
+        x: anchor === "start" ? x : anchor === "end" ? x - w : x - w / 2,
+        y: y - (isEc ? EC_FONT : FONT), w, h,
+      };
+    };
+    const measEcBox = textMeasurer(svg, "enz-ec", EC_FONT * 0.6);
     const committed = enzymeLabels.flatMap((L) => {
       const out: { el: SVGElement; isEc: boolean }[] = [];
       if (L.name.getAttribute("visibility") !== "hidden") out.push({ el: L.name, isEc: false });
       if (L.ec && L.ec.getAttribute("visibility") !== "hidden") out.push({ el: L.ec, isEc: true });
       return out;
-    }).map((e) => {
-      let b: { x: number; y: number; width: number; height: number };
-      try { b = e.el.getBBox(); } catch { return null; }
-      return { ...e, box: { x: b.x, y: b.y, w: b.width, h: b.height } };
-    }).filter(Boolean) as { el: SVGElement; isEc: boolean; box: Box }[];
+    }).map((e) => ({ ...e, box: boxOf(e.el, e.isEc) }));
 
     for (let i = 0; i < committed.length; i++) {
       for (let j = i + 1; j < committed.length; j++) {
@@ -961,18 +976,11 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // display:none element reports a zero box — so every geometric comparison
     // here silently compared nothing. This was the real reason three
     // successive attempts at this sweep changed no pixel.
-    const measEc = textMeasurer(svg, "enz-ec", 8.5 * 0.6);
     for (const L of enzymeLabels) {
       if (!L.ec || L.ec.getAttribute("visibility") === "hidden") continue;
-      const ex = Number(L.ec.getAttribute("x") || 0), ey = Number(L.ec.getAttribute("y") || 0);
-      const ew = measEc.width(L.ec.textContent || ""), anchor = L.ec.getAttribute("text-anchor");
-      const box = {
-        x: anchor === "start" ? ex : anchor === "end" ? ex - ew : ex - ew / 2,
-        y: ey - EC_FONT, w: ew, h: EC_FONT + 2,
-      };
-      if (hit(box, placedTags)) L.ec.setAttribute("visibility", "hidden");
+      if (hit(boxOf(L.ec, true), placedTags)) L.ec.setAttribute("visibility", "hidden");
     }
-    measEc.done();
+    measEcBox.done();
 
     measEnz.done();
     measCof.done();
