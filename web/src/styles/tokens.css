@@ -2,6 +2,29 @@
    Theme-aware. Edge color tokens mirror schema/arrows.json so the legend, the
    graph renderer, and the docs all speak the same visual language. */
 
+/* Self-hosted type. This is a correctness requirement, not a polish item: the
+   chart's layout is MEASURED against text — build-chart.mjs reserves label
+   boxes and chart-view.ts runs an anti-collision placer over real glyph
+   extents. While the stacks merely NAMED fonts and hoped, a reader without
+   Inter got wider fallback glyphs than the reservation assumed and collisions
+   the placer believed it had avoided. Measured: 3 overprints on a machine with
+   Inter installed vs 6 on one without, same build, same browser.
+   Latin subsets, OFL-licensed, ~150KB total for every weight actually used. */
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("/metabolian/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("/metabolian/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("/metabolian/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("/metabolian/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("/metabolian/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("/metabolian/fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("/metabolian/fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+
 :root {
   /* type */
   --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
