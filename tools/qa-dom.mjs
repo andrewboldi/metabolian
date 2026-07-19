@@ -355,6 +355,13 @@ if (gate) {
   const broken = Object.entries(BUDGET).filter(([k, max]) => (totals[k] || 0) > max);
   if (broken.length) {
     console.error(`\n✗ regression: ${broken.map(([k, max]) => `${k}=${totals[k]} (budget ${max})`).join(", ")}`);
+    // Name the offenders. A bare count is undiagnosable from a CI log, and this
+    // gate can legitimately differ between browser builds — you need to see WHICH
+    // pair collided to tell a real regression from metric jitter.
+    for (const [id, m] of Object.entries(res)) {
+      for (const o of m.samples?.overlaps || []) console.error(`    ${id}: [${o.aL}] "${o.a}"  <->  [${o.bL}] "${o.b}"`);
+      for (const o of m.samples?.onCell || []) console.error(`    ${id}: [${o.layer}] "${o.text}" over a cell`);
+    }
     process.exit(1);
   }
   console.log(`\n✓ within budget: ${Object.entries(BUDGET).map(([k, m]) => `${k}=${totals[k]}/${m}`).join("  ")}`);
