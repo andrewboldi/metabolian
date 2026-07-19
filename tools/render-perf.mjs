@@ -75,6 +75,14 @@ class CDP {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Node exposes WebSocket as a global from v22. Say so plainly: on Node 20 the
+// old attach loop constructed one inside a `catch {}` and swallowed the
+// ReferenceError 300 times over, then blamed Chromium for not being there.
+if (typeof WebSocket === "undefined") {
+  console.error(`This harness needs a global WebSocket (Node >=22). Running Node ${process.version}.`);
+  process.exit(1);
+}
+
 async function measure(url) {
   const port = 9222 + Math.floor(performance.now() % 500);
   const proc = spawn(findChrome(), [

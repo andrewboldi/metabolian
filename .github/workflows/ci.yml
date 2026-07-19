@@ -32,7 +32,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
-        with: { node-version: 20, cache: npm }
+        # Node 22: this job drives Chromium over a WebSocket, which is a global
+        # only from v22. On 20 the harness has no transport at all.
+        with: { node-version: 22, cache: npm }
       - run: npm ci
       - run: npm run build
       - name: Serve and measure what actually paints
