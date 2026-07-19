@@ -20,7 +20,16 @@
 
 .met-name { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: 11px; font-weight: 400; fill: #231F20; letter-spacing: 0.04em; text-anchor: middle; }
 .met-formula { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9px; fill: #555; text-anchor: middle; }
-.enz-name { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #254991; text-transform: uppercase; letter-spacing: 0.02em; cursor: pointer; }
+/* NO text-transform here, deliberately. uppercase maps Greek locants onto Greek
+   capitals — β (U+03B2) becomes Β (U+0392) — which are glyph-identical to Latin
+   letters, so MTPα and MTPβ both rendered as "MTPB"-shaped labels and collapsed
+   the two subunits of the trifunctional enzyme into look-alikes. D-β-hydroxy-
+   butyrate dehydrogenase, γ-glutamyltransferase 1, dopamine β-hydroxylase,
+   PKA-Cα, HIF-1α and PDH E1 α were corrupted the same way. Roche sets locants
+   lowercase anyway, so caseless is also the higher-fidelity result. If uppercase
+   enzyme names are ever wanted, do it at build time with a transform that skips
+   locants — never here, where CSS cannot tell a locant from a letter. */
+.enz-name { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #254991; letter-spacing: 0.02em; cursor: pointer; }
 .enz-name:hover { fill: #d43900; text-decoration: underline; }
 .enz-ec { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 8.5px; fill: #254991; opacity: .75; }
 .cofactor-label { font-family: "Inter", system-ui, sans-serif; font-size: 9px; fill: #EF2D47; }
@@ -46,6 +55,38 @@
 [data-lod="overview"] .met-box { stroke-width: 0.75; stroke: #4a453e; }
 [data-lod="overview"] .flux-line { stroke-width: 0.6; }
 [data-lod="overview"] .branch-line { stroke-width: 0.4; }
+
+/* The inlined structures were left out of that list and so kept dissolving into
+   grey smudges. They are a nested <svg>, so their ink is scaled TWICE — once by
+   the cell viewBox (~x0.45) and again by the chart zoom — and RDKit writes
+   stroke-width:2.0px into a *style attribute*, which outranks any stylesheet
+   rule. Holding the ink therefore needs both non-scaling-stroke (to pin the
+   width to screen px through both scales) and !important (to beat the inline
+   style); either one alone is a no-op. Measured over the built charts: at each
+   chart's own Fit view 94% of molecule nodes drew bonds under one device pixel,
+   median 0.28px.
+   Selector note: path[style] is exactly RDKit's stroked ink (bonds, wedges,
+   hashes); path:not([style]) is exactly its filled atom-label glyphs, which
+   carry fill= and no stroke. The two sets do not overlap, so weight can be set
+   on the ink without fattening the lettering. */
+[data-lod="overview"] .mol-inline path[style],
+[data-lod="normal"] .mol-inline path[style] { vector-effect: non-scaling-stroke; }
+[data-lod="normal"] .mol-inline path[style] { stroke-width: 0.8px !important; }
+
+/* At overview a bond lands ~0.09px wide and an atom label ~0.2px tall, so
+   RDKit's heteroatom colouring (38% of bond ink is red/blue/orange, and every
+   label glyph is) can only resolve as sub-pixel chroma — that is the "pale
+   salmon haze" over the phosphosugars, not pale bonds. Drop the labels, which
+   cannot render as letters at this size anyway, and take the skeleton to the
+   same warm grey the cell outline already uses, so a cell reads as structural
+   density from across the room. Colour and lettering come back at normal, where
+   they are large enough to carry meaning. Weight sits between .flux-line (0.6)
+   and .branch-line (0.4): the backbone must still lead. */
+[data-lod="overview"] .mol-inline path[style] { stroke-width: 0.5px !important; stroke: #4a453e !important; }
+[data-lod="overview"] .mol-inline path:not([style]) { display: none; }
+/* detail LOD is deliberately left alone: there the depiction should scale like
+   real drawn ink (and match .mol-preview in the inspector). Pinning a width
+   here would cap it, so a molecule at 6x zoom would render as spidery hairlines. */
 
 /* ---- tracing ---- */
 .traced .dimmed { opacity: 0.08; }

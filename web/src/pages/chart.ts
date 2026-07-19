@@ -11,6 +11,11 @@ mountChrome("chart");
 
 let view: ReturnType<typeof mountChart> | null = null;
 
+/** The view the chart re-derives whenever its box changes — the deep link if
+ *  there is one, otherwise a plain fit. Cleared the moment the reader takes the
+ *  view over by panning or zooming, so auto-correction never fights them. */
+let autoView: (() => void) | null = null;
+
 async function main() {
   const canvas = document.getElementById("chart-canvas")!;
   const index = await getJSON<{ charts: { id: string; title: string; grid: string }[] }>("chart/index.json");
@@ -47,18 +52,56 @@ async function load(id: string, canvas: HTMLElement) {
   });
 
   // deep-linkable view: ?z=<zoom>&cx=<chartX>&cy=<chartY>
+  // An ABSENT param must stay `undefined` so setView falls back to the bounds
+  // centre. Number(null) and Number("") are both 0 and both pass isFinite, so
+  // coercing first would forward the literal chart coordinate (0,0) — which is
+  // off the top-left corner of every layout — and frame blank sheet.
   const q = new URLSearchParams(location.search);
-  const z = Number(q.get("z"));
-  if (Number.isFinite(z) && z > 0) {
-    const cx = Number(q.get("cx")), cy = Number(q.get("cy"));
-    view.setView(z, Number.isFinite(cx) ? cx : undefined, Number.isFinite(cy) ? cy : undefined);
-  }
+  const num = (key: string) => {
+    const raw = q.get(key);
+    if (raw === null || raw.trim() === "") return undefined;
+    const n = Number(raw);
+    return Number.isFinite(n) ? n : undefined;
+  };
+  const z = num("z");
+
+  // mountChart fits against whatever box the canvas has at mount time and then
+  // latches `sized`, so that first measurement is the only one that ever counts
+  // — and it is not trustworthy. #chart-canvas takes ALL of its geometry from
+  // chart.css (`position:absolute; inset:0` inside a 100vh shell), so until that
+  // stylesheet applies the div is a static, zero-height box. Measuring it then
+  // yields a centring translate hundreds of px off, and because a stylesheet
+  // landing late fires no window `resize`, nothing ever corrects it. So watch
+  // the box itself and re-derive the view each time it changes.
+  const chart = view;
+  autoView = z !== undefined && z > 0
+    ? () => chart.setView(z, num("cx"), num("cy"))
+    : () => chart.fit();
+
+  new ResizeObserver(() => {
+    const r = canvas.getBoundingClientRect();
+    // A degenerate box means layout has not happened yet; measuring it is what
+    // caused the bug. Skip it — a later observation arrives with a real one.
+    if (!autoView || r.width < 2 || r.height < 2) return;
+    autoView();
+  }).observe(canvas);
+
+  // Panning or zooming by hand hands the view to the reader for good.
+  const release = () => { autoView = null; };
+  for (const ev of ["wheel", "pointerdown"]) canvas.addEventListener(ev, release, { passive: true });
 }
 
 function wireHud() {
-  document.getElementById("zoom-in")!.addEventListener("click", () => view?.zoomBy(1.35));
-  document.getElementById("zoom-out")!.addEventListener("click", () => view?.zoomBy(1 / 1.35));
-  document.getElementById("zoom-fit")!.addEventListener("click", () => { view?.fit(); view?.trace(null); });
+  // Zooming by hand is the reader taking the view over; Fit is them asking for
+  // it back, so it re-arms auto-fit — and drops any deep link, which is an
+  // opening frame, not a view the chart should snap back to on the next resize.
+  document.getElementById("zoom-in")!.addEventListener("click", () => { autoView = null; view?.zoomBy(1.35); });
+  document.getElementById("zoom-out")!.addEventListener("click", () => { autoView = null; view?.zoomBy(1 / 1.35); });
+  document.getElementById("zoom-fit")!.addEventListener("click", () => {
+    const chart = view;
+    if (chart) { autoView = () => chart.fit(); chart.fit(); }
+    view?.trace(null);
+  });
   document.getElementById("inspector-close")!.addEventListener("click", closeInspector);
 }
 

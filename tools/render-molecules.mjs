@@ -14,6 +14,9 @@ import { dirname, join } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const CACHE = join(ROOT, "data", "smiles.json");
+
+/** Above this heavy-atom count a species is a peptide/protein: name it, don't draw it. */
+const MACROMOLECULE_ATOMS = 120;
 const OUT = join(ROOT, "web", "public", "mol");
 
 const require = createRequire(join(ROOT, "package.json"));
@@ -51,16 +54,27 @@ async function main() {
   mkdirSync(OUT, { recursive: true });
 
   const index = {};
-  let ok = 0, skipped = 0, failed = 0;
+  let ok = 0, skipped = 0, failed = 0, macro = 0;
 
   for (const [key, entry] of Object.entries(cache)) {
     if (!entry?.smiles) { skipped++; continue; }
+
+    // Peptides and proteins get NO skeletal depiction. Drawing insulin's 404
+    // heavy atoms produced a 267KB file of 1172 paths that renders as an
+    // illegible black scribble at cell size — and the poster never draws a
+    // hormone's backbone, it names it. Cells without a depiction fall back to
+    // the name-only form, which is both faster and the higher-fidelity result.
+    // Margin is wide: insulin 404 and glucagon 246 are the only entries above
+    // 100; the largest genuine metabolite (a bile-acid CoA conjugate) is 80.
+    const heavyAtoms = (entry.smiles.match(/[A-Z]/g) || []).length;
+    if (heavyAtoms > MACROMOLECULE_ATOMS) { macro++; continue; }
+
     let mol;
     try {
       mol = RDKit.get_mol(entry.smiles);
       if (!mol || !mol.is_valid()) { failed++; mol?.delete(); continue; }
       // Size scales a little with molecule complexity so big molecules stay legible.
-      const heavy = (entry.smiles.match(/[A-Z]/g) || []).length;
+      const heavy = heavyAtoms;
       const w = Math.min(420, Math.max(150, 90 + heavy * 7));
       const h = Math.round(w * 0.8);
       const svg = cleanSvg(mol.get_svg(w, h));
@@ -79,7 +93,7 @@ async function main() {
   }
 
   writeFileSync(join(OUT, "index.json"), JSON.stringify(index));
-  console.log(`Rendered ${ok} molecule SVGs (${skipped} without SMILES, ${failed} failed) -> web/public/mol/`);
+  console.log(`Rendered ${ok} molecule SVGs (${skipped} without SMILES, ${macro} macromolecules named not drawn, ${failed} failed) -> web/public/mol/`);
 }
 
 main();

@@ -8,18 +8,32 @@
 # ceramide synthase step. They are co-substrates, not intermediates, so they never
 # join the spine.
 #
-# Ceramide is the hub, so both head-group columns hang off it. Sphingomyelin runs
-# down the right and glucosylceramide down the left; in both, the head group is
-# what actually moves, so the arrow rides on the donor->product pair and ceramide
-# enters and leaves on the side. That is also why the TNF line lands on SMPD1: the
-# 'sphingomyelin cycle' regenerates ceramide as a stress second messenger.
+# Ceramide is the hub, so both head-group columns hang off it: sphingomyelin down
+# the right, glucosylceramide down the left. Both arms RE-LIST ceramide as their
+# first step, the way the purine chart re-lists IMP, so that the bold arrow leaves
+# the ceramide cell itself. What moves in these steps is a head group, but what the
+# arrow must trace is the carbon backbone that survives the step — so ceramide is
+# the spine of each arm and the head-group donor/acceptor pair rides in as a +/-
+# side entry. Drawing it the other way round (donor on the arrow, ceramide on the
+# side) made the boldest mark in each quadrant assert a reaction that does not
+# exist, and left ceramide visually unconnected to its own products.
+#
+# The TNF line still lands on SMPD1: that hydrolysis is the 'sphingomyelin cycle'
+# that regenerates ceramide as a stress second messenger, which is why ceramide is
+# the side EXIT of the SMPD1 step and the column carries on to phosphocholine. A
+# second arrow back to the ceramide cell is not drawable — it would land exactly on
+# top of the SMS1 arrow (same two cells, same route reversed) and swap the two
+# enzymes' cofactor labels.
 #
 # The rheostat closes at the bottom — SPHK1 lifts sphingosine to S1P, SGPP1 brings
-# it back, SGPL1 cleaves what is left.
+# it back, SGPL1 cleaves what is left. SGPP1 is drawn as its own arm off S1P for
+# the same reason as above: the sphingoid backbone is what it conserves, so the
+# arrow runs S1P -> sphingosine with the hydrolysis pair on the side, not
+# H2O -> Pi with the two sphingoid species pushed into the side entries.
 #
 # Species carried in reactions[] but not drawable as +/- side entries, because
 # MPL's cofactor token stops at a hyphen (`+palmitoyl-coa` lexes as `+palmitoyl`
-# `-coa`). The three that matter are drawn as cells instead; the rest are noted here:
+# `-coa`). The two acyl donors are drawn as cells instead; the rest are noted here:
 #   sm4  ferro-/ferricytochrome b5 — DES1's electron donor/acceptor pair, re-reduced
 #        by cytochrome b5 reductase at the expense of NAD(P)H
 #   sm8  fatty acid — released alongside sphingosine by acid ceramidase
@@ -34,6 +48,9 @@
 pathway sphingolipid-metabolism "Sphingolipid metabolism (ceramide and the S1P rheostat)" {
   grid B3
   spacing 152
+  wrap 5   # both head-group arms now leave the ceramide cell itself, so ceramide
+           # needs open paper below it; the default 3-column serpentine put the
+           # SGPL1 tail in the corridor both arms have to cross
 
   spine at 0,0 {
     l-serine
@@ -65,33 +82,45 @@ pathway sphingolipid-metabolism "Sphingolipid metabolism (ceramide and the S1P r
     acyl-coa
   }
 
-  # Sphingomyelin column (Golgi out, lysosome back). Phosphocholine is the moiety
-  # in motion: SMS1 hands it from phosphatidylcholine to ceramide and releases DAG;
-  # acid sphingomyelinase strips it back off, regenerating ceramide.
+  # Sphingomyelin column (Golgi out, lysosome back). The ceramide backbone is what
+  # is conserved across SMS1, so it stays on the arrow and the phosphocholine donor
+  # pair rides in on the side: phosphatidylcholine in, DAG out. Acid sphingomyelinase
+  # then hydrolyses the head group back off; the column follows the phosphocholine
+  # that leaves and shows the regenerated ceramide as the side exit, because MPL
+  # cannot draw a second arrow back to ceramide without laying it exactly on top of
+  # the SMS1 arrow (same two cells, same route, reversed) and cross-attributing the
+  # two enzymes' cofactor arcs. The TNF line lands on SMPD1 all the same: that step
+  # IS the sphingomyelin cycle.
   branch from ceramide side right {
-    phosphatidylcholine
-    -> sgms1 [2.7.8.27] +ceramide -dag
+    ceramide
+    -> sgms1 [2.7.8.27] +phosphatidylcholine -dag
     sphingomyelin
     -> smpd1 [3.1.4.12] +h2o -ceramide
     phosphocholine
   }
 
-  # Glycosphingolipid column. Glucose is the moiety in motion, carried from
-  # UDP-glucose onto ceramide — the committed step of glycosphingolipid synthesis
-  # and the branch point to lactosylceramide, gangliosides and globosides.
+  # Glycosphingolipid column — the committed step of glycosphingolipid synthesis and
+  # the branch point to lactosylceramide, gangliosides and globosides. Again the
+  # ceramide backbone is the spine; glucose is the moiety in motion, arriving on the
+  # side from UDP-glucose. (Spelled `udpglucose` in the side entry, not the module's
+  # own `udp-glucose` id: MPL's cofactor token stops at a hyphen, so `+udp-glucose`
+  # would lex as `+udp` `-glucose`. The unhyphenated id names the same compound —
+  # KEGG C00029 — and is what the label lookup resolves against.)
   branch from ceramide side left {
-    udp-glucose
-    -> ugcg [2.4.1.80] +ceramide -udp
+    ceramide
+    -> ugcg [2.4.1.80] +udpglucose -udp
     glucosylceramide
   }
 
-  # S1P phosphatase, the counterweight to sphingosine kinase. Drawn the way the
-  # ketolysis limb is drawn: the arrow rides on the hydrolysis pair while the two
-  # sphingoid species enter and leave on the side.
+  # S1P phosphatase, the counterweight to sphingosine kinase: it walks the spine's
+  # last step back up. The sphingoid backbone is what is conserved across it, so the
+  # arrow runs S1P -> sphingosine and the hydrolysis pair enters and leaves on the
+  # side. (The two protons released with the Pi are left off, like the fatty acid at
+  # ASAH1 — see the notes above.)
   branch from s1p side left {
-    h2o
-    -> sgpp1 [3.1.3.114] +s1p -sphingosine
-    pi
+    s1p
+    -> sgpp1 [3.1.3.114] +h2o -pi
+    sphingosine
   }
 
   # reg_ceramide_spt — end-product feedback capping de novo synthesis at the

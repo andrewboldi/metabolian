@@ -136,6 +136,11 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const layerFlux = s("g", { class: "layer-flux" });
   const layerReg = s("g", { class: "layer-reg" });
   const layerNodes = s("g", { class: "layer-nodes" });
+  // Cofactor captions live ABOVE the cells. As children of the reaction group in
+  // layer-flux they painted below layer-nodes, so any cell's white-haloed name
+  // knocked a side-entry out mid-word. The red arcs stay down in layer-flux with
+  // the chemistry; only the text is lifted.
+  const layerCofactor = s("g", { class: "layer-cofactor" });
   // Enzyme names paint after the regulation rails. As children of layer-flux they
   // were drawn BEFORE layer-reg, so a rail crossing a name painted straight over
   // it and the white knockout halo — the poster's own trick — could not protect
@@ -144,7 +149,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   // Region titles paint last: they are map furniture and must sit on top of the
   // chemistry (with their knockout halo), not be struck through by it.
   const layerLabels = s("g", { class: "layer-labels" });
-  viewport.append(layerGrid, layerRegions, layerFlux, layerReg, layerNodes, layerEnzLabels, layerLabels);
+  viewport.append(layerGrid, layerRegions, layerFlux, layerReg, layerNodes, layerCofactor, layerEnzLabels, layerLabels);
   svg.append(viewport);
   canvas.append(svg);
 
@@ -214,12 +219,18 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   }
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
-  const enzymeLabels: { name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number; chars: number; full: string }[] = [];
-  // cofactor labels are fixed to their arc geometry, so they act as obstacles
-  // that enzyme names must route around rather than being moved themselves
-  const cofactorBoxes: { x: number; y: number; w: number; h: number }[] = [];
+  const enzymeLabels: { name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number; full: string; shown: string }[] = [];
+  // Cofactor captions were pinned to their arc geometry and registered only as
+  // obstacles for OTHER labels — the one text class on the sheet that was never
+  // itself moved. They are now deferred and placed against the same obstacle set.
+  const cofactorLabels: CofactorLabel[] = [];
+  // The text zone inside a cell — its name band, or the whole cell for a condensed
+  // column. A caption landing here is text-on-text, the worst outcome on the sheet;
+  // one landing on the structure area is merely text over a drawing, which reads.
+  const nameBoxes: { x: number; y: number; w: number; h: number }[] = [];
   const nodeEls = new Map<string, SVGGElement>();
   const edgeEls: { el: SVGElement; rxn: ChartRxn }[] = [];
+  const regGlyphs: { el: SVGGElement; x: number; y: number }[] = [];
 
   // ---------- flux reactions ----------
   for (const r of ir.reactions) {
@@ -243,19 +254,24 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const tx = mx + dir * 14;
       const anchor = dir > 0 ? "start" : "end";
       const full = r.enzymeName || r.enzyme || "";
-      const shownName = full.length > 34 ? full.slice(0, 32).replace(/[\s(,-]+$/, "") + "…" : full;
-      const name = s("text", { class: "enz-name lod-normal", x: tx, y: my - 2, "text-anchor": anchor }, [shownName]);
+      // Case is semantic in chemical notation, so the blanket CSS uppercase is
+      // switched off here and applied selectively by displayLabel().
+      const shown = displayLabel(full);
+      const name = s("text", {
+        class: "enz-name lod-normal", x: tx, y: my - 2, "text-anchor": anchor,
+        style: "text-transform:none",
+      }, [shown]);
       name.append(s("title", {}, [full]));
       name.addEventListener("click", (e) => { e.stopPropagation(); hooks.onEnzyme?.(r); });
       layerEnzLabels.append(name);
       const ecEl = r.ec ? s("text", { class: "enz-ec lod-detail", x: tx, y: my + 10, "text-anchor": anchor }, [`EC ${r.ec}`]) : null;
       if (ecEl) layerEnzLabels.append(ecEl);
       // register with the anti-collision placer that runs once everything exists
-      enzymeLabels.push({ name, ec: ecEl, mx, my, chars: shownName.length, full });
-      // cofactors enter/leave on a curved side-entry, Michal-style
+      enzymeLabels.push({ name, ec: ecEl, mx, my, full, shown });
+      // cofactors enter/leave on a curved side-entry, Michal-style. Only the arcs
+      // are committed here; the captions are placed after the cells exist.
       const elen = r.points.reduce((acc, p, i) => i ? acc + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0, 0);
-      const cof = cofactorSide(r, mx, my, -dir, elen);
-      g.append(cof);
+      g.append(cofactorSide(r, -dir, elen, cofactorLabels));
       // Effectors with no clean corridor are tagged onto the step itself, the way
       // the poster annotates a regulated reaction in tight space.
       const tags = (r as ChartRxn & { tags?: { effect: string; label: string; x: number; y: number }[] }).tags;
@@ -268,26 +284,50 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         tg.append(s("text", { x: tag.x - dir * 10 + 9, y: ty, fill: color, class: "eff-label" }, [tag.label]));
         g.append(tg);
       });
-      for (const t of Array.from(cof.querySelectorAll("text"))) {
-        const lx = Number(t.getAttribute("x")), ly = Number(t.getAttribute("y"));
-        const w = (t.textContent || "").length * 4.5;
-        cofactorBoxes.push({ x: t.getAttribute("text-anchor") === "end" ? lx - w : lx, y: ly - 9, w, h: 11 });
-      }
     }
     layerFlux.append(g);
   }
 
   // ---------- regulation ----------
+  // A rail terminates ON the flux line it regulates, so a glyph pinned to the
+  // terminus puts the black reaction arrow straight through the circle. Walk back
+  // along the rail to the first spot that clears the chemistry; the stub that is
+  // left over reads as the tick tying the glyph to its step. A fixed offset cannot
+  // do this — a rail often runs alongside a flux line rather than into it.
+  const fluxSegs: [number, number, number, number][] = [];
+  for (const r of ir.reactions) {
+    for (let i = 1; i < r.points.length; i++) {
+      fluxSegs.push([r.points[i - 1][0], r.points[i - 1][1], r.points[i][0], r.points[i][1]]);
+    }
+  }
+  const glyphClearance = (x: number, y: number) => {
+    for (const n of ir.nodes) if (x > n.x && x < n.x + n.w && y > n.y && y < n.y + n.h) return 0;
+    let d = Infinity;
+    for (const seg of fluxSegs) {
+      d = Math.min(d, distToSegment(x, y, seg[0], seg[1], seg[2], seg[3]));
+      if (d < 1) break;
+    }
+    return d;
+  };
   for (const reg of ir.regulation) {
     const g = s("g", { class: "reg" });
     const pts = reg.points.map((p) => p.join(",")).join(" ");
     g.append(s("polyline", { class: `reg-line${reg.effect === "activate" ? " activate" : ""}`, points: pts }));
-    const [ex, ey] = reg.points[reg.points.length - 1];
+    let ex = 0, ey = 0, clearest = -1;
+    for (const back of [13, 18, 24, 31, 39, 48]) {
+      const [x, y] = backAlongPath(reg.points as [number, number][], back);
+      const clear = glyphClearance(x, y);
+      if (clear > clearest) { clearest = clear; ex = x; ey = y; }
+      if (clear >= 9) break;                  // the circle clears the ink entirely
+    }
     const color = reg.effect === "activate" ? "#1a7f37" : "#c8102e";
-    const glyph = s("g", { class: "reg-glyph" });
-    glyph.append(s("circle", { cx: ex, cy: ey, r: 7, fill: "#fff", stroke: color, "stroke-width": 1.4 }));
-    glyph.append(s("text", { x: ex, y: ey + 3.5, fill: color }, [reg.effect === "activate" ? "+" : "–"]));
+    // Radius is zoom-compensated in apply(), the way --title-size is: a fixed
+    // 7-unit circle renders at ~2.5px on a sheet that fits at 35%.
+    const glyph = s("g", { class: "reg-glyph", transform: `translate(${ex},${ey})` });
+    glyph.append(s("circle", { cx: 0, cy: 0, r: 7, fill: "#fff", stroke: color, "stroke-width": 1.4 }));
+    glyph.append(s("text", { x: 0, y: 3.5, fill: color }, [reg.effect === "activate" ? "+" : "–"]));
     g.append(glyph);
+    regGlyphs.push({ el: glyph, x: ex, y: ey });
     layerReg.append(g);
   }
 
@@ -306,11 +346,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       // nodes gave incoming edges no bbox to clip against.
       g.append(s("rect", { class: "met-box", x: 0, y: 0, width: n.w, height: n.h }));
     } else {
-      // no structure to draw — this box exists only to hold the name, so it must
-      // appear and vanish WITH the name instead of leaving a hollow rectangle
-      g.append(s("rect", { class: "met-box name-only lod-normal", x: 0, y: 0, width: n.w, height: n.h }));
+      // A content-bearing cell keeps its frame at EVERY zoom level. Gating the
+      // frame behind lod-normal made these cells render as literally nothing at
+      // overview, so incoming arrowheads docked against blank paper.
+      g.append(s("rect", { class: "met-box name-only", x: 0, y: 0, width: n.w, height: n.h }));
     }
-    const name = n.label.toUpperCase();
+    const name = displayLabel(n.label);
     // Wrap to the cell's own width (11px uppercase advances ~7px with tracking)
     // rather than a fixed character count, which overflowed narrow cells.
     const NAME_CH = 7;
@@ -321,25 +362,32 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       x: n.w / 2, y: (isProtein ? 34 : 12) + i * 11,
     }, [ln])));
     const top = 12 + shown.length * 11;
-    // Michal's condensed column: stacked atom rows instead of a skeletal drawing
+    // Michal's condensed column: stacked atom rows instead of a skeletal drawing.
+    // Carries the same LOD class as the name so a condensed cell's contents appear
+    // and disappear WITH its frame, never as unframed floating text.
     const cond = (n as ChartNode & { condensed?: string[] }).condensed;
     if (cond?.length) {
       cond.forEach((row, i) => g.append(s("text", {
-        class: "cond-row", x: n.w / 2, y: top + 12 + i * 13,
+        class: "cond-row lod-normal", x: n.w / 2, y: top + 12 + i * 13,
       }, [row])));
     }
     if (n.formula) g.append(s("text", { class: "met-formula lod-detail", x: n.w / 2, y: n.h - 4 }, [n.formula]));
+    // a condensed cell is text all the way down; every other cell only at the top
+    nameBoxes.push({ x: n.x, y: n.y, w: n.w, h: cond?.length ? n.h : top });
     g.setAttribute("data-structure-top", String(top));
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });
     layerNodes.append(g);
     nodeEls.set(n.id, g);
   }
 
-  // ---------- enzyme label placement ----------
+  // ---------- label placement ----------
   // Labels must not cross a metabolite cell or another label. Try each candidate
-  // placement around the reaction midpoint and take the first clear one.
-  (function placeEnzymeLabels() {
-    const FONT = 10, EC_H = 11;
+  // placement around the reaction midpoint and take the first clear one. Enzyme
+  // names go first (they identify the step); cofactor captions are then placed
+  // against the SAME obstacle set, so the two classes are mutually aware instead
+  // of one class routing around a fixed guess made by the other.
+  (function placeLabels() {
+    const FONT = 10, EC_H = 11, COF = 9;
     const cells = ir.nodes.map((n) => ({ x: n.x - 4, y: n.y - 4, w: n.w + 8, h: n.h + 8 }));
     // Regulation rails and scaffolding hairlines are ink too — a label that lands
     // on one gets struck through at its baseline. Reserve a thin corridor along
@@ -359,23 +407,46 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // Rails are a SOFT obstacle: preferred-against, never disqualifying. Treating
     // them as hard blockers cleared the strike-throughs but demoted half the
     // labels to detail zoom, which hides content rather than fixing it.
-    const taken: { x: number; y: number; w: number; h: number }[] = [...cofactorBoxes];
-    const hit = (b: { x: number; y: number; w: number; h: number }, list: typeof taken) =>
+    type Box = { x: number; y: number; w: number; h: number };
+    const taken: Box[] = [];
+    const hit = (b: Box, list: Box[]) =>
       list.some((o) => !(b.x + b.w <= o.x || o.x + o.w <= b.x || b.y + b.h <= o.y || o.y + o.h <= b.y));
+    const overlap = (b: Box, list: Box[]) =>
+      list.reduce((acc, o) => {
+        const ox = Math.min(b.x + b.w, o.x + o.w) - Math.max(b.x, o.x);
+        const oy = Math.min(b.y + b.h, o.y + o.h) - Math.max(b.y, o.y);
+        return acc + (ox > 0 && oy > 0 ? ox * oy : 0);
+      }, 0);
 
-    const CH = FONT * 0.52;               // mean glyph advance
-    /** How much room a label has before it runs into something, from x outward. */
-    const channel = (x: number, y: number, anchor: string) => {
+    // Real extents, not a guessed advance. .enz-name is text-transform:uppercase
+    // Helvetica with .02em tracking and runs ~0.63em, not the 0.52em this placer
+    // assumed — so every collision box and every measured channel used to be ~20%
+    // narrower than its own ink and labels were committed into space they did not
+    // fit. Measured once per string and cached.
+    const measEnz = textMeasurer(svg, "enz-name", FONT * 0.63);
+    const measCof = textMeasurer(svg, "cofactor-label", COF * 0.54);
+    const SAMPLE = "DEHYDROGENASE SYNTHASE TRANSFERASE REDUCTASE KINASE";
+    const CH = Math.max(4, measEnz.width(SAMPLE) / SAMPLE.length);   // mean glyph advance
+
+    /**
+     * How much room a label has before it runs into something, from x outward.
+     * `up`/`down` are the label's real ink extent either side of the baseline: a
+     * wrapped name's second line and its EC number occupy bands of their own, and
+     * testing only the first line let them be placed straight through a cell.
+     */
+    const channel = (x: number, y: number, anchor: string, up: number, down: number) => {
       let limit = 320;
-      for (const o of [...cells, ...taken]) {
-        if (y + 2 < o.y || y - FONT - 2 > o.y + o.h) continue;   // not on this band
+      const scan = (o: Box) => {
+        if (y + down + 2 < o.y || y - up - 2 > o.y + o.h) return;   // not on this band
         if (anchor === "start" && o.x > x) limit = Math.min(limit, o.x - x - 5);
         else if (anchor === "end" && o.x + o.w < x) limit = Math.min(limit, x - (o.x + o.w) - 5);
         else if (anchor === "middle") {
           if (o.x > x) limit = Math.min(limit, (o.x - x - 5) * 2);
           else if (o.x + o.w < x) limit = Math.min(limit, (x - (o.x + o.w) - 5) * 2);
         }
-      }
+      };
+      for (const o of cells) scan(o);
+      for (const o of taken) scan(o);
       return Math.max(0, limit);
     };
 
@@ -391,19 +462,32 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       // long names overrun their neighbour regardless of where they were placed.
       let best: { c: typeof candidates[0]; avail: number } | null = null;
       for (const c of candidates) {
-        const avail = channel(L.mx + c.dx, L.my + c.dy, c.anchor);
+        const avail = channel(L.mx + c.dx, L.my + c.dy, c.anchor, FONT, 0);
         if (!best || avail > best.avail) best = { c, avail };
       }
       const chosen = best!.c;
-      const roomChars = Math.floor(best!.avail / CH);
-      // Below ~12 characters even a wrapped name degrades into a fragment like
-      // "Delta4- / 3-o… (AKR1D1)". A label that only appears on zoom is more
-      // honest than a mangled one, so lay it out comfortably and defer it.
-      const cramped = roomChars < 12;
-      const maxChars = cramped ? 30 : Math.max(3, roomChars);
+      const budget = (avail: number) => {
+        // Below ~12 characters even a wrapped name degrades into a fragment like
+        // "Delta4- / 3-o… (AKR1D1)". A label that only appears on zoom is more
+        // honest than a mangled one, so lay it out comfortably and defer it.
+        const roomChars = Math.floor(avail / CH);
+        return { cramped: roomChars < 12, maxChars: roomChars < 12 ? 30 : Math.max(3, roomChars) };
+      };
       // Wrap to the measured channel instead of truncating to it: the gene symbol
       // stays on the sheet, which is what makes a step identifiable in print.
-      const lines = wrapEnzymeName(L.full, maxChars);
+      let { cramped, maxChars } = budget(best!.avail);
+      let lines = wrapEnzymeName(L.shown, maxChars);
+      // The first pass sized the channel as if the label were one line. A wrapped
+      // name plus an EC number occupies a much deeper band, which can run into an
+      // obstacle the single-line test never saw — re-measure against the real band.
+      const below = () => FONT * (lines.length - 1) + (L.ec ? EC_H : 0);
+      if (below() > 0) {
+        const avail2 = channel(L.mx + chosen.dx, L.my + chosen.dy, chosen.anchor, FONT, below());
+        if (avail2 < best!.avail) {
+          ({ cramped, maxChars } = budget(avail2));
+          lines = wrapEnzymeName(L.shown, maxChars);
+        }
+      }
       // setting textContent would drop the <title> child that carries the full
       // name on hover — rebuild the node explicitly
       L.name.replaceChildren(
@@ -411,7 +495,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         s("title", {}, [L.full]),
       );
       if (L.ec) L.ec.classList.add("lod-detail");
-      const w = Math.max(...lines.map((l) => l.length)) * CH;
+      const w = Math.max(...lines.map((l) => measEnz.width(l)));
       const h = FONT * lines.length + (L.ec ? EC_H : 0);
 
       const commit = (c: { dx: number; dy: number; anchor: string }, x: number, y: number) => {
@@ -426,12 +510,6 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
           L.ec.setAttribute("text-anchor", c.anchor);
         }
       };
-      const overlap = (b: { x: number; y: number; w: number; h: number }, list: typeof taken) =>
-        list.reduce((acc, o) => {
-          const ox = Math.min(b.x + b.w, o.x + o.w) - Math.max(b.x, o.x);
-          const oy = Math.min(b.y + b.h, o.y + o.h) - Math.max(b.y, o.y);
-          return acc + (ox > 0 && oy > 0 ? ox * oy : 0);
-        }, 0);
 
       let placed = false;
       if (cramped) {
@@ -474,10 +552,98 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         if (fallback) { commit(fallback.c, fallback.x, fallback.y); taken.push(fallback.box); }
       }
     }
+
+    // ---------- cofactor captions ----------
+    // Same candidate-and-commit treatment the enzyme names get. The caption walks
+    // outward along its own arc and, failing that, flips to the far side of the
+    // step; the arc's outer end is rebuilt from whichever candidate wins, so the
+    // caption and the arc it belongs to can never come apart.
+    const b = ir.bounds;
+    for (const L of cofactorLabels) {
+      // A multi-species entry used to be one ' + ' run that shot off across the
+      // sheet. Stack it instead — the poster writes side entries as a column. A
+      // single species with no short form ("Enzyme N6-(dihydrolipoyl)lysine …")
+      // still overruns the widest cell on the sheet, so wrap that too rather than
+      // hand the placer a box nowhere can hold.
+      // No side-entry may be wider than a cell — that is the sheet's own grammar,
+      // and measured over the atlas it is also where caption-on-name collisions
+      // bottom out (19, against 21 for an unbounded run 224 units wide).
+      const CAP = 120;
+      const wrapToWidth = (text: string): string[] => {
+        if (measCof.width(text) <= CAP) return [text];
+        const out: string[] = [];
+        let cur = "";
+        for (const word of text.split(/\s+/)) {
+          const next = cur ? `${cur} ${word}` : word;
+          if (cur && measCof.width(next) > CAP) { out.push(cur); cur = word; } else cur = next;
+        }
+        if (cur) out.push(cur);
+        return out;
+      };
+      const joined = L.species.join(" + ");
+      const lines = (measCof.width(joined) <= CAP ? [joined] : L.species).flatMap(wrapToWidth);
+      L.text.replaceChildren(...lines.map((t, i) => s("tspan", { dy: i === 0 ? 0 : COF + 1 }, [t])));
+      const w = Math.max(...lines.map((t) => measCof.width(t)));
+      const h = COF * lines.length + 2;
+
+      // Sliding the entry ALONG its own step is the move that actually frees space
+      // on a crowded sheet — and it is the poster's own habit: a substrate joins
+      // upstream of the midpoint, a product leaves downstream of it.
+      const fracs = L.side === "in" ? [0.34, 0.5, 0.22, 0.62, 0.14] : [0.66, 0.5, 0.78, 0.38, 0.86];
+      type Spot = { mx: number; my: number; d: number; rx: number; ry: number; anchor: string; x: number; y: number; box: Box; cost: number };
+      let best: Spot | null = null;
+      outer:
+      for (const frac of fracs) {
+        const [mx, my] = pointAlong(L.points, frac);
+        for (const d of [L.dir, -L.dir]) {
+          for (const grow of [0, 12, 26, 44]) {
+            const rx = L.rx + grow;
+            // reaching further out also lifts the entry clear of the line, as far
+            // as the step's own length allows
+            const ry = Math.min(L.ryMax, L.ry + grow * 0.45);
+            // an "in" entry stacks UPWARD so its last line sits beside the arc
+            const ax = mx + d * (rx + 4);
+            const ay = L.side === "in" ? my - ry - 2 - COF * (lines.length - 1) : my + ry + 10;
+            const rawX = d > 0 ? ax : ax - w;
+            const rawY = ay - COF;
+            // nothing may be drawn off the sheet
+            const cx = Math.min(Math.max(rawX, b.x + 2), Math.max(b.x + 2, b.x + b.w - w - 2));
+            const cy = Math.min(Math.max(rawY, b.y + 2), Math.max(b.y + 2, b.y + b.h - h - 2));
+            const box = { x: cx, y: cy, w, h };
+            // Text on text is the worst outcome on this sheet — worse than text
+            // over a structure, which still reads. Price it accordingly so a
+            // caption with nowhere clean to go sits over a drawing, not a name.
+            const cost = overlap(box, cells) + (overlap(box, taken) + overlap(box, nameBoxes)) * 4
+              + (hit(box, railBoxes) ? 60 : 0);
+            const spot: Spot = {
+              mx, my, d, rx, ry, anchor: d > 0 ? "start" : "end",
+              x: ax + (cx - rawX), y: ay + (cy - rawY), box, cost,
+            };
+            if (!best || spot.cost < best.cost) best = spot;
+            if (!cost) break outer;
+          }
+        }
+      }
+      const c = best!;
+      L.text.setAttribute("x", String(c.x));
+      L.text.setAttribute("y", String(c.y));
+      L.text.setAttribute("text-anchor", c.anchor);
+      for (const ts of Array.from(L.text.querySelectorAll("tspan"))) ts.setAttribute("x", String(c.x));
+      // the arc follows the caption, so the two can never come apart
+      L.arc.setAttribute("d", cofactorArc(c.mx, c.my, c.d, c.rx, c.ry, L.side));
+      taken.push(c.box);
+      layerCofactor.append(L.text);
+    }
+
+    measEnz.done();
+    measCof.done();
   })();
 
   // ---------- pan / zoom ----------
   let k = 1, tx = 0, ty = 0;
+  // Has the reader taken ownership of the framing (zoomed, panned or deep-linked)?
+  // While false the chart is free to reframe itself when the canvas resizes.
+  let userAdjusted = false;
   const apply = () => {
     viewport.setAttribute("transform", `translate(${tx},${ty}) scale(${k})`);
     const lod = k < LOD_NORMAL ? "overview" : k < LOD_DETAIL ? "normal" : "detail";
@@ -488,21 +654,54 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // size so the sheet stays navigable when zoomed all the way out.
     svg.style.setProperty("--title-size", `${Math.min(220, Math.max(14, 17 / k))}px`);
     svg.style.setProperty("--grid-size", `${Math.min(180, Math.max(12, 15 / k))}px`);
+    // A regulation glyph is a legend key, not chemistry drawn to scale: hold it at
+    // a readable size instead of letting a 7-unit circle shrink to ~2.5px on a
+    // sheet that fits at 35%.
+    const gs = Math.min(8, Math.max(1, 6 / (7 * k)));
+    for (const gl of regGlyphs) gl.el.setAttribute("transform", `translate(${gl.x},${gl.y}) scale(${gs})`);
     declutterLabels(lod);
     scheduleLoad();
     hooks.onZoom?.(k, lod);
   };
 
-  function fit() {
+  /** The clear area fit() frames into: the canvas minus the floating HUD and help bar. */
+  function clearArea() {
     const r = canvas.getBoundingClientRect();
-    // The HUD and help bar float over the canvas — fit into the clear area, not
-    // the raw rect, or the top and bottom of the drawing hide under them.
     const insetTop = 108, insetBottom = 72, insetX = 32;
-    const availW = Math.max(120, r.width - insetX * 2);
-    const availH = Math.max(120, r.height - insetTop - insetBottom);
-    k = Math.min(availW / ir.bounds.w, availH / ir.bounds.h);
-    tx = insetX + (availW - ir.bounds.w * k) / 2 - ir.bounds.x * k;
-    ty = insetTop + (availH - ir.bounds.h * k) / 2 - ir.bounds.y * k;
+    return {
+      x: insetX, y: insetTop,
+      w: Math.max(120, r.width - insetX * 2),
+      h: Math.max(120, r.height - insetTop - insetBottom),
+    };
+  }
+
+  /**
+   * Keep the sheet reconciled with the clear area after a zoom or a deep link.
+   * Only fit() ever consulted ir.bounds, so any subsequent zoom could leave a wide
+   * dead band on one edge while clipping content off the opposite one. When the
+   * scaled sheet is larger than the clear area it must cover it (no dead band);
+   * when it is smaller it must sit fully inside it (it cannot be pushed off).
+   */
+  function clampView() {
+    const a = clearArea();
+    const clampAxis = (pos: number, size: number, min: number, extent: number) => {
+      const lo = Math.min(min, min + extent - size), hi = Math.max(min, min + extent - size);
+      return Math.min(hi, Math.max(lo, pos));
+    };
+    const cw = ir.bounds.w * k, ch = ir.bounds.h * k;
+    const left = ir.bounds.x * k + tx, top = ir.bounds.y * k + ty;
+    tx += clampAxis(left, cw, a.x, a.w) - left;
+    ty += clampAxis(top, ch, a.y, a.h) - top;
+  }
+
+  function fit() {
+    const a = clearArea();
+    k = Math.min(a.w / ir.bounds.w, a.h / ir.bounds.h);
+    tx = a.x + (a.w - ir.bounds.w * k) / 2 - ir.bounds.x * k;
+    ty = a.y + (a.h - ir.bounds.h * k) / 2 - ir.bounds.y * k;
+    // A fresh fit is the framing the chart wants; stop treating the view as
+    // user-owned so a later resize is free to reframe it.
+    userAdjusted = false;
     apply();
   }
 
@@ -514,6 +713,8 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     tx = px - ((px - tx) / k) * nk;
     ty = py - ((py - ty) / k) * nk;
     k = nk;
+    userAdjusted = true;
+    clampView();
     apply();
   }
 
@@ -532,6 +733,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   canvas.addEventListener("pointermove", (e) => {
     if (!dragging) return;
     tx += e.clientX - lx; ty += e.clientY - ly; lx = e.clientX; ly = e.clientY;
+    userAdjusted = true;
     apply();
   });
   const endDrag = () => { dragging = false; canvas.classList.remove("dragging"); };
@@ -620,7 +822,17 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
           || root.getAttribute("viewBox") || `0 0 ${n.molSize?.w ?? 200} ${n.molSize?.h ?? 160}`;
         const top = Number(g.getAttribute("data-structure-top") || 16);
         const inner = s("svg", { x: 4, y: top, width: n.w - 8, height: n.h - top - 12, viewBox: vb, preserveAspectRatio: "xMidYMid meet", class: "mol-inline" });
-        for (const child of Array.from(root.childNodes)) inner.append(child.cloneNode(true));
+        // RDKit paints its canvas with a full-bleed opaque white rect before the
+        // bonds. Cloned in, it knocks out everything already drawn under the cell —
+        // and because the inner <svg> clips to its own viewport, it wipes the whole
+        // cell interior, taking the red cofactor arcs with it. Drop the backdrop and
+        // keep only the ink; the sheet is white paper anyway.
+        const srcW = Number(root.getAttribute("width")?.replace(/px$/, "")) || n.molSize?.w || 0;
+        const srcH = Number(root.getAttribute("height")?.replace(/px$/, "")) || n.molSize?.h || 0;
+        for (const child of Array.from(root.childNodes)) {
+          if (isBackdropRect(child, srcW, srcH)) continue;
+          inner.append(child.cloneNode(true));
+        }
         g.append(inner);
       } catch { /* structure is an enhancement; never break the chart */ }
     }
@@ -659,21 +871,37 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
 
   canvas.addEventListener("click", (e) => { if (e.target === svg || e.target === canvas) trace(null); });
 
-  let sized = false;
-  addEventListener("resize", () => { if (!sized) fit(); else apply(); }, { passive: true });
+  // Reframe on resize. The old `let sized = false; …; fit(); sized = true;` set the
+  // flag synchronously on the next line, so the `!sized` branch was unreachable from
+  // any real resize event and the chart only ever rescaled a stale k. A
+  // ResizeObserver also catches the cases `resize` misses entirely — the inspector
+  // opening, a CSS layout change — and is debounced to one frame.
+  let refitPending = 0;
+  const onResize = () => {
+    if (refitPending) return;
+    refitPending = requestAnimationFrame(() => {
+      refitPending = 0;
+      // Only reframe while the view is still the chart's own. Once the reader has
+      // zoomed or panned, keep their framing and merely reconcile it.
+      if (userAdjusted) { clampView(); apply(); } else fit();
+    });
+  };
+  new ResizeObserver(onResize).observe(canvas);
   fit();
-  sized = true;
 
   /** Deep-linkable view: centre chart coords (cx,cy) at zoom k. */
   function setView(nk: number, cx?: number, cy?: number) {
-    const r = canvas.getBoundingClientRect();
+    const a = clearArea();
     k = Math.min(6, Math.max(0.08, nk));
     const targetX = cx ?? ir.bounds.x + ir.bounds.w / 2;
     const targetY = cy ?? ir.bounds.y + ir.bounds.h / 2;
     // centre in the CLEAR area, not the raw rect — the HUD and help bar float over it
-    const insetTop = 108, insetBottom = 72;
-    tx = r.width / 2 - targetX * k;
-    ty = insetTop + (r.height - insetTop - insetBottom) / 2 - targetY * k;
+    tx = a.x + a.w / 2 - targetX * k;
+    ty = a.y + a.h / 2 - targetY * k;
+    // A deep link is a framing request, not a licence to strand the sheet off-screen:
+    // reconcile it against the bounds the same way a zoom is reconciled.
+    userAdjusted = true;
+    clampView();
     apply();
   }
 
@@ -686,8 +914,29 @@ function marker(id: string, color: string) {
   return m;
 }
 
-/** True midpoint measured along the polyline, so labels sit ON detoured routes. */
-function midpoint(points: [number, number][]): [number, number] {
+/**
+ * RDKit's opaque full-canvas backdrop: `<rect fill:#FFFFFF width=<canvas> x=0 y=0>`,
+ * emitted before every depiction. Structures themselves are paths and text, so a
+ * white rect covering the whole source canvas is never chemistry — but a small
+ * white rect might be (a knockout behind an atom label), hence the coverage test
+ * rather than a blanket "drop every white rect".
+ */
+function isBackdropRect(node: Node, srcW: number, srcH: number): boolean {
+  if (node.nodeType !== 1) return false;
+  const el = node as Element;
+  if (el.tagName.toLowerCase() !== "rect") return false;
+  const style = (el.getAttribute("style") || "").toLowerCase();
+  const styleFill = /(?:^|;)\s*fill\s*:\s*([^;]+)/.exec(style)?.[1]?.trim();
+  const fill = (styleFill || el.getAttribute("fill") || "").trim().toLowerCase();
+  if (fill !== "#ffffff" && fill !== "#fff" && fill !== "white") return false;
+  const num = (a: string) => Number(el.getAttribute(a)) || 0;
+  if (num("x") > 1 || num("y") > 1) return false;
+  // covers (essentially) the whole source canvas
+  return srcW > 0 && srcH > 0 && num("width") >= srcW * 0.98 && num("height") >= srcH * 0.98;
+}
+
+/** The point `frac` of the way along a polyline, so labels sit ON detoured routes. */
+function pointAlong(points: [number, number][], frac: number): [number, number] {
   if (points.length < 2) return points[0] || [0, 0];
   const seg: number[] = [];
   let total = 0;
@@ -695,10 +944,11 @@ function midpoint(points: [number, number][]): [number, number] {
     const d = Math.hypot(points[i][0] - points[i - 1][0], points[i][1] - points[i - 1][1]);
     seg.push(d); total += d;
   }
+  const target = total * frac;
   let walked = 0;
   for (let i = 0; i < seg.length; i++) {
-    if (walked + seg[i] >= total / 2) {
-      const t = seg[i] ? (total / 2 - walked) / seg[i] : 0;
+    if (walked + seg[i] >= target) {
+      const t = seg[i] ? (target - walked) / seg[i] : 0;
       return [
         points[i][0] + (points[i + 1][0] - points[i][0]) * t,
         points[i][1] + (points[i + 1][1] - points[i][1]) * t,
@@ -709,17 +959,130 @@ function midpoint(points: [number, number][]): [number, number] {
   return points[points.length - 1];
 }
 
-/** Michal's side-entry: cofactors swing in on a quarter arc across the reaction arrow. */
-function cofactorSide(r: ChartRxn, mx: number, my: number, dir: number, edgeLen = 120): SVGGElement {
+/** True midpoint measured along the polyline. */
+function midpoint(points: [number, number][]): [number, number] {
+  return pointAlong(points, 0.5);
+}
+
+interface CofactorLabel {
+  text: SVGTextElement; arc: SVGPathElement;
+  points: [number, number][]; dir: number; rx: number; ry: number; ryMax: number;
+  side: "in" | "out"; species: string[];
+}
+
+/** The quarter arc a side-entry swings in on, as a function of the side it takes. */
+function cofactorArc(mx: number, my: number, dir: number, rx: number, ry: number, side: "in" | "out"): string {
+  return side === "in"
+    ? `M ${mx + dir * rx} ${my - ry} Q ${mx + dir * rx * 0.5} ${my - ry * 0.2} ${mx} ${my - 2}`
+    : `M ${mx} ${my + 2} Q ${mx + dir * rx * 0.5} ${my + ry * 0.2} ${mx + dir * rx} ${my + ry}`;
+}
+
+/**
+ * Michal's side-entry: cofactors swing in on a quarter arc across the reaction
+ * arrow. Only the ARCS are committed here — they belong down in the flux layer
+ * with the chemistry. The captions are handed to the placer, which decides the
+ * side and reach and then rebuilds the arc to match.
+ */
+function cofactorSide(r: ChartRxn, dir: number, edgeLen: number, out: CofactorLabel[]): SVGGElement {
   const g = s("g", { class: "cofactor lod-detail" });
-  const R = Math.max(12, Math.min(26, edgeLen * 0.22));
-  if (r.inLabels?.length) {
-    g.append(s("path", { class: "cofactor-arc", d: `M ${mx + dir * R} ${my - R} Q ${mx + dir * R * 0.5} ${my - R * 0.2} ${mx} ${my - 2}`, "marker-end": "url(#arrow-reg)" }));
-    g.append(s("text", { class: "cofactor-label", x: mx + dir * (R + 4), y: my - R - 2, "text-anchor": dir > 0 ? "start" : "end" }, [r.inLabels.join(" + ")]));
-  }
-  if (r.outLabels?.length) {
-    g.append(s("path", { class: "cofactor-arc", d: `M ${mx} ${my + 2} Q ${mx + dir * R * 0.5} ${my + R * 0.2} ${mx + dir * R} ${my + R}`, "marker-end": "url(#arrow-reg)" }));
-    g.append(s("text", { class: "cofactor-label", x: mx + dir * (R + 4), y: my + R + 10, "text-anchor": dir > 0 ? "start" : "end" }, [r.outLabels.join(" + ")]));
-  }
+  const points = r.points as [number, number][];
+  const [mx, my] = midpoint(points);
+  const rx = Math.max(12, Math.min(26, edgeLen * 0.22));
+  // The arc may never reach further ALONG the step than the step is long, or the
+  // caption is parked past its own arrowhead on a short link. That ceiling is what
+  // the placer is allowed to spend when it needs to escape upward or downward.
+  const ry = Math.max(8, Math.min(rx, edgeLen / 2 - 8));
+  const ryMax = Math.max(ry, Math.min(ry * 2.2, edgeLen / 2 - 8));
+  const add = (species: string[], side: "in" | "out") => {
+    const arc = s("path", { class: "cofactor-arc", d: cofactorArc(mx, my, dir, rx, ry, side), "marker-end": "url(#arrow-reg)" });
+    g.append(arc);
+    out.push({ text: s("text", { class: "cofactor-label lod-detail" }), arc, points, dir, rx, ry, ryMax, side, species });
+  };
+  if (r.inLabels?.length) add(r.inLabels, "in");
+  if (r.outLabels?.length) add(r.outLabels, "out");
   return g;
+}
+
+/** Perpendicular distance from a point to a line segment. */
+function distToSegment(px: number, py: number, x1: number, y1: number, x2: number, y2: number): number {
+  const dx = x2 - x1, dy = y2 - y1, l2 = dx * dx + dy * dy;
+  const t = l2 ? Math.max(0, Math.min(1, ((px - x1) * dx + (py - y1) * dy) / l2)) : 0;
+  return Math.hypot(px - (x1 + dx * t), py - (y1 + dy * t));
+}
+
+/** The point `dist` back along a polyline from its end, clamped to half its length. */
+function backAlongPath(points: [number, number][], dist: number): [number, number] {
+  const end = points[points.length - 1];
+  if (points.length < 2) return end;
+  let total = 0;
+  for (let i = 1; i < points.length; i++) total += Math.hypot(points[i][0] - points[i - 1][0], points[i][1] - points[i - 1][1]);
+  let left = Math.min(dist, total / 2);
+  for (let i = points.length - 1; i > 0; i--) {
+    const [x2, y2] = points[i], [x1, y1] = points[i - 1];
+    const seg = Math.hypot(x2 - x1, y2 - y1);
+    if (seg >= left) {
+      const t = seg ? left / seg : 0;
+      return [x2 + (x1 - x2) * t, y2 + (y1 - y2) * t];
+    }
+    left -= seg;
+  }
+  return points[0];
+}
+
+/**
+ * Real text extents, cached per string. Every collision box on this sheet used to
+ * be sized from a guessed mean advance, which is how labels got committed into
+ * space they did not fit. Falls back to the guess when the platform cannot measure
+ * (headless, or the SVG is not laid out yet) so layout still happens, just coarser.
+ */
+function textMeasurer(svg: SVGSVGElement, cls: string, fallbackCh: number) {
+  const probe = s("text", {
+    class: cls, x: -9999, y: -9999,
+    style: "visibility:hidden;text-transform:none;pointer-events:none",
+  });
+  svg.append(probe);
+  const cache = new Map<string, number>();
+  return {
+    width(str: string): number {
+      if (!str) return 0;
+      const seen = cache.get(str);
+      if (seen !== undefined) return seen;
+      let w = 0;
+      try { probe.textContent = str; w = probe.getComputedTextLength(); } catch { w = 0; }
+      if (!(w > 0)) w = str.length * fallbackCh;
+      cache.set(str, w);
+      return w;
+    },
+    done() { probe.remove(); },
+  };
+}
+
+// Case is semantic in chemical notation and a blanket toUpperCase() destroys it:
+// Pb is lead but PB is nothing, CoA is coenzyme A but COA is not, and the d in
+// dTMP, the c in cAMP and the n in n-butyrate ARE part of the compound's identity.
+// Michal still sets names in caps, so we still uppercase — only the runs where
+// case carries no meaning.
+const ELEMENT_SYMBOLS = new Set([
+  "Ag", "Al", "Ba", "Br", "Ca", "Cd", "Cl", "Co", "Cr", "Cu", "Fe", "Hg", "Li",
+  "Mg", "Mn", "Mo", "Na", "Ni", "Pb", "Pt", "Se", "Si", "Sn", "Sr", "Ti", "Zn",
+]);
+// stereo descriptors and locant prefixes, which are lower case by convention
+const LOWER_DESCRIPTORS = new Set([
+  "alpha", "beta", "gamma", "delta", "epsilon", "omega", "cis", "trans",
+  "myo", "scyllo", "sn", "tert", "ortho", "erythro", "threo",
+]);
+
+/** Uppercase a label the way the poster does, without mangling its chemistry. */
+export function displayLabel(text: string): string {
+  return text.replace(/[A-Za-z]+/g, (run) => {
+    if (ELEMENT_SYMBOLS.has(run)) return run;
+    if (LOWER_DESCRIPTORS.has(run.toLowerCase())) return run.toLowerCase();
+    // a single lower-case letter is a locant, not a word: n-butyrate is normal
+    // butyrate, N-butyrate would be nitrogen-substituted
+    if (run.length === 1 && run === run.toLowerCase()) return run;
+    // a capital following a lower-case letter is deliberate abbreviation casing
+    // (CoA, dTMP, cAMP, mRNA, pH) — the source has already made that call
+    if (/[a-z][A-Z]/.test(run)) return run;
+    return run.toUpperCase();
+  });
 }
