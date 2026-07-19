@@ -182,10 +182,21 @@ else {
 }
 
 if (BUDGET) {
-  const over = results.filter((r) => (r.allStructuresMs ?? Infinity) > BUDGET);
+  // Budget what the reader actually feels. Issue #309 was "cannot see anything
+  // for several minutes", so time-to-first-cell is the metric that matters and
+  // applies to every chart.
+  //
+  // allStructuresMs only counts where hydration actually completes: the master
+  // sheet deliberately hydrates the structures in view (24 of 278) and leaves
+  // the rest, so it never reports an "all" time. Treating that absence as
+  // Infinity failed the build on the one chart whose laziness is the point.
+  const over = results.filter((r) =>
+    (r.firstCellMs ?? Infinity) > BUDGET || (r.allStructuresMs != null && r.allStructuresMs > BUDGET));
   if (over.length) {
-    console.error(`\n✗ ${over.length} chart(s) exceeded the ${BUDGET}ms budget to finish drawing.`);
+    console.error(`\n✗ ${over.length} chart(s) exceeded the ${BUDGET}ms budget: ` +
+      over.map((r) => `${r.id} (first cell ${Math.round(r.firstCellMs ?? -1)}ms)`).join(", "));
     process.exit(1);
   }
-  console.log(`\n✓ all charts finished drawing within ${BUDGET}ms.`);
+  console.log(`\n✓ every chart drew its first cell within ${BUDGET}ms, and every chart that ` +
+    `completes hydration finished within it.`);
 }
