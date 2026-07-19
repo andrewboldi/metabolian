@@ -56,9 +56,12 @@ class CDP {
       if (msg.id && this.pending.has(msg.id)) { this.pending.get(msg.id)(msg.result ?? {}); this.pending.delete(msg.id); }
     });
   }
-  send(method, params = {}) {
+  send(method, params = {}, sessionId = this.sessionId) {
     const id = ++this.id;
-    return new Promise((res) => { this.pending.set(id, res); this.ws.send(JSON.stringify({ id, method, params })); });
+    return new Promise((res) => {
+      this.pending.set(id, res);
+      this.ws.send(JSON.stringify(sessionId ? { id, method, params, sessionId } : { id, method, params }));
+    });
   }
   async eval(expr) {
     const r = await this.send("Runtime.evaluate", { expression: expr, returnByValue: true, awaitPromise: true });
@@ -248,17 +251,24 @@ async function run(ids) {
 
   let ws;
   try {
-    for (let i = 0; i < 300 && !ws; i++) {
+    // Attach via the browser endpoint Chrome prints on stderr, not the /json/list
+    // HTTP API. On a CI runner Chrome reported `DevTools listening on ws://...`
+    // and was fully up, yet /json/list never yielded a page target and the job
+    // failed with the browser running the whole time. The ws URL is authoritative
+    // and needs no second service.
+    let browserWs = "";
+    for (let i = 0; i < 300 && !browserWs; i++) {
       await sleep(150);
-      try {
-        const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
-        const page = list.find((t) => t.type === "page");
-        if (page) ws = new WebSocket(page.webSocketDebuggerUrl);
-      } catch { /* not up yet */ }
+      browserWs = (launchLog.match(/ws:\/\/[^\s]+/) || [""])[0];
     }
-    if (!ws) throw new Error(`could not attach to Chromium at ${findChrome()}\n${launchLog.trim() || "(no stderr)"}`);
+    if (!browserWs) throw new Error(`Chromium never announced a DevTools endpoint (${findChrome()})\n${launchLog.trim() || "(no stderr)"}`);
+    ws = new WebSocket(browserWs);
     await new Promise((res, rej) => { ws.addEventListener("open", res); ws.addEventListener("error", rej); });
     const cdp = new CDP(ws);
+    // Make our own page and drive it through a flat session.
+    const { targetId } = await cdp.send("Target.createTarget", { url: "about:blank" });
+    const { sessionId } = await cdp.send("Target.attachToTarget", { targetId, flatten: true });
+    cdp.sessionId = sessionId;
     await cdp.send("Page.enable");
     await cdp.send("Runtime.enable");
 

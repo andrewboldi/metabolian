@@ -59,9 +59,12 @@ class CDP {
       else if (msg.method) (this.handlers.get(msg.method) || []).forEach((h) => h(msg.params));
     });
   }
-  send(method, params = {}) {
+  send(method, params = {}, sessionId = this.sessionId) {
     const id = ++this.id;
-    return new Promise((res) => { this.pending.set(id, res); this.ws.send(JSON.stringify({ id, method, params })); });
+    return new Promise((res) => {
+      this.pending.set(id, res);
+      this.ws.send(JSON.stringify(sessionId ? { id, method, params, sessionId } : { id, method, params }));
+    });
   }
   on(method, fn) { if (!this.handlers.has(method)) this.handlers.set(method, []); this.handlers.get(method).push(fn); }
   async eval(expr) {
@@ -92,18 +95,22 @@ async function measure(url) {
 
   let ws;
   try {
-    for (let i = 0; i < 300 && !ws; i++) {
+    // Attach via the endpoint Chrome prints on stderr, not /json/list — on a CI
+    // runner the HTTP API never yielded a page target while the browser was
+    // demonstrably up and listening. Same fix as tools/qa-dom.mjs.
+    let browserWs = "";
+    for (let i = 0; i < 300 && !browserWs; i++) {
       await sleep(150);
-      try {
-        const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
-        const page = list.find((t) => t.type === "page");
-        if (page) ws = new WebSocket(page.webSocketDebuggerUrl);
-      } catch { /* not up yet */ }
+      browserWs = (launchLog.match(/ws:\/\/[^\s]+/) || [""])[0];
     }
-    if (!ws) throw new Error(`could not attach to Chromium at ${findChrome()}\n${launchLog.trim() || "(no stderr)"}`);
+    if (!browserWs) throw new Error(`Chromium never announced a DevTools endpoint (${findChrome()})\n${launchLog.trim() || "(no stderr)"}`);
+    ws = new WebSocket(browserWs);
     await new Promise((res, rej) => { ws.addEventListener("open", res); ws.addEventListener("error", rej); });
 
     const cdp = new CDP(ws);
+    const { targetId } = await cdp.send("Target.createTarget", { url: "about:blank" });
+    const { sessionId } = await cdp.send("Target.attachToTarget", { targetId, flatten: true });
+    cdp.sessionId = sessionId;
     let requests = 0, bytes = 0, molRequests = 0, molBytes = 0;
     cdp.on("Network.responseReceived", (p) => {
       requests++;
