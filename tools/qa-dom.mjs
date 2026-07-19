@@ -178,6 +178,24 @@ const PROBE = `(async () => {
     }
   }
 
+  // --- labels lying on top of unrelated cells --------------------------------
+  // Text-vs-text cannot see this class at all: an enzyme name printed across a
+  // metabolite box collides with the BOX, not with another label, so the sheet
+  // reads as struck through while every text metric stays at zero. Only labels
+  // that live outside the cell layer count — a metabolite's own name, formula and
+  // condensed rows are inside their cell by design.
+  const cellBoxes = [...svg.querySelectorAll(".layer-nodes .met-box, .layer-nodes rect")].map((el) => {
+    const r = el.getBoundingClientRect();
+    return { x: r.x, y: r.y, w: r.width, h: r.height };
+  }).filter((c) => c.w > 6 && c.h > 6);
+  const onCell = [];
+  for (const t of readable) {
+    if (t.layer === "nodes") continue;
+    for (const c of cellBoxes) {
+      if (overprint(t, c)) { onCell.push({ text: t.text, layer: t.layer }); break; }
+    }
+  }
+
   // --- cells with nothing in them -------------------------------------------
   // The "renders as an empty box" class: a cell rect that contains no glyph and
   // no structure ink anywhere inside it.
@@ -199,9 +217,10 @@ const PROBE = `(async () => {
     lineThroughText: struck.length,
     strickenWithoutHalo: struck.filter((s) => !s.halo).length,
     emptyCells: empties.length,
+    labelsOverCells: onCell.length,
     minFontPx: fonts.length ? Math.round(Math.min(...fonts) * 10) / 10 : 0,
     labels: readable.length,
-    samples: { overlaps: overlaps.slice(0, 60), struck: struck.slice(0, 60), empties: empties.slice(0, 8) },
+    samples: { overlaps: overlaps.slice(0, 60), struck: struck.slice(0, 60), empties: empties.slice(0, 8), onCell: onCell.slice(0, 40) },
   };
 })()`;
 
@@ -256,7 +275,7 @@ const ids = only.length ? only : readdirSync(CHARTS)
 
 const res = await run(ids);
 
-const totals = { textOverlaps: 0, lineThroughText: 0, strickenWithoutHalo: 0, emptyCells: 0 };
+const totals = { textOverlaps: 0, lineThroughText: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 0 };
 let minFont = Infinity;
 for (const m of Object.values(res)) {
   if (m.error) continue;
@@ -267,11 +286,11 @@ for (const m of Object.values(res)) {
 if (asJson) {
   console.log(JSON.stringify({ charts: res, totals, minFontPx: minFont }, null, 2));
 } else {
-  const cols = ["textOverlaps", "lineThroughText", "emptyCells", "minFontPx", "labels"];
+  const cols = ["textOverlaps", "labelsOverCells", "lineThroughText", "emptyCells", "minFontPx"];
   console.log("chart".padEnd(38) + cols.map((c) => c.replace(/([A-Z])/g, " $1").trim().slice(0, 9).padStart(11)).join(""));
   for (const [id, m] of Object.entries(res)) {
     if (m.error) { console.log("! " + id.padEnd(36) + "  ERROR " + m.error); continue; }
-    const bad = m.textOverlaps > 0 || m.lineThroughText > 0 || m.emptyCells > 0;
+    const bad = m.textOverlaps > 0 || m.labelsOverCells > 0 || m.emptyCells > 0;
     console.log((bad ? "! " : "  ") + id.padEnd(36) + cols.map((c) => String(m[c]).padStart(11)).join(""));
   }
   console.log("\nTOTALS: " + Object.entries(totals).map(([k, v]) => `${k}=${v}`).join("  ") + `  minFontPx=${minFont}`);
@@ -287,7 +306,12 @@ if (asJson) {
  * halo is Michal's own device, not a defect. What matters is that the label is
  * protected, which is strickenWithoutHalo.
  */
-const BUDGET = { textOverlaps: 3, strickenWithoutHalo: 0, emptyCells: 0 };
+const BUDGET = { textOverlaps: 3, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 12 };
+
+// labelsOverCells is budgeted, not zeroed. Raising the placer's cell-overlap
+// weight from 1 to 3 moved the number not at all: these 12 captions have no
+// better candidate position, so the remaining cost is the cell border rather
+// than a competing label — the least bad of the available placements.
 
 if (gate) {
   const broken = Object.entries(BUDGET).filter(([k, max]) => (totals[k] || 0) > max);
