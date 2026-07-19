@@ -61,7 +61,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const layerFlux = s("g", { class: "layer-flux" });
   const layerReg = s("g", { class: "layer-reg" });
   const layerNodes = s("g", { class: "layer-nodes" });
-  viewport.append(layerGrid, layerRegions, layerFlux, layerReg, layerNodes);
+  // Region titles paint last: they are map furniture and must sit on top of the
+  // chemistry (with their knockout halo), not be struck through by it.
+  const layerLabels = s("g", { class: "layer-labels" });
+  viewport.append(layerGrid, layerRegions, layerFlux, layerReg, layerNodes, layerLabels);
   svg.append(viewport);
   canvas.append(svg);
 
@@ -125,8 +128,8 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     const titleText = s("text", { x: reg.x - 30, y: reg.y - 64 }, [reg.title]);
     label.append(titleText);
     label.append(s("text", { class: "region-ref", x: reg.x - 30 + tw - 14, y: reg.y - 64 }, [reg.ref]));
-    g.append(label);
     layerRegions.append(g);
+    layerLabels.append(label);
     regionLabels.push({ el: label, reg, short: reg.title.replace(/\s*\(.*$/, "") });
   }
 
@@ -398,20 +401,37 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // screen; collision must therefore be measured with the SCREEN size.
     const chartFont = Math.min(220, Math.max(14, 17 / k));
     const fontPx = chartFont * k;
+    // Breathing room, so a near-miss doesn't read as a collision, and a hard clamp
+    // to the sheet frame so no title hangs off the edge of the chart.
+    const PAD_X = 10, PAD_Y = 5;
+    // Keep titles out of the coordinate-ruler gutter as well as inside the frame,
+    // or the top row of titles prints straight over the A–L letters.
+    const GUTTER = 46;
+    const bounds = ir.bounds;
+    const frameL = (bounds.x + GUTTER) * k + tx;
+    const frameR = (bounds.x + bounds.w - GUTTER) * k + tx;
+    const frameT = (bounds.y + GUTTER) * k + ty;
     const boxes: { x: number; y: number; w: number; h: number }[] = [];
     const ordered = [...regionLabels].sort((a, b) => b.reg.w * b.reg.h - a.reg.w * a.reg.h);
     for (const item of ordered) {
       const text = lod === "overview" ? item.short : item.reg.title;
       const t = item.el.querySelector("text");
       if (t && t.textContent !== text) t.textContent = text;
-      const sx = (item.reg.x - 30) * k + tx;
-      const sy = (item.reg.y - 64) * k + ty;
       const w = text.length * fontPx * 0.55;
       const h = fontPx * 1.25;
-      const box = { x: sx, y: sy - h * 0.8, w, h };
+      const sx = (item.reg.x - 30) * k + tx;
+      const sy = (item.reg.y - 64) * k + ty;
+      let dx = 0, dy = 0;
+      if (sx + w > frameR) dx = frameR - (sx + w);
+      if (sx + dx < frameL) dx = frameL - sx;
+      const top = sy - h * 0.8;
+      if (top + dy < frameT) dy = frameT - top;
+      const box = { x: sx + dx - PAD_X, y: top + dy - PAD_Y, w: w + PAD_X * 2, h: h + PAD_Y * 2 };
       const clash = boxes.some((b) =>
         !(box.x + box.w <= b.x || b.x + b.w <= box.x || box.y + box.h <= b.y || b.y + b.h <= box.y));
       item.el.style.display = clash ? "none" : "";
+      if (!clash && (dx || dy)) item.el.setAttribute("transform", `translate(${dx / k},${dy / k})`);
+      else item.el.removeAttribute("transform");
       if (!clash) boxes.push(box);
     }
   }

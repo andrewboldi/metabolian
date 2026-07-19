@@ -35,6 +35,18 @@
 [data-lod="overview"] .lod-normal { display: none; }
 [data-lod="normal"] .lod-detail { display: none; }
 
+/* At overview the sheet is scaled so far down that a 1.5-unit stroke falls below
+   one device pixel and the chart reads as blank paper with floating titles. Hold
+   the ink at screen width so the overview shows real structural density — the way
+   the poster still reads as dense chemistry from across the room. */
+[data-lod="overview"] .met-box,
+[data-lod="overview"] .flux-line,
+[data-lod="overview"] .branch-line,
+[data-lod="overview"] .tie-line { vector-effect: non-scaling-stroke; }
+[data-lod="overview"] .met-box { stroke-width: 0.75; stroke: #4a453e; }
+[data-lod="overview"] .flux-line { stroke-width: 0.6; }
+[data-lod="overview"] .branch-line { stroke-width: 0.4; }
+
 /* ---- tracing ---- */
 .traced .dimmed { opacity: 0.08; }
 .trace-hit { stroke: #d43900 !important; stroke-width: 3.2 !important; }
@@ -65,7 +77,11 @@
 .grid-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: var(--grid-size, 15px); fill: #8a8574; text-anchor: middle; dominant-baseline: middle; }
 .region-frame { fill: none; stroke: #c9c4b4; stroke-width: 1; stroke-dasharray: 6 5; }
 .region-title rect { fill: none; stroke: #F14C1C; stroke-width: 1.5; }
-.region-title text { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: var(--title-size, 15px); font-weight: 400; fill: #F14C1C; letter-spacing: .04em; dominant-baseline: middle; }
+.region-title text { font-family: "Helvetica Neue", Inter, system-ui, sans-serif; font-size: var(--title-size, 15px); font-weight: 400; fill: #F14C1C; letter-spacing: .04em; dominant-baseline: middle;
+  /* Titles stay legible wherever the declutterer parks them — the same knockout
+     halo the poster uses for labels that cross ink. Sized in em so it tracks the
+     title as it scales from overview (huge) down to detail (small). */
+  paint-order: stroke; stroke: #FFFFFF; stroke-width: 0.2em; stroke-linejoin: round; }
 .region-title .region-ref { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; fill: #F14C1C; font-weight: 400; }
 /* the boxed plate only makes sense once the title is at its drawn size */
 [data-lod="overview"] .region-title rect, [data-lod="normal"] .region-title rect { display: none; }
