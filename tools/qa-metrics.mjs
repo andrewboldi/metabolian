@@ -111,6 +111,14 @@ for (const f of files.sort()) {
   for (const [k, v] of Object.entries(m)) if (!k.endsWith("Percent")) totals[k] = (totals[k] || 0) + v;
 }
 
+/**
+ * --gate fails the build on the defect classes we have driven to zero, so they
+ * cannot silently come back. Deliberately NOT gated: reversibleSpineSteps (many
+ * are legitimately reversible) and namesExceedingCell (still 22, a real backlog
+ * item — gating it now would just pin the build red).
+ */
+const GATED = ["scaffoldThroughCell", "fluxThroughCell", "danglingArrows", "overlappingCells"];
+
 if (asJson) {
   console.log(JSON.stringify({ charts: report, totals }, null, 2));
 } else {
@@ -121,4 +129,13 @@ if (asJson) {
     console.log((bad ? "! " : "  ") + id.padEnd(36) + cols.map((c) => String(m[c]).padStart(10)).join(""));
   }
   console.log("\nTOTALS: " + Object.entries(totals).map(([k, v]) => `${k}=${v}`).join("  "));
+}
+
+if (argv.includes("--gate")) {
+  const broken = GATED.filter((k) => (totals[k] || 0) > 0);
+  if (broken.length) {
+    console.error(`\n✗ regression: ${broken.map((k) => `${k}=${totals[k]}`).join(", ")} (expected 0)`);
+    process.exit(1);
+  }
+  console.log(`\n✓ ${GATED.join(", ")} all zero.`);
 }
