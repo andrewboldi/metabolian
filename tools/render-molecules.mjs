@@ -35,8 +35,26 @@ export function cleanSvg(svg) {
   return svg
     .replace(/<\?xml[^>]*\?>/g, "")
     .replace(/<!DOCTYPE[^>]*>/g, "")
-    .replace(/<rect[^>]*fill=['"]#FFFFFF['"][^>]*\/>/gi, "")
-    .replace(/<rect[^>]*style=['"][^'"]*fill:#FFFFFF[^'"]*['"][^>]*\/>/gi, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    // Collapse whitespace BEFORE matching tags. RDKit emits the ground rect as
+    // `<rect …>\n</rect>`, so every rule below that expected `></rect>` silently
+    // missed while looking correct in isolation — which is exactly how the rect
+    // survived on all 321 files through an earlier "fix".
+    .replace(/\s*\n\s*/g, " ")
+    .replace(/>\s+</g, "><")
+    // RDKit paints an opaque white ground rect behind every depiction. These two
+    // rules only matched a self-closing tag, but RDKit emits `></rect>` — so the
+    // rect survived on all 321 files: dead bytes, and an opaque box inside every
+    // cell that hides whatever the sheet draws behind the molecule.
+    .replace(/<rect\b[^>]*fill=['"]#FFFFFF['"][^>]*(?:\/>|><\/rect>)/gi, "")
+    .replace(/<rect\b[^>]*style=['"][^'"]*fill:#FFFFFF[^'"]*['"][^>]*(?:\/>|><\/rect>)/gi, "")
+    // Namespaces and hints no consumer reads. The rdkit/xlink namespaces, the
+    // profile and the whitespace hint are pure overhead once the markup is inlined
+    // into the chart's own <svg>. The bond-/atom- classes are deliberately KEPT:
+    // they are the only handle for highlighting a reacting centre later.
+    .replace(/\s+xmlns:(?:rdkit|xlink)=['"][^'"]*['"]/g, "")
+    .replace(/\s+(?:baseProfile|version)=['"][^'"]*['"]/g, "")
+    .replace(/\s+xml:space=['"][^'"]*['"]/g, "")
     .replace(/\s*\n\s*/g, " ")
     .replace(/>\s+</g, "><")
     .trim();
