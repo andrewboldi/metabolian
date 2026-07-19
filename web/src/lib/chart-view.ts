@@ -270,6 +270,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const nodeEls = new Map<string, SVGGElement>();
   const edgeEls: { el: SVGElement; rxn: ChartRxn }[] = [];
   const regGlyphs: { el: SVGGElement; x: number; y: number; cap: number }[] = [];
+  const effTags: { el: SVGGElement; dy: number }[] = [];
 
   // ---------- flux reactions ----------
   for (const r of ir.reactions) {
@@ -322,6 +323,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         tg.append(s("text", { x: tag.x - dir * 10, y: ty, fill: color, class: "eff-glyph" }, [tag.effect === "activate" ? "+" : "–"]));
         tg.append(s("text", { x: tag.x - dir * 10 + 9, y: ty, fill: color, class: "eff-label" }, [tag.label]));
         g.append(tg);
+        // Placed at a fixed offset off the step with no collision test at all —
+        // which is why these discs sat on metabolite names and enzyme titles. The
+        // final pass in placeLabels() moves them once real label boxes exist.
+        effTags.push({ el: tg, dy: 0 });
       });
     }
     layerFlux.append(g);
@@ -346,8 +351,19 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   // an obstacle for the next one.
   const placedGlyphs: [number, number][] = [];
   const GLYPH_SEP = 18;                       // 2r + 4 at the world radius
+  // Enzyme names are obstacles for a GLYPH, not the other way round. The label
+  // placer already treats placed discs as an obstacle, but only a soft one —
+  // making it hard demoted 21 names to detail zoom (see below). Solving it from
+  // this end costs nothing: a disc has six walk-back distances and a
+  // perpendicular escape, where a 200px label has almost no freedom. Without
+  // this the glyph simply did not know enzyme labels existed, and 15 of them
+  // parked on top of a name.
+  const enzLabelBoxes = ir.reactions
+    .filter((r) => r.enzyme && r.labelBox)
+    .map((r) => r.labelBox as { x: number; y: number; w: number; h: number });
   const glyphClearance = (x: number, y: number) => {
     for (const n of ir.nodes) if (x > n.x && x < n.x + n.w && y > n.y && y < n.y + n.h) return 0;
+    for (const b of enzLabelBoxes) if (x > b.x && x < b.x + b.w && y > b.y && y < b.y + b.h) return 0;
     let d = Infinity;
     for (const seg of fluxSegs) {
       d = Math.min(d, distToSegment(x, y, seg[0], seg[1], seg[2], seg[3]));
@@ -802,6 +818,73 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       L.arc.setAttribute("d", cofactorArc(c.mx, c.my, c.d, c.rx, c.ry, L.side));
       taken.push(c.box);
       layerCofactor.append(L.text);
+    }
+
+    // Final pass: move the DISCS off the labels, now that labels have committed.
+    // Ordering was the whole problem. Glyphs are placed before this runs, so they
+    // could only avoid each label's *reserved* box — and the placer's whole job is
+    // to move labels out of their reservation, which put a name back under a disc.
+    // Nudging the disc is the cheap direction: it is a 14u circle attached to its
+    // rail by a walk-back distance, so a few units along the local rail normal
+    // costs nothing legible, where moving a 200px name has nowhere to go.
+    // `taken` is every label box this placer actually committed.
+    for (const gl of regGlyphs) {
+      const R = 7;
+      const buried = (x: number, y: number) => taken.reduce((acc, o) => {
+        const ox = Math.min(x + R, o.x + o.w) - Math.max(x - R, o.x);
+        const oy = Math.min(y + R, o.y + o.h) - Math.max(y - R, o.y);
+        return acc + (ox > 0 && oy > 0 ? ox * oy : 0);
+      }, 0);
+      if (!buried(gl.x, gl.y)) continue;
+      let best = { x: gl.x, y: gl.y, cost: buried(gl.x, gl.y) };
+      for (const rad of [10, 15, 21, 28]) {
+        for (let a = 0; a < 8; a++) {
+          const x = gl.x + Math.cos((a * Math.PI) / 4) * rad;
+          const y = gl.y + Math.sin((a * Math.PI) / 4) * rad;
+          // A disc must not solve a label collision by landing in a cell instead.
+          if (ir.nodes.some((n) => x > n.x && x < n.x + n.w && y > n.y && y < n.y + n.h)) continue;
+          const cost = buried(x, y);
+          if (cost < best.cost) best = { x, y, cost };
+          if (!cost) break;
+        }
+        if (!best.cost) break;
+      }
+      gl.x = best.x; gl.y = best.y;
+      gl.el.setAttribute("transform", `translate(${gl.x},${gl.y})`);
+    }
+
+    // Same treatment for the effector tags stamped onto a step. getBBox() is the
+    // honest extent here: a tag is a disc PLUS a caption of unknown width, so a
+    // guessed box would under-reserve exactly the way the enzyme metrics once did.
+    // They only move along y — sliding one sideways would detach it from the step
+    // it annotates.
+    // Committed tags become obstacles for the next one — the same set-placement
+    // the discs use. Without it, moving each tag off the labels independently just
+    // stacked them ON EACH OTHER: a '+' and a '–' merged into one smudge, which is
+    // strictly worse than the collision being fixed.
+    const placedTags: Box[] = [];
+    for (const t of effTags) {
+      let box: { x: number; y: number; width: number; height: number };
+      try { box = t.el.getBBox(); } catch { continue; }
+      // The discs moved just above, so reserve them at their CURRENT centres —
+      // a tag and a regulation glyph are the two things most likely to want the
+      // same few units of clearance beside a regulated step.
+      const discBoxes: Box[] = regGlyphs.map((g) => ({ x: g.x - 8, y: g.y - 8, w: 16, h: 16 }));
+      const obstacles = taken.concat(nameBoxes, placedTags, discBoxes);
+      const buried = (dy: number) => obstacles.reduce((acc, o) => {
+        const ox = Math.min(box.x + box.width, o.x + o.w) - Math.max(box.x, o.x);
+        const oy = Math.min(box.y + dy + box.height, o.y + o.h) - Math.max(box.y + dy, o.y);
+        return acc + (ox > 0 && oy > 0 ? ox * oy : 0);
+      }, 0);
+      if (!buried(0)) { placedTags.push({ x: box.x, y: box.y, w: box.width, h: box.height }); continue; }
+      let best = { dy: 0, cost: buried(0) };
+      for (const dy of [-12, 12, -20, 20, -30, 30, -42, 42]) {
+        const cost = buried(dy);
+        if (cost < best.cost) best = { dy, cost };
+        if (!cost) break;
+      }
+      if (best.dy) t.el.setAttribute("transform", `translate(0,${best.dy})`);
+      placedTags.push({ x: box.x, y: box.y + best.dy, w: box.width, h: box.height });
     }
 
     measEnz.done();

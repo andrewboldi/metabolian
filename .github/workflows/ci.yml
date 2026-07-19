@@ -26,6 +26,23 @@ jobs:
       - name: Chart QA gates (routing, dangling arrows, cell overlap)
         run: node tools/qa-metrics.mjs --gate
 
+  render:
+    name: Rendered-output QA (overprints, strikethroughs, empty cells)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - name: Serve and measure what actually paints
+        run: |
+          npx vite preview --port 4173 &
+          npx wait-on -t 60000 http://localhost:4173/metabolian/chart.html
+          node tools/qa-dom.mjs --gate
+
   web:
     name: Lint, typecheck, build
     runs-on: ubuntu-latest

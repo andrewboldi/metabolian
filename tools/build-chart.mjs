@@ -150,6 +150,7 @@ const COF_H = 11;
 const ENZ_CH = 5.2;       // .enz-name 10px, chart-view.ts:366
 const ENZ_H = 10;
 const EC_H = 11;
+const FORMULA_H = 11;    // the molecular-formula line the renderer paints at h-4
 // Enzyme-label box model. Declared HERE, with the other text metrics, because
 // chooseCofactorSides() runs at module top level well above the old position —
 // leaving these below it threw a temporal-dead-zone ReferenceError that broke
@@ -322,7 +323,7 @@ function structureBox(key) {
  * 142px wide and rendered "ALPHA-D-GLUCOSE / 1-PHOSPHATE (CORI…", losing
  * "ESTER)". The name is the identity of the cell; it gets measured first.
  */
-function cellSize(smiles, label, key) {
+function cellSize(smiles, label, key, hasFormula = false) {
   const name = String(label || "").toUpperCase();
   const cond = condensedFor(smiles);
   // A cell is sized to the box its own depiction needs at the atlas bond length,
@@ -352,7 +353,12 @@ function cellSize(smiles, label, key) {
   // cell below it down the spine and breaks routes unrelated to the caption.
   const want = cond ? Math.max(captionWidth(name), name.length * NAME_CH + 6) : captionWidth(name);
   const w = Math.max(base.w, Math.min(MAX_CELL_W, want));
-  if (cond) return { w, h: base.h + (captionLines(name, w) - 1) * NAME_LINE_H, condensed: cond.rows };
+  // The molecular formula is painted at h-4, and under a condensed column the
+  // last atom row already sits at exactly 13*rows + 22 — which IS h-4 under the
+  // old budget, so the formula printed straight through the last row on every
+  // condensed cell that had one. Reserve it a line of its own.
+  if (cond) return { w, h: base.h + (captionLines(name, w) - 1) * NAME_LINE_H
+    + (hasFormula ? FORMULA_H : 0), condensed: cond.rows };
   // A structure cell reserves the caption it will ACTUALLY wrap to. The renderer
   // fits the drawing into whatever is left under the name, so an unreserved
   // second line comes straight out of the molecule — measured, that is what
@@ -451,7 +457,8 @@ for (const f of mplFiles) {
       const key = depictable(m) ? metKey(m) : null;
       sizes[id] = macroClass(m)
         ? proteinChipSize(m.name)                     // a chip, not a structure cell
-        : cellSize(key ? SMILES[key]?.smiles : null, m?.name || id, key);
+        : cellSize(key ? SMILES[key]?.smiles : null, m?.name || id, key,
+                    !!(m?.formula && !isClassFormula(m.formula)));
     }
     // protein regulators live in the enzyme table and get Michal's chip
     for (const id of enzymes.keys()) sizes[id] = proteinChipSize(R.enz(id)?.gene || R.enz(id)?.name || id);
