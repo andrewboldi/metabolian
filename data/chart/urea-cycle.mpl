@@ -15,11 +15,11 @@ pathway urea-cycle "Urea cycle (Krebs–Henseleit ornithine cycle)" {
     ornithine
     -> otc [2.1.3.3] +carbamoyl_p -pi
     citrulline
-    -> ass1 [6.3.4.5] +atp -amp -ppi -hplus !committed
+    -> ass1 [6.3.4.5] +aspartate +atp -amp -ppi -hplus !committed
     argininosuccinate
     <-> asl [4.3.2.1] -hplus
     arginine
-    -> arg1 [3.5.3.1] +h2o -urea
+    -> arg1 [3.5.3.1] +h2o
   }
 
   # first nitrogen: ammonia and bicarbonate fixed into carbamoyl phosphate in the
@@ -37,18 +37,21 @@ pathway urea-cycle "Urea cycle (Krebs–Henseleit ornithine cycle)" {
     nag
   }
 
-  # second nitrogen: cytosolic aspartate condenses with citrulline at ASS1
-  branch from citrulline side right {
-    aspartate
-  }
-
-  # aspartate–argininosuccinate shunt: the carbon skeleton leaves as fumarate
+  # aspartate–argininosuccinate shunt: aspartate donates the second nitrogen as a
+  # side entry on ASS1 (above); its carbon skeleton leaves again here as fumarate,
+  # the hand-off to the TCA cycle. Re-listing argininosuccinate makes this a real
+  # drawn ASL arc rather than a scaffold hairline.
   branch from argininosuccinate side right {
+    argininosuccinate
+    <-> asl [4.3.2.1]
     fumarate
   }
 
-  # the excretory end product, split off arginine by arginase-1
+  # the excretory end product, split off arginine by arginase-1. Re-listing
+  # arginine gives urea its own arrow — the water goes on the ring arc.
   branch from arginine side right {
+    arginine
+    -> arg1 [3.5.3.1]
     urea
   }
 

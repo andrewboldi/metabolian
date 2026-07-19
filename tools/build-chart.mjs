@@ -21,6 +21,15 @@ const OUT = join(ROOT, "web", "public", "chart");
 // those are authored to satisfy them — then flip the flag on in CI.
 const STRICT = process.env.CHART_STRICT === "1";
 
+// A frozen per-chart ceiling on DROPPED BIOCHEMISTRY (declared regulations never
+// drawn, cells with no flux edge, cells that draw nothing). Optional: absent, the
+// coverage findings stay reports as they always were. Present, no chart may get
+// worse than the day it was frozen — which is how 108 undrawn regulations burn
+// down instead of accruing. Shape: { "<chart id>": { regulations, orphans, blank } }.
+const BUDGET_FILE = join(ROOT, "data", "chart", "coverage-budget.json");
+const COVERAGE_BUDGET = existsSync(BUDGET_FILE)
+  ? JSON.parse(readFileSync(BUDGET_FILE, "utf8")) : {};
+
 // Michal writes cofactors in their conventional short form — "ADP + Pi", never
 // "Adenosine diphosphate + Orthophosphate". Density depends on this.
 const SHORT = {
@@ -43,6 +52,7 @@ const SHORT = {
   lipoyllys: "Lip(S₂)", dihydrolipoyllys: "Lip(SH)₂", acetyldihydrolipoyllys: "acetyl-Lip(SH)",
   formylthf: "10-CHO-THF", methylenethf: "5,10-CH₂-THF", mlthf: "5,10-CH₂-THF",
   methenylthf: "5,10-CH=THF", holoacp: "ACP-SH",
+  methyl_thf: "5-CH₃-THF", methylthf: "5-CH₃-THF", mthf5: "5-CH₃-THF",
   // The rest of the ids that reach a side arc. Probing every emitted label found
   // 40 species printing 15-51 characters: the alias table was keyed on idealised
   // ids (`hco3`, `glutathione`) the modules do not use, and trimParenthetical
@@ -140,6 +150,11 @@ const COF_H = 11;
 const ENZ_CH = 5.2;       // .enz-name 10px, chart-view.ts:366
 const ENZ_H = 10;
 const EC_H = 11;
+// Enzyme-label box model. Declared HERE, with the other text metrics, because
+// chooseCofactorSides() runs at module top level well above the old position —
+// leaving these below it threw a temporal-dead-zone ReferenceError that broke
+// the entire data build.
+const LABEL_W = 70, LABEL_LINE = 10, LABEL_EC = 11;
 
 /**
  * chart-view.ts wrapCellName, ported so a cell can be sized to the caption it
@@ -207,6 +222,17 @@ function condensedFor(smiles) {
 const PX_PER_BOND = 9;      // drawn length of one bond, everywhere on the atlas
 const MAX_DRAW_W = 212;     // no single structure may dominate its sheet; past
 const MAX_DRAW_H = 148;     // this the molecule is shrunk rather than the cell grown
+// ...except that a ceiling on WIDTH alone is a ceiling on the bond length of
+// exactly the long, thin molecules. Measured: ubiquinol (ink aspect 6.7) and the
+// acyl-CoA family (4.4) were the only structures on the atlas the width term
+// bound, and it shrank the WHOLE depiction — the quinol head with its two
+// methoxys came out ~30u wide, indistinguishable from the quinone. A tail sets
+// the scale of a head it has nothing to do with. Past WIDE_ASPECT the cell is
+// allowed to grow sideways instead, which is the axis a landscape sheet has to
+// spare; 320 is the narrowest ceiling that keeps every one of those structures
+// above the legibility floor below.
+const WIDE_ASPECT = 3;
+const MAX_DRAW_W_WIDE = 320;
 const NAME_TOP = 12;        // chart-view.ts: first caption baseline
 const CELL_PAD_B = 12;      // chart-view.ts: gap under the drawing
 
@@ -247,12 +273,15 @@ function bondOf(key) {
   return bond;
 }
 
-// Below this the drawing stops reading as a structure and becomes texture. Set
-// from the atlas, not by taste: a tighter floor (0.6) also chipped the acyl-CoA
-// spine of fatty-acid beta-oxidation, taking that sheet from 8 structures to 3 —
-// a long molecule drawn at half the standard bond length is still a skeleton,
-// and losing it costs more than the residual scale spread does.
-const MIN_LEGIBLE_BOND = PX_PER_BOND * 0.5;
+// Below this the drawing stops reading as a structure and becomes texture. The
+// floor used to be 0.5, justified by the acyl-CoA spine of fatty-acid
+// beta-oxidation: those cells drew at 4.9 and a tighter floor took that sheet
+// from 8 structures to 3. The aspect ceiling above is what actually rescues that
+// family — they now draw at ~7.5 — so the floor no longer has to be lowered to
+// accommodate a sizing bug. At 0.75 the only depictions still dropped are the
+// ones the LAYOUT clamps below any legible size (an effector chip is a fixed
+// box whatever molecule it holds), which is precisely what the gate is for.
+const MIN_LEGIBLE_BOND = PX_PER_BOND * 0.75;
 
 /**
  * The bond length this cell will ACTUALLY draw at — chart-view.ts fits the ink
@@ -261,7 +290,17 @@ const MIN_LEGIBLE_BOND = PX_PER_BOND * 0.5;
  */
 function drawnBondPx(n, mol, key) {
   const bond = bondOf(key);
-  if (!bond || !mol?.ink?.w) return Infinity;      // unmeasurable: leave it alone
+  if (!mol?.ink?.w) return Infinity;               // nothing to judge
+  // A depiction with no bond at all (H₂, NH₃, Ca²⁺, Pb²⁺, H⁺ — 16 nodes on the
+  // atlas) cannot be scale-normalised in either direction: bondLength() returns
+  // null, structureBox() therefore returns null, and cellSize() falls through to
+  // the name-only box that reserves NO drawing height. Returning Infinity here
+  // used to mean "leave it alone", so the one class the gate should always catch
+  // was the one class it never fired on — H₂ shipped with an inner <svg> of
+  // height 0, NH₃ at 0.2x. Zero is the honest answer: drop the depiction and let
+  // the cell be the name plate it was already sized as. Every one of these ions
+  // has a typeset form in SHORT that reads better than a two-letter skeleton.
+  if (!bond) return 0;
   const top = NAME_TOP + captionLines(String(n.label).toUpperCase(), n.w) * NAME_LINE_H;
   const fit = Math.min((n.w - 8) / mol.ink.w, (n.h - top - CELL_PAD_B) / mol.ink.h);
   return fit * bond;
@@ -272,7 +311,8 @@ function structureBox(key) {
   const mol = key ? molIndex[key] : null;
   const bond = key ? bondOf(key) : null;
   if (!mol?.ink?.w || !mol.ink.h || !bond) return null;
-  const scale = Math.min(PX_PER_BOND / bond, MAX_DRAW_W / mol.ink.w, MAX_DRAW_H / mol.ink.h);
+  const maxW = mol.ink.w / mol.ink.h >= WIDE_ASPECT ? MAX_DRAW_W_WIDE : MAX_DRAW_W;
+  const scale = Math.min(PX_PER_BOND / bond, maxW / mol.ink.w, MAX_DRAW_H / mol.ink.h);
   return { w: Math.round(mol.ink.w * scale), h: Math.round(mol.ink.h * scale) };
 }
 
@@ -295,6 +335,12 @@ function cellSize(smiles, label, key) {
     const wide = Math.max(...cond.rows.map((r) => r.length));
     base = { w: Math.max(76, wide * 7.2 + 20), h: cond.rows.length * 13 + 26 };
   } else if (draw) {
+    // Floor the drawing box. Species like NO and H2O2 have an ink extent of only
+    // a few units, so the cell came out shorter than its caption needed and the
+    // depiction was handed <=8 units to draw in — the airless-cell gate's exact
+    // complaint. A diatomic still needs paper to read as a structure.
+    draw.w = Math.max(draw.w, 56);
+    draw.h = Math.max(draw.h, 34);
     base = { w: draw.w + 8, h: draw.h + NAME_TOP + NAME_LINE_H + CELL_PAD_B };
   } else base = { w: 108, h: 46 };     // no usable depiction: a name-only box
   // A second caption line pushes everything below it down one row. Under a
@@ -578,6 +624,20 @@ for (const f of mplFiles) {
   // whose label boxes fall on clear paper.
   chooseCofactorSides(ir);
 
+  // A cell that carries a depiction must have reserved paper to draw it in. This
+  // is the assertion that would have caught the bondless class before it shipped:
+  // n.mol survived while cellSize() had handed the node a name-only box, so the
+  // renderer fitted the ink into whatever the caption left — for H₂ that was
+  // exactly 0 units of height.
+  const airless = ir.nodes.filter((n) => n.mol &&
+    n.h - NAME_TOP - captionLines(String(n.label).toUpperCase(), n.w) * NAME_LINE_H - CELL_PAD_B <= 8)
+    .map((n) => `${n.metabolite} (h=${n.h})`);
+  if (airless.length) {
+    console.error(`❌ ${f}: ${airless.length} cell(s) carrying a structure with no room to draw it: ${airless.slice(0, 4).join(", ")}`);
+    process.exitCode = 1;
+    continue;
+  }
+
   // ---- geometry gates ----------------------------------------------------
   // Layout quality gate: a readable chart has no overlapping cells. This fails
   // the build rather than shipping a tangle.
@@ -732,17 +792,41 @@ for (const f of mplFiles) {
   if (missing.regulations.length) notes.push(`${missing.regulations.length} declared regulation(s) never drawn`);
   if (missing.orphans.length) notes.push(`${missing.orphans.length} cell(s) with no flux or regulation edge`);
   if (missing.cofactorSpine.length) notes.push(`${missing.cofactorSpine.length} cell(s) drawn as a side label instead of a substrate`);
+  if (missing.blank.length) notes.push(`${missing.blank.length} cell(s) with no structure and no condensed column`);
   if (notes.length) {
     textWarnings += notes.length;
     console.warn(`⚠  ${f}: ${notes.join("; ")}`);
     for (const s of missing.regulations.slice(0, 3)) console.warn(`     regulation not on the sheet: ${s}`);
     for (const s of missing.orphans.slice(0, 3)) console.warn(`     orphan cell: ${s}`);
+    for (const s of missing.blank.slice(0, 3)) console.warn(`     cell draws nothing (no SMILES resolved): ${s}`);
     for (const s of missing.cofactorSpine.slice(0, 3)) console.warn(`     side label should be a substrate: ${s}`);
     for (const s of wordy.slice(0, 3)) console.warn(`     caption still prose: "${s}"`);
     for (const s of doubleDrawn.slice(0, 3)) console.warn(`     drawn twice off one step: ${s}`);
     for (const b of onCell.slice(0, 3)) console.warn(`     label over a cell: ${b.tag} "${b.text}"`);
-    if (STRICT) { process.exitCode = 1; continue; }
   }
+  // Dropped biochemistry is not a cosmetic finding. A regulation the module
+  // declares and the sheet never draws, a cell with no flux edge and a cell that
+  // draws nothing are all the drawing failing to say what the data says — so
+  // they are the findings that ratchet, separately from the softer
+  // side-label/cofactor-placement reports. The budget file (if present) is a
+  // frozen per-chart count: a chart may not get worse than it is today, and each
+  // fix lowers the ceiling. Without it the whole set is still gated by
+  // CHART_STRICT=1, as before.
+  const dropped = {
+    regulations: missing.regulations.length,
+    orphans: missing.orphans.length,
+    blank: missing.blank.length,
+  };
+  const budget = COVERAGE_BUDGET[ir.id];
+  const over = budget
+    ? Object.entries(dropped).filter(([k, v]) => v > (budget[k] ?? 0)).map(([k, v]) => `${k}: ${v} > ${budget[k] ?? 0}`)
+    : [];
+  if (over.length) {
+    console.error(`❌ ${f}: coverage regressed past its frozen budget — ${over.join(", ")}`);
+    process.exitCode = 1;
+    continue;
+  }
+  if (STRICT && notes.length) { process.exitCode = 1; continue; }
 
   writeFileSync(join(OUT, `${ir.id}.json`), JSON.stringify(ir));
   charts.push({ id: ir.id, title: ir.title, grid: ir.grid, nodes: ir.nodes.length, reactions: ir.reactions.length });
@@ -862,6 +946,18 @@ function cofactorRuns(r, side = r.side) {
  */
 function chooseCofactorSides(ir) {
   const taken = [];
+  // Every stroke the compiler has already committed. `side` does not only move
+  // the cofactor captions — it moves the enzyme name and its EC line to the
+  // opposite side of the arrow, onto paper compile() reserved as free when it
+  // routed the regulation rails and the branch hairlines against labelKeepOut.
+  // Measured before this check, 73 of 304 enzyme labels were inked on the
+  // opposite side from their own reserved box, which is why names on cholesterol
+  // and sphingolipid were struck through by rails.
+  const routedInk = [];
+  for (const g of ir.regulation || []) routedInk.push(...segmentsOf(g.points));
+  for (const r of ir.reactions) if (r.kind === "branch-link") routedInk.push(...segmentsOf(r.points));
+  const onRoutedInk = (box) => routedInk.some((s) => segmentHitsBox(s, box));
+
   /** Struck-out labels first, then how much ink is buried, then how close it came. */
   const cost = (boxes) => {
     let hits = 0, ink = 0, near = Infinity;
@@ -877,11 +973,57 @@ function chooseCofactorSides(ir) {
   for (const r of ir.reactions) {
     if (!(r.inLabels?.length || r.outLabels?.length)) continue;
     const other = r.side === "left" ? "right" : "left";
-    const keep = cofactorRuns(r, r.side);
-    const flip = cofactorRuns(r, other);
-    if (better(cost(flip), cost(keep))) { r.side = other; taken.push(...flip); }
+    // The name block moves with the side, so it is scored with the side.
+    const keep = [...cofactorRuns(r, r.side), ...enzymeLabelBoxes(r, r.side)];
+    const flip = [...cofactorRuns(r, other), ...enzymeLabelBoxes(r, other)];
+    // A flip that parks the enzyme name on a committed rail trades a buried
+    // cofactor caption for a struck-through enzyme name — never worth it, and
+    // invisible to a cost function that only scores the captions it is moving.
+    const flipLegal = !enzymeLabelBoxes(r, other).some(onRoutedInk);
+    if (flipLegal && better(cost(flip), cost(keep))) { r.side = other; taken.push(...flip); }
     else taken.push(...keep);
+    // The exported box is what the renderer sets the name into. Leaving it on the
+    // pre-flip side made the renderer's own obstacle model disagree with its ink.
+    const box = enzymeLabelBoxes(r, r.side)[0];
+    if (box) r.labelBox = { x: box.x, y: box.y, w: box.w, h: box.h };
   }
+}
+
+// compile.mjs labelBoxesFor(): the always-set head of an enzyme name plus its EC
+// line. Mirrored here because this file is what decides the final side.
+
+function enzymeLabelBoxes(r, side = r.side) {
+  if (!r.enzyme) return [];
+  const [mx, my] = polyMid(r.points);
+  const d = side === "left" ? -1 : 1;
+  return [{
+    kind: "enzyme-block", tag: `${r.enzyme}.block`,
+    x: Math.round(d > 0 ? mx + 10 : mx - 10 - LABEL_W),
+    y: Math.round(my - LABEL_LINE - 4),
+    w: LABEL_W, h: LABEL_LINE * 2 + LABEL_EC + 4,
+  }];
+}
+
+/** Split a polyline into its segments. A function *declaration* so it hoists:
+ *  chooseCofactorSides() runs at module top level and called this ~50 lines
+ *  before the old `const` arrow was initialised, which threw a temporal-dead-zone
+ *  ReferenceError and broke the whole data build. */
+function segmentsOf(points) {
+  return (points || []).slice(1).map((p, i) => [points[i], p]);
+}
+
+/** Does an axis-aligned box contain any part of this segment? (Liang–Barsky.) */
+function segmentHitsBox([p, q], b) {
+  let t0 = 0, t1 = 1;
+  const dx = q[0] - p[0], dy = q[1] - p[1];
+  for (const [num, den] of [[b.x - p[0], dx], [p[0] - (b.x + b.w), -dx],
+                            [b.y - p[1], dy], [p[1] - (b.y + b.h), -dy]]) {
+    if (den === 0) { if (num > 0) return false; continue; }
+    const t = num / den;
+    if (den > 0) { if (t > t1) return false; if (t > t0) t0 = t; }
+    else { if (t < t0) return false; if (t < t1) t1 = t; }
+  }
+  return t0 <= t1;
 }
 
 /** Shortest distance between two non-overlapping boxes. */
@@ -953,7 +1095,22 @@ function growBounds(ir, runs) {
  * finding names the .mpl construct to fix — the pathway JSON is the authority.
  */
 function coverageReport(ir, modJson, nodeByMet, dataRxnOf) {
-  const out = { regulations: [], orphans: [], cofactorSpine: [] };
+  const out = { regulations: [], orphans: [], cofactorSpine: [], blank: [] };
+
+  // A cell with neither a drawing nor a condensed column draws a frame, a name
+  // and nothing else. Nothing in the pipeline asked whether a cell had ANY
+  // content, which is how L-malate came to be an empty frame on three sheets and
+  // the whole acyl-[ACP] elongation cycle of fatty-acid synthesis on a fourth:
+  // data/smiles.json holds those entries as `unresolved: true` stubs with no
+  // `smiles` key, so they resolve to neither path. A class entry (R-X, lipid
+  // hydroperoxide, the lipoyllysines) carries a formulaClass and is honestly
+  // structureless; a protein has its chip; a compact effector chip is clamped by
+  // the layout on purpose. Everything else is a resolver failure, by name.
+  for (const n of ir.nodes) {
+    if (n.mol || n.condensed || n.compact) continue;
+    if (n.macromolecule || n.isProtein || n.formulaClass) continue;
+    out.blank.push(n.metabolite);
+  }
   if (!modJson) return out;
 
   const drawn = new Set();

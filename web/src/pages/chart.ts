@@ -43,7 +43,7 @@ async function load(id: string, canvas: HTMLElement) {
   const ir = await getJSON<ChartIR>(`chart/${id}.json`);
   document.getElementById("chart-title")!.textContent = ir.title;
   view = mountChart(ir, canvas, BASE, {
-    onMetabolite: (n) => { openMetabolite(n); view?.trace(n.id); },
+    onMetabolite: (n) => { openNode(n); view?.trace(n.id); },
     onEnzyme: (r) => openEnzyme(r),
     onZoom: (k, lod) => {
       document.getElementById("zoom-readout")!.textContent = `${Math.round(k * 100)}%`;
@@ -117,6 +117,44 @@ function closeInspector() {
   view?.trace(null);
 }
 
+/** Fields build-chart.mjs puts on a protein/effector node. They are not on
+ *  ChartNode (owned by chart-view.ts), so read them through a narrow cast. */
+type ProteinFields = { isProtein?: boolean; fullName?: string | null; gene?: string | null; uniprot?: string | null };
+const asProtein = (n: ChartNode) => n as ChartNode & ProteinFields;
+
+async function openNode(n: ChartNode) {
+  if (asProtein(n).isProtein) await openProtein(n);
+  else await openMetabolite(n);
+}
+
+/** A regulator drawn as an enzyme chip is a protein, not a metabolite: it gets
+ *  the enzyme colour, its full name as the title with the gene symbol beneath,
+ *  and UniProt/AlphaFold links built from `n.uniprot` (xrefs is empty on these
+ *  nodes — the accession only ever lands on `uniprot`). */
+async function openProtein(n: ChartNode) {
+  const p = asProtein(n);
+  const body = inspectorBody();
+  body.append(el("div", {}, [el("span.drawer__kind", { style: "color:var(--node-enzyme)" }, ["protein"])]));
+  body.append(el("h2", {}, [p.fullName || n.label]));
+  // Only a subtitle when the symbol says something the title did not.
+  const symbol = p.gene || n.label;
+  if (symbol && symbol !== (p.fullName || n.label)) {
+    body.append(el("p.muted", { style: "font-size:var(--step--1);margin-top:-.35rem" }, [symbol]));
+  }
+
+  const chips = el("div.chips");
+  if (p.gene) chips.append(el("span.chip", {}, [p.gene]));
+  if (p.uniprot) {
+    chips.append(el("a.chip", { href: `https://www.uniprot.org/uniprotkb/${p.uniprot}/entry`, target: "_blank", rel: "noopener" }, [`UniProt ${p.uniprot}`]));
+    chips.append(el("a.chip", { href: `https://alphafold.ebi.ac.uk/entry/${p.uniprot}`, target: "_blank", rel: "noopener" }, ["AlphaFold"]));
+  }
+  if (chips.childElementCount) body.append(chips);
+
+  if (p.uniprot) await structureBlock(body, { uniprot: p.uniprot, pdb: null }, p.fullName || n.label);
+
+  body.append(el("p.muted", { style: "font-size:var(--step--1)" }, ["Regulatory links are highlighted on the chart. Click empty space to clear the trace."]));
+}
+
 async function openMetabolite(n: ChartNode) {
   const body = inspectorBody();
   body.append(el("div", {}, [el("span.drawer__kind", { style: "color:var(--node-metabolite)" }, ["metabolite"])]));
@@ -161,11 +199,16 @@ async function openEnzyme(r: ChartRxn) {
     ]));
   }
 
-  // inline 3D structure — no page navigation
+  await structureBlock(body, { uniprot: r.uniprot, pdb: r.pdb }, r.enzymeName || "");
+}
+
+/** Inline 3D structure + representation buttons + the full-viewer link. Shared
+ *  by the enzyme and protein drawers — no page navigation either way. */
+async function structureBlock(body: HTMLElement, ref: { uniprot: string | null; pdb: string | null }, name: string) {
   const status = el("p.muted", { style: "font-size:var(--step--1)" }, ["Loading structure…"]);
   const host = el("div", { id: "mol3d" });
   body.append(host, status);
-  const viewer = await renderStructure(host as HTMLElement, { uniprot: r.uniprot, pdb: r.pdb }, (m) => { status.textContent = m; });
+  const viewer = await renderStructure(host as HTMLElement, ref, (m) => { status.textContent = m; });
   if (viewer) {
     const reps = el("div", { style: "display:flex;gap:.35rem;flex-wrap:wrap" });
     for (const [label, style] of [["Cartoon", "cartoon"], ["Sticks", "stick"], ["Spheres", "sphere"]] as const) {
@@ -178,7 +221,7 @@ async function openEnzyme(r: ChartRxn) {
       }, [label]));
     }
     body.append(reps);
-    body.append(el("a", { href: asset(`protein.html?uniprot=${r.uniprot ?? ""}&name=${encodeURIComponent(r.enzymeName || "")}`), style: "font-size:var(--step--1)" }, ["Open full structure viewer →"]));
+    body.append(el("a", { href: asset(`protein.html?uniprot=${ref.uniprot ?? ""}&name=${encodeURIComponent(name)}`), style: "font-size:var(--step--1)" }, ["Open full structure viewer →"]));
   }
 }
 

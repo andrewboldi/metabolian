@@ -39,8 +39,15 @@ const LABEL_W = 70;         // the always-set head of a name (~13 chars), reserv
 const COFACTOR_CH = 4.5;    // cofactor labels are set smaller
 const COFACTOR_R = 26;      // the side-entry arc's radius at its largest
 const CAPTION_H = 34;       // a cell's name rows: y = 12 + i*11, up to two lines
-const ROW_GAP = 52;   // room for the arrow, enzyme name and cofactor arcs
-const COL_PAD = 58;   // paper between two columns of the same chain
+const GLYPH_R = 7;          // the +/- disc's own radius in chart-view.ts
+const GLYPH_CLEAR = 20;     // centre-to-centre: two discs closer than this stack
+// Spacing is what a step's ANNOTATION needs, not a round number. A vertical step
+// carries two cofactor arcs of radius COFACTOR_R between its cells; a step that
+// runs sideways carries the name block itself in the gap, and 58 units of paper
+// for a 70-unit reservation is why labelBoxesFor could only ever hand back a box
+// that was inside the next cell.
+const ROW_GAP = Math.max(52, 2 * COFACTOR_R);   // arrow + enzyme name + cofactor arcs
+const COL_PAD = LABEL_W + 24;                   // paper between two columns of the same chain
 
 // The sheet is read on a landscape screen and "Fit" scales by min(kx, ky), so a
 // block that comes out square throws away the surplus width. Fold every chain
@@ -432,11 +439,29 @@ export function layout(ast, sizes = {}, fold = 1) {
   // the routes (and therefore the midpoints) are final, and treat it as a real
   // obstacle for everything routed afterwards.
   const labelKeepOut = [];
+  // The side-entry arcs are FIXED geometry — the renderer swings them out of the
+  // step's midpoint on the side opposite the enzyme name, at a radius it computes
+  // from the edge's own length. A +/- disc landing inside one of those envelopes
+  // does not read as "beside the arrow": .cofactor-arc carries the same red
+  // arrowhead as a regulation edge, so a substrate arc ending in the disc stack
+  // makes the sheet assert "CO2 inhibits PDH". Model the envelope here, once, and
+  // treat it as an obstacle the landing may never sit in.
+  const cofactorZones = [];
+  // The row an enzyme name is SET on, across the run it can actually reach. A
+  // rail laid along it strikes the name out however the ladder was relaxed, so
+  // unlike the reserved boxes this is a constraint the router never gives up.
+  const labelRows = [];
   for (const r of reactions) {
     const boxes = labelBoxesFor(r);
     if (!boxes.length) continue;
     r.labelBox = boxes[0];        // exported so the renderer can set into it
     labelKeepOut.push(...boxes);
+    const zone = cofactorZoneFor(r);
+    if (zone) cofactorZones.push(zone);
+    const [mx, my] = polyMid(r.points);
+    const d = r.side === "left" ? -1 : 1;
+    const run = 14 + labelReach(mx + d * 14, my, d);
+    labelRows.push({ y: Math.round(my), x0: Math.round(d > 0 ? mx : mx - run), x1: Math.round(d > 0 ? mx + run : mx) });
   }
 
   // What the routed rails have already claimed. Regulation used to be checked
@@ -518,6 +543,17 @@ export function layout(ast, sizes = {}, fold = 1) {
    * still draws its regulation rather than degrading every edge to a tag.
    */
   function regClear(points, src, legacy = regStrict.legacy) {
+    // Two tests the ladder may NEVER relax, because what they prevent is worse
+    // than a longer rail: a leg laid along an enzyme name's own baseline (which
+    // strikes the name out), and a leg laid ON a flux stroke (which makes the two
+    // read as one line — that is what drew warburg g6p->hk2 on the hk2 arrow).
+    if (onLabelRow(points)) return false;
+    if (shadowsFlux(points, 3, 12)) return false;
+    // The +/- disc is seated by walking BACK along the rail from the landing, so
+    // a rail that arrives with no straight approach leaves the renderer nowhere
+    // to walk and the glyph is committed on top of whatever the rail terminates
+    // on. Reserve a run at least a disc's diameter long.
+    if (approachRun(points) < 2 * GLYPH_R + 4) return false;
     // Text and other rails are obstacles too, not just cells.
     if (regStrict.labels && !clearOfLabels(points, labelKeepOut)) return false;
     if (regStrict.rails && !clearOfRails(points, railSegments)) return false;
@@ -534,6 +570,32 @@ export function layout(ast, sizes = {}, fold = 1) {
       }
     }
     return true;
+  }
+
+  /** Length of the straight run the rail arrives on. */
+  function approachRun(points) {
+    const a = points[points.length - 2], b = points[points.length - 1];
+    return Math.hypot(b[0] - a[0], b[1] - a[1]);
+  }
+
+  /**
+   * Does a horizontal leg of this route lie along a row an enzyme name is set on?
+   * regulationRoute prefers a VERTICAL approach for exactly this reason, but its
+   * Z-route fallbacks arrive horizontally, so the rail came back to the row the
+   * router was trying to avoid.
+   */
+  function onLabelRow(points) {
+    for (let i = 1; i < points.length; i++) {
+      const [x1, y1] = points[i - 1], [x2, y2] = points[i];
+      if (y1 !== y2) continue;
+      const lo = Math.min(x1, x2), hi = Math.max(x1, x2);
+      if (hi - lo < 20) continue;                  // a stub, not a run
+      for (const row of labelRows) {
+        if (Math.abs(y1 - row.y) > 8) continue;
+        if (Math.min(hi, row.x1) - Math.max(lo, row.x0) > 12) return true;
+      }
+    }
+    return false;
   }
 
   /** True when no segment of a route runs through paper reserved for text. */
@@ -623,7 +685,15 @@ export function layout(ast, sizes = {}, fold = 1) {
     // and relax one constraint at a time rather than all at once. The cell test
     // (the one the build gate enforces) is only loosened at the last resort.
     let pts = null;
-    for (const level of [{ labels: 1, rails: 1 }, { labels: 0, rails: 1 }, { labels: 0, rails: 0 }, { labels: 0, rails: 0, legacy: 1 }]) {
+    // A REACTION can carry Michal's own device — the effector's name written ON
+    // the step — so it never needs a rail driven through the label column to say
+    // the same thing. Keep the text reservation binding for those and degrade to
+    // tagStep(). A CELL target has nowhere to write a tag, so for those the old
+    // ladder still runs all the way down: a long rail beats losing the relation.
+    const ladder = dst.points
+      ? [{ labels: 1, rails: 1 }, { labels: 1, rails: 0 }, { labels: 0, rails: 1 }]
+      : [{ labels: 1, rails: 1 }, { labels: 0, rails: 1 }, { labels: 0, rails: 0 }, { labels: 0, rails: 0, legacy: 1 }];
+    for (const level of ladder) {
       Object.assign(regStrict, { labels: !!level.labels, rails: !!level.rails, legacy: !!level.legacy });
       pts = regulationRoute(src, dst, n, targetCount.get(r.to) || 1, regLane);
       if (pts) break;
@@ -716,6 +786,16 @@ export function layout(ast, sizes = {}, fold = 1) {
     const mets = chain.steps.filter((s) => s.kind === "metabolite");
     const n = mets.length;
     if (!n) return;
+    // Ring members were spaced by `radius` alone, so the tangential gap between
+    // two cells had no relation to the annotation block each chord must carry —
+    // which is how OGDH's name ended up 32% inside the cells on either side of
+    // it. Grow the ring until the chord between neighbouring centres has room for
+    // a cell AND the block beside it. Capped, so a declared radius still governs.
+    if (n > 2) {
+      const avgW = mets.reduce((a, s) => a + sizeOf(s.id).w, 0) / n;
+      const need = (avgW + LABEL_W + 24) / (2 * Math.sin(Math.PI / n));
+      radius = Math.min(Math.max(radius, need), radius * 1.5);
+    }
     const ring = [];
     mets.forEach((step, i) => {
       const a = -Math.PI / 2 + (i * 2 * Math.PI) / n;   // start at 12 o'clock
@@ -738,6 +818,15 @@ export function layout(ast, sizes = {}, fold = 1) {
       if (!step) break;
       const from = ring[i], to = ring[(i + 1) % ring.length];
       finishReaction(step, from, to, true);
+      // Which side of a ring chord the name goes on is not a parity question —
+      // `reactions.length % 2` put half the TCA's enzyme names INSIDE the ring,
+      // where every other member competes for the same paper. Outward is where
+      // Michal writes them, and it is where the unlimited paper is.
+      const rx = reactions[reactions.length - 1];
+      if (rx && rx.onRing) {
+        const mx = (rx.points[0][0] + rx.points[1][0]) / 2;
+        rx.side = mx >= cx ? "right" : "left";
+      }
     }
   }
 
@@ -897,22 +986,40 @@ export function layout(ast, sizes = {}, fold = 1) {
     const exitY = dy >= 0 ? from.y + from.h : from.y;
     const entryY = dy >= 0 ? to.y : to.y + to.h;
     const midY = Math.round((exitY + entryY) / 2);
+    // The crossing lane must lie in the GAP between the two rows. When the cells
+    // overlap vertically, entryY is behind exitY: the midpoint then falls inside
+    // one or both boxes, and the Z doubles back up through the cell it just left,
+    // crosses its own name band, and docks on the far cell's wrong face pointing
+    // against the flow. clear() exempts both endpoints by construction, so nothing
+    // downstream could ever notice. Require a real gutter, or take a detour lane —
+    // detourY() already searches for one outside both boxes.
+    const GUTTER = 10;
+    const laneOk = dy >= 0 ? entryY - exitY >= 2 * GUTTER : exitY - entryY >= 2 * GUTTER;
     const z = [[fcx, exitY], [fcx, midY], [tcx, midY], [tcx, entryY]];
-    if (clear(z, from, to)) return z;
+    if (laneOk && clear(z, from, to)) return z;
     const dy2 = detourY(from, to);
     if (clear(dy2, from, to)) return dy2;
     return detourX(from, to);
   }
 
-  /** True when no segment of the route crosses a cell other than its endpoints. */
+  /**
+   * True when no segment of the route crosses a cell it does not connect.
+   *
+   * Only the FIRST and LAST segment may touch the endpoint cells — those are the
+   * stubs that dock on their frames. An interior segment inside `from` or `to` is
+   * a line drawn through its own box, which is exactly the tunnelling the blanket
+   * `n === from || n === to` exemption made the compiler blind to.
+   */
   function clear(points, from, to) {
     const pad = 6;
-    for (let i = 1; i < points.length; i++) {
+    const last = points.length - 1;
+    for (let i = 1; i <= last; i++) {
+      const stub = points.length <= 2 || i === 1 || i === last;
       const [x1, y1] = points[i - 1], [x2, y2] = points[i];
       const lo = { x: Math.min(x1, x2) - pad, y: Math.min(y1, y2) - pad };
       const hi = { x: Math.max(x1, x2) + pad, y: Math.max(y1, y2) + pad };
       for (const n of nodes) {
-        if (n === from || n === to) continue;
+        if (stub && (n === from || n === to)) continue;
         if (!(hi.x <= n.x || n.x + n.w <= lo.x || hi.y <= n.y || n.y + n.h <= lo.y)) return false;
       }
     }
@@ -931,7 +1038,11 @@ export function layout(ast, sizes = {}, fold = 1) {
       }
     }
     // Last resort: find a horizontal band that is actually clear across the span.
-    const band = clearBandY(fcx, tcx, (from.y + to.y) / 2, from, to);
+    // clearBandY exempts the endpoints, so the band it returns can sit INSIDE one
+    // of them — push it clear rather than crossing the cell we are docking on.
+    let band = clearBandY(fcx, tcx, (from.y + to.y) / 2, from, to);
+    const inBox = (y, n) => y > n.y - 8 && y < n.y + n.h + 8;
+    if (inBox(band, from) || inBox(band, to)) band = Math.max(from.y + from.h, to.y + to.h) + 64;
     const exit = band < from.y ? from.y : from.y + from.h;
     const entry = band < to.y ? to.y : to.y + to.h;
     return [[fcx, exit], [fcx, band], [tcx, band], [tcx, entry]];
@@ -1092,8 +1203,14 @@ export function layout(ast, sizes = {}, fold = 1) {
     f = Math.max(0.12, Math.min(0.88, f));
     const labelDir = dst.side === "left" ? -1 : 1;
     const base = pointAlong(dst.points, f);
+    // Fan the discs onto the NAME side, not away from it. Stepping away from the
+    // name put the whole stack on exactly the side chart-view.ts swings the
+    // cofactor arcs out on (`cofactorSide(r, -dir, ...)`) — glyphs and arcs landed
+    // on the same side of the same midpoint every time. The name is movable (the
+    // renderer's placer re-seats it); the arc is not, so the disc yields to the
+    // arc and the text yields to the disc.
     const prefer = Math.abs(base.uy) > 0.5
-      ? (-base.uy * labelDir > 0 ? -1 : 1)   // vertical shaft: step away from the name
+      ? (-base.uy * labelDir > 0 ? 1 : -1)   // vertical shaft: step towards the name
       : (scy <= base.y ? -1 : 1);            // horizontal shaft: step towards the source
     // Walk the shaft (still skipping the label band) until a landing point is
     // found that is clear of every cell and of every glyph already placed.
@@ -1106,22 +1223,96 @@ export function layout(ast, sizes = {}, fold = 1) {
         if (q) return q;
       }
     }
-    return freeLanding([base.x, base.y], -base.uy * prefer, base.ux * prefer);
+    // Nothing along the shaft was fully clear. Take the least-bad seat rather than
+    // the preferred side's seat: with several regulators on one step (PDC's E1 has
+    // three) committing to one side is what stacked five of six discs on the same
+    // band of the enzyme name.
+    let fallback = null;
+    for (const df of [0, -0.18, 0.18, -0.3, 0.3]) {
+      const ff = Math.max(0.12, Math.min(0.88, f + df));
+      const at = pointAlong(dst.points, ff);
+      for (const s of [prefer, -prefer]) {
+        const q = freeLanding([at.x, at.y], -at.uy * s, at.ux * s);
+        if (!fallback || q.cost < fallback.cost) fallback = q;
+      }
+    }
+    return fallback;
   }
 
   /**
    * Step a landing point off the shaft until the +/- disc it carries sits on
-   * clear paper: not on another regulator's glyph, and not on a cell frame.
+   * clear paper.
+   *
+   * The disc used to be tested against cell rectangles and other landings only —
+   * never against the flux strokes it is meant to sit BESIDE, never against the
+   * cofactor side-entry envelopes, never against the text the compiler reserved
+   * 600 lines earlier. So a disc could land on the arrow (which is what the
+   * renderer's back-walk was invented to compensate for, and cannot when the rail
+   * is short), or inside a substrate arc, which turns a cofactor arrowhead into a
+   * regulation arrowhead and makes the sheet assert biochemistry that is false.
+   *
+   * The tiers say which constraints may be given up, in order of what a reader
+   * loses. Two are never given up: a disc may not coincide with another disc, and
+   * a disc may not sit inside a cell.
    */
   function freeLanding(p, ux, uy, strict = false) {
-    for (let i = 0; i < 8; i++) {
+    let best = null, bestCost = Infinity;
+    for (let i = 0; i < 10; i++) {
       const off = 13 + i * 9;
       const q = [Math.round(p[0] + ux * off), Math.round(p[1] + uy * off)];
-      if (railLandings.some((o) => Math.hypot(o[0] - q[0], o[1] - q[1]) < 17)) continue;
-      if (nodes.some((n) => q[0] > n.x - 9 && q[0] < n.x + n.w + 9 && q[1] > n.y - 9 && q[1] < n.y + n.h + 9)) continue;
-      return q;
+      let cost = 0;
+      // never given up: a disc may not coincide with another disc, nor sit in a cell
+      if (railLandings.some((o) => Math.hypot(o[0] - q[0], o[1] - q[1]) < GLYPH_CLEAR)) cost += 1e6;
+      if (nodes.some((n) => q[0] > n.x - 9 && q[0] < n.x + n.w + 9 && q[1] > n.y - 9 && q[1] < n.y + n.h + 9)) cost += 1e6;
+      // the arcs are fixed geometry, so the disc yields to them
+      if (cofactorZones.some((z) => inZone(q, z))) cost += 1e4;
+      // on the arrow is what the renderer's back-walk exists to undo, and cannot
+      if (nearFlux(q, GLYPH_R + 2)) cost += 1e3;
+      // text last: the renderer's placer can re-seat a name, not an arc
+      if (labelKeepOut.some((b) => q[0] > b.x - 4 && q[0] < b.x + b.w + 4 && q[1] > b.y - 4 && q[1] < b.y + b.h + 4)) cost += 50;
+      cost += i;                       // all else equal, stay near the shaft
+      if (cost < bestCost) { bestCost = cost; best = q; }
+      if (cost <= i) break;            // fully clear: take it
     }
-    return strict ? null : [Math.round(p[0] + ux * 13), Math.round(p[1] + uy * 13)];
+    if (strict && bestCost > 9) return null;   // let the caller try another f
+    best.cost = bestCost;
+    return best;
+  }
+
+  /** Distance from a point to the nearest flux stroke, thresholded. */
+  function nearFlux(q, r) {
+    for (const rx of reactions) {
+      if (rx.kind === "branch-link") continue;
+      const pts = rx.points;
+      for (let i = 1; i < pts.length; i++) {
+        const [ax, ay] = pts[i - 1], [bx, by] = pts[i];
+        const vx = bx - ax, vy = by - ay;
+        const L2 = vx * vx + vy * vy;
+        let t = L2 ? ((q[0] - ax) * vx + (q[1] - ay) * vy) / L2 : 0;
+        t = Math.max(0, Math.min(1, t));
+        if (Math.hypot(q[0] - (ax + vx * t), q[1] - (ay + vy * t)) < r) return true;
+      }
+    }
+    return false;
+  }
+
+  function inZone(q, z) {
+    return q[0] > z.x && q[0] < z.x + z.w && q[1] > z.y && q[1] < z.y + z.h;
+  }
+
+  /**
+   * The paper the side-entry arcs sweep: chart-view.ts swings them out of the
+   * step's midpoint on the side OPPOSITE the enzyme name, at the same radius
+   * labelBoxesFor() computes for their captions.
+   */
+  function cofactorZoneFor(r) {
+    if (!r.enzyme) return null;
+    if (!(r.in?.length || r.out?.length)) return null;
+    const [mx, my] = polyMid(r.points);
+    const d = r.side === "left" ? -1 : 1;
+    const len = r.points.reduce((a, p, i) => (i ? a + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0), 0);
+    const R = Math.max(12, Math.min(COFACTOR_R, len * 0.22));
+    return { x: Math.round(d > 0 ? mx - R : mx), y: Math.round(my - R), w: Math.round(R), h: Math.round(2 * R) };
   }
 
   /** Record a routed rail so the next one cannot be laid down on top of it. */
@@ -1143,17 +1334,42 @@ export function layout(ast, sizes = {}, fold = 1) {
     if (!r.enzyme) return [];
     const [mx, my] = polyMid(r.points);
     const d = r.side === "left" ? -1 : 1;
-    // Reserve the part of the name block that is ALWAYS set — the first dozen
-    // characters and the EC line under them. Claiming the full width a long name
-    // could reach blankets the sheet: measured, 70% of rails then had no legal
-    // corridor at all and were routed across the text anyway. The renderer wraps
-    // the tail to whatever channel is left, so the tail is negotiable; the head
-    // is not.
-    const boxes = [{
-      x: Math.round(d > 0 ? mx + 10 : mx - 10 - LABEL_W),
-      y: Math.round(my - LABEL_LINE - 4),
-      w: LABEL_W, h: LABEL_LINE * 2 + LABEL_EC + 4,
-    }];
+    // Reserve what will actually be inked. The head of the name (LABEL_W, ~13
+    // characters) is the floor; where the channel is wide the renderer sets the
+    // whole name on ONE long line instead of wrapping, and that run is what a
+    // rail was crossing. Claiming a blanket NAME_REACH for every step is the
+    // other failure mode — it leaves 70% of rails no legal corridor at all — so
+    // reserve the shorter of the two: the name's own width, or the paper it has.
+    const h = LABEL_LINE * 2 + LABEL_EC + 4;
+    const y = Math.round(my - LABEL_LINE - 4);
+    const want = Math.max(LABEL_W, String(r.enzyme).length * 5.4 + 12);
+    // The gap between two cells is not always wide enough for the block a step
+    // must carry, and committing to mx±10 then reserved paper that was INSIDE a
+    // neighbouring cell — the compiler asserting text could be set where a
+    // structure already is (ketone hmgcs2, citric ogdh). Search instead: try the
+    // declared side, then the other, then further out, and keep the first box on
+    // free paper. For a ring chord "the other side" is the outside of the ring,
+    // which is where Michal writes TCA enzyme names anyway.
+    let box = null, bestPen = Infinity, side = d;
+    for (const cand of [d, -d]) {
+      for (const gap of [10, 22, 36]) {
+        const w = Math.max(40, Math.min(want, labelReach(mx + cand * gap, my, cand)));
+        const b = { x: Math.round(cand > 0 ? mx + gap : mx - gap - w), y, w, h };
+        let pen = 0;
+        for (const n of nodes) {
+          const ox = Math.min(b.x + b.w, n.x + n.w) - Math.max(b.x, n.x);
+          const oy = Math.min(b.y + b.h, n.y + n.h) - Math.max(b.y, n.y);
+          if (ox > 0 && oy > 0) pen += ox * oy;
+        }
+        if (pen < bestPen) { bestPen = pen; box = b; side = cand; }
+        if (!pen) break;
+      }
+      if (!bestPen) break;
+    }
+    // The renderer reads `side` for BOTH the name and the cofactor arcs, so the
+    // two can never be told different stories: move the side, not just the box.
+    r.side = side > 0 ? "right" : "left";
+    const boxes = [box];
     // Cofactor captions hang off the arc on the other side, at exactly the
     // radius chart-view.ts computes from the edge's own length.
     const len = r.points.reduce((a, p, i) => (i ? a + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0), 0);
@@ -1162,7 +1378,7 @@ export function layout(ast, sizes = {}, fold = 1) {
       const w = labelRun(ids);
       if (!w) continue;
       boxes.push({
-        x: Math.round(d > 0 ? mx - 4 - R - w : mx + 4 + R),
+        x: Math.round(side > 0 ? mx - 4 - R - w : mx + 4 + R),
         y: Math.round(top ? my - R - 12 : my + R - 2),
         w, h: 14,
       });
@@ -1237,22 +1453,22 @@ export function layout(ast, sizes = {}, fold = 1) {
   }
 
   /** Does this route lie ON a real reaction's stroke? Then it reads as one line. */
-  function shadowsFlux(points) {
+  function shadowsFlux(points, tol = 6, run = 24) {
     for (let i = 1; i < points.length; i++) {
       const a = points[i - 1], b = points[i];
       for (const r of reactions) {
         if (r.kind === "branch-link") continue;
         for (let j = 1; j < r.points.length; j++) {
           const c = r.points[j - 1], d = r.points[j];
-          if (a[1] === b[1] && c[1] === d[1] && Math.abs(a[1] - c[1]) <= 6) {
+          if (a[1] === b[1] && c[1] === d[1] && Math.abs(a[1] - c[1]) <= tol) {
             const ov = Math.min(Math.max(a[0], b[0]), Math.max(c[0], d[0]))
                      - Math.max(Math.min(a[0], b[0]), Math.min(c[0], d[0]));
-            if (ov > 24) return true;
+            if (ov > run) return true;
           }
-          if (a[0] === b[0] && c[0] === d[0] && Math.abs(a[0] - c[0]) <= 6) {
+          if (a[0] === b[0] && c[0] === d[0] && Math.abs(a[0] - c[0]) <= tol) {
             const ov = Math.min(Math.max(a[1], b[1]), Math.max(c[1], d[1]))
                      - Math.max(Math.min(a[1], b[1]), Math.min(c[1], d[1]));
-            if (ov > 24) return true;
+            if (ov > run) return true;
           }
         }
       }

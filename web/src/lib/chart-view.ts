@@ -25,6 +25,8 @@ export interface ChartRxn {
   uniprot: string | null; pdb: string | null; gene: string | null;
   reversible: boolean; committed?: boolean; from: string; to: string; points: [number, number][];
   in: string[]; out: string[]; inLabels: string[]; outLabels: string[]; side?: string;
+  /** Paper the router already kept clear for this step's text (compile.mjs). */
+  labelBox?: { x: number; y: number; w: number; h: number };
 }
 export interface ChartReg { effect: string; kind: string; from: string; to: string; points: [number, number][]; glyph: string; }
 export interface ChartIR {
@@ -36,40 +38,68 @@ export interface ChartIR {
 export interface ChartHooks {
   onMetabolite?(n: ChartNode): void;
   onEnzyme?(r: ChartRxn): void;
-  onZoom?(k: number, lod: string): void;
+  /** `namePx` is the on-screen size of an enzyme name — the honest legibility test. */
+  onZoom?(k: number, lod: string, namePx?: number): void;
 }
 
 /**
- * Fit an enzyme name into at most two lines of `maxChars`. Horizontal room is the
- * scarce axis on this sheet, vertical room usually is not — so wrap rather than
- * truncate. The trailing parenthesised gene symbol (AKR1C4, BAAT, MFE-2 …) is the
- * identifier you navigate by, so it is never the thing that gets cut.
+ * Fit an enzyme name into at most `maxLines` lines of `maxChars`. Horizontal room
+ * is the scarce axis on this sheet, vertical room usually is not — so wrap rather
+ * than truncate, and take a THIRD line before ellipsising anything: Roche routinely
+ * breaks a systematic name over three lines, and a name cut mid-word
+ * ("STEROL 14alpha-DEMETH…") asserts less than one that simply runs deeper.
+ * Breaks are taken preferentially at the seams a chemical name already has — a
+ * ` / ` alternation and a parenthesised qualifier — before falling back to word
+ * wrapping and, last, to a hyphenated mid-token split. The trailing parenthesised
+ * gene symbol (AKR1C4, BAAT, MFE-2 …) is the identifier you navigate by, so it is
+ * never the thing that gets cut.
  */
-export function wrapEnzymeName(full: string, maxChars: number): string[] {
+export function wrapEnzymeName(full: string, maxChars: number, maxLines = 3): string[] {
   if (full.length <= maxChars) return [full];
   const gene = full.match(/\s(\([^()]*\))\s*$/);
-  const head = gene ? full.slice(0, gene.index) : full;
+  const head = (gene ? full.slice(0, gene.index) : full).trim();
   const tail = gene ? gene[1] : "";
   // The whole name minus its gene symbol fits: park the symbol on line two.
   if (head.length <= maxChars && tail && tail.length <= maxChars) return [head, tail];
 
-  const words = head.split(/\s+/);
-  let l1 = "", i = 0;
-  for (; i < words.length; i++) {
-    const next = l1 ? `${l1} ${words[i]}` : words[i];
-    if (next.length > maxChars) break;
-    l1 = next;
+  const lines: string[] = [];
+  let cur = "";
+  const push = () => { if (cur) { lines.push(cur); cur = ""; } };
+  /** Emit whole lines of an over-long single token, returning the remainder. */
+  const breakLong = (w: string) => {
+    let rest = w;
+    let guard = 8;
+    while (rest.length > maxChars && guard-- > 0) {
+      const hy = rest.lastIndexOf("-", maxChars - 1);
+      if (hy >= Math.floor(maxChars * 0.45)) { lines.push(rest.slice(0, hy + 1)); rest = rest.slice(hy + 1); }
+      else { lines.push(rest.slice(0, Math.max(1, maxChars - 1)) + "-"); rest = rest.slice(Math.max(1, maxChars - 1)); }
+    }
+    return rest;
+  };
+  for (const w of head.split(/\s+/)) {
+    const seam = w === "/" || w === "—" || w.startsWith("(");
+    const next = cur ? `${cur} ${w}` : w;
+    if (cur && (seam || next.length > maxChars)) { push(); cur = breakLong(w); }
+    else if (!cur && w.length > maxChars) cur = breakLong(w);
+    else cur = next;
   }
-  let rest: string;
-  if (!l1) { l1 = head.slice(0, maxChars); rest = head.slice(maxChars).trim(); }
-  else rest = words.slice(i).join(" ");
+  push();
+  if (tail) {
+    const li = lines.length - 1;
+    if (li >= 0 && lines[li].length + 1 + tail.length <= maxChars) lines[li] += ` ${tail}`;
+    else lines.push(tail);
+  }
+  if (!lines.length) return [head.slice(0, Math.max(1, maxChars))];
+  if (lines.length <= maxLines) return lines;
 
-  let l2 = tail ? (rest ? `${rest} ${tail}` : tail) : rest;
-  if (l2.length > maxChars) {
-    const room = Math.max(3, maxChars - (tail ? tail.length + 2 : 1));
-    l2 = rest.slice(0, room).replace(/[\s(,\-]+$/, "") + "…" + (tail ? ` ${tail}` : "");
-  }
-  return l2 ? [l1, l2] : [l1];
+  // Genuinely too long even over three lines. Keep the gene symbol — it is the
+  // handle — and ellipsise the run in front of it rather than the end of the name.
+  const room = Math.max(1, maxLines - (tail ? 1 : 0));
+  const kept = lines.slice(0, room);
+  const li = kept.length - 1;
+  kept[li] = kept[li].replace(/[\s(,\-]+$/, "") + "…";
+  if (tail) kept.push(tail);
+  return kept;
 }
 
 /**
@@ -221,7 +251,14 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   }
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
-  const enzymeLabels: { name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number; full: string; shown: string }[] = [];
+  const enzymeLabels: {
+    name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number;
+    full: string; shown: string;
+    /** this step's OWN stroke — a name straddling it gets cut from its EC number */
+    own: [number, number][];
+    /** paper compile.mjs already routed everything else around, if it exported any */
+    reserved?: { x: number; y: number; w: number; h: number };
+  }[] = [];
   // Cofactor captions were pinned to their arc geometry and registered only as
   // obstacles for OTHER labels — the one text class on the sheet that was never
   // itself moved. They are now deferred and placed against the same obstacle set.
@@ -232,7 +269,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const nameBoxes: { x: number; y: number; w: number; h: number }[] = [];
   const nodeEls = new Map<string, SVGGElement>();
   const edgeEls: { el: SVGElement; rxn: ChartRxn }[] = [];
-  const regGlyphs: { el: SVGGElement; x: number; y: number }[] = [];
+  const regGlyphs: { el: SVGGElement; x: number; y: number; cap: number }[] = [];
 
   // ---------- flux reactions ----------
   for (const r of ir.reactions) {
@@ -269,7 +306,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const ecEl = r.ec ? s("text", { class: "enz-ec lod-detail", x: tx, y: my + 10, "text-anchor": anchor }, [`EC ${r.ec}`]) : null;
       if (ecEl) layerEnzLabels.append(ecEl);
       // register with the anti-collision placer that runs once everything exists
-      enzymeLabels.push({ name, ec: ecEl, mx, my, full, shown });
+      enzymeLabels.push({ name, ec: ecEl, mx, my, full, shown, own: r.points, reserved: r.labelBox });
       // cofactors enter/leave on a curved side-entry, Michal-style. Only the arcs
       // are committed here; the captions are placed after the cells exist.
       const elen = r.points.reduce((acc, p, i) => i ? acc + Math.hypot(p[0] - r.points[i - 1][0], p[1] - r.points[i - 1][1]) : 0, 0);
@@ -302,6 +339,13 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       fluxSegs.push([r.points[i - 1][0], r.points[i - 1][1], r.points[i][0], r.points[i][1]]);
     }
   }
+  // Glyphs are placed as a SET, not one at a time. Scoring each disc against only
+  // the cells and the flux lines left N regulators of one step stacked 13u apart at
+  // r=7 — two of them merging OPPOSITE effects into a single smudge on the two most
+  // famous allosteric switches on the atlas. Every committed disc therefore becomes
+  // an obstacle for the next one.
+  const placedGlyphs: [number, number][] = [];
+  const GLYPH_SEP = 18;                       // 2r + 4 at the world radius
   const glyphClearance = (x: number, y: number) => {
     for (const n of ir.nodes) if (x > n.x && x < n.x + n.w && y > n.y && y < n.y + n.h) return 0;
     let d = Infinity;
@@ -309,19 +353,47 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       d = Math.min(d, distToSegment(x, y, seg[0], seg[1], seg[2], seg[3]));
       if (d < 1) break;
     }
+    // A neighbouring disc counts as clear once the two centres are GLYPH_SEP apart;
+    // closer than that it degrades the score exactly like ink would.
+    for (const [gx, gy] of placedGlyphs) {
+      d = Math.min(d, Math.max(0, Math.hypot(x - gx, y - gy) - GLYPH_SEP + 9));
+      if (d < 1) break;
+    }
     return d;
   };
   for (const reg of ir.regulation) {
     const g = s("g", { class: "reg" });
-    const pts = reg.points.map((p) => p.join(",")).join(" ");
-    g.append(s("polyline", { class: `reg-line${reg.effect === "activate" ? " activate" : ""}`, points: pts }));
-    let ex = 0, ey = 0, clearest = -1;
+    const pathPts = reg.points as [number, number][];
+    let ex = 0, ey = 0, clearest = -1, chosenBack = 13, offPath = false;
     for (const back of [13, 18, 24, 31, 39, 48]) {
-      const [x, y] = backAlongPath(reg.points as [number, number][], back);
+      const [x, y] = backAlongPath(pathPts, back);
       const clear = glyphClearance(x, y);
-      if (clear > clearest) { clearest = clear; ex = x; ey = y; }
+      if (clear > clearest) { clearest = clear; ex = x; ey = y; chosenBack = back; }
       if (clear >= 9) break;                  // the circle clears the ink entirely
     }
+    // Every probe distance failed — the best available centre still sits ON the
+    // arrow, which is the exact outcome the walk-back exists to prevent. Step
+    // PERPENDICULAR to the local rail direction instead of committing to it.
+    if (clearest < 3 && pathPts.length >= 2) {
+      const [bx, by] = backAlongPath(pathPts, 13);
+      const p0 = pathPts[pathPts.length - 2], p1 = pathPts[pathPts.length - 1];
+      const len = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]) || 1;
+      const nx = -(p1[1] - p0[1]) / len, ny = (p1[0] - p0[0]) / len;
+      for (const step of [11, -11, 16, -16, 22, -22]) {
+        const x = bx + nx * step, y = by + ny * step;
+        const clear = glyphClearance(x, y);
+        if (clear > clearest) { clearest = clear; ex = x; ey = y; offPath = true; }
+        if (clear >= 9) break;
+      }
+    }
+    // The rail is drawn to the disc, never past it: walking the glyph back up to
+    // 48u used to leave that much dashed line painted beyond its own circle with no
+    // arrowhead and no glyph at the end — a rail terminating in mid-air.
+    const drawn = offPath ? pathPts : trimPath(pathPts, chosenBack);
+    g.append(s("polyline", {
+      class: `reg-line${reg.effect === "activate" ? " activate" : ""}`,
+      points: drawn.map((p) => p.join(",")).join(" "),
+    }));
     const color = reg.effect === "activate" ? "#1a7f37" : "#c8102e";
     // Radius is zoom-compensated in apply(), the way --title-size is: a fixed
     // 7-unit circle renders at ~2.5px on a sheet that fits at 35%.
@@ -329,8 +401,23 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     glyph.append(s("circle", { cx: 0, cy: 0, r: 7, fill: "#fff", stroke: color, "stroke-width": 1.4 }));
     glyph.append(s("text", { x: 0, y: 3.5, fill: color }, [reg.effect === "activate" ? "+" : "–"]));
     g.append(glyph);
-    regGlyphs.push({ el: glyph, x: ex, y: ey });
+    regGlyphs.push({ el: glyph, x: ex, y: ey, cap: 8 });
+    placedGlyphs.push([ex, ey]);
     layerReg.append(g);
+  }
+  // How far apply() may inflate each disc, capped by the separation the placer
+  // actually achieved for THAT disc. Without this a 1.9x zoom compensation turns
+  // 13u centres into 26u circles and a regulator stack renders as one bead-chain
+  // blob — merging opposite effects into a single smudge. The cap is per-glyph, not
+  // per-sheet: one tight pair must not shrink every other glyph on the chart back
+  // to an illegible 2.5px.
+  for (let i = 0; i < regGlyphs.length; i++) {
+    let sep = Infinity;
+    for (let j = 0; j < regGlyphs.length; j++) {
+      if (i === j) continue;
+      sep = Math.min(sep, Math.hypot(regGlyphs[i].x - regGlyphs[j].x, regGlyphs[i].y - regGlyphs[j].y));
+    }
+    regGlyphs[i].cap = Number.isFinite(sep) ? Math.max(1, sep / 15) : 8;
   }
 
   // ---------- metabolite cells ----------
@@ -374,8 +461,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       }, [row])));
     }
     if (n.formula) g.append(s("text", { class: "met-formula lod-detail", x: n.w / 2, y: n.h - 4 }, [n.formula]));
-    // a condensed cell is text all the way down; every other cell only at the top
-    nameBoxes.push({ x: n.x, y: n.y, w: n.w, h: cond?.length ? n.h : top });
+    // a condensed cell is text all the way down; every other cell only at the top.
+    // A protein chip paints its name at y=34, BELOW `top` (=23 for one line), so
+    // reserving y..y+top left the one label the placer most needs to see invisible
+    // to it — measure the real ink bottom instead of assuming the metabolite layout.
+    const inkBot = (isProtein ? 34 : 12) + (shown.length - 1) * 11 + 4;
+    nameBoxes.push({ x: n.x, y: n.y, w: n.w, h: cond?.length ? n.h : Math.max(top, inkBot) });
     g.setAttribute("data-structure-top", String(top));
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });
     layerNodes.append(g);
@@ -394,22 +485,40 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // Regulation rails and scaffolding hairlines are ink too — a label that lands
     // on one gets struck through at its baseline. Reserve a thin corridor along
     // every segment so names and EC numbers are placed clear of them.
-    const railBoxes: { x: number; y: number; w: number; h: number }[] = [];
-    const reserveRail = (pts: [number, number][] | undefined) => {
+    type Box = { x: number; y: number; w: number; h: number };
+    const segBoxes = (pts: [number, number][] | undefined, pad = 3): Box[] => {
+      const out: Box[] = [];
       for (let i = 1; i < (pts?.length ?? 0); i++) {
         const [x1, y1] = pts![i - 1], [x2, y2] = pts![i];
-        railBoxes.push({
-          x: Math.min(x1, x2) - 3, y: Math.min(y1, y2) - 3,
-          w: Math.abs(x2 - x1) + 6, h: Math.abs(y2 - y1) + 6,
+        out.push({
+          x: Math.min(x1, x2) - pad, y: Math.min(y1, y2) - pad,
+          w: Math.abs(x2 - x1) + pad * 2, h: Math.abs(y2 - y1) + pad * 2,
         });
       }
+      return out;
     };
+    const railBoxes: Box[] = [];
+    const reserveRail = (pts: [number, number][] | undefined) => { railBoxes.push(...segBoxes(pts)); };
     for (const g of ir.regulation || []) reserveRail(g.points as [number, number][]);
-    for (const r of ir.reactions) if (r.kind === "branch-link") reserveRail(r.points as [number, number][]);
+    // Flux strokes are ink too, and they were absent from the obstacle set
+    // entirely — which is why the default candidate always scored "clear" and a
+    // name+EC block was routinely laid straddling its own horizontal run, the
+    // stroke passing through the 12u gap between the two baselines.
+    for (const r of ir.reactions) reserveRail(r.points as [number, number][]);
+    // Regulation discs are drawn as circles the label placer never saw; at normal
+    // LOD apply() inflates r=7 to ~23 units, so a 46-unit disc sat among 10px
+    // labels. Reserve the disc at its INFLATED radius — but as a SOFT obstacle,
+    // the same treatment rails get. Measured over the atlas, making it hard cleared
+    // no extra ink and demoted 21 more enzyme names to detail zoom, which hides
+    // content rather than fixing it.
+    const GLYPH_R = 7 * Math.min(8, Math.max(1, 6 / (7 * LOD_NORMAL)));
+    const glyphBoxes: Box[] = regGlyphs.map((g) => ({
+      x: g.x - GLYPH_R, y: g.y - GLYPH_R, w: GLYPH_R * 2, h: GLYPH_R * 2,
+    }));
+    railBoxes.push(...glyphBoxes);
     // Rails are a SOFT obstacle: preferred-against, never disqualifying. Treating
     // them as hard blockers cleared the strike-throughs but demoted half the
     // labels to detail zoom, which hides content rather than fixing it.
-    type Box = { x: number; y: number; w: number; h: number };
     const taken: Box[] = [];
     const hit = (b: Box, list: Box[]) =>
       list.some((o) => !(b.x + b.w <= o.x || o.x + o.w <= b.x || b.y + b.h <= o.y || o.y + o.h <= b.y));
@@ -436,8 +545,16 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
      * wrapped name's second line and its EC number occupy bands of their own, and
      * testing only the first line let them be placed straight through a cell.
      */
+    const B = ir.bounds, EDGE = 4;
     const channel = (x: number, y: number, anchor: string, up: number, down: number) => {
-      let limit = 320;
+      // The framed sheet is the first obstacle. Starting from a flat 320 and never
+      // consulting ir.bounds is what let a long name at a margin lay out one 309u
+      // line running 75u past bounds.x+bounds.w, where fit() simply crops it.
+      const toRight = (B.x + B.w - EDGE) - x, toLeft = x - (B.x + EDGE);
+      let limit = Math.min(320,
+        anchor === "start" ? toRight
+          : anchor === "end" ? toLeft
+            : 2 * Math.min(toRight, toLeft));
       const scan = (o: Box) => {
         if (y + down + 2 < o.y || y - up - 2 > o.y + o.h) return;   // not on this band
         if (anchor === "start" && o.x > x) limit = Math.min(limit, o.x - x - 5);
@@ -453,7 +570,16 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     };
 
     for (const L of enzymeLabels) {
+      // The paper compile.mjs already routed the rails and the scaffolding around
+      // (r.labelBox, "exported so the renderer can set into it") is the one
+      // rectangle on the sheet something guaranteed to keep clear — so it goes in
+      // FRONT of the local guesses. It is not forced: it is a fixed 70x35 reserve
+      // and most names are wider, so it competes on the same clear/collide tiers.
+      const reserved = L.reserved
+        ? [{ dx: L.reserved.x - L.mx, dy: L.reserved.y + FONT - L.my, anchor: "start" }]
+        : [];
       const candidates = [
+        ...reserved,
         { dx: 14, dy: -2, anchor: "start" }, { dx: -14, dy: -2, anchor: "end" },
         { dx: 14, dy: -18, anchor: "start" }, { dx: -14, dy: -18, anchor: "end" },
         { dx: 14, dy: 16, anchor: "start" }, { dx: -14, dy: 16, anchor: "end" },
@@ -519,13 +645,31 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         L.name.classList.add("lod-detail");
       }
       type Spot = { c: typeof candidates[0]; x: number; y: number; box: typeof taken[0]; ovl: number };
-      let onRail: Spot | null = null;   // clear of real obstacles, but crosses a rail
+      // A step's OWN stroke is the obstacle that produced the signature defect: the
+      // name sits at my-2 and its EC at my+10, so a horizontal middle segment runs
+      // straight through the 12u gap and cuts the name from its number. The escape
+      // ({dx:14,dy:-18}) was always in the candidate list — it was simply never
+      // reached, because with no flux ink in the obstacle set the default scored clear.
+      const ownBoxes = segBoxes(L.own, 3);
+      let offOwn: Spot | null = null;   // clear of cells/labels/own stroke, on other ink
+      let onOwn: Spot | null = null;    // clear of cells and labels, straddles its own run
       let fallback: Spot | null = null; // nothing is clear — least-bad
       for (const c of [chosen, ...candidates]) {
-        const x = L.mx + c.dx, y = L.my + c.dy;
-        const bx = c.anchor === "start" ? x : c.anchor === "end" ? x - w : x - w / 2;
-        const box = { x: bx, y: y - FONT, w, h };
-        const spot: Spot = { c, x, y, box, ovl: overlap(box, cells) + overlap(box, taken) };
+        const rx = L.mx + c.dx, ry = L.my + c.dy;
+        const rbx = c.anchor === "start" ? rx : c.anchor === "end" ? rx - w : rx - w / 2;
+        const rby = ry - FONT;
+        // Clamp the COMMITTED box to the framed sheet, mirroring the clamp the
+        // cofactor placer already applies. Without it a long name at a margin was
+        // committed past bounds.x+bounds.w and fit() cropped it.
+        const bx = Math.min(Math.max(rbx, B.x + EDGE), Math.max(B.x + EDGE, B.x + B.w - EDGE - w));
+        const by = Math.min(Math.max(rby, B.y + EDGE), Math.max(B.y + EDGE, B.y + B.h - EDGE - h));
+        const x = rx + (bx - rbx), y = ry + (by - rby);
+        const box = { x: bx, y: by, w, h };
+        const spot: Spot = {
+          c, x, y, box,
+          // glyph overlap only RANKS a spot; it never disqualifies one
+          ovl: overlap(box, cells) + overlap(box, taken) + overlap(box, glyphBoxes),
+        };
         if (!hit(box, cells) && !hit(box, taken)) {
           if (!hit(box, railBoxes)) {         // best: clear of ink entirely
             commit(c, x, y);
@@ -533,15 +677,18 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
             placed = true;
             break;
           }
-          if (!onRail || spot.ovl < onRail.ovl) onRail = spot;
+          if (!hit(box, ownBoxes)) { if (!offOwn || spot.ovl < offOwn.ovl) offOwn = spot; }
+          else if (!onOwn || spot.ovl < onOwn.ovl) onOwn = spot;
         }
         if (!fallback || spot.ovl < fallback.ovl) fallback = spot;
       }
-      // Clear of cells and other labels but sitting on a rail: still show it at
-      // normal zoom — a rail crossing is far less costly than a hidden enzyme.
-      if (!placed && onRail) {
-        commit(onRail.c, onRail.x, onRail.y);
-        taken.push(onRail.box);
+      // Clear of cells, labels and glyphs but crossing some ink: still show it at
+      // normal zoom — a crossing is far less costly than a hidden enzyme. Prefer a
+      // spot that at least does not straddle the step's own stroke.
+      const relaxed = offOwn || onOwn;
+      if (!placed && relaxed) {
+        commit(relaxed.c, relaxed.x, relaxed.y);
+        taken.push(relaxed.box);
         placed = true;
       }
       // Nowhere clear: hold it back to detail zoom, but still park it at the
@@ -593,12 +740,19 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       // upstream of the midpoint, a product leaves downstream of it.
       const fracs = L.side === "in" ? [0.34, 0.5, 0.22, 0.62, 0.14] : [0.66, 0.5, 0.78, 0.38, 0.86];
       type Spot = { mx: number; my: number; d: number; rx: number; ry: number; anchor: string; x: number; y: number; box: Box; cost: number };
-      let best: Spot | null = null;
+      let best: Spot | null = null;      // least-bad, may be text-on-text
+      let clean: Spot | null = null;     // never lands on a name band or another label
       outer:
       for (const frac of fracs) {
         const [mx, my] = pointAlong(L.points, frac);
         for (const d of [L.dir, -L.dir]) {
-          for (const grow of [0, 12, 26, 44]) {
+          // The escape budget used to stop at rx+44, which on a short step beside a
+          // wide cell could not reach past the cell at all: every candidate landed
+          // inside the caption band and the placer committed text-on-text. Keep
+          // growing the reach — the sheet has free paper either side of a wide cell,
+          // and because the ARC is rebuilt from the winning rx it doubles as the
+          // leader line back to the step.
+          for (const grow of [0, 12, 26, 44, 66, 92, 124]) {
             const rx = L.rx + grow;
             // reaching further out also lifts the entry clear of the line, as far
             // as the step's own length allows
@@ -613,20 +767,33 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
             const cy = Math.min(Math.max(rawY, b.y + 2), Math.max(b.y + 2, b.y + b.h - h - 2));
             const box = { x: cx, y: cy, w, h };
             // Text on text is the worst outcome on this sheet — worse than text
-            // over a structure, which still reads. Price it accordingly so a
-            // caption with nowhere clean to go sits over a drawing, not a name.
+            // over a structure, which still reads. A cell's name band and another
+            // committed label are therefore a HARD veto (the way cells already are
+            // for enzyme names), not merely a 4x price: pricing let the placer
+            // "win" by picking the least-bad collision when nothing could clear.
+            const onText = hit(box, taken) || hit(box, nameBoxes);
             const cost = overlap(box, cells) + (overlap(box, taken) + overlap(box, nameBoxes)) * 4
-              + (hit(box, railBoxes) ? 60 : 0);
+              + (hit(box, railBoxes) ? 60 : 0) + (hit(box, glyphBoxes) ? 40 : 0);
             const spot: Spot = {
               mx, my, d, rx, ry, anchor: d > 0 ? "start" : "end",
               x: ax + (cx - rawX), y: ay + (cy - rawY), box, cost,
             };
             if (!best || spot.cost < best.cost) best = spot;
-            if (!cost) break outer;
+            if (!onText && (!clean || spot.cost < clean.cost)) clean = spot;
+            if (!onText && !cost) break outer;
           }
         }
       }
-      const c = best!;
+      // Nothing anywhere clears another piece of text. A clipped corner still reads
+      // under the knockout halo, so only a caption substantially buried in a name is
+      // withheld — printing it there asserts nothing legible about either label. The
+      // arc still shows that a cofactor enters, and the <title> keeps the species.
+      const c = clean || best!;
+      if (!clean) {
+        const buried = overlap(c.box, taken) + overlap(c.box, nameBoxes);
+        if (buried > w * h * 0.4) L.text.setAttribute("visibility", "hidden");
+      }
+      L.text.append(s("title", {}, [L.species.join(" + ")]));
       L.text.setAttribute("x", String(c.x));
       L.text.setAttribute("y", String(c.y));
       L.text.setAttribute("text-anchor", c.anchor);
@@ -659,11 +826,20 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // A regulation glyph is a legend key, not chemistry drawn to scale: hold it at
     // a readable size instead of letting a 7-unit circle shrink to ~2.5px on a
     // sheet that fits at 35%.
+    // …but never past the separation the placer actually achieved. Inflating every
+    // disc 1.9x on 13-unit centres is what turned a regulator stack into one
+    // bead-chain blob, merging opposite effects into a single smudge.
     const gs = Math.min(8, Math.max(1, 6 / (7 * k)));
-    for (const gl of regGlyphs) gl.el.setAttribute("transform", `translate(${gl.x},${gl.y}) scale(${gs})`);
+    for (const gl of regGlyphs) {
+      gl.el.setAttribute("transform", `translate(${gl.x},${gl.y}) scale(${Math.min(gs, gl.cap)})`);
+    }
     declutterLabels(lod);
     scheduleLoad();
-    hooks.onZoom?.(k, lod);
+    // The tier above is a threshold on the world→screen scale, but what decides
+    // legibility is the resulting on-screen type size — .enz-name is a fixed 10
+    // chart units and is not counter-scaled. Report that size so the HUD can stop
+    // claiming a tier nothing in it is readable at.
+    hooks.onZoom?.(k, lod, 10 * k);
   };
 
   /** The clear area fit() frames into: the canvas minus the floating HUD and help bar. */
@@ -1016,6 +1192,36 @@ function distToSegment(px: number, py: number, x1: number, y1: number, x2: numbe
   const dx = x2 - x1, dy = y2 - y1, l2 = dx * dx + dy * dy;
   const t = l2 ? Math.max(0, Math.min(1, ((px - x1) * dx + (py - y1) * dy) / l2)) : 0;
   return Math.hypot(px - (x1 + dx * t), py - (y1 + dy * t));
+}
+
+/**
+ * The polyline with its last `back` units removed (clamped to half its length), so
+ * a rail is never painted past the glyph that terminates it.
+ */
+function trimPath(points: [number, number][], back: number): [number, number][] {
+  if (points.length < 2) return points;
+  const segs: number[] = [];
+  let total = 0;
+  for (let i = 1; i < points.length; i++) {
+    const d = Math.hypot(points[i][0] - points[i - 1][0], points[i][1] - points[i - 1][1]);
+    segs.push(d); total += d;
+  }
+  const keep = Math.max(0, total - Math.min(back, total / 2));
+  const out: [number, number][] = [points[0]];
+  let walked = 0;
+  for (let i = 0; i < segs.length; i++) {
+    if (walked + segs[i] >= keep) {
+      const t = segs[i] ? (keep - walked) / segs[i] : 0;
+      out.push([
+        points[i][0] + (points[i + 1][0] - points[i][0]) * t,
+        points[i][1] + (points[i + 1][1] - points[i][1]) * t,
+      ]);
+      return out;
+    }
+    walked += segs[i];
+    out.push(points[i + 1]);
+  }
+  return out;
 }
 
 /** The point `dist` back along a polyline from its end, clamped to half its length. */
