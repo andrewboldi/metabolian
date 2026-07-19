@@ -42,6 +42,9 @@ jobs:
           npx vite preview --port 4173 &
           npx wait-on -t 60000 http://localhost:4173/metabolian/chart.html
           node tools/qa-dom.mjs --gate
+      - name: Render performance budget
+        run: |
+          node tools/render-perf.mjs --budget 4000 _master glycolysis cholesterol-biosynthesis purine-de-novo-synthesis
 
   web:
     name: Lint, typecheck, build
