@@ -92,6 +92,12 @@ async function measure(url) {
     // GCM registration before the debugging socket answers. None of it is wanted
     // for a measurement run, and waiting on it is what timed the attach out.
     "--no-first-run", "--no-default-browser-check", "--disable-extensions",
+    // Deterministic text. Hinting and subpixel positioning are tuned per
+    // platform and per build, so the same label measured different widths on
+    // a dev browser and a CI runner — which made two real overprints look
+    // like environment noise and could not be reproduced locally at all.
+    "--font-render-hinting=none", "--disable-font-subpixel-positioning",
+    "--disable-lcd-text", "--force-device-scale-factor=1",
     "--disable-background-networking", "--disable-sync", "--metrics-recording-only",
     `--remote-debugging-port=${port}`, "--window-size=1600,1000", "about:blank",
   ], { stdio: ["ignore", "ignore", "pipe"] });

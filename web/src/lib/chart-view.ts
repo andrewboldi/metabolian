@@ -269,6 +269,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const nameBoxes: { x: number; y: number; w: number; h: number }[] = [];
   const nodeEls = new Map<string, SVGGElement>();
   const edgeEls: { el: SVGElement; rxn: ChartRxn }[] = [];
+  /** .met-formula font size — the band the formula occupies at the cell foot. */
+  const FORMULA_FONT = 9;
+  /** .enz-ec font size — used to reconstruct an EC's box when CSS has it hidden. */
+  const EC_FONT = 8.5;
   const regGlyphs: { el: SVGGElement; x: number; y: number; cap: number }[] = [];
   const effTags: { el: SVGGElement; dy: number }[] = [];
 
@@ -483,6 +487,13 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // to it — measure the real ink bottom instead of assuming the metabolite layout.
     const inkBot = (isProtein ? 34 : 12) + (shown.length - 1) * 11 + 4;
     nameBoxes.push({ x: n.x, y: n.y, w: n.w, h: cond?.length ? n.h : Math.max(top, inkBot) });
+    // The molecular formula is text too, and it sits at the FOOT of the cell —
+    // outside the name band reserved above. Placers therefore treated the bottom
+    // of every structure cell as free paper and dropped effector tags and
+    // cofactor captions straight onto the formula.
+    if (n.formula && !cond?.length) {
+      nameBoxes.push({ x: n.x, y: n.y + n.h - 4 - FORMULA_FONT, w: n.w, h: FORMULA_FONT + 4 });
+    }
     g.setAttribute("data-structure-top", String(top));
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });
     layerNodes.append(g);
@@ -883,10 +894,13 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       }, 0);
       if (!buried(gl.x, gl.y)) continue;
       let best = { x: gl.x, y: gl.y, cost: buried(gl.x, gl.y) };
-      for (const rad of [10, 15, 21, 28]) {
-        for (let a = 0; a < 8; a++) {
-          const x = gl.x + Math.cos((a * Math.PI) / 4) * rad;
-          const y = gl.y + Math.sin((a * Math.PI) / 4) * rad;
+      // Reach further, and in finer steps. On the pentose-phosphate sheet the disc
+      // sat inside a wide cell, so every offset up to 28u was still over that
+      // cell's own caption and the search gave up with the disc where it started.
+      for (const rad of [10, 15, 21, 28, 36, 46, 58]) {
+        for (let a = 0; a < 12; a++) {
+          const x = gl.x + Math.cos((a * Math.PI) / 6) * rad;
+          const y = gl.y + Math.sin((a * Math.PI) / 6) * rad;
           // A disc must not solve a label collision by landing in a cell instead.
           if (ir.nodes.some((n) => x > n.x && x < n.x + n.w && y > n.y && y < n.y + n.h)) continue;
           const cost = buried(x, y);
@@ -932,6 +946,33 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       if (best.dy) t.el.setAttribute("transform", `translate(0,${best.dy})`);
       placedTags.push({ x: box.x, y: box.y + best.dy, w: box.width, h: box.height });
     }
+
+    // An EC buried by an effector tag is the same trade the sweep above makes: the
+    // number is supplementary, the annotation is not. This runs HERE, after the
+    // tag nudge, because reading the tags before they move measures boxes that no
+    // longer exist — which is why the first attempt changed nothing.
+    // `placedTags` already holds each tag's FINAL box in user space (its measured
+    // ink plus the dy the nudge committed), which is the only correct source here:
+    // getBBox ignores the group transform the nudge just applied, and
+    // getBoundingClientRect returns zeros because this runs before the viewport
+    // transform is set. Both were tried; both silently hid nothing.
+    // The EC box is computed from its committed attributes, NOT from getBBox.
+    // An EC carries .lod-detail and is display:none at this zoom, and a
+    // display:none element reports a zero box — so every geometric comparison
+    // here silently compared nothing. This was the real reason three
+    // successive attempts at this sweep changed no pixel.
+    const measEc = textMeasurer(svg, "enz-ec", 8.5 * 0.6);
+    for (const L of enzymeLabels) {
+      if (!L.ec || L.ec.getAttribute("visibility") === "hidden") continue;
+      const ex = Number(L.ec.getAttribute("x") || 0), ey = Number(L.ec.getAttribute("y") || 0);
+      const ew = measEc.width(L.ec.textContent || ""), anchor = L.ec.getAttribute("text-anchor");
+      const box = {
+        x: anchor === "start" ? ex : anchor === "end" ? ex - ew : ex - ew / 2,
+        y: ey - EC_FONT, w: ew, h: EC_FONT + 2,
+      };
+      if (hit(box, placedTags)) L.ec.setAttribute("visibility", "hidden");
+    }
+    measEc.done();
 
     measEnz.done();
     measCof.done();

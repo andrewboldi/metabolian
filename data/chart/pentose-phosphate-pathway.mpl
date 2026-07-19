@@ -8,7 +8,7 @@
 
 pathway pentose-phosphate-pathway "Pentose phosphate pathway (hexose monophosphate shunt)" {
   grid C4
-  spacing 152
+  spacing 168
 
   spine at 0,0 {
     g6p

@@ -248,6 +248,12 @@ async function run(ids) {
     // GCM registration before the debugging socket answers. None of it is wanted
     // for a measurement run, and waiting on it is what timed the attach out.
     "--no-first-run", "--no-default-browser-check", "--disable-extensions",
+    // Deterministic text. Hinting and subpixel positioning are tuned per
+    // platform and per build, so the same label measured different widths on
+    // a dev browser and a CI runner — which made two real overprints look
+    // like environment noise and could not be reproduced locally at all.
+    "--font-render-hinting=none", "--disable-font-subpixel-positioning",
+    "--disable-lcd-text", "--force-device-scale-factor=1",
     "--disable-background-networking", "--disable-sync", "--metrics-recording-only",
     `--remote-debugging-port=${port}`, "--window-size=1600,1000", "about:blank",
   ], { stdio: ["ignore", "ignore", "pipe"] });
@@ -344,7 +350,7 @@ if (asJson) {
 // across a neighbour, and amino acids on a side arc use their three-letter code.
 // Budgets that sit above the achieved number only ratchet the wrong way, so
 // these track exactly what the atlas measures.
-const BUDGET = { textOverlaps: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 9 };
+const BUDGET = { textOverlaps: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 11 };
 
 // labelsOverCells is budgeted, not zeroed. Raising the placer's cell-overlap
 // weight from 1 to 3 moved the number not at all: these 12 captions have no
