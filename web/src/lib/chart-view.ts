@@ -39,6 +39,39 @@ export interface ChartHooks {
   onZoom?(k: number, lod: string): void;
 }
 
+/**
+ * Fit an enzyme name into at most two lines of `maxChars`. Horizontal room is the
+ * scarce axis on this sheet, vertical room usually is not — so wrap rather than
+ * truncate. The trailing parenthesised gene symbol (AKR1C4, BAAT, MFE-2 …) is the
+ * identifier you navigate by, so it is never the thing that gets cut.
+ */
+export function wrapEnzymeName(full: string, maxChars: number): string[] {
+  if (full.length <= maxChars) return [full];
+  const gene = full.match(/\s(\([^()]*\))\s*$/);
+  const head = gene ? full.slice(0, gene.index) : full;
+  const tail = gene ? gene[1] : "";
+  // The whole name minus its gene symbol fits: park the symbol on line two.
+  if (head.length <= maxChars && tail && tail.length <= maxChars) return [head, tail];
+
+  const words = head.split(/\s+/);
+  let l1 = "", i = 0;
+  for (; i < words.length; i++) {
+    const next = l1 ? `${l1} ${words[i]}` : words[i];
+    if (next.length > maxChars) break;
+    l1 = next;
+  }
+  let rest: string;
+  if (!l1) { l1 = head.slice(0, maxChars); rest = head.slice(maxChars).trim(); }
+  else rest = words.slice(i).join(" ");
+
+  let l2 = tail ? (rest ? `${rest} ${tail}` : tail) : rest;
+  if (l2.length > maxChars) {
+    const room = Math.max(3, maxChars - (tail ? tail.length + 2 : 1));
+    l2 = rest.slice(0, room).replace(/[\s(,\-]+$/, "") + "…" + (tail ? ` ${tail}` : "");
+  }
+  return l2 ? [l1, l2] : [l1];
+}
+
 // Tuned so a typical "Fit" view of a single pathway already shows enzyme names.
 const LOD_NORMAL = 0.26;
 const LOD_DETAIL = 0.7;
@@ -280,7 +313,6 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     };
 
     for (const L of enzymeLabels) {
-      const h = FONT + (L.ec ? EC_H : 0);
       const candidates = [
         { dx: 14, dy: -2, anchor: "start" }, { dx: -14, dy: -2, anchor: "end" },
         { dx: 14, dy: -18, anchor: "start" }, { dx: -14, dy: -18, anchor: "end" },
@@ -296,17 +328,30 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         if (!best || avail > best.avail) best = { c, avail };
       }
       const chosen = best!.c;
-      const maxChars = Math.max(3, Math.floor(best!.avail / CH));
-      const text = L.full.length > maxChars
-        ? L.full.slice(0, Math.max(2, maxChars - 1)).replace(/[\s(,\-]+$/, "") + "…"
-        : L.full;
+      const roomChars = Math.floor(best!.avail / CH);
+      // Below ~12 characters even a wrapped name degrades into a fragment like
+      // "Delta4- / 3-o… (AKR1D1)". A label that only appears on zoom is more
+      // honest than a mangled one, so lay it out comfortably and defer it.
+      const cramped = roomChars < 12;
+      const maxChars = cramped ? 30 : Math.max(3, roomChars);
+      // Wrap to the measured channel instead of truncating to it: the gene symbol
+      // stays on the sheet, which is what makes a step identifiable in print.
+      const lines = wrapEnzymeName(L.full, maxChars);
       // setting textContent would drop the <title> child that carries the full
       // name on hover — rebuild the node explicitly
-      L.name.replaceChildren(document.createTextNode(text), s("title", {}, [L.full]));
+      L.name.replaceChildren(
+        ...lines.map((ln, i) => s("tspan", { dy: i === 0 ? 0 : FONT }, [ln])),
+        s("title", {}, [L.full]),
+      );
       if (L.ec) L.ec.classList.add("lod-detail");
-      const w = text.length * CH;
+      const w = Math.max(...lines.map((l) => l.length)) * CH;
+      const h = FONT * lines.length + (L.ec ? EC_H : 0);
 
       let placed = false;
+      if (cramped) {
+        L.name.classList.remove("lod-normal");
+        L.name.classList.add("lod-detail");
+      }
       for (const c of [chosen, ...candidates]) {
         const x = L.mx + c.dx, y = L.my + c.dy;
         const bx = c.anchor === "start" ? x : c.anchor === "end" ? x - w : x - w / 2;
@@ -315,9 +360,11 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         L.name.setAttribute("x", String(x));
         L.name.setAttribute("y", String(y));
         L.name.setAttribute("text-anchor", c.anchor);
+        // each wrapped line re-anchors at the label's x, or tspans stagger
+        for (const ts of Array.from(L.name.querySelectorAll("tspan"))) ts.setAttribute("x", String(x));
         if (L.ec) {
           L.ec.setAttribute("x", String(x));
-          L.ec.setAttribute("y", String(y + EC_H));
+          L.ec.setAttribute("y", String(y + EC_H + (lines.length - 1) * FONT));
           L.ec.setAttribute("text-anchor", c.anchor);
         }
         taken.push(box);
