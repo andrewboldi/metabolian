@@ -322,6 +322,43 @@ export function layout(ast, sizes = {}, fold = 1) {
   const effRows = Math.max(3, Math.ceil(Math.sqrt(effectorsNeeded.length * 1.4)));
   const effBaseX = outsideCore(outsideRing(spineX + effDir * COL_GAP, effDir), effDir);
   const effBaseY = (ast.spine || ast.cycle).at.y;
+  /**
+   * Is this box sitting on a line that has already been routed? freeSlotNear only
+   * knows about CELLS, so an effector chip could be parked directly on a flux or
+   * cycle edge — and the router had already committed that edge, so it failed the
+   * crossing gate with no way to recover. Regulatory cascades make this routine
+   * rather than rare: a dozen kinase chips will find every routed line there is.
+   */
+  const onARoute = (r) => reactions.some((rx) => {
+    const pts = rx.points || [];
+    for (let i = 1; i < pts.length; i++) {
+      const [p, q] = [pts[i - 1], pts[i]];
+      // Test the segment's BOUNDING BOX, matching the crossing gate in
+      // build-chart.mjs exactly. Sampling the thin line instead looks more
+      // precise and is wrong here: for a diagonal cycle chord the gate treats
+      // the whole enclosing rectangle as occupied, so a chip could clear the
+      // line, still sit inside the box, and fail a gate it appeared to satisfy.
+      const lo = { x: Math.min(p[0], q[0]), y: Math.min(p[1], q[1]) };
+      const hi = { x: Math.max(p[0], q[0]), y: Math.max(p[1], q[1]) };
+      if (!(hi.x <= r.x || r.x + r.w <= lo.x || hi.y <= r.y || r.y + r.h <= lo.y)) return true;
+    }
+    return false;
+  });
+  /** Walk a slot outward (away from the drawing) until it clears the routed lines. */
+  const offRoute = (x, y, w, h, dir) => {
+    // Must satisfy BOTH constraints at once. Pushing a chip off a route without
+    // re-testing cells just traded one gate failure for another — the chips
+    // landed clear of the lines and on top of each other.
+    const ok = (c) => !onARoute(c) && !hits(c);
+    for (let step = 0; step < 22; step++) {
+      for (const dy of [0, -34, 34, -68, 68, -102, 102]) {
+        const cand = { x: x + dir * step * 46, y: y + dy, w, h };
+        if (ok(cand)) return { x: cand.x, y: cand.y };
+      }
+    }
+    return { x, y };
+  };
+
   effectorsNeeded.forEach((id, i) => {
     const rx = targetOf.get(id);
     const szE = effectorSize(id);
@@ -338,11 +375,13 @@ export function layout(ast, sizes = {}, fold = 1) {
       // stretch the whole sheet. Short lines AND a compact bbox.
       const lo = coreBox.x0 - COL_GAP * 1.6, hi = coreBox.x1 + COL_GAP * 1.6;
       const slot = freeSlotNear(Math.max(lo, Math.min(hi, mid[0] + side * COL_GAP)), y, side, szE.w, szE.h);
-      x = slot.x; y = slot.y;
+      const off = offRoute(slot.x, slot.y, szE.w, szE.h, side);
+      x = off.x; y = off.y;
     } else {
       const col = Math.floor(i / effRows), row = i % effRows;
       const slot = freeSlotNear(effBaseX + effDir * col * COL_GAP, effBaseY + row * ast.spacing, effDir, szE.w, szE.h);
-      x = slot.x; y = slot.y;
+      const off = offRoute(slot.x, slot.y, szE.w, szE.h, effDir);
+      x = off.x; y = off.y;
     }
     const node = {
       id: `${ast.id}:${id}`, metabolite: id,

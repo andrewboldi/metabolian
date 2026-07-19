@@ -33,7 +33,7 @@ pathway glycogen-metabolism "Glycogen synthesis and breakdown (glycogenesis & gl
 
   # The hexose-phosphate pool, and the liver's exit to blood glucose. Re-listing
   # g1p makes phosphoglucomutase a real drawn step rather than a scaffold hairline.
-  branch from g1p side right {
+  branch from g1p side left {
     g1p
     <-> pgm1 [5.4.2.2]
     g6p
@@ -53,4 +53,30 @@ pathway glycogen-metabolism "Glycogen synthesis and breakdown (glycogenesis & gl
   inhibit g6p -> pygm allosteric
   activate amp -> pygm allosteric
   inhibit atp -> pygm allosteric
+  inhibit glucose -> pygl allosteric
+
+  # The covalent cascade — the headline biology of this panel, and what the Roche
+  # sheet devotes most of the space to. `effect` is the NET effect on the target;
+  # the trailing word is the MECHANISM, so phosphorylation that switches an enzyme
+  # on and phosphorylation that switches one off are both drawn as phosphorylation.
+  #
+  # Hormone -> second messenger -> kinase cascade:
+  activate glucagon -> prkaca hormonal
+  activate epinephrine -> prkaca hormonal
+  activate camp -> prkaca allosteric
+  activate prkaca -> phkb phosphorylation
+  activate ca2 -> calm1 allosteric
+  activate phosphorylase_kinase -> pygm phosphorylation
+
+  # ...and the same stroke that switches phosphorylase ON switches synthase OFF,
+  # which is what makes the two arms reciprocal rather than merely opposite.
+  inhibit prkaca -> gys1 phosphorylation
+  inhibit gsk3b -> gys1 phosphorylation
+  inhibit prkaa2 -> gys1 phosphorylation
+  activate insulin -> gsk3b hormonal
+
+  # PP1 reverses all three, which is how insulin flips the panel back to storage.
+  activate pp1_glycogen -> gys1 dephosphorylation
+  inhibit pp1_glycogen -> pygm dephosphorylation
+  inhibit pp1_glycogen -> phkb dephosphorylation
 }
