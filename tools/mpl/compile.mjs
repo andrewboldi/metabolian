@@ -593,13 +593,6 @@ export function layout(ast, sizes = {}) {
   }
 
   /** Right-angle elbow between two cells (never diagonal). */
-  function elbow(a, b) {
-    const ax = a.x + NODE_W / 2, ay = a.y + NODE_H / 2;
-    const bx = b.x + NODE_W / 2, by = b.y + NODE_H / 2;
-    const midY = (ay + by) / 2;
-    return [[ax, ay], [ax, midY], [bx, midY], [bx, by]];
-  }
-
   /** Regulation runs out to a gutter beside the column, then back in. */
   function regulationRoute(src, dst, index = 0, total = 1) {
     const sx = src.x + src.w / 2, sy = src.y + src.h / 2;

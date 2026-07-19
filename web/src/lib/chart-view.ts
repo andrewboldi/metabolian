@@ -391,16 +391,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const w = Math.max(...lines.map((l) => l.length)) * CH;
       const h = FONT * lines.length + (L.ec ? EC_H : 0);
 
-      let placed = false;
-      if (cramped) {
-        L.name.classList.remove("lod-normal");
-        L.name.classList.add("lod-detail");
-      }
-      for (const c of [chosen, ...candidates]) {
-        const x = L.mx + c.dx, y = L.my + c.dy;
-        const bx = c.anchor === "start" ? x : c.anchor === "end" ? x - w : x - w / 2;
-        const box = { x: bx, y: y - FONT, w, h };
-        if (hit(box, cells) || hit(box, taken)) continue;
+      const commit = (c: { dx: number; dy: number; anchor: string }, x: number, y: number) => {
         L.name.setAttribute("x", String(x));
         L.name.setAttribute("y", String(y));
         L.name.setAttribute("text-anchor", c.anchor);
@@ -411,14 +402,41 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
           L.ec.setAttribute("y", String(y + EC_H + (lines.length - 1) * FONT));
           L.ec.setAttribute("text-anchor", c.anchor);
         }
-        taken.push(box);
-        placed = true;
-        break;
+      };
+      const overlap = (b: { x: number; y: number; w: number; h: number }, list: typeof taken) =>
+        list.reduce((acc, o) => {
+          const ox = Math.min(b.x + b.w, o.x + o.w) - Math.max(b.x, o.x);
+          const oy = Math.min(b.y + b.h, o.y + o.h) - Math.max(b.y, o.y);
+          return acc + (ox > 0 && oy > 0 ? ox * oy : 0);
+        }, 0);
+
+      let placed = false;
+      if (cramped) {
+        L.name.classList.remove("lod-normal");
+        L.name.classList.add("lod-detail");
       }
-      // Nowhere clear: keep it out of the way and only reveal when zoomed in.
+      let fallback: { c: typeof candidates[0]; x: number; y: number; box: typeof taken[0]; ovl: number } | null = null;
+      for (const c of [chosen, ...candidates]) {
+        const x = L.mx + c.dx, y = L.my + c.dy;
+        const bx = c.anchor === "start" ? x : c.anchor === "end" ? x - w : x - w / 2;
+        const box = { x: bx, y: y - FONT, w, h };
+        if (!hit(box, cells) && !hit(box, taken)) {
+          commit(c, x, y);
+          taken.push(box);
+          placed = true;
+          break;
+        }
+        const ovl = overlap(box, cells) + overlap(box, taken);
+        if (!fallback || ovl < fallback.ovl) fallback = { c, x, y, box, ovl };
+      }
+      // Nowhere clear: hold it back to detail zoom, but still park it at the
+      // LEAST-colliding candidate and reserve that space. Leaving it at the
+      // reaction midpoint is what made labels pile into runs like
+      // "pyBUTYRATE KINASE)N OXIDOREDUCTASE" once detail LOD revealed them all.
       if (!placed) {
         L.name.classList.remove("lod-normal");
         L.name.classList.add("lod-detail");
+        if (fallback) { commit(fallback.c, fallback.x, fallback.y); taken.push(fallback.box); }
       }
     }
   })();
