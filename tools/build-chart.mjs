@@ -20,7 +20,11 @@ const OUT = join(ROOT, "web", "public", "chart");
 // "Adenosine diphosphate + Orthophosphate". Density depends on this.
 const SHORT = {
   atp: "ATP", adp: "ADP", amp: "AMP", gtp: "GTP", gdp: "GDP", utp: "UTP", udp: "UDP",
-  ctp: "CTP", itp: "ITP", nad: "NAD+", nadh: "NADH+H+", nadp: "NADP+", nadph: "NADPH+H+",
+  // NADH/NADPH are written plain: the pathway data lists the proton as its own
+  // `hplus` participant (73 of 83 redox steps do), so baking "+H+" into the alias
+  // printed it twice — "NADPH+H+ + H+" — asserting a stoichiometry no source
+  // supports. The data is the authority on protons; the renderer must not add any.
+  ctp: "CTP", itp: "ITP", nad: "NAD+", nadh: "NADH", nadp: "NADP+", nadph: "NADPH",
   fad: "FAD", fadh2: "FADH2", fmn: "FMN", coa: "CoA-SH", coash: "CoA-SH",
   pi: "Pi", ppi: "PPi", h2o: "H2O", hplus: "H+", co2: "CO2", o2: "O2", nh3: "NH3",
   nh4: "NH4+", hco3: "HCO3-", h2o2: "H2O2", q: "Q", qh2: "QH2", thf: "THF",
