@@ -40,7 +40,17 @@ async function main() {
 }
 
 async function load(id: string, canvas: HTMLElement) {
-  const ir = await getJSON<ChartIR>(`chart/${id}.json`);
+  // Fetch the sheet and the fonts CONCURRENTLY, then place labels only once the
+  // fonts are in. The anti-collision placer measures real glyph extents, and it
+  // runs exactly once — so a webfont arriving after layout leaves every label
+  // positioned against fallback metrics, permanently. That is not hypothetical:
+  // a cold-cache CI runner measured 2 overprints where a warm one measured 0,
+  // and a reader on a slow connection would have kept the bad placement.
+  // fonts.ready is already resolved on a warm cache, so this costs nothing then.
+  const [ir] = await Promise.all([
+    getJSON<ChartIR>(`chart/${id}.json`),
+    document.fonts?.ready ?? Promise.resolve(),
+  ]);
   document.getElementById("chart-title")!.textContent = ir.title;
   view = mountChart(ir, canvas, BASE, {
     onMetabolite: (n) => { openNode(n); view?.trace(n.id); },
