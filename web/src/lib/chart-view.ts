@@ -72,6 +72,48 @@ export function wrapEnzymeName(full: string, maxChars: number): string[] {
   return l2 ? [l1, l2] : [l1];
 }
 
+/**
+ * Wrap a metabolite name to the cell's real width. Chemical names contain single
+ * tokens longer than any cell ("5-PHOSPHO-ALPHA-D-RIBOSE"), so word-only wrapping
+ * let them run straight through the cell border; those are split at a hyphen where
+ * possible. Overflow is ellipsised on the last line rather than dropped silently.
+ */
+export function wrapCellName(text: string, maxChars: number, maxLines = 2): string[] {
+  const out: string[] = [];
+  let cur = "";
+  const flush = () => { if (cur) { out.push(cur); cur = ""; } };
+  for (const w of text.split(/\s+/)) {
+    if (w.length > maxChars) {
+      flush();
+      let rest = w;
+      while (rest.length > maxChars && out.length < maxLines) {
+        const hyphen = rest.lastIndexOf("-", maxChars);
+        if (hyphen >= Math.floor(maxChars * 0.45)) {
+          out.push(rest.slice(0, hyphen + 1));       // break after an existing hyphen
+          rest = rest.slice(hyphen + 1);
+        } else {
+          // No usable hyphen: break mid-token but mark it, so the reader sees
+          // "5-AMINOLEV-/ULINATE" as one hyphenated word, not two fragments.
+          out.push(rest.slice(0, maxChars - 1) + "-");
+          rest = rest.slice(maxChars - 1);
+        }
+      }
+      cur = rest;
+    } else if ((cur ? cur.length + 1 : 0) + w.length > maxChars) {
+      flush();
+      cur = w;
+    } else cur = cur ? `${cur} ${w}` : w;
+  }
+  flush();
+  if (out.length > maxLines) {
+    const kept = out.slice(0, maxLines);
+    const last = kept[maxLines - 1];
+    kept[maxLines - 1] = last.length > maxChars - 1 ? last.slice(0, Math.max(1, maxChars - 1)) + "…" : last + "…";
+    return kept;
+  }
+  return out;
+}
+
 // Tuned so a typical "Fit" view of a single pathway already shows enzyme names.
 const LOD_NORMAL = 0.26;
 const LOD_DETAIL = 0.7;
@@ -264,13 +306,11 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       g.append(s("rect", { class: "met-box name-only lod-normal", x: 0, y: 0, width: n.w, height: n.h }));
     }
     const name = n.label.toUpperCase();
-    const lines: string[] = [];
-    let cur = "";
-    for (const w of name.split(/\s+/)) {
-      if ((cur + " " + w).trim().length > 20) { if (cur) lines.push(cur); cur = w; } else cur = (cur + " " + w).trim();
-    }
-    if (cur) lines.push(cur);
-    const shown = lines.slice(0, 2);
+    // Wrap to the cell's own width (11px uppercase advances ~7px with tracking)
+    // rather than a fixed character count, which overflowed narrow cells.
+    const NAME_CH = 7;
+    const nameChars = Math.max(6, Math.floor((n.w - 6) / NAME_CH));
+    const shown = wrapCellName(name, nameChars, 2);
     shown.forEach((ln, i) => g.append(s("text", {
       class: (isProtein ? "prot-name" : "met-name") + " lod-normal",
       x: n.w / 2, y: (isProtein ? 34 : 12) + i * 11,
