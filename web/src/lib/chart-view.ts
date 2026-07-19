@@ -734,6 +734,33 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       }
     }
 
+    // Final sweep over what actually committed. A label taking the fallback path
+    // accepts a collision knowingly, but it can also be collided WITH by a label
+    // placed later — and no amount of care in the earlier iteration can see that.
+    // Where such a pair survives, the EC number is the half to drop: the name
+    // identifies the step and the number stays on the <title>. This is what left
+    // EC 1.4.1.3 printed across FRUCTOSE-2,6-BISPHOSPHATASE on the Warburg sheet.
+    const committed = enzymeLabels.flatMap((L) => {
+      const out: { el: SVGElement; isEc: boolean }[] = [];
+      if (L.name.getAttribute("visibility") !== "hidden") out.push({ el: L.name, isEc: false });
+      if (L.ec && L.ec.getAttribute("visibility") !== "hidden") out.push({ el: L.ec, isEc: true });
+      return out;
+    }).map((e) => {
+      let b: { x: number; y: number; width: number; height: number };
+      try { b = e.el.getBBox(); } catch { return null; }
+      return { ...e, box: { x: b.x, y: b.y, w: b.width, h: b.height } };
+    }).filter(Boolean) as { el: SVGElement; isEc: boolean; box: Box }[];
+
+    for (let i = 0; i < committed.length; i++) {
+      for (let j = i + 1; j < committed.length; j++) {
+        const a = committed[i], b = committed[j];
+        if (a.el.getAttribute("visibility") === "hidden" || b.el.getAttribute("visibility") === "hidden") continue;
+        if (!hit(a.box, [b.box])) continue;   // hit() takes a LIST, not a box
+        const drop = a.isEc ? a : b.isEc ? b : null;   // never drop a name for a name
+        if (drop) drop.el.setAttribute("visibility", "hidden");
+      }
+    }
+
     // ---------- cofactor captions ----------
     // Same candidate-and-commit treatment the enzyme names get. The caption walks
     // outward along its own arc and, failing that, flips to the far side of the
@@ -846,7 +873,10 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // `taken` is every label box this placer actually committed.
     for (const gl of regGlyphs) {
       const R = 7;
-      const buried = (x: number, y: number) => taken.reduce((acc, o) => {
+      // nameBoxes too: a disc that dodges the enzyme labels can still land on a
+      // metabolite's own caption, which is what put a '–' on 6-PHOSPHO-D-GLUCONO-.
+      const discObstacles = taken.concat(nameBoxes);
+      const buried = (x: number, y: number) => discObstacles.reduce((acc, o) => {
         const ox = Math.min(x + R, o.x + o.w) - Math.max(x - R, o.x);
         const oy = Math.min(y + R, o.y + o.h) - Math.max(y - R, o.y);
         return acc + (ox > 0 && oy > 0 ? ox * oy : 0);

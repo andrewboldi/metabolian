@@ -344,7 +344,7 @@ if (asJson) {
 // across a neighbour, and amino acids on a side arc use their three-letter code.
 // Budgets that sit above the achieved number only ratchet the wrong way, so
 // these track exactly what the atlas measures.
-const BUDGET = { textOverlaps: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 10 };
+const BUDGET = { textOverlaps: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 9 };
 
 // labelsOverCells is budgeted, not zeroed. Raising the placer's cell-overlap
 // weight from 1 to 3 moved the number not at all: these 12 captions have no
