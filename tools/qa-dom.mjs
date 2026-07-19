@@ -38,7 +38,11 @@ function findChrome() {
       if (existsSync(p2)) return p2;
     }
   }
-  for (const p of ["/usr/bin/chromium-browser", "/usr/bin/chromium", "/snap/bin/chromium", "/opt/google/chrome/chrome"]) {
+  // GitHub's ubuntu runners ship Chrome at /usr/bin/google-chrome. Missing it here
+  // is what made the CI job fail to launch a browser at all.
+  for (const p of ["/usr/bin/google-chrome", "/usr/bin/google-chrome-stable",
+                   "/usr/bin/chromium-browser", "/usr/bin/chromium", "/snap/bin/chromium",
+                   "/opt/google/chrome/chrome"]) {
     if (existsSync(p)) return p;
   }
   throw new Error("No Chromium found. Set CHROME_PATH.");
@@ -227,9 +231,15 @@ const PROBE = `(async () => {
 async function run(ids) {
   const port = 9500 + Math.floor(Math.random() * 400);
   const proc = spawn(findChrome(), [
-    "--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
+    "--headless=new", "--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu",
+    "--disable-dev-shm-usage", "--hide-scrollbars",
     `--remote-debugging-port=${port}`, "--window-size=1600,1000", "about:blank",
-  ], { stdio: "ignore" });
+  ], { stdio: ["ignore", "ignore", "pipe"] });
+  // Keep stderr. Discarding it turned a CI launch failure into a bare "could not
+  // attach to Chromium" with nothing to act on.
+  let launchLog = "";
+  proc.stderr?.on("data", (d) => { launchLog += d.toString().slice(0, 400); });
+  proc.on("exit", (code) => { if (code) launchLog += `\n[chrome exited ${code}]`; });
 
   let ws;
   try {
@@ -241,7 +251,7 @@ async function run(ids) {
         if (page) ws = new WebSocket(page.webSocketDebuggerUrl);
       } catch { /* not up yet */ }
     }
-    if (!ws) throw new Error("could not attach to Chromium");
+    if (!ws) throw new Error(`could not attach to Chromium at ${findChrome()}\n${launchLog.trim() || "(no stderr)"}`);
     await new Promise((res, rej) => { ws.addEventListener("open", res); ws.addEventListener("error", rej); });
     const cdp = new CDP(ws);
     await cdp.send("Page.enable");

@@ -34,8 +34,6 @@ jobs:
       - uses: actions/setup-node@v7
         with: { node-version: 20, cache: npm }
       - run: npm ci
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
       - run: npm run build
       - name: Serve and measure what actually paints
         run: |
