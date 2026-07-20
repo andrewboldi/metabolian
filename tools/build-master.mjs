@@ -36,7 +36,11 @@ const allCharts = files.map((f) => JSON.parse(readFileSync(join(CHART_DIR, f), "
  * earn their space on a poster are the ones that get it, with the hand-authored
  * modules always first because they are the curated core.
  */
-const NODE_BUDGET = Number(process.env.MASTER_NODE_BUDGET || 14000);
+// 11,500 measured: the master paints in ~3.5s at this size and ~8.1s at 14,000,
+// against a 4s budget for an individual sheet. Chosen with headroom rather than
+// at the edge, because this number degrades non-linearly and a reader on slower
+// hardware is the one who pays.
+const NODE_BUDGET = Number(process.env.MASTER_NODE_BUDGET || 11500);
 const generated = new Set(
   existsSync(join(ROOT, "data", "ingest", "sheets.json"))
     ? JSON.parse(readFileSync(join(ROOT, "data", "ingest", "sheets.json"), "utf8")).map((x) => x.id)
