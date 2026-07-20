@@ -327,7 +327,15 @@
   --node-pathway: #515f6d;      /* 5.29 */
 }
 
-/* Visitors who have not toggled. Mirror of the block above — KEEP IN SYNC. */
+/* Mirror of the block above — KEEP IN SYNC.
+   NOT REACHABLE TODAY, and that is deliberate: every page ships
+   <html lang="en" data-theme="dark"> (all 9 files), so the chrome opens on the
+   darkroom regardless of OS preference — the dark field is the design, not a
+   default. lib/theme.ts only rewrites the attribute once a visitor has actually
+   toggled, and lib/layout.ts:346 falls back to this media query when the
+   attribute is absent. So this block is the live safety net the moment that
+   authored attribute is dropped from the markup; keep it in sync, do not delete
+   it, and do not assume it is what an OS-light visitor currently sees. */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     color-scheme: light;

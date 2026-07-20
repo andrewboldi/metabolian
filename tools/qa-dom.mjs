@@ -395,6 +395,20 @@ const BUDGET = { textOverlaps: 1, strickenWithoutHalo: 0, emptyCells: 0, labelsO
 // than a competing label — the least bad of the available placements.
 
 if (gate) {
+  // A gate that cannot measure must FAIL, not pass. Every metric here counts
+  // defects, so "nothing rendered" and "nothing wrong" produce identical zeros —
+  // and this gate duly reported a serene pass against a preview server that was
+  // simply not running. Assert the measurement happened before trusting it.
+  const measured = Object.values(res);
+  const errored = measured.filter((m) => m.error);
+  const labels = measured.reduce((n, m) => n + (m.labels || 0), 0);
+  if (errored.length || !labels) {
+    console.error(`\n✗ measurement failed, so the result is meaningless: ` +
+      `${errored.length} chart(s) errored, ${labels} labels seen across ${measured.length} chart(s).` +
+      `\n  First error: ${errored[0]?.error || "(none — but no labels rendered)"}` +
+      `\n  Is the preview server up at ${BASE}?`);
+    process.exit(1);
+  }
   const broken = Object.entries(BUDGET).filter(([k, max]) => (totals[k] || 0) > max);
   if (broken.length) {
     console.error(`\n✗ regression: ${broken.map(([k, max]) => `${k}=${totals[k]} (budget ${max})`).join(", ")}`);

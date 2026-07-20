@@ -34,7 +34,7 @@ async function main() {
   const list = el("ol.stack", { style: "list-style:none;padding:0;counter-reset:step" });
   for (const r of reactions) {
     const cats = (r.data.catalysts || []).map((c: any) => {
-      const enz = [...enzymes.values()].find((e) => (e.data.id === c.enzyme) || e.label);
+      const enz = [...enzymes.values()].find((e) => e.data.id === c.enzyme);
       return enz?.label || c.enzyme;
     });
     list.append(el("li.card", { style: "display:grid;gap:.4rem" }, [

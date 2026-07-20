@@ -193,7 +193,7 @@ function buildIndex(m: Master) {
     const rxn = byId.get(rxnId);
     if (!key || !rxn || rxn.kind !== "reaction") return;
     const c = clusters.get(key)!;
-    const k = `${key} ${rxnId}`;
+    const k = `${key}\u0000${rxnId}`;
     let a = acc.get(k);
     if (!a) { a = { c, rxn, makes: false, uses: false, both: false, cofactor: false }; acc.set(k, a); }
     if (kind === "cofactor") a.cofactor = true; else a[kind] = true;
@@ -350,7 +350,7 @@ function closeResults() {
 function renderLanding() {
   document.title = "Follow a compound — Metabolian";
   const stats = el("p.ex-stats.muted", {}, [
-    `${pathwayMeta.size} pathways · ${fmt(searchIndex.length)} compounds · ` +
+    `${fmt(pathwayMeta.size)} pathways · ${fmt(searchIndex.length)} compounds · ` +
     `${fmt([...pathwayMeta.values()].reduce((s, p) => s + (p.counts?.reactions || 0), 0))} reactions`,
   ]);
 
