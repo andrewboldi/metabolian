@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-3-hydroxyisobutyrate-to-propionyl-coa",
+  "name": "(R)-3-hydroxyisobutyrate to propionyl-CoA",
+  "category": "other",
+  "summary": "A 2-step route from (R)-3-hydroxyisobutyrate to propionyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56972"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:141211"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_3_hydroxyisobutyrate",
+      "name": "(R)-3-hydroxyisobutyrate",
+      "short": "3-hydroxyisobutyrate",
+      "formula": "C4H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141211"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "r_methylmalonate_semialdehyde",
+      "name": "(R)-methylmalonate semialdehyde",
+      "short": "methylmalonate…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141212"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57392"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "propanoyl_phosphate",
+      "name": "propanoyl phosphate",
+      "formula": "C3H5O5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58933"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_222",
+      "name": "phosphate propanoyltransferase",
+      "ec": [
+        "2.3.1.222"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-3-hydroxy-2-methylpropanoate + NAD(+) = (R)-2-methyl-3-oxopropanoate + NADH + H(+)",
+      "equation": "(R)-3-hydroxy-2-methylpropanoate + NAD(+) = (R)-2-methyl-3-oxopropanoate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxyisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_methylmalonate_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate +...",
+      "equation": "(R)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_methylmalonate_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:76623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphate propanoyltransferase",
+      "equation": "propanoyl-CoA + phosphate = propanoyl phosphate + CoA",
+      "ec": "2.3.1.222",
+      "substrates": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanoyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_222"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28046"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28046"
+          }
+        ]
+      }
+    }
+  ]
+}

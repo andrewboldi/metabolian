@@ -16,13 +16,19 @@ pathway campestanol-to-fmn "campestanol to FMN" {
     6_hydroxyteasterone
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    4_hydroxycholesterol
+  branch from 6_deoxycathasterone side left {
+    6_deoxycathasterone
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    5_22s_24r_22_hydroxyergostan_3_one
   }
 
-  branch from 6_deoxoteasterone side right {
+  branch from fmn side right {
+    fmn
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    hydroxycholesterol_27
+  }
+
+  branch from 6_deoxoteasterone side left {
     6_deoxoteasterone
     <-> ec_1_14_19_79 [1.14.19.79] +fmnh2 +o2 +fmn +h2o +hplus
     3_dehydro_6_deoxoteasterone

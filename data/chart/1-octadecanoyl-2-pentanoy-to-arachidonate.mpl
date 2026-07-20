@@ -22,21 +22,15 @@ pathway 1-octadecanoyl-2-pentanoy-to-arachidonate "1-octadecanoyl-2-pentanoy… 
     pentanoyl_coa
   }
 
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side right {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_stearoyl_2_palmitoyl_sn_glycero_3_phosphocholi +h2o +hplus
-    palmitate
-  }
-
-  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch side left {
+  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch side right {
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycerol +cdp_choline +hplus
-    cytidine_5_monophosphate
+    <-> . +o2
+    1_stearoyl_2_15_hydroperoxyarachidonoyl_sn_glyce
   }
 
-  branch from arachidonate side right {
+  branch from arachidonate side left {
     arachidonate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    18_hete
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 }

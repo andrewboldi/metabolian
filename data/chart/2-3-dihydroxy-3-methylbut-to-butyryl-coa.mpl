@@ -18,8 +18,8 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… t
 
   branch from kiv side left {
     kiv
-    <-> ec_4_2_1_9 [4.2.1.9] +h2o
-    r_2_3_dihydroxy_3_methylbutanoate
+    <-> ec_1_4_1_23 [1.4.1.23] +valine +nad +h2o +nadh +hplus
+    nh3
   }
 
   branch from isobutyryl_coa side right {
@@ -30,8 +30,8 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… t
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_3_7_5 [1.3.7.5] +2r_3z_phycocyanobilin +di_sulfido_diiron +hplus
-    biliverdin
+    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_biflaviolin
   }
 
   branch from butyryl_coa side right {

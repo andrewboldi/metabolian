@@ -1,0 +1,258 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "desmethylxanthohumol-to-s-adenosyl-l-homocystein",
+  "name": "desmethylxanthohumol to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from desmethylxanthohumol to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51696"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:80489"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "desmethylxanthohumol",
+      "name": "desmethylxanthohumol",
+      "formula": "C20H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80489"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "xanthohumol",
+      "name": "xanthohumol",
+      "formula": "C21H22O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:66331"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_o_methylxanthohumol",
+      "name": "4-O-methylxanthohumol",
+      "short": "4-O-methylxanthohum…",
+      "formula": "C22H24O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139593"
+      }
+    },
+    {
+      "id": "4_demethylwyosine_5_monophosphate_1",
+      "name": "4-demethylwyosine 5'-monophosphate(1−)",
+      "short": "4-demethylwyosine…",
+      "formula": "C13H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64315"
+      }
+    },
+    {
+      "id": "isowyosine_5_monophosphate_1",
+      "name": "isowyosine 5'-monophosphate(1−)",
+      "short": "isowyosine 5'-MP(1−)",
+      "formula": "C14H15N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136979"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_338",
+      "name": "desmethylxanthohumol 6'-O-methyltransferase",
+      "ec": [
+        "2.1.1.338"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_339",
+      "name": "xanthohumol 4-O-methyltransferase",
+      "ec": [
+        "2.1.1.339"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "desmethylxanthohumol 6'-O-methyltransferase",
+      "equation": "desmethylxanthohumol + S-adenosyl-L-methionine = xanthohumol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.338",
+      "substrates": [
+        {
+          "metabolite": "desmethylxanthohumol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthohumol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_338"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51696"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "xanthohumol 4-O-methyltransferase",
+      "equation": "xanthohumol + S-adenosyl-L-methionine = 4-O-methylxanthohumol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.339",
+      "substrates": [
+        {
+          "metabolite": "xanthohumol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_methylxanthohumol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_339"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-demethylwyosine(37) in tRNA(Phe) + S-adenosyl-L-methionine = isowyosine(37) in tRNA(P...",
+      "equation": "4-demethylwyosine(37) in tRNA(Phe) + S-adenosyl-L-methionine = isowyosine(37) in tRNA(Phe) + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_demethylwyosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isowyosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53056"
+          }
+        ]
+      }
+    }
+  ]
+}

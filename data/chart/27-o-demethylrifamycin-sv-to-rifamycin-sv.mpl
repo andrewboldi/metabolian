@@ -20,7 +20,7 @@ pathway 27-o-demethylrifamycin-sv-to-rifamycin-sv "27-O-demethylrifamycin SV to 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_9 [2.1.1.9] +thiol +sam +hplus
-    methyl_sulfide
+    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
+    3_o_l_oleandrosyl_oleandolide
   }
 }

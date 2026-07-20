@@ -141,60 +141,60 @@
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:32544"
       }
     },
     {
-      "id": "adp_d_ribose_1_phosphate",
-      "name": "ADP-α-D-ribose 1''-phosphate",
-      "short": "ADP-α-D-ribose 1''-P",
-      "formula": "C15H20N5O17P3",
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nicotinate_adenine_dinucleotide_phosphate",
+      "name": "nicotinate-adenine dinucleotide phosphate",
+      "short": "nicotinate-adenine…",
+      "formula": "C21H23N6O18P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58753"
+        "chebi": "CHEBI:75967"
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57288"
+        "chebi": "CHEBI:61929"
       }
     },
     {
-      "id": "n6_acetyl_l_lysine",
-      "name": "N6-acetyl-L-lysine",
-      "formula": "C8H14N2O2",
+      "id": "8_hydroxyfurocoumarin",
+      "name": "8-hydroxyfurocoumarin",
+      "short": "8-hydroxyfurocoumar…",
+      "formula": "C11HO4R5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61930"
+        "chebi": "CHEBI:52025"
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "8_methoxyfurocoumarin",
+      "name": "8-methoxyfurocoumarin",
+      "short": "8-methoxyfurocoumar…",
+      "formula": "C12H3O4R5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74411"
-      }
-    },
-    {
-      "id": "n6_methyladenosine_5_monophosphate_1",
-      "name": "N6-methyladenosine 5'-monophosphate(1−)",
-      "short": "N6-methyladenosine…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74449"
+        "chebi": "CHEBI:52028"
       }
     }
   ],
@@ -207,17 +207,24 @@
       ]
     },
     {
-      "id": "ec_2_3_1_48",
-      "name": "histone acetyltransferase",
+      "id": "ec_2_4_99_20",
+      "name": "2'-phospho-ADP-ribosyl cyclase/2'-phospho-cyclic-ADP-ribose transferase",
       "ec": [
-        "2.3.1.48"
+        "2.4.99.20"
       ]
     },
     {
-      "id": "ec_2_1_1_181",
-      "name": "23S rRNA (adenine(1618)-N(6))-methyltransferase",
+      "id": "ec_2_1_1_59",
+      "name": "[cytochrome c]-lysine N-methyltransferase",
       "ec": [
-        "2.1.1.181"
+        "2.1.1.59"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_70",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "ec": [
+        "2.1.1.70"
       ]
     }
   ],
@@ -398,104 +405,57 @@
     },
     {
       "id": "r5",
-      "name": "phosphate + NAD(+) = ADP-alpha-D-ribose 1''-phosphate + nicotinamide + H(+)",
-      "equation": "phosphate + NAD(+) = ADP-alpha-D-ribose 1''-phosphate + nicotinamide + H(+)",
+      "name": "2'-phospho-ADP-ribosyl cyclase/2'-phospho-cyclic-ADP-ribose transferase",
+      "equation": "nicotinate + NADP(+) = NAADP(+) + nicotinamide",
+      "ec": "2.4.99.20",
       "substrates": [
         {
-          "metabolite": "pi",
+          "metabolite": "nicotinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "adp_d_ribose_1_phosphate",
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "nicotinamide",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_2_4_99_20"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:20788"
+        "rhea": "RHEA:38599"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20788"
+            "id": "RHEA:38599"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "histone acetyltransferase",
-      "equation": "L-lysyl-[histone] + acetyl-CoA = N(6)-acetyl-L-lysyl-[histone] + CoA + H(+)",
-      "ec": "2.3.1.48",
+      "name": "[cytochrome c]-lysine N-methyltransferase",
+      "equation": "L-lysyl-[cytochrome c] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[cytochrome c] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.59",
       "substrates": [
         {
           "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_acetyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_48"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:21992"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:21992"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "23S rRNA (adenine(1618)-N(6))-methyltransferase",
-      "equation": "adenosine(1618) in 23S rRNA + S-adenosyl-L-methionine = N(6)-methyladenosine(1618) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.181",
-      "substrates": [
-        {
-          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -505,7 +465,7 @@
       ],
       "products": [
         {
-          "metabolite": "n6_methyladenosine_5_monophosphate_1",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -519,20 +479,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_181"
+          "enzyme": "ec_2_1_1_59"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:16497"
+        "rhea": "RHEA:24312"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16497"
+            "id": "RHEA:24312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "equation": "an 8-hydroxyfurocoumarin + S-adenosyl-L-methionine = an 8-methoxyfurocoumarin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.70",
+      "substrates": [
+        {
+          "metabolite": "8_hydroxyfurocoumarin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_methoxyfurocoumarin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:21244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21244"
           }
         ]
       }

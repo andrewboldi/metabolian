@@ -206,12 +206,21 @@
       }
     },
     {
-      "id": "maltose",
-      "name": "maltose",
+      "id": "sucrose",
+      "name": "sucrose",
       "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17306"
+        "chebi": "CHEBI:17992"
+      }
+    },
+    {
+      "id": "d_fructofuranose",
+      "name": "D-fructofuranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37721"
       }
     },
     {
@@ -244,30 +253,31 @@
       }
     },
     {
-      "id": "pimelate",
-      "name": "pimelate",
-      "formula": "C7H10O4",
-      "charge": -2,
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36165"
+        "chebi": "CHEBI:78442"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:57305"
       }
     },
     {
-      "id": "pimeloyl_coa",
-      "name": "pimeloyl-CoA",
-      "formula": "C28H41N7O19P3S",
-      "charge": -5,
+      "id": "3_glycyladenylyl_zwitterionic_group",
+      "name": "3'-glycyladenylyl zwitterionic group",
+      "short": "3'-glycyladenylyl…",
+      "formula": "C12H16N6O7P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57360"
+        "chebi": "CHEBI:78522"
       }
     },
     {
@@ -277,6 +287,15 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "adp_d_glucoside",
+      "name": "ADP α-D-glucoside",
+      "formula": "C16H23N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57498"
       }
     }
   ],
@@ -317,10 +336,10 @@
       ]
     },
     {
-      "id": "ec_2_4_1_139",
-      "name": "maltose synthase",
+      "id": "ec_2_4_1_7",
+      "name": "sucrose phosphorylase",
       "ec": [
-        "2.4.1.139"
+        "2.4.1.7"
       ]
     },
     {
@@ -331,10 +350,10 @@
       ]
     },
     {
-      "id": "ec_6_2_1_14",
-      "name": "6-carboxyhexanoate--CoA ligase",
+      "id": "ec_6_1_1_14",
+      "name": "glycine--tRNA ligase",
       "ec": [
-        "6.2.1.14"
+        "6.1.1.14"
       ]
     }
   ],
@@ -621,11 +640,11 @@
     },
     {
       "id": "r7",
-      "name": "UDP-alpha-D-galactose + H2O = alpha-D-galactose 1-phosphate + UMP + 2 H(+)",
-      "equation": "UDP-alpha-D-galactose + H2O = alpha-D-galactose 1-phosphate + UMP + 2 H(+)",
+      "name": "UDP-alpha-D-glucose + H2O = alpha-D-galactose 1-phosphate + UMP + 2 H(+)",
+      "equation": "UDP-alpha-D-glucose + H2O = alpha-D-galactose 1-phosphate + UMP + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "udp_d_galactose",
+          "metabolite": "udp_d_glucose",
           "stoichiometry": 1
         },
         {
@@ -650,59 +669,59 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:86579"
+        "rhea": "RHEA:29551"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:86579"
+            "id": "RHEA:29551"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "maltose synthase",
-      "equation": "2 alpha-D-glucose 1-phosphate + H2O = D-maltose + 2 phosphate",
-      "ec": "2.4.1.139",
+      "name": "sucrose phosphorylase",
+      "equation": "sucrose + phosphate = D-fructose + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.7",
       "substrates": [
         {
-          "metabolite": "g1p",
-          "stoichiometry": 2
+          "metabolite": "sucrose",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "pi",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "maltose",
+          "metabolite": "d_fructofuranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
-          "stoichiometry": 2
+          "metabolite": "g1p",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_139"
+          "enzyme": "ec_2_4_1_7"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:22320"
+        "rhea": "RHEA:24048"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22320"
+            "id": "RHEA:24048"
           }
         ]
       }
@@ -758,26 +777,26 @@
     },
     {
       "id": "r10",
-      "name": "6-carboxyhexanoate--CoA ligase",
-      "equation": "heptanedioate + ATP + CoA = 6-carboxyhexanoyl-CoA + AMP + diphosphate",
-      "ec": "6.2.1.14",
+      "name": "glycine--tRNA ligase",
+      "equation": "tRNA(Gly) + glycine + ATP = glycyl-tRNA(Gly) + AMP + diphosphate",
+      "ec": "6.1.1.14",
       "substrates": [
         {
-          "metabolite": "pimelate",
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pimeloyl_coa",
+          "metabolite": "3_glycyladenylyl_zwitterionic_group",
           "stoichiometry": 1
         },
         {
@@ -791,20 +810,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_14"
+          "enzyme": "ec_6_1_1_14"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:14781"
+        "rhea": "RHEA:16013"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14781"
+            "id": "RHEA:16013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "glucosyl-3-phosphoglycerate synthase",
+      "equation": "ADP-alpha-D-glucose + (2R)-3-phosphoglycerate = (2R)-2-O-(alpha-D-glucopyranosyl)-3-phospho-glycerate + ADP + H(+)",
+      "ec": "2.4.1.266",
+      "substrates": [
+        {
+          "metabolite": "adp_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_266"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:31311"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31311"
           }
         ]
       }

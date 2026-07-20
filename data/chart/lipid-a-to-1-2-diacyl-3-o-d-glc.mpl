@@ -20,13 +20,7 @@ pathway lipid-a-to-1-2-diacyl-3-o-d-glc "lipid A to 1,2-diacyl-3-O-(Î²-D-Glc-(â€
 
   branch from dag side left {
     dag
-    <-> ec_3_1_4_11 [3.1.4.11] +1_phosphatidyl_1d_myo_inositol_4_5_bisphosphate +h2o +hplus
-    1d_myo_inositol_1_4_5_trisphosphate
-  }
-
-  branch from 3_d_glucosyl_1_2_diacyl_sn_glycerol side right {
-    3_d_glucosyl_1_2_diacyl_sn_glycerol
-    <-> ec_5_1_3_34 [5.1.3.34]
-    1_2_diacyl_3_d_galactosyl_sn_glycerol
+    <-> . +n_hexacosanoylsphinganine +1_phosphatidyl_1d_myo_inositol
+    ins_1_p_cer_d18_0_26_0
   }
 }

@@ -20,25 +20,31 @@ pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine 
 
   branch from oxobut side left {
     oxobut
-    <-> ec_4_4_1_1 [4.4.1.1] +nh3
-    l_homoserine
+    <-> ec_2_6_1_44 [2.6.1.44] +alanine +pyruvate
+    l_aminobutyrate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_3_12 [3.5.3.12] +agmatinium +h2o
-    n_carbamoylputrescinium
+    <-> ec_3_5_1_101 [3.5.1.101] +s_piperazin_4_ium_2_carboxamide +h2o
+    s_piperazine_2_carboxylic_acid
   }
 
   branch from alanine side left {
     alanine
-    <-> ec_2_6_1_58 [2.6.1.58] +l_phenylalanine +pyruvate
-    keto_phenylpyruvate
+    <-> ec_2_6_1_113 [2.6.1.113] +1_4_butanediammonium +pyruvate
+    4_ammoniobutanal
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    crepenynate
+    <-> . +dserine +h2o +hydrogen_donor +nh3
+    3_hydroxypyruvate
+  }
+
+  branch from selenophosphate side left {
+    selenophosphate
+    <-> ec_2_9_1_2 [2.9.1.2] +h2o +3_l_selenocysteinyl_adenylyl_1_group +pi
+    3_o_phosphonato_l_seryl_adenylyl_2_group
   }
 }

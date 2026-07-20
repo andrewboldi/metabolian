@@ -18,7 +18,7 @@ pathway 14-methyl-steroid-to-fmn "14α-methyl steroid to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    4_7_dihydroxycholesterol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    16_hete
   }
 }

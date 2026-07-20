@@ -1,0 +1,394 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "demethylspheroidene-to-di-sulfido-diiron",
+  "name": "demethylspheroidene to di-μ-sulfido-diiron",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from demethylspheroidene to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30903"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62505"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "demethylspheroidene",
+      "name": "demethylspheroidene",
+      "formula": "C40H58O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62505"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "spheroidene",
+      "name": "spheroidene",
+      "formula": "C41H60O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35330"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "spheroiden_2_one",
+      "name": "spheroiden-2-one",
+      "formula": "C41H58O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62480"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o_demethylpuromycin",
+      "name": "O-demethylpuromycin",
+      "formula": "C21H28N7O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58037"
+      }
+    },
+    {
+      "id": "puromycin",
+      "name": "puromycin",
+      "formula": "C22H30N7O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:60255"
+      }
+    },
+    {
+      "id": "epi_isozizaene",
+      "name": "(+)-epi-isozizaene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51458"
+      }
+    },
+    {
+      "id": "albaflavenone",
+      "name": "albaflavenone",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51460"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_210",
+      "name": "demethylspheroidene O-methyltransferase",
+      "ec": [
+        "2.1.1.210"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_9",
+      "name": "spheroidene monooxygenase",
+      "ec": [
+        "1.14.15.9"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_38",
+      "name": "O-demethylpuromycin O-methyltransferase",
+      "ec": [
+        "2.1.1.38"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_39",
+      "name": "epi-isozizaene 5-monooxygenase",
+      "ec": [
+        "1.14.15.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "demethylspheroidene O-methyltransferase",
+      "equation": "demethylspheroidene + S-adenosyl-L-methionine = spheroidene + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.210",
+      "substrates": [
+        {
+          "metabolite": "demethylspheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_210"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30903"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "spheroidene monooxygenase",
+      "equation": "spheroidene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = spheroiden-2-one + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.9",
+      "substrates": [
+        {
+          "metabolite": "spheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spheroiden_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "O-demethylpuromycin O-methyltransferase",
+      "equation": "O-demethylpuromycin + S-adenosyl-L-methionine = puromycin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.38",
+      "substrates": [
+        {
+          "metabolite": "o_demethylpuromycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "puromycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "epi-isozizaene 5-monooxygenase",
+      "equation": "(+)-epi-isozizaene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = albaflavenone + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.39",
+      "substrates": [
+        {
+          "metabolite": "epi_isozizaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "albaflavenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32439"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32439"
+          }
+        ]
+      }
+    }
+  ]
+}

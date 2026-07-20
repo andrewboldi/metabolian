@@ -15,10 +15,4 @@ pathway sucrose-6f-phosphate-to-d-fructofuranose "sucrose 6F-phosphate to β-D-f
     <-> ec_2_7_1_56 [2.7.1.56] +atp -adp -hplus
     f16bp
   }
-
-  branch from d_glucose_6_phosphate side left {
-    d_glucose_6_phosphate
-    <-> . +salicin_6_phosphate +h2o
-    salicyl_alcohol
-  }
 }

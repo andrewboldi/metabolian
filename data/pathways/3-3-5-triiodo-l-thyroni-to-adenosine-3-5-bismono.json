@@ -1,0 +1,372 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-3-5-triiodo-l-thyroni-to-adenosine-3-5-bismono",
+  "name": "3,3',5'-triiodo-L-thyroni… to adenosine 3',5'-bismonoph…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 3,3',5'-triiodo-L-thyronine zwitterion to adenosine 3',5'-bismonophosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18897"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57261"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_3_5_triiodo_l_thyronine",
+      "name": "3,3',5'-triiodo-L-thyronine",
+      "short": "3,3',5'-triiodo-L-t…",
+      "formula": "C15H12I3NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57261"
+      }
+    },
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_thyroxine",
+      "name": "L-thyroxine",
+      "formula": "C15H11I4NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58448"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "l_thyroxine_sulfate",
+      "name": "L-thyroxine sulfate",
+      "formula": "C15H10I4NO7S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:176512"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "4_methylquinoline",
+      "name": "4-methylquinoline",
+      "formula": "C10H9N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48983"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_methylquinolin_2_1h_one",
+      "name": "4-methylquinolin-2(1H)-one",
+      "short": "4-methylquinolin-2(…",
+      "formula": "C10H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48986"
+      }
+    },
+    {
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46858"
+      }
+    },
+    {
+      "id": "l_tyrosine_o_sulfate_1",
+      "name": "L-tyrosine-O-sulfate(1−)",
+      "short": "L-tyrosine-O-sulfat…",
+      "formula": "C9H8NO5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65286"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_21_99_3",
+      "name": "thyroxine 5-deiodinase",
+      "ec": [
+        "1.21.99.3"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_17",
+      "name": "quinoline 2-oxidoreductase",
+      "ec": [
+        "1.3.99.17"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_20",
+      "name": "protein-tyrosine sulfotransferase",
+      "ec": [
+        "2.8.2.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "thyroxine 5-deiodinase",
+      "equation": "3,3',5'-triiodo-L-thyronine + iodide + A + H(+) = L-thyroxine + AH2",
+      "ec": "1.21.99.3",
+      "substrates": [
+        {
+          "metabolite": "3_3_5_triiodo_l_thyronine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_thyroxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_99_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18897"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-thyroxine + 3'-phosphoadenylyl sulfate = L-thyroxine sulfate + adenosine 3',5'-bispho...",
+      "equation": "L-thyroxine + 3'-phosphoadenylyl sulfate = L-thyroxine sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_thyroxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_thyroxine_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:83575"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "quinoline 2-oxidoreductase",
+      "equation": "4-methylquinoline + A + H2O = 4-methylquinolin-2(1H)-one + AH2",
+      "ec": "1.3.99.17",
+      "substrates": [
+        {
+          "metabolite": "4_methylquinoline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylquinolin_2_1h_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protein-tyrosine sulfotransferase",
+      "equation": "L-tyrosyl-[protein] + 3'-phosphoadenylyl sulfate = O-sulfo-L-tyrosine-[protein] + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.20",
+      "substrates": [
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tyrosine_o_sulfate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16801"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16801"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -201,13 +201,13 @@
       }
     },
     {
-      "id": "1_hydroxy_6_methoxyphenazine_n10_oxide",
-      "name": "1-hydroxy-6-methoxyphenazine N10-oxide",
-      "short": "1-hydroxy-6-methoxy…",
-      "formula": "C13H9N2O3",
+      "id": "1_6_dihydroxyphenazine_n5_oxide",
+      "name": "1,6-dihydroxyphenazine N5-oxide",
+      "short": "1,6-dihydroxyphenaz…",
+      "formula": "C12H7N2O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:192368"
+        "chebi": "CHEBI:192371"
       }
     },
     {
@@ -220,23 +220,32 @@
       }
     },
     {
-      "id": "2_4_6_trichlorophenolate",
-      "name": "2,4,6-trichlorophenolate",
-      "short": "2,4,6-trichlorophen…",
-      "formula": "C6H2Cl3O",
+      "id": "1_hydroxy_6_methoxyphenazine_n10_oxide",
+      "name": "1-hydroxy-6-methoxyphenazine N10-oxide",
+      "short": "1-hydroxy-6-methoxy…",
+      "formula": "C13H9N2O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:140426"
+        "chebi": "CHEBI:192368"
       }
     },
     {
-      "id": "2_4_6_trichloroanisole",
-      "name": "2,4,6-trichloroanisole",
-      "short": "2,4,6-trichloroanis…",
-      "formula": "C7H5Cl3O",
+      "id": "c30_botryococcene",
+      "name": "C30 botryococcene",
+      "formula": "C30H50",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:19333"
+        "chebi": "CHEBI:70786"
+      }
+    },
+    {
+      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
+      "short": "3,20-dimethyl-1,2,2…",
+      "formula": "C32H54",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70865"
       }
     }
   ],
@@ -249,10 +258,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_136",
-      "name": "chlorophenol O-methyltransferase",
+      "id": "ec_2_1_1_263",
+      "name": "botryococcene C-methyltransferase",
       "ec": [
-        "2.1.1.136"
+        "2.1.1.263"
       ]
     }
   ],
@@ -615,6 +624,53 @@
     },
     {
       "id": "r9",
+      "name": "1,6-dihydroxyphenazine + NADPH + O2 = 1,6-dihydroxyphenazine N(5)-oxide + NADP(+) + H2O",
+      "equation": "1,6-dihydroxyphenazine + NADPH + O2 = 1,6-dihydroxyphenazine N(5)-oxide + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "1_6_dihydroxyphenazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_6_dihydroxyphenazine_n5_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:72647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "1-hydroxy-6-methoxyphenazine + NADPH + O2 = 1-hydroxy-6-methoxyphenazine N(10)-oxide + ...",
       "equation": "1-hydroxy-6-methoxyphenazine + NADPH + O2 = 1-hydroxy-6-methoxyphenazine N(10)-oxide + NADP(+) + H2O",
       "substrates": [
@@ -646,7 +702,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:72655"
       },
@@ -661,46 +717,50 @@
       }
     },
     {
-      "id": "r10",
-      "name": "chlorophenol O-methyltransferase",
-      "equation": "2,4,6-trichlorophenol + S-adenosyl-L-methionine = 2,4,6-trichloroanisole + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.136",
+      "id": "r11",
+      "name": "botryococcene C-methyltransferase",
+      "equation": "C30 botryococcene + 2 S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.263",
       "substrates": [
         {
-          "metabolite": "2_4_6_trichlorophenolate",
+          "metabolite": "c30_botryococcene",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "2_4_6_trichloroanisole",
+          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_136"
+          "enzyme": "ec_2_1_1_263"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:18909"
+        "rhea": "RHEA:34655"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18909"
+            "id": "RHEA:34655"
           }
         ]
       }

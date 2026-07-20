@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-oleoyl-2-o-arachidonyl-to-n-oleoyl-l-phenylala",
+  "name": "1-oleoyl-2-O-arachidonyl-… to N-oleoyl-L-phenylalaninate",
+  "category": "other",
+  "summary": "A 2-step route from 1-oleoyl-2-O-arachidonyl-sn-glycerol to N-oleoyl-L-phenylalaninate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38527"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75914"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_oleoyl_2_o_arachidonyl_sn_glycerol",
+      "name": "1-oleoyl-2-O-arachidonyl-sn-glycerol",
+      "short": "1-oleoyl-2-O-arachi…",
+      "formula": "C41H72O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75914"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_arachidonyl_glyceryl_ether",
+      "name": "2-arachidonyl glyceryl ether",
+      "short": "2-arachidonyl…",
+      "formula": "C23H40O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75913"
+      }
+    },
+    {
+      "id": "oleate",
+      "name": "oleate",
+      "formula": "C18H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30823"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "n_oleoyl_l_phenylalaninate",
+      "name": "N-oleoyl-L-phenylalaninate",
+      "short": "N-oleoyl-L-phenylal…",
+      "formula": "C27H42NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134020"
+      }
+    },
+    {
+      "id": "1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine",
+      "name": "1-oleoyl-2-palmitoyl-sn-glycero-3-phosphocholine",
+      "short": "1-oleoyl-2-palmitoy…",
+      "formula": "C42H82NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74667"
+      }
+    },
+    {
+      "id": "2_palmitoyl_sn_glycero_3_phosphocholine",
+      "name": "2-palmitoyl-sn-glycero-3-phosphocholine",
+      "short": "2-palmitoyl-sn-glyc…",
+      "formula": "C24H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76078"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-(9Z-octadecenoyl)-2-O-(5Z,8Z,11Z,14Z-eicosatetraenyl)-sn-glycerol + H2O = 2-O-(5Z,8Z,...",
+      "equation": "1-(9Z-octadecenoyl)-2-O-(5Z,8Z,11Z,14Z-eicosatetraenyl)-sn-glycerol + H2O = 2-O-(5Z,8Z,11Z,14Z)-eicosatetraenylglycerol + (9Z)-octadecenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_oleoyl_2_o_arachidonyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_arachidonyl_glyceryl_ether",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38527"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-phenylalanine + (9Z)-octadecenoate = N-(9Z-octadecenoyl)-L-phenylalanine + H2O",
+      "equation": "L-phenylalanine + (9Z)-octadecenoate = N-(9Z-octadecenoyl)-L-phenylalanine + H2O",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_oleoyl_l_phenylalaninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1-(9Z-octadecenoyl)-2-hexadecanoyl-sn-glycero-3-phosphocholine + H2O = 2-hexadecanoyl-s...",
+      "equation": "1-(9Z-octadecenoyl)-2-hexadecanoyl-sn-glycero-3-phosphocholine + H2O = 2-hexadecanoyl-sn-glycero-3-phosphocholine + (9Z)-octadecenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_palmitoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38787"
+          }
+        ]
+      }
+    }
+  ]
+}

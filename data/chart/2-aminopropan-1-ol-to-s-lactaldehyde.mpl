@@ -18,7 +18,7 @@ pathway 2-aminopropan-1-ol-to-s-lactaldehyde "2-aminopropan-1-ol to (S)-lactalde
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_101 [3.5.1.101] +s_piperazin_4_ium_2_carboxamide +h2o
-    s_piperazine_2_carboxylic_acid
+    <-> . +1_naphthaleneacetamide +h2o
+    1_naphthaleneacetate
   }
 }

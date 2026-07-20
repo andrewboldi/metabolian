@@ -169,40 +169,31 @@
       }
     },
     {
-      "id": "long_chain_fatty_acyl_coa",
-      "name": "long-chain fatty acyl-CoA",
+      "id": "long_chain_fatty_acyl_amp",
+      "name": "long-chain fatty acyl-AMP",
       "short": "long-chain fatty…",
-      "formula": "C22H31N7O17P3SR",
+      "formula": "C11H12N5O8PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136562"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:83139"
+        "chebi": "CHEBI:57369"
       }
     },
     {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
+      "id": "benzyl_acetate",
+      "name": "benzyl acetate",
+      "formula": "C9H10O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "acetaldehyde",
-      "name": "Acetaldehyde",
-      "formula": "C2H4O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15343"
-      }
-    },
-    {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17499"
+        "chebi": "CHEBI:52051"
       }
     },
     {
@@ -216,22 +207,31 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:78442"
       }
     },
     {
-      "id": "r_linalool",
-      "name": "(R)-linalool",
-      "formula": "C10H18O",
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28"
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "3_l_phenylalanyl_adenylyl_1_group",
+      "name": "3'-(L-phenylalanyl)adenylyl(1−) group",
+      "short": "3'-(L-phenylalanyl)…",
+      "formula": "C19H21N6O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78531"
       }
     }
   ],
@@ -258,13 +258,6 @@
       ]
     },
     {
-      "id": "ec_1_1_99_36",
-      "name": "alcohol dehydrogenase (nicotinoprotein)",
-      "ec": [
-        "1.1.99.36"
-      ]
-    },
-    {
       "id": "ec_1_2_1_80",
       "name": "long-chain acyl-[acyl-carrier-protein] reductase",
       "ec": [
@@ -272,10 +265,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_26",
-      "name": "R-linalool synthase",
+      "id": "ec_6_1_1_20",
+      "name": "phenylalanine--tRNA ligase",
       "ec": [
-        "4.2.3.26"
+        "6.1.1.20"
       ]
     }
   ],
@@ -449,25 +442,15 @@
     },
     {
       "id": "r4",
-      "name": "a long-chain fatty acyl-CoA + H2O = a long-chain fatty acid + CoA + H(+)",
-      "equation": "a long-chain fatty acyl-CoA + H2O = a long-chain fatty acid + CoA + H(+)",
+      "name": "a long-chain fatty acid + ATP + H(+) = a long-chain fatty acyl-AMP + diphosphate",
+      "equation": "a long-chain fatty acid + ATP + H(+) = a long-chain fatty acyl-AMP + diphosphate",
       "substrates": [
-        {
-          "metabolite": "long_chain_fatty_acyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "long_chain_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -475,62 +458,66 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "long_chain_fatty_acyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:67680"
+        "rhea": "RHEA:52336"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67680"
+            "id": "RHEA:52336"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "alcohol dehydrogenase (nicotinoprotein)",
-      "equation": "ethanol + A = acetaldehyde + AH2",
-      "ec": "1.1.99.36",
+      "name": "ethanol + benzoyl-CoA = benzyl acetate + CoA",
+      "equation": "ethanol + benzoyl-CoA = benzyl acetate + CoA",
       "substrates": [
         {
           "metabolite": "ethanol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "benzoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "acetaldehyde",
+          "metabolite": "benzyl_acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "coa",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_99_36"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33567"
+        "rhea": "RHEA:65124"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33567"
+            "id": "RHEA:65124"
           }
         ]
       }
@@ -590,45 +577,57 @@
     },
     {
       "id": "r7",
-      "name": "R-linalool synthase",
-      "equation": "(2E)-geranyl diphosphate + H2O = (R)-linalool + diphosphate",
-      "ec": "4.2.3.26",
+      "name": "phenylalanine--tRNA ligase",
+      "equation": "tRNA(Phe) + L-phenylalanine + ATP = L-phenylalanyl-tRNA(Phe) + AMP + diphosphate + H(+)",
+      "ec": "6.1.1.20",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_linalool",
+          "metabolite": "3_l_phenylalanyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_26"
+          "enzyme": "ec_6_1_1_20"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:15809"
+        "rhea": "RHEA:19413"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15809"
+            "id": "RHEA:19413"
           }
         ]
       }

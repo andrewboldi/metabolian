@@ -30,8 +30,8 @@ pathway cetoleate-to-7z-octadecenoyl-coa "cetoleate to (7Z)-octadecenoyl-CoA" {
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_96 [2.5.1.96] +fpp
-    15_cis_4_4_diapophytoene
+    <-> . +r_lipoate +gtp +hplus
+    r_lipoyl_gmp
   }
 
   branch from 3_oxo_11z_docos_11_enoyl_coa side right {
@@ -50,5 +50,11 @@ pathway cetoleate-to-7z-octadecenoyl-coa "cetoleate to (7Z)-octadecenoyl-CoA" {
     3_oxo_9z_icos_9_enoyl_coa
     <-> . +nad +nadh +hplus
     3r_9z_hydroxyicos_9_enoyl_coa
+  }
+
+  branch from 7z_octadecenoyl_coa side left {
+    7z_octadecenoyl_coa
+    <-> . +cholesterol +coa
+    ce_18_1_7z
   }
 }

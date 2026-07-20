@@ -24,21 +24,33 @@ pathway d-apiitol-to-n6-r-s8-succinyldihydr "D-apiitol to N6-[(R)-S8-succinyldih
     n6_r_s8_succinyldihydrolipoyl_l_lysine_1
   }
 
-  branch from dhap side left {
-    dhap
-    <-> ec_1_1_3_21 [1.1.3.21] +o2 +h2o2
-    sn_glycerol_3_phosphate
+  branch from x5p side left {
+    x5p
+    <-> ec_2_2_1_15 [2.2.1.15] +6_deoxy_6_sulfo_d_fructofuranose +g3p
+    4_deoxy_4_sulfo_d_erythrose
   }
 
-  branch from n6_r_dihydrolipoyl_l_lysine side right {
+  branch from dhap side right {
+    dhap
+    <-> ec_1_1_1_261 [1.1.1.261] +nadp +nadph +hplus
+    sn_glycerol_1_phosphate
+  }
+
+  branch from n6_r_dihydrolipoyl_l_lysine side left {
     n6_r_dihydrolipoyl_l_lysine
-    <-> ec_2_3_1_168 [2.3.1.168] +mbutyryl_coa +coa
-    n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin
+    <-> . +3s_3_carboxy_3_hydroxypropanoyl_coa +coa
+    n6_r_s8_3s_3_carboxy_3_hydroxypropanoyl_dihydrol
+  }
+
+  branch from g3p side right {
+    g3p
+    <-> ec_2_2_1_14 [2.2.1.14] +6_deoxy_6_sulfo_d_fructofuranose +l_3_sulfolactaldehyde
+    d_fructofuranose_6_phosphate
   }
 
   branch from n6_r_lipoyl_l_lysine side left {
     n6_r_lipoyl_l_lysine
-    <-> ec_6_3_1_20 [6.3.1.20] +l_lysinium +r_lipoate +atp +amp +hplus
-    ppi
+    <-> ec_3_5_1_138 [3.5.1.138] +h2o +r_lipoate
+    l_lysinium
   }
 }

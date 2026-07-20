@@ -1,0 +1,400 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pyridoxaminium-to-4-pyridoxate",
+  "name": "pyridoxaminium to 4-pyridoxate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from pyridoxaminium(1+) to 4-pyridoxate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30775"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57761"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pyridoxaminium",
+      "name": "pyridoxaminium",
+      "formula": "C8H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57761"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pyridoxal",
+      "name": "pyridoxal",
+      "formula": "C8H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17310"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "4_pyridoxate",
+      "name": "4-pyridoxate",
+      "formula": "C8H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30959"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pyridoxine",
+      "name": "pyridoxine",
+      "formula": "C8H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16709"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "r_piperazin_4_ium_2_carboxamide",
+      "name": "(R)-piperazin-4-ium-2-carboxamide",
+      "short": "piperazin-4-ium-2-c…",
+      "formula": "C5H12N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58916"
+      }
+    },
+    {
+      "id": "r_piperazine_2_carboxylic_acid",
+      "name": "(R)-piperazine-2-carboxylic acid",
+      "short": "piperazine-2-carbox…",
+      "formula": "C5H10N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58917"
+      }
+    },
+    {
+      "id": "5_formyl_3_hydroxy_2_methylpyridine_4_carboxylat",
+      "name": "5-formyl-3-hydroxy-2-methylpyridine-4-carboxylate",
+      "short": "5-formyl-3-hydroxy-…",
+      "formula": "C8H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140633"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_3_8",
+      "name": "pyridoxal oxidase",
+      "ec": [
+        "1.2.3.8"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_100",
+      "name": "(R)-amidase",
+      "ec": [
+        "3.5.1.100"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pyridoxamine + O2 + H2O = pyridoxal + H2O2 + NH4(+)",
+      "equation": "pyridoxamine + O2 + H2O = pyridoxal + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "pyridoxaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyridoxal oxidase",
+      "equation": "pyridoxal + O2 + H2O = 4-pyridoxate + H2O2 + H(+)",
+      "ec": "1.2.3.8",
+      "substrates": [
+        {
+          "metabolite": "pyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_pyridoxate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "pyridoxine + NAD(+) = pyridoxal + NADH + H(+)",
+      "equation": "pyridoxine + NAD(+) = pyridoxal + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "pyridoxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:52684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(R)-amidase",
+      "equation": "(R)-piperazine-2-carboxamide + H2O = (R)-piperazine-2-carboxylate + NH4(+)",
+      "ec": "3.5.1.100",
+      "substrates": [
+        {
+          "metabolite": "r_piperazin_4_ium_2_carboxamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_piperazine_2_carboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26542"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26542"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "5-formyl-3-hydroxy-2-methylpyridine-4-carboxylate + NADH + H(+) = 4-pyridoxate + NAD(+)",
+      "equation": "5-formyl-3-hydroxy-2-methylpyridine-4-carboxylate + NADH + H(+) = 4-pyridoxate + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "5_formyl_3_hydroxy_2_methylpyridine_4_carboxylat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_pyridoxate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:63260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63260"
+          }
+        ]
+      }
+    }
+  ]
+}

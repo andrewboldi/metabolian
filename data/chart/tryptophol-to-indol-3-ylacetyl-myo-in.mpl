@@ -40,7 +40,7 @@ pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_182 [3.2.1.182] +diboa_d_glucoside +h2o
-    diboa
+    <-> . +nadp +nadph +hplus
+    d_glucitol
   }
 }

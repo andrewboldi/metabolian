@@ -18,7 +18,7 @@ pathway l-glycero-l-galacto-octul-to-o-pantetheine-4-pho "L-glycero-L-galacto-oc
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_n5 [2.3.1.n5] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +sn_glycerol_3_phosphate
-    1_acyl_sn_glycerol_3_phosphate
+    <-> ec_6_2_1_51 [6.2.1.51] +17_4_hydroxyphenyl_heptadecanoate +atp +amp +ppi
+    o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine
   }
 }

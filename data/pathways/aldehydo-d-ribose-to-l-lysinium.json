@@ -122,33 +122,31 @@
       }
     },
     {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:59789"
+        "chebi": "CHEBI:57392"
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61961"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
+      "id": "n6_propanoyl_l_lysine",
+      "name": "N6-propanoyl-L-lysine",
+      "short": "N6-propanoyl-L-lysi…",
+      "formula": "C9H16N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57856"
+        "chebi": "CHEBI:138019"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -158,13 +156,6 @@
       "name": "protein-ribulosamine 3-kinase",
       "ec": [
         "2.7.1.172"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_259",
-      "name": "[fructose-bisphosphate aldolase]-lysine N-methyltransferase",
-      "ec": [
-        "2.1.1.259"
       ]
     }
   ],
@@ -341,49 +332,43 @@
     },
     {
       "id": "r5",
-      "name": "[fructose-bisphosphate aldolase]-lysine N-methyltransferase",
-      "equation": "[fructose-bisphosphate aldolase]-L-lysine + 3 S-adenosyl-L-methionine = [fructose-bisphosphate aldolase]-N(6),N(6),N(6)-trimethyl-L-lysine + 3 S-adenosyl-L-homocysteine + 3 H(+)",
-      "ec": "2.1.1.259",
+      "name": "propanoyl-CoA + L-lysyl-[protein] = N(6)-propanoyl-L-lysyl-[protein] + CoA + H(+)",
+      "equation": "propanoyl-CoA + L-lysyl-[protein] = N(6)-propanoyl-L-lysyl-[protein] + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "propionyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
-          "stoichiometry": 3
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "n6_propanoyl_l_lysine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
-          "stoichiometry": 3
+          "metabolite": "coa",
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_259"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:51000"
+        "rhea": "RHEA:54020"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51000"
+            "id": "RHEA:54020"
           }
         ]
       }

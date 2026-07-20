@@ -30,25 +30,37 @@ pathway 3-5-unsubstituted-to-cobamamide "3',5'-unsubstituted… to cobamamide" {
 
   branch from fmn side left {
     fmn
-    <-> ec_2_7_1_26 [2.7.1.26] +atp +adp +hplus
-    riboflavin
+    <-> ec_1_14_19_67 [1.14.19.67] +r_reticulinium +fmnh2 +o2 +h2o +hplus
+    salutaridinium
   }
 
-  branch from cob_ii_yrinic_acid_a_c_diamide side right {
-    cob_ii_yrinic_acid_a_c_diamide
-    <-> . +glutamine +atp +h2o +glutamate +adp +pi +hplus
-    cob_ii_yrinate_c_monoamide
-  }
-
-  branch from fmnh2 side left {
+  branch from fmnh2 side right {
     fmnh2
-    <-> . +24r_24_hydroxycholesterol +o2 +fmn +h2o +hplus
-    24r_7_24_dihydroxycholesterol
+    <-> ec_1_14_14_57 [1.14.14.57] +taurochenodeoxycholate +o2 +fmn +h2o +hplus
+    taurohyocholate
   }
 
-  branch from triphosphate side right {
+  branch from triphosphate side left {
     triphosphate
-    <-> ec_2_5_1_17 [2.5.1.17] +fadh2 +atp +adenosylcobinamide +fad +hplus
-    cob_ii_inamide
+    <-> ec_3_1_5_1 [3.1.5.1] +dgtp +h2o +hplus
+    2_deoxyguanosine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_5_1_1_3 [5.1.1.3]
+    d_glutamate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_166 [4.2.3.166] +fpp +h2o
+    1_10_e_4e_6s_7r_germacradien_6_ol
+  }
+
+  branch from cobamamide side right {
+    cobamamide
+    <-> . +cob_ii_alamin +hydrogen_donor +atp +triphosphate +hplus
+    hydrogen_acceptor
   }
 }

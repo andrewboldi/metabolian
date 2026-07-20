@@ -124,33 +124,41 @@
       }
     },
     {
-      "id": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
-      "name": "O-(S-fatty acylpantetheine-4'-phosphoryl)-L-serine(1−)",
-      "short": "O-(S-fatty…",
-      "formula": "C15H24N3O9PSR",
+      "id": "17_4_hydroxyphenyl_heptadecanoate",
+      "name": "17-(4-hydroxyphenyl)heptadecanoate",
+      "short": "17-(4-hydroxyphenyl…",
+      "formula": "C23H37O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138651"
+        "chebi": "CHEBI:91233"
       }
     },
     {
-      "id": "sn_glycerol_3_phosphate",
-      "name": "sn-glycerol 3-phosphate",
-      "short": "sn-glycerol 3-P",
-      "formula": "C3H7O6P",
-      "charge": -2,
+      "id": "o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine",
+      "name": "O-{S-[17-(4-hydroxyphenyl)heptadecanoyl]pantetheine-4'-phosphoryl}serine(1−)",
+      "short": "O-{S-[17-(4-hydroxy…",
+      "formula": "C37H61N3O10PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57597"
+        "chebi": "CHEBI:133300"
       }
     },
     {
-      "id": "1_acyl_sn_glycerol_3_phosphate",
-      "name": "1-acyl-sn-glycerol 3-phosphate",
-      "short": "1-acyl-sn-glycerol…",
-      "formula": "C4H6O7PR",
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57970"
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -163,10 +171,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_n5",
-      "name": "glycerol-3-phosphate acyltransferase (acyl-[acyl-carrier-protein]-",
+      "id": "ec_6_2_1_51",
+      "name": "4-hydroxyphenylalkanoate adenylyltransferase FadD29",
       "ec": [
-        "2.3.1.n5"
+        "6.2.1.51"
       ]
     }
   ],
@@ -300,45 +308,53 @@
     },
     {
       "id": "r4",
-      "name": "glycerol-3-phosphate acyltransferase (acyl-[acyl-carrier-protein]-",
-      "equation": "a fatty acyl-[ACP] + sn-glycerol 3-phosphate = a 1-acyl-sn-glycero-3-phosphate + holo-[ACP]",
-      "ec": "2.3.1.n5",
+      "name": "4-hydroxyphenylalkanoate adenylyltransferase FadD29",
+      "equation": "17-(4-hydroxyphenyl)heptadecanoate + holo-[(phenol)carboxyphthiodiolenone synthase] + ATP = 17-(4-hydroxyphenyl)heptadecanoyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
+      "ec": "6.2.1.51",
       "substrates": [
         {
-          "metabolite": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
+          "metabolite": "17_4_hydroxyphenyl_heptadecanoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "holo-acp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_n5"
+          "enzyme": "ec_6_2_1_51"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42300"
+        "rhea": "RHEA:55720"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42300"
+            "id": "RHEA:55720"
           }
         ]
       }

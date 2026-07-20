@@ -1,0 +1,419 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucosamine-to-d-fructofuranose",
+  "name": "α-D-glucosamine… to β-D-fructofuranose…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from α-D-glucosamine 6-phosphate(1−) to β-D-fructofuranose 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12172"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75989"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucosamine_6_phosphate",
+      "name": "α-D-glucosamine 6-phosphate",
+      "short": "α-D-glucosamine 6-P",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75989"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_fructofuranose_6_phosphate",
+      "name": "β-D-fructofuranose 6-phosphate",
+      "short": "β-D-fructofuranose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57634"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "f16bp",
+      "name": "D-Fructose 1,6-bisphosphate",
+      "short": "D-Fructose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:32966"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_glucitol_6_phosphate",
+      "name": "D-glucitol 6-phosphate",
+      "short": "D-glucitol 6-P",
+      "formula": "C6H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60084"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "guanosine",
+      "name": "Guanosine",
+      "formula": "C10H13N5O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16750"
+      }
+    },
+    {
+      "id": "xanthosine",
+      "name": "xanthosine",
+      "formula": "C10H12N4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18107"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_99_6",
+      "name": "glucosamine-6-phosphate deaminase",
+      "ec": [
+        "3.5.99.6"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_90",
+      "name": "diphosphate--fructose-6-phosphate 1-phosphotransferase",
+      "ec": [
+        "2.7.1.90"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_11",
+      "name": "fructose-bisphosphatase",
+      "ec": [
+        "3.1.3.11"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_140",
+      "name": "sorbitol-6-phosphate 2-dehydrogenase",
+      "ec": [
+        "1.1.1.140"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_15",
+      "name": "guanosine deaminase",
+      "ec": [
+        "3.5.4.15"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucosamine-6-phosphate deaminase",
+      "equation": "alpha-D-glucosamine 6-phosphate + H2O = beta-D-fructose 6-phosphate + NH4(+)",
+      "ec": "3.5.99.6",
+      "substrates": [
+        {
+          "metabolite": "d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_99_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12172"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "diphosphate--fructose-6-phosphate 1-phosphotransferase",
+      "equation": "beta-D-fructose 6-phosphate + diphosphate = beta-D-fructose 1,6-bisphosphate + phosphate + H(+)",
+      "ec": "2.7.1.90",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "f16bp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13613"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13613"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "fructose-bisphosphatase",
+      "equation": "beta-D-fructose 1,6-bisphosphate + H2O = beta-D-fructose 6-phosphate + phosphate",
+      "ec": "3.1.3.11",
+      "substrates": [
+        {
+          "metabolite": "f16bp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sorbitol-6-phosphate 2-dehydrogenase",
+      "equation": "D-sorbitol 6-phosphate + NAD(+) = beta-D-fructose 6-phosphate + NADH + H(+)",
+      "ec": "1.1.1.140",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_140"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19837"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19837"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "guanosine deaminase",
+      "equation": "guanosine + H2O + H(+) = xanthosine + NH4(+)",
+      "ec": "3.5.4.15",
+      "substrates": [
+        {
+          "metabolite": "guanosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12861"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12861"
+          }
+        ]
+      }
+    }
+  ]
+}

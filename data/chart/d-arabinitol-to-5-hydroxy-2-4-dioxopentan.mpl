@@ -22,8 +22,8 @@ pathway d-arabinitol-to-5-hydroxy-2-4-dioxopentan "D-arabinitol to 5-hydroxy-2,4
 
   branch from d_arabinopyranose side left {
     d_arabinopyranose
-    <-> ec_1_1_1_435 [1.1.1.435] +nadp +nadph +hplus
-    d_arabinono_1_5_lactone
+    <-> ec_2_7_1_54 [2.7.1.54] +atp +adp +hplus
+    aldehydo_d_arabinose_5_phosphate
   }
 
   branch from d_arabinono_1_4_lactone side right {

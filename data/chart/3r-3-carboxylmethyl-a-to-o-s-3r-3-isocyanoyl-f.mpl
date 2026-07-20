@@ -20,13 +20,13 @@ pathway 3r-3-carboxylmethyl-a-to-o-s-3r-3-isocyanoyl-f "(3R)-3-[(carboxylmethyl)
 
   branch from succinate side left {
     succinate
-    <-> . +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o +hplus
-    4s_2_3_dehydroflavan_3_4_diol
+    <-> . +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_105 [2.7.7.105] +phosphonatoenolpyruvate +gtp +hplus
-    enolpyruvoyl_2_diphospho_5_guanosine
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    manool
   }
 }

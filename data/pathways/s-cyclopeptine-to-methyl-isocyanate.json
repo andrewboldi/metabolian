@@ -119,22 +119,22 @@
       }
     },
     {
-      "id": "l_asparagine",
-      "name": "L-asparagine",
-      "formula": "C4H6N2O2",
+      "id": "dihydrokaempferol",
+      "name": "(+)-dihydrokaempferol",
+      "short": "(+)-dihydrokaempfer…",
+      "formula": "C15H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50347"
+        "chebi": "CHEBI:15401"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_asparagine",
-      "name": "(3S)-3-hydroxy-L-asparagine",
-      "short": "3-hydroxy-L-asparag…",
-      "formula": "C4H6N2O3",
-      "charge": 0,
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138107"
+        "chebi": "CHEBI:58573"
       }
     }
   ],
@@ -151,13 +151,6 @@
       "name": "cyclopenase",
       "ec": [
         "4.1.99.27"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_n4",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "ec": [
-        "1.14.11.n4"
       ]
     }
   ],
@@ -319,12 +312,11 @@
     },
     {
       "id": "r4",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "equation": "L-asparaginyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-asparaginyl-[ankyrin-repeat domain protein] + succinate + CO2",
-      "ec": "1.14.11.n4",
+      "name": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + ...",
+      "equation": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "l_asparagine",
+          "metabolite": "dihydrokaempferol",
           "stoichiometry": 1
         },
         {
@@ -338,7 +330,7 @@
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_asparagine",
+          "metabolite": "kaempferol_oxoanion",
           "stoichiometry": 1
         },
         {
@@ -348,24 +340,27 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_1_14_11_n4"
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:54272"
+        "rhea": "RHEA:61132"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54272"
+            "id": "RHEA:61132"
           }
         ]
       }

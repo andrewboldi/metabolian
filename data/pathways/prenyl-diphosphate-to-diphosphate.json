@@ -1,0 +1,231 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prenyl-diphosphate-to-diphosphate",
+  "name": "prenyl diphosphate to diphosphate",
+  "category": "other",
+  "summary": "A 2-step route from prenyl diphosphate(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21676"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "r_lavandulyl_diphosphate",
+      "name": "(R)-lavandulyl diphosphate",
+      "short": "lavandulyl PP",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:143949"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_lavandulol",
+      "name": "(R)-lavandulol",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50283"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "10_epi_cubebol",
+      "name": "(−)-10-epi-cubebol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138045"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_69",
+      "name": "lavandulyl diphosphate synthase",
+      "ec": [
+        "2.5.1.69"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_175",
+      "name": "10-epi-cubebol synthase",
+      "ec": [
+        "4.2.3.175"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "lavandulyl diphosphate synthase",
+      "equation": "2 dimethylallyl diphosphate = (R)-lavandulyl diphosphate + diphosphate",
+      "ec": "2.5.1.69",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_lavandulyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-lavandulyl diphosphate + H2O = (R)-lavandulol + diphosphate",
+      "equation": "(R)-lavandulyl diphosphate + H2O = (R)-lavandulol + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "r_lavandulyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_lavandulol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:60696"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "10-epi-cubebol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-cubebol + diphosphate",
+      "ec": "4.2.3.175",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10_epi_cubebol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_175"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54064"
+          }
+        ]
+      }
+    }
+  ]
+}

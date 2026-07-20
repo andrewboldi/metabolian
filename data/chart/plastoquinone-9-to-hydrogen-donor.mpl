@@ -20,21 +20,21 @@ pathway plastoquinone-9-to-hydrogen-donor "plastoquinone-9 to hydrogen donor" {
     all_trans_3_4_didehydrolycopene
   }
 
-  branch from 9_9_di_cis_carotene side left {
-    9_9_di_cis_carotene
-    <-> . +1_4_benzoquinones +hydroquinones
-    7_9_9_tri_cis_neurosporene
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> . +l_methionine +1_4_benzoquinones +h2o
+    l_methionine_s_s_oxide
   }
 
-  branch from hydroquinones side right {
-    hydroquinones
-    <-> ec_1_1_5_4 [1.1.5.4] +malate +1_4_benzoquinones
-    oxaloacetate
+  branch from lycopene side right {
+    lycopene
+    <-> ec_2_5_1_150 [2.5.1.150] +dmapp +h2o +ppi
+    dihydroisopentenyldehydrorhodopin
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_65 [1.14.99.65] +o_s_4_amino_l_phenylalanylpantetheine_4_phosphor +o2 +hydrogen_acceptor +h2o
-    o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos
+    <-> . +oleoyl_coa +o2 +hydrogen_acceptor +h2o
+    linoleoyl_coa
   }
 }

@@ -1,0 +1,280 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxepin-2-3h-ylideneace-to-3-oxo-5-6-dehydrosub",
+  "name": "2-oxepin-2(3H)-ylideneace… to 3-oxo-5,6-dehydrosuberyl-…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 2-oxepin-2(3H)-ylideneacetyl-CoA(4−) to 3-oxo-5,6-dehydrosuberyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31755"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:63252"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxepin_2_3h_ylideneacetyl_coa",
+      "name": "2-oxepin-2(3H)-ylideneacetyl-CoA",
+      "short": "2-oxepin-2(3H)-ylid…",
+      "formula": "C29H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:63252"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_8_dioxooct_5_enoyl_coa",
+      "name": "3,8-dioxooct-5-enoyl-CoA",
+      "short": "3,8-dioxooct-5-enoy…",
+      "formula": "C29H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:63257"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_oxo_5_6_dehydrosuberyl_coa",
+      "name": "3-oxo-5,6-dehydrosuberyl-CoA",
+      "short": "3-oxo-5,6-dehydrosu…",
+      "formula": "C29H39N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:63255"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_3_didehydroadipoyl_coa",
+      "name": "2,3-didehydroadipoyl-CoA",
+      "short": "2,3-didehydroadipoy…",
+      "formula": "C27H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:71044"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_3_2_12",
+      "name": "oxepin-CoA hydrolase",
+      "ec": [
+        "3.3.2.12"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_91",
+      "name": "3-oxo-5,6-dehydrosuberyl-CoA semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.91"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_223",
+      "name": "3-oxo-5,6-didehydrosuberyl-CoA thiolase",
+      "ec": [
+        "2.3.1.223"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "oxepin-CoA hydrolase",
+      "equation": "2-oxepin-2(3H)-ylideneacetyl-CoA + H2O = 3-oxo-5,6-dehydrosuberyl-CoA semialdehyde",
+      "ec": "3.3.2.12",
+      "substrates": [
+        {
+          "metabolite": "2_oxepin_2_3h_ylideneacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_8_dioxooct_5_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31755"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31755"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-oxo-5,6-dehydrosuberyl-CoA semialdehyde dehydrogenase",
+      "equation": "3-oxo-5,6-dehydrosuberyl-CoA semialdehyde + NADP(+) + H2O = 3-oxo-5,6-didehydrosuberyl-CoA + NADPH + 2 H(+)",
+      "ec": "1.2.1.91",
+      "substrates": [
+        {
+          "metabolite": "3_8_dioxooct_5_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_5_6_dehydrosuberyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31747"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31747"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-oxo-5,6-didehydrosuberyl-CoA thiolase",
+      "equation": "2,3-didehydroadipoyl-CoA + acetyl-CoA = 3-oxo-5,6-didehydrosuberyl-CoA + CoA",
+      "ec": "2.3.1.223",
+      "substrates": [
+        {
+          "metabolite": "2_3_didehydroadipoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_5_6_dehydrosuberyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_223"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34799"
+          }
+        ]
+      }
+    }
+  ]
+}

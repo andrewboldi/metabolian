@@ -258,6 +258,54 @@
       "xrefs": {
         "chebi": "CHEBI:85414"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "germacrene_d",
+      "name": "(−)-germacrene D",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49044"
+      }
+    },
+    {
+      "id": "5_amino_1_5_phospho_d_ribosyl_imidazole_4_thioca",
+      "name": "5-amino-1-(5-phospho-D-ribosyl)imidazole-4-thiocarboxamide",
+      "short": "5-amino-1-(5-phosph…",
+      "formula": "C9H13N4O7PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:145873"
+      }
+    },
+    {
+      "id": "6_mercaptopurine_riboside_5_phosphate",
+      "name": "6-mercaptopurine riboside 5'-phosphate",
+      "short": "6-mercaptopurine…",
+      "formula": "C10H11N4O7PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:145875"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
@@ -301,6 +349,13 @@
       "name": "dihydroneopterin triphosphate aldolase",
       "ec": [
         "4.1.2.60"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_75",
+      "name": "(-)-germacrene D synthase",
+      "ec": [
+        "4.2.3.75"
       ]
     }
   ],
@@ -751,6 +806,90 @@
           {
             "db": "Rhea",
             "id": "RHEA:45744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "(-)-germacrene D synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-germacrene D + diphosphate",
+      "ec": "4.2.3.75",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germacrene_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:12016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "5-amino-1-(5-phospho-D-ribosyl)imidazole-4-thiocarboxamide + 10-formyldihydrofolate = 6...",
+      "equation": "5-amino-1-(5-phospho-D-ribosyl)imidazole-4-thiocarboxamide + 10-formyldihydrofolate = 6-thio-IMP + 7,8-dihydrofolate + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_amino_1_5_phospho_d_ribosyl_imidazole_4_thioca",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "10_formyldihydrofolate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_mercaptopurine_riboside_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dhf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:62676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62676"
           }
         ]
       }

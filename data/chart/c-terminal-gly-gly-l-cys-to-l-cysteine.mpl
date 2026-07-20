@@ -22,25 +22,25 @@ pathway c-terminal-gly-gly-l-cys-to-l-cysteine "C-terminal Gly-Gly-L-Cys(… to 
 
   branch from cysteine side left {
     cysteine
-    <-> ec_1_8_1_6 [1.8.1.6] +nad +nadh +hplus
-    l_cystine
+    <-> . +ala_cys +h2o
+    alanine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_83 [4.2.3.83] +fpp
-    santalene
+    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate +ctp +hplus
+    cdp_1_stearoyl_2_arachidonoyl_sn_glycerol
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> ec_2_3_1_225 [2.3.1.225] +palmitoyl_coa +coa
-    s_palmitoyl_l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
+    3e_phycocyanobilin
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +hydrogen_donor +o2 +h2o
-    4z_7z_10z_14e_16z_19z_13_hydroxydocosahexaenoat
+    <-> . +o_s_2e_4e_6e_octa_2_4_6_trienyl_pantetheine_4_ph +malonyl-coa +hydrogen_donor +hplus +holo-acp +co2 +coa +h2o
+    2_4_dihydroxy_6_3e_5e_7e_2_oxonona_3_5_7_trienyl
   }
 }

@@ -18,14 +18,14 @@ pathway neocasomorphin-to-fmn "neocasomorphin to FMN" {
 
   branch from isoleucine side left {
     isoleucine
-    <-> ec_1_14_11_74 [1.14.11.74] +akg +o2 +succinate +co2
-    31_hydroxy_l_isoleucine
+    <-> . +glyoxylate +glycine
+    kmv
   }
 
   branch from fmn side right {
     fmn
-    <-> . +epiandrosterone +fmnh2 +o2 +h2o +hplus
-    3_5_7_3_7_dihydroxyandrostan_17_one
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    14r_15s_eet
   }
 
   branch from 2_hydroxy_2_methylbutanenitrile side left {

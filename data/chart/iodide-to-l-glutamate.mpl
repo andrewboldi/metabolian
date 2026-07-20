@@ -24,7 +24,7 @@ pathway iodide-to-l-glutamate "iodide to L-glutamate" {
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_57 [2.6.1.57] +aromatic_l_amino_acid +akg
-    aromatic_2_oxo_monocarboxylic_acid_anion
+    <-> ec_6_3_2_31 [6.3.2.31] +f420_0 +gtp +gdp +pi +hplus
+    coenzyme_f420_1
   }
 }

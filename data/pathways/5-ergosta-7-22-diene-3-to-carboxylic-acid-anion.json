@@ -93,16 +93,6 @@
       }
     },
     {
-      "id": "3_l_aspartate_adenylyl_1_group",
-      "name": "3'-(L-aspartate)adenylyl(1−) group",
-      "short": "3'-(L-aspartate)ade…",
-      "formula": "C14H17N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78516"
-      }
-    },
-    {
       "id": "1_ergostan_3_yl_l_aspartate",
       "name": "1-(ergostan-3β-yl)-L-aspartate",
       "short": "1-(ergostan-3β-yl)-…",
@@ -113,30 +103,51 @@
       }
     },
     {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78442"
+        "chebi": "CHEBI:29991"
       }
     },
     {
-      "id": "3_acylpyruvate",
-      "name": "3-acylpyruvate",
-      "formula": "C4H2O4R",
+      "id": "aliphatic_sulfonate_oxoanion",
+      "name": "aliphatic sulfonate oxoanion",
+      "short": "aliphatic…",
+      "formula": "CH2O3SR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57278"
+        "chebi": "CHEBI:231625"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "tetra_3_sulfido_tetrairon",
+      "name": "tetra-μ3-sulfido-tetrairon",
+      "short": "tetra-μ3-sulfido-te…",
+      "formula": "H4Fe4S4",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:33722"
+      }
+    },
+    {
+      "id": "tetra_3_sulfido_tetrairon",
+      "name": "tetra-μ3-sulfido-tetrairon",
+      "short": "tetra-μ3-sulfido-te…",
+      "formula": "H4Fe4S4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33723"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
       }
     }
   ],
@@ -149,17 +160,17 @@
       ]
     },
     {
-      "id": "ec_2_3_2_37",
-      "name": "ergosteryl-3beta-O-L-aspartate synthase",
+      "id": "ec_3_1_1_121",
+      "name": "ergosteryl-3beta-O-L-aspartate hydrolase",
       "ec": [
-        "2.3.2.37"
+        "3.1.1.121"
       ]
     },
     {
-      "id": "ec_3_7_1_5",
-      "name": "acylpyruvate hydrolase",
+      "id": "ec_1_97_1_13",
+      "name": "aliphatic sulfonate oxidoreductase",
       "ec": [
-        "3.7.1.5"
+        "1.97.1.13"
       ]
     }
   ],
@@ -289,57 +300,12 @@
     },
     {
       "id": "r4",
-      "name": "ergosteryl-3beta-O-L-aspartate synthase",
-      "equation": "L-aspartyl-tRNA(Asp) + ergosterol = 1-(ergostan-3beta-yl)-L-aspartate + tRNA(Asp)",
-      "ec": "2.3.2.37",
+      "name": "ergosteryl-3beta-O-L-aspartate hydrolase",
+      "equation": "1-(ergostan-3beta-yl)-L-aspartate + H2O = ergosterol + L-aspartate + H(+)",
+      "ec": "3.1.1.121",
       "substrates": [
-        {
-          "metabolite": "3_l_aspartate_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ergosterol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "1_ergostan_3_yl_l_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_2_37"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:76555"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76555"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "acylpyruvate hydrolase",
-      "equation": "a 3-acylpyruvate + H2O = a carboxylate + pyruvate + H(+)",
-      "ec": "3.7.1.5",
-      "substrates": [
-        {
-          "metabolite": "3_acylpyruvate",
           "stoichiometry": 1
         },
         {
@@ -349,11 +315,11 @@
       ],
       "products": [
         {
-          "metabolite": "carboxylic_acid_anion",
+          "metabolite": "ergosterol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "aspartate",
           "stoichiometry": 1
         },
         {
@@ -363,20 +329,77 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_7_1_5"
+          "enzyme": "ec_3_1_1_121"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19009"
+        "rhea": "RHEA:76559"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19009"
+            "id": "RHEA:76559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "aliphatic sulfonate oxidoreductase",
+      "equation": "an aliphatic sulfonate + 4 oxidized [4Fe-4S]-[ferredoxin] + 2 H2O = 4 reduced [4Fe-4S]-[ferredoxin] + a carboxylate + sulfite + 6 H(+)",
+      "ec": "1.97.1.13",
+      "substrates": [
+        {
+          "metabolite": "aliphatic_sulfonate_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 6
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_97_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:80643"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80643"
           }
         ]
       }

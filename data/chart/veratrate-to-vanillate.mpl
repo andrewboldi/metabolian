@@ -18,13 +18,13 @@ pathway veratrate-to-vanillate "veratrate to vanillate" {
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_247 [1.14.13.247] +l_proline_betaine +nadh +o2 +hplus +nad +h2o
-    n_methylproline
+    <-> . +chlorotoluron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_chloro_4_methylphenyl_1_methylurea
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
-    15_r_hepe
+    <-> . +verruculide_c +hydrogen_donor +o2 +h2o
+    verruculide_c_epoxide
   }
 }

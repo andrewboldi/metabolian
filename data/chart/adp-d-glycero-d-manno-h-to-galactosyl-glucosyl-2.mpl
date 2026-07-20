@@ -30,19 +30,13 @@ pathway adp-d-glycero-d-manno-h-to-galactosyl-glucosyl-2 "ADP-D-glycero-β-D-man
 
   branch from adp_l_glycero_d_manno_heptose side left {
     adp_l_glycero_d_manno_heptose
-    <-> . +galactosyl_glucosyl_3_heptosyl_3_kdo_2_lipid_a_b +adp +hplus
-    lipid_a_core
+    <-> ec_2_4_99_25 [2.4.99.25] +an_l_d_hep_1_3_4_o_phospho_l_d_hep_1_5_kdo_2_4_k +adp +hplus
+    an_l_d_hep_1_7_l_d_hep_1_3_4_o_phospho_l_d_hep_1
   }
 
   branch from heptosyl_2_kdo_2_lipid_a side right {
     heptosyl_2_kdo_2_lipid_a
     <-> ec_2_7_1_235 [2.7.1.235] +atp +adp +hplus
     l_d_hep_1_3_4_o_phospho_l_d_hep_1_5_kdo_2_4_kdo
-  }
-
-  branch from galactosyl_glucosyl_2_heptosyl_3_kdo_2_lipid_a_b side left {
-    galactosyl_glucosyl_2_heptosyl_3_kdo_2_lipid_a_b
-    <-> . +udp_d_glucose +udp +hplus
-    galactosyl_glucosyl_3_heptosyl_3_kdo_2_lipid_a_b
   }
 }

@@ -18,7 +18,7 @@ pathway z-2-methylpropanal-oxime-to-linamarin "(Z)-2-methylpropanal oxime to lin
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_20_hydroxydocosapentaenoate
+    <-> ec_1_14_14_168 [1.14.14.168] +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
+    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
   }
 }

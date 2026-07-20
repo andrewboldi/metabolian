@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-homocitrate-to-but-1-ene-1-2-4-tricarbox",
+  "name": "(2R)-homocitrate to but-1-ene-1,2,4-tricarbox…",
+  "category": "other",
+  "summary": "A 2-step route from (2R)-homocitrate(3−) to but-1-ene-1,2,4-tricarboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32303"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58884"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_homocitrate",
+      "name": "(2R)-homocitrate",
+      "formula": "C7H7O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58884"
+      }
+    },
+    {
+      "id": "homoisocitrate",
+      "name": "(−)-homoisocitrate",
+      "formula": "C7H7O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15404"
+      }
+    },
+    {
+      "id": "but_1_ene_1_2_4_tricarboxylate",
+      "name": "but-1-ene-1,2,4-tricarboxylate",
+      "short": "but-1-ene-1,2,4-tri…",
+      "formula": "C7H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58174"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_114",
+      "name": "methanogen homoaconitase",
+      "ec": [
+        "4.2.1.114"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_36",
+      "name": "homoaconitate hydratase",
+      "ec": [
+        "4.2.1.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methanogen homoaconitase",
+      "equation": "(2R)-homocitrate = (2R,3S)-homoisocitrate",
+      "ec": "4.2.1.114",
+      "substrates": [
+        {
+          "metabolite": "2r_homocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "homoisocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "homoaconitate hydratase",
+      "equation": "(2R,3S)-homoisocitrate = cis-homoaconitate + H2O",
+      "ec": "4.2.1.36",
+      "substrates": [
+        {
+          "metabolite": "homoisocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "but_1_ene_1_2_4_tricarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15485"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15485"
+          }
+        ]
+      }
+    }
+  ]
+}

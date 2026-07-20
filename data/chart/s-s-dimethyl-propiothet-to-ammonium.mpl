@@ -22,19 +22,19 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
 
   branch from dimethyl_sulfoxide side left {
     dimethyl_sulfoxide
-    <-> ec_1_14_13_245 [1.14.13.245] +nadh +o2 +hplus +nad +h2o
+    <-> ec_1_8_1_17 [1.8.1.17] +nad +h2o +nadh +hplus
     sulfonyldimethane
   }
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_4_2_1_32 [4.2.1.32] +h2o
-    l_tartrate
+    <-> ec_2_3_3_1 [2.3.3.1] +acetyl_coa +h2o +coa +hplus
+    citrate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_14 [1.4.3.14] +l_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
+    <-> ec_1_4_1_7 [1.4.1.7] +serine +nad +h2o +nadh +hplus
+    3_hydroxypyruvate
   }
 }

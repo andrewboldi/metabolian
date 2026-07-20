@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hederagenin-to-fmn",
+  "name": "hederagenin to FMN",
+  "category": "other",
+  "summary": "A 2-step route from hederagenin(1−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56492"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:140466"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hederagenin",
+      "name": "hederagenin",
+      "formula": "C30H47O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140466"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "gypsogenin",
+      "name": "gypsogenin",
+      "formula": "C30H45O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140467"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gypsogenate",
+      "name": "gypsogenate",
+      "formula": "C30H44O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:140468"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "gypsogenin_28_d_glucoside",
+      "name": "gypsogenin 28-β-D-glucoside",
+      "short": "gypsogenin…",
+      "formula": "C36H56O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167133"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "quercetin_7_olate",
+      "name": "quercetin-7-olate",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57694"
+      }
+    },
+    {
+      "id": "myricetin",
+      "name": "myricetin",
+      "formula": "C15H9O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58395"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hederagenin + reduced [NADPH--hemoprotein reductase] + O2 = gypsogenin + oxidized [NADP...",
+      "equation": "hederagenin + reduced [NADPH--hemoprotein reductase] + O2 = gypsogenin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hederagenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gypsogenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56492"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56492"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "gypsogenin + reduced [NADPH--hemoprotein reductase] + O2 = gypsogenate + oxidized [NADP...",
+      "equation": "gypsogenin + reduced [NADPH--hemoprotein reductase] + O2 = gypsogenate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "gypsogenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gypsogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "gypsogenin + UDP-alpha-D-glucose = gypsogenin 28-beta-D-glucoside + UDP",
+      "equation": "gypsogenin + UDP-alpha-D-glucose = gypsogenin 28-beta-D-glucoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "gypsogenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gypsogenin_28_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "quercetin + reduced [NADPH--hemoprotein reductase] + O2 = myricetin + oxidized [NADPH--...",
+      "equation": "quercetin + reduced [NADPH--hemoprotein reductase] + O2 = myricetin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "quercetin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61128"
+          }
+        ]
+      }
+    }
+  ]
+}

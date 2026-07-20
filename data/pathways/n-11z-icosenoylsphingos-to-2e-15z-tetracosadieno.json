@@ -234,12 +234,12 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:57692"
       }
     },
     {
@@ -253,31 +253,31 @@
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:58307"
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9β,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58622"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "stemar_13_ene",
-      "name": "stemar-13-ene",
-      "formula": "C20H32",
+      "id": "chamigrene",
+      "name": "(+)-β-chamigrene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50069"
+        "chebi": "CHEBI:61746"
       }
     },
     {
@@ -289,14 +289,70 @@
       "xrefs": {
         "chebi": "CHEBI:232718"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "n_13z_docosenoyl_sphinganine",
+      "name": "N-(13Z-docosenoyl)-sphinganine",
+      "short": "N-(13Z-docosenoyl)-…",
+      "formula": "C40H79NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149661"
+      }
+    },
+    {
+      "id": "15z_tetracosenoyl_coa",
+      "name": "(15Z)-tetracosenoyl-CoA",
+      "short": "tetracosenoyl-CoA",
+      "formula": "C45H76N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74128"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_33",
-      "name": "stemar-13-ene synthase",
+      "id": "ec_4_2_3_78",
+      "name": "beta-chamigrene synthase",
       "ec": [
-        "4.2.3.33"
+        "4.2.3.78"
       ]
     }
   ],
@@ -721,15 +777,19 @@
     },
     {
       "id": "r11",
-      "name": "(11Z)-eicosenoyl-CoA + O2 = (2E,11Z)-eicosadienoyl-CoA + H2O2",
-      "equation": "(11Z)-eicosenoyl-CoA + O2 = (2E,11Z)-eicosadienoyl-CoA + H2O2",
+      "name": "(11Z)-eicosenoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,11Z)-eico...",
+      "equation": "(11Z)-eicosenoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,11Z)-eicosadienoyl-CoA + reduced [electron-transfer flavoprotein]",
       "substrates": [
         {
           "metabolite": "11z_eicosenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
@@ -739,39 +799,39 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "fadh2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:86155"
+        "rhea": "RHEA:83055"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:86155"
+            "id": "RHEA:83055"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "stemar-13-ene synthase",
-      "equation": "9alpha-copalyl diphosphate = stemar-13-ene + diphosphate",
-      "ec": "4.2.3.33",
+      "name": "beta-chamigrene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-chamigrene + diphosphate",
+      "ec": "4.2.3.78",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "stemar_13_ene",
+          "metabolite": "chamigrene",
           "stoichiometry": 1
         },
         {
@@ -781,55 +841,145 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_33"
+          "enzyme": "ec_4_2_3_78"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:25552"
+        "rhea": "RHEA:30379"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25552"
+            "id": "RHEA:30379"
           }
         ]
       }
     },
     {
       "id": "r13",
-      "name": "(2E,13Z)-docosadienoyl-CoA + H2O = (3S)-hydroxy-(13Z)-docosenoyl-CoA",
-      "equation": "(2E,13Z)-docosadienoyl-CoA + H2O = (3S)-hydroxy-(13Z)-docosenoyl-CoA",
+      "name": "(3S)-hydroxy-(13Z)-docosenoyl-CoA + NAD(+) = 3-oxo-(13Z)-docosenoyl-CoA + NADH + H(+)",
+      "equation": "(3S)-hydroxy-(13Z)-docosenoyl-CoA + NAD(+) = 3-oxo-(13Z)-docosenoyl-CoA + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "2e_13z_docosadienoyl_coa",
+          "metabolite": "3s_13z_3_hydroxydocosenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_13z_3_hydroxydocosenoyl_coa",
+          "metabolite": "13z_3_oxodocosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:83063"
+        "rhea": "RHEA:83075"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:83063"
+            "id": "RHEA:83075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "(13Z)-docosenoyl-CoA + sphinganine = N-(13Z-docosenoyl)-sphinganine + CoA + H(+)",
+      "equation": "(13Z)-docosenoyl-CoA + sphinganine = N-(13Z-docosenoyl)-sphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "erucoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sphinganine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_13z_docosenoyl_sphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:64048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "(15Z)-tetracosenoyl-CoA + O2 = (2E,15Z)-tetracosadienoyl-CoA + H2O2",
+      "equation": "(15Z)-tetracosenoyl-CoA + O2 = (2E,15Z)-tetracosadienoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "15z_tetracosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_15z_tetracosadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:83047"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83047"
           }
         ]
       }

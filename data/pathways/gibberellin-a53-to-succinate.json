@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "gibberellin-a53-to-succinate",
   "name": "gibberellin A53 to succinate",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from gibberellin A53(2−) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -109,62 +109,31 @@
       }
     },
     {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
+      "id": "gibberellin_a19",
+      "name": "gibberellin A19",
+      "formula": "C20H24O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58587"
+      }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:59789"
+        "chebi": "CHEBI:29965"
       }
     },
     {
-      "id": "gibberellin_a20_methyl_ester",
-      "name": "gibberellin A20 methyl ester",
-      "short": "gibberellin A20…",
-      "formula": "C20H26O5",
-      "charge": 0,
+      "id": "3r_3_hydroxy_l_argininium",
+      "name": "(3R)-3-hydroxy-L-argininium",
+      "short": "3-hydroxy-L-arginin…",
+      "formula": "C6H13N4O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:73257"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
-      }
-    },
-    {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H7NO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50342"
-      }
-    },
-    {
-      "id": "trans_3_hydroxy_l_proline",
-      "name": "trans-3-hydroxy-L-proline",
-      "short": "trans-3-hydroxy-L-p…",
-      "formula": "C5H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:85428"
-      }
-    },
-    {
-      "id": "gibberellin_a1_methyl_ester",
-      "name": "gibberellin A1 methyl ester",
-      "short": "gibberellin A1…",
-      "formula": "C20H26O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:73250"
+        "chebi": "CHEBI:78294"
       }
     }
   ],
@@ -184,10 +153,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_275",
-      "name": "gibberellin A9 O-methyltransferase",
+      "id": "ec_1_14_11_73",
+      "name": "[protein]-arginine 3-hydroxylase",
       "ec": [
-        "2.1.1.275"
+        "1.14.11.73"
       ]
     }
   ],
@@ -355,56 +324,59 @@
     },
     {
       "id": "r4",
-      "name": "gibberellin A9 O-methyltransferase",
-      "equation": "gibberellin A20 + S-adenosyl-L-methionine = gibberellin A20 methyl ester + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.275",
+      "name": "gibberellin A19 + O2 + H(+) = gibberellin A20 + CO2 + H2O",
+      "equation": "gibberellin A19 + O2 + H(+) = gibberellin A20 + CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "gibberellin_a20",
+          "metabolite": "gibberellin_a19",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "gibberellin_a20_methyl_ester",
+          "metabolite": "gibberellin_a20",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
+          "metabolite": "co2",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_1_1_275"
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:36123"
+        "rhea": "RHEA:60808"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36123"
+            "id": "RHEA:60808"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "[ribosomal protein S23]-L-proline + 2-oxoglutarate + O2 = [ribosomal protein S23]-trans...",
-      "equation": "[ribosomal protein S23]-L-proline + 2-oxoglutarate + O2 = [ribosomal protein S23]-trans-3-hydroxy-L-proline + succinate + CO2",
+      "name": "[protein]-arginine 3-hydroxylase",
+      "equation": "L-arginyl-[protein] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[protein] + succinate + CO2",
+      "ec": "1.14.11.73",
       "substrates": [
         {
-          "metabolite": "l_proline",
+          "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
@@ -418,7 +390,7 @@
       ],
       "products": [
         {
-          "metabolite": "trans_3_hydroxy_l_proline",
+          "metabolite": "3r_3_hydroxy_l_argininium",
           "stoichiometry": 1
         },
         {
@@ -430,56 +402,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_73"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:45792"
+        "rhea": "RHEA:56744"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45792"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "gibberellin A1 + S-adenosyl-L-methionine = O-methyl gibberellin A1 + S-adenosyl-L-homoc...",
-      "equation": "gibberellin A1 + S-adenosyl-L-methionine = O-methyl gibberellin A1 + S-adenosyl-L-homocysteine",
-      "substrates": [
-        {
-          "metabolite": "gibberellin_a1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gibberellin_a1_methyl_ester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:36111"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:36111"
+            "id": "RHEA:56744"
           }
         ]
       }

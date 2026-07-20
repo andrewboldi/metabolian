@@ -18,25 +18,19 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-d
 
   branch from behenate side left {
     behenate
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    2_hydroxybehenate
+    <-> ec_6_2_1_59 [6.2.1.59] +holo-acp +atp +amp +ppi
+    o_s_docosanoylpantetheine_4_phosphoryl_l_serine
   }
 
-  branch from glycerol side right {
-    glycerol
-    <-> . +1_icosanoylglycerol +h2o +hplus
-    icosanoate
-  }
-
-  branch from docosanoyl_coa side left {
+  branch from docosanoyl_coa side right {
     docosanoyl_coa
     <-> . +fad +hplus +fadh2
     trans_2_docosenoyl_coa
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
-    ditrans_polycis_tridecaprenyl_diphosphate
+    <-> ec_4_2_3_93 [4.2.3.93] +fpp
+    guaiene
   }
 }

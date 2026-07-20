@@ -114,31 +114,32 @@
       }
     },
     {
-      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
-      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
-      "short": "all-cis-5,8,11,14,1…",
-      "formula": "C20H29O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58562"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "1_hydroxy_5_androstan_3_17_dione",
+      "name": "1-hydroxy-5α-androstan-3,17-dione",
+      "short": "1-hydroxy-5α-andros…",
+      "formula": "C19H28O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:157754"
       }
     },
     {
-      "id": "15_s_hepe",
-      "name": "15(S)-HEPE",
-      "formula": "C20H29O3",
-      "charge": -1,
+      "id": "5_androstan_1_3_17_trione",
+      "name": "5α-androstan-1,3,17-trione",
+      "short": "5α-androstan-1,3,17…",
+      "formula": "C19H26O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132087"
+        "chebi": "CHEBI:157755"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
       }
     },
     {
@@ -151,43 +152,17 @@
       }
     },
     {
-      "id": "primary_ammonium_ion",
-      "name": "primary ammonium ion",
-      "formula": "H3NR",
-      "charge": 1,
+      "id": "s_hexadecanoyl_4_phosphopantetheine",
+      "name": "S-hexadecanoyl-4'-phosphopantetheine",
+      "short": "S-hexadecanoyl-4'-p…",
+      "formula": "C27H51N2O8PS",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:65296"
-      }
-    },
-    {
-      "id": "sulfamate",
-      "name": "sulfamate",
-      "formula": "HNO3SR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:131822"
-      }
-    },
-    {
-      "id": "3_3_5_triiodo_l_thyronine",
-      "name": "3,3',5-triiodo-L-thyronine",
-      "short": "3,3',5-triiodo-L-th…",
-      "formula": "C15H12I3NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:533015"
+        "chebi": "CHEBI:132018"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_8_2_3",
-      "name": "amine sulfotransferase",
-      "ec": [
-        "2.8.2.3"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -328,29 +303,50 @@
     },
     {
       "id": "r4",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (15S)-hydroxy-(5Z,8Z,11Z,13E,17Z)-ei...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (15S)-hydroxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + A + H2O",
+      "name": "1-hydroxy-5alpha-androstan-3,17-dione + A = 5alpha-androstan-1,3,17-trione + AH2",
+      "equation": "1-hydroxy-5alpha-androstan-3,17-dione + A = 5alpha-androstan-1,3,17-trione + AH2",
       "substrates": [
         {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "metabolite": "1_hydroxy_5_androstan_3_17_dione",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "15_s_hepe",
+          "metabolite": "5_androstan_1_3_17_trione",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hexadecanoyl-CoA + H2O = S-hexadecanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphos...",
+      "equation": "hexadecanoyl-CoA + H2O = S-hexadecanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "palmitoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -358,39 +354,9 @@
           "stoichiometry": 1
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:50196"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:50196"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "amine sulfotransferase",
-      "equation": "a primary amine + 3'-phosphoadenylyl sulfate = a sulfamate + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "ec": "2.8.2.3",
-      "substrates": [
-        {
-          "metabolite": "primary_ammonium_ion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "sulfamate",
+          "metabolite": "s_hexadecanoyl_4_phosphopantetheine",
           "stoichiometry": 1
         },
         {
@@ -402,65 +368,17 @@
           "stoichiometry": 2
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_2_3"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24136"
+        "rhea": "RHEA:50032"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24136"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "3,3',5-triiodo-L-thyronine + 3'-phosphoadenylyl sulfate = 3,3',5-triiodo-L-thyronine su...",
-      "equation": "3,3',5-triiodo-L-thyronine + 3'-phosphoadenylyl sulfate = 3,3',5-triiodo-L-thyronine sulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_3_5_triiodo_l_thyronine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_3_5_triiodo_l_thyronine_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:67876"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67876"
+            "id": "RHEA:50032"
           }
         ]
       }

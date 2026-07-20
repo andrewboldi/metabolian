@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "coenzyme-q10-to-ammonium",
   "name": "coenzyme Q10 to ammonium",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from coenzyme Q10 to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,26 +120,6 @@
       }
     },
     {
-      "id": "trans_4_hydroxy_l_proline",
-      "name": "trans-4-hydroxy-L-proline",
-      "short": "trans-4-hydroxy-L-p…",
-      "formula": "C5H9NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58375"
-      }
-    },
-    {
-      "id": "3r_5s_1_pyrroline_3_hydroxy_5_carboxylate",
-      "name": "(3R,5S)-1-pyrroline-3-hydroxy-5-carboxylate",
-      "short": "(3R,5S)-1-pyrroline…",
-      "formula": "C5H6NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:62612"
-      }
-    },
-    {
       "id": "l_cysteine",
       "name": "L-cysteine",
       "formula": "C3H5NOS",
@@ -177,51 +157,41 @@
       }
     },
     {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "methyl_thiocyanate",
-      "name": "methyl thiocyanate",
-      "formula": "C2H3NS",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61112"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
+      "id": "hypothiocyanous_acid",
+      "name": "hypothiocyanous acid",
+      "formula": "CHNOS",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57856"
+        "chebi": "CHEBI:133907"
       }
     },
     {
-      "id": "l_cysteate",
-      "name": "L-cysteate",
-      "formula": "C3H6NO5S",
+      "id": "3_oxocyclopentanecarbonitrile",
+      "name": "3-oxocyclopentanecarbonitrile",
+      "short": "3-oxocyclopentaneca…",
+      "formula": "C6H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71188"
+      }
+    },
+    {
+      "id": "3_oxocyclopentanecarboxylate",
+      "name": "3-oxocyclopentanecarboxylate",
+      "short": "3-oxocyclopentaneca…",
+      "formula": "C6H7O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58090"
-      }
-    },
-    {
-      "id": "2_ammonioprop_2_enoate",
-      "name": "2-ammonioprop-2-enoate",
-      "short": "2-ammonioprop-2-eno…",
-      "formula": "C3H5NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:76565"
+        "chebi": "CHEBI:71191"
       }
     }
   ],
@@ -245,13 +215,6 @@
       "name": "L-cysteine S-thiosulfotransferase",
       "ec": [
         "2.8.5.2"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_n4",
-      "name": "thiocyanate methyltransferase",
-      "ec": [
-        "2.1.1.n4"
       ]
     }
   ],
@@ -403,49 +366,6 @@
     },
     {
       "id": "r4",
-      "name": "ubiquinone-10 + trans-4-hydroxy-L-proline = (3R,5S)-1-pyrroline-3-hydroxy-5-carboxylate...",
-      "equation": "ubiquinone-10 + trans-4-hydroxy-L-proline = (3R,5S)-1-pyrroline-3-hydroxy-5-carboxylate + ubiquinol-10 + H(+)",
-      "substrates": [
-        {
-          "metabolite": "coenzyme_q10",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_4_hydroxy_l_proline",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3r_5s_1_pyrroline_3_hydroxy_5_carboxylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ubiquinol_10",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:52516"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52516"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "L-cysteine S-thiosulfotransferase",
       "equation": "L-cysteinyl-[SoxY protein] + thiosulfate + 2 Fe(III)-[cytochrome c] = S-sulfosulfanyl-L-cysteinyl-[SoxY protein] + 2 Fe(II)-[cytochrome c] + 2 H(+)",
       "ec": "2.8.5.2",
@@ -483,7 +403,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:56720"
       },
@@ -498,67 +418,16 @@
       }
     },
     {
-      "id": "r6",
-      "name": "thiocyanate methyltransferase",
-      "equation": "thiocyanate + S-adenosyl-L-methionine = methyl thiocyanate + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.n4",
+      "id": "r5",
+      "name": "thiocyanate + H2O2 + H(+) = hypothiocyanous acid + H2O",
+      "equation": "thiocyanate + H2O2 + H(+) = hypothiocyanous acid + H2O",
       "substrates": [
         {
           "metabolite": "thiocyanate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methyl_thiocyanate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_n4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:28014"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:28014"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "L-cysteate = 2-aminoprop-2-enoate + sulfite + H(+)",
-      "equation": "L-cysteate = 2-aminoprop-2-enoate + sulfite + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_cysteate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_ammonioprop_2_enoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfite",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -566,17 +435,66 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "hypothiocyanous_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:43028"
+        "rhea": "RHEA:69416"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43028"
+            "id": "RHEA:69416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-oxocyclopentanecarbonitrile + 2 H2O = 3-oxocyclopentanecarboxylate + NH4(+)",
+      "equation": "3-oxocyclopentanecarbonitrile + 2 H2O = 3-oxocyclopentanecarboxylate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "3_oxocyclopentanecarbonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxocyclopentanecarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34859"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34859"
           }
         ]
       }

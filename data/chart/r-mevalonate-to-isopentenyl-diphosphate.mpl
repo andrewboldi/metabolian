@@ -24,7 +24,7 @@ pathway r-mevalonate-to-isopentenyl-diphosphate "(R)-mevalonate to isopentenyl d
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_29 [2.5.1.29] +fpp +ppi
-    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    <-> ec_2_5_1_1 [2.5.1.1] +dmapp +ppi
+    gpp
   }
 }

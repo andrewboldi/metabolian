@@ -30,14 +30,14 @@ pathway dihydrocaffeoyl-coa-to-methyl-co "dihydrocaffeoyl-CoA to methyl-Co" {
 
   branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> . +2r_3s_piscidate +coa
-    cimicifugate_d
+    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
+    3_4_dihydroxybenzaldehyde
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +di_sulfido_diiron +o2 +hplus +h2o
-    3_8_biflaviolin_2_7_2_triolate
+    <-> . +hydroxycholesterol_27 +di_sulfido_diiron +o2 +hplus +h2o
+    3_hydroxycholest_5_en_26_al
   }
 
   branch from trans_feruloyl_coa side left {
@@ -48,7 +48,13 @@ pathway dihydrocaffeoyl-coa-to-methyl-co "dihydrocaffeoyl-CoA to methyl-Co" {
 
   branch from sah side right {
     sah
-    <-> ec_2_3_1_161 [2.3.1.161] +holo-acp +malonyl-coa +sam +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
+    <-> ec_2_1_1_175 [2.1.1.175] +tricetin +sam +hplus
+    3_5_di_o_methyltricetin
+  }
+
+  branch from vanillin side left {
+    vanillin
+    <-> . +nadph +hplus +nadp
+    vanillyl_alcohol
   }
 }

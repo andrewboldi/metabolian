@@ -26,13 +26,19 @@ pathway n-acetylneuraminosyl-2-to-n-acetylneuraminate-4 "α-N-acetylneuraminosyl
 
   branch from ganglioside_gd3 side left {
     ganglioside_gd3
-    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +cytidine_5_monophosphate +hplus
-    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne
+    <-> . +acetyl_coa +coa
+    n_acetyl_7_o_acetylneuraminosyl_2_8_n_acetylneu
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d_gl +cmp_n_acetyl_neuraminate +hplus
-    monosialyl_gb5
+    <-> . +n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
+  }
+
+  branch from n_acetylneuraminosyl_2_8_n_acetylneuraminosyl_2 side left {
+    n_acetylneuraminosyl_2_8_n_acetylneuraminosyl_2
+    <-> . +acetyl_coa +coa
+    n_acetyl_7_o_acetylneuraminosyl_2_8_n_acetylneur
   }
 }

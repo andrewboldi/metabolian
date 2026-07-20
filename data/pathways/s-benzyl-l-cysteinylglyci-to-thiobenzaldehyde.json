@@ -120,32 +120,30 @@
       }
     },
     {
-      "id": "3s_3_hydroxy_d_aspartate",
-      "name": "(3S)-3-hydroxy-D-aspartate",
-      "short": "3-hydroxy-D-asparta…",
-      "formula": "C4H6NO5",
-      "charge": -1,
+      "id": "icosanoyl_coa",
+      "name": "icosanoyl-CoA",
+      "formula": "C41H70N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:60894"
+        "chebi": "CHEBI:57380"
       }
     },
     {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
+      "id": "n_icosanoylglycinate",
+      "name": "N-icosanoylglycinate",
+      "formula": "C22H42NO3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36655"
+        "chebi": "CHEBI:87391"
       }
     },
     {
-      "id": "camp",
-      "name": "3',5'-Cyclic AMP (cAMP)",
-      "short": "3',5'-Cyclic AMP…",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58165"
+        "chebi": "CHEBI:57287"
       }
     },
     {
@@ -158,31 +156,44 @@
       }
     },
     {
-      "id": "3_5_cyclic_imp",
-      "name": "3',5'-cyclic IMP",
-      "formula": "C10H10N4O7P",
-      "charge": -1,
+      "id": "copper",
+      "name": "copper",
+      "formula": "Cu",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:134197"
+        "chebi": "CHEBI:29036"
+      }
+    },
+    {
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:327995"
+      }
+    },
+    {
+      "id": "copper",
+      "name": "copper",
+      "formula": "Cu",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:49552"
+      }
+    },
+    {
+      "id": "4_hydroxyphenyl_acetaldehyde",
+      "name": "(4-hydroxyphenyl)acetaldehyde",
+      "short": "(4-hydroxyphenyl)ac…",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15621"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_1_3_41",
-      "name": "3-hydroxy-D-aspartate aldolase",
-      "ec": [
-        "4.1.3.41"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_46",
-      "name": "cAMP deaminase",
-      "ec": [
-        "3.5.4.46"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -342,18 +353,11 @@
     },
     {
       "id": "r5",
-      "name": "3-hydroxy-D-aspartate aldolase",
-      "equation": "(3S)-3-hydroxy-D-aspartate = glyoxylate + glycine",
-      "ec": "4.1.3.41",
+      "name": "eicosanoyl-CoA + glycine = N-eicosanoylglycinate + CoA + H(+)",
+      "equation": "eicosanoyl-CoA + glycine = N-eicosanoylglycinate + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "3s_3_hydroxy_d_aspartate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glyoxylate",
+          "metabolite": "icosanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -361,38 +365,13 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_4_1_3_41"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:27934"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:27934"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "cAMP deaminase",
-      "equation": "3',5'-cyclic AMP + H2O + H(+) = 3',5'-cyclic IMP + NH4(+)",
-      "ec": "3.5.4.46",
-      "substrates": [
-        {
-          "metabolite": "camp",
+          "metabolite": "n_icosanoylglycinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
@@ -400,32 +379,68 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "3_5_cyclic_imp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_4_46"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:22908"
+        "rhea": "RHEA:49792"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22908"
+            "id": "RHEA:49792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2 oxidized [azurin] + tyramine + H2O = 2 reduced [azurin] + (4-hydroxyphenyl)acetaldehy...",
+      "equation": "2 oxidized [azurin] + tyramine + H2O = 2 reduced [azurin] + (4-hydroxyphenyl)acetaldehyde + NH4(+) + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "tyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "4_hydroxyphenyl_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:57128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57128"
           }
         ]
       }

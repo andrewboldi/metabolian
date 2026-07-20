@@ -205,10 +205,10 @@
     {
       "id": "l_proline",
       "name": "L-proline",
-      "formula": "C5H7NO",
+      "formula": "C5H9NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50342"
+        "chebi": "CHEBI:60039"
       }
     },
     {
@@ -230,13 +230,50 @@
       }
     },
     {
-      "id": "trans_4_hydroxy_l_proline",
-      "name": "trans-4-hydroxy-L-proline",
-      "short": "trans-4-hydroxy-L-p…",
-      "formula": "C5H7NO2",
+      "id": "cis_3_hydroxy_l_proline",
+      "name": "cis-3-hydroxy-L-proline",
+      "short": "cis-3-hydroxy-L-pro…",
+      "formula": "C5H9NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61965"
+        "chebi": "CHEBI:60041"
+      }
+    },
+    {
+      "id": "propionamide",
+      "name": "propionamide",
+      "formula": "C3H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:45422"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_succinyl_l_lysine_1",
+      "name": "N6-succinyl-L-lysine(1−)",
+      "short": "N6-succinyl-L-lysin…",
+      "formula": "C10H15N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87830"
       }
     }
   ],
@@ -291,10 +328,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_2",
-      "name": "procollagen-proline 4-dioxygenase",
+      "id": "ec_1_14_11_28",
+      "name": "proline 3-hydroxylase",
       "ec": [
-        "1.14.11.2"
+        "1.14.11.28"
       ]
     }
   ],
@@ -663,9 +700,9 @@
     },
     {
       "id": "r9",
-      "name": "procollagen-proline 4-dioxygenase",
-      "equation": "L-prolyl-[collagen] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[collagen] + succinate + CO2",
-      "ec": "1.14.11.2",
+      "name": "proline 3-hydroxylase",
+      "equation": "L-proline + 2-oxoglutarate + O2 = cis-3-hydroxy-L-proline + succinate + CO2",
+      "ec": "1.14.11.28",
       "substrates": [
         {
           "metabolite": "l_proline",
@@ -682,7 +719,7 @@
       ],
       "products": [
         {
-          "metabolite": "trans_4_hydroxy_l_proline",
+          "metabolite": "cis_3_hydroxy_l_proline",
           "stoichiometry": 1
         },
         {
@@ -696,20 +733,102 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_2"
+          "enzyme": "ec_1_14_11_28"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:18945"
+        "rhea": "RHEA:20265"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18945"
+            "id": "RHEA:20265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "propanamide + H2O = propanoate + NH4(+)",
+      "equation": "propanamide + H2O = propanoate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "propionamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:68112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "succinyl-CoA + L-lysyl-[protein] = N(6)-succinyl-L-lysyl-[protein] + CoA + H(+)",
+      "equation": "succinyl-CoA + L-lysyl-[protein] = N(6)-succinyl-L-lysyl-[protein] + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_succinyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:16261"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16261"
           }
         ]
       }

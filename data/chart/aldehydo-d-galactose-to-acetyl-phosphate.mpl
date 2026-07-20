@@ -24,25 +24,31 @@ pathway aldehydo-d-galactose-to-acetyl-phosphate "aldehydo-D-galactose… to ace
 
   branch from keto_d_tagatose_6_phosphate side left {
     keto_d_tagatose_6_phosphate
-    <-> ec_2_7_1_101 [2.7.1.101] +atp +adp +hplus
-    keto_d_tagatose
+    <-> ec_1_1_1_251 [1.1.1.251] +nad +nadh +hplus
+    galactitol_1_phosphate
   }
 
   branch from e4p side right {
     e4p
-    <-> ec_2_2_1_14 [2.2.1.14] +6_deoxy_6_sulfo_d_fructofuranose +s7p
-    l_3_sulfolactaldehyde
+    <-> ec_1_13_11_79 [1.13.11.79] +fmnh2 +o2 +5_6_dimethylbenzimidazole +hplus
+    dialurate
   }
 
-  branch from l_lysinium side left {
+  branch from n6_acetyl_l_lysine side left {
+    n6_acetyl_l_lysine
+    <-> . +o2 +h2o +l_allysine +h2o2
+    acetamide
+  }
+
+  branch from l_lysinium side right {
     l_lysinium
     <-> . +gtp +ppi +hplus
     n_5_guanylyl_l_lysine_1
   }
 
-  branch from acetate side right {
+  branch from acetate side left {
     acetate
-    <-> ec_3_5_1_51 [3.5.1.51] +4_acetamidobutanoyl_coa +h2o
-    4_aminobutanoyl_coa
+    <-> ec_2_8_3_19 [2.8.3.19] +oxalate +acetyl_coa
+    oxalyl_coa
   }
 }

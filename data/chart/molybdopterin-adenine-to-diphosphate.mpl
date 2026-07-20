@@ -8,25 +8,15 @@ pathway molybdopterin-adenine-to-diphosphate "molybdopterin adenine… to diphos
 
   spine at 0,0 {
     molybdopterin_adenine_dinucleotide
-    <-> . +molybdate +hplus -h2o
-    mo_vi_o3_molybdopterin_adenosine_dinucleotide
-    <-> .
-    mo_vi_o2_oh_molybdopterin_adenosine_dinucleotide
-    <-> . +h2o -amp -hplus
+    <-> ec_2_10_1_1 [2.10.1.1] +molybdate -amp -hplus
     mo_vi_o2_oh_molybdopterin_cofactor
     <-> ec_2_7_7_76 [2.7.7.76] +ctp +hplus -ppi
     mo_vi_molybdopterin_cytosine_dinucleotide
   }
 
-  branch from mo_vi_o2_oh_molybdopterin_cofactor side left {
-    mo_vi_o2_oh_molybdopterin_cofactor
-    <-> ec_2_7_7_77 [2.7.7.77] +gtp +hplus +ppi
-    mo_vi_molybdopterin_guanine_dinucleotide
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> . +ipp +fpp
-    2_cis_6_trans_10_trans_geranylgeranyl_diphosphat
+    <-> ec_4_2_3_37 [4.2.3.37] +fpp
+    epi_isozizaene
   }
 }

@@ -18,19 +18,25 @@ pathway 2-methylthioethanol-to-formaldehyde "2-methylthioethanol to formaldehyde
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +5_s_hete +hydrogen_donor +o2 +h2o
-    5_s_15_r_dihete
+    <-> . +propionyl_coa +malonyl-coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
+    6_ethyl_2_4_dihydroxy_3_5_dimethylbenzaldehyde
   }
 
-  branch from sah side right {
+  branch from dimethyl_sulfide side right {
+    dimethyl_sulfide
+    <-> ec_1_14_13_245 [1.14.13.245] +nadh +o2 +hplus +nad +h2o
+    dimethyl_sulfoxide
+  }
+
+  branch from sah side left {
     sah
-    <-> . +3_methoxy_4_5_dihydroxy_trans_stilbene +sam +hplus
-    pterostilbene
+    <-> ec_2_1_1_310 [2.1.1.310] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
-  branch from formaldehyde side left {
+  branch from formaldehyde side right {
     formaldehyde
-    <-> . +n6_methyl_l_lysinium +akg +o2 +succinate +co2
-    l_lysinium
+    <-> . +isoproturon +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    isoproturon_monodemethyl
   }
 }

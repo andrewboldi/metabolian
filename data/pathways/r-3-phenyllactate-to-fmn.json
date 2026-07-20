@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "r-3-phenyllactate-to-fmn",
   "name": "(R)-3-phenyllactate to FMN",
-  "category": "redox-detox",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from (R)-3-phenyllactate to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -147,41 +147,23 @@
       }
     },
     {
-      "id": "d_glucitol",
-      "name": "D-glucitol",
-      "formula": "C6H14O6",
+      "id": "e_indol_3_ylacetaldehyde_oxime",
+      "name": "(E)-indol-3-ylacetaldehyde oxime",
+      "short": "indol-3-ylacetaldeh…",
+      "formula": "C10H10N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17924"
+        "chebi": "CHEBI:17545"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "1_aci_nitro_2_1h_indol_3_yl_ethane",
+      "name": "1-aci-nitro-2-(1H-indol-3-yl)ethane",
+      "short": "1-aci-nitro-2-(1H-i…",
+      "formula": "C10H10N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "dehydroepiandrosterone_sulfate",
-      "name": "dehydroepiandrosterone sulfate",
-      "short": "dehydroepiandroster…",
-      "formula": "C19H27O5S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57905"
-      }
-    },
-    {
-      "id": "16_hydroxydehydroepiandrosterone_3_sulfate",
-      "name": "16α-hydroxydehydroepiandrosterone 3-sulfate",
-      "short": "16α-hydroxydehydroe…",
-      "formula": "C19H27O6S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87538"
+        "chebi": "CHEBI:136445"
       }
     }
   ],
@@ -409,50 +391,11 @@
     },
     {
       "id": "r5",
-      "name": "D-sorbitol + O2 = D-glucose + H2O2",
-      "equation": "D-sorbitol + O2 = D-glucose + H2O2",
+      "name": "(E)-(indol-3-yl)acetaldehyde oxime + reduced [NADPH--hemoprotein reductase] + O2 = 1-ac...",
+      "equation": "(E)-(indol-3-yl)acetaldehyde oxime + reduced [NADPH--hemoprotein reductase] + O2 = 1-aci-nitro-2-(1H-indol-3-yl)ethane + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "d_glucitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69524"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69524"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "dehydroepiandrosterone 3-sulfate + reduced [NADPH--hemoprotein reductase] + O2 = 16alph...",
-      "equation": "dehydroepiandrosterone 3-sulfate + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxydehydroepiandrosterone 3-sulfate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dehydroepiandrosterone_sulfate",
+          "metabolite": "e_indol_3_ylacetaldehyde_oxime",
           "stoichiometry": 1
         },
         {
@@ -466,7 +409,7 @@
       ],
       "products": [
         {
-          "metabolite": "16_hydroxydehydroepiandrosterone_3_sulfate",
+          "metabolite": "1_aci_nitro_2_1h_indol_3_yl_ethane",
           "stoichiometry": 1
         },
         {
@@ -483,16 +426,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:47224"
+        "rhea": "RHEA:52184"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47224"
+            "id": "RHEA:52184"
           }
         ]
       }

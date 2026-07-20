@@ -22,13 +22,13 @@ pathway 3-6-7-9-tetrahydroxy-3-me-to-herqueinone "3,6,7,9-tetrahydroxy-3-me… t
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    13s_edaxadiene
+    <-> . +12_hete +atp +coa +amp
+    12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa
   }
 
   branch from sah side right {
     sah
-    <-> . +c30_botryococcene +sam +hplus
-    3_methyl_1_2_didehydro_2_3_dihydrobotryococcene
+    <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_6 +sam +hplus
+    ubiquinol_6
   }
 }

@@ -1,0 +1,217 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-3-epoxy-2-3-dihydrobenz-to-cis-3-4-didehydroad",
+  "name": "2,3-epoxy-2,3-dihydrobenz… to cis-3,4-didehydroadipoyl-…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 2,3-epoxy-2,3-dihydrobenzoyl-CoA(4−) to cis-3,4-didehydroadipoyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48308"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:88118"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_3_epoxy_2_3_dihydrobenzoyl_coa",
+      "name": "2,3-epoxy-2,3-dihydrobenzoyl-CoA",
+      "short": "2,3-epoxy-2,3-dihyd…",
+      "formula": "C28H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:88118"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cis_3_4_didehydroadipoyl_coa_semialdehyde",
+      "name": "cis-3,4-didehydroadipoyl-CoA semialdehyde",
+      "short": "cis-3,4-didehydroad…",
+      "formula": "C27H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58787"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "cis_3_4_didehydroadipoyl_coa",
+      "name": "cis-3,4-didehydroadipoyl-CoA",
+      "short": "cis-3,4-didehydroad…",
+      "formula": "C27H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:58786"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_44",
+      "name": "2,3-epoxybenzoyl-CoA dihydrolase",
+      "ec": [
+        "4.1.2.44"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_77",
+      "name": "3,4-dehydroadipyl-CoA semialdehyde dehydrogenase (NADP(+))",
+      "ec": [
+        "1.2.1.77"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,3-epoxybenzoyl-CoA dihydrolase",
+      "equation": "2,3-epoxy-2,3-dihydrobenzoyl-CoA + 2 H2O = (3Z)-6-oxohex-3-enoyl-CoA + formate + H(+)",
+      "ec": "4.1.2.44",
+      "substrates": [
+        {
+          "metabolite": "2_3_epoxy_2_3_dihydrobenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_3_4_didehydroadipoyl_coa_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3,4-dehydroadipyl-CoA semialdehyde dehydrogenase (NADP(+))",
+      "equation": "(3Z)-6-oxohex-3-enoyl-CoA + NADP(+) + H2O = cis-3,4-dehydroadipyl-CoA + NADPH + 2 H(+)",
+      "ec": "1.2.1.77",
+      "substrates": [
+        {
+          "metabolite": "cis_3_4_didehydroadipoyl_coa_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_3_4_didehydroadipoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25391"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25391"
+          }
+        ]
+      }
+    }
+  ]
+}

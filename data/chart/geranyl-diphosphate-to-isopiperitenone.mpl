@@ -24,14 +24,14 @@ pathway geranyl-diphosphate-to-isopiperitenone "geranyl diphosphate to (−)-iso
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    tuberculosinol
+    <-> . +11_12_eet +atp +coa +amp
+    11_12_epoxy_5z_8z_14z_icosatrienoyl_coa
   }
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    15_hydroxyestradiol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    13_hete
   }
 
   branch from isopiperitenone side right {

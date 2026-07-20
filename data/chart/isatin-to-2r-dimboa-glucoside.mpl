@@ -28,25 +28,19 @@ pathway isatin-to-2r-dimboa-glucoside "isatin to (2R)-DIMBOA glucoside" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_7_24_dihydroxycholesterol
+    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
+    20_hetre
   }
 
   branch from succinate side right {
     succinate
-    <-> . +l_asparagine +akg +o2 +co2
-    3s_3_hydroxy_l_asparagine
+    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +formaldehyde +co2
+    n6_n6_dimethyl_l_lysine_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_n7 [2.1.1.n7] +5_pentadeca_8_11_14_trien_1_yl_resorcinol +sam +hplus
-    5_pentadeca_8_11_14_trien_1_yl_resorcinol_monome
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> . +z_alkenyl_glucosinolate +h2o +hplus
-    z_n_sulfonatooxy_alkenimidothioate
+    <-> ec_2_1_1_193 [2.1.1.193] +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
   }
 }

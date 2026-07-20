@@ -22,25 +22,37 @@ pathway methyl-sulfate-to-dtmp "methyl sulfate to dTMP" {
 
   branch from methanol side left {
     methanol
-    <-> . +4_o_methylrhodomycin_d +h2o +hplus
-    10_carboxy_13_deoxydaunorubicin
+    <-> ec_3_1_1_59 [3.1.1.59] +juvenile_hormone_i +h2o +hplus
+    juvenile_hormone_i_carboxylate
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +2_ethylhexyl_sulfate +akg +o2 +succinate +co2 +hplus
-    2_ethylhexanal
+    <-> ec_1_14_11_77 [1.14.11.77] +primary_linear_alkyl_sulfate_ester +akg +o2 +succinate +co2 +hplus
+    aldehyde
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n_methyl_l_tryptophan +o2 +h2o +h2o2
-    l_tryptophan
+    <-> ec_1_5_3_19 [1.5.3.19] +4_methylamino_butyric_acid +o2 +h2o +h2o2
+    gaba
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_99_23 [1.14.99.23] +3_hydroxybenzoate +o2 +hydrogen_acceptor +h2o
-    2_3_dihydroxybenzoate
+    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
+    tetrachloroethene
+  }
+
+  branch from dtmp side left {
+    dtmp
+    <-> ec_3_6_1_9 [3.6.1.9] +dttp +h2o +hplus
+    ppi
+  }
+
+  branch from thymidine side right {
+    thymidine
+    <-> ec_2_4_2_2 [2.4.2.2] +pi +thymine
+    2_deoxy_d_ribose_1_phosphate
   }
 }

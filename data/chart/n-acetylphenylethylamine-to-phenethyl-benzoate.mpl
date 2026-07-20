@@ -18,15 +18,15 @@ pathway n-acetylphenylethylamine-to-phenethyl-benzoate "N-acetylphenylethylamine
     phenethyl_benzoate
   }
 
-  branch from 2_phenylethanaminium side left {
-    2_phenylethanaminium
-    <-> . +acetoin +h2o
-    3_phenethylamino_butan_2_one
+  branch from phenylacetaldehyde side left {
+    phenylacetaldehyde
+    <-> . +hydrogen_cyanide
+    2s_2_hydroxy_3_phenylpropanenitrile
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nad +h2o +nadh +hplus
-    5_guanidino_2_oxopentanoic_acid
+    <-> . +3_5_dimethylcyclohexan_1_aminium +nadp +h2o +nadph +hplus
+    3_5_dimethylcyclohexanone
   }
 }

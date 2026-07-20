@@ -134,22 +134,21 @@
       }
     },
     {
-      "id": "cmp_n_acyl_neuraminate",
-      "name": "CMP-N-acyl-β-neuraminate",
-      "short": "CMP-N-acyl-β-neuram…",
-      "formula": "C19H26N4O16PR",
-      "charge": -2,
+      "id": "cdp_choline",
+      "name": "CDP-choline",
+      "formula": "C14H25N4O11P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:68671"
+        "chebi": "CHEBI:58779"
       }
     },
     {
-      "id": "n_acylneuraminate",
-      "name": "N-acylneuraminate",
-      "formula": "C10H15NO9R",
+      "id": "phosphocholine",
+      "name": "Phosphocholine",
+      "formula": "C5H13NO4P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60073"
+        "chebi": "CHEBI:295975"
       }
     }
   ],
@@ -183,10 +182,10 @@
       ]
     },
     {
-      "id": "ec_3_1_4_40",
-      "name": "CMP-N-acylneuraminate phosphodiesterase",
+      "id": "ec_3_6_1_53",
+      "name": "Mn(2+)-dependent ADP-ribose/CDP-alcohol diphosphatase",
       "ec": [
-        "3.1.4.40"
+        "3.6.1.53"
       ]
     }
   ],
@@ -416,12 +415,12 @@
     },
     {
       "id": "r6",
-      "name": "CMP-N-acylneuraminate phosphodiesterase",
-      "equation": "a CMP-N-acyl-beta-neuraminate + H2O = an N-acylneuraminate + CMP + H(+)",
-      "ec": "3.1.4.40",
+      "name": "Mn(2+)-dependent ADP-ribose/CDP-alcohol diphosphatase",
+      "equation": "CDP-choline + H2O = phosphocholine + CMP + 2 H(+)",
+      "ec": "3.6.1.53",
       "substrates": [
         {
-          "metabolite": "cmp_n_acyl_neuraminate",
+          "metabolite": "cdp_choline",
           "stoichiometry": 1
         },
         {
@@ -431,7 +430,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_acylneuraminate",
+          "metabolite": "phosphocholine",
           "stoichiometry": 1
         },
         {
@@ -440,25 +439,25 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_4_40"
+          "enzyme": "ec_3_6_1_53"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:20185"
+        "rhea": "RHEA:32487"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20185"
+            "id": "RHEA:32487"
           }
         ]
       }

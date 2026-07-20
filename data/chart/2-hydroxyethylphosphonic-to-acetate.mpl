@@ -24,7 +24,7 @@ pathway 2-hydroxyethylphosphonic-to-acetate "2-hydroxyethylphosphonic… to acet
 
   branch from acetate side right {
     acetate
-    <-> . +n_acetylcadaverine +h2o
-    cadaverine
+    <-> . +3_hydroxy_3_4_hydroxyphenyl_propanoate
+    4_hydroxybenzaldehyde
   }
 }

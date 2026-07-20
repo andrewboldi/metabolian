@@ -18,7 +18,7 @@ pathway 17-4-hydroxyphenyl-hepta-to-o-s-c35-phenol-carbo "17-(4-hydroxyphenyl)he
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_44 [4.2.3.44] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    isopimara_7_15_diene
+    <-> ec_4_2_3_226 [4.2.3.226] +2_cis_6_trans_farnesyl_diphosphate
+    2_epi_prezizaene
   }
 }

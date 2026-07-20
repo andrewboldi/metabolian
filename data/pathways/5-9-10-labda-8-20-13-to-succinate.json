@@ -167,60 +167,96 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57907"
       }
     },
     {
-      "id": "bicyclogermacrene",
-      "name": "bicyclogermacrene",
-      "formula": "C15H24",
+      "id": "sesterfisherol",
+      "name": "sesterfisherol",
+      "formula": "C25H42O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63709"
+        "chebi": "CHEBI:138046"
       }
     },
     {
-      "id": "1_4_cineole",
-      "name": "1,4-cineole",
-      "formula": "C10H18O",
+      "id": "ent_kaur_16_en_19_al",
+      "name": "ent-kaur-16-en-19-al",
+      "formula": "C20H30O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:80788"
+        "chebi": "CHEBI:15418"
       }
     },
     {
-      "id": "2_exo_hydroxy_1_4_cineole",
-      "name": "2-exo-hydroxy-1,4-cineole",
-      "short": "2-exo-hydroxy-1,4-c…",
-      "formula": "C10H18O2",
+      "id": "dehydrocholesterol_7",
+      "name": "7-Dehydrocholesterol (provitamin D3)",
+      "short": "7-Dehydrocholestero…",
+      "formula": "C27H44O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90956"
+        "chebi": "CHEBI:17759"
       }
     },
     {
-      "id": "hexanoyl_coa",
-      "name": "hexanoyl-CoA",
-      "formula": "C27H42N7O17P3S",
-      "charge": -4,
+      "id": "cholesta_5_7_dien_3_24s_diol",
+      "name": "cholesta-5,7-dien-3β,24S-diol",
+      "short": "cholesta-5,7-dien-3…",
+      "formula": "C27H44O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62620"
+        "chebi": "CHEBI:137061"
       }
     },
     {
-      "id": "2_hydroxyhexanoyl_coa",
-      "name": "2-hydroxyhexanoyl-CoA",
-      "short": "2-hydroxyhexanoyl-C…",
-      "formula": "C27H42N7O18P3S",
-      "charge": -4,
+      "id": "phenylsuccinate",
+      "name": "phenylsuccinate",
+      "formula": "C10H8O4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:138630"
+        "chebi": "CHEBI:188356"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "2_phenylsuccinyl_coa",
+      "name": "2-phenylsuccinyl-CoA",
+      "formula": "C31H39N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:188357"
       }
     }
   ],
@@ -240,10 +276,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_100",
-      "name": "bicyclogermacrene synthase",
+      "id": "ec_4_2_3_176",
+      "name": "sesterfisherol synthase",
       "ec": [
-        "4.2.3.100"
+        "4.2.3.176"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_28",
+      "name": "phenylsuccinyl-CoA transferase",
+      "ec": [
+        "2.8.3.28"
       ]
     }
   ],
@@ -556,18 +599,73 @@
     },
     {
       "id": "r7",
-      "name": "bicyclogermacrene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = bicyclogermacrene + diphosphate",
-      "ec": "4.2.3.100",
+      "name": "ent-kaur-16-ene + 6 reduced [2Fe-2S]-[ferredoxin] + 3 O2 + 5 H(+) = ent-kaur-16-en-19-o...",
+      "equation": "ent-kaur-16-ene + 6 reduced [2Fe-2S]-[ferredoxin] + 3 O2 + 5 H(+) = ent-kaur-16-en-19-oate + 6 oxidized [2Fe-2S]-[ferredoxin] + 4 H2O",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "ent_kaurene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_kaur_16_en_19_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:61532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "sesterfisherol synthase",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = sesterfisherol + diphosphate",
+      "ec": "4.2.3.176",
+      "substrates": [
+        {
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "bicyclogermacrene",
+          "metabolite": "sesterfisherol",
           "stoichiometry": 1
         },
         {
@@ -577,31 +675,82 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_100"
+          "enzyme": "ec_4_2_3_176"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:31999"
+        "rhea": "RHEA:54068"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31999"
+            "id": "RHEA:54068"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole +...",
-      "equation": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "id": "r9",
+      "name": "ent-kaur-16-en-19-al + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + H(+) = ent-kaur-16-en-19-...",
+      "equation": "ent-kaur-16-en-19-al + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + H(+) = ent-kaur-16-en-19-oate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "1_4_cineole",
+          "metabolite": "ent_kaur_16_en_19_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_kaur_16_en_19_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:61544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "7-dehydrocholesterol + reduced [NADPH--hemoprotein reductase] + O2 = cholesta-5,7-dien-...",
+      "equation": "7-dehydrocholesterol + reduced [NADPH--hemoprotein reductase] + O2 = cholesta-5,7-dien-3beta,24S-diol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dehydrocholesterol_7",
           "stoichiometry": 1
         },
         {
@@ -615,7 +764,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_exo_hydroxy_1_4_cineole",
+          "metabolite": "cholesta_5_7_dien_3_24s_diol",
           "stoichiometry": 1
         },
         {
@@ -632,63 +781,112 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:49160"
+        "rhea": "RHEA:53244"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49160"
+            "id": "RHEA:53244"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "hexanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyhexanoyl-CoA + succinate + CO2",
-      "equation": "hexanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyhexanoyl-CoA + succinate + CO2",
+      "id": "r11",
+      "name": "ent-7alpha-hydroxykaur-16-en-19-oate + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = ...",
+      "equation": "ent-7alpha-hydroxykaur-16-en-19-oate + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = gibberellin A12 aldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
       "substrates": [
         {
-          "metabolite": "hexanoyl_coa",
+          "metabolite": "ent_7_hydroxykaur_16_en_19_oate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "2_hydroxyhexanoyl_coa",
+          "metabolite": "gibberellin_a12_aldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinate",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:55172"
+        "rhea": "RHEA:61552"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55172"
+            "id": "RHEA:61552"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "phenylsuccinyl-CoA transferase",
+      "equation": "phenylsuccinate + succinyl-CoA = 2-phenylsuccinyl-CoA + succinate",
+      "ec": "2.8.3.28",
+      "substrates": [
+        {
+          "metabolite": "phenylsuccinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phenylsuccinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:69735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69735"
           }
         ]
       }

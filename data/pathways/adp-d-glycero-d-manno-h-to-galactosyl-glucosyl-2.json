@@ -183,22 +183,23 @@
       }
     },
     {
-      "id": "galactosyl_glucosyl_3_heptosyl_3_kdo_2_lipid_a_b",
-      "name": "galactosyl-(glucosyl)3-(heptosyl)3-(KDO)2-lipid A-bisphosphate",
-      "short": "galactosyl-(glucosy…",
-      "formula": "C155H270N2O83P4",
-      "charge": -10,
+      "id": "an_l_d_hep_1_3_4_o_phospho_l_d_hep_1_5_kdo_2_4_k",
+      "name": "an L-α-D-Hep-(1→3)-4-O-phospho-L-α-D-Hep-(1→5)-[α-Kdo-(2→4)]-α-Kdo-(2→6)-lipid A",
+      "short": "an L-α-D-Hep-(1→3)-…",
+      "formula": "C56H77N2O54P3R6",
+      "charge": -8,
       "xrefs": {
-        "chebi": "CHEBI:62003"
+        "chebi": "CHEBI:193070"
       }
     },
     {
-      "id": "lipid_a_core",
-      "name": "lipid A-core",
-      "formula": "C162H282N2O89P4",
-      "charge": -10,
+      "id": "an_l_d_hep_1_7_l_d_hep_1_3_4_o_phospho_l_d_hep_1",
+      "name": "an L-α-D-Hep-(1→7)-L-α-D-Hep-(1→3)-4-O-phospho-L-α-D-Hep-(1→5)-[α-Kdo-(2→4)]-α-Kdo-(2→6)-lipid A",
+      "short": "an L-α-D-Hep-(1→7)-…",
+      "formula": "C63H89N2O60P3R6",
+      "charge": -8,
       "xrefs": {
-        "chebi": "CHEBI:62004"
+        "chebi": "CHEBI:193071"
       }
     },
     {
@@ -232,6 +233,13 @@
       "name": "lipopolysaccharide heptosyltransferase II",
       "ec": [
         "2.4.99.24"
+      ]
+    },
+    {
+      "id": "ec_2_4_99_25",
+      "name": "lipopolysaccharide heptosyltransferase III",
+      "ec": [
+        "2.4.99.25"
       ]
     },
     {
@@ -638,11 +646,12 @@
     },
     {
       "id": "r10",
-      "name": "alpha-D-Glc-(1->2)-alpha-D-Glc-(1->3)-[alpha-D-Gal-(1->6)]-alpha-D-Glc-(1->3)-[L-alpha-...",
-      "equation": "alpha-D-Glc-(1->2)-alpha-D-Glc-(1->3)-[alpha-D-Gal-(1->6)]-alpha-D-Glc-(1->3)-[L-alpha-D-Hep-(1->7)]-4-O-PO3(2-)-L-alpha-D-Hep-(1->3)-4-O-PO3(2-)-L-alpha-D-Hep-(1->5)-[alpha-Kdo-(2->4)]-alpha-Kdo-(2->6)-lipid A + ADP-L-glycero-beta-D-manno-heptose = lipid A-core + ADP + H(+)",
+      "name": "lipopolysaccharide heptosyltransferase III",
+      "equation": "an L-alpha-D-Hep-(1->3)-4-O-phospho-L-alpha-D-Hep-(1->5)-[alpha-Kdo-(2->4)]-alpha-Kdo-(2->6)-lipid A + ADP-L-glycero-beta-D-manno-heptose = an L-alpha-D-Hep-(1->7)-L-alpha-D-Hep-(1->3)-4-O-phospho-L-alpha-D-Hep-(1->5)-[alpha-Kdo-(2->4)]-alpha-Kdo-(2->6)-lipid A + ADP + H(+)",
+      "ec": "2.4.99.25",
       "substrates": [
         {
-          "metabolite": "galactosyl_glucosyl_3_heptosyl_3_kdo_2_lipid_a_b",
+          "metabolite": "an_l_d_hep_1_3_4_o_phospho_l_d_hep_1_5_kdo_2_4_k",
           "stoichiometry": 1
         },
         {
@@ -652,7 +661,7 @@
       ],
       "products": [
         {
-          "metabolite": "lipid_a_core",
+          "metabolite": "an_l_d_hep_1_7_l_d_hep_1_3_4_o_phospho_l_d_hep_1",
           "stoichiometry": 1
         },
         {
@@ -664,17 +673,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_99_25"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:30019"
+        "rhea": "RHEA:74095"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30019"
+            "id": "RHEA:74095"
           }
         ]
       }
@@ -724,49 +738,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:74091"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "alpha-D-Glc-(1->3)-[alpha-D-Gal-(1->6)]-alpha-D-Glc-(1->3)-[L-alpha-D-Hep-(1->7)]-4-O-P...",
-      "equation": "alpha-D-Glc-(1->3)-[alpha-D-Gal-(1->6)]-alpha-D-Glc-(1->3)-[L-alpha-D-Hep-(1->7)]-4-O-PO3(2-)-L-alpha-D-Hep-(1->3)-4-O-PO3(2-)-L-alpha-D-Hep-(1->5)-[alpha-Kdo-(2->4)]-alpha-Kdo-(2->6)-lipid A + UDP-alpha-D-glucose = alpha-D-Glc-(1->2)-alpha-D-Glc-(1->3)-[alpha-D-Gal-(1->6)]-alpha-D-Glc-(1->3)-[L-alpha-D-Hep-(1->7)]-4-O-PO3(2-)-L-alpha-D-Hep-(1->3)-4-O-PO3(2-)-L-alpha-D-Hep-(1->5)-[alpha-Kdo-(2->4)]-alpha-Kdo-(2->6)-lipid A + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "galactosyl_glucosyl_2_heptosyl_3_kdo_2_lipid_a_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "galactosyl_glucosyl_3_heptosyl_3_kdo_2_lipid_a_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:30015"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:30015"
           }
         ]
       }

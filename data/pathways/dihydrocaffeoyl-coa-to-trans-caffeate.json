@@ -1,0 +1,332 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dihydrocaffeoyl-coa-to-trans-caffeate",
+  "name": "dihydrocaffeoyl-CoA to trans-caffeate",
+  "category": "other",
+  "summary": "A 2-step route from dihydrocaffeoyl-CoA(4−) to trans-caffeate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38027"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87137"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dihydrocaffeoyl_coa",
+      "name": "dihydrocaffeoyl-CoA",
+      "formula": "C30H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87137"
+      }
+    },
+    {
+      "id": "trans_caffeate",
+      "name": "trans-caffeate",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57770"
+      }
+    },
+    {
+      "id": "3_3_4_dihydroxyphenyl_propanoate",
+      "name": "3-(3,4-dihydroxyphenyl)propanoate",
+      "short": "3-(3,4-dihydroxyphe…",
+      "formula": "C9H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58744"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15562"
+      }
+    },
+    {
+      "id": "2_e_caffeoyl_d_threo_isocitrate",
+      "name": "2-[(E)-caffeoyl]-D-threo-isocitrate",
+      "short": "2-[(E)-caffeoyl]-D-…",
+      "formula": "C15H11O10",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:153067"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "1_caffeoyl_d_glucose",
+      "name": "1-caffeoyl-β-D-glucose",
+      "short": "1-caffeoyl-β-D-gluc…",
+      "formula": "C15H18O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:614"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_3_23",
+      "name": "caffeate CoA-transferase",
+      "ec": [
+        "2.8.3.23"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_126",
+      "name": "isocitrate O-dihydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.126"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "caffeate CoA-transferase",
+      "equation": "hydrocaffeoyl-CoA + (E)-caffeate = 3-(3,4-dihydroxyphenyl)propanoate + (E)-caffeoyl-CoA",
+      "ec": "2.8.3.23",
+      "substrates": [
+        {
+          "metabolite": "dihydrocaffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-(3,4-dihydroxyphenyl)propanoate + NAD(+) = (E)-caffeate + NADH + H(+)",
+      "equation": "3-(3,4-dihydroxyphenyl)propanoate + NAD(+) = (E)-caffeate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isocitrate O-dihydroxycinnamoyltransferase",
+      "equation": "D-threo-isocitrate + (E)-caffeoyl-CoA = 2-[(E)-caffeoyl]-D-threo-isocitrate(3-) + CoA",
+      "ec": "2.3.1.126",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_e_caffeoyl_d_threo_isocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20756"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20756"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(E)-caffeate + UDP-alpha-D-glucose = 1-O-[(E)-caffeoyl]-beta-D-glucose + UDP",
+      "equation": "(E)-caffeate + UDP-alpha-D-glucose = 1-O-[(E)-caffeoyl]-beta-D-glucose + UDP",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_caffeoyl_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:57464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57464"
+          }
+        ]
+      }
+    }
+  ]
+}

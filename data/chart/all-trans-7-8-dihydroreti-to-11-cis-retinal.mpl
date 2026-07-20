@@ -18,19 +18,19 @@ pathway all-trans-7-8-dihydroreti-to-11-cis-retinal "all-trans-7,8-dihydroretiâ€
 
   branch from all_trans_retinol side left {
     all_trans_retinol
-    <-> ec_1_14_19_53 [1.14.19.53] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    all_trans_3_4_didehydroretinol
+    <-> ec_1_1_1_300 [1.1.1.300] +nadp +nadph +hplus
+    all_trans_retinal
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_25 [1.3.99.25] +isodihydrocarvone +hydrogen_acceptor
-    carvone
+    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    mycobilin_b
   }
 
   branch from 11_cis_retinol side left {
     11_cis_retinol
-    <-> . +myristoyl_coa +coa
-    11_cis_retinyl_tetradecanoate
+    <-> . +palmitoyl_coa +coa
+    11_cis_retinyl_palmitate
   }
 }

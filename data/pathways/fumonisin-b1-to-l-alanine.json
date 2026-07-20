@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fumonisin-b1-to-l-alanine",
+  "name": "fumonisin B1 to L-alanine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from fumonisin B1(3-) to L-alanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30363"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62554"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fumonisin_b1",
+      "name": "fumonisin B1",
+      "formula": "C34H56NO15",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62554"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
+      "name": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol",
+      "short": "(2S,3S,5R,10R,12S,1…",
+      "formula": "C22H48NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:62526"
+      }
+    },
+    {
+      "id": "tricarballylate",
+      "name": "tricarballylate",
+      "formula": "C6H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62517"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "3s_5r_10r_12s_14s_15r_16r_3_5_10_14_15_pentahyd",
+      "name": "(3S,5R,10R,12S,14S,15R,16R)-3,5,10,14,15-pentahydroxy-12,16-dimethylicosan-2-one",
+      "short": "(3S,5R,10R,12S,14S,…",
+      "formula": "C22H44O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133941"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "cis_aconitate",
+      "name": "cis-Aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16383"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17180"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_87",
+      "name": "fumonisin B1 esterase",
+      "ec": [
+        "3.1.1.87"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_51",
+      "name": "serine--pyruvate transaminase",
+      "ec": [
+        "2.6.1.51"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "fumonisin B1 esterase",
+      "equation": "fumonisin B1 + 2 H2O = (2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol + 2 tricarballylate + 2 H(+)",
+      "ec": "3.1.1.87",
+      "substrates": [
+        {
+          "metabolite": "fumonisin_b1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tricarballylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30363"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30363"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol + pyru...",
+      "equation": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol + pyruvate = (3S,5R,10R,12S,14S,15R,16R)-3,5,10,14,15-pentahydroxy-12,16-dimethylicosan-2-one + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_5r_10r_12s_14s_15r_16r_3_5_10_14_15_pentahyd",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tricarballylate + FAD + H(+) = cis-aconitate + FADH2",
+      "equation": "tricarballylate + FAD + H(+) = cis-aconitate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "tricarballylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86635"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86635"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "serine--pyruvate transaminase",
+      "equation": "L-serine + pyruvate = 3-hydroxypyruvate + L-alanine",
+      "ec": "2.6.1.51",
+      "substrates": [
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22852"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22852"
+          }
+        ]
+      }
+    }
+  ]
+}

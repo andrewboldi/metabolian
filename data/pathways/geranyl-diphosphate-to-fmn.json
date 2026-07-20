@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "geranyl-diphosphate-to-fmn",
   "name": "geranyl diphosphate to FMN",
-  "category": "other",
-  "summary": "A 3-step route from geranyl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from geranyl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:68708"
+        "id": "RHEA:32543"
       },
       {
         "db": "ChEBI",
@@ -38,12 +38,12 @@
       }
     },
     {
-      "id": "linalool",
-      "name": "linalool",
+      "id": "1_8_cineole",
+      "name": "1,8-cineole",
       "formula": "C10H18O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17580"
+        "chebi": "CHEBI:27961"
       }
     },
     {
@@ -74,13 +74,13 @@
       }
     },
     {
-      "id": "2e_2_6_dimethylocta_2_7_diene_1_6_diol",
-      "name": "(2E)-2,6-dimethylocta-2,7-diene-1,6-diol",
-      "short": "2,6-dimethylocta-2,…",
+      "id": "2_exo_hydroxy_1_8_cineole",
+      "name": "2-exo-hydroxy-1,8-cineole",
+      "short": "2-exo-hydroxy-1,8-c…",
       "formula": "C10H18O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15662"
+        "chebi": "CHEBI:16271"
       }
     },
     {
@@ -102,67 +102,80 @@
       }
     },
     {
-      "id": "6e_8_oxolinalool",
-      "name": "(6E)-8-oxolinalool",
-      "formula": "C10H16O2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "5_epi_eremophilene",
+      "name": "(−)-5-epi-eremophilene",
+      "short": "(−)-5-epi-eremophil…",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64259"
+        "chebi": "CHEBI:142537"
       }
     },
     {
-      "id": "2_o_3_dimethylflaviolin_7_olate",
-      "name": "2-O,3-dimethylflaviolin-7-olate",
-      "short": "2-O,3-dimethylflavi…",
-      "formula": "C12H9O5",
-      "charge": -1,
+      "id": "ferruginol",
+      "name": "ferruginol",
+      "formula": "C20H30O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78589"
+        "chebi": "CHEBI:78274"
       }
     },
     {
-      "id": "6_linalyl_2_o_3_dimethylflaviolin_7_olate",
-      "name": "6-linalyl-2-O,3-dimethylflaviolin-7-olate",
-      "short": "6-linalyl-2-O,3-dim…",
-      "formula": "C22H25O5",
-      "charge": -1,
+      "id": "sugiol",
+      "name": "sugiol",
+      "formula": "C20H28O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78588"
-      }
-    },
-    {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32395"
-      }
-    },
-    {
-      "id": "13_s_hete",
-      "name": "13(S)-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136654"
+        "chebi": "CHEBI:138961"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_5_1_124",
-      "name": "6-linalyl-2-O,3-dimethylflaviolin synthase",
+      "id": "ec_4_2_3_108",
+      "name": "1,8-cineole synthase",
       "ec": [
-        "2.5.1.124"
+        "4.2.3.108"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_56",
+      "name": "1,8-cineole 2-exo-monooxygenase",
+      "ec": [
+        "1.14.14.56"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_199",
+      "name": "(-)-5-epieremophilene synthase",
+      "ec": [
+        "4.2.3.199"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_65",
+      "name": "sugiol synthase",
+      "ec": [
+        "1.14.14.65"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "(2E)-geranyl diphosphate + H2O = linalool + diphosphate",
-      "equation": "(2E)-geranyl diphosphate + H2O = linalool + diphosphate",
+      "name": "1,8-cineole synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = 1,8-cineole + diphosphate",
+      "ec": "4.2.3.108",
       "substrates": [
         {
           "metabolite": "gpp",
@@ -175,149 +188,7 @@
       ],
       "products": [
         {
-          "metabolite": "linalool",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:68708"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68708"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "linalool + reduced [NADPH--hemoprotein reductase] + O2 = (6E)-8-hydroxylinalool + oxidi...",
-      "equation": "linalool + reduced [NADPH--hemoprotein reductase] + O2 = (6E)-8-hydroxylinalool + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "linalool",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_2_6_dimethylocta_2_7_diene_1_6_diol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 2,
-      "xrefs": {
-        "rhea": "RHEA:32503"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32503"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r3",
-      "name": "(6E)-8-hydroxylinalool + reduced [NADPH--hemoprotein reductase] + O2 = (6E)-8-oxolinalo...",
-      "equation": "(6E)-8-hydroxylinalool + reduced [NADPH--hemoprotein reductase] + O2 = (6E)-8-oxolinalool + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2e_2_6_dimethylocta_2_7_diene_1_6_diol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6e_8_oxolinalool",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 3,
-      "xrefs": {
-        "rhea": "RHEA:32639"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32639"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "6-linalyl-2-O,3-dimethylflaviolin synthase",
-      "equation": "2-O,3-dimethylflaviolin + (2E)-geranyl diphosphate = 6-linalyl-2-O,3-dimethylflaviolin + diphosphate",
-      "ec": "2.5.1.124",
-      "substrates": [
-        {
-          "metabolite": "2_o_3_dimethylflaviolin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_linalyl_2_o_3_dimethylflaviolin_7_olate",
+          "metabolite": "1_8_cineole",
           "stoichiometry": 1
         },
         {
@@ -327,31 +198,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_124"
+          "enzyme": "ec_4_2_3_108"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:41007"
+        "rhea": "RHEA:32543"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41007"
+            "id": "RHEA:32543"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 13(S)...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 13(S)-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "id": "r2",
+      "name": "1,8-cineole 2-exo-monooxygenase",
+      "equation": "1,8-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,8-cineole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.56",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "1_8_cineole",
           "stoichiometry": 1
         },
         {
@@ -365,7 +237,7 @@
       ],
       "products": [
         {
-          "metabolite": "13_s_hete",
+          "metabolite": "2_exo_hydroxy_1_8_cineole",
           "stoichiometry": 1
         },
         {
@@ -381,17 +253,120 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_56"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:52508"
+        "rhea": "RHEA:32895"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52508"
+            "id": "RHEA:32895"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(-)-5-epieremophilene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-5-epi-eremophilene + diphosphate",
+      "ec": "4.2.3.199",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_epi_eremophilene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_199"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sugiol synthase",
+      "equation": "ferruginol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = sugiol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.65",
+      "substrates": [
+        {
+          "metabolite": "ferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sugiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:55456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55456"
           }
         ]
       }

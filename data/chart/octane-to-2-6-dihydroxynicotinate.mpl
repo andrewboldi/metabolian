@@ -34,21 +34,33 @@ pathway octane-to-2-6-dihydroxynicotinate "octane to 2,6-dihydroxynicotinate" {
     octyl_palmitate
   }
 
-  branch from octanal side right {
-    octanal
-    <-> ec_1_14_11_77 [1.14.11.77] +n_octyl_sulfate +akg +o2 +succinate +co2 +hplus
-    sulfate
-  }
-
-  branch from octanoate side left {
+  branch from octanoate side right {
     octanoate
     <-> . +h2o +coa +hplus
     octanoyl_coa
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_10 [2.5.1.10] +ipp +gpp
-    fpp
+    <-> ec_1_3_1_96 [1.3.1.96] +presqualene_pp +nadph +hplus +nadp
+    squalene
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_n4 [2.3.1.n4] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +1_acyl_sn_glycerol_3_phosphate
+    1_2_diacyl_sn_glycerol_3_phosphate
+  }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +pi +nad +hplus
+    adp_d_ribose_1_phosphate
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
+    n6_acetyl_l_lysine
   }
 }

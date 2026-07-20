@@ -1,0 +1,231 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ent-glycosmisate-to-hydroquinones",
+  "name": "ent-glycosmisate to hydroquinones",
+  "category": "other",
+  "summary": "A 2-step route from ent-glycosmisate to hydroquinones, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49868"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:131937"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ent_glycosmisate",
+      "name": "ent-glycosmisate",
+      "formula": "C20H19O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:131937"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "dca_cl",
+      "name": "(+)-DCA-CL",
+      "formula": "C20H17O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:131936"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dca_cc",
+      "name": "(+)-DCA-CC",
+      "formula": "C20H16O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:131935"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_malate",
+      "name": "(R)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15588"
+      }
+    },
+    {
+      "id": "enol_oxaloacetate",
+      "name": "enol-oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17479"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-dehydrodiconiferyl acid + a quinone = (+)-dehydrodiconiferyl acid ketone + a quinol",
+      "equation": "(+)-dehydrodiconiferyl acid + a quinone = (+)-dehydrodiconiferyl acid ketone + a quinol",
+      "substrates": [
+        {
+          "metabolite": "ent_glycosmisate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dca_cl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(+)-dehydrodiconiferyl acid ketone + a quinone + H2O = (+)-dehydrodiconiferyl acid carb...",
+      "equation": "(+)-dehydrodiconiferyl acid ketone + a quinone + H2O = (+)-dehydrodiconiferyl acid carboxylate + a quinol + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dca_cl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dca_cc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(R)-malate + a quinone = enol-oxaloacetate + a quinol",
+      "equation": "(R)-malate + a quinone = enol-oxaloacetate + a quinol",
+      "substrates": [
+        {
+          "metabolite": "r_malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "enol_oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79827"
+          }
+        ]
+      }
+    }
+  ]
+}

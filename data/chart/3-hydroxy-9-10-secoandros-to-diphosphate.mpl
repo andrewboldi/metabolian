@@ -20,8 +20,8 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_111 [1.14.14.111] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
-    9_pimara_7_15_dien_19_oate
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    19_hepe
   }
 
   branch from 2z_4z_2_hydroxyhexa_2_4_dienoate side right {
@@ -32,7 +32,7 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from ppi side left {
     ppi
-    <-> ec_6_3_4_11 [6.3.4.11] +l_lysinium +biotinate +atp +amp +hplus
-    biotinyl_l_lysine
+    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    abieta_8_14_12_diene
   }
 }

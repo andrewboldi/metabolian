@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "4-hydroxymandelate-to-hydrogen-donor",
   "name": "4-hydroxymandelate to hydrogen donor",
-  "category": "redox-detox",
+  "category": "nucleotide-metabolism",
   "summary": "A 6-step route from 4-hydroxymandelate to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -176,31 +176,23 @@
       }
     },
     {
-      "id": "tyraminium",
-      "name": "tyraminium",
-      "formula": "C8H12NO",
-      "charge": 1,
+      "id": "ascorbate",
+      "name": "L-Ascorbate (vitamin C)",
+      "short": "L-Ascorbate…",
+      "formula": "C6H7O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:327995"
+        "chebi": "CHEBI:38290"
       }
     },
     {
-      "id": "4_hydroxyphenyl_acetaldehyde",
-      "name": "(4-hydroxyphenyl)acetaldehyde",
-      "short": "(4-hydroxyphenyl)ac…",
-      "formula": "C8H8O2",
-      "charge": 0,
+      "id": "mdha",
+      "name": "Monodehydroascorbate (ascorbate radical)",
+      "short": "Monodehydroascorbat…",
+      "formula": "C6H6O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15621"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:59513"
       }
     },
     {
@@ -223,22 +215,13 @@
       }
     },
     {
-      "id": "arsenic_triglutathione",
-      "name": "arsenic triglutathione",
-      "short": "arsenic triglutathi…",
-      "formula": "C30H45AsN9O18S3",
-      "charge": -3,
+      "id": "p_aminophenylarsonous_acid",
+      "name": "p-aminophenylarsonous acid",
+      "short": "p-aminophenylarsono…",
+      "formula": "C6H8AsNO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:183640"
-      }
-    },
-    {
-      "id": "linoleoyl_coa",
-      "name": "linoleoyl-CoA",
-      "formula": "C39H62N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57383"
+        "chebi": "CHEBI:50022"
       }
     },
     {
@@ -251,12 +234,70 @@
       }
     },
     {
-      "id": "linolenoyl_coa",
-      "name": "α-linolenoyl-CoA",
-      "formula": "C39H60N7O17P3S",
+      "id": "4_ammoniocyclohexa_2_5_dien_1_one",
+      "name": "4-ammoniocyclohexa-2,5-dien-1-one",
+      "short": "4-ammoniocyclohexa-…",
+      "formula": "C6H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232331"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "3_disulfanyl_l_alanine",
+      "name": "3-disulfanyl-L-alanine",
+      "short": "3-disulfanyl-L-alan…",
+      "formula": "C3H5NOS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61963"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:74034"
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "2_thiocytidine_5_monophosphate_1",
+      "name": "2-thiocytidine 5'-monophosphate(1−)",
+      "short": "2-thiocytidine…",
+      "formula": "C9H11N3O6PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141453"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -581,51 +622,43 @@
     },
     {
       "id": "r7",
-      "name": "2 oxidized [azurin] + tyramine + H2O = 2 reduced [azurin] + (4-hydroxyphenyl)acetaldehy...",
-      "equation": "2 oxidized [azurin] + tyramine + H2O = 2 reduced [azurin] + (4-hydroxyphenyl)acetaldehyde + NH4(+) + 2 H(+)",
+      "name": "Cu(2+)(out) + L-ascorbate(in) = Cu(+)(out) + monodehydro-L-ascorbate radical(in) + H(+)",
+      "equation": "Cu(2+)(out) + L-ascorbate(in) = Cu(+)(out) + monodehydro-L-ascorbate radical(in) + H(+)",
       "substrates": [
         {
           "metabolite": "copper",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "tyraminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "ascorbate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
           "metabolite": "copper",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "4_hydroxyphenyl_acetaldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "mdha",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:57128"
+        "rhea": "RHEA:66656"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57128"
+            "id": "RHEA:66656"
           }
         ]
       }
@@ -677,54 +710,11 @@
     },
     {
       "id": "r9",
-      "name": "arsenite + 3 glutathione + H(+) = arsenic triglutathione + 3 H2O",
-      "equation": "arsenite + 3 glutathione + H(+) = arsenic triglutathione + 3 H2O",
+      "name": "4-aminophenylarsonous acid + AH2 + O2 = 4-aminocyclohexa-2,5-dien-1-one + arsenite + A",
+      "equation": "4-aminophenylarsonous acid + AH2 + O2 = 4-aminocyclohexa-2,5-dien-1-one + arsenite + A",
       "substrates": [
         {
-          "metabolite": "arsenite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "arsenic_triglutathione",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:69428"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69428"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "(9Z,12Z)-octadecadienoyl-CoA + AH2 + O2 = (9Z,12Z,15Z)-octadecatrienoyl-CoA + A + 2 H2O",
-      "equation": "(9Z,12Z)-octadecadienoyl-CoA + AH2 + O2 = (9Z,12Z,15Z)-octadecatrienoyl-CoA + A + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "linoleoyl_coa",
+          "metabolite": "p_aminophenylarsonous_acid",
           "stoichiometry": 1
         },
         {
@@ -738,7 +728,62 @@
       ],
       "products": [
         {
-          "metabolite": "linolenoyl_coa",
+          "metabolite": "4_ammoniocyclohexa_2_5_dien_1_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arsenite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:82443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82443"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "cytidine(32) in tRNA + S-sulfanyl-L-cysteinyl-[cysteine desulfurase] + AH2 + ATP = 2-th...",
+      "equation": "cytidine(32) in tRNA + S-sulfanyl-L-cysteinyl-[cysteine desulfurase] + AH2 + ATP = 2-thiocytidine(32) in tRNA + L-cysteinyl-[cysteine desulfurase] + A + AMP + diphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_thiocytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
           "stoichiometry": 1
         },
         {
@@ -746,21 +791,29 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:36891"
+        "rhea": "RHEA:57048"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36891"
+            "id": "RHEA:57048"
           }
         ]
       }

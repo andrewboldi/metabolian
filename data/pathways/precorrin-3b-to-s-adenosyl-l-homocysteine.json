@@ -102,22 +102,23 @@
       }
     },
     {
-      "id": "squalene",
-      "name": "Squalene",
-      "formula": "C30H50",
-      "charge": 0,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15440"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "3_methyl_1_2_didehydro_2_3_dihydrosqualene",
-      "name": "3-methyl-1,2-didehydro-2,3-dihydrosqualene",
-      "short": "3-methyl-1,2-didehy…",
-      "formula": "C31H52",
-      "charge": 0,
+      "id": "n6_methyladenosine_5_monophosphate_1",
+      "name": "N6-methyladenosine 5'-monophosphate(1−)",
+      "short": "N6-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:70860"
+        "chebi": "CHEBI:74449"
       }
     },
     {
@@ -168,6 +169,13 @@
       "name": "precorrin-6A synthase (deacetylating)",
       "ec": [
         "2.1.1.152"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_266",
+      "name": "23S rRNA (adenine(2030)-N(6))-methyltransferase",
+      "ec": [
+        "2.1.1.266"
       ]
     },
     {
@@ -332,11 +340,12 @@
     },
     {
       "id": "r4",
-      "name": "squalene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrosqualene + S-ade...",
-      "equation": "squalene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrosqualene + S-adenosyl-L-homocysteine + H(+)",
+      "name": "23S rRNA (adenine(2030)-N(6))-methyltransferase",
+      "equation": "adenosine(2030) in 23S rRNA + S-adenosyl-L-methionine = N(6)-methyladenosine(2030) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.266",
       "substrates": [
         {
-          "metabolite": "squalene",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -346,7 +355,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_methyl_1_2_didehydro_2_3_dihydrosqualene",
+          "metabolite": "n6_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -358,17 +367,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_266"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:34647"
+        "rhea": "RHEA:43736"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34647"
+            "id": "RHEA:43736"
           }
         ]
       }

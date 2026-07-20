@@ -18,8 +18,8 @@ pathway catechin-to-succinyl-coa "(+)-catechin to succinyl-CoA" {
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_16 [1.14.11.16] +l_aspartate +akg +o2 +co2
-    3_hydroxy_l_aspartate
+    <-> ec_4_1_3_1 [4.1.3.1] +d_threo_isocitrate
+    glyoxylate
   }
 
   branch from succinyl_coa side right {

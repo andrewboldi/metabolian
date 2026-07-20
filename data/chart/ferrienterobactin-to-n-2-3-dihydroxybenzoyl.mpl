@@ -15,10 +15,4 @@ pathway ferrienterobactin-to-n-2-3-dihydroxybenzoyl "ferrienterobactin to N-(2,3
     <-> . +h2o +hplus -n_2_3_dihydroxybenzoyl_l_serinate
     fe_iii_n_2_3_dihydroxybenzoyl_l_serine
   }
-
-  branch from n_2_3_dihydroxybenzoyl_l_serinate side left {
-    n_2_3_dihydroxybenzoyl_l_serinate
-    <-> ec_3_1_1_109 [3.1.1.109] +fe_iii_di_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_d +h2o +hplus
-    fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox
-  }
 }

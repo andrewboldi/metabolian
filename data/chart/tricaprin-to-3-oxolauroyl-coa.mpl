@@ -18,8 +18,8 @@ pathway tricaprin-to-3-oxolauroyl-coa "tricaprin to 3-oxolauroyl-CoA" {
 
   branch from decanoate side left {
     decanoate
-    <-> . +nad +h2o +nadh +hplus
-    decanal
+    <-> . +n6_capryl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from decanoyl_coa side right {
@@ -30,8 +30,8 @@ pathway tricaprin-to-3-oxolauroyl-coa "tricaprin to 3-oxolauroyl-CoA" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    longifolene
+    <-> ec_2_5_1_83 [2.5.1.83] +ipp +fpp
+    all_trans_hexaprenyl_diphosphate
   }
 
   branch from 3_oxolauroyl_coa side right {

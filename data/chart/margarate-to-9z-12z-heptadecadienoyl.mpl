@@ -18,13 +18,13 @@ pathway margarate-to-9z-12z-heptadecadienoyl "margarate to (9Z,12Z)-heptadecadie
 
   branch from heptadecanoyl_coa side left {
     heptadecanoyl_coa
-    <-> . +1_oleoyl_sn_glycero_3_phosphate +coa
-    1_oleoyl_2_heptadecanoyl_sn_glycero_3_phosphate
+    <-> . +fad +hplus +fadh2
+    trans_2_heptadecenoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_109 [4.2.3.109] +gpp
-    sabinene
+    <-> ec_4_2_3_59 [4.2.3.59] +fpp
+    e_bisabolene
   }
 }

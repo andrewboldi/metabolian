@@ -18,19 +18,7 @@ pathway 1-hexadecanoyl-2-9z-octa-to-hexadecanoate "1-hexadecanoyl-2-(9Z-octa… 
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphoethanolamine side left {
     1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +coa
-    oleoyl_coa
-  }
-
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam side right {
-    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-  }
-
-  branch from palmitate side left {
-    palmitate
-    <-> . +1_palmitoyl_sn_glycerol_3_phosphate +h2o +hplus
-    sn_glycerol_3_phosphate
+    <-> . +palmitoleoyl_coa +coa
+    1_hexadecanoyl_2_9z_hexadec_9_enoyl_sn_glycero_3
   }
 }

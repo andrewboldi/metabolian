@@ -36,13 +36,25 @@ pathway 3r-8z-11z-14z-3-hydroxy-to-9z-12z-15z-18z-21z-3 "(3R,8Z,11Z,14Z)-3-hydro
 
   branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side right {
     5z_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +cholesterol +coa
-    cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate
+    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +coa
+    1_acyl_2_5z_8z_11z_14z_17z_eicosapentaenoyl_sn_g
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +dihydroalstonine +hydrogen_donor
-    alstonine
+    <-> . +2_amino_6_hydroxyaminopurine +hydrogen_donor +h2o
+    9h_purine_2_6_diamine
+  }
+
+  branch from 2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa side right {
+    2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
+    <-> .
+    3e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
+  }
+
+  branch from 7z_10z_13z_16z_19z_docosapentaenoyl_coa side left {
+    7z_10z_13z_16z_19z_docosapentaenoyl_coa
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
   }
 }

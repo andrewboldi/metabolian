@@ -120,110 +120,40 @@
       }
     },
     {
-      "id": "dihydrourocanate",
-      "name": "dihydrourocanate",
-      "formula": "C6H7N2O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:72991"
-      }
-    },
-    {
-      "id": "urocanate",
-      "name": "urocanate",
-      "formula": "C6H5N2O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:27247"
-      }
-    },
-    {
-      "id": "s_goitrin",
-      "name": "(S)-goitrin",
-      "formula": "C5H7NOS",
+      "id": "zeaxanthin",
+      "name": "zeaxanthin",
+      "formula": "C40H56O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:80751"
+        "chebi": "CHEBI:27547"
       }
     },
     {
-      "id": "z_glucosinolate",
-      "name": "(Z)-glucosinolate",
-      "formula": "C7H11NO9S2R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:183098"
-      }
-    },
-    {
-      "id": "z_n_sulfonatooxy_alkanimidothioate",
-      "name": "(Z)-N-(sulfonatooxy)alkanimidothioate",
-      "short": "N-(sulfonatooxy)alk…",
-      "formula": "CNO4S2R",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:183089"
-      }
-    },
-    {
-      "id": "dodecyl_sulfate",
-      "name": "dodecyl sulfate",
-      "formula": "C12H25O4S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:23872"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "dodecanal",
-      "name": "dodecanal",
-      "formula": "C12H24O",
+      "id": "adonixanthin",
+      "name": "adonixanthin",
+      "formula": "C40H54O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:27836"
+        "chebi": "CHEBI:80217"
       }
     },
     {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:30031"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:29919"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_3_99_33",
-      "name": "urocanate reductase",
+      "id": "ec_1_14_99_64",
+      "name": "zeaxanthin 4-ketolase",
       "ec": [
-        "1.3.99.33"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_77",
-      "name": "alkyl sulfatase",
-      "ec": [
-        "1.14.11.77"
+        "1.14.99.64"
       ]
     }
   ],
@@ -355,184 +285,92 @@
     },
     {
       "id": "r4",
-      "name": "urocanate reductase",
-      "equation": "dihydrourocanate + A = urocanate + AH2",
-      "ec": "1.3.99.33",
+      "name": "zeaxanthin 4-ketolase",
+      "equation": "all-trans-zeaxanthin + 2 AH2 + 2 O2 = all-trans-adonixanthin + 2 A + 3 H2O",
+      "ec": "1.14.99.64",
       "substrates": [
         {
-          "metabolite": "dihydrourocanate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "urocanate",
+          "metabolite": "zeaxanthin",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adonixanthin",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_3_99_33"
+          "enzyme": "ec_1_14_99_64"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:36059"
+        "rhea": "RHEA:56768"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36059"
+            "id": "RHEA:56768"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(Z)-(2R)-2-hydroxy-3-butenyl-N-(sulfonatooxy)methanimidothioate = goitrin + sulfate",
-      "equation": "(Z)-(2R)-2-hydroxy-3-butenyl-N-(sulfonatooxy)methanimidothioate = goitrin + sulfate",
+      "name": "hydrogen sulfide + 2 O2 = sulfate + H(+)",
+      "equation": "hydrogen sulfide + 2 O2 = sulfate + H(+)",
       "substrates": [
         {
-          "metabolite": "z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani",
+          "metabolite": "h2s",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "s_goitrin",
+          "metabolite": "sulfate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sulfate",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:69292"
+        "rhea": "RHEA:85007"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69292"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "a (Z)-glucosinolate + H2O = a (Z)-N-(sulfonatooxy)alkanimidothioate + D-glucose + H(+)",
-      "equation": "a (Z)-glucosinolate + H2O = a (Z)-N-(sulfonatooxy)alkanimidothioate + D-glucose + H(+)",
-      "substrates": [
-        {
-          "metabolite": "z_glucosinolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_n_sulfonatooxy_alkanimidothioate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:69220"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69220"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "alkyl sulfatase",
-      "equation": "dodecyl sulfate + 2-oxoglutarate + O2 = dodecanal + sulfate + succinate + CO2 + H(+)",
-      "ec": "1.14.11.77",
-      "substrates": [
-        {
-          "metabolite": "dodecyl_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dodecanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_77"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:65748"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65748"
+            "id": "RHEA:85007"
           }
         ]
       }

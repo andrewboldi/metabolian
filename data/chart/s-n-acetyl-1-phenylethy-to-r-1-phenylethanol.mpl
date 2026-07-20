@@ -22,15 +22,9 @@ pathway s-n-acetyl-1-phenylethy-to-r-1-phenylethanol "(S)-N-acetyl-1-phenylethyâ
     nh3
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_l_aspartate +h2o
-    aspartate
-  }
-
-  branch from alanine side left {
+  branch from alanine side right {
     alanine
-    <-> ec_1_5_1_17 [1.5.1.17] +nad +h2o +pyruvate +nadh +hplus
-    2_2_iminodipropanoate
+    <-> . +s_3_ammonio_3_phenylpropanoate +pyruvate
+    3_oxo_3_phenylpropionate
   }
 }

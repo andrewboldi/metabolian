@@ -26,7 +26,7 @@ pathway s-s-adenosyl-l-methioni-to-adenin-9-yl-riburono "(S)-S-adenosyl-L-methio
 
   branch from methionine side right {
     methionine
-    <-> . +gly_met +h2o
-    glycine
+    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron +sah
+    2_methyladenosine_5_monophosphate_1
   }
 }

@@ -18,7 +18,7 @@ pathway s-cyclopeptine-to-methyl-isocyanate "(S)-cyclopeptine to methyl isocyana
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_asparagine +akg +o2 +co2
-    3s_3_hydroxy_l_asparagine
+    <-> . +dihydrokaempferol +akg +o2 +co2 +h2o +hplus
+    kaempferol_oxoanion
   }
 }

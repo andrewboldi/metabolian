@@ -8,29 +8,23 @@ pathway s-tetrahydrocolumbamine-to-fmn "(S)-tetrahydrocolumbamine to FMN" {
 
   spine at 0,0 {
     s_tetrahydrocolumbamine
-    <-> ec_1_14_19_68 [1.14.19.68] +fmnh2 +o2 -fmn -h2o -hplus
-    s_canadine
+    <-> ec_2_1_1_89 [2.1.1.89] +sam -sah -hplus
+    tetrahydropalmatine
     <-> ec_2_1_1_122 [2.1.1.122] +sam -sah
-    s_cis_n_methylcanadine
+    s_cis_n_methyltetrahydropalmatine
     <-> ec_1_14_14_97 [1.14.14.97] +fmnh2 +o2 -fmn -h2o -hplus
-    allocryptopine
-  }
-
-  branch from s_canadine side left {
-    s_canadine
-    <-> ec_1_3_3_8 [1.3.3.8] +o2 +hplus +h2o2
-    berberine
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    18_r_hete
+    muramine
   }
 
   branch from sah side left {
     sah
-    <-> . +lathosterone +sam +hplus
-    4_methyllathosterone
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
+    7_ketocholesterol
   }
 }

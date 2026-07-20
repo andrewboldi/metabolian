@@ -1,0 +1,180 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-2-hydroxybutyrate-to-l-aminobutyrate",
+  "name": "(R)-2-hydroxybutyrate to L-α-aminobutyrate",
+  "category": "other",
+  "summary": "A 2-step route from (R)-2-hydroxybutyrate to L-α-aminobutyrate zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83043"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232384"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_2_hydroxybutyrate",
+      "name": "(R)-2-hydroxybutyrate",
+      "short": "2-hydroxybutyrate",
+      "formula": "C4H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232384"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "2_oxoglutaramate",
+      "name": "2-oxoglutaramate",
+      "formula": "C5H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16769"
+      }
+    },
+    {
+      "id": "l_aminobutyrate",
+      "name": "L-α-aminobutyrate",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74359"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2R)-hydroxybutanoate + NADP(+) = 2-oxobutanoate + NADPH + H(+)",
+      "equation": "(2R)-hydroxybutanoate + NADP(+) = 2-oxobutanoate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxybutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxobutanoate + L-glutamine = 2-oxoglutaramate + (2S)-2-aminobutanoate",
+      "equation": "2-oxobutanoate + L-glutamine = 2-oxoglutaramate + (2S)-2-aminobutanoate",
+      "substrates": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutaramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_aminobutyrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:66116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66116"
+          }
+        ]
+      }
+    }
+  ]
+}

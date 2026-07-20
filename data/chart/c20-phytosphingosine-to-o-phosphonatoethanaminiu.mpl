@@ -24,7 +24,7 @@ pathway c20-phytosphingosine-to-o-phosphonatoethanaminiu "C20 phytosphingosineâ€
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +serine
+    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine
   }
 }

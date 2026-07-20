@@ -140,30 +140,21 @@
       }
     },
     {
-      "id": "n_formylmethanofuran",
-      "name": "N-formylmethanofuran",
-      "formula": "C35H39N4O16",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57727"
-      }
-    },
-    {
-      "id": "methanofuranate",
-      "name": "methanofuranate",
-      "formula": "C34H40N4O15",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58151"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "pentalenene",
+      "name": "pentalenene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:17251"
+      }
+    },
+    {
+      "id": "pentalen_13_al",
+      "name": "pentalen-13-al",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63244"
       }
     }
   ],
@@ -176,10 +167,10 @@
       ]
     },
     {
-      "id": "ec_1_2_7_12",
-      "name": "formylmethanofuran dehydrogenase",
+      "id": "ec_1_14_15_32",
+      "name": "pentalenene oxygenase",
       "ec": [
-        "1.2.7.12"
+        "1.14.15.32"
       ]
     }
   ],
@@ -439,57 +430,57 @@
     },
     {
       "id": "r6",
-      "name": "formylmethanofuran dehydrogenase",
-      "equation": "N-formylmethanofuran + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = methanofuran + 2 reduced [2Fe-2S]-[ferredoxin] + CO2 + H(+)",
-      "ec": "1.2.7.12",
+      "name": "pentalenene oxygenase",
+      "equation": "pentalenene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = pentalen-13-al + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.32",
       "substrates": [
         {
-          "metabolite": "n_formylmethanofuran",
+          "metabolite": "pentalenene",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 2
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "hplus",
+          "stoichiometry": 4
         }
       ],
       "products": [
         {
-          "metabolite": "methanofuranate",
+          "metabolite": "pentalen_13_al",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "stoichiometry": 4
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "h2o",
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_7_12"
+          "enzyme": "ec_1_14_15_32"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:19841"
+        "rhea": "RHEA:31699"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19841"
+            "id": "RHEA:31699"
           }
         ]
       }

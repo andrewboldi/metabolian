@@ -214,21 +214,22 @@
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57288"
+        "chebi": "CHEBI:57371"
       }
     },
     {
-      "id": "n6_acetyl_l_lysine",
-      "name": "N6-acetyl-L-lysine",
-      "formula": "C8H14N2O2",
+      "id": "n6_butyryl_l_lysine",
+      "name": "N6-butyryl-L-lysine",
+      "formula": "C10H18N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61930"
+        "chebi": "CHEBI:137955"
       }
     },
     {
@@ -247,13 +248,6 @@
       "name": "protein deglycase",
       "ec": [
         "3.5.1.124"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_48",
-      "name": "histone acetyltransferase",
-      "ec": [
-        "2.3.1.48"
       ]
     }
   ],
@@ -633,22 +627,21 @@
     },
     {
       "id": "r10",
-      "name": "histone acetyltransferase",
-      "equation": "L-lysyl-[protein] + acetyl-CoA = N(6)-acetyl-L-lysyl-[protein] + CoA + H(+)",
-      "ec": "2.3.1.48",
+      "name": "butanoyl-CoA + L-lysyl-[protein] = N(6)-butanoyl-L-lysyl-[protein] + CoA + H(+)",
+      "equation": "butanoyl-CoA + L-lysyl-[protein] = N(6)-butanoyl-L-lysyl-[protein] + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "butyryl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_acetyl_l_lysine",
+          "metabolite": "n6_butyryl_l_lysine",
           "stoichiometry": 1
         },
         {
@@ -660,22 +653,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_48"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:45948"
+        "rhea": "RHEA:53912"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45948"
+            "id": "RHEA:53912"
           }
         ]
       }

@@ -18,13 +18,13 @@ pathway 5-ergosta-7-22-diene-3-to-carboxylic-acid-anion "5α-ergosta-7,22-diene-
 
   branch from ergosterol side left {
     ergosterol
-    <-> ec_2_3_2_37 [2.3.2.37] +3_l_aspartate_adenylyl_1_group +amp_3_end_1
-    1_ergostan_3_yl_l_aspartate
+    <-> ec_3_1_1_121 [3.1.1.121] +1_ergostan_3_yl_l_aspartate +h2o +hplus
+    aspartate
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_7_1_5 [3.7.1.5] +h2o +pyruvate +hplus
-    3_acylpyruvate
+    <-> ec_1_97_1_13 [1.97.1.13] +aliphatic_sulfonate_oxoanion +tetra_3_sulfido_tetrairon +h2o +sulfite +hplus
+    tetra_3_sulfido_tetrairon
   }
 }

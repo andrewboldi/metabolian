@@ -1,0 +1,129 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-deoxy-2-3-dehydro-n-ace-to-aceneuramate",
+  "name": "2-deoxy-2,3-dehydro-N-ace… to aceneuramate",
+  "category": "other",
+  "summary": "A 2-step route from 2-deoxy-2,3-dehydro-N-acetylneuraminate to aceneuramate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78523"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:229229"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_deoxy_2_3_dehydro_n_acetylneuraminate",
+      "name": "2-deoxy-2,3-dehydro-N-acetylneuraminate",
+      "short": "2-deoxy-2,3-dehydro…",
+      "formula": "C11H16NO8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229229"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acetyl_neuraminate",
+      "name": "N-acetyl-α-neuraminate",
+      "short": "N-acetyl-α-neuramin…",
+      "formula": "C11H18NO9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58770"
+      }
+    },
+    {
+      "id": "aceneuramate",
+      "name": "aceneuramate",
+      "formula": "C11H18NO9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:173083"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-deoxy-2,3-dehydro-N-acetylneuraminate + H2O = N-acetyl-alpha-neuraminate",
+      "equation": "2-deoxy-2,3-dehydro-N-acetylneuraminate + H2O = N-acetyl-alpha-neuraminate",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_2_3_dehydro_n_acetylneuraminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78523"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetyl-alpha-neuraminate = aceneuramate",
+      "equation": "N-acetyl-alpha-neuraminate = aceneuramate",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aceneuramate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:67736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67736"
+          }
+        ]
+      }
+    }
+  ]
+}

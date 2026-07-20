@@ -20,25 +20,25 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-a
 
   branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano side left {
     1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
-    <-> ec_3_1_4_4 [3.1.4.4] +h2o +ethanolaminium +hplus
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate
+    <-> . +serine +ethanolaminium
+    1_1z_alkenyl_2_acyl_sn_glycero_3_phospho_l_serin
   }
 
-  branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin side right {
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin
-    <-> ec_2_7_8_22 [2.7.8.22] +1_z_alk_1_enyl_2_acyl_sn_glycerol +cdp_choline +hplus
-    cytidine_5_monophosphate
-  }
-
-  branch from ethanolaminium side left {
+  branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +linoleoyl_ethanolamide +h2o
-    linoleate
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_acyl_sn_glycerol_3_phosphate
   }
 
-  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side right {
+  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side left {
     1_z_alk_1_enyl_sn_glycero_3_phosphocholine
-    <-> ec_3_3_2_2 [3.3.2.2] +h2o +choline_alfoscerate
-    ch2_containing_aldehyde
+    <-> . +oleoyl_coa +coa
+    1_z_alk_1_enyl_2_oleoyl_sn_glycero_3_phosphochol
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> ec_3_5_1_23 [3.5.1.23] +n_acylsphingosine +h2o
+    sphingosine
   }
 }

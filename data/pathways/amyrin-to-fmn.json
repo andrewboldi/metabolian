@@ -3,13 +3,13 @@
   "id": "amyrin-to-fmn",
   "name": "β-amyrin to FMN",
   "category": "energy-metabolism",
-  "summary": "A 3-step route from β-amyrin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from β-amyrin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:31715"
+        "id": "RHEA:31711"
       },
       {
         "db": "ChEBI",
@@ -46,12 +46,12 @@
       }
     },
     {
-      "id": "11_hydroxy_amyrin",
-      "name": "11α-hydroxy-β-amyrin",
-      "formula": "C30H50O2",
+      "id": "11_oxo_amyrin",
+      "name": "11-oxo-β-amyrin",
+      "formula": "C30H48O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63177"
+        "chebi": "CHEBI:63184"
       }
     },
     {
@@ -82,15 +82,6 @@
       }
     },
     {
-      "id": "11_oxo_amyrin",
-      "name": "11-oxo-β-amyrin",
-      "formula": "C30H48O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:63184"
-      }
-    },
-    {
       "id": "glycyrrhetinate",
       "name": "glycyrrhetinate",
       "formula": "C30H45O4",
@@ -100,21 +91,22 @@
       }
     },
     {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
+      "id": "thromboxane_a2",
+      "name": "thromboxane A2",
+      "formula": "C20H31O5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:32395"
+        "chebi": "CHEBI:57445"
       }
     },
     {
-      "id": "17_hete",
-      "name": "17-HETE",
-      "formula": "C20H31O3",
+      "id": "18_hydroxythromboxane_a2",
+      "name": "18-hydroxythromboxane A2",
+      "short": "18-hydroxythromboxa…",
+      "formula": "C20H31O6",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:132016"
+        "chebi": "CHEBI:137989"
       }
     },
     {
@@ -139,6 +131,13 @@
   ],
   "enzymes": [
     {
+      "id": "ec_1_14_14_152",
+      "name": "beta-amyrin 11-oxidase",
+      "ec": [
+        "1.14.14.152"
+      ]
+    },
+    {
       "id": "ec_1_14_14_115",
       "name": "11-oxo-beta-amyrin 30-oxidase",
       "ec": [
@@ -156,8 +155,9 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 11alpha-hydroxy-beta-amyrin...",
-      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 11alpha-hydroxy-beta-amyrin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "beta-amyrin 11-oxidase",
+      "equation": "beta-amyrin + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxo-beta-amyrin + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.152",
       "substrates": [
         {
           "metabolite": "amyrin",
@@ -165,62 +165,11 @@
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "11_hydroxy_amyrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:31715"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:31715"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "11alpha-hydroxy-beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 11-oxo-beta...",
-      "equation": "11alpha-hydroxy-beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 11-oxo-beta-amyrin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "11_hydroxy_amyrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
@@ -230,34 +179,39 @@
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 2
         },
         {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_152"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:31719"
+        "rhea": "RHEA:31711"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31719"
+            "id": "RHEA:31711"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "11-oxo-beta-amyrin 30-oxidase",
       "equation": "11-oxo-beta-amyrin + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = glycyrrhetinate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
       "ec": "1.14.14.115",
@@ -299,7 +253,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:35499"
       },
@@ -314,12 +268,12 @@
       }
     },
     {
-      "id": "r4",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 17-hy...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 17-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "id": "r3",
+      "name": "thromboxane A2 + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-thromboxane A...",
+      "equation": "thromboxane A2 + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-thromboxane A2 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "thromboxane_a2",
           "stoichiometry": 1
         },
         {
@@ -333,7 +287,7 @@
       ],
       "products": [
         {
-          "metabolite": "17_hete",
+          "metabolite": "18_hydroxythromboxane_a2",
           "stoichiometry": 1
         },
         {
@@ -350,22 +304,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:49968"
+        "rhea": "RHEA:53940"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49968"
+            "id": "RHEA:53940"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r4",
       "name": "glycyrrhizinate beta-glucuronidase",
       "equation": "glycyrrhizin + H2O = 2-(beta-D-glucuronosyl)-D-glucuronate + glycyrrhetinate",
       "ec": "3.2.1.128",
@@ -395,7 +349,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:17369"
       },

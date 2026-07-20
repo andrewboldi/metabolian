@@ -133,21 +133,57 @@
       }
     },
     {
-      "id": "rs_norcoclaurinium",
-      "name": "(RS)-norcoclaurinium",
-      "formula": "C16H18NO3",
-      "charge": 1,
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58482"
+        "chebi": "CHEBI:16567"
       }
     },
     {
-      "id": "rs_coclaurinium",
-      "name": "(RS)-coclaurinium",
-      "formula": "C17H20NO3",
-      "charge": 1,
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58481"
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "cyclopeptine",
+      "name": "cyclopeptine",
+      "formula": "C17H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71320"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -174,10 +210,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_128",
-      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "id": "ec_6_3_2_40",
+      "name": "cyclopeptine synthase",
       "ec": [
-        "2.1.1.128"
+        "6.3.2.40"
       ]
     }
   ],
@@ -396,49 +432,65 @@
     },
     {
       "id": "r5",
-      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
-      "equation": "norcoclaurine + S-adenosyl-L-methionine = coclaurine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.128",
+      "name": "cyclopeptine synthase",
+      "equation": "anthranilate + L-phenylalanine + S-adenosyl-L-methionine + 2 ATP = cyclopeptine + 2 AMP + S-adenosyl-L-homocysteine + 2 diphosphate + 2 H(+)",
+      "ec": "6.3.2.40",
       "substrates": [
         {
-          "metabolite": "rs_norcoclaurinium",
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "rs_coclaurinium",
+          "metabolite": "cyclopeptine",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 2
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
         },
         {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_128"
+          "enzyme": "ec_6_3_2_40"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:19941"
+        "rhea": "RHEA:35091"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19941"
+            "id": "RHEA:35091"
           }
         ]
       }

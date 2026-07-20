@@ -1,0 +1,238 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "purines-2-deoxy-d-ribonu-to-2-deoxy-d-ribofurano",
+  "name": "purines 2'-deoxy-D-ribonu… to 2-deoxy-D-ribofuranose…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from purines 2'-deoxy-D-ribonucleoside to 2-deoxy-D-ribofuranose 5-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36431"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142361"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "purines_2_deoxy_d_ribonucleoside",
+      "name": "purines 2'-deoxy-D-ribonucleoside",
+      "short": "purines 2'-deoxy-D-…",
+      "formula": "C10H11N4O3R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142361"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "purine_nucleobase",
+      "name": "purine nucleobase",
+      "formula": "C5H3N4R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26386"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57259"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribofuranose_5_phosphate",
+      "name": "2-deoxy-D-ribofuranose 5-phosphate",
+      "short": "2-deoxy-D-ribofuran…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62877"
+      }
+    },
+    {
+      "id": "pyrimidine_2_deoxyribonucleoside_5_phosphate",
+      "name": "pyrimidine 2'-deoxyribonucleoside 5'-phosphate",
+      "short": "pyrimidine…",
+      "formula": "C9H8N2O6PR4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142209"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pyrimidine_nucleobase",
+      "name": "pyrimidine nucleobase",
+      "short": "pyrimidine…",
+      "formula": "C4HN2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26432"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_7",
+      "name": "phosphopentomutase",
+      "ec": [
+        "5.4.2.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "a purine 2'-deoxy-D-ribonucleoside + phosphate = a purine nucleobase + 2-deoxy-alpha-D-ribose 1-phosphate",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "purines_2_deoxy_d_ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "purine_nucleobase",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphopentomutase",
+      "equation": "2-deoxy-alpha-D-ribose 1-phosphate = 2-deoxy-D-ribose 5-phosphate",
+      "ec": "5.4.2.7",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27658"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27658"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a pyrimidine 2'-deoxyribonucleoside 5'-phosphate + H2O = a pyrimidine nucleobase + 2-de...",
+      "equation": "a pyrimidine 2'-deoxyribonucleoside 5'-phosphate + H2O = a pyrimidine nucleobase + 2-deoxy-D-ribose 5-phosphate",
+      "substrates": [
+        {
+          "metabolite": "pyrimidine_2_deoxyribonucleoside_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyrimidine_nucleobase",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxy_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57852"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57852"
+          }
+        ]
+      }
+    }
+  ]
+}

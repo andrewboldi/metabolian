@@ -132,22 +132,23 @@
       }
     },
     {
-      "id": "n_fatty_acyl_glycine",
-      "name": "N-(fatty acyl)-glycine",
-      "short": "N-(fatty acyl)-glyc…",
-      "formula": "C3H3NO3R",
-      "charge": -1,
+      "id": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+      "name": "1,2-diacyl-3-β-D-galactosyl-sn-glycerol",
+      "short": "1,2-diacyl-3-β-D-ga…",
+      "formula": "C11H16O10R2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:149742"
+        "chebi": "CHEBI:17615"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "1_acyl_3_o_d_galactosyl_sn_glycerol",
+      "name": "1-acyl-3-O-(β-D-galactosyl)-sn-glycerol",
+      "short": "1-acyl-3-O-(β-D-gal…",
+      "formula": "C10H17O9R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:228229"
       }
     },
     {
@@ -167,25 +168,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:74897"
-      }
-    },
-    {
-      "id": "n_oleoyl_l_tryptophan",
-      "name": "N-oleoyl-L-tryptophan",
-      "short": "N-oleoyl-L-tryptoph…",
-      "formula": "C29H43N2O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:149733"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57912"
       }
     }
   ],
@@ -357,11 +339,11 @@
     },
     {
       "id": "r5",
-      "name": "an N-(fatty acyl)-glycine + H2O = a fatty acid + glycine",
-      "equation": "an N-(fatty acyl)-glycine + H2O = a fatty acid + glycine",
+      "name": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = a 1-acyl-3-O-(beta-D-galactosy...",
+      "equation": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = a 1-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + a fatty acid + H(+)",
       "substrates": [
         {
-          "metabolite": "n_fatty_acyl_glycine",
+          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -371,25 +353,29 @@
       ],
       "products": [
         {
+          "metabolite": "1_acyl_3_o_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "fatty-acid",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49796"
+        "rhea": "RHEA:78079"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49796"
+            "id": "RHEA:78079"
           }
         ]
       }
@@ -429,45 +415,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:37379"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "N-(9Z-octadecenoyl)-L-tryptophan + H2O = L-tryptophan + (9Z)-octadecenoate",
-      "equation": "N-(9Z-octadecenoyl)-L-tryptophan + H2O = L-tryptophan + (9Z)-octadecenoate",
-      "substrates": [
-        {
-          "metabolite": "n_oleoyl_l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "oleate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:64176"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64176"
           }
         ]
       }

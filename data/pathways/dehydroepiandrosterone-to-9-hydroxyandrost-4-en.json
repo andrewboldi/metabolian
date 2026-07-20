@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dehydroepiandrosterone-to-9-hydroxyandrost-4-en",
   "name": "dehydroepiandrosterone… to 9α-hydroxyandrost-4-en-3,…",
-  "category": "nucleotide-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 4-step route from dehydroepiandrosterone sulfate(1−) to 9α-hydroxyandrost-4-en-3,17-dione, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -123,43 +123,31 @@
       }
     },
     {
-      "id": "3_phosphonato_5_adenylyl_sulfate",
-      "name": "3'-phosphonato-5'-adenylyl sulfate",
-      "short": "3'-phosphonato-5'-a…",
-      "formula": "C10H11N5O13P2S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58339"
-      }
-    },
-    {
-      "id": "adenosine_3_5_bismonophosphate",
-      "name": "adenosine 3',5'-bismonophosphate",
-      "short": "adenosine…",
-      "formula": "C10H11N5O10P2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58343"
-      }
-    },
-    {
-      "id": "z_n_sulfonatooxy_prop_2_enimidothioate",
-      "name": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate",
-      "short": "N-(sulfonatooxy)pro…",
-      "formula": "C4H5NO4S2",
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:183062"
+        "chebi": "CHEBI:58885"
       }
     },
     {
-      "id": "2_thiiran_2_yl_acetonitrile",
-      "name": "2-(thiiran-2-yl)acetonitrile",
-      "short": "2-(thiiran-2-yl)ace…",
-      "formula": "C4H5NS",
+      "id": "dehydroepiandrosterone_3_d_glucoside",
+      "name": "dehydroepiandrosterone 3-β-D-glucoside",
+      "short": "dehydroepiandroster…",
+      "formula": "C25H38O7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:183064"
+        "chebi": "CHEBI:145051"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
       }
     },
     {
@@ -204,13 +192,6 @@
       "name": "3beta-hydroxy-Delta(5)-steroid dehydrogenase",
       "ec": [
         "1.1.1.145"
-      ]
-    },
-    {
-      "id": "ec_4_8_1_8",
-      "name": "N-(sulfonatooxy)prop-2-enimidothioate sulfolyase",
-      "ec": [
-        "4.8.1.8"
       ]
     }
   ],
@@ -397,25 +378,25 @@
     },
     {
       "id": "r5",
-      "name": "3beta-hydroxyandrost-5-en-17-one + 3'-phosphoadenylyl sulfate = dehydroepiandrosterone ...",
-      "equation": "3beta-hydroxyandrost-5-en-17-one + 3'-phosphoadenylyl sulfate = dehydroepiandrosterone 3-sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "name": "3beta-hydroxyandrost-5-en-17-one + UDP-alpha-D-glucose = dehydroepiandrosterone 3-beta-...",
+      "equation": "3beta-hydroxyandrost-5-en-17-one + UDP-alpha-D-glucose = dehydroepiandrosterone 3-beta-D-glucoside + UDP + H(+)",
       "substrates": [
         {
           "metabolite": "dehydroepiandrosterone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "metabolite": "udp_d_glucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dehydroepiandrosterone_sulfate",
+          "metabolite": "dehydroepiandrosterone_3_d_glucoside",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adenosine_3_5_bismonophosphate",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
@@ -426,61 +407,20 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:51216"
+        "rhea": "RHEA:61812"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51216"
+            "id": "RHEA:61812"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "N-(sulfonatooxy)prop-2-enimidothioate sulfolyase",
-      "equation": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate = 2-(thiiran-2-yl)acetonitrile + sulfate",
-      "ec": "4.8.1.8",
-      "substrates": [
-        {
-          "metabolite": "z_n_sulfonatooxy_prop_2_enimidothioate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_thiiran_2_yl_acetonitrile",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_8_1_8"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:69252"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69252"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "androst-4-ene-3,17-dione + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydrox...",
       "equation": "androst-4-ene-3,17-dione + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxyandrost-4-ene-3,17-dione + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
@@ -516,7 +456,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:53228"
       },

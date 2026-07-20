@@ -24,8 +24,8 @@ pathway n-1-dioleoyl-sn-glycero-3-to-triolein "N,1-dioleoyl-sn-glycero-3… to t
 
   branch from 1_oleoyl_sn_glycero_3_phosphate side left {
     1_oleoyl_sn_glycero_3_phosphate
-    <-> . +linoleoyl_coa +coa
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
+    <-> . +myristoyl_coa +coa
+    1_oleoyl_2_myristoyl_sn_glycero_3_phosphate
   }
 
   branch from 1_2_dioleoyl_sn_glycerol side right {
@@ -34,9 +34,21 @@ pathway n-1-dioleoyl-sn-glycero-3-to-triolein "N,1-dioleoyl-sn-glycero-3… to t
     1_2_dioleoyl_3_linoleoyl_sn_glycerol
   }
 
+  branch from triolein side left {
+    triolein
+    <-> . +all_trans_retinol +dioleoylglycerol
+    all_trans_retinyl_oleate
+  }
+
+  branch from dioleoylglycerol side right {
+    dioleoylglycerol
+    <-> . +1_oleoyl_sn_glycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
+    1_o_oleoyl_sn_glycero_3_phosphocholine
+  }
+
   branch from oleate side left {
     oleate
-    <-> . +12_9z_octadecenoyloxy_octadecanoate +h2o +hplus
-    12_hydroxyoctadecanoate
+    <-> . +1_palmitoyl_2_oleoyl_sn_glycero_3_phosphate +h2o +hplus
+    1_palmitoyl_sn_glycerol_3_phosphate
   }
 }

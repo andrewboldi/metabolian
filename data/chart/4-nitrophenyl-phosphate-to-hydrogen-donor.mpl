@@ -24,15 +24,21 @@ pathway 4-nitrophenyl-phosphate-to-hydrogen-donor "4-nitrophenyl phosphate to hy
     4_nitrophenyl_sulfate
   }
 
-  branch from nitrite side right {
-    nitrite
-    <-> ec_1_7_3_6 [1.7.3.6] +o2 +h2o +hplus
-    hydroxylamine
+  branch from 2_hydroxy_4_nitrophenolate side right {
+    2_hydroxy_4_nitrophenolate
+    <-> ec_1_14_12_23 [1.14.12.23] +nadh +o2 +nitrite +nad +hplus
+    1_3_dinitrobenzene
   }
 
-  branch from hydrogen_donor side left {
+  branch from nitrite side left {
+    nitrite
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    nitroxyl
+  }
+
+  branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
-    tetrachloroethene
+    <-> ec_1_3_99_26 [1.3.99.26] +all_trans_carotene +hydrogen_acceptor
+    lycopene
   }
 }

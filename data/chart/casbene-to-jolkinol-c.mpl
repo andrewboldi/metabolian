@@ -20,13 +20,7 @@ pathway casbene-to-jolkinol-c "(−)-casbene to jolkinol C" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_129 [1.14.14.129] +oleoyl_coa +fmnh2 +o2 +h2o +hplus
-    18_hydroxyoleoyl_coa
-  }
-
-  branch from 4_8_dihydroxycasbene side right {
-    4_8_dihydroxycasbene
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    4_hydroxycasbene
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11r_12s_eet
   }
 }

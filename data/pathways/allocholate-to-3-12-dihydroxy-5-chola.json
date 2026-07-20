@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "allocholate-to-3-12-dihydroxy-5-chola",
   "name": "allocholate to 3β,12α-dihydroxy-5β-chola…",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 3-step route from allocholate to 3β,12α-dihydroxy-5β-cholan-24-oate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -102,50 +102,13 @@
       }
     },
     {
-      "id": "allodeoxycholoyl_coa",
-      "name": "allodeoxycholoyl-CoA",
-      "formula": "C45H70N7O19P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:137664"
-      }
-    },
-    {
-      "id": "allodeoxycholate",
-      "name": "allodeoxycholate",
-      "formula": "C24H39O4",
+      "id": "12_dehydrodeoxycholate",
+      "name": "12-dehydrodeoxycholate",
+      "short": "12-dehydrodeoxychol…",
+      "formula": "C24H37O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:137662"
-      }
-    },
-    {
-      "id": "3_phosphonato_5_adenylyl_sulfate",
-      "name": "3'-phosphonato-5'-adenylyl sulfate",
-      "short": "3'-phosphonato-5'-a…",
-      "formula": "C10H11N5O13P2S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58339"
-      }
-    },
-    {
-      "id": "3_sulfodeoxycholate",
-      "name": "3α-sulfodeoxycholate",
-      "formula": "C24H38O7S",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:195622"
-      }
-    },
-    {
-      "id": "adenosine_3_5_bismonophosphate",
-      "name": "adenosine 3',5'-bismonophosphate",
-      "short": "adenosine…",
-      "formula": "C10H11N5O10P2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58343"
+        "chebi": "CHEBI:233653"
       }
     },
     {
@@ -306,64 +269,25 @@
     },
     {
       "id": "r4",
-      "name": "allocholate + allodeoxycholoyl-CoA = allocholoyl-CoA + allodeoxycholate",
-      "equation": "allocholate + allodeoxycholoyl-CoA = allocholoyl-CoA + allodeoxycholate",
-      "substrates": [
-        {
-          "metabolite": "allocholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "allodeoxycholoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "allocholoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "allodeoxycholate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:53768"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:53768"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "deoxycholate + 3'-phosphoadenylyl sulfate = deoxycholate 3-sulfate + adenosine 3',5'-bi...",
-      "equation": "deoxycholate + 3'-phosphoadenylyl sulfate = deoxycholate 3-sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "name": "deoxycholate + NADP(+) = 12-dehydrodeoxycholate + NADPH + H(+)",
+      "equation": "deoxycholate + NADP(+) = 12-dehydrodeoxycholate + NADPH + H(+)",
       "substrates": [
         {
           "metabolite": "deoxycholate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_sulfodeoxycholate",
+          "metabolite": "12_dehydrodeoxycholate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adenosine_3_5_bismonophosphate",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -372,22 +296,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:77203"
+        "rhea": "RHEA:84223"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77203"
+            "id": "RHEA:84223"
           }
         ]
       }
     },
     {
-      "id": "r6",
+      "id": "r5",
       "name": "12alpha-hydroxy-3-oxo-5beta-cholan-24-oate + NAD(+) = 12alpha-hydroxy-3-oxochola-4-en-2...",
       "equation": "12alpha-hydroxy-3-oxo-5beta-cholan-24-oate + NAD(+) = 12alpha-hydroxy-3-oxochola-4-en-24-oate + NADH + H(+)",
       "substrates": [
@@ -415,7 +339,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:74307"
       },

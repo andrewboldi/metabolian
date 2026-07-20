@@ -18,21 +18,9 @@ pathway l-threitol-to-dihydroxyacetone "L-threitol to dihydroxyacetone" {
     dihydroxyacetone
   }
 
-  branch from l_erythrulose_1_phosphate side left {
-    l_erythrulose_1_phosphate
-    <-> ec_4_1_1_121 [4.1.1.121] +hplus +co2
-    3_oxoisoapionate_4_phosphate
-  }
-
-  branch from formaldehyde side right {
+  branch from formaldehyde side left {
     formaldehyde
-    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +succinate +co2
-    5_n7_methyl_5_triphosphoguanosine_2_o_methyladen
-  }
-
-  branch from dihydroxyacetone side left {
-    dihydroxyacetone
-    <-> . +serinol +nad +h2o +nadh +hplus
-    nh3
+    <-> ec_1_14_11_65 [1.14.11.65] +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    l_lysinium
   }
 }

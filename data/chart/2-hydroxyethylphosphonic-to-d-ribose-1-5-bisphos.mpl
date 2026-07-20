@@ -28,19 +28,31 @@ pathway 2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos "2-hydroxyethylphosphon
 
   branch from adenine side right {
     adenine
-    <-> . +2_deoxyadenosine_5_monophosphate +h2o
-    2_deoxy_d_ribofuranose_5_phosphate
+    <-> . +datp +h2o
+    2_deoxyribose_5_triphosphate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_37 [6.2.1.37] +3_hydroxybenzoate +atp +coa +amp
-    3_hydroxybenzoyl_coa
+    <-> . +gpp
+    pinene
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
-    2_methyladenosine_5_monophosphate_1
+    <-> ec_4_1_99_22 [4.1.99.22] +gtp +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
+    8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_c +sam +h2o +5_deoxyadenosine +hplus
+    bacteriochlorophyllide_e
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_17z_icosatrienoyl_coa +hydrogen_donor +o2 +h2o
+    5z_11z_14z_17z_icosatetraenoyl_coa
   }
 }

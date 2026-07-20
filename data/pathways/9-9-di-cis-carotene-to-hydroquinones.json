@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "9-9-di-cis-carotene-to-hydroquinones",
+  "name": "9,9'-di-cis-ζ-carotene to hydroquinones",
+  "category": "other",
+  "summary": "A 2-step route from 9,9'-di-cis-ζ-carotene to hydroquinones, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30959"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:48716"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "9_9_di_cis_carotene",
+      "name": "9,9'-di-cis-ζ-carotene",
+      "short": "9,9'-di-cis-ζ-carot…",
+      "formula": "C40H60",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48716"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "7_9_9_tri_cis_neurosporene",
+      "name": "7,9,9'-tri-cis-neurosporene",
+      "short": "7,9,9'-tri-cis-neur…",
+      "formula": "C40H58",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62463"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "7_7_9_9_tetra_cis_lycopene",
+      "name": "7,7',9,9'-tetra-cis-lycopene",
+      "short": "7,7',9,9'-tetra-cis…",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62466"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "9,9'-di-cis-zeta-carotene + a quinone = 7,9,9'-tri-cis-neurosporene + a quinol",
+      "equation": "9,9'-di-cis-zeta-carotene + a quinone = 7,9,9'-tri-cis-neurosporene + a quinol",
+      "substrates": [
+        {
+          "metabolite": "9_9_di_cis_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_9_9_tri_cis_neurosporene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30959"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7,9,9'-tri-cis-neurosporene + a quinone = 7,7',9,9'-tetra-cis-lycopene + a quinol",
+      "equation": "7,9,9'-tri-cis-neurosporene + a quinone = 7,7',9,9'-tetra-cis-lycopene + a quinol",
+      "substrates": [
+        {
+          "metabolite": "7_9_9_tri_cis_neurosporene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_7_9_9_tetra_cis_lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30963"
+          }
+        ]
+      }
+    }
+  ]
+}

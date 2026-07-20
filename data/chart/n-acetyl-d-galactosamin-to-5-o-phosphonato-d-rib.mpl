@@ -32,19 +32,25 @@ pathway n-acetyl-d-galactosamin-to-5-o-phosphonato-d-rib "N-acetyl-α-D-galactos
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_3_6_1_26 [3.6.1.26] +cdp_diacylglycerol +h2o +hplus
-    1_2_diacyl_sn_glycerol_3_phosphate
+    <-> ec_3_6_1_16 [3.6.1.16] +2r_cdp_glycerol +h2o +hplus
+    sn_glycerol_3_phosphate
   }
 
-  branch from uridine side left {
-    uridine
-    <-> . +3_terminal_pupu_2
-    ump_2_3_cyclic_phosphate_2
-  }
-
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_6 [4.3.1.6] +alanyl_coa
-    acryloyl_coa
+    <-> ec_6_3_1_2 [6.3.1.2] +glutamate +atp +adp +pi +hplus
+    glutamine
+  }
+
+  branch from d_ribofuranose side right {
+    d_ribofuranose
+    <-> . +guanosine +h2o
+    guanine
+  }
+
+  branch from uracil side left {
+    uracil
+    <-> ec_1_3_1_1 [1.3.1.1] +nad +nadh +hplus
+    5_6_dihydrouracil
   }
 }

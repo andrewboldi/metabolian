@@ -18,7 +18,7 @@ pathway 2-acylphloroglucinol-to-diphosphate "2-acylphloroglucinol to diphosphate
 
   branch from ppi side left {
     ppi
-    <-> . +gtp
-    precursor_z
+    <-> . +presqualene_pp
+    15_cis_4_4_diapophytoene
   }
 }

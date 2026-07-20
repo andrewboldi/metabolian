@@ -18,8 +18,8 @@ pathway dtdp-l-dihydrostreptose-to-dtdp "dTDP-L-dihydrostreptose to dTDP" {
 
   branch from dtdp side left {
     dtdp
-    <-> ec_2_4_1_327 [2.4.1.327] +dtdp_2_deoxy_l_fucose +aclacinomycin_s +hplus
-    2_deoxy_l_fucosylaclacinomycin_s
+    <-> . +dtmp
+    dttp
   }
 
   branch from dtmp side right {

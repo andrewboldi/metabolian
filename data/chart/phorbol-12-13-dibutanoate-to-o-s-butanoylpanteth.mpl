@@ -20,15 +20,15 @@ pathway phorbol-12-13-dibutanoate-to-o-s-butanoylpanteth "phorbol 12,13-dibutano
     butyryl-acp
   }
 
-  branch from butyrate side left {
-    butyrate
-    <-> ec_3_7_1_7 [3.7.1.7] +nonane_4_6_dione +h2o +hplus
-    pentan_2_one
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_17 [6.1.1.17] +amp_3_end_1 +glutamate +atp +amp
+    3_l_glutamate_adenylyl_1_group
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp
-    3_l_aspartate_adenylyl_1_group
+  branch from butenoyl-acp side right {
+    butenoyl-acp
+    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_butanoic_acid +holo-acp +hplus +h2o
+    glycine
   }
 }

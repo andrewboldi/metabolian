@@ -18,14 +18,14 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
 
   branch from palmitoleate side left {
     palmitoleate
-    <-> . +1_2_3_tripalmitoleoylglycerol +h2o +hplus
-    1_3_dipalmitoleoylglycerol
+    <-> ec_3_1_1_98 [3.1.1.98] +o_9z_hexadecenoyl_l_serine +h2o +hplus
+    l_serine
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +serine
-    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine
+    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet +serine
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphose
   }
 
   branch from palmitoleoyl_coa side left {
@@ -36,7 +36,7 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    selinene
+    <-> ec_4_2_3_40 [4.2.3.40] +fpp
+    z_bisabolene
   }
 }

@@ -22,7 +22,7 @@ pathway n-acetyl-d-glucosaminyl-to-d-gal-1-3-l-fuc-1 "N-acetyl-α-D-glucosaminyl
 
   branch from n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po side left {
     n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
-    <-> . +gdp_d_mannose +gdp +hplus
-    d_mannosyl_1_3_n_acetyl_d_galctosaminyl_1_dipho
+    <-> . +gdp_6_deoxy_d_mannose +gdp +hplus
+    d_rhamnosyl_1_3_n_acetyl_d_galactosaminyl_1_dip
   }
 }

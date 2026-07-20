@@ -101,52 +101,51 @@
       }
     },
     {
-      "id": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
-      "name": "1,2-diacyl-3-β-D-galactosyl-sn-glycerol",
-      "short": "1,2-diacyl-3-β-D-ga…",
-      "formula": "C11H16O10R2",
+      "id": "2_monoglyceride",
+      "name": "2-monoglyceride",
+      "formula": "C4H7O4R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17615"
+        "chebi": "CHEBI:17389"
       }
     },
     {
-      "id": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
-      "name": "2-O-acyl-3-O-β-D-galactosyl-sn-glycerol",
-      "short": "2-O-acyl-3-O-β-D-ga…",
-      "formula": "C10H17O9R1",
+      "id": "phosphatidylcholine",
+      "name": "Phosphatidylcholine",
+      "formula": "C10H18NO8PR2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18063"
+        "chebi": "CHEBI:57643"
       }
     },
     {
-      "id": "triglyceride",
-      "name": "triglyceride",
-      "formula": "C6H5O6R3",
+      "id": "acyl_sn_glycero_3_phosphocholine",
+      "name": "acyl-sn-glycero-3-phosphocholine",
+      "short": "acyl-sn-glycero-3-p…",
+      "formula": "C9H19NO7PR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17855"
+        "chebi": "CHEBI:84465"
       }
     },
     {
-      "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphocholine",
-      "name": "1,2-dihexadecanoyl-sn-glycero-3-phosphocholine",
-      "short": "1,2-dihexadecanoyl-…",
-      "formula": "C40H80NO8P",
+      "id": "1_myristoyl_sn_glycero_3_phosphocholine",
+      "name": "1-myristoyl-sn-glycero-3-phosphocholine",
+      "short": "1-myristoyl-sn-glyc…",
+      "formula": "C22H46NO7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:72999"
+        "chebi": "CHEBI:64489"
       }
     },
     {
-      "id": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
-      "name": "1,2-dihexadecanoyl-sn-glycerol-3-phosphate",
-      "short": "1,2-dihexadecanoyl-…",
-      "formula": "C35H67O8P",
-      "charge": -2,
+      "id": "1_myristoyl_sn_glycero_2_3_cyclic_phosphate",
+      "name": "1-myristoyl-sn-glycero-2,3-cyclic-phosphate",
+      "short": "1-myristoyl-sn-glyc…",
+      "formula": "C17H32O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:72859"
+        "chebi": "CHEBI:143882"
       }
     },
     {
@@ -326,11 +325,21 @@
     },
     {
       "id": "r4",
-      "name": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + a 1,2-diacylglycerol = a 2-acyl-3-O-...",
-      "equation": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + a 1,2-diacylglycerol = a 2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + a triacylglycerol",
+      "name": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero-3-p...",
+      "equation": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero-3-phosphocholine + a 1,2-diacylglycerol",
       "substrates": [
         {
-          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+          "metabolite": "2_monoglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
@@ -338,70 +347,52 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "triglyceride",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:77959"
+        "rhea": "RHEA:44824"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77959"
+            "id": "RHEA:44824"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "1,2-dihexadecanoyl-sn-glycero-3-phosphocholine + H2O = 1,2-dihexadecanoyl-sn-glycero-3-...",
-      "equation": "1,2-dihexadecanoyl-sn-glycero-3-phosphocholine + H2O = 1,2-dihexadecanoyl-sn-glycero-3-phosphate + choline + H(+)",
+      "name": "1-tetradecanoyl-sn-glycero-3-phosphocholine = 1-tetradecanoyl-sn-glycero-2,3-cyclic pho...",
+      "equation": "1-tetradecanoyl-sn-glycero-3-phosphocholine = 1-tetradecanoyl-sn-glycero-2,3-cyclic phosphate + choline",
       "substrates": [
         {
-          "metabolite": "1_2_dihexadecanoyl_sn_glycero_3_phosphocholine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "1_myristoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
+          "metabolite": "1_myristoyl_sn_glycero_2_3_cyclic_phosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "choline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:44872"
+        "rhea": "RHEA:60604"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44872"
+            "id": "RHEA:60604"
           }
         ]
       }

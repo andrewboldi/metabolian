@@ -123,26 +123,6 @@
       }
     },
     {
-      "id": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
-      "name": "1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycerol",
-      "short": "1-stearoyl-2-(4Z,7Z…",
-      "formula": "C43H72O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77129"
-      }
-    },
-    {
-      "id": "mg_0_0_22_6_4z_7z_10z_13z_16z_19z_0_0",
-      "name": "MG(0:0/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0)",
-      "short": "MG(0:0/22:6(4Z,7Z,1…",
-      "formula": "C25H38O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:186738"
-      }
-    },
-    {
       "id": "prostaglandin_e2_2_glyceryl_ester",
       "name": "prostaglandin E2 2-glyceryl ester",
       "short": "prostaglandin E2…",
@@ -153,33 +133,25 @@
       }
     },
     {
-      "id": "adonixanthin",
-      "name": "adonixanthin",
-      "formula": "C40H54O3",
+      "id": "andilesin_b",
+      "name": "andilesin B",
+      "formula": "C25H30O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:80217"
+        "chebi": "CHEBI:223328"
       }
     },
     {
-      "id": "astaxanthin",
-      "name": "astaxanthin",
-      "formula": "C40H52O4",
+      "id": "andilesin_c",
+      "name": "andilesin C",
+      "formula": "C25H32O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:40968"
+        "chebi": "CHEBI:223334"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_99_64",
-      "name": "zeaxanthin 4-ketolase",
-      "ec": [
-        "1.14.99.64"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -335,49 +307,6 @@
     },
     {
       "id": "r5",
-      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycerol + H2O = 2-(4Z,7Z,1...",
-      "equation": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycerol + H2O = 2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-glycerol + octadecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "mg_0_0_22_6_4z_7z_10z_13z_16z_19z_0_0",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "octadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:77107"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77107"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "2-glyceryl-prostaglandin H2 = 2-glyceryl-prostaglandin E2",
       "equation": "2-glyceryl-prostaglandin H2 = 2-glyceryl-prostaglandin E2",
       "substrates": [
@@ -393,7 +322,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:53324"
       },
@@ -408,54 +337,40 @@
       }
     },
     {
-      "id": "r7",
-      "name": "zeaxanthin 4-ketolase",
-      "equation": "all-trans-adonixanthin + 2 AH2 + 2 O2 = all-trans-(3S,3'S)-astaxanthin + 2 A + 3 H2O",
-      "ec": "1.14.99.64",
+      "id": "r6",
+      "name": "andilesin B + AH2 = andilesin C + A",
+      "equation": "andilesin B + AH2 = andilesin C + A",
       "substrates": [
         {
-          "metabolite": "adonixanthin",
+          "metabolite": "andilesin_b",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "astaxanthin",
+          "metabolite": "andilesin_c",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_99_64"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:56772"
+        "rhea": "RHEA:82655"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56772"
+            "id": "RHEA:82655"
           }
         ]
       }

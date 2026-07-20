@@ -195,12 +195,12 @@
       }
     },
     {
-      "id": "kaempferol_oxoanion",
-      "name": "kaempferol oxoanion",
-      "formula": "C15H9O6",
-      "charge": -1,
+      "id": "s_naringenin",
+      "name": "(S)-naringenin",
+      "formula": "C15H12O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58573"
+        "chebi": "CHEBI:17846"
       }
     },
     {
@@ -213,30 +213,59 @@
       }
     },
     {
-      "id": "calycosin",
-      "name": "calycosin",
-      "formula": "C16H11O5",
-      "charge": -1,
+      "id": "linalool",
+      "name": "linalool",
+      "formula": "C10H18O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77992"
+        "chebi": "CHEBI:17580"
       }
     },
     {
-      "id": "pseudobaptigenin",
-      "name": "pseudobaptigenin",
-      "formula": "C16H9O5",
-      "charge": -1,
+      "id": "6e_8_oxolinalool",
+      "name": "(6E)-8-oxolinalool",
+      "formula": "C10H16O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78327"
+        "chebi": "CHEBI:64259"
       }
     },
     {
-      "id": "quercetin_7_olate",
-      "name": "quercetin-7-olate",
-      "formula": "C15H9O7",
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57694"
+        "chebi": "CHEBI:58573"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50342"
+      }
+    },
+    {
+      "id": "trans_3_hydroxy_l_proline",
+      "name": "trans-3-hydroxy-L-proline",
+      "short": "trans-3-hydroxy-L-p…",
+      "formula": "C5H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85428"
+      }
+    },
+    {
+      "id": "3_3_o_dimethylmyricetin_7_olate",
+      "name": "3,3'-O-dimethylmyricetin 7-olate",
+      "short": "3,3'-O-dimethylmyri…",
+      "formula": "C17H13O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194066"
       }
     }
   ],
@@ -256,10 +285,10 @@
       ]
     },
     {
-      "id": "ec_1_14_19_63",
-      "name": "pseudobaptigenin synthase",
+      "id": "ec_1_14_14_84",
+      "name": "linalool 8-monooxygenase",
       "ec": [
-        "1.14.19.63"
+        "1.14.14.84"
       ]
     }
   ],
@@ -562,11 +591,11 @@
     },
     {
       "id": "r7",
-      "name": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + ...",
-      "equation": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + H(+)",
+      "name": "(2S)-naringenin + 2-oxoglutarate + O2 = (2R,3R)-dihydrokaempferol + succinate + CO2",
+      "equation": "(2S)-naringenin + 2-oxoglutarate + O2 = (2R,3R)-dihydrokaempferol + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "dihydrokaempferol",
+          "metabolite": "s_naringenin",
           "stoichiometry": 1
         },
         {
@@ -580,7 +609,7 @@
       ],
       "products": [
         {
-          "metabolite": "kaempferol_oxoanion",
+          "metabolite": "dihydrokaempferol",
           "stoichiometry": 1
         },
         {
@@ -590,27 +619,19 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:61132"
+        "rhea": "RHEA:61084"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61132"
+            "id": "RHEA:61084"
           }
         ]
       }
@@ -668,77 +689,77 @@
     },
     {
       "id": "r9",
-      "name": "pseudobaptigenin synthase",
-      "equation": "calycosin + reduced [NADPH--hemoprotein reductase] + O2 = pseudobaptigenin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "ec": "1.14.19.63",
+      "name": "linalool 8-monooxygenase",
+      "equation": "linalool + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (6E)-8-oxolinalool + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.84",
       "substrates": [
         {
-          "metabolite": "calycosin",
+          "metabolite": "linalool",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "pseudobaptigenin",
+          "metabolite": "6e_8_oxolinalool",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 2
         },
         {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_19_63"
+          "enzyme": "ec_1_14_14_84"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:28238"
+        "rhea": "RHEA:32635"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28238"
+            "id": "RHEA:32635"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "quercetin + reduced [NADPH--hemoprotein reductase] + O2 = myricetin + oxidized [NADPH--...",
-      "equation": "quercetin + reduced [NADPH--hemoprotein reductase] + O2 = myricetin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "kaempferol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = myricetin + 2 oxidized [...",
+      "equation": "kaempferol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = myricetin + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "quercetin_7_olate",
+          "metabolite": "kaempferol_oxoanion",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
@@ -748,10 +769,100 @@
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:61120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "[ribosomal protein S23]-L-proline + 2-oxoglutarate + O2 = [ribosomal protein S23]-trans...",
+      "equation": "[ribosomal protein S23]-L-proline + 2-oxoglutarate + O2 = [ribosomal protein S23]-trans-3-hydroxy-L-proline + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_3_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:45792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "laricitrin + S-adenosyl-L-methionine = 3,3'-O-dimethylmyricetin + S-adenosyl-L-homocyst...",
+      "equation": "laricitrin + S-adenosyl-L-methionine = 3,3'-O-dimethylmyricetin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "laricitrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_o_dimethylmyricetin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
           "stoichiometry": 1
         },
         {
@@ -760,16 +871,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:61128"
+        "rhea": "RHEA:74779"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61128"
+            "id": "RHEA:74779"
           }
         ]
       }

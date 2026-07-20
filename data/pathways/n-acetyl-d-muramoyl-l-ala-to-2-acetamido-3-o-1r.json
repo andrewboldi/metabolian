@@ -103,12 +103,23 @@
       }
     },
     {
-      "id": "pyridoxaminium",
-      "name": "pyridoxaminium",
-      "formula": "C8H13N2O2",
+      "id": "n_acetyl_d_muramate_1_phosphate",
+      "name": "N-acetyl-α-D-muramate 1-phosphate",
+      "short": "N-acetyl-α-D-murama…",
+      "formula": "C11H17NO11P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:137594"
+      }
+    },
+    {
+      "id": "2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae",
+      "name": "(2E,5S,6E,8E,10E)-1-ammoniododeca-2,6,8,10-tetraen-5-ol",
+      "short": "(2E,5S,6E,8E,10E)-1…",
+      "formula": "C12H20NO",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57761"
+        "chebi": "CHEBI:142545"
       }
     },
     {
@@ -121,12 +132,13 @@
       }
     },
     {
-      "id": "pyridoxal",
-      "name": "pyridoxal",
-      "formula": "C8H9NO3",
+      "id": "2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae",
+      "name": "(2E,5S,6E,8E,10E)-5-hydroxydodeca-2,6,8,10-tetraenal",
+      "short": "(2E,5S,6E,8E,10E)-5…",
+      "formula": "C12H16O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17310"
+        "chebi": "CHEBI:141054"
       }
     }
   ],
@@ -139,10 +151,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_30",
-      "name": "pyridoxamine--pyruvate transaminase",
+      "id": "ec_2_7_1_221",
+      "name": "N-acetylmuramate 1-kinase",
       "ec": [
-        "2.6.1.30"
+        "2.7.1.221"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_115",
+      "name": "5-hydroxydodecatetraenal 1-aminotransferase",
+      "ec": [
+        "2.6.1.115"
       ]
     }
   ],
@@ -276,12 +295,61 @@
     },
     {
       "id": "r4",
-      "name": "pyridoxamine--pyruvate transaminase",
-      "equation": "pyridoxamine + pyruvate = pyridoxal + L-alanine",
-      "ec": "2.6.1.30",
+      "name": "N-acetylmuramate 1-kinase",
+      "equation": "N-acetyl-D-muramate + ATP = N-acetyl-alpha-D-muramate 1-phosphate + ADP + H(+)",
+      "ec": "2.7.1.221",
       "substrates": [
         {
-          "metabolite": "pyridoxaminium",
+          "metabolite": "2_acetamido_3_o_1r_1_carboxylatoethyl_2_deoxy_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_muramate_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_221"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53720"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "5-hydroxydodecatetraenal 1-aminotransferase",
+      "equation": "(2E,5S,6E,8E,10E)-1-aminododeca-2,6,8,10-tetraen-5-ol + pyruvate = (2E,5S,6E,8E,10E)-5-hydroxydodeca-2,6,8,10-tetraenal + L-alanine",
+      "ec": "2.6.1.115",
+      "substrates": [
+        {
+          "metabolite": "2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae",
           "stoichiometry": 1
         },
         {
@@ -291,7 +359,7 @@
       ],
       "products": [
         {
-          "metabolite": "pyridoxal",
+          "metabolite": "2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae",
           "stoichiometry": 1
         },
         {
@@ -301,20 +369,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_30"
+          "enzyme": "ec_2_6_1_115"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:12841"
+        "rhea": "RHEA:24024"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12841"
+            "id": "RHEA:24024"
           }
         ]
       }

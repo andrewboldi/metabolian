@@ -18,19 +18,13 @@ pathway butyrate-ester-to-acetate "butyrate ester to acetate" {
 
   branch from aliphatic_alcohol side left {
     aliphatic_alcohol
-    <-> . +octanoate_ester +h2o +hplus
-    octanoate
+    <-> . +fatty_acid_ester +h2o +hplus
+    fatty-acid
   }
 
-  branch from butyrate side right {
-    butyrate
-    <-> . +tributyrin +h2o +hplus
-    dibutyrin
-  }
-
-  branch from acetate side left {
+  branch from acetate side right {
     acetate
-    <-> . +dihydroprecondylocarpine_acetate +hplus
-    catharanthine
+    <-> . +n_acetyl_s_benzyl_l_cysteine +h2o
+    s_benzyl_l_cysteine
   }
 }

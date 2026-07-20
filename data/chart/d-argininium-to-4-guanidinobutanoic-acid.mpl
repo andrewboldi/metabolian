@@ -18,25 +18,13 @@ pathway d-argininium-to-4-guanidinobutanoic-acid "D-argininium to 4-guanidinobut
 
   branch from 5_guanidino_2_oxopentanoic_acid side left {
     5_guanidino_2_oxopentanoic_acid
-    <-> ec_1_4_3_25 [1.4.3.25] +o2 +h2o +h2o2 +nh3
-    arginine
+    <-> ec_2_6_1_125 [2.6.1.125] +arginine +akg
+    glutamate
   }
 
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_14_99_68 [1.14.99.68] +4_aminobenzoate +o2 +hydrogen_acceptor +h2o
-    4_nitrobenzoate
-  }
-
-  branch from nh3 side left {
+  branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus +pyruvate
-    3_amino_d_alanine
-  }
-
-  branch from 4_guanidiniumylbutanal side right {
-    4_guanidiniumylbutanal
-    <-> . +o2 +h2o +h2o2 +nh3
-    agmatinium
+    <-> ec_3_5_3_27 [3.5.3.27] +arginine +h2o +hplus +co2
+    ornithine
   }
 }

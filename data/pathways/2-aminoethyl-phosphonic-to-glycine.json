@@ -1,0 +1,357 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-aminoethyl-phosphonic-to-glycine",
+  "name": "(2-aminoethyl)phosphonic… to glycine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from (2-aminoethyl)phosphonic acid zwitterion to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41440"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57418"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_aminoethyl_phosphonic_acid",
+      "name": "(2-aminoethyl)phosphonic acid",
+      "short": "(2-aminoethyl)phosp…",
+      "formula": "C2H8NO3P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57418"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
+      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
+      "short": "(2-amino-1-hydroxye…",
+      "formula": "C2H8NO4P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141612"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "lauroyl_coa",
+      "name": "lauroyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57375"
+      }
+    },
+    {
+      "id": "2_hydroxydodecanoyl_coa",
+      "name": "2-hydroxydodecanoyl-CoA",
+      "short": "2-hydroxydodecanoyl…",
+      "formula": "C33H54N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138299"
+      }
+    },
+    {
+      "id": "gly_gln",
+      "name": "Gly-Gln",
+      "formula": "C7H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74392"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_46",
+      "name": "2-aminoethylphosphonate dioxygenase",
+      "ec": [
+        "1.14.11.46"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_78",
+      "name": "2-amino-1-hydroxyethylphosphonate dioxygenase (glycine-forming)",
+      "ec": [
+        "1.13.11.78"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-aminoethylphosphonate dioxygenase",
+      "equation": "(2-aminoethyl)phosphonate + 2-oxoglutarate + O2 = (1R)-(2-amino-1-hydroxyethyl)phosphonate + succinate + CO2",
+      "ec": "1.14.11.46",
+      "substrates": [
+        {
+          "metabolite": "2_aminoethyl_phosphonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41440"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-amino-1-hydroxyethylphosphonate dioxygenase (glycine-forming)",
+      "equation": "(1R)-(2-amino-1-hydroxyethyl)phosphonate + O2 = glycine + phosphate + 2 H(+)",
+      "ec": "1.13.11.78",
+      "substrates": [
+        {
+          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dodecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxydodecanoyl-CoA + succinate + CO2",
+      "equation": "dodecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxydodecanoyl-CoA + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "lauroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxydodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glycyl-L-glutamine + H2O = L-glutamine + glycine",
+      "equation": "glycyl-L-glutamine + H2O = L-glutamine + glycine",
+      "substrates": [
+        {
+          "metabolite": "gly_gln",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37315"
+          }
+        ]
+      }
+    }
+  ]
+}

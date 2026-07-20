@@ -18,7 +18,7 @@ pathway 7-8-dihydroneopterin-to-7-8-dihydropteroate "7,8-dihydroneopterin to 7,8
 
   branch from 7_8_dihydroneopterin_3_phosphate side left {
     7_8_dihydroneopterin_3_phosphate
-    <-> ec_3_6_1_67 [3.6.1.67] +7_8_dihydroneopterin_3_triphosphate +h2o +hplus
-    ppi
+    <-> ec_3_1_4_56 [3.1.4.56] +h2o +hplus
+    7_8_dihydro_d_neopterin_2_3_cyclic_phosphate
   }
 }

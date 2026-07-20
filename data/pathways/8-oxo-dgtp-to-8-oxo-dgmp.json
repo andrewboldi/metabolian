@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "8-oxo-dgtp-to-8-oxo-dgmp",
+  "name": "8-oxo-dGTP to 8-oxo-dGMP",
+  "category": "other",
+  "summary": "A 2-step route from 8-oxo-dGTP(4−) to 8-oxo-dGMP(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59980"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77896"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "8_oxo_dgtp",
+      "name": "8-oxo-dGTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77896"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "8_oxo_dgdp",
+      "name": "8-oxo-dGDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:63715"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "8_oxo_dgmp",
+      "name": "8-oxo-dGMP",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63224"
+      }
+    },
+    {
+      "id": "3_end_deoxyribonucleotide_8_oxoguanine_2",
+      "name": "3'-end deoxyribonucleotide-8-oxoguanine(2−)",
+      "short": "3'-end deoxyribonuc…",
+      "formula": "C15H19N5O12P2R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231896"
+      }
+    },
+    {
+      "id": "3_end_deoxyribonucleotide_1",
+      "name": "3'-end deoxyribonucleotide(1−)",
+      "short": "3'-end deoxyribonuc…",
+      "formula": "C5H8O5PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138148"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_69",
+      "name": "8-oxo-(d)GTP phosphatase",
+      "ec": [
+        "3.6.1.69"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_58",
+      "name": "8-oxo-dGDP phosphatase",
+      "ec": [
+        "3.6.1.58"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "8-oxo-(d)GTP phosphatase",
+      "equation": "8-oxo-dGTP + H2O = 8-oxo-dGDP + phosphate + H(+)",
+      "ec": "3.6.1.69",
+      "substrates": [
+        {
+          "metabolite": "8_oxo_dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_dgdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59980"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59980"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "8-oxo-dGDP phosphatase",
+      "equation": "8-oxo-dGDP + H2O = 8-oxo-dGMP + phosphate + H(+)",
+      "ec": "3.6.1.58",
+      "substrates": [
+        {
+          "metabolite": "8_oxo_dgdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_dgmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32063"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 3'-end 2'-deoxyribonucleotide-8-oxoguanine-DNA + H2O = 8-oxo-dGMP + a 3'-end 2'-deoxy...",
+      "equation": "a 3'-end 2'-deoxyribonucleotide-8-oxoguanine-DNA + H2O = 8-oxo-dGMP + a 3'-end 2'-deoxyribonucleotide-DNA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_end_deoxyribonucleotide_8_oxoguanine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_dgmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_end_deoxyribonucleotide_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:81471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81471"
+          }
+        ]
+      }
+    }
+  ]
+}

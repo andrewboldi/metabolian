@@ -26,19 +26,25 @@ pathway 2s-2-carbamoylpyrrolidi-to-o-s-4-5-dichloropyrr "(2S)-2-carbamoylpyrroli
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
-    2_formylglutarate
+    <-> ec_2_3_2_14 [2.3.2.14] +d_alanine +glutamine
+    l_glutamyl_d_alaninate
   }
 
-  branch from ppi side left {
+  branch from o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit side left {
+    o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit
+    <-> . +aculene_c +holo-acp
+    aculene_a
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_6_2_1_40 [6.2.1.40] +4_hydroxybutyrate +atp +coa +amp
-    4_hydroxybutyryl_coa
+    <-> ec_4_2_3_52 [4.2.3.52] +gpp
+    phellandrene
   }
 
-  branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side right {
+  branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side left {
     o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl
-    <-> . +fadh2 +chloride +o2 +fad +h2o
-    o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho
+    <-> ec_1_14_19_57 [1.14.19.57] +bromide +fadh2 +o2 +fad +h2o
+    o_s_3_4_5_tribromopyrrole_2_carbonyl_pantetheine
   }
 }

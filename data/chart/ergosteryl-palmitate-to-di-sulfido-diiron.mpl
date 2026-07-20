@@ -26,8 +26,8 @@ pathway ergosteryl-palmitate-to-di-sulfido-diiron "ergosteryl palmitate to di-μ
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_182 [1.14.14.182] +taxusin +fmnh2 +o2 +h2o +hplus
-    7_hydroxytaxusin
+    <-> . +cerotate +fmnh2 +o2 +h2o +hplus
+    26_hydroxyhexacosanoate
   }
 
   branch from 1_25_dihydroxyvitamin_d2 side left {
@@ -38,7 +38,7 @@ pathway ergosteryl-palmitate-to-di-sulfido-diiron "ergosteryl palmitate to di-μ
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_7_12 [1.3.7.12] +primary_fluorescent_chlorophyll_catabolite +di_sulfido_diiron +hplus
-    red_chlorophyll_catabolite
+    <-> . +di_sulfido_diiron +cholesterol +o2 +hplus +h2o
+    22r_22_hydroxycholesterol
   }
 }

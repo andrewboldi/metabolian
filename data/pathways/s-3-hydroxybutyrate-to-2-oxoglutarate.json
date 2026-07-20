@@ -1,0 +1,269 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-3-hydroxybutyrate-to-2-oxoglutarate",
+  "name": "(S)-3-hydroxybutyrate to 2-oxoglutarate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (S)-3-hydroxybutyrate to 2-oxoglutarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23048"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:11047"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_3_hydroxybutyrate",
+      "name": "(S)-3-hydroxybutyrate",
+      "short": "3-hydroxybutyrate",
+      "formula": "C4H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11047"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "r_2_hydroxyglutarate",
+      "name": "(R)-2-hydroxyglutarate",
+      "short": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15801"
+      }
+    },
+    {
+      "id": "acetoacetate",
+      "name": "Acetoacetate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13705"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_hydroxyglutarate",
+      "name": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:11596"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_99_24",
+      "name": "hydroxyacid-oxoacid transhydrogenase",
+      "ec": [
+        "1.1.99.24"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_399",
+      "name": "2-oxoglutarate reductase",
+      "ec": [
+        "1.1.1.399"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hydroxyacid-oxoacid transhydrogenase",
+      "equation": "(S)-3-hydroxybutanoate + 2-oxoglutarate = (R)-2-hydroxyglutarate + acetoacetate",
+      "ec": "1.1.99.24",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxybutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxoglutarate reductase",
+      "equation": "(R)-2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
+      "ec": "1.1.1.399",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_399"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-hydroxyglutarate + NADP(+) = 2-oxoglutarate + NADPH + H(+)",
+      "equation": "2-hydroxyglutarate + NADP(+) = 2-oxoglutarate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:52308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52308"
+          }
+        ]
+      }
+    }
+  ]
+}

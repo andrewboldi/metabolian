@@ -195,6 +195,15 @@
       }
     },
     {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
       "id": "n_phospho_l_arginine_1",
       "name": "Nω-phospho-L-arginine(1−)",
       "short": "Nω-phospho-L-argini…",
@@ -205,32 +214,12 @@
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "n6_succinyl_l_lysine_1",
-      "name": "N6-succinyl-L-lysine(1−)",
-      "short": "N6-succinyl-L-lysin…",
-      "formula": "C10H15N2O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87830"
-      }
-    },
-    {
-      "id": "2_o_succinyl_adp_d_ribose",
-      "name": "2''-O-succinyl-ADP-D-ribose",
-      "short": "2''-O-succinyl-ADP-…",
-      "formula": "C19H24N5O17P2",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:87832"
+        "chebi": "CHEBI:456216"
       }
     },
     {
@@ -240,6 +229,35 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "6_n_adp_d_ribosyl_l_lysinium_1",
+      "name": "6-N-(ADP-D-ribosyl)-L-lysinium(1−)",
+      "short": "6-N-(ADP-D-ribosyl)…",
+      "formula": "C21H32N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142515"
+      }
+    },
+    {
+      "id": "o_adp_d_ribosyl_l_serine_2",
+      "name": "O-(ADP-D-ribosyl)-L-serine(2−)",
+      "short": "O-(ADP-D-ribosyl)-L…",
+      "formula": "C18H24N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142556"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
       }
     }
   ],
@@ -273,10 +291,10 @@
       ]
     },
     {
-      "id": "ec_3_9_1_2",
-      "name": "protein arginine phosphatase",
+      "id": "ec_2_7_14_1",
+      "name": "protein arginine kinase",
       "ec": [
-        "3.9.1.2"
+        "2.7.14.1"
       ]
     }
   ],
@@ -639,70 +657,70 @@
     },
     {
       "id": "r9",
-      "name": "protein arginine phosphatase",
-      "equation": "N(omega)-phospho-L-arginyl-[protein] + H2O = L-arginyl-[protein] + phosphate",
-      "ec": "3.9.1.2",
+      "name": "protein arginine kinase",
+      "equation": "L-arginyl-[protein] + ATP = N(omega)-phospho-L-arginyl-[protein] + ADP + H(+)",
+      "ec": "2.7.14.1",
       "substrates": [
-        {
-          "metabolite": "n_phospho_l_arginine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_phospho_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_9_1_2"
+          "enzyme": "ec_2_7_14_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:43380"
+        "rhea": "RHEA:43384"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43380"
+            "id": "RHEA:43384"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "N(6)-succinyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-succinyl-ADP-D-ribose + nicotina...",
-      "equation": "N(6)-succinyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-succinyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
+      "name": "L-lysyl-[protein] + NAD(+) = N(6)-(ADP-D-ribosyl)-L-lysyl-[protein] + nicotinamide + H(+)",
+      "equation": "L-lysyl-[protein] + NAD(+) = N(6)-(ADP-D-ribosyl)-L-lysyl-[protein] + nicotinamide + H(+)",
       "substrates": [
         {
-          "metabolite": "n6_succinyl_l_lysine_1",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_o_succinyl_adp_d_ribose",
+          "metabolite": "6_n_adp_d_ribosyl_l_lysinium_1",
           "stoichiometry": 1
         },
         {
@@ -710,21 +728,60 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:47668"
+        "rhea": "RHEA:58220"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47668"
+            "id": "RHEA:58220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "O-(ADP-D-ribosyl)-L-seryl-[protein] + H2O = ADP-D-ribose + L-seryl-[protein]",
+      "equation": "O-(ADP-D-ribosyl)-L-seryl-[protein] + H2O = ADP-D-ribose + L-seryl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "o_adp_d_ribosyl_l_serine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:58256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58256"
           }
         ]
       }

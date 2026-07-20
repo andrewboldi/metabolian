@@ -16,21 +16,15 @@ pathway l-4-hydroxyglutamate-to-glyoxylate "L-4-hydroxyglutamate… to glyoxylat
     glyoxylate
   }
 
-  branch from erythro_4_hydroxy_l_glutamate side left {
-    erythro_4_hydroxy_l_glutamate
-    <-> ec_1_2_1_88 [1.2.1.88] +nad +h2o +nadh +hplus
-    3r_5s_1_pyrroline_3_hydroxy_5_carboxylate
-  }
-
-  branch from glutamate side right {
+  branch from glutamate side left {
     glutamate
-    <-> ec_6_3_5_5 [6.3.5.5] +hco3 +glutamine +atp +h2o +adp +pi +hplus
-    carbamoyl_p
+    <-> ec_5_4_3_9 [5.4.3.9]
+    isoglutamate
   }
 
-  branch from glyoxylate side left {
+  branch from glyoxylate side right {
     glyoxylate
-    <-> ec_4_1_3_24 [4.1.3.24] +acetyl_coa
-    3s_3_carboxy_3_hydroxypropanoyl_coa
+    <-> ec_4_1_3_41 [4.1.3.41] +3r_3_hydroxy_d_aspartate
+    glycine
   }
 }

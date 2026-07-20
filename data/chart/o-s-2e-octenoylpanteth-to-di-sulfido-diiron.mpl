@@ -30,8 +30,8 @@ pathway o-s-2e-octenoylpanteth-to-di-sulfido-diiron "O-[S-(2E)-octenoylpantethâ€
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_51 [6.2.1.51] +19_4_hydroxyphenyl_nonadecanoate +atp +amp +ppi
-    o_s_19_4_hydroxyphenyl_nonadecanoyl_pantetheine
+    <-> ec_6_2_1_63 [6.2.1.63] +arginine +atp +amp +ppi
+    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
   }
 
   branch from o_s_dec_9_ynoylpantetheine_4_phosphoryl_serine_1 side left {
@@ -42,7 +42,7 @@ pathway o-s-2e-octenoylpanteth-to-di-sulfido-diiron "O-[S-(2E)-octenoylpantethâ€
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_42 [1.14.19.42] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    1_acyl_2_7z_hexadec_7_enoyl_glycerolipid
+    <-> . +fenuron +di_sulfido_diiron +o2 +hplus +formaldehyde +h2o
+    1_methyl_3_phenylurea
   }
 }

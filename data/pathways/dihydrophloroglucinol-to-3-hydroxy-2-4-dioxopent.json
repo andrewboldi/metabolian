@@ -198,30 +198,23 @@
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "2_4_6_trihydroxyacetophenone",
+      "name": "2',4',6'-trihydroxyacetophenone",
+      "short": "2',4',6'-trihydroxy…",
+      "formula": "C8H8O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:64344"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "2_4_diacetylphloroglucinol",
+      "name": "2,4-diacetylphloroglucinol",
+      "short": "2,4-diacetylphlorog…",
+      "formula": "C10H9O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:140662"
       }
     },
     {
@@ -262,13 +255,23 @@
       }
     },
     {
-      "id": "2r_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one",
-      "name": "(2R,4S)-2-methyl-2,4-dihydroxydihydrofuran-3-one",
-      "short": "(2R,4S)-2-methyl-2,…",
-      "formula": "C5H8O4",
+      "id": "l_homolanthionine_dizwitterion",
+      "name": "L-homolanthionine dizwitterion",
+      "short": "L-homolanthionine…",
+      "formula": "C8H16N2O4S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:71316"
+        "chebi": "CHEBI:178194"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
       }
     }
   ],
@@ -309,10 +312,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_253",
-      "name": "phloroglucinol synthase",
+      "id": "ec_2_3_1_272",
+      "name": "2-acetylphloroglucinol acetyltransferase",
       "ec": [
-        "2.3.1.253"
+        "2.3.1.272"
       ]
     },
     {
@@ -672,49 +675,45 @@
     },
     {
       "id": "r9",
-      "name": "phloroglucinol synthase",
-      "equation": "3 malonyl-CoA + 3 H(+) = 1,3,5-trihydroxybenzene + 3 CO2 + 3 CoA",
-      "ec": "2.3.1.253",
+      "name": "2-acetylphloroglucinol acetyltransferase",
+      "equation": "2 2-acetylphloroglucinol = 2,4-diacetylphloroglucinol + 1,3,5-trihydroxybenzene + H(+)",
+      "ec": "2.3.1.272",
       "substrates": [
         {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
+          "metabolite": "2_4_6_trihydroxyacetophenone",
+          "stoichiometry": 2
         }
       ],
       "products": [
+        {
+          "metabolite": "2_4_diacetylphloroglucinol",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "phloroglucinol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 3
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_253"
+          "enzyme": "ec_2_3_1_272"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:50380"
+        "rhea": "RHEA:48236"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50380"
+            "id": "RHEA:48236"
           }
         ]
       }
@@ -809,31 +808,39 @@
     },
     {
       "id": "r12",
-      "name": "(S)-4,5-dihydroxypentane-2,3-dione = (2R,4S)-2-methyl-2,4-dihydroxydihydrofuran-3-one",
-      "equation": "(S)-4,5-dihydroxypentane-2,3-dione = (2R,4S)-2-methyl-2,4-dihydroxydihydrofuran-3-one",
+      "name": "2 L-homocysteine = L-homolanthionine + hydrogen sulfide + H(+)",
+      "equation": "2 L-homocysteine = L-homolanthionine + hydrogen sulfide + H(+)",
       "substrates": [
         {
-          "metabolite": "s_4_5_dihydroxypentane_2_3_dione",
-          "stoichiometry": 1
+          "metabolite": "homocysteine",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "2r_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one",
+          "metabolite": "l_homolanthionine_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:35155"
+        "rhea": "RHEA:68652"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35155"
+            "id": "RHEA:68652"
           }
         ]
       }

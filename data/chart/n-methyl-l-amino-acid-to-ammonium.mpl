@@ -20,25 +20,37 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
 
   branch from l_amino_acid side left {
     l_amino_acid
-    <-> ec_4_3_2_9 [4.3.2.9] +l_glutamyl_l_amino_acid
-    5_oxo_l_prolinate
+    <-> . +glyoxylate +2_oxo_monocarboxylic_acid_anion
+    glycine
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_4_1_2_24 [4.1.2.24] +n_n_dimethylaniline_n_oxide
-    n_methylaniline
+    <-> ec_4_4_1_22 [4.4.1.22] +s_hydroxymethyl_glutathione
+    gsh
   }
 
   branch from 2_oxo_monocarboxylic_acid_anion side left {
     2_oxo_monocarboxylic_acid_anion
-    <-> ec_1_1_1_337 [1.1.1.337] +nad +nadh +hplus
-    2s_2_hydroxy_monocarboxylic_acid_anion
+    <-> ec_1_1_1_345 [1.1.1.345] +nad +nadh +hplus
+    2r_2_hydroxy_monocarboxylic_acid_anion
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_3_2_7 [2.3.2.7] +hydroxylamine +l_asparagine +hplus
-    l_aspartylhydroxamic_acid
+    <-> ec_3_5_1_4 [3.5.1.4] +n_acylammonia +h2o
+    monocarboxylic_acid_anion
+  }
+
+  branch from 2_oxosuccinamate side left {
+    2_oxosuccinamate
+    <-> . +d_asparagine +hydrogen_acceptor +h2o +nh3
+    hydrogen_donor
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_4_3_1_16 [4.3.1.16] +nh3
+    3s_3_hydroxy_l_aspartate
   }
 }

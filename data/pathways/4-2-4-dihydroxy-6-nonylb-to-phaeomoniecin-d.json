@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-2-4-dihydroxy-6-nonylb-to-phaeomoniecin-d",
+  "name": "4-(2,4-dihydroxy-6-nonylb… to phaeomoniecin D",
+  "category": "other",
+  "summary": "A 2-step route from 4-(2,4-dihydroxy-6-nonylbenzoyloxy)-2-hydroxy-6-nonylbenzoate to phaeomoniecin D(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82179"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232028"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_2_4_dihydroxy_6_nonylbenzoyloxy_2_hydroxy_6_no",
+      "name": "4-(2,4-dihydroxy-6-nonylbenzoyloxy)-2-hydroxy-6-nonylbenzoate",
+      "short": "4-(2,4-dihydroxy-6-…",
+      "formula": "C32H45O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232028"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "exophillate",
+      "name": "exophillate",
+      "formula": "C38H55O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232029"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "phaeomoniecin_d",
+      "name": "phaeomoniecin D",
+      "formula": "C44H65O17",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232032"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "exophillate aglycone + UDP-alpha-D-glucose = exophillate + UDP + H(+)",
+      "equation": "exophillate aglycone + UDP-alpha-D-glucose = exophillate + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_2_4_dihydroxy_6_nonylbenzoyloxy_2_hydroxy_6_no",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "exophillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "exophillate + UDP-alpha-D-galactose = phaeomoniecin D + UDP + H(+)",
+      "equation": "exophillate + UDP-alpha-D-galactose = phaeomoniecin D + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "exophillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phaeomoniecin_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82203"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82203"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,21 +4,15 @@
 # edit the generator, not this file.
 
 pathway s-4-hydroxy-2-oxopentan-to-acetaldehyde "(S)-4-hydroxy-2-oxopentan… to acetaldehyde" {
-  spacing 228
+  spacing 192
 
   spine at 0,0 {
     s_4_hydroxy_2_oxopentanoate
     <-> ec_4_1_3_39 [4.1.3.39] -pyruvate
     acetaldehyde
-    <-> .
+    <-> . +pyruvate +hplus -co2
     acetoin
-    <-> ec_2_2_1_4 [2.2.1.4] +r5p -acetaldehyde
-    1_deoxy_d_altro_heptulose_7_phosphate
-  }
-
-  branch from acetoin side left {
-    acetoin
-    <-> . +3_aminobutan_2_ol +nad +h2o +nadh +hplus
-    nh3
+    <-> ec_2_3_1_190 [2.3.1.190] +nad +coa -acetyl_coa -nadh -hplus
+    acetaldehyde
   }
 }

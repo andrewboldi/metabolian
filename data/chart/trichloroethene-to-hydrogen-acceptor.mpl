@@ -18,8 +18,8 @@ pathway trichloroethene-to-hydrogen-acceptor "trichloroethene to hydrogen accept
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_2_8_1_9 [2.8.1.9] +mo_vi_o2_oh_molybdopterin_cofactor +cysteine +hydrogen_donor +alanine +h2o
-    mo_vi_o_s_oh_molybdopterin_cofactor
+    <-> . +cannabigerolate +hydrogen_donor
+    cannabichromenate
   }
 
   branch from ethene side right {

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "tricaprin-to-3-oxolauroyl-coa",
   "name": "tricaprin to 3-oxolauroyl-CoA",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from tricaprin to 3-oxolauroyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -128,30 +128,21 @@
       }
     },
     {
-      "id": "decanal",
-      "name": "decanal",
-      "formula": "C10H20O",
+      "id": "n6_capryl_l_lysine",
+      "name": "N6-capryl-L-lysine",
+      "formula": "C16H30N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:31457"
+        "chebi": "CHEBI:143222"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:29969"
       }
     },
     {
@@ -183,6 +174,16 @@
       }
     },
     {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -193,12 +194,13 @@
       }
     },
     {
-      "id": "longifolene",
-      "name": "longifolene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "all_trans_hexaprenyl_diphosphate",
+      "name": "all-trans-hexaprenyl diphosphate",
+      "short": "all-trans-hexapreny…",
+      "formula": "C30H49O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:6530"
+        "chebi": "CHEBI:58179"
       }
     },
     {
@@ -210,21 +212,32 @@
       "xrefs": {
         "chebi": "CHEBI:74276"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_56",
-      "name": "gamma-humulene synthase",
+      "id": "ec_2_5_1_83",
+      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
       "ec": [
-        "4.2.3.56"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_58",
-      "name": "longifolene synthase",
-      "ec": [
-        "4.2.3.58"
+        "2.5.1.83"
       ]
     }
   ],
@@ -360,15 +373,11 @@
     },
     {
       "id": "r4",
-      "name": "decanal + NAD(+) + H2O = decanoate + NADH + 2 H(+)",
-      "equation": "decanal + NAD(+) + H2O = decanoate + NADH + 2 H(+)",
+      "name": "N(6)-decanoyl-L-lysyl-[protein] + H2O = decanoate + L-lysyl-[protein]",
+      "equation": "N(6)-decanoyl-L-lysyl-[protein] + H2O = decanoate + L-lysyl-[protein]",
       "substrates": [
         {
-          "metabolite": "decanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
+          "metabolite": "n6_capryl_l_lysine",
           "stoichiometry": 1
         },
         {
@@ -382,25 +391,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:44104"
+        "rhea": "RHEA:85167"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44104"
+            "id": "RHEA:85167"
           }
         ]
       }
@@ -446,10 +451,14 @@
     },
     {
       "id": "r6",
-      "name": "gamma-humulene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = longifolene + diphosphate",
-      "ec": "4.2.3.56",
+      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
+      "equation": "3 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-hexaprenyl diphosphate + 3 diphosphate",
+      "ec": "2.5.1.83",
       "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 3
+        },
         {
           "metabolite": "fpp",
           "stoichiometry": 1
@@ -457,30 +466,30 @@
       ],
       "products": [
         {
-          "metabolite": "longifolene",
+          "metabolite": "all_trans_hexaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_56"
+          "enzyme": "ec_2_5_1_83"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25464"
+        "rhea": "RHEA:27559"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25464"
+            "id": "RHEA:27559"
           }
         ]
       }

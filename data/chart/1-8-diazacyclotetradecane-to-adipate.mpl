@@ -30,8 +30,8 @@ pathway 1-8-diazacyclotetradecane-to-adipate "1,8-diazacyclotetradecane… to ad
 
   branch from glutamate side right {
     glutamate
-    <-> ec_1_4_1_14 [1.4.1.14] +nad +akg +nadh +hplus
-    glutamine
+    <-> ec_2_6_1_72 [2.6.1.72] +d_4_hydroxyphenylglycine +akg
+    4_hydroxyphenylglyoxylate
   }
 
   branch from glutarate side left {

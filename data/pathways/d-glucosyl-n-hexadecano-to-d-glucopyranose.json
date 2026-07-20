@@ -1,0 +1,161 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucosyl-n-hexadecano-to-d-glucopyranose",
+  "name": "β-D-glucosyl-N-hexadecano… to D-glucopyranose",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from β-D-glucosyl-N-hexadecanoylsphingosine to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58296"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:84716"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucosyl_n_hexadecanoylsphingosine",
+      "name": "β-D-glucosyl-N-hexadecanoylsphingosine",
+      "short": "β-D-glucosyl-N-hexa…",
+      "formula": "C40H77NO8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84716"
+      }
+    },
+    {
+      "id": "25_acyl_27_norcholesterol",
+      "name": "25-acyl-27-norcholesterol",
+      "short": "25-acyl-27-norchole…",
+      "formula": "C26H43OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142575"
+      }
+    },
+    {
+      "id": "25_acyl_27_norcholesteryl_d_glucoside",
+      "name": "25-acyl-27-norcholesteryl β-D-glucoside",
+      "short": "25-acyl-27-norchole…",
+      "formula": "C32H53O6R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142576"
+      }
+    },
+    {
+      "id": "n_hexadecanoylsphingosine",
+      "name": "N-hexadecanoylsphingosine",
+      "short": "N-hexadecanoylsphin…",
+      "formula": "C34H67NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72959"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-D-glucosyl-(1<->1')-N-hexadecanoylsphing-4-enine + 25-substituted-cholesterol = 25...",
+      "equation": "beta-D-glucosyl-(1<->1')-N-hexadecanoylsphing-4-enine + 25-substituted-cholesterol = 25-substituted-cholesteryl beta-D-glucoside + N-hexadecanoylsphing-4-enine",
+      "substrates": [
+        {
+          "metabolite": "d_glucosyl_n_hexadecanoylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "25_acyl_27_norcholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25_acyl_27_norcholesteryl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_hexadecanoylsphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58296"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "25-substituted-cholesteryl beta-D-glucoside + H2O = 25-substituted-cholesterol + D-glucose",
+      "equation": "25-substituted-cholesteryl beta-D-glucoside + H2O = 25-substituted-cholesterol + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "25_acyl_27_norcholesteryl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25_acyl_27_norcholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58312"
+          }
+        ]
+      }
+    }
+  ]
+}

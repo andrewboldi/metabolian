@@ -187,6 +187,16 @@
       }
     },
     {
+      "id": "long_chain_fatty_acyl_coa",
+      "name": "long-chain fatty acyl-CoA",
+      "short": "long-chain fatty…",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:83139"
+      }
+    },
+    {
       "id": "long_chain_fatty_acyl_amp",
       "name": "long-chain fatty acyl-AMP",
       "short": "long-chain fatty…",
@@ -197,22 +207,22 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "sativene",
-      "name": "(+)-sativene",
-      "formula": "C15H24",
+      "id": "hydropyrene",
+      "name": "hydropyrene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:231783"
+        "chebi": "CHEBI:142541"
       }
     }
   ],
@@ -246,10 +256,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_129",
-      "name": "(+)-sativene synthase",
+      "id": "ec_1_2_1_84",
+      "name": "alcohol-forming fatty acyl-CoA reductase (NADPH)",
       "ec": [
-        "4.2.3.129"
+        "1.2.1.84"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_201",
+      "name": "hydropyrene synthase",
+      "ec": [
+        "4.2.3.201"
       ]
     }
   ],
@@ -480,6 +497,59 @@
     },
     {
       "id": "r5",
+      "name": "alcohol-forming fatty acyl-CoA reductase (NADPH)",
+      "equation": "a long-chain fatty acyl-CoA + 2 NADPH + 2 H(+) = a long-chain primary fatty alcohol + 2 NADP(+) + CoA",
+      "ec": "1.2.1.84",
+      "substrates": [
+        {
+          "metabolite": "long_chain_fatty_acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "long_chain_primary_fatty_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:52716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "a long-chain fatty acyl-AMP + holo-[ACP] = a long-chain fatty acyl-[ACP] + AMP + H(+)",
       "equation": "a long-chain fatty acyl-AMP + holo-[ACP] = a long-chain fatty acyl-[ACP] + AMP + H(+)",
       "substrates": [
@@ -507,7 +577,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:63632"
       },
@@ -522,19 +592,19 @@
       }
     },
     {
-      "id": "r6",
-      "name": "(+)-sativene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-sativene + diphosphate",
-      "ec": "4.2.3.129",
+      "id": "r7",
+      "name": "hydropyrene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = hydropyrene + diphosphate",
+      "ec": "4.2.3.201",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sativene",
+          "metabolite": "hydropyrene",
           "stoichiometry": 1
         },
         {
@@ -544,20 +614,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_129"
+          "enzyme": "ec_4_2_3_201"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:33119"
+        "rhea": "RHEA:59224"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33119"
+            "id": "RHEA:59224"
           }
         ]
       }

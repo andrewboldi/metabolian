@@ -18,13 +18,7 @@ pathway guanidinoacetic-acid-to-s-adenosyl-l-homocystein "guanidinoacetic acid t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_265 [2.1.1.265] +tellurite +sam
-    methanetelluronate
-  }
-
-  branch from urea side right {
-    urea
-    <-> ec_3_5_3_17 [3.5.3.17] +taurocyamine +h2o
-    taurine
+    <-> . +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
   }
 }

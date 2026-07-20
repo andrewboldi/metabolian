@@ -1,0 +1,254 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-3-sn-phosphatidyl-sn-to-glycerol",
+  "name": "1-(3-sn-phosphatidyl)-sn-… to glycerol",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from 1-(3-sn-phosphatidyl)-sn-glycerol 3-phosphate(3−) to glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34079"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60110"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate",
+      "name": "1-(3-sn-phosphatidyl)-sn-glycerol 3-phosphate",
+      "short": "1-(3-sn-phosphatidy…",
+      "formula": "C8H11O13P2R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60110"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+      "name": "1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C8H12O10PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64716"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "cardiolipin",
+      "name": "cardiolipin",
+      "formula": "C13H16O17P2R4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62237"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29950"
+      }
+    },
+    {
+      "id": "s_1_2_diacyl_sn_glyceryl_l_cysteine",
+      "name": "S-1,2-diacyl-sn-glyceryl-L-cysteine",
+      "short": "S-1,2-diacyl-sn-gly…",
+      "formula": "C8H9NO5SR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140658"
+      }
+    },
+    {
+      "id": "sn_glycerol_1_phosphate",
+      "name": "sn-glycerol 1-phosphate",
+      "short": "sn-glycerol 1-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57685"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_145",
+      "name": "phosphatidylglycerol--prolipoprotein diacylglyceryl transferase",
+      "ec": [
+        "2.5.1.145"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycero-3'-phosphate) + ADP + H(+) = a 1,2-dia...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycero-3'-phosphate) + ADP + H(+) = a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) + ATP",
+      "substrates": [
+        {
+          "metabolite": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34079"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2 a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) = a cardiolipin + glycerol",
+      "equation": "2 a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) = a cardiolipin + glycerol",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cardiolipin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31451"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31451"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphatidylglycerol--prolipoprotein diacylglyceryl transferase",
+      "equation": "L-cysteinyl-[prolipoprotein] + a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) = an S-1,2-diacyl-sn-glyceryl-L-cysteinyl-[prolipoprotein] + sn-glycerol 1-phosphate + H(+)",
+      "ec": "2.5.1.145",
+      "substrates": [
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_2_diacyl_sn_glyceryl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_145"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:56712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56712"
+          }
+        ]
+      }
+    }
+  ]
+}

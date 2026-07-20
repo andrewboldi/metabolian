@@ -28,19 +28,31 @@ pathway n-benzylformamide-to-n2-n5-dibenzoyl-l-ornithi "N-benzylformamide to N2,
 
   branch from formate side right {
     formate
-    <-> ec_3_5_4_16 [3.5.4.16] +gtp +h2o +hplus
-    7_8_dihydroneopterin_3_triphosphate
+    <-> ec_4_1_99_5 [4.1.99.5] +long_chain_fatty_aldehyde +nadph +o2 +hplus +nadp +h2o
+    long_chain_alkane
   }
 
   branch from benzaldehyde side left {
     benzaldehyde
-    <-> ec_4_1_2_26 [4.1.2.26] +l_threo_3_phenylserine
-    glycine
+    <-> . +r_n_acetyl_s_benzyl_l_cysteine_sulfoxide +fmnh2 +o2 +fmn +h2o +hplus
+    n_acetyl_s_hydroxy_l_cysteine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_3_19 [1.4.3.19] +glycine +o2 +h2o +h2o2
-    glyoxylate
+    <-> ec_3_5_4_7 [3.5.4.7] +adp +h2o +hplus
+    idp
+  }
+
+  branch from benzoate side left {
+    benzoate
+    <-> . +atp +hplus +ppi
+    benzoyl_amp
+  }
+
+  branch from benzoyl_coa side right {
+    benzoyl_coa
+    <-> ec_1_14_13_58 [1.14.13.58] +nadph +o2 +hplus +nadp +h2o
+    3_hydroxybenzoyl_coa
   }
 }

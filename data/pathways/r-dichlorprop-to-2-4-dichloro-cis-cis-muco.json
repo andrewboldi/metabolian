@@ -137,49 +137,22 @@
       }
     },
     {
-      "id": "2_4_dichlorophenoxy_acetate",
-      "name": "(2,4-dichlorophenoxy)acetate",
-      "short": "(2,4-dichlorophenox…",
-      "formula": "C8H5Cl2O3",
-      "charge": -1,
+      "id": "decanoyl_coa",
+      "name": "decanoyl-CoA",
+      "formula": "C31H50N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:19351"
+        "chebi": "CHEBI:61430"
       }
     },
     {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
-      "charge": -1,
+      "id": "2_hydroxydecanoyl_coa",
+      "name": "2-hydroxydecanoyl-CoA",
+      "short": "2-hydroxydecanoyl-C…",
+      "formula": "C31H50N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:36655"
-      }
-    },
-    {
-      "id": "l_citramalate",
-      "name": "L-citramalate",
-      "formula": "C5H6O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30936"
-      }
-    },
-    {
-      "id": "succinyl_coa",
-      "name": "Succinyl-CoA",
-      "formula": "C25H35N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57292"
-      }
-    },
-    {
-      "id": "3s_citramalyl_coa",
-      "name": "(3S)-citramalyl-CoA",
-      "formula": "C26H37N7O20P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:58668"
+        "chebi": "CHEBI:138292"
       }
     },
     {
@@ -206,13 +179,6 @@
       "name": "2,4-dichlorophenol 6-monooxygenase",
       "ec": [
         "1.14.13.20"
-      ]
-    },
-    {
-      "id": "ec_2_8_3_22",
-      "name": "succinyl-CoA--L-malate CoA-transferase",
-      "ec": [
-        "2.8.3.22"
       ]
     },
     {
@@ -379,11 +345,11 @@
     },
     {
       "id": "r4",
-      "name": "(2,4-dichlorophenoxy)acetate + 2-oxoglutarate + O2 = 2,4-dichlorophenol + glyoxylate + ...",
-      "equation": "(2,4-dichlorophenoxy)acetate + 2-oxoglutarate + O2 = 2,4-dichlorophenol + glyoxylate + succinate + CO2",
+      "name": "decanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxydecanoyl-CoA + succinate + CO2",
+      "equation": "decanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxydecanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "2_4_dichlorophenoxy_acetate",
+          "metabolite": "decanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -397,11 +363,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_4_dichlorophenol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glyoxylate",
+          "metabolite": "2_hydroxydecanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -416,65 +378,20 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:48984"
+        "rhea": "RHEA:54604"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48984"
+            "id": "RHEA:54604"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "succinyl-CoA--L-malate CoA-transferase",
-      "equation": "(3S)-citramalate + succinyl-CoA = (3S)-citramalyl-CoA + succinate",
-      "ec": "2.8.3.22",
-      "substrates": [
-        {
-          "metabolite": "l_citramalate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_citramalyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_3_22"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:38287"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:38287"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "dichloromuconate cycloisomerase",
       "equation": "2-(2,4-dichloro-5-oxo-2,5-dihydrofuryl)acetate = (2E,4E)-2,4-dichloromuconate + H(+)",
       "ec": "5.5.1.11",
@@ -500,7 +417,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:17437"
       },

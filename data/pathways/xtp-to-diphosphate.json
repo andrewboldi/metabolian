@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "xtp-to-diphosphate",
   "name": "XTP to diphosphate",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from XTP(4−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -129,59 +129,49 @@
       }
     },
     {
-      "id": "xanthosine",
-      "name": "xanthosine",
-      "formula": "C10H12N4O6",
+      "id": "neomycin_c",
+      "name": "neomycin C",
+      "formula": "C23H52N6O13",
+      "charge": 6,
+      "xrefs": {
+        "chebi": "CHEBI:65077"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "6_oxoneomycin_c",
+      "name": "6'''-oxoneomycin C",
+      "formula": "C23H48N5O14",
+      "charge": 5,
+      "xrefs": {
+        "chebi": "CHEBI:65068"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "phellandrene",
+      "name": "β-phellandrene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18107"
-      }
-    },
-    {
-      "id": "gaba",
-      "name": "γ-Aminobutyrate (GABA)",
-      "short": "γ-Aminobutyrate…",
-      "formula": "C4H9NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:59888"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78442"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
-      "id": "3_l_tryptophyl_adenylyl_1_group",
-      "name": "3'-(L-tryptophyl)adenylyl(1−) group",
-      "short": "3'-(L-tryptophyl)ad…",
-      "formula": "C21H22N7O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78535"
+        "chebi": "CHEBI:48741"
       }
     }
   ],
@@ -201,17 +191,10 @@
       ]
     },
     {
-      "id": "ec_4_1_1_15",
-      "name": "glutamate decarboxylase",
+      "id": "ec_2_6_1_95",
+      "name": "neomycin C transaminase",
       "ec": [
-        "4.1.1.15"
-      ]
-    },
-    {
-      "id": "ec_6_1_1_2",
-      "name": "tryptophan--tRNA ligase",
-      "ec": [
-        "6.1.1.2"
+        "2.6.1.95"
       ]
     }
   ],
@@ -375,141 +358,80 @@
     },
     {
       "id": "r4",
-      "name": "XMP + H2O = xanthosine + phosphate",
-      "equation": "XMP + H2O = xanthosine + phosphate",
+      "name": "neomycin C transaminase",
+      "equation": "neomycin C + 2-oxoglutarate = 6'''-deamino-6'''-oxoneomycin C + L-glutamate",
+      "ec": "2.6.1.95",
       "substrates": [
         {
-          "metabolite": "xmp",
+          "metabolite": "neomycin_c",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "xanthosine",
+          "metabolite": "6_oxoneomycin_c",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "glutamate",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_95"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:28530"
+        "rhea": "RHEA:33959"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28530"
+            "id": "RHEA:33959"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "glutamate decarboxylase",
-      "equation": "L-glutamate + H(+) = 4-aminobutanoate + CO2",
-      "ec": "4.1.1.15",
+      "name": "(2E)-geranyl diphosphate = beta-phellandrene + diphosphate",
+      "equation": "(2E)-geranyl diphosphate = beta-phellandrene + diphosphate",
       "substrates": [
         {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "gpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "gaba",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_15"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:17785"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:17785"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "tryptophan--tRNA ligase",
-      "equation": "tRNA(Trp) + L-tryptophan + ATP = L-tryptophyl-tRNA(Trp) + AMP + diphosphate + H(+)",
-      "ec": "6.1.1.2",
-      "substrates": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_l_tryptophyl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "phellandrene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_1_1_2"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24080"
+        "rhea": "RHEA:25504"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24080"
+            "id": "RHEA:25504"
           }
         ]
       }

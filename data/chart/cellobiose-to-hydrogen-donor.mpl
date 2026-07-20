@@ -22,8 +22,8 @@ pathway cellobiose-to-hydrogen-donor "cellobiose to hydrogen donor" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_1_99_27 [1.1.99.27] +r_pantolactone +hydrogen_acceptor
-    2_dehydropantolactone
+    <-> ec_1_3_99_30 [1.3.99.30] +15_cis_phytoene +hydrogen_acceptor
+    all_trans_3_4_didehydrolycopene
   }
 
   branch from d_gluconate side right {
@@ -34,7 +34,7 @@ pathway cellobiose-to-hydrogen-donor "cellobiose to hydrogen donor" {
 
   branch from g1p side left {
     g1p
-    <-> ec_2_7_7_69 [2.7.7.69] +pi +gdp +hplus
+    <-> . +h2o +gmp +hplus
     gdp_d_glucose
   }
 }

@@ -22,8 +22,8 @@ pathway propene-to-propanoyl-phosphate "propene to propanoyl phosphate" {
 
   branch from propanal side left {
     propanal
-    <-> ec_4_1_3_43 [4.1.3.43] +pyruvate
-    s_4_hydroxy_2_oxohexanoate
+    <-> . +nadp +nadph +hplus
+    propan_1_ol
   }
 
   branch from propionate side right {

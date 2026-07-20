@@ -22,8 +22,8 @@ pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_22 [4.2.3.22] +fpp +h2o
-    1e_4s_5e_7r_germacra_1_10_5_dien_11_ol
+    <-> ec_4_2_3_117 [4.2.3.117] +gpp
+    camphene
   }
 
   branch from validoxylamine_a side right {
@@ -34,7 +34,7 @@ pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
 
   branch from succinate side left {
     succinate
-    <-> . +pentalenolactone_e +akg +o2 +co2
-    pentalenolactone_f
+    <-> ec_1_14_11_n4 [1.14.11.n4] +l_histidine +akg +o2 +co2
+    3s_3_hydroxy_l_histidine
   }
 }

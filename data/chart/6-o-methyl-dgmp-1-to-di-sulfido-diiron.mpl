@@ -24,21 +24,15 @@ pathway 6-o-methyl-dgmp-1-to-di-sulfido-diiron "6-O-methyl dGMP(1−) to di-μ-s
     sah
   }
 
-  branch from 2_deoxyguanosine_5_monophosphate_1 side right {
-    2_deoxyguanosine_5_monophosphate_1
-    <-> . +1_n2_etheno_2_deoxyguanosine_5_monophosphate_1 +akg +o2 +h2o +succinate +co2
-    glyoxal
-  }
-
-  branch from lactate side left {
+  branch from lactate side right {
     lactate
     <-> ec_3_5_1_124 [3.5.1.124] +h2o +l_cysteine +hplus
     s_1_hydroxy_2_oxopropyl_l_cysteine
   }
 
-  branch from di_sulfido_diiron side right {
+  branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_4 [1.14.15.4] +steroid +di_sulfido_diiron +o2 +hplus +h2o
-    11_hydroxy_steroid
+    <-> ec_1_12_1_4 [1.12.1.4] +nad +di_sulfido_diiron +nadh +hplus
+    h2
   }
 }

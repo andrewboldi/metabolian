@@ -20,7 +20,7 @@ pathway udp-2-acetamido-2-deoxy-to-udp-2-3-diacetamido-2 "UDP-2-acetamido-2-deox
 
   branch from akg side left {
     akg
-    <-> ec_1_1_1_42 [1.1.1.42] +nadp +co2 +nadph
-    d_threo_isocitrate
+    <-> . +fad +hplus +fadh2
+    r_2_hydroxyglutarate
   }
 }

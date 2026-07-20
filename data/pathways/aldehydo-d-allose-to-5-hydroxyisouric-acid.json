@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid",
   "name": "aldehydo-D-allose to 5-hydroxyisouric acid",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 8-step route from aldehydo-D-allose to 5-hydroxyisouric acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -243,40 +243,22 @@
       }
     },
     {
-      "id": "tyrosine",
-      "name": "L-Tyrosine",
-      "formula": "C9H11NO3",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "pentalenene",
+      "name": "pentalenene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58315"
-      }
-    },
-    {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32682"
-      }
-    },
-    {
-      "id": "l_tyrosiniumyl_l_arginine",
-      "name": "L-tyrosiniumyl-L-arginine",
-      "short": "L-tyrosiniumyl-L-ar…",
-      "formula": "C15H24N5O4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:58184"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:17251"
       }
     },
     {
@@ -363,10 +345,10 @@
       ]
     },
     {
-      "id": "ec_6_3_2_24",
-      "name": "tyrosine--arginine ligase",
+      "id": "ec_4_2_3_7",
+      "name": "pentalenene synthase",
       "ec": [
-        "6.3.2.24"
+        "4.2.3.7"
       ]
     },
     {
@@ -781,57 +763,41 @@
     },
     {
       "id": "r10",
-      "name": "tyrosine--arginine ligase",
-      "equation": "L-tyrosine + L-arginine + ATP = L-tyrosyl-L-arginine + AMP + diphosphate + H(+)",
-      "ec": "6.3.2.24",
+      "name": "pentalenene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = pentalenene + diphosphate",
+      "ec": "4.2.3.7",
       "substrates": [
         {
-          "metabolite": "tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_tyrosiniumyl_l_arginine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "pentalenene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_2_24"
+          "enzyme": "ec_4_2_3_7"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:15345"
+        "rhea": "RHEA:18081"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15345"
+            "id": "RHEA:18081"
           }
         ]
       }

@@ -158,43 +158,49 @@
       }
     },
     {
-      "id": "n_n_diacetylchitobiose",
-      "name": "N,N'-diacetylchitobiose",
-      "short": "N,N'-diacetylchitob…",
-      "formula": "C16H28N2O11",
-      "charge": 0,
+      "id": "2_hydroxyglutarate",
+      "name": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:28681"
+        "chebi": "CHEBI:11596"
       }
     },
     {
-      "id": "n_acetyl_d_glucosaminyl_1_4_d_glucosaminium",
-      "name": "N-acetyl-β-D-glucosaminyl-(1→4)-D-glucosaminium",
-      "short": "N-acetyl-β-D-glucos…",
-      "formula": "C14H27N2O10",
-      "charge": 1,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:59910"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "3_hydroxycyclohexanone",
-      "name": "3-hydroxycyclohexanone",
-      "short": "3-hydroxycyclohexan…",
-      "formula": "C6H10O2",
-      "charge": 0,
+      "id": "2_hydroxyglutaryl_coa",
+      "name": "2-hydroxyglutaryl-CoA",
+      "short": "2-hydroxyglutaryl-C…",
+      "formula": "C26H37N7O20P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:17611"
+        "chebi": "CHEBI:78628"
       }
     },
     {
-      "id": "cyclohexane_1_3_dione",
-      "name": "cyclohexane-1,3-dione",
-      "short": "cyclohexane-1,3-dio…",
-      "formula": "C6H8O2",
-      "charge": 0,
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17766"
+        "chebi": "CHEBI:30245"
+      }
+    },
+    {
+      "id": "crepenynate",
+      "name": "crepenynate",
+      "formula": "C18H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:14030"
       }
     }
   ],
@@ -225,20 +231,6 @@
       "name": "C-19 steroid 1alpha-hydroxylase",
       "ec": [
         "1.14.15.19"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_105",
-      "name": "chitin disaccharide deacetylase",
-      "ec": [
-        "3.5.1.105"
-      ]
-    },
-    {
-      "id": "ec_1_1_99_26",
-      "name": "3-hydroxycyclohexanone dehydrogenase",
-      "ec": [
-        "1.1.99.26"
       ]
     }
   ],
@@ -461,22 +453,21 @@
     },
     {
       "id": "r5",
-      "name": "chitin disaccharide deacetylase",
-      "equation": "N,N'-diacetylchitobiose + H2O = N-acetyl-beta-D-glucosaminyl-(1->4)-D-glucosamine + acetate",
-      "ec": "3.5.1.105",
+      "name": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
+      "equation": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
       "substrates": [
         {
-          "metabolite": "n_n_diacetylchitobiose",
+          "metabolite": "2_hydroxyglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_d_glucosaminyl_1_4_d_glucosaminium",
+          "metabolite": "2_hydroxyglutaryl_coa",
           "stoichiometry": 1
         },
         {
@@ -484,67 +475,64 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_105"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27469"
+        "rhea": "RHEA:42076"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27469"
+            "id": "RHEA:42076"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "3-hydroxycyclohexanone dehydrogenase",
-      "equation": "3-hydroxycyclohexanone + A = cyclohexane-1,3-dione + AH2",
-      "ec": "1.1.99.26",
+      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = crepenynate + A + 2 H2O",
+      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = crepenynate + A + 2 H2O",
       "substrates": [
         {
-          "metabolite": "3_hydroxycyclohexanone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cyclohexane_1_3_dione",
+          "metabolite": "linoleate",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_1_99_26"
+          "metabolite": "crepenynate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:15905"
+        "rhea": "RHEA:23456"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15905"
+            "id": "RHEA:23456"
           }
         ]
       }

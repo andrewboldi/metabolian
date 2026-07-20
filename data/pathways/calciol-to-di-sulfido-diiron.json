@@ -101,40 +101,51 @@
       }
     },
     {
-      "id": "calcitriol",
-      "name": "calcitriol",
-      "formula": "C27H44O3",
-      "charge": 0,
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:17823"
+        "chebi": "CHEBI:58052"
       }
     },
     {
-      "id": "epothilone_d",
-      "name": "epothilone D",
-      "formula": "C27H41NO5S",
-      "charge": 0,
+      "id": "calcidiol_3_o_d_glucuronate",
+      "name": "calcidiol 3-O-(β-D-glucuronate)",
+      "short": "calcidiol…",
+      "formula": "C33H51O8",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29579"
+        "chebi": "CHEBI:139278"
       }
     },
     {
-      "id": "epothilone_b",
-      "name": "epothilone B",
-      "formula": "C27H41NO6S",
-      "charge": 0,
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:31550"
+        "chebi": "CHEBI:58223"
       }
     },
     {
-      "id": "25_hydroxy_24_oxocalciol",
-      "name": "25-hydroxy-24-oxocalciol",
-      "short": "25-hydroxy-24-oxoca…",
-      "formula": "C27H42O3",
+      "id": "11_deoxycorticosterone",
+      "name": "11-deoxycorticosterone",
+      "short": "11-deoxycorticoster…",
+      "formula": "C21H30O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:47805"
+        "chebi": "CHEBI:16973"
+      }
+    },
+    {
+      "id": "19_hydroxy_11_deoxycorticosterone",
+      "name": "19-hydroxy-11-deoxycorticosterone",
+      "short": "19-hydroxy-11-deoxy…",
+      "formula": "C21H30O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195167"
       }
     }
   ],
@@ -151,13 +162,6 @@
       "name": "calcidiol 1-monooxygenase",
       "ec": [
         "1.14.15.18"
-      ]
-    },
-    {
-      "id": "ec_1_14_15_22",
-      "name": "vitamin D 1,25-hydroxylase",
-      "ec": [
-        "1.14.15.22"
       ]
     }
   ],
@@ -329,68 +333,54 @@
     },
     {
       "id": "r4",
-      "name": "vitamin D 1,25-hydroxylase",
-      "equation": "calcidiol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = calcitriol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "ec": "1.14.15.22",
+      "name": "calcidiol + UDP-alpha-D-glucuronate = calcidiol 3-O-(beta-D-glucuronide) + UDP + H(+)",
+      "equation": "calcidiol + UDP-alpha-D-glucuronate = calcidiol 3-O-(beta-D-glucuronide) + UDP + H(+)",
       "substrates": [
         {
           "metabolite": "calcidiol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "udp_d_glucuronate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "calcitriol",
+          "metabolite": "calcidiol_3_o_d_glucuronate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "metabolite": "udp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hplus",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_15_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50700"
+        "rhea": "RHEA:55844"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50700"
+            "id": "RHEA:55844"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "epothilone D + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = epothilone B + 2 oxidize...",
-      "equation": "epothilone D + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = epothilone B + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "name": "21-hydroxyprogesterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 19-hydroxy-11-deoxycor...",
+      "equation": "21-hydroxyprogesterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 19-hydroxy-11-deoxycorticosterone + 2 oxidized [adrenodoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "epothilone_d",
+          "metabolite": "11_deoxycorticosterone",
           "stoichiometry": 1
         },
         {
@@ -408,7 +398,7 @@
       ],
       "products": [
         {
-          "metabolite": "epothilone_b",
+          "metabolite": "19_hydroxy_11_deoxycorticosterone",
           "stoichiometry": 1
         },
         {
@@ -423,65 +413,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:47808"
+        "rhea": "RHEA:76155"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47808"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "secalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 25-hydroxy-24-oxocalciol + 2 oxi...",
-      "equation": "secalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 25-hydroxy-24-oxocalciol + 2 oxidized [adrenodoxin] + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "24r_24_25_dihydroxycalciol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "25_hydroxy_24_oxocalciol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:49196"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:49196"
+            "id": "RHEA:76155"
           }
         ]
       }

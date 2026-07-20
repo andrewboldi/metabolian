@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-deoxysphinganine-to-n-acyl-1-deoxysphingosine",
+  "name": "1-deoxysphinganine to N-acyl-1-deoxysphingosine",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from 1-deoxysphinganine(1+) to N-acyl-1-deoxysphingosine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:76675"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:67109"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_deoxysphinganine",
+      "name": "1-deoxysphinganine",
+      "formula": "C18H40NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:67109"
+      }
+    },
+    {
+      "id": "fatty_acyl_coa",
+      "name": "fatty acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77636"
+      }
+    },
+    {
+      "id": "n_acyl_1_deoxysphinganine",
+      "name": "N-acyl-1-deoxysphinganine",
+      "short": "N-acyl-1-deoxysphin…",
+      "formula": "C19H38NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67111"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_acyl_1_deoxysphingosine",
+      "name": "N-acyl-1-deoxysphingosine",
+      "short": "N-acyl-1-deoxysphin…",
+      "formula": "C19H36NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195246"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-deoxysphinganine + a fatty acyl-CoA = N-acyl-1-deoxysphinganine + CoA + H(+)",
+      "equation": "1-deoxysphinganine + a fatty acyl-CoA = N-acyl-1-deoxysphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_deoxysphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_1_deoxysphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:76675"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76675"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acyl-1-deoxysphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = N-acyl-1-deoxysphi...",
+      "equation": "N-acyl-1-deoxysphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = N-acyl-1-deoxysphing-14Z-enine + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_1_deoxysphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_1_deoxysphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:76487"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76487"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,7 +18,7 @@ pathway l-trihomomethionine-to-e-6-methylsulfanyl-hex "L-trihomomethionine to (E
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_38 [1.14.14.38] +valine +fmnh2 +o2 +co2 +h2o +hplus
-    e_2_methylpropanal_oxime
+    <-> ec_1_14_14_107 [1.14.14.107] +ent_kaur_16_en_19_oate +fmnh2 +o2 +h2o +hplus
+    gibberellin_a12
   }
 }

@@ -8,17 +8,9 @@ pathway cyclobis-1-6-nigerosyl-to-d-glucopyranose "cyclobis-(1→6)-α-nigerosyl
 
   spine at 0,0 {
     cyclobis_1_6_nigerosyl
-    <-> . +h2o
-    d_glcp_1_6_d_glcp_1_3_d_glcp_1_6_d_glcp
-    <-> . +h2o
+    <-> ec_3_2_1_204 [3.2.1.204] +h2o
     isomaltose
     <-> ec_3_2_1_205 [3.2.1.205] +h2o -glucose
     d_glucose
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +6_o_methyldeacetylisoipecoside +h2o
-    6_o_methyldeacetylisoipecoside_aglycone
   }
 }

@@ -146,12 +146,22 @@
       }
     },
     {
-      "id": "pinene",
-      "name": "(+)-β-pinene",
-      "formula": "C10H16",
+      "id": "1r_2r_3r_prephytoene_diphosphate",
+      "name": "(1R,2R,3R)-prephytoene diphosphate",
+      "short": "(1R,2R,3R)-prephyto…",
+      "formula": "C40H65O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58011"
+      }
+    },
+    {
+      "id": "lycopaoctaene",
+      "name": "lycopaoctaene",
+      "formula": "C40H66",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50026"
+        "chebi": "CHEBI:142538"
       }
     },
     {
@@ -201,13 +211,6 @@
       "name": "farnesol kinase",
       "ec": [
         "2.7.1.216"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_122",
-      "name": "(+)-beta-pinene synthase",
-      "ec": [
-        "4.2.3.122"
       ]
     }
   ],
@@ -410,41 +413,47 @@
     },
     {
       "id": "r5",
-      "name": "(+)-beta-pinene synthase",
-      "equation": "(2E)-geranyl diphosphate = (1R,5R)-beta-pinene + diphosphate",
-      "ec": "4.2.3.122",
+      "name": "(1R,2R,3R)-prephytoene diphosphate + NADPH + H(+) = all-trans-lycopaoctaene + diphospha...",
+      "equation": "(1R,2R,3R)-prephytoene diphosphate + NADPH + H(+) = all-trans-lycopaoctaene + diphosphate + NADP(+)",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "1r_2r_3r_prephytoene_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pinene",
+          "metabolite": "lycopaoctaene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_4_2_3_122"
+          "metabolite": "nadp",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:32579"
+        "rhea": "RHEA:58180"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32579"
+            "id": "RHEA:58180"
           }
         ]
       }

@@ -26,8 +26,8 @@ pathway phylloquinone-to-adp-d-ribose "phylloquinone to ADP-D-ribose" {
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinoline +h2o +hydrogen_donor
-    quinolin_2_1h_one
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_5_ol +h2o +hydrogen_donor
+    5_hydroxyquinolin_2_1h_one
   }
 
   branch from l_glutamate side left {
@@ -38,7 +38,13 @@ pathway phylloquinone-to-adp-d-ribose "phylloquinone to ADP-D-ribose" {
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> ec_2_4_2_31 [2.4.2.31] +l_argininium +nad +hplus
-    n_adp_d_ribosyl_l_argininium_1
+    <-> . +nadp +h2o +hplus
+    adp_d_ribose_2_phosphate
+  }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> . +h2o
+    cyclic_adp_d_ribose
   }
 }

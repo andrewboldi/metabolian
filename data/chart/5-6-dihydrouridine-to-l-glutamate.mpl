@@ -36,8 +36,8 @@ pathway 5-6-dihydrouridine-to-l-glutamate "5,6-dihydrouridine… to L-glutamate"
 
   branch from uracil side right {
     uracil
-    <-> ec_1_14_11_10 [1.14.11.10] +2_deoxyuridine +akg +o2 +succinate +co2
-    2_deoxy_d_ribono_1_4_lactone
+    <-> ec_2_4_2_2 [2.4.2.2] +2_deoxyuridine +pi
+    2_deoxy_d_ribose_1_phosphate
   }
 
   branch from acetate side left {
@@ -48,7 +48,13 @@ pathway 5-6-dihydrouridine-to-l-glutamate "5,6-dihydrouridine… to L-glutamate"
 
   branch from glutamate side right {
     glutamate
-    <-> . +4_hydroxy_l_glutamate +akg
-    4_hydroxy_2_oxoglutarate
+    <-> ec_2_6_1_17 [2.6.1.17] +n_3_carboxylatopropionyl_ll_2_6_diaminopimelate +akg
+    l_2_succinylamino_6_oxoheptanedioate
+  }
+
+  branch from 5_aminopentanoic_acid side left {
+    5_aminopentanoic_acid
+    <-> . +nad +h2o +nadh +hplus
+    5_ammoniopentanal
   }
 }

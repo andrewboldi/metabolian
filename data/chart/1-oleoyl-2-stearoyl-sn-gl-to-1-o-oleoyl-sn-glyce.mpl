@@ -24,19 +24,13 @@ pathway 1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce "1-oleoyl-2-stearoyl-sn
 
   branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side right {
     1_o_oleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    palmitate
-  }
-
-  branch from 1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine side left {
-    1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine
     <-> . +h2o +oleate +hplus
-    2_palmitoyl_sn_glycero_3_phosphocholine
+    choline_alfoscerate
   }
 
-  branch from 1_o_palmitoyl_n_acetylsphingosine side right {
+  branch from 1_o_palmitoyl_n_acetylsphingosine side left {
     1_o_palmitoyl_n_acetylsphingosine
-    <-> . +n_acetylsphingosine +2_linoleoyl_sn_glycero_3_phosphocholine
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi +n_acetylsphingosine
+    2_azelaoyl_sn_glycero_3_phosphocholine
   }
 }

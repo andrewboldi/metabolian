@@ -20,21 +20,15 @@ pathway lipid-a-to-cytidine-5-monophosphate "lipid A to cytidine 5'-monophosphat
     4_o_di_2r_1_glycerylphosphonato_n_acetyl_d_manno
   }
 
-  branch from ditrans_polycis_undecaprenyl_phosphate side left {
-    ditrans_polycis_undecaprenyl_phosphate
-    <-> ec_2_7_4_29 [2.7.4.29] +an_kdo_2_4_kdo_2_6_lipid_a +ditrans_polycis_undecaprenyl_diphosphate
-    an_d_kdo_2_4_d_kdo_2_6_lipid_a_1_diphosphate
-  }
-
-  branch from n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly side right {
+  branch from n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly side left {
     n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly
     <-> ec_2_4_1_188 [2.4.1.188] +udp_d_glucose +udp +hplus
     d_glucosyl_1_4_n_acetyl_d_glucosaminyl_undecapr
   }
 
-  branch from cytidine_5_monophosphate side left {
+  branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_3_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    an_kdo_2_8_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
   }
 }

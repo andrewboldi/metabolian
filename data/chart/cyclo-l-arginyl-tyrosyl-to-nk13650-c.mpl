@@ -24,25 +24,31 @@ pathway cyclo-l-arginyl-tyrosyl-to-nk13650-c "cyclo(L-arginyl-tyrosyl)(… to NK
 
   branch from fmn side left {
     fmn
-    <-> . +22r_22_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    7_22r_dihydroxycholesterol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    14_15_eet
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +5_s_hete +hydrogen_donor +o2 +h2o
-    5_s_11_r_dihete
+    <-> . +uridine_5_monophosphate_1 +hydrogen_donor +o2 +h2o
+    5_hydroxyuridine_5_phosphate_1
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +pyrrolizixenacetamide +h2o +hplus
-    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one
-  }
-
-  branch from nk13650_b side right {
+  branch from nk13650_b side left {
     nk13650_b
     <-> . +aspartate +atp +adp +pi +hplus
     nk13650_a
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_149 [4.2.3.149] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    r_nephthenol
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_220 [2.1.1.220] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 }

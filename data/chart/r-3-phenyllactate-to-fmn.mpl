@@ -22,15 +22,9 @@ pathway r-3-phenyllactate-to-fmn "(R)-3-phenyllactate to FMN" {
     2r_3r_3_hydroxylittorine
   }
 
-  branch from glucose side right {
-    glucose
-    <-> . +o2 +h2o2
-    d_glucitol
-  }
-
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> . +dehydroepiandrosterone_sulfate +fmnh2 +o2 +h2o +hplus
-    16_hydroxydehydroepiandrosterone_3_sulfate
+    <-> . +e_indol_3_ylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
+    1_aci_nitro_2_1h_indol_3_yl_ethane
   }
 }

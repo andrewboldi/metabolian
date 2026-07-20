@@ -8,19 +8,9 @@ pathway carotene-to-hydrogen-acceptor "β-carotene to hydrogen acceptor" {
 
   spine at 0,0 {
     carotene
-    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
-    4_hydroxy_all_trans_carotene
-    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
-    4_4_dihydroxy_all_trans_carotene
-    <-> . -h2o
-    echinenone
     <-> ec_1_14_99_63 [1.14.99.63] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
-    canthaxanthin
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_17_99_9 [1.17.99.9] +ferroheme_o +h2o +hydrogen_donor
-    ferroheme_a
+    echinenone
+    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    4_hydroxyechinenone
   }
 }

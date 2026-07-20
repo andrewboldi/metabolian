@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "25r-3-7-12-trihydrox-to-24e-3-7-12-trihydrox",
+  "name": "(25R)-3α,7α,12α-trihydrox… to (24E)-3α,7α,12α-trihydrox…",
+  "category": "redox-detox",
+  "summary": "A 2-step route from (25R)-3α,7α,12α-trihydroxy-5β-cholestan-26-oyl-CoA(4−) to (24E)-3α,7α,12α-trihydroxy-5β-cholest-24-en-26-oyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40455"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58677"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "thca_coa_25r",
+      "name": "(25R)-3alpha,7alpha,12alpha-Trihydroxy-5beta-cholestanoyl-CoA",
+      "short": "3alpha,7alpha,12alp…",
+      "formula": "C48H76N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58677"
+      }
+    },
+    {
+      "id": "25s_3_7_12_trihydroxy_5_cholestan_26_oyl_coa",
+      "name": "(25S)-3α,7α,12α-trihydroxy-5β-cholestan-26-oyl-CoA",
+      "short": "3α,7α,12α-trihydrox…",
+      "formula": "C48H76N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77251"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co",
+      "name": "(24E)-3α,7α,12α-trihydroxy-5β-cholest-24-en-26-oyl-CoA",
+      "short": "3α,7α,12α-trihydrox…",
+      "formula": "C48H74N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:59879"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oyl-CoA = (25S)-3alpha,7alpha...",
+      "equation": "(25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oyl-CoA = (25S)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "thca_coa_25r",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25s_3_7_12_trihydroxy_5_cholestan_26_oyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(25S)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oyl-CoA + O2 = (24E)-3alpha,7...",
+      "equation": "(25S)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oyl-CoA + O2 = (24E)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholest-24-en-26-oyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "25s_3_7_12_trihydroxy_5_cholestan_26_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46728"
+          }
+        ]
+      }
+    }
+  ]
+}

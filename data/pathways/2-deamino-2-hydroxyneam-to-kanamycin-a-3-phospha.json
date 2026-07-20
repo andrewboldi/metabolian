@@ -1,0 +1,339 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-deamino-2-hydroxyneam-to-kanamycin-a-3-phospha",
+  "name": "2'-deamino-2'-hydroxyneam… to kanamycin A 3'-phosphate",
+  "category": "other",
+  "summary": "A 2-step route from 2'-deamino-2'-hydroxyneamine(3+) to kanamycin A 3'-phosphate(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35795"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:67213"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_deamino_2_hydroxyneamine",
+      "name": "2'-deamino-2'-hydroxyneamine",
+      "short": "2'-deamino-2'-hydro…",
+      "formula": "C12H28N3O7",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:67213"
+      }
+    },
+    {
+      "id": "udp_d_kanosamine",
+      "name": "UDP-α-D-kanosamine",
+      "formula": "C15H24N3O16P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71964"
+      }
+    },
+    {
+      "id": "kanamycin_a",
+      "name": "kanamycin A",
+      "formula": "C18H40N4O11",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:58214"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "kanamycin_a_3_phosphate",
+      "name": "kanamycin A 3'-phosphate",
+      "short": "kanamycin A 3'-P",
+      "formula": "C18H39N4O14P",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:57909"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "carbamoyl_p",
+      "name": "Carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58228"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "6_o_carbamoylkanamycin_a",
+      "name": "6''-O-carbamoylkanamycin A",
+      "short": "6''-O-carbamoylkana…",
+      "formula": "C19H41N5O12",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:73675"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_301",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "ec": [
+        "2.4.1.301"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_95",
+      "name": "kanamycin kinase",
+      "ec": [
+        "2.7.1.95"
+      ]
+    },
+    {
+      "id": "ec_6_1_2_2",
+      "name": "nebramycin 5' synthase",
+      "ec": [
+        "6.1.2.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "equation": "2'-deamino-2'-hydroxyneamine + UDP-alpha-D-kanosamine = kanamycin A + UDP + H(+)",
+      "ec": "2.4.1.301",
+      "substrates": [
+        {
+          "metabolite": "2_deamino_2_hydroxyneamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_kanosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kanamycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_301"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "kanamycin kinase",
+      "equation": "kanamycin A + ATP = kanamycin 3'-phosphate + ADP + H(+)",
+      "ec": "2.7.1.95",
+      "substrates": [
+        {
+          "metabolite": "kanamycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kanamycin_a_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_95"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nebramycin 5' synthase",
+      "equation": "kanamycin A + carbamoyl phosphate + ATP + H2O = 6''-O-carbamoylkanamycin A + AMP + phosphate + diphosphate + H(+)",
+      "ec": "6.1.2.2",
+      "substrates": [
+        {
+          "metabolite": "kanamycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamoyl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_carbamoylkanamycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42100"
+          }
+        ]
+      }
+    }
+  ]
+}

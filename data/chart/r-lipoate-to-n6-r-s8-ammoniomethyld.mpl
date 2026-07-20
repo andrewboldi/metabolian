@@ -18,8 +18,8 @@ pathway r-lipoate-to-n6-r-s8-ammoniomethyld "(R)-lipoate to N6-[(R)-S8-ammoniome
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    13r_edaxadiene
+    <-> . +14_15_eet +atp +coa +amp
+    14_15_epoxy_5z_8z_11z_icosatrienoyl_coa
   }
 
   branch from n6_r_lipoyl_l_lysine side right {

@@ -20,27 +20,27 @@ pathway 3-methyldeoxycytidine-to-succinate "3-methyldeoxycytidine… to succinat
     5_carboxy_dcmp_2
   }
 
-  branch from 2_deoxycytidine_5_monophosphate_1 side left {
-    2_deoxycytidine_5_monophosphate_1
-    <-> ec_3_5_4_38 [3.5.4.38] +h2o +hplus +nh3
-    dump
-  }
-
-  branch from formaldehyde side right {
+  branch from formaldehyde side left {
     formaldehyde
-    <-> . +5_methyltriphosphate_guanosine_ribonucleotide_4 +akg +o2 +succinate +co2 +hplus
-    5_end_gtp_ribonucleotide_5
+    <-> ec_1_14_11_69 [1.14.11.69] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
   }
 
-  branch from succinate side left {
+  branch from succinate side right {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_histidine +akg +o2 +co2
-    3s_3_hydroxy_l_histidine
+    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +formaldehyde +co2
+    n6_n6_dimethyl_l_lysine_1
   }
 
-  branch from 5_methyl_dcmp_1 side right {
+  branch from 5_methyl_dcmp_1 side left {
     5_methyl_dcmp_1
     <-> . +ascorbate +o2 +glyoxylate +co2
     8s_9s_5_glyceryldeoxycytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 }

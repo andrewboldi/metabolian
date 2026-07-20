@@ -16,15 +16,9 @@ pathway ent-cassa-12-15-diene-to-fmn "ent-cassa-12,15-diene to FMN" {
     ent_3_hydroxycassa_12_15_dien_2_one
   }
 
-  branch from ent_cassa_12_15_dien_2_ol side left {
-    ent_cassa_12_15_dien_2_ol
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    ent_cassa_12_15_dien_2_3_diol
-  }
-
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    12_hete
+    <-> . +eriodictyol +fmnh2 +o2 +h2o +hplus
+    2s_dihydrotricetin
   }
 }

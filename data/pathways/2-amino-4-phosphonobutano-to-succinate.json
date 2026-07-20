@@ -206,12 +206,12 @@
       }
     },
     {
-      "id": "l_selenomethionine",
-      "name": "L-selenomethionine",
-      "formula": "C5H11NO2Se",
-      "charge": 0,
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:62621"
+        "chebi": "CHEBI:37565"
       }
     },
     {
@@ -224,73 +224,71 @@
       }
     },
     {
-      "id": "l_adenosylselenomethionine",
-      "name": "L-adenosylselenomethionine",
-      "short": "L-adenosylselenomet…",
-      "formula": "C15H23N6O5Se",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:62227"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
+      "id": "2_3_cgamp",
+      "name": "2'-3'-cGAMP",
+      "formula": "C20H22N10O13P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:143093"
       }
     },
     {
-      "id": "l_serine",
-      "name": "L-serine",
-      "formula": "C3H5NO2",
+      "id": "1_palmityl_2_arachidonoyl_sn_glycerol",
+      "name": "1-palmityl-2-arachidonoyl-sn-glycerol",
+      "short": "1-palmityl-2-arachi…",
+      "formula": "C39H70O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29999"
+        "chebi": "CHEBI:77184"
       }
     },
     {
-      "id": "cdp_choline",
-      "name": "CDP-choline",
-      "formula": "C14H25N4O11P2",
+      "id": "cdp_ethanolamine",
+      "name": "CDP-ethanolamine",
+      "formula": "C11H19N4O11P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58779"
+        "chebi": "CHEBI:57876"
       }
     },
     {
-      "id": "o_phosphocholine_l_serine",
-      "name": "O-phosphocholine-L-serine",
-      "short": "O-phosphocholine-L-…",
-      "formula": "C8H17N2O5P",
+      "id": "1_o_palmityl_2_arachidonoyl_sn_glycero_3_phospho",
+      "name": "1-O-palmityl-2-arachidonoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-O-palmityl-2-arac…",
+      "formula": "C41H76NO7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138595"
+        "chebi": "CHEBI:231463"
       }
     },
     {
-      "id": "decanoyl_coa",
-      "name": "decanoyl-CoA",
-      "formula": "C31H50N7O17P3S",
-      "charge": -4,
+      "id": "chrodrimanin_h",
+      "name": "chrodrimanin H",
+      "formula": "C25H32O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61430"
+        "chebi": "CHEBI:156416"
       }
     },
     {
-      "id": "2_hydroxydecanoyl_coa",
-      "name": "2-hydroxydecanoyl-CoA",
-      "short": "2-hydroxydecanoyl-C…",
-      "formula": "C31H50N7O18P3S",
-      "charge": -4,
+      "id": "chrodrimanin_e",
+      "name": "chrodrimanin E",
+      "formula": "C25H30O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138292"
+        "chebi": "CHEBI:156417"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_7_7_86",
+      "name": "cyclic GMP-AMP synthase",
+      "ec": [
+        "2.7.7.86"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -548,68 +546,66 @@
     },
     {
       "id": "r7",
-      "name": "L-selenomethionine + ATP + H2O = L-adenosylselenomethionine + phosphate + diphosphate",
-      "equation": "L-selenomethionine + ATP + H2O = L-adenosylselenomethionine + phosphate + diphosphate",
+      "name": "cyclic GMP-AMP synthase",
+      "equation": "GTP + ATP = 2',3'-cGAMP + 2 diphosphate",
+      "ec": "2.7.7.86",
       "substrates": [
         {
-          "metabolite": "l_selenomethionine",
+          "metabolite": "gtp",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_adenosylselenomethionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
+          "metabolite": "2_3_cgamp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_86"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:31211"
+        "rhea": "RHEA:42064"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31211"
+            "id": "RHEA:42064"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "[Rab1 protein]-L-serine + CDP-choline = [Rab1 protein]-O-phosphocholine-L-serine + CMP ...",
-      "equation": "[Rab1 protein]-L-serine + CDP-choline = [Rab1 protein]-O-phosphocholine-L-serine + CMP + H(+)",
+      "name": "1-O-hexadecyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + CDP-ethanolamine = 1-O-h...",
+      "equation": "1-O-hexadecyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + CDP-ethanolamine = 1-O-hexadecyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphoethanolamine + CMP + H(+)",
       "substrates": [
         {
-          "metabolite": "l_serine",
+          "metabolite": "1_palmityl_2_arachidonoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cdp_choline",
+          "metabolite": "cdp_ethanolamine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_phosphocholine_l_serine",
+          "metabolite": "1_o_palmityl_2_arachidonoyl_sn_glycero_3_phospho",
           "stoichiometry": 1
         },
         {
@@ -624,25 +620,25 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:56080"
+        "rhea": "RHEA:80239"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56080"
+            "id": "RHEA:80239"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "decanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxydecanoyl-CoA + succinate + CO2",
-      "equation": "decanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxydecanoyl-CoA + succinate + CO2",
+      "name": "chrodrimanin H + 2-oxoglutarate + O2 = chrodrimanin E + succinate + CO2 + H2O",
+      "equation": "chrodrimanin H + 2-oxoglutarate + O2 = chrodrimanin E + succinate + CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "decanoyl_coa",
+          "metabolite": "chrodrimanin_h",
           "stoichiometry": 1
         },
         {
@@ -656,7 +652,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxydecanoyl_coa",
+          "metabolite": "chrodrimanin_e",
           "stoichiometry": 1
         },
         {
@@ -666,19 +662,23 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:54604"
+        "rhea": "RHEA:65316"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54604"
+            "id": "RHEA:65316"
           }
         ]
       }

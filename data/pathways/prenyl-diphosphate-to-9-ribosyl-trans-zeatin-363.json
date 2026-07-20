@@ -1,0 +1,289 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prenyl-diphosphate-to-9-ribosyl-trans-zeatin-363",
+  "name": "prenyl diphosphate to 9-ribosyl-trans-zeatin…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from prenyl diphosphate(3−) to 9-ribosyl-trans-zeatin 5'-triphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36331"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n6_dimethylallyl_adenosine_5_triphosphate",
+      "name": "N6-(dimethylallyl)adenosine 5'-triphosphate",
+      "short": "N6-(dimethylallyl)a…",
+      "formula": "C15H20N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:73532"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "9_ribosyl_trans_zeatin_5_triphosphate",
+      "name": "9-ribosyl-trans-zeatin 5'-triphosphate",
+      "short": "9-ribosyl-trans-zea…",
+      "formula": "C15H20N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87953"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "isoelisabethatriene",
+      "name": "isoelisabethatriene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142543"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_112",
+      "name": "adenylate dimethylallyltransferase (ADP/ATP-dependent)",
+      "ec": [
+        "2.5.1.112"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_203",
+      "name": "isoelisabethatriene synthase",
+      "ec": [
+        "4.2.3.203"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "adenylate dimethylallyltransferase (ADP/ATP-dependent)",
+      "equation": "dimethylallyl diphosphate + ATP = N(6)-(dimethylallyl)adenosine 5'-triphosphate + diphosphate",
+      "ec": "2.5.1.112",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_dimethylallyl_adenosine_5_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_112"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(6)-(dimethylallyl)adenosine 5'-triphosphate + NADPH + O2 + H(+) = 9-ribosyl-trans-zea...",
+      "equation": "N(6)-(dimethylallyl)adenosine 5'-triphosphate + NADPH + O2 + H(+) = 9-ribosyl-trans-zeatin 5'-triphosphate + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "n6_dimethylallyl_adenosine_5_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_ribosyl_trans_zeatin_5_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isoelisabethatriene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = isoelisabethatriene + diphosphate",
+      "ec": "4.2.3.203",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoelisabethatriene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_203"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59236"
+          }
+        ]
+      }
+    }
+  ]
+}

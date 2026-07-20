@@ -3,13 +3,13 @@
   "id": "icas-1-to-ic-asc-c7-coa",
   "name": "icas#1 to IC-asc-ΔC7-CoA",
   "category": "redox-detox",
-  "summary": "A 3-step route from icas#1(1−) to IC-asc-ΔC7-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from icas#1(1−) to IC-asc-ΔC7-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:66256"
+        "id": "RHEA:66252"
       },
       {
         "db": "ChEBI",
@@ -37,33 +37,6 @@
       }
     },
     {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "ic_asc_c7_amp",
-      "name": "IC-asc-C7-AMP",
-      "formula": "C32H40N6O13P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:166982"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
       "id": "coa",
       "name": "Coenzyme A (CoA-SH)",
       "formula": "C21H32N7O16P3S",
@@ -88,6 +61,15 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -128,29 +110,29 @@
       }
     },
     {
-      "id": "cubenene",
-      "name": "(+)-cubenene",
+      "id": "sesquiphellandrene",
+      "name": "β-sesquiphellandrene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61685"
+        "chebi": "CHEBI:64361"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_63",
-      "name": "(+)-cubenene synthase",
+      "id": "ec_4_2_3_123",
+      "name": "beta-sesquiphellandrene synthase",
       "ec": [
-        "4.2.3.63"
+        "4.2.3.123"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "IC-asc-C7 + ATP + H(+) = IC-asc-C7-AMP + diphosphate",
-      "equation": "IC-asc-C7 + ATP + H(+) = IC-asc-C7-AMP + diphosphate",
+      "name": "IC-asc-C7 + ATP + CoA = IC-asc-C7-CoA + AMP + diphosphate",
+      "equation": "IC-asc-C7 + ATP + CoA = IC-asc-C7-CoA + AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "icas_1",
@@ -158,45 +140,6 @@
         },
         {
           "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ic_asc_c7_amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:66256"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66256"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "IC-asc-C7-AMP + CoA = IC-asc-C7-CoA + AMP + H(+)",
-      "equation": "IC-asc-C7-AMP + CoA = IC-asc-C7-CoA + AMP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ic_asc_c7_amp",
           "stoichiometry": 1
         },
         {
@@ -214,27 +157,27 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:66260"
+        "rhea": "RHEA:66252"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66260"
+            "id": "RHEA:66252"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "IC-asc-C7-CoA + O2 = IC-asc-DeltaC7-CoA + H2O2",
       "equation": "IC-asc-C7-CoA + O2 = IC-asc-DeltaC7-CoA + H2O2",
       "substrates": [
@@ -258,7 +201,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:66232"
       },
@@ -273,10 +216,10 @@
       }
     },
     {
-      "id": "r4",
-      "name": "(+)-cubenene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-cubenene + diphosphate",
-      "ec": "4.2.3.63",
+      "id": "r3",
+      "name": "beta-sesquiphellandrene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-sesquiphellandrene + diphosphate",
+      "ec": "4.2.3.123",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -285,7 +228,7 @@
       ],
       "products": [
         {
-          "metabolite": "cubenene",
+          "metabolite": "sesquiphellandrene",
           "stoichiometry": 1
         },
         {
@@ -295,20 +238,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_63"
+          "enzyme": "ec_4_2_3_123"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:29475"
+        "rhea": "RHEA:32699"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29475"
+            "id": "RHEA:32699"
           }
         ]
       }

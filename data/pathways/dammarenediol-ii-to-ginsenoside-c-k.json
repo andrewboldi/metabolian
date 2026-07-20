@@ -166,23 +166,21 @@
       }
     },
     {
-      "id": "dihydromonacolin_l_carboxylate",
-      "name": "dihydromonacolin L carboxylate",
-      "short": "dihydromonacolin L…",
-      "formula": "C19H31O4",
+      "id": "5_hepe",
+      "name": "5-HEPE",
+      "formula": "C20H29O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:79031"
+        "chebi": "CHEBI:90737"
       }
     },
     {
-      "id": "monacolin_l_carboxylate",
-      "name": "monacolin L carboxylate",
-      "short": "monacolin L…",
-      "formula": "C19H29O4",
+      "id": "5_20_dihepe",
+      "name": "5,20-diHEPE",
+      "formula": "C20H29O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:79044"
+        "chebi": "CHEBI:91301"
       }
     },
     {
@@ -193,25 +191,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:77147"
-      }
-    },
-    {
-      "id": "campesterol_3_d_glucoside",
-      "name": "campesterol 3-β-D-glucoside",
-      "short": "campesterol…",
-      "formula": "C34H58O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:145072"
-      }
-    },
-    {
-      "id": "campesterol",
-      "name": "campesterol",
-      "formula": "C28H48O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28623"
       }
     }
   ],
@@ -256,13 +235,6 @@
       "name": "ginsenosidase type III",
       "ec": [
         "3.2.1.191"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_124",
-      "name": "dihydromonacolin L hydroxylase",
-      "ec": [
-        "1.14.14.124"
       ]
     }
   ],
@@ -655,12 +627,11 @@
     },
     {
       "id": "r9",
-      "name": "dihydromonacolin L hydroxylase",
-      "equation": "dihydromonacolin L carboxylate + reduced [NADPH--hemoprotein reductase] + O2 = monacolin L carboxylate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "ec": "1.14.14.124",
+      "name": "5-hydroxy-(6E,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase...",
+      "equation": "5-hydroxy-(6E,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 5,20-dihydroxy-(6E,8Z,11Z,14Z,17Z)-eicosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "dihydromonacolin_l_carboxylate",
+          "metabolite": "5_hepe",
           "stoichiometry": 1
         },
         {
@@ -674,7 +645,7 @@
       ],
       "products": [
         {
-          "metabolite": "monacolin_l_carboxylate",
+          "metabolite": "5_20_dihepe",
           "stoichiometry": 1
         },
         {
@@ -683,29 +654,24 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_124"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:42368"
+        "rhea": "RHEA:49380"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42368"
+            "id": "RHEA:49380"
           }
         ]
       }
@@ -755,45 +721,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:57988"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "campesteryl 3-beta-D-glucoside + H2O = campesterol + D-glucose",
-      "equation": "campesteryl 3-beta-D-glucoside + H2O = campesterol + D-glucose",
-      "substrates": [
-        {
-          "metabolite": "campesterol_3_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "campesterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:62024"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62024"
           }
         ]
       }

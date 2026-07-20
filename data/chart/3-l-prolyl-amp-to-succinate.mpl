@@ -18,13 +18,13 @@ pathway 3-l-prolyl-amp-to-succinate "3'-L-prolyl-AMP to succinate" {
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_69 [6.2.1.69] +cysteine +atp +amp +ppi
-    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
+    <-> . +malonyl-coa +hplus +co2 +coa +h2o
+    o_3r_atrochrysone_carboxylpantetheine_4_phosphor
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_fischerindole_u +chloride +akg +o2 +hplus +co2 +h2o
-    12_epi_fischerindole_g
+    <-> . +2_deoxyadenosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    2_chloro_deoxyadenosine_5_monophosphate
   }
 }

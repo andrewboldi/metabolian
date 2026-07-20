@@ -18,7 +18,7 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_8 [2.1.1.8] +histaminium +sam +hplus
-    n_methylhistaminium
+    <-> . +malonyl-coa +sam
+    malonyl_coa_methyl_ester
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dodecan-1-ol-to-9z-12z-pentadecadienoyl",
   "name": "dodecan-1-ol to (9Z,12Z)-pentadecadienoyl…",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 6-step route from dodecan-1-ol to (9Z,12Z)-pentadecadienoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -195,23 +195,22 @@
       }
     },
     {
-      "id": "1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine",
-      "name": "1-palmitoyl-2-acyl-sn-glycero-3-phosphocholine",
-      "short": "1-palmitoyl-2-acyl-…",
-      "formula": "C25H49NO8PR",
-      "charge": 0,
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77369"
+        "chebi": "CHEBI:30245"
       }
     },
     {
-      "id": "2_acyl_sn_glycero_3_phosphocholine",
-      "name": "2-acyl-sn-glycero-3-phosphocholine",
-      "short": "2-acyl-sn-glycero-3…",
-      "formula": "C9H19NO7PR",
-      "charge": 0,
+      "id": "1_linoleoylglycerone_3_phosphate",
+      "name": "1-linoleoylglycerone 3-phosphate",
+      "short": "1-linoleoylglyceron…",
+      "formula": "C21H35O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57875"
+        "chebi": "CHEBI:77493"
       }
     },
     {
@@ -235,22 +234,33 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57533"
       }
     },
     {
-      "id": "himachalene",
-      "name": "γ-himachalene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:49224"
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "tri_trans_poly_cis_undecaprenyl_diphosphate",
+      "name": "tri-trans,poly-cis-undecaprenyl diphosphate",
+      "short": "tri-trans,poly-cis-…",
+      "formula": "C55H89O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60388"
       }
     }
   ],
@@ -263,10 +273,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_56",
-      "name": "gamma-humulene synthase",
+      "id": "ec_2_5_1_89",
+      "name": "tritrans,polycis-undecaprenyl-diphosphate synthase [geranylgeranyl-",
       "ec": [
-        "4.2.3.56"
+        "2.5.1.89"
       ]
     }
   ],
@@ -565,43 +575,39 @@
     },
     {
       "id": "r7",
-      "name": "a 1-hexadecanoyl-2-acyl-sn-glycero-3-phosphocholine + H2O = a 2-acyl-sn-glycero-3-phosp...",
-      "equation": "a 1-hexadecanoyl-2-acyl-sn-glycero-3-phosphocholine + H2O = a 2-acyl-sn-glycero-3-phosphocholine + hexadecanoate + H(+)",
+      "name": "1-hexadecanoylglycerone 3-phosphate + (9Z,12Z)-octadecadienoate = 1-(9Z,12Z)-octadecadi...",
+      "equation": "1-hexadecanoylglycerone 3-phosphate + (9Z,12Z)-octadecadienoate = 1-(9Z,12Z)-octadecadienoylglycerone 3-phosphate + hexadecanoate",
       "substrates": [
         {
-          "metabolite": "1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_palmitoylglycerone_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "linoleate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_acyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_linoleoylglycerone_3_phosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "palmitate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:40507"
+        "rhea": "RHEA:40755"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40507"
+            "id": "RHEA:40755"
           }
         ]
       }
@@ -647,41 +653,45 @@
     },
     {
       "id": "r9",
-      "name": "gamma-humulene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = gamma-himachalene + diphosphate",
-      "ec": "4.2.3.56",
+      "name": "tritrans,polycis-undecaprenyl-diphosphate synthase [geranylgeranyl-",
+      "equation": "geranylgeranyl diphosphate + 7 isopentenyl diphosphate = tri-trans,hepta-cis-undecaprenyl diphosphate + 7 diphosphate",
+      "ec": "2.5.1.89",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "geranylgeranyl_diphosphate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 7
         }
       ],
       "products": [
         {
-          "metabolite": "himachalene",
+          "metabolite": "tri_trans_poly_cis_undecaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 7
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_56"
+          "enzyme": "ec_2_5_1_89"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:25472"
+        "rhea": "RHEA:27622"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25472"
+            "id": "RHEA:27622"
           }
         ]
       }

@@ -26,7 +26,7 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-415 "dTDP-β-L-mycarose to 
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_150 [2.1.1.150] +7_hydroxyisoflavones +sam +hplus
-    7_methoxyisoflavones
+    <-> ec_2_1_1_232 [2.1.1.232] +s_naringenin +sam +hplus
+    sakuranetin
   }
 }

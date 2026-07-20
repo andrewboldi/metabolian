@@ -212,21 +212,39 @@
       }
     },
     {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
-      "charge": -1,
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:36655"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
       }
     },
     {
@@ -260,32 +278,49 @@
       }
     },
     {
-      "id": "3_hydroxyisovaleryl_coa",
-      "name": "3-hydroxyisovaleryl-CoA",
-      "short": "3-hydroxyisovaleryl…",
-      "formula": "C26H40N7O18P3S",
-      "charge": -4,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:62555"
+        "chebi": "CHEBI:29969"
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "biotinate",
+      "name": "biotinate",
+      "formula": "C10H15N2O3S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:57586"
       }
     },
     {
-      "id": "hmg_coa",
-      "name": "(S)-3-Hydroxy-3-methylglutaryl-CoA",
-      "short": "3-Hydroxy-3-methylg…",
-      "formula": "C27H39N7O20P3S",
-      "charge": -5,
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:43074"
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap",
+      "name": "3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naphtho[2,1-b]pyran-1-one",
+      "short": "3,6,7,9-tetrahydrox…",
+      "formula": "C14H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142802"
       }
     }
   ],
@@ -333,10 +368,10 @@
       ]
     },
     {
-      "id": "ec_4_2_1_18",
-      "name": "methylglutaconyl-CoA hydratase",
+      "id": "ec_6_3_4_11",
+      "name": "biotin--[methylcrotonoyl-CoA-carboxylase] ligase",
       "ec": [
-        "4.2.1.18"
+        "6.3.4.11"
       ]
     }
   ],
@@ -635,15 +670,19 @@
     },
     {
       "id": "r7",
-      "name": "L-leucine + glyoxylate = 4-methyl-2-oxopentanoate + glycine",
-      "equation": "L-leucine + glyoxylate = 4-methyl-2-oxopentanoate + glycine",
+      "name": "L-leucine + O2 + H2O = 4-methyl-2-oxopentanoate + H2O2 + NH4(+)",
+      "equation": "L-leucine + O2 + H2O = 4-methyl-2-oxopentanoate + H2O2 + NH4(+)",
       "substrates": [
         {
           "metabolite": "leucine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glyoxylate",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -653,21 +692,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:69128"
+        "rhea": "RHEA:60996"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69128"
+            "id": "RHEA:60996"
           }
         ]
       }
@@ -727,76 +770,108 @@
     },
     {
       "id": "r9",
-      "name": "3-hydroxyisovaleryl-CoA = 3-methylbut-2-enoyl-CoA + H2O",
-      "equation": "3-hydroxyisovaleryl-CoA = 3-methylbut-2-enoyl-CoA + H2O",
+      "name": "biotin--[methylcrotonoyl-CoA-carboxylase] ligase",
+      "equation": "apo-[3-methylcrotonoyl-CoA:carbon-dioxide ligase (ADP-forming)] + biotin + ATP = holo-[3-methylcrotonoyl-CoA:carbon-dioxide ligase (ADP-forming)] + AMP + diphosphate + H(+)",
+      "ec": "6.3.4.11",
       "substrates": [
         {
-          "metabolite": "3_hydroxyisovaleryl_coa",
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "biotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "methylcrotonyl_coa",
+          "metabolite": "biotinyl_l_lysine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "amp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_4_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:31079"
+        "rhea": "RHEA:24376"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31079"
+            "id": "RHEA:24376"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "methylglutaconyl-CoA hydratase",
-      "equation": "(3S)-3-hydroxy-3-methylglutaryl-CoA = 3-methyl-(2E)-glutaconyl-CoA + H2O",
-      "ec": "4.2.1.18",
+      "name": "6 malonyl-CoA + acetyl-CoA + 5 H(+) = 3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naph...",
+      "equation": "6 malonyl-CoA + acetyl-CoA + 5 H(+) = 3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naphtho[2,1-b]pyran-1-one + 6 CO2 + 7 CoA + H2O",
       "substrates": [
         {
-          "metabolite": "hmg_coa",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
         }
       ],
       "products": [
         {
-          "metabolite": "methylglutaconyl_coa",
+          "metabolite": "3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 7
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_18"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:21536"
+        "rhea": "RHEA:12060"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21536"
+            "id": "RHEA:12060"
           }
         ]
       }

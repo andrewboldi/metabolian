@@ -22,25 +22,31 @@ pathway 9z-12z-15z-octadecatrie-to-1-palmitoylglycerone "(9Z,12Z,15Z)-octadecatr
 
   branch from palmitate side left {
     palmitate
-    <-> . +octadecan_1_ol +1_palmitoylglycerone_3_phosphate +hplus
-    1_octadecylglycerone_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    2_linoleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> ec_2_5_1_30 [2.5.1.30] +ipp +fpp
+    all_trans_heptaprenyl_diphosphate
   }
 
   branch from o_s_hexadecanoylpantetheine_4_phosphoryl_serine side left {
     o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_1_14_19_26 [1.14.19.26] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    o_s_6z_hexadecenoylpantetheine_4_phosphoryl_seri
+    <-> . +nadph +hplus +holo-acp +nadp
+    hexadecan_1_ol
   }
 
   branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
     1_palmitoyl_sn_glycerol_3_phosphate
     <-> . +sn_glycerol_3_phosphate +coa
     palmitoyl_coa
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_6_2_1_46 [6.2.1.46] +l_alloisoleucine +atp +amp +ppi
+    o_s_l_alloisoleucyl_pantetheine_4_phosphoryl_ser
   }
 }

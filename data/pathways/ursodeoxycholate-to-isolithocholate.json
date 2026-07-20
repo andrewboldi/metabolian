@@ -3,13 +3,13 @@
   "id": "ursodeoxycholate-to-isolithocholate",
   "name": "ursodeoxycholate to isolithocholate",
   "category": "energy-metabolism",
-  "summary": "A 3-step route from ursodeoxycholate to isolithocholate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 4-step route from ursodeoxycholate to isolithocholate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:53800"
+        "id": "RHEA:51452"
       },
       {
         "db": "ChEBI",
@@ -28,6 +28,60 @@
       }
     },
     {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "muricholate",
+      "name": "β-muricholate",
+      "formula": "C24H39O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134119"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
       "id": "lithocholyl_coa",
       "name": "lithocholyl-CoA",
       "formula": "C45H70N7O18P3S",
@@ -37,12 +91,12 @@
       }
     },
     {
-      "id": "ursodeoxycholoyl_coa",
-      "name": "ursodeoxycholoyl-CoA",
-      "formula": "C45H70N7O19P3S",
+      "id": "muricholoyl_coa",
+      "name": "β-muricholoyl-CoA",
+      "formula": "C45H70N7O20P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:137679"
+        "chebi": "CHEBI:137668"
       }
     },
     {
@@ -82,21 +136,50 @@
       }
     },
     {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
       "id": "isolithocholate",
       "name": "isolithocholate",
       "formula": "C24H39O3",
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:87728"
+      }
+    },
+    {
+      "id": "allodeoxycholoyl_coa",
+      "name": "allodeoxycholoyl-CoA",
+      "formula": "C45H70N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:137664"
+      }
+    },
+    {
+      "id": "allodeoxycholate",
+      "name": "allodeoxycholate",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137662"
+      }
+    },
+    {
+      "id": "5_epi_aristolochene",
+      "name": "(+)-5-epi-aristolochene",
+      "short": "(+)-5-epi-aristoloc…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23925"
+      }
+    },
+    {
+      "id": "2_hydroxy_5_epi_aristolochene",
+      "name": "2β-hydroxy-5-epi-aristolochene",
+      "short": "2β-hydroxy-5-epi-ar…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142082"
       }
     },
     {
@@ -142,16 +225,74 @@
       "ec": [
         "1.1.1.391"
       ]
+    },
+    {
+      "id": "ec_1_14_14_151",
+      "name": "premnaspirodiene oxygenase",
+      "ec": [
+        "1.14.14.151"
+      ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "ursodeoxycholate + lithocholoyl-CoA = ursodeoxycholoyl-CoA + lithocholate",
-      "equation": "ursodeoxycholate + lithocholoyl-CoA = ursodeoxycholoyl-CoA + lithocholate",
+      "name": "ursodeoxycholate + reduced [NADPH--hemoprotein reductase] + O2 = beta-muricholate + oxi...",
+      "equation": "ursodeoxycholate + reduced [NADPH--hemoprotein reductase] + O2 = beta-muricholate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "ursodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "muricholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-muricholate + lithocholoyl-CoA = beta-muricholoyl-CoA + lithocholate",
+      "equation": "beta-muricholate + lithocholoyl-CoA = beta-muricholoyl-CoA + lithocholate",
+      "substrates": [
+        {
+          "metabolite": "muricholate",
           "stoichiometry": 1
         },
         {
@@ -161,7 +302,7 @@
       ],
       "products": [
         {
-          "metabolite": "ursodeoxycholoyl_coa",
+          "metabolite": "muricholoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -170,22 +311,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:53800"
+        "rhea": "RHEA:53780"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53800"
+            "id": "RHEA:53780"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "3alpha-hydroxycholanate dehydrogenase (NAD(+))",
       "equation": "lithocholate + NAD(+) = 3-oxo-5beta-cholan-24-oate + NADH + H(+)",
       "ec": "1.1.1.52",
@@ -219,7 +360,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:19585"
       },
@@ -234,7 +375,7 @@
       }
     },
     {
-      "id": "r3",
+      "id": "r4",
       "name": "3beta-hydroxycholanate 3-dehydrogenase (NAD(+))",
       "equation": "3-oxo-5beta-cholan-24-oate + NADH + H(+) = isolithocholate + NAD(+)",
       "ec": "1.1.1.391",
@@ -268,7 +409,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:47508"
       },
@@ -283,7 +424,103 @@
       }
     },
     {
-      "id": "r4",
+      "id": "r5",
+      "name": "beta-muricholate + allodeoxycholoyl-CoA = beta-muricholoyl-CoA + allodeoxycholate",
+      "equation": "beta-muricholate + allodeoxycholoyl-CoA = beta-muricholoyl-CoA + allodeoxycholate",
+      "substrates": [
+        {
+          "metabolite": "muricholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "allodeoxycholoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "muricholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "allodeoxycholate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:53788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "premnaspirodiene oxygenase",
+      "equation": "(+)-5-epi-aristolochene + reduced [NADPH--hemoprotein reductase] + O2 = 2beta-hydroxy-5-epi-aristolochene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.151",
+      "substrates": [
+        {
+          "metabolite": "5_epi_aristolochene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_5_epi_aristolochene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_151"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:57672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "lithocholate + UDP-alpha-D-glucuronate = lithocholoyl-3-O-(beta-D-glucuronate) + UDP + ...",
       "equation": "lithocholate + UDP-alpha-D-glucuronate = lithocholoyl-3-O-(beta-D-glucuronate) + UDP + H(+)",
       "substrates": [
@@ -311,7 +548,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:53028"
       },

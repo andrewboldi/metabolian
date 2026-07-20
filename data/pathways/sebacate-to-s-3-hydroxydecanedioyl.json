@@ -120,12 +120,31 @@
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "indole_3_butyrate",
+      "name": "indole-3-butyrate",
+      "formula": "C12H12NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143274"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "n2_4_indol_3_yl_butanoyl_l_glutaminate",
+      "name": "N2-[4-(indol-3-yl)butanoyl]-L-glutaminate",
+      "short": "N2-[4-(indol-3-yl)b…",
+      "formula": "C17H20N3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143275"
       }
     },
     {
@@ -135,15 +154,6 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "glycyl_amp",
-      "name": "glycyl-AMP",
-      "formula": "C12H17N6O8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:42626"
       }
     }
   ],
@@ -272,15 +282,33 @@
     },
     {
       "id": "r4",
-      "name": "glycine + ATP + H(+) = glycyl-5'-AMP + diphosphate",
-      "equation": "glycine + ATP + H(+) = glycyl-5'-AMP + diphosphate",
+      "name": "(indol-3-yl)butanoate + L-glutamine + ATP = (indol-3-yl)butanoyl-L-glutamine + AMP + di...",
+      "equation": "(indol-3-yl)butanoate + L-glutamine + ATP = (indol-3-yl)butanoyl-L-glutamine + AMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "glycine",
+          "metabolite": "indole_3_butyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_4_indol_3_yl_butanoyl_l_glutaminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
           "stoichiometry": 1
         },
         {
@@ -288,27 +316,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "glycyl_amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:33407"
+        "rhea": "RHEA:59864"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33407"
+            "id": "RHEA:59864"
           }
         ]
       }

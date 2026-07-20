@@ -18,25 +18,25 @@ pathway d-valine-to-n6-r-s8-isobutyryldihy "D-valine to N6-[(R)-S8-isobutyryldih
 
   branch from kiv side left {
     kiv
-    <-> ec_1_4_1_23 [1.4.1.23] +nad +h2o +nh3 +nadh +hplus
-    valine
+    <-> . +fad +hplus +fadh2
+    r_2_hydroxy_3_methylbutyrate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +n_acylphytosphingosine +o2 +hydrogen_acceptor +h2o
-    n_acyl_8_phytosphingenine
+    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_acceptor
+    7_8_dihydromethanopterin
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_3_15 [3.5.3.15] +l_argininium +h2o
-    l_citrulline
+    <-> . +1_4_butanediammonium +o2 +h2o2
+    1_pyrrolinium
   }
 
   branch from isobutyryl_coa side right {
     isobutyryl_coa
-    <-> . +carnitine +coa
-    o_isobutyryl_l_carnitine
+    <-> ec_1_3_8_5 [1.3.8.5] +fad +hplus +fadh2
+    methacrylyl_coa
   }
 }

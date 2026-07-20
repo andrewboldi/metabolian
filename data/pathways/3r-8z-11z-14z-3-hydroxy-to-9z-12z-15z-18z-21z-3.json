@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3r-8z-11z-14z-3-hydroxy-to-9z-12z-15z-18z-21z-3",
   "name": "(3R,8Z,11Z,14Z)-3-hydroxy… to (9Z,12Z,15Z,18Z,21Z)-3-ox…",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 9-step route from (3R,8Z,11Z,14Z)-3-hydroxyicosatrienoyl-CoA(4−) to (9Z,12Z,15Z,18Z,21Z)-3-oxotetracosapentaenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -236,40 +236,63 @@
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
+      "id": "1_acyl_sn_glycero_3_phospho_1d_myo_inositol",
+      "name": "1-acyl-sn-glycero-3-phospho-1D-myo-inositol",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C10H17O12PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64771"
+      }
+    },
+    {
+      "id": "1_acyl_2_5z_8z_11z_14z_17z_eicosapentaenoyl_sn_g",
+      "name": "1-acyl-2-(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoyl-sn-glycero-3-phospho-D-myo-inositol",
+      "short": "1-acyl-2-(5Z,8Z,11Z…",
+      "formula": "C30H45O13PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74335"
+      }
+    },
+    {
+      "id": "2_amino_6_hydroxyaminopurine",
+      "name": "2-amino-6-hydroxyaminopurine",
+      "short": "2-amino-6-hydroxyam…",
+      "formula": "C5H6N6O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:78685"
       }
     },
     {
-      "id": "cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate",
-      "name": "cholesteryl (5Z,8Z,11Z,14Z,17Z-eicosapentaenoate)",
-      "short": "cholesteryl…",
-      "formula": "C47H74O2",
+      "id": "9h_purine_2_6_diamine",
+      "name": "9H-purine-2,6-diamine",
+      "short": "9H-purine-2,6-diami…",
+      "formula": "C5H6N6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84969"
+        "chebi": "CHEBI:40235"
       }
     },
     {
-      "id": "dihydroalstonine",
-      "name": "dihydroalstonine",
-      "formula": "C21H23N2O3",
-      "charge": 1,
+      "id": "3e_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
+      "name": "(3E,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA",
+      "short": "(3E,7Z,10Z,13Z,16Z,…",
+      "formula": "C43H62N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:142534"
+        "chebi": "CHEBI:84791"
       }
     },
     {
-      "id": "alstonine",
-      "name": "alstonine",
-      "formula": "C21H21N2O3",
-      "charge": 1,
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C43H62N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:142530"
+        "chebi": "CHEBI:74298"
       }
     }
   ],
@@ -733,21 +756,21 @@
     },
     {
       "id": "r11",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoyl-CoA + cholesterol = (5Z,8Z,11Z,14Z,17Z-eicosapenta...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoyl-CoA + cholesterol = (5Z,8Z,11Z,14Z,17Z-eicosapentaenoyl)-cholesterol + CoA",
+      "name": "a 1-acyl-sn-glycero-3-phospho-(1D-myo-inositol) + (5Z,8Z,11Z,14Z,17Z)-eicosapentaenoyl-...",
+      "equation": "a 1-acyl-sn-glycero-3-phospho-(1D-myo-inositol) + (5Z,8Z,11Z,14Z,17Z)-eicosapentaenoyl-CoA = a 1-acyl-2-(5Z,8Z,11Z,14Z,17Z-eicosapentaenoyl)-sn-glycero-3-phospho-(1D-myo-inositol) + CoA",
       "substrates": [
         {
-          "metabolite": "5z_8z_11z_14z_17z_icosapentaenoyl_coa",
+          "metabolite": "1_acyl_sn_glycero_3_phospho_1d_myo_inositol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cholesterol",
+          "metabolite": "5z_8z_11z_14z_17z_icosapentaenoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate",
+          "metabolite": "1_acyl_2_5z_8z_11z_14z_17z_eicosapentaenoyl_sn_g",
           "stoichiometry": 1
         },
         {
@@ -758,35 +781,25 @@
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:46612"
+        "rhea": "RHEA:37011"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46612"
+            "id": "RHEA:37011"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "dihydroalstonine + A = alstonine + AH2",
-      "equation": "dihydroalstonine + A = alstonine + AH2",
+      "name": "2-amino-N(6)-hydroxyadenine + AH2 = 2,6-diaminopurine + A + H2O",
+      "equation": "2-amino-N(6)-hydroxyadenine + AH2 = 2,6-diaminopurine + A + H2O",
       "substrates": [
         {
-          "metabolite": "dihydroalstonine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alstonine",
+          "metabolite": "2_amino_6_hydroxyaminopurine",
           "stoichiometry": 1
         },
         {
@@ -794,17 +807,113 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "9h_purine_2_6_diamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:58208"
+        "rhea": "RHEA:84591"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58208"
+            "id": "RHEA:84591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "(3E,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA = (2E,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA",
+      "equation": "(3E,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA = (2E,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "3e_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:84219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4...",
+      "equation": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "7z_10z_13z_16z_19z_docosapentaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:63652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63652"
           }
         ]
       }

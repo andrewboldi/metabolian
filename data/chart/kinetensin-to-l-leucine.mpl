@@ -18,13 +18,13 @@ pathway kinetensin-to-l-leucine "kinetensin to L-leucine" {
 
   branch from leucine side left {
     leucine
-    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022d
+    <-> . +l_leucyl_o_isoindolinone_l_homoserine +h2o
+    o_isoindolinone_l_homoserine
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_3_1_1 [2.3.1.1] +acetyl_coa +coa +hplus
-    nag
+    <-> ec_2_5_1_140 [2.5.1.140] +pser +pi +hplus
+    n_2s_2_amino_2_carboxyethyl_l_glutamate
   }
 }

@@ -27,7 +27,7 @@ pathway 5-dihydrotestosterone-to-4-hydroxyestrone "5β-dihydrotestosterone to 4-
   branch from testosterone side left {
     testosterone
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    19_hydroxytestosterone
+    16_hydroxytestosterone
   }
 
   branch from androst_4_ene_3_17_dione side right {
@@ -38,13 +38,19 @@ pathway 5-dihydrotestosterone-to-4-hydroxyestrone "5β-dihydrotestosterone to 4-
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_hexahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_9_methylsulfanyl_nonanal_oxime
+    <-> . +hydroxycholesterol_7a +fmnh2 +o2 +h2o +hplus
+    24s_7_24_dihydroxycholesterol
   }
 
   branch from estrone side right {
     estrone
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    6_hydroxyestrone
+    15_hydroxyestrone
+  }
+
+  branch from 4_hydroxyestrone side left {
+    4_hydroxyestrone
+    <-> . +udp_d_glucuronate +udp +hplus
+    4_hydroxyestrone_4_o_d_glucuronide
   }
 }

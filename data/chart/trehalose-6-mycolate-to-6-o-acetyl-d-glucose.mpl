@@ -32,13 +32,13 @@ pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose "α,α'-trehalose 6-mycolat
 
   branch from g1p side left {
     g1p
-    <-> . +maltohexaose +pi
-    maltopentaose
+    <-> . +maltotetraose +pi
+    maltotriose
   }
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +2_d_glucosyloxy_cis_cinnamate +h2o
-    cis_2_coumarate
+    <-> . +sucrose
+    6_kestotriose
   }
 }

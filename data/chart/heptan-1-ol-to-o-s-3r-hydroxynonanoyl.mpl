@@ -28,7 +28,7 @@ pathway heptan-1-ol-to-o-s-3r-hydroxynonanoyl "heptan-1-ol to O-[S-(3R)-hydroxyn
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_92 [2.5.1.92] +ipp +dmapp
-    2_cis_6_cis_farnesyl_diphosphate
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_8_14_15_diene
   }
 }

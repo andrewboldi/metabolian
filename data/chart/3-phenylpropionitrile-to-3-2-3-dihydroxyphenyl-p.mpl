@@ -18,13 +18,13 @@ pathway 3-phenylpropionitrile-to-3-2-3-dihydroxyphenyl-p "3-phenylpropionitrile 
 
   branch from 3_phenylpropionate side left {
     3_phenylpropionate
-    <-> . +atp +nadph +hplus +amp +ppi +nadp
-    3_phenylpropanal
+    <-> ec_1_3_8_15 [1.3.8.15] +fad +hplus +fadh2
+    trans_cinnamate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_17 [4.3.1.17] +pyruvate
-    serine
+    <-> ec_4_3_1_31 [4.3.1.31] +l_tryptophan
+    e_3_indol_3_yl_acrylate
   }
 }

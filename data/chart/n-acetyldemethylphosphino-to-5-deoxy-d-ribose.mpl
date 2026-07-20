@@ -18,25 +18,31 @@ pathway n-acetyldemethylphosphino-to-5-deoxy-d-ribose "N-Acetyldemethylphosphino
 
   branch from n_acetyl_l_phosphinothricin side left {
     n_acetyl_l_phosphinothricin
-    <-> ec_2_3_1_183 [2.3.1.183] +acetyl_coa +coa +hplus
-    glufosinate_p
+    <-> . +n_acetyldemethylphosphinothricinate +methylcobalamin +sam +5_deoxyadenosine +methionine
+    cob_iii_alamin
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_4_1_99_22 [4.1.99.22] +gtp +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+    <-> . +a_2_3_di_o_phytanyl_sn_glycerophospholipid +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
+    a_glycerol_dibiphytanyl_glycerol_tetraether_phos
   }
 
   branch from methionine side left {
     methionine
-    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_c +sam +h2o +5_deoxyadenosine +hplus
-    bacteriochlorophyllide_e
+    <-> ec_2_1_1_390 [2.1.1.390] +gentamicin_x2_cation +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
+    geneticin_cation
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_7_8 [1.3.7.8] +nh3 +adp +pi +hplus +hydrogen_donor +atp +h2o
-    hydroxylamine
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
+    18_s_hepe
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

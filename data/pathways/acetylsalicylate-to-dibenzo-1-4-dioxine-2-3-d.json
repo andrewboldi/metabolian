@@ -119,54 +119,6 @@
       }
     },
     {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "2_d_glucopyranosyloxy_benzoate",
-      "name": "2-(β-D-glucopyranosyloxy)benzoate",
-      "short": "2-(β-D-glucopyranos…",
-      "formula": "C13H15O8",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:145670"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene",
-      "name": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene",
-      "short": "5-(3,4-diacetoxybut…",
-      "formula": "C16H14O4S2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16013"
-      }
-    },
-    {
-      "id": "5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene",
-      "name": "5-(3-hydroxy-4-acetoxybut-1-ynyl)-2,2'-bithiophene",
-      "short": "5-(3-hydroxy-4-acet…",
-      "formula": "C14H12O3S2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17229"
-      }
-    },
-    {
       "id": "2_3_dihydroxybenzoate",
       "name": "2,3-dihydroxybenzoate",
       "short": "2,3-dihydroxybenzoa…",
@@ -174,6 +126,43 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "4_acetamidobutanoyl_coa",
+      "name": "4-acetamidobutanoyl-CoA",
+      "short": "4-acetamidobutanoyl…",
+      "formula": "C27H41N8O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58583"
+      }
+    },
+    {
+      "id": "4_aminobutanoyl_coa",
+      "name": "4-aminobutanoyl-CoA",
+      "formula": "C25H40N8O17P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57352"
+      }
+    },
+    {
+      "id": "2_chlorobenzoate",
+      "name": "2-chlorobenzoate",
+      "formula": "C7H4ClO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28303"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
       }
     }
   ],
@@ -200,17 +189,17 @@
       ]
     },
     {
-      "id": "ec_3_1_1_66",
-      "name": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene deacetylase",
+      "id": "ec_3_5_1_51",
+      "name": "4-acetamidobutyryl-CoA deacetylase",
       "ec": [
-        "3.1.1.66"
+        "3.5.1.51"
       ]
     },
     {
-      "id": "ec_4_1_1_46",
-      "name": "o-pyrocatechuate decarboxylase",
+      "id": "ec_1_14_12_13",
+      "name": "2-halobenzoate 1,2-dioxygenase",
       "ec": [
-        "4.1.1.46"
+        "1.14.12.13"
       ]
     }
   ],
@@ -372,25 +361,19 @@
     },
     {
       "id": "r4",
-      "name": "salicylate + UDP-alpha-D-glucose = salicylate 2-O-beta-D-glucoside + UDP + H(+)",
-      "equation": "salicylate + UDP-alpha-D-glucose = salicylate 2-O-beta-D-glucoside + UDP + H(+)",
+      "name": "salicylate + NADH + O2 + H(+) = 2,3-dihydroxybenzoate + NAD(+) + H2O",
+      "equation": "salicylate + NADH + O2 + H(+) = 2,3-dihydroxybenzoate + NAD(+) + H2O",
       "substrates": [
         {
           "metabolite": "salicylate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_d_glucopyranosyloxy_benzoate",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -398,29 +381,43 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:62312"
+        "rhea": "RHEA:51792"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62312"
+            "id": "RHEA:51792"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene deacetylase",
-      "equation": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene + H2O = 5-(3-hydroxy-4-acetoxybut-1-ynyl)-2,2'-bithiophene + acetate + H(+)",
-      "ec": "3.1.1.66",
+      "name": "4-acetamidobutyryl-CoA deacetylase",
+      "equation": "4-acetamidobutanoyl-CoA + H2O = 4-aminobutanoyl-CoA + acetate",
+      "ec": "3.5.1.51",
       "substrates": [
         {
-          "metabolite": "5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene",
+          "metabolite": "4_acetamidobutanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -430,46 +427,50 @@
       ],
       "products": [
         {
-          "metabolite": "5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene",
+          "metabolite": "4_aminobutanoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "acetate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_1_66"
+          "enzyme": "ec_3_5_1_51"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:16313"
+        "rhea": "RHEA:22928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16313"
+            "id": "RHEA:22928"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "o-pyrocatechuate decarboxylase",
-      "equation": "2,3-dihydroxybenzoate + H(+) = catechol + CO2",
-      "ec": "4.1.1.46",
+      "name": "2-halobenzoate 1,2-dioxygenase",
+      "equation": "2-chlorobenzoate + NADH + O2 + H(+) = catechol + chloride + CO2 + NAD(+)",
+      "ec": "1.14.12.13",
       "substrates": [
         {
-          "metabolite": "2_3_dihydroxybenzoate",
+          "metabolite": "2_chlorobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -483,26 +484,34 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_1_46"
+          "enzyme": "ec_1_14_12_13"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:21492"
+        "rhea": "RHEA:21652"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21492"
+            "id": "RHEA:21652"
           }
         ]
       }

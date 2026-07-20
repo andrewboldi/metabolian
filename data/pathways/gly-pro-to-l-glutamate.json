@@ -101,15 +101,6 @@
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
       "id": "atp",
       "name": "ATP",
       "formula": "C10H12N5O13P3",
@@ -119,21 +110,12 @@
       }
     },
     {
-      "id": "brevianamide_f",
-      "name": "brevianamide F",
-      "formula": "C16H17N3O2",
-      "charge": 0,
+      "id": "3_l_prolyl_amp",
+      "name": "3'-L-prolyl-AMP",
+      "formula": "C15H20N6O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:64530"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:140179"
       }
     },
     {
@@ -146,40 +128,22 @@
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "amino_oxobutanoate",
-      "name": "L-2-Amino-3-oxobutanoate",
-      "short": "L-2-Amino-3-oxobuta…",
-      "formula": "C4H7NO3",
+      "id": "glycyl_amp",
+      "name": "glycyl-AMP",
+      "formula": "C12H17N6O8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78948"
+        "chebi": "CHEBI:42626"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "2s_3s_methylphenylalanine",
+      "name": "(2S,3S)-β-methylphenylalanine",
+      "short": "(2S,3S)-β-methylphe…",
+      "formula": "C10H13NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29991"
+        "chebi": "CHEBI:76864"
       }
     },
     {
@@ -192,12 +156,13 @@
       }
     },
     {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
-      "charge": -2,
+      "id": "3s_3_methyl_2_oxo_3_phenylpropanoate",
+      "name": "(3S)-3-methyl-2-oxo-3-phenylpropanoate",
+      "short": "3-methyl-2-oxo-3-ph…",
+      "formula": "C10H9O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16452"
+        "chebi": "CHEBI:74119"
       }
     }
   ],
@@ -217,17 +182,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_29",
-      "name": "glycine C-acetyltransferase",
+      "id": "ec_2_6_1_107",
+      "name": "beta-methylphenylalanine transaminase",
       "ec": [
-        "2.3.1.29"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_1",
-      "name": "aspartate transaminase",
-      "ec": [
-        "2.6.1.1"
+        "2.6.1.107"
       ]
     }
   ],
@@ -375,108 +333,94 @@
     },
     {
       "id": "r4",
-      "name": "L-proline + L-tryptophan + 2 ATP = brevianamide F + 2 AMP + 2 diphosphate + 2 H(+)",
-      "equation": "L-proline + L-tryptophan + 2 ATP = brevianamide F + 2 AMP + 2 diphosphate + 2 H(+)",
+      "name": "L-proline + ATP = 3'-L-prolyl-AMP + diphosphate",
+      "equation": "L-proline + ATP = 3'-L-prolyl-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "l_proline",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "atp",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "brevianamide_f",
+          "metabolite": "3_l_prolyl_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "ppi",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:35935"
+        "rhea": "RHEA:56276"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35935"
+            "id": "RHEA:56276"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "glycine C-acetyltransferase",
-      "equation": "glycine + acetyl-CoA = (2S)-2-amino-3-oxobutanoate + CoA",
-      "ec": "2.3.1.29",
+      "name": "glycine + ATP + H(+) = glycyl-5'-AMP + diphosphate",
+      "equation": "glycine + ATP + H(+) = glycyl-5'-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "glycine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "amino_oxobutanoate",
+          "metabolite": "glycyl_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "ppi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_29"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:20736"
+        "rhea": "RHEA:33407"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20736"
+            "id": "RHEA:33407"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "aspartate transaminase",
-      "equation": "L-aspartate + 2-oxoglutarate = oxaloacetate + L-glutamate",
-      "ec": "2.6.1.1",
+      "name": "beta-methylphenylalanine transaminase",
+      "equation": "(3S)-3-methyl-L-phenylalanine + 2-oxoglutarate = (3S)-2-oxo-3-phenylbutanoate + L-glutamate",
+      "ec": "2.6.1.107",
       "substrates": [
         {
-          "metabolite": "aspartate",
+          "metabolite": "2s_3s_methylphenylalanine",
           "stoichiometry": 1
         },
         {
@@ -486,7 +430,7 @@
       ],
       "products": [
         {
-          "metabolite": "oxaloacetate",
+          "metabolite": "3s_3_methyl_2_oxo_3_phenylpropanoate",
           "stoichiometry": 1
         },
         {
@@ -496,20 +440,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_1"
+          "enzyme": "ec_2_6_1_107"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:21824"
+        "rhea": "RHEA:39911"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21824"
+            "id": "RHEA:39911"
           }
         ]
       }

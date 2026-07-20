@@ -1,0 +1,242 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pseudooxynicotinium-to-4-oxo-4-pyridin-3-yl-but",
+  "name": "pseudooxynicotinium to 4-oxo-4-(pyridin-3-yl)but…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from pseudooxynicotinium(1+) to 4-oxo-4-(pyridin-3-yl)butanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:75351"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:66878"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pseudooxynicotinium",
+      "name": "pseudooxynicotinium",
+      "formula": "C10H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:66878"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_oxo_4_pyridin_3_yl_butanal",
+      "name": "4-oxo-4-(pyridin-3-yl)butanal",
+      "short": "4-oxo-4-(pyridin-3-…",
+      "formula": "C9H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:66879"
+      }
+    },
+    {
+      "id": "methylamine",
+      "name": "Methylamine",
+      "formula": "CH6N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59338"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "4_oxo_4_pyridin_3_yl_butanoate",
+      "name": "4-oxo-4-(pyridin-3-yl)butanoate",
+      "short": "4-oxo-4-(pyridin-3-…",
+      "formula": "C9H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66942"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_4_2_3",
+      "name": "pseudooxynicotine oxidase",
+      "ec": [
+        "1.4.2.3"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_83",
+      "name": "3-succinoylsemialdehyde-pyridine dehydrogenase",
+      "ec": [
+        "1.2.1.83"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pseudooxynicotine oxidase",
+      "equation": "pseudooxynicotine + 2 Fe(III)-[cytochrome c] + H2O = 4-oxo-4-(pyridin-3-yl)butanal + methylamine + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "1.4.2.3",
+      "substrates": [
+        {
+          "metabolite": "pseudooxynicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxo_4_pyridin_3_yl_butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:75351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-succinoylsemialdehyde-pyridine dehydrogenase",
+      "equation": "4-oxo-4-(pyridin-3-yl)butanal + NADP(+) + H2O = 4-oxo-4-(pyridin-3-yl)butanoate + NADPH + 2 H(+)",
+      "ec": "1.2.1.83",
+      "substrates": [
+        {
+          "metabolite": "4_oxo_4_pyridin_3_yl_butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxo_4_pyridin_3_yl_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34215"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34215"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -20,19 +20,13 @@ pathway 1-acyl-2-oleoyl-sn-glycer-to-1-oleoyl-2-linoleoy "1-acyl-2-oleoyl-sn-gly
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +n_fatty_acyl_glycine +h2o
-    glycine
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    1_acyl_3_o_d_galactosyl_sn_glycerol
   }
 
   branch from 1_oleoyl_sn_glycero_3_phosphoserine side right {
     1_oleoyl_sn_glycero_3_phosphoserine
     <-> . +arachidonoyl_coa +coa
     1_oleoyl_2_arachidonoyl_sn_glycero_3_phospho_l_s
-  }
-
-  branch from oleate side left {
-    oleate
-    <-> . +n_oleoyl_l_tryptophan +h2o
-    l_tryptophan
   }
 }

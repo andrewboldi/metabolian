@@ -1,0 +1,359 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "amyrin-to-fmn-43068",
+  "name": "β-amyrin to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from β-amyrin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:43068"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:10352"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10352"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "oleanolate",
+      "name": "oleanolate",
+      "formula": "C30H47O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82828"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cochalate",
+      "name": "cochalate",
+      "formula": "C30H47O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138946"
+      }
+    },
+    {
+      "id": "hederagenin",
+      "name": "hederagenin",
+      "formula": "C30H47O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140466"
+      }
+    },
+    {
+      "id": "16_hydroxy_amyrin",
+      "name": "16α-hydroxy-β-amyrin",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140655"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_126",
+      "name": "beta-amyrin 28-monooxygenase",
+      "ec": [
+        "1.14.14.126"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_63",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "ec": [
+        "1.14.14.63"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_171",
+      "name": "beta-amyrin 16alpha-hydroxylase",
+      "ec": [
+        "1.14.14.171"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-amyrin 28-monooxygenase",
+      "equation": "beta-amyrin + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = oleanolate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.126",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oleanolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:43068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "equation": "oleanolate + reduced [NADPH--hemoprotein reductase] + O2 = cochalate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.63",
+      "substrates": [
+        {
+          "metabolite": "oleanolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cochalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "oleanolate + reduced [NADPH--hemoprotein reductase] + O2 = hederagenin + oxidized [NADP...",
+      "equation": "oleanolate + reduced [NADPH--hemoprotein reductase] + O2 = hederagenin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "oleanolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hederagenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:56488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-amyrin 16alpha-hydroxylase",
+      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxy-beta-amyrin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.171",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxy_amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_171"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56708"
+          }
+        ]
+      }
+    }
+  ]
+}

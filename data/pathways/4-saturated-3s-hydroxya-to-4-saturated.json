@@ -1,0 +1,202 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-saturated-3s-hydroxya-to-4-saturated",
+  "name": "4-saturated-(3S)-hydroxya… to 4-saturated…",
+  "category": "other",
+  "summary": "A 2-step route from 4-saturated-(3S)-hydroxyacyl-CoA(4−) to 4-saturated trans-2-enoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20724"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137480"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_saturated_3s_hydroxyacyl_coa",
+      "name": "4-saturated-(3S)-hydroxyacyl-CoA",
+      "short": "4-saturated-(3S)-hy…",
+      "formula": "C25H37N7O18P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:137480"
+      }
+    },
+    {
+      "id": "trans_3_enoyl_coa",
+      "name": "trans-3-enoyl-CoA",
+      "formula": "C25H35N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58521"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_saturated_trans_2_enoyl_coa",
+      "name": "4-saturated trans-2-enoyl-CoA",
+      "short": "4-saturated…",
+      "formula": "C25H35N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85097"
+      }
+    },
+    {
+      "id": "cis_3_enoyl_coa",
+      "name": "cis-3-enoyl-CoA",
+      "formula": "C25H35N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85489"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_17",
+      "name": "enoyl-CoA hydratase",
+      "ec": [
+        "4.2.1.17"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_8",
+      "name": "Delta(3)-Delta(2)-enoyl-CoA isomerase",
+      "ec": [
+        "5.3.3.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "enoyl-CoA hydratase",
+      "equation": "a 4-saturated-(3S)-3-hydroxyacyl-CoA = a (3E)-enoyl-CoA + H2O",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "4_saturated_3s_hydroxyacyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_3_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Delta(3)-Delta(2)-enoyl-CoA isomerase",
+      "equation": "a (3E)-enoyl-CoA = a 4-saturated (2E)-enoyl-CoA",
+      "ec": "5.3.3.8",
+      "substrates": [
+        {
+          "metabolite": "trans_3_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_saturated_trans_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:45228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45228"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Delta(3)-Delta(2)-enoyl-CoA isomerase",
+      "equation": "a (3Z)-enoyl-CoA = a 4-saturated (2E)-enoyl-CoA",
+      "ec": "5.3.3.8",
+      "substrates": [
+        {
+          "metabolite": "cis_3_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_saturated_trans_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45900"
+          }
+        ]
+      }
+    }
+  ]
+}

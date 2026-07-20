@@ -18,15 +18,9 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-hexadecanoate "1-oleoyl-sn-glycero-3-pho…
     2_oleoyl_sn_glycero_3_phosphoserine
   }
 
-  branch from oleate side left {
-    oleate
-    <-> . +1_oleoyl_2_acyl_sn_glycero_3_phosphoglycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoglycerol
-  }
-
-  branch from palmitate side right {
+  branch from palmitate side left {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    2_oleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +s_palmitoyl_n_acetylcysteine_methyl_ester +h2o +hplus
+    n_acetylcysteine_methyl_ester
   }
 }

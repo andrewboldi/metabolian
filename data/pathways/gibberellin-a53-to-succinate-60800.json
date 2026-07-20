@@ -110,31 +110,32 @@
       }
     },
     {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H7NO",
+      "id": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
+      "name": "O-[S-(L-threonyl)pantetheine-4'-phosphoryl]-L-serine residue",
+      "short": "O-[S-(L-threonyl)pa…",
+      "formula": "C18H33N4O10PS",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50342"
+        "chebi": "CHEBI:144927"
       }
     },
     {
-      "id": "trans_4_hydroxy_l_proline",
-      "name": "trans-4-hydroxy-L-proline",
-      "short": "trans-4-hydroxy-L-p…",
-      "formula": "C5H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:61965"
-      }
-    },
-    {
-      "id": "gibberellin_a20",
-      "name": "gibberellin A20",
-      "formula": "C19H23O5",
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58526"
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl",
+      "name": "O-[S-(4-chloro-L-threonyl)pantetheine-4'-phosphoryl]-L-serine residue",
+      "short": "O-[S-(4-chloro-L-th…",
+      "formula": "C18H32ClN4O10PS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144979"
       }
     }
   ],
@@ -147,10 +148,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_29",
-      "name": "hypoxia-inducible factor-proline dioxygenase",
+      "id": "ec_1_14_20_15",
+      "name": "L-threonyl-[L-threonyl-carrier protein] 4-chlorinase",
       "ec": [
-        "1.14.11.29"
+        "1.14.20.15"
       ]
     }
   ],
@@ -312,64 +313,20 @@
     },
     {
       "id": "r4",
-      "name": "hypoxia-inducible factor-proline dioxygenase",
-      "equation": "L-prolyl-[hypoxia-inducible factor alpha subunit] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[hypoxia-inducible factor alpha subunit] + succinate + CO2",
-      "ec": "1.14.11.29",
+      "name": "L-threonyl-[L-threonyl-carrier protein] 4-chlorinase",
+      "equation": "L-threonyl-[peptidyl-carrier protein] + chloride + 2-oxoglutarate + O2 + H(+) = 4-chloro-L-threonyl-[peptidyl-carrier protein] + succinate + CO2 + H2O",
+      "ec": "1.14.20.15",
       "substrates": [
         {
-          "metabolite": "l_proline",
+          "metabolite": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_4_hydroxy_l_proline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_29"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:48400"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48400"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "gibberellin A19 + O2 + H(+) = gibberellin A20 + CO2 + H2O",
-      "equation": "gibberellin A19 + O2 + H(+) = gibberellin A20 + CO2 + H2O",
-      "substrates": [
-        {
-          "metabolite": "gibberellin_a19",
           "stoichiometry": 1
         },
         {
@@ -383,7 +340,11 @@
       ],
       "products": [
         {
-          "metabolite": "gibberellin_a20",
+          "metabolite": "o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
           "stoichiometry": 1
         },
         {
@@ -395,17 +356,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_20_15"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:60808"
+        "rhea": "RHEA:56812"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60808"
+            "id": "RHEA:56812"
           }
         ]
       }

@@ -8,23 +8,11 @@ pathway d-mannitol-to-2-deoxy-4-epi-scyllo-inos "D-mannitol to 2-deoxy-4-epi-scy
 
   spine at 0,0 {
     d_mannitol
-    <-> ec_1_1_1_138 [1.1.1.138] +nadp -nadph -hplus
-    d_fructofuranose
-    <-> ec_2_7_1_202 [2.7.1.202] +n_phosphonato_l_histidine -l_histidine
-    d_fructofuranose_1_phosphate
-    <-> ec_2_7_13_1 [2.7.13.1] +l_histidine +atp -adp -hplus
-    n_phosphonato_l_histidine
-    <-> ec_2_7_1_197 [2.7.1.197] +d_mannitol -l_histidine
-    d_mannitol_1_phosphate
-    <-> ec_1_1_1_224 [1.1.1.224] +nadp -nadph -hplus
+    <-> ec_1_1_1_255 [1.1.1.255] +nad -nadh -hplus
+    d_mannopyranose
+    <-> ec_2_7_1_191 [2.7.1.191] +n_phosphonato_l_histidine -l_histidine
     d_mannopyranose_6_phosphate
     <-> ec_4_2_3_230 [4.2.3.230] -pi
     2_deoxy_4_epi_scyllo_inosose
-  }
-
-  branch from l_histidine side left {
-    l_histidine
-    <-> . +gtp +ppi
-    n_5_guanosyl_phosphono_l_histidine_1
   }
 }

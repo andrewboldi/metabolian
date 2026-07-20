@@ -15,10 +15,4 @@ pathway muricholate-to-3-12-dihydroxy-5-chola "β-muricholate to 3β,12α-dihydr
     <-> . +nadh +hplus -nad
     3_12_dihydroxy_5_cholan_24_oate
   }
-
-  branch from deoxycholate side left {
-    deoxycholate
-    <-> . +nadp +nadph +hplus
-    12_dehydrodeoxycholate
-  }
 }

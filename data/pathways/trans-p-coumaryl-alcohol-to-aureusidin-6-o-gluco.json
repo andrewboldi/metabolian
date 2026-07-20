@@ -169,51 +169,41 @@
       }
     },
     {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
+      "id": "3_hydroxy_3_4_hydroxyphenyl_propionyl_coa",
+      "name": "3-hydroxy-3-(4-hydroxyphenyl)propionyl-CoA",
+      "short": "3-hydroxy-3-(4-hydr…",
+      "formula": "C30H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:73500"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "desmethylxanthohumol",
+      "name": "desmethylxanthohumol",
+      "formula": "C20H20O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:13193"
+        "chebi": "CHEBI:80489"
       }
     },
     {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
-      "charge": 0,
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:17499"
-      }
-    },
-    {
-      "id": "anthocyanidin_3_o_d_glucoside",
-      "name": "anthocyanidin 3-O-β-D-glucoside",
-      "short": "anthocyanidin…",
-      "formula": "C21H19O10R2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:16307"
-      }
-    },
-    {
-      "id": "anthocyanidin_3_o_6_o_4_hydroxycinnamoyl_d_gluco",
-      "name": "anthocyanidin 3-O-[6-O-(4-hydroxycinnamoyl)-β-D-glucoside]",
-      "short": "anthocyanidin…",
-      "formula": "C30H24O12R2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:71505"
-      }
-    },
-    {
-      "id": "2_3_4_4_6_pentahydroxychalcone_4_o_d_glucoside",
-      "name": "2',3,4,4',6'-pentahydroxychalcone 4'-O-β-D-glucoside",
-      "short": "2',3,4,4',6'-pentah…",
-      "formula": "C21H21O11",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77622"
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -261,10 +251,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_215",
-      "name": "anthocyanidin 3-O-glucoside 6''-O-acyltransferase",
+      "id": "ec_2_5_1_136",
+      "name": "2-acylphloroglucinol 4-prenyltransferase",
       "ec": [
-        "2.3.1.215"
+        "2.5.1.136"
       ]
     }
   ],
@@ -520,137 +510,80 @@
     },
     {
       "id": "r6",
-      "name": "(E)-4-coumaroyl alcohol + A = (E)-4-coumaraldehyde + AH2",
-      "equation": "(E)-4-coumaroyl alcohol + A = (E)-4-coumaraldehyde + AH2",
+      "name": "(E)-4-coumaroyl-CoA + H2O = 3-hydroxy-3-(4-hydroxyphenyl)propanoyl-CoA",
+      "equation": "(E)-4-coumaroyl-CoA + H2O = 3-hydroxy-3-(4-hydroxyphenyl)propanoyl-CoA",
       "substrates": [
         {
-          "metabolite": "trans_p_coumaryl_alcohol",
+          "metabolite": "trans_4_coumaroyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxycinnamaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "3_hydroxy_3_4_hydroxyphenyl_propionyl_coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:76451"
+        "rhea": "RHEA:40991"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76451"
+            "id": "RHEA:40991"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "anthocyanidin 3-O-glucoside 6''-O-acyltransferase",
-      "equation": "an anthocyanidin 3-O-beta-D-glucoside + (E)-4-coumaroyl-CoA = an anthocyanidin 3-O-[6-O-(4-hydroxycinnamoyl)-beta-D-glucoside] + CoA + H(+)",
-      "ec": "2.3.1.215",
+      "name": "2-acylphloroglucinol 4-prenyltransferase",
+      "equation": "2',4,4',6'-tetrahydroxychalcone + dimethylallyl diphosphate = desmethylxanthohumol + diphosphate",
+      "ec": "2.5.1.136",
       "substrates": [
         {
-          "metabolite": "anthocyanidin_3_o_d_glucoside",
+          "metabolite": "2_4_4_6_tetrahydroxychalcone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "trans_4_coumaroyl_coa",
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "anthocyanidin_3_o_6_o_4_hydroxycinnamoyl_d_gluco",
+          "metabolite": "desmethylxanthohumol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_215"
+          "enzyme": "ec_2_5_1_136"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:35411"
+        "rhea": "RHEA:51876"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35411"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "aureusidin synthase",
-      "equation": "2 2',3,4,4',6'-pentahydroxychalcone 4'-O-beta-D-glucoside + O2 + 2 H(+) = 2 aureusidin 6-O-beta-glucoside + 2 H2O",
-      "ec": "1.21.3.6",
-      "substrates": [
-        {
-          "metabolite": "2_3_4_4_6_pentahydroxychalcone_4_o_d_glucoside",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aureusidin_6_o_glucoside",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_21_3_6"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:34195"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:34195"
+            "id": "RHEA:51876"
           }
         ]
       }

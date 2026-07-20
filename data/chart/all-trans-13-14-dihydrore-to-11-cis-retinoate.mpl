@@ -22,25 +22,31 @@ pathway all-trans-13-14-dihydrore-to-11-cis-retinoate "all-trans-13,14-dihydrore
 
   branch from all_trans_retinol side left {
     all_trans_retinol
-    <-> . +palmitoyl_coa +coa
-    all_trans_retinyl_palmitate
+    <-> . +all_trans_retinyl_palmitate +h2o +hplus
+    palmitate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_5_99_3 [1.5.99.3] +l_pipecolic_acid +hydrogen_acceptor +hplus
-    s_1_piperideine_6_carboxylate
+    <-> ec_1_3_99_17 [1.3.99.17] +8_chloroquinoline +hydrogen_acceptor +h2o
+    8_chloroquinolin_2_1h_one
   }
 
   branch from all_trans_retinyl_ester side left {
     all_trans_retinyl_ester
-    <-> . +all_trans_retinol +phosphatidylcholine
-    2_acyl_sn_glycero_3_phosphocholine
+    <-> ec_3_1_1_90 [3.1.1.90] +h2o +fatty-acid +hplus
+    13_cis_retinol
   }
 
   branch from 11_cis_retinol side right {
     11_cis_retinol
-    <-> ec_3_1_1_63 [3.1.1.63] +11_cis_retinyl_palmitate +h2o +hplus
-    palmitate
+    <-> ec_3_1_1_64 [3.1.1.64] +h2o +palmitate +hplus
+    all_trans_retinyl_palmitate
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> ec_3_1_1_32 [3.1.1.32] +phosphatidylcholine +h2o +hplus
+    2_acyl_sn_glycero_3_phosphocholine
   }
 }

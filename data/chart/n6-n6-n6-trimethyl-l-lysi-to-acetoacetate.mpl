@@ -28,14 +28,14 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-acetoacetate "N6,N6,N6-trimethyl-L-lysi… 
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_7 [1.14.11.7] +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
+    <-> ec_2_8_3_5 [2.8.3.5] +3_oxo_monocarboxylic_acid_anion +succinyl_coa
+    3_oxoacyl_coa
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_1_4_1 [2.1.4.1] +arginine +ornithine
-    guanidinoacetic_acid
+    <-> ec_1_4_2_1 [1.4.2.1] +iron +h2o +fe2 +nh3 +hplus
+    glyoxylate
   }
 
   branch from 4_trimethylammonio_butanoate side left {
@@ -48,5 +48,17 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-acetoacetate "N6,N6,N6-trimethyl-L-lysi… 
     carnitine
     <-> ec_4_1_1_42 [4.1.1.42] +hplus +co2
     2_methylcholine
+  }
+
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_2_3_1_318 [2.3.1.318] +3_oxoadipate +acetyl_coa
+    succinyl_coa
+  }
+
+  branch from acetoacetyl_coa side right {
+    acetoacetyl_coa
+    <-> . +nad +nadh +hplus
+    hydroxybutyryl_coa
   }
 }

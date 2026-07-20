@@ -20,21 +20,15 @@ pathway 5-nitroanthranilate-to-fumarate "5-nitroanthranilate to fumarate" {
     fumarate
   }
 
-  branch from 5_nitrosalicylate side left {
-    5_nitrosalicylate
-    <-> . +o2 +hplus
-    4_nitro_6_oxohepta_2_4_dienedioate
-  }
-
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_73 [3.5.1.73] +r_carnitinamide +h2o
-    carnitine
+    <-> ec_1_4_3_13 [1.4.3.13] +l_lysinium +o2 +h2o +h2o2
+    l_allysine
   }
 
-  branch from nitrite side left {
+  branch from nitrite side right {
     nitrite
-    <-> ec_1_7_3_1 [1.7.3.1] +secondary_nitroalkane +o2 +h2o +h2o2 +hplus
-    ketone
+    <-> ec_1_14_12_23 [1.14.12.23] +3_4_dinitrotoluene +nadh +o2 +nad
+    5_methyl_3_nitrocatechol
   }
 }

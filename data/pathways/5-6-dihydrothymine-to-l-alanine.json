@@ -111,39 +111,40 @@
       }
     },
     {
-      "id": "3_chloro_d_alanine",
-      "name": "3-chloro-D-alanine",
-      "formula": "C3H6ClNO2",
+      "id": "iminodiacetonitrile",
+      "name": "iminodiacetonitrile",
+      "formula": "C4H5N3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:47291"
+        "chebi": "CHEBI:71189"
       }
     },
     {
-      "id": "chloride",
-      "name": "chloride",
-      "formula": "Cl",
+      "id": "n_cyanomethyl_glycinate",
+      "name": "N-(cyanomethyl)glycinate",
+      "short": "N-(cyanomethyl)glyc…",
+      "formula": "C4H5N2O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17996"
+        "chebi": "CHEBI:71192"
       }
     },
     {
-      "id": "2_2_dialkylglycine",
-      "name": "2,2-dialkylglycine",
-      "formula": "C2H3NO2R2",
+      "id": "ala_gln",
+      "name": "Ala-Gln",
+      "formula": "C8H15N3O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57689"
+        "chebi": "CHEBI:74387"
       }
     },
     {
-      "id": "dialkyl_ketone",
-      "name": "dialkyl ketone",
-      "formula": "COR2",
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18044"
+        "chebi": "CHEBI:58359"
       }
     }
   ],
@@ -167,20 +168,6 @@
       "name": "(R)-3-amino-2-methylpropionate--pyruvate transaminase",
       "ec": [
         "2.6.1.40"
-      ]
-    },
-    {
-      "id": "ec_4_5_1_2",
-      "name": "3-chloro-D-alanine dehydrochlorinase",
-      "ec": [
-        "4.5.1.2"
-      ]
-    },
-    {
-      "id": "ec_4_1_1_64",
-      "name": "2,2-dialkylglycine decarboxylase (pyruvate)",
-      "ec": [
-        "4.1.1.64"
       ]
     }
   ],
@@ -330,12 +317,50 @@
     },
     {
       "id": "r4",
-      "name": "3-chloro-D-alanine dehydrochlorinase",
-      "equation": "3-chloro-D-alanine + H2O = chloride + pyruvate + NH4(+) + H(+)",
-      "ec": "4.5.1.2",
+      "name": "iminodiacetonitrile + 2 H2O = N-(cyanomethyl)glycine + NH4(+)",
+      "equation": "iminodiacetonitrile + 2 H2O = N-(cyanomethyl)glycine + NH4(+)",
       "substrates": [
         {
-          "metabolite": "3_chloro_d_alanine",
+          "metabolite": "iminodiacetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_cyanomethyl_glycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34855"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-alanyl-L-glutamine + H2O = L-glutamine + L-alanine",
+      "equation": "L-alanyl-L-glutamine + H2O = L-glutamine + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "ala_gln",
           "stoichiometry": 1
         },
         {
@@ -345,91 +370,25 @@
       ],
       "products": [
         {
-          "metabolite": "chloride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_5_1_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:18873"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:18873"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "2,2-dialkylglycine decarboxylase (pyruvate)",
-      "equation": "2,2-dialkylglycine + pyruvate + H(+) = dialkyl ketone + L-alanine + CO2",
-      "ec": "4.1.1.64",
-      "substrates": [
-        {
-          "metabolite": "2_2_dialkylglycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dialkyl_ketone",
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "alanine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_64"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:16073"
+        "rhea": "RHEA:37275"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16073"
+            "id": "RHEA:37275"
           }
         ]
       }

@@ -48,7 +48,19 @@ pathway d-arabinitol-to-ribitol "D-arabinitol to ribitol" {
 
   branch from g3p side right {
     g3p
-    <-> ec_4_1_2_8 [4.1.2.8] +1s_2r_1_c_indol_3_yl_glycerol_3_phosphate
-    1h_indole
+    <-> ec_1_1_1_177 [1.1.1.177] +nadp +nadph +hplus
+    sn_glycerol_3_phosphate
+  }
+
+  branch from sulfonatoacetaldehyde side left {
+    sulfonatoacetaldehyde
+    <-> ec_1_1_1_313 [1.1.1.313] +nadp +nadph +hplus
+    isethionate
+  }
+
+  branch from sulfonatoacetate side right {
+    sulfonatoacetate
+    <-> . +atp +coa +amp +ppi
+    sulfoacetyl_coa
   }
 }

@@ -24,7 +24,7 @@ pathway l-tyrosine-to-dehydroalanine "L-tyrosine to dehydroalanine" {
 
   branch from dehydroalanine side right {
     dehydroalanine
-    <-> ec_4_4_1_37 [4.4.1.37] +pyridinium_3_5_biscarboxylate_mononucleotide +l_cysteine +atp +amp +ppi +hplus
-    pyridinium_3_carboxylate_5_thiocarboxylate_monon
+    <-> ec_2_4_2_60 [2.4.2.60] +l_cysteine +glycine +nad +nicotinamide +h2o +hplus
+    adp_5_ethyl_4_methylthiazole_2_carboxylate
   }
 }

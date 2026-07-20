@@ -26,21 +26,15 @@ pathway 2-3-cyclic-amp-to-9h-xanthine "2',3'-cyclic AMP to 9H-xanthine" {
     dgdp
   }
 
-  branch from d_ribofuranose side right {
-    d_ribofuranose
-    <-> . +nadp +nadph +hplus
-    ribitol
-  }
-
-  branch from adenine side left {
+  branch from adenine side right {
     adenine
-    <-> . +datp +h2o
-    2_deoxyribose_5_triphosphate
+    <-> . +n6_hydroxyadenine +hydrogen_donor +h2o
+    hydrogen_acceptor
   }
 
-  branch from hypoxanthine side right {
-    hypoxanthine
-    <-> . +2_deoxyinosine_5_phosphate +h2o
-    2_deoxy_d_ribofuranose_5_phosphate
+  branch from nh3 side left {
+    nh3
+    <-> . +ctp +h2o +hplus
+    utp
   }
 }

@@ -1,0 +1,293 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "toluene-to-benzaldehyde",
+  "name": "toluene to benzaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from toluene to benzaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51592"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17578"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "toluene",
+      "name": "toluene",
+      "formula": "C7H8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17578"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "benzyl_alcohol",
+      "name": "benzyl alcohol",
+      "formula": "C7H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17987"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "benzaldehyde",
+      "name": "benzaldehyde",
+      "formula": "C7H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17169"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17347"
+      }
+    },
+    {
+      "id": "11_hydroxytestosterone",
+      "name": "11β-hydroxytestosterone",
+      "short": "11β-hydroxytestoste…",
+      "formula": "C19H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81481"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_26",
+      "name": "toluene methyl-monooxygenase",
+      "ec": [
+        "1.14.15.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "toluene methyl-monooxygenase",
+      "equation": "toluene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = benzyl alcohol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.26",
+      "substrates": [
+        {
+          "metabolite": "toluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "benzyl alcohol + NAD(+) = benzaldehyde + NADH + H(+)",
+      "equation": "benzyl alcohol + NAD(+) = benzaldehyde + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "benzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:64696"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "testosterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 11beta,17beta-dihydroxyandrost-4...",
+      "equation": "testosterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 11beta,17beta-dihydroxyandrost-4-ene-3-one + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_hydroxytestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86455"
+          }
+        ]
+      }
+    }
+  ]
+}

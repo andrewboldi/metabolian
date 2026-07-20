@@ -12,33 +12,19 @@ pathway n1-s-3-amino-3-carboxy-to-ammonium "N1-[(S)-3-amino-3-carboxy… to ammo
     n1_aminopropylagmatine
     <-> ec_3_5_3_24 [3.5.3.24] +h2o -spermidine
     urea
-    <-> ec_6_3_4_6 [6.3.4.6] +hco3 +atp -adp -pi -hplus
-    urea_1_carboxylate
-    <-> ec_3_5_1_54 [3.5.1.54] +h2o +hplus -co2
-    nh3
-  }
-
-  branch from n1_aminopropylagmatine side left {
-    n1_aminopropylagmatine
-    <-> ec_2_5_1_104 [2.5.1.104] +s_adenosylmethioninaminium +agmatinium +hplus
-    5_s_methyl_5_thioadenosine
-  }
-
-  branch from urea side right {
-    urea
-    <-> . +s_2_ureidoglycine +h2o +nh3
-    glyoxylate
+    <-> . +hplus -nh3
+    isocyanic_acid
   }
 
   branch from spermidine side left {
     spermidine
-    <-> ec_2_5_1_79 [2.5.1.79] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
-    thermosperminium
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
+    n8_acetylspermidinium
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +4_aminoimidazole +h2o +hplus
-    n_formimidoylglycine
+    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nadp +h2o +nadph +hplus
+    ketone
   }
 }

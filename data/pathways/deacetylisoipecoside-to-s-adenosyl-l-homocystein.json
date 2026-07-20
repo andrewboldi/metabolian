@@ -1,0 +1,242 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "deacetylisoipecoside-to-s-adenosyl-l-homocystein",
+  "name": "deacetylisoipecoside to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from deacetylisoipecoside(1+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83651"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58091"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "deacetylisoipecoside",
+      "name": "deacetylisoipecoside",
+      "formula": "C25H34NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58091"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "7_o_methyldeacetylisoipecoside",
+      "name": "7-O-methyldeacetylisoipecoside",
+      "short": "7-O-methyldeacetyli…",
+      "formula": "C26H36NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:231626"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "6_7_o_o_dimethyldeacetylisoipecoside",
+      "name": "6,7-O,O-dimethyldeacetylisoipecoside",
+      "short": "6,7-O,O-dimethyldea…",
+      "formula": "C27H38NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:231627"
+      }
+    },
+    {
+      "id": "5_carboxymethyl_uridine_5_monophosphate_2",
+      "name": "5-(carboxymethyl)uridine 5'-monophosphate(2−)",
+      "short": "5-(carboxymethyl)ur…",
+      "formula": "C11H11N2O10P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:74882"
+      }
+    },
+    {
+      "id": "5_2_methoxy_2_oxoethyl_uridine_5_monophosphate",
+      "name": "5-(2-methoxy-2-oxoethyl)uridine 5'-monophosphate",
+      "short": "5-(2-methoxy-2-oxoe…",
+      "formula": "C12H14N2O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74851"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_229",
+      "name": "tRNA (carboxymethyluridine(34)-5-O)-methyltransferase",
+      "ec": [
+        "2.1.1.229"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "deacetylisoipecoside + S-adenosyl-L-methionine = 7-O-methyldeacetylisoipecoside + S-ade...",
+      "equation": "deacetylisoipecoside + S-adenosyl-L-methionine = 7-O-methyldeacetylisoipecoside + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "deacetylisoipecoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_o_methyldeacetylisoipecoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83651"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7-O-methyldeacetylisoipecoside + S-adenosyl-L-methionine = 6,7-O,O-dimethyldeacetylisoi...",
+      "equation": "7-O-methyldeacetylisoipecoside + S-adenosyl-L-methionine = 6,7-O,O-dimethyldeacetylisoipecoside + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "7_o_methyldeacetylisoipecoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_7_o_o_dimethyldeacetylisoipecoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80667"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tRNA (carboxymethyluridine(34)-5-O)-methyltransferase",
+      "equation": "5-(carboxymethyl)uridine(34) in tRNA + S-adenosyl-L-methionine = 5-(2-methoxy-2-oxoethyl)uridine(34) in tRNA + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.229",
+      "substrates": [
+        {
+          "metabolite": "5_carboxymethyl_uridine_5_monophosphate_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_2_methoxy_2_oxoethyl_uridine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_229"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43208"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -26,7 +26,7 @@ pathway secoisolariciresinol-to-fmn-34423 "(−)-secoisolariciresinol to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_151 [1.14.14.151] +premnaspirodiene +fmnh2 +o2 +h2o +hplus
-    solavetivone
+    <-> ec_1_14_14_123 [1.14.14.123] +3_hydroxy_ent_sandaracopimaradiene +fmnh2 +o2 +h2o +hplus
+    oryzalexin_d
   }
 }

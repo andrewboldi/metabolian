@@ -36,8 +36,8 @@ pathway s-carnitine-to-glycerone-phosphate "(S)-carnitine to glycerone phosphate
 
   branch from acetate side right {
     acetate
-    <-> ec_3_7_1_6 [3.7.1.6] +h2o +pyruvate +hplus
-    acetylpyruvate
+    <-> ec_2_5_1_118 [2.5.1.118] +isoxazolin_5_one +o_acetyl_l_serine +hplus
+    3_5_oxoisoxazolin_2_yl_l_alanine
   }
 
   branch from dmglycine side left {
@@ -48,7 +48,19 @@ pathway s-carnitine-to-glycerone-phosphate "(S)-carnitine to glycerone phosphate
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_4_4_1_22 [4.4.1.22] +s_hydroxymethyl_glutathione
-    gsh
+    <-> . +n_methyl_l_tryptophan +o2 +h2o +h2o2
+    l_tryptophan
+  }
+
+  branch from sarcosine side left {
+    sarcosine
+    <-> ec_2_1_1_20 [2.1.1.20] +glycine +sah +hplus
+    sam
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_2_1_4_1 [2.1.4.1] +arginine +ornithine
+    guanidinoacetic_acid
   }
 }

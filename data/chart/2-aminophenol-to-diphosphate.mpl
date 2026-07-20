@@ -18,7 +18,7 @@ pathway 2-aminophenol-to-diphosphate "2-aminophenol to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_99 [4.2.3.99] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    syn_labda_8_17_12e_14_triene
+    <-> . +6_1s_5s_4_oxo_5_2z_pent_2_en_1_yl_cyclopent_2_en +atp +coa +amp
+    9s_13s_1a_1b_dinor_12_oxo_10_15_phytodienoyl_co
   }
 }

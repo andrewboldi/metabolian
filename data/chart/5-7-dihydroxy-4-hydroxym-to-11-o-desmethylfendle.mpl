@@ -20,19 +20,19 @@ pathway 5-7-dihydroxy-4-hydroxym-to-11-o-desmethylfendle "5,7-dihydroxy-4-(hydro
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_175 [2.1.1.175] +tricetin +sam +hplus
-    3_5_di_o_methyltricetin
+    <-> ec_2_1_1_225 [2.1.1.225] +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
   }
 
   branch from fmn side right {
     fmn
-    <-> . +dehydroepiandrosterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxydehydroepiandrosterone
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    5z_8z_14z_17z_11_12_epoxyicosatetraenoate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_82 [4.2.3.82] +fpp
-    santalene
+    <-> . +1_2_diarachidonoyl_sn_glycero_3_phosphate +ctp +hplus
+    cdp_1_2_diarachidonoyl_sn_glycerol
   }
 }

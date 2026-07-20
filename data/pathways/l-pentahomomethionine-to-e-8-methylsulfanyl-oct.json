@@ -113,25 +113,35 @@
       }
     },
     {
-      "id": "valine",
-      "name": "L-Valine",
-      "formula": "C5H11NO2",
+      "id": "l_tetrahomomethionine",
+      "name": "L-tetrahomomethionine",
+      "short": "L-tetrahomomethioni…",
+      "formula": "C9H19NO2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57762"
+        "chebi": "CHEBI:134634"
       }
     },
     {
-      "id": "n_hydroxy_l_valinate",
-      "name": "N-hydroxy-L-valinate",
-      "formula": "C5H10NO3",
-      "charge": -1,
+      "id": "e_7_methylsulfanyl_heptanal_oxime",
+      "name": "(E)-7-(methylsulfanyl)heptanal oxime",
+      "short": "7-(methylsulfanyl)h…",
+      "formula": "C8H17NOS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61140"
+        "chebi": "CHEBI:134683"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_42",
+      "name": "homomethionine N-monooxygenase",
+      "ec": [
+        "1.14.14.42"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -280,51 +290,61 @@
     },
     {
       "id": "r4",
-      "name": "L-valine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-valine + oxidized ...",
-      "equation": "L-valine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-valine + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "name": "homomethionine N-monooxygenase",
+      "equation": "L-tetrahomomethionine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-7-(methylsulfanyl)heptanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.42",
       "substrates": [
         {
-          "metabolite": "valine",
+          "metabolite": "l_tetrahomomethionine",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "n_hydroxy_l_valinate",
+          "metabolite": "e_7_methylsulfanyl_heptanal_oxime",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 2
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_42"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30491"
+        "rhea": "RHEA:33243"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30491"
+            "id": "RHEA:33243"
           }
         ]
       }

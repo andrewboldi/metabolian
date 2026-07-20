@@ -235,58 +235,22 @@
       }
     },
     {
-      "id": "n6_capryl_l_lysine",
-      "name": "N6-capryl-L-lysine",
-      "formula": "C16H30N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143222"
-      }
-    },
-    {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:29969"
-      }
-    },
-    {
-      "id": "tetradecanoate_ester",
-      "name": "tetradecanoate ester",
-      "formula": "C14H27O2R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:87691"
-      }
-    },
-    {
-      "id": "tetradecanoate",
-      "name": "tetradecanoate",
-      "formula": "C14H27O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30807"
-      }
-    },
-    {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9β,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58622"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "stemod_13_17_ene",
-      "name": "stemod-13(17)-ene",
-      "formula": "C20H32",
+      "id": "germacrene_d",
+      "name": "(+)-germacrene D",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50068"
+        "chebi": "CHEBI:49046"
       }
     },
     {
@@ -306,6 +270,54 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "medium_chain_fatty_acid_anion",
+      "name": "medium-chain fatty acid anion",
+      "short": "medium-chain fatty…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59558"
+      }
+    },
+    {
+      "id": "o_s_medium_chain_fatty_acyl_pantetheine_4_phosph",
+      "name": "O-[S-(medium-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(medium-chain…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133242"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "o_s_2z_dodecenoylpantetheine_4_phosphoryl_l_seri",
+      "name": "O-[S-(2Z)-dodecenoylpantetheine-4'-phosphoryl]-L-serine(1−)",
+      "short": "O-[S-(2Z)-dodecenoy…",
+      "formula": "C26H45N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:235419"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
     }
   ],
   "enzymes": [
@@ -324,10 +336,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_34",
-      "name": "stemod-13(17)-ene synthase",
+      "id": "ec_4_2_3_77",
+      "name": "(+)-germacrene D synthase",
       "ec": [
-        "4.2.3.34"
+        "4.2.3.77"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_47",
+      "name": "medium-chain-fatty-acid--[acyl-carrier-protein] ligase",
+      "ec": [
+        "6.2.1.47"
       ]
     }
   ],
@@ -721,100 +740,18 @@
     },
     {
       "id": "r10",
-      "name": "N(6)-decanoyl-L-lysyl-[protein] + H2O = decanoate + L-lysyl-[protein]",
-      "equation": "N(6)-decanoyl-L-lysyl-[protein] + H2O = decanoate + L-lysyl-[protein]",
+      "name": "(+)-germacrene D synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-germacrene D + diphosphate",
+      "ec": "4.2.3.77",
       "substrates": [
         {
-          "metabolite": "n6_capryl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "decanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:85167"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:85167"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "a tetradecanoate ester + H2O = an aliphatic alcohol + tetradecanoate + H(+)",
-      "equation": "a tetradecanoate ester + H2O = an aliphatic alcohol + tetradecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "tetradecanoate_ester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aliphatic_alcohol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "tetradecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:47388"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:47388"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "stemod-13(17)-ene synthase",
-      "equation": "9alpha-copalyl diphosphate = stemod-13(17)-ene + diphosphate",
-      "ec": "4.2.3.34",
-      "substrates": [
-        {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "stemod_13_17_ene",
+          "metabolite": "germacrene_d",
           "stoichiometry": 1
         },
         {
@@ -824,26 +761,26 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_34"
+          "enzyme": "ec_4_2_3_77"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:25556"
+        "rhea": "RHEA:30427"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25556"
+            "id": "RHEA:30427"
           }
         ]
       }
     },
     {
-      "id": "r13",
+      "id": "r11",
       "name": "decanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxododecanoyl-[ACP] + CO2 + CoA",
       "equation": "decanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxododecanoyl-[ACP] + CO2 + CoA",
       "substrates": [
@@ -875,7 +812,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 13,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:43652"
       },
@@ -885,6 +822,102 @@
           {
             "db": "Rhea",
             "id": "RHEA:43652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "medium-chain-fatty-acid--[acyl-carrier-protein] ligase",
+      "equation": "a medium-chain fatty acid + holo-[ACP] + ATP = a medium-chain fatty acyl-[ACP] + AMP + diphosphate",
+      "ec": "6.2.1.47",
+      "substrates": [
+        {
+          "metabolite": "medium_chain_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_medium_chain_fatty_acyl_pantetheine_4_phosph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:50460"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "dodecanoyl-[ACP] + FAD + H(+) = (2Z)-dodecenoyl-[ACP] + FADH2",
+      "equation": "dodecanoyl-[ACP] + FAD + H(+) = (2Z)-dodecenoyl-[ACP] + FADH2",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_2z_dodecenoylpantetheine_4_phosphoryl_l_seri",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:46516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46516"
           }
         ]
       }

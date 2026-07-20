@@ -24,7 +24,7 @@ pathway 5-22s-24r-22-hydroxyer-to-fmn "(5α,22S,24R)-22-hydroxyer… to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    8r_9s_eet
+    <-> . +vernolate +fmnh2 +o2 +h2o +hplus
+    12_13_epoxy_18_hydroxy_9z_octadecenoate
   }
 }

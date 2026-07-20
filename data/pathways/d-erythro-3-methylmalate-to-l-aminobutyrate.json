@@ -1,0 +1,253 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-erythro-3-methylmalate-to-l-aminobutyrate",
+  "name": "D-erythro-3-methylmalate to L-α-aminobutyrate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from D-erythro-3-methylmalate(2−) to L-α-aminobutyrate zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32715"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58511"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_erythro_3_methylmalate",
+      "name": "D-erythro-3-methylmalate",
+      "short": "D-erythro-3-methylm…",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58511"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_l_argininium",
+      "name": "Nω,Nω-dimethyl-L-argininium",
+      "short": "Nω,Nω-dimethyl-L-ar…",
+      "formula": "C8H19N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58326"
+      }
+    },
+    {
+      "id": "5_3_3_dimethylguanidino_2_oxopentanoate",
+      "name": "5-(3,3-dimethylguanidino)-2-oxopentanoate",
+      "short": "5-(3,3-dimethylguan…",
+      "formula": "C8H15N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197301"
+      }
+    },
+    {
+      "id": "l_aminobutyrate",
+      "name": "L-α-aminobutyrate",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74359"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_n5",
+      "name": "3-methylmalate dehydrogenase",
+      "ec": [
+        "1.1.1.n5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-methylmalate dehydrogenase",
+      "equation": "(2R,3S)-3-methylmalate + NAD(+) = 2-oxobutanoate + CO2 + NADH",
+      "ec": "1.1.1.n5",
+      "substrates": [
+        {
+          "metabolite": "d_erythro_3_methylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_n5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(omega),N(omega)-dimethyl-L-arginine + 2-oxobutanoate = 5-(3,3-dimethylguanidino)-2-ox...",
+      "equation": "N(omega),N(omega)-dimethyl-L-arginine + 2-oxobutanoate = 5-(3,3-dimethylguanidino)-2-oxopentanoate + (2S)-2-aminobutanoate",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethyl_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_3_3_dimethylguanidino_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_aminobutyrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(omega),N(omega)-dimethyl-L-arginine + glyoxylate = 5-(3,3-dimethylguanidino)-2-oxopen...",
+      "equation": "N(omega),N(omega)-dimethyl-L-arginine + glyoxylate = 5-(3,3-dimethylguanidino)-2-oxopentanoate + glycine",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethyl_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_3_3_dimethylguanidino_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77311"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77311"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "z-glucosinolate-to-sulfate",
+  "name": "(Z)-glucosinolate to sulfate",
+  "category": "other",
+  "summary": "A 2-step route from (Z)-glucosinolate(1−) to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69220"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:183098"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "z_glucosinolate",
+      "name": "(Z)-glucosinolate",
+      "formula": "C7H11NO9S2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:183098"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "z_n_sulfonatooxy_alkanimidothioate",
+      "name": "(Z)-N-(sulfonatooxy)alkanimidothioate",
+      "short": "N-(sulfonatooxy)alk…",
+      "formula": "CNO4S2R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:183089"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nitrile",
+      "name": "nitrile",
+      "formula": "CNR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18379"
+      }
+    },
+    {
+      "id": "sulfur_atom",
+      "name": "sulfur atom",
+      "formula": "S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26833"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_8_1_5",
+      "name": "thiohydroximate-O-sulfate sulfate/sulfur-lyase (nitrile-forming)",
+      "ec": [
+        "4.8.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a (Z)-glucosinolate + H2O = a (Z)-N-(sulfonatooxy)alkanimidothioate + D-glucose + H(+)",
+      "equation": "a (Z)-glucosinolate + H2O = a (Z)-N-(sulfonatooxy)alkanimidothioate + D-glucose + H(+)",
+      "substrates": [
+        {
+          "metabolite": "z_glucosinolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_n_sulfonatooxy_alkanimidothioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69220"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thiohydroximate-O-sulfate sulfate/sulfur-lyase (nitrile-forming)",
+      "equation": "a (Z)-N-(sulfonatooxy)alkanimidothioate = a nitrile + sulfur + sulfate",
+      "ec": "4.8.1.5",
+      "substrates": [
+        {
+          "metabolite": "z_n_sulfonatooxy_alkanimidothioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_8_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59956"
+          }
+        ]
+      }
+    }
+  ]
+}

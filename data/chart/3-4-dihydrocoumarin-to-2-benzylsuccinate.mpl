@@ -22,27 +22,33 @@ pathway 3-4-dihydrocoumarin-to-2-benzylsuccinate "3,4-dihydrocoumarin to 2-benzy
     2_benzylsuccinate
   }
 
-  branch from 3_2_hydroxyphenyl_propanoate side left {
-    3_2_hydroxyphenyl_propanoate
-    <-> ec_1_3_1_11 [1.3.1.11] +nad +nadh +hplus
-    trans_2_coumarate
-  }
-
-  branch from 3_2_3_dihydroxyphenyl_propanoate side right {
+  branch from 3_2_3_dihydroxyphenyl_propanoate side left {
     3_2_3_dihydroxyphenyl_propanoate
     <-> ec_1_14_13_127 [1.14.13.127] +nadh +o2 +hplus +nad +h2o
     3_3_hydroxyphenyl_propanoate
   }
 
-  branch from 2z_2_hydroxypenta_2_4_dienoate side left {
+  branch from 2z_2_hydroxypenta_2_4_dienoate side right {
     2z_2_hydroxypenta_2_4_dienoate
     <-> ec_4_2_1_80 [4.2.1.80] +h2o
     s_4_hydroxy_2_oxopentanoate
   }
 
-  branch from succinate side right {
+  branch from succinate side left {
     succinate
-    <-> ec_1_14_20_5 [1.14.20.5] +flavanones +akg +o2 +co2 +h2o
-    flavones
+    <-> . +n6_methyl_l_lysinium +akg +o2 +formaldehyde +co2
+    l_lysinium
+  }
+
+  branch from fumarate side right {
+    fumarate
+    <-> ec_4_2_1_2 [4.2.1.2] +h2o
+    malate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_97_1_9 [1.97.1.9] +selenite +hydrogen_acceptor +h2o
+    selenate
   }
 }

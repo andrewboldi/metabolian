@@ -8,37 +8,15 @@ pathway 1-palmitoyl-2-oleoyl-3-st-to-14-hydroxypalmitate "1-palmitoyl-2-oleoyl-3
 
   spine at 0,0 {
     1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol
-    <-> . +h2o -octadecanoate -hplus
-    1_palmitoyl_2_oleoyl_sn_glycerol
-    <-> . +palmitoyl_coa -coa
-    1_3_dipalmitoyl_2_oleoylglycerol
     <-> . +h2o -palmitate -hplus
-    2_oleoyl_3_palmitoyl_sn_glycerol
+    2_oleoyl_3_stearoyl_sn_glycerol
     <-> . +palmitate +nadph +o2 +hplus -nadp -h2o
     14_hydroxypalmitate
   }
 
-  branch from 1_palmitoyl_2_oleoyl_sn_glycerol side left {
-    1_palmitoyl_2_oleoyl_sn_glycerol
-    <-> . +palmitoyl_coa +coa
-    2_oleoylglycerol
-  }
-
-  branch from octadecanoate side right {
-    octadecanoate
-    <-> . +tristearoylglycerol +h2o +hplus
-    2_3_distearoyl_sn_glycerol
-  }
-
-  branch from 1_3_dipalmitoyl_2_oleoylglycerol side left {
-    1_3_dipalmitoyl_2_oleoylglycerol
-    <-> . +h2o +palmitate +hplus
-    1_palmitoyl_2_oleoylglycerol
-  }
-
-  branch from palmitate side right {
+  branch from palmitate side left {
     palmitate
-    <-> . +1_palmitoylglycerone_3_phosphate +linoleate
-    1_linoleoylglycerone_3_phosphate
+    <-> . +1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +h2o +hplus
+    2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce
   }
 }

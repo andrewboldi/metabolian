@@ -1,0 +1,217 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "mogroside-iia1-to-mogroside-iva",
+  "name": "mogroside IIA1 to mogroside IVA",
+  "category": "other",
+  "summary": "A 2-step route from mogroside IIA1 to mogroside IVA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81895"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232043"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mogroside_iia1",
+      "name": "mogroside IIA1",
+      "formula": "C42H72O14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232043"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "mogroside_iiia",
+      "name": "mogroside IIIA",
+      "formula": "C48H82O19",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229952"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "mogroside_iva",
+      "name": "mogroside IVA",
+      "formula": "C54H92O24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229958"
+      }
+    },
+    {
+      "id": "mogroside_ivx",
+      "name": "mogroside IVX",
+      "formula": "C54H92O24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232053"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mogroside II-A1 + UDP-alpha-D-glucose = mogroside IIIX + UDP + H(+)",
+      "equation": "mogroside II-A1 + UDP-alpha-D-glucose = mogroside IIIX + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "mogroside_iia1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mogroside_iiia",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81895"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81895"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mogroside IIIX + UDP-alpha-D-glucose = mogroside IVA + UDP + H(+)",
+      "equation": "mogroside IIIX + UDP-alpha-D-glucose = mogroside IVA + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "mogroside_iiia",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mogroside_iva",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:81863"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "mogroside IIIX + UDP-alpha-D-glucose = mogroside IVX + UDP + H(+)",
+      "equation": "mogroside IIIX + UDP-alpha-D-glucose = mogroside IVX + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "mogroside_iiia",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mogroside_ivx",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:81951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81951"
+          }
+        ]
+      }
+    }
+  ]
+}

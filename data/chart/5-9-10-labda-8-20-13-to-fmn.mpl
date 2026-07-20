@@ -18,14 +18,14 @@ pathway 5-9-10-labda-8-20-13-to-fmn "5α,9α,10β-labda-8(20),13-… to FMN" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_87 [4.2.3.87] +fpp
-    guaiene
+    <-> ec_4_2_3_157 [4.2.3.157] +fpp +h2o
+    isoafricanol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    16_hydroxyestradiol
+    <-> ec_1_14_14_47 [1.14.14.47] +fmnh2 +arginine +o2 +no +h2o +hplus
+    citrulline
   }
 
   branch from abietate side left {

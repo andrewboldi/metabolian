@@ -1,0 +1,246 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-s-6-methoxycarbonylhe-to-hydroxyclavatol-methy",
+  "name": "O-[S-(6-methoxycarbonylhe… to hydroxyclavatol methyl…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from O-[S-(6-methoxycarbonylhexanoyl)pantetheine-4'-phosphoryl]serine(1−) residue to hydroxyclavatol methyl ether, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42700"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:82735"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_s_6_methoxycarbonylhexanoyl_pantetheine_4_phos",
+      "name": "O-[S-(6-methoxycarbonylhexanoyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(6-methoxycarb…",
+      "formula": "C22H37N3O11PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82735"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o_s_pimeloylpantetheine_4_phosphoryl_serine_2",
+      "name": "O-(S-pimeloylpantetheine-4'-phosphoryl)serine(2−)",
+      "short": "O-(S-pimeloylpantet…",
+      "formula": "C21H34N3O11PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78846"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17790"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ortho_quinone_methide",
+      "name": "ortho-quinone methide",
+      "short": "ortho-quinone…",
+      "formula": "C10H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188927"
+      }
+    },
+    {
+      "id": "hydroxyclavatol_methyl_ether",
+      "name": "hydroxyclavatol methyl ether",
+      "short": "hydroxyclavatol…",
+      "formula": "C11H14O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188928"
+      }
+    },
+    {
+      "id": "coronaridine",
+      "name": "(−)-coronaridine",
+      "formula": "C21H27N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:146232"
+      }
+    },
+    {
+      "id": "de_ester_coronaridene",
+      "name": "de-ester-(−)-coronaridene",
+      "short": "de-ester-(−)-corona…",
+      "formula": "C20H24N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:235316"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_85",
+      "name": "pimeloyl-[acyl-carrier protein] methyl ester esterase",
+      "ec": [
+        "3.1.1.85"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pimeloyl-[acyl-carrier protein] methyl ester esterase",
+      "equation": "6-carboxyhexanoyl-[ACP] methyl ester + H2O = 6-carboxyhexanoyl-[ACP] + methanol + H(+)",
+      "ec": "3.1.1.85",
+      "substrates": [
+        {
+          "metabolite": "o_s_6_methoxycarbonylhexanoyl_pantetheine_4_phos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_pimeloylpantetheine_4_phosphoryl_serine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "o-quinone methide + methanol = hydroxyclavatol methyl ether",
+      "equation": "o-quinone methide + methanol = hydroxyclavatol methyl ether",
+      "substrates": [
+        {
+          "metabolite": "ortho_quinone_methide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyclavatol_methyl_ether",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70087"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(-)-coronaridine + H2O = de-ester-(-)-coronaridene + methanol + H(+)",
+      "equation": "(-)-coronaridine + H2O = de-ester-(-)-coronaridene + methanol + H(+)",
+      "substrates": [
+        {
+          "metabolite": "coronaridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "de_ester_coronaridene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:85883"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85883"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -28,27 +28,27 @@ pathway decanoate-ester-to-o-pantetheine-4-phospho "decanoate ester to O-(pantet
     kdo_2_lipid_a_6_e_coli
   }
 
-  branch from decanoate side left {
-    decanoate
-    <-> . +n6_capryl_l_lysine +h2o
-    l_lysinium
-  }
-
-  branch from aliphatic_alcohol side right {
-    aliphatic_alcohol
-    <-> . +tetradecanoate_ester +h2o +hplus
-    tetradecanoate
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    stemod_13_17_ene
+    <-> ec_4_2_3_77 [4.2.3.77] +fpp
+    germacrene_d
   }
 
   branch from o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri side right {
     o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
     <-> . +malonyl-acp +hplus +co2 +coa
     decanoyl_coa
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_6_2_1_47 [6.2.1.47] +medium_chain_fatty_acid_anion +atp +amp +ppi
+    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
+  }
+
+  branch from dodecanoyl_pantetheine_4_phosphorylserine_1 side right {
+    dodecanoyl_pantetheine_4_phosphorylserine_1
+    <-> . +fad +hplus +fadh2
+    o_s_2z_dodecenoylpantetheine_4_phosphoryl_l_seri
   }
 }

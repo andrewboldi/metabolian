@@ -131,23 +131,23 @@
       }
     },
     {
-      "id": "cytidine_5_monophosphate_1",
-      "name": "cytidine 5'-monophosphate(1−)",
-      "short": "cytidine 5'-MP(1−)",
-      "formula": "C9H11N3O7P",
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:82748"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "5_methylcytidine_5_monophosphate_1",
-      "name": "5-methylcytidine 5'-monophosphate(1−)",
-      "short": "5-methylcytidine…",
-      "formula": "C10H13N3O7P",
+      "id": "n1_methylguanosine_5_monophosphate_1",
+      "name": "N1-methylguanosine 5'-monophosphate(1−)",
+      "short": "N1-methylguanosine…",
+      "formula": "C11H13N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74483"
+        "chebi": "CHEBI:73542"
       }
     }
   ],
@@ -157,6 +157,13 @@
       "name": "carminomycin 4-O-methyltransferase",
       "ec": [
         "2.1.1.292"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_228",
+      "name": "tRNA (guanine(37)-N(1))-methyltransferase",
+      "ec": [
+        "2.1.1.228"
       ]
     }
   ],
@@ -357,11 +364,12 @@
     },
     {
       "id": "r5",
-      "name": "cytidine(72) in tRNA(Thr) + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA(Thr)...",
-      "equation": "cytidine(72) in tRNA(Thr) + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA(Thr) + S-adenosyl-L-homocysteine + H(+)",
+      "name": "tRNA (guanine(37)-N(1))-methyltransferase",
+      "equation": "guanosine(37) in tRNA + S-adenosyl-L-methionine = N(1)-methylguanosine(37) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.228",
       "substrates": [
         {
-          "metabolite": "cytidine_5_monophosphate_1",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -371,7 +379,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "metabolite": "n1_methylguanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -383,17 +391,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_228"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:21124"
+        "rhea": "RHEA:36899"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21124"
+            "id": "RHEA:36899"
           }
         ]
       }

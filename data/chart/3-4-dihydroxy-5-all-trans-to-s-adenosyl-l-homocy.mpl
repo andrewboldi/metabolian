@@ -20,13 +20,13 @@ pathway 3-4-dihydroxy-5-all-trans-to-s-adenosyl-l-homocy "3,4-dihydroxy-5-all-tr
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_170 [2.1.1.170] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    1_acyl_2_palmitoleoylglycerolipid
+    <-> . +1_acyl_2_linoleoyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
+    1_acyl_2_linolenoyl_3_d_galactosyl_1_6_d_galacto
   }
 }

@@ -28,27 +28,39 @@ pathway n-5-phosphonato-d-ribo-to-diphosphate "N-(5-phosphonato-β-D-ribo… to 
     molybdopterin_adenine_dinucleotide
   }
 
-  branch from l_tryptophan side left {
+  branch from g3p side left {
+    g3p
+    <-> ec_2_2_1_15 [2.2.1.15] +4_deoxy_4_sulfo_d_erythrulose +x5p
+    sulfonatoacetaldehyde
+  }
+
+  branch from l_tryptophan side right {
     l_tryptophan
-    <-> ec_2_1_1_106 [2.1.1.106] +sam +sah +hplus
-    2_methyl_l_tryptophan
+    <-> ec_1_13_12_3 [1.13.12.3] +o2 +co2 +h2o
+    indole_3_acetamide
   }
 
-  branch from 1_deoxy_d_xylulose_5_phosphate side right {
-    1_deoxy_d_xylulose_5_phosphate
-    <-> . +1_methylthio_d_xylulose_5_phosphate +hydrogen_donor +hydrogen_acceptor
-    methanethiol
-  }
-
-  branch from r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e side left {
-    r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e
-    <-> ec_5_3_99_10 [5.3.99.10]
-    2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
+  branch from c_terminal_gly_gly_1 side left {
+    c_terminal_gly_gly_1
+    <-> . +atp +c_terminal_n_glycylaminoethanethioate_1 +amp +ppi
+    h2s
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
-    3_l_glutaminyl_adenylyl_zwitterionic_group
+    <-> ec_6_3_5_1 [6.3.5.1] +deamido_nad +glutamine +atp +h2o +amp +nad +hplus
+    glutamate
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> . +cysteine +3_disulfanyl_l_alanine
+    alanine
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_3_99_29 [1.3.99.29] +15_cis_phytoene +hydrogen_donor
+    all_trans_carotene
   }
 }

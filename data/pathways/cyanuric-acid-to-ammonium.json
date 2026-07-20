@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cyanuric-acid-to-ammonium",
+  "name": "cyanuric acid to ammonium",
+  "category": "other",
+  "summary": "A 2-step route from cyanuric acid to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14641"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:38028"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cyanuric_acid",
+      "name": "cyanuric acid",
+      "formula": "C3H3N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:38028"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "biuret",
+      "name": "biuret",
+      "formula": "C2H5N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18138"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "urea_1_carboxylate",
+      "name": "urea-1-carboxylate",
+      "formula": "C2H3N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15832"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "cyclohexylammonium",
+      "name": "cyclohexylammonium",
+      "formula": "C6H14N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:42939"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "cyclohexanone",
+      "name": "cyclohexanone",
+      "formula": "C6H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17854"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_84",
+      "name": "biuret amidohydrolase",
+      "ec": [
+        "3.5.1.84"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cyanurate + H2O = biuret + CO2",
+      "equation": "cyanurate + H2O = biuret + CO2",
+      "substrates": [
+        {
+          "metabolite": "cyanuric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biuret",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14641"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "biuret amidohydrolase",
+      "equation": "biuret + H2O = urea-1-carboxylate + NH4(+)",
+      "ec": "3.5.1.84",
+      "substrates": [
+        {
+          "metabolite": "biuret",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea_1_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17525"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17525"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cyclohexylamine + NADP(+) + H2O = cyclohexanone + NH4(+) + NADPH + H(+)",
+      "equation": "cyclohexylamine + NADP(+) + H2O = cyclohexanone + NH4(+) + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cyclohexylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclohexanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76899"
+          }
+        ]
+      }
+    }
+  ]
+}

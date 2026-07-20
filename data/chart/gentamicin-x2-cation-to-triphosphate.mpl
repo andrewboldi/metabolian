@@ -18,27 +18,21 @@ pathway gentamicin-x2-cation-to-triphosphate "gentamicin X2 cation to triphospha
     cobamamide
   }
 
-  branch from cob_iii_alamin side left {
-    cob_iii_alamin
-    <-> . +n_acetyldemethylphosphinothricinate +methylcobalamin +sam +5_deoxyadenosine +methionine
-    n_acetyl_l_phosphinothricin
-  }
-
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> . +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +methylcobalamin +sam +cob_iii_alamin +methionine
-    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
-  }
-
-  branch from methionine side left {
-    methionine
-    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
-    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
-  }
-
-  branch from cob_i_alamin side right {
+  branch from cob_i_alamin side left {
     cob_i_alamin
     <-> . +sam +methylcobalamin
     sah
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +fe_ii_heme_i +h2o +hydrogen_donor
+    fe_ii_hydroxyheme_i
+  }
+
+  branch from triphosphate side left {
+    triphosphate
+    <-> . +dctp +h2o +hplus
+    2_deoxycytidine
   }
 }

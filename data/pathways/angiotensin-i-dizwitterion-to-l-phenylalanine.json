@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "angiotensin-i-dizwitterion-to-l-phenylalanine",
+  "name": "angiotensin I dizwitterion to L-phenylalanine",
+  "category": "other",
+  "summary": "A 2-step route from angiotensin I dizwitterion to L-phenylalanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:63560"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:147350"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "angiotensin_i_dizwitterion",
+      "name": "angiotensin I dizwitterion",
+      "short": "angiotensin I…",
+      "formula": "C62H89N17O14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:147350"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "his_leu",
+      "name": "His-Leu",
+      "formula": "C12H20N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:147392"
+      }
+    },
+    {
+      "id": "ile5_angiotensin_ii_dizwitterion",
+      "name": "Ile5-angiotensin II dizwitterion",
+      "short": "Ile5-angiotensin…",
+      "formula": "C50H71N13O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58506"
+      }
+    },
+    {
+      "id": "ile5_angiotensin_ii_1_7_dizwitterion",
+      "name": "Ile5-angiotensin II (1-7) dizwitterion",
+      "short": "Ile5-angiotensin…",
+      "formula": "C41H62N12O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58922"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "r_3_ammonio_3_phenylpropanoate",
+      "name": "(R)-3-ammonio-3-phenylpropanoate",
+      "short": "3-ammonio-3-phenylp…",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67158"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_4_15_1",
+      "name": "peptidyl-dipeptidase A",
+      "ec": [
+        "3.4.15.1"
+      ]
+    },
+    {
+      "id": "ec_3_4_17_23",
+      "name": "angiotensin-converting enzyme 2",
+      "ec": [
+        "3.4.17.23"
+      ]
+    },
+    {
+      "id": "ec_5_4_3_10",
+      "name": "phenylalanine aminomutase (L-beta-phenylalanine forming)",
+      "ec": [
+        "5.4.3.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "peptidyl-dipeptidase A",
+      "equation": "angiotensin I + H2O = L-histidyl-L-leucine + angiotensin II",
+      "ec": "3.4.15.1",
+      "substrates": [
+        {
+          "metabolite": "angiotensin_i_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "his_leu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ile5_angiotensin_ii_dizwitterion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_15_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:63560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "angiotensin-converting enzyme 2",
+      "equation": "angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine",
+      "ec": "3.4.17.23",
+      "substrates": [
+        {
+          "metabolite": "ile5_angiotensin_ii_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ile5_angiotensin_ii_1_7_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_17_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:26554"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phenylalanine aminomutase (L-beta-phenylalanine forming)",
+      "equation": "L-phenylalanine = (3R)-beta-phenylalanine",
+      "ec": "5.4.3.10",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_ammonio_3_phenylpropanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_3_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34395"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34395"
+          }
+        ]
+      }
+    }
+  ]
+}

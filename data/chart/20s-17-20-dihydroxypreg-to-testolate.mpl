@@ -32,13 +32,13 @@ pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to te
 
   branch from acetate side left {
     acetate
-    <-> ec_2_8_3_14 [2.8.3.14] +5_hydroxypentanoate +acetyl_coa
-    5_hydroxypentanoyl_coa
+    <-> . +1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol +h2o +hplus
+    1_hexadecyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +fmnh2 +o2 +h2o +hplus
-    s_perillyl_alcohol
+    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
+    glyceollin_iii
   }
 }

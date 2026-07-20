@@ -36,8 +36,8 @@ pathway 3-hydroxyicosanoyl-coa-to-3-oxotetracosanoyl-coa "3-hydroxyicosanoyl-CoA
 
   branch from icosanoyl_coa side right {
     icosanoyl_coa
-    <-> . +1_oleoyl_sn_glycero_3_phosphate +coa
-    1_oleoyl_2_icosanoyl_sn_glycero_3_phosphate
+    <-> . +2_oleoylglycerol +coa
+    1_icosanoyl_2_oleoyl_sn_glycerol
   }
 
   branch from 3_oxodocosanoyl_coa side left {
@@ -50,5 +50,17 @@ pathway 3-hydroxyicosanoyl-coa-to-3-oxotetracosanoyl-coa "3-hydroxyicosanoyl-CoA
     trans_2_docosenoyl_coa
     <-> . +h2o
     3s_3_hydroxydocosanoyl_coa
+  }
+
+  branch from docosanoyl_coa side left {
+    docosanoyl_coa
+    <-> . +h2o +coa +hplus
+    behenate
+  }
+
+  branch from 3_oxotetracosanoyl_coa side right {
+    3_oxotetracosanoyl_coa
+    <-> . +nad +nadh +hplus
+    3r_3_hydroxytetracosanoyl_coa
   }
 }

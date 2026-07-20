@@ -160,50 +160,77 @@
       }
     },
     {
-      "id": "tuberculosinyl_diphosphate",
-      "name": "tuberculosinyl diphosphate",
-      "short": "tuberculosinyl PP",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "12_hete",
+      "name": "12-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58822"
+        "chebi": "CHEBI:90718"
       }
     },
     {
-      "id": "13s_edaxadiene",
-      "name": "(13S)-edaxadiene",
-      "formula": "C20H34O",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:63180"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "c30_botryococcene",
-      "name": "C30 botryococcene",
-      "formula": "C30H50",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:70786"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
-      "name": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene",
-      "short": "3-methyl-1,2-didehy…",
-      "formula": "C31H52",
+      "id": "12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa",
+      "name": "12-hydroxy-(5Z,8Z,10E,14Z)-icosatetraenoyl-CoA",
+      "short": "12-hydroxy-(5Z,8Z,1…",
+      "formula": "C41H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:136408"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "3_demethylubiquinol_6",
+      "name": "3-demethylubiquinol-6",
+      "short": "3-demethylubiquinol…",
+      "formula": "C38H58O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:70863"
+        "chebi": "CHEBI:64253"
+      }
+    },
+    {
+      "id": "ubiquinol_6",
+      "name": "ubiquinol-6",
+      "formula": "C39H60O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52970"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_5_1_153",
-      "name": "adenosine tuberculosinyltransferase",
+      "id": "ec_2_1_1_64",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
       "ec": [
-        "2.5.1.153"
+        "2.1.1.64"
       ]
     }
   ],
@@ -425,22 +452,29 @@
     },
     {
       "id": "r6",
-      "name": "adenosine tuberculosinyltransferase",
-      "equation": "tuberculosinyl diphosphate + H2O = (13S)-edaxadiene + diphosphate",
-      "ec": "2.5.1.153",
+      "name": "12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + ATP + CoA = 12-hydroxy-(5Z,8Z,10E,14Z)-e...",
+      "equation": "12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + ATP + CoA = 12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "tuberculosinyl_diphosphate",
+          "metabolite": "12_hete",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "13s_edaxadiene",
+          "metabolite": "12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -448,33 +482,29 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_153"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:31791"
+        "rhea": "RHEA:52112"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31791"
+            "id": "RHEA:52112"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "C30 botryococcene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrobotryoc...",
-      "equation": "C30 botryococcene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "equation": "3-demethylubiquinol-6 + S-adenosyl-L-methionine = ubiquinol-6 + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.64",
       "substrates": [
         {
-          "metabolite": "c30_botryococcene",
+          "metabolite": "3_demethylubiquinol_6",
           "stoichiometry": 1
         },
         {
@@ -484,7 +514,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
+          "metabolite": "ubiquinol_6",
           "stoichiometry": 1
         },
         {
@@ -496,17 +526,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_64"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:34659"
+        "rhea": "RHEA:44400"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34659"
+            "id": "RHEA:44400"
           }
         ]
       }

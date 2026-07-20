@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-nicotinium-to-6-hydroxypseudooxynicotin",
+  "name": "(R)-nicotinium to 6-hydroxypseudooxynicotin…",
+  "category": "redox-detox",
+  "summary": "A 2-step route from (R)-nicotinium(1+) to 6-hydroxypseudooxynicotinium(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42352"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:79008"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_nicotinium",
+      "name": "(R)-nicotinium",
+      "formula": "C10H15N2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:79008"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_6_hydroxynicotinium",
+      "name": "(R)-6-hydroxynicotinium",
+      "short": "6-hydroxynicotinium",
+      "formula": "C10H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58413"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "6_hydroxypseudooxynicotinium",
+      "name": "6-hydroxypseudooxynicotinium",
+      "short": "6-hydroxypseudooxyn…",
+      "formula": "C10H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58682"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "17_r_hdohe",
+      "name": "17(R)-HDoHE",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90814"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_5_99_4",
+      "name": "nicotine 6-hydroxylase",
+      "ec": [
+        "1.5.99.4"
+      ]
+    },
+    {
+      "id": "ec_1_5_3_6",
+      "name": "(R)-6-hydroxynicotine oxidase",
+      "ec": [
+        "1.5.3.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nicotine 6-hydroxylase",
+      "equation": "(R)-nicotine + A + H2O = (R)-6-hydroxynicotine + AH2",
+      "ec": "1.5.99.4",
+      "substrates": [
+        {
+          "metabolite": "r_nicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_6_hydroxynicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-6-hydroxynicotine oxidase",
+      "equation": "(R)-6-hydroxynicotine + O2 + H2O = 6-hydroxypseudooxynicotine + H2O2",
+      "ec": "1.5.3.6",
+      "substrates": [
+        {
+          "metabolite": "r_6_hydroxynicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxypseudooxynicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + AH2 + O2 = 17R-hydroxy-(4Z,7Z,10Z,13Z,15E,19...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + AH2 + O2 = 17R-hydroxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17_r_hdohe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48816"
+          }
+        ]
+      }
+    }
+  ]
+}

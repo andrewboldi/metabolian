@@ -18,7 +18,7 @@ pathway n-terminal-l-seryl-l-prol-to-s-adenosyl-l-homocy "N-terminal L-seryl-L-p
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_344 [2.1.1.344] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +sam +hplus
-    n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a34 +sam
+    gibberellin_a34_methyl_ester
   }
 }

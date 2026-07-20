@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-amino-l-phenylalanine-to-s-adenosyl-l-homocyst",
+  "name": "4-amino-L-phenylalanine to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 4-amino-L-phenylalanine zwitterion to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:67960"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:143072"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_amino_l_phenylalanine",
+      "name": "4-amino-L-phenylalanine",
+      "short": "4-amino-L-phenylala…",
+      "formula": "C9H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143072"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "4_methylamino_l_phenylalanine",
+      "name": "4-methylamino-L-phenylalanine",
+      "short": "4-methylamino-L-phe…",
+      "formula": "C10H14N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:176804"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_dimethylamino_l_phenylalanine",
+      "name": "4-dimethylamino-L-phenylalanine",
+      "short": "4-dimethylamino-L-p…",
+      "formula": "C11H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:176805"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_191",
+      "name": "23S rRNA (cytosine(1962)-C(5))-methyltransferase",
+      "ec": [
+        "2.1.1.191"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-amino-L-phenylalanine + S-adenosyl-L-methionine = 4-methylamino-L-phenylalanine + S-a...",
+      "equation": "4-amino-L-phenylalanine + S-adenosyl-L-methionine = 4-methylamino-L-phenylalanine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_amino_l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylamino_l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:67960"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-methylamino-L-phenylalanine + S-adenosyl-L-methionine = 4-dimethylamino-L-phenylalani...",
+      "equation": "4-methylamino-L-phenylalanine + S-adenosyl-L-methionine = 4-dimethylamino-L-phenylalanine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_methylamino_l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_dimethylamino_l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:67964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "23S rRNA (cytosine(1962)-C(5))-methyltransferase",
+      "equation": "cytidine(1962) in 23S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1962) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.191",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42912"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42912"
+          }
+        ]
+      }
+    }
+  ]
+}

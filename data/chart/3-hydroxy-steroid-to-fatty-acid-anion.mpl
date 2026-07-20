@@ -16,6 +16,18 @@ pathway 3-hydroxy-steroid-to-fatty-acid-anion "3β-hydroxy steroid to fatty acid
     3_o_d_galactopyranosyl_sn_glycerol
   }
 
+  branch from 1_2_diglyceride side left {
+    1_2_diglyceride
+    <-> . +triglyceride +coa
+    acyl_coa
+  }
+
+  branch from triglyceride side right {
+    triglyceride
+    <-> . +all_trans_retinol +1_3_diglyceride
+    all_trans_retinyl_ester
+  }
+
   branch from 3_o_d_galactopyranosyl_sn_glycerol side left {
     3_o_d_galactopyranosyl_sn_glycerol
     <-> . +h2o +fatty-acid +hplus
@@ -24,7 +36,7 @@ pathway 3-hydroxy-steroid-to-fatty-acid-anion "3β-hydroxy steroid to fatty acid
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
-    3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 }

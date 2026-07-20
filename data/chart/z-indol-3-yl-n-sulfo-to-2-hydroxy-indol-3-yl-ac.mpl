@@ -22,21 +22,15 @@ pathway z-indol-3-yl-n-sulfo-to-2-hydroxy-indol-3-yl-ac "(Z)-(indol-3-yl)-N-(sul
     indole_3_acetamide
   }
 
-  branch from sulfur_atom side right {
-    sulfur_atom
-    <-> ec_1_8_2_7 [1.8.2.7] +thiocyanate +iron +h2o +fe2 +hplus
-    cyanate
-  }
-
-  branch from sulfate side left {
-    sulfate
-    <-> . +z_3_hydroxypropyl_n_sulfonatooxy_methanimidothi +sulfur_atom
-    4_hydroxybutylnitrile
-  }
-
   branch from indole_3_acetate side right {
     indole_3_acetate
     <-> ec_2_8_3_28 [2.8.3.28] +succinyl_coa +succinate
     indol_3_ylacetyl_coa
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +2_phenylacetamide +h2o
+    phenylacetate
   }
 }

@@ -129,49 +129,39 @@
       }
     },
     {
-      "id": "2r_3_sulfopropanediol",
-      "name": "(2R)-3-sulfopropanediol",
-      "short": "3-sulfopropanediol",
-      "formula": "C3H7O5S",
-      "charge": -1,
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60997"
+        "chebi": "CHEBI:507393"
       }
     },
     {
-      "id": "isethionate",
-      "name": "isethionate",
-      "formula": "C2H5O4S",
-      "charge": -1,
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:61904"
+        "chebi": "CHEBI:29034"
       }
     },
     {
-      "id": "sulfonatoacetate",
-      "name": "sulfonatoacetate",
-      "formula": "C2H2O5S",
-      "charge": -2,
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:58824"
+        "chebi": "CHEBI:29033"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
+        "chebi": "CHEBI:28938"
       }
     }
   ],
@@ -195,20 +185,6 @@
       "name": "sulfopyruvate decarboxylase",
       "ec": [
         "4.1.1.79"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_308",
-      "name": "sulfopropanediol 3-dehydrogenase",
-      "ec": [
-        "1.1.1.308"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_433",
-      "name": "sulfoacetaldehyde reductase (NADH)",
-      "ec": [
-        "1.1.1.433"
       ]
     }
   ],
@@ -401,16 +377,15 @@
     },
     {
       "id": "r5",
-      "name": "sulfopropanediol 3-dehydrogenase",
-      "equation": "(2R)-3-sulfopropanediol + 2 NAD(+) + H2O = (2R)-3-sulfolactate + 2 NADH + 3 H(+)",
-      "ec": "1.1.1.308",
+      "name": "taurine + 2 Fe(III)-[cytochrome c] + H2O = sulfoacetaldehyde + 2 Fe(II)-[cytochrome c] ...",
+      "equation": "taurine + 2 Fe(III)-[cytochrome c] + H2O = sulfoacetaldehyde + 2 Fe(II)-[cytochrome c] + NH4(+) + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "2r_3_sulfopropanediol",
+          "metabolite": "taurine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "iron",
           "stoichiometry": 2
         },
         {
@@ -420,130 +395,33 @@
       ],
       "products": [
         {
-          "metabolite": "r_3_sulfolactate",
+          "metabolite": "sulfonatoacetaldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "fe2",
           "stoichiometry": 2
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
         {
-          "enzyme": "ec_1_1_1_308"
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:28074"
+        "rhea": "RHEA:81555"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28074"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "sulfoacetaldehyde reductase (NADH)",
-      "equation": "2-hydroxyethane-1-sulfonate + NAD(+) = sulfoacetaldehyde + NADH + H(+)",
-      "ec": "1.1.1.433",
-      "substrates": [
-        {
-          "metabolite": "isethionate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sulfonatoacetaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_433"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:64516"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64516"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + ADP + phosphate",
-      "equation": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + ADP + phosphate",
-      "substrates": [
-        {
-          "metabolite": "sulfonatoacetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sulfoacetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:76683"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76683"
+            "id": "RHEA:81555"
           }
         ]
       }

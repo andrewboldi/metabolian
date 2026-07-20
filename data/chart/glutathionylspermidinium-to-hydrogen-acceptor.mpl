@@ -22,19 +22,19 @@ pathway glutathionylspermidinium-to-hydrogen-acceptor "glutathionylspermidinium 
 
   branch from spermidine side left {
     spermidine
-    <-> ec_2_5_1_128 [2.5.1.128] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
-    n4_bis_aminopropyl_spermidine
+    <-> . +citrate +atp +amp +ppi +hplus
+    n_citryl_spermidine
   }
 
   branch from gsh side right {
     gsh
-    <-> ec_4_3_2_7 [4.3.2.7] +5_oxo_l_prolinate
-    cysgly
+    <-> . +nad +nadh +hplus
+    gssg
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
-    dehydroprobetaenone_i
+    <-> . +linoleate +hydrogen_donor +o2 +h2o
+    9_s_hode
   }
 }

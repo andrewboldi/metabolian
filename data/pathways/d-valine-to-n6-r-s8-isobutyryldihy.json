@@ -139,12 +139,22 @@
       }
     },
     {
-      "id": "valine",
-      "name": "L-Valine",
-      "formula": "C5H11NO2",
-      "charge": 0,
+      "id": "r_2_hydroxy_3_methylbutyrate",
+      "name": "(R)-2-hydroxy-3-methylbutyrate",
+      "short": "2-hydroxy-3-methylb…",
+      "formula": "C5H9O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57762"
+        "chebi": "CHEBI:145660"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
       }
     },
     {
@@ -157,13 +167,41 @@
       }
     },
     {
-      "id": "n_acylphytosphingosine",
-      "name": "N-acylphytosphingosine",
-      "short": "N-acylphytosphingos…",
-      "formula": "C19H38NO4R",
-      "charge": 0,
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:31998"
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "5_6_7_8_tetrahydromethanopterin",
+      "name": "5,6,7,8-tetrahydromethanopterin",
+      "short": "5,6,7,8-tetrahydrom…",
+      "formula": "C30H42N6O16P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58103"
+      }
+    },
+    {
+      "id": "7_8_dihydromethanopterin",
+      "name": "7,8-dihydromethanopterin",
+      "short": "7,8-dihydromethanop…",
+      "formula": "C30H40N6O16P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:72788"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
       }
     },
     {
@@ -176,50 +214,30 @@
       }
     },
     {
-      "id": "n_acyl_8_phytosphingenine",
-      "name": "N-acyl-Δ8-phytosphingenine",
-      "short": "N-acyl-Δ8-phytosphi…",
-      "formula": "C19H36NO4R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50934"
-      }
-    },
-    {
-      "id": "l_argininium",
-      "name": "L-argininium",
-      "formula": "C6H13N4O",
+      "id": "1_pyrrolinium",
+      "name": "1-pyrrolinium",
+      "formula": "C4H8N",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:29965"
+        "chebi": "CHEBI:36781"
       }
     },
     {
-      "id": "l_citrulline",
-      "name": "L-citrulline",
-      "formula": "C6H11N3O2",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:83397"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "carnitine",
-      "name": "L-Carnitine",
-      "formula": "C7H15NO3",
-      "charge": 0,
+      "id": "methacrylyl_coa",
+      "name": "Methacrylyl-CoA",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:16347"
-      }
-    },
-    {
-      "id": "o_isobutyryl_l_carnitine",
-      "name": "O-isobutyryl-L-carnitine",
-      "short": "O-isobutyryl-L-carn…",
-      "formula": "C11H21NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:84838"
+        "chebi": "CHEBI:62500"
       }
     }
   ],
@@ -239,17 +257,17 @@
       ]
     },
     {
-      "id": "ec_1_4_1_23",
-      "name": "valine dehydrogenase (NAD(+))",
+      "id": "ec_1_5_99_15",
+      "name": "dihydromethanopterin reductase (acceptor)",
       "ec": [
-        "1.4.1.23"
+        "1.5.99.15"
       ]
     },
     {
-      "id": "ec_3_5_3_15",
-      "name": "protein-arginine deiminase",
+      "id": "ec_1_3_8_5",
+      "name": "short-chain 2-methylacyl-CoA dehydrogenase",
       "ec": [
-        "3.5.3.15"
+        "1.3.8.5"
       ]
     }
   ],
@@ -401,20 +419,19 @@
     },
     {
       "id": "r4",
-      "name": "valine dehydrogenase (NAD(+))",
-      "equation": "L-valine + NAD(+) + H2O = 3-methyl-2-oxobutanoate + NH4(+) + NADH + H(+)",
-      "ec": "1.4.1.23",
+      "name": "(R)-2-hydroxy-3-methylbutanoate + FAD + H(+) = 3-methyl-2-oxobutanoate + FADH2",
+      "equation": "(R)-2-hydroxy-3-methylbutanoate + FAD + H(+) = 3-methyl-2-oxobutanoate + FADH2",
       "substrates": [
         {
-          "metabolite": "valine",
+          "metabolite": "r_2_hydroxy_3_methylbutyrate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "fad",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
@@ -424,49 +441,77 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "fadh2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_4_1_23"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30763"
+        "rhea": "RHEA:84927"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30763"
+            "id": "RHEA:84927"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "an N-acyl-(4R)-4-hydroxysphinganine + AH2 + O2 = a (4R,8E)-4-hydroxysphingenine ceramid...",
-      "equation": "an N-acyl-(4R)-4-hydroxysphinganine + AH2 + O2 = a (4R,8E)-4-hydroxysphingenine ceramide + A + 2 H2O",
+      "name": "dihydromethanopterin reductase (acceptor)",
+      "equation": "5,6,7,8-tetrahydromethanopterin + A = 7,8-dihydromethanopterin + AH2",
+      "ec": "1.5.99.15",
       "substrates": [
         {
-          "metabolite": "n_acylphytosphingosine",
+          "metabolite": "5_6_7_8_tetrahydromethanopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydromethanopterin",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "putrescine + O2 = 1-pyrroline + H2O2 + NH4(+)",
+      "equation": "putrescine + O2 = 1-pyrroline + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
           "stoichiometry": 1
         },
         {
@@ -476,51 +521,11 @@
       ],
       "products": [
         {
-          "metabolite": "n_acyl_8_phytosphingenine",
+          "metabolite": "1_pyrrolinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:25828"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:25828"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "protein-arginine deiminase",
-      "equation": "L-arginyl-[protein] + H2O = L-citrullyl-[protein] + NH4(+)",
-      "ec": "3.5.3.15",
-      "substrates": [
-        {
-          "metabolite": "l_argininium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_citrulline",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -528,61 +533,66 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_3_15"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:18089"
+        "rhea": "RHEA:33247"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18089"
+            "id": "RHEA:33247"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "2-methylpropanoyl-CoA + (R)-carnitine = O-isobutanoyl-(R)-carnitine + CoA",
-      "equation": "2-methylpropanoyl-CoA + (R)-carnitine = O-isobutanoyl-(R)-carnitine + CoA",
+      "name": "short-chain 2-methylacyl-CoA dehydrogenase",
+      "equation": "2-methylpropanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = 2-methylpropenoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "ec": "1.3.8.5",
       "substrates": [
         {
           "metabolite": "isobutyryl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "carnitine",
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_isobutyryl_l_carnitine",
+          "metabolite": "methacrylyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "fadh2",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:44988"
+        "rhea": "RHEA:44180"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44988"
+            "id": "RHEA:44180"
           }
         ]
       }

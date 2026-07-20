@@ -36,7 +36,7 @@ pathway pentanamide-to-3-propylmalate "pentanamide to 3-propylmalate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_9_1 [2.7.9.1] +pyruvate +pi +atp +amp +hplus
-    phosphonatoenolpyruvate
+    <-> ec_6_1_1_1 [6.1.1.1] +amp_3_end_1 +tyrosine +atp +amp +hplus
+    3_l_tyrosyl_adenylyl_1_group
   }
 }

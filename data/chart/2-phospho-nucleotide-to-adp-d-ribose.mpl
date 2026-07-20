@@ -18,13 +18,13 @@ pathway 2-phospho-nucleotide-to-adp-d-ribose "2'-phospho-nucleotide… to ADP-D-
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +nadp +h2o +hplus
-    adp_d_ribose_2_phosphate
+    <-> . +n6_propanoyl_l_lysine +nad +h2o +l_lysinium
+    3_o_propanoyl_adp_d_ribose
   }
 
   branch from adp_d_ribose side right {
     adp_d_ribose
-    <-> ec_3_2_2_19 [3.2.2.19] +n_adp_d_ribosyl_l_arginine +h2o
-    arginine
+    <-> . +s_adp_d_ribosyl_l_cysteine_2 +h2o
+    l_cysteine
   }
 }

@@ -18,7 +18,7 @@ pathway aldehydo-d-mannose-to-diphosphate "aldehydo-D-mannose… to diphosphate"
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_39 [4.2.3.39] +fpp +h2o
-    epi_cedrol
+    <-> . +ipp +fpp
+    2_cis_6_trans_10_trans_geranylgeranyl_diphosphat
   }
 }

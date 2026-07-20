@@ -22,25 +22,37 @@ pathway n-lignoceroylsphingosine-to-n-2-hydroxytetracosa "N-lignoceroylsphingosi
 
   branch from phosphocholine side left {
     phosphocholine
-    <-> . +o_phosphocholine_l_serine +h2o +hplus
-    l_serine
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_acyl_sn_glycerol
   }
 
   branch from tetracosanoate side right {
     tetracosanoate
-    <-> . +1_tetracosanoylglycerol +h2o +hplus
-    glycerol
+    <-> . +n_tetracosanoyltaurine +h2o
+    taurine
   }
 
-  branch from tetracosanoyl_coa side left {
+  branch from sphingosine side left {
+    sphingosine
+    <-> . +sam +sah +hplus
+    n_n_dimethylsphingosine
+  }
+
+  branch from tetracosanoyl_coa side right {
     tetracosanoyl_coa
-    <-> . +c17_sphingosine +coa +hplus
-    n_tetracosanoyl_c17_sphingosine
+    <-> . +o2 +h2o2
+    trans_2_tetracosenoyl_coa
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    abieta_8_14_12_diene
+    <-> ec_4_2_3_73 [4.2.3.73] +fpp
+    valencene
+  }
+
+  branch from n_2_hydroxytetracosanoyl_sphinganine side right {
+    n_2_hydroxytetracosanoyl_sphinganine
+    <-> . +sphinganine +coa +hplus
+    2_hydroxytetracosanoyl_coa
   }
 }

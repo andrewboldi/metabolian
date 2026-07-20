@@ -18,13 +18,13 @@ pathway 1-palmitoyl-2-4z-7z-10z-to-1-hexadecanoyl-sn-gly "1-palmitoyl-2-[(4Z,7Z,
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_3_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
-    an_kdo_2_8_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
+    <-> . +n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +octanoyl_coa +coa
-    1_palmitoyl_2_capryloyl_sn_glycero_3_phosphochol
+    <-> . +1_palmitoyl_2_10e_9_hydroperoxyoctadecenoyl_sn_g +h2o +hplus
+    9_hydroperoxy_10e_octadecenoate
   }
 }

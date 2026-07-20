@@ -141,59 +141,43 @@
       }
     },
     {
-      "id": "mycinamicin_iii",
-      "name": "mycinamicin III",
-      "formula": "C36H60NO11",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:63308"
-      }
-    },
-    {
-      "id": "mycinamicin_iv",
-      "name": "mycinamicin IV",
-      "formula": "C37H62NO11",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:63310"
-      }
-    },
-    {
-      "id": "chloromethane",
-      "name": "chloromethane",
-      "formula": "CH3Cl",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:36014"
-      }
-    },
-    {
-      "id": "chloride",
-      "name": "chloride",
-      "formula": "Cl",
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17996"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "24s_24_hydroxycholesterol",
-      "name": "(24S)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "n2_n2_dimethylguanosine_5_monophosphate_1",
+      "name": "N2,N2-dimethylguanosine 5'-monophosphate(1−)",
+      "short": "N2,N2-dimethylguano…",
+      "formula": "C12H15N5O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:34310"
+        "chebi": "CHEBI:74513"
       }
     },
     {
-      "id": "24s_25s_cholest_5_en_3_24_26_triol",
-      "name": "(24S,25S)-cholest-5-en-3β,24,26-triol",
-      "short": "(24S,25S)-cholest-5…",
-      "formula": "C27H46O3",
-      "charge": 0,
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:86165"
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate",
+      "name": "(4Z,7Z,10Z,16Z,19Z)-13,14-epoxydocosapentaenoate",
+      "short": "(4Z,7Z,10Z,16Z,19Z)…",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133933"
       }
     }
   ],
@@ -213,10 +197,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_237",
-      "name": "mycinamicin III 3''-O-methyltransferase",
+      "id": "ec_2_1_1_213",
+      "name": "tRNA (guanine(10)-N(2))-dimethyltransferase",
       "ec": [
-        "2.1.1.237"
+        "2.1.1.213"
       ]
     }
   ],
@@ -380,103 +364,60 @@
     },
     {
       "id": "r4",
-      "name": "mycinamicin III 3''-O-methyltransferase",
-      "equation": "mycinamicin III + S-adenosyl-L-methionine = mycinamicin IV + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.237",
+      "name": "tRNA (guanine(10)-N(2))-dimethyltransferase",
+      "equation": "guanosine(10) in tRNA + 2 S-adenosyl-L-methionine = N(2)-dimethylguanosine(10) in tRNA + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.213",
       "substrates": [
         {
-          "metabolite": "mycinamicin_iii",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "mycinamicin_iv",
+          "metabolite": "n2_n2_dimethylguanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_237"
+          "enzyme": "ec_2_1_1_213"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31639"
+        "rhea": "RHEA:43124"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31639"
+            "id": "RHEA:43124"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "chloromethane + H2O = methanol + chloride + H(+)",
-      "equation": "chloromethane + H2O = methanol + chloride + H(+)",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 13,14-epoxy-(4Z,7Z,10Z,16Z,19Z)-docosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "chloromethane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "chloride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:67720"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67720"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(24S)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S,25R)-24,2...",
-      "equation": "(24S)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S,25R)-24,26-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "24s_24_hydroxycholesterol",
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
           "stoichiometry": 1
         },
         {
@@ -490,7 +431,7 @@
       ],
       "products": [
         {
-          "metabolite": "24s_25s_cholest_5_en_3_24_26_triol",
+          "metabolite": "4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate",
           "stoichiometry": 1
         },
         {
@@ -507,16 +448,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46388"
+        "rhea": "RHEA:51088"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46388"
+            "id": "RHEA:51088"
           }
         ]
       }

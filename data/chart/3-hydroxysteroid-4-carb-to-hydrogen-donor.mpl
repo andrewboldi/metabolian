@@ -30,7 +30,7 @@ pathway 3-hydroxysteroid-4-carb-to-hydrogen-donor "3β-hydroxysteroid-4α-carb�
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +butyryl_coa +hydrogen_acceptor
-    crotonoyl_coa
+    <-> . +17_estradiol +hydrogen_acceptor
+    estrone
   }
 }

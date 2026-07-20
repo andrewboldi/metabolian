@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "tauropinate-to-sulfoacetyl-coa",
   "name": "tauropinate to sulfoacetyl-CoA",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from tauropinate(1−) to sulfoacetyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,22 +137,22 @@
       }
     },
     {
-      "id": "fatty_acyl_coa",
-      "name": "fatty acyl-CoA",
-      "formula": "C22H31N7O17P3SR",
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:77636"
+        "chebi": "CHEBI:57379"
       }
     },
     {
-      "id": "fatty_acid_taurine_conjugate",
-      "name": "fatty acid-taurine conjugate",
-      "short": "fatty acid-taurine…",
-      "formula": "C3H5NO4SR",
+      "id": "n_hexadecanoyltaurine",
+      "name": "N-hexadecanoyltaurine",
+      "short": "N-hexadecanoyltauri…",
+      "formula": "C18H36NO4S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:132040"
+        "chebi": "CHEBI:132045"
       }
     },
     {
@@ -201,21 +201,21 @@
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:456216"
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:43474"
       }
     }
   ],
@@ -242,10 +242,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_313",
-      "name": "sulfoacetaldehyde reductase (NADPH)",
+      "id": "ec_1_1_1_433",
+      "name": "sulfoacetaldehyde reductase (NADH)",
       "ec": [
-        "1.1.1.313"
+        "1.1.1.433"
       ]
     },
     {
@@ -414,21 +414,21 @@
     },
     {
       "id": "r4",
-      "name": "a fatty acyl-CoA + taurine = an N-fatty acyl-taurine + CoA + H(+)",
-      "equation": "a fatty acyl-CoA + taurine = an N-fatty acyl-taurine + CoA + H(+)",
+      "name": "taurine + hexadecanoyl-CoA = N-hexadecanoyl-taurine + CoA + H(+)",
+      "equation": "taurine + hexadecanoyl-CoA = N-hexadecanoyl-taurine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "fatty_acyl_coa",
+          "metabolite": "taurine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "taurine",
+          "metabolite": "palmitoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fatty_acid_taurine_conjugate",
+          "metabolite": "n_hexadecanoyltaurine",
           "stoichiometry": 1
         },
         {
@@ -443,30 +443,30 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50092"
+        "rhea": "RHEA:50108"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50092"
+            "id": "RHEA:50108"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "sulfoacetaldehyde reductase (NADPH)",
-      "equation": "2-hydroxyethane-1-sulfonate + NADP(+) = sulfoacetaldehyde + NADPH + H(+)",
-      "ec": "1.1.1.313",
+      "name": "sulfoacetaldehyde reductase (NADH)",
+      "equation": "2-hydroxyethane-1-sulfonate + NAD(+) = sulfoacetaldehyde + NADH + H(+)",
+      "ec": "1.1.1.433",
       "substrates": [
         {
           "metabolite": "isethionate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
@@ -476,7 +476,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -486,20 +486,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_313"
+          "enzyme": "ec_1_1_1_433"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:29591"
+        "rhea": "RHEA:64516"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29591"
+            "id": "RHEA:64516"
           }
         ]
       }
@@ -551,8 +551,8 @@
     },
     {
       "id": "r7",
-      "name": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + AMP + diphosphate",
-      "equation": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + AMP + diphosphate",
+      "name": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + ADP + phosphate",
+      "equation": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + ADP + phosphate",
       "substrates": [
         {
           "metabolite": "sulfonatoacetate",
@@ -573,25 +573,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "pi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:75003"
+        "rhea": "RHEA:76683"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75003"
+            "id": "RHEA:76683"
           }
         ]
       }

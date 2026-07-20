@@ -20,21 +20,27 @@ pathway r-2-hydroxy-4-methylpen-to-5-3-carboxylato-3-ox "(R)-2-hydroxy-4-methylp
     5_3_carboxylato_3_oxoprop_1_en_1_yl_4_6_dihydrox
   }
 
-  branch from kynurenate side left {
+  branch from kic side left {
+    kic
+    <-> . +d_leucine +o2 +h2o +h2o2
+    nh3
+  }
+
+  branch from kynurenate side right {
     kynurenate
-    <-> ec_1_3_99_18 [1.3.99.18] +hydrogen_acceptor +h2o +hydrogen_donor
-    quinaldate
+    <-> ec_2_6_1_7 [2.6.1.7] +l_kynurenine +akg +h2o
+    glutamate
   }
 
-  branch from leucine side right {
+  branch from leucine side left {
     leucine
-    <-> ec_3_5_1_64 [3.5.1.64] +n_benzyloxycarbonyl_l_leucinate +h2o +hplus +co2
-    benzyl_alcohol
+    <-> . +r_2_hydroxy_3_methylbutyrate +sam +atp +amp +sah +ppi +hplus
+    bassianolide
   }
 
-  branch from hydrogen_acceptor side left {
+  branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_97_1_9 [1.97.1.9] +selenite +h2o +hydrogen_donor
-    selenate
+    <-> ec_1_21_99_4 [1.21.99.4] +3_3_5_triiodo_l_thyronine +iodide +hplus +hydrogen_donor
+    l_thyroxine
   }
 }

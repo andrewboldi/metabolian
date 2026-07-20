@@ -151,22 +151,31 @@
       }
     },
     {
-      "id": "l_serine",
-      "name": "L-serine",
-      "formula": "C3H5NO2",
-      "charge": 0,
+      "id": "l_arginyl_amp",
+      "name": "L-arginyl-AMP",
+      "formula": "C16H27N9O8P",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:29999"
+        "chebi": "CHEBI:144944"
       }
     },
     {
-      "id": "adenosine_3_5_bismonophosphate",
-      "name": "adenosine 3',5'-bismonophosphate",
-      "short": "adenosine…",
-      "formula": "C10H11N5O10P2",
-      "charge": -4,
+      "id": "o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-(L-arginyl)pantetheine-4'-phosphoryl]serine(1+)",
+      "short": "O-[S-(L-arginyl)pan…",
+      "formula": "C20H39N7O9PS",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58343"
+        "chebi": "CHEBI:144966"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
       }
     }
   ],
@@ -389,25 +398,25 @@
     },
     {
       "id": "r6",
-      "name": "apo-[D-alanyl-carrier protein] + CoA = holo-[D-alanyl-carrier protein] + adenosine 3',5...",
-      "equation": "apo-[D-alanyl-carrier protein] + CoA = holo-[D-alanyl-carrier protein] + adenosine 3',5'-bisphosphate + H(+)",
+      "name": "L-arginyl-AMP + holo-[peptidyl-carrier protein] = L-arginyl-[peptidyl-carrier protein] ...",
+      "equation": "L-arginyl-AMP + holo-[peptidyl-carrier protein] = L-arginyl-[peptidyl-carrier protein] + AMP + H(+)",
       "substrates": [
         {
-          "metabolite": "l_serine",
+          "metabolite": "l_arginyl_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "holo-acp",
+          "metabolite": "o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adenosine_3_5_bismonophosphate",
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -418,14 +427,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:56420"
+        "rhea": "RHEA:62500"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56420"
+            "id": "RHEA:62500"
           }
         ]
       }

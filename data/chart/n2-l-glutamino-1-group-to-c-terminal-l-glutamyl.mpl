@@ -27,10 +27,4 @@ pathway n2-l-glutamino-1-group-to-c-terminal-l-glutamyl "N2-L-glutamino(1−) gr
     <-> ec_3_5_4_23 [3.5.4.23] +blasticidin_s +h2o +hplus
     deaminohydroxyblasticidin_s
   }
-
-  branch from c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha side left {
-    c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha
-    <-> ec_1_2_1_103 [1.2.1.103] +pi +nadp +nadph +hplus
-    c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh
-  }
 }

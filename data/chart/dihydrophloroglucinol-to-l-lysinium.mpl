@@ -42,7 +42,7 @@ pathway dihydrophloroglucinol-to-l-lysinium "dihydrophloroglucinol to L-lysinium
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
-    n6_acetyl_l_lysine
+    <-> . +butyryl_coa +coa +hplus
+    n6_butyryl_l_lysine
   }
 }

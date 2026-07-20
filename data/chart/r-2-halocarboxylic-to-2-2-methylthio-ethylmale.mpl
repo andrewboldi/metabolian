@@ -30,19 +30,13 @@ pathway r-2-halocarboxylic-to-2-2-methylthio-ethylmale "(R)-2-halocarboxylic… 
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_acceptor +h2o
-    chlorite
+    <-> ec_1_1_99_32 [1.1.99.32] +l_sorbopyranose +hydrogen_acceptor
+    l_xylo_hexos_2_ulose
   }
 
   branch from 4_methylthio_2_oxobutanoate side left {
     4_methylthio_2_oxobutanoate
     <-> . +5_methylsulfanyl_2_3_dioxopentyl_phosphate +o2 +h2o +pi +hplus
     formate
-  }
-
-  branch from l_amino_acid side right {
-    l_amino_acid
-    <-> . +n_fatty_acyl_l_amino_acid_anion +h2o
-    fatty-acid
   }
 }

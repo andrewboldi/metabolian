@@ -120,48 +120,41 @@
       }
     },
     {
-      "id": "precorrin_6y",
-      "name": "precorrin-6Y",
-      "formula": "C44H50N4O16",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:58532"
-      }
-    },
-    {
-      "id": "precorrin_7",
-      "name": "precorrin-7",
-      "formula": "C44H52N4O14",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:71490"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "12_hete",
-      "name": "12-HETE",
-      "formula": "C20H31O3",
+      "id": "pseudouridine_5_phosphate_1",
+      "name": "pseudouridine 5'-phosphate(1−)",
+      "short": "pseudouridine…",
+      "formula": "C9H10N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90718"
+        "chebi": "CHEBI:65314"
       }
     },
     {
-      "id": "12_20_dihete",
-      "name": "12,20-DiHETE",
-      "formula": "C20H31O4",
+      "id": "n1_methylpseudouridine_5_monophosphate_1",
+      "name": "N1-methylpseudouridine 5'-monophosphate(1−)",
+      "short": "N1-methylpseudourid…",
+      "formula": "C10H12N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90719"
+        "chebi": "CHEBI:74890"
+      }
+    },
+    {
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30245"
+      }
+    },
+    {
+      "id": "9_r_hode",
+      "name": "9(R)-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77895"
       }
     }
   ],
@@ -178,6 +171,13 @@
       "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
       "ec": [
         "2.1.1.69"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_260",
+      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
+      "ec": [
+        "2.1.1.260"
       ]
     }
   ],
@@ -329,11 +329,12 @@
     },
     {
       "id": "r4",
-      "name": "precorrin-6B + S-adenosyl-L-methionine = precorrin-7 + S-adenosyl-L-homocysteine + CO2 ...",
-      "equation": "precorrin-6B + S-adenosyl-L-methionine = precorrin-7 + S-adenosyl-L-homocysteine + CO2 + H(+)",
+      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
+      "equation": "pseudouridine(914) in M. jannaschii 16S rRNA + S-adenosyl-L-methionine = N(1)-methylpseudouridine(914) in M. jannaschii 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.260",
       "substrates": [
         {
-          "metabolite": "precorrin_6y",
+          "metabolite": "pseudouridine_5_phosphate_1",
           "stoichiometry": 1
         },
         {
@@ -343,7 +344,7 @@
       ],
       "products": [
         {
-          "metabolite": "precorrin_7",
+          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -351,36 +352,37 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_260"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:35383"
+        "rhea": "RHEA:46716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35383"
+            "id": "RHEA:46716"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] +...",
-      "equation": "12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 12,20-dihydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = (9R)-hydroxy-...",
+      "equation": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = (9R)-hydroxy-(10E,12Z)-octadecadienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "12_hete",
+          "metabolite": "linoleate",
           "stoichiometry": 1
         },
         {
@@ -394,7 +396,7 @@
       ],
       "products": [
         {
-          "metabolite": "12_20_dihete",
+          "metabolite": "9_r_hode",
           "stoichiometry": 1
         },
         {
@@ -413,14 +415,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:48664"
+        "rhea": "RHEA:52504"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48664"
+            "id": "RHEA:52504"
           }
         ]
       }

@@ -18,7 +18,7 @@ pathway n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy "N-terminal L-alanyl-L-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_7 [2.1.1.7] +nicotinate +sam
-    n_methylnicotinate
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a3 +sam
+    gibberellin_a3_methyl_ester
   }
 }

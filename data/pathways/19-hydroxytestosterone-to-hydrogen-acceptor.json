@@ -129,23 +129,21 @@
       }
     },
     {
-      "id": "1_o_oleoyl_sn_glycero_3_phosphocholine",
-      "name": "1-O-oleoyl-sn-glycero-3-phosphocholine",
-      "short": "1-O-oleoyl-sn-glyce…",
-      "formula": "C26H52NO7P",
+      "id": "albendazole",
+      "name": "albendazole",
+      "formula": "C12H15N3O2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28610"
+        "chebi": "CHEBI:16664"
       }
     },
     {
-      "id": "1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho",
-      "name": "1-O-[(9R,10S)-epoxystearoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-O-[(9R,10S)-epoxy…",
-      "formula": "C26H52NO8P",
+      "id": "hydroxyalbendazole",
+      "name": "hydroxyalbendazole",
+      "formula": "C12H15N3O3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132280"
+        "chebi": "CHEBI:140182"
       }
     },
     {
@@ -179,21 +177,21 @@
       }
     },
     {
-      "id": "zeaxanthin",
-      "name": "zeaxanthin",
-      "formula": "C40H56O2",
+      "id": "andilesin_d",
+      "name": "andilesin D",
+      "formula": "C25H30O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:27547"
+        "chebi": "CHEBI:232444"
       }
     },
     {
-      "id": "adonixanthin",
-      "name": "adonixanthin",
-      "formula": "C40H54O3",
+      "id": "andilesin_a",
+      "name": "andilesin A",
+      "formula": "C25H32O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:80217"
+        "chebi": "CHEBI:177859"
       }
     }
   ],
@@ -206,10 +204,10 @@
       ]
     },
     {
-      "id": "ec_1_14_99_64",
-      "name": "zeaxanthin 4-ketolase",
+      "id": "ec_1_14_14_74",
+      "name": "albendazole monooxygenase (hydroxylating)",
       "ec": [
-        "1.14.99.64"
+        "1.14.14.74"
       ]
     }
   ],
@@ -375,11 +373,12 @@
     },
     {
       "id": "r4",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase] + O2 = 1-[(9R,10S)-epoxy-octadecanoyl]-sn-glycero-3-phosphocholine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "albendazole monooxygenase (hydroxylating)",
+      "equation": "albendazole + reduced [NADPH--hemoprotein reductase] + O2 = hydroxyalbendazole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.74",
       "substrates": [
         {
-          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "albendazole",
           "stoichiometry": 1
         },
         {
@@ -393,7 +392,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho",
+          "metabolite": "hydroxyalbendazole",
           "stoichiometry": 1
         },
         {
@@ -409,17 +408,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_74"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50320"
+        "rhea": "RHEA:56288"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50320"
+            "id": "RHEA:56288"
           }
         ]
       }
@@ -469,53 +473,39 @@
     },
     {
       "id": "r6",
-      "name": "zeaxanthin 4-ketolase",
-      "equation": "all-trans-zeaxanthin + 2 AH2 + 2 O2 = all-trans-adonixanthin + 2 A + 3 H2O",
-      "ec": "1.14.99.64",
+      "name": "andilesin D + AH2 = andilesin A + A",
+      "equation": "andilesin D + AH2 = andilesin A + A",
       "substrates": [
         {
-          "metabolite": "zeaxanthin",
+          "metabolite": "andilesin_d",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "adonixanthin",
+          "metabolite": "andilesin_a",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_99_64"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:56768"
+        "rhea": "RHEA:82643"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56768"
+            "id": "RHEA:82643"
           }
         ]
       }

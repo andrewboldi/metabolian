@@ -16,7 +16,13 @@ pathway 3r-11z-3-hydroxyoctadec-to-1-oleoyl-2-11z-octad "(3R,11Z)-3-hydroxyoctad
     1_oleoyl_2_11z_octadecenoyl_sn_glycero_3_phospha
   }
 
-  branch from 11z_octadecenoyl_coa side left {
+  branch from 2e_11z_octadecadienoyl_coa side left {
+    2e_11z_octadecadienoyl_coa
+    <-> . +h2o
+    3s_11z_3_hydroxyoctadecenoyl_coa
+  }
+
+  branch from 11z_octadecenoyl_coa side right {
     11z_octadecenoyl_coa
     <-> . +malonyl-coa +hplus +co2 +coa
     13z_3_oxoicosenoyl_coa

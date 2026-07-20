@@ -18,7 +18,7 @@ pathway n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy "N-terminal glycyl-L-ly
 
   branch from sah side left {
     sah
-    <-> . +s_norreticuline +sam +hplus
-    s_norcodamine
+    <-> . +n_methyl_l_histidine +sam +hplus
+    n_n_dimethyl_l_histidine
   }
 }

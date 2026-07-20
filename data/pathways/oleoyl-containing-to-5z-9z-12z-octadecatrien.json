@@ -1,0 +1,303 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "oleoyl-containing-to-5z-9z-12z-octadecatrien",
+  "name": "oleoyl-containing… to (5Z,9Z,12Z)-octadecatrien…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from oleoyl-containing glycerolipid to (5Z,9Z,12Z)-octadecatrienoyl-containing glycerolipid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46332"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:88240"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "oleoyl_containing_glycerolipid",
+      "name": "oleoyl-containing glycerolipid",
+      "short": "oleoyl-containing…",
+      "formula": "C18H33OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88240"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "linoleoyl_containing_glycerolipid",
+      "name": "linoleoyl-containing glycerolipid",
+      "short": "linoleoyl-containin…",
+      "formula": "C18H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88351"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5z_9z_12z_octadecatrienoyl_containing_glyceroli",
+      "name": "(5Z,9Z,12Z)-octadecatrienoyl-containing glycerolipid",
+      "short": "(5Z,9Z,12Z)-octadec…",
+      "formula": "C18H29OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88238"
+      }
+    },
+    {
+      "id": "9z_11e_13e_octadecatrienoyl_containing_glycerol",
+      "name": "(9Z,11E,13E)-octadecatrienoyl-containing glycerolipid",
+      "short": "(9Z,11E,13E)-octade…",
+      "formula": "C18H29OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88254"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_22",
+      "name": "acyl-lipid omega-6 desaturase (cytochrome b5)",
+      "ec": [
+        "1.14.19.22"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_12",
+      "name": "acyl-lipid omega-(9-4) desaturase",
+      "ec": [
+        "1.14.19.12"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_33",
+      "name": "Delta(12) acyl-lipid conjugase (11E,13E-forming)",
+      "ec": [
+        "1.14.19.33"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acyl-lipid omega-6 desaturase (cytochrome b5)",
+      "equation": "a (9Z)-octadecenoyl-containing glycerolipid + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.22",
+      "substrates": [
+        {
+          "metabolite": "oleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "linoleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acyl-lipid omega-(9-4) desaturase",
+      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = a (5Z,9Z,12Z)-octadecatrienoyl-containing glycerolipid + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.12",
+      "substrates": [
+        {
+          "metabolite": "linoleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_9z_12z_octadecatrienoyl_containing_glyceroli",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Delta(12) acyl-lipid conjugase (11E,13E-forming)",
+      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = a (9Z,11E,13E)-octadecatrienoyl-containing glycerolipid + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.33",
+      "substrates": [
+        {
+          "metabolite": "linoleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_11e_13e_octadecatrienoyl_containing_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46368"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46368"
+          }
+        ]
+      }
+    }
+  ]
+}

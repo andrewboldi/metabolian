@@ -4,11 +4,11 @@
 # edit the generator, not this file.
 
 pathway dinitrogen-oxide-to-fmn "dinitrogen oxide to FMN" {
-  spacing 212
+  spacing 280
 
   spine at 0,0 {
     dinitrogen_oxide
-    <-> ec_1_7_2_5 [1.7.2.5] +iron +h2o -fe2 -hplus
+    <-> ec_1_7_1_14 [1.7.1.14] +nadp +h2o -nadph -hplus
     no
     <-> . +ferriheme_b +h2o -nitrite -hplus
     ferroheme_b
@@ -16,27 +16,27 @@ pathway dinitrogen-oxide-to-fmn "dinitrogen oxide to FMN" {
     biliverdin
   }
 
-  branch from ferroheme_b side left {
-    ferroheme_b
-    <-> ec_1_14_99_58 [1.14.99.58] +hydrogen_donor +o2 +hplus +carbon_monoxide +fe2 +hydrogen_acceptor +h2o
-    biliverdin
+  branch from no side left {
+    no
+    <-> ec_1_14_15_41 [1.14.15.41] +l_tryptophan +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    4_nitro_l_tryptophan
   }
 
-  branch from nitrite side right {
-    nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +3_4_dinitrotoluene +nadh +o2 +nad
-    5_methyl_3_nitrocatechol
+  branch from ferroheme_b side right {
+    ferroheme_b
+    <-> . +h2o2 +hplus +co2 +h2o
+    harderoheme_iii
   }
 
   branch from biliverdin side left {
     biliverdin
-    <-> ec_1_3_1_24 [1.3.1.24] +nadp +nadph +hplus
+    <-> ec_1_3_3_5 [1.3.3.5] +o2 +h2o
     bilirubin
   }
 
-  branch from carbon_monoxide side right {
-    carbon_monoxide
-    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
-    biliverdin
+  branch from fmn side right {
+    fmn
+    <-> . +14_15_eet +fmnh2 +o2 +h2o +hplus
+    14_15_epoxy_20_hydroxy_5z_8z_11z_icosatrienoate
   }
 }

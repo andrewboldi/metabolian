@@ -21,7 +21,7 @@ pathway n-hydroxy-l-phenylalanina-to-benzoyl-cyanide "N-hydroxy-L-phenylalaninaâ
   branch from fmn side left {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14s_15r_eet
+    16_s_hete
   }
 
   branch from e_phenylacetaldehyde_oxime side right {

@@ -1,0 +1,348 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "neryl-diphosphate-to-fmn",
+  "name": "neryl diphosphate to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from neryl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56632"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57665"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "neryl_diphosphate",
+      "name": "neryl diphosphate",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57665"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_8_cineole",
+      "name": "1,8-cineole",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27961"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_endo_hydroxy_1_8_cineole",
+      "name": "2-endo-hydroxy-1,8-cineole",
+      "short": "2-endo-hydroxy-1,8-…",
+      "formula": "C10H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35811"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "siccayne",
+      "name": "siccayne",
+      "formula": "C11H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156304"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "pestalodiol",
+      "name": "pestalodiol",
+      "formula": "C16H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156305"
+      }
+    },
+    {
+      "id": "germacrene_a",
+      "name": "(+)-germacrene A",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41595"
+      }
+    },
+    {
+      "id": "germacra_1_10_4_11_13_trien_12_ol",
+      "name": "germacra-1(10),4,11(13)-trien-12-ol",
+      "short": "germacra-1(10),4,11…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62090"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_133",
+      "name": "1,8-cineole 2-endo-monooxygenase",
+      "ec": [
+        "1.14.14.133"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "neryl diphosphate + H2O = 1,8-cineole + diphosphate",
+      "equation": "neryl diphosphate + H2O = 1,8-cineole + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "neryl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_8_cineole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,8-cineole 2-endo-monooxygenase",
+      "equation": "1,8-cineole + reduced [flavodoxin] + O2 = 2-endo-hydroxy-1,8-cineole + oxidized [flavodoxin] + H2O + H(+)",
+      "ec": "1.14.14.133",
+      "substrates": [
+        {
+          "metabolite": "1_8_cineole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_endo_hydroxy_1_8_cineole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_133"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "siccayne + dimethylallyl diphosphate = pestalodiol + diphosphate",
+      "equation": "siccayne + dimethylallyl diphosphate = pestalodiol + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "siccayne",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pestalodiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(+)-(R)-germacrene A + reduced [NADPH--hemoprotein reductase] + O2 = germacra-1(10),4,1...",
+      "equation": "(+)-(R)-germacrene A + reduced [NADPH--hemoprotein reductase] + O2 = germacra-1(10),4,11(13)-trien-12-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "germacrene_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germacra_1_10_4_11_13_trien_12_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61308"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-methylbutyrate-to-2-methylcrotonoyl-coa",
+  "name": "2-methylbutyrate to 2-methylcrotonoyl-CoA",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 2-methylbutyrate to 2-methylcrotonoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46180"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:48946"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_methylbutyrate",
+      "name": "2-methylbutyrate",
+      "formula": "C5H9O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:48946"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "2_methylbutanoyl_coa",
+      "name": "2-methylbutanoyl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57336"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "tiglyl_coa",
+      "name": "Tiglyl-CoA",
+      "formula": "C26H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57337"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "r_2_methylbutyrylcarnitine",
+      "name": "(R)-2-methylbutyrylcarnitine",
+      "short": "2-methylbutyrylcarn…",
+      "formula": "C12H23NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84840"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "l_tryptophyl_amp",
+      "name": "L-tryptophyl-AMP",
+      "formula": "C21H23N7O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144939"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_8_5",
+      "name": "short-chain 2-methylacyl-CoA dehydrogenase",
+      "ec": [
+        "1.3.8.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-methylbutanoate + ATP + CoA = 2-methylbutanoyl-CoA + AMP + diphosphate",
+      "equation": "2-methylbutanoate + ATP + CoA = 2-methylbutanoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_methylbutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylbutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "short-chain 2-methylacyl-CoA dehydrogenase",
+      "equation": "2-methylbutanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-2-methylbut-2-enoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "ec": "1.3.8.5",
+      "substrates": [
+        {
+          "metabolite": "2_methylbutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tiglyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43780"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-methylbutanoyl-CoA + (R)-carnitine = O-2-methylbutanoyl-(R)-carnitine + CoA",
+      "equation": "2-methylbutanoyl-CoA + (R)-carnitine = O-2-methylbutanoyl-(R)-carnitine + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_methylbutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_2_methylbutyrylcarnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-tryptophan + ATP = L-tryptophyl-5'-AMP + diphosphate",
+      "equation": "L-tryptophan + ATP = L-tryptophyl-5'-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tryptophyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61792"
+          }
+        ]
+      }
+    }
+  ]
+}

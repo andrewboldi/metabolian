@@ -22,17 +22,11 @@ pathway 19e-geissoschizine-to-perakine "(19E)-geissoschizine to perakine" {
 
   branch from fmn side left {
     fmn
-    <-> . +hydroxy_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    oxo_fatty_acid_anion
+    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
+    5_20_dihete
   }
 
-  branch from methanol side right {
-    methanol
-    <-> ec_3_1_1_100 [3.1.1.100] +chlorophyllide_a +h2o +hplus +co2
-    3_vinylbacteriochlorophyllide_d
-  }
-
-  branch from perakine side left {
+  branch from perakine side right {
     perakine
     <-> ec_1_1_1_317 [1.1.1.317] +nadp +nadph +hplus
     raucaffrinoline

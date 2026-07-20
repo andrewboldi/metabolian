@@ -1,0 +1,169 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-n-diacetylchitobiose-to-n-n-diacetylchitobiona",
+  "name": "N,N'-diacetylchitobiose to N,N'-diacetylchitobionate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from N,N'-diacetylchitobiose to N,N'-diacetylchitobionate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59544"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28681"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_n_diacetylchitobiose",
+      "name": "N,N'-diacetylchitobiose",
+      "short": "N,N'-diacetylchitob…",
+      "formula": "C16H28N2O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28681"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_n_diacetylchitobiono_1_5_lactone",
+      "name": "N,N'-diacetylchitobiono-1,5-lactone",
+      "short": "N,N'-diacetylchitob…",
+      "formula": "C16H26N2O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143145"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_n_diacetylchitobionate",
+      "name": "N,N'-diacetylchitobionate",
+      "short": "N,N'-diacetylchitob…",
+      "formula": "C16H27N2O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143149"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N,N'-diacetylchitobiose + O2 = N,N'-diacetylchitobiono-1,5-lactone + H2O2",
+      "equation": "N,N'-diacetylchitobiose + O2 = N,N'-diacetylchitobiono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "n_n_diacetylchitobiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_diacetylchitobiono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N,N'-diacetylchitobiono-1,5-lactone + H2O = N,N'-diacetylchitobionate + H(+)",
+      "equation": "N,N'-diacetylchitobiono-1,5-lactone + H2O = N,N'-diacetylchitobionate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_n_diacetylchitobiono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_diacetylchitobionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59556"
+          }
+        ]
+      }
+    }
+  ]
+}

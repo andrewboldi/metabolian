@@ -1,0 +1,226 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-4-hydroxy-l-proline-to-erythro-4-hydroxy-l",
+  "name": "trans-4-hydroxy-L-proline to erythro-4-hydroxy-L-gluta…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from trans-4-hydroxy-L-proline zwitterion to erythro-4-hydroxy-L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52512"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58375"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_4_hydroxy_l_proline",
+      "name": "trans-4-hydroxy-L-proline",
+      "short": "trans-4-hydroxy-L-p…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58375"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "3r_5s_1_pyrroline_3_hydroxy_5_carboxylate",
+      "name": "(3R,5S)-1-pyrroline-3-hydroxy-5-carboxylate",
+      "short": "(3R,5S)-1-pyrroline…",
+      "formula": "C5H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62612"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "erythro_4_hydroxy_l_glutamate",
+      "name": "erythro-4-hydroxy-L-glutamate",
+      "short": "erythro-4-hydroxy-L…",
+      "formula": "C5H8NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:6331"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_5_5_3",
+      "name": "hydroxyproline dehydrogenase",
+      "ec": [
+        "1.5.5.3"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_88",
+      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.88"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hydroxyproline dehydrogenase",
+      "equation": "trans-4-hydroxy-L-proline + a quinone = (3R,5S)-1-pyrroline-3-hydroxy-5-carboxylate + a quinol + H(+)",
+      "ec": "1.5.5.3",
+      "substrates": [
+        {
+          "metabolite": "trans_4_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_5s_1_pyrroline_3_hydroxy_5_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_5_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
+      "equation": "(3R,5S)-1-pyrroline-3-hydroxy-5-carboxylate + NAD(+) + 2 H2O = (4S)-4-hydroxy-L-glutamate + NADH + H(+)",
+      "ec": "1.2.1.88",
+      "substrates": [
+        {
+          "metabolite": "3r_5s_1_pyrroline_3_hydroxy_5_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "erythro_4_hydroxy_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31155"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31155"
+          }
+        ]
+      }
+    }
+  ]
+}

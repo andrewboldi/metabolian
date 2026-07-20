@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny",
   "name": "(R)-N-acetyl-1-phenylethy… to (2S)-2-hydroxy-2-phenylpr…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (R)-N-acetyl-1-phenylethylamine to (2S)-2-hydroxy-2-phenylpropanenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -121,50 +121,40 @@
       }
     },
     {
-      "id": "melatonin",
-      "name": "melatonin",
-      "formula": "C13H16N2O2",
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H8N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16796"
+        "chebi": "CHEBI:30011"
       }
     },
     {
-      "id": "5_methoxytryptamine",
-      "name": "5-methoxytryptamine",
-      "formula": "C11H15N2O",
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:166874"
+        "chebi": "CHEBI:29969"
       }
     },
     {
-      "id": "3_5_dibromo_4_oxidobenzonitrile",
-      "name": "3,5-dibromo-4-oxidobenzonitrile",
-      "short": "3,5-dibromo-4-oxido…",
-      "formula": "C7H2Br2NO",
-      "charge": -1,
+      "id": "n6_glutamyl_lysine",
+      "name": "N6-(γ-glutamyl)lysine",
+      "short": "N6-(γ-glutamyl)lysi…",
+      "formula": "C11H17N3O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58046"
-      }
-    },
-    {
-      "id": "3_5_dibromo_4_oxidobenzoate",
-      "name": "3,5-dibromo-4-oxidobenzoate",
-      "short": "3,5-dibromo-4-oxido…",
-      "formula": "C7H2Br2O3",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57274"
+        "chebi": "CHEBI:138370"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_3_5_5_6",
-      "name": "bromoxynil nitrilase",
+      "id": "ec_2_3_2_13",
+      "name": "protein-glutamine gamma-glutamyltransferase",
       "ec": [
-        "3.5.5.6"
+        "2.3.2.13"
       ]
     }
   ],
@@ -296,61 +286,22 @@
     },
     {
       "id": "r4",
-      "name": "melatonin + H2O = 5-methoxytryptamine + acetate",
-      "equation": "melatonin + H2O = 5-methoxytryptamine + acetate",
+      "name": "protein-glutamine gamma-glutamyltransferase",
+      "equation": "L-glutaminyl-[protein] + L-lysyl-[protein] = [protein]-L-lysyl-N(6)-5-L-glutamyl-[protein] + NH4(+)",
+      "ec": "2.3.2.13",
       "substrates": [
         {
-          "metabolite": "melatonin",
+          "metabolite": "l_glutamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_methoxytryptamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:67208"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67208"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "bromoxynil nitrilase",
-      "equation": "3,5-dibromo-4-hydroxybenzonitrile + 2 H2O = 3,5-dibromo-4-hydroxybenzoate + NH4(+)",
-      "ec": "3.5.5.6",
-      "substrates": [
-        {
-          "metabolite": "3_5_dibromo_4_oxidobenzonitrile",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_5_dibromo_4_oxidobenzoate",
+          "metabolite": "n6_glutamyl_lysine",
           "stoichiometry": 1
         },
         {
@@ -360,20 +311,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_5_6"
+          "enzyme": "ec_2_3_2_13"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:22100"
+        "rhea": "RHEA:54816"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22100"
+            "id": "RHEA:54816"
           }
         ]
       }

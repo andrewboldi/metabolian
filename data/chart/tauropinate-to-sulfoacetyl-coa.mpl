@@ -18,13 +18,13 @@ pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
 
   branch from taurine side left {
     taurine
-    <-> . +fatty_acyl_coa +coa +hplus
-    fatty_acid_taurine_conjugate
+    <-> . +palmitoyl_coa +coa +hplus
+    n_hexadecanoyltaurine
   }
 
   branch from sulfonatoacetaldehyde side right {
     sulfonatoacetaldehyde
-    <-> ec_1_1_1_313 [1.1.1.313] +nadp +nadph +hplus
+    <-> ec_1_1_1_433 [1.1.1.433] +nad +nadh +hplus
     isethionate
   }
 
@@ -36,7 +36,7 @@ pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
 
   branch from sulfoacetyl_coa side right {
     sulfoacetyl_coa
-    <-> . +sulfonatoacetate +atp +coa +amp
-    ppi
+    <-> . +atp +coa +adp +pi
+    sulfonatoacetate
   }
 }

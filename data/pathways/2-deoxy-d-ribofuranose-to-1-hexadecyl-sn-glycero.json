@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-deoxy-d-ribofuranose-to-1-hexadecyl-sn-glycero",
   "name": "2-deoxy-D-ribofuranose to 1-hexadecyl-sn-glycero-3-…",
-  "category": "nucleotide-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 6-step route from 2-deoxy-D-ribofuranose to 1-hexadecyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -179,13 +179,13 @@
       }
     },
     {
-      "id": "purine_2_deoxyribonucleoside_5_phosphate",
-      "name": "purine 2'-deoxyribonucleoside 5'-phosphate",
-      "short": "purine 2'-deoxyribo…",
-      "formula": "C10H10N4O6PR2",
+      "id": "2_deoxyadenosine_5_monophosphate",
+      "name": "2'-deoxyadenosine 5'-monophosphate",
+      "short": "2'-deoxyadenosine…",
+      "formula": "C10H12N5O6P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:142198"
+        "chebi": "CHEBI:58245"
       }
     },
     {
@@ -198,12 +198,12 @@
       }
     },
     {
-      "id": "purine_nucleobase",
-      "name": "purine nucleobase",
-      "formula": "C5H3N4R2",
+      "id": "adenine",
+      "name": "Adenine",
+      "formula": "C5H5N5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:26386"
+        "chebi": "CHEBI:16708"
       }
     },
     {
@@ -226,22 +226,22 @@
       }
     },
     {
-      "id": "1_stearoylglycerone_3_phosphate",
-      "name": "1-stearoylglycerone 3-phosphate",
-      "short": "1-stearoylglycerone…",
-      "formula": "C21H39O7P",
+      "id": "1_acylglycerone_3_phosphate",
+      "name": "1-acylglycerone 3-phosphate",
+      "short": "1-acylglycerone 3-P",
+      "formula": "C4H4O7PR",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:83203"
+        "chebi": "CHEBI:57534"
       }
     },
     {
-      "id": "octadecanoate",
-      "name": "octadecanoate",
-      "formula": "C18H35O2",
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:25629"
+        "chebi": "CHEBI:28868"
       }
     },
     {
@@ -549,11 +549,11 @@
     },
     {
       "id": "r7",
-      "name": "a purine 2'-deoxyribonucleoside 5'-phosphate + H2O = a purine nucleobase + 2-deoxy-D-ri...",
-      "equation": "a purine 2'-deoxyribonucleoside 5'-phosphate + H2O = a purine nucleobase + 2-deoxy-D-ribose 5-phosphate",
+      "name": "dAMP + H2O = 2-deoxy-D-ribose 5-phosphate + adenine",
+      "equation": "dAMP + H2O = 2-deoxy-D-ribose 5-phosphate + adenine",
       "substrates": [
         {
-          "metabolite": "purine_2_deoxyribonucleoside_5_phosphate",
+          "metabolite": "2_deoxyadenosine_5_monophosphate",
           "stoichiometry": 1
         },
         {
@@ -563,25 +563,25 @@
       ],
       "products": [
         {
-          "metabolite": "purine_nucleobase",
+          "metabolite": "2_deoxy_d_ribofuranose_5_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_deoxy_d_ribofuranose_5_phosphate",
+          "metabolite": "adenine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:51132"
+        "rhea": "RHEA:57824"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51132"
+            "id": "RHEA:57824"
           }
         ]
       }
@@ -631,11 +631,11 @@
     },
     {
       "id": "r9",
-      "name": "1-octadecanoylglycerone 3-phosphate + hexadecan-1-ol = 1-O-hexadecylglycerone 3-phospha...",
-      "equation": "1-octadecanoylglycerone 3-phosphate + hexadecan-1-ol = 1-O-hexadecylglycerone 3-phosphate + octadecanoate + H(+)",
+      "name": "a 1-acylglycerone 3-phosphate + hexadecan-1-ol = 1-O-hexadecylglycerone 3-phosphate + a...",
+      "equation": "a 1-acylglycerone 3-phosphate + hexadecan-1-ol = 1-O-hexadecylglycerone 3-phosphate + a fatty acid + H(+)",
       "substrates": [
         {
-          "metabolite": "1_stearoylglycerone_3_phosphate",
+          "metabolite": "1_acylglycerone_3_phosphate",
           "stoichiometry": 1
         },
         {
@@ -649,7 +649,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "octadecanoate",
+          "metabolite": "fatty-acid",
           "stoichiometry": 1
         },
         {
@@ -660,14 +660,14 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:40711"
+        "rhea": "RHEA:40935"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40711"
+            "id": "RHEA:40935"
           }
         ]
       }

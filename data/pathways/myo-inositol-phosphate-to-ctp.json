@@ -186,12 +186,33 @@
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
+      "id": "n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace",
+      "name": "α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→3)-N-acetyl-β-D-galactosaminyl-(1→4)-[α-N-acetylneuraminosyl-(2→3)]-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-N-acylsphingosine",
+      "short": "α-N-acetylneuramino…",
+      "formula": "C67H111N4O39R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78445"
+      }
+    },
+    {
+      "id": "cmp_n_acetyl_neuraminate",
+      "name": "CMP-N-acetyl-β-neuraminate",
+      "short": "CMP-N-acetyl-β-neur…",
+      "formula": "C20H29N4O16P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57812"
+      }
+    },
+    {
+      "id": "neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne",
+      "name": "α-Neu5Ac-(2→3)-β-D-Gal-(1→3)-[α-Neu5Ac-(2→6)]-β-D-GalNAc-(1→4)-[α-Neu5Ac-(2→3)]-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer",
+      "short": "α-Neu5Ac-(2→3)-β-D-…",
+      "formula": "C78H127N5O47R",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:78571"
       }
     },
     {
@@ -212,6 +233,33 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:88226"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
       }
     }
   ],
@@ -238,31 +286,17 @@
       ]
     },
     {
-      "id": "ec_3_6_1_8",
-      "name": "ATP diphosphatase",
-      "ec": [
-        "3.6.1.8"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_9",
-      "name": "nucleotide diphosphatase",
-      "ec": [
-        "3.6.1.9"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_65",
-      "name": "(d)CTP diphosphatase",
-      "ec": [
-        "3.6.1.65"
-      ]
-    },
-    {
       "id": "ec_2_7_1_216",
       "name": "farnesol kinase",
       "ec": [
         "2.7.1.216"
+      ]
+    },
+    {
+      "id": "ec_6_3_4_2",
+      "name": "CTP synthase (glutamine hydrolyzing)",
+      "ec": [
+        "6.3.4.2"
       ]
     }
   ],
@@ -533,26 +567,25 @@
     },
     {
       "id": "r7",
-      "name": "ATP diphosphatase",
-      "equation": "CTP + H2O = CMP + diphosphate + H(+)",
-      "ec": "3.6.1.8",
+      "name": "a ganglioside GD1a (d18:1(4E)) + CMP-N-acetyl-beta-neuraminate = a ganglioside GT1aalph...",
+      "equation": "a ganglioside GD1a (d18:1(4E)) + CMP-N-acetyl-beta-neuraminate = a ganglioside GT1aalpha (d18:1(4E)) + CMP + H(+)",
       "substrates": [
         {
-          "metabolite": "ctp",
+          "metabolite": "n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "cmp_n_acetyl_neuraminate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cytidine_5_monophosphate",
+          "metabolite": "neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "cytidine_5_monophosphate",
           "stoichiometry": 1
         },
         {
@@ -560,22 +593,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_1_8"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:27762"
+        "rhea": "RHEA:41972"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27762"
+            "id": "RHEA:41972"
           }
         ]
       }
@@ -625,6 +653,71 @@
           {
             "db": "Rhea",
             "id": "RHEA:51680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "CTP synthase (glutamine hydrolyzing)",
+      "equation": "UTP + L-glutamine + ATP + H2O = CTP + L-glutamate + ADP + phosphate + 2 H(+)",
+      "ec": "6.3.4.2",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_4_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:26426"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26426"
           }
         ]
       }

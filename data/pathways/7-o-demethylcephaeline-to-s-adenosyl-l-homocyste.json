@@ -1,0 +1,271 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-o-demethylcephaeline-to-s-adenosyl-l-homocyste",
+  "name": "7'-O-demethylcephaeline to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 7'-O-demethylcephaeline(2+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80555"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231589"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_o_demethylcephaeline",
+      "name": "7'-O-demethylcephaeline",
+      "short": "7'-O-demethylcephae…",
+      "formula": "C27H38N2O4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:231589"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "cephaeline",
+      "name": "cephaeline",
+      "formula": "C28H40N2O4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:231587"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "emetine",
+      "name": "emetine",
+      "formula": "C29H42N2O4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:149548"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "n1_methylguanosine_5_monophosphate_1",
+      "name": "N1-methylguanosine 5'-monophosphate(1−)",
+      "short": "N1-methylguanosine…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73542"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_395",
+      "name": "7'-O-demethylcephaeline methyltransferase",
+      "ec": [
+        "2.1.1.395"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_396",
+      "name": "cephaeline 6'-O-methyltransferase",
+      "ec": [
+        "2.1.1.396"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_221",
+      "name": "tRNA (guanine(9)-N(1))-methyltransferase",
+      "ec": [
+        "2.1.1.221"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "7'-O-demethylcephaeline methyltransferase",
+      "equation": "7'-O-demethylcephaeline + S-adenosyl-L-methionine = cephaeline + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.395",
+      "substrates": [
+        {
+          "metabolite": "7_o_demethylcephaeline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cephaeline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_395"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cephaeline 6'-O-methyltransferase",
+      "equation": "cephaeline + S-adenosyl-L-methionine = emetine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.396",
+      "substrates": [
+        {
+          "metabolite": "cephaeline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "emetine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_396"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80659"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tRNA (guanine(9)-N(1))-methyltransferase",
+      "equation": "guanosine(9) in tRNA + S-adenosyl-L-methionine = N(1)-methylguanosine(9) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.221",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_221"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43156"
+          }
+        ]
+      }
+    }
+  ]
+}

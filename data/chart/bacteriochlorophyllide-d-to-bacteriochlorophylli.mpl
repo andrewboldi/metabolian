@@ -20,19 +20,19 @@ pathway bacteriochlorophyllide-d-to-bacteriochlorophylli "bacteriochlorophyllide
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_69 [2.1.1.69] +5_hydroxyfurocoumarin +sam +hplus
-    5_methoxyfurocoumarin
+    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
+    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_4_3_1_32 [4.3.1.32] +5_amino_5_4_hydroxybenzyl_6_d_ribitylimino_5_6_d +sam +methionine +nh3 +hplus
-    7_8_didemethyl_8_hydroxy_5_deazariboflavin
+    <-> . +l_isoleucine +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
+    methylcyclopropylglycine
   }
 
   branch from methionine side left {
     methionine
-    <-> ec_1_3_98_6 [1.3.98.6] +fe_coproporphyrin_iii +sam +5_deoxyadenosine +co2
-    ferroheme_b
+    <-> . +3_l_methionyl_adenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
   }
 }

@@ -109,31 +109,33 @@
       }
     },
     {
-      "id": "s_averantin",
-      "name": "(S)-averantin",
-      "formula": "C20H19O7",
-      "charge": -1,
+      "id": "24s_24_hydroxycholesterol",
+      "name": "(24S)-24-hydroxycholesterol",
+      "short": "24-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77899"
+        "chebi": "CHEBI:34310"
       }
     },
     {
-      "id": "1_s_5_r_5_hydroxyaverantin",
-      "name": "(1'S,5'R)-5'-hydroxyaverantin",
-      "short": "(1'S,5'R)-5'-hydrox…",
-      "formula": "C20H20O8",
+      "id": "24s_25_dihydroxycholesterol",
+      "name": "(24S,25)-dihydroxycholesterol",
+      "short": "(24S,25)-dihydroxyc…",
+      "formula": "C27H46O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:71536"
+        "chebi": "CHEBI:86074"
       }
     },
     {
-      "id": "11_hydroxysugiol",
-      "name": "11-hydroxysugiol",
-      "formula": "C20H28O3",
+      "id": "11_20_dihydroxyferruginol",
+      "name": "11,20-dihydroxyferruginol",
+      "short": "11,20-dihydroxyferr…",
+      "formula": "C20H30O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138962"
+        "chebi": "CHEBI:138965"
       }
     }
   ],
@@ -167,17 +169,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_116",
-      "name": "averantin hydroxylase",
+      "id": "ec_1_14_14_67",
+      "name": "11-hydroxysugiol 20-monooxygenase",
       "ec": [
-        "1.14.14.116"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_65",
-      "name": "sugiol synthase",
-      "ec": [
-        "1.14.14.65"
+        "1.14.14.67"
       ]
     }
   ],
@@ -412,12 +407,11 @@
     },
     {
       "id": "r5",
-      "name": "averantin hydroxylase",
-      "equation": "(1'S)-averantin + reduced [NADPH--hemoprotein reductase] + O2 = (1'S,5'R)-5'-hydroxyaverantin + oxidized [NADPH--hemoprotein reductase] + H2O",
-      "ec": "1.14.14.116",
+      "name": "(24S)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 24S,25-dihydro...",
+      "equation": "(24S)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 24S,25-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "s_averantin",
+          "metabolite": "24s_24_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -431,7 +425,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_s_5_r_5_hydroxyaverantin",
+          "metabolite": "24s_25_dihydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -441,33 +435,32 @@
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_1_14_14_116"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:35575"
+        "rhea": "RHEA:46384"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35575"
+            "id": "RHEA:46384"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "sugiol synthase",
-      "equation": "11-hydroxyferruginol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-hydroxysugiol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.65",
+      "name": "11-hydroxysugiol 20-monooxygenase",
+      "equation": "11-hydroxyferruginol + reduced [NADPH--hemoprotein reductase] + O2 = 11,20-dihydroxyferruginol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.67",
       "substrates": [
         {
           "metabolite": "11_hydroxyferruginol",
@@ -475,47 +468,47 @@
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "11_hydroxysugiol",
+          "metabolite": "11_20_dihydroxyferruginol",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_65"
+          "enzyme": "ec_1_14_14_67"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:55460"
+        "rhea": "RHEA:55468"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55460"
+            "id": "RHEA:55468"
           }
         ]
       }

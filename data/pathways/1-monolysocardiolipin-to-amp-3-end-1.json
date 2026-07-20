@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-monolysocardiolipin-to-amp-3-end-1",
   "name": "1-monolysocardiolipin to AMP 3'-end(1−)",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 1-monolysocardiolipin(2−) to AMP 3'-end(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -124,23 +124,23 @@
       }
     },
     {
-      "id": "2_monolysocardiolipin",
-      "name": "2-monolysocardiolipin",
-      "short": "2-monolysocardiolip…",
-      "formula": "C12H17O16P2R3",
-      "charge": -2,
+      "id": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-(Z)-alk-1-enyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(Z)-alk-1-enyl-sn…",
+      "formula": "C7H15NO6PR",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64743"
+        "chebi": "CHEBI:77288"
       }
     },
     {
-      "id": "2_2_dilysocardiolipin",
-      "name": "2,2'-dilysocardiolipin",
-      "short": "2,2'-dilysocardioli…",
-      "formula": "C11H18O15P2R2",
-      "charge": -2,
+      "id": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano",
+      "name": "1-(Z)-alk-1-enyl-2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(Z)-alk-1-enyl-2-…",
+      "formula": "C8H14NO7PR2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75137"
+        "chebi": "CHEBI:77290"
       }
     },
     {
@@ -172,22 +172,22 @@
       }
     },
     {
-      "id": "3_glycyladenylyl_zwitterionic_group",
-      "name": "3'-glycyladenylyl zwitterionic group",
-      "short": "3'-glycyladenylyl…",
-      "formula": "C12H16N6O7P",
-      "charge": 0,
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78522"
+        "chebi": "CHEBI:78533"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:33384"
       }
     }
   ],
@@ -197,13 +197,6 @@
       "name": "alanylphosphatidylglycerol synthase",
       "ec": [
         "2.3.2.11"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_96",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "ec": [
-        "3.1.1.96"
       ]
     }
   ],
@@ -337,35 +330,39 @@
     },
     {
       "id": "r4",
-      "name": "2 1'-[1,2-diacyl-sn-glycero-3-phospho],3'-[1-acyl-sn-glycero-3-phospho]-glycerol = 1',3...",
-      "equation": "2 1'-[1,2-diacyl-sn-glycero-3-phospho],3'-[1-acyl-sn-glycero-3-phospho]-glycerol = 1',3'-bis-[1-acyl-sn-glycero-3-phospho]-glycerol + a cardiolipin",
+      "name": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + a 1,2-diacyl-sn-glycero-3-phospho...",
+      "equation": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1-O-(1Z-alkenyl)-2-acyl-sn-glycero-3-phosphoethanolamine + a 1-acyl-sn-glycero-3-phosphocholine",
       "substrates": [
         {
-          "metabolite": "2_monolysocardiolipin",
-          "stoichiometry": 2
+          "metabolite": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_2_dilysocardiolipin",
+          "metabolite": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cardiolipin",
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:67788"
+        "rhea": "RHEA:79435"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67788"
+            "id": "RHEA:79435"
           }
         ]
       }
@@ -411,12 +408,11 @@
     },
     {
       "id": "r6",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "equation": "glycyl-tRNA(Ala) + H2O = tRNA(Ala) + glycine + H(+)",
-      "ec": "3.1.1.96",
+      "name": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
+      "equation": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
       "substrates": [
         {
-          "metabolite": "3_glycyladenylyl_zwitterionic_group",
+          "metabolite": "3_l_seryl_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
@@ -430,30 +426,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "serine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_96"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:53744"
+        "rhea": "RHEA:74551"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53744"
+            "id": "RHEA:74551"
           }
         ]
       }

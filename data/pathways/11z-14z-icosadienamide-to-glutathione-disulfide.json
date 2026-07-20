@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "11z-14z-icosadienamide-to-glutathione-disulfide",
   "name": "(11Z,14Z)-icosadienamide to glutathione disulfide",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from (11Z,14Z)-icosadienamide to glutathione disulfide(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -114,53 +114,54 @@
       }
     },
     {
-      "id": "l_glutaminiumyl_group",
-      "name": "L-glutaminiumyl group",
-      "short": "L-glutaminiumyl…",
-      "formula": "C5H10N2O2",
+      "id": "5_methoxytryptamine",
+      "name": "5-methoxytryptamine",
+      "formula": "C11H15N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:64722"
+        "chebi": "CHEBI:166874"
       }
     },
     {
-      "id": "n_terminal_5_oxo_l_proline",
-      "name": "N-terminal 5-oxo-L-proline",
-      "short": "N-terminal…",
-      "formula": "C5H6NO2",
+      "id": "5_methoxyindoleacetaldehyde",
+      "name": "5-Methoxyindoleacetaldehyde",
+      "short": "5-Methoxyindoleacet…",
+      "formula": "C11H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87215"
+        "chebi": "CHEBI:166541"
       }
     },
     {
-      "id": "9_s_hpode",
-      "name": "9(S)-HPODE",
-      "formula": "C18H31O4",
-      "charge": -1,
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60955"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "9_s_hode",
-      "name": "9(S)-HODE",
-      "formula": "C18H31O3",
+      "id": "5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13",
+      "name": "(5Z,8Z,11Z,13E,15S,17Z)-15-hydroperoxy-5,8,11,13,17-eicosapentaenoate",
+      "short": "(5Z,8Z,11Z,13E,15S,…",
+      "formula": "C20H29O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77852"
+        "chebi": "CHEBI:194369"
+      }
+    },
+    {
+      "id": "15_s_hepe",
+      "name": "15(S)-HEPE",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132087"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_3_2_5",
-      "name": "glutaminyl-peptide cyclotransferase",
-      "ec": [
-        "2.3.2.5"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -316,18 +317,29 @@
     },
     {
       "id": "r5",
-      "name": "glutaminyl-peptide cyclotransferase",
-      "equation": "N-terminal L-glutaminyl-[peptide] = N-terminal 5-oxo-L-prolyl-[peptide] + NH4(+)",
-      "ec": "2.3.2.5",
+      "name": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
+      "equation": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "l_glutaminiumyl_group",
+          "metabolite": "5_methoxytryptamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_terminal_5_oxo_l_proline",
+          "metabolite": "5_methoxyindoleacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -335,33 +347,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_2_5"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:23652"
+        "rhea": "RHEA:59600"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23652"
+            "id": "RHEA:59600"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate + 2 glutathione = (9S)-hydroxy-(10E,12Z)-oc...",
-      "equation": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate + 2 glutathione = (9S)-hydroxy-(10E,12Z)-octadecadienoate + glutathione disulfide + H2O",
+      "name": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + 2 glutathione = (15S)-hydroxy...",
+      "equation": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + 2 glutathione = (15S)-hydroxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + glutathione disulfide + H2O",
       "substrates": [
         {
-          "metabolite": "9_s_hpode",
+          "metabolite": "5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13",
           "stoichiometry": 1
         },
         {
@@ -371,7 +378,7 @@
       ],
       "products": [
         {
-          "metabolite": "9_s_hode",
+          "metabolite": "15_s_hepe",
           "stoichiometry": 1
         },
         {
@@ -386,14 +393,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:76687"
+        "rhea": "RHEA:76707"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76687"
+            "id": "RHEA:76707"
           }
         ]
       }

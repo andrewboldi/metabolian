@@ -20,21 +20,33 @@ pathway 1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol "1-alkyl-sn-glycero-3-p
     1_alkyl_sn_glycerol_3_phosphate
   }
 
-  branch from ethanolaminium side left {
+  branch from 1_alkyl_sn_glycerol_3_phosphate side left {
+    1_alkyl_sn_glycerol_3_phosphate
+    <-> . +1_alkyl_2_acyl_sn_glycero_3_phosphate +h2o +hplus
+    fatty-acid
+  }
+
+  branch from ethanolaminium side right {
     ethanolaminium
     <-> ec_2_7_8_29 [2.7.8.29] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +serine
     3_sn_phosphatidyl_l_serine
   }
 
-  branch from 1_alkyl_2_acetyl_sn_glycerol side right {
+  branch from 1_alkyl_2_acetyl_sn_glycerol side left {
     1_alkyl_2_acetyl_sn_glycerol
     <-> ec_2_3_1_125 [2.3.1.125] +acyl_coa +coa
     1_alkyl_2_acetyl_3_acyl_sn_glycerol
   }
 
+  branch from 1_o_alkyl_sn_glycerol side right {
+    1_o_alkyl_sn_glycerol
+    <-> . +h2o +fatty-acid +hplus
+    1_alkyl_3_acyl_sn_glycerol
+  }
+
   branch from acetate side left {
     acetate
-    <-> . +2_acetamido_5_oxopentanoate +h2o
-    l_glutamic_5_semialdehyde
+    <-> . +triacetin +h2o +hplus
+    diacetin
   }
 }

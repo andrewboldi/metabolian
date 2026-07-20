@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "octyl-d-glucopyranoside-to-d-glucopyranose",
+  "name": "octyl β-D-glucopyranoside to D-glucopyranose",
+  "category": "other",
+  "summary": "A 2-step route from octyl β-D-glucopyranoside to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59108"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:41128"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "octyl_d_glucopyranoside",
+      "name": "octyl β-D-glucopyranoside",
+      "short": "octyl β-D-glucopyra…",
+      "formula": "C14H28O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41128"
+      }
+    },
+    {
+      "id": "chenodeoxycholate",
+      "name": "Chenodeoxycholic acid (chenodeoxycholate)",
+      "short": "Chenodeoxycholic…",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36234"
+      }
+    },
+    {
+      "id": "chenodeoxycholate_3_o_d_glucoside",
+      "name": "chenodeoxycholate-3-O-β-D-glucoside",
+      "short": "chenodeoxycholate-3…",
+      "formula": "C30H49O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142610"
+      }
+    },
+    {
+      "id": "octan_1_ol",
+      "name": "octan-1-ol",
+      "formula": "C8H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16188"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "octyl_acetate",
+      "name": "octyl acetate",
+      "formula": "C10H20O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87495"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "7_hydroxy_3_oxo_5_cholan_24_oate",
+      "name": "7α-hydroxy-3-oxo-5β-cholan-24-oate",
+      "short": "7α-hydroxy-3-oxo-5β…",
+      "formula": "C24H37O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87731"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "octyl beta-D-glucose + chenodeoxycholate = beta-D-glucosyl-(1->3)-O-chenodeoxycholate +...",
+      "equation": "octyl beta-D-glucose + chenodeoxycholate = beta-D-glucosyl-(1->3)-O-chenodeoxycholate + octan-1-ol",
+      "substrates": [
+        {
+          "metabolite": "octyl_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chenodeoxycholate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chenodeoxycholate_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octan_1_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-D-glucosyl-(1->3)-O-chenodeoxycholate + H2O = chenodeoxycholate + D-glucose",
+      "equation": "beta-D-glucosyl-(1->3)-O-chenodeoxycholate + H2O = chenodeoxycholate + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholate_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "octan-1-ol + acetyl-CoA = octyl acetate + CoA",
+      "equation": "octan-1-ol + acetyl-CoA = octyl acetate + CoA",
+      "substrates": [
+        {
+          "metabolite": "octan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "chenodeoxycholate + NAD(+) = 3-oxochenodeoxycholate + NADH + H(+)",
+      "equation": "chenodeoxycholate + NAD(+) = 3-oxochenodeoxycholate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_hydroxy_3_oxo_5_cholan_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47532"
+          }
+        ]
+      }
+    }
+  ]
+}

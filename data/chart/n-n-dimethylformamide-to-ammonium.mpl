@@ -20,14 +20,14 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
 
   branch from formate side left {
     formate
-    <-> ec_4_1_99_5 [4.1.99.5] +octadecanal +nadph +o2 +hplus +nadp +h2o
-    heptadecane
+    <-> ec_1_14_15_36 [1.14.15.36] +14_methyl_steroid +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    14_steroid
   }
 
   branch from methylamine side right {
     methylamine
-    <-> ec_3_5_1_36 [3.5.1.36] +n_methyl_2_oxoglutaramate +h2o
-    akg
+    <-> ec_3_5_1_137 [3.5.1.137] +n_methyl_carbamate_ester +h2o +hplus +co2
+    alcohol
   }
 
   branch from cobalt side left {
@@ -38,7 +38,7 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_24 [3.5.4.24] +l_sepiapterin +h2o +hplus
-    s_xanthopterin_b2
+    <-> ec_1_7_1_10 [1.7.1.10] +nad +h2o +nadh +hplus
+    hydroxylamine
   }
 }

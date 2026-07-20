@@ -123,22 +123,23 @@
       }
     },
     {
-      "id": "l_kynurenine",
-      "name": "L-kynurenine",
-      "formula": "C10H12N2O3",
-      "charge": 0,
+      "id": "gdp_4_amino_4_6_dideoxy_d_mannose",
+      "name": "GDP-4-amino-4,6-dideoxy-α-D-mannose",
+      "short": "GDP-4-amino-4,6-did…",
+      "formula": "C16H25N6O14P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57959"
+        "chebi": "CHEBI:73996"
       }
     },
     {
-      "id": "4_2_aminophenyl_2_4_dioxobutanoate",
-      "name": "4-(2-aminophenyl)-2,4-dioxobutanoate",
-      "short": "4-(2-aminophenyl)-2…",
-      "formula": "C10H8NO4",
-      "charge": -1,
+      "id": "gdp_4_dehydro_6_deoxy_d_mannose",
+      "name": "GDP-4-dehydro-6-deoxy-α-D-mannose",
+      "short": "GDP-4-dehydro-6-deo…",
+      "formula": "C16H21N5O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58147"
+        "chebi": "CHEBI:57964"
       }
     }
   ],
@@ -169,6 +170,13 @@
       "name": "UDP-N-acetylglucosamine 4,6-dehydratase (inverting)",
       "ec": [
         "4.2.1.115"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_102",
+      "name": "GDP-perosamine synthase",
+      "ec": [
+        "2.6.1.102"
       ]
     }
   ],
@@ -347,11 +355,12 @@
     },
     {
       "id": "r5",
-      "name": "L-kynurenine + 2-oxoglutarate = 4-(2-aminophenyl)-2,4-dioxobutanoate + L-glutamate",
-      "equation": "L-kynurenine + 2-oxoglutarate = 4-(2-aminophenyl)-2,4-dioxobutanoate + L-glutamate",
+      "name": "GDP-perosamine synthase",
+      "equation": "GDP-alpha-D-perosamine + 2-oxoglutarate = GDP-4-dehydro-alpha-D-rhamnose + L-glutamate",
+      "ec": "2.6.1.102",
       "substrates": [
         {
-          "metabolite": "l_kynurenine",
+          "metabolite": "gdp_4_amino_4_6_dideoxy_d_mannose",
           "stoichiometry": 1
         },
         {
@@ -361,7 +370,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_2_aminophenyl_2_4_dioxobutanoate",
+          "metabolite": "gdp_4_dehydro_6_deoxy_d_mannose",
           "stoichiometry": 1
         },
         {
@@ -369,17 +378,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_102"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:20964"
+        "rhea": "RHEA:36779"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20964"
+            "id": "RHEA:36779"
           }
         ]
       }

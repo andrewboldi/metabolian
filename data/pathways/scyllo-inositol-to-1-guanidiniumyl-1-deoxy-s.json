@@ -186,49 +186,31 @@
       }
     },
     {
-      "id": "d_glutamine",
-      "name": "D-glutamine",
-      "formula": "C5H10N2O3",
-      "charge": 0,
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:58000"
+        "chebi": "CHEBI:57292"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "n2_succinyl_l_ornithinate",
+      "name": "N2-succinyl-L-ornithinate",
+      "short": "N2-succinyl-L-ornit…",
+      "formula": "C9H15N2O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:58514"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
-      "id": "n5_hydroxy_l_ornithine",
-      "name": "N5-hydroxy-L-ornithine",
-      "short": "N5-hydroxy-L-ornith…",
-      "formula": "C5H12N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78275"
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -269,10 +251,10 @@
       ]
     },
     {
-      "id": "ec_1_14_13_196",
-      "name": "L-ornithine N(5)-monooxygenase [NAD(P)H]",
+      "id": "ec_2_3_1_109",
+      "name": "arginine N-succinyltransferase",
       "ec": [
-        "1.14.13.196"
+        "2.3.1.109"
       ]
     }
   ],
@@ -551,100 +533,49 @@
     },
     {
       "id": "r7",
-      "name": "D-glutamine + O2 + H2O = 2-oxoglutaramate + H2O2 + NH4(+)",
-      "equation": "D-glutamine + O2 + H2O = 2-oxoglutaramate + H2O2 + NH4(+)",
+      "name": "arginine N-succinyltransferase",
+      "equation": "succinyl-CoA + L-ornithine = N(2)-succinyl-L-ornithine + CoA + H(+)",
+      "ec": "2.3.1.109",
       "substrates": [
         {
-          "metabolite": "d_glutamine",
+          "metabolite": "succinyl_coa",
           "stoichiometry": 1
         },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_oxoglutaramate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:78215"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78215"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "L-ornithine N(5)-monooxygenase [NAD(P)H]",
-      "equation": "L-ornithine + NADH + O2 = N(5)-hydroxy-L-ornithine + NAD(+) + H2O",
-      "ec": "1.14.13.196",
-      "substrates": [
         {
           "metabolite": "ornithine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n5_hydroxy_l_ornithine",
+          "metabolite": "n2_succinyl_l_ornithinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_196"
+          "enzyme": "ec_2_3_1_109"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:41512"
+        "rhea": "RHEA:65020"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41512"
+            "id": "RHEA:65020"
           }
         ]
       }

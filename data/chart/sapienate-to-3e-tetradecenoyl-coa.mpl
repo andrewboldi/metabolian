@@ -32,7 +32,7 @@ pathway sapienate-to-3e-tetradecenoyl-coa "sapienate to (3E)-tetradecenoyl-CoA" 
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_80 [4.2.3.80] +fpp
-    longipinene
+    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +ctp +hplus
+    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 }

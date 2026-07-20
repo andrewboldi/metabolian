@@ -18,19 +18,13 @@ pathway 3-1-hydroxyethyl-bacteri-to-chlorophyllide-b "3-(1-hydroxyethyl)bacteriâ
     chlorophyllide_b
   }
 
-  branch from 3_1_hydroxyethyl_chlorophyllide_a side left {
-    3_1_hydroxyethyl_chlorophyllide_a
-    <-> ec_1_1_1_396 [1.1.1.396] +nad +nadh +hplus
-    3_acetylchlorophyllide_a
-  }
-
-  branch from di_sulfido_diiron side right {
+  branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_24 [1.14.15.24] +carotene +o2 +hplus +di_sulfido_diiron +h2o
-    zeaxanthin
+    <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    linolenoyl_containing_glycerolipid
   }
 
-  branch from chlorophyllide_a side left {
+  branch from chlorophyllide_a side right {
     chlorophyllide_a
     <-> ec_1_3_7_13 [1.3.7.13] +di_sulfido_diiron +di_sulfido_diiron +hplus
     divinyl_chlorophyllide_a

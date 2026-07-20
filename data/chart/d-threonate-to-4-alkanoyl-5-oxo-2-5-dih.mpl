@@ -26,8 +26,8 @@ pathway d-threonate-to-4-alkanoyl-5-oxo-2-5-dih "D-threonate to (4-alkanoyl-5-ox
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_2_3_1_221 [2.3.1.221] +o_s_hexanoylpantetheine_4_phosphoryl_serine_1 +malonyl-coa +hplus +co2 +coa +h2o
-    norsolorinic_acid_anthrone
+    <-> ec_1_2_1_80 [1.2.1.80] +long_chain_fatty_aldehyde +nad +nadh +hplus
+    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
   }
 
   branch from 4_alkanoyl_5_oxo_2_5_dihydrofuran_3_yl_methyl_p side left {

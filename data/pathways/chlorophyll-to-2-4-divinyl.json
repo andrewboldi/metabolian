@@ -243,6 +243,34 @@
       }
     },
     {
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58043"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
       "id": "pheophytin_a",
       "name": "pheophytin a",
       "formula": "C55H73N4O5",
@@ -258,6 +286,26 @@
       "charge": 2,
       "xrefs": {
         "chebi": "CHEBI:18420"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+      "name": "(1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol",
+      "short": "(1E,4S,5E,7R)-germa…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46734"
       }
     }
   ],
@@ -312,10 +360,24 @@
       ]
     },
     {
+      "id": "ec_2_7_4_4",
+      "name": "nucleoside-phosphate kinase",
+      "ec": [
+        "2.7.4.4"
+      ]
+    },
+    {
       "id": "ec_4_99_1_10",
       "name": "magnesium dechelatase",
       "ec": [
         "4.99.1.10"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_22",
+      "name": "germacradienol synthase",
+      "ec": [
+        "4.2.3.22"
       ]
     }
   ],
@@ -796,6 +858,51 @@
     },
     {
       "id": "r11",
+      "name": "nucleoside-phosphate kinase",
+      "equation": "a ribonucleoside 5'-phosphate + ATP = a ribonucleoside 5'-diphosphate + ADP",
+      "ec": "2.7.4.4",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:24036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
       "name": "magnesium dechelatase",
       "equation": "chlorophyll a + 2 H(+) = pheophytin a + Mg(2+)",
       "ec": "4.99.1.10",
@@ -825,7 +932,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 12,
       "xrefs": {
         "rhea": "RHEA:52788"
       },
@@ -835,6 +942,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:52788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "germacradienol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol + diphosphate",
+      "ec": "4.2.3.22",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:22436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22436"
           }
         ]
       }

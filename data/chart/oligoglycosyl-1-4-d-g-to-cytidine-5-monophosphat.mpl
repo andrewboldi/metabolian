@@ -26,13 +26,13 @@ pathway oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat "oligoglycosyl-(1→4)-
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco
+    <-> ec_2_7_8_39 [2.7.8.39] +cdp_2_3_bis_o_phytanyl_sn_glycerol +1d_myo_inositol_3_phosphate +hplus
+    1_archaetidyl_1d_myo_inositol_3_phosphate
   }
 
   branch from imp side left {
     imp
-    <-> ec_3_6_1_6 [3.6.1.6] +h2o +pi +hplus
-    idp
+    <-> ec_3_5_4_10 [3.5.4.10] +h2o
+    faicar
   }
 }

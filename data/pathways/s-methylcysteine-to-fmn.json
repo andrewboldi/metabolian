@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-methylcysteine-to-fmn",
+  "name": "S-methylcysteine to FMN",
+  "category": "other",
+  "summary": "A 2-step route from S-methylcysteine zwitterion to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:75523"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:133545"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_methylcysteine",
+      "name": "S-methylcysteine",
+      "formula": "C4H9NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133545"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_s_methyl_l_cysteine",
+      "name": "N-acetyl-S-methyl-L-cysteine",
+      "short": "N-acetyl-S-methyl-L…",
+      "formula": "C6H10NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194347"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "r_n_acetyl_s_methyl_l_cysteine_sulfoxide",
+      "name": "(R)-N-acetyl-S-methyl-L-cysteine sulfoxide",
+      "short": "N-acetyl-S-methyl-L…",
+      "formula": "C6H10NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194348"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "7z_10z_13z_16z_19z_docosapentaenoate",
+      "name": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoate",
+      "short": "(7Z,10Z,13Z,16Z,19Z…",
+      "formula": "C22H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77224"
+      }
+    },
+    {
+      "id": "7z_10z_13z_16z_19_20_epoxydocosatetraenoate",
+      "name": "(7Z,10Z,13Z,16Z)-19,20-epoxydocosatetraenoate",
+      "short": "(7Z,10Z,13Z,16Z)-19…",
+      "formula": "C22H33O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133935"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "S-methyl-L-cysteine + acetyl-CoA = N-acetyl-S-methyl-L-cysteine + CoA + H(+)",
+      "equation": "S-methyl-L-cysteine + acetyl-CoA = N-acetyl-S-methyl-L-cysteine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_methylcysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_s_methyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:75523"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetyl-S-methyl-L-cysteine + FMNH2 + O2 = (R)-N-acetyl-S-methyl-L-cysteine sulfoxide ...",
+      "equation": "N-acetyl-S-methyl-L-cysteine + FMNH2 + O2 = (R)-N-acetyl-S-methyl-L-cysteine sulfoxide + FMN + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_s_methyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_n_acetyl_s_methyl_l_cysteine_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:75535"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = ...",
+      "equation": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 19,20-epoxy-(7Z,10Z,13Z,16Z)-docosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "7z_10z_13z_16z_19z_docosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7z_10z_13z_16z_19_20_epoxydocosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51096"
+          }
+        ]
+      }
+    }
+  ]
+}

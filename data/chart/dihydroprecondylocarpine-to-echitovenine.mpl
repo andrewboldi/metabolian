@@ -16,15 +16,9 @@ pathway dihydroprecondylocarpine-to-echitovenine "dihydroprecondylocarpine… to
     echitovenine
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +h2o +h2o2 +hplus
-    peracetic_acid
-  }
-
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> ec_1_14_14_78 [1.14.14.78] +phylloquinone +fmnh2 +o2 +h2o +hplus
-    hydroxyphylloquinone
+    <-> ec_1_14_14_28 [1.14.14.28] +long_chain_alkane +fmnh2 +o2 +h2o +hplus
+    long_chain_fatty_alcohol
   }
 }

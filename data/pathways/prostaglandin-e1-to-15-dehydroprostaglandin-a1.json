@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prostaglandin-e1-to-15-dehydroprostaglandin-a1",
+  "name": "prostaglandin E1 to 15-dehydroprostaglandin A1",
+  "category": "other",
+  "summary": "A 2-step route from prostaglandin E1(1−) to 15-dehydroprostaglandin A1(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50548"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57397"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "prostaglandin_e1",
+      "name": "prostaglandin E1",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57397"
+      }
+    },
+    {
+      "id": "prostaglandin_a1",
+      "name": "prostaglandin A1",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57398"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "15_dehydroprostaglandin_a1",
+      "name": "15-dehydroprostaglandin A1",
+      "short": "15-dehydroprostagla…",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85072"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prostaglandin E1 = prostaglandin A1 + H2O",
+      "equation": "prostaglandin E1 = prostaglandin A1 + H2O",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_e1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50548"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin A1 + NAD(+) = 15-oxo-prostaglandin A1 + NADH + H(+)",
+      "equation": "prostaglandin A1 + NAD(+) = 15-oxo-prostaglandin A1 + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_dehydroprostaglandin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41263"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,19 +18,19 @@ pathway 5-formimidoyltetrahydrofo-to-hydrogen-cyanide "5-formimidoyltetrahydrofo
 
   branch from thf side left {
     thf
-    <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +methylene_thf +nadh +hplus +nad
-    5_methyluridine_5_monophosphate_1
+    <-> . +dump +methylene_thf +h2o
+    5_hydroxymethyluridine_2_deoxy_5_phosphate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_75 [2.6.1.75] +s_4_bromophenyl_l_cysteine +akg
-    4_bromophenylsulfanyl_pyruvate
+    <-> ec_1_4_1_13 [1.4.1.13] +nadp +akg +nadph +hplus
+    glutamine
   }
 
   branch from hydrogen_cyanide side left {
     hydrogen_cyanide
-    <-> ec_4_1_2_46 [4.1.2.46] +2r_2_hydroxy_2_methylbutanenitrile
-    butan_2_one
+    <-> ec_1_14_19_52 [1.14.19.52] +l_cys_ian +fmnh2 +o2 +fmn +co2 +h2o +hplus
+    camalexin
   }
 }

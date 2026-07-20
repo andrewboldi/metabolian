@@ -20,7 +20,7 @@ pathway aldehydo-d-ribose-to-l-lysinium "aldehydo-D-ribose… to L-lysinium" {
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_1_1_259 [2.1.1.259] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +propionyl_coa +coa +hplus
+    n6_propanoyl_l_lysine
   }
 }

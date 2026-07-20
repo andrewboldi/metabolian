@@ -177,58 +177,67 @@
       }
     },
     {
-      "id": "3_methyl_7h_xanthine",
-      "name": "3-methyl-7H-xanthine",
-      "formula": "C6H6N4O2",
+      "id": "sulfonyldimethane",
+      "name": "sulfonyldimethane",
+      "formula": "C2H6O2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62208"
+        "chebi": "CHEBI:9349"
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57783"
+        "chebi": "CHEBI:57618"
       }
     },
     {
-      "id": "xanthine",
-      "name": "Xanthine",
-      "formula": "C5H4N4O2",
-      "charge": 0,
+      "id": "methanesulfinate",
+      "name": "methanesulfinate",
+      "formula": "CH3O2S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17712"
+        "chebi": "CHEBI:133603"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58349"
+        "chebi": "CHEBI:58210"
       }
     },
     {
-      "id": "l_asparagine",
-      "name": "L-asparagine",
-      "formula": "C4H8N2O3",
-      "charge": 0,
+      "id": "r_malate",
+      "name": "(R)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58048"
+        "chebi": "CHEBI:15588"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_asparagine",
-      "name": "(3S)-3-hydroxy-L-asparagine",
-      "short": "3-hydroxy-L-asparag…",
-      "formula": "C4H8N2O4",
-      "charge": 0,
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:58850"
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "3r_3_carboxy_3_hydroxypropanoyl_coa",
+      "name": "(3R)-3-carboxy-3-hydroxypropanoyl-CoA",
+      "short": "3-carboxy-3-hydroxy…",
+      "formula": "C25H35N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:77427"
       }
     }
   ],
@@ -262,17 +271,17 @@
       ]
     },
     {
-      "id": "ec_1_14_13_179",
-      "name": "methylxanthine N(3)-demethylase",
+      "id": "ec_1_14_14_35",
+      "name": "dimethylsulfone monooxygenase",
       "ec": [
-        "1.14.13.179"
+        "1.14.14.35"
       ]
     },
     {
-      "id": "ec_1_14_11_39",
-      "name": "L-asparagine oxygenase",
+      "id": "ec_2_8_3_20",
+      "name": "succinyl-CoA--D-citramalate CoA-transferase",
       "ec": [
-        "1.14.11.39"
+        "2.8.3.20"
       ]
     }
   ],
@@ -507,30 +516,30 @@
     },
     {
       "id": "r5",
-      "name": "methylxanthine N(3)-demethylase",
-      "equation": "3-methylxanthine + NADPH + O2 + H(+) = xanthine + formaldehyde + NADP(+) + H2O",
-      "ec": "1.14.13.179",
+      "name": "dimethylsulfone monooxygenase",
+      "equation": "dimethyl sulfone + FMNH2 + O2 = methanesulfinate + FMN + formaldehyde + H2O + 2 H(+)",
+      "ec": "1.14.14.35",
       "substrates": [
         {
-          "metabolite": "3_methyl_7h_xanthine",
+          "metabolite": "sulfonyldimethane",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "fmnh2",
           "stoichiometry": 1
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "xanthine",
+          "metabolite": "methanesulfinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
           "stoichiometry": 1
         },
         {
@@ -538,83 +547,75 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_179"
+          "enzyme": "ec_1_14_14_35"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:36291"
+        "rhea": "RHEA:50716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36291"
+            "id": "RHEA:50716"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-asparagine oxygenase",
-      "equation": "L-asparagine + 2-oxoglutarate + O2 = (2S,3S)-3-hydroxyasparagine + succinate + CO2",
-      "ec": "1.14.11.39",
+      "name": "succinyl-CoA--D-citramalate CoA-transferase",
+      "equation": "(R)-malate + succinyl-CoA = (R)-malyl-CoA + succinate",
+      "ec": "2.8.3.20",
       "substrates": [
         {
-          "metabolite": "l_asparagine",
+          "metabolite": "r_malate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "succinyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_asparagine",
+          "metabolite": "3r_3_carboxy_3_hydroxypropanoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_39"
+          "enzyme": "ec_2_8_3_20"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25772"
+        "rhea": "RHEA:40655"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25772"
+            "id": "RHEA:40655"
           }
         ]
       }

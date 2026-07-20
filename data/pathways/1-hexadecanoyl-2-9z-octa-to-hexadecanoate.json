@@ -113,42 +113,22 @@
       }
     },
     {
-      "id": "oleoyl_coa",
-      "name": "oleoyl-CoA",
-      "formula": "C39H64N7O17P3S",
+      "id": "palmitoleoyl_coa",
+      "name": "palmitoleoyl-CoA",
+      "formula": "C37H60N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57387"
+        "chebi": "CHEBI:61540"
       }
     },
     {
-      "id": "2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate",
-      "name": "2-ammonioethyl (2R)-2,3-dihydroxypropyl phosphate",
-      "short": "2-ammonioethyl…",
-      "formula": "C5H14NO6P",
+      "id": "1_hexadecanoyl_2_9z_hexadec_9_enoyl_sn_glycero_3",
+      "name": "1-hexadecanoyl-2-[(9Z)-hexadec-9-enoyl]-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecanoyl-2-[(…",
+      "formula": "C37H72NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:143890"
-      }
-    },
-    {
-      "id": "1_palmitoyl_sn_glycerol_3_phosphate",
-      "name": "1-palmitoyl-sn-glycerol 3-phosphate",
-      "short": "1-palmitoyl-sn-glyc…",
-      "formula": "C19H37O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57518"
-      }
-    },
-    {
-      "id": "sn_glycerol_3_phosphate",
-      "name": "sn-glycerol 3-phosphate",
-      "short": "sn-glycerol 3-P",
-      "formula": "C3H7O6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57597"
+        "chebi": "CHEBI:73999"
       }
     }
   ],
@@ -277,21 +257,21 @@
     },
     {
       "id": "r4",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (9Z)-octadecenoyl-CoA = 1-hexadecanoy...",
-      "equation": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (9Z)-octadecenoyl-CoA = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + CoA",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (9Z)-hexadecenoyl-CoA = 1-hexadecanoy...",
+      "equation": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (9Z)-hexadecenoyl-CoA = 1-hexadecanoyl-2-(9Z)-hexadecenoyl-sn-glycero-3-phosphoethanolamine + CoA",
       "substrates": [
         {
           "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "oleoyl_coa",
+          "metabolite": "palmitoleoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+          "metabolite": "1_hexadecanoyl_2_9z_hexadec_9_enoyl_sn_glycero_3",
           "stoichiometry": 1
         },
         {
@@ -302,92 +282,14 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:36015"
+        "rhea": "RHEA:37419"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36015"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "2 1-hexadecanoyl-sn-glycero-3-phosphoethanolamine = 1,2-dihexadecanoyl-sn-glycero-3-pho...",
-      "equation": "2 1-hexadecanoyl-sn-glycero-3-phosphoethanolamine = 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine + sn-glycero-3-phosphoethanolamine",
-      "substrates": [
-        {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:63768"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:63768"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphate + H2O = sn-glycerol 3-phosphate + hexadecanoate +...",
-      "equation": "1-hexadecanoyl-sn-glycero-3-phosphate + H2O = sn-glycerol 3-phosphate + hexadecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_palmitoyl_sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:49092"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:49092"
+            "id": "RHEA:37419"
           }
         ]
       }

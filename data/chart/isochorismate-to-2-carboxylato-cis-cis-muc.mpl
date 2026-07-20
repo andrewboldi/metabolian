@@ -15,10 +15,4 @@ pathway isochorismate-to-2-carboxylato-cis-cis-muc "isochorismate to 2-carboxyla
     <-> ec_1_13_11_28 [1.13.11.28] +o2 -hplus
     2_carboxylato_cis_cis_muconate
   }
-
-  branch from 2_3_dihydroxybenzoate side left {
-    2_3_dihydroxybenzoate
-    <-> . +threonine +glycine +atp +amp +ppi +h2o +hplus
-    corynebactin
-  }
 }

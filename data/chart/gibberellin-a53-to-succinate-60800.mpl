@@ -18,13 +18,7 @@ pathway gibberellin-a53-to-succinate-60800 "gibberellin A53 to succinate" {
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_29 [1.14.11.29] +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
-  }
-
-  branch from gibberellin_a19 side right {
-    gibberellin_a19
-    <-> . +o2 +hplus +co2 +h2o
-    gibberellin_a20
+    <-> ec_1_14_20_15 [1.14.20.15] +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +chloride +akg +o2 +hplus +co2 +h2o
+    o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl
   }
 }

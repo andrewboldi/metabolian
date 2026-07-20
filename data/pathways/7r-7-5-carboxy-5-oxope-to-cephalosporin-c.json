@@ -111,41 +111,52 @@
       }
     },
     {
-      "id": "lauroyl_coa",
-      "name": "lauroyl-CoA",
-      "formula": "C33H54N7O17P3S",
-      "charge": -4,
+      "id": "ldopa",
+      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
+      "short": "3,4-Dihydroxy-L-phe…",
+      "formula": "C9H11NO4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57375"
+        "chebi": "CHEBI:57504"
       }
     },
     {
-      "id": "3s_4s_3_hydroxytetradecane_1_3_4_tricarboxylate",
-      "name": "(3S,4S)-3-hydroxytetradecane-1,3,4-tricarboxylate",
-      "short": "(3S,4S)-3-hydroxyte…",
-      "formula": "C17H27O7",
-      "charge": -3,
+      "id": "3_4_dihydroxyphenylpyruvate",
+      "name": "3,4-dihydroxyphenylpyruvate",
+      "short": "3,4-dihydroxyphenyl…",
+      "formula": "C9H7O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57435"
+        "chebi": "CHEBI:29055"
       }
     },
     {
-      "id": "e_glutaconate",
-      "name": "(E)-glutaconate",
-      "formula": "C5H4O4",
-      "charge": -2,
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36460"
+        "chebi": "CHEBI:29985"
       }
     },
     {
-      "id": "trans_4_carboxybut_2_enoyl_coa",
-      "name": "trans-4-carboxybut-2-enoyl-CoA",
-      "short": "trans-4-carboxybut-…",
-      "formula": "C26H35N7O19P3S",
-      "charge": -5,
+      "id": "1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin",
+      "name": "1-tetradecyl-2-acetyl-sn-glycero-3-phosphocholine",
+      "short": "1-tetradecyl-2-acet…",
+      "formula": "C24H50NO7P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57353"
+        "chebi": "CHEBI:78101"
+      }
+    },
+    {
+      "id": "1_tetradecyl_sn_glycero_3_phosphocholine",
+      "name": "1-tetradecyl-sn-glycero-3-phosphocholine",
+      "short": "1-tetradecyl-sn-gly…",
+      "formula": "C22H48NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78102"
       }
     }
   ],
@@ -172,17 +183,10 @@
       ]
     },
     {
-      "id": "ec_2_3_3_4",
-      "name": "decylhomocitrate synthase",
+      "id": "ec_2_6_1_49",
+      "name": "dihydroxyphenylalanine transaminase",
       "ec": [
-        "2.3.3.4"
-      ]
-    },
-    {
-      "id": "ec_2_8_3_12",
-      "name": "glutaconate CoA-transferase",
-      "ec": [
-        "2.8.3.12"
+        "2.6.1.49"
       ]
     }
   ],
@@ -328,16 +332,56 @@
     },
     {
       "id": "r4",
-      "name": "decylhomocitrate synthase",
-      "equation": "dodecanoyl-CoA + 2-oxoglutarate + H2O = (3S,4S)-3-hydroxytetradecane-1,3,4-tricarboxylate + CoA + H(+)",
-      "ec": "2.3.3.4",
+      "name": "dihydroxyphenylalanine transaminase",
+      "equation": "L-dopa + 2-oxoglutarate = 3-(3,4-dihydroxyphenyl)pyruvate + L-glutamate",
+      "ec": "2.6.1.49",
       "substrates": [
         {
-          "metabolite": "lauroyl_coa",
+          "metabolite": "ldopa",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxyphenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15273"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1-O-tetradecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-tetradecyl-sn-glycero-3...",
+      "equation": "1-O-tetradecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-tetradecyl-sn-glycero-3-phosphocholine + acetate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin",
           "stoichiometry": 1
         },
         {
@@ -347,11 +391,11 @@
       ],
       "products": [
         {
-          "metabolite": "3s_4s_3_hydroxytetradecane_1_3_4_tricarboxylate",
+          "metabolite": "1_tetradecyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "acetate",
           "stoichiometry": 1
         },
         {
@@ -359,67 +403,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_3_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:10364"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:10364"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "glutaconate CoA-transferase",
-      "equation": "trans-glutaconate + acetyl-CoA = (2E)-glutaconyl-CoA + acetate",
-      "ec": "2.8.3.12",
-      "substrates": [
-        {
-          "metabolite": "e_glutaconate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_4_carboxybut_2_enoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_3_12"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:23208"
+        "rhea": "RHEA:41368"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23208"
+            "id": "RHEA:41368"
           }
         ]
       }

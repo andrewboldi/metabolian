@@ -19,10 +19,4 @@ pathway 2-hydroxy-4-methylvalerate-to-o-s-isoheptanoyl-p "2-hydroxy-4-methylvale
     <-> . +nadh +hplus -nad
     o_s_isoheptanoyl_pantetheine_4_phosphoryl_serine
   }
-
-  branch from n6_r_dihydrolipoyl_l_lysine side left {
-    n6_r_dihydrolipoyl_l_lysine
-    <-> . +glutaryl_coa +coa
-    n6_r_s8_glutaryldihydrolipoyl_l_lysine_1
-  }
 }

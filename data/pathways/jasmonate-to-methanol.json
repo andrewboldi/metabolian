@@ -1,0 +1,362 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "jasmonate-to-methanol",
+  "name": "jasmonate to methanol",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from jasmonate(1−) to methanol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13349"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58431"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "jasmonate",
+      "name": "jasmonate",
+      "formula": "C12H17O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58431"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "methyl_jasmonate",
+      "name": "(−)-methyl jasmonate",
+      "formula": "C13H20O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15929"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17790"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "n1_methyladenosine_5_monophosphate_1",
+      "name": "N1-methyladenosine 5'-monophosphate(1−)",
+      "short": "N1-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74491"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "12_hydroxyjasmonate",
+      "name": "12-hydroxyjasmonate",
+      "formula": "C12H17O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132022"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_141",
+      "name": "jasmonate O-methyltransferase",
+      "ec": [
+        "2.1.1.141"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_287",
+      "name": "25S rRNA (adenine(645)-N(1))-methyltransferase",
+      "ec": [
+        "2.1.1.287"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_228",
+      "name": "jasmomic acid 12-hydroxylase",
+      "ec": [
+        "1.14.13.228"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "jasmonate O-methyltransferase",
+      "equation": "jasmonate + S-adenosyl-L-methionine = methyl (-)-jasmonate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.141",
+      "substrates": [
+        {
+          "metabolite": "jasmonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_jasmonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_141"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13349"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methyl (-)-jasmonate + H2O = jasmonate + methanol + H(+)",
+      "equation": "methyl (-)-jasmonate + H2O = jasmonate + methanol + H(+)",
+      "substrates": [
+        {
+          "metabolite": "methyl_jasmonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "jasmonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55372"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "25S rRNA (adenine(645)-N(1))-methyltransferase",
+      "equation": "adenosine(645) in 25S rRNA + S-adenosyl-L-methionine = N(1)-methyladenosine(645) in 25S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.287",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_methyladenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_287"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "jasmomic acid 12-hydroxylase",
+      "equation": "jasmonate + NADPH + O2 + H(+) = (1R,2R)-12-hydroxyjasmonate + NADP(+) + H2O",
+      "ec": "1.14.13.228",
+      "substrates": [
+        {
+          "metabolite": "jasmonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxyjasmonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_228"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49984"
+          }
+        ]
+      }
+    }
+  ]
+}

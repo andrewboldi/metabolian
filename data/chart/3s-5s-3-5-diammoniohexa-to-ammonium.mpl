@@ -18,25 +18,13 @@ pathway 3s-5s-3-5-diammoniohexa-to-ammonium "(3S,5S)-3,5-diammoniohexa… to amm
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_33 [3.5.4.33] +adenosine_5_monophosphate_1 +h2o +hplus
-    inosine_5_phosphate_1
-  }
-
-  branch from l_3_aminobutanoyl_coa side right {
-    l_3_aminobutanoyl_coa
-    <-> ec_2_6_1_111 [2.6.1.111] +akg +glutamate
-    acetoacetyl_coa
-  }
-
-  branch from acetoacetate side left {
-    acetoacetate
-    <-> . +3_aminobutanoic_acid +pyruvate
-    alanine
+    <-> . +2s_2_amino_3_methylbutan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxy_3_methylbutan_2_one
   }
 
   branch from crotonoyl_coa side right {
     crotonoyl_coa
-    <-> ec_4_2_1_120 [4.2.1.120] +h2o
-    4_hydroxybutyryl_coa
+    <-> . +o2 +h2o2
+    butyryl_coa
   }
 }

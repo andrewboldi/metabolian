@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "methylenediurea-to-ammonium",
   "name": "methylenediurea to ammonium",
-  "category": "redox-detox",
+  "category": "other",
   "summary": "A 3-step route from methylenediurea to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -94,50 +94,31 @@
       }
     },
     {
-      "id": "pyridoxamine_5_phosphate",
-      "name": "pyridoxamine 5'-phosphate",
-      "short": "pyridoxamine 5'-P",
-      "formula": "C8H12N2O5P",
-      "charge": -1,
+      "id": "n_carbamoylputrescinium",
+      "name": "N-carbamoylputrescinium",
+      "short": "N-carbamoylputresci…",
+      "formula": "C5H14N3O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58451"
+        "chebi": "CHEBI:58318"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "plp",
-      "name": "Pyridoxal 5'-phosphate (PLP)",
-      "short": "Pyridoxal 5'-P (PLP)",
-      "formula": "C8H8NO6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:597326"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:326268"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_4_3_5",
-      "name": "pyridoxal 5'-phosphate synthase",
+      "id": "ec_3_5_1_53",
+      "name": "N-carbamoylputrescine amidase",
       "ec": [
-        "1.4.3.5"
+        "3.5.1.53"
       ]
     }
   ],
@@ -261,53 +242,53 @@
     },
     {
       "id": "r4",
-      "name": "pyridoxal 5'-phosphate synthase",
-      "equation": "pyridoxamine 5'-phosphate + O2 + H2O = pyridoxal 5'-phosphate + H2O2 + NH4(+)",
-      "ec": "1.4.3.5",
+      "name": "N-carbamoylputrescine amidase",
+      "equation": "N-carbamoylputrescine + H2O + 2 H(+) = putrescine + NH4(+) + CO2",
+      "ec": "3.5.1.53",
       "substrates": [
         {
-          "metabolite": "pyridoxamine_5_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "n_carbamoylputrescinium",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "plp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "1_4_butanediammonium",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_3_5"
+          "enzyme": "ec_3_5_1_53"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:15817"
+        "rhea": "RHEA:22284"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15817"
+            "id": "RHEA:22284"
           }
         ]
       }

@@ -30,13 +30,13 @@ pathway 17-18-epoxy-17-hydroxycur-to-s-adenosyl-l-homocy "17,18-epoxy-17-hydroxy
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_139 [1.14.14.139] +c7a_hydroxy_4_cholesten_3_one +fmnh2 +o2 +h2o +hplus
-    dihydroxy_4_cholesten_3_one_7a12a
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    12_hete
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_240 [2.1.1.240] +trans_resveratrol +sam +hplus
-    pterostilbene
+    <-> ec_2_1_1_309 [2.1.1.309] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

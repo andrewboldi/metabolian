@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-3e-5-oxopent-3-ene-1-to-4z-2-oxohept-4-enedi",
+  "name": "(2R,3E)-5-oxopent-3-ene-1… to (4Z)-2-oxohept-4-enedioate",
+  "category": "other",
+  "summary": "A 2-step route from (2R,3E)-5-oxopent-3-ene-1,2,5-tricarboxylate to (4Z)-2-oxohept-4-enedioate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38031"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87491"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_3e_5_oxopent_3_ene_1_2_5_tricarboxylate",
+      "name": "(2R,3E)-5-oxopent-3-ene-1,2,5-tricarboxylate",
+      "short": "(2R,3E)-5-oxopent-3…",
+      "formula": "C8H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:87491"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2z_4z_2_hydroxyhepta_2_4_dienedioate",
+      "name": "(2Z,4Z)-2-hydroxyhepta-2,4-dienedioate",
+      "short": "(2Z,4Z)-2-hydroxyhe…",
+      "formula": "C7H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:87504"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "4z_2_oxohept_4_enedioate",
+      "name": "(4Z)-2-oxohept-4-enedioate",
+      "short": "2-oxohept-4-enedioa…",
+      "formula": "C7H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:87507"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3E,5R)-5-carboxy-2-oxohept-3-enedioate + H(+) = (2Z,4Z)-2-hydroxyhepta-2,4-diene-1,7-d...",
+      "equation": "(3E,5R)-5-carboxy-2-oxohept-3-enedioate + H(+) = (2Z,4Z)-2-hydroxyhepta-2,4-diene-1,7-dioate + CO2",
+      "substrates": [
+        {
+          "metabolite": "2r_3e_5_oxopent_3_ene_1_2_5_tricarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_4z_2_hydroxyhepta_2_4_dienedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2Z,4Z)-2-hydroxyhepta-2,4-diene-1,7-dioate = (4Z)-2-oxohept-4-enedioate",
+      "equation": "(2Z,4Z)-2-hydroxyhepta-2,4-diene-1,7-dioate = (4Z)-2-oxohept-4-enedioate",
+      "substrates": [
+        {
+          "metabolite": "2z_4z_2_hydroxyhepta_2_4_dienedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_2_oxohept_4_enedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:38035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38035"
+          }
+        ]
+      }
+    }
+  ]
+}

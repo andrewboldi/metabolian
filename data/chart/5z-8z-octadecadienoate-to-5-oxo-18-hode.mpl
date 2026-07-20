@@ -26,7 +26,7 @@ pathway 5z-8z-octadecadienoate-to-5-oxo-18-hode "(5Z,8Z)-octadecadienoate to 5-o
 
   branch from gssg side right {
     gssg
-    <-> . +15_s_hpete +gsh +h2o
-    15_s_hete
+    <-> . +a_phosphatidylcholine_hydroperoxide +gsh +h2o
+    a_hydroxy_phosphatidylcholine
   }
 }

@@ -18,13 +18,13 @@ pathway furfural-to-hydrogen-donor "furfural to hydrogen donor" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_84 [4.2.3.84] +fpp +h2o
-    10_epi_eudesmol
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    ent_manool
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_2_8_1_14 [2.8.1.14] +5_taurinomethyluridine_5_phosphate_1 +3_disulfanyl_l_alanine +atp +l_cysteine +hydrogen_acceptor +amp +ppi +hplus
-    5_taurinomethyl_2_thiouridine_5_phosphate_1
+    <-> . +ferroheme_o +hydrogen_acceptor +h2o
+    fe_ii_heme_i
   }
 }

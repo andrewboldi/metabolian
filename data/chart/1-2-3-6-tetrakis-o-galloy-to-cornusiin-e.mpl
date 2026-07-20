@@ -18,7 +18,7 @@ pathway 1-2-3-6-tetrakis-o-galloy-to-cornusiin-e "1,2,3,6-tetrakis-O-galloy… t
 
   branch from glucose side left {
     glucose
-    <-> ec_2_3_1_n12 [2.3.1.n12] +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +1_o_sinapoyl_d_glucose
-    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
+    <-> . +campesterol_3_d_glucoside +h2o
+    campesterol
   }
 }

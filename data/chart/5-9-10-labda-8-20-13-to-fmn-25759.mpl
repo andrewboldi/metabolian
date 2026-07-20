@@ -18,13 +18,13 @@ pathway 5-9-10-labda-8-20-13-to-fmn-25759 "5β,9α,10α-labda-8(20),13-… to FM
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_10 [3.1.7.10] +geranylgeranyl_diphosphate +h2o
-    13e_labda_7_13_dien_15_ol
+    <-> . +8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct +atp +coa +amp
+    opc8_coa
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11r_12s_eet
+    <-> . +9_10_epome +fmnh2 +o2 +h2o +hplus
+    9_10_epoxy_18_hydroxy_12z_octadecenoate
   }
 }

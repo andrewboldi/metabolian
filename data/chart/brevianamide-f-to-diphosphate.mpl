@@ -34,19 +34,31 @@ pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_126 [4.2.3.126] +fpp
-    muurolene
+    <-> . +icosanoate +atp +hplus
+    icosanoyl_amp
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_16 [1.14.14.16] +progesterone +fmnh2 +o2 +h2o +hplus
-    11_deoxycorticosterone
+    <-> ec_1_14_14_73 [1.14.14.73] +fenbendazole +fmnh2 +o2 +h2o +hplus
+    oxfendazole
   }
 
   branch from sah side right {
     sah
-    <-> . +n_methyl_l_histidine +sam +hplus
-    n_n_dimethyl_l_histidine
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +gardenin_b +akg +o2 +formaldehyde +co2 +hplus
+    nevadensin_7_olate
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +preandiloid_a +hydrogen_donor
+    preandiloid_b
   }
 }

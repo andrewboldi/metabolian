@@ -18,19 +18,17 @@ pathway o-s-7z-tetradecenoylpa-to-o-pantetheine-4-phosph "O-(S-(7Z)-tetradecenoy
     o_s_9z_hexadecenoylpantetheine_4_phosphoryl_seri
     <-> ec_2_3_1_242 [2.3.1.242] +kdo_2_lipid_iva -holo-acp
     kdo_2_palmitoleoyl_lipid_iva
-    <-> . +o_s_tetradecanoylpantetheine_4_phosphoryl_serine -holo-acp
-    kdo_2_palmitoleoyl_myristoyl_lipid_a
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_274 [2.3.1.274] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +pi
-    acyl_monophosphate
+    <-> ec_6_2_1_54 [6.2.1.54] +d_alanine +atp +amp +ppi
+    o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z
   }
 
   branch from o_s_9z_hexadecenoylpantetheine_4_phosphoryl_seri side right {
     o_s_9z_hexadecenoylpantetheine_4_phosphoryl_seri
-    <-> ec_2_3_1_179 [2.3.1.179] +malonyl-acp +hplus +holo-acp +co2
-    o_s_3_oxo_11z_octadecenoyl_pantetheine_4_phospho
+    <-> . +l_lysinium +holo-acp +hplus
+    n6_9z_hexadec_9_enoyl_l_lysine
   }
 }

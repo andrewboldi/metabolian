@@ -18,25 +18,25 @@ pathway l-serine-phosphoethanolam-to-diphosphate "L-serine phosphoethanolam… t
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> . +hplus +co2
-    pser
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_2_dioleoyl_sn_glycerol
   }
 
   branch from serine side right {
     serine
-    <-> ec_2_3_1_50 [2.3.1.50] +palmitoyl_coa +hplus +co2 +coa
-    ketosphinganine
+    <-> ec_1_1_1_387 [1.1.1.387] +nad +co2 +nadh
+    ammonioacetaldehyde
   }
 
   branch from sah side left {
     sah
-    <-> ec_6_3_2_40 [6.3.2.40] +anthranilate +l_phenylalanine +sam +atp +amp +ppi +hplus
-    cyclopeptine
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_102 [4.2.3.102] +fpp
-    sesquithujene
+    <-> ec_4_2_3_171 [4.2.3.171] +fpp +h2o
+    corvol_ether_a
   }
 }

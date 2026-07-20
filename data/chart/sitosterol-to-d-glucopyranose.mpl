@@ -15,10 +15,4 @@ pathway sitosterol-to-d-glucopyranose "sitosterol to D-glucopyranose" {
     <-> . +h2o -glucose
     stigmasterol
   }
-
-  branch from glucose side left {
-    glucose
-    <-> . +deacetylisoipecoside +h2o
-    n_deacetylisoipecoside_aglycone
-  }
 }

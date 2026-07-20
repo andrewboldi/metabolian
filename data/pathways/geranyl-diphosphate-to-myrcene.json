@@ -3,13 +3,13 @@
   "id": "geranyl-diphosphate-to-myrcene",
   "name": "geranyl diphosphate to β-myrcene",
   "category": "other",
-  "summary": "A 4-step route from geranyl diphosphate(3−) to β-myrcene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from geranyl diphosphate(3−) to β-myrcene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:47944"
+        "id": "RHEA:24116"
       },
       {
         "db": "ChEBI",
@@ -38,48 +38,21 @@
       }
     },
     {
-      "id": "geranyl_phosphate",
-      "name": "geranyl phosphate",
-      "formula": "C10H17O4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:88107"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "geraniol",
-      "name": "geraniol",
-      "formula": "C10H18O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17447"
-      }
-    },
-    {
       "id": "s_linalool",
       "name": "(S)-linalool",
       "formula": "C10H18O",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:98"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -92,46 +65,31 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:58553"
       }
     },
     {
-      "id": "geranial",
-      "name": "geranial",
-      "formula": "C10H16O",
+      "id": "ent_atiserene",
+      "name": "ent-atiserene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16980"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:138219"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_3_6_1_68",
-      "name": "geranyl diphosphate phosphohydrolase",
+      "id": "ec_4_2_3_25",
+      "name": "S-linalool synthase",
       "ec": [
-        "3.6.1.68"
-      ]
-    },
-    {
-      "id": "ec_5_4_4_4",
-      "name": "geraniol isomerase",
-      "ec": [
-        "5.4.4.4"
+        "4.2.3.25"
       ]
     },
     {
@@ -142,19 +100,19 @@
       ]
     },
     {
-      "id": "ec_1_1_1_347",
-      "name": "geraniol dehydrogenase (NAD(+))",
+      "id": "ec_4_2_3_185",
+      "name": "ent-atiserene synthase",
       "ec": [
-        "1.1.1.347"
+        "4.2.3.185"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "geranyl diphosphate phosphohydrolase",
-      "equation": "(2E)-geranyl diphosphate + H2O = (2E)-geranyl phosphate + phosphate + H(+)",
-      "ec": "3.6.1.68",
+      "name": "S-linalool synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (S)-linalool + diphosphate",
+      "ec": "4.2.3.25",
       "substrates": [
         {
           "metabolite": "gpp",
@@ -167,116 +125,36 @@
       ],
       "products": [
         {
-          "metabolite": "geranyl_phosphate",
+          "metabolite": "s_linalool",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_1_68"
+          "enzyme": "ec_4_2_3_25"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:47944"
+        "rhea": "RHEA:24116"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47944"
+            "id": "RHEA:24116"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "(2E)-geranyl phosphate + H2O = (2E)-geraniol + phosphate",
-      "equation": "(2E)-geranyl phosphate + H2O = (2E)-geraniol + phosphate",
-      "substrates": [
-        {
-          "metabolite": "geranyl_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "geraniol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 2,
-      "xrefs": {
-        "rhea": "RHEA:68020"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68020"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r3",
-      "name": "geraniol isomerase",
-      "equation": "(2E)-geraniol = (S)-linalool",
-      "ec": "5.4.4.4",
-      "substrates": [
-        {
-          "metabolite": "geraniol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_linalool",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_4_4_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 3,
-      "xrefs": {
-        "rhea": "RHEA:30715"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:30715"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
       "name": "linalool dehydratase",
       "equation": "(S)-linalool = beta-myrcene + H2O",
       "ec": "4.2.1.127",
@@ -302,7 +180,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:30711"
       },
@@ -317,50 +195,42 @@
       }
     },
     {
-      "id": "r5",
-      "name": "geraniol dehydrogenase (NAD(+))",
-      "equation": "(2E)-geraniol + NAD(+) = (2E)-geranial + NADH + H(+)",
-      "ec": "1.1.1.347",
+      "id": "r3",
+      "name": "ent-atiserene synthase",
+      "equation": "ent-copalyl diphosphate = ent-atiserene + diphosphate",
+      "ec": "4.2.3.185",
       "substrates": [
         {
-          "metabolite": "geraniol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "geranial",
+          "metabolite": "ent_atiserene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_347"
+          "enzyme": "ec_4_2_3_185"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:34347"
+        "rhea": "RHEA:54496"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34347"
+            "id": "RHEA:54496"
           }
         ]
       }

@@ -18,25 +18,19 @@ pathway 1r-2r-cyclohexa-3-5-die-to-formaldehyde "(1R,2R)-cyclohexa-3,5-die… to
 
   branch from catechol side left {
     catechol
-    <-> . +2_ethoxyphenol +fadh2 +o2 +fad +h2o +hplus
-    acetaldehyde
+    <-> ec_1_3_1_20 [1.3.1.20] +nadp +nadph +hplus
+    1s_2s_cyclohexa_3_5_diene_1_2_diol
   }
 
-  branch from guaiacol side right {
-    guaiacol
-    <-> ec_1_11_1_14 [1.11.1.14] +veratrylglycerol_guaiacyl_ether +h2o2 +glycolaldehyde +h2o
-    veratraldehyde
-  }
-
-  branch from sah side left {
+  branch from sah side right {
     sah
-    <-> ec_2_1_1_301 [2.1.1.301] +l_alaniniumyl_group +sam +hplus
-    n_n_dimethyl_l_alanyl_group
+    <-> ec_2_1_1_105 [2.1.1.105] +n_benzoyl_4_hydroxyanthranilate +sam +hplus
+    n_benzoyl_4_methoxyanthranilate
   }
 
-  branch from formaldehyde side right {
+  branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadh +o2 +hplus +nad +h2o
-    3_methyl_7h_xanthine
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    15_oxo_bilirubin
   }
 }

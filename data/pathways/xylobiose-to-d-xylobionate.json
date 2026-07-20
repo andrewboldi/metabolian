@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "xylobiose-to-d-xylobionate",
+  "name": "xylobiose to D-xylobionate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from xylobiose to D-xylobionate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59632"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28309"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "xylobiose",
+      "name": "xylobiose",
+      "formula": "C10H18O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28309"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_xylobiono_1_5_lactone",
+      "name": "D-xylobiono-1,5-lactone",
+      "short": "D-xylobiono-1,5-lac…",
+      "formula": "C10H16O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143156"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_xylobionate",
+      "name": "D-xylobionate",
+      "formula": "C10H17O10",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143166"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-xylobiose + O2 = D-xylobiono-1,5-lactone + H2O2",
+      "equation": "D-xylobiose + O2 = D-xylobiono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "xylobiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylobiono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-xylobiono-1,5-lactone + H2O = D-xylobionate + H(+)",
+      "equation": "D-xylobiono-1,5-lactone + H2O = D-xylobionate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_xylobiono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylobionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59644"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59644"
+          }
+        ]
+      }
+    }
+  ]
+}

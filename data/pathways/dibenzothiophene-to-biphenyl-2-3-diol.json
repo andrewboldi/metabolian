@@ -138,31 +138,23 @@
       }
     },
     {
-      "id": "22_oxodocosanoate",
-      "name": "22-oxodocosanoate",
-      "formula": "C22H41O3",
-      "charge": -1,
+      "id": "22r_22_hydroxycholesterol",
+      "name": "(22R)-22-hydroxycholesterol",
+      "short": "22-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76298"
+        "chebi": "CHEBI:67237"
       }
     },
     {
-      "id": "docosanedioate",
-      "name": "docosanedioate",
-      "formula": "C22H40O4",
-      "charge": -2,
+      "id": "7_22r_dihydroxycholesterol",
+      "name": "(7α,22R)-dihydroxycholesterol",
+      "short": "(7α,22R)-dihydroxyc…",
+      "formula": "C27H46O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76299"
-      }
-    },
-    {
-      "id": "h2s",
-      "name": "Hydrogen sulfide (H2S)",
-      "short": "Hydrogen sulfide…",
-      "formula": "HS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29919"
+        "chebi": "CHEBI:86145"
       }
     }
   ],
@@ -427,11 +419,11 @@
     },
     {
       "id": "r5",
-      "name": "22-oxodocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = docosanedioate + oxid...",
-      "equation": "22-oxodocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = docosanedioate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "name": "(22R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,7alpha)-d...",
+      "equation": "(22R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,7alpha)-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "22_oxodocosanoate",
+          "metabolite": "22r_22_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -445,7 +437,7 @@
       ],
       "products": [
         {
-          "metabolite": "docosanedioate",
+          "metabolite": "7_22r_dihydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -458,67 +450,20 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:39043"
+        "rhea": "RHEA:46460"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39043"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
-      "equation": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
-      "substrates": [
-        {
-          "metabolite": "h2s",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sulfite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:55316"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:55316"
+            "id": "RHEA:46460"
           }
         ]
       }

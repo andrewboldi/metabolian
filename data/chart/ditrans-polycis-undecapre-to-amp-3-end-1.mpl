@@ -26,14 +26,14 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
 
   branch from ditrans_polycis_undecaprenyl_phosphate side left {
     ditrans_polycis_undecaprenyl_phosphate
-    <-> ec_2_7_4_29 [2.7.4.29] +ditrans_polycis_undecaprenyl_diphosphate +kdo_2_lipid_a_6_e_coli
-    kdo_2_lipid_a_1_diphosphate_7_e_coli
+    <-> ec_2_7_4_29 [2.7.4.29] +an_kdo_2_4_kdo_2_6_lipid_a +ditrans_polycis_undecaprenyl_diphosphate
+    an_d_kdo_2_4_d_kdo_2_6_lipid_a_1_diphosphate
   }
 
   branch from ump side right {
     ump
-    <-> . +thiamine +utp +hplus
-    thiamine_1_diphosphate
+    <-> . +h2o +hplus
+    3_5_cyclic_ump
   }
 
   branch from lipid_ii side left {
@@ -46,5 +46,17 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
     <-> . +undecaprenyldiphosphonato_n_acetyl_n_acetylgluco +pi +hplus
     nh3
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_6_3_2_33 [6.3.2.33] +5_6_7_8_tetrahydromethanopterin +atp +adp +pi +hplus
+    5_6_7_8_tetrahydrosarcinapterin
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> ec_2_3_2_6 [2.3.2.6] +l_argininiumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    l_leucyl_l_arginyl_2_group
   }
 }

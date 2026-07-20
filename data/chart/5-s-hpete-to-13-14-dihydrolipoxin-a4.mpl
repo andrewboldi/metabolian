@@ -19,4 +19,10 @@ pathway 5-s-hpete-to-13-14-dihydrolipoxin-a4 "5(S)-HPETE to 13,14-dihydrolipoxin
     <-> . +nadh +hplus -nad
     13_14_dihydrolipoxin_a4
   }
+
+  branch from leukotriene_a4 side left {
+    leukotriene_a4
+    <-> . +o2 +h2o
+    lipoxin_b4
+  }
 }

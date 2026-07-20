@@ -12,25 +12,19 @@ pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diph
     2r_2_hydroxy_fatty_acid_anion
     <-> . +o2 -co2 -h2o
     fatty-acid
-    <-> . +atp +coa -amp -ppi
-    fatty_acyl_coa
+    <-> . +atp +hplus -ppi
+    fatty_acyl_amp
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_1_1_32 [3.1.1.32] +phosphatidylcholine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphocholine
+    <-> ec_3_1_1_111 [3.1.1.111] +1_acyl_sn_glycero_3_phosphoserine +h2o +hplus
+    sn_glycero_3_phosphoserine
   }
 
-  branch from fatty_acyl_coa side right {
-    fatty_acyl_coa
-    <-> . +15_methylhexadecasphinganine +coa +hplus
-    n_acyl_15_methylhexadecasphinganine
-  }
-
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> . +fpp
-    germacrene_a
+    <-> ec_4_2_3_46 [4.2.3.46] +fpp
+    e_e_farnesene
   }
 }

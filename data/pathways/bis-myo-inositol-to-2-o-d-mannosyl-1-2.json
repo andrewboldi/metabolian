@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "bis-myo-inositol-to-2-o-d-mannosyl-1-2",
+  "name": "bis(myo-inositol)… to 2-O-(β-D-mannosyl-(1→2)-β…",
+  "category": "other",
+  "summary": "A 2-step route from bis(myo-inositol) 1,3'-phosphate to 2-O-(β-D-mannosyl-(1→2)-β-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59080"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142886"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "bis_myo_inositol_1_3_phosphate",
+      "name": "bis(myo-inositol) 1,3'-phosphate",
+      "short": "bis(myo-inositol)…",
+      "formula": "C12H22O14P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142886"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "2_o_d_mannosyl_bis_myo_inositol_1_3_phosphate",
+      "name": "2-O-(β-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate",
+      "short": "2-O-(β-D-mannosyl)-…",
+      "formula": "C18H32O19P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142888"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_o_d_mannosyl_1_2_d_mannosyl_bis_myo_inositol_1",
+      "name": "2-O-(β-D-mannosyl-(1→2)-β-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate",
+      "short": "2-O-(β-D-mannosyl-(…",
+      "formula": "C24H42O24P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142887"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "bis(myo-inositol) 1,3'-phosphate + GDP-alpha-D-mannose = 2-O-(beta-D-mannosyl)-bis(myo-...",
+      "equation": "bis(myo-inositol) 1,3'-phosphate + GDP-alpha-D-mannose = 2-O-(beta-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "bis_myo_inositol_1_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_d_mannosyl_bis_myo_inositol_1_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-O-(beta-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate + GDP-alpha-D-mannose = 2-O-(bet...",
+      "equation": "2-O-(beta-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate + GDP-alpha-D-mannose = 2-O-(beta-D-mannosyl-(1->2)-beta-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_o_d_mannosyl_bis_myo_inositol_1_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_d_mannosyl_1_2_d_mannosyl_bis_myo_inositol_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59084"
+          }
+        ]
+      }
+    }
+  ]
+}

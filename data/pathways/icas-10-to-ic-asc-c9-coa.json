@@ -3,13 +3,13 @@
   "id": "icas-10-to-ic-asc-c9-coa",
   "name": "icas#10 to IC-asc-ΔC9-CoA",
   "category": "redox-detox",
-  "summary": "A 3-step route from icas#10(1−) to IC-asc-ΔC9-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from icas#10(1−) to IC-asc-ΔC9-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:66244"
+        "id": "RHEA:66240"
       },
       {
         "db": "ChEBI",
@@ -34,33 +34,6 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "ic_asc_c9_amp",
-      "name": "IC-asc-C9-AMP",
-      "formula": "C34H44N6O13P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:166983"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -91,6 +64,15 @@
       }
     },
     {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
       "id": "o2",
       "name": "Dioxygen (O2)",
       "formula": "O2",
@@ -118,39 +100,39 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58057"
       }
     },
     {
-      "id": "zingiberene",
-      "name": "zingiberene",
-      "formula": "C15H24",
+      "id": "e_ocimene",
+      "name": "(E)-β-ocimene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10115"
+        "chebi": "CHEBI:64280"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_65",
-      "name": "zingiberene synthase",
+      "id": "ec_4_2_3_106",
+      "name": "(E)-beta-ocimene synthase",
       "ec": [
-        "4.2.3.65"
+        "4.2.3.106"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "IC-asc-C9 + ATP + H(+) = IC-asc-C9-AMP + diphosphate",
-      "equation": "IC-asc-C9 + ATP + H(+) = IC-asc-C9-AMP + diphosphate",
+      "name": "IC-asc-C9 + ATP + CoA = IC-asc-C9-CoA + AMP + diphosphate",
+      "equation": "IC-asc-C9 + ATP + CoA = IC-asc-C9-CoA + AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "icas_10",
@@ -158,45 +140,6 @@
         },
         {
           "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ic_asc_c9_amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:66244"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66244"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "IC-asc-C9-AMP + CoA = IC-asc-C9-CoA + AMP + H(+)",
-      "equation": "IC-asc-C9-AMP + CoA = IC-asc-C9-CoA + AMP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ic_asc_c9_amp",
           "stoichiometry": 1
         },
         {
@@ -214,27 +157,27 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:66248"
+        "rhea": "RHEA:66240"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66248"
+            "id": "RHEA:66240"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "IC-asc-C9-CoA + O2 = IC-asc-DeltaC9-CoA + H2O2",
       "equation": "IC-asc-C9-CoA + O2 = IC-asc-DeltaC9-CoA + H2O2",
       "substrates": [
@@ -258,7 +201,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:66236"
       },
@@ -273,19 +216,19 @@
       }
     },
     {
-      "id": "r4",
-      "name": "zingiberene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-zingiberene + diphosphate",
-      "ec": "4.2.3.65",
+      "id": "r3",
+      "name": "(E)-beta-ocimene synthase",
+      "equation": "(2E)-geranyl diphosphate = (E)-beta-ocimene + diphosphate",
+      "ec": "4.2.3.106",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "gpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "zingiberene",
+          "metabolite": "e_ocimene",
           "stoichiometry": 1
         },
         {
@@ -295,20 +238,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_65"
+          "enzyme": "ec_4_2_3_106"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:28643"
+        "rhea": "RHEA:32691"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28643"
+            "id": "RHEA:32691"
           }
         ]
       }

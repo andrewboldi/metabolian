@@ -171,31 +171,22 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:37565"
       }
     },
     {
-      "id": "n_acetyl_d_glucosamino_1_5_lactone",
-      "name": "N-acetyl-D-glucosamino-1,5-lactone",
+      "id": "n_acetyl_d_glucosamine_6_phosphate",
+      "name": "N-acetyl-D-glucosamine 6-phosphate",
       "short": "N-acetyl-D-glucosam…",
-      "formula": "C8H13NO6",
-      "charge": 0,
+      "formula": "C8H14NO9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:42870"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:57513"
       }
     }
   ],
@@ -478,39 +469,43 @@
     },
     {
       "id": "r6",
-      "name": "N-acetyl-D-glucosamine + O2 = N-acetyl-D-glucosamino-1,5-lactone + H2O2",
-      "equation": "N-acetyl-D-glucosamine + O2 = N-acetyl-D-glucosamino-1,5-lactone + H2O2",
+      "name": "N-acetyl-D-glucosamine + GTP = N-acetyl-D-glucosamine 6-phosphate + GDP + H(+)",
+      "equation": "N-acetyl-D-glucosamine + GTP = N-acetyl-D-glucosamine 6-phosphate + GDP + H(+)",
       "substrates": [
         {
           "metabolite": "n_acetyl_d_glucosamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "gtp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_d_glucosamino_1_5_lactone",
+          "metabolite": "n_acetyl_d_glucosamine_6_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:69504"
+        "rhea": "RHEA:74647"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69504"
+            "id": "RHEA:74647"
           }
         ]
       }

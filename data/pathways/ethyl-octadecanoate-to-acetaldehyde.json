@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ethyl-octadecanoate-to-acetaldehyde",
+  "name": "ethyl octadecanoate to acetaldehyde",
+  "category": "other",
+  "summary": "A 2-step route from ethyl octadecanoate to acetaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50316"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:84936"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ethyl_octadecanoate",
+      "name": "ethyl octadecanoate",
+      "formula": "C20H40O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84936"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16236"
+      }
+    },
+    {
+      "id": "octadecanoate",
+      "name": "octadecanoate",
+      "formula": "C18H35O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:25629"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "n_stearoyl_l_phenylalanine",
+      "name": "N-stearoyl-L-phenylalanine",
+      "short": "N-stearoyl-L-phenyl…",
+      "formula": "C27H44NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149700"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ethyl octadecanoate + H2O = ethanol + octadecanoate + H(+)",
+      "equation": "ethyl octadecanoate + H2O = ethanol + octadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ethyl_octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ethanol + 2 Fe(III)-[cytochrome c] = acetaldehyde + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "equation": "ethanol + 2 Fe(III)-[cytochrome c] = acetaldehyde + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:62200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-octadecanoyl-L-phenylalanine + H2O = octadecanoate + L-phenylalanine",
+      "equation": "N-octadecanoyl-L-phenylalanine + H2O = octadecanoate + L-phenylalanine",
+      "substrates": [
+        {
+          "metabolite": "n_stearoyl_l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64128"
+          }
+        ]
+      }
+    }
+  ]
+}

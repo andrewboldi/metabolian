@@ -18,13 +18,13 @@ pathway dichloromethane-to-formyl-phosphate "dichloromethane to formyl phosphate
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_14_34 [1.14.14.34] +methanesulfonate +fmnh2 +o2 +sulfite +h2o +hplus
-    fmn
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    5_oxo_bilirubin
   }
 
   branch from formate side right {
     formate
-    <-> ec_3_5_1_88 [3.5.1.88] +n_formyl_l_methionyl_group +h2o
-    l_methioniniumyl_group
+    <-> ec_3_5_1_102 [3.5.1.102] +2_amino_5_formylamino_6_1_d_ribosylamino_pyrimid +h2o +hplus
+    2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on
   }
 }

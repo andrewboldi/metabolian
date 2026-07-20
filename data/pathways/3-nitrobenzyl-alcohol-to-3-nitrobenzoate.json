@@ -1,0 +1,193 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-nitrobenzyl-alcohol-to-3-nitrobenzoate",
+  "name": "3-nitrobenzyl alcohol to 3-nitrobenzoate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from 3-nitrobenzyl alcohol to 3-nitrobenzoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80431"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:191016"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_nitrobenzyl_alcohol",
+      "name": "3-nitrobenzyl alcohol",
+      "short": "3-nitrobenzyl…",
+      "formula": "C7H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:191016"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_nitrobenzaldehyde",
+      "name": "3-nitrobenzaldehyde",
+      "formula": "C7H5NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231487"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_nitrobenzoate",
+      "name": "3-nitrobenzoate",
+      "formula": "C7H4NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231488"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-nitrobenzyl alcohol + O2 = 3-nitrobenzaldehyde + H2O2",
+      "equation": "3-nitrobenzyl alcohol + O2 = 3-nitrobenzaldehyde + H2O2",
+      "substrates": [
+        {
+          "metabolite": "3_nitrobenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_nitrobenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-nitrobenzaldehyde + NAD(+) + H2O = 3-nitrobenzoate + NADH + 2 H(+)",
+      "equation": "3-nitrobenzaldehyde + NAD(+) + H2O = 3-nitrobenzoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_nitrobenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_nitrobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80367"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80367"
+          }
+        ]
+      }
+    }
+  ]
+}

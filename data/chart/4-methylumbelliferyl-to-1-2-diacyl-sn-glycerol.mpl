@@ -36,19 +36,31 @@ pathway 4-methylumbelliferyl-to-1-2-diacyl-sn-glycerol "4-methylumbelliferyl… 
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_11 [2.8.3.11] +citramalate +acetyl_coa
-    3s_citramalyl_coa
+    <-> ec_3_5_1_62 [3.5.1.62] +n_acetylputrescinium +h2o
+    1_4_butanediammonium
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_39 [2.7.7.39] +sn_glycerol_3_phosphate +ctp +hplus
-    2r_cdp_glycerol
+    <-> ec_4_2_3_172 [4.2.3.172] +fpp +h2o
+    10_epi_juneol
   }
 
   branch from glycerol_1_phosphate side right {
     glycerol_1_phosphate
     <-> ec_3_1_4_42 [3.1.4.42] +h2o +hplus
     glycerol_1_2_cyclic_phosphate
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +1_oleoylglycerol
+    1_2_dioleoylglycerol
+  }
+
+  branch from dihydroxyacetone side right {
+    dihydroxyacetone
+    <-> . +serinol +nad +h2o +nadh +hplus
+    nh3
   }
 }

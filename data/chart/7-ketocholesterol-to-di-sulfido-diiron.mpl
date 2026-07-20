@@ -18,7 +18,7 @@ pathway 7-ketocholesterol-to-di-sulfido-diiron "7-ketocholesterol to di-μ-sulfi
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_17 [1.14.15.17] +pheophorbide_a +di_sulfido_diiron +o2 +hplus
-    red_chlorophyll_catabolite
+    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_oxo_deoxycorticosterone
   }
 }

@@ -125,40 +125,43 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57623"
       }
     },
     {
-      "id": "car_3_ene",
-      "name": "(+)-car-3-ene",
-      "formula": "C10H16",
-      "charge": 0,
+      "id": "nerylneryl_diphosphate",
+      "name": "nerylneryl diphosphate",
+      "short": "nerylneryl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:7"
+        "chebi": "CHEBI:139032"
       }
     },
     {
-      "id": "trans_anol",
-      "name": "trans-anol",
-      "formula": "C9H10O",
-      "charge": 0,
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:73343"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "trans_anethole",
-      "name": "trans-anethole",
-      "formula": "C10H12O",
-      "charge": 0,
+      "id": "2_o_methylguanosine_5_monophosphate_1",
+      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
+      "short": "2'-O-methylguanosin…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:35616"
+        "chebi": "CHEBI:74445"
       }
     }
   ],
@@ -185,17 +188,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_107",
-      "name": "(+)-car-3-ene synthase",
+      "id": "ec_2_5_1_142",
+      "name": "nerylneryl diphosphate synthase",
       "ec": [
-        "4.2.3.107"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_279",
-      "name": "trans-anol O-methyltransferase",
-      "ec": [
-        "2.1.1.279"
+        "2.5.1.142"
       ]
     }
   ],
@@ -349,92 +345,56 @@
     },
     {
       "id": "r4",
-      "name": "6 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-nonaprenyl diphosp...",
-      "equation": "6 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-nonaprenyl diphosphate + 6 diphosphate",
+      "name": "nerylneryl diphosphate synthase",
+      "equation": "3 isopentenyl diphosphate + dimethylallyl diphosphate = nerylneryl diphosphate + 3 diphosphate",
+      "ec": "2.5.1.142",
       "substrates": [
         {
           "metabolite": "ipp",
-          "stoichiometry": 6
+          "stoichiometry": 3
         },
         {
-          "metabolite": "fpp",
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_nonaprenyl_diphosphate",
+          "metabolite": "nerylneryl_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 6
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_142"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:55364"
+        "rhea": "RHEA:55520"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55364"
+            "id": "RHEA:55520"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(+)-car-3-ene synthase",
-      "equation": "(2E)-geranyl diphosphate = (+)-car-3-ene + diphosphate",
-      "ec": "4.2.3.107",
+      "name": "guanosine(1145) in 16S rRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(1145) in 1...",
+      "equation": "guanosine(1145) in 16S rRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(1145) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "gpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "car_3_ene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_107"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:32539"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32539"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "trans-anol O-methyltransferase",
-      "equation": "(E)-anol + S-adenosyl-L-methionine = (E)-anethole + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.279",
-      "substrates": [
-        {
-          "metabolite": "trans_anol",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -444,7 +404,7 @@
       ],
       "products": [
         {
-          "metabolite": "trans_anethole",
+          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -456,22 +416,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_279"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:36247"
+        "rhea": "RHEA:47776"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36247"
+            "id": "RHEA:47776"
           }
         ]
       }

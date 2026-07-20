@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-methylpentanoyl-coa-to-diphosphate",
+  "name": "4-methylpentanoyl-CoA to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 4-methylpentanoyl-CoA(4−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55064"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:131445"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_methylpentanoyl_coa",
+      "name": "4-methylpentanoyl-CoA",
+      "short": "4-methylpentanoyl-C…",
+      "formula": "C27H42N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:131445"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "isocaproate",
+      "name": "isocaproate",
+      "formula": "C6H11O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74904"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "l_threonine",
+      "name": "L-threonine",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30013"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "uridylyl_l_threonine_1",
+      "name": "uridylyl-L-threonine(1−)",
+      "short": "uridylyl-L-threonin…",
+      "formula": "C13H17N3O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:156052"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-methylpentanoyl-CoA + H2O = 4-methylpentanoate + CoA + H(+)",
+      "equation": "4-methylpentanoyl-CoA + H2O = 4-methylpentanoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_methylpentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isocaproate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-methylpentanoate + ATP + CoA = 4-methylpentanoyl-CoA + AMP + diphosphate",
+      "equation": "4-methylpentanoate + ATP + CoA = 4-methylpentanoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "isocaproate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylpentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:66988"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66988"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-threonyl-[protein] + UTP = uridylyl-L-threonyl-[protein] + diphosphate",
+      "equation": "L-threonyl-[protein] + UTP = uridylyl-L-threonyl-[protein] + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridylyl_l_threonine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64608"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64608"
+          }
+        ]
+      }
+    }
+  ]
+}

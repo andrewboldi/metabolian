@@ -18,7 +18,7 @@ pathway l-kynurenine-to-6-imino-5-oxocyclohexa-1 "L-kynurenine to 6-imino-5-oxoc
 
   branch from 3_hydroxy_l_kynurenine side left {
     3_hydroxy_l_kynurenine
-    <-> ec_2_6_1_7 [2.6.1.7] +akg +glutamate +h2o
+    <-> ec_2_6_1_63 [2.6.1.63] +glyoxylate +glycine +h2o
     xanthurenate
   }
 
@@ -30,7 +30,7 @@ pathway l-kynurenine-to-6-imino-5-oxocyclohexa-1 "L-kynurenine to 6-imino-5-oxoc
 
   branch from alanine side left {
     alanine
-    <-> ec_2_6_1_99 [2.6.1.99] +l_tryptophan +pyruvate
-    3_indol_3_yl_pyruvate
+    <-> . +3_hydroxy_l_kynurenine +pyruvate
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
   }
 }

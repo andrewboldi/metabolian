@@ -133,22 +133,22 @@
       }
     },
     {
-      "id": "6s_5_methyltetrahydrofolate",
-      "name": "(6S)-5-methyltetrahydrofolate",
-      "short": "5-methyltetrahydrof…",
-      "formula": "C20H23N7O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:18608"
-      }
-    },
-    {
       "id": "nad",
       "name": "NAD+",
       "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "methenyl_thf",
+      "name": "5,10-Methenyltetrahydrofolate",
+      "short": "5,10-Methenyltetrah…",
+      "formula": "C20H20N7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57455"
       }
     },
     {
@@ -161,23 +161,22 @@
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
+      "id": "gibberellin_a1",
+      "name": "gibberellin A1",
+      "formula": "C19H23O6",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:58524"
       }
     },
     {
-      "id": "2_o_methylguanosine_5_monophosphate_1",
-      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
-      "short": "2'-O-methylguanosin…",
-      "formula": "C11H13N5O7P",
-      "charge": -1,
+      "id": "gibberellin_a1_methyl_ester",
+      "name": "gibberellin A1 methyl ester",
+      "short": "gibberellin A1…",
+      "formula": "C20H26O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74445"
+        "chebi": "CHEBI:73250"
       }
     }
   ],
@@ -190,24 +189,10 @@
       ]
     },
     {
-      "id": "ec_1_5_1_20",
-      "name": "methylenetetrahydrofolate reductase [NAD(P)H]",
+      "id": "ec_1_5_1_15",
+      "name": "methylenetetrahydrofolate dehydrogenase (NAD(+))",
       "ec": [
-        "1.5.1.20"
-      ]
-    },
-    {
-      "id": "ec_1_5_1_54",
-      "name": "methylenetetrahydrofolate reductase (NADH)",
-      "ec": [
-        "1.5.1.54"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_34",
-      "name": "tRNA (guanosine(18)-2'-O)-methyltransferase",
-      "ec": [
-        "2.1.1.34"
+        "1.5.1.15"
       ]
     }
   ],
@@ -353,12 +338,12 @@
     },
     {
       "id": "r4",
-      "name": "methylenetetrahydrofolate reductase [NAD(P)H]",
-      "equation": "(6S)-5-methyl-5,6,7,8-tetrahydrofolate + NAD(+) = (6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NADH + H(+)",
-      "ec": "1.5.1.20",
+      "name": "methylenetetrahydrofolate dehydrogenase (NAD(+))",
+      "equation": "(6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NAD(+) = (6R)-5,10-methenyltetrahydrofolate + NADH",
+      "ec": "1.5.1.15",
       "substrates": [
         {
-          "metabolite": "6s_5_methyltetrahydrofolate",
+          "metabolite": "methylene_thf",
           "stoichiometry": 1
         },
         {
@@ -368,46 +353,41 @@
       ],
       "products": [
         {
-          "metabolite": "methylene_thf",
+          "metabolite": "methenyl_thf",
           "stoichiometry": 1
         },
         {
           "metabolite": "nadh",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_5_1_20"
+          "enzyme": "ec_1_5_1_15"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19821"
+        "rhea": "RHEA:22892"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19821"
+            "id": "RHEA:22892"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "tRNA (guanosine(18)-2'-O)-methyltransferase",
-      "equation": "guanosine(18) in tRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(18) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.34",
+      "name": "gibberellin A1 + S-adenosyl-L-methionine = O-methyl gibberellin A1 + S-adenosyl-L-homoc...",
+      "equation": "gibberellin A1 + S-adenosyl-L-methionine = O-methyl gibberellin A1 + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "gibberellin_a1",
           "stoichiometry": 1
         },
         {
@@ -417,34 +397,25 @@
       ],
       "products": [
         {
-          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
+          "metabolite": "gibberellin_a1_methyl_ester",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_34"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:20077"
+        "rhea": "RHEA:36111"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20077"
+            "id": "RHEA:36111"
           }
         ]
       }

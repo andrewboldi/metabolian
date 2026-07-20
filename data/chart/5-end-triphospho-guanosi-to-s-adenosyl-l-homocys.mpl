@@ -26,8 +26,8 @@ pathway 5-end-triphospho-guanosi-to-s-adenosyl-l-homocys "5'-end triphospho-guan
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_59 [4.2.3.59] +fpp
-    e_bisabolene
+    <-> ec_4_2_3_94 [4.2.3.94] +fpp
+    curcumene
   }
 
   branch from 5_end_n7_methyl_5_triphospho_guanosine_guanosine side left {
@@ -38,7 +38,7 @@ pathway 5-end-triphospho-guanosi-to-s-adenosyl-l-homocys "5'-end triphospho-guan
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_95 [2.1.1.95] +tocopherol +sam +hplus
-    r_r_r_tocopherol
+    <-> ec_2_1_1_167 [2.1.1.167] +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

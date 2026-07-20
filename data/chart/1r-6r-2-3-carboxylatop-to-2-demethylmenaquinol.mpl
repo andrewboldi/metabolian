@@ -26,13 +26,7 @@ pathway 1r-6r-2-3-carboxylatop-to-2-demethylmenaquinol "(1R,6R)-2-(3-carboxylato
 
   branch from ppi side left {
     ppi
-    <-> ec_3_6_1_55 [3.6.1.55] +8_oxo_dgtp +h2o +hplus
-    8_oxo_dgmp
-  }
-
-  branch from 1_4_dihydroxy_2_naphthoate side right {
-    1_4_dihydroxy_2_naphthoate
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_heptaprenyl_diphosphate +hplus +co2 +ppi
-    2_demethylmenaquinol_7
+    <-> ec_2_7_7_90 [2.7.7.90] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +ctp
+    cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate
   }
 }

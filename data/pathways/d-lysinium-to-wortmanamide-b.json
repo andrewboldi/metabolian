@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-lysinium-to-wortmanamide-b",
+  "name": "D-lysinium to wortmanamide B",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from D-lysinium(1+) to wortmanamide B(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30875"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:32557"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_lysinium",
+      "name": "D-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32557"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "6_amino_2_oxohexanoic_acid",
+      "name": "6-amino-2-oxohexanoic acid",
+      "short": "6-amino-2-oxohexano…",
+      "formula": "C6H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58183"
+      }
+    },
+    {
+      "id": "d_glutamate",
+      "name": "D-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29986"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "5_aminopentanoic_acid",
+      "name": "5-aminopentanoic acid",
+      "short": "5-aminopentanoic…",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:356010"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "wortmanamide_b",
+      "name": "wortmanamide B",
+      "formula": "C23H40NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167453"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-lysine + 2-oxoglutarate = 6-amino-2-oxohexanoate + D-glutamate",
+      "equation": "D-lysine + 2-oxoglutarate = 6-amino-2-oxohexanoate + D-glutamate",
+      "substrates": [
+        {
+          "metabolite": "d_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_amino_2_oxohexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30875"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30875"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-amino-2-oxohexanoate + H2O2 = 5-aminopentanoate + CO2 + H2O",
+      "equation": "6-amino-2-oxohexanoate + H2O2 = 5-aminopentanoate + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "6_amino_2_oxohexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_aminopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5-aminopentanoate + 8 malonyl-CoA + acetyl-CoA + 13 NADPH + 20 H(+) = wortmanamide B + ...",
+      "equation": "5-aminopentanoate + 8 malonyl-CoA + acetyl-CoA + 13 NADPH + 20 H(+) = wortmanamide B + 8 CO2 + 13 NADP(+) + 9 CoA + 7 H2O",
+      "substrates": [
+        {
+          "metabolite": "5_aminopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 13
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 20
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "wortmanamide_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 13
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 7
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66812"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66812"
+          }
+        ]
+      }
+    }
+  ]
+}

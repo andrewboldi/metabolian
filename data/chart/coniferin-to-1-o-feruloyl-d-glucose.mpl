@@ -18,15 +18,21 @@ pathway coniferin-to-1-o-feruloyl-d-glucose "coniferin to 1-O-feruloyl-β-D-gluc
     1_o_feruloyl_d_glucose
   }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_216 [3.2.1.216] +d_glcp_1_2_d_glcp +h2o
-    d_glucose
+  branch from coniferol side left {
+    coniferol
+    <-> . +hydrogen_acceptor +coniferyl_aldehyde
+    hydrogen_donor
   }
 
   branch from coniferyl_aldehyde side right {
     coniferyl_aldehyde
     <-> . +udp_d_glucose +udp +hplus
     coniferaldehyde_d_glucoside
+  }
+
+  branch from trans_ferulate side left {
+    trans_ferulate
+    <-> . +h2o
+    3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoate
   }
 }

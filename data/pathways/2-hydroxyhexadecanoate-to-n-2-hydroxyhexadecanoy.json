@@ -1,0 +1,256 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-hydroxyhexadecanoate-to-n-2-hydroxyhexadecanoy",
+  "name": "2-hydroxyhexadecanoate to N-(2-hydroxyhexadecanoyl)…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 2-hydroxyhexadecanoate to N-(2-hydroxyhexadecanoyl)sphinganine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:44204"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:65097"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_hydroxyhexadecanoate",
+      "name": "2-hydroxyhexadecanoate",
+      "short": "2-hydroxyhexadecano…",
+      "formula": "C16H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65097"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "2_hydroxypalmitoyl_coa",
+      "name": "2-hydroxypalmitoyl-CoA",
+      "short": "2-hydroxypalmitoyl-…",
+      "formula": "C37H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74115"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "sphinganine",
+      "name": "Sphinganine",
+      "formula": "C18H40NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57817"
+      }
+    },
+    {
+      "id": "n_2_hydroxyhexadecanoyl_sphinganine",
+      "name": "N-(2-hydroxyhexadecanoyl)sphinganine",
+      "short": "N-(2-hydroxyhexadec…",
+      "formula": "C34H69NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67043"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "l_seryl_amp",
+      "name": "L-seryl-AMP",
+      "formula": "C13H18N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61231"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxyhexadecanoate + ATP + CoA = 2-hydroxyhexadecanoyl-CoA + AMP + diphosphate",
+      "equation": "2-hydroxyhexadecanoate + ATP + CoA = 2-hydroxyhexadecanoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyhexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxypalmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:44204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxyhexadecanoyl-CoA + sphinganine = N-(2-hydroxyhexadecanoyl)-sphinganine + CoA +...",
+      "equation": "2-hydroxyhexadecanoyl-CoA + sphinganine = N-(2-hydroxyhexadecanoyl)-sphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxypalmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sphinganine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2_hydroxyhexadecanoyl_sphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-serine + ATP = L-seryl-5'-AMP + diphosphate",
+      "equation": "L-serine + ATP = L-seryl-5'-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_seryl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28570"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28570"
+          }
+        ]
+      }
+    }
+  ]
+}

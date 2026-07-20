@@ -22,6 +22,18 @@ pathway steviol-to-rebaudioside-m "steviol to rebaudioside M" {
     rebaudioside_m
   }
 
+  branch from steviolmonoside side left {
+    steviolmonoside
+    <-> . +udp_d_glucose +udp +hplus
+    steviolbioside
+  }
+
+  branch from stevioside side right {
+    stevioside
+    <-> . +udp_d_glucose +udp +hplus
+    rebaudioside_e
+  }
+
   branch from rebaudioside_a side left {
     rebaudioside_a
     <-> . +udp_d_glucose +udp

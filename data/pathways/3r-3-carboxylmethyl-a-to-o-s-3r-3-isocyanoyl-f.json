@@ -160,64 +160,45 @@
       }
     },
     {
-      "id": "2r_3s_4s_leucoanthocyanidin",
-      "name": "(2R,3S,4S)-leucoanthocyanidin",
-      "short": "(2R,3S,4S)-leucoant…",
-      "formula": "C15H5O3R9",
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H7NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138176"
+        "chebi": "CHEBI:50342"
       }
     },
     {
-      "id": "4s_2_3_dehydroflavan_3_4_diol",
-      "name": "(4S)-2,3-dehydroflavan-3,4-diol",
-      "short": "2,3-dehydroflavan-3…",
-      "formula": "C15H2O3R9",
-      "charge": -1,
+      "id": "trans_4_hydroxy_l_proline",
+      "name": "trans-4-hydroxy-L-proline",
+      "short": "trans-4-hydroxy-L-p…",
+      "formula": "C5H7NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138178"
+        "chebi": "CHEBI:61965"
       }
     },
     {
-      "id": "phosphonatoenolpyruvate",
-      "name": "phosphonatoenolpyruvate",
-      "short": "phosphonatoenolpyru…",
-      "formula": "C3H2O6P",
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58702"
+        "chebi": "CHEBI:58635"
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
+      "id": "manool",
+      "name": "manool",
+      "formula": "C20H34O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "enolpyruvoyl_2_diphospho_5_guanosine",
-      "name": "enolpyruvoyl-2-diphospho-5'-guanosine",
-      "short": "enolpyruvoyl-2-diph…",
-      "formula": "C13H14N5O13P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:143701"
+        "chebi": "CHEBI:76945"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_7_7_105",
-      "name": "phosphoenolpyruvate guanylyltransferase",
-      "ec": [
-        "2.7.7.105"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -405,11 +386,11 @@
     },
     {
       "id": "r5",
-      "name": "a (2R,3S,4S)-leucoanthocyanidin + 2-oxoglutarate + O2 = a (4S)-2,3-dehydroflavan-3,4-di...",
-      "equation": "a (2R,3S,4S)-leucoanthocyanidin + 2-oxoglutarate + O2 = a (4S)-2,3-dehydroflavan-3,4-diol + succinate + CO2 + H2O + H(+)",
+      "name": "L-prolyl-[protein] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[protein] + succina...",
+      "equation": "L-prolyl-[protein] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[protein] + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "2r_3s_4s_leucoanthocyanidin",
+          "metabolite": "l_proline",
           "stoichiometry": 1
         },
         {
@@ -423,7 +404,7 @@
       ],
       "products": [
         {
-          "metabolite": "4s_2_3_dehydroflavan_3_4_diol",
+          "metabolite": "trans_4_hydroxy_l_proline",
           "stoichiometry": 1
         },
         {
@@ -433,53 +414,40 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54436"
+        "rhea": "RHEA:63484"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54436"
+            "id": "RHEA:63484"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "phosphoenolpyruvate guanylyltransferase",
-      "equation": "phosphoenolpyruvate + GTP + H(+) = enolpyruvoyl-2-diphospho-5'-guanosine + diphosphate",
-      "ec": "2.7.7.105",
+      "name": "(+)-copalyl diphosphate + H2O = manool + diphosphate",
+      "equation": "(+)-copalyl diphosphate + H2O = manool + diphosphate",
       "substrates": [
         {
-          "metabolite": "phosphonatoenolpyruvate",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "enolpyruvoyl_2_diphospho_5_guanosine",
+          "metabolite": "manool",
           "stoichiometry": 1
         },
         {
@@ -487,22 +455,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_105"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:30519"
+        "rhea": "RHEA:40011"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30519"
+            "id": "RHEA:40011"
           }
         ]
       }

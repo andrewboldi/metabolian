@@ -287,22 +287,13 @@
       }
     },
     {
-      "id": "2_deoxy_d_ribono_1_4_lactone",
-      "name": "2-deoxy-D-ribono-1,4-lactone",
-      "short": "2-deoxy-D-ribono-1,…",
-      "formula": "C5H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17281"
-      }
-    },
-    {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:30031"
+        "chebi": "CHEBI:57259"
       }
     },
     {
@@ -324,23 +315,32 @@
       }
     },
     {
-      "id": "4_hydroxy_l_glutamate",
-      "name": "4-hydroxy-L-glutamate",
-      "short": "4-hydroxy-L-glutama…",
-      "formula": "C5H8NO5",
-      "charge": -1,
+      "id": "n_3_carboxylatopropionyl_ll_2_6_diaminopimelate",
+      "name": "N-(3-carboxylatopropionyl)-LL-2,6-diaminopimelate",
+      "short": "N-(3-carboxylatopro…",
+      "formula": "C11H16N2O7",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:32812"
+        "chebi": "CHEBI:58087"
       }
     },
     {
-      "id": "4_hydroxy_2_oxoglutarate",
-      "name": "4-hydroxy-2-oxoglutarate",
-      "short": "4-hydroxy-2-oxoglut…",
-      "formula": "C5H4O6",
-      "charge": -2,
+      "id": "l_2_succinylamino_6_oxoheptanedioate",
+      "name": "L-2-succinylamino-6-oxoheptanedioate",
+      "short": "L-2-succinylamino-6…",
+      "formula": "C11H12NO8",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:17742"
+        "chebi": "CHEBI:15685"
+      }
+    },
+    {
+      "id": "5_ammoniopentanal",
+      "name": "5-ammoniopentanal",
+      "formula": "C5H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:144896"
       }
     }
   ],
@@ -402,10 +402,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_10",
-      "name": "pyrimidine-deoxynucleoside 1'-dioxygenase",
+      "id": "ec_2_4_2_2",
+      "name": "pyrimidine-nucleoside phosphorylase",
       "ec": [
-        "1.14.11.10"
+        "2.4.2.2"
       ]
     },
     {
@@ -413,6 +413,13 @@
       "name": "citrate (pro-3S)-lyase",
       "ec": [
         "4.1.3.6"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_17",
+      "name": "succinyldiaminopimelate transaminase",
+      "ec": [
+        "2.6.1.17"
       ]
     }
   ],
@@ -877,57 +884,45 @@
     },
     {
       "id": "r11",
-      "name": "pyrimidine-deoxynucleoside 1'-dioxygenase",
-      "equation": "2'-deoxyuridine + 2-oxoglutarate + O2 = 2-deoxy-D-ribono-1,4-lactone + uracil + succinate + CO2",
-      "ec": "1.14.11.10",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "equation": "2'-deoxyuridine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + uracil",
+      "ec": "2.4.2.2",
       "substrates": [
         {
           "metabolite": "2_deoxyuridine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "pi",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_deoxy_d_ribono_1_4_lactone",
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "uracil",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_10"
+          "enzyme": "ec_2_4_2_2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:23316"
+        "rhea": "RHEA:22824"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23316"
+            "id": "RHEA:22824"
           }
         ]
       }
@@ -975,11 +970,12 @@
     },
     {
       "id": "r13",
-      "name": "4-hydroxy-L-glutamate + 2-oxoglutarate = 4-hydroxy-2-oxoglutarate + L-glutamate",
-      "equation": "4-hydroxy-L-glutamate + 2-oxoglutarate = 4-hydroxy-2-oxoglutarate + L-glutamate",
+      "name": "succinyldiaminopimelate transaminase",
+      "equation": "N-succinyl-(2S,6S)-2,6-diaminopimelate + 2-oxoglutarate = (S)-2-succinylamino-6-oxoheptanedioate + L-glutamate",
+      "ec": "2.6.1.17",
       "substrates": [
         {
-          "metabolite": "4_hydroxy_l_glutamate",
+          "metabolite": "n_3_carboxylatopropionyl_ll_2_6_diaminopimelate",
           "stoichiometry": 1
         },
         {
@@ -989,7 +985,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_hydroxy_2_oxoglutarate",
+          "metabolite": "l_2_succinylamino_6_oxoheptanedioate",
           "stoichiometry": 1
         },
         {
@@ -997,17 +993,69 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_17"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:10480"
+        "rhea": "RHEA:11960"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10480"
+            "id": "RHEA:11960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "5-aminopentanal + NAD(+) + H2O = 5-aminopentanoate + NADH + 2 H(+)",
+      "equation": "5-aminopentanal + NAD(+) + H2O = 5-aminopentanoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "5_ammoniopentanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_aminopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:61632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61632"
           }
         ]
       }

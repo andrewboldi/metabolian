@@ -20,21 +20,21 @@ pathway all-trans-4-4-diapophyto-to-hydrogen-donor "all-trans-4,4'-diapophyto…
     4_4_diapolycopenedioate
   }
 
-  branch from 4_4_diapolycopene side left {
-    4_4_diapolycopene
+  branch from 4_4_diaponeurosporene side left {
+    4_4_diaponeurosporene
     <-> ec_1_3_8_2 [1.3.8.2] +fad +hplus +fadh2
     15_cis_4_4_diapophytoene
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +h2o
-    mycobilin_b
+    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_donor +h2o
+    s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_1_99_41 [1.1.99.41] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +hydrogen_acceptor
-    3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
+    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_acceptor +h2o
+    s_2_4_dinitro_6_hydroxylaminotoluyl_glutathione
   }
 }

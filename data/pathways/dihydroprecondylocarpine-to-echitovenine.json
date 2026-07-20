@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dihydroprecondylocarpine-to-echitovenine",
   "name": "dihydroprecondylocarpine… to (+)-echitovenine",
-  "category": "redox-detox",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from dihydroprecondylocarpine acetate to (+)-echitovenine(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -146,49 +146,31 @@
       }
     },
     {
-      "id": "peracetic_acid",
-      "name": "peracetic acid",
-      "formula": "C2H4O3",
+      "id": "long_chain_alkane",
+      "name": "long-chain alkane",
+      "formula": "HR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:42530"
+        "chebi": "CHEBI:83563"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "long_chain_fatty_alcohol",
+      "name": "long-chain fatty alcohol",
+      "short": "long-chain fatty…",
+      "formula": "HOR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "phylloquinone",
-      "name": "phylloquinone",
-      "formula": "C31H46O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:18067"
-      }
-    },
-    {
-      "id": "hydroxyphylloquinone",
-      "name": "ω-hydroxyphylloquinone",
-      "short": "ω-hydroxyphylloquin…",
-      "formula": "C31H46O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78276"
+        "chebi": "CHEBI:17135"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_14_78",
-      "name": "phylloquinone omega-hydroxylase",
+      "id": "ec_1_14_14_28",
+      "name": "long-chain alkane monooxygenase",
       "ec": [
-        "1.14.14.78"
+        "1.14.14.28"
       ]
     }
   ],
@@ -328,55 +310,12 @@
     },
     {
       "id": "r4",
-      "name": "peracetic acid + H2O = acetate + H2O2 + H(+)",
-      "equation": "peracetic acid + H2O = acetate + H2O2 + H(+)",
+      "name": "long-chain alkane monooxygenase",
+      "equation": "a long-chain alkane + FMNH2 + O2 = a long chain fatty alcohol + FMN + H2O + H(+)",
+      "ec": "1.14.14.28",
       "substrates": [
         {
-          "metabolite": "peracetic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68392"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68392"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "phylloquinone omega-hydroxylase",
-      "equation": "phylloquinone + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxyphylloquinone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.78",
-      "substrates": [
-        {
-          "metabolite": "phylloquinone",
+          "metabolite": "long_chain_alkane",
           "stoichiometry": 1
         },
         {
@@ -390,7 +329,7 @@
       ],
       "products": [
         {
-          "metabolite": "hydroxyphylloquinone",
+          "metabolite": "long_chain_fatty_alcohol",
           "stoichiometry": 1
         },
         {
@@ -408,20 +347,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_78"
+          "enzyme": "ec_1_14_14_28"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:41516"
+        "rhea": "RHEA:49060"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41516"
+            "id": "RHEA:49060"
           }
         ]
       }

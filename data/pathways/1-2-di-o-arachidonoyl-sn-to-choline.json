@@ -1,0 +1,188 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-di-o-arachidonoyl-sn-to-choline",
+  "name": "1,2-di-O-arachidonoyl-sn-… to choline",
+  "category": "other",
+  "summary": "A 2-step route from 1,2-di-O-arachidonoyl-sn-glycero-3-phosphocholine to choline, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55256"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60657"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_di_o_arachidonoyl_sn_glycero_3_phosphocholin",
+      "name": "1,2-di-O-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "1,2-di-O-arachidono…",
+      "formula": "C48H80NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60657"
+      }
+    },
+    {
+      "id": "1_2_dioleoyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-dioleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-dioleoyl-sn-gly…",
+      "formula": "C41H78NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74986"
+      }
+    },
+    {
+      "id": "n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho",
+      "name": "N-arachidonoyl-1,2-dioleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "N-arachidonoyl-1,2-…",
+      "formula": "C61H107NO9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85277"
+      }
+    },
+    {
+      "id": "2_arachidonoyl_sn_glycero_3_phosphocholine",
+      "name": "2-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "2-arachidonoyl-sn-g…",
+      "formula": "C28H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76079"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_arachidonoyl_sn_glycero_3_phosphate",
+      "name": "2-arachidonoyl-sn-glycero-3-phosphate",
+      "short": "2-arachidonoyl-sn-g…",
+      "formula": "C23H37O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78209"
+      }
+    },
+    {
+      "id": "choline",
+      "name": "Choline",
+      "formula": "C5H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15354"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1,2-di-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + 1,2-di-(9Z-octade...",
+      "equation": "1,2-di-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + 2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_di_o_arachidonoyl_sn_glycero_3_phosphocholin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dioleoyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_arachidonoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + H2O = 2-(5Z,8Z,11Z,14Z...",
+      "equation": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + H2O = 2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + choline + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_arachidonoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_arachidonoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41392"
+          }
+        ]
+      }
+    }
+  ]
+}

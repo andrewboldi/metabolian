@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-end-3-n-acyl-l-ami-to-n-choloyl-l-amino-acid",
+  "name": "3'-end 3'-(N-acyl-L-α-ami… to N-choloyl-L-α-amino acid…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 3'-end 3'-(N-acyl-L-α-aminoacyl)adenylyl(1−) residue to N-choloyl-L-α-amino acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:54448"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138191"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_end_3_n_acyl_l_aminoacyl_adenylyl_1",
+      "name": "3'-end 3'-(N-acyl-L-α-aminoacyl)adenylyl(1−)",
+      "short": "3'-end 3'-(N-acyl-L…",
+      "formula": "C13H13N6O8PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138191"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acyl_l_amino_acid_anion",
+      "name": "N-acyl-L-α-amino acid anion",
+      "short": "N-acyl-L-α-amino…",
+      "formula": "C3H2NO3R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59874"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_amino_acid",
+      "name": "L-α-amino acid",
+      "formula": "C2H4NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59869"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "cholate",
+      "name": "Cholic acid (cholate)",
+      "short": "Cholic acid…",
+      "formula": "C24H39O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29747"
+      }
+    },
+    {
+      "id": "n_choloyl_l_amino_acid_anion",
+      "name": "N-choloyl-L-α-amino acid anion",
+      "short": "N-choloyl-L-α-amino…",
+      "formula": "C26H41NO6R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229709"
+      }
+    },
+    {
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78533"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_29",
+      "name": "peptidyl-tRNA hydrolase",
+      "ec": [
+        "3.1.1.29"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_14",
+      "name": "N-acyl-aliphatic-L-amino acid amidohydrolase",
+      "ec": [
+        "3.5.1.14"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "peptidyl-tRNA hydrolase",
+      "equation": "an N-acyl-L-alpha-aminoacyl-tRNA + H2O = an N-acyl-L-amino acid + a tRNA + H(+)",
+      "ec": "3.1.1.29",
+      "substrates": [
+        {
+          "metabolite": "3_end_3_n_acyl_l_aminoacyl_adenylyl_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_l_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:54448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acyl-aliphatic-L-amino acid amidohydrolase",
+      "equation": "an N-acyl-L-amino acid + H2O = an L-alpha-amino acid + a carboxylate",
+      "ec": "3.5.1.14",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_l_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15565"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15565"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "an L-alpha-amino acid + cholate = an N-choloyl-L-alpha-amino acid + H2O",
+      "equation": "an L-alpha-amino acid + cholate = an N-choloyl-L-alpha-amino acid + H2O",
+      "substrates": [
+        {
+          "metabolite": "l_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_choloyl_l_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79087"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-seryl-tRNA(Thr) + H2O = tRNA(Thr) + L-serine",
+      "equation": "L-seryl-tRNA(Thr) + H2O = tRNA(Thr) + L-serine",
+      "substrates": [
+        {
+          "metabolite": "3_l_seryl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74219"
+          }
+        ]
+      }
+    }
+  ]
+}

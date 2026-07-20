@@ -24,13 +24,13 @@ pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor "(20S)-17,20-dihydroxypregâ
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_105 [3.5.1.105] +n_n_diacetylchitobiose +h2o
-    n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
+    <-> . +2_hydroxyglutarate +acetyl_coa
+    2_hydroxyglutaryl_coa
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_1_99_26 [1.1.99.26] +3_hydroxycyclohexanone +hydrogen_donor
-    cyclohexane_1_3_dione
+    <-> . +linoleate +hydrogen_donor +o2 +h2o
+    crepenynate
   }
 }

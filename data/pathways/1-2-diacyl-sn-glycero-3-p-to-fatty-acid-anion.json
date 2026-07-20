@@ -1,0 +1,352 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-diacyl-sn-glycero-3-p-to-fatty-acid-anion",
+  "name": "1,2-diacyl-sn-glycero-3-p… to fatty acid anion",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 1,2-diacyl-sn-glycero-3-phospholipid to fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77739"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136912"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phospholipid",
+      "name": "1,2-diacyl-sn-glycero-3-phospholipid",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C5H5O8PR3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136912"
+      }
+    },
+    {
+      "id": "1_2_diglyceride",
+      "name": "1,2-diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49172"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycero_3_phospholipid",
+      "name": "1-acyl-sn-glycero-3-phospholipid",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C4H6O7PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:169977"
+      }
+    },
+    {
+      "id": "triglyceride",
+      "name": "triglyceride",
+      "formula": "C6H5O6R3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17855"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+      "name": "1,2-diacyl-3-β-D-galactosyl-sn-glycerol",
+      "short": "1,2-diacyl-3-β-D-ga…",
+      "formula": "C11H16O10R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17615"
+      }
+    },
+    {
+      "id": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
+      "name": "2-O-acyl-3-O-β-D-galactosyl-sn-glycerol",
+      "short": "2-O-acyl-3-O-β-D-ga…",
+      "formula": "C10H17O9R1",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18063"
+      }
+    },
+    {
+      "id": "1_acyl_3_o_d_galactosyl_sn_glycerol",
+      "name": "1-acyl-3-O-(β-D-galactosyl)-sn-glycerol",
+      "short": "1-acyl-3-O-(β-D-gal…",
+      "formula": "C10H17O9R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:228229"
+      }
+    },
+    {
+      "id": "n_fatty_acyl_l_tyrosine",
+      "name": "N-(fatty acyl)-L-tyrosine",
+      "short": "N-(fatty acyl)-L-ty…",
+      "formula": "C10H9NO4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149739"
+      }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_158",
+      "name": "phospholipid:diacylglycerol acyltransferase",
+      "ec": [
+        "2.3.1.158"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phospholipid:diacylglycerol acyltransferase",
+      "equation": "a glycerophospholipid + a 1,2-diacylglycerol = a 1-acyl-sn-glycero-3-phospholipid + a triacylglycerol",
+      "ec": "2.3.1.158",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospholipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycero_3_phospholipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_158"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77739"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77739"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a triacylglycerol + H2O = a 1,2-diacylglycerol + a fatty acid + H(+)",
+      "equation": "a triacylglycerol + H2O = a 1,2-diacylglycerol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35667"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + a 1,2-diacylglycerol = a 2-acyl-3-O-...",
+      "equation": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + a 1,2-diacylglycerol = a 2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + a triacylglycerol",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77959"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + a 1,2-diacylglycerol = a 1-acyl-3-O-...",
+      "equation": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + a 1,2-diacylglycerol = a 1-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + a triacylglycerol",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_3_o_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:77999"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "an N-(fatty acyl)-L-tyrosine + H2O = L-tyrosine + a fatty acid",
+      "equation": "an N-(fatty acyl)-L-tyrosine + H2O = L-tyrosine + a fatty acid",
+      "substrates": [
+        {
+          "metabolite": "n_fatty_acyl_l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64188"
+          }
+        ]
+      }
+    }
+  ]
+}

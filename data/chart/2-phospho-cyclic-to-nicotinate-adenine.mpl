@@ -15,10 +15,4 @@ pathway 2-phospho-cyclic-to-nicotinate-adenine "2'-phospho-cyclic… to nicotina
     <-> . +o2 +hplus -h2o2
     nicotinate_adenine_dinucleotide_phosphate
   }
-
-  branch from nicotinate_adenine_dinucleotide_phosphate side left {
-    nicotinate_adenine_dinucleotide_phosphate
-    <-> . +naadph +o2 +hplus
-    superoxide
-  }
 }

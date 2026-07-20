@@ -26,7 +26,19 @@ pathway udp-n-acetyl-d-muramate-to-undecaprenyldiphospho "UDP-N-acetyl-α-D-mura
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_97 [4.2.3.97] +fpp
-    cadinene
+    <-> ec_2_7_7_108 [2.7.7.108] +l_threonine +atp
+    o_adenyl_l_threonine_1
+  }
+
+  branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso side right {
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
+    <-> ec_3_4_17_13 [3.4.17.13] +udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso +h2o
+    d_alanine
+  }
+
+  branch from udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2 side left {
+    udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2
+    <-> ec_3_4_17_8 [3.4.17.8] +h2o +d_alanine
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
   }
 }

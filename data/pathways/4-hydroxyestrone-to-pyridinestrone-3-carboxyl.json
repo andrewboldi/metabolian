@@ -1,0 +1,172 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxyestrone-to-pyridinestrone-3-carboxyl",
+  "name": "4-hydroxyestrone to pyridinestrone-3-carboxyl…",
+  "category": "other",
+  "summary": "A 2-step route from 4-hydroxyestrone to pyridinestrone-3-carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53608"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87602"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxyestrone",
+      "name": "4-hydroxyestrone",
+      "formula": "C18H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87602"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2z_10z_3_hydroxy_5_17_dioxo_4_5_secoestra_2_10",
+      "name": "(2Z,10Z)-3-hydroxy-5,17-dioxo-4,5-secoestra-2,10-diene-3-oate",
+      "short": "(2Z,10Z)-3-hydroxy-…",
+      "formula": "C18H21O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137521"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "pyridinestrone_3_carboxylate",
+      "name": "pyridinestrone-3-carboxylate",
+      "short": "pyridinestrone-3-ca…",
+      "formula": "C18H20NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137549"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-hydroxyestrone + O2 = (2Z,10Z)-3-hydroxy-5,17-dioxo-4,5-secoestra-2,10-diene-3-oate +...",
+      "equation": "4-hydroxyestrone + O2 = (2Z,10Z)-3-hydroxy-5,17-dioxo-4,5-secoestra-2,10-diene-3-oate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyestrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_10z_3_hydroxy_5_17_dioxo_4_5_secoestra_2_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53608"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53608"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2Z,10Z)-3-hydroxy-5,17-dioxo-4,5-secoestra-2,10-diene-3-oate + NH4(+) = pyridinestrone...",
+      "equation": "(2Z,10Z)-3-hydroxy-5,17-dioxo-4,5-secoestra-2,10-diene-3-oate + NH4(+) = pyridinestrone carboxylate + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2z_10z_3_hydroxy_5_17_dioxo_4_5_secoestra_2_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridinestrone_3_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53664"
+          }
+        ]
+      }
+    }
+  ]
+}

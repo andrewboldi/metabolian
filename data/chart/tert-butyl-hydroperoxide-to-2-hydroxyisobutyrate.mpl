@@ -20,7 +20,7 @@ pathway tert-butyl-hydroperoxide-to-2-hydroxyisobutyrate "tert-butyl hydroperoxi
 
   branch from gssg side left {
     gssg
-    <-> . +12_r_hpete +gsh +h2o
-    12_r_hete
+    <-> . +4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah +gsh +h2o
+    17s_hdha
   }
 }

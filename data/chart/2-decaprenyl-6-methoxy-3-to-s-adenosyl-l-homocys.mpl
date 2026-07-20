@@ -24,7 +24,7 @@ pathway 2-decaprenyl-6-methoxy-3-to-s-adenosyl-l-homocys "2-decaprenyl-6-methoxy
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_169 [2.1.1.169] +tricetin +sam +hplus
-    3_4_5_o_trimethyltricetin
+    <-> ec_2_1_1_226 [2.1.1.226] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

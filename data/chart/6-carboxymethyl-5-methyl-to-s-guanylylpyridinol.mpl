@@ -20,13 +20,13 @@ pathway 6-carboxymethyl-5-methyl-to-s-guanylylpyridinol "6-carboxymethyl-5-methy
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_255 [2.1.1.255] +gpp +sam +hplus
-    e_2_methylgeranyl_diphosphate
+    <-> ec_2_1_1_230 [2.1.1.230] +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
   }
 
   branch from ppi side right {
     ppi
-    <-> . +presqualene_pp
-    15_cis_4_4_diapophytoene
+    <-> ec_4_2_3_156 [4.2.3.156] +presqualene_pp +h2o
+    r_12_hydroxysqualene
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin",
   "name": "N-stearoylsphingosine-1-p… to N-hexadecanoylsphingosine…",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 4-step route from N-stearoylsphingosine-1-phosphocholine to N-hexadecanoylsphingosine 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -150,12 +150,22 @@
       }
     },
     {
-      "id": "glucose",
-      "name": "D-Glucose",
-      "formula": "C6H12O6",
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4167"
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "cholesteryl_d_glucoside",
+      "name": "cholesteryl β-D-glucoside",
+      "short": "cholesteryl…",
+      "formula": "C33H56O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17495"
       }
     },
     {
@@ -176,24 +186,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:147296"
-      }
-    },
-    {
-      "id": "octadecanoate_ester",
-      "name": "octadecanoate ester",
-      "formula": "C18H35O2R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:75925"
-      }
-    },
-    {
-      "id": "aliphatic_alcohol",
-      "name": "aliphatic alcohol",
-      "formula": "HOR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:2571"
       }
     },
     {
@@ -388,39 +380,39 @@
     },
     {
       "id": "r5",
-      "name": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + H2O = N-octadecanoylsphing-4-eni...",
-      "equation": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + H2O = N-octadecanoylsphing-4-enine + D-glucose",
+      "name": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + cholesterol = cholesteryl 3-beta...",
+      "equation": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + cholesterol = cholesteryl 3-beta-D-glucoside + N-octadecanoylsphing-4-enine",
       "substrates": [
         {
           "metabolite": "d_glucosyl_n_octadecanoylsphingosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_octadecanoylsphingosine",
+          "metabolite": "cholesteryl_d_glucoside",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "n_octadecanoylsphingosine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59284"
+        "rhea": "RHEA:70311"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59284"
+            "id": "RHEA:70311"
           }
         ]
       }
@@ -470,49 +462,6 @@
     },
     {
       "id": "r7",
-      "name": "octadecanoate ester + H2O = an aliphatic alcohol + octadecanoate + H(+)",
-      "equation": "octadecanoate ester + H2O = an aliphatic alcohol + octadecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "octadecanoate_ester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aliphatic_alcohol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "octadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:47396"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:47396"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "beta-D-galactosyl-(1<->1')-N-hexadecanoylsphing-4-enine + H2O = beta-D-galactose + N-he...",
       "equation": "beta-D-galactosyl-(1<->1')-N-hexadecanoylsphing-4-enine + H2O = beta-D-galactose + N-hexadecanoylsphing-4-enine",
       "substrates": [
@@ -536,7 +485,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:69703"
       },

@@ -105,23 +105,22 @@
       }
     },
     {
-      "id": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
-      "name": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene",
-      "short": "3-methyl-1,2-didehy…",
-      "formula": "C31H52",
-      "charge": 0,
+      "id": "7_demethylmitomycin_a",
+      "name": "7-demethylmitomycin A",
+      "short": "7-demethylmitomycin…",
+      "formula": "C15H15N3O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:70863"
+        "chebi": "CHEBI:84955"
       }
     },
     {
-      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
-      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
-      "short": "3,20-dimethyl-1,2,2…",
-      "formula": "C32H54",
-      "charge": 0,
+      "id": "mitomycin_a",
+      "name": "mitomycin A",
+      "formula": "C16H18N3O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:70865"
+        "chebi": "CHEBI:84589"
       }
     }
   ],
@@ -145,6 +144,13 @@
       "name": "inositol 3-methyltransferase",
       "ec": [
         "2.1.1.39"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_316",
+      "name": "mitomycin 6-O-methyltransferase",
+      "ec": [
+        "2.1.1.316"
       ]
     }
   ],
@@ -290,11 +296,12 @@
     },
     {
       "id": "r4",
-      "name": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-dimeth...",
-      "equation": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
+      "name": "mitomycin 6-O-methyltransferase",
+      "equation": "6-demethylmitomycin A + S-adenosyl-L-methionine = mitomycin A + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.316",
       "substrates": [
         {
-          "metabolite": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
+          "metabolite": "7_demethylmitomycin_a",
           "stoichiometry": 1
         },
         {
@@ -304,29 +311,30 @@
       ],
       "products": [
         {
-          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+          "metabolite": "mitomycin_a",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_2_1_1_316"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:34671"
+        "rhea": "RHEA:45104"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34671"
+            "id": "RHEA:45104"
           }
         ]
       }

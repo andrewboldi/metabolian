@@ -18,7 +18,7 @@ pathway hydroxyurea-to-ammonium "hydroxyurea to ammonium" {
 
   branch from nh3 side left {
     nh3
-    <-> . +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +hplus
-    dichlorochromopyrrolate
+    <-> . +n_methylhistaminium +o2 +h2o +h2o2
+    1_methylimidazole_4_acetaldehyde
   }
 }

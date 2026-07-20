@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ginsenoside-rb1-to-d-glucopyranose",
+  "name": "ginsenoside Rb1 to D-glucopyranose",
+  "category": "other",
+  "summary": "A 2-step route from ginsenoside Rb1 to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38339"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:67989"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ginsenoside_rb1",
+      "name": "ginsenoside Rb1",
+      "formula": "C54H92O23",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67989"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ginsenoside_rd",
+      "name": "ginsenoside Rd",
+      "formula": "C48H82O18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67988"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "ginsenoside_c_k",
+      "name": "ginsenoside C-K",
+      "formula": "C36H62O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77146"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_195",
+      "name": "20-O-multi-glycoside ginsenosidase",
+      "ec": [
+        "3.2.1.195"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_191",
+      "name": "ginsenosidase type III",
+      "ec": [
+        "3.2.1.191"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "20-O-multi-glycoside ginsenosidase",
+      "equation": "(20S)-ginsenoside Rb1 + H2O = (20S)-ginsenoside Rd + D-glucose",
+      "ec": "3.2.1.195",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rb1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_rd",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_195"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38339"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ginsenosidase type III",
+      "equation": "(20S)-ginsenoside Rd + 2 H2O = (20S)-ginsenoside C-K + 2 D-glucose",
+      "ec": "3.2.1.191",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rd",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_c_k",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:40743"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40743"
+          }
+        ]
+      }
+    }
+  ]
+}

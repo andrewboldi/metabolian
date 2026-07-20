@@ -136,42 +136,41 @@
       }
     },
     {
-      "id": "9z_12z_hexadecadienoyl_coa",
-      "name": "(9Z,12Z)-hexadecadienoyl-CoA",
-      "short": "(9Z,12Z)-hexadecadi…",
-      "formula": "C37H58N7O17P3S",
-      "charge": -4,
+      "id": "1_hydroxy_carotene",
+      "name": "1'-hydroxy-γ-carotene",
+      "short": "1'-hydroxy-γ-carote…",
+      "formula": "C40H58O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76552"
+        "chebi": "CHEBI:80133"
       }
     },
     {
-      "id": "9z_12z_hexadeca_9_12_15_trienoyl_coa",
-      "name": "(9Z,12Z)-hexadeca-9,12,15-trienoyl-CoA",
-      "short": "(9Z,12Z)-hexadeca-9…",
-      "formula": "C37H56N7O17P3S",
-      "charge": -4,
+      "id": "1_hydroxytorulene",
+      "name": "1'-hydroxytorulene",
+      "formula": "C40H56O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:85914"
+        "chebi": "CHEBI:80134"
       }
     },
     {
-      "id": "5_methylcytidine_5_monophosphate_1",
-      "name": "5-methylcytidine 5'-monophosphate(1−)",
-      "short": "5-methylcytidine…",
-      "formula": "C10H13N3O7P",
-      "charge": -1,
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74483"
+        "chebi": "CHEBI:29965"
       }
     },
     {
-      "id": "5_formyl_cmp_1",
-      "name": "5-formyl CMP(1−)",
-      "formula": "C10H11N3O8P",
-      "charge": -1,
+      "id": "3r_3_hydroxy_l_argininium",
+      "name": "(3R)-3-hydroxy-L-argininium",
+      "short": "3-hydroxy-L-arginin…",
+      "formula": "C6H13N4O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:138075"
+        "chebi": "CHEBI:78294"
       }
     },
     {
@@ -184,15 +183,7 @@
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_19_13",
-      "name": "acyl-CoA 15-desaturase",
-      "ec": [
-        "1.14.19.13"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -443,104 +434,86 @@
     },
     {
       "id": "r6",
-      "name": "acyl-CoA 15-desaturase",
-      "equation": "(9Z,12Z)-hexadecadienoyl-CoA + AH2 + O2 = (9Z,12Z,15Z)-hexadecatrienoyl-CoA + A + 2 H2O",
-      "ec": "1.14.19.13",
+      "name": "1'-hydroxy-gamma-carotene + A = 1'-hydroxytorulene + AH2",
+      "equation": "1'-hydroxy-gamma-carotene + A = 1'-hydroxytorulene + AH2",
       "substrates": [
         {
-          "metabolite": "9z_12z_hexadecadienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9z_12z_hexadeca_9_12_15_trienoyl_coa",
+          "metabolite": "1_hydroxy_carotene",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_14_19_13"
+          "metabolite": "1_hydroxytorulene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:37599"
+        "rhea": "RHEA:59332"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37599"
+            "id": "RHEA:59332"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "5-methylcytidine(34) in mitochondrial tRNA(Met) + 2 2-oxoglutarate + 2 O2 = 5-formylcyt...",
-      "equation": "5-methylcytidine(34) in mitochondrial tRNA(Met) + 2 2-oxoglutarate + 2 O2 = 5-formylcytidine(34) in mitochondrial tRNA(Met) + 2 succinate + 2 CO2 + H2O",
+      "name": "L-arginyl-[ribosomal protein eS6] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[rib...",
+      "equation": "L-arginyl-[ribosomal protein eS6] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[ribosomal protein eS6] + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_formyl_cmp_1",
+          "metabolite": "3r_3_hydroxy_l_argininium",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:54144"
+        "rhea": "RHEA:57160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54144"
+            "id": "RHEA:57160"
           }
         ]
       }

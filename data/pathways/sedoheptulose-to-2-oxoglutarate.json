@@ -208,70 +208,58 @@
       }
     },
     {
-      "id": "25r_3_7_dihydroxy_5_cholestan_26_oate",
-      "name": "(25R)-3α,7α-dihydroxy-5β-cholestan-26-oate",
-      "short": "3α,7α-dihydroxy-5β-…",
-      "formula": "C27H45O4",
-      "charge": -1,
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58750"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
+      "id": "himachalene",
+      "name": "β-himachalene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49210"
+      }
+    },
+    {
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15562"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "25r_3_7_dihydroxy_5_cholestan_26_oyl_coa",
-      "name": "(25R)-3α,7α-dihydroxy-5β-cholestan-26-oyl-CoA",
-      "short": "3α,7α-dihydroxy-5β-…",
-      "formula": "C48H76N7O19P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58752"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "pyridoxamine_5_phosphate",
-      "name": "pyridoxamine 5'-phosphate",
-      "short": "pyridoxamine 5'-P",
-      "formula": "C8H12N2O5P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58451"
-      }
-    },
-    {
-      "id": "plp",
-      "name": "Pyridoxal 5'-phosphate (PLP)",
-      "short": "Pyridoxal 5'-P (PLP)",
-      "formula": "C8H8NO6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:597326"
-      }
-    },
-    {
-      "id": "d_glutamate",
-      "name": "D-glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29986"
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -312,17 +300,17 @@
       ]
     },
     {
-      "id": "ec_6_2_1_28",
-      "name": "3alpha,7alpha-dihydroxy-5beta-cholestanate--CoA ligase",
+      "id": "ec_4_2_3_56",
+      "name": "gamma-humulene synthase",
       "ec": [
-        "6.2.1.28"
+        "4.2.3.56"
       ]
     },
     {
-      "id": "ec_2_6_1_54",
-      "name": "pyridoxamine-phosphate transaminase",
+      "id": "ec_1_1_1_42",
+      "name": "isocitrate dehydrogenase (NADP(+))",
       "ec": [
-        "2.6.1.54"
+        "1.1.1.42"
       ]
     }
   ],
@@ -683,30 +671,18 @@
     },
     {
       "id": "r9",
-      "name": "3alpha,7alpha-dihydroxy-5beta-cholestanate--CoA ligase",
-      "equation": "(25R)-3alpha,7alpha-dihydroxy-5beta-cholestan-26-oate + ATP + CoA = (25R)-3alpha,7alpha-dihydroxy-5beta-cholestan-26-oyl-CoA + AMP + diphosphate",
-      "ec": "6.2.1.28",
+      "name": "gamma-humulene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-himachalene + diphosphate",
+      "ec": "4.2.3.56",
       "substrates": [
         {
-          "metabolite": "25r_3_7_dihydroxy_5_cholestan_26_oate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "25r_3_7_dihydroxy_5_cholestan_26_oyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "himachalene",
           "stoichiometry": 1
         },
         {
@@ -716,65 +692,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_28"
+          "enzyme": "ec_4_2_3_56"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:21776"
+        "rhea": "RHEA:25468"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21776"
+            "id": "RHEA:25468"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "pyridoxamine-phosphate transaminase",
-      "equation": "pyridoxamine 5'-phosphate + 2-oxoglutarate = pyridoxal 5'-phosphate + D-glutamate",
-      "ec": "2.6.1.54",
+      "name": "isocitrate dehydrogenase (NADP(+))",
+      "equation": "D-threo-isocitrate + NADP(+) = 2-oxoglutarate + CO2 + NADPH",
+      "ec": "1.1.1.42",
       "substrates": [
         {
-          "metabolite": "pyridoxamine_5_phosphate",
+          "metabolite": "d_threo_isocitrate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "plp",
+          "metabolite": "akg",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_glutamate",
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_54"
+          "enzyme": "ec_1_1_1_42"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:15877"
+        "rhea": "RHEA:19629"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15877"
+            "id": "RHEA:19629"
           }
         ]
       }

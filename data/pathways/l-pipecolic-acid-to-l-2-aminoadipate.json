@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-pipecolic-acid-to-l-2-aminoadipate",
+  "name": "L-pipecolic acid to L-2-aminoadipate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from L-pipecolic acid zwitterion to L-2-aminoadipate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11992"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61185"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_pipecolic_acid",
+      "name": "L-pipecolic acid",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61185"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_1_piperideine_6_carboxylate",
+      "name": "(S)-1-piperideine-6-carboxylate",
+      "short": "1-piperideine-6-car…",
+      "formula": "C6H8NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58769"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_2_aminoadipate",
+      "name": "L-2-aminoadipate",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58672"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_5_3_7",
+      "name": "L-pipecolate oxidase",
+      "ec": [
+        "1.5.3.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-pipecolate oxidase",
+      "equation": "L-pipecolate + O2 = L-1-piperideine-6-carboxylate + H2O2 + H(+)",
+      "ec": "1.5.3.7",
+      "substrates": [
+        {
+          "metabolite": "l_pipecolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_piperideine_6_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-1-piperideine-6-carboxylate + NADP(+) + 2 H2O = L-2-aminoadipate + NADPH + H(+)",
+      "equation": "L-1-piperideine-6-carboxylate + NADP(+) + 2 H2O = L-2-aminoadipate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_1_piperideine_6_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_2_aminoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49480"
+          }
+        ]
+      }
+    }
+  ]
+}

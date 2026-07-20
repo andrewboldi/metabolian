@@ -1,0 +1,298 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cob-ii-inamide-to-adenosylcobinamide",
+  "name": "cob(II)inamide to adenosylcobinamide…",
+  "category": "other",
+  "summary": "A 2-step route from cob(II)inamide to adenosylcobinamide phosphate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14725"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:141013"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cob_ii_inamide",
+      "name": "cob(II)inamide",
+      "formula": "C48H72CoN11O8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141013"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adenosylcobinamide",
+      "name": "adenosylcobinamide",
+      "formula": "C58H84CoN16O11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:2480"
+      }
+    },
+    {
+      "id": "triphosphate",
+      "name": "triphosphate",
+      "formula": "O10P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:18036"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "adenosylcobinamide_phosphate",
+      "name": "adenosylcobinamide phosphate",
+      "short": "adenosylcobinamide P",
+      "formula": "C58H83CoN16O14P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58502"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61404"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine",
+      "name": "2'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17256"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_17",
+      "name": "corrinoid adenosyltransferase",
+      "ec": [
+        "2.5.1.17"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_156",
+      "name": "adenosylcobinamide kinase",
+      "ec": [
+        "2.7.1.156"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "corrinoid adenosyltransferase",
+      "equation": "2 cob(II)inamide + reduced [electron-transfer flavoprotein] + 2 ATP = 2 adenosylcob(III)inamide + 2 triphosphate + oxidized [electron-transfer flavoprotein] + 3 H(+)",
+      "ec": "2.5.1.17",
+      "substrates": [
+        {
+          "metabolite": "cob_ii_inamide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adenosylcobinamide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "triphosphate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14725"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "adenosylcobinamide kinase",
+      "equation": "adenosylcob(III)inamide + ATP = adenosylcob(III)inamide phosphate + ADP + H(+)",
+      "ec": "2.7.1.156",
+      "substrates": [
+        {
+          "metabolite": "adenosylcobinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adenosylcobinamide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_156"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15769"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15769"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dATP + H2O = 2'-deoxyadenosine + triphosphate + H(+)",
+      "equation": "dATP + H2O = 2'-deoxyadenosine + triphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:67648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67648"
+          }
+        ]
+      }
+    }
+  ]
+}

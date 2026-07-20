@@ -1,0 +1,271 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cucurbitadienol-to-fmn",
+  "name": "cucurbitadienol to FMN",
+  "category": "other",
+  "summary": "A 2-step route from cucurbitadienol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55512"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62456"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cucurbitadienol",
+      "name": "cucurbitadienol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62456"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "11_hydroxycucurbitadienol",
+      "name": "11α-hydroxycucurbitadienol",
+      "short": "11α-hydroxycucurbit…",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138972"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "11_oxocucurbitadienol",
+      "name": "11-oxocucurbitadienol",
+      "short": "11-oxocucurbitadien…",
+      "formula": "C30H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138973"
+      }
+    },
+    {
+      "id": "dihydrokaempferol",
+      "name": "(+)-dihydrokaempferol",
+      "short": "(+)-dihydrokaempfer…",
+      "formula": "C15H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15401"
+      }
+    },
+    {
+      "id": "taxifolin",
+      "name": "(+)-taxifolin",
+      "formula": "C15H12O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17948"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxycucurbitadien...",
+      "equation": "cucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxycucurbitadienol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cucurbitadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_hydroxycucurbitadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "11-hydroxycucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-oxocucurbi...",
+      "equation": "11-hydroxycucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-oxocucurbitadienol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "11_hydroxycucurbitadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_oxocucurbitadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2R,3R)-dihydrokaempferol + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-dihyd...",
+      "equation": "(2R,3R)-dihydrokaempferol + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-dihydroquercetin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dihydrokaempferol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taxifolin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61112"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -128,42 +128,25 @@
       }
     },
     {
-      "id": "oleoyl_coa",
-      "name": "oleoyl-CoA",
-      "formula": "C39H64N7O17P3S",
-      "charge": -4,
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57387"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "18_hydroxyoleoyl_coa",
-      "name": "18-hydroxyoleoyl-CoA",
-      "formula": "C39H64N7O18P3S",
-      "charge": -4,
+      "id": "11r_12s_eet",
+      "name": "(11R,12S)-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:86044"
-      }
-    },
-    {
-      "id": "4_hydroxycasbene",
-      "name": "4-hydroxycasbene",
-      "formula": "C20H32O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156578"
+        "chebi": "CHEBI:131970"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_129",
-      "name": "long-chain acyl-CoA omega-monooxygenase",
-      "ec": [
-        "1.14.14.129"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -363,12 +346,11 @@
     },
     {
       "id": "r5",
-      "name": "long-chain acyl-CoA omega-monooxygenase",
-      "equation": "(9Z)-octadecenoyl-CoA + reduced [NADPH--hemoprotein reductase] + O2 = (9Z)-18-hydroxyoctadecenoyl-CoA + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.129",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R,...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R,12S)-epoxy-(5Z,8Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "oleoyl_coa",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -382,7 +364,7 @@
       ],
       "products": [
         {
-          "metabolite": "18_hydroxyoleoyl_coa",
+          "metabolite": "11r_12s_eet",
           "stoichiometry": 1
         },
         {
@@ -396,75 +378,19 @@
         {
           "metabolite": "hplus",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_129"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:45072"
+        "rhea": "RHEA:49880"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45072"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "4-hydroxycasbene + reduced [NADPH--hemoprotein reductase] + O2 = 4,8-dihydroxycasbene +...",
-      "equation": "4-hydroxycasbene + reduced [NADPH--hemoprotein reductase] + O2 = 4,8-dihydroxycasbene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "4_hydroxycasbene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_8_dihydroxycasbene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65596"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65596"
+            "id": "RHEA:49880"
           }
         ]
       }

@@ -18,8 +18,8 @@ pathway sphingomyelin-to-n-acylsphingoid "sphingomyelin to N-acylsphingoid" {
 
   branch from n_acylsphingoid side left {
     n_acylsphingoid
-    <-> . +d_glucosylceramide +h2o
-    glucose
+    <-> . +man_1_6_ins_1_p_cer +h2o +hplus
+    d_mannosyl_1_6_1d_myo_inositol_1_phosphate
   }
 
   branch from sphingoid_base side right {
@@ -30,7 +30,7 @@ pathway sphingomyelin-to-n-acylsphingoid "sphingomyelin to N-acylsphingoid" {
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +fatty_acid_ester +h2o +hplus
-    aliphatic_alcohol
+    <-> . +d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer +h2o
+    d_galactosyl_d_galactosyl_d_glucosylsphingosine
   }
 }

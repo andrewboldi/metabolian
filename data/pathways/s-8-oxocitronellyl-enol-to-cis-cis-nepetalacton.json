@@ -1,0 +1,182 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-8-oxocitronellyl-enol-to-cis-cis-nepetalacton",
+  "name": "(S)-8-oxocitronellyl enol to cis-cis-nepetalactone",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (S)-8-oxocitronellyl enol to cis-cis-nepetalactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61420"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:144481"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_8_oxocitronellyl_enol",
+      "name": "(S)-8-oxocitronellyl enol",
+      "short": "8-oxocitronellyl…",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144481"
+      }
+    },
+    {
+      "id": "cis_cis_nepetalactol",
+      "name": "cis-cis-nepetalactol",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144485"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "cis_cis_nepetalactone",
+      "name": "cis-cis-nepetalactone",
+      "short": "cis-cis-nepetalacto…",
+      "formula": "C10H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144482"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_5_1_35",
+      "name": "(+)-cis,cis-nepetalactol synthase",
+      "ec": [
+        "5.5.1.35"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_419",
+      "name": "nepetalactol dehydrogenase",
+      "ec": [
+        "1.1.1.419"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-cis,cis-nepetalactol synthase",
+      "equation": "(S)-8-oxocitronellyl enol = cis-cis-nepetalactol",
+      "ec": "5.5.1.35",
+      "substrates": [
+        {
+          "metabolite": "s_8_oxocitronellyl_enol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_cis_nepetalactol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61420"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61420"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nepetalactol dehydrogenase",
+      "equation": "cis-cis-nepetalactol + NAD(+) = cis-cis-nepetalactone + NADH + H(+)",
+      "ec": "1.1.1.419",
+      "substrates": [
+        {
+          "metabolite": "cis_cis_nepetalactol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_cis_nepetalactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_419"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61424"
+          }
+        ]
+      }
+    }
+  ]
+}

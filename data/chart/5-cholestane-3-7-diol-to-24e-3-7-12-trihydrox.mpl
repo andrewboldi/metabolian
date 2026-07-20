@@ -32,19 +32,31 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_5 [1.14.14.5] +alkanesulfonate_oxoanion +fmnh2 +o2 +sulfite +h2o +hplus
-    aldehyde
+    <-> ec_1_14_14_17 [1.14.14.17] +squalene +fmnh2 +o2 +h2o +hplus
+    epoxysqualene
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_2_7_8 [1.2.7.8] +3_indol_3_yl_pyruvate +coa +di_sulfido_diiron +co2 +hplus
-    indol_3_ylacetyl_coa
+    <-> ec_1_3_7_5 [1.3.7.5] +2r_3z_phycocyanobilin +di_sulfido_diiron +hplus
+    biliverdin
   }
 
   branch from 25r_3_7_12_trihydroxy_5_cholestan_26_oate side right {
     25r_3_7_12_trihydroxy_5_cholestan_26_oate
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
     25r_3_7_dihydroxy_5_cholestan_26_oate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_24 [4.2.3.24] +fpp
+    amorpha_4_11_diene
+  }
+
+  branch from thca_24oh_coa side right {
+    thca_24oh_coa
+    <-> . +nad +nadh +hplus
+    thca_24oxo_coa
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cis-cis-2-ammonio-3-3-ox-to-ammonium",
   "name": "cis,cis-2-ammonio-3-(3-ox… to ammonium",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from cis,cis-2-ammonio-3-(3-oxoprop-1-enyl)but-2-enedioate(1−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -113,40 +113,41 @@
       }
     },
     {
-      "id": "d_lysinium",
-      "name": "D-lysinium",
-      "formula": "C6H15N2O2",
+      "id": "1s_3_methyl_cyclohexylammonium",
+      "name": "(1S)-3-methyl-cyclohexylammonium",
+      "short": "3-methyl-cyclohexyl…",
+      "formula": "C7H16N",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32557"
+        "chebi": "CHEBI:195388"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "6_amino_2_oxohexanoic_acid",
-      "name": "6-amino-2-oxohexanoic acid",
-      "short": "6-amino-2-oxohexano…",
-      "formula": "C6H11NO3",
+      "id": "3_methylcyclohexanone",
+      "name": "3-methylcyclohexanone",
+      "short": "3-methylcyclohexano…",
+      "formula": "C7H12O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58183"
+        "chebi": "CHEBI:195391"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -170,13 +171,6 @@
       "name": "2-aminomuconate deaminase",
       "ec": [
         "3.5.99.5"
-      ]
-    },
-    {
-      "id": "ec_1_4_3_3",
-      "name": "D-amino-acid oxidase",
-      "ec": [
-        "1.4.3.3"
       ]
     }
   ],
@@ -326,16 +320,15 @@
     },
     {
       "id": "r4",
-      "name": "D-amino-acid oxidase",
-      "equation": "D-lysine + O2 + H2O = 6-amino-2-oxohexanoate + H2O2 + NH4(+)",
-      "ec": "1.4.3.3",
+      "name": "(1S)-3-methyl-cyclohexylamine + NADP(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADPH ...",
+      "equation": "(1S)-3-methyl-cyclohexylamine + NADP(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADPH + H(+)",
       "substrates": [
         {
-          "metabolite": "d_lysinium",
+          "metabolite": "1s_3_methyl_cyclohexylammonium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
@@ -345,34 +338,33 @@
       ],
       "products": [
         {
-          "metabolite": "6_amino_2_oxohexanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "3_methylcyclohexanone",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_1_4_3_3"
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:37583"
+        "rhea": "RHEA:76915"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37583"
+            "id": "RHEA:76915"
           }
         ]
       }

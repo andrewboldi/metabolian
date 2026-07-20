@@ -3,7 +3,7 @@
   "id": "3-iodothyronamine-to-hydrogen-donor",
   "name": "3'-iodothyronamine to hydrogen donor",
   "category": "other",
-  "summary": "A 3-step route from 3'-iodothyronamine(1+) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from 3'-iodothyronamine(1+) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -84,41 +84,13 @@
       }
     },
     {
-      "id": "3_3_5_5_tetraiodothyronamine",
-      "name": "3,3',5,5'-tetraiodothyronamine",
-      "short": "3,3',5,5'-tetraiodo…",
-      "formula": "C14H12I4NO2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:233344"
-      }
-    },
-    {
-      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
-      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
-      "short": "all-cis-5,8,11,14,1…",
-      "formula": "C20H29O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58562"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "dehydrocholesterol_7",
+      "name": "7-Dehydrocholesterol (provitamin D3)",
+      "short": "7-Dehydrocholestero…",
+      "formula": "C27H44O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "11_r_hepe",
-      "name": "11(R)-HEPE",
-      "formula": "C20H29O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90820"
+        "chebi": "CHEBI:17759"
       }
     },
     {
@@ -131,17 +103,25 @@
       }
     },
     {
-      "id": "3_3_diiodothyronamine",
-      "name": "3,3'-diiodothyronamine",
-      "short": "3,3'-diiodothyronam…",
-      "formula": "C14H14I2NO2",
-      "charge": 1,
+      "id": "cholesta_5_7_dien_3_25_diol",
+      "name": "cholesta-5,7-dien-3β,25-diol",
+      "short": "cholesta-5,7-dien-3…",
+      "formula": "C27H44O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:233341"
+        "chebi": "CHEBI:137057"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_17_99_10",
+      "name": "steroid C-25 hydroxylase",
+      "ec": [
+        "1.17.99.10"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -239,72 +219,12 @@
     },
     {
       "id": "r3",
-      "name": "3,3',5'-triiodothyronamine + iodide + A + H(+) = 3,3',5,5'-tetraiodothyronamine + AH2",
-      "equation": "3,3',5'-triiodothyronamine + iodide + A + H(+) = 3,3',5,5'-tetraiodothyronamine + AH2",
+      "name": "steroid C-25 hydroxylase",
+      "equation": "7-dehydrocholesterol + A + H2O = cholesta-5,7-dien-3beta,25-diol + AH2",
+      "ec": "1.17.99.10",
       "substrates": [
         {
-          "metabolite": "3_3_5_triiodothyronamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "iodide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_3_5_5_tetraiodothyronamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 3,
-      "xrefs": {
-        "rhea": "RHEA:83807"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:83807"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (11R)-hydroxy-(5Z,8Z,12E,14Z,17Z)-ei...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (11R)-hydroxy-(5Z,8Z,12E,14Z,17Z)-eicosapentaenoate + A + H2O",
-      "substrates": [
-        {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "11_r_hepe",
+          "metabolite": "dehydrocholesterol_7",
           "stoichiometry": 1
         },
         {
@@ -316,46 +236,9 @@
           "stoichiometry": 1
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:50848"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:50848"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "3,3'-diiodothyronamine + iodide + A + H(+) = 3,3',5'-triiodothyronamine + AH2",
-      "equation": "3,3'-diiodothyronamine + iodide + A + H(+) = 3,3',5'-triiodothyronamine + AH2",
-      "substrates": [
-        {
-          "metabolite": "3_3_diiodothyronamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "iodide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "3_3_5_triiodothyronamine",
+          "metabolite": "cholesta_5_7_dien_3_25_diol",
           "stoichiometry": 1
         },
         {
@@ -363,17 +246,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_10"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:83795"
+        "rhea": "RHEA:66540"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:83795"
+            "id": "RHEA:66540"
           }
         ]
       }

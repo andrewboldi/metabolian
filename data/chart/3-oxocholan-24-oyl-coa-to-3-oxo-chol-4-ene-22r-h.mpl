@@ -30,7 +30,7 @@ pathway 3-oxocholan-24-oyl-coa-to-3-oxo-chol-4-ene-22r-h "3-oxocholan-24-oyl-CoA
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +2_arachidonoyl_sn_glycero_3_phosphoethanolamine +o2 +hydrogen_acceptor +h2o
-    2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_triaceta +o2 +hydrogen_acceptor +h2o
+    s_2_trans_6_trans_10_trans_epoxygeranylgeranyl
   }
 }

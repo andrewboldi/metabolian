@@ -18,25 +18,25 @@ pathway n-1-dioleoyl-sn-glycero-3-to-oleoyl-sn-glycero-3 "N,1-dioleoyl-sn-glycer
 
   branch from oleate side left {
     oleate
-    <-> . +1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol +h2o +hplus
-    1_palmitoyl_3_stearoyl_sn_glycerol
+    <-> . +n_oleoyl_l_glutaminate +h2o
+    glutamine
   }
 
   branch from oleoyl_ethanolamide side right {
     oleoyl_ethanolamide
-    <-> . +h2o +pi
-    n_oleoylethanolamine_phosphate
+    <-> . +n_1_2_trioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_2_dioleoyl_sn_glycero_3_phosphate
   }
 
   branch from sn_glycerol_3_phosphate side left {
     sn_glycerol_3_phosphate
-    <-> ec_2_4_1_96 [2.4.1.96] +udp_d_galactose +udp +hplus
-    1_d_galactosyl_sn_glycerol_3_phosphate
+    <-> . +palmitoleoyl_coa +coa
+    1_palmitoleoyl_sn_glycerol_3_phosphate
   }
 
   branch from oleoyl_sn_glycero_3_phosphocholine side right {
     oleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_o_palmityl_2_o_methyl_sn_glycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
-    1_palmityl_2_methyl_3_oleoyl_sn_glycerol
+    <-> . +2_palmitoylglycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
+    1_oleoyl_2_palmitoylglycerol
   }
 }

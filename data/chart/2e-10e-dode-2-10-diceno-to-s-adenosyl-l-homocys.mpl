@@ -18,27 +18,15 @@ pathway 2e-10e-dode-2-10-diceno-to-s-adenosyl-l-homocys "(2E,10E)-dode-2,10-dice
     phomoidride_b
   }
 
-  branch from 4_deca_1_8_diyl_2_5_dioxo_2_5_dihydro_3_furanyl side left {
-    4_deca_1_8_diyl_2_5_dioxo_2_5_dihydro_3_furanyl
-    <-> . +hplus +h2o
-    4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb
-  }
-
-  branch from succinate side right {
+  branch from succinate side left {
     succinate
-    <-> . +octanoyl_coa +akg +o2 +co2
-    2_hydroxyoctanoyl_coa
-  }
-
-  branch from methanol side left {
-    methanol
-    <-> . +carbendazim +h2o +hplus
-    n_1h_1_3_benzodiazol_2_yl_carbamate
+    <-> . +berkeleyone_b +akg +o2 +co2 +h2o
+    berkeleydione
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_46 [2.1.1.46] +4_hydroxyisoflavones +sam +hplus
-    4_methoxyisoflavones
+    <-> ec_2_1_1_216 [2.1.1.216] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_n2_dimethylguanosine_5_monophosphate_1
   }
 }

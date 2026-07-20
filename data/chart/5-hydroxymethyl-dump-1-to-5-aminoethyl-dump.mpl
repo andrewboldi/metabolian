@@ -30,15 +30,9 @@ pathway 5-hydroxymethyl-dump-1-to-5-aminoethyl-dump "5-hydroxymethyl-dUMP(1−) 
     5_aminomethyl_dump_zwitterion
   }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> . +a_2_3_di_o_phytanyl_sn_glycerophospholipid +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    a_macrocyclic_archaeaol_phospholipid
-  }
-
-  branch from methionine side right {
-    methionine
-    <-> . +a_2_3_di_o_phytanyl_sn_glycerophospholipid +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
-    a_glycerol_dibiphytanyl_glycerol_tetraether_phos
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +betaenone_c +hydrogen_donor
+    betaenone_b
   }
 }

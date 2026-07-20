@@ -1,0 +1,240 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-dehydro-l-gulonate-to-l-xylulose-5-phosphate",
+  "name": "3-dehydro-L-gulonate to L-xylulose 5-phosphate",
+  "category": "other",
+  "summary": "A 2-step route from 3-dehydro-L-gulonate to L-xylulose 5-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28222"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57655"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_dehydro_l_gulonate",
+      "name": "3-dehydro-L-gulonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57655"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_dehydro_l_gulonate_6_phosphate",
+      "name": "3-dehydro-L-gulonate 6-phosphate",
+      "short": "3-dehydro-L-gulonat…",
+      "formula": "C6H8O10P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58774"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_xylulose_5_phosphate",
+      "name": "L-xylulose 5-phosphate",
+      "short": "L-xylulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57829"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "l_ascorbate_6_phosphate",
+      "name": "L-ascorbate 6-phosphate",
+      "short": "L-ascorbate 6-P",
+      "formula": "C6H6O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:61698"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_85",
+      "name": "3-dehydro-L-gulonate-6-phosphate decarboxylase",
+      "ec": [
+        "4.1.1.85"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-dehydro-L-gulonate + ATP = 3-dehydro-L-gulonate 6-phosphate + ADP + H(+)",
+      "equation": "3-dehydro-L-gulonate + ATP = 3-dehydro-L-gulonate 6-phosphate + ADP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_dehydro_l_gulonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydro_l_gulonate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28222"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28222"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-dehydro-L-gulonate-6-phosphate decarboxylase",
+      "equation": "3-dehydro-L-gulonate 6-phosphate + H(+) = L-xylulose 5-phosphate + CO2",
+      "ec": "4.1.1.85",
+      "substrates": [
+        {
+          "metabolite": "3_dehydro_l_gulonate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-ascorbate 6-phosphate + H2O = 3-dehydro-L-gulonate 6-phosphate",
+      "equation": "L-ascorbate 6-phosphate + H2O = 3-dehydro-L-gulonate 6-phosphate",
+      "substrates": [
+        {
+          "metabolite": "l_ascorbate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydro_l_gulonate_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28803"
+          }
+        ]
+      }
+    }
+  ]
+}

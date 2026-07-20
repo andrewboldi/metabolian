@@ -122,49 +122,42 @@
       }
     },
     {
-      "id": "n6_dimethylallyladenine",
-      "name": "N6-dimethylallyladenine",
-      "short": "N6-dimethylallylade…",
-      "formula": "C10H13N5",
-      "charge": 0,
+      "id": "l_homoserine_lactone",
+      "name": "L-homoserine lactone",
+      "formula": "C4H8NO2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:17660"
+        "chebi": "CHEBI:58633"
       }
     },
     {
-      "id": "discadenine",
-      "name": "discadenine",
-      "formula": "C14H20N6O2",
-      "charge": 0,
+      "id": "2_n_hydroxynocardicin_c",
+      "name": "2'-N-hydroxynocardicin C",
+      "short": "2'-N-hydroxynocardi…",
+      "formula": "C23H25N4O9",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57585"
+        "chebi": "CHEBI:231961"
       }
     },
     {
-      "id": "isonocardicin_a",
-      "name": "isonocardicin A",
-      "formula": "C23H22N4O9",
-      "charge": -2,
+      "id": "1_acyl_2_palmitoylglycerolipid",
+      "name": "1-acyl-2-palmitoylglycerolipid",
+      "short": "1-acyl-2-palmitoylg…",
+      "formula": "C20H36O5R2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77633"
+        "chebi": "CHEBI:86999"
       }
     },
     {
-      "id": "pentalenene",
-      "name": "pentalenene",
-      "formula": "C15H24",
+      "id": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
+      "name": "1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid",
+      "short": "1-acyl-2-[(3E)-hexa…",
+      "formula": "C20H34O5R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17251"
-      }
-    },
-    {
-      "id": "pentalen_13_ol",
-      "name": "pentalen-13-ol",
-      "formula": "C15H24O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:63243"
+        "chebi": "CHEBI:87002"
       }
     }
   ],
@@ -191,10 +184,17 @@
       ]
     },
     {
-      "id": "ec_2_5_1_24",
-      "name": "discadenine synthase",
+      "id": "ec_4_4_1_42",
+      "name": "S-adenosyl-L-methionine lyase",
       "ec": [
-        "2.5.1.24"
+        "4.4.1.42"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_43",
+      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
+      "ec": [
+        "1.14.19.43"
       ]
     }
   ],
@@ -344,14 +344,10 @@
     },
     {
       "id": "r4",
-      "name": "discadenine synthase",
-      "equation": "N(6)-dimethylallyladenine + S-adenosyl-L-methionine = discadenine + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "2.5.1.24",
+      "name": "S-adenosyl-L-methionine lyase",
+      "equation": "S-adenosyl-L-methionine = L-homoserine lactone + S-methyl-5'-thioadenosine",
+      "ec": "4.4.1.42",
       "substrates": [
-        {
-          "metabolite": "n6_dimethylallyladenine",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "sam",
           "stoichiometry": 1
@@ -359,11 +355,49 @@
       ],
       "products": [
         {
-          "metabolite": "discadenine",
+          "metabolite": "l_homoserine_lactone",
           "stoichiometry": 1
         },
         {
           "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "nocardicin C + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + H(+) = 2'-N-hydroxynocardicin C +...",
+      "equation": "nocardicin C + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + H(+) = 2'-N-hydroxynocardicin C + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "nocardicin_c_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -371,70 +405,43 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_24"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:19581"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:19581"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "nocardicin-A epimerase",
-      "equation": "isonocardicin A = nocardicin A",
-      "ec": "5.1.1.14",
-      "substrates": [
-        {
-          "metabolite": "isonocardicin_a",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "nocardicin_a",
+          "metabolite": "2_n_hydroxynocardicin_c",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_5_1_1_14"
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:22792"
+        "rhea": "RHEA:82035"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22792"
+            "id": "RHEA:82035"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidiz...",
-      "equation": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
+      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.43",
       "substrates": [
         {
-          "metabolite": "pentalenene",
+          "metabolite": "1_acyl_2_palmitoylglycerolipid",
           "stoichiometry": 1
         },
         {
@@ -452,7 +459,7 @@
       ],
       "products": [
         {
-          "metabolite": "pentalen_13_ol",
+          "metabolite": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
           "stoichiometry": 1
         },
         {
@@ -461,20 +468,25 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_43"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:31703"
+        "rhea": "RHEA:46764"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31703"
+            "id": "RHEA:46764"
           }
         ]
       }

@@ -22,15 +22,21 @@ pathway l-tyrosinal-to-herquline-a "L-tyrosinal to herquline A" {
     herquline_a
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_126 [1.14.14.126] +amyrin +fmnh2 +o2 +h2o +hplus
-    oleanolate
+  branch from s_s_2_5_di_p_hydroxybenzyl_piperazine side left {
+    s_s_2_5_di_p_hydroxybenzyl_piperazine
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    1s_4s_4_4_hydroxyphenyl_methyl_2_5_diazaspiro_b
   }
 
-  branch from sah side right {
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_30 [1.14.14.30] +2_methylpropanaminium +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_2_methylpropanamine
+  }
+
+  branch from sah side left {
     sah
-    <-> ec_2_1_1_78 [2.1.1.78] +isoorientin +sam +hplus
-    isoscoparin_7_olate
+    <-> ec_2_1_1_170 [2.1.1.170] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

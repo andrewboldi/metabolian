@@ -16,15 +16,9 @@ pathway queuosine-to-nicotinamide "queuosine to nicotinamide" {
     n2_adp_d_ribosyl_guanine
   }
 
-  branch from d_ribofuranose side left {
-    d_ribofuranose
-    <-> . +riboflavin +fmnh2 +o2 +fmn +h2o
-    lumichrome
-  }
-
-  branch from nicotinamide side right {
+  branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_malonyl_l_lysine_1 +nad +h2o +l_lysinium
-    2_o_malonyl_adp_d_ribose
+    <-> . +l_serine +nad +hplus
+    o_adp_d_ribosyl_l_serine_2
   }
 }

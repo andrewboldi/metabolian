@@ -24,8 +24,8 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
 
   branch from methylamine side right {
     methylamine
-    <-> ec_1_5_3_21 [1.5.3.21] +4_methylamino_butyric_acid +o2 +h2o +h2o2
-    4_oxobutanoate
+    <-> ec_3_5_1_137 [3.5.1.137] +carbofuran +h2o +hplus +co2
+    2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol
   }
 
   branch from hexanoyl_coa side left {
@@ -36,7 +36,13 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_13 [4.2.3.13] +fpp
-    cadinene
+    <-> ec_3_6_1_9 [3.6.1.9] +dctp +h2o +hplus
+    2_deoxycytosine_5_monophosphate
+  }
+
+  branch from 3_oxooctanoyl_coa side left {
+    3_oxooctanoyl_coa
+    <-> . +nad +nadh +hplus
+    s_3_hydroxyoctanoyl_coa
   }
 }

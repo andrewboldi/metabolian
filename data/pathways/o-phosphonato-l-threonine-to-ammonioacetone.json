@@ -1,0 +1,180 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-phosphonato-l-threonine-to-ammonioacetone",
+  "name": "O-phosphonato-L-threonine to ammonioacetone",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from O-phosphonato-L-threonine(2−) to ammonioacetone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30579"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58675"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_phosphonato_l_threonine",
+      "name": "O-phosphonato-L-threonine",
+      "short": "O-phosphonato-L-thr…",
+      "formula": "C4H8NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58675"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "ammonioacetone",
+      "name": "ammonioacetone",
+      "formula": "C3H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58320"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "O-phospho-L-threonine + H2O = L-threonine + phosphate",
+      "equation": "O-phospho-L-threonine + H2O = L-threonine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "o_phosphonato_l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30579"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-threonine + NAD(+) = aminoacetone + CO2 + NADH",
+      "equation": "L-threonine + NAD(+) = aminoacetone + CO2 + NADH",
+      "substrates": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ammonioacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33239"
+          }
+        ]
+      }
+    }
+  ]
+}

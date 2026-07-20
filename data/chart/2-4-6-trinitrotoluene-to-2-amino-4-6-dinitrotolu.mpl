@@ -20,17 +20,11 @@ pathway 2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu "2,4,6-trinitrotolueneâ
 
   branch from 2_4_6_trinitrotoluene side left {
     2_4_6_trinitrotoluene
-    <-> . +nadph +hplus +nadp +h2o
+    <-> . +nadh +hplus +nad +h2o
     4_hydroxylamino_2_6_dinitrotoluene
   }
 
-  branch from superoxide side right {
-    superoxide
-    <-> . +chromium +nadh +o2 +nad +hplus
-    chromium
-  }
-
-  branch from 2_hydroxylamino_4_6_dinitrotoluene side left {
+  branch from 2_hydroxylamino_4_6_dinitrotoluene side right {
     2_hydroxylamino_4_6_dinitrotoluene
     <-> . +udp_d_glucose +udp +hplus
     2_hydroxylamino_4_6_dinitrotoluene_o_d_glucoside

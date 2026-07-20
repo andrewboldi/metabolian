@@ -41,4 +41,10 @@ pathway 7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu "7-ammoniomethyl-7-deaz
     <-> . +guanosine_5_monophosphate_1 +guanine
     queuine
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +hydroxylamine +nh3 +hydrogen_donor +h2o +hplus
+    dinitrogen
+  }
 }

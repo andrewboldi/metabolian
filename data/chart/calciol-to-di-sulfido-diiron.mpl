@@ -18,19 +18,13 @@ pathway calciol-to-di-sulfido-diiron "calciol to di-μ-sulfido-diiron" {
 
   branch from calcidiol side left {
     calcidiol
-    <-> ec_1_14_15_22 [1.14.15.22] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    calcitriol
+    <-> . +udp_d_glucuronate +udp +hplus
+    calcidiol_3_o_d_glucuronate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +epothilone_d +di_sulfido_diiron +o2 +hplus +h2o
-    epothilone_b
-  }
-
-  branch from 24r_24_25_dihydroxycalciol side left {
-    24r_24_25_dihydroxycalciol
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    25_hydroxy_24_oxocalciol
+    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_hydroxy_11_deoxycorticosterone
   }
 }

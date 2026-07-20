@@ -1,0 +1,224 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-3-sulfopropanediol-to-3-sulfonatopyruvate",
+  "name": "(2R)-3-sulfopropanediol to 3-sulfonatopyruvate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (2R)-3-sulfopropanediol(1−) to 3-sulfonatopyruvate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28074"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60997"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_3_sulfopropanediol",
+      "name": "(2R)-3-sulfopropanediol",
+      "short": "3-sulfopropanediol",
+      "formula": "C3H7O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60997"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_3_sulfolactate",
+      "name": "(R)-3-sulfolactate",
+      "formula": "C3H4O6S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58738"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_sulfonatopyruvate",
+      "name": "3-sulfonatopyruvate",
+      "formula": "C3H2O6S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57940"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_308",
+      "name": "sulfopropanediol 3-dehydrogenase",
+      "ec": [
+        "1.1.1.308"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_338",
+      "name": "(2R)-3-sulfolactate dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.338"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sulfopropanediol 3-dehydrogenase",
+      "equation": "(2R)-3-sulfopropanediol + 2 NAD(+) + H2O = (2R)-3-sulfolactate + 2 NADH + 3 H(+)",
+      "ec": "1.1.1.308",
+      "substrates": [
+        {
+          "metabolite": "2r_3_sulfopropanediol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_sulfolactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_308"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28074"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28074"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2R)-3-sulfolactate dehydrogenase (NADP(+))",
+      "equation": "(2R)-3-sulfolactate + NADP(+) = 3-sulfopyruvate + NADPH + H(+)",
+      "ec": "1.1.1.338",
+      "substrates": [
+        {
+          "metabolite": "r_3_sulfolactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_sulfonatopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_338"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15537"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15537"
+          }
+        ]
+      }
+    }
+  ]
+}

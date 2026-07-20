@@ -24,21 +24,15 @@ pathway dihydroprecondylocarpine-to-fmn "dihydroprecondylocarpine… to FMN" {
     r_19_hydroxytabersonine
   }
 
-  branch from acetate side right {
-    acetate
-    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine +h2o
-    udp_3_o_3r_hydroxyacyl_d_glucosamine
-  }
-
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> ec_1_14_14_123 [1.14.14.123] +3_hydroxy_ent_sandaracopimaradiene +fmnh2 +o2 +h2o +hplus
-    oryzalexin_d
+    <-> . +prostaglandin_h2 +fmnh2 +o2 +h2o +hplus
+    19_hydroxyprostaglandin_h2
   }
 
-  branch from sah side right {
+  branch from sah side left {
     sah
-    <-> ec_2_1_1_145 [2.1.1.145] +trans_aconitate +sam
-    2e_2_methoxycarbonylmethyl_but_2_enedioate
+    <-> ec_2_1_1_291 [2.1.1.291] +r_reticulinium +sam +hplus
+    r_laudanine
   }
 }

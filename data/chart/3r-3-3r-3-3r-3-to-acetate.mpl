@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-3r-3-3r-3-to-acetate "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate" {
-  spacing 248
+  spacing 188
 
   spine at 0,0 {
     3r_3_3r_3_3r_3_3r_3_3r_3_hydroxybutanoyl_oxy_bu
@@ -18,35 +18,13 @@ pathway 3r-3-3r-3-3r-3-to-acetate "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate" {
     bhb
     <-> ec_1_1_1_30 [1.1.1.30] +nad -nadh -hplus
     acetoacetate
-    <-> ec_4_1_1_4 [4.1.1.4] +hplus -co2
-    acetone
-    <-> ec_1_14_13_226 [1.14.13.226] +nadph +o2 +hplus -nadp -h2o
-    methyl_acetate
-    <-> ec_3_1_1_114 [3.1.1.114] +h2o -acetate -hplus
-    methanol
+    <-> . +acetyl_coa -acetate
+    acetoacetyl_coa
   }
 
   branch from bhb side left {
     bhb
     <-> . +h2o +coa +hplus
     r_3_hydroxybutanoyl_coa
-  }
-
-  branch from acetoacetate side right {
-    acetoacetate
-    <-> . +ywa1 +h2o +hplus
-    naphthalene_1_3_6_8_tetrol
-  }
-
-  branch from acetone side left {
-    acetone
-    <-> . +nad +nadh +hplus
-    propan_2_ol
-  }
-
-  branch from methanol side right {
-    methanol
-    <-> ec_3_1_1_122 [3.1.1.122] +carbendazim +h2o +co2
-    2_aminobenzimidazole
   }
 }

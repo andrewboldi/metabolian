@@ -26,8 +26,8 @@ pathway r-amygdalin-to-d-glucopyranose "(R)-amygdalin to D-glucopyranose" {
 
   branch from glucose side right {
     glucose
-    <-> ec_2_3_1_103 [2.3.1.103] +1_o_sinapoyl_d_glucose
-    1_2_di_o_sinapoyl_d_glucose
+    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein +h2o
+    oleuropein_aglycone
   }
 
   branch from mandelonitrile side left {
@@ -38,7 +38,13 @@ pathway r-amygdalin-to-d-glucopyranose "(R)-amygdalin to D-glucopyranose" {
 
   branch from lactose side right {
     lactose
-    <-> ec_3_2_1_227 [3.2.1.227] +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc +h2o
-    n_acetyllactosamine
+    <-> ec_2_7_1_207 [2.7.1.207] +n_phosphonato_l_histidine +l_histidine
+    lactose_6_phosphate
+  }
+
+  branch from d_galactose side left {
+    d_galactose
+    <-> . +lactose +h2o
+    d_glucose
   }
 }

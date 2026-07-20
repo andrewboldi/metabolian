@@ -12,19 +12,13 @@ pathway 5-phosphonato-d-ribose-to-diphosphate "5-phosphonato-α-D-ribose… to d
     d_ribofuranose_2_5_bisphosphate
     <-> ec_3_1_4_57 [3.1.4.57] +h2o -pi
     d_ribofuranose_5_phosphate
-    <-> ec_2_7_7_96 [2.7.7.96] +atp +hplus -ppi
-    adp_d_ribose
+    <-> . +ctp +hplus -ppi
+    cdp_d_ribose
   }
 
-  branch from adp_d_ribose side left {
-    adp_d_ribose
-    <-> . +s_adp_d_ribosyl_l_cysteine_2 +h2o
-    l_cysteine
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_n9 [2.5.1.n9] +sn_glycerol_1_phosphate +all_trans_heptaprenyl_diphosphate
-    3_heptaprenyl_sn_glycero_1_phosphate
+    <-> . +fpp
+    sesquisabinene_a
   }
 }

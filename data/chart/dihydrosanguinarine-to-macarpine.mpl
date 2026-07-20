@@ -22,8 +22,8 @@ pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_58 [1.14.14.58] +geranyllinalool +fmnh2 +o2 +buten_2_one +h2o +hplus
-    4_8_12_trimethyltrideca_1_3_7_11_tetraene
+    <-> . +24r_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24r_7_24_dihydroxycholesterol
   }
 
   branch from dihydrochelirubine side right {

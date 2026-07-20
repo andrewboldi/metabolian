@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "selenite-to-formaldehyde",
   "name": "selenite to formaldehyde",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from selenite(2−) to formaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -146,13 +146,12 @@
       }
     },
     {
-      "id": "5_5_dehydrodivanillate",
-      "name": "5,5'-dehydrodivanillate",
-      "short": "5,5'-dehydrodivanil…",
-      "formula": "C16H12O8",
-      "charge": -2,
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:141401"
+        "chebi": "CHEBI:16347"
       }
     },
     {
@@ -165,13 +164,60 @@
       }
     },
     {
-      "id": "5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox",
-      "name": "5,6,6'-trihydroxy-5'-methoxy[biphenyl]-3,3'-dicarboxylate",
-      "short": "5,6,6'-trihydroxy-5…",
-      "formula": "C15H10O8",
+      "id": "3r_3_hydroxy_4_oxobutanoate",
+      "name": "(3R)-3-hydroxy-4-oxobutanoate",
+      "short": "3-hydroxy-4-oxobuta…",
+      "formula": "C4H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138809"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_l_arginine_1",
+      "name": "Nω,N'ω-dimethyl-L-arginine(1+)",
+      "short": "Nω,N'ω-dimethyl-L-a…",
+      "formula": "C8H17N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:88221"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:141402"
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "n_methyl_argininium_1",
+      "name": "Nω-methyl-argininium(1+)",
+      "short": "Nω-methyl-argininiu…",
+      "formula": "C7H15N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65280"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -195,6 +241,13 @@
       "name": "selenate reductase (quinol)",
       "ec": [
         "1.97.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_239",
+      "name": "carnitine monooxygenase",
+      "ec": [
+        "1.14.13.239"
       ]
     }
   ],
@@ -438,11 +491,12 @@
     },
     {
       "id": "r6",
-      "name": "5,5'-dehydrodivanillate + NADH + O2 + H(+) = 2,2',3-trihydroxy-3'-methoxy-5,5'-dicarbox...",
-      "equation": "5,5'-dehydrodivanillate + NADH + O2 + H(+) = 2,2',3-trihydroxy-3'-methoxy-5,5'-dicarboxybiphenyl + formaldehyde + NAD(+) + H2O",
+      "name": "carnitine monooxygenase",
+      "equation": "(R)-carnitine + NADH + O2 + H(+) = (3R)-3-hydroxy-4-oxobutanoate + trimethylamine + NAD(+) + H2O",
+      "ec": "1.14.13.239",
       "substrates": [
         {
-          "metabolite": "5_5_dehydrodivanillate",
+          "metabolite": "carnitine",
           "stoichiometry": 1
         },
         {
@@ -460,11 +514,11 @@
       ],
       "products": [
         {
-          "metabolite": "5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox",
+          "metabolite": "3r_3_hydroxy_4_oxobutanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "formaldehyde",
+          "metabolite": "trimethylammonium",
           "stoichiometry": 1
         },
         {
@@ -476,17 +530,73 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_239"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:57008"
+        "rhea": "RHEA:55396"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57008"
+            "id": "RHEA:55396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "N(omega),N(omega)'-dimethyl-L-arginyl-[protein] + 2-oxoglutarate + O2 = N(omega)-methyl...",
+      "equation": "N(omega),N(omega)'-dimethyl-L-arginyl-[protein] + 2-oxoglutarate + O2 = N(omega)-methyl-L-arginyl-[protein] + formaldehyde + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methyl_argininium_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:58472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58472"
           }
         ]
       }

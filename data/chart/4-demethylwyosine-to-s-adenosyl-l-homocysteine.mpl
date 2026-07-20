@@ -20,13 +20,13 @@ pathway 4-demethylwyosine-to-s-adenosyl-l-homocysteine "4-demethylwyosine… to 
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> . +n4_aminopropylspermidine +s_adenosylmethioninaminium +hplus
-    n4_bis_aminopropyl_spermidine
+    <-> ec_2_5_1_157 [2.5.1.157] +n1_methylpseudouridine_5_monophosphate_1 +sam +hplus
+    n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_291 [2.1.1.291] +r_reticulinium +sam +hplus
-    r_laudanine
+    <-> . +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 }

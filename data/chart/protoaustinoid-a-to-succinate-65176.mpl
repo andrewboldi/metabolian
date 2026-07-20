@@ -18,19 +18,19 @@ pathway protoaustinoid-a-to-succinate-65176 "protoaustinoid A to succinate" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +palmitoleoyl_coa +o2 +hydrogen_acceptor +h2o
-    9z_12z_hexadecadienoyl_coa
+    <-> . +1_1_dihydroxyneurosporene +hydrogen_acceptor
+    1_hydroxy_demethylspheroidene
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_icosadienoyl_coa +hydrogen_donor +o2 +h2o
-    5z_11z_14z_icosatrienoyl_coa
+    <-> . +1_1_dihydroxy_1_1_2_2_tetrahydrolycopene +hydrogen_donor
+    1_1_dihydroxy_3_4_didehydrolycopene
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
+    <-> . +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 }

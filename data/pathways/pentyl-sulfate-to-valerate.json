@@ -1,0 +1,315 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pentyl-sulfate-to-valerate",
+  "name": "pentyl sulfate to valerate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from pentyl sulfate(1−) to valerate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:65724"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:157687"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pentyl_sulfate",
+      "name": "pentyl sulfate",
+      "formula": "C5H11O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:157687"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "pentanal",
+      "name": "pentanal",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84069"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "valerate",
+      "name": "valerate",
+      "formula": "C5H9O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:31011"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "5s_5_hydroxy_l_lysinium",
+      "name": "(5S)-5-hydroxy-L-lysinium",
+      "short": "5-hydroxy-L-lysinium",
+      "formula": "C6H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141843"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_77",
+      "name": "alkyl sulfatase",
+      "ec": [
+        "1.14.11.77"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alkyl sulfatase",
+      "equation": "pentyl sulfate + 2-oxoglutarate + O2 = pentanal + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
+      "substrates": [
+        {
+          "metabolite": "pentyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:65724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pentanal + NAD(+) + H2O = pentanoate + NADH + 2 H(+)",
+      "equation": "pentanal + NAD(+) + H2O = pentanoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "pentanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-lysyl-[protein] + 2-oxoglutarate + O2 = (5S)-5-hydroxy-L-lysyl-[protein] + succinate ...",
+      "equation": "L-lysyl-[protein] + 2-oxoglutarate + O2 = (5S)-5-hydroxy-L-lysyl-[protein] + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_5_hydroxy_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58360"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58360"
+          }
+        ]
+      }
+    }
+  ]
+}

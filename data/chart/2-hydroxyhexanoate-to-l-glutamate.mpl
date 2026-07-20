@@ -16,15 +16,21 @@ pathway 2-hydroxyhexanoate-to-l-glutamate "2-hydroxyhexanoate to L-glutamate" {
     2_oxohexanoate
   }
 
-  branch from kynurenate side left {
-    kynurenate
-    <-> . +l_kynurenine +pyruvate +h2o
-    alanine
+  branch from 2_oxohexanoate side left {
+    2_oxohexanoate
+    <-> . +nad +nadh +hplus
+    2r_hydroxyhexanoate
   }
 
-  branch from glutamate side right {
+  branch from kynurenate side right {
+    kynurenate
+    <-> . +mercaptopyruvate +l_kynurenine +h2o
+    cysteine
+  }
+
+  branch from glutamate side left {
     glutamate
-    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
-    ctp
+    <-> . +l_propargylglycine +atp +adp +pi +hplus
+    l_glutamyl_l_propargylglycine
   }
 }

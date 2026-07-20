@@ -1,0 +1,248 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fumigaclavine-b-to-diphosphate",
+  "name": "fumigaclavine B to diphosphate",
+  "category": "other",
+  "summary": "A 2-step route from fumigaclavine B(1+) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34267"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:67146"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fumigaclavine_b",
+      "name": "fumigaclavine B",
+      "formula": "C16H21N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:67146"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "fumigaclavine_a",
+      "name": "fumigaclavine A",
+      "formula": "C18H23N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:67145"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "fumigaclavine_c",
+      "name": "fumigaclavine C",
+      "formula": "C23H31N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:67147"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "pinene",
+      "name": "α-pinene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36740"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_205",
+      "name": "fumigaclavine B O-acetyltransferase",
+      "ec": [
+        "2.3.1.205"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_100",
+      "name": "fumigaclavine A dimethylallyltransferase",
+      "ec": [
+        "2.5.1.100"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "fumigaclavine B O-acetyltransferase",
+      "equation": "fumigaclavine B + acetyl-CoA = fumigaclavine A + CoA",
+      "ec": "2.3.1.205",
+      "substrates": [
+        {
+          "metabolite": "fumigaclavine_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fumigaclavine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_205"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34267"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34267"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "fumigaclavine A dimethylallyltransferase",
+      "equation": "fumigaclavine A + dimethylallyl diphosphate = fumigaclavine C + diphosphate",
+      "ec": "2.5.1.100",
+      "substrates": [
+        {
+          "metabolite": "fumigaclavine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fumigaclavine_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2E)-geranyl diphosphate = alpha-pinene + diphosphate",
+      "equation": "(2E)-geranyl diphosphate = alpha-pinene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25662"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25662"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-4-amino-5-oxopentanoi-to-l-alanine",
+  "name": "(S)-4-amino-5-oxopentanoi… to L-alanine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from (S)-4-amino-5-oxopentanoic acid zwitterion to L-alanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14265"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57501"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_4_amino_5_oxopentanoic_acid",
+      "name": "(S)-4-amino-5-oxopentanoic acid",
+      "short": "4-amino-5-oxopentan…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57501"
+      }
+    },
+    {
+      "id": "ala",
+      "name": "5-Aminolevulinate",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:356416"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "4_5_dioxopentanoate",
+      "name": "4,5-dioxopentanoate",
+      "formula": "C5H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58055"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "pbg",
+      "name": "Porphobilinogen",
+      "formula": "C10H13N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58126"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18005"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_3_8",
+      "name": "glutamate-1-semialdehyde 2,1-aminomutase",
+      "ec": [
+        "5.4.3.8"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_43",
+      "name": "aminolevulinate transaminase",
+      "ec": [
+        "2.6.1.43"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_24",
+      "name": "porphobilinogen synthase",
+      "ec": [
+        "4.2.1.24"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_58",
+      "name": "phenylalanine(histidine) transaminase",
+      "ec": [
+        "2.6.1.58"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glutamate-1-semialdehyde 2,1-aminomutase",
+      "equation": "(S)-4-amino-5-oxopentanoate = 5-aminolevulinate",
+      "ec": "5.4.3.8",
+      "substrates": [
+        {
+          "metabolite": "s_4_amino_5_oxopentanoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ala",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14265"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aminolevulinate transaminase",
+      "equation": "5-aminolevulinate + pyruvate = 4,5-dioxopentanoate + L-alanine",
+      "ec": "2.6.1.43",
+      "substrates": [
+        {
+          "metabolite": "ala",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_5_dioxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "porphobilinogen synthase",
+      "equation": "2 5-aminolevulinate = porphobilinogen + 2 H2O + H(+)",
+      "ec": "4.2.1.24",
+      "substrates": [
+        {
+          "metabolite": "ala",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pbg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phenylalanine(histidine) transaminase",
+      "equation": "L-phenylalanine + pyruvate = 3-phenylpyruvate + L-alanine",
+      "ec": "2.6.1.58",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13053"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13053"
+          }
+        ]
+      }
+    }
+  ]
+}

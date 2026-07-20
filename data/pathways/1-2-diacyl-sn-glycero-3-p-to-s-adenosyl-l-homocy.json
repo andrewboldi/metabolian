@@ -115,6 +115,34 @@
       }
     },
     {
+      "id": "2_3_diacyl_sn_glycerol",
+      "name": "2,3-diacyl-sn-glycerol",
+      "short": "2,3-diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75524"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
       "id": "phosphatidylcholine",
       "name": "Phosphatidylcholine",
       "formula": "C10H18NO8PR2",
@@ -142,31 +170,21 @@
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:327995"
       }
     },
     {
-      "id": "l_isoaspartate",
-      "name": "L-β-isoaspartate",
-      "formula": "C4H4NO3",
-      "charge": -1,
+      "id": "n_methyltyraminium",
+      "name": "N-methyltyraminium",
+      "formula": "C9H14NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:90596"
-      }
-    },
-    {
-      "id": "l_isoaspartate_methyl_ester",
-      "name": "L-isoaspartate α-methyl ester",
-      "short": "L-isoaspartate…",
-      "formula": "C5H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:90598"
+        "chebi": "CHEBI:58155"
       }
     }
   ],
@@ -200,10 +218,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_77",
-      "name": "protein-L-isoaspartate(D-aspartate) O-methyltransferase",
+      "id": "ec_2_1_1_27",
+      "name": "tyramine N-methyltransferase",
       "ec": [
-        "2.1.1.77"
+        "2.1.1.27"
       ]
     }
   ],
@@ -343,6 +361,45 @@
     },
     {
       "id": "r4",
+      "name": "a 2,3-diacyl-sn-glycerol + an acyl-CoA = a triacyl-sn-glycerol + CoA",
+      "equation": "a 2,3-diacyl-sn-glycerol + an acyl-CoA = a triacyl-sn-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_3_diacyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triacyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:39839"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39839"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "phospholipase C",
       "equation": "a 1,2-diacyl-sn-glycero-3-phosphocholine + H2O = phosphocholine + a 1,2-diacyl-sn-glycerol + H(+)",
       "ec": "3.1.4.3",
@@ -376,7 +433,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:10604"
       },
@@ -391,7 +448,7 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "acyl-CoA hydrolase",
       "equation": "a fatty acyl-CoA + H2O = a fatty acid + CoA + H(+)",
       "ec": "3.1.2.20",
@@ -425,7 +482,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:16781"
       },
@@ -440,13 +497,13 @@
       }
     },
     {
-      "id": "r6",
-      "name": "protein-L-isoaspartate(D-aspartate) O-methyltransferase",
-      "equation": "[protein]-L-isoaspartate + S-adenosyl-L-methionine = [protein]-L-isoaspartate alpha-methyl ester + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.77",
+      "id": "r7",
+      "name": "tyramine N-methyltransferase",
+      "equation": "tyramine + S-adenosyl-L-methionine = N-methyltyramine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.27",
       "substrates": [
         {
-          "metabolite": "l_isoaspartate",
+          "metabolite": "tyraminium",
           "stoichiometry": 1
         },
         {
@@ -456,30 +513,34 @@
       ],
       "products": [
         {
-          "metabolite": "l_isoaspartate_methyl_ester",
+          "metabolite": "n_methyltyraminium",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_77"
+          "enzyme": "ec_2_1_1_27"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:12705"
+        "rhea": "RHEA:14865"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12705"
+            "id": "RHEA:14865"
           }
         ]
       }

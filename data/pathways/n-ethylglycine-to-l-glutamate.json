@@ -145,22 +145,42 @@
       }
     },
     {
-      "id": "2_hydroxy_3_oxopropanoate",
-      "name": "2-hydroxy-3-oxopropanoate",
-      "short": "2-hydroxy-3-oxoprop…",
-      "formula": "C3H3O4",
-      "charge": -1,
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57978"
+        "chebi": "CHEBI:16810"
       }
     },
     {
-      "id": "d_glutamate",
-      "name": "D-glutamate",
-      "formula": "C5H8NO4",
+      "id": "2_hydroxy_3_oxoadipate",
+      "name": "2-hydroxy-3-oxoadipate",
+      "short": "2-hydroxy-3-oxoadip…",
+      "formula": "C6H6O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57712"
+      }
+    },
+    {
+      "id": "s_4_bromophenyl_l_cysteine",
+      "name": "S-(4-bromophenyl)-L-cysteine",
+      "short": "S-(4-bromophenyl)-L…",
+      "formula": "C9H10BrNO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58257"
+      }
+    },
+    {
+      "id": "4_bromophenylsulfanyl_pyruvate",
+      "name": "(4-bromophenylsulfanyl)pyruvate",
+      "short": "(4-bromophenylsulfa…",
+      "formula": "C9H6BrO3S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29986"
+        "chebi": "CHEBI:17468"
       }
     }
   ],
@@ -187,17 +207,17 @@
       ]
     },
     {
-      "id": "ec_4_1_1_47",
-      "name": "tartronate-semialdehyde synthase",
+      "id": "ec_2_2_1_5",
+      "name": "2-hydroxy-3-oxoadipate synthase",
       "ec": [
-        "4.1.1.47"
+        "2.2.1.5"
       ]
     },
     {
-      "id": "ec_5_1_1_3",
-      "name": "glutamate racemase",
+      "id": "ec_2_6_1_75",
+      "name": "cysteine-conjugate transaminase",
       "ec": [
-        "5.1.1.3"
+        "2.6.1.75"
       ]
     }
   ],
@@ -398,13 +418,17 @@
     },
     {
       "id": "r5",
-      "name": "tartronate-semialdehyde synthase",
-      "equation": "2 glyoxylate + H(+) = 2-hydroxy-3-oxopropanoate + CO2",
-      "ec": "4.1.1.47",
+      "name": "2-hydroxy-3-oxoadipate synthase",
+      "equation": "glyoxylate + 2-oxoglutarate + H(+) = 2-hydroxy-3-oxoadipate + CO2",
+      "ec": "2.2.1.5",
       "substrates": [
         {
           "metabolite": "glyoxylate",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
@@ -413,7 +437,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxy_3_oxopropanoate",
+          "metabolite": "2_hydroxy_3_oxoadipate",
           "stoichiometry": 1
         },
         {
@@ -423,57 +447,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_1_47"
+          "enzyme": "ec_2_2_1_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:10136"
+        "rhea": "RHEA:14341"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10136"
+            "id": "RHEA:14341"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "glutamate racemase",
-      "equation": "L-glutamate = D-glutamate",
-      "ec": "5.1.1.3",
+      "name": "cysteine-conjugate transaminase",
+      "equation": "S-(4-bromophenyl)-L-cysteine + 2-oxoglutarate = 3-((4-bromophenyl)sulfanyl)-2-oxopropanoate + L-glutamate",
+      "ec": "2.6.1.75",
       "substrates": [
         {
-          "metabolite": "glutamate",
+          "metabolite": "s_4_bromophenyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_glutamate",
+          "metabolite": "4_bromophenylsulfanyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_5_1_1_3"
+          "enzyme": "ec_2_6_1_75"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:12813"
+        "rhea": "RHEA:13485"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12813"
+            "id": "RHEA:13485"
           }
         ]
       }

@@ -1,0 +1,288 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-o-d-glucopyranosyl-g-to-d-glucopyranose",
+  "name": "2-O-(α-D-glucopyranosyl)g… to D-glucopyranose",
+  "category": "other",
+  "summary": "A 3-step route from 2-O-(α-D-glucopyranosyl)glycerol to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56416"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:82766"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_o_d_glucopyranosyl_glycerol",
+      "name": "2-O-(α-D-glucopyranosyl)glycerol",
+      "short": "2-O-(α-D-glucopyran…",
+      "formula": "C9H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82766"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    },
+    {
+      "id": "gdp_l_galactose",
+      "name": "GDP-β-L-galactose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61454"
+      }
+    },
+    {
+      "id": "l_galactose_1_phosphate",
+      "name": "β-L-galactose 1-phosphate",
+      "short": "β-L-galactose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75522"
+      }
+    },
+    {
+      "id": "gdp_d_glucose",
+      "name": "GDP-α-D-glucose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62230"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_359",
+      "name": "glucosylglycerol phosphorylase (configuration-retaining)",
+      "ec": [
+        "2.4.1.359"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_69",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "ec": [
+        "2.7.7.69"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_42",
+      "name": "GDP-glucosidase",
+      "ec": [
+        "3.2.1.42"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucosylglycerol phosphorylase (configuration-retaining)",
+      "equation": "2-O-(alpha-D-glucopyranosyl)glycerol + phosphate = alpha-D-glucose 1-phosphate + glycerol",
+      "ec": "2.4.1.359",
+      "substrates": [
+        {
+          "metabolite": "2_o_d_glucopyranosyl_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_359"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56416"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "equation": "GDP-beta-L-galactose + alpha-D-glucose 1-phosphate = beta-L-galactose 1-phosphate + GDP-alpha-D-glucose",
+      "ec": "2.7.7.69",
+      "substrates": [
+        {
+          "metabolite": "gdp_l_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_galactose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:65712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "GDP-glucosidase",
+      "equation": "GDP-alpha-D-glucose + H2O = D-glucose + GDP + H(+)",
+      "ec": "3.2.1.42",
+      "substrates": [
+        {
+          "metabolite": "gdp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15049"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15049"
+          }
+        ]
+      }
+    }
+  ]
+}

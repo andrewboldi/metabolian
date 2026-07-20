@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-behenoylglycerol-to-n-docosanoylsphinganine",
   "name": "1-behenoylglycerol to N-docosanoylsphinganine",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 1-behenoylglycerol to N-docosanoylsphinganine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -128,57 +128,23 @@
       }
     },
     {
-      "id": "fe2",
-      "name": "Ferrous iron (Fe2+)",
-      "formula": "Fe",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:29033"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "2_hydroxybehenate",
-      "name": "2-hydroxybehenate",
-      "formula": "C22H43O3",
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76722"
+        "chebi": "CHEBI:64479"
       }
     },
     {
-      "id": "iron",
-      "name": "iron",
-      "formula": "Fe",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:29034"
-      }
-    },
-    {
-      "id": "1_icosanoylglycerol",
-      "name": "1-icosanoylglycerol",
-      "formula": "C23H46O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142495"
-      }
-    },
-    {
-      "id": "icosanoate",
-      "name": "icosanoate",
-      "formula": "C20H39O2",
+      "id": "o_s_docosanoylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-(S-docosanoylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-docosanoylpant…",
+      "formula": "C36H67N3O9PS",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:32360"
+        "chebi": "CHEBI:142238"
       }
     },
     {
@@ -210,42 +176,38 @@
       }
     },
     {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
       "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:162247"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
+      "id": "guaiene",
+      "name": "δ-guaiene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:128769"
-      }
-    },
-    {
-      "id": "ditrans_polycis_tridecaprenyl_diphosphate",
-      "name": "ditrans,polycis-tridecaprenyl diphosphate",
-      "short": "ditrans,polycis-tri…",
-      "formula": "C65H105O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60385"
+        "chebi": "CHEBI:63447"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_5_1_88",
-      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "id": "ec_6_2_1_59",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
       "ec": [
-        "2.5.1.88"
+        "6.2.1.59"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_93",
+      "name": "delta-guaiene synthase",
+      "ec": [
+        "4.2.3.93"
       ]
     }
   ],
@@ -385,100 +347,59 @@
     },
     {
       "id": "r4",
-      "name": "docosanoate + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 2-hydroxydocosanoate + 2 Fe(III)...",
-      "equation": "docosanoate + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 2-hydroxydocosanoate + 2 Fe(III)-[cytochrome b5] + H2O",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "equation": "holo-[(phenol)carboxyphthiodiolenone synthase] + docosanoate + ATP = docosanoyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
+      "ec": "6.2.1.59",
       "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "behenate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fe2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "2_hydroxybehenate",
+          "metabolite": "o_s_docosanoylpantetheine_4_phosphoryl_l_serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "iron",
-          "stoichiometry": 2
+          "metabolite": "amp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "ppi",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_59"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:39819"
+        "rhea": "RHEA:59160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39819"
+            "id": "RHEA:59160"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "1-eicosanoylglycerol + H2O = eicosanoate + glycerol + H(+)",
-      "equation": "1-eicosanoylglycerol + H2O = eicosanoate + glycerol + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_icosanoylglycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "icosanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:47072"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:47072"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "docosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-docosenoyl-CoA...",
       "equation": "docosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-docosenoyl-CoA + reduced [electron-transfer flavoprotein]",
       "substrates": [
@@ -506,7 +427,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:47228"
       },
@@ -521,46 +442,42 @@
       }
     },
     {
-      "id": "r7",
-      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
-      "equation": "(2Z,6E)-farnesyl diphosphate + 10 isopentenyl diphosphate = di-trans,deca-cis-tridecaprenyl diphosphate + 10 diphosphate",
-      "ec": "2.5.1.88",
+      "id": "r6",
+      "name": "delta-guaiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = delta-guaiene + diphosphate",
+      "ec": "4.2.3.93",
       "substrates": [
         {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 10
         }
       ],
       "products": [
         {
-          "metabolite": "ditrans_polycis_tridecaprenyl_diphosphate",
+          "metabolite": "guaiene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 10
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_88"
+          "enzyme": "ec_4_2_3_93"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:27614"
+        "rhea": "RHEA:31831"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27614"
+            "id": "RHEA:31831"
           }
         ]
       }

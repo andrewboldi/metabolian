@@ -24,19 +24,25 @@ pathway d-gal-1-3-d-galnac-to-n-acylsphingoid "β-D-Gal-(1→3)-β-D-GalNAc-… 
 
   branch from n_acylsphingoid side right {
     n_acylsphingoid
-    <-> . +galactosylceramide +h2o
-    d_galactopyranose
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +h2o
+    lactose
   }
 
   branch from inositol_phosphoceramide side left {
     inositol_phosphoceramide
     <-> . +gdp_d_mannose +gdp +hplus
-    mannosylinositol_phosphorylceramide
+    man_1_6_ins_1_p_cer
   }
 
   branch from dag side right {
     dag
-    <-> ec_2_7_8_42 [2.7.8.42] +kdo_2_lipid_iva +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    7_o_2_aminoethyl_phosphoryl_kdo_2_4_kdo_2_6_lipi
+    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
+    pser
+  }
+
+  branch from 1d_myo_inositol_1_phosphate side left {
+    1d_myo_inositol_1_phosphate
+    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +h2o +hplus
+    1_acyl_sn_glycerol
   }
 }

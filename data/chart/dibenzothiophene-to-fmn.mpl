@@ -20,7 +20,7 @@ pathway dibenzothiophene-to-fmn "dibenzothiophene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +3_hydroxypalmitate +fmnh2 +o2 +h2o +hplus
-    3_16_dihydroxyhexadecanoate
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    2_hydroxy_17_estradiol
   }
 }

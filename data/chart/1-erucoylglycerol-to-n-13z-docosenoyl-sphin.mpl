@@ -22,21 +22,15 @@ pathway 1-erucoylglycerol-to-n-13z-docosenoyl-sphin "1-erucoylglycerol to N-[(13
     nh3
   }
 
-  branch from glycerol side right {
-    glycerol
-    <-> . +prostaglandin_e2_1_glyceryl_ester +h2o +hplus
-    prostaglandin_e2
-  }
-
-  branch from erucoyl_coa side left {
+  branch from erucoyl_coa side right {
     erucoyl_coa
-    <-> . +phytosphingosine +coa +hplus
-    n_13z_docosenoyl_phytosphingosine
+    <-> . +fad +hplus +fadh2
+    2e_13z_docosadienoyl_coa
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
-    ditrans_polycis_tetradecaprenyl_diphosphate
+    <-> ec_4_2_3_104 [4.2.3.104] +fpp
+    1e_4e_8e_humulene
   }
 }

@@ -1,0 +1,369 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "marmesin-to-fmn",
+  "name": "(+)-marmesin to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (+)-marmesin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19281"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:6695"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "marmesin",
+      "name": "(+)-marmesin",
+      "formula": "C14H14O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6695"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "psoralen",
+      "name": "psoralen",
+      "formula": "C11H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27616"
+      }
+    },
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15347"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "xanthotoxol",
+      "name": "xanthotoxol",
+      "formula": "C11H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15709"
+      }
+    },
+    {
+      "id": "discoidol",
+      "name": "discoidol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192996"
+      }
+    },
+    {
+      "id": "discodiene",
+      "name": "discodiene",
+      "formula": "C12H18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193096"
+      }
+    },
+    {
+      "id": "prostaglandin_a1",
+      "name": "prostaglandin A1",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57398"
+      }
+    },
+    {
+      "id": "20_hydroxyprostaglandin_a1",
+      "name": "20-hydroxyprostaglandin A1",
+      "short": "20-hydroxyprostagla…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136663"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_141",
+      "name": "psoralen synthase",
+      "ec": [
+        "1.14.14.141"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "psoralen synthase",
+      "equation": "(7S)-marmesin + reduced [NADPH--hemoprotein reductase] + O2 = psoralen + acetone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.141",
+      "substrates": [
+        {
+          "metabolite": "marmesin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "psoralen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_141"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19281"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19281"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "psoralen + reduced [NADPH--hemoprotein reductase] + O2 = xanthotoxol + oxidized [NADPH-...",
+      "equation": "psoralen + reduced [NADPH--hemoprotein reductase] + O2 = xanthotoxol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "psoralen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthotoxol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:68548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68548"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "discoidol + reduced [NADPH--hemoprotein reductase] + O2 = discodiene + acetone + oxidiz...",
+      "equation": "discoidol + reduced [NADPH--hemoprotein reductase] + O2 = discodiene + acetone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "discoidol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "discodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:74107"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "prostaglandin A1 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy prostagland...",
+      "equation": "prostaglandin A1 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy prostaglandin A1 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxyprostaglandin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52524"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52524"
+          }
+        ]
+      }
+    }
+  ]
+}

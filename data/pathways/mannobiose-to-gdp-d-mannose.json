@@ -93,50 +93,22 @@
       }
     },
     {
-      "id": "gdp_d_glucose",
-      "name": "GDP-α-D-glucose",
+      "id": "gdp_l_galactose",
+      "name": "GDP-β-L-galactose",
       "formula": "C16H23N5O16P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:62230"
+        "chebi": "CHEBI:61454"
       }
     },
     {
-      "id": "g1p",
-      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
-      "short": "alpha-D-Glucose…",
+      "id": "l_galactose_1_phosphate",
+      "name": "β-L-galactose 1-phosphate",
+      "short": "β-L-galactose 1-P",
       "formula": "C6H11O9P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58601"
-      }
-    },
-    {
-      "id": "glucoerucin",
-      "name": "glucoerucin",
-      "formula": "C12H22NO9S3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:5404"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim",
-      "name": "(Z)-4-methylsulfanylbutyl-N-(sulfonatooxy)methanimidothioate",
-      "short": "4-methylsulfanylbut…",
-      "formula": "C6H12NO4S3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:183222"
+        "chebi": "CHEBI:75522"
       }
     },
     {
@@ -146,6 +118,15 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
       }
     },
     {
@@ -326,11 +307,11 @@
     {
       "id": "r4",
       "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
-      "equation": "GDP-alpha-D-glucose + alpha-D-mannose 1-phosphate = alpha-D-glucose 1-phosphate + GDP-alpha-D-mannose",
+      "equation": "GDP-beta-L-galactose + alpha-D-mannose 1-phosphate = beta-L-galactose 1-phosphate + GDP-alpha-D-mannose",
       "ec": "2.7.7.69",
       "substrates": [
         {
-          "metabolite": "gdp_d_glucose",
+          "metabolite": "gdp_l_galactose",
           "stoichiometry": 1
         },
         {
@@ -340,7 +321,7 @@
       ],
       "products": [
         {
-          "metabolite": "g1p",
+          "metabolite": "l_galactose_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -356,59 +337,20 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:66032"
+        "rhea": "RHEA:65708"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66032"
+            "id": "RHEA:65708"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "glucoerucin + H2O = (Z)-4-methylsulfanylbutyl-N-(sulfonatooxy)methanimidothioate + D-gl...",
-      "equation": "glucoerucin + H2O = (Z)-4-methylsulfanylbutyl-N-(sulfonatooxy)methanimidothioate + D-glucose",
-      "substrates": [
-        {
-          "metabolite": "glucoerucin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69320"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69320"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "GDP-mannose 6-dehydrogenase",
       "equation": "GDP-alpha-D-mannose + 2 NAD(+) + H2O = GDP-alpha-D-mannuronate + 2 NADH + 3 H(+)",
       "ec": "1.1.1.132",
@@ -446,7 +388,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:21728"
       },

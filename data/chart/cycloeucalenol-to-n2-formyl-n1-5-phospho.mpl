@@ -16,21 +16,15 @@ pathway cycloeucalenol-to-n2-formyl-n1-5-phospho "cycloeucalenol to N2-formyl-N1
     n2_formyl_n1_5_phospho_d_ribosyl_glycinamide
   }
 
-  branch from obtusifoliol side left {
-    obtusifoliol
-    <-> . +di_sulfido_diiron +o2 +hplus +4_methyl_5_ergosta_8_14_24_28_trien_3_ol +formate +h2o
-    di_sulfido_diiron
-  }
-
-  branch from formate side right {
+  branch from formate side left {
     formate
-    <-> . +24_25_dihydrolanosterol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    4_4_dimethyl_8_14_cholestadien_3_ol
+    <-> ec_1_14_19_80 [1.14.19.80] +19e_geissoschizine +fmnh2 +o2 +fmn +h2o +hplus
+    akuammicine
   }
 
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> ec_1_14_14_149 [1.14.14.149] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
-    capsidiol
+    <-> ec_1_14_14_151 [1.14.14.151] +premnaspirodiene +fmnh2 +o2 +h2o +hplus
+    solavetivone
   }
 }

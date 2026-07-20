@@ -149,39 +149,31 @@
       }
     },
     {
-      "id": "l_saccharopinate",
-      "name": "L-saccharopinate",
-      "formula": "C11H19N2O6",
-      "charge": -1,
+      "id": "s_2_hydroxyglutarate",
+      "name": "(S)-2-hydroxyglutarate",
+      "short": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57951"
+        "chebi": "CHEBI:16782"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58349"
+        "chebi": "CHEBI:57692"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:32551"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
+        "chebi": "CHEBI:58307"
       }
     }
   ],
@@ -219,13 +211,6 @@
       "name": "kanosamine kinase",
       "ec": [
         "2.7.1.179"
-      ]
-    },
-    {
-      "id": "ec_1_5_1_8",
-      "name": "saccharopine dehydrogenase (NADP(+), L-lysine-forming)",
-      "ec": [
-        "1.5.1.8"
       ]
     }
   ],
@@ -473,34 +458,15 @@
     },
     {
       "id": "r6",
-      "name": "saccharopine dehydrogenase (NADP(+), L-lysine-forming)",
-      "equation": "L-saccharopine + NADP(+) + H2O = L-lysine + 2-oxoglutarate + NADPH + H(+)",
-      "ec": "1.5.1.8",
+      "name": "(S)-2-hydroxyglutarate + FAD + H(+) = FADH2 + 2-oxoglutarate",
+      "equation": "(S)-2-hydroxyglutarate + FAD + H(+) = FADH2 + 2-oxoglutarate",
       "substrates": [
         {
-          "metabolite": "l_saccharopinate",
+          "metabolite": "s_2_hydroxyglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "fad",
           "stoichiometry": 1
         },
         {
@@ -508,22 +474,27 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_5_1_8"
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:19373"
+        "rhea": "RHEA:30087"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19373"
+            "id": "RHEA:30087"
           }
         ]
       }

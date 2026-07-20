@@ -20,25 +20,25 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-
 
   branch from 1_sn_glycero_3_o_phosphonato_1d_myo_inositol side left {
     1_sn_glycero_3_o_phosphonato_1d_myo_inositol
-    <-> . +1_phosphatidyl_1d_myo_inositol +h2o +hplus
-    carboxylic_acid_anion
+    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol
+    1_phosphatidyl_1d_myo_inositol
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_2_dioleoylglycerol +h2o +hplus
-    1_oleoylglycerol
+    <-> . +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc +h2o +hplus
+    sn_glycero_3_phospho_1_sn_glycerol
   }
 
   branch from 1d_myo_inositol_1_phosphate side left {
     1d_myo_inositol_1_phosphate
-    <-> . +inositol_phosphophytoceramide_t18_0 +h2o +hplus
-    n_acylphytosphingosine
+    <-> . +2_acyl_sn_glycero_3_phospho_1d_myo_inositol +h2o +hplus
+    2_monoglyceride
   }
 
-  branch from glycerol side right {
-    glycerol
-    <-> . +1_monolauroylglycerol +h2o +hplus
-    dodecanoate
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
+    dtdp_d_ravidosamine
   }
 }

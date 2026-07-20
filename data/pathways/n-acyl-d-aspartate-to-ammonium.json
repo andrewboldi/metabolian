@@ -1,0 +1,408 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acyl-d-aspartate-to-ammonium",
+  "name": "N-acyl-D-aspartate to ammonium",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from N-acyl-D-aspartate(2−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18285"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57512"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acyl_d_aspartate",
+      "name": "N-acyl-D-aspartate",
+      "formula": "C5H4NO5R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57512"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_aspartate",
+      "name": "D-aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29990"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "sphingomyelin",
+      "name": "Sphingomyelin",
+      "formula": "C24H48N2O6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17636"
+      }
+    },
+    {
+      "id": "sphingosine_1_phosphocholine",
+      "name": "sphingosine-1-phosphocholine",
+      "short": "sphingosine-1-phosp…",
+      "formula": "C23H50N2O5P",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58906"
+      }
+    },
+    {
+      "id": "enol_oxaloacetate",
+      "name": "enol-oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17479"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "sym_homospermidinium",
+      "name": "sym-homospermidinium",
+      "formula": "C8H24N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57811"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_83",
+      "name": "N-acyl-D-aspartate deacylase",
+      "ec": [
+        "3.5.1.83"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_1",
+      "name": "D-aspartate oxidase",
+      "ec": [
+        "1.4.3.1"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_15",
+      "name": "D-glutamate(D-aspartate) oxidase",
+      "ec": [
+        "1.4.3.15"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_109",
+      "name": "sphingomyelin deacylase",
+      "ec": [
+        "3.5.1.109"
+      ]
+    },
+    {
+      "id": "ec_5_3_2_2",
+      "name": "oxaloacetate tautomerase",
+      "ec": [
+        "5.3.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_44",
+      "name": "homospermidine synthase",
+      "ec": [
+        "2.5.1.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acyl-D-aspartate deacylase",
+      "equation": "an N-acyl-D-aspartate + H2O = D-aspartate + a carboxylate",
+      "ec": "3.5.1.83",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_d_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18285"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18285"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-aspartate oxidase",
+      "equation": "D-aspartate + O2 + H2O = oxaloacetate + H2O2 + NH4(+)",
+      "ec": "1.4.3.1",
+      "substrates": [
+        {
+          "metabolite": "d_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sphingomyelin deacylase",
+      "equation": "a sphingomyelin + H2O = sphing-4-enine-phosphocholine + a carboxylate",
+      "ec": "3.5.1.109",
+      "substrates": [
+        {
+          "metabolite": "sphingomyelin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphingosine_1_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30911"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30911"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "oxaloacetate tautomerase",
+      "equation": "oxaloacetate = enol-oxaloacetate",
+      "ec": "5.3.2.2",
+      "substrates": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "enol_oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16021"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16021"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "homospermidine synthase",
+      "equation": "2 putrescine = sym-homospermidine + NH4(+)",
+      "ec": "2.5.1.44",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sym_homospermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:18645"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18645"
+          }
+        ]
+      }
+    }
+  ]
+}

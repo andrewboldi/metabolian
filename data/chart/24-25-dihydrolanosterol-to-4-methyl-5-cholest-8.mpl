@@ -20,7 +20,7 @@ pathway 24-25-dihydrolanosterol-to-4-methyl-5-cholest-8 "24,25-dihydrolanosterol
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_177 [1.14.14.177] +triacontanoate +fmnh2 +o2 +h2o +hplus
-    hydroxytriacontanoate
+    <-> ec_1_14_14_163 [1.14.14.163] +s_1_hydroxy_n_methylcanadine +fmnh2 +o2 +h2o +hplus
+    13s_14r_1_13_dihydroxy_n_methylcanadine
   }
 }

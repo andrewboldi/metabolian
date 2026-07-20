@@ -20,7 +20,7 @@ pathway isoepoxydon-to-hydrogen-donor "(+)-isoepoxydon to hydrogen donor" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +oleoyl_coa +o2 +hydrogen_acceptor +h2o
-    linoleoyl_coa
+    <-> ec_1_14_99_64 [1.14.99.64] +adonixanthin +o2 +hydrogen_acceptor +h2o
+    astaxanthin
   }
 }

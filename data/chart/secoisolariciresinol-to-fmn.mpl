@@ -28,25 +28,25 @@ pathway secoisolariciresinol-to-fmn "(−)-secoisolariciresinol to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_36 [1.14.14.36] +tyrosine +fmnh2 +o2 +co2 +h2o +hplus
-    e_4_hydroxyphenyl_acetaldehyde_oxime
+    <-> ec_1_14_14_33 [1.14.14.33] +edta +fmnh2 +o2 +glyoxylate +h2o +hplus
+    ethylenediaminediacetate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_16 [2.1.1.16] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
-    1_acyl_2_10_methylenealkanoyl_sn_3_glycerophosph
+    <-> ec_2_1_1_78 [2.1.1.78] +isoorientin +sam +hplus
+    isoscoparin_7_olate
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
-    3s_3_hydroxy_l_arginine
+    <-> ec_1_14_11_n4 [1.14.11.n4] +l_aspartate +akg +o2 +co2
+    3s_3_hydroxy_l_aspartate
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    adenosine_5_monophosphate_1
+    <-> . +n_n_dimethyl_l_arginine_1 +akg +o2 +succinate +co2
+    l_argininium
   }
 }

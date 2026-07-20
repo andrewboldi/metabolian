@@ -22,7 +22,7 @@ pathway levoglucosan-to-3-amino-3-deoxy-6-o-phosp "levoglucosan to 3-amino-3-deo
 
   branch from akg side left {
     akg
-    <-> ec_1_5_1_8 [1.5.1.8] +l_saccharopinate +nadp +h2o +nadph +hplus
-    l_lysinium
+    <-> . +fad +hplus +fadh2
+    s_2_hydroxyglutarate
   }
 }

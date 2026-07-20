@@ -1,0 +1,399 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-guanidinopropanoic-acid-to-l-lysinium",
+  "name": "3-guanidinopropanoic acid to L-lysinium",
+  "category": "other",
+  "summary": "A 3-step route from 3-guanidinopropanoic acid zwitterion to L-lysinium(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16029"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57593"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_guanidinopropanoic_acid",
+      "name": "3-guanidinopropanoic acid",
+      "short": "3-guanidinopropanoi…",
+      "formula": "C4H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57593"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "β-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57966"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "alanyl_l_lysinium",
+      "name": "β-alanyl-L-lysinium",
+      "formula": "C9H20N3O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143161"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "alanyl_5_amp",
+      "name": "β-alanyl-5'-AMP",
+      "formula": "C13H19N6O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192795"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "d_lysinium",
+      "name": "D-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32557"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_3_17",
+      "name": "guanidinopropionase",
+      "ec": [
+        "3.5.3.17"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_11",
+      "name": "carnosine synthase",
+      "ec": [
+        "6.3.2.11"
+      ]
+    },
+    {
+      "id": "ec_3_4_13_4",
+      "name": "Xaa-Arg dipeptidase",
+      "ec": [
+        "3.4.13.4"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_5",
+      "name": "lysine racemase",
+      "ec": [
+        "5.1.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "guanidinopropionase",
+      "equation": "3-guanidinopropanoate + H2O = urea + beta-alanine",
+      "ec": "3.5.3.17",
+      "substrates": [
+        {
+          "metabolite": "3_guanidinopropanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16029"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16029"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "carnosine synthase",
+      "equation": "beta-alanine + L-lysine + ATP = beta-alanyl-L-lysine + ADP + phosphate + H(+)",
+      "ec": "6.3.2.11",
+      "substrates": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59584"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Xaa-Arg dipeptidase",
+      "equation": "beta-alanyl-L-lysine + H2O = beta-alanine + L-lysine",
+      "ec": "3.4.13.4",
+      "substrates": [
+        {
+          "metabolite": "alanyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_13_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59608"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59608"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-alanine + ATP + H(+) = beta-alanyl-5'-AMP + diphosphate",
+      "equation": "beta-alanine + ATP + H(+) = beta-alanyl-5'-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanyl_5_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:73339"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lysine racemase",
+      "equation": "L-lysine = D-lysine",
+      "ec": "5.1.1.5",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22864"
+          }
+        ]
+      }
+    }
+  ]
+}

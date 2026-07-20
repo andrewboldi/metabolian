@@ -113,30 +113,31 @@
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
+      "id": "o_carbamoyl_l_serine",
+      "name": "O-carbamoyl-L-serine",
+      "formula": "C4H8N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57912"
+        "chebi": "CHEBI:57594"
       }
     },
     {
-      "id": "1h_indole",
-      "name": "1H-indole",
-      "formula": "C8H7N",
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16881"
+        "chebi": "CHEBI:76565"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -153,13 +154,6 @@
       "name": "hydroxymethylpyrimidine kinase",
       "ec": [
         "2.7.1.49"
-      ]
-    },
-    {
-      "id": "ec_4_1_99_1",
-      "name": "tryptophanase",
-      "ec": [
-        "4.1.99.1"
       ]
     }
   ],
@@ -299,49 +293,43 @@
     },
     {
       "id": "r4",
-      "name": "tryptophanase",
-      "equation": "L-tryptophan + H2O = indole + pyruvate + NH4(+)",
-      "ec": "4.1.99.1",
+      "name": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
+      "equation": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
       "substrates": [
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "o_carbamoyl_l_serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1h_indole",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
+          "metabolite": "2_ammonioprop_2_enoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_4_1_99_1"
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19553"
+        "rhea": "RHEA:43004"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19553"
+            "id": "RHEA:43004"
           }
         ]
       }

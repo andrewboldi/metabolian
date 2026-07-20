@@ -24,8 +24,8 @@ pathway r-2-4-chloro-2-methylp-to-4-chloro-2-methyl-cis "(R)-2-(4-chloro-2-methy
 
   branch from succinate side right {
     succinate
-    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +malate
-    3s_3_carboxy_3_hydroxypropanoyl_coa
+    <-> . +octanoyl_coa +akg +o2 +co2
+    2_hydroxyoctanoyl_coa
   }
 
   branch from 4_chloro_2_methyl_cis_cis_muconate side left {

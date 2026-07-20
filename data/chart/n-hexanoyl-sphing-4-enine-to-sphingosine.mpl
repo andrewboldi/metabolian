@@ -26,19 +26,19 @@ pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to 
 
   branch from sphingosine side right {
     sphingosine
-    <-> . +sam +sah +hplus
-    n_n_dimethylsphingosine
+    <-> . +2_o_acetyl_1_o_hexadecyl_sn_glycero_3_phosphocho +n_acetylsphingosine +hplus
+    lysophosphatidylcholine_o_16_0_0_0
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +n_acylsphingosine +hplus
-    n_acylsphingosine_1_phosphoethanolamine
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
+    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
   }
 
   branch from choline side right {
     choline
-    <-> . +1_oleyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_oleyl_sn_glycero_3_phosphate
+    <-> . +phosphatidylcholine +serine
+    3_sn_phosphatidyl_l_serine
   }
 }

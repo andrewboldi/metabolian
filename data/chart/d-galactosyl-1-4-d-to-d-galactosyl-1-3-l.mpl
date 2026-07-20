@@ -28,14 +28,14 @@ pathway d-galactosyl-1-4-d-to-d-galactosyl-1-3-l "β-D-galactosyl-(1→4)-β-D-�
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +h2o +pi +hplus
-    ctp
+    <-> . +n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d +cmp_n_acetyl_9_o_acetylneuraminate +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne
   }
 
   branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side left {
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +cytidine_5_monophosphate +hplus
-    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
+    <-> . +udp_n_acetyl_d_galactosamine +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_3_n
   }
 
   branch from l_fuc_1_2_d_gal_1_3_d_galnac_1_4_neu5ac_2_3_d_g side right {

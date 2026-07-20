@@ -111,52 +111,44 @@
       }
     },
     {
-      "id": "13_s_hpode",
-      "name": "13(S)-HPODE",
-      "formula": "C18H31O4",
+      "id": "12_r_hpete",
+      "name": "12(R)-HPETE",
+      "formula": "C20H31O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57466"
+        "chebi": "CHEBI:75230"
       }
     },
     {
-      "id": "13_s_hode",
-      "name": "13(S)-HODE",
-      "formula": "C18H31O3",
+      "id": "12_r_hete",
+      "name": "12(R)-HETE",
+      "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90850"
+        "chebi": "CHEBI:83343"
       }
     },
     {
-      "id": "s_acylglutathionate",
-      "name": "S-acylglutathionate",
-      "formula": "C11H15N3O7SR",
+      "id": "prostaglandin_a2",
+      "name": "prostaglandin A2",
+      "formula": "C20H29O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60058"
+        "chebi": "CHEBI:133370"
       }
     },
     {
-      "id": "carboxylic_acid_anion",
-      "name": "carboxylic acid anion",
-      "short": "carboxylic acid…",
-      "formula": "CO2R",
-      "charge": -1,
+      "id": "s_pga2_s_glutathione_conjugate",
+      "name": "(S)-PGA2-S-glutathione conjugate",
+      "short": "PGA2-S-glutathione…",
+      "formula": "C30H45N3O10S",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:29067"
+        "chebi": "CHEBI:133769"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_3_1_2_7",
-      "name": "glutathione thiolesterase",
-      "ec": [
-        "3.1.2.7"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -297,11 +289,11 @@
     },
     {
       "id": "r4",
-      "name": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-oc...",
-      "equation": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-octadecadienoate + glutathione disulfide + H2O",
+      "name": "(12R)-hydroperoxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + 2 glutathione = (12R)-hydroxy-(5Z...",
+      "equation": "(12R)-hydroperoxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + 2 glutathione = (12R)-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + glutathione disulfide + H2O",
       "substrates": [
         {
-          "metabolite": "13_s_hpode",
+          "metabolite": "12_r_hpete",
           "stoichiometry": 1
         },
         {
@@ -311,7 +303,7 @@
       ],
       "products": [
         {
-          "metabolite": "13_s_hode",
+          "metabolite": "12_r_hete",
           "stoichiometry": 1
         },
         {
@@ -326,63 +318,49 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:48888"
+        "rhea": "RHEA:76691"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48888"
+            "id": "RHEA:76691"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "glutathione thiolesterase",
-      "equation": "an S-acylglutathione + H2O = a carboxylate + glutathione + H(+)",
-      "ec": "3.1.2.7",
+      "name": "prostaglandin A2 + glutathione = prostaglandin A2-S-(S)-glutathione",
+      "equation": "prostaglandin A2 + glutathione = prostaglandin A2-S-(S)-glutathione",
       "substrates": [
         {
-          "metabolite": "s_acylglutathionate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "carboxylic_acid_anion",
+          "metabolite": "prostaglandin_a2",
           "stoichiometry": 1
         },
         {
           "metabolite": "gsh",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_3_1_2_7"
+          "metabolite": "s_pga2_s_glutathione_conjugate",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:22708"
+        "rhea": "RHEA:50800"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22708"
+            "id": "RHEA:50800"
           }
         ]
       }

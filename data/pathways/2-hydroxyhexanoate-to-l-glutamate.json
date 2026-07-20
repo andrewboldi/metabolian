@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-hydroxyhexanoate-to-l-glutamate",
   "name": "2-hydroxyhexanoate to L-glutamate",
-  "category": "nucleotide-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from 2-hydroxyhexanoate to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -110,39 +110,67 @@
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
+      "id": "2r_hydroxyhexanoate",
+      "name": "(2R)-hydroxyhexanoate",
+      "short": "hydroxyhexanoate",
+      "formula": "C6H11O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:232386"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "mercaptopyruvate",
+      "name": "3-Mercaptopyruvate",
+      "formula": "C3H3O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57678"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
+        "chebi": "CHEBI:35235"
       }
     },
     {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
+      "id": "l_propargylglycine",
+      "name": "L-propargylglycine",
+      "formula": "C5H7NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58359"
+        "chebi": "CHEBI:143285"
       }
     },
     {
@@ -155,13 +183,13 @@
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
+      "id": "l_glutamyl_l_propargylglycine",
+      "name": "L-γ-glutamyl-L-propargylglycine",
+      "short": "L-γ-glutamyl-L-prop…",
+      "formula": "C10H13N2O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:37563"
+        "chebi": "CHEBI:143286"
       }
     },
     {
@@ -181,15 +209,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
     }
   ],
   "enzymes": [
@@ -198,13 +217,6 @@
       "name": "2-aminohexanoate transaminase",
       "ec": [
         "2.6.1.67"
-      ]
-    },
-    {
-      "id": "ec_6_3_4_2",
-      "name": "CTP synthase (glutamine hydrolyzing)",
-      "ec": [
-        "6.3.4.2"
       ]
     }
   ],
@@ -338,15 +350,58 @@
     },
     {
       "id": "r4",
-      "name": "L-kynurenine + pyruvate = kynurenate + L-alanine + H2O",
-      "equation": "L-kynurenine + pyruvate = kynurenate + L-alanine + H2O",
+      "name": "(2R)-hydroxyhexanoate + NAD(+) = 2-oxohexanoate + NADH + H(+)",
+      "equation": "(2R)-hydroxyhexanoate + NAD(+) = 2-oxohexanoate + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "l_kynurenine",
+          "metabolite": "2r_hydroxyhexanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:86071"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-oxo-3-sulfanylpropanoate + L-kynurenine = kynurenate + L-cysteine + H2O",
+      "equation": "2-oxo-3-sulfanylpropanoate + L-kynurenine = kynurenate + L-cysteine + H2O",
+      "substrates": [
+        {
+          "metabolite": "mercaptopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_kynurenine",
           "stoichiometry": 1
         }
       ],
@@ -356,7 +411,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "cysteine",
           "stoichiometry": 1
         },
         {
@@ -365,50 +420,41 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:65916"
+        "rhea": "RHEA:69104"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65916"
+            "id": "RHEA:69104"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "CTP synthase (glutamine hydrolyzing)",
-      "equation": "UTP + L-glutamine + ATP + H2O = CTP + L-glutamate + ADP + phosphate + 2 H(+)",
-      "ec": "6.3.4.2",
+      "id": "r6",
+      "name": "L-propargylglycine + L-glutamate + ATP = L-gamma-glutamyl-L-propargylglycine + ADP + ph...",
+      "equation": "L-propargylglycine + L-glutamate + ATP = L-gamma-glutamyl-L-propargylglycine + ADP + phosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "utp",
+          "metabolite": "l_propargylglycine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamine",
+          "metabolite": "glutamate",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
+          "metabolite": "l_glutamyl_l_propargylglycine",
           "stoichiometry": 1
         },
         {
@@ -421,25 +467,20 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_4_2"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:26426"
+        "rhea": "RHEA:59896"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26426"
+            "id": "RHEA:59896"
           }
         ]
       }

@@ -26,7 +26,7 @@ pathway butyrobetainyl-coa-to-diphosphate "γ-butyrobetainyl-CoA to diphosphate"
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_115 [4.2.3.115] +gpp
-    terpinene
+    <-> . +mutildienyl_diphosphate +h2o
+    premutilin
   }
 }

@@ -104,26 +104,6 @@
       }
     },
     {
-      "id": "1_stearoyl_2_10_hydroxyoctadecanoyl_sn_glycero_3",
-      "name": "1-stearoyl,2-(10-hydroxyoctadecanoyl)-sn-glycero-3-phospho-L-serine",
-      "short": "1-stearoyl,2-(10-hy…",
-      "formula": "C42H81NO11P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:143088"
-      }
-    },
-    {
-      "id": "1_stearoyl_sn_glycero_3_phosphoserine",
-      "name": "1-stearoyl-sn-glycero-3-phosphoserine",
-      "short": "1-stearoyl-sn-glyce…",
-      "formula": "C24H47NO9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:84467"
-      }
-    },
-    {
       "id": "linoleoyl_coa",
       "name": "linoleoyl-CoA",
       "formula": "C39H62N7O17P3S",
@@ -143,23 +123,21 @@
       }
     },
     {
-      "id": "5_9z_octadecenoyloxy_octadecanoate",
-      "name": "5-[(9Z)-octadecenoyloxy]octadecanoate",
-      "short": "5-[(9Z)-octadecenoy…",
-      "formula": "C36H67O4",
+      "id": "n_oleoyl_l_tyrosine",
+      "name": "N-oleoyl-L-tyrosine",
+      "formula": "C27H42NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:136389"
+        "chebi": "CHEBI:149734"
       }
     },
     {
-      "id": "5_hydroxyoctadecanoate",
-      "name": "5-hydroxyoctadecanoate",
-      "short": "5-hydroxyoctadecano…",
-      "formula": "C18H35O3",
-      "charge": -1,
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:136370"
+        "chebi": "CHEBI:58315"
       }
     }
   ],
@@ -292,49 +270,6 @@
     },
     {
       "id": "r4",
-      "name": "1-octadecanoyl-2-(10-hydroxyoctadecanoyl)-sn-glycero-3-phospho-L-serine + H2O = 1-octad...",
-      "equation": "1-octadecanoyl-2-(10-hydroxyoctadecanoyl)-sn-glycero-3-phospho-L-serine + H2O = 1-octadecanoyl-sn-glycero-3-phosphoserine + 10-hydroxyoctadecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_stearoyl_2_10_hydroxyoctadecanoyl_sn_glycero_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_stearoyl_sn_glycero_3_phosphoserine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "10_hydroxyoctadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:59368"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59368"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "1-hexadecanoyl-sn-glycero-3-phospho-L-serine + (9Z,12Z)-octadecadienoyl-CoA = 1-hexadec...",
       "equation": "1-hexadecanoyl-sn-glycero-3-phospho-L-serine + (9Z,12Z)-octadecadienoyl-CoA = 1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phospho-L-serine + CoA",
       "substrates": [
@@ -358,7 +293,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:37535"
       },
@@ -373,12 +308,12 @@
       }
     },
     {
-      "id": "r6",
-      "name": "5-(9Z-octadecenoyloxy)-octadecanoate + H2O = 5-hydroxy-octadecanoate + (9Z)-octadecenoa...",
-      "equation": "5-(9Z-octadecenoyloxy)-octadecanoate + H2O = 5-hydroxy-octadecanoate + (9Z)-octadecenoate + H(+)",
+      "id": "r5",
+      "name": "N-(9Z-octadecenoyl)-L-tyrosine + H2O = L-tyrosine + (9Z)-octadecenoate",
+      "equation": "N-(9Z-octadecenoyl)-L-tyrosine + H2O = L-tyrosine + (9Z)-octadecenoate",
       "substrates": [
         {
-          "metabolite": "5_9z_octadecenoyloxy_octadecanoate",
+          "metabolite": "n_oleoyl_l_tyrosine",
           "stoichiometry": 1
         },
         {
@@ -388,29 +323,25 @@
       ],
       "products": [
         {
-          "metabolite": "5_hydroxyoctadecanoate",
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
           "metabolite": "oleate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:52100"
+        "rhea": "RHEA:64184"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52100"
+            "id": "RHEA:64184"
           }
         ]
       }

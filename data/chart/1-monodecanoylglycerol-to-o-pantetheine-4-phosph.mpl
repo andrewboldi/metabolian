@@ -24,8 +24,8 @@ pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol
 
   branch from glycerol side right {
     glycerol
-    <-> . +1_monomyristoylglycerol +h2o +hplus
-    tetradecanoate
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_3_phosphate
   }
 
   branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side left {
@@ -36,7 +36,13 @@ pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_30 [4.2.3.30] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_pimara_8_14_15_diene
+    <-> ec_4_2_3_63 [4.2.3.63] +fpp
+    cubenene
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +l_serine +coa +hplus
+    adenosine_3_5_bismonophosphate
   }
 }

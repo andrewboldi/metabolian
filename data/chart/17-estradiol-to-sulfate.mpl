@@ -18,19 +18,19 @@ pathway 17-estradiol-to-sulfate "17α-estradiol to sulfate" {
 
   branch from estrone side left {
     estrone
-    <-> ec_1_1_1_62 [1.1.1.62] +nadp +nadph +hplus
+    <-> ec_1_1_1_62 [1.1.1.62] +nad +nadh +hplus
     17_estradiol
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_14 [2.8.2.14] +taurolithocholate +3_phosphonato_5_adenylyl_sulfate +hplus
-    taurolithocholic_acid_sulfate
+    <-> ec_2_8_2_7 [2.8.2.7] +udp_n_acetyl_d_galactosamine_4_sulfate +3_phosphonato_5_adenylyl_sulfate +hplus
+    udp_n_acetyl_d_galactosamine_4_6_bissulfate
   }
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +primary_linear_alkyl_sulfate_ester +akg +o2 +succinate +co2 +hplus
-    aldehyde
+    <-> ec_3_1_6_22 [3.1.6.22] +2_butyloctyl_sulfate +h2o +hplus
+    2_butyl_1_octanol
   }
 }

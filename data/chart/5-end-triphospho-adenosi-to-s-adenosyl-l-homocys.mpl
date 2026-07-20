@@ -26,8 +26,8 @@ pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-aden
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_57 [4.2.3.57] +fpp
-    caryophyllene
+    <-> ec_4_2_3_95 [4.2.3.95] +fpp
+    cuprenene
   }
 
   branch from 5_end_n7_methyl_5_triphospho_guanosine_adenosine side left {
@@ -38,7 +38,7 @@ pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-aden
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_117 [2.1.1.117] +s_scoulerine +sam +hplus
-    s_tetrahydrocolumbamine
+    <-> ec_2_1_1_166 [2.1.1.166] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 }

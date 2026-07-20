@@ -16,27 +16,21 @@ pathway coenzyme-q10-to-ammonium "coenzyme Q10 to ammonium" {
     carbonyl_sulfide
   }
 
-  branch from ubiquinol_10 side left {
-    ubiquinol_10
-    <-> . +coenzyme_q10 +trans_4_hydroxy_l_proline +hplus
-    3r_5s_1_pyrroline_3_hydroxy_5_carboxylate
-  }
-
-  branch from trioxidosulfanidosulfate side right {
+  branch from trioxidosulfanidosulfate side left {
     trioxidosulfanidosulfate
     <-> ec_2_8_5_2 [2.8.5.2] +l_cysteine +iron +fe2 +hplus
     s_sulfosulfanyl_l_cysteine_1
   }
 
-  branch from thiocyanate side left {
+  branch from thiocyanate side right {
     thiocyanate
-    <-> ec_2_1_1_n4 [2.1.1.n4] +sam +sah
-    methyl_thiocyanate
+    <-> . +h2o2 +hplus +h2o
+    hypothiocyanous_acid
   }
 
-  branch from sulfite side right {
-    sulfite
-    <-> . +l_cysteate +hplus
-    2_ammonioprop_2_enoate
+  branch from nh3 side left {
+    nh3
+    <-> . +3_oxocyclopentanecarbonitrile +h2o
+    3_oxocyclopentanecarboxylate
   }
 }

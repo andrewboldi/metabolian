@@ -1,0 +1,188 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tetracenomycin-f2-to-tetracenomycin-d3",
+  "name": "tetracenomycin F2 to tetracenomycin D3",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from tetracenomycin F2(2−) to tetracenomycin D3(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38851"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77982"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tetracenomycin_f2",
+      "name": "tetracenomycin F2",
+      "formula": "C20H14O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77982"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "tetracenomycin_f1",
+      "name": "tetracenomycin F1",
+      "formula": "C20H13O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74931"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "tetracenomycin_d3",
+      "name": "tetracenomycin D3",
+      "formula": "C20H10O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77990"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_154",
+      "name": "tetracenomycin F2 cyclase",
+      "ec": [
+        "4.2.1.154"
+      ]
+    },
+    {
+      "id": "ec_1_13_12_21",
+      "name": "tetracenomycin-F1 monooxygenase",
+      "ec": [
+        "1.13.12.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tetracenomycin F2 cyclase",
+      "equation": "tetracenomycin F2 + H(+) = tetracenomycin F1 + H2O",
+      "ec": "4.2.1.154",
+      "substrates": [
+        {
+          "metabolite": "tetracenomycin_f2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetracenomycin_f1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_154"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38851"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tetracenomycin-F1 monooxygenase",
+      "equation": "tetracenomycin F1 + O2 = tetracenomycin D3 + H2O + H(+)",
+      "ec": "1.13.12.21",
+      "substrates": [
+        {
+          "metabolite": "tetracenomycin_f1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetracenomycin_d3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37447"
+          }
+        ]
+      }
+    }
+  ]
+}

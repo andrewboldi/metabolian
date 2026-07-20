@@ -22,27 +22,39 @@ pathway 4-coumaroyl-coa-to-ammonium "4-coumaroyl-CoA to ammonium" {
     homocysteine
   }
 
-  branch from sah side left {
+  branch from isoliquiritigenin side left {
+    isoliquiritigenin
+    <-> .
+    liquiritigenin
+  }
+
+  branch from sah side right {
     sah
-    <-> . +methylarsonous_acid +sam +hplus
-    dimethylarsinate
+    <-> ec_2_1_1_139 [2.1.1.139] +3_demethylstaurosporinium +sam +hplus
+    staurosporinium
   }
 
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_57 [3.5.1.57] +l_tryptophanamide +h2o
-    l_tryptophan
+    <-> ec_2_7_1_62 [2.7.1.62] +phosphoramidate +d_hexose +hplus
+    d_hexose_1_phosphate
   }
 
-  branch from homocysteine side left {
+  branch from homocysteine side right {
     homocysteine
-    <-> . +atp +amp +ppi
-    l_homocysteine_thiolactone
+    <-> . +c_terminal_n_glycylaminoethanethioate_1 +o_phosphonato_l_homoserine +h2o +pi
+    c_terminal_gly_gly_1
   }
 
-  branch from inosine side right {
+  branch from inosine side left {
     inosine
     <-> ec_3_2_2_2 [3.2.2.2] +h2o +d_ribofuranose
     hypoxanthine
+  }
+
+  branch from cystathionine side right {
+    cystathionine
+    <-> ec_2_5_1_160 [2.5.1.160] +cysteine +pi
+    o_phosphonato_l_homoserine
   }
 }

@@ -24,8 +24,8 @@ pathway 4-hydroxymandelate-to-hydrogen-donor "4-hydroxymandelate to hydrogen don
 
   branch from copper side left {
     copper
-    <-> . +copper +tyraminium +h2o +nh3 +hplus
-    4_hydroxyphenyl_acetaldehyde
+    <-> . +copper +ascorbate +hplus
+    mdha
   }
 
   branch from 4_hydroxybenzaldehyde side right {
@@ -36,13 +36,13 @@ pathway 4-hydroxymandelate-to-hydrogen-donor "4-hydroxymandelate to hydrogen don
 
   branch from arsenite side left {
     arsenite
-    <-> . +gsh +hplus +h2o
-    arsenic_triglutathione
+    <-> . +p_aminophenylarsonous_acid +hydrogen_donor +o2 +hydrogen_acceptor
+    4_ammoniocyclohexa_2_5_dien_1_one
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +linoleoyl_coa +o2 +hydrogen_acceptor +h2o
-    linolenoyl_coa
+    <-> . +cytidine_5_monophosphate_1 +3_disulfanyl_l_alanine +atp +l_cysteine +hydrogen_acceptor +amp +ppi +hplus
+    2_thiocytidine_5_monophosphate_1
   }
 }

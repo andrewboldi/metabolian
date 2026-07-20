@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "z-5-oxohex-2-enedioate-to-3z-2-oxohex-3-enedioa",
+  "name": "(Z)-5-oxohex-2-enedioate to (3Z)-2-oxohex-3-enedioate",
+  "category": "other",
+  "summary": "A 2-step route from (Z)-5-oxohex-2-enedioate to (3Z)-2-oxohex-3-enedioate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32211"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16967"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "z_5_oxohex_2_enedioate",
+      "name": "(Z)-5-oxohex-2-enedioate",
+      "short": "5-oxohex-2-enedioate",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16967"
+      }
+    },
+    {
+      "id": "2e_4z_2_hydroxymuconate",
+      "name": "(2E,4Z)-2-hydroxymuconate",
+      "short": "(2E,4Z)-2-hydroxymu…",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64016"
+      }
+    },
+    {
+      "id": "3z_2_oxohex_3_enedioate",
+      "name": "(3Z)-2-oxohex-3-enedioate",
+      "short": "2-oxohex-3-enedioate",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64011"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(Z)-5-oxohex-2-enedioate = (2E,4Z)-2-hydroxyhexa-2,4-dienedioate",
+      "equation": "(Z)-5-oxohex-2-enedioate = (2E,4Z)-2-hydroxyhexa-2,4-dienedioate",
+      "substrates": [
+        {
+          "metabolite": "z_5_oxohex_2_enedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_4z_2_hydroxymuconate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32211"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E,4Z)-2-hydroxyhexa-2,4-dienedioate = (3Z)-2-oxohex-3-enedioate",
+      "equation": "(2E,4Z)-2-hydroxyhexa-2,4-dienedioate = (3Z)-2-oxohex-3-enedioate",
+      "substrates": [
+        {
+          "metabolite": "2e_4z_2_hydroxymuconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3z_2_oxohex_3_enedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32207"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32207"
+          }
+        ]
+      }
+    }
+  ]
+}

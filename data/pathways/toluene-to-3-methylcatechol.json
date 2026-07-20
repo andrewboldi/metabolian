@@ -1,0 +1,206 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "toluene-to-3-methylcatechol",
+  "name": "toluene to 3-methylcatechol",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from toluene to 3-methylcatechol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16737"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17578"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "toluene",
+      "name": "toluene",
+      "formula": "C7H8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17578"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1s_2r_3_methylcyclohexa_3_5_diene_1_2_diol",
+      "name": "(1S,2R)-3-methylcyclohexa-3,5-diene-1,2-diol",
+      "short": "(1S,2R)-3-methylcyc…",
+      "formula": "C7H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15565"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_methylcatechol",
+      "name": "3-methylcatechol",
+      "formula": "C7H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18404"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_12_11",
+      "name": "toluene dioxygenase",
+      "ec": [
+        "1.14.12.11"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_19",
+      "name": "cis-1,2-dihydrobenzene-1,2-diol dehydrogenase",
+      "ec": [
+        "1.3.1.19"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "toluene dioxygenase",
+      "equation": "toluene + NADH + O2 + H(+) = (1S,2R)-3-methylcyclohexa-3,5-diene-1,2-diol + NAD(+)",
+      "ec": "1.14.12.11",
+      "substrates": [
+        {
+          "metabolite": "toluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1s_2r_3_methylcyclohexa_3_5_diene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16737"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cis-1,2-dihydrobenzene-1,2-diol dehydrogenase",
+      "equation": "(1S,2R)-3-methylcyclohexa-3,5-diene-1,2-diol + NAD(+) = 3-methylcatechol + NADH + H(+)",
+      "ec": "1.3.1.19",
+      "substrates": [
+        {
+          "metabolite": "1s_2r_3_methylcyclohexa_3_5_diene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25193"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25193"
+          }
+        ]
+      }
+    }
+  ]
+}

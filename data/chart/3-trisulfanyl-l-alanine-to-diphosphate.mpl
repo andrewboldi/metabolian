@@ -12,20 +12,8 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     s_sulfosulfanyl_l_cysteine_1
     <-> ec_3_1_6_20 [3.1.6.20] +h2o -sulfate -hplus
     3_disulfanyl_l_alanine
-    <-> ec_2_8_1_4 [2.8.1.4] +uridine_5_monophosphate_1 +di_sulfido_diiron +atp +hplus -4_thiouridine_5_phosphate_1 -di_sulfido_diiron -amp -ppi
-    l_cysteine
-  }
-
-  branch from 3_disulfanyl_l_alanine side left {
-    3_disulfanyl_l_alanine
-    <-> . +cytidine_5_monophosphate_1 +hydrogen_donor +atp +l_cysteine +hydrogen_acceptor +amp +ppi +hplus
-    2_thiocytidine_5_monophosphate_1
-  }
-
-  branch from sulfate side right {
-    sulfate
-    <-> . +z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi +sulfur_atom
-    5_methylsulfinylpentyl_nitrile
+    <-> ec_2_8_1_13 [2.8.1.13] +uridine_5_monophosphate_1 +hydrogen_donor +atp -l_cysteine -hydrogen_acceptor -amp -ppi -hplus
+    2_thiouridine_5_phosphate_1
   }
 
   branch from l_cysteine side left {
@@ -34,9 +22,15 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     3e_phycocyanobilin
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_19_23 [1.14.19.23] +oleoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    linoleoyl_containing_glycerolipid
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +linoleate +hydrogen_donor +o2 +h2o
+    13_r_hode
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_163 [4.2.3.163] +fpp +h2o
+    corvol_ether_b
   }
 }

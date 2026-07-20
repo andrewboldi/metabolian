@@ -28,21 +28,27 @@ pathway d-glcp-1-4-d-glcp-to-1-o-acetylmaltose "α-D-Glcp-(1→4)-α-D-Glcp-(…
     d_maltohexaono_1_5_lactone
   }
 
-  branch from d_glucose side right {
-    d_glucose
-    <-> ec_3_1_3_9 [3.1.3.9] +h2o +pi
-    d_glucose_6_phosphate
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side left {
+  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side right {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
     <-> . +o2 +h2o2
     d_maltopentaono_1_5_lactone
   }
 
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side right {
+  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
     <-> . +o2 +h2o2
     d_maltotetraono_1_5_lactone
+  }
+
+  branch from d_glcp_1_4_d_glcp_1_4_d_glcp side right {
+    d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> . +o2 +h2o2
+    d_maltotriono_1_5_lactone
+  }
+
+  branch from maltose side left {
+    maltose
+    <-> ec_2_7_1_175 [2.7.1.175] +atp +adp +hplus
+    maltose_1_phosphate
   }
 }

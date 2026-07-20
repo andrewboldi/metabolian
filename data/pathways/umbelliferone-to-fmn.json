@@ -1,0 +1,384 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "umbelliferone-to-fmn",
+  "name": "umbelliferone to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from umbelliferone to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51868"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27510"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "umbelliferone",
+      "name": "umbelliferone",
+      "formula": "C9H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27510"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "7_demethylsuberosin",
+      "name": "7-demethylsuberosin",
+      "formula": "C14H14O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:69042"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "marmesin",
+      "name": "(+)-marmesin",
+      "formula": "C14H14O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6695"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o_orsellinate",
+      "name": "o-orsellinate",
+      "formula": "C8H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16162"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "ilicicolinate_b",
+      "name": "ilicicolinate B",
+      "formula": "C23H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:146152"
+      }
+    },
+    {
+      "id": "indole_3_carbonyl_nitrile",
+      "name": "indole-3-carbonyl nitrile",
+      "short": "indole-3-carbonyl…",
+      "formula": "C10H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142139"
+      }
+    },
+    {
+      "id": "4_hydroxy_indole_3_carbonyl_nitrile",
+      "name": "4-hydroxy-indole-3-carbonyl nitrile",
+      "short": "4-hydroxy-indole-3-…",
+      "formula": "C10H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142138"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_139",
+      "name": "umbelliferone 6-dimethylallyltransferase",
+      "ec": [
+        "2.5.1.139"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_66",
+      "name": "marmesin synthase",
+      "ec": [
+        "1.14.14.66"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_165",
+      "name": "indole-3-carbonyl nitrile 4-hydroxylase",
+      "ec": [
+        "1.14.14.165"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "umbelliferone 6-dimethylallyltransferase",
+      "equation": "umbelliferone + dimethylallyl diphosphate = demethylsuberosin + diphosphate",
+      "ec": "2.5.1.139",
+      "substrates": [
+        {
+          "metabolite": "umbelliferone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_demethylsuberosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_139"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "marmesin synthase",
+      "equation": "demethylsuberosin + reduced [NADPH--hemoprotein reductase] + O2 = (7S)-marmesin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.66",
+      "substrates": [
+        {
+          "metabolite": "7_demethylsuberosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "marmesin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "orsellinate + (2E,6E)-farnesyl diphosphate = ilicicolinate B + diphosphate",
+      "equation": "orsellinate + (2E,6E)-farnesyl diphosphate = ilicicolinate B + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "o_orsellinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ilicicolinate_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "indole-3-carbonyl nitrile 4-hydroxylase",
+      "equation": "indole-3-carbonyl nitrile + reduced [NADPH--hemoprotein reductase] + O2 = 4-hydroxy-indole-3-carbonyl nitrile + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.165",
+      "substrates": [
+        {
+          "metabolite": "indole_3_carbonyl_nitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_indole_3_carbonyl_nitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_165"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:57864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57864"
+          }
+        ]
+      }
+    }
+  ]
+}

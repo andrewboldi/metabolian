@@ -1,0 +1,246 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-thialysinium-to-4s-5-6-dihydro-4h-1-3-t",
+  "name": "L-thialysinium to (4S)-5,6-dihydro-4H-1,3-t…",
+  "category": "other",
+  "summary": "A 2-step route from L-thialysinium to (4S)-5,6-dihydro-4H-1,3-thiazine-4-carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:65196"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:156132"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_thialysinium",
+      "name": "L-thialysinium",
+      "formula": "C5H13N2O2S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:156132"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_acetaldehyde_l_cysteine",
+      "name": "S-(acetaldehyde)-L-cysteine",
+      "short": "S-(acetaldehyde)-L-…",
+      "formula": "C5H9NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156378"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4s_5_6_dihydro_4h_1_3_thiazine_4_carboxylate",
+      "name": "(4S)-5,6-dihydro-4H-1,3-thiazine-4-carboxylate",
+      "short": "5,6-dihydro-4H-1,3-…",
+      "formula": "C5H6NO2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:156133"
+      }
+    },
+    {
+      "id": "palmitoleamide",
+      "name": "palmitoleamide",
+      "formula": "C16H31NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146162"
+      }
+    },
+    {
+      "id": "palmitoleate",
+      "name": "palmitoleate",
+      "formula": "C16H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32372"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "S-(2-aminoethyl)-L-cysteine + NAD(+) + H2O = S-(acetaldehyde)-L-cysteine + NH4(+) + NAD...",
+      "equation": "S-(2-aminoethyl)-L-cysteine + NAD(+) + H2O = S-(acetaldehyde)-L-cysteine + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_thialysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acetaldehyde_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:65196"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65196"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "S-(acetaldehyde)-L-cysteine = (4S)-5,6-dihydro-4H-1,3-thiazine-4-carboxylate + H2O + H(+)",
+      "equation": "S-(acetaldehyde)-L-cysteine = (4S)-5,6-dihydro-4H-1,3-thiazine-4-carboxylate + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_acetaldehyde_l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_5_6_dihydro_4h_1_3_thiazine_4_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:65200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(9Z)-hexadecenamide + H2O = (9Z)-hexadecenoate + NH4(+)",
+      "equation": "(9Z)-hexadecenamide + H2O = (9Z)-hexadecenoate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "palmitoleamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62980"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62980"
+          }
+        ]
+      }
+    }
+  ]
+}

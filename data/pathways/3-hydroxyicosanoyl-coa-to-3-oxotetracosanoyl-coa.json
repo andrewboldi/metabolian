@@ -187,23 +187,22 @@
       }
     },
     {
-      "id": "1_oleoyl_sn_glycero_3_phosphate",
-      "name": "1-oleoyl-sn-glycero-3-phosphate",
-      "short": "1-oleoyl-sn-glycero…",
-      "formula": "C21H39O7P",
-      "charge": -2,
+      "id": "2_oleoylglycerol",
+      "name": "2-oleoylglycerol",
+      "formula": "C21H40O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74544"
+        "chebi": "CHEBI:73990"
       }
     },
     {
-      "id": "1_oleoyl_2_icosanoyl_sn_glycero_3_phosphate",
-      "name": "1-oleoyl-2-icosanoyl-sn-glycero-3-phosphate",
-      "short": "1-oleoyl-2-icosanoy…",
-      "formula": "C41H77O8P",
-      "charge": -2,
+      "id": "1_icosanoyl_2_oleoyl_sn_glycerol",
+      "name": "1-icosanoyl-2-oleoyl-sn-glycerol",
+      "short": "1-icosanoyl-2-oleoy…",
+      "formula": "C41H78O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74937"
+        "chebi": "CHEBI:75470"
       }
     },
     {
@@ -224,6 +223,43 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:87564"
+      }
+    },
+    {
+      "id": "behenate",
+      "name": "behenate",
+      "formula": "C22H43O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:23858"
+      }
+    },
+    {
+      "id": "3r_3_hydroxytetracosanoyl_coa",
+      "name": "(3R)-3-hydroxytetracosanoyl-CoA",
+      "short": "3-hydroxytetracosan…",
+      "formula": "C45H78N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -657,21 +693,21 @@
     },
     {
       "id": "r11",
-      "name": "eicosanoyl-CoA + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphate = 1-(9Z)-octadecenoyl-2-eic...",
-      "equation": "eicosanoyl-CoA + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphate = 1-(9Z)-octadecenoyl-2-eicosanoyl-sn-glycero-3-phosphate + CoA",
+      "name": "eicosanoyl-CoA + 2-(9Z-octadecenoyl)-glycerol = 1-eicosanoyl-2-(9Z)-octadecenoyl-sn-gly...",
+      "equation": "eicosanoyl-CoA + 2-(9Z-octadecenoyl)-glycerol = 1-eicosanoyl-2-(9Z)-octadecenoyl-sn-glycerol + CoA",
       "substrates": [
         {
           "metabolite": "icosanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_oleoyl_sn_glycero_3_phosphate",
+          "metabolite": "2_oleoylglycerol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_oleoyl_2_icosanoyl_sn_glycero_3_phosphate",
+          "metabolite": "1_icosanoyl_2_oleoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -682,14 +718,14 @@
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:37451"
+        "rhea": "RHEA:38079"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37451"
+            "id": "RHEA:38079"
           }
         ]
       }
@@ -768,6 +804,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:78575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "docosanoyl-CoA + H2O = docosanoate + CoA + H(+)",
+      "equation": "docosanoyl-CoA + H2O = docosanoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "docosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "behenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:40783"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "(3R)-hydroxytetracosanoyl-CoA + NAD(+) = 3-oxotetracosanoyl-CoA + NADH + H(+)",
+      "equation": "(3R)-hydroxytetracosanoyl-CoA + NAD(+) = 3-oxotetracosanoyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3r_3_hydroxytetracosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxotetracosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:78563"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78563"
           }
         ]
       }

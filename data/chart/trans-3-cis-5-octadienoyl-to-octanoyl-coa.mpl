@@ -18,15 +18,9 @@ pathway trans-3-cis-5-octadienoyl-to-octanoyl-coa "trans-3-cis-5-octadienoyl… 
     octanoyl_coa
   }
 
-  branch from trans_oct_2_enoyl_coa side left {
-    trans_oct_2_enoyl_coa
-    <-> .
-    cis_3_octenoyl_coa
-  }
-
-  branch from octanoyl_coa side right {
+  branch from octanoyl_coa side left {
     octanoyl_coa
-    <-> ec_2_3_1_137 [2.3.1.137] +carnitine +coa
-    o_octanoyl_l_carnitine
+    <-> . +acetyl_coa +coa
+    3_oxodecanoyl_coa
   }
 }

@@ -18,25 +18,31 @@ pathway n-oleoyl-l-leucinate-to-amp-3-end-1 "N-oleoyl-L-leucinate to AMP 3'-end(
 
   branch from leucine side left {
     leucine
-    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022a
+    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
+    n_amidino_l_leucine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +n_oleoylphytosphingosine +h2o
-    phytosphingosine
+    <-> . +n_hexadecanoyl_o_1_octadecanoyl_2_oleoyl_sn_glyc +h2o +hplus
+    n_hexadecanoyl_o_1_octadecanoyl_sn_glycero_3_pho
   }
 
   branch from 3_l_leucyl_adenylyl_zwitterionic_group side left {
     3_l_leucyl_adenylyl_zwitterionic_group
-    <-> ec_2_3_2_22 [2.3.2.22] +amp_3_end_1 +hplus
-    cyclo_l_leucyl_l_leucyl
+    <-> . +acetyl_coa +coa +hplus
+    3_n_acetyl_l_leucyl_adenylyl
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_41 [4.2.3.41] +geranylgeranyl_diphosphate
-    elisabethatriene
+    <-> ec_4_2_3_80 [4.2.3.80] +fpp
+    longipinene
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> . +3_l_seryl_adenylyl_1_group +h2o
+    serine
   }
 }

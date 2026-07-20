@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-aminopentanenitrile-to-kynurenate",
   "name": "2-aminopentanenitrile to kynurenate",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 2-aminopentanenitrile to kynurenate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -111,76 +111,50 @@
       }
     },
     {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29991"
-      }
-    },
-    {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16452"
-      }
-    },
-    {
-      "id": "2r_hydroxypentanoate",
-      "name": "(2R)-hydroxypentanoate",
-      "short": "hydroxypentanoate",
-      "formula": "C5H9O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:232385"
-      }
-    },
-    {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57692"
-      }
-    },
-    {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58307"
-      }
-    },
-    {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:36655"
-      }
-    },
-    {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "2_amino_4_hydroxypteridine",
+      "name": "2-amino-4-hydroxypteridine",
+      "short": "2-amino-4-hydroxypt…",
+      "formula": "C6H3N5OR2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:73184"
+      }
+    },
+    {
+      "id": "2_4_dihydroxypteridine",
+      "name": "2,4-dihydroxypteridine",
+      "short": "2,4-dihydroxypterid…",
+      "formula": "C6H2N4O2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73186"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_6_1_63",
-      "name": "kynurenine--glyoxylate transaminase",
+      "id": "ec_3_5_4_11",
+      "name": "pterin deaminase",
       "ec": [
-        "2.6.1.63"
+        "3.5.4.11"
       ]
     }
   ],
@@ -320,62 +294,16 @@
     },
     {
       "id": "r4",
-      "name": "L-aspartate + O2 + H2O = oxaloacetate + H2O2 + NH4(+)",
-      "equation": "L-aspartate + O2 + H2O = oxaloacetate + H2O2 + NH4(+)",
+      "name": "pterin deaminase",
+      "equation": "a 2-amino-4-hydroxypteridine + H2O + H(+) = a 2,4-dihydroxypteridine + NH4(+)",
+      "ec": "3.5.4.11",
       "substrates": [
         {
-          "metabolite": "aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "2_amino_4_hydroxypteridine",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "oxaloacetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:19025"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:19025"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(2R)-hydroxypentanoate + FAD + H(+) = 2-oxopentanoate + FADH2",
-      "equation": "(2R)-hydroxypentanoate + FAD + H(+) = 2-oxopentanoate + FADH2",
-      "substrates": [
-        {
-          "metabolite": "2r_hydroxypentanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
           "stoichiometry": 1
         },
         {
@@ -385,41 +313,45 @@
       ],
       "products": [
         {
-          "metabolite": "2_oxopentanoate",
+          "metabolite": "2_4_dihydroxypteridine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fadh2",
+          "metabolite": "nh3",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_11"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:82487"
+        "rhea": "RHEA:36055"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82487"
+            "id": "RHEA:36055"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "kynurenine--glyoxylate transaminase",
-      "equation": "L-kynurenine + glyoxylate = kynurenate + glycine + H2O",
-      "ec": "2.6.1.63",
+      "id": "r5",
+      "name": "L-kynurenine + pyruvate = kynurenate + L-alanine + H2O",
+      "equation": "L-kynurenine + pyruvate = kynurenate + L-alanine + H2O",
       "substrates": [
         {
           "metabolite": "l_kynurenine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glyoxylate",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         }
       ],
@@ -429,7 +361,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "alanine",
           "stoichiometry": 1
         },
         {
@@ -437,22 +369,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_63"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:65896"
+        "rhea": "RHEA:65916"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65896"
+            "id": "RHEA:65916"
           }
         ]
       }

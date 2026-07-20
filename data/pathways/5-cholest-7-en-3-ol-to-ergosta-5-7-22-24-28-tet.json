@@ -207,21 +207,23 @@
       }
     },
     {
-      "id": "cycloartenol",
-      "name": "cycloartenol",
-      "formula": "C30H50O",
-      "charge": 0,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17030"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "cyclolaudenol",
-      "name": "cyclolaudenol",
-      "formula": "C31H52O",
-      "charge": 0,
+      "id": "n6_methyladenosine_5_monophosphate_1",
+      "name": "N6-methyladenosine 5'-monophosphate(1−)",
+      "short": "N6-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:142990"
+        "chebi": "CHEBI:74449"
       }
     },
     {
@@ -231,6 +233,35 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:52393"
+      }
+    },
+    {
+      "id": "3_l_aspartate_adenylyl_1_group",
+      "name": "3'-(L-aspartate)adenylyl(1−) group",
+      "short": "3'-(L-aspartate)ade…",
+      "formula": "C14H17N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78516"
+      }
+    },
+    {
+      "id": "1_ergostan_3_yl_l_aspartate",
+      "name": "1-(ergostan-3β-yl)-L-aspartate",
+      "short": "1-(ergostan-3β-yl)-…",
+      "formula": "C32H49NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195261"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
       }
     }
   ],
@@ -264,10 +295,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_142",
-      "name": "cycloartenol 24-C-methyltransferase",
+      "id": "ec_2_1_1_181",
+      "name": "23S rRNA (adenine(1618)-N(6))-methyltransferase",
       "ec": [
-        "2.1.1.142"
+        "2.1.1.181"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_37",
+      "name": "ergosteryl-3beta-O-L-aspartate synthase",
+      "ec": [
+        "2.3.2.37"
       ]
     }
   ],
@@ -724,12 +762,12 @@
     },
     {
       "id": "r11",
-      "name": "cycloartenol 24-C-methyltransferase",
-      "equation": "cycloartenol + S-adenosyl-L-methionine = cyclolaudenol + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.142",
+      "name": "23S rRNA (adenine(1618)-N(6))-methyltransferase",
+      "equation": "adenosine(1618) in 23S rRNA + S-adenosyl-L-methionine = N(6)-methyladenosine(1618) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.181",
       "substrates": [
         {
-          "metabolite": "cycloartenol",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -739,7 +777,7 @@
       ],
       "products": [
         {
-          "metabolite": "cyclolaudenol",
+          "metabolite": "n6_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -753,20 +791,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_142"
+          "enzyme": "ec_2_1_1_181"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:13137"
+        "rhea": "RHEA:16497"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13137"
+            "id": "RHEA:16497"
           }
         ]
       }
@@ -806,6 +844,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:41480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "ergosteryl-3beta-O-L-aspartate synthase",
+      "equation": "L-aspartyl-tRNA(Asp) + ergosterol = 1-(ergostan-3beta-yl)-L-aspartate + tRNA(Asp)",
+      "ec": "2.3.2.37",
+      "substrates": [
+        {
+          "metabolite": "3_l_aspartate_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_ergostan_3_yl_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:76555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76555"
           }
         ]
       }

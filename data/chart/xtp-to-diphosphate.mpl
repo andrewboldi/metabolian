@@ -16,21 +16,15 @@ pathway xtp-to-diphosphate "XTP to diphosphate" {
     glutamate
   }
 
-  branch from xmp side left {
-    xmp
-    <-> . +h2o +pi
-    xanthosine
-  }
-
-  branch from glutamate side right {
+  branch from glutamate side left {
     glutamate
-    <-> ec_4_1_1_15 [4.1.1.15] +hplus +co2
-    gaba
+    <-> ec_2_6_1_95 [2.6.1.95] +neomycin_c +akg
+    6_oxoneomycin_c
   }
 
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_6_1_1_2 [6.1.1.2] +amp_3_end_1 +l_tryptophan +atp +amp +hplus
-    3_l_tryptophyl_adenylyl_1_group
+    <-> . +gpp
+    phellandrene
   }
 }

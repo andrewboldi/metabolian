@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-3-hydroxyacyl-coa-to-2-3-trans-enoyl-coa-3408",
+  "name": "(R)-3-hydroxyacyl-CoA to 2,3-trans-enoyl CoA",
+  "category": "other",
+  "summary": "A 2-step route from (R)-3-hydroxyacyl-CoA(4−) to 2,3-trans-enoyl CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34083"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57319"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_3_hydroxyacyl_coa",
+      "name": "(R)-3-hydroxyacyl-CoA",
+      "short": "3-hydroxyacyl-CoA",
+      "formula": "C24H35N7O18P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57319"
+      }
+    },
+    {
+      "id": "s_3_hydroxyacyl_coa",
+      "name": "(S)-3-hydroxyacyl-CoA",
+      "short": "3-hydroxyacyl-CoA",
+      "formula": "C24H35N7O18P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57318"
+      }
+    },
+    {
+      "id": "2_3_trans_enoyl_coa",
+      "name": "2,3-trans-enoyl CoA",
+      "formula": "C24H33N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58856"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxoacyl_coa",
+      "name": "3-oxoacyl-CoA",
+      "formula": "C24H33N7O18P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:90726"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_substituted_propionyl_coa",
+      "name": "3-substituted propionyl-CoA",
+      "short": "3-substituted…",
+      "formula": "C24H35N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:65111"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_17",
+      "name": "enoyl-CoA hydratase",
+      "ec": [
+        "4.2.1.17"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_35",
+      "name": "3-hydroxyacyl-CoA dehydrogenase",
+      "ec": [
+        "1.1.1.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a (3R)-3-hydroxyacyl-CoA = a (3S)-3-hydroxyacyl-CoA",
+      "equation": "a (3R)-3-hydroxyacyl-CoA = a (3S)-3-hydroxyacyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxyacyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_3_hydroxyacyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "enoyl-CoA hydratase",
+      "equation": "a (3S)-3-hydroxyacyl-CoA = a (2E)-enoyl-CoA + H2O",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxyacyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_trans_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:16105"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16105"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-hydroxyacyl-CoA dehydrogenase",
+      "equation": "a (3S)-3-hydroxyacyl-CoA + NAD(+) = a 3-oxoacyl-CoA + NADH + H(+)",
+      "ec": "1.1.1.35",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxyacyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxoacyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a 2,3-saturated acyl-CoA + FAD + H(+) = a (2E)-enoyl-CoA + FADH2",
+      "equation": "a 2,3-saturated acyl-CoA + FAD + H(+) = a (2E)-enoyl-CoA + FADH2",
+      "substrates": [
+        {
+          "metabolite": "3_substituted_propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_trans_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44700"
+          }
+        ]
+      }
+    }
+  ]
+}

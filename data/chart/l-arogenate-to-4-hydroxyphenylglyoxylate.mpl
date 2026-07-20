@@ -20,25 +20,19 @@ pathway l-arogenate-to-4-hydroxyphenylglyoxylate "L-arogenate to 4-hydroxyphenyl
 
   branch from 1s_4s_prephenate side left {
     1s_4s_prephenate
-    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
-    6_methoxy_2_octaprenylhydroquinone
+    <-> . +sam +keto_phenylpyruvate +h2o
+    s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_49 [2.6.1.49] +ldopa +akg
-    3_4_dihydroxyphenylpyruvate
+    <-> ec_2_6_1_82 [2.6.1.82] +1_4_butanediammonium +akg
+    4_ammoniobutanal
   }
 
   branch from 3_4_hydroxyphenyl_pyruvate side left {
     3_4_hydroxyphenyl_pyruvate
     <-> ec_6_4_1_10 [6.4.1.10] +atp +amp +ppi +hplus
     atromentin
-  }
-
-  branch from 4_hydroxyphenylglyoxylate side right {
-    4_hydroxyphenylglyoxylate
-    <-> ec_2_6_1_72 [2.6.1.72] +akg +glutamate
-    d_4_hydroxyphenylglycine
   }
 }

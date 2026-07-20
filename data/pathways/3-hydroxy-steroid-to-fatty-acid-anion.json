@@ -113,6 +113,52 @@
       }
     },
     {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "all_trans_retinol",
+      "name": "all-trans-retinol",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17336"
+      }
+    },
+    {
+      "id": "all_trans_retinyl_ester",
+      "name": "all-trans-retinyl ester",
+      "short": "all-trans-retinyl…",
+      "formula": "C21H29O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63410"
+      }
+    },
+    {
+      "id": "1_3_diglyceride",
+      "name": "1,3-diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47777"
+      }
+    },
+    {
       "id": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
       "name": "2-O-acyl-3-O-β-D-galactosyl-sn-glycerol",
       "short": "2-O-acyl-3-O-β-D-ga…",
@@ -123,23 +169,23 @@
       }
     },
     {
-      "id": "3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer",
-      "name": "3-(β-D-galactosyl)-1,2-bis(long-chain acyl)-sn-glycerol",
-      "short": "3-(β-D-galactosyl)-…",
-      "formula": "C11H16O10R2",
-      "charge": 0,
+      "id": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+      "name": "1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C8H12O10PR2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90477"
+        "chebi": "CHEBI:64716"
       }
     },
     {
-      "id": "3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero",
-      "name": "3-(β-D-galactosyl)-2-mono(long-chain acyl)-sn-glycerol",
-      "short": "3-(β-D-galactosyl)-…",
-      "formula": "C10H17O9R",
-      "charge": 0,
+      "id": "2_acyl_sn_glycero_3_phospho_1_sn_glycerol",
+      "name": "2-acyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C7H13O9PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90475"
+        "chebi": "CHEBI:76528"
       }
     }
   ],
@@ -268,6 +314,84 @@
     },
     {
       "id": "r4",
+      "name": "a 1,2-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "equation": "a 1,2-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78183"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "a triacylglycerol + all-trans-retinol = an all-trans-retinyl ester + a 1,3-diacylglycerol",
+      "equation": "a triacylglycerol + all-trans-retinol = an all-trans-retinyl ester + a 1,3-diacylglycerol",
+      "substrates": [
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_retinol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:78067"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "a 2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = 3-beta-D-galactosyl-sn-glycerol + ...",
       "equation": "a 2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = 3-beta-D-galactosyl-sn-glycerol + a fatty acid + H(+)",
       "substrates": [
@@ -295,7 +419,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:78095"
       },
@@ -310,12 +434,12 @@
       }
     },
     {
-      "id": "r5",
-      "name": "long chain 1,2-diacyl-3-O-beta-D-galactosyl-sn-glycerol + H2O = long chain 2-acyl-3-O-b...",
-      "equation": "long chain 1,2-diacyl-3-O-beta-D-galactosyl-sn-glycerol + H2O = long chain 2-acyl-3-O-beta-D-galactosyl-sn-glycerol + a fatty acid + H(+)",
+      "id": "r7",
+      "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) + H2O = 2-acyl-sn-glycero-3-phospho-...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) + H2O = 2-acyl-sn-glycero-3-phospho-(1'-sn-glycerol) + a fatty acid + H(+)",
       "substrates": [
         {
-          "metabolite": "3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -325,7 +449,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero",
+          "metabolite": "2_acyl_sn_glycero_3_phospho_1_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -338,16 +462,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:48444"
+        "rhea": "RHEA:67428"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48444"
+            "id": "RHEA:67428"
           }
         ]
       }

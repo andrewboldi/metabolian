@@ -30,13 +30,13 @@ pathway n-n-dimethyl-l-arginini-to-n5-methyl-l-glutamine "Nω,Nω-dimethyl-L-arg
 
   branch from methylamine side left {
     methylamine
-    <-> ec_1_4_1_17 [1.4.1.17] +nadp +h2o +pyruvate +nadph +hplus
-    n_methyl_l_alanine
+    <-> . +carbaryl +h2o +hplus +co2
+    1_naphthol
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +1_7_dimethylxanthine +nadph +o2 +hplus +nadp +h2o
-    7_methylxanthine
+    <-> ec_1_14_11_27 [1.14.11.27] +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    l_lysinium
   }
 }

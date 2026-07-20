@@ -1,0 +1,302 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nocardicin-e-to-nocardicin-a",
+  "name": "nocardicin E to nocardicin A",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from nocardicin E(2−) to nocardicin A(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19845"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77885"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nocardicin_e",
+      "name": "nocardicin E",
+      "formula": "C19H15N3O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77885"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "isonocardicin_a",
+      "name": "isonocardicin A",
+      "formula": "C23H22N4O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77633"
+      }
+    },
+    {
+      "id": "5_s_methyl_5_thioadenosine",
+      "name": "5'-S-methyl-5'-thioadenosine",
+      "short": "5'-S-methyl-5'-thio…",
+      "formula": "C11H15N5O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17509"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nocardicin_a",
+      "name": "nocardicin A",
+      "formula": "C23H22N4O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77658"
+      }
+    },
+    {
+      "id": "s_s_s_nicotianamine_trizwitterion",
+      "name": "(S,S,S)-nicotianamine trizwitterion",
+      "short": "(S,S,S)-nicotianami…",
+      "formula": "C12H21N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58249"
+      }
+    },
+    {
+      "id": "2_n_n_dihydroxynocardicin_c",
+      "name": "2'-N,N-dihydroxynocardicin C",
+      "short": "2'-N,N-dihydroxynoc…",
+      "formula": "C23H25N4O10",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231962"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_38",
+      "name": "isonocardicin synthase",
+      "ec": [
+        "2.5.1.38"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_14",
+      "name": "nocardicin-A epimerase",
+      "ec": [
+        "5.1.1.14"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_43",
+      "name": "nicotianamine synthase",
+      "ec": [
+        "2.5.1.43"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isonocardicin synthase",
+      "equation": "nocardicin E + S-adenosyl-L-methionine = isonocardicin A + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.38",
+      "substrates": [
+        {
+          "metabolite": "nocardicin_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isonocardicin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19845"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nocardicin-A epimerase",
+      "equation": "isonocardicin A = nocardicin A",
+      "ec": "5.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "isonocardicin_a",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nocardicin_a",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nicotianamine synthase",
+      "equation": "3 S-adenosyl-L-methionine = nicotianamine + 3 S-methyl-5'-thioadenosine + 3 H(+)",
+      "ec": "2.5.1.43",
+      "substrates": [
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_s_nicotianamine_trizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16481"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2'-N,N-dihydroxynocardicin C = nocardicin A + H2O + H(+)",
+      "equation": "2'-N,N-dihydroxynocardicin C = nocardicin A + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_n_n_dihydroxynocardicin_c",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nocardicin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:82043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82043"
+          }
+        ]
+      }
+    }
+  ]
+}

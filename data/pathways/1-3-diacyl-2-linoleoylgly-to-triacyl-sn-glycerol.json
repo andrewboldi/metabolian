@@ -150,52 +150,69 @@
       }
     },
     {
-      "id": "3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha",
-      "name": "3-[α-D-galactosyl-(1→6)-β-D-galactosyl]-1,2-bis(long-chain acyl)-sn-glycerol",
-      "short": "3-[α-D-galactosyl-(…",
-      "formula": "C17H26O15R2",
-      "charge": 0,
+      "id": "9_hydroxyoctadecanoate",
+      "name": "9-hydroxyoctadecanoate",
+      "short": "9-hydroxyoctadecano…",
+      "formula": "C18H35O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90463"
+        "chebi": "CHEBI:136286"
       }
     },
     {
-      "id": "3_d_galactosyl_1_6_d_galactosyl_2_mono_long_chai",
-      "name": "3-[α-D-galactosyl-(1→6)-β-D-galactosyl]-2-mono(long-chain acyl)-sn-glycerol",
-      "short": "3-[α-D-galactosyl-(…",
-      "formula": "C16H27O14R",
+      "id": "triglyceride",
+      "name": "triglyceride",
+      "formula": "C6H5O6R3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90469"
+        "chebi": "CHEBI:17855"
       }
     },
     {
-      "id": "1_acyl_sn_glycerol",
-      "name": "1-acyl-sn-glycerol",
+      "id": "9_acyloxy_stearate",
+      "name": "9-(acyloxy)-stearate",
+      "formula": "C19H34O4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:228230"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phospholipid",
+      "name": "1,2-diacyl-sn-glycero-3-phospholipid",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C5H5O8PR3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136912"
+      }
+    },
+    {
+      "id": "a_2_acyl_sn_glycero_3_phospholipid",
+      "name": "a 2-acyl-sn-glycero-3-phospholipid",
+      "short": "a 2-acyl-sn-glycero…",
+      "formula": "C4H6O7PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140660"
+      }
+    },
+    {
+      "id": "2_monoglyceride",
+      "name": "2-monoglyceride",
       "formula": "C4H7O4R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64683"
+        "chebi": "CHEBI:17389"
       }
     },
     {
-      "id": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
-      "name": "1-(Z)-alk-1-enyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1-(Z)-alk-1-enyl-sn…",
-      "formula": "C7H15NO6PR",
+      "id": "1_2_diglyceride",
+      "name": "1,2-diglyceride",
+      "formula": "C5H6O5R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77288"
-      }
-    },
-    {
-      "id": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano",
-      "name": "1-(Z)-alk-1-enyl-2-acyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1-(Z)-alk-1-enyl-2-…",
-      "formula": "C8H14NO7PR2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77290"
+        "chebi": "CHEBI:49172"
       }
     }
   ],
@@ -363,11 +380,50 @@
     },
     {
       "id": "r5",
-      "name": "long chain 1,2-diacyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + H...",
-      "equation": "long chain 1,2-diacyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + H2O = long chain 2-acyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + a fatty acid + H(+)",
+      "name": "9-hydroxy-octadecanoate + a triacylglycerol = 9-(acyloxy)-octadecanoate + a 1,3-diacylg...",
+      "equation": "9-hydroxy-octadecanoate + a triacylglycerol = 9-(acyloxy)-octadecanoate + a 1,3-diacylglycerol",
       "substrates": [
         {
-          "metabolite": "3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha",
+          "metabolite": "9_hydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_acyloxy_stearate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:77987"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77987"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "a glycerophospholipid + H2O = a 2-acyl-sn-glycero-3-phospholipid + a fatty acid + H(+)",
+      "equation": "a glycerophospholipid + H2O = a 2-acyl-sn-glycero-3-phospholipid + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospholipid",
           "stoichiometry": 1
         },
         {
@@ -377,7 +433,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_d_galactosyl_1_6_d_galactosyl_2_mono_long_chai",
+          "metabolite": "a_2_acyl_sn_glycero_3_phospholipid",
           "stoichiometry": 1
         },
         {
@@ -390,66 +446,27 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:48440"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48440"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "a 1-acyl-sn-glycerol + an acyl-CoA = a 1,3-diacyl-sn-glycerol + CoA",
-      "equation": "a 1-acyl-sn-glycerol + an acyl-CoA = a 1,3-diacyl-sn-glycerol + CoA",
-      "substrates": [
-        {
-          "metabolite": "1_acyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_3_diacyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:77559"
+        "rhea": "RHEA:67424"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77559"
+            "id": "RHEA:67424"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + a 1,2-diacyl-sn-glycero-3-phospho...",
-      "equation": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1-O-(1Z-alkenyl)-2-acyl-sn-glycero-3-phosphoethanolamine + a 1-acyl-sn-glycero-3-phosphocholine",
+      "name": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1,2-diacylglycerol + a ...",
+      "equation": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1,2-diacylglycerol + a 1-acyl-sn-glycero-3-phosphocholine",
       "substrates": [
         {
-          "metabolite": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
+          "metabolite": "2_monoglyceride",
           "stoichiometry": 1
         },
         {
@@ -459,7 +476,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano",
+          "metabolite": "1_2_diglyceride",
           "stoichiometry": 1
         },
         {
@@ -470,14 +487,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:79435"
+        "rhea": "RHEA:78439"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:79435"
+            "id": "RHEA:78439"
           }
         ]
       }

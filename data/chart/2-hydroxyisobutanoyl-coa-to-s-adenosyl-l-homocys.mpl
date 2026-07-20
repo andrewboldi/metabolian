@@ -24,19 +24,19 @@ pathway 2-hydroxyisobutanoyl-coa-to-s-adenosyl-l-homocys "2-hydroxyisobutanoyl-C
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +pi +nad +hplus
-    adp_d_ribose_1_phosphate
+    <-> ec_2_4_99_20 [2.4.99.20] +nicotinate +nadp
+    nicotinate_adenine_dinucleotide_phosphate
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
-    n6_acetyl_l_lysine
+    <-> ec_2_1_1_59 [2.1.1.59] +sam +sah +hplus
+    n6_methyl_l_lysinium
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
+    8_methoxyfurocoumarin
   }
 }

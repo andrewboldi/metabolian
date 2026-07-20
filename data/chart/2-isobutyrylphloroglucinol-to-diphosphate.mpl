@@ -18,7 +18,7 @@ pathway 2-isobutyrylphloroglucinol-to-diphosphate "2-isobutyrylphloroglucinol to
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_139 [4.2.3.139] +fpp
-    valerena_4_7_11_diene
+    <-> . +1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol +dmapp
+    1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy
   }
 }

@@ -28,19 +28,19 @@ pathway aklavinone-to-s-adenosyl-l-homocysteine "aklavinone to S-adenosyl-L-homo
 
   branch from methanol side right {
     methanol
-    <-> ec_3_1_1_n2 [3.1.1.n2] +s_2e_6e_farnesyl_l_cysteine_methyl_ester +h2o +hplus
-    s_2e_6e_farnesyl_l_cysteinate
+    <-> ec_3_1_1_123 [3.1.1.123] +17_dehydropreakuammicine +h2o +co2
+    norfluorocurarine
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_5_ol +h2o +hydrogen_donor
-    5_hydroxyquinolin_2_1h_one
+    <-> . +c20_dihydroceramide +hydrogen_donor +o2 +h2o
+    c20_ceramide
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_6 [2.1.1.6] +catechols +sam +hplus
-    guaiacols
+    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
+    chloromethane
   }
 }

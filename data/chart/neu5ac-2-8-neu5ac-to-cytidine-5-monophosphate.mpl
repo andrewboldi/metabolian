@@ -20,13 +20,13 @@ pathway neu5ac-2-8-neu5ac-to-cytidine-5-monophosphate "α-Neu5Ac-(2→8)-α-Neu5
 
   branch from n_acetylneuraminate side left {
     n_acetylneuraminate
-    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +h2o
-    neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac
+    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_4_glc_1_1_cer_d18_1 +h2o
+    neu5ac_2_3_gal_1_4_glc_1_1_cer_d18_1_18_0
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_g +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_glcnac_1_3_d
+    <-> ec_3_1_4_17 [3.1.4.17] +h2o +hplus
+    3_5_cyclic_cmp
   }
 }

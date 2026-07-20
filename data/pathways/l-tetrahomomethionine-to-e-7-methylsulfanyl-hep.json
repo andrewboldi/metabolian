@@ -113,30 +113,31 @@
       }
     },
     {
-      "id": "carotene",
-      "name": "α-carotene",
-      "formula": "C40H56",
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28425"
+        "chebi": "CHEBI:58095"
       }
     },
     {
-      "id": "cryptoxanthin",
-      "name": "α-cryptoxanthin",
-      "formula": "C40H56O",
+      "id": "e_phenylacetaldehyde_oxime",
+      "name": "(E)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10223"
+        "chebi": "CHEBI:47793"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_14_158",
-      "name": "carotene epsilon-hydroxylase",
+      "id": "ec_1_14_14_40",
+      "name": "phenylalanine N-monooxygenase",
       "ec": [
-        "1.14.14.158"
+        "1.14.14.40"
       ]
     }
   ],
@@ -288,57 +289,61 @@
     },
     {
       "id": "r4",
-      "name": "carotene epsilon-hydroxylase",
-      "equation": "alpha-carotene + reduced [NADPH--hemoprotein reductase] + O2 = alpha-cryptoxanthin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.158",
+      "name": "phenylalanine N-monooxygenase",
+      "equation": "L-phenylalanine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-phenylacetaldehyde oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.40",
       "substrates": [
         {
-          "metabolite": "carotene",
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "cryptoxanthin",
+          "metabolite": "e_phenylacetaldehyde_oxime",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_158"
+          "enzyme": "ec_1_14_14_40"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30399"
+        "rhea": "RHEA:33263"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30399"
+            "id": "RHEA:33263"
           }
         ]
       }

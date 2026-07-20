@@ -1,0 +1,198 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "wogonin-to-d-glucopyranuronate",
+  "name": "wogonin to D-glucopyranuronate",
+  "category": "other",
+  "summary": "A 2-step route from wogonin(1−) to D-glucopyranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28322"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78338"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "wogonin",
+      "name": "wogonin",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78338"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "wogonin_7_o_d_glucuronate",
+      "name": "wogonin 7-O-β-D-glucuronate",
+      "short": "wogonin 7-O-β-D-glu…",
+      "formula": "C22H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61285"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucopyranuronate",
+      "name": "D-glucopyranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58720"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_253",
+      "name": "baicalein 7-O-glucuronosyltransferase",
+      "ec": [
+        "2.4.1.253"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_167",
+      "name": "baicalin-beta-D-glucuronidase",
+      "ec": [
+        "3.2.1.167"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "baicalein 7-O-glucuronosyltransferase",
+      "equation": "wogonin + UDP-alpha-D-glucuronate = wogonin 7-O-beta-D-glucuronate + UDP",
+      "ec": "2.4.1.253",
+      "substrates": [
+        {
+          "metabolite": "wogonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "wogonin_7_o_d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_253"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28322"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "baicalin-beta-D-glucuronidase",
+      "equation": "wogonin 7-O-beta-D-glucuronate + H2O = wogonin + D-glucuronate + H(+)",
+      "ec": "3.2.1.167",
+      "substrates": [
+        {
+          "metabolite": "wogonin_7_o_d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "wogonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_167"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28326"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28326"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -24,8 +24,8 @@ pathway kaempferol-3-o-d-glucos-to-s-adenosyl-l-homocyst "kaempferol 3-O-β-D-gl
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +6_kestotriose +sucrose
-    6_6_kestotetraose
+    <-> . +naringenin_7_o_d_glucoside +h2o
+    s_naringenin
   }
 
   branch from kaempferide side left {
@@ -36,7 +36,7 @@ pathway kaempferol-3-o-d-glucos-to-s-adenosyl-l-homocyst "kaempferol 3-O-β-D-gl
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_163 [2.1.1.163] +6_methoxy_2_octaprenyl_1_4_benzoquinone +sam +hplus
-    3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone
+    <-> ec_2_1_1_200 [2.1.1.200] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

@@ -22,25 +22,37 @@ pathway n-n-dimethyl-l-histidine-to-ergothioneyl-d-linco "Nα,Nα-dimethyl-L-his
 
   branch from n_n_n_trimethyl_l_histidine side left {
     n_n_n_trimethyl_l_histidine
-    <-> . +cysteine +alanine
-    ergothioneine_thione_form
+    <-> . +n_acetyl_1_seleno_d_glucosamine +o2 +hplus +h2o
+    hercynyl_seglcnac_selenoxide
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
-    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_89 [2.6.1.89] +dtdp_3_azaniumyl_3_6_dideoxy_d_glucose +akg
-    dtdp_3_dehydro_6_deoxy_d_glucose
+    <-> . +dmapp +ppi
+    prekainate
   }
 
-  branch from hydrogen_acceptor side right {
+  branch from ergothioneine side right {
+    ergothioneine
+    <-> . +hplus
+    ergothioneine_thione_form
+  }
+
+  branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +arachidonate +hydrogen_donor +o2 +h2o
-    11_r_hete
+    <-> . +n_hydroxy_n_methyl_n_nitroso_l_citrulline +hydrogen_donor +no
+    n_hydroxy_n_methyl_l_citrulline
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +2_aminopentan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxy_2_pentanone
   }
 }

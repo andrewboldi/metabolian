@@ -18,9 +18,15 @@ pathway hydroxymalonate-to-decarboxy-3-dehydropresph "hydroxymalonate to decarbo
     decarboxy_3_dehydropresphingofungin
   }
 
-  branch from holo-acp side left {
+  branch from 3_oxopresphingofungin_anion side left {
+    3_oxopresphingofungin_anion
+    <-> . +nadph +hplus +nadp
+    presphingofungin
+  }
+
+  branch from holo-acp side right {
     holo-acp
-    <-> ec_2_7_8_7 [2.7.8.7] +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser +malonyl-acp +hplus +co2
+    o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory
   }
 }

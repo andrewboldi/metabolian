@@ -18,7 +18,7 @@ pathway mycothiol-s-conjugate-to-s-substituted "mycothiol S-conjugate to S-subst
 
   branch from acetate side left {
     acetate
-    <-> . +1_o_acetyl_adp_d_ribose +h2o +hplus
-    adp_d_ribose
+    <-> . +n_acetyl_l_leucinate +h2o
+    leucine
   }
 }

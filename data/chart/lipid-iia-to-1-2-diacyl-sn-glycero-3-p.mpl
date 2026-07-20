@@ -32,19 +32,31 @@ pathway lipid-iia-to-1-2-diacyl-sn-glycero-3-p "lipid IIA to 1,2-diacyl-sn-glyce
 
   branch from 2_acyl_sn_glycero_3_phosphate side right {
     2_acyl_sn_glycero_3_phosphate
-    <-> ec_2_3_1_198 [2.3.1.198] +acyl_coa +coa
-    sn_glycerol_3_phosphate
+    <-> . +2_acyl_sn_glycero_3_phosphoserine +h2o +hplus
+    serine
   }
 
   branch from choline side left {
     choline
-    <-> . +phosphatidylcholine +serine
-    3_sn_phosphatidyl_l_serine
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine
+    1_acyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from 1_acyl_sn_glycerol_3_phosphate side right {
     1_acyl_sn_glycerol_3_phosphate
-    <-> ec_2_3_1_275 [2.3.1.275] +sn_glycerol_3_phosphate +pi
-    acyl_monophosphate
+    <-> . +linoleoyl_coa +coa
+    1_acyl_2_linoleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate +h2o +hplus
+    2_16_1_lysophosphatidate
+  }
+
+  branch from 1_acyl_sn_glycerol side right {
+    1_acyl_sn_glycerol
+    <-> . +acyl_coa +coa
+    1_3_diacyl_sn_glycerol
   }
 }

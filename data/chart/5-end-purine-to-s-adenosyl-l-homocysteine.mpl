@@ -18,27 +18,21 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
     5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur
   }
 
-  branch from 5_end_purine_ribonucleoside_5_diphosphate_3 side left {
-    5_end_purine_ribonucleoside_5_diphosphate_3
-    <-> . +5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_p +h2o +hplus
-    n2_n2_n7_trimethylguanosine_5_phosphate
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_166 [4.2.3.166] +fpp +h2o
-    1_10_e_4e_6s_7r_germacradien_6_ol
+    <-> ec_6_1_1_7 [6.1.1.7] +amp_3_end_1 +alanine +atp +amp
+    3_l_alanyl_adenylyl_zwitterionic_group
   }
 
-  branch from 5_n7_methyl_5_triphosphoguanosine_purine_ribonuc side left {
+  branch from 5_n7_methyl_5_triphosphoguanosine_purine_ribonuc side right {
     5_n7_methyl_5_triphosphoguanosine_purine_ribonuc
     <-> . +h2o +7_methylguanosine_5_diphosphate +hplus
     5_end_phospho_purine_ribonucleoside_2
   }
 
-  branch from sah side right {
+  branch from sah side left {
     sah
-    <-> ec_2_1_1_121 [2.1.1.121] +6_o_methylnorlaudanosolinium +sam +hplus
-    nororientalinium
+    <-> ec_2_1_1_28 [2.1.1.28] +phenylethanolaminium +sam +hplus
+    n_methylphenylethanolaminium
   }
 }

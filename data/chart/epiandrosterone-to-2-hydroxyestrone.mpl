@@ -20,27 +20,33 @@ pathway epiandrosterone-to-2-hydroxyestrone "epiandrosterone to 2-hydroxyestrone
     2_hydroxyestrone_3_o_d_glucuronide
   }
 
-  branch from 5_androstane_3_17_dione side left {
-    5_androstane_3_17_dione
-    <-> ec_1_1_1_209 [1.1.1.209] +nadp +nadph +hplus
-    androsterone
-  }
-
-  branch from androst_4_ene_3_17_dione side right {
+  branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
     <-> ec_1_3_99_4 [1.3.99.4] +hydrogen_acceptor +hydrogen_donor
     androsta_1_4_diene_3_17_dione
   }
 
-  branch from hydrogen_donor side left {
+  branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_17 [1.3.99.17] +8_methylquinoline +hydrogen_acceptor +h2o
-    8_methylquinolin_2_1h_one
+    <-> . +5_s_hete +o2 +hydrogen_acceptor +h2o
+    5_s_15_r_dihete
   }
 
-  branch from estrone side right {
+  branch from estrone side left {
     estrone
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    15_hydroxyestrone
+    6_hydroxyestrone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    4_hydroxycholesterol
+  }
+
+  branch from 2_hydroxyestrone side left {
+    2_hydroxyestrone
+    <-> . +sam +sah +hplus
+    2_hydroxy_3_o_methyl_estrone
   }
 }

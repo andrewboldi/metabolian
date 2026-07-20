@@ -20,17 +20,11 @@ pathway guaiacylglycerol-guaiac-to-dimethylaminium "guaiacylglycerol-Î²-guaiacâ€
 
   branch from vanillin side left {
     vanillin
-    <-> ec_1_13_11_94 [1.13.11.94] +2_methoxy_4_vinylphenol +o2
-    formaldehyde
+    <-> ec_4_1_2_65 [4.1.2.65] +trans_ferulate +h2o
+    acetate
   }
 
-  branch from catechol side right {
-    catechol
-    <-> ec_1_3_1_20 [1.3.1.20] +nadp +nadph +hplus
-    1s_2s_cyclohexa_3_5_diene_1_2_diol
-  }
-
-  branch from cobalt side left {
+  branch from cobalt side right {
     cobalt
     <-> ec_1_16_99_1 [1.16.99.1] +cobalt +hydrogen_donor +atp +h2o +adp +pi +hplus
     hydrogen_acceptor

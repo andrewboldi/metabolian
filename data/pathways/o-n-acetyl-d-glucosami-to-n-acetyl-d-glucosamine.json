@@ -1,9 +1,9 @@
 {
   "$schema": "../../schema/pathway.schema.json",
   "id": "o-n-acetyl-d-glucosami-to-n-acetyl-d-glucosamine",
-  "name": "O-(N-acetyl-β-D-glucosami… to N-acetyl-D-glucosamine…",
+  "name": "O-(N-acetyl-β-D-glucosami… to N-acetyl-α-D-glucosamine…",
   "category": "amino-acid-metabolism",
-  "summary": "A 3-step route from O-(N-acetyl-β-D-glucosaminyl)-L-serine residue to N-acetyl-D-glucosamine 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from O-(N-acetyl-β-D-glucosaminyl)-L-serine residue to N-acetyl-α-D-glucosamine 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -94,22 +94,13 @@
       }
     },
     {
-      "id": "n_acetyl_d_glucosamine_6_phosphate",
-      "name": "N-acetyl-D-glucosamine 6-phosphate",
-      "short": "N-acetyl-D-glucosam…",
-      "formula": "C8H14NO9P",
+      "id": "o_phospho_l_serine_2",
+      "name": "O-phospho-L-serine(2−)",
+      "short": "O-phospho-L-serine(…",
+      "formula": "C3H4NO5P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57513"
-      }
-    },
-    {
-      "id": "d_serine",
-      "name": "D-serine",
-      "formula": "C3H5NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29998"
+        "chebi": "CHEBI:83421"
       }
     }
   ],
@@ -129,17 +120,10 @@
       ]
     },
     {
-      "id": "ec_5_4_2_3",
-      "name": "phosphoacetylglucosamine mutase",
+      "id": "ec_2_7_11_26",
+      "name": "[tau protein] kinase",
       "ec": [
-        "5.4.2.3"
-      ]
-    },
-    {
-      "id": "ec_5_1_1_16",
-      "name": "protein-serine epimerase",
-      "ec": [
-        "5.1.1.16"
+        "2.7.11.26"
       ]
     }
   ],
@@ -240,74 +224,49 @@
     },
     {
       "id": "r3",
-      "name": "phosphoacetylglucosamine mutase",
-      "equation": "N-acetyl-alpha-D-glucosamine 1-phosphate = N-acetyl-D-glucosamine 6-phosphate",
-      "ec": "5.4.2.3",
+      "name": "[tau protein] kinase",
+      "equation": "L-seryl-[tau protein] + ATP = O-phospho-L-seryl-[tau protein] + ADP + H(+)",
+      "ec": "2.7.11.26",
       "substrates": [
         {
-          "metabolite": "n_acetyl_d_glucosamine_1_phosphate",
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_d_glucosamine_6_phosphate",
+          "metabolite": "o_phospho_l_serine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_5_4_2_3"
+          "enzyme": "ec_2_7_11_26"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:23804"
+        "rhea": "RHEA:12801"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23804"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "protein-serine epimerase",
-      "equation": "L-seryl-[protein] = D-seryl-[protein]",
-      "ec": "5.1.1.16",
-      "substrates": [
-        {
-          "metabolite": "l_serine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_serine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_1_1_16"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:10660"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:10660"
+            "id": "RHEA:12801"
           }
         ]
       }

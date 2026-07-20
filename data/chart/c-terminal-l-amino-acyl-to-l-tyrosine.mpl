@@ -24,13 +24,13 @@ pathway c-terminal-l-amino-acyl-to-l-tyrosine "C-terminal L-α-amino-acyl… to 
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_2_3_1_53 [2.3.1.53] +acetyl_coa +coa +hplus
-    n_acetyl_l_phenylalaninate
+    <-> . +arachidonate +h2o
+    n_arachidonoyl_l_phenylalaninate
   }
 
   branch from tyrosine side left {
     tyrosine
-    <-> ec_1_3_1_43 [1.3.1.43] +nad +co2 +nadh
-    l_arogenate
+    <-> ec_4_1_1_25 [4.1.1.25] +hplus +co2
+    tyraminium
   }
 }

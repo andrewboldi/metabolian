@@ -1,0 +1,359 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-o-acetyl-d-glucose-to-d-glucono-1-5-lactone",
+  "name": "6-O-acetyl-D-glucose to D-glucono-1,5-lactone",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 6-O-acetyl-D-glucose to D-glucono-1,5-lactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18485"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17901"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_o_acetyl_d_glucose",
+      "name": "6-O-acetyl-D-glucose",
+      "formula": "C8H14O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17901"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "d_glucono_1_5_lactone",
+      "name": "D-glucono-1,5-lactone",
+      "short": "D-glucono-1,5-lacto…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16217"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "daucosterol",
+      "name": "daucosterol",
+      "formula": "C35H60O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67554"
+      }
+    },
+    {
+      "id": "sitosterol",
+      "name": "sitosterol",
+      "formula": "C29H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27693"
+      }
+    },
+    {
+      "id": "n_acetylsphingosine",
+      "name": "N-acetylsphingosine",
+      "formula": "C20H39NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46979"
+      }
+    },
+    {
+      "id": "sphingosine",
+      "name": "Sphingosine",
+      "formula": "C18H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57756"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_33",
+      "name": "6-acetylglucose deacetylase",
+      "ec": [
+        "3.1.1.33"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_47",
+      "name": "glucose 1-dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.47"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_119",
+      "name": "glucose 1-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.119"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_359",
+      "name": "aldose 1-dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.359"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_360",
+      "name": "glucose/galactose 1-dehydrogenase",
+      "ec": [
+        "1.1.1.360"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_104",
+      "name": "steryl-beta-glucosidase",
+      "ec": [
+        "3.2.1.104"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6-acetylglucose deacetylase",
+      "equation": "6-acetyl-D-glucose + H2O = D-glucose + acetate + H(+)",
+      "ec": "3.1.1.33",
+      "substrates": [
+        {
+          "metabolite": "6_o_acetyl_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18485"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18485"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucose 1-dehydrogenase [NAD(P)(+)]",
+      "equation": "D-glucose + NADP(+) = D-glucono-1,5-lactone + NADPH + H(+)",
+      "ec": "1.1.1.47",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14405"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "steryl-beta-glucosidase",
+      "equation": "sitosteryl 3-beta-D-glucoside + H2O = sitosterol + D-glucose",
+      "ec": "3.2.1.104",
+      "substrates": [
+        {
+          "metabolite": "daucosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sitosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_104"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62020"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-(acetyl)-sphing-4-enine + H2O = sphing-4-enine + acetate",
+      "equation": "N-(acetyl)-sphing-4-enine + H2O = sphing-4-enine + acetate",
+      "substrates": [
+        {
+          "metabolite": "n_acetylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:58484"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58484"
+          }
+        ]
+      }
+    }
+  ]
+}

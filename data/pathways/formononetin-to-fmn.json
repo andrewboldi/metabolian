@@ -1,0 +1,309 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "formononetin-to-fmn",
+  "name": "formononetin to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from formononetin(1−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22960"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77688"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "formononetin",
+      "name": "formononetin",
+      "formula": "C16H11O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77688"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "calycosin",
+      "name": "calycosin",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77992"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pseudobaptigenin",
+      "name": "pseudobaptigenin",
+      "formula": "C16H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78327"
+      }
+    },
+    {
+      "id": "1e_4e_8e_humulene",
+      "name": "(1E,4E,8E)-α-humulene",
+      "short": "(1E,4E,8E)-α-humule…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:5768"
+      }
+    },
+    {
+      "id": "8_hydroxy_humulene",
+      "name": "8-hydroxy-α-humulene",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63893"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_88",
+      "name": "isoflavone 3'-hydroxylase",
+      "ec": [
+        "1.14.14.88"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_63",
+      "name": "pseudobaptigenin synthase",
+      "ec": [
+        "1.14.19.63"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_113",
+      "name": "alpha-humulene 10-hydroxylase",
+      "ec": [
+        "1.14.14.113"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isoflavone 3'-hydroxylase",
+      "equation": "formononetin + reduced [NADPH--hemoprotein reductase] + O2 = calycosin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.88",
+      "substrates": [
+        {
+          "metabolite": "formononetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calycosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22960"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pseudobaptigenin synthase",
+      "equation": "calycosin + reduced [NADPH--hemoprotein reductase] + O2 = pseudobaptigenin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.63",
+      "substrates": [
+        {
+          "metabolite": "calycosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudobaptigenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28238"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha-humulene 10-hydroxylase",
+      "equation": "alpha-humulene + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxy-alpha-humulene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.113",
+      "substrates": [
+        {
+          "metabolite": "1e_4e_8e_humulene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_hydroxy_humulene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_113"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32491"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32491"
+          }
+        ]
+      }
+    }
+  ]
+}

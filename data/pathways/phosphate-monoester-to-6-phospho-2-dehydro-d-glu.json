@@ -186,23 +186,30 @@
       }
     },
     {
-      "id": "6_o_d_xylopyranosyl_d_glucopyranoside",
-      "name": "6-O-(β-D-xylopyranosyl)-β-D-glucopyranoside",
-      "short": "6-O-(β-D-xylopyrano…",
-      "formula": "C11H19O10R",
+      "id": "peroxol",
+      "name": "peroxol",
+      "formula": "HO2R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:2220"
+        "chebi": "CHEBI:35924"
       }
     },
     {
-      "id": "d_xylp_1_6_d_glcp",
-      "name": "β-D-Xylp-(1→6)-β-D-Glcp",
-      "short": "β-D-Xylp-(1→6)-β-D-…",
-      "formula": "C11H20O10",
-      "charge": 0,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16405"
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
       }
     },
     {
@@ -236,23 +243,21 @@
       }
     },
     {
-      "id": "quinoline_4_carboxylate",
-      "name": "quinoline-4-carboxylate",
-      "short": "quinoline-4-carboxy…",
-      "formula": "C10H6NO2",
-      "charge": -1,
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58440"
+        "chebi": "CHEBI:28938"
       }
     },
     {
-      "id": "2_oxo_1_2_dihydroquinoline_4_carboxylate",
-      "name": "2-oxo-1,2-dihydroquinoline-4-carboxylate",
-      "short": "2-oxo-1,2-dihydroqu…",
-      "formula": "C10H6NO3",
-      "charge": -1,
+      "id": "hydroxylamine",
+      "name": "hydroxylamine",
+      "formula": "H3NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58878"
+        "chebi": "CHEBI:15429"
       }
     }
   ],
@@ -314,10 +319,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_149",
-      "name": "beta-primeverosidase",
+      "id": "ec_1_11_1_26",
+      "name": "NADH-dependent peroxiredoxin",
       "ec": [
-        "3.2.1.149"
+        "1.11.1.26"
       ]
     },
     {
@@ -335,10 +340,10 @@
       ]
     },
     {
-      "id": "ec_1_3_99_19",
-      "name": "quinoline-4-carboxylate 2-oxidoreductase",
+      "id": "ec_1_7_99_1",
+      "name": "hydroxylamine reductase",
       "ec": [
-        "1.3.99.19"
+        "1.7.99.1"
       ]
     }
   ],
@@ -619,12 +624,30 @@
     },
     {
       "id": "r7",
-      "name": "beta-primeverosidase",
-      "equation": "a 6-O-(beta-D-xylopyranosyl)-beta-D-glucopyranoside + H2O = a 6-O-(beta-D-xylopyranosyl)-beta-D-glucopyranose + an alcohol",
-      "ec": "3.2.1.149",
+      "name": "NADH-dependent peroxiredoxin",
+      "equation": "a hydroperoxide + NADH + H(+) = an alcohol + NAD(+) + H2O",
+      "ec": "1.11.1.26",
       "substrates": [
         {
-          "metabolite": "6_o_d_xylopyranosyl_d_glucopyranoside",
+          "metabolite": "peroxol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -632,32 +655,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "d_xylp_1_6_d_glcp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alcohol",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_149"
+          "enzyme": "ec_1_11_1_26"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:24480"
+        "rhea": "RHEA:62628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24480"
+            "id": "RHEA:62628"
           }
         ]
       }
@@ -758,16 +771,16 @@
     },
     {
       "id": "r10",
-      "name": "quinoline-4-carboxylate 2-oxidoreductase",
-      "equation": "quinoline-4-carboxylate + A + H2O = 2-oxo-1,2-dihydroquinoline-4-carboxylate + AH2",
-      "ec": "1.3.99.19",
+      "name": "hydroxylamine reductase",
+      "equation": "A + NH4(+) + H2O = hydroxylamine + AH2 + H(+)",
+      "ec": "1.7.99.1",
       "substrates": [
         {
-          "metabolite": "quinoline_4_carboxylate",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "nh3",
           "stoichiometry": 1
         },
         {
@@ -777,30 +790,34 @@
       ],
       "products": [
         {
-          "metabolite": "2_oxo_1_2_dihydroquinoline_4_carboxylate",
+          "metabolite": "hydroxylamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_3_99_19"
+          "enzyme": "ec_1_7_99_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:14949"
+        "rhea": "RHEA:22052"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14949"
+            "id": "RHEA:22052"
           }
         ]
       }

@@ -32,19 +32,31 @@ pathway 1-palmitoyl-2-3-dioleoyl-to-oleate "1-palmitoyl-2,3-dioleoyl-… to olea
 
   branch from palmitate side right {
     palmitate
-    <-> . +n_hexadecanoylphytosphingosine +h2o
-    phytosphingosine
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    choline_alfoscerate
   }
 
   branch from 2_oleoylglycerol side left {
     2_oleoylglycerol
-    <-> . +lauroyl_coa +coa
-    1_lauroyl_2_oleoyl_sn_glycerol
+    <-> . +octanoyl_coa +coa
+    1_octanoyl_2_oleoyl_sn_glycerol
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_oleoylglycerol +h2o +hplus
-    glycerol
+    <-> . +1_3_dioleoylglycerol +h2o +hplus
+    1_oleoyl_sn_glycerol
+  }
+
+  branch from 1_2_dioleoyl_sn_glycerol side left {
+    1_2_dioleoyl_sn_glycerol
+    <-> . +h2o +oleate +hplus
+    monooleoylglycerol
+  }
+
+  branch from 1_oleoyl_3_palmitoyl_sn_glycerol side right {
+    1_oleoyl_3_palmitoyl_sn_glycerol
+    <-> . +3_palmitoyl_sn_glycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
+    oleoyl_sn_glycero_3_phosphocholine
   }
 }

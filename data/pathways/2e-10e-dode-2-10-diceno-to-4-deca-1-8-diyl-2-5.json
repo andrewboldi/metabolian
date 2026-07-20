@@ -1,0 +1,177 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-10e-dode-2-10-diceno-to-4-deca-1-8-diyl-2-5",
+  "name": "(2E,10E)-dode-2,10-diceno… to [4-(deca-1,8-diyl)-2,5-di…",
+  "category": "other",
+  "summary": "A 2-step route from (2E,10E)-dode-2,10-dicenoyl-CoA(4−) to [4-(deca-1,8-diyl)-2,5-dioxo-2,5-dihydro-3-furanyl]acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77751"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:197428"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_10e_dode_2_10_dicenoyl_coa",
+      "name": "(2E,10E)-dode-2,10-dicenoyl-CoA",
+      "short": "(2E,10E)-dode-2,10-…",
+      "formula": "C33H50N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:197428"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb",
+      "name": "(4E,11E)-2-hydroxytrideca-4,11-dien-1,2,3-tricarboxylate",
+      "short": "(4E,11E)-2-hydroxyt…",
+      "formula": "C16H21O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:197445"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_deca_1_8_diyl_2_5_dioxo_2_5_dihydro_3_furanyl",
+      "name": "[4-(deca-1,8-diyl)-2,5-dioxo-2,5-dihydro-3-furanyl]acetate",
+      "short": "[4-(deca-1,8-diyl)-…",
+      "formula": "C16H19O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:197420"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E,10E)-dode-2,10-dicenoyl-CoA + oxaloacetate + H2O = (4E,11E)-2-hydroxytrideca-4,11-d...",
+      "equation": "(2E,10E)-dode-2,10-dicenoyl-CoA + oxaloacetate + H2O = (4E,11E)-2-hydroxytrideca-4,11-dien-1,2,3-tricarboxylate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_10e_dode_2_10_dicenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(4E,11E)-2-hydroxytrideca-4,11-dien-1,2,3-tricarboxylate + 2 H(+) = [4-(deca-1,8-diyl)-...",
+      "equation": "(4E,11E)-2-hydroxytrideca-4,11-dien-1,2,3-tricarboxylate + 2 H(+) = [4-(deca-1,8-diyl)-2,5-dioxo-2,5-dihydro-3-furanyl]acetate + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_deca_1_8_diyl_2_5_dioxo_2_5_dihydro_3_furanyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77755"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77755"
+          }
+        ]
+      }
+    }
+  ]
+}

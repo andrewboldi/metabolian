@@ -26,7 +26,7 @@ pathway luteolin-4-o-d-glucosi-to-luteolin-7-o-d-glucos "luteolin 4'-O-β-D-gluc
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +3_ketolactose +h2o
-    3_keto_d_galactose
+    <-> . +apigenin_7_o_d_glucoside +h2o
+    apigenin_7_olate
   }
 }

@@ -18,19 +18,19 @@ pathway pentadecan-1-ol-to-16-feruloyloxypalmitate "pentadecan-1-ol to 16-ferulo
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
-    2_arachidonoyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoylglycerone_3_phosphate +arachidonate
+    1_arachidonoylglycerone_3_phosphate
   }
 
   branch from 16_hydroxyhexadecanoate side right {
     16_hydroxyhexadecanoate
-    <-> . +atp +coa +amp +ppi
-    16_hydroxyhexadecanoyl_coa
+    <-> . +udp_d_glucose +udp +hplus
+    16_d_glucopyranosyloxy_hexadecanoate
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_tetrahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_7_methylsulfanyl_heptanal_oxime
+    <-> ec_1_14_14_129 [1.14.14.129] +oleoyl_coa +fmnh2 +o2 +h2o +hplus
+    18_hydroxyoleoyl_coa
   }
 }

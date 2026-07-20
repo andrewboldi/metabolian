@@ -15,16 +15,4 @@ pathway n-n-diacetylchitobiose-to-2-ammonio-2-deoxy-d-gl "N,N'-diacetylchitobios
     <-> ec_2_7_1_147 [2.7.1.147] +adp -amp -hplus
     glucosamine6p
   }
-
-  branch from acetate side left {
-    acetate
-    <-> ec_4_1_2_66 [4.1.2.66] +trans_4_coumarate +h2o
-    4_hydroxybenzaldehyde
-  }
-
-  branch from n_acetyl_d_glucosamine side right {
-    n_acetyl_d_glucosamine
-    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +h2o
-    n4_d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1
-  }
 }

@@ -117,51 +117,43 @@
       }
     },
     {
-      "id": "n4_aminopropylspermidine",
-      "name": "N4-aminopropylspermidine",
-      "short": "N4-aminopropylsperm…",
-      "formula": "C10H30N4",
-      "charge": 4,
+      "id": "n1_methylpseudouridine_5_monophosphate_1",
+      "name": "N1-methylpseudouridine 5'-monophosphate(1−)",
+      "short": "N1-methylpseudourid…",
+      "formula": "C10H12N2O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:82770"
+        "chebi": "CHEBI:74890"
       }
     },
     {
-      "id": "s_adenosylmethioninaminium",
-      "name": "S-adenosylmethioninaminium",
-      "short": "S-adenosylmethionin…",
-      "formula": "C14H24N6O3S",
-      "charge": 2,
+      "id": "n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour",
+      "name": "N1-methyl-N3-[(3S)-3-amino-3-carboxypropyl]-pseudouridine 5'-phosphate(1−)",
+      "short": "N1-methyl-N3-[(3S)-…",
+      "formula": "C14H19N3O10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57443"
+        "chebi": "CHEBI:146234"
       }
     },
     {
-      "id": "n4_bis_aminopropyl_spermidine",
-      "name": "N4-bis(aminopropyl)spermidine",
-      "short": "N4-bis(aminopropyl)…",
-      "formula": "C13H38N5",
-      "charge": 5,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:82771"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "r_reticulinium",
-      "name": "(R)-reticulinium",
-      "formula": "C19H24NO4",
-      "charge": 1,
+      "id": "n1_methyladenosine_5_monophosphate_1",
+      "name": "N1-methyladenosine 5'-monophosphate(1−)",
+      "short": "N1-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58144"
-      }
-    },
-    {
-      "id": "r_laudanine",
-      "name": "(R)-laudanine",
-      "formula": "C20H26NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:76001"
+        "chebi": "CHEBI:74491"
       }
     }
   ],
@@ -195,10 +187,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_291",
-      "name": "(R,S)-reticuline 7-O-methyltransferase",
+      "id": "ec_2_5_1_157",
+      "name": "rRNA small subunit aminocarboxypropyltransferase",
       "ec": [
-        "2.1.1.291"
+        "2.5.1.157"
       ]
     }
   ],
@@ -401,21 +393,22 @@
     },
     {
       "id": "r5",
-      "name": "N(4)-aminopropylspermidine + S-adenosyl 3-(methylsulfanyl)propylamine = N(4)-bis(aminop...",
-      "equation": "N(4)-aminopropylspermidine + S-adenosyl 3-(methylsulfanyl)propylamine = N(4)-bis(aminopropyl)spermidine + S-methyl-5'-thioadenosine + H(+)",
+      "name": "rRNA small subunit aminocarboxypropyltransferase",
+      "equation": "an N(1)-methylpseudouridine in rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine in rRNA + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.157",
       "substrates": [
         {
-          "metabolite": "n4_aminopropylspermidine",
+          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_adenosylmethioninaminium",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n4_bis_aminopropyl_spermidine",
+          "metabolite": "n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour",
           "stoichiometry": 1
         },
         {
@@ -427,29 +420,33 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_157"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:42872"
+        "rhea": "RHEA:63296"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42872"
+            "id": "RHEA:63296"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(R,S)-reticuline 7-O-methyltransferase",
-      "equation": "(R)-reticuline + S-adenosyl-L-methionine = (R)-laudanine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.291",
+      "name": "an adenosine in tRNA + S-adenosyl-L-methionine = an N(1)-methyladenosine in tRNA + S-ad...",
+      "equation": "an adenosine in tRNA + S-adenosyl-L-methionine = an N(1)-methyladenosine in tRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "r_reticulinium",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -459,7 +456,7 @@
       ],
       "products": [
         {
-          "metabolite": "r_laudanine",
+          "metabolite": "n1_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -471,22 +468,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_291"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:38907"
+        "rhea": "RHEA:49132"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38907"
+            "id": "RHEA:49132"
           }
         ]
       }

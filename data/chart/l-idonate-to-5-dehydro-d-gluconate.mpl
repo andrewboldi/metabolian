@@ -21,10 +21,4 @@ pathway l-idonate-to-5-dehydro-d-gluconate "L-idonate to 5-dehydro-D-gluconate" 
     <-> ec_1_1_1_69 [1.1.1.69] +nadp +nadph +hplus
     d_gluconate
   }
-
-  branch from 2_5_didehydro_d_gluconate side right {
-    2_5_didehydro_d_gluconate
-    <-> ec_1_1_1_346 [1.1.1.346] +nadp +nadph +hplus
-    2_dehydro_l_idonate
-  }
 }

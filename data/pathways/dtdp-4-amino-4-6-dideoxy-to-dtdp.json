@@ -140,41 +140,31 @@
       }
     },
     {
-      "id": "dtdp_6_deoxy_l_mannose",
-      "name": "dTDP-6-deoxy-β-L-mannose",
-      "short": "dTDP-6-deoxy-β-L-ma…",
-      "formula": "C16H24N2O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57510"
-      }
-    },
-    {
-      "id": "l_argininium",
-      "name": "L-argininium",
-      "formula": "C6H13N4O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:29965"
-      }
-    },
-    {
-      "id": "n_6_deoxy_l_mannosyl_l_arginyl_2",
-      "name": "Nω-(6-deoxy-α-L-mannosyl)-L-arginyl(2+)",
-      "short": "Nω-(6-deoxy-α-L-man…",
-      "formula": "C12H23N4O5",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:167445"
-      }
-    },
-    {
       "id": "dtmp",
       "name": "dTMP",
       "formula": "C10H13N2O8P",
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:63528"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58069"
       }
     }
   ],
@@ -390,43 +380,39 @@
     },
     {
       "id": "r5",
-      "name": "dTDP-beta-L-rhamnose + L-arginyl-[protein] = N(omega)-(alpha-L-rhamnosyl)-L-arginyl-[pr...",
-      "equation": "dTDP-beta-L-rhamnose + L-arginyl-[protein] = N(omega)-(alpha-L-rhamnosyl)-L-arginyl-[protein] + dTDP + H(+)",
+      "name": "dTMP + CTP = CDP + dTDP",
+      "equation": "dTMP + CTP = CDP + dTDP",
       "substrates": [
         {
-          "metabolite": "dtdp_6_deoxy_l_mannose",
+          "metabolite": "dtmp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_argininium",
+          "metabolite": "ctp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_6_deoxy_l_mannosyl_l_arginyl_2",
+          "metabolite": "cdp",
           "stoichiometry": 1
         },
         {
           "metabolite": "dtdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:66692"
+        "rhea": "RHEA:82687"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66692"
+            "id": "RHEA:82687"
           }
         ]
       }

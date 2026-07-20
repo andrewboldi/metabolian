@@ -30,8 +30,8 @@ pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'
 
   branch from 1_1_2_trilinoleoyl_2_oleoyl_cardiolipin side left {
     1_1_2_trilinoleoyl_2_oleoyl_cardiolipin
-    <-> . +trilinoleoyl_2_monolysocardiolipin +coa
-    oleoyl_coa
+    <-> . +trilinoleoyl_2_monolysocardiolipin +1_2_dioleoyl_sn_glycero_3_phosphocholine
+    1_o_oleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from trilinoleoyl_2_monolysocardiolipin side right {

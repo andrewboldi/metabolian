@@ -17,10 +17,4 @@ pathway syringate-to-d-glucopyranose "syringate to D-glucopyranose" {
     <-> ec_2_3_1_90 [2.3.1.90] -glucose
     1_6_bis_o_galloyl_d_glucose
   }
-
-  branch from glucose side left {
-    glucose
-    <-> . +glucoraphanin +h2o +hplus
-    z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi
-  }
 }

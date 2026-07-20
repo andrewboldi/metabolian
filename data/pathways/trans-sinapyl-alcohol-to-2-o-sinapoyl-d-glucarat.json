@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-sinapyl-alcohol-to-2-o-sinapoyl-d-glucarat",
+  "name": "trans-sinapyl alcohol to 2-O-sinapoyl-D-glucarate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from trans-sinapyl alcohol to 2-O-sinapoyl-D-glucarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:72031"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64557"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_sinapyl_alcohol",
+      "name": "trans-sinapyl alcohol",
+      "short": "trans-sinapyl…",
+      "formula": "C11H14O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64557"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "e_sinapaldehyde",
+      "name": "(E)-sinapaldehyde",
+      "formula": "C11H12O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27949"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "sinapoyl_coa",
+      "name": "sinapoyl-CoA",
+      "formula": "C32H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57393"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_glucarate",
+      "name": "D-glucarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30612"
+      }
+    },
+    {
+      "id": "2_o_sinapoyl_d_glucarate",
+      "name": "2-O-sinapoyl-D-glucarate",
+      "short": "2-O-sinapoyl-D-gluc…",
+      "formula": "C17H18O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58793"
+      }
+    },
+    {
+      "id": "2r_3s_piscidate",
+      "name": "(2R,3S)-piscidate",
+      "formula": "C11H10O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:192789"
+      }
+    },
+    {
+      "id": "cimicifugate_j",
+      "name": "cimicifugate J",
+      "formula": "C22H20O11",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:192792"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_44",
+      "name": "cinnamoyl-CoA reductase",
+      "ec": [
+        "1.2.1.44"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_131",
+      "name": "glucarate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.131"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(E)-sinapyl alcohol + O2 = (E)-sinapaldehyde + H2O2",
+      "equation": "(E)-sinapyl alcohol + O2 = (E)-sinapaldehyde + H2O2",
+      "substrates": [
+        {
+          "metabolite": "trans_sinapyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_sinapaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:72031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cinnamoyl-CoA reductase",
+      "equation": "(E)-sinapaldehyde + NADP(+) + CoA = (E)-sinapoyl-CoA + NADPH + H(+)",
+      "ec": "1.2.1.44",
+      "substrates": [
+        {
+          "metabolite": "e_sinapaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:64656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucarate O-hydroxycinnamoyltransferase",
+      "equation": "D-glucarate + (E)-sinapoyl-CoA = 2-O-[(E)-sinapoyl]-D-glucarate + CoA",
+      "ec": "2.3.1.131",
+      "substrates": [
+        {
+          "metabolite": "d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_sinapoyl_d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_131"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(2R,3S)-piscidate + (E)-sinapoyl-CoA = cimicifugate J + CoA",
+      "equation": "(2R,3S)-piscidate + (E)-sinapoyl-CoA = cimicifugate J + CoA",
+      "substrates": [
+        {
+          "metabolite": "2r_3s_piscidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cimicifugate_j",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:73327"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73327"
+          }
+        ]
+      }
+    }
+  ]
+}

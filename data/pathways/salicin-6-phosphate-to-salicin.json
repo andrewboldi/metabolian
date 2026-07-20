@@ -1,0 +1,260 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "salicin-6-phosphate-to-salicin",
+  "name": "salicin-6-phosphate to salicin",
+  "category": "redox-detox",
+  "summary": "A 2-step route from salicin-6-phosphate(2−) to salicin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33127"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64794"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "salicin_6_phosphate",
+      "name": "salicin-6-phosphate",
+      "formula": "C13H17O10P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64794"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "salicyl_alcohol",
+      "name": "salicyl alcohol",
+      "formula": "C7H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16464"
+      }
+    },
+    {
+      "id": "d_glucose_6_phosphate",
+      "name": "β-D-glucose 6-phosphate",
+      "short": "β-D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58247"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "salicin",
+      "name": "salicin",
+      "formula": "C13H18O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17814"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "salicylaldehyde",
+      "name": "salicylaldehyde",
+      "formula": "C7H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16008"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_172",
+      "name": "salicyl-alcohol beta-D-glucosyltransferase",
+      "ec": [
+        "2.4.1.172"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "salicin-6-phosphate + H2O = salicyl alcohol + beta-D-glucose 6-phosphate",
+      "equation": "salicin-6-phosphate + H2O = salicyl alcohol + beta-D-glucose 6-phosphate",
+      "substrates": [
+        {
+          "metabolite": "salicin_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "salicyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33127"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33127"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "salicyl-alcohol beta-D-glucosyltransferase",
+      "equation": "salicyl alcohol + UDP-alpha-D-glucose = salicin + UDP + H(+)",
+      "ec": "2.4.1.172",
+      "substrates": [
+        {
+          "metabolite": "salicyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "salicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_172"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "salicyl alcohol + O2 = salicylaldehyde + H2O2",
+      "equation": "salicyl alcohol + O2 = salicylaldehyde + H2O2",
+      "substrates": [
+        {
+          "metabolite": "salicyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "salicylaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80451"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80451"
+          }
+        ]
+      }
+    }
+  ]
+}

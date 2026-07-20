@@ -1,0 +1,222 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-3-tripalmitoleoylglyc-to-10-hydroxypalmitate",
+  "name": "1,2,3-tripalmitoleoylglyc… to 10-hydroxypalmitate",
+  "category": "other",
+  "summary": "A 2-step route from 1,2,3-tripalmitoleoylglycerol to 10-hydroxypalmitate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38399"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75841"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_3_tripalmitoleoylglycerol",
+      "name": "1,2,3-tripalmitoleoylglycerol",
+      "short": "1,2,3-tripalmitoleo…",
+      "formula": "C51H92O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75841"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_3_dipalmitoleoyl_sn_glycerol",
+      "name": "2,3-dipalmitoleoyl-sn-glycerol",
+      "short": "2,3-dipalmitoleoyl-…",
+      "formula": "C35H64O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75853"
+      }
+    },
+    {
+      "id": "palmitoleate",
+      "name": "palmitoleate",
+      "formula": "C16H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32372"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "10_hydroxypalmitate",
+      "name": "10-hydroxypalmitate",
+      "formula": "C16H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194446"
+      }
+    },
+    {
+      "id": "12_9z_hexadecenoyloxy_octadecanoate",
+      "name": "12-[(9Z)-hexadecenoyloxy]octadecanoate",
+      "short": "12-[(9Z)-hexadeceno…",
+      "formula": "C34H63O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136312"
+      }
+    },
+    {
+      "id": "12_hydroxyoctadecanoate",
+      "name": "12-hydroxyoctadecanoate",
+      "short": "12-hydroxyoctadecan…",
+      "formula": "C18H35O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84201"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1,2,3-tri-(9Z)-hexadecenoylglycerol + H2O = 2,3-di-(9Z)-hexadecenoyl-sn-glycerol + (9Z)...",
+      "equation": "1,2,3-tri-(9Z)-hexadecenoylglycerol + H2O = 2,3-di-(9Z)-hexadecenoyl-sn-glycerol + (9Z)-hexadecenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_3_tripalmitoleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dipalmitoleoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(9Z)-hexadecenoate + H2O = 10-hydroxyhexadecanoate",
+      "equation": "(9Z)-hexadecenoate + H2O = 10-hydroxyhexadecanoate",
+      "substrates": [
+        {
+          "metabolite": "palmitoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10_hydroxypalmitate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:75767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "12-(9Z-hexadecenoyloxy)-octadecanoate + H2O = 12-hydroxyoctadecanoate + (9Z)-hexadeceno...",
+      "equation": "12-(9Z-hexadecenoyloxy)-octadecanoate + H2O = 12-hydroxyoctadecanoate + (9Z)-hexadecenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "12_9z_hexadecenoyloxy_octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:52072"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52072"
+          }
+        ]
+      }
+    }
+  ]
+}

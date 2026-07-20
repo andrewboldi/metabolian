@@ -1,0 +1,233 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sapropterin-to-r-dyspropterin",
+  "name": "sapropterin to (R)-dyspropterin",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from sapropterin to (R)-dyspropterin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42500"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59560"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sapropterin",
+      "name": "sapropterin",
+      "formula": "C9H15N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59560"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+      "name": "(6R)-6-lactoyl-5,6,7,8-tetrahydropterin",
+      "short": "6-lactoyl-5,6,7,8-t…",
+      "formula": "C9H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136565"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_dyspropterin",
+      "name": "(R)-dyspropterin",
+      "formula": "C9H11N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136564"
+      }
+    },
+    {
+      "id": "6r_5_6_7_8_tetrahydrobiopterin",
+      "name": "(6R)-5,6,7,8-tetrahydrobiopterin",
+      "short": "5,6,7,8-tetrahydrob…",
+      "formula": "C9H15N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136570"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_220",
+      "name": "6-pyruvoyltetrahydropterin 2'-reductase",
+      "ec": [
+        "1.1.1.220"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + NADP(+) = 6-lactoyl-5,6,7,8-tetrahydropter...",
+      "equation": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + NADP(+) = 6-lactoyl-5,6,7,8-tetrahydropterin + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sapropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-pyruvoyltetrahydropterin 2'-reductase",
+      "equation": "6-lactoyl-5,6,7,8-tetrahydropterin + NADP(+) = 6-pyruvoyl-5,6,7,8-tetrahydropterin + NADPH + H(+)",
+      "ec": "1.1.1.220",
+      "substrates": [
+        {
+          "metabolite": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_dyspropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(6R)-5,6,7,8-tetrahydrobiopterin + 2 NADP(+) = 6-pyruvoyl-5,6,7,8-tetrahydropterin + 2 ...",
+      "equation": "(6R)-5,6,7,8-tetrahydrobiopterin + 2 NADP(+) = 6-pyruvoyl-5,6,7,8-tetrahydropterin + 2 NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "6r_5_6_7_8_tetrahydrobiopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_dyspropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24738"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24738"
+          }
+        ]
+      }
+    }
+  ]
+}

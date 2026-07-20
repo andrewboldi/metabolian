@@ -1,0 +1,315 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-dichlorprop-to-3-5-dichlorocatechol",
+  "name": "(S)-dichlorprop to 3,5-dichlorocatechol",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (S)-dichlorprop(1−) to 3,5-dichlorocatechol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37827"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75287"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_dichlorprop",
+      "name": "(S)-dichlorprop",
+      "formula": "C9H7Cl2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75287"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_4_dichlorophenol",
+      "name": "2,4-dichlorophenol",
+      "formula": "C6H4Cl2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16738"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_5_dichlorocatechol",
+      "name": "3,5-dichlorocatechol",
+      "formula": "C6H4Cl2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15788"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "isovaleryl_coa",
+      "name": "Isovaleryl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57345"
+      }
+    },
+    {
+      "id": "2_hydroxyisovaleryl_coa",
+      "name": "2-hydroxyisovaleryl-CoA",
+      "short": "2-hydroxyisovaleryl…",
+      "formula": "C26H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138296"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_43",
+      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "ec": [
+        "1.14.11.43"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "equation": "(S)-(2,4-dichlorophenoxy)propanoate + 2-oxoglutarate + O2 = 2,4-dichlorophenol + pyruvate + succinate + CO2",
+      "ec": "1.14.11.43",
+      "substrates": [
+        {
+          "metabolite": "s_dichlorprop",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_dichlorophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,4-dichlorophenol + NADH + O2 + H(+) = 3,5-dichlorocatechol + NAD(+) + H2O",
+      "equation": "2,4-dichlorophenol + NADH + O2 + H(+) = 3,5-dichlorocatechol + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_4_dichlorophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dichlorocatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80611"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-methylbutanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylbutanoyl-CoA + succinate...",
+      "equation": "3-methylbutanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylbutanoyl-CoA + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "isovaleryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyisovaleryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54612"
+          }
+        ]
+      }
+    }
+  ]
+}

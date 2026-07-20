@@ -24,7 +24,7 @@ pathway 6-2-azaniumyl-2-carboxyl-to-pyrroloquinoline-qui "6-(2-azaniumyl-2-carbo
 
   branch from myo_2_inosose side right {
     myo_2_inosose
-    <-> ec_5_3_99_11 [5.3.99.11]
-    2d_2_3_5_4_6_pentahydroxycyclohexanone
+    <-> . +nad +nadh +hplus
+    3_dehydro_scyllo_inosose
   }
 }

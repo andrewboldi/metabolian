@@ -1,0 +1,235 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-3-hydroxylauroyl-coa-to-lauroyl-coa",
+  "name": "(R)-3-hydroxylauroyl-CoA to lauroyl-CoA",
+  "category": "other",
+  "summary": "A 2-step route from (R)-3-hydroxylauroyl-CoA(4−) to lauroyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:44024"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:74276"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_3_hydroxylauroyl_coa",
+      "name": "(R)-3-hydroxylauroyl-CoA",
+      "short": "3-hydroxylauroyl-CoA",
+      "formula": "C33H54N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74276"
+      }
+    },
+    {
+      "id": "trans_dodec_2_enoyl_coa",
+      "name": "trans-dodec-2-enoyl-CoA",
+      "short": "trans-dodec-2-enoyl…",
+      "formula": "C33H52N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57330"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "lauroyl_coa",
+      "name": "lauroyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57375"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "3_oxotetradecanoyl_coa",
+      "name": "3-oxotetradecanoyl-CoA",
+      "short": "3-oxotetradecanoyl-…",
+      "formula": "C35H56N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62543"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3R)-3-hydroxydodecanoyl-CoA = (2E)-dodecenoyl-CoA + H2O",
+      "equation": "(3R)-3-hydroxydodecanoyl-CoA = (2E)-dodecenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxylauroyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_dodec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:44024"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44024"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-dodecenoyl-CoA + NADH + H(+) = dodecanoyl-CoA + NAD(+)",
+      "equation": "(2E)-dodecenoyl-CoA + NADH + H(+) = dodecanoyl-CoA + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_dodec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lauroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:45408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dodecanoyl-CoA + acetyl-CoA = 3-oxotetradecanoyl-CoA + CoA",
+      "equation": "dodecanoyl-CoA + acetyl-CoA = 3-oxotetradecanoyl-CoA + CoA",
+      "substrates": [
+        {
+          "metabolite": "lauroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxotetradecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:31091"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31091"
+          }
+        ]
+      }
+    }
+  ]
+}

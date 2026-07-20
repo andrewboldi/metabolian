@@ -1,0 +1,235 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-threo-3-phenylserine-to-s-mandelonitrile",
+  "name": "L-threo-3-phenylserine to (S)-mandelonitrile",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from L-threo-3-phenylserine zwitterion to (S)-mandelonitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21712"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57901"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_threo_3_phenylserine",
+      "name": "L-threo-3-phenylserine",
+      "short": "L-threo-3-phenylser…",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57901"
+      }
+    },
+    {
+      "id": "benzaldehyde",
+      "name": "benzaldehyde",
+      "formula": "C7H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17169"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    },
+    {
+      "id": "s_mandelonitrile",
+      "name": "(S)-mandelonitrile",
+      "formula": "C8H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36941"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "amino_oxobutanoate",
+      "name": "L-2-Amino-3-oxobutanoate",
+      "short": "L-2-Amino-3-oxobuta…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78948"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_26",
+      "name": "phenylserine aldolase",
+      "ec": [
+        "4.1.2.26"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_29",
+      "name": "glycine C-acetyltransferase",
+      "ec": [
+        "2.3.1.29"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phenylserine aldolase",
+      "equation": "L-threo-3-phenylserine = benzaldehyde + glycine",
+      "ec": "4.1.2.26",
+      "substrates": [
+        {
+          "metabolite": "l_threo_3_phenylserine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "benzaldehyde + hydrogen cyanide = (S)-mandelonitrile",
+      "equation": "benzaldehyde + hydrogen cyanide = (S)-mandelonitrile",
+      "substrates": [
+        {
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_mandelonitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycine C-acetyltransferase",
+      "equation": "glycine + acetyl-CoA = (2S)-2-amino-3-oxobutanoate + CoA",
+      "ec": "2.3.1.29",
+      "substrates": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amino_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20736"
+          }
+        ]
+      }
+    }
+  ]
+}

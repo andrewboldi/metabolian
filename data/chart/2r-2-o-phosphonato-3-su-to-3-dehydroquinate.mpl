@@ -24,13 +24,7 @@ pathway 2r-2-o-phosphonato-3-su-to-3-dehydroquinate "(2R)-2-O-phosphonato-3-suâ€
 
   branch from sulfite side right {
     sulfite
-    <-> . +3_sulfino_l_alanine +h2o +hplus
-    alanine
-  }
-
-  branch from 3_dehydroquinate side left {
-    3_dehydroquinate
-    <-> ec_1_1_1_282 [1.1.1.282] +nadp +nadph +hplus
-    quinate
+    <-> . +nad +h2o +nadh +hplus
+    h2s
   }
 }

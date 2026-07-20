@@ -18,8 +18,8 @@ pathway 2-deoxymugineate-to-succinyl-coa "2'-deoxymugineate to succinyl-CoA" {
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_4 [1.14.11.4] +l_lysinium +akg +o2 +co2
-    5r_5_hydroxy_l_lysine_1
+    <-> ec_1_14_11_25 [1.14.11.25] +2_deoxymugineate +akg +o2 +co2 +hplus
+    3_epi_3_hydroxy_2_deoxymugineate
   }
 
   branch from succinyl_coa side right {

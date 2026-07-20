@@ -28,14 +28,26 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from l_fucopyranose side left {
     l_fucopyranose
-    <-> . +l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco +h2o
-    d_galactosyl_1_4_n_acetyl_d_glucosaminide
+    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac +h2o
+    d_galactosyl_1_3_n_acetyl_d_galactosaminide
   }
 
   branch from alcohol side right {
     alcohol
     <-> ec_3_1_1_48 [3.1.1.48] +n5_acyl_l_ornithine_ester +h2o +hplus
     n5_acyl_l_ornithine
+  }
+
+  branch from l_fucono_1_5_lactone side left {
+    l_fucono_1_5_lactone
+    <-> ec_1_1_1_435 [1.1.1.435] +nadp +nadph +hplus
+    l_fucose
+  }
+
+  branch from l_fuconate side right {
+    l_fuconate
+    <-> ec_3_1_1_120 [3.1.1.120] +h2o +hplus
+    l_fucono_1_4_lactone
   }
 
   branch from 2_dehydro_3_deoxy_l_fuconate side left {

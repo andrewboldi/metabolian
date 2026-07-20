@@ -20,21 +20,15 @@ pathway trans-p-coumaryl-alcohol-to-aureusidin-6-o-gluco "trans-p-coumaryl alcoh
     aureusidin_6_o_glucoside
   }
 
-  branch from 4_hydroxycinnamaldehyde side left {
-    4_hydroxycinnamaldehyde
-    <-> . +trans_p_coumaryl_alcohol +hydrogen_acceptor
-    hydrogen_donor
-  }
-
-  branch from trans_4_coumaroyl_coa side right {
+  branch from trans_4_coumaroyl_coa side left {
     trans_4_coumaroyl_coa
-    <-> ec_2_3_1_215 [2.3.1.215] +anthocyanidin_3_o_d_glucoside +coa +hplus
-    anthocyanidin_3_o_6_o_4_hydroxycinnamoyl_d_gluco
+    <-> . +h2o
+    3_hydroxy_3_4_hydroxyphenyl_propionyl_coa
   }
 
-  branch from aureusidin_6_o_glucoside side left {
-    aureusidin_6_o_glucoside
-    <-> ec_1_21_3_6 [1.21.3.6] +o2 +hplus +h2o
-    2_3_4_4_6_pentahydroxychalcone_4_o_d_glucoside
+  branch from 2_4_4_6_tetrahydroxychalcone side right {
+    2_4_4_6_tetrahydroxychalcone
+    <-> ec_2_5_1_136 [2.5.1.136] +dmapp +ppi
+    desmethylxanthohumol
   }
 }

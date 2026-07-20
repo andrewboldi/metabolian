@@ -15,10 +15,4 @@ pathway s-3-hydroxydecanedioyl-to-trans-2-octenedioyl-c "(S)-3-hydroxydecanedioy
     <-> . +o2 -h2o2
     trans_2_octenedioyl_coa
   }
-
-  branch from octanedioyl_coa side left {
-    octanedioyl_coa
-    <-> . +h2o +coa +hplus
-    suberate
-  }
 }

@@ -18,17 +18,11 @@ pathway 15-methylhexadecasphing-4-to-choline-phosphate "15-methylhexadecasphing-
 
   branch from n_acyl_15_methylhexadecasphing_4_enine side left {
     n_acyl_15_methylhexadecasphing_4_enine
-    <-> . +atp +adp +hplus
-    n_acyl_15_methylhexadecasphing_4_enine_1_phospha
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    n_acyl_15_methylhexadecasphinganine
   }
 
-  branch from dag side right {
-    dag
-    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
-    pser
-  }
-
-  branch from phosphocholine side left {
+  branch from phosphocholine side right {
     phosphocholine
     <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
     1_2_dioleoyl_sn_glycerol

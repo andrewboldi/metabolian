@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "zearalenone-to-s-e-1-3-5-dihydroxyphe",
+  "name": "zearalenone to (S,E)-1-(3,5-dihydroxyphe…",
+  "category": "other",
+  "summary": "A 2-step route from zearalenone to (S,E)-1-(3,5-dihydroxyphenyl)-10-hydroxyundec-1-en-6-one, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79255"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:10106"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "zearalenone",
+      "name": "zearalenone",
+      "formula": "C18H22O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10106"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_e_2_4_dihydroxy_6_10_hydroxy_6_oxoundec_1_en",
+      "name": "(S,E)-2,4-dihydroxy-6-(10-hydroxy-6-oxoundec-1-en-1-yl)benzoate",
+      "short": "(S,E)-2,4-dihydroxy…",
+      "formula": "C18H23O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229751"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_e_1_3_5_dihydroxyphenyl_10_hydroxyundec_1_en",
+      "name": "(S,E)-1-(3,5-dihydroxyphenyl)-10-hydroxyundec-1-en-6-one",
+      "short": "(S,E)-1-(3,5-dihydr…",
+      "formula": "C17H24O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229752"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "zearalenone + H2O = hydrolyzed zearalenone + H(+)",
+      "equation": "zearalenone + H2O = hydrolyzed zearalenone + H(+)",
+      "substrates": [
+        {
+          "metabolite": "zearalenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_e_2_4_dihydroxy_6_10_hydroxy_6_oxoundec_1_en",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hydrolyzed zearalenone + H(+) = decarboxylated hydrolyzed zearalenone + CO2",
+      "equation": "hydrolyzed zearalenone + H(+) = decarboxylated hydrolyzed zearalenone + CO2",
+      "substrates": [
+        {
+          "metabolite": "s_e_2_4_dihydroxy_6_10_hydroxy_6_oxoundec_1_en",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_e_1_3_5_dihydroxyphenyl_10_hydroxyundec_1_en",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79259"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79259"
+          }
+        ]
+      }
+    }
+  ]
+}

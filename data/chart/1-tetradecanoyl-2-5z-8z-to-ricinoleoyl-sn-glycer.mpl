@@ -19,18 +19,18 @@ pathway 1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer "1-tetradecanoyl-2-[(5Z
   branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side left {
     2_arachidonoyl_sn_glycero_3_phosphocholine
     <-> . +hydrogen_donor +o2 +hydrogen_acceptor +h2o
-    2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
+    2_15r_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g
   }
 
   branch from tetradecanoate side right {
     tetradecanoate
-    <-> ec_1_11_2_4 [1.11.2.4] +h2o2 +h2o
-    2s_2_hydroxytetradecanoate
+    <-> . +holo-acp +atp +amp +ppi
+    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
   }
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +o2
-    8_s_hpete
+    <-> . +h2o +coa +hplus
+    arachidonoyl_coa
   }
 }

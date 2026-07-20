@@ -18,7 +18,7 @@ pathway 4-amino-5-formamidomethyl-to-4-amino-2-methyl-5 "4-amino-5-formamidometh
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_1_99_1 [4.1.99.1] +l_tryptophan +h2o +pyruvate
-    1h_indole
+    <-> . +o_carbamoyl_l_serine +hplus +co2
+    2_ammonioprop_2_enoate
   }
 }

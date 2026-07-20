@@ -204,40 +204,31 @@
       }
     },
     {
-      "id": "25_hydroxycholest_4_en_3_one",
-      "name": "25-hydroxycholest-4-en-3-one",
-      "short": "25-hydroxycholest-4…",
-      "formula": "C27H44O2",
+      "id": "cholest_5_en_3_one",
+      "name": "cholest-5-en-3-one",
+      "formula": "C27H44O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:155845"
+        "chebi": "CHEBI:63906"
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
+      "id": "corticosterone",
+      "name": "corticosterone",
+      "formula": "C21H30O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58359"
+        "chebi": "CHEBI:16827"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
+      "id": "18_hydroxycorticosterone",
+      "name": "18-hydroxycorticosterone",
+      "short": "18-hydroxycorticost…",
+      "formula": "C21H30O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:16485"
       }
     },
     {
@@ -267,6 +258,43 @@
       "xrefs": {
         "chebi": "CHEBI:146202"
       }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "isoprene",
+      "name": "isoprene",
+      "formula": "C5H8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35194"
+      }
+    },
+    {
+      "id": "chlorate",
+      "name": "chlorate",
+      "formula": "ClO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:49709"
+      }
+    },
+    {
+      "id": "chlorite",
+      "name": "chlorite",
+      "formula": "ClO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17441"
+      }
     }
   ],
   "enzymes": [
@@ -285,17 +313,31 @@
       ]
     },
     {
-      "id": "ec_1_17_99_10",
-      "name": "steroid C-25 hydroxylase",
+      "id": "ec_5_3_3_1",
+      "name": "steroid Delta-isomerase",
       "ec": [
-        "1.17.99.10"
+        "5.3.3.1"
       ]
     },
     {
-      "id": "ec_1_4_7_1",
-      "name": "glutamate synthase (ferredoxin)",
+      "id": "ec_1_14_15_5",
+      "name": "corticosterone 18-monooxygenase",
       "ec": [
-        "1.4.7.1"
+        "1.14.15.5"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_27",
+      "name": "isoprene synthase",
+      "ec": [
+        "4.2.3.27"
+      ]
+    },
+    {
+      "id": "ec_1_97_1_1",
+      "name": "chlorate reductase",
+      "ec": [
+        "1.97.1.1"
       ]
     }
   ],
@@ -596,71 +638,49 @@
     },
     {
       "id": "r7",
-      "name": "steroid C-25 hydroxylase",
-      "equation": "cholest-4-en-3-one + A + H2O = 25-hydroxycholest-4-en-3-one + AH2",
-      "ec": "1.17.99.10",
+      "name": "steroid Delta-isomerase",
+      "equation": "cholest-5-en-3-one = cholest-4-en-3-one",
+      "ec": "5.3.3.1",
       "substrates": [
         {
-          "metabolite": "cholest_4_en_3_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "cholest_5_en_3_one",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "25_hydroxycholest_4_en_3_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "cholest_4_en_3_one",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_17_99_10"
+          "enzyme": "ec_5_3_3_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:65616"
+        "rhea": "RHEA:32187"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65616"
+            "id": "RHEA:32187"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "glutamate synthase (ferredoxin)",
-      "equation": "2 oxidized [2Fe-2S]-[ferredoxin] + 2 L-glutamate = L-glutamine + 2 reduced [2Fe-2S]-[ferredoxin] + 2-oxoglutarate + 2 H(+)",
-      "ec": "1.4.7.1",
+      "name": "corticosterone 18-monooxygenase",
+      "equation": "corticosterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-hydroxycorticosterone + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.5",
       "substrates": [
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glutamine",
+          "metabolite": "corticosterone",
           "stoichiometry": 1
         },
         {
@@ -668,7 +688,7 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "akg",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -676,22 +696,36 @@
           "stoichiometry": 2
         }
       ],
+      "products": [
+        {
+          "metabolite": "18_hydroxycorticosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_7_1"
+          "enzyme": "ec_1_14_15_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:12128"
+        "rhea": "RHEA:11872"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12128"
+            "id": "RHEA:11872"
           }
         ]
       }
@@ -774,6 +808,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:63172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "isoprene synthase",
+      "equation": "dimethylallyl diphosphate = isoprene + diphosphate",
+      "ec": "4.2.3.27",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoprene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:13369"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13369"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "chlorate reductase",
+      "equation": "chlorate + AH2 = chlorite + A + H2O",
+      "ec": "1.97.1.1",
+      "substrates": [
+        {
+          "metabolite": "chlorate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_97_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:16349"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16349"
           }
         ]
       }

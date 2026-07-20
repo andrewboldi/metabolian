@@ -140,40 +140,22 @@
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "12_18_dihydroxyoctadecanoate",
-      "name": "12,18-dihydroxyoctadecanoate",
-      "short": "12,18-dihydroxyocta…",
-      "formula": "C18H35O4",
+      "id": "12_9z_octadecenoyloxy_octadecanoate",
+      "name": "12-[(9Z)-octadecenoyloxy]octadecanoate",
+      "short": "12-[(9Z)-octadeceno…",
+      "formula": "C36H67O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:91294"
+        "chebi": "CHEBI:136302"
       }
     },
     {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
+      "id": "oleate",
+      "name": "oleate",
+      "formula": "C18H33O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58210"
+        "chebi": "CHEBI:30823"
       }
     },
     {
@@ -187,32 +169,31 @@
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5β,9α,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58553"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "ent_pimara_9_11_15_diene",
-      "name": "ent-pimara-9(11),15-diene",
-      "short": "ent-pimara-9(11),15…",
-      "formula": "C20H32",
+      "id": "patchouli_alcohol",
+      "name": "patchouli alcohol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50064"
+        "chebi": "CHEBI:7940"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_31",
-      "name": "ent-pimara-9(11),15-diene synthase",
+      "id": "ec_4_2_3_70",
+      "name": "patchoulol synthase",
       "ec": [
-        "4.2.3.31"
+        "4.2.3.70"
       ]
     }
   ],
@@ -352,33 +333,25 @@
     },
     {
       "id": "r4",
-      "name": "12-hydroxyoctadecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 12,18-dihydroxy...",
-      "equation": "12-hydroxyoctadecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 12,18-dihydroxyoctadecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "12-(9Z-octadecenoyloxy)-octadecanoate + H2O = 12-hydroxyoctadecanoate + (9Z)-octadeceno...",
+      "equation": "12-(9Z-octadecenoyloxy)-octadecanoate + H2O = 12-hydroxyoctadecanoate + (9Z)-octadecenoate + H(+)",
       "substrates": [
         {
-          "metabolite": "12_hydroxyoctadecanoate",
+          "metabolite": "12_9z_octadecenoyloxy_octadecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "12_18_dihydroxyoctadecanoate",
+          "metabolite": "12_hydroxyoctadecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "oleate",
           "stoichiometry": 1
         },
         {
@@ -389,14 +362,14 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:49376"
+        "rhea": "RHEA:52060"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49376"
+            "id": "RHEA:52060"
           }
         ]
       }
@@ -450,18 +423,22 @@
     },
     {
       "id": "r6",
-      "name": "ent-pimara-9(11),15-diene synthase",
-      "equation": "ent-copalyl diphosphate = ent-pimara-9(11),15-diene + diphosphate",
-      "ec": "4.2.3.31",
+      "name": "patchoulol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = patchoulol + diphosphate",
+      "ec": "4.2.3.70",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ent_pimara_9_11_15_diene",
+          "metabolite": "patchouli_alcohol",
           "stoichiometry": 1
         },
         {
@@ -471,20 +448,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_31"
+          "enzyme": "ec_4_2_3_70"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25544"
+        "rhea": "RHEA:29503"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25544"
+            "id": "RHEA:29503"
           }
         ]
       }

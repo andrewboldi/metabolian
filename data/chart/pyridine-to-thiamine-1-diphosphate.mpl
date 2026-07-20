@@ -36,8 +36,8 @@ pathway pyridine-to-thiamine-1-diphosphate "pyridine to thiamine(1+) diphosphate
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_42 [2.5.1.42] +sn_3_o_geranylgeranyl_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
+    <-> . +2_3_dihydroxybenzoate +atp +hplus
+    2_3_dihydroxybenzoyl_5_adenylate
   }
 
   branch from thiamine_1_diphosphate side right {

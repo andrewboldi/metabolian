@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-threonate-to-n6-3-o-phospho-d-erythru",
   "name": "L-threonate to N6-(3-O-phospho-D-erythru…",
-  "category": "carbohydrate-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 9-step route from L-threonate to N6-(3-O-phospho-D-erythrulosyl)-L-lysinium(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -239,32 +239,33 @@
       }
     },
     {
-      "id": "r_demethyl_4_deoxygadusol",
-      "name": "(R)-demethyl-4-deoxygadusol",
-      "short": "demethyl-4-deoxygad…",
-      "formula": "C7H9O5",
+      "id": "2_epi_5_epi_valiolone",
+      "name": "2-epi-5-epi-valiolone",
+      "short": "2-epi-5-epi-valiolo…",
+      "formula": "C7H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84187"
+      }
+    },
+    {
+      "id": "6_deoxy_6_sulfo_d_fructofuranose",
+      "name": "6-deoxy-6-sulfo-D-fructofuranose",
+      "short": "6-deoxy-6-sulfo-D-f…",
+      "formula": "C6H11O8S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:132139"
+        "chebi": "CHEBI:77133"
       }
     },
     {
-      "id": "sucrose_6f_phosphate",
-      "name": "sucrose 6F-phosphate",
-      "formula": "C12H21O14P",
-      "charge": -2,
+      "id": "l_3_sulfolactaldehyde",
+      "name": "L-3-sulfolactaldehyde",
+      "short": "L-3-sulfolactaldehy…",
+      "formula": "C3H5O5S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57723"
-      }
-    },
-    {
-      "id": "g1p",
-      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
-      "short": "alpha-D-Glucose…",
-      "formula": "C6H11O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58601"
+        "chebi": "CHEBI:90109"
       }
     }
   ],
@@ -319,17 +320,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_154",
-      "name": "demethyl-4-deoxygadusol synthase",
+      "id": "ec_4_2_3_152",
+      "name": "2-epi-5-epi-valiolone synthase",
       "ec": [
-        "4.2.3.154"
+        "4.2.3.152"
       ]
     },
     {
-      "id": "ec_2_4_1_329",
-      "name": "sucrose 6(F)-phosphate phosphorylase",
+      "id": "ec_2_2_1_14",
+      "name": "6-deoxy-6-sulfo-D-fructose transaldolase",
       "ec": [
-        "2.4.1.329"
+        "2.2.1.14"
       ]
     }
   ],
@@ -772,9 +773,9 @@
     },
     {
       "id": "r11",
-      "name": "demethyl-4-deoxygadusol synthase",
-      "equation": "D-sedoheptulose 7-phosphate = (R)-demethyl-4-deoxygadusol + phosphate + H2O + H(+)",
-      "ec": "4.2.3.154",
+      "name": "2-epi-5-epi-valiolone synthase",
+      "equation": "D-sedoheptulose 7-phosphate = 2-epi-5-epi-valiolone + phosphate",
+      "ec": "4.2.3.152",
       "substrates": [
         {
           "metabolite": "s7p",
@@ -783,83 +784,75 @@
       ],
       "products": [
         {
-          "metabolite": "r_demethyl_4_deoxygadusol",
+          "metabolite": "2_epi_5_epi_valiolone",
           "stoichiometry": 1
         },
         {
           "metabolite": "pi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_154"
+          "enzyme": "ec_4_2_3_152"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:49560"
+        "rhea": "RHEA:44184"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49560"
+            "id": "RHEA:44184"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "sucrose 6(F)-phosphate phosphorylase",
-      "equation": "sucrose 6(F)-phosphate + phosphate = beta-D-fructose 6-phosphate + alpha-D-glucose 1-phosphate",
-      "ec": "2.4.1.329",
+      "name": "6-deoxy-6-sulfo-D-fructose transaldolase",
+      "equation": "6-deoxy-6-sulfo-D-fructose + D-erythrose 4-phosphate = (2S)-3-sulfolactaldehyde + D-sedoheptulose 7-phosphate",
+      "ec": "2.2.1.14",
       "substrates": [
         {
-          "metabolite": "sucrose_6f_phosphate",
+          "metabolite": "6_deoxy_6_sulfo_d_fructofuranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "e4p",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_fructofuranose_6_phosphate",
+          "metabolite": "l_3_sulfolactaldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "g1p",
+          "metabolite": "s7p",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_329"
+          "enzyme": "ec_2_2_1_14"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:38863"
+        "rhea": "RHEA:66920"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38863"
+            "id": "RHEA:66920"
           }
         ]
       }

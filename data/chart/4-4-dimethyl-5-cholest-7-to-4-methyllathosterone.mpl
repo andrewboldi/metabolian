@@ -4,15 +4,11 @@
 # edit the generator, not this file.
 
 pathway 4-4-dimethyl-5-cholest-7-to-4-methyllathosterone "4,4-dimethyl-5α-cholest-7… to 4α-methyllathosterone" {
-  spacing 152
+  spacing 196
 
   spine at 0,0 {
     4_4_dimethyl_5_cholest_7_en_3_ol
-    <-> . +fe2 +o2 +hplus -iron -h2o
-    4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
-    <-> . +fe2 +o2 +hplus -iron -h2o
-    3_hydroxy_4_methyl_5_cholest_7_ene_4_carbaldehyd
-    <-> . +fe2 +o2 +hplus -iron -h2o
+    <-> ec_1_14_18_9 [1.14.18.9] +fe2 +o2 +hplus -iron -h2o
     3_hydroxy_4_methyl_5_cholest_7_ene_4_carboxylate
     <-> . +nad -co2 -nadh
     4_methyllathosterone

@@ -131,49 +131,31 @@
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "n_acetyl_l_phenylalaninate",
-      "name": "N-acetyl-L-phenylalaninate",
-      "short": "N-acetyl-L-phenylal…",
-      "formula": "C11H12NO3",
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57702"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "l_arogenate",
-      "name": "L-arogenate",
-      "formula": "C10H12NO5",
+      "id": "n_arachidonoyl_l_phenylalaninate",
+      "name": "N-arachidonoyl-L-phenylalaninate",
+      "short": "N-arachidonoyl-L-ph…",
+      "formula": "C29H40NO3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58180"
+        "chebi": "CHEBI:134022"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:327995"
       }
     },
     {
@@ -183,15 +165,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -218,24 +191,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_53",
-      "name": "phenylalanine N-acetyltransferase",
+      "id": "ec_4_1_1_25",
+      "name": "tyrosine decarboxylase",
       "ec": [
-        "2.3.1.53"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_43",
-      "name": "arogenate dehydrogenase",
-      "ec": [
-        "1.3.1.43"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_79",
-      "name": "arogenate dehydrogenase [NAD(P)(+)]",
-      "ec": [
-        "1.3.1.79"
+        "4.1.1.25"
       ]
     }
   ],
@@ -428,26 +387,51 @@
     },
     {
       "id": "r5",
-      "name": "phenylalanine N-acetyltransferase",
-      "equation": "L-phenylalanine + acetyl-CoA = N-acetyl-L-phenylalanine + CoA + H(+)",
-      "ec": "2.3.1.53",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-phenylalanine + H2O",
       "substrates": [
         {
-          "metabolite": "l_phenylalanine",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_l_phenylalaninate",
+          "metabolite": "n_arachidonoyl_l_phenylalaninate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:51312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "tyrosine decarboxylase",
+      "equation": "L-tyrosine + H(+) = tyramine + CO2",
+      "ec": "4.1.1.25",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
@@ -455,71 +439,32 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_53"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:17801"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:17801"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "arogenate dehydrogenase",
-      "equation": "L-arogenate + NAD(+) = L-tyrosine + CO2 + NADH",
-      "ec": "1.3.1.43",
-      "substrates": [
-        {
-          "metabolite": "l_arogenate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "tyrosine",
+          "metabolite": "tyraminium",
           "stoichiometry": 1
         },
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_3_1_43"
+          "enzyme": "ec_4_1_1_25"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:12256"
+        "rhea": "RHEA:14345"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12256"
+            "id": "RHEA:14345"
           }
         ]
       }

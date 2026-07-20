@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-malyl-n-acetyl-d-gl-to-bacillithiol",
+  "name": "(S)-malyl N-acetyl-α-D-gl… to bacillithiol",
+  "category": "other",
+  "summary": "A 2-step route from (S)-malyl N-acetyl-α-D-glucosaminide(2−) to bacillithiol(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33411"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64870"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_malyl_n_acetyl_d_glucosaminide",
+      "name": "(S)-malyl N-acetyl-α-D-glucosaminide",
+      "short": "malyl N-acetyl-α-D-…",
+      "formula": "C12H17NO10",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64870"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_malyl_d_glucosaminide",
+      "name": "(S)-malyl α-D-glucosaminide",
+      "short": "malyl α-D-glucosami…",
+      "formula": "C10H16NO9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64871"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "bacillithiol",
+      "name": "bacillithiol",
+      "formula": "C13H21N2O10S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64876"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-malyl N-acetyl-alpha-D-glucosaminide + H2O = (S)-malyl alpha-D-glucosaminide + acetate",
+      "equation": "(S)-malyl N-acetyl-alpha-D-glucosaminide + H2O = (S)-malyl alpha-D-glucosaminide + acetate",
+      "substrates": [
+        {
+          "metabolite": "s_malyl_n_acetyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_malyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S)-malyl alpha-D-glucosaminide + L-cysteine = bacillithiol + H2O",
+      "equation": "(S)-malyl alpha-D-glucosaminide + L-cysteine = bacillithiol + H2O",
+      "substrates": [
+        {
+          "metabolite": "s_malyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bacillithiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33427"
+          }
+        ]
+      }
+    }
+  ]
+}

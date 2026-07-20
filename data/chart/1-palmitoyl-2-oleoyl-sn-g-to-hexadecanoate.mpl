@@ -18,19 +18,7 @@ pathway 1-palmitoyl-2-oleoyl-sn-g-to-hexadecanoate "1-palmitoyl-2-oleoyl-sn-g…
 
   branch from 1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero side left {
     1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    <-> . +stearoyl_coa +coa
-    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +n_oleoyl_l_asparagine +h2o
-    l_asparagine
-  }
-
-  branch from palmitate side left {
-    palmitate
-    <-> . +ethyl_hexadecanoate +h2o +hplus
-    ethanol
+    <-> . +1_palmitoyl_2_oleoyl_sn_glycero_3_phospho_1_sn_g +coa
+    oleoyl_coa
   }
 }

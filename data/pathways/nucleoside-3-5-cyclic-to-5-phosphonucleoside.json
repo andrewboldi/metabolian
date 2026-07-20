@@ -1,0 +1,257 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nucleoside-3-5-cyclic-to-5-phosphonucleoside",
+  "name": "nucleoside 3',5'-cyclic… to 5'-phosphonucleoside…",
+  "category": "other",
+  "summary": "A 2-step route from nucleoside 3',5'-cyclic phosphate anion to 5'-phosphonucleoside 3'-diphosphate(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14653"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58464"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nucleoside_3_5_cyclic_phosphate_anion",
+      "name": "nucleoside 3',5'-cyclic phosphate anion",
+      "short": "nucleoside…",
+      "formula": "C5H6O5PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58464"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nucleoside_5_phosphate_dianion",
+      "name": "nucleoside 5'-phosphate dianion",
+      "short": "nucleoside 5'-P…",
+      "formula": "C5H7O6PR2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57867"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "5_phosphonucleoside_3_diphosphate",
+      "name": "5'-phosphonucleoside 3'-diphosphate",
+      "short": "5'-phosphonucleosid…",
+      "formula": "C5H6O12P3R2",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:144554"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "nucleoside",
+      "name": "nucleoside",
+      "formula": "C5H8O3R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33838"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_17",
+      "name": "3',5'-cyclic-nucleotide phosphodiesterase",
+      "ec": [
+        "3.1.4.17"
+      ]
+    },
+    {
+      "id": "ec_2_7_6_4",
+      "name": "nucleotide diphosphokinase",
+      "ec": [
+        "2.7.6.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3',5'-cyclic-nucleotide phosphodiesterase",
+      "equation": "a nucleoside 3',5'-cyclic phosphate + H2O = a nucleoside 5'-phosphate + H(+)",
+      "ec": "3.1.4.17",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_3_5_cyclic_phosphate_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_phosphate_dianion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14653"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nucleotide diphosphokinase",
+      "equation": "a nucleoside 5'-phosphate + ATP = a 5'-phosphonucleoside 3'-diphosphate + AMP + H(+)",
+      "ec": "2.7.6.4",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_phosphate_dianion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_phosphonucleoside_3_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_6_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12713"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12713"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a nucleoside 5'-phosphate + H2O = a nucleoside + phosphate",
+      "equation": "a nucleoside 5'-phosphate + H2O = a nucleoside + phosphate",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_phosphate_dianion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22140"
+          }
+        ]
+      }
+    }
+  ]
+}

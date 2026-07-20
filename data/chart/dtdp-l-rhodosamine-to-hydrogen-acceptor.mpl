@@ -18,13 +18,13 @@ pathway dtdp-l-rhodosamine-to-hydrogen-acceptor "dTDP-β-L-rhodosamine to hydrog
 
   branch from methanol side left {
     methanol
-    <-> ec_3_1_1_89 [3.1.1.89] +methyl_l_leucinato_group +h2o +hplus
-    l_leucinate
+    <-> . +voacangine +h2o +hplus
+    de_ester_voacangine
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +4_methylquinoline +h2o +hydrogen_donor
-    4_methylquinolin_2_1h_one
+    <-> . +3_substituted_propionyl_coa +hydrogen_donor
+    2_3_dehydroacyl_coa
   }
 }

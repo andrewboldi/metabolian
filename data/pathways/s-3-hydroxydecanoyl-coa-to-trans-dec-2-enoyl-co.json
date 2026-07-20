@@ -102,13 +102,13 @@
       }
     },
     {
-      "id": "r_3_hydroxydecanoyl_coa",
-      "name": "(R)-3-hydroxydecanoyl-CoA",
-      "short": "3-hydroxydecanoyl-C…",
-      "formula": "C31H50N7O18P3S",
+      "id": "2e_4z_deca_2_4_dienoyl_coa",
+      "name": "(2E,4Z)-deca-2,4-dienoyl-CoA",
+      "short": "(2E,4Z)-deca-2,4-di…",
+      "formula": "C31H46N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:74272"
+        "chebi": "CHEBI:137593"
       }
     },
     {
@@ -266,35 +266,43 @@
     },
     {
       "id": "r4",
-      "name": "(3R)-3-hydroxydecanoyl-CoA = (2E)-decenoyl-CoA + H2O",
-      "equation": "(3R)-3-hydroxydecanoyl-CoA = (2E)-decenoyl-CoA + H2O",
+      "name": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
+      "equation": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
       "substrates": [
-        {
-          "metabolite": "r_3_hydroxydecanoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "trans_dec_2_enoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_4z_deca_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:45992"
+        "rhea": "RHEA:53708"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45992"
+            "id": "RHEA:53708"
           }
         ]
       }

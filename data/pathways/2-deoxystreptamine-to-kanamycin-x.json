@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-deoxystreptamine-to-kanamycin-x",
+  "name": "2-deoxystreptamine to kanamycin X",
+  "category": "other",
+  "summary": "A 2-step route from 2-deoxystreptamine(2+) to kanamycin X(3+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34063"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:65069"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_deoxystreptamine",
+      "name": "2-deoxystreptamine",
+      "formula": "C6H16N2O3",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:65069"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "2_deamino_2_hydroxyparomamine",
+      "name": "2'-deamino-2'-hydroxyparomamine",
+      "short": "2'-deamino-2'-hydro…",
+      "formula": "C12H26N2O8",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:65071"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_kanosamine",
+      "name": "UDP-α-D-kanosamine",
+      "formula": "C15H24N3O16P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71964"
+      }
+    },
+    {
+      "id": "kanamycin_x",
+      "name": "kanamycin X",
+      "formula": "C18H38N3O12",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:72756"
+      }
+    },
+    {
+      "id": "3_deamino_3_hydroxykanamycin_x",
+      "name": "3''-deamino-3''-hydroxykanamycin X",
+      "short": "3''-deamino-3''-hyd…",
+      "formula": "C18H36N2O13",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:72946"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_284",
+      "name": "2-deoxystreptamine glucosyltransferase",
+      "ec": [
+        "2.4.1.284"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_301",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "ec": [
+        "2.4.1.301"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-deoxystreptamine glucosyltransferase",
+      "equation": "2-deoxystreptamine + UDP-alpha-D-glucose = 2'-deamino-2'-hydroxyparomamine + UDP + H(+)",
+      "ec": "2.4.1.284",
+      "substrates": [
+        {
+          "metabolite": "2_deoxystreptamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deamino_2_hydroxyparomamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_284"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34063"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "equation": "2'-deamino-2'-hydroxyparomamine + UDP-alpha-D-kanosamine = kanamycin X + UDP + H(+)",
+      "ec": "2.4.1.301",
+      "substrates": [
+        {
+          "metabolite": "2_deamino_2_hydroxyparomamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_kanosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kanamycin_x",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_301"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35791"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2'-deamino-2'-hydroxyparomamine + UDP-alpha-D-glucose = 3''-deamino-3''-hydroxykanamyci...",
+      "equation": "2'-deamino-2'-hydroxyparomamine + UDP-alpha-D-glucose = 3''-deamino-3''-hydroxykanamycin X + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_deamino_2_hydroxyparomamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_deamino_3_hydroxykanamycin_x",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:35931"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35931"
+          }
+        ]
+      }
+    }
+  ]
+}

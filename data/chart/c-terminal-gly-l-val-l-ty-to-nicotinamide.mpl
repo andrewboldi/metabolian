@@ -18,27 +18,21 @@ pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… 
     c_terminal_o_adp_d_ribosyl_glycine_2
   }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> . +gtp +hydrogen_donor +sam +methionine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_gtp
-  }
-
-  branch from methionine side right {
-    methionine
-    <-> . +utp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_utp
-  }
-
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_17z_icosatrienoyl_coa +hydrogen_donor +o2 +h2o
-    5z_11z_14z_17z_icosatetraenoyl_coa
+    <-> ec_1_14_99_66 [1.14.99.66] +n6_n6_dimethyl_l_lysine_1 +h2o +formaldehyde +hydrogen_donor
+    l_lysinium
   }
 
-  branch from glycino_1_group side right {
-    glycino_1_group
-    <-> . +gly_gly +h2o
-    glyciniumyl_group
+  branch from 3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr side right {
+    3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr
+    <-> ec_1_4_3_26 [1.4.3.26] +o2 +h2o +h2o2 +nh3
+    premycofactocin
+  }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> ec_2_4_2_31 [2.4.2.31] +l_argininium +nadp +hplus
+    n_2_phospho_adp_d_ribosyl_l_arginine_3
   }
 }

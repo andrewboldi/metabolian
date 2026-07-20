@@ -18,7 +18,7 @@ pathway n2-3r-3-2-saturated-a-to-s-adenosyl-l-homocystei "N2-[(3R)-3-(2-saturate
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_143 [2.1.1.143] +24_methylidenelophenol +sam +hplus
-    z_24_ethylidenelophenol
+    <-> ec_2_1_1_279 [2.1.1.279] +trans_anol +sam +hplus
+    trans_anethole
   }
 }

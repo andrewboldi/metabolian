@@ -143,68 +143,51 @@
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
+      "id": "l_seryl_amp",
+      "name": "L-seryl-AMP",
+      "formula": "C13H18N6O9P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29985"
+        "chebi": "CHEBI:61231"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re",
+      "name": "O-[S-(L-seryl)pantetheine-4'-phosphoryl]-L-serine residue",
+      "short": "O-[S-(L-seryl)pante…",
+      "formula": "C17H31N4O10PS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:144955"
       }
     },
     {
-      "id": "o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1",
-      "name": "O-[S-(γ-L-glutamyl)pantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(γ-L-glutamyl)…",
-      "formula": "C19H32N4O11PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:137996"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:456215"
       }
     },
     {
-      "id": "progesterone",
-      "name": "progesterone",
-      "formula": "C21H30O2",
+      "id": "e_phenylacetaldehyde_oxime",
+      "name": "(E)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17026"
+        "chebi": "CHEBI:47793"
       }
     },
     {
-      "id": "16_hydroxyprogesterone",
-      "name": "16α-hydroxyprogesterone",
-      "short": "16α-hydroxyprogeste…",
-      "formula": "C21H30O3",
+      "id": "1_aci_nitro_2_phenyl_ethane",
+      "name": "1-aci-nitro-2-(phenyl)ethane",
+      "short": "1-aci-nitro-2-(phen…",
+      "formula": "C8H9NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15826"
+        "chebi": "CHEBI:136829"
       }
     },
     {
@@ -237,13 +220,6 @@
       "name": "monacolin J acid methylbutanoate transferase",
       "ec": [
         "2.3.1.238"
-      ]
-    },
-    {
-      "id": "ec_6_2_1_39",
-      "name": "[butirosin acyl-carrier protein]--L-glutamate ligase",
-      "ec": [
-        "6.2.1.39"
       ]
     }
   ],
@@ -487,64 +463,50 @@
     },
     {
       "id": "r6",
-      "name": "[butirosin acyl-carrier protein]--L-glutamate ligase",
-      "equation": "holo-[BtrI ACP] + L-glutamate + ATP = gamma-L-glutamyl-[BtrI ACP] + ADP + phosphate",
-      "ec": "6.2.1.39",
+      "name": "L-seryl-5'-AMP + holo-[peptidyl-carrier protein] = L-seryl-[peptidyl-carrier protein] +...",
+      "equation": "L-seryl-5'-AMP + holo-[peptidyl-carrier protein] = L-seryl-[peptidyl-carrier protein] + AMP",
       "substrates": [
         {
+          "metabolite": "l_seryl_amp",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "holo-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1",
+          "metabolite": "o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "amp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_2_1_39"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:53948"
+        "rhea": "RHEA:61708"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53948"
+            "id": "RHEA:61708"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxyprogesteron...",
-      "equation": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(E)-phenylacetaldehyde oxime + reduced [NADPH--hemoprotein reductase] + O2 = 1-aci-nitr...",
+      "equation": "(E)-phenylacetaldehyde oxime + reduced [NADPH--hemoprotein reductase] + O2 = 1-aci-nitro-2-(phenyl)ethane + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "progesterone",
+          "metabolite": "e_phenylacetaldehyde_oxime",
           "stoichiometry": 1
         },
         {
@@ -558,7 +520,7 @@
       ],
       "products": [
         {
-          "metabolite": "16_hydroxyprogesterone",
+          "metabolite": "1_aci_nitro_2_phenyl_ethane",
           "stoichiometry": 1
         },
         {
@@ -577,14 +539,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:47260"
+        "rhea": "RHEA:52196"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47260"
+            "id": "RHEA:52196"
           }
         ]
       }

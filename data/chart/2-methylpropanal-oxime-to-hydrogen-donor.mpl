@@ -18,25 +18,25 @@ pathway 2-methylpropanal-oxime-to-hydrogen-donor "2-methylpropanal oxime to hydr
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_139 [2.1.1.139] +3_demethylstaurosporinium +sam +hplus
-    staurosporinium
+    <-> ec_2_1_1_121 [2.1.1.121] +6_o_methylnorlaudanosolinium +sam +hplus
+    nororientalinium
   }
 
   branch from cob_ii_alamin side right {
     cob_ii_alamin
-    <-> . +hydrogen_donor +atp +triphosphate +hydrogen_acceptor +hplus
+    <-> ec_2_5_1_154 [2.5.1.154] +fadh2 +atp +h2o +fad +pi +ppi +hplus
     cobamamide
   }
 
   branch from sam side left {
     sam
-    <-> ec_2_1_1_69 [2.1.1.69] +bergaptol +sah
-    5_methoxypsoralen
+    <-> ec_2_1_1_79 [2.1.1.79] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sah +hplus
+    1_acyl_2_9_10_methyleneacyl_sn_glycero_3_phospho
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_16 [1.3.99.16] +isoquinoline +hydrogen_acceptor +h2o
-    isoquinolin_1_2h_one
+    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
+    phenylglyoxylate
   }
 }

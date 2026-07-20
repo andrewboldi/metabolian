@@ -22,21 +22,39 @@ pathway 5-9-10-labda-8-20-13-to-succinate "5β,9α,10α-labda-8(20),13-… to su
     gibberellin_a25
   }
 
-  branch from ppi side left {
+  branch from ent_kaurene side left {
+    ent_kaurene
+    <-> . +di_sulfido_diiron +o2 +hplus +ent_kaur_16_en_19_oate +h2o
+    di_sulfido_diiron
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_100 [4.2.3.100] +fpp
-    bicyclogermacrene
+    <-> ec_4_2_3_176 [4.2.3.176] +all_trans_pentaprenyl_diphosphate +h2o
+    sesterfisherol
+  }
+
+  branch from ent_kaur_16_en_19_oate side left {
+    ent_kaur_16_en_19_oate
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    ent_kaur_16_en_19_al
   }
 
   branch from fmn side right {
     fmn
-    <-> . +1_4_cineole +fmnh2 +o2 +h2o +hplus
-    2_exo_hydroxy_1_4_cineole
+    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
+    cholesta_5_7_dien_3_24s_diol
   }
 
-  branch from succinate side left {
+  branch from ent_7_hydroxykaur_16_en_19_oate side left {
+    ent_7_hydroxykaur_16_en_19_oate
+    <-> . +o2 +hplus +gibberellin_a12_aldehyde +di_sulfido_diiron +h2o
+    di_sulfido_diiron
+  }
+
+  branch from succinate side right {
     succinate
-    <-> . +hexanoyl_coa +akg +o2 +co2
-    2_hydroxyhexanoyl_coa
+    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
+    2_phenylsuccinyl_coa
   }
 }

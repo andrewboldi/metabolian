@@ -18,21 +18,15 @@ pathway phenylglyoxylyl-coa-to-s-adenosyl-l-homocysteine "phenylglyoxylyl-CoA to
     methyl_benzoate
   }
 
-  branch from phenylglyoxylate side left {
-    phenylglyoxylate
-    <-> . +o2 +h2o2
-    mandelate
-  }
-
-  branch from benzaldehyde side right {
+  branch from benzaldehyde side left {
     benzaldehyde
-    <-> . +nadp +nadph +hplus
-    benzyl_alcohol
+    <-> . +benzylaminium +nad +h2o +nadh +hplus
+    nh3
   }
 
-  branch from sah side left {
+  branch from sah side right {
     sah
-    <-> ec_2_1_1_141 [2.1.1.141] +jasmonate +sam
-    methyl_jasmonate
+    <-> ec_2_1_1_88 [2.1.1.88] +gossypetin +sam +hplus
+    3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate
   }
 }

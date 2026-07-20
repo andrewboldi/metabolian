@@ -95,6 +95,16 @@
       }
     },
     {
+      "id": "3_dehydroisoorientin",
+      "name": "3''-dehydroisoorientin",
+      "short": "3''-dehydroisoorien…",
+      "formula": "C21H17O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194218"
+      }
+    },
+    {
       "id": "udp_d_glucose",
       "name": "UDP-α-D-glucose",
       "formula": "C15H22N2O17P2",
@@ -122,21 +132,23 @@
       }
     },
     {
-      "id": "4_hydroxyflavanones",
-      "name": "4'-hydroxyflavanones",
-      "formula": "C15H3O3R9",
-      "charge": 0,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:140331"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "4_methoxyflavanones",
-      "name": "4'-methoxyflavanones",
-      "formula": "C16H5O3R9",
-      "charge": 0,
+      "id": "n1_methyladenosine_5_monophosphate_1",
+      "name": "N1-methyladenosine 5'-monophosphate(1−)",
+      "short": "N1-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:140332"
+        "chebi": "CHEBI:74491"
       }
     }
   ],
@@ -149,10 +161,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_231",
-      "name": "flavonoid 4'-O-methyltransferase",
+      "id": "ec_2_1_1_218",
+      "name": "tRNA (adenine(9)-N(1))-methyltransferase",
       "ec": [
-        "2.1.1.231"
+        "2.1.1.218"
       ]
     }
   ],
@@ -282,6 +294,41 @@
     },
     {
       "id": "r4",
+      "name": "3''-dehydroisoorientin = 1,5-anhydro-D-erythro-hex-1-en-3-ulose + luteolin",
+      "equation": "3''-dehydroisoorientin = 1,5-anhydro-D-erythro-hex-1-en-3-ulose + luteolin",
+      "substrates": [
+        {
+          "metabolite": "3_dehydroisoorientin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_5_anhydro_d_erythro_hex_1_en_3_ulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "luteolin_7_olate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "luteolin + UDP-alpha-D-glucose = isoorientin + UDP + H(+)",
       "equation": "luteolin + UDP-alpha-D-glucose = isoorientin + UDP + H(+)",
       "substrates": [
@@ -309,7 +356,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:78783"
       },
@@ -324,13 +371,13 @@
       }
     },
     {
-      "id": "r5",
-      "name": "flavonoid 4'-O-methyltransferase",
-      "equation": "a 4'-hydroxyflavanone + S-adenosyl-L-methionine = a 4'-methoxyflavanone + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.231",
+      "id": "r6",
+      "name": "tRNA (adenine(9)-N(1))-methyltransferase",
+      "equation": "adenosine(9) in tRNA + S-adenosyl-L-methionine = N(1)-methyladenosine(9) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.218",
       "substrates": [
         {
-          "metabolite": "4_hydroxyflavanones",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -340,7 +387,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_methoxyflavanones",
+          "metabolite": "n1_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -354,20 +401,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_231"
+          "enzyme": "ec_2_1_1_218"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:31743"
+        "rhea": "RHEA:43148"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31743"
+            "id": "RHEA:43148"
           }
         ]
       }

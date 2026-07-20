@@ -142,13 +142,13 @@
       }
     },
     {
-      "id": "n_acetyl_d_galactosamino_1_5_lactone",
-      "name": "N-acetyl-D-galactosamino-1,5-lactone",
+      "id": "n_acetyl_d_galactosaminate",
+      "name": "N-acetyl-D-galactosaminate",
       "short": "N-acetyl-D-galactos…",
-      "formula": "C8H13NO6",
-      "charge": 0,
+      "formula": "C8H14NO7",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:184299"
+        "chebi": "CHEBI:28655"
       }
     },
     {
@@ -161,50 +161,31 @@
       }
     },
     {
-      "id": "ac_o_9_sialylglycoconjugate_anion",
-      "name": "Ac-O-9-sialylglycoconjugate anion",
-      "short": "Ac-O-9-sialylglycoc…",
-      "formula": "C13H19NO10R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:231692"
-      }
-    },
-    {
-      "id": "sialylglycoconjugate_anion",
-      "name": "sialylglycoconjugate anion",
-      "short": "sialylglycoconjugat…",
-      "formula": "C11H17NO9R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:231691"
-      }
-    },
-    {
-      "id": "ammeline",
-      "name": "ammeline",
-      "formula": "C3H5N5O",
+      "id": "l_cystine",
+      "name": "L-cystine",
+      "formula": "C6H12N2O4S2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28646"
+        "chebi": "CHEBI:35491"
       }
     },
     {
-      "id": "ammelide",
-      "name": "ammelide",
-      "formula": "C3H4N4O2",
-      "charge": 0,
+      "id": "2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop",
+      "name": "(2R)-2-ammonio-2-carboxylatoethyl-disulfanyl-oxopropanoate",
+      "short": "2-ammonio-2-carboxy…",
+      "formula": "C6H8NO5S2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:28134"
+        "chebi": "CHEBI:144484"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_3_5_4_45",
-      "name": "melamine deaminase",
+      "id": "ec_1_1_3_29",
+      "name": "N-acylhexosamine oxidase",
       "ec": [
-        "3.5.4.45"
+        "1.1.3.29"
       ]
     }
   ],
@@ -371,8 +352,9 @@
     },
     {
       "id": "r5",
-      "name": "N-acetyl-D-galactosamine + O2 = N-acetyl-D-galactosamino-1,5-lactone + H2O2",
-      "equation": "N-acetyl-D-galactosamine + O2 = N-acetyl-D-galactosamino-1,5-lactone + H2O2",
+      "name": "N-acylhexosamine oxidase",
+      "equation": "N-acetyl-D-galactosamine + O2 + H2O = N-acetyl-D-galactosaminate + H2O2 + H(+)",
+      "ec": "1.1.3.29",
       "substrates": [
         {
           "metabolite": "n_acetyl_d_galactosamine",
@@ -381,40 +363,57 @@
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_d_galactosamino_1_5_lactone",
+          "metabolite": "n_acetyl_d_galactosaminate",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_29"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:69516"
+        "rhea": "RHEA:69512"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69516"
+            "id": "RHEA:69512"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "an Ac-O-9-sialoglycoconjugate + H2O = a sialoglycoconjugate + acetate + H(+)",
-      "equation": "an Ac-O-9-sialoglycoconjugate + H2O = a sialoglycoconjugate + acetate + H(+)",
+      "name": "L-cystine + O2 + H2O = (2R)-2-amino-2-carboxylatoethyl-disulfanyl-oxopropanoate + H2O2 ...",
+      "equation": "L-cystine + O2 + H2O = (2R)-2-amino-2-carboxylatoethyl-disulfanyl-oxopropanoate + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "ac_o_9_sialylglycoconjugate_anion",
+          "metabolite": "l_cystine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -424,55 +423,11 @@
       ],
       "products": [
         {
-          "metabolite": "sialylglycoconjugate_anion",
+          "metabolite": "2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:80763"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:80763"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "melamine deaminase",
-      "equation": "ammeline + H2O + H(+) = ammelide + NH4(+)",
-      "ec": "3.5.4.45",
-      "substrates": [
-        {
-          "metabolite": "ammeline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ammelide",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -480,22 +435,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_4_45"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:26201"
+        "rhea": "RHEA:61284"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26201"
+            "id": "RHEA:61284"
           }
         ]
       }

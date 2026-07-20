@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "prenyl-diphosphate-to-hydrogen-donor",
   "name": "prenyl diphosphate to hydrogen donor",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from prenyl diphosphate(3−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -132,21 +132,22 @@
       }
     },
     {
-      "id": "caryophyllene",
-      "name": "(+)-β-caryophyllene",
+      "id": "2s_3r_6s_9s_protoillud_7_ene",
+      "name": "(2S,3R,6S,9S)-(−)-protoillud-7-ene",
+      "short": "(2S,3R,6S,9S)-(−)-p…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63190"
+        "chebi": "CHEBI:137530"
       }
     },
     {
-      "id": "torulene",
-      "name": "torulene",
-      "formula": "C40H54",
-      "charge": 0,
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:9638"
+        "chebi": "CHEBI:30245"
       }
     },
     {
@@ -159,41 +160,12 @@
       }
     },
     {
-      "id": "4_apo_carotenal",
-      "name": "4'-apo-β-carotenal",
-      "formula": "C35H46O",
-      "charge": 0,
+      "id": "13_s_hode",
+      "name": "13(S)-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:53157"
-      }
-    },
-    {
-      "id": "7_chloro_l_tryptophan",
-      "name": "7-chloro-L-tryptophan",
-      "short": "7-chloro-L-tryptoph…",
-      "formula": "C11H11ClN2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58713"
-      }
-    },
-    {
-      "id": "monodechloroaminopyrrolnitrin",
-      "name": "monodechloroaminopyrrolnitrin",
-      "short": "monodechloroaminopy…",
-      "formula": "C10H9ClN2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:85785"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:90850"
       }
     }
   ],
@@ -220,17 +192,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_89",
-      "name": "(+)-beta-caryophyllene synthase",
+      "id": "ec_4_2_3_160",
+      "name": "(2S,3R,6S,9S)-(-)-protoillud-7-ene synthase",
       "ec": [
-        "4.2.3.89"
-      ]
-    },
-    {
-      "id": "ec_1_13_11_59",
-      "name": "torulene dioxygenase",
-      "ec": [
-        "1.13.11.59"
+        "4.2.3.160"
       ]
     }
   ],
@@ -380,9 +345,9 @@
     },
     {
       "id": "r4",
-      "name": "(+)-beta-caryophyllene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-(E)-beta-caryophyllene + diphosphate",
-      "ec": "4.2.3.89",
+      "name": "(2S,3R,6S,9S)-(-)-protoillud-7-ene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (2S,3R,6S,9S)-(-)-protoillud-7-ene + diphosphate",
+      "ec": "4.2.3.160",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -391,7 +356,7 @@
       ],
       "products": [
         {
-          "metabolite": "caryophyllene",
+          "metabolite": "2s_3r_6s_9s_protoillud_7_ene",
           "stoichiometry": 1
         },
         {
@@ -401,76 +366,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_89"
+          "enzyme": "ec_4_2_3_160"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31815"
+        "rhea": "RHEA:53628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31815"
+            "id": "RHEA:53628"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "torulene dioxygenase",
-      "equation": "torulene + O2 = 4'-apo-beta-carotenal + 3-methyl-2-butenal",
-      "ec": "1.13.11.59",
+      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
+      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
       "substrates": [
         {
-          "metabolite": "torulene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_apo_carotenal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_methylbut_2_enal",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_13_11_59"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:31519"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:31519"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
-      "equation": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "7_chloro_l_tryptophan",
+          "metabolite": "linoleate",
           "stoichiometry": 1
         },
         {
@@ -484,7 +404,7 @@
       ],
       "products": [
         {
-          "metabolite": "monodechloroaminopyrrolnitrin",
+          "metabolite": "13_s_hode",
           "stoichiometry": 1
         },
         {
@@ -492,25 +412,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50952"
+        "rhea": "RHEA:75451"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50952"
+            "id": "RHEA:75451"
           }
         ]
       }

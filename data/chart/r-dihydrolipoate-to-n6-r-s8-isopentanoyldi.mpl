@@ -8,9 +8,7 @@ pathway r-dihydrolipoate-to-n6-r-s8-isopentanoyldi "(R)-dihydrolipoate to N6-[(R
 
   spine at 0,0 {
     r_dihydrolipoate
-    <-> . +atp +hplus -ppi
-    n6_r_dihydrolipoyl_amp
-    <-> . +l_lysinium -amp -hplus
+    <-> . +l_lysinium +atp -amp -ppi -hplus
     n6_r_dihydrolipoyl_l_lysine
     <-> ec_2_3_1_168 [2.3.1.168] +isovaleryl_coa -coa
     n6_r_s8_isopentanoyldihydrolipoyl_l_lysine
@@ -18,7 +16,7 @@ pathway r-dihydrolipoate-to-n6-r-s8-isopentanoyldi "(R)-dihydrolipoate to N6-[(R
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_86 [4.2.3.86] +fpp
-    7_epi_selinene
+    <-> ec_4_2_3_135 [4.2.3.135] +fpp
+    6_protoilludene
   }
 }

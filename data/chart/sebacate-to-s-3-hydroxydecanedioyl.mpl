@@ -18,7 +18,7 @@ pathway sebacate-to-s-3-hydroxydecanedioyl "sebacate to (S)-3-hydroxydecanedioyl
 
   branch from ppi side left {
     ppi
-    <-> . +glycine +atp +hplus
-    glycyl_amp
+    <-> . +indole_3_butyrate +glutamine +atp +amp +hplus
+    n2_4_indol_3_yl_butanoyl_l_glutaminate
   }
 }

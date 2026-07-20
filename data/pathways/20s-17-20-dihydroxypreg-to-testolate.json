@@ -193,50 +193,42 @@
       }
     },
     {
-      "id": "5_hydroxypentanoate",
-      "name": "5-hydroxypentanoate",
-      "formula": "C5H9O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16230"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "5_hydroxypentanoyl_coa",
-      "name": "5-hydroxypentanoyl-CoA",
-      "short": "5-hydroxypentanoyl-…",
-      "formula": "C26H40N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57357"
-      }
-    },
-    {
-      "id": "4s_limonene",
-      "name": "(4S)-limonene",
-      "formula": "C10H16",
+      "id": "1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol",
+      "name": "1-hexadecyl-2-acetyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecyl-2-acety…",
+      "formula": "C23H48NO7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15383"
+        "chebi": "CHEBI:78387"
       }
     },
     {
-      "id": "s_perillyl_alcohol",
-      "name": "(S)-(−)-perillyl alcohol",
-      "short": "(−)-perillyl alcohol",
-      "formula": "C10H16O",
+      "id": "1_hexadecyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-hexadecyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecyl-sn-glyc…",
+      "formula": "C21H46NO6P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10782"
+        "chebi": "CHEBI:78390"
+      }
+    },
+    {
+      "id": "6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero",
+      "name": "(6aS,11aS)-2-dimethylallyl-3,6a,9-trihydroxypterocarpan",
+      "short": "(6aS,11aS)-2-dimeth…",
+      "formula": "C20H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50118"
+      }
+    },
+    {
+      "id": "glyceollin_iii",
+      "name": "glyceollin III",
+      "formula": "C20H18O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52086"
       }
     }
   ],
@@ -277,17 +269,10 @@
       ]
     },
     {
-      "id": "ec_2_8_3_14",
-      "name": "5-hydroxypentanoate CoA-transferase",
+      "id": "ec_1_14_14_135",
+      "name": "glyceollin synthase",
       "ec": [
-        "2.8.3.14"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_52",
-      "name": "(S)-limonene 7-monooxygenase",
-      "ec": [
-        "1.14.14.52"
+        "1.14.14.135"
       ]
     }
   ],
@@ -596,57 +581,55 @@
     },
     {
       "id": "r7",
-      "name": "5-hydroxypentanoate CoA-transferase",
-      "equation": "5-hydroxypentanoate + acetyl-CoA = 5-hydroxy-pentanoyl-CoA + acetate",
-      "ec": "2.8.3.14",
+      "name": "1-O-hexadecyl-2-acetyl-sn-glycero-3-phosphoethanolamine + H2O = 1-O-hexadecyl-sn-glycer...",
+      "equation": "1-O-hexadecyl-2-acetyl-sn-glycero-3-phosphoethanolamine + H2O = 1-O-hexadecyl-sn-glycero-3-phosphoethanolamine + acetate + H(+)",
       "substrates": [
         {
-          "metabolite": "5_hydroxypentanoate",
+          "metabolite": "1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_hydroxypentanoyl_coa",
+          "metabolite": "1_hexadecyl_sn_glycero_3_phosphoethanolamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "acetate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_8_3_14"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:23496"
+        "rhea": "RHEA:41708"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23496"
+            "id": "RHEA:41708"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "(S)-limonene 7-monooxygenase",
-      "equation": "(4S)-limonene + reduced [NADPH--hemoprotein reductase] + O2 = (4S)-perillyl alcohol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.52",
+      "name": "glyceollin synthase",
+      "equation": "(6aS,11aS)-2-dimethylallyl-3,6a,9-trihydroxypterocarpan + reduced [NADPH--hemoprotein reductase] + O2 = glyceollin III + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.135",
       "substrates": [
         {
-          "metabolite": "4s_limonene",
+          "metabolite": "6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero",
           "stoichiometry": 1
         },
         {
@@ -660,7 +643,7 @@
       ],
       "products": [
         {
-          "metabolite": "s_perillyl_alcohol",
+          "metabolite": "glyceollin_iii",
           "stoichiometry": 1
         },
         {
@@ -669,7 +652,7 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
@@ -678,20 +661,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_52"
+          "enzyme": "ec_1_14_14_135"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:23432"
+        "rhea": "RHEA:26051"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23432"
+            "id": "RHEA:26051"
           }
         ]
       }

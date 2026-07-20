@@ -26,8 +26,8 @@ pathway d-galnac-1-3-l-fuc-to-n-acetylneuraminate "α-D-GalNAc-(1→3)-[α-L-Fuc
 
   branch from n_acetyl_d_galactosamine side right {
     n_acetyl_d_galactosamine
-    <-> . +n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga +h2o
-    l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
+    <-> . +n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_galacto +h2o
+    n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
   }
 
   branch from d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d side left {
@@ -36,9 +36,21 @@ pathway d-galnac-1-3-l-fuc-to-n-acetylneuraminate "α-D-GalNAc-(1→3)-[α-L-Fuc
     l_fucp_1_3_d_galp_1_4_d_glcpnac_1_3_d_galp_1_4
   }
 
-  branch from l_fucopyranose side right {
-    l_fucopyranose
-    <-> . +l_fuc_1_2_d_gal_1_4_d_glc +h2o
-    d_galactosyl_1_4_d_glucoside
+  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_4_n_ace side right {
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_n_ace
+    <-> . +gdp_l_fucose +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_4_99_14 [2.4.99.14] +a_kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    a_kdo_3_lipid_iva
+  }
+
+  branch from n_acetylneuraminate side right {
+    n_acetylneuraminate
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +h2o
+    gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_8_neu5ac
   }
 }

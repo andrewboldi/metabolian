@@ -18,19 +18,13 @@ pathway n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate "N-(fatty acyl)-L-leucine
 
   branch from leucine side left {
     leucine
-    <-> . +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022f
+    <-> . +l_leucyl_o_isoindolinone_d_homoserine +h2o
+    o_isoindolinone_d_homoserine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +h2o +hplus
-    holo-acp
-  }
-
-  branch from n_acetyl_l_leucinate side left {
-    n_acetyl_l_leucinate
-    <-> . +h2o +leucine
-    acetate
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    monoacyl_3_o_d_galactosyl_sn_glycerol
   }
 }

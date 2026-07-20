@@ -1,0 +1,367 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-coumaroyl-coa-to-s-adenosyl-l-homocysteine",
+  "name": "4-coumaroyl-CoA to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 4-coumaroyl-CoA(4−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11936"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57355"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_coumaroyl_coa",
+      "name": "4-coumaroyl-CoA",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57355"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_resveratrol",
+      "name": "trans-resveratrol",
+      "formula": "C14H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:45713"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "pterostilbene",
+      "name": "pterostilbene",
+      "formula": "C16H16O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:8630"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_5_dihydroxybenzaldehyde",
+      "name": "3,5-dihydroxybenzaldehyde",
+      "short": "3,5-dihydroxybenzal…",
+      "formula": "C7H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50204"
+      }
+    },
+    {
+      "id": "4_hydroxybenzaldehyde",
+      "name": "4-hydroxybenzaldehyde",
+      "short": "4-hydroxybenzaldehy…",
+      "formula": "C7H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17597"
+      }
+    },
+    {
+      "id": "cycloartenol",
+      "name": "cycloartenol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17030"
+      }
+    },
+    {
+      "id": "cyclolaudenol",
+      "name": "cyclolaudenol",
+      "formula": "C31H52O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142990"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_95",
+      "name": "trihydroxystilbene synthase",
+      "ec": [
+        "2.3.1.95"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_240",
+      "name": "trans-resveratrol di-O-methyltransferase",
+      "ec": [
+        "2.1.1.240"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_142",
+      "name": "cycloartenol 24-C-methyltransferase",
+      "ec": [
+        "2.1.1.142"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "trihydroxystilbene synthase",
+      "equation": "4-coumaroyl-CoA + 3 malonyl-CoA + 3 H(+) = trans-resveratrol + 4 CO2 + 4 CoA",
+      "ec": "2.3.1.95",
+      "substrates": [
+        {
+          "metabolite": "4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_resveratrol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_95"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "trans-resveratrol di-O-methyltransferase",
+      "equation": "trans-resveratrol + 2 S-adenosyl-L-methionine = pterostilbene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.240",
+      "substrates": [
+        {
+          "metabolite": "trans_resveratrol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pterostilbene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_240"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32103"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "trans-resveratrol + O2 = 3,5-dihydroxybenzaldehyde + 4-hydroxybenzaldehyde",
+      "equation": "trans-resveratrol + O2 = 3,5-dihydroxybenzaldehyde + 4-hydroxybenzaldehyde",
+      "substrates": [
+        {
+          "metabolite": "trans_resveratrol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dihydroxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxybenzaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cycloartenol 24-C-methyltransferase",
+      "equation": "cycloartenol + S-adenosyl-L-methionine = cyclolaudenol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.142",
+      "substrates": [
+        {
+          "metabolite": "cycloartenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclolaudenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_142"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13137"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13137"
+          }
+        ]
+      }
+    }
+  ]
+}

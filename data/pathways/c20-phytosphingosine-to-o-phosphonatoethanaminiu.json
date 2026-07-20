@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "c20-phytosphingosine-to-o-phosphonatoethanaminiu",
   "name": "C20 phytosphingosine… to O-phosphonatoethanaminium",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from C20 phytosphingosine 1-phosphate(1−) to O-phosphonatoethanaminium(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -122,23 +122,32 @@
       }
     },
     {
-      "id": "1_oleoyl_sn_glycero_3_phosphoethanolamine",
-      "name": "1-oleoyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1-oleoyl-sn-glycero…",
-      "formula": "C23H46NO7P",
+      "id": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecanoyl-2-(9…",
+      "formula": "C39H76NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74971"
+        "chebi": "CHEBI:73007"
       }
     },
     {
-      "id": "1_oleoyl_sn_glycero_3_phosphate",
-      "name": "1-oleoyl-sn-glycero-3-phosphate",
-      "short": "1-oleoyl-sn-glycero…",
-      "formula": "C21H39O7P",
-      "charge": -2,
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74544"
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine",
+      "name": "1-palmitoyl-2-oleoyl-sn-glycero-3-phosphoserine",
+      "short": "1-palmitoyl-2-oleoy…",
+      "formula": "C40H75NO10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75029"
       }
     }
   ],
@@ -333,43 +342,39 @@
     },
     {
       "id": "r5",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + H2O = 1-(9Z-octadecenoyl)-sn-gly...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + H2O = 1-(9Z-octadecenoyl)-sn-glycero-3-phosphate + ethanolamine + H(+)",
+      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-hexa...",
+      "equation": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + ethanolamine",
       "substrates": [
         {
-          "metabolite": "1_oleoyl_sn_glycero_3_phosphoethanolamine",
+          "metabolite": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "serine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_oleoyl_sn_glycero_3_phosphate",
+          "metabolite": "1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
           "metabolite": "ethanolaminium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:38927"
+        "rhea": "RHEA:41484"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38927"
+            "id": "RHEA:41484"
           }
         ]
       }

@@ -24,21 +24,15 @@ pathway dihydroprecondylocarpine-to-fmn-81299 "dihydroprecondylocarpine… to FM
     catharanthine
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_n_acetyl +h2o
-    n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_d_muramy
+  branch from tabersoninium side right {
+    tabersoninium
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    lochnericine
   }
 
-  branch from 3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni side left {
-    3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni
-    <-> ec_1_1_99_41 [1.1.99.41] +3r_3_hydroxy_2_3_dihydrotabersoninium +hydrogen_acceptor
-    hydrogen_donor
-  }
-
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_17_estradiol
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    5z_11z_14z_17z_8_9_epoxyicosatetraenoate
   }
 }

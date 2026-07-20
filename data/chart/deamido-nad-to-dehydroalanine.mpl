@@ -26,17 +26,11 @@ pathway deamido-nad-to-dehydroalanine "deamido-NAD to dehydroalanine" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_137 [4.2.3.137] +fpp
-    e_2_epi_caryophyllene
+    <-> . +nicotinate +atp +coa +amp
+    nicotinyl_coa
   }
 
-  branch from dehydroalanine side right {
-    dehydroalanine
-    <-> ec_2_4_2_60 [2.4.2.60] +l_cysteine +glycine +nad +nicotinamide +h2o +hplus
-    adp_5_ethyl_4_methylthiazole_2_carboxylate
-  }
-
-  branch from pyridinium_3_5_bisthiocarboxylate_mononucleotide side left {
+  branch from pyridinium_3_5_bisthiocarboxylate_mononucleotide side right {
     pyridinium_3_5_bisthiocarboxylate_mononucleotide
     <-> ec_4_99_1_12 [4.99.1.12] +ni_ii_pyridinium_3_5_bisthiocarboxylate_mononucl
     nickel

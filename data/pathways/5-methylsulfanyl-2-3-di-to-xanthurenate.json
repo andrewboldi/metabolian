@@ -132,24 +132,6 @@
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
       "id": "glyoxylate",
       "name": "Glyoxylate",
       "formula": "C2HO3",
@@ -166,6 +148,24 @@
       "xrefs": {
         "chebi": "CHEBI:57305"
       }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
     }
   ],
   "enzymes": [
@@ -181,13 +181,6 @@
       "name": "acireductone dioxygenase (Fe(2+)-requiring)",
       "ec": [
         "1.13.11.54"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_63",
-      "name": "kynurenine--glyoxylate transaminase",
-      "ec": [
-        "2.6.1.63"
       ]
     }
   ],
@@ -362,48 +355,8 @@
     },
     {
       "id": "r5",
-      "name": "3-hydroxy-L-kynurenine + 2-oxoglutarate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoat...",
-      "equation": "3-hydroxy-L-kynurenine + 2-oxoglutarate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + L-glutamate",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxy_l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65888"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65888"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "kynurenine--glyoxylate transaminase",
-      "equation": "3-hydroxy-L-kynurenine + glyoxylate = xanthurenate + glycine + H2O",
-      "ec": "2.6.1.63",
+      "name": "3-hydroxy-L-kynurenine + glyoxylate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + ...",
+      "equation": "3-hydroxy-L-kynurenine + glyoxylate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + glycine",
       "substrates": [
         {
           "metabolite": "3_hydroxy_l_kynurenine",
@@ -416,11 +369,50 @@
       ],
       "products": [
         {
-          "metabolite": "xanthurenate",
+          "metabolite": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65904"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65904"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-hydroxy-L-kynurenine + pyruvate = xanthurenate + L-alanine + H2O",
+      "equation": "3-hydroxy-L-kynurenine + pyruvate = xanthurenate + L-alanine + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_l_kynurenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthurenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
           "stoichiometry": 1
         },
         {
@@ -428,22 +420,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_63"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:65900"
+        "rhea": "RHEA:65908"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65900"
+            "id": "RHEA:65908"
           }
         ]
       }

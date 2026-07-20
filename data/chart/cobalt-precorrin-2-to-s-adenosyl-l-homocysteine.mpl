@@ -22,8 +22,8 @@ pathway cobalt-precorrin-2-to-s-adenosyl-l-homocysteine "cobalt-precorrin-2 to S
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_144 [2.1.1.144] +trans_aconitate +sam
-    2e_3_methoxycarbonyl_pent_2_enedioate
+    <-> ec_2_1_1_76 [2.1.1.76] +quercetin_7_olate +sam +hplus
+    3_4_5_trihydroxy_3_methoxyflavon_7_olate
   }
 
   branch from cobalt_precorrin_4 side right {
@@ -32,13 +32,7 @@ pathway cobalt-precorrin-2-to-s-adenosyl-l-homocysteine "cobalt-precorrin-2 to S
     hydrogen_acceptor
   }
 
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> . +iron +fe2 +hplus
-    ethanol
-  }
-
-  branch from cobalt_precorrin_6a side right {
+  branch from cobalt_precorrin_6a side left {
     cobalt_precorrin_6a
     <-> ec_1_3_1_106 [1.3.1.106] +nad +nadh +hplus
     cobalt_precorrin_6b

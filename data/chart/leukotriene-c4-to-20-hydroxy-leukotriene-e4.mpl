@@ -18,13 +18,13 @@ pathway leukotriene-c4-to-20-hydroxy-leukotriene-e4 "leukotriene C4 to 20-hydrox
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_2 [2.6.1.2] +akg +pyruvate
-    alanine
+    <-> ec_2_6_1_94 [2.6.1.94] +2_deamino_2_hydroxyneamine +akg
+    2_deamino_2_hydroxy_6_dehydroparomamine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_kynurenine +glyoxylate
-    4_2_aminophenyl_2_4_dioxobutanoate
+    <-> . +o2 +h2o2
+    dehydroglycine
   }
 }

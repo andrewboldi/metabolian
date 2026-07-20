@@ -223,13 +223,31 @@
       }
     },
     {
-      "id": "r_3_hydroxybutanoyl_coa",
-      "name": "(R)-3-hydroxybutanoyl-CoA",
-      "short": "3-hydroxybutanoyl-C…",
-      "formula": "C25H38N7O18P3S",
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57315"
+        "chebi": "CHEBI:57371"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
       }
     },
     {
@@ -261,41 +279,50 @@
       }
     },
     {
-      "id": "succinyl_coa",
-      "name": "Succinyl-CoA",
-      "formula": "C25H35N7O19P3S",
-      "charge": -5,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57292"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "n6_succinyl_l_lysine_1",
-      "name": "N6-succinyl-L-lysine(1−)",
-      "short": "N6-succinyl-L-lysin…",
-      "formula": "C10H15N2O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87830"
-      }
-    },
-    {
-      "id": "3r_3_carboxylmethyl_amino_butanoic_acid",
-      "name": "(3R)-3-[(carboxylmethyl)amino]butanoic acid",
-      "short": "3-[(carboxylmethyl)…",
-      "formula": "C6H10NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:193081"
-      }
-    },
-    {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "n6_acetyl_l_lysine",
+      "name": "N6-acetyl-L-lysine",
+      "formula": "C8H14N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:61930"
+      }
+    },
+    {
+      "id": "hydroxybutyryl-acp",
+      "name": "(3R)-3-Hydroxybutanoyl-[ACP]",
+      "short": "3-Hydroxybutanoyl-[…",
+      "formula": "C18H31N3O10PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78451"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "trichodiene",
+      "name": "trichodiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15861"
       }
     }
   ],
@@ -308,17 +335,17 @@
       ]
     },
     {
-      "id": "ec_4_2_1_55",
-      "name": "3-hydroxybutyryl-CoA dehydratase",
+      "id": "ec_2_3_1_108",
+      "name": "alpha-tubulin N-acetyltransferase",
       "ec": [
-        "4.2.1.55"
+        "2.3.1.108"
       ]
     },
     {
-      "id": "ec_4_3_2_11",
-      "name": "(3R)-3-[(carboxylmethyl)amino]fatty acid synthase",
+      "id": "ec_4_2_3_6",
+      "name": "trichodiene synthase",
       "ec": [
-        "4.3.2.11"
+        "4.2.3.6"
       ]
     }
   ],
@@ -702,12 +729,15 @@
     },
     {
       "id": "r10",
-      "name": "3-hydroxybutyryl-CoA dehydratase",
-      "equation": "(3R)-3-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
-      "ec": "4.2.1.55",
+      "name": "butanoyl-CoA + A = (2E)-butenoyl-CoA + AH2",
+      "equation": "butanoyl-CoA + A = (2E)-butenoyl-CoA + AH2",
       "substrates": [
         {
-          "metabolite": "r_3_hydroxybutanoyl_coa",
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         }
       ],
@@ -717,26 +747,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_55"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:17849"
+        "rhea": "RHEA:25164"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17849"
+            "id": "RHEA:25164"
           }
         ]
       }
@@ -790,21 +815,22 @@
     },
     {
       "id": "r12",
-      "name": "succinyl-CoA + L-lysyl-[protein] = N(6)-succinyl-L-lysyl-[protein] + CoA + H(+)",
-      "equation": "succinyl-CoA + L-lysyl-[protein] = N(6)-succinyl-L-lysyl-[protein] + CoA + H(+)",
+      "name": "alpha-tubulin N-acetyltransferase",
+      "equation": "L-lysyl-[alpha-tubulin] + acetyl-CoA = N(6)-acetyl-L-lysyl-[alpha-tubulin] + CoA + H(+)",
+      "ec": "2.3.1.108",
       "substrates": [
         {
-          "metabolite": "succinyl_coa",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_succinyl_l_lysine_1",
+          "metabolite": "n6_acetyl_l_lysine",
           "stoichiometry": 1
         },
         {
@@ -816,37 +842,33 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_108"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:16261"
+        "rhea": "RHEA:15277"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16261"
+            "id": "RHEA:15277"
           }
         ]
       }
     },
     {
       "id": "r13",
-      "name": "(3R)-3-[(carboxylmethyl)amino]fatty acid synthase",
-      "equation": "(3R)-3-[(carboxymethyl)amino]butanoate + holo-[ACP] + H(+) = (2E)-butenoyl-[ACP] + glycine + H2O",
-      "ec": "4.3.2.11",
+      "name": "(3R)-hydroxybutanoyl-[ACP] = (2E)-butenoyl-[ACP] + H2O",
+      "equation": "(3R)-hydroxybutanoyl-[ACP] = (2E)-butenoyl-[ACP] + H2O",
       "substrates": [
         {
-          "metabolite": "3r_3_carboxylmethyl_amino_butanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "holo-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "hydroxybutyryl-acp",
           "stoichiometry": 1
         }
       ],
@@ -856,30 +878,109 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_3_2_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:74927"
+        "rhea": "RHEA:41808"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74927"
+            "id": "RHEA:41808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "trichodiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = trichodiene + diphosphate",
+      "ec": "4.2.3.6",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trichodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:12052"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "butanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxohexanoyl-[ACP] + CO2 + CoA",
+      "equation": "butanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxohexanoyl-[ACP] + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:42248"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42248"
           }
         ]
       }

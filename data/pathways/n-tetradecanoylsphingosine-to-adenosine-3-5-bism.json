@@ -121,21 +121,22 @@
       }
     },
     {
-      "id": "n_acetylsphingosine",
-      "name": "N-acetylsphingosine",
-      "formula": "C20H39NO3",
-      "charge": 0,
+      "id": "sphingosine_1_phosphocholine",
+      "name": "sphingosine-1-phosphocholine",
+      "short": "sphingosine-1-phosp…",
+      "formula": "C23H50N2O5P",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:46979"
+        "chebi": "CHEBI:58906"
       }
     },
     {
-      "id": "acetate",
-      "name": "Acetate",
-      "formula": "C2H3O2",
+      "id": "phosphocholine",
+      "name": "Phosphocholine",
+      "formula": "C5H13NO4P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:30089"
+        "chebi": "CHEBI:295975"
       }
     },
     {
@@ -158,22 +159,22 @@
       }
     },
     {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H9NO2",
+      "id": "methyl_l_tyrosinate",
+      "name": "methyl L-tyrosinate",
+      "formula": "C10H13NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:46858"
+        "chebi": "CHEBI:17215"
       }
     },
     {
-      "id": "l_tyrosine_o_sulfate_1",
-      "name": "L-tyrosine-O-sulfate(1−)",
-      "short": "L-tyrosine-O-sulfat…",
-      "formula": "C9H8NO5S",
+      "id": "l_tyrosine_methyl_ester_4_sulfate",
+      "name": "L-tyrosine methyl ester 4-sulfate",
+      "short": "L-tyrosine methyl…",
+      "formula": "C10H12NO6S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:65286"
+        "chebi": "CHEBI:58377"
       }
     }
   ],
@@ -193,10 +194,10 @@
       ]
     },
     {
-      "id": "ec_2_8_2_20",
-      "name": "protein-tyrosine sulfotransferase",
+      "id": "ec_2_8_2_9",
+      "name": "tyrosine-ester sulfotransferase",
       "ec": [
-        "2.8.2.20"
+        "2.8.2.9"
       ]
     }
   ],
@@ -340,11 +341,11 @@
     },
     {
       "id": "r4",
-      "name": "N-(acetyl)-sphing-4-enine + H2O = sphing-4-enine + acetate",
-      "equation": "N-(acetyl)-sphing-4-enine + H2O = sphing-4-enine + acetate",
+      "name": "sphing-4-enine-phosphocholine + H2O = sphing-4-enine + phosphocholine + H(+)",
+      "equation": "sphing-4-enine-phosphocholine + H2O = sphing-4-enine + phosphocholine + H(+)",
       "substrates": [
         {
-          "metabolite": "n_acetylsphingosine",
+          "metabolite": "sphingosine_1_phosphocholine",
           "stoichiometry": 1
         },
         {
@@ -358,21 +359,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:58484"
+        "rhea": "RHEA:41095"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58484"
+            "id": "RHEA:41095"
           }
         ]
       }
@@ -422,12 +427,12 @@
     },
     {
       "id": "r6",
-      "name": "protein-tyrosine sulfotransferase",
-      "equation": "L-tyrosyl-[protein] + 3'-phosphoadenylyl sulfate = O-sulfo-L-tyrosine-[protein] + adenosine 3',5'-bisphosphate + H(+)",
-      "ec": "2.8.2.20",
+      "name": "tyrosine-ester sulfotransferase",
+      "equation": "L-tyrosine methyl ester + 3'-phosphoadenylyl sulfate = L-tyrosine methyl ester 4-sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.9",
       "substrates": [
         {
-          "metabolite": "l_tyrosine",
+          "metabolite": "methyl_l_tyrosinate",
           "stoichiometry": 1
         },
         {
@@ -437,7 +442,7 @@
       ],
       "products": [
         {
-          "metabolite": "l_tyrosine_o_sulfate_1",
+          "metabolite": "l_tyrosine_methyl_ester_4_sulfate",
           "stoichiometry": 1
         },
         {
@@ -451,20 +456,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_8_2_20"
+          "enzyme": "ec_2_8_2_9"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:16801"
+        "rhea": "RHEA:19977"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16801"
+            "id": "RHEA:19977"
           }
         ]
       }

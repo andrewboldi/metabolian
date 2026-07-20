@@ -18,19 +18,13 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor-83779 "3'-iodo-L-thyronine to hydro
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
-    15_s_hepe
+    <-> . +1_hydroxy_5_androstan_3_17_dione +hydrogen_acceptor
+    5_androstan_1_3_17_trione
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_3 [2.8.2.3] +primary_ammonium_ion +3_phosphonato_5_adenylyl_sulfate +hplus
-    sulfamate
-  }
-
-  branch from 3_3_5_triiodo_l_thyronine_sulfate side left {
-    3_3_5_triiodo_l_thyronine_sulfate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    3_3_5_triiodo_l_thyronine
+    <-> . +palmitoyl_coa +h2o +hplus
+    s_hexadecanoyl_4_phosphopantetheine
   }
 }

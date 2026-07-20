@@ -1,0 +1,146 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-5-methyl-tetronate-to-penilactone-a",
+  "name": "(R)-5-methyl-tetronate to penilactone A",
+  "category": "cofactor-vitamin-metabolism",
+  "summary": "A 2-step route from (R)-5-methyl-tetronate to penilactone A, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:70095"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:188931"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_5_methyl_tetronate",
+      "name": "(R)-5-methyl-tetronate",
+      "short": "5-methyl-tetronate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188931"
+      }
+    },
+    {
+      "id": "ortho_quinone_methide",
+      "name": "ortho-quinone methide",
+      "short": "ortho-quinone…",
+      "formula": "C10H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188927"
+      }
+    },
+    {
+      "id": "peniphenone_d",
+      "name": "peniphenone D",
+      "formula": "C15H15O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188935"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "penilactone_a",
+      "name": "penilactone A",
+      "formula": "C25H26O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188937"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-5-methyl-tetronate + o-quinone methide = peniphenone D",
+      "equation": "(R)-5-methyl-tetronate + o-quinone methide = peniphenone D",
+      "substrates": [
+        {
+          "metabolite": "r_5_methyl_tetronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ortho_quinone_methide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "peniphenone_d",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:70095"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70095"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "peniphenone D + o-quinone methide + H(+) = penilactone A",
+      "equation": "peniphenone D + o-quinone methide + H(+) = penilactone A",
+      "substrates": [
+        {
+          "metabolite": "peniphenone_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ortho_quinone_methide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "penilactone_a",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70099"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70099"
+          }
+        ]
+      }
+    }
+  ]
+}

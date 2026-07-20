@@ -249,21 +249,31 @@
       }
     },
     {
-      "id": "acetylpyruvate",
-      "name": "acetylpyruvate",
-      "formula": "C5H5O4",
-      "charge": -1,
+      "id": "isoxazolin_5_one",
+      "name": "isoxazolin-5-one",
+      "formula": "C3H3NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15360"
+        "chebi": "CHEBI:76851"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "o_acetyl_l_serine",
+      "name": "O-acetyl-L-serine",
+      "formula": "C5H9NO4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:58340"
+      }
+    },
+    {
+      "id": "3_5_oxoisoxazolin_2_yl_l_alanine",
+      "name": "3-(5-oxoisoxazolin-2-yl)-L-alanine",
+      "short": "3-(5-oxoisoxazolin-…",
+      "formula": "C6H8N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76855"
       }
     },
     {
@@ -287,23 +297,49 @@
       }
     },
     {
-      "id": "s_hydroxymethyl_glutathione",
-      "name": "S-(hydroxymethyl)glutathione",
-      "short": "S-(hydroxymethyl)gl…",
-      "formula": "C11H18N3O7S",
-      "charge": -1,
+      "id": "n_methyl_l_tryptophan",
+      "name": "Nα-methyl-L-tryptophan",
+      "short": "Nα-methyl-L-tryptop…",
+      "formula": "C12H14N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58758"
+        "chebi": "CHEBI:57283"
       }
     },
     {
-      "id": "gsh",
-      "name": "Glutathione (reduced, GSH)",
-      "short": "Glutathione…",
-      "formula": "C10H16N3O6S",
-      "charge": -1,
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57925"
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "guanidinoacetic_acid",
+      "name": "guanidinoacetic acid",
+      "formula": "C3H7N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57742"
+      }
+    },
+    {
+      "id": "ornithine",
+      "name": "L-Ornithine",
+      "formula": "C5H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:46911"
       }
     }
   ],
@@ -358,10 +394,10 @@
       ]
     },
     {
-      "id": "ec_3_7_1_6",
-      "name": "acetylpyruvate hydrolase",
+      "id": "ec_2_5_1_118",
+      "name": "beta-(isoxazolin-5-on-2-yl)-L-alanine synthase",
       "ec": [
-        "3.7.1.6"
+        "2.5.1.118"
       ]
     },
     {
@@ -372,10 +408,17 @@
       ]
     },
     {
-      "id": "ec_4_4_1_22",
-      "name": "S-(hydroxymethyl)glutathione synthase",
+      "id": "ec_2_1_1_20",
+      "name": "glycine N-methyltransferase",
       "ec": [
-        "4.4.1.22"
+        "2.1.1.20"
+      ]
+    },
+    {
+      "id": "ec_2_1_4_1",
+      "name": "glycine amidinotransferase",
+      "ec": [
+        "2.1.4.1"
       ]
     }
   ],
@@ -862,26 +905,26 @@
     },
     {
       "id": "r11",
-      "name": "acetylpyruvate hydrolase",
-      "equation": "acetylpyruvate + H2O = acetate + pyruvate + H(+)",
-      "ec": "3.7.1.6",
+      "name": "beta-(isoxazolin-5-on-2-yl)-L-alanine synthase",
+      "equation": "isoxazolin-5-one + O-acetyl-L-serine = 3-(5-oxoisoxazolin-2-yl)-L-alanine + acetate + H(+)",
+      "ec": "2.5.1.118",
       "substrates": [
         {
-          "metabolite": "acetylpyruvate",
+          "metabolite": "isoxazolin_5_one",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "o_acetyl_l_serine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "acetate",
+          "metabolite": "3_5_oxoisoxazolin_2_yl_l_alanine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "acetate",
           "stoichiometry": 1
         },
         {
@@ -891,20 +934,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_7_1_6"
+          "enzyme": "ec_2_5_1_118"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:16097"
+        "rhea": "RHEA:22112"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16097"
+            "id": "RHEA:22112"
           }
         ]
       }
@@ -960,41 +1003,141 @@
     },
     {
       "id": "r13",
-      "name": "S-(hydroxymethyl)glutathione synthase",
-      "equation": "S-(hydroxymethyl)glutathione = glutathione + formaldehyde",
-      "ec": "4.4.1.22",
+      "name": "N(alpha)-methyl-L-tryptophan + O2 + H2O = L-tryptophan + formaldehyde + H2O2",
+      "equation": "N(alpha)-methyl-L-tryptophan + O2 + H2O = L-tryptophan + formaldehyde + H2O2",
       "substrates": [
         {
-          "metabolite": "s_hydroxymethyl_glutathione",
+          "metabolite": "n_methyl_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "gsh",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         },
         {
           "metabolite": "formaldehyde",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_4_4_1_22"
+          "metabolite": "h2o2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:22488"
+        "rhea": "RHEA:28006"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22488"
+            "id": "RHEA:28006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "glycine N-methyltransferase",
+      "equation": "glycine + S-adenosyl-L-methionine = sarcosine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.20",
+      "substrates": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sarcosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:19937"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19937"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "glycine amidinotransferase",
+      "equation": "L-arginine + glycine = guanidinoacetate + L-ornithine",
+      "ec": "2.1.4.1",
+      "substrates": [
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guanidinoacetic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_4_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:13201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13201"
           }
         ]
       }

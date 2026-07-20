@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-7-dimethylxanthine-to-formaldehyde-36283",
+  "name": "1,7-dimethylxanthine to formaldehyde",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 1,7-dimethylxanthine to formaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36283"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:25858"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_7_dimethylxanthine",
+      "name": "1,7-dimethylxanthine",
+      "formula": "C7H8N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:25858"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "7_methylxanthine",
+      "name": "7-methylxanthine",
+      "formula": "C6H6N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48991"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "xanthine",
+      "name": "Xanthine",
+      "formula": "C5H4N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17712"
+      }
+    },
+    {
+      "id": "4_chloro_l_lysinium",
+      "name": "4-chloro-L-lysinium",
+      "formula": "C6H14ClN2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143276"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "l_2_amino_4_chloropent_4_enoic_acid",
+      "name": "L-2-amino-4-chloropent-4-enoic acid",
+      "short": "L-2-amino-4-chlorop…",
+      "formula": "C5H8ClNO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57555"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_178",
+      "name": "methylxanthine N(1)-demethylase",
+      "ec": [
+        "1.14.13.178"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_128",
+      "name": "7-methylxanthine demethylase",
+      "ec": [
+        "1.14.13.128"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methylxanthine N(1)-demethylase",
+      "equation": "1,7-dimethylxanthine + NADPH + O2 + H(+) = 7-methylxanthine + formaldehyde + NADP(+) + H2O",
+      "ec": "1.14.13.178",
+      "substrates": [
+        {
+          "metabolite": "1_7_dimethylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_178"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36283"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7-methylxanthine demethylase",
+      "equation": "7-methylxanthine + NADPH + O2 + H(+) = xanthine + formaldehyde + NADP(+) + H2O",
+      "ec": "1.14.13.128",
+      "substrates": [
+        {
+          "metabolite": "7_methylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30307"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-chloro-L-lysine + AH2 + O2 = L-2-amino-4-chloropent-4-enoate + formaldehyde + A + NH4...",
+      "equation": "4-chloro-L-lysine + AH2 + O2 = L-2-amino-4-chloropent-4-enoate + formaldehyde + A + NH4(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_chloro_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_2_amino_4_chloropent_4_enoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59888"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59888"
+          }
+        ]
+      }
+    }
+  ]
+}

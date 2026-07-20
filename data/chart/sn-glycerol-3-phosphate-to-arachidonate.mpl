@@ -16,15 +16,15 @@ pathway sn-glycerol-3-phosphate-to-arachidonate "sn-glycerol 3-phosphate to arac
     1_stearoyl_sn_glycero_3_phosphate
   }
 
-  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate side left {
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
-    <-> . +atp +adp +hplus
-    1_stearoyl_2_arachidonoyl_sn_glycerol
+  branch from 1_stearoyl_sn_glycero_3_phosphate side left {
+    1_stearoyl_sn_glycero_3_phosphate
+    <-> . +linoleoyl_coa +coa
+    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate
   }
 
   branch from arachidonate side right {
     arachidonate
-    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +o2
+    9_r_hpete
   }
 }

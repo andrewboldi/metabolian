@@ -42,9 +42,21 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
     14e_18e_lycopadiene
   }
 
-  branch from chlorophyll_a side right {
+  branch from nucleoside_5_diphosphate side right {
+    nucleoside_5_diphosphate
+    <-> ec_2_7_4_4 [2.7.4.4] +atp +adp
+    nucleoside_5_monophosphate
+  }
+
+  branch from chlorophyll_a side left {
     chlorophyll_a
     <-> ec_4_99_1_10 [4.99.1.10] +hplus +magnesium
     pheophytin_a
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_22 [4.2.3.22] +fpp +h2o
+    1e_4s_5e_7r_germacra_1_10_5_dien_11_ol
   }
 }

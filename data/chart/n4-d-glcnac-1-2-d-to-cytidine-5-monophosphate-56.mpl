@@ -15,10 +15,4 @@ pathway n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate-56 "N4-{β-D-GlcNAc-(1→2
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_gal_1_4_d
   }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
-  }
 }

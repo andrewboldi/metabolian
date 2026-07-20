@@ -26,14 +26,14 @@ pathway lipid-a-4-e-coli-to-lysophosphatidylcholine "lipid A(4−) (E. coli) to 
 
   branch from dag side left {
     dag
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
-    sn_glycerol_3_phosphate
+    <-> . +acyl_coa +coa
+    2_monoglyceride
   }
 
   branch from 1_acyl_sn_glycerol side right {
     1_acyl_sn_glycerol
-    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
-    1_3_diacyl_sn_glycerol
+    <-> . +dag +coa
+    acyl_coa
   }
 
   branch from sterol side left {
@@ -44,7 +44,19 @@ pathway lipid-a-4-e-coli-to-lysophosphatidylcholine "lipid A(4−) (E. coli) to 
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_111 [3.1.1.111] +1_acyl_sn_glycero_3_phosphoserine +h2o +hplus
-    sn_glycero_3_phosphoserine
+    <-> ec_3_1_1_111 [3.1.1.111] +3_sn_phosphatidyl_l_serine +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
+    1_o_acyl_sn_glycero_3_phosphocholine
+    <-> . +choline_alfoscerate +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    1_acyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from choline_alfoscerate side right {
+    choline_alfoscerate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
   }
 }

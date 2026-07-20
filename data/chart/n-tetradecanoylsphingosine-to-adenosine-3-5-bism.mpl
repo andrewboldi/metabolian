@@ -18,8 +18,8 @@ pathway n-tetradecanoylsphingosine-to-adenosine-3-5-bism "N-tetradecanoylsphingo
 
   branch from sphingosine side left {
     sphingosine
-    <-> . +n_acetylsphingosine +h2o
-    acetate
+    <-> . +sphingosine_1_phosphocholine +h2o +hplus
+    phosphocholine
   }
 
   branch from tetradecanoate side right {
@@ -30,7 +30,7 @@ pathway n-tetradecanoylsphingosine-to-adenosine-3-5-bism "N-tetradecanoylsphingo
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_20 [2.8.2.20] +l_tyrosine +3_phosphonato_5_adenylyl_sulfate +hplus
-    l_tyrosine_o_sulfate_1
+    <-> ec_2_8_2_9 [2.8.2.9] +methyl_l_tyrosinate +3_phosphonato_5_adenylyl_sulfate +hplus
+    l_tyrosine_methyl_ester_4_sulfate
   }
 }

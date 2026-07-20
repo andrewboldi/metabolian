@@ -214,91 +214,89 @@
       }
     },
     {
-      "id": "copal_8_ol_diphosphate",
-      "name": "copal-8-ol diphosphate",
-      "short": "copal-8-ol PP",
-      "formula": "C20H35O8P2",
-      "charge": -3,
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:64283"
+        "chebi": "CHEBI:32682"
       }
     },
     {
-      "id": "cis_abienol",
-      "name": "cis-abienol",
-      "formula": "C20H34O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:68624"
-      }
-    },
-    {
-      "id": "3_methyldodecanoyl_coa",
-      "name": "3-methyldodecanoyl-CoA",
-      "short": "3-methyldodecanoyl-…",
-      "formula": "C34H56N7O17P3S",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138637"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "2_hydroxy_3_methyldodecanoyl_coa",
-      "name": "2-hydroxy-3-methyldodecanoyl-CoA",
-      "short": "2-hydroxy-3-methyld…",
-      "formula": "C34H56N7O18P3S",
-      "charge": -4,
+      "id": "l_arginyl_amp",
+      "name": "L-arginyl-AMP",
+      "formula": "C16H27N9O8P",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:138636"
+        "chebi": "CHEBI:144944"
       }
     },
     {
-      "id": "dehydroprobetaenone_i",
-      "name": "dehydroprobetaenone I",
-      "short": "dehydroprobetaenone…",
-      "formula": "C21H34O2",
+      "id": "thebaine",
+      "name": "thebaine",
+      "formula": "C19H22NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59953"
+      }
+    },
+    {
+      "id": "6_o_demethylthebaine",
+      "name": "6-O-demethylthebaine",
+      "formula": "C18H19NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145061"
+        "chebi": "CHEBI:194545"
       }
     },
     {
-      "id": "probetaenone_i",
-      "name": "probetaenone I",
-      "formula": "C21H36O2",
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145062"
+        "chebi": "CHEBI:16842"
       }
     },
     {
-      "id": "betaenone_c",
-      "name": "betaenone C",
-      "formula": "C21H34O5",
+      "id": "chermesin_d_methyl_ester",
+      "name": "chermesin D methyl ester",
+      "short": "chermesin D methyl…",
+      "formula": "C26H36O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145053"
+        "chebi": "CHEBI:167691"
       }
     },
     {
-      "id": "betaenone_b",
-      "name": "betaenone B",
-      "formula": "C21H36O5",
+      "id": "lanosterol",
+      "name": "Lanosterol",
+      "formula": "C30H50O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145054"
+        "chebi": "CHEBI:16521"
+      }
+    },
+    {
+      "id": "eburicol",
+      "name": "eburicol",
+      "formula": "C31H52O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70315"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_140",
-      "name": "cis-abienol synthase",
-      "ec": [
-        "4.2.3.140"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -638,18 +636,25 @@
     },
     {
       "id": "r9",
-      "name": "cis-abienol synthase",
-      "equation": "8-hydroxycopalyl diphosphate = cis-abienol + diphosphate",
-      "ec": "4.2.3.140",
+      "name": "L-arginine + ATP + H(+) = L-arginyl-AMP + diphosphate",
+      "equation": "L-arginine + ATP + H(+) = L-arginyl-AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "copal_8_ol_diphosphate",
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cis_abienol",
+          "metabolite": "l_arginyl_amp",
           "stoichiometry": 1
         },
         {
@@ -657,33 +662,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_140"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:34463"
+        "rhea": "RHEA:62496"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34463"
+            "id": "RHEA:62496"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "3-methyldodecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methyldodecanoyl-CoA + succi...",
-      "equation": "3-methyldodecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methyldodecanoyl-CoA + succinate + CO2",
+      "name": "thebaine + 2-oxoglutarate + O2 = 6-O-demethylthebaine + formaldehyde + succinate + CO2 ...",
+      "equation": "thebaine + 2-oxoglutarate + O2 = 6-O-demethylthebaine + formaldehyde + succinate + CO2 + H(+)",
       "substrates": [
         {
-          "metabolite": "3_methyldodecanoyl_coa",
+          "metabolite": "thebaine",
           "stoichiometry": 1
         },
         {
@@ -697,7 +697,11 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxy_3_methyldodecanoyl_coa",
+          "metabolite": "6_o_demethylthebaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
           "stoichiometry": 1
         },
         {
@@ -707,97 +711,105 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:55192"
+        "rhea": "RHEA:76115"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55192"
+            "id": "RHEA:76115"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "dehydroprobetaenone I + AH2 = probetaenone I + A",
-      "equation": "dehydroprobetaenone I + AH2 = probetaenone I + A",
+      "name": "chermesin D + S-adenosyl-L-methionine = chermesin D methyl ester + S-adenosyl-L-homocys...",
+      "equation": "chermesin D + S-adenosyl-L-methionine = chermesin D methyl ester + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "dehydroprobetaenone_i",
+          "metabolite": "chermesin_d",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "probetaenone_i",
+          "metabolite": "chermesin_d_methyl_ester",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "sah",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:61864"
+        "rhea": "RHEA:67056"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61864"
+            "id": "RHEA:67056"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "betaenone C + AH2 = betaenone B + A",
-      "equation": "betaenone C + AH2 = betaenone B + A",
+      "name": "lanosterol + S-adenosyl-L-methionine = eburicol + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "lanosterol + S-adenosyl-L-methionine = eburicol + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "betaenone_c",
+          "metabolite": "lanosterol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "betaenone_b",
+          "metabolite": "eburicol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:61900"
+        "rhea": "RHEA:52652"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61900"
+            "id": "RHEA:52652"
           }
         ]
       }

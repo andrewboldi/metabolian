@@ -18,7 +18,7 @@ pathway bromochloromethane-to-s-formylmycothiol "bromochloromethane to S-formylm
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_32 [1.14.11.32] +codeine +akg +o2 +succinate +co2
-    morphine
+    <-> . +n6_n6_dimethyl_l_lysine_1 +hydrogen_acceptor +h2o +hydrogen_donor
+    n6_methyl_l_lysinium
   }
 }

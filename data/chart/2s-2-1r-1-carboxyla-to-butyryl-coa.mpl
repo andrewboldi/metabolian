@@ -20,25 +20,25 @@ pathway 2s-2-1r-1-carboxyla-to-butyryl-coa "(2S)-2-{[(1R)-1-carboxyla… to buty
 
   branch from l_2_aminopentanoic_acid side left {
     l_2_aminopentanoic_acid
-    <-> . +2_oxopentanoate +l_kynurenine
-    4_2_aminophenyl_2_4_dioxobutanoate
-  }
-
-  branch from 2_oxopentanoate side right {
-    2_oxopentanoate
-    <-> . +n_n_dimethyl_l_argininium +l_2_aminopentanoic_acid
+    <-> . +2_oxopentanoate +n_n_dimethyl_l_argininium
     5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
-  branch from nh3 side left {
+  branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_10 [1.4.1.10] +glycine +nad +h2o +nadh +hplus
-    glyoxylate
+    <-> ec_3_5_5_6 [3.5.5.6] +3_5_dibromo_4_oxidobenzonitrile +h2o
+    3_5_dibromo_4_oxidobenzoate
   }
 
-  branch from butanal side right {
+  branch from butanal side left {
     butanal
-    <-> . +butane_1_sulfonate +fmnh2 +o2 +sulfite +h2o +hplus
-    fmn
+    <-> . +nadp +nadph +hplus
+    butan_1_ol
+  }
+
+  branch from butyryl_coa side right {
+    butyryl_coa
+    <-> ec_1_3_1_86 [1.3.1.86] +nadp +nadph +hplus
+    crotonoyl_coa
   }
 }

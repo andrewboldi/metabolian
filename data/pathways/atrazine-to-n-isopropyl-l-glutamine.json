@@ -183,21 +183,12 @@
       }
     },
     {
-      "id": "biuret",
-      "name": "biuret",
-      "formula": "C2H5N3O2",
-      "charge": 0,
+      "id": "1_carboxybiuret",
+      "name": "1-carboxybiuret",
+      "formula": "C3H4N3O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:18138"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:142864"
       }
     }
   ],
@@ -221,6 +212,13 @@
       "name": "N-isopropylammelide isopropylaminohydrolase",
       "ec": [
         "3.5.4.42"
+      ]
+    },
+    {
+      "id": "ec_3_5_2_15",
+      "name": "cyanuric acid amidohydrolase",
+      "ec": [
+        "3.5.2.15"
       ]
     }
   ],
@@ -476,8 +474,9 @@
     },
     {
       "id": "r6",
-      "name": "cyanurate + H2O = biuret + CO2",
-      "equation": "cyanurate + H2O = biuret + CO2",
+      "name": "cyanuric acid amidohydrolase",
+      "equation": "cyanurate + H2O = 1-carboxybiuret + H(+)",
+      "ec": "3.5.2.15",
       "substrates": [
         {
           "metabolite": "cyanuric_acid",
@@ -490,25 +489,30 @@
       ],
       "products": [
         {
-          "metabolite": "biuret",
+          "metabolite": "1_carboxybiuret",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_15"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:14641"
+        "rhea": "RHEA:70363"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14641"
+            "id": "RHEA:70363"
           }
         ]
       }

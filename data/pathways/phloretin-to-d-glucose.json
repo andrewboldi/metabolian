@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phloretin-to-d-glucose",
+  "name": "phloretin to β-D-glucose",
+  "category": "other",
+  "summary": "A 2-step route from phloretin to β-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51576"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17276"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phloretin",
+      "name": "phloretin",
+      "formula": "C15H14O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17276"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "phlorizin",
+      "name": "phlorizin",
+      "formula": "C21H24O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:8113"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "β-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15903"
+      }
+    },
+    {
+      "id": "trilobatin",
+      "name": "trilobatin",
+      "formula": "C21H24O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145829"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_357",
+      "name": "phlorizin synthase",
+      "ec": [
+        "2.4.1.357"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phlorizin synthase",
+      "equation": "phloretin + UDP-alpha-D-glucose = phlorizin + UDP + H(+)",
+      "ec": "2.4.1.357",
+      "substrates": [
+        {
+          "metabolite": "phloretin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phlorizin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_357"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phlorizin + H2O = phloretin + beta-D-glucose",
+      "equation": "phlorizin + H2O = phloretin + beta-D-glucose",
+      "substrates": [
+        {
+          "metabolite": "phlorizin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phloretin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69639"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phloretin + UDP-alpha-D-glucose = trilobatin + UDP + H(+)",
+      "equation": "phloretin + UDP-alpha-D-glucose = trilobatin + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "phloretin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trilobatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65148"
+          }
+        ]
+      }
+    }
+  ]
+}

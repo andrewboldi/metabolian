@@ -1,0 +1,384 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "biocytin-to-diphosphate",
+  "name": "biocytin to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from biocytin zwitterion to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77171"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195545"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "biocytin",
+      "name": "biocytin",
+      "formula": "C16H28N4O4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195545"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "biotinate",
+      "name": "biotinate",
+      "formula": "C10H15N2O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57586"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "biotinyl_l_lysine",
+      "name": "biotinyl-L-lysine",
+      "formula": "C16H26N4O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83144"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cadaverine",
+      "name": "cadaverine",
+      "formula": "C5H16N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58384"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "2_o_3_dimethylflaviolin_7_olate",
+      "name": "2-O,3-dimethylflaviolin-7-olate",
+      "short": "2-O,3-dimethylflavi…",
+      "formula": "C12H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78589"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "6_linalyl_2_o_3_dimethylflaviolin_7_olate",
+      "name": "6-linalyl-2-O,3-dimethylflaviolin-7-olate",
+      "short": "6-linalyl-2-O,3-dim…",
+      "formula": "C22H25O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78588"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_12",
+      "name": "biotinidase",
+      "ec": [
+        "3.5.1.12"
+      ]
+    },
+    {
+      "id": "ec_6_3_4_9",
+      "name": "biotin--[methylmalonyl-CoA-carboxytransferase] ligase",
+      "ec": [
+        "6.3.4.9"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_18",
+      "name": "lysine decarboxylase",
+      "ec": [
+        "4.1.1.18"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_124",
+      "name": "6-linalyl-2-O,3-dimethylflaviolin synthase",
+      "ec": [
+        "2.5.1.124"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "biotinidase",
+      "equation": "biocytin + H2O = biotin + L-lysine",
+      "ec": "3.5.1.12",
+      "substrates": [
+        {
+          "metabolite": "biocytin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77171"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "biotin--[methylmalonyl-CoA-carboxytransferase] ligase",
+      "equation": "apo-[methylmalonyl-CoA:pyruvate carboxytransferase] + biotin + ATP = holo-[methylmalonyl-CoA:pyruvate carboxytransferase] + AMP + diphosphate + H(+)",
+      "ec": "6.3.4.9",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "biotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biotinyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_4_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lysine decarboxylase",
+      "equation": "L-lysine + H(+) = cadaverine + CO2",
+      "ec": "4.1.1.18",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "6-linalyl-2-O,3-dimethylflaviolin synthase",
+      "equation": "2-O,3-dimethylflaviolin + (2E)-geranyl diphosphate = 6-linalyl-2-O,3-dimethylflaviolin + diphosphate",
+      "ec": "2.5.1.124",
+      "substrates": [
+        {
+          "metabolite": "2_o_3_dimethylflaviolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_linalyl_2_o_3_dimethylflaviolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:41007"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41007"
+          }
+        ]
+      }
+    }
+  ]
+}

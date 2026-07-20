@@ -22,27 +22,15 @@ pathway 1-palmitoyl-2-arachidonoy-to-1-arachidonoyl-2-ol "1-palmitoyl-2-arachido
     1_arachidonoyl_2_oleoyl_sn_glycero_3_phosphate
   }
 
-  branch from 1_o_palmitoyl_n_acetylsphingosine side left {
-    1_o_palmitoyl_n_acetylsphingosine
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s +n_acetylsphingosine
-    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side right {
+  branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side left {
     2_arachidonoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_di_o_arachidonoyl_sn_glycero_3_phosphocholin +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +hplus
-    n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho
+    <-> . +o2
+    2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad
   }
 
-  branch from arachidonate side left {
+  branch from arachidonate side right {
     arachidonate
-    <-> . +h2o +coa +hplus
-    arachidonoyl_coa
-  }
-
-  branch from 1_arachidonoyl_sn_glycerol_3_phosphate side right {
-    1_arachidonoyl_sn_glycerol_3_phosphate
-    <-> . +arachidonoyl_coa +coa
-    sn_glycerol_3_phosphate
+    <-> . +1_arachidonyl_2_palmityl_sn_glycero_3_phosphocho +h2o +hplus
+    2_hexadecyl_sn_glycero_3_phosphocholine
   }
 }

@@ -26,13 +26,13 @@ pathway all-trans-decaprenyl-to-s-adenosyl-l-homocystein "all-trans-decaprenylâ€
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_132 [4.2.3.132] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    neoabietadiene
+    <-> . +gtp +atp
+    cyclic_amp_amp_gmp
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_173 [2.1.1.173] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_337 [2.1.1.337] +s_reticulinium +sam +hplus
+    s_tembetarine
   }
 }

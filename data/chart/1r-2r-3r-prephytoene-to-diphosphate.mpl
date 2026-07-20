@@ -20,13 +20,13 @@ pathway 1r-2r-3r-prephytoene-to-diphosphate "(1R,2R,3R)-prephytoene… to diphos
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_2 [3.1.7.2] +h2o +gtp +hplus
-    guanosine_3_diphosphate_5_triphosphate_hexaanion
+    <-> ec_6_3_2_55 [6.3.2.55] +2_2_aminoethylcarbamoyl_methyl_2_hydroxybutanedi +3_amino_l_alanine +atp +amp
+    2_l_alanin_3_ylcarbamoyl_methyl_3_2_aminoethylca
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +d_alanine +hydrogen_acceptor +h2o +pyruvate
-    nh3
+    <-> . +e_e_farnesyl_5_7_dihydroxy_4_6_dimethylphthalid +o2 +hydrogen_acceptor +h2o
+    e_e_epoxyfarnesyl_5_7_dihydroxy_4_6_dimethylpht
   }
 }

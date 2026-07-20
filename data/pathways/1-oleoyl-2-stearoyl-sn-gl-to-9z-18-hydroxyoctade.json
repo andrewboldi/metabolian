@@ -157,31 +157,23 @@
       }
     },
     {
-      "id": "l_trihomomethionine",
-      "name": "L-trihomomethionine",
-      "formula": "C8H17NO2S",
-      "charge": 0,
+      "id": "dihydromonacolin_l_carboxylate",
+      "name": "dihydromonacolin L carboxylate",
+      "short": "dihydromonacolin L…",
+      "formula": "C19H31O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:134633"
+        "chebi": "CHEBI:79031"
       }
     },
     {
-      "id": "e_6_methylsulfanyl_hexanal_oxime",
-      "name": "(E)-6-(methylsulfanyl)hexanal oxime",
-      "short": "6-(methylsulfanyl)h…",
-      "formula": "C7H15NOS",
-      "charge": 0,
+      "id": "monacolin_l_carboxylate",
+      "name": "monacolin L carboxylate",
+      "short": "monacolin L…",
+      "formula": "C19H29O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:134681"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:79044"
       }
     }
   ],
@@ -194,10 +186,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_42",
-      "name": "homomethionine N-monooxygenase",
+      "id": "ec_1_14_14_124",
+      "name": "dihydromonacolin L hydroxylase",
       "ec": [
-        "1.14.14.42"
+        "1.14.14.124"
       ]
     }
   ],
@@ -433,61 +425,57 @@
     },
     {
       "id": "r6",
-      "name": "homomethionine N-monooxygenase",
-      "equation": "L-trihomomethionine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-6-(methylsulfanyl)hexanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.42",
+      "name": "dihydromonacolin L hydroxylase",
+      "equation": "dihydromonacolin L carboxylate + reduced [NADPH--hemoprotein reductase] + O2 = monacolin L carboxylate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.124",
       "substrates": [
         {
-          "metabolite": "l_trihomomethionine",
+          "metabolite": "dihydromonacolin_l_carboxylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_6_methylsulfanyl_hexanal_oxime",
+          "metabolite": "monacolin_l_carboxylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_42"
+          "enzyme": "ec_1_14_14_124"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:32723"
+        "rhea": "RHEA:42368"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32723"
+            "id": "RHEA:42368"
           }
         ]
       }

@@ -171,41 +171,67 @@
       }
     },
     {
-      "id": "dihydro_ferroheme_d1",
-      "name": "dihydro-ferroheme d1",
-      "formula": "C34H28FeN4O10",
+      "id": "preandiloid_b",
+      "name": "preandiloid B",
+      "formula": "C25H32O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232433"
+      }
+    },
+    {
+      "id": "preandiloid_c",
+      "name": "preandiloid C",
+      "formula": "C25H30O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232434"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:140498"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "ferroheme_d1",
-      "name": "ferroheme d1",
-      "formula": "C34H26FeN4O10",
+      "id": "3_5_dimethylorsellinate",
+      "name": "3,5-dimethylorsellinate",
+      "short": "3,5-dimethylorselli…",
+      "formula": "C10H11O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:131856"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:60549"
-      }
-    },
-    {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:65315"
-      }
-    },
-    {
-      "id": "5_methyluridine_5_monophosphate_1",
-      "name": "5-methyluridine 5'-monophosphate(1−)",
-      "short": "5-methyluridine…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74447"
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -215,13 +241,6 @@
       "name": "N(6)-L-threonylcarbamoyladenine synthase",
       "ec": [
         "2.3.1.234"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_35",
-      "name": "tRNA (uracil(54)-C(5))-methyltransferase",
-      "ec": [
-        "2.1.1.35"
       ]
     }
   ],
@@ -426,11 +445,11 @@
     },
     {
       "id": "r5",
-      "name": "dihydro-heme d1 + A = heme d1 + AH2",
-      "equation": "dihydro-heme d1 + A = heme d1 + AH2",
+      "name": "preandiloid B + A = preandiloid C + AH2",
+      "equation": "preandiloid B + A = preandiloid C + AH2",
       "substrates": [
         {
-          "metabolite": "dihydro_ferroheme_d1",
+          "metabolite": "preandiloid_b",
           "stoichiometry": 1
         },
         {
@@ -440,7 +459,7 @@
       ],
       "products": [
         {
-          "metabolite": "ferroheme_d1",
+          "metabolite": "preandiloid_c",
           "stoichiometry": 1
         },
         {
@@ -451,63 +470,65 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:56524"
+        "rhea": "RHEA:82631"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56524"
+            "id": "RHEA:82631"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "tRNA (uracil(54)-C(5))-methyltransferase",
-      "equation": "uridine(54) in tRNA + S-adenosyl-L-methionine = 5-methyluridine(54) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.35",
+      "name": "3 malonyl-CoA + acetyl-CoA + 2 S-adenosyl-L-methionine = 3,5-dimethylorsellinate + 2 S-...",
+      "equation": "3 malonyl-CoA + acetyl-CoA + 2 S-adenosyl-L-methionine = 3,5-dimethylorsellinate + 2 S-adenosyl-L-homocysteine + 3 CO2 + 4 CoA",
       "substrates": [
         {
-          "metabolite": "uridine_5_monophosphate_1",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "5_methyluridine_5_monophosphate_1",
+          "metabolite": "3_5_dimethylorsellinate",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
         {
-          "enzyme": "ec_2_1_1_35"
+          "metabolite": "coa",
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:42712"
+        "rhea": "RHEA:49628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42712"
+            "id": "RHEA:49628"
           }
         ]
       }

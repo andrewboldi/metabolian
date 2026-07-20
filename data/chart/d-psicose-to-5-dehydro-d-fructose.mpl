@@ -14,7 +14,7 @@ pathway d-psicose-to-5-dehydro-d-fructose "D-psicose to 5-dehydro-D-fructose" {
     d_glucitol
     <-> ec_1_1_99_21 [1.1.99.21] +hydrogen_acceptor -hydrogen_donor
     keto_l_sorbose
-    <-> ec_1_1_1_123 [1.1.1.123] +nadp -nadph -hplus
+    <-> ec_1_1_3_11 [1.1.3.11] +o2 -h2o2
     5_dehydro_d_fructose
   }
 
@@ -24,15 +24,9 @@ pathway d-psicose-to-5-dehydro-d-fructose "D-psicose to 5-dehydro-D-fructose" {
     d_sorbopyranose
   }
 
-  branch from keto_l_sorbose side right {
-    keto_l_sorbose
-    <-> ec_2_7_1_206 [2.7.1.206] +n_phosphonato_l_histidine +l_histidine
-    l_sorbose_1_phosphate
-  }
-
-  branch from hydrogen_donor side left {
+  branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_17 [1.3.99.17] +8_chloroquinoline +hydrogen_acceptor +h2o
-    8_chloroquinolin_2_1h_one
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +hydrogen_acceptor +h2o
+    4z_7z_10z_14e_16z_19z_13_hydroxydocosahexaenoat
   }
 }

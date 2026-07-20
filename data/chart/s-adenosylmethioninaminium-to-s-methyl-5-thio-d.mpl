@@ -18,13 +18,13 @@ pathway s-adenosylmethioninaminium-to-s-methyl-5-thio-d "S-adenosylmethioninamin
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_38 [2.5.1.38] +nocardicin_e +sam +hplus
-    isonocardicin_a
+    <-> . +spermine +s_adenosylmethioninaminium +hplus
+    n4_aminopropylspermine
   }
 
   branch from spermidine side right {
     spermidine
-    <-> . +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
-    n4_aminopropylspermidine
+    <-> ec_2_5_1_128 [2.5.1.128] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    n4_bis_aminopropyl_spermidine
   }
 }

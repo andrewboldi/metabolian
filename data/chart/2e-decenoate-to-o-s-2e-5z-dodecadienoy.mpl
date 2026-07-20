@@ -22,13 +22,13 @@ pathway 2e-decenoate-to-o-s-2e-5z-dodecadienoy "(2E)-decenoate to O-[S-(2E,5Z)-d
 
   branch from ppi side left {
     ppi
-    <-> ec_6_3_2_14 [6.3.2.14] +2_3_dihydroxybenzoate +serine +atp +amp +hplus
-    enterobactin
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    ent_copalol
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> ec_6_2_1_59 [6.2.1.59] +icosanoate +atp +amp +ppi
+    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
   }
 }

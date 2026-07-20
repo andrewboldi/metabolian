@@ -26,15 +26,21 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,
     1_6_dimethoxyphenazine
   }
 
-  branch from 1_hydroxy_6_methoxyphenazine side left {
+  branch from 1_6_dihydroxyphenazine side left {
+    1_6_dihydroxyphenazine
+    <-> . +nadph +o2 +nadp +h2o
+    1_6_dihydroxyphenazine_n5_oxide
+  }
+
+  branch from 1_hydroxy_6_methoxyphenazine side right {
     1_hydroxy_6_methoxyphenazine
     <-> . +nadph +o2 +nadp +h2o
     1_hydroxy_6_methoxyphenazine_n10_oxide
   }
 
-  branch from sah side right {
+  branch from sah side left {
     sah
-    <-> ec_2_1_1_136 [2.1.1.136] +2_4_6_trichlorophenolate +sam
-    2_4_6_trichloroanisole
+    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 }

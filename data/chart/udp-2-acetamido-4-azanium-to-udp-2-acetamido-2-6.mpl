@@ -24,8 +24,8 @@ pathway udp-2-acetamido-4-azanium-to-udp-2-acetamido-2-6 "UDP-2-acetamido-4-azan
 
   branch from glutamate side right {
     glutamate
-    <-> ec_1_4_3_11 [1.4.3.11] +o2 +h2o +akg +h2o2
-    nh3
+    <-> . +gly_glu +h2o
+    glycine
   }
 
   branch from udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos side left {

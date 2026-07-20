@@ -16,27 +16,21 @@ pathway deacetylipecoside-to-fmnh2 "deacetylipecoside to FMNH2" {
     2_c_methyl_d_erythritol_2_4_cyclic_diphosphate
   }
 
-  branch from secologanin side left {
-    secologanin
-    <-> ec_3_5_99_13 [3.5.99.13] +3_s_strictosidinium +h2o
-    tryptaminium
-  }
-
-  branch from dopamine side right {
+  branch from dopamine side left {
     dopamine
-    <-> ec_3_5_99_15 [3.5.99.15] +h2o +secologanin
-    deacetylisoipecoside
+    <-> . +palmitoyl_coa +coa +hplus
+    n_palmitoyl_dopamine
   }
 
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> ec_2_7_1_42 [2.7.1.42] +riboflavin +g1p
-    glucose
+    <-> . +tyrosine +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_tyrosinate
   }
 
-  branch from 2_c_methyl_d_erythritol_2_4_cyclic_diphosphate side right {
-    2_c_methyl_d_erythritol_2_4_cyclic_diphosphate
-    <-> ec_1_17_7_1 [1.17.7.1] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +di_sulfido_diiron +h2o +hplus
-    di_sulfido_diiron
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_25 [1.14.14.25] +cholesterol +o2 +fmn +h2o +hplus
+    24s_24_hydroxycholesterol
   }
 }

@@ -18,19 +18,13 @@ pathway 1-2-3-trilinolenoylglycer-to-hydrogen-acceptor "1,2,3-trilinolenoylglyce
 
   branch from linolenate side left {
     linolenate
-    <-> ec_1_13_11_77 [1.13.11.77] +o2
-    8e_10s_12z_15z_10_hydroperoxyoctadec_8_12_15_tr
+    <-> . +atp +coa +amp +ppi
+    linolenoyl_coa
   }
 
-  branch from r_2_hydroperoxy_linolenate side right {
-    r_2_hydroperoxy_linolenate
-    <-> . +hplus +co2 +h2o
-    8z_11z_14z_heptadecatrienal
-  }
-
-  branch from hydrogen_acceptor side left {
+  branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_6_ol +h2o +hydrogen_donor
-    6_hydroxyquinolin_2_1h_one
+    <-> ec_1_2_99_10 [1.2.99.10] +4_4_diapolycopen_4_al +h2o +hydrogen_donor +hplus
+    4_4_diapolycopen_4_oate
   }
 }

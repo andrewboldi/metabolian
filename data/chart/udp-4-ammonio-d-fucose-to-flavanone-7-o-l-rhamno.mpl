@@ -18,13 +18,19 @@ pathway udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno "UDP-4-ammonio-α-D-fuc
     flavanone_7_o_l_rhamnosyl_1_2_d_glucoside
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_6_3_2_33 [6.3.2.33] +5_6_7_8_tetrahydromethanopterin +atp +adp +pi +hplus
-    5_6_7_8_tetrahydrosarcinapterin
+  branch from udp_4_dehydro_6_deoxy_d_glucose side left {
+    udp_4_dehydro_6_deoxy_d_glucose
+    <-> . +3_o_l_rha_1_3_d_gal_1_2_d_glca_quillate +udp
+    3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_4_d
   }
 
-  branch from udp_l_rhamnose side right {
+  branch from glutamate side right {
+    glutamate
+    <-> . +s_2e_6e_10e_geranylgeranyl_l_glutathione +h2o
+    s_2e_6e_10e_geranylgeranyl_l_cysteinylglycine
+  }
+
+  branch from udp_l_rhamnose side left {
     udp_l_rhamnose
     <-> ec_2_4_1_159 [2.4.1.159] +flavonol_3_o_d_glucoside +udp +hplus
     flavonol_3_o_l_rhamnosyl_1_6_d_glucoside_s

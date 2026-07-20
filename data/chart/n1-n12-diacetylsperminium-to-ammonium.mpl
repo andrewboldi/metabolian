@@ -20,25 +20,37 @@ pathway n1-n12-diacetylsperminium-to-ammonium "N1,N12-diacetylsperminium to ammo
 
   branch from n1_acetylspermidinium side left {
     n1_acetylspermidinium
-    <-> . +h2o +spermidine
-    acetate
+    <-> . +o2 +h2o +3_ammoniopropanal +h2o2
+    n_acetylputrescinium
   }
 
   branch from 1_4_butanediammonium side right {
     1_4_butanediammonium
-    <-> ec_3_5_3_11 [3.5.3.11] +agmatinium +h2o
-    urea
+    <-> ec_2_1_3_6 [2.1.3.6] +carbamoyl_p +pi +hplus
+    n_carbamoylputrescinium
   }
 
   branch from sym_homospermidinium side left {
     sym_homospermidinium
-    <-> . +acetyl_coa +coa +hplus
-    n1_acetyl_sym_homospermidinium
+    <-> . +o2 +h2o2 +nh3
+    n_4_ammoniobutylpyrrolinium_ion
   }
 
   branch from trimethylenediaminium side right {
     trimethylenediaminium
-    <-> ec_1_5_3_15 [1.5.3.15] +n8_acetylspermidinium +o2 +h2o +h2o2
-    4_acetamidobutanal
+    <-> ec_1_5_3_14 [1.5.3.14] +spermidine +o2 +h2o +h2o2
+    4_ammoniobutanal
+  }
+
+  branch from 1_formylpyrrolizidine side left {
+    1_formylpyrrolizidine
+    <-> .
+    n_4_oxobutylpyrrolinium_ion
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
+    3_5_cyclic_imp
   }
 }

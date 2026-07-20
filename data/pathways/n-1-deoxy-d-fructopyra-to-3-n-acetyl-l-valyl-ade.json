@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-1-deoxy-d-fructopyra-to-3-n-acetyl-l-valyl-ade",
   "name": "N-(1-deoxy-β-D-fructopyra… to 3'-(N-acetyl-L-valyl)aden…",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from N-(1-deoxy-β-D-fructopyranos-1-yl)-L-valine betaine to 3'-(N-acetyl-L-valyl)adenylyl residue(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -158,22 +158,22 @@
       }
     },
     {
-      "id": "2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y",
-      "name": "(2S)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]propanoate",
-      "short": "2-[(E)-{[(2R,3S,4R,…",
-      "formula": "C9H14NO7",
-      "charge": -1,
+      "id": "n_1_deoxy_d_fructopyranos_1_yl_l_phenylalanine_b",
+      "name": "N-(1-deoxy-β-D-fructopyranos-1-yl)-L-phenylalanine betaine",
+      "short": "N-(1-deoxy-β-D-fruc…",
+      "formula": "C15H21NO7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:228148"
+        "chebi": "CHEBI:228153"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
+        "chebi": "CHEBI:58095"
       }
     },
     {
@@ -214,22 +214,22 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57907"
       }
     },
     {
-      "id": "eudesmol",
-      "name": "α-eudesmol",
-      "formula": "C15H26O",
+      "id": "ophiobolin_f",
+      "name": "ophiobolin F",
+      "formula": "C25H42O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10278"
+        "chebi": "CHEBI:78293"
       }
     }
   ],
@@ -249,10 +249,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_85",
-      "name": "alpha-eudesmol synthase",
+      "id": "ec_4_2_3_145",
+      "name": "ophiobolin F synthase",
       "ec": [
-        "4.2.3.85"
+        "4.2.3.145"
       ]
     }
   ],
@@ -402,19 +402,19 @@
     },
     {
       "id": "r4",
-      "name": "(2S)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]propanoate ...",
-      "equation": "(2S)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]propanoate + H2O + H(+) = 2-dehydro-D-glucose + L-alanine",
+      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-phenylalanine + O2 + H2O = 2-dehydro-D-glucose ...",
+      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-phenylalanine + O2 + H2O = 2-dehydro-D-glucose + L-phenylalanine + H2O2",
       "substrates": [
         {
-          "metabolite": "2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y",
+          "metabolite": "n_1_deoxy_d_fructopyranos_1_yl_l_phenylalanine_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
@@ -424,21 +424,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:77827"
+        "rhea": "RHEA:77855"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77827"
+            "id": "RHEA:77855"
           }
         ]
       }
@@ -502,12 +506,12 @@
     },
     {
       "id": "r6",
-      "name": "alpha-eudesmol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = alpha-eudesmol + diphosphate",
-      "ec": "4.2.3.85",
+      "name": "ophiobolin F synthase",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = ophiobolin F + diphosphate",
+      "ec": "4.2.3.145",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -517,7 +521,7 @@
       ],
       "products": [
         {
-          "metabolite": "eudesmol",
+          "metabolite": "ophiobolin_f",
           "stoichiometry": 1
         },
         {
@@ -527,20 +531,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_85"
+          "enzyme": "ec_4_2_3_145"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:30951"
+        "rhea": "RHEA:41552"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30951"
+            "id": "RHEA:41552"
           }
         ]
       }

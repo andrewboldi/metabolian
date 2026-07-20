@@ -18,15 +18,9 @@ pathway roxarsone-iii-to-arsenite "roxarsone (III) to arsenite" {
     s_mycothiol_l_cysteine
   }
 
-  branch from arsenite side left {
-    arsenite
-    <-> . +methylarsonous_acid +hydrogen_donor +o2 +hydrogen_acceptor +hplus
-    methanol
-  }
-
-  branch from hydrogen_acceptor side right {
+  branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +hydrogen_donor +o2 +h2o
-    17_r_hdohe
+    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
+    2_4_dihydroxy_3_methyl_6_2_oxopropyl_benzaldehyd
   }
 }

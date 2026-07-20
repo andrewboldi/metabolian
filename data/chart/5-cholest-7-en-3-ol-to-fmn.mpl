@@ -32,7 +32,7 @@ pathway 5-cholest-7-en-3-ol-to-fmn "5α-cholest-7-en-3β-ol to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_pentahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_8_methylsulfanyl_octanal_oxime
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    2_hydroxytestosterone
   }
 }

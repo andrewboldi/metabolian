@@ -30,13 +30,19 @@ pathway carboxynorspermidine-to-diphosphate "carboxynorspermidine to diphosphate
 
   branch from 5_s_methyl_5_thioadenosine side right {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +sam +hplus
-    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+    <-> ec_2_5_1_24 [2.5.1.24] +n6_dimethylallyladenine +sam +hplus
+    discadenine
   }
 
-  branch from ppi side left {
+  branch from alanine side left {
+    alanine
+    <-> ec_3_4_13_4 [3.4.13.4] +alanyl_l_ornithine +h2o
+    ornithine
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_6_3_5_1 [6.3.5.1] +deamido_nad +glutamine +atp +h2o +amp +nad +hplus
-    glutamate
+    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    stemar_13_ene
   }
 }

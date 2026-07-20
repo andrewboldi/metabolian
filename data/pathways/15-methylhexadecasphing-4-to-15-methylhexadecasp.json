@@ -1,0 +1,172 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "15-methylhexadecasphing-4-to-15-methylhexadecasp",
+  "name": "15-methylhexadecasphing-4… to 15-methylhexadecasphing-4…",
+  "category": "other",
+  "summary": "A 2-step route from 15-methylhexadecasphing-4-enine 1-phosphate(1−) to 15-methylhexadecasphing-4-enine 1-phosphate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34723"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:70991"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "15_methylhexadecasphing_4_enine_1_phosphate",
+      "name": "15-methylhexadecasphing-4-enine 1-phosphate",
+      "short": "15-methylhexadecasp…",
+      "formula": "C17H35NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:70991"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "15_methylhexadecasphing_4_enine",
+      "name": "15-methylhexadecasphing-4-enine",
+      "short": "15-methylhexadecasp…",
+      "formula": "C17H36NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:70771"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "15-methylhexadecasphing-4-enine 1-phosphate + H2O = 15-methylhexadecasphing-4-enine + p...",
+      "equation": "15-methylhexadecasphing-4-enine 1-phosphate + H2O = 15-methylhexadecasphing-4-enine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "15_methylhexadecasphing_4_enine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_methylhexadecasphing_4_enine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "15-methylhexadecasphing-4-enine + ATP = 15-methylhexadecasphing-4-enine 1-phosphate + A...",
+      "equation": "15-methylhexadecasphing-4-enine + ATP = 15-methylhexadecasphing-4-enine 1-phosphate + ADP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "15_methylhexadecasphing_4_enine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_methylhexadecasphing_4_enine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34715"
+          }
+        ]
+      }
+    }
+  ]
+}

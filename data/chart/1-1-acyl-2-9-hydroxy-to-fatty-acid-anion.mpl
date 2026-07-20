@@ -16,27 +16,27 @@ pathway 1-1-acyl-2-9-hydroxy-to-fatty-acid-anion "1'-[1-acyl-2-(9-hydroxy-(… t
     2_monolysocardiolipin
   }
 
-  branch from 9_hode side left {
-    9_hode
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    hydrogen_acceptor
-  }
-
-  branch from 2_monolysocardiolipin side right {
+  branch from 2_monolysocardiolipin side left {
     2_monolysocardiolipin
     <-> . +cardiolipin +coa
     acyl_coa
   }
 
-  branch from cardiolipin side left {
+  branch from cardiolipin side right {
     cardiolipin
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    ethanolaminium
+    <-> . +2_monolysocardiolipin
+    2_2_dilysocardiolipin
   }
 
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
+  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
     1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_3_o_alkylglycerol +phosphatidylcholine
-    1_alkyl_3_acylglycerol
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
+    1_acyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +n_fatty_acyl_l_phenylalanine +h2o
+    l_phenylalanine
   }
 }

@@ -143,22 +143,22 @@
       }
     },
     {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "prenol",
-      "name": "prenol",
-      "formula": "C5H10O",
+      "id": "germacrene_a",
+      "name": "germacrene A",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16019"
+        "chebi": "CHEBI:36517"
       }
     },
     {
@@ -171,31 +171,22 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "l_histidinol_phosphate",
+      "name": "L-histidinol phosphate",
+      "short": "L-histidinol P",
+      "formula": "C6H11N3O4P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:57980"
       }
     },
     {
-      "id": "l_glutamyl_phosphate",
-      "name": "L-γ-glutamyl phosphate",
-      "short": "L-γ-glutamyl P",
-      "formula": "C5H8NO7P",
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58274"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
+        "chebi": "CHEBI:16810"
       }
     }
   ],
@@ -243,17 +234,10 @@
       ]
     },
     {
-      "id": "ec_3_1_7_1",
-      "name": "prenyl-diphosphatase",
+      "id": "ec_2_6_1_9",
+      "name": "histidinol-phosphate transaminase",
       "ec": [
-        "3.1.7.1"
-      ]
-    },
-    {
-      "id": "ec_2_7_2_11",
-      "name": "glutamate 5-kinase",
-      "ec": [
-        "2.7.2.11"
+        "2.6.1.9"
       ]
     }
   ],
@@ -526,22 +510,17 @@
     },
     {
       "id": "r7",
-      "name": "prenyl-diphosphatase",
-      "equation": "dimethylallyl diphosphate + H2O = prenol + diphosphate",
-      "ec": "3.1.7.1",
+      "name": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
       "substrates": [
         {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "prenol",
+          "metabolite": "germacrene_a",
           "stoichiometry": 1
         },
         {
@@ -549,22 +528,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_7_1"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:21496"
+        "rhea": "RHEA:25452"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21496"
+            "id": "RHEA:25452"
           }
         ]
       }
@@ -618,45 +592,45 @@
     },
     {
       "id": "r9",
-      "name": "glutamate 5-kinase",
-      "equation": "L-glutamate + ATP = L-glutamyl 5-phosphate + ADP",
-      "ec": "2.7.2.11",
+      "name": "histidinol-phosphate transaminase",
+      "equation": "L-histidinol phosphate + 2-oxoglutarate = 3-(imidazol-4-yl)-2-oxopropyl phosphate + L-glutamate",
+      "ec": "2.6.1.9",
       "substrates": [
         {
-          "metabolite": "glutamate",
+          "metabolite": "l_histidinol_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_glutamyl_phosphate",
+          "metabolite": "3_imidazol_4_yl_2_oxopropyl_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "glutamate",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_2_11"
+          "enzyme": "ec_2_6_1_9"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:14877"
+        "rhea": "RHEA:23744"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14877"
+            "id": "RHEA:23744"
           }
         ]
       }

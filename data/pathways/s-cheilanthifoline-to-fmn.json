@@ -130,41 +130,40 @@
       }
     },
     {
-      "id": "17_estradiol",
-      "name": "17β-estradiol",
-      "formula": "C18H24O2",
-      "charge": 0,
+      "id": "tryptaminium",
+      "name": "tryptaminium",
+      "formula": "C10H13N2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:16469"
+        "chebi": "CHEBI:57887"
       }
     },
     {
-      "id": "7_hydroxyestradiol",
-      "name": "7α-hydroxyestradiol",
-      "formula": "C18H24O3",
-      "charge": 0,
+      "id": "serotonin",
+      "name": "serotonin",
+      "formula": "C10H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:87598"
+        "chebi": "CHEBI:350546"
       }
     },
     {
-      "id": "20_methyl_21_22_didehydro_20_21_dihydrobotryococ",
-      "name": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene",
-      "short": "20-methyl-21,22-did…",
-      "formula": "C31H52",
+      "id": "3_demethylubiquinol_7",
+      "name": "3-demethylubiquinol-7",
+      "short": "3-demethylubiquinol…",
+      "formula": "C43H66O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:70864"
+        "chebi": "CHEBI:84431"
       }
     },
     {
-      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
-      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
-      "short": "3,20-dimethyl-1,2,2…",
-      "formula": "C32H54",
+      "id": "ubiquinol_7",
+      "name": "ubiquinol-7",
+      "formula": "C44H68O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:70865"
+        "chebi": "CHEBI:84432"
       }
     }
   ],
@@ -195,6 +194,20 @@
       "name": "protopine 6-monooxygenase",
       "ec": [
         "1.14.14.98"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_186",
+      "name": "tryptamine 5-hydroxylase",
+      "ec": [
+        "1.14.14.186"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_64",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "ec": [
+        "2.1.1.64"
       ]
     }
   ],
@@ -417,11 +430,12 @@
     },
     {
       "id": "r5",
-      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha-hydroxy-17beta-...",
-      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha-hydroxy-17beta-estradiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "tryptamine 5-hydroxylase",
+      "equation": "tryptamine + reduced [NADPH--hemoprotein reductase] + O2 = serotonin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.186",
       "substrates": [
         {
-          "metabolite": "17_estradiol",
+          "metabolite": "tryptaminium",
           "stoichiometry": 1
         },
         {
@@ -435,7 +449,7 @@
       ],
       "products": [
         {
-          "metabolite": "7_hydroxyestradiol",
+          "metabolite": "serotonin",
           "stoichiometry": 1
         },
         {
@@ -451,28 +465,34 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_186"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:47288"
+        "rhea": "RHEA:52320"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47288"
+            "id": "RHEA:52320"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-d...",
-      "equation": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "equation": "3-demethylubiquinol-7 + S-adenosyl-L-methionine = ubiquinol-7 + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.64",
       "substrates": [
         {
-          "metabolite": "20_methyl_21_22_didehydro_20_21_dihydrobotryococ",
+          "metabolite": "3_demethylubiquinol_7",
           "stoichiometry": 1
         },
         {
@@ -482,7 +502,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+          "metabolite": "ubiquinol_7",
           "stoichiometry": 1
         },
         {
@@ -494,17 +514,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_64"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:34663"
+        "rhea": "RHEA:44404"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34663"
+            "id": "RHEA:44404"
           }
         ]
       }

@@ -28,8 +28,8 @@ pathway heptadecan-1-ol-to-carboxylic-acid-anion "heptadecan-1-ol to carboxylic 
 
   branch from palmitate side left {
     palmitate
-    <-> . +tetradecan_1_ol +1_palmitoylglycerone_3_phosphate +hplus
-    1_tetradecylglycerone_3_phosphate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
   }
 
   branch from n_hexadecanoylsphinganine side right {
@@ -40,13 +40,25 @@ pathway heptadecan-1-ol-to-carboxylic-acid-anion "heptadecan-1-ol to carboxylic 
 
   branch from dag side left {
     dag
-    <-> ec_2_7_8_27 [2.7.8.27] +n_acylsphingosine +phosphatidylcholine
-    sphingomyelin
+    <-> ec_4_6_1_13 [4.6.1.13] +1_phosphatidyl_1d_myo_inositol
+    1d_myo_inositol_1_2_cyclic_phosphate
   }
 
   branch from 2_3_diacyl_sn_glycerol side right {
     2_3_diacyl_sn_glycerol
     <-> . +2_monoglyceride +phosphatidylcholine
     1_o_acyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> ec_3_1_1_118 [3.1.1.118] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
+  }
+
+  branch from 2_monoglyceride side right {
+    2_monoglyceride
+    <-> . +atp +adp +hplus
+    2_acyl_sn_glycero_3_phosphate
   }
 }

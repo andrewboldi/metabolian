@@ -121,23 +121,22 @@
       }
     },
     {
-      "id": "1_2_3_tripalmitoleoylglycerol",
-      "name": "1,2,3-tripalmitoleoylglycerol",
-      "short": "1,2,3-tripalmitoleo…",
-      "formula": "C51H92O6",
+      "id": "o_9z_hexadecenoyl_l_serine",
+      "name": "O-[(9Z)-hexadecenoyl]-L-serine",
+      "short": "O-[(9Z)-hexadecenoy…",
+      "formula": "C19H33NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75841"
+        "chebi": "CHEBI:85189"
       }
     },
     {
-      "id": "1_3_dipalmitoleoylglycerol",
-      "name": "1,3-dipalmitoleoylglycerol",
-      "short": "1,3-dipalmitoleoylg…",
-      "formula": "C35H64O5",
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75849"
+        "chebi": "CHEBI:29999"
       }
     },
     {
@@ -150,13 +149,13 @@
       }
     },
     {
-      "id": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
-      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine",
-      "short": "1-hexadecanoyl-2-(9…",
-      "formula": "C39H76NO8P",
+      "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet",
+      "name": "1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-stearoyl-2-arachi…",
+      "formula": "C43H78NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73007"
+        "chebi": "CHEBI:78268"
       }
     },
     {
@@ -169,13 +168,13 @@
       }
     },
     {
-      "id": "1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine",
-      "name": "1-palmitoyl-2-oleoyl-sn-glycero-3-phosphoserine",
-      "short": "1-palmitoyl-2-oleoy…",
-      "formula": "C40H75NO10P",
+      "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphose",
+      "name": "1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphoserine",
+      "short": "1-stearoyl-2-arachi…",
+      "formula": "C44H77NO10P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:75029"
+        "chebi": "CHEBI:78269"
       }
     },
     {
@@ -225,16 +224,31 @@
       }
     },
     {
-      "id": "selinene",
-      "name": "δ-selinene",
+      "id": "z_bisabolene",
+      "name": "(Z)-γ-bisabolene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49278"
+        "chebi": "CHEBI:49238"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_98",
+      "name": "[Wnt protein] O-palmitoleoyl-L-serine hydrolase",
+      "ec": [
+        "3.1.1.98"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_40",
+      "name": "(Z)-gamma-bisabolene synthase",
+      "ec": [
+        "4.2.3.40"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -363,11 +377,12 @@
     },
     {
       "id": "r4",
-      "name": "1,2,3-tri-(9Z)-hexadecenoylglycerol + H2O = 1,3-di-(9Z)-hexadecenoylglycerol + (9Z)-hex...",
-      "equation": "1,2,3-tri-(9Z)-hexadecenoylglycerol + H2O = 1,3-di-(9Z)-hexadecenoylglycerol + (9Z)-hexadecenoate + H(+)",
+      "name": "[Wnt protein] O-palmitoleoyl-L-serine hydrolase",
+      "equation": "[Wnt protein]-O-(9Z)-hexadecenoyl-L-serine + H2O = [Wnt protein]-L-serine + (9Z)-hexadecenoate + H(+)",
+      "ec": "3.1.1.98",
       "substrates": [
         {
-          "metabolite": "1_2_3_tripalmitoleoylglycerol",
+          "metabolite": "o_9z_hexadecenoyl_l_serine",
           "stoichiometry": 1
         },
         {
@@ -377,7 +392,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_3_dipalmitoleoylglycerol",
+          "metabolite": "l_serine",
           "stoichiometry": 1
         },
         {
@@ -389,28 +404,33 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_98"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:38395"
+        "rhea": "RHEA:45340"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38395"
+            "id": "RHEA:45340"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-hexa...",
-      "equation": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + ethanolamine",
+      "name": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphoethanolamine + L-...",
+      "equation": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphoethanolamine + L-serine = 1-octadecanoyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphoserine + ethanolamine",
       "substrates": [
         {
-          "metabolite": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet",
           "stoichiometry": 1
         },
         {
@@ -420,7 +440,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine",
+          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphose",
           "stoichiometry": 1
         },
         {
@@ -431,14 +451,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:41484"
+        "rhea": "RHEA:41500"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41484"
+            "id": "RHEA:41500"
           }
         ]
       }
@@ -496,8 +516,9 @@
     },
     {
       "id": "r7",
-      "name": "(2E,6E)-farnesyl diphosphate = delta-selinene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = delta-selinene + diphosphate",
+      "name": "(Z)-gamma-bisabolene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
+      "ec": "4.2.3.40",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -506,7 +527,7 @@
       ],
       "products": [
         {
-          "metabolite": "selinene",
+          "metabolite": "z_bisabolene",
           "stoichiometry": 1
         },
         {
@@ -514,17 +535,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_40"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:25440"
+        "rhea": "RHEA:26081"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25440"
+            "id": "RHEA:26081"
           }
         ]
       }

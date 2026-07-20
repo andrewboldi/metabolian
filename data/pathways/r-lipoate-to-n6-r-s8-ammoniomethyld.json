@@ -120,31 +120,31 @@
       }
     },
     {
-      "id": "tuberculosinyl_diphosphate",
-      "name": "tuberculosinyl diphosphate",
-      "short": "tuberculosinyl PP",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "14_15_eet",
+      "name": "14,15-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58822"
+        "chebi": "CHEBI:84024"
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "13r_edaxadiene",
-      "name": "(13R)-edaxadiene",
-      "formula": "C20H34O",
-      "charge": 0,
+      "id": "14_15_epoxy_5z_8z_11z_icosatrienoyl_coa",
+      "name": "14,15-epoxy-(5Z,8Z,11Z)-icosatrienoyl-CoA",
+      "short": "14,15-epoxy-(5Z,8Z,…",
+      "formula": "C41H62N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:63178"
+        "chebi": "CHEBI:136117"
       }
     },
     {
@@ -174,13 +174,6 @@
       "name": "glycine dehydrogenase (aminomethyl-transferring)",
       "ec": [
         "1.4.4.2"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_153",
-      "name": "adenosine tuberculosinyltransferase",
-      "ec": [
-        "2.5.1.153"
       ]
     }
   ],
@@ -322,22 +315,29 @@
     },
     {
       "id": "r4",
-      "name": "adenosine tuberculosinyltransferase",
-      "equation": "tuberculosinyl diphosphate + H2O = (13R)-edaxadiene + diphosphate",
-      "ec": "2.5.1.153",
+      "name": "14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoate + ATP + CoA = 14,15-epoxy-(5Z,8Z,11Z)-eicosatri...",
+      "equation": "14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoate + ATP + CoA = 14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "tuberculosinyl_diphosphate",
+          "metabolite": "14_15_eet",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "13r_edaxadiene",
+          "metabolite": "14_15_epoxy_5z_8z_11z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -345,22 +345,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_153"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31787"
+        "rhea": "RHEA:52016"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31787"
+            "id": "RHEA:52016"
           }
         ]
       }

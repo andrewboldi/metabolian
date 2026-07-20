@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-galactonate-to-d-tagaturonate",
+  "name": "L-galactonate to D-tagaturonate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from L-galactonate to D-tagaturonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:26345"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:53071"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_galactonate",
+      "name": "L-galactonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:53071"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "aldehydo_d_galacturonate",
+      "name": "aldehydo-D-galacturonate",
+      "short": "aldehydo-D-galactur…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:12952"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_tagaturonate",
+      "name": "D-tagaturonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17886"
+      }
+    },
+    {
+      "id": "d_mannonate",
+      "name": "D-mannonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17767"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_365",
+      "name": "D-galacturonate reductase",
+      "ec": [
+        "1.1.1.365"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_12",
+      "name": "glucuronate isomerase",
+      "ec": [
+        "5.3.1.12"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_57",
+      "name": "fructuronate reductase",
+      "ec": [
+        "1.1.1.57"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-galacturonate reductase",
+      "equation": "L-galactonate + NADP(+) = aldehydo-D-galacturonate + NADPH + H(+)",
+      "ec": "1.1.1.365",
+      "substrates": [
+        {
+          "metabolite": "l_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_galacturonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_365"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:26345"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucuronate isomerase",
+      "equation": "aldehydo-D-galacturonate = keto-D-tagaturonate",
+      "ec": "5.3.1.12",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_galacturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_tagaturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27702"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "fructuronate reductase",
+      "equation": "D-mannonate + NAD(+) = keto-D-tagaturonate + NADH + H(+)",
+      "ec": "1.1.1.57",
+      "substrates": [
+        {
+          "metabolite": "d_mannonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_tagaturonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51652"
+          }
+        ]
+      }
+    }
+  ]
+}

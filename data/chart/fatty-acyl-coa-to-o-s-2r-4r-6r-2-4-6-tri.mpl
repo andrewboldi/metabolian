@@ -18,15 +18,21 @@ pathway fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri "fatty acyl-CoA to O-(S-[2R,4R,
     o_s_2r_4r_6r_2_4_6_trimethyl_very_long_chain_fat
   }
 
-  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side left {
+  branch from long_chain_primary_fatty_alcohol side left {
+    long_chain_primary_fatty_alcohol
+    <-> ec_1_2_1_84 [1.2.1.84] +nadph +hplus +nadp +coa
+    long_chain_fatty_acyl_coa
+  }
+
+  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side right {
     o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
     <-> . +holo-acp +amp +hplus
     long_chain_fatty_acyl_amp
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_129 [4.2.3.129] +fpp
-    sativene
+    <-> ec_4_2_3_201 [4.2.3.201] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    hydropyrene
   }
 }

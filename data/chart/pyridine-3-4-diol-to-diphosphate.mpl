@@ -30,14 +30,14 @@ pathway pyridine-3-4-diol-to-diphosphate "pyridine-3,4-diol to diphosphate" {
 
   branch from acetate side left {
     acetate
-    <-> ec_2_8_3_10 [2.8.3.10] +citrate +acetyl_coa
-    3s_citryl_coa
+    <-> ec_3_5_1_105 [3.5.1.105] +n_n_diacetylchitobiose +h2o
+    n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_1_7 [6.3.1.7] +4_methylene_l_glutamate +nh3 +atp +amp +hplus
-    4_methylene_l_glutamine
+    <-> ec_6_3_2_24 [6.3.2.24] +tyrosine +arginine +atp +amp +hplus
+    l_tyrosiniumyl_l_arginine
   }
 
   branch from d_pantetheine_4_phosphate side left {
@@ -46,9 +46,21 @@ pathway pyridine-3-4-diol-to-diphosphate "pyridine-3,4-diol to diphosphate" {
     holo-acp
   }
 
-  branch from 3_dephospho_coa side right {
-    3_dephospho_coa
-    <-> . +5_coa_ribonucleoside_2 +h2o +hplus
-    5_end_ribonucleotide_2
+  branch from adenine side right {
+    adenine
+    <-> ec_2_4_2_1 [2.4.2.1] +adenosine +pi
+    r1p
+  }
+
+  branch from glutamine side left {
+    glutamine
+    <-> ec_6_3_5_6 [6.3.5.6] +3_l_aspartate_adenylyl_1_group +atp +h2o +glutamate +adp +pi +hplus
+    3_l_asparaginyl_adenylyl_1_group
+  }
+
+  branch from nicotinate_d_ribonucleotide side right {
+    nicotinate_d_ribonucleotide
+    <-> ec_2_4_2_55 [2.4.2.55] +phenol +nicotinate +hplus
+    phenyl_5_phosphonato_d_ribofuranoside
   }
 }

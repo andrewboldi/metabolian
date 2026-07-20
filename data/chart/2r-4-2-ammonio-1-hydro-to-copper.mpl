@@ -18,19 +18,13 @@ pathway 2r-4-2-ammonio-1-hydro-to-copper "(2R)-4-(2-ammonio-1-hydro… to copper
     p_hydroxybenzyl_alcohol
   }
 
-  branch from 4_hydroxyphenyl_acetaldehyde side left {
-    4_hydroxyphenyl_acetaldehyde
-    <-> ec_4_1_1_108 [4.1.1.108] +o2 +h2o +hplus +h2o2 +nh3 +co2
-    tyrosine
-  }
-
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_110 [3.5.1.110] +z_2_methylureidoacrylate +h2o +hplus +co2
-    z_3_amino_2_methylacrylate
+    <-> . +3_methyl_butan_2_aminium +nadp +h2o +nadph +hplus
+    3_methylbutan_2_one
   }
 
-  branch from p_cresol side left {
+  branch from p_cresol side right {
     p_cresol
     <-> ec_1_14_13_236 [1.14.13.236] +nadh +o2 +hplus +nad +h2o
     toluene

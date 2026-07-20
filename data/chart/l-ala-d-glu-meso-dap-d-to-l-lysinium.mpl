@@ -36,7 +36,7 @@ pathway l-ala-d-glu-meso-dap-d-to-l-lysinium "L-Ala-γ-D-Glu-meso-Dap-D-… to L
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_1_5_1_16 [1.5.1.16] +nadp +h2o +pyruvate +nadph +hplus
-    d_lysopine_dizwitterion
+    <-> ec_5_4_3_2 [5.4.3.2]
+    3s_3_6_diammoniohexanoate
   }
 }

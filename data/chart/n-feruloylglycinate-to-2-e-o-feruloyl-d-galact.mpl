@@ -18,19 +18,19 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
 
   branch from trans_ferulate side left {
     trans_ferulate
-    <-> . +h2o
-    3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoate
+    <-> ec_1_2_1_68 [1.2.1.68] +nad +h2o +nadh +hplus
+    coniferyl_aldehyde
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_6_1_60 [2.6.1.60] +aromatic_l_amino_acid +glyoxylate
-    aromatic_2_oxo_monocarboxylic_acid_anion
+    <-> ec_1_4_3_19 [1.4.3.19] +o2 +h2o +h2o2 +nh3
+    glyoxylate
   }
 
   branch from trans_feruloyl_coa side left {
     trans_feruloyl_coa
-    <-> ec_1_3_1_117 [1.3.1.117] +nadp +nadph +hplus
-    dihydroferuloyl_coa
+    <-> ec_1_14_11_61 [1.14.11.61] +akg +o2 +succinate +co2
+    trans_6_hydroxyferuloyl_coa
   }
 }

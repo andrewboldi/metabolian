@@ -4,27 +4,15 @@
 # edit the generator, not this file.
 
 pathway d-ribitol-5-phosphate-to-d-ribulose-1-phosphate "D-ribitol 5-phosphate to D-ribulose 1-phosphate" {
-  spacing 156
+  spacing 220
 
   spine at 0,0 {
     d_ribitol_5_phosphate
-    <-> . +h2o -pi
-    ribitol
-    <-> ec_1_1_1_56 [1.1.1.56] +nad -nadh -hplus
-    d_ribulose
-    <-> . +atp -adp -hplus
+    <-> ec_1_1_1_137 [1.1.1.137] +nadp -nadph -hplus
+    ru5p
+    <-> ec_2_7_1_19 [2.7.1.19] +atp -adp -hplus
+    d_ribulose_1_5_bisphosphate
+    <-> ec_3_1_3_109 [3.1.3.109] +h2o -pi
     d_ribulose_1_phosphate
-  }
-
-  branch from ribitol side left {
-    ribitol
-    <-> . +h2o +pi
-    d_ribitol_1_phosphate
-  }
-
-  branch from d_ribulose side right {
-    d_ribulose
-    <-> ec_1_1_1_250 [1.1.1.250] +nad +nadh +hplus
-    d_arabinitol
   }
 }

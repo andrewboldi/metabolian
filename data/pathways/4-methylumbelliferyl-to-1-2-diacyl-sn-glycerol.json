@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "4-methylumbelliferyl-to-1-2-diacyl-sn-glycerol",
   "name": "4-methylumbelliferyl… to 1,2-diacyl-sn-glycerol…",
-  "category": "nucleotide-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 9-step route from 4-methylumbelliferyl acetate to 1,2-diacyl-sn-glycerol 3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -252,50 +252,40 @@
       }
     },
     {
-      "id": "citramalate",
-      "name": "citramalate",
-      "formula": "C5H6O5",
-      "charge": -2,
+      "id": "n_acetylputrescinium",
+      "name": "N-acetylputrescinium",
+      "formula": "C6H15N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:13997"
+        "chebi": "CHEBI:58263"
       }
     },
     {
-      "id": "3s_citramalyl_coa",
-      "name": "(3S)-citramalyl-CoA",
-      "formula": "C26H37N7O20P3S",
-      "charge": -5,
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:58668"
+        "chebi": "CHEBI:326268"
       }
     },
     {
-      "id": "sn_glycerol_3_phosphate",
-      "name": "sn-glycerol 3-phosphate",
-      "short": "sn-glycerol 3-P",
-      "formula": "C3H7O6P",
-      "charge": -2,
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57597"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
+      "id": "10_epi_juneol",
+      "name": "10-epi-juneol",
+      "formula": "C15H26O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:37563"
-      }
-    },
-    {
-      "id": "2r_cdp_glycerol",
-      "name": "(2R)-CDP-glycerol",
-      "formula": "C12H19N3O13P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58311"
+        "chebi": "CHEBI:138037"
       }
     },
     {
@@ -306,6 +296,60 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:57831"
+      }
+    },
+    {
+      "id": "1_oleoylglycerol",
+      "name": "1-oleoylglycerol",
+      "formula": "C21H40O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75342"
+      }
+    },
+    {
+      "id": "1_2_dioleoylglycerol",
+      "name": "1,2-dioleoylglycerol",
+      "formula": "C39H72O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52323"
+      }
+    },
+    {
+      "id": "serinol",
+      "name": "serinol",
+      "formula": "C3H10NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:194490"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -360,17 +404,17 @@
       ]
     },
     {
-      "id": "ec_2_8_3_11",
-      "name": "citramalate CoA-transferase",
+      "id": "ec_3_5_1_62",
+      "name": "acetylputrescine deacetylase",
       "ec": [
-        "2.8.3.11"
+        "3.5.1.62"
       ]
     },
     {
-      "id": "ec_2_7_7_39",
-      "name": "glycerol-3-phosphate cytidylyltransferase",
+      "id": "ec_4_2_3_172",
+      "name": "10-epi-juneol synthase",
       "ec": [
-        "2.7.7.39"
+        "4.2.3.172"
       ]
     },
     {
@@ -840,22 +884,22 @@
     },
     {
       "id": "r11",
-      "name": "citramalate CoA-transferase",
-      "equation": "citramalate + acetyl-CoA = (3S)-citramalyl-CoA + acetate",
-      "ec": "2.8.3.11",
+      "name": "acetylputrescine deacetylase",
+      "equation": "N-acetylputrescine + H2O = putrescine + acetate",
+      "ec": "3.5.1.62",
       "substrates": [
         {
-          "metabolite": "citramalate",
+          "metabolite": "n_acetylputrescinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_citramalyl_coa",
+          "metabolite": "1_4_butanediammonium",
           "stoichiometry": 1
         },
         {
@@ -865,46 +909,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_8_3_11"
+          "enzyme": "ec_3_5_1_62"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:17621"
+        "rhea": "RHEA:23412"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17621"
+            "id": "RHEA:23412"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "glycerol-3-phosphate cytidylyltransferase",
-      "equation": "sn-glycerol 3-phosphate + CTP + H(+) = CDP-glycerol + diphosphate",
-      "ec": "2.7.7.39",
+      "name": "10-epi-juneol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-juneol + diphosphate",
+      "ec": "4.2.3.172",
       "substrates": [
         {
-          "metabolite": "sn_glycerol_3_phosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2r_cdp_glycerol",
+          "metabolite": "10_epi_juneol",
           "stoichiometry": 1
         },
         {
@@ -914,20 +954,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_39"
+          "enzyme": "ec_4_2_3_172"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:13361"
+        "rhea": "RHEA:14485"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13361"
+            "id": "RHEA:14485"
           }
         ]
       }
@@ -973,6 +1013,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:16493"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "2 1-(9Z-octadecenoyl)-glycerol = 1,2-di-(9Z-octadecenoyl)-glycerol + glycerol",
+      "equation": "2 1-(9Z-octadecenoyl)-glycerol = 1,2-di-(9Z-octadecenoyl)-glycerol + glycerol",
+      "substrates": [
+        {
+          "metabolite": "1_oleoylglycerol",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dioleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:38323"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38323"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "serinol + NAD(+) + H2O = dihydroxyacetone + NH4(+) + NADH + H(+)",
+      "equation": "serinol + NAD(+) + H2O = dihydroxyacetone + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "serinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:75915"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75915"
           }
         ]
       }

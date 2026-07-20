@@ -1,0 +1,276 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "thioester-to-s-adenosyl-l-homocysteine",
+  "name": "thioester to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from thioester to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82919"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:51277"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "thioester",
+      "name": "thioester",
+      "formula": "COSR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51277"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "thiol",
+      "name": "thiol",
+      "formula": "HSR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29256"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "methyl_sulfide",
+      "name": "methyl sulfide",
+      "formula": "CH3SR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86315"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "2_o_methylcytidine_5_monophosphate_1",
+      "name": "2'-O-methylcytidine 5'-monophosphate(1−)",
+      "short": "2'-O-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74495"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_9",
+      "name": "thiol S-methyltransferase",
+      "ec": [
+        "2.1.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_227",
+      "name": "16S rRNA (cytidine(1409)-2'-O)-methyltransferase",
+      "ec": [
+        "2.1.1.227"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a thioester + H2O = a thiol + a carboxylate + H(+)",
+      "equation": "a thioester + H2O = a thiol + a carboxylate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "thioester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82919"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82919"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thiol S-methyltransferase",
+      "equation": "a thiol + S-adenosyl-L-methionine = a methyl thioether + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.9",
+      "substrates": [
+        {
+          "metabolite": "thiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18277"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "16S rRNA (cytidine(1409)-2'-O)-methyltransferase",
+      "equation": "cytidine(1409) in 16S rRNA + S-adenosyl-L-methionine = 2'-O-methylcytidine(1409) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.227",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_227"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43204"
+          }
+        ]
+      }
+    }
+  ]
+}

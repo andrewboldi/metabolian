@@ -1,0 +1,213 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-phosphonatooxy-l-thre-to-glycine",
+  "name": "4-(phosphonatooxy)-L-thre… to glycine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 4-(phosphonatooxy)-L-threonine(2−) to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30659"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58452"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_phosphonatooxy_l_threonine",
+      "name": "4-(phosphonatooxy)-L-threonine",
+      "short": "4-(phosphonatooxy)-…",
+      "formula": "C4H8NO7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58452"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_hydroxy_l_threonine",
+      "name": "4-hydroxy-L-threonine",
+      "short": "4-hydroxy-L-threoni…",
+      "formula": "C4H9NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60904"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17071"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "n_arachidonoylglycinate",
+      "name": "N-arachidonoylglycinate",
+      "short": "N-arachidonoylglyci…",
+      "formula": "C22H34NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59002"
+      }
+    },
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-(phosphooxy)-L-threonine + H2O = 4-hydroxy-L-threonine + phosphate",
+      "equation": "4-(phosphooxy)-L-threonine + H2O = 4-hydroxy-L-threonine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "4_phosphonatooxy_l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30659"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxy-L-threonine = glycolaldehyde + glycine",
+      "equation": "4-hydroxy-L-threonine = glycolaldehyde + glycine",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_l_threonine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28779"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28779"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-glycine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + ...",
+      "equation": "N-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-glycine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + glycine",
+      "substrates": [
+        {
+          "metabolite": "n_arachidonoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64108"
+          }
+        ]
+      }
+    }
+  ]
+}

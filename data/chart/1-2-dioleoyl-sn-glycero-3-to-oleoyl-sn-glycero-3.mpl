@@ -12,25 +12,19 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-oleoyl-sn-glycero-3 "1,2-dioleoyl-sn-glycer
     1_2_dioleoyl_sn_glycero_3_phospho_n_n_dimethylet
     <-> . +sam -sah -hplus
     1_2_dioleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_o_palmityl_2_acetyl_sn_glycerol -oleoyl_sn_glycero_3_phosphocholine
-    1_palmityl_2_acetyl_3_oleoyl_sn_glycerol
+    <-> . +1_o_palmitylglycerol -oleoyl_sn_glycero_3_phosphocholine
+    1_o_palmityl_3_oleoylglycerol
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_176 [2.1.1.176] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_338 [2.1.1.338] +xanthogalenol +sam +hplus
+    4_o_methylxanthohumol
   }
 
-  branch from 1_2_dioleoyl_sn_glycero_3_phosphocholine side right {
-    1_2_dioleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_di_o_myristoyl_sn_glycero_3_phosphocholine +1_2_dioleoyl_sn_glycerol
-    1_2_ditetradecanoyl_sn_glycerol
-  }
-
-  branch from 1_palmityl_2_acetyl_3_oleoyl_sn_glycerol side left {
-    1_palmityl_2_acetyl_3_oleoyl_sn_glycerol
-    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
+  branch from 1_o_palmityl_3_oleoylglycerol side right {
+    1_o_palmityl_3_oleoylglycerol
+    <-> . +1_o_palmitylglycerol +coa
     oleoyl_coa
   }
 }

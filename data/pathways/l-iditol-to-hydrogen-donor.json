@@ -1,0 +1,302 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-iditol-to-hydrogen-donor",
+  "name": "L-iditol to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from L-iditol to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10160"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18202"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_iditol",
+      "name": "L-iditol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18202"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "keto_l_sorbose",
+      "name": "keto-L-sorbose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13172"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "5_dehydro_d_fructose",
+      "name": "5-dehydro-D-fructose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17011"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "ecdysone",
+      "name": "ecdysone",
+      "formula": "C27H44O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16688"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "20_hydroxyecdysone",
+      "name": "20-hydroxyecdysone",
+      "formula": "C27H44O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16587"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_14",
+      "name": "L-iditol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_12",
+      "name": "sorbose dehydrogenase",
+      "ec": [
+        "1.1.99.12"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_22",
+      "name": "ecdysone 20-monooxygenase",
+      "ec": [
+        "1.14.99.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-iditol 2-dehydrogenase",
+      "equation": "L-iditol + NAD(+) = keto-L-sorbose + NADH + H(+)",
+      "ec": "1.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "l_iditol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sorbose dehydrogenase",
+      "equation": "keto-L-sorbose + A = 5-dehydro-D-fructose + AH2",
+      "ec": "1.1.99.12",
+      "substrates": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14713"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14713"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ecdysone 20-monooxygenase",
+      "equation": "ecdysone + AH2 + O2 = 20-hydroxyecdysone + A + H2O",
+      "ec": "1.14.99.22",
+      "substrates": [
+        {
+          "metabolite": "ecdysone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxyecdysone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14021"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14021"
+          }
+        ]
+      }
+    }
+  ]
+}

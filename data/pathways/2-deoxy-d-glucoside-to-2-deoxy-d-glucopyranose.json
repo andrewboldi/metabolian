@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-deoxy-d-glucoside-to-2-deoxy-d-glucopyranose",
   "name": "2-deoxy-α-D-glucoside to 2-deoxy-D-glucopyranose",
-  "category": "other",
+  "category": "redox-detox",
   "summary": "A 3-step route from 2-deoxy-α-D-glucoside to 2-deoxy-D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -103,23 +103,32 @@
       }
     },
     {
-      "id": "6_phospho_d_galactoside",
-      "name": "6-phospho-β-D-galactoside",
-      "short": "6-phospho-β-D-galac…",
-      "formula": "C6H10O9PR",
-      "charge": -2,
+      "id": "peroxol",
+      "name": "peroxol",
+      "formula": "HO2R",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58534"
+        "chebi": "CHEBI:35924"
       }
     },
     {
-      "id": "d_galactopyranose_6_phosphate",
-      "name": "D-galactopyranose 6-phosphate",
-      "short": "D-galactopyranose…",
-      "formula": "C6H11O9P",
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "gssg",
+      "name": "Glutathione disulfide (oxidized, GSSG)",
+      "short": "Glutathione…",
+      "formula": "C20H30N6O12S2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:91004"
+        "chebi": "CHEBI:58297"
       }
     },
     {
@@ -167,10 +176,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_85",
-      "name": "6-phospho-beta-galactosidase",
+      "id": "ec_1_11_1_27",
+      "name": "glutathione-dependent peroxiredoxin",
       "ec": [
-        "3.2.1.85"
+        "1.11.1.27"
       ]
     }
   ],
@@ -310,12 +319,26 @@
     },
     {
       "id": "r4",
-      "name": "6-phospho-beta-galactosidase",
-      "equation": "a 6-phospho-beta-D-galactoside + H2O = D-galactose 6-phosphate + an alcohol",
-      "ec": "3.2.1.85",
+      "name": "glutathione-dependent peroxiredoxin",
+      "equation": "a hydroperoxide + 2 glutathione = an alcohol + glutathione disulfide + H2O",
+      "ec": "1.11.1.27",
       "substrates": [
         {
-          "metabolite": "6_phospho_d_galactoside",
+          "metabolite": "peroxol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gssg",
           "stoichiometry": 1
         },
         {
@@ -323,32 +346,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "d_galactopyranose_6_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alcohol",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_85"
+          "enzyme": "ec_1_11_1_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:24568"
+        "rhea": "RHEA:62632"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24568"
+            "id": "RHEA:62632"
           }
         ]
       }

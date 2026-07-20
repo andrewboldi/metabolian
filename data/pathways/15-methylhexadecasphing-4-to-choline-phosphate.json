@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "15-methylhexadecasphing-4-to-choline-phosphate",
   "name": "15-methylhexadecasphing-4… to choline phosphate",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 15-methylhexadecasphing-4-enine(1+) to choline phosphate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -113,50 +113,40 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "n_acyl_15_methylhexadecasphing_4_enine_1_phospha",
-      "name": "N-acyl-15-methylhexadecasphing-4-enine-1-phosphate",
+      "id": "n_acyl_15_methylhexadecasphinganine",
+      "name": "N-acyl-15-methylhexadecasphinganine",
       "short": "N-acyl-15-methylhex…",
-      "formula": "C18H33NO6PR",
-      "charge": -2,
+      "formula": "C18H36NO3R",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:71156"
+        "chebi": "CHEBI:70845"
       }
     },
     {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:456216"
+        "chebi": "CHEBI:29033"
       }
     },
     {
-      "id": "3_sn_phosphatidyl_l_serine",
-      "name": "3-sn-phosphatidyl-L-serine",
-      "short": "3-sn-phosphatidyl-L…",
-      "formula": "C8H11NO10PR2",
-      "charge": -1,
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57262"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "pser",
-      "name": "O-Phospho-L-serine",
-      "formula": "C3H6NO6P",
-      "charge": -2,
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:57524"
+        "chebi": "CHEBI:29034"
       }
     },
     {
@@ -309,92 +299,57 @@
     },
     {
       "id": "r4",
-      "name": "an N-acyl-15-methylhexadecasphing-4-enine + ATP = an N-acyl-15-methylhexadecasphing-4-e...",
-      "equation": "an N-acyl-15-methylhexadecasphing-4-enine + ATP = an N-acyl-15-methylhexadecasphing-4-enine-1-phosphate + ADP + H(+)",
+      "name": "an N-acyl-15-methylhexadecasphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-...",
+      "equation": "an N-acyl-15-methylhexadecasphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-acyl-15-methylhexadecasphing-4-enine + 2 Fe(III)-[cytochrome b5] + 2 H2O",
       "substrates": [
+        {
+          "metabolite": "n_acyl_15_methylhexadecasphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
         {
           "metabolite": "n_acyl_15_methylhexadecasphing_4_enine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acyl_15_methylhexadecasphing_4_enine_1_phospha",
-          "stoichiometry": 1
+          "metabolite": "iron",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:34751"
+        "rhea": "RHEA:81479"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34751"
+            "id": "RHEA:81479"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + H2O = O-phospho-L-serine + a 1,2-diacyl-sn...",
-      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + H2O = O-phospho-L-serine + a 1,2-diacyl-sn-glycerol + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_sn_phosphatidyl_l_serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pser",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dag",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:78963"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78963"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1,2-di-(9Z-octadecenoyl)-s...",
       "equation": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1,2-di-(9Z-octadecenoyl)-sn-glycerol + phosphocholine + H(+)",
       "substrates": [
@@ -422,7 +377,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:78947"
       },

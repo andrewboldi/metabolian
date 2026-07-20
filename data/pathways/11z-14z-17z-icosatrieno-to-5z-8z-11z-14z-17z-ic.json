@@ -1,0 +1,229 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "11z-14z-17z-icosatrieno-to-5z-8z-11z-14z-17z-ic",
+  "name": "(11Z,14Z,17Z)-icosatrieno… to (5Z,8Z,11Z,14Z,17Z)-icosa…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (11Z,14Z,17Z)-icosatrienoyl-containing glycerolipid to (5Z,8Z,11Z,14Z,17Z)-icosapentaenoyl-containing glycerolipid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46796"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:88253"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "11z_14z_17z_icosatrienoyl_containing_glycerolip",
+      "name": "(11Z,14Z,17Z)-icosatrienoyl-containing glycerolipid",
+      "short": "(11Z,14Z,17Z)-icosa…",
+      "formula": "C20H33OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88253"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_arachidonoyl_containing_glycerolipid",
+      "name": "ω-3-arachidonoyl-containing glycerolipid",
+      "short": "ω-3-arachidonoyl-co…",
+      "formula": "C20H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90082"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5z_8z_11z_14z_17z_icosapentaenoyl_containing_gl",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-icosapentaenoyl-containing glycerolipid",
+      "short": "(5Z,8Z,11Z,14Z,17Z)…",
+      "formula": "C20H29OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90083"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_4",
+      "name": "acyl-lipid (11-3)-desaturase",
+      "ec": [
+        "1.14.19.4"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_30",
+      "name": "acyl-lipid (8-3)-desaturase",
+      "ec": [
+        "1.14.19.30"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acyl-lipid (11-3)-desaturase",
+      "equation": "an (11Z,14Z,17Z)-icosatrienoyl-containing glycerolipid + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an (8Z,11Z,14Z,17Z)-eicosatetraenoyl-containing glycerolipid + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.4",
+      "substrates": [
+        {
+          "metabolite": "11z_14z_17z_icosatrienoyl_containing_glycerolip",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_arachidonoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acyl-lipid (8-3)-desaturase",
+      "equation": "an (8Z,11Z,14Z,17Z)-eicosatetraenoyl-containing glycerolipid + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = a (5Z,8Z,11Z,14Z,17Z)-eicosapentaenoyl-containing glycerolipid + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.30",
+      "substrates": [
+        {
+          "metabolite": "3_arachidonoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_8z_11z_14z_17z_icosapentaenoyl_containing_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46264"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46264"
+          }
+        ]
+      }
+    }
+  ]
+}

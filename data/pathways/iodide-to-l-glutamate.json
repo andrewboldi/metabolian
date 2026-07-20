@@ -139,23 +139,48 @@
       }
     },
     {
-      "id": "aromatic_l_amino_acid",
-      "name": "aromatic L-α-amino acid",
-      "short": "aromatic L-α-amino…",
-      "formula": "C2H4NO2R",
-      "charge": 0,
+      "id": "f420_0",
+      "name": "F420-0",
+      "formula": "C19H19N3O12P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:84824"
+        "chebi": "CHEBI:59907"
       }
     },
     {
-      "id": "aromatic_2_oxo_monocarboxylic_acid_anion",
-      "name": "aromatic 2-oxo monocarboxylic acid anion",
-      "short": "aromatic 2-oxo…",
-      "formula": "C2O3R",
-      "charge": -1,
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:73309"
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "coenzyme_f420_1",
+      "name": "coenzyme F420-1",
+      "formula": "C24H25N4O15P",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:59920"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
       }
     }
   ],
@@ -168,10 +193,10 @@
       ]
     },
     {
-      "id": "ec_2_6_1_57",
-      "name": "aromatic-amino-acid transaminase",
+      "id": "ec_6_3_2_31",
+      "name": "coenzyme F420-0:L-glutamate ligase",
       "ec": [
-        "2.6.1.57"
+        "6.3.2.31"
       ]
     }
   ],
@@ -356,22 +381,16 @@
     },
     {
       "id": "r5",
-      "name": "aromatic-amino-acid transaminase",
-      "equation": "an aromatic L-alpha-amino acid + 2-oxoglutarate = an aromatic oxo-acid + L-glutamate",
-      "ec": "2.6.1.57",
+      "name": "coenzyme F420-0:L-glutamate ligase",
+      "equation": "oxidized coenzyme F420-0 + GTP + L-glutamate = oxidized coenzyme F420-1 + GDP + phosphate + H(+)",
+      "ec": "6.3.2.31",
       "substrates": [
         {
-          "metabolite": "aromatic_l_amino_acid",
+          "metabolite": "f420_0",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aromatic_2_oxo_monocarboxylic_acid_anion",
+          "metabolite": "gtp",
           "stoichiometry": 1
         },
         {
@@ -379,22 +398,40 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "coenzyme_f420_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_57"
+          "enzyme": "ec_6_3_2_31"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:17533"
+        "rhea": "RHEA:30555"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17533"
+            "id": "RHEA:30555"
           }
         ]
       }

@@ -194,31 +194,41 @@
       }
     },
     {
-      "id": "spermidine",
-      "name": "spermidine",
-      "formula": "C7H22N3",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:57834"
-      }
-    },
-    {
-      "id": "n_3_ammoniopropyl_4_ammoniobutanal",
-      "name": "N-(3-ammoniopropyl)-4-ammoniobutanal",
-      "short": "N-(3-ammoniopropyl)…",
-      "formula": "C7H18N2O",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:58869"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
+      "id": "n6_1_deoxy_d_fructopyranos_1_yl_l_lysinium",
+      "name": "N6-(1-deoxy-β-D-fructopyranos-1-yl)-L-lysinium",
+      "short": "N6-(1-deoxy-β-D-fru…",
+      "formula": "C12H25N2O7",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:228168"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1_deoxy_d_fructos_1_yl_amine",
+      "name": "(1-deoxy-D-fructos-1-yl)amine",
+      "short": "(1-deoxy-D-fructos-…",
+      "formula": "C6H14NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:228165"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     },
     {
@@ -244,13 +254,6 @@
       "name": "lysine--8-amino-7-oxononanoate transaminase",
       "ec": [
         "2.6.1.105"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_127",
-      "name": "spermidine--8-amino-7-oxononanoate transaminase",
-      "ec": [
-        "2.6.1.127"
       ]
     }
   ],
@@ -492,60 +495,15 @@
     },
     {
       "id": "r6",
-      "name": "spermidine--8-amino-7-oxononanoate transaminase",
-      "equation": "(8S)-8-amino-7-oxononanoate + spermidine = N-(3-aminopropyl)-4-aminobutanal + (7R,8S)-7,8-diammoniononanoate",
-      "ec": "2.6.1.127",
+      "name": "N(6)-(1-deoxy-beta-D-fructopyranos-1-yl)-L-lysine + O2 + H2O = (1-deoxy-D-fructos-1-yl)...",
+      "equation": "N(6)-(1-deoxy-beta-D-fructopyranos-1-yl)-L-lysine + O2 + H2O = (1-deoxy-D-fructos-1-yl)amine + (S)-2-amino-6-oxohexanoate + H2O2",
       "substrates": [
         {
-          "metabolite": "8s_8_amino_7_oxononanoic_acid",
+          "metabolite": "n6_1_deoxy_d_fructopyranos_1_yl_l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "spermidine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_3_ammoniopropyl_4_ammoniobutanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7r_8s_7_8_diammoniononanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_127"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:85507"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:85507"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "L-lysine + NADP(+) + H2O = (S)-2-amino-6-oxohexanoate + NH4(+) + NADPH + H(+)",
-      "equation": "L-lysine + NADP(+) + H2O = (S)-2-amino-6-oxohexanoate + NH4(+) + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -555,39 +513,35 @@
       ],
       "products": [
         {
+          "metabolite": "1_deoxy_d_fructos_1_yl_amine",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "l_allysine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:64796"
+        "rhea": "RHEA:77895"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64796"
+            "id": "RHEA:77895"
           }
         ]
       }
     },
     {
-      "id": "r8",
+      "id": "r7",
       "name": "N(6)-[(2S,3R)-2-amino-8-carboxyoctan-3-yl]-L-lysyl-[protein] + CO2 + NADP(+) + H2O = (7...",
       "equation": "N(6)-[(2S,3R)-2-amino-8-carboxyoctan-3-yl]-L-lysyl-[protein] + CO2 + NADP(+) + H2O = (7R,8S)-8-amino-7-(carboxyamino)nonanoate + (S)-2-amino-6-oxohexanoyl-[protein] + NADPH + 3 H(+)",
       "substrates": [
@@ -627,7 +581,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:63668"
       },

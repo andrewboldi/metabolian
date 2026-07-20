@@ -9,36 +9,26 @@ pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
   spine at 0,0 {
     trioctanoin
     <-> . +h2o -octanoate -hplus
-    dioctanoylglycerol
-    <-> . +h2o -octanoate -hplus
-    monooctanoylglycerol
-    <-> . +h2o -glycerol -hplus
-    octanoate
-    <-> . +atp +coa -amp -ppi
+    2_3_dioctanoyl_sn_glycerol
+    <-> . +octanoate +atp +coa -amp -ppi
     octanoyl_coa
   }
 
   branch from octanoate side left {
     octanoate
-    <-> . +h2o +glycerol +hplus
-    1_monooctanoylglycerol
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_dioctoanoyl +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_2_octoanoyl_sn_g
   }
 
-  branch from glycerol side right {
-    glycerol
-    <-> . +monobutyrin +h2o +hplus
-    butyrate
-  }
-
-  branch from octanoyl_coa side left {
+  branch from octanoyl_coa side right {
     octanoyl_coa
-    <-> . +acetyl_coa +coa
-    3_oxodecanoyl_coa
+    <-> ec_2_3_1_137 [2.3.1.137] +carnitine +coa
+    o_octanoyl_l_carnitine
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> . +gpp
-    pinene
+    <-> ec_4_2_3_48 [4.2.3.48] +fpp +h2o
+    3s_6e_nerolidol
   }
 }

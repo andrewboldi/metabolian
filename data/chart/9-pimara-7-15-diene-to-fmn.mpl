@@ -18,7 +18,7 @@ pathway 9-pimara-7-15-diene-to-fmn "9β-pimara-7,15-diene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    16_hete
+    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +fmnh2 +o2 +h2o +hplus
+    maniladiol
   }
 }

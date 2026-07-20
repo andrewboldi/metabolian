@@ -20,8 +20,8 @@ pathway n-hydroxy-l-valinate-to-hydrogen-cyanide "N-hydroxy-L-valinate to hydrog
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    5_6_eet
+    <-> . +prostaglandin_i2 +fmnh2 +o2 +h2o +hplus
+    19_hydroxyprostaglandin_i2
   }
 
   branch from e_2_methylpropanal_oxime side right {
@@ -30,15 +30,9 @@ pathway n-hydroxy-l-valinate-to-hydrogen-cyanide "N-hydroxy-L-valinate to hydrog
     z_2_methylpropanal_oxime
   }
 
-  branch from acetone side left {
-    acetone
-    <-> . +discoidol +fmnh2 +o2 +fmn +h2o +hplus
-    discodiene
-  }
-
-  branch from hydrogen_cyanide side right {
+  branch from hydrogen_cyanide side left {
     hydrogen_cyanide
-    <-> ec_4_1_2_47 [4.1.2.47] +aromatic_s_hydroxynitrile
-    arenecarbaldehyde
+    <-> . +crotonaldehyde
+    2s_3e_2_hydroxypent_3_enenitrile
   }
 }

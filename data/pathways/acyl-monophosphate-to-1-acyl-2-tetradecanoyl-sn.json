@@ -1,0 +1,184 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acyl-monophosphate-to-1-acyl-2-tetradecanoyl-sn",
+  "name": "acyl monophosphate to 1-acyl-2-tetradecanoyl-sn…",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from acyl monophosphate(2−) to 1-acyl-2-tetradecanoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34075"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59918"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acyl_monophosphate",
+      "name": "acyl monophosphate",
+      "formula": "CO5PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59918"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57597"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycerol_3_phosphate",
+      "name": "1-acyl-sn-glycerol 3-phosphate",
+      "short": "1-acyl-sn-glycerol…",
+      "formula": "C4H6O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57970"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "myristoyl_coa",
+      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
+      "short": "Myristoyl-CoA…",
+      "formula": "C35H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57385"
+      }
+    },
+    {
+      "id": "1_acyl_2_tetradecanoyl_sn_glycero_3_phosphate",
+      "name": "1-acyl-2-tetradecanoyl-sn-glycero-3-phosphate",
+      "short": "1-acyl-2-tetradecan…",
+      "formula": "C18H32O8PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64863"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_275",
+      "name": "acyl phosphate:glycerol-3-phosphate acyltransferase",
+      "ec": [
+        "2.3.1.275"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acyl phosphate:glycerol-3-phosphate acyltransferase",
+      "equation": "an acyl phosphate + sn-glycerol 3-phosphate = a 1-acyl-sn-glycero-3-phosphate + phosphate",
+      "ec": "2.3.1.275",
+      "substrates": [
+        {
+          "metabolite": "acyl_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_275"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34075"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1-acyl-sn-glycero-3-phosphate + tetradecanoyl-CoA = a 1-acyl-2-tetradecanoyl-sn-glyce...",
+      "equation": "a 1-acyl-sn-glycero-3-phosphate + tetradecanoyl-CoA = a 1-acyl-2-tetradecanoyl-sn-glycero-3-phosphate + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "myristoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_tetradecanoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33323"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33323"
+          }
+        ]
+      }
+    }
+  ]
+}

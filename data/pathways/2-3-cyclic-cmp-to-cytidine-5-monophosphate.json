@@ -102,33 +102,13 @@
       }
     },
     {
-      "id": "n_acyl_d_galactosylsphingosine",
-      "name": "N-acyl-β-D-galactosylsphingosine",
-      "short": "N-acyl-β-D-galactos…",
-      "formula": "C25H46NO8R",
-      "charge": 0,
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:18390"
-      }
-    },
-    {
-      "id": "cmp_n_acetyl_neuraminate",
-      "name": "CMP-N-acetyl-β-neuraminate",
-      "short": "CMP-N-acetyl-β-neur…",
-      "formula": "C20H29N4O16P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57812"
-      }
-    },
-    {
-      "id": "n_acetyl_neuraminosyl_2_3_d_galactosylceramide",
-      "name": "N-acetyl-α-neuraminosyl-(2→3)-β-D-galactosylceramide",
-      "short": "N-acetyl-α-neuramin…",
-      "formula": "C36H62N2O16R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78482"
+        "chebi": "CHEBI:37563"
       }
     }
   ],
@@ -291,43 +271,43 @@
     },
     {
       "id": "r4",
-      "name": "a beta-D-galactosyl-(1<->1')-N-acylsphing-4-enine + CMP-N-acetyl-beta-neuraminate = a g...",
-      "equation": "a beta-D-galactosyl-(1<->1')-N-acylsphing-4-enine + CMP-N-acetyl-beta-neuraminate = a ganglioside GM4 (d18:1(4E)) + CMP + H(+)",
+      "name": "CTP + 2 H2O = CMP + 2 phosphate + 2 H(+)",
+      "equation": "CTP + 2 H2O = CMP + 2 phosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "n_acyl_d_galactosylsphingosine",
+          "metabolite": "ctp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cmp_n_acetyl_neuraminate",
-          "stoichiometry": 1
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "products": [
-        {
-          "metabolite": "n_acetyl_neuraminosyl_2_3_d_galactosylceramide",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "cytidine_5_monophosphate",
           "stoichiometry": 1
         },
         {
+          "metabolite": "pi",
+          "stoichiometry": 2
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:47600"
+        "rhea": "RHEA:64908"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47600"
+            "id": "RHEA:64908"
           }
         ]
       }

@@ -192,22 +192,31 @@
       }
     },
     {
-      "id": "2_deoxymugineate",
-      "name": "2'-deoxymugineate",
-      "formula": "C12H19N2O7",
-      "charge": -1,
+      "id": "2_deoxyuridine",
+      "name": "2'-deoxyuridine",
+      "formula": "C9H12N2O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58487"
+        "chebi": "CHEBI:16450"
       }
     },
     {
-      "id": "3_epi_3_hydroxy_2_deoxymugineate",
-      "name": "3-epi-3-hydroxy-2'-deoxymugineate",
-      "short": "3-epi-3-hydroxy-2'-…",
-      "formula": "C12H18N2O8",
-      "charge": -2,
+      "id": "2_deoxy_d_ribono_1_4_lactone",
+      "name": "2-deoxy-D-ribono-1,4-lactone",
+      "short": "2-deoxy-D-ribono-1,…",
+      "formula": "C5H8O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58684"
+        "chebi": "CHEBI:17281"
+      }
+    },
+    {
+      "id": "uracil",
+      "name": "uracil",
+      "formula": "C4H4N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17568"
       }
     },
     {
@@ -221,31 +230,50 @@
       }
     },
     {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
+      "id": "2_nitrobutanedioate",
+      "name": "2-nitrobutanedioate",
+      "formula": "C4H3NO6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:180682"
       }
     },
     {
-      "id": "dlactate",
-      "name": "(R)-Lactate (D-lactate)",
-      "short": "Lactate (D-lactate)",
-      "formula": "C3H5O3",
-      "charge": -1,
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16004"
+        "chebi": "CHEBI:15589"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "hydroxylamine",
+      "name": "hydroxylamine",
+      "formula": "H3NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15429"
+      }
+    },
+    {
+      "id": "3s_3_hydroxy_d_aspartate",
+      "name": "(3S)-3-hydroxy-D-aspartate",
+      "short": "3-hydroxy-D-asparta…",
+      "formula": "C4H6NO5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:60894"
       }
     }
   ],
@@ -272,10 +300,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_25",
-      "name": "mugineic-acid 3-dioxygenase",
+      "id": "ec_1_14_11_10",
+      "name": "pyrimidine-deoxynucleoside 1'-dioxygenase",
       "ec": [
-        "1.14.11.25"
+        "1.14.11.10"
       ]
     },
     {
@@ -286,10 +314,24 @@
       ]
     },
     {
-      "id": "ec_4_3_1_1",
-      "name": "aspartate ammonia-lyase",
+      "id": "ec_4_3_99_5",
+      "name": "nitrosuccinate lyase",
       "ec": [
-        "4.3.1.1"
+        "4.3.99.5"
+      ]
+    },
+    {
+      "id": "ec_1_7_3_6",
+      "name": "hydroxylamine oxidase (cytochrome)",
+      "ec": [
+        "1.7.3.6"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_184",
+      "name": "(3S)-3-hydroxy-D-aspartate dehydratase",
+      "ec": [
+        "4.2.1.184"
       ]
     }
   ],
@@ -584,12 +626,12 @@
     },
     {
       "id": "r7",
-      "name": "mugineic-acid 3-dioxygenase",
-      "equation": "2'-deoxymugineate + 2-oxoglutarate + O2 = 3-epihydroxy-2'-deoxymugineate + succinate + CO2 + H(+)",
-      "ec": "1.14.11.25",
+      "name": "pyrimidine-deoxynucleoside 1'-dioxygenase",
+      "equation": "2'-deoxyuridine + 2-oxoglutarate + O2 = 2-deoxy-D-ribono-1,4-lactone + uracil + succinate + CO2",
+      "ec": "1.14.11.10",
       "substrates": [
         {
-          "metabolite": "2_deoxymugineate",
+          "metabolite": "2_deoxyuridine",
           "stoichiometry": 1
         },
         {
@@ -603,7 +645,11 @@
       ],
       "products": [
         {
-          "metabolite": "3_epi_3_hydroxy_2_deoxymugineate",
+          "metabolite": "2_deoxy_d_ribono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
           "stoichiometry": 1
         },
         {
@@ -613,28 +659,24 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_25"
+          "enzyme": "ec_1_14_11_10"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:20065"
+        "rhea": "RHEA:23316"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20065"
+            "id": "RHEA:23316"
           }
         ]
       }
@@ -686,12 +728,12 @@
     },
     {
       "id": "r9",
-      "name": "aspartate ammonia-lyase",
-      "equation": "L-aspartate = fumarate + NH4(+)",
-      "ec": "4.3.1.1",
+      "name": "nitrosuccinate lyase",
+      "equation": "2-nitrobutanedioate = fumarate + nitrite + H(+)",
+      "ec": "4.3.99.5",
       "substrates": [
         {
-          "metabolite": "aspartate",
+          "metabolite": "2_nitrobutanedioate",
           "stoichiometry": 1
         }
       ],
@@ -701,41 +743,45 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_1"
+          "enzyme": "ec_4_3_99_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:16601"
+        "rhea": "RHEA:69044"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16601"
+            "id": "RHEA:69044"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "ubiquinone-8 + (R)-lactate = ubiquinol-8 + pyruvate",
-      "equation": "ubiquinone-8 + (R)-lactate = ubiquinol-8 + pyruvate",
+      "name": "ubiquinone-8 + (S)-malate = ubiquinol-8 + oxaloacetate",
+      "equation": "ubiquinone-8 + (S)-malate = ubiquinol-8 + oxaloacetate",
       "substrates": [
         {
           "metabolite": "ubiquinone_8",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dlactate",
+          "metabolite": "malate",
           "stoichiometry": 1
         }
       ],
@@ -745,21 +791,111 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "oxaloacetate",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:29079"
+        "rhea": "RHEA:29083"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29079"
+            "id": "RHEA:29083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "hydroxylamine oxidase (cytochrome)",
+      "equation": "hydroxylamine + O2 = nitrite + H2O + H(+)",
+      "ec": "1.7.3.6",
+      "substrates": [
+        {
+          "metabolite": "hydroxylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:19969"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "(3S)-3-hydroxy-D-aspartate dehydratase",
+      "equation": "(3S)-3-hydroxy-D-aspartate = iminosuccinate + H2O",
+      "ec": "4.2.1.184",
+      "substrates": [
+        {
+          "metabolite": "3s_3_hydroxy_d_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "iminoaspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_184"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:62112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62112"
           }
         ]
       }

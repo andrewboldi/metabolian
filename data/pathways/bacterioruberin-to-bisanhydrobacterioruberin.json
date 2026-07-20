@@ -1,0 +1,133 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "bacterioruberin-to-bisanhydrobacterioruberin",
+  "name": "bacterioruberin to bisanhydrobacterioruberin",
+  "category": "other",
+  "summary": "A 2-step route from bacterioruberin to bisanhydrobacterioruberin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47268"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:49388"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "bacterioruberin",
+      "name": "bacterioruberin",
+      "formula": "C50H76O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49388"
+      }
+    },
+    {
+      "id": "monoanhydrobacterioruberin",
+      "name": "monoanhydrobacterioruberin",
+      "short": "monoanhydrobacterio…",
+      "formula": "C50H74O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87122"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "bisanhydrobacterioruberin",
+      "name": "bisanhydrobacterioruberin",
+      "short": "bisanhydrobacterior…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87121"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "bacterioruberin = monoanhydrobacterioruberin + H2O",
+      "equation": "bacterioruberin = monoanhydrobacterioruberin + H2O",
+      "substrates": [
+        {
+          "metabolite": "bacterioruberin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "monoanhydrobacterioruberin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "monoanhydrobacterioruberin = bisanhydrobacterioruberin + H2O",
+      "equation": "monoanhydrobacterioruberin = bisanhydrobacterioruberin + H2O",
+      "substrates": [
+        {
+          "metabolite": "monoanhydrobacterioruberin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bisanhydrobacterioruberin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47272"
+          }
+        ]
+      }
+    }
+  ]
+}

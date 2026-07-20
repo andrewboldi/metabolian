@@ -185,49 +185,40 @@
       }
     },
     {
-      "id": "r_2_o_sulfonatolactate",
-      "name": "(R)-2-O-sulfonatolactate",
-      "short": "2-O-sulfonatolactate",
-      "formula": "C3H4O6S",
+      "id": "r_2_hydroxyglutarate",
+      "name": "(R)-2-hydroxyglutarate",
+      "short": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58737"
+        "chebi": "CHEBI:15801"
       }
     },
     {
-      "id": "sulfate",
-      "name": "sulfate",
-      "formula": "O4S",
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16189"
+        "chebi": "CHEBI:16810"
       }
     },
     {
-      "id": "ecdysone",
-      "name": "ecdysone",
-      "formula": "C27H44O6",
-      "charge": 0,
+      "id": "quinaldate",
+      "name": "quinaldate",
+      "formula": "C10H6NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16688"
+        "chebi": "CHEBI:19775"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "kynurenate",
+      "name": "kynurenate",
+      "formula": "C10H6NO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "20_hydroxyecdysone",
-      "name": "20-hydroxyecdysone",
-      "formula": "C27H44O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16587"
+        "chebi": "CHEBI:58454"
       }
     }
   ],
@@ -289,17 +280,17 @@
       ]
     },
     {
-      "id": "ec_3_1_6_17",
-      "name": "D-lactate-2-sulfatase",
+      "id": "ec_1_1_99_40",
+      "name": "(R)-2-hydroxyglutarate--pyruvate transhydrogenase",
       "ec": [
-        "3.1.6.17"
+        "1.1.99.40"
       ]
     },
     {
-      "id": "ec_1_14_99_22",
-      "name": "ecdysone 20-monooxygenase",
+      "id": "ec_1_3_99_18",
+      "name": "quinaldate 4-oxidoreductase",
       "ec": [
-        "1.14.99.22"
+        "1.3.99.18"
       ]
     }
   ],
@@ -656,16 +647,16 @@
     },
     {
       "id": "r9",
-      "name": "D-lactate-2-sulfatase",
-      "equation": "(R)-2-O-sulfolactate + H2O = (R)-lactate + sulfate + H(+)",
-      "ec": "3.1.6.17",
+      "name": "(R)-2-hydroxyglutarate--pyruvate transhydrogenase",
+      "equation": "(R)-2-hydroxyglutarate + pyruvate = (R)-lactate + 2-oxoglutarate",
+      "ec": "1.1.99.40",
       "substrates": [
         {
-          "metabolite": "r_2_o_sulfonatolactate",
+          "metabolite": "r_2_hydroxyglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         }
       ],
@@ -675,56 +666,38 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_6_17"
+          "enzyme": "ec_1_1_99_40"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:20337"
+        "rhea": "RHEA:51608"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20337"
+            "id": "RHEA:51608"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "ecdysone 20-monooxygenase",
-      "equation": "ecdysone + AH2 + O2 = 20-hydroxyecdysone + A + H2O",
-      "ec": "1.14.99.22",
+      "name": "quinaldate 4-oxidoreductase",
+      "equation": "quinaldate + A + H2O = kynurenate + AH2",
+      "ec": "1.3.99.18",
       "substrates": [
         {
-          "metabolite": "ecdysone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "20_hydroxyecdysone",
+          "metabolite": "quinaldate",
           "stoichiometry": 1
         },
         {
@@ -736,22 +709,32 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "kynurenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_99_22"
+          "enzyme": "ec_1_3_99_18"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:14021"
+        "rhea": "RHEA:16697"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14021"
+            "id": "RHEA:16697"
           }
         ]
       }

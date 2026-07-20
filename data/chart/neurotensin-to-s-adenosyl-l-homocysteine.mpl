@@ -18,19 +18,19 @@ pathway neurotensin-to-s-adenosyl-l-homocysteine "neurotensin to S-adenosyl-L-ho
 
   branch from leucine side left {
     leucine
-    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022c
+    <-> . +l_leu_d_isd_l_ala_l_gln +h2o
+    isoindolamide_b
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_13_12_15 [1.13.12.15] +ldopa +o2
-    3_4_dihydroxyphenylpyruvate
+    <-> . +l_histidine +o2 +h2o +h2o2
+    3_imidazol_5_yl_pyruvate
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_185 [2.1.1.185] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_173 [2.1.1.173] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 }

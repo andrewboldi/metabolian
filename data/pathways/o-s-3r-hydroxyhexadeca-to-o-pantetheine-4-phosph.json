@@ -142,50 +142,23 @@
       }
     },
     {
-      "id": "12_pahsa",
-      "name": "12-PAHSA",
-      "formula": "C34H65O4",
+      "id": "medium_chain_fatty_acyl_amp",
+      "name": "medium-chain fatty acyl-AMP",
+      "short": "medium-chain fatty…",
+      "formula": "C11H12N5O8PR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:83677"
+        "chebi": "CHEBI:141140"
       }
     },
     {
-      "id": "12_hydroxyoctadecanoate",
-      "name": "12-hydroxyoctadecanoate",
-      "short": "12-hydroxyoctadecan…",
-      "formula": "C18H35O3",
+      "id": "o_s_medium_chain_fatty_acyl_pantetheine_4_phosph",
+      "name": "O-[S-(medium-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(medium-chain…",
+      "formula": "C15H24N3O9PSR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:84201"
-      }
-    },
-    {
-      "id": "icosanoate",
-      "name": "icosanoate",
-      "formula": "C20H39O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32360"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1",
-      "name": "O-(S-icosanoylpantetheine-4'-phosphoryl)-L-serine(1−)",
-      "short": "O-(S-icosanoylpante…",
-      "formula": "C34H63N3O9PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87848"
+        "chebi": "CHEBI:133242"
       }
     },
     {
@@ -195,15 +168,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -220,13 +184,6 @@
       "name": "phthioceranic/hydroxyphthioceranic acid synthase",
       "ec": [
         "2.3.1.287"
-      ]
-    },
-    {
-      "id": "ec_6_2_1_59",
-      "name": "long-chain fatty acid adenylase/transferase FadD26",
-      "ec": [
-        "6.2.1.59"
       ]
     }
   ],
@@ -425,25 +382,25 @@
     },
     {
       "id": "r5",
-      "name": "12-hexadecanoyloxy-octadecanoate + H2O = 12-hydroxyoctadecanoate + hexadecanoate + H(+)",
-      "equation": "12-hexadecanoyloxy-octadecanoate + H2O = 12-hydroxyoctadecanoate + hexadecanoate + H(+)",
+      "name": "a medium-chain fatty acyl-AMP + holo-[ACP] = a medium-chain fatty acyl-[ACP] + AMP + H(+)",
+      "equation": "a medium-chain fatty acyl-AMP + holo-[ACP] = a medium-chain fatty acyl-[ACP] + AMP + H(+)",
       "substrates": [
         {
-          "metabolite": "12_pahsa",
+          "metabolite": "medium_chain_fatty_acyl_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "12_hydroxyoctadecanoate",
+          "metabolite": "o_s_medium_chain_fatty_acyl_pantetheine_4_phosph",
           "stoichiometry": 1
         },
         {
-          "metabolite": "palmitate",
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -454,67 +411,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:52056"
+        "rhea": "RHEA:63636"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52056"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "long-chain fatty acid adenylase/transferase FadD26",
-      "equation": "eicosanoate + holo-[(phenol)carboxyphthiodiolenone synthase] + ATP = icosanoyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
-      "ec": "6.2.1.59",
-      "substrates": [
-        {
-          "metabolite": "icosanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "holo-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_2_1_59"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:59156"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59156"
+            "id": "RHEA:63636"
           }
         ]
       }

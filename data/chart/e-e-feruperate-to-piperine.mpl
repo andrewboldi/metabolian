@@ -16,21 +16,27 @@ pathway e-e-feruperate-to-piperine "(E,E)-feruperate to piperine" {
     piperine
   }
 
-  branch from fmn side left {
+  branch from e_e_piperate side left {
+    e_e_piperate
+    <-> . +atp +hplus +ppi
+    e_e_piperoyl_amp
+  }
+
+  branch from fmn side right {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    2_hydroxytestosterone
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate
   }
 
-  branch from e_e_piperonyl_coa side right {
+  branch from e_e_piperonyl_coa side left {
     e_e_piperonyl_coa
-    <-> . +2_methylpropanaminium +coa +hplus
-    e_e_piperlonguminine
+    <-> . +pyrrolidinium_ion +coa +hplus
+    piperyline
   }
 
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_76 [4.2.3.76] +fpp
-    selinene
+    <-> ec_4_2_3_137 [4.2.3.137] +fpp
+    e_2_epi_caryophyllene
   }
 }

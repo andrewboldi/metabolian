@@ -21,10 +21,4 @@ pathway 2-hydroxy-2-3-dihydrogeni-to-d-glucose "2-hydroxy-2,3-dihydrogeni… to 
     <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 +fmn +h2o +hplus
     2_hydroxygenistein
   }
-
-  branch from d_glucose side right {
-    d_glucose
-    <-> . +eriodictyol_7_o_d_glucopyranoside +h2o
-    eriodictyol
-  }
 }

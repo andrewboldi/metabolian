@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "scyllo-inositol-to-2d-2-3-5-4-6-pentahydroxy",
+  "name": "scyllo-inositol to 2D-2,3,5/4,6-pentahydroxy…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from scyllo-inositol to 2D-2,3,5/4,6-pentahydroxycyclohexanone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39063"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:10642"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "scyllo_inositol",
+      "name": "scyllo-inositol",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10642"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "myo_2_inosose",
+      "name": "myo-2-inosose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17811"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2d_2_3_5_4_6_pentahydroxycyclohexanone",
+      "name": "2D-2,3,5/4,6-pentahydroxycyclohexanone",
+      "short": "2D-2,3,5/4,6-pentah…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50920"
+      }
+    },
+    {
+      "id": "1d_chiro_inositol",
+      "name": "1D-chiro-inositol",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27372"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_371",
+      "name": "scyllo-inositol 2-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.371"
+      ]
+    },
+    {
+      "id": "ec_5_3_99_11",
+      "name": "2-keto-myo-inositol isomerase",
+      "ec": [
+        "5.3.99.11"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_369",
+      "name": "D-chiro-inositol 1-dehydrogenase",
+      "ec": [
+        "1.1.1.369"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "scyllo-inositol 2-dehydrogenase (NADP(+))",
+      "equation": "scyllo-inositol + NADP(+) = scyllo-inosose + NADPH + H(+)",
+      "ec": "1.1.1.371",
+      "substrates": [
+        {
+          "metabolite": "scyllo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myo_2_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_371"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39063"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-keto-myo-inositol isomerase",
+      "equation": "scyllo-inosose = scyllo-inosine",
+      "ec": "5.3.99.11",
+      "substrates": [
+        {
+          "metabolite": "myo_2_inosose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2d_2_3_5_4_6_pentahydroxycyclohexanone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-chiro-inositol 1-dehydrogenase",
+      "equation": "1D-chiro-inositol + NAD(+) = scyllo-inosine + NADH + H(+)",
+      "ec": "1.1.1.369",
+      "substrates": [
+        {
+          "metabolite": "1d_chiro_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2d_2_3_5_4_6_pentahydroxycyclohexanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_369"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25832"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25832"
+          }
+        ]
+      }
+    }
+  ]
+}

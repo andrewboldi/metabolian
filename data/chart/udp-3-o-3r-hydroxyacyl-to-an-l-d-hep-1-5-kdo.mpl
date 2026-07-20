@@ -30,25 +30,37 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-5-kdo "UDP-3-O-[(3R)-hydroxyacylâ
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_39 [2.3.1.39] +malonyl-coa +coa
-    malonyl-acp
+    <-> ec_2_3_1_179 [2.3.1.179] +o_s_9z_hexadecenoylpantetheine_4_phosphoryl_seri +malonyl-acp +hplus +co2
+    o_s_3_oxo_11z_octadecenoyl_pantetheine_4_phospho
   }
 
-  branch from a_kdo_lipid_iva side right {
+  branch from a_lipid_iva side right {
+    a_lipid_iva
+    <-> ec_2_3_1_251 [2.3.1.251] +phosphatidylcholine +2_acyl_sn_glycero_3_phosphocholine
+    a_lipid_ivb
+  }
+
+  branch from a_kdo_lipid_iva side left {
     a_kdo_lipid_iva
     <-> ec_2_7_1_166 [2.7.1.166] +atp +adp +hplus
     a_4_o_phospho_kdo_2_6_lipid_iva
   }
 
-  branch from cytidine_5_monophosphate side left {
+  branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
   }
 
-  branch from a_kdo_2_lipid_iva side right {
+  branch from a_kdo_2_lipid_iva side left {
     a_kdo_2_lipid_iva
-    <-> ec_2_4_99_14 [2.4.99.14] +cmp_3_deoxy_d_manno_octulosonate +cytidine_5_monophosphate +hplus
-    a_kdo_3_lipid_iva
+    <-> ec_2_3_1_242 [2.3.1.242] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +holo-acp
+    an_acyl_kdo_2_4_kdo_2_6_lipid_iva
+  }
+
+  branch from an_l_d_hep_1_5_kdo_2_4_kdo_2_6_lipid_a side right {
+    an_l_d_hep_1_5_kdo_2_4_kdo_2_6_lipid_a
+    <-> ec_2_4_99_24 [2.4.99.24] +adp_l_glycero_d_manno_heptose +adp +hplus
+    an_l_d_hep_1_3_l_d_hep_1_5_kdo_2_4_kdo_2_6_lipid
   }
 }

@@ -1,0 +1,265 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxy-17-estradiol-to-4-methoxy-17-estradiol",
+  "name": "4-hydroxy-17β-estradiol to 4-methoxy-17β-estradiol…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 4-hydroxy-17β-estradiol to 4-methoxy-17β-estradiol 3-O-(β-D-glucuronide)(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53096"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62845"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxy_17_estradiol",
+      "name": "4-hydroxy-17β-estradiol",
+      "short": "4-hydroxy-17β-estra…",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62845"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "4_methoxy_17_estradiol",
+      "name": "4-methoxy-17β-estradiol",
+      "short": "4-methoxy-17β-estra…",
+      "formula": "C19H26O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136975"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "4_methoxy_17_estradiol_3_o_d_glucuronide",
+      "name": "4-methoxy-17β-estradiol 3-O-(β-D-glucuronide)",
+      "short": "4-methoxy-17β-estra…",
+      "formula": "C25H33O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136976"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "secondary_ammonium_ion",
+      "name": "secondary ammonium ion",
+      "short": "secondary ammonium…",
+      "formula": "H2NR2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:137419"
+      }
+    },
+    {
+      "id": "methylated_secondary_ammonium_ion",
+      "name": "methylated secondary ammonium ion",
+      "short": "methylated…",
+      "formula": "CH4NR2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:137984"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_49",
+      "name": "amine N-methyltransferase",
+      "ec": [
+        "2.1.1.49"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-hydroxy-17beta-estradiol + S-adenosyl-L-methionine = 4-methoxy-17beta-estradiol + S-a...",
+      "equation": "4-hydroxy-17beta-estradiol + S-adenosyl-L-methionine = 4-methoxy-17beta-estradiol + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methoxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-methoxy-17beta-estradiol + UDP-alpha-D-glucuronate = 4-methoxy-17beta-estradiol 3-O-(...",
+      "equation": "4-methoxy-17beta-estradiol + UDP-alpha-D-glucuronate = 4-methoxy-17beta-estradiol 3-O-(beta-D-glucuronate) + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_methoxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methoxy_17_estradiol_3_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "amine N-methyltransferase",
+      "equation": "a secondary amine + S-adenosyl-L-methionine = a methylated secondary amine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.49",
+      "substrates": [
+        {
+          "metabolite": "secondary_ammonium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylated_secondary_ammonium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53924"
+          }
+        ]
+      }
+    }
+  ]
+}

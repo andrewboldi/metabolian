@@ -18,18 +18,6 @@ pathway l-allothreonine-to-3-hydroxyhexane-2-5-dione "L-allothreonine to 3-hydro
     3_hydroxyhexane_2_5_dione
   }
 
-  branch from amino_oxobutanoate side left {
-    amino_oxobutanoate
-    <-> ec_1_1_1_103 [1.1.1.103] +nad +nadh +hplus
-    threonine
-  }
-
-  branch from ammonioacetone side right {
-    ammonioacetone
-    <-> ec_1_1_1_75 [1.1.1.75] +nad +nadh +hplus
-    2r_2_hydroxypropylammonium
-  }
-
   branch from methylglyoxal side left {
     methylglyoxal
     <-> . +guanosine_5_monophosphate_1
@@ -38,7 +26,7 @@ pathway l-allothreonine-to-3-hydroxyhexane-2-5-dione "L-allothreonine to 3-hydro
 
   branch from nh3 side right {
     nh3
-    <-> ec_6_3_4_16 [6.3.4.16] +hco3 +atp +adp +pi +hplus
-    carbamoyl_p
+    <-> ec_1_4_3_22 [1.4.3.22] +histaminium +o2 +h2o +h2o2
+    imidazole_4_acetaldehyde
   }
 }

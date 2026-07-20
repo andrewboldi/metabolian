@@ -34,19 +34,25 @@ pathway s-mandelate-to-1-2-benzoquinone "(S)-mandelate to 1,2-benzoquinone" {
 
   branch from phenylglyoxylate side right {
     phenylglyoxylate
-    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
-    hydrogen_donor
+    <-> . +o2 +h2o2
+    mandelate
   }
 
   branch from benzoyl_coa side left {
     benzoyl_coa
-    <-> ec_2_3_1_196 [2.3.1.196] +benzyl_alcohol +coa
-    benzyl_benzoate
+    <-> ec_2_3_1_220 [2.3.1.220] +malonyl-coa +hplus +co2 +coa
+    2_4_6_trihydroxybenzophenone
   }
 
-  branch from benzoate side right {
-    benzoate
-    <-> . +7_14_16_trihydroxyconfertifolin +hplus +h2o
-    dideacetyl_astellolide_a
+  branch from glycine side right {
+    glycine
+    <-> ec_1_5_1_22 [1.5.1.22] +nad +h2o +pyruvate +nadh +hplus
+    n_carboxylatomethyl_d_alanine
+  }
+
+  branch from catechol side left {
+    catechol
+    <-> ec_1_14_14_20 [1.14.14.20] +fadh2 +o2 +fad +h2o +hplus
+    phenol
   }
 }

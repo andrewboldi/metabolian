@@ -18,13 +18,7 @@ pathway uracil-5-carboxylate-to-pseudouridine-5-phosphat "uracil-5-carboxylate t
     pseudouridine_5_phosphate
   }
 
-  branch from uracil side left {
-    uracil
-    <-> . +dump +h2o
-    2_deoxyribose_5_monophosphate_1
-  }
-
-  branch from pseudouridine_5_phosphate side right {
+  branch from pseudouridine_5_phosphate side left {
     pseudouridine_5_phosphate
     <-> . +pseudo_utp +h2o +hplus
     ppi

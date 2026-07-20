@@ -26,19 +26,19 @@ pathway 3-d-ribofuranosyl-uric-to-d-ribofuranose-5-phosp "3-(β-D-ribofuranosyl)
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_3_5_4_32 [3.5.4.32] +7_8_dihydro_8_oxoguanine +h2o +hplus
-    nh3
+    <-> ec_1_17_3_2 [1.17.3.2] +o2 +h2o +h2o2
+    6_8_dihydroxypurine
   }
 
   branch from d_ribofuranose_5_phosphate side left {
     d_ribofuranose_5_phosphate
-    <-> . +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o
-    2_5_6_triamino_4_hydroxypyrimidine
+    <-> .
+    r5p
   }
 
   branch from adp_d_ribose side right {
     adp_d_ribose
-    <-> ec_3_2_2_19 [3.2.2.19] +n_adp_d_ribosyl_l_argininium_1 +h2o
-    l_argininium
+    <-> ec_3_2_2_19 [3.2.2.19] +n_adp_d_ribosyl_l_arginine +h2o
+    arginine
   }
 }

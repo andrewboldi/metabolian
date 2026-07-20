@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-2-acetamido-4-azanium-to-udp-2-acetamido-2-6",
   "name": "UDP-2-acetamido-4-azanium… to UDP-2-acetamido-2,6-dideo…",
-  "category": "redox-detox",
+  "category": "other",
   "summary": "A 3-step route from UDP-2-acetamido-4-azaniumyl-2,4,6-trideoxy-α-D-glucose(1−) to UDP-2-acetamido-2,6-dideoxy-β-L-lyxo-hex-4-ulose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -96,30 +96,21 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "gly_glu",
+      "name": "Gly-Glu",
+      "formula": "C7H11N2O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:73784"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:57305"
       }
     },
     {
@@ -173,13 +164,6 @@
       "name": "UDP-N-acetylglucosamine 4,6-dehydratase (configuration-retaining)",
       "ec": [
         "4.2.1.135"
-      ]
-    },
-    {
-      "id": "ec_1_4_3_11",
-      "name": "L-glutamate oxidase",
-      "ec": [
-        "1.4.3.11"
       ]
     },
     {
@@ -341,16 +325,11 @@
     },
     {
       "id": "r5",
-      "name": "L-glutamate oxidase",
-      "equation": "L-glutamate + O2 + H2O = 2-oxoglutarate + H2O2 + NH4(+)",
-      "ec": "1.4.3.11",
+      "name": "glycyl-L-glutamate + H2O = glycine + L-glutamate",
+      "equation": "glycyl-L-glutamate + H2O = glycine + L-glutamate",
       "substrates": [
         {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "gly_glu",
           "stoichiometry": 1
         },
         {
@@ -360,34 +339,25 @@
       ],
       "products": [
         {
-          "metabolite": "akg",
+          "metabolite": "glycine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "glutamate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_4_3_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:20728"
+        "rhea": "RHEA:36463"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20728"
+            "id": "RHEA:36463"
           }
         ]
       }

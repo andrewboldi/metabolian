@@ -18,8 +18,8 @@ pathway n-1-deoxy-d-fructopyra-to-3-n-acetyl-l-valyl-ade "N-(1-deoxy-β-D-fructo
 
   branch from 2_dehydro_d_glucopyranose side left {
     2_dehydro_d_glucopyranose
-    <-> . +2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y +h2o +hplus
-    alanine
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_phenylalanine_b +o2 +h2o +h2o2
+    l_phenylalanine
   }
 
   branch from valine side right {
@@ -30,7 +30,7 @@ pathway n-1-deoxy-d-fructopyra-to-3-n-acetyl-l-valyl-ade "N-(1-deoxy-β-D-fructo
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_85 [4.2.3.85] +fpp +h2o
-    eudesmol
+    <-> ec_4_2_3_145 [4.2.3.145] +all_trans_pentaprenyl_diphosphate +h2o
+    ophiobolin_f
   }
 }

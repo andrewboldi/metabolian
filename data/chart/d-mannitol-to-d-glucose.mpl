@@ -8,7 +8,7 @@ pathway d-mannitol-to-d-glucose "D-mannitol to β-D-glucose" {
 
   spine at 0,0 {
     d_mannitol
-    <-> ec_1_1_2_2 [1.1.2.2] +iron -fe2 -hplus
+    <-> ec_1_1_1_138 [1.1.1.138] +nadp -nadph -hplus
     d_fructofuranose
     <-> ec_2_4_1_13 [2.4.1.13] +adp_d_glucoside -adp -hplus
     sucrose
@@ -16,17 +16,5 @@ pathway d-mannitol-to-d-glucose "D-mannitol to β-D-glucose" {
     1_kestose
     <-> . +sucrose -d_glucose
     1_6_kestotetraose
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +ipecoside +h2o
-    ipecoside_aglycone
-  }
-
-  branch from d_glucose side right {
-    d_glucose
-    <-> . +quercetin_3_o_d_glucopyranoside +h2o
-    quercetin_7_olate
   }
 }

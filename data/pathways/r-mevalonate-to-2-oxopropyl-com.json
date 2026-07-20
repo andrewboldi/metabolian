@@ -1,0 +1,378 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-mevalonate-to-2-oxopropyl-com",
+  "name": "(R)-mevalonate to 2-oxopropyl-CoM",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (R)-mevalonate to 2-oxopropyl-CoM(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15989"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:36464"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mevalonate",
+      "name": "(R)-Mevalonate",
+      "formula": "C6H11O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36464"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hmg_coa",
+      "name": "(S)-3-Hydroxy-3-methylglutaryl-CoA",
+      "short": "3-Hydroxy-3-methylg…",
+      "formula": "C27H39N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:43074"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetoacetate",
+      "name": "Acetoacetate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13705"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coenzyme_m",
+      "name": "coenzyme M",
+      "formula": "C2H5O3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58319"
+      }
+    },
+    {
+      "id": "2_oxopropyl_com",
+      "name": "2-oxopropyl-CoM",
+      "formula": "C5H9O4S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57552"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "r_2_hydroxypropyl_com",
+      "name": "(R)-2-hydroxypropyl-CoM",
+      "short": "2-hydroxypropyl-CoM",
+      "formula": "C5H11O4S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58458"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_34",
+      "name": "hydroxymethylglutaryl-CoA reductase (NADPH)",
+      "ec": [
+        "1.1.1.34"
+      ]
+    },
+    {
+      "id": "ec_4_1_3_4",
+      "name": "hydroxymethylglutaryl-CoA lyase",
+      "ec": [
+        "4.1.3.4"
+      ]
+    },
+    {
+      "id": "ec_1_8_1_5",
+      "name": "2-oxopropyl-CoM reductase (carboxylating)",
+      "ec": [
+        "1.8.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_268",
+      "name": "2-(R)-hydroxypropyl-CoM dehydrogenase",
+      "ec": [
+        "1.1.1.268"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hydroxymethylglutaryl-CoA reductase (NADPH)",
+      "equation": "(R)-mevalonate + 2 NADP(+) + CoA = (3S)-3-hydroxy-3-methylglutaryl-CoA + 2 NADPH + 2 H(+)",
+      "ec": "1.1.1.34",
+      "substrates": [
+        {
+          "metabolite": "mevalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hmg_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15989"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hydroxymethylglutaryl-CoA lyase",
+      "equation": "(3S)-3-hydroxy-3-methylglutaryl-CoA = acetoacetate + acetyl-CoA",
+      "ec": "4.1.3.4",
+      "substrates": [
+        {
+          "metabolite": "hmg_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_3_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-oxopropyl-CoM reductase (carboxylating)",
+      "equation": "coenzyme M + acetoacetate + NADP(+) = 2-oxopropyl-coenzyme M + CO2 + NADPH",
+      "ec": "1.8.1.5",
+      "substrates": [
+        {
+          "metabolite": "coenzyme_m",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxopropyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16977"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-(R)-hydroxypropyl-CoM dehydrogenase",
+      "equation": "(R)-2-hydroxypropyl-coenzyme M + NAD(+) = 2-oxopropyl-coenzyme M + NADH + H(+)",
+      "ec": "1.1.1.268",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxypropyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxopropyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_268"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13249"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13249"
+          }
+        ]
+      }
+    }
+  ]
+}

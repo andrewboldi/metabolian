@@ -24,7 +24,7 @@ pathway l-2-4-diazaniumylbutyrate-to-succinate "L-2,4-diazaniumylbutyrate to suc
 
   branch from succinate side right {
     succinate
-    <-> . +stearoyl_coa +akg +o2 +co2
-    2_hydroxystearoyl_coa
+    <-> . +n_geranyl_l_glutamate +akg +o2 +co2 +h2o
+    dainate_a
   }
 }

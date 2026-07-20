@@ -93,31 +93,21 @@
       }
     },
     {
-      "id": "pyrithiamine",
-      "name": "pyrithiamine",
-      "formula": "C14H19N4O",
-      "charge": 1,
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H8N2O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:72290"
+        "chebi": "CHEBI:58048"
       }
     },
     {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro",
-      "name": "1-(4-hydroxy-2-methylpyrimid-5-ylmethyl)-3-(2-hydroxyethyl)-2-methylpyridinium",
-      "short": "1-(4-hydroxy-2-meth…",
-      "formula": "C14H18N3O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:57975"
+        "chebi": "CHEBI:29991"
       }
     }
   ],
@@ -137,10 +127,17 @@
       ]
     },
     {
-      "id": "ec_3_5_4_20",
-      "name": "pyrithiamine deaminase",
+      "id": "ec_3_5_1_1",
+      "name": "asparaginase",
       "ec": [
-        "3.5.4.20"
+        "3.5.1.1"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_38",
+      "name": "glutamin-(asparagin-)ase",
+      "ec": [
+        "3.5.1.38"
       ]
     }
   ],
@@ -299,26 +296,22 @@
     },
     {
       "id": "r5",
-      "name": "pyrithiamine deaminase",
-      "equation": "1-(4-amino-2-methylpyrimid-5-ylmethyl)-3-(2-hydroxyethyl)-2-methylpyridinium + H2O + H(+) = 1-(4-hydroxy-2-methylpyrimid-5-ylmethyl)-3-(2-hydroxyethyl)-2-methylpyridinium + NH4(+)",
-      "ec": "3.5.4.20",
+      "name": "asparaginase",
+      "equation": "L-asparagine + H2O = L-aspartate + NH4(+)",
+      "ec": "3.5.1.1",
       "substrates": [
         {
-          "metabolite": "pyrithiamine",
+          "metabolite": "l_asparagine",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro",
+          "metabolite": "aspartate",
           "stoichiometry": 1
         },
         {
@@ -328,20 +321,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_20"
+          "enzyme": "ec_3_5_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:14537"
+        "rhea": "RHEA:21016"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14537"
+            "id": "RHEA:21016"
           }
         ]
       }

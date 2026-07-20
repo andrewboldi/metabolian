@@ -18,7 +18,7 @@ pathway 6-deoxocastasterone-to-fmn "6-deoxocastasterone to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    22r_22_hydroxycholesterol
+    <-> . +n_arachidonoylserotonin +fmnh2 +o2 +h2o +hplus
+    n_arachidonoyl_2_oxoserotonin
   }
 }

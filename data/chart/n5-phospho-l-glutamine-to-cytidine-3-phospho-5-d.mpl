@@ -18,13 +18,13 @@ pathway n5-phospho-l-glutamine-to-cytidine-3-phospho-5-d "N5-phospho-L-glutamine
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_109 [2.5.1.109] +brevianamide_f +dmapp
-    deoxybrevianamide_e
+    <-> . +fpp
+    dauca_4_7_diene
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_103 [2.6.1.103] +s_3_5_dihydroxyphenylglycine +akg
-    3_5_dihydroxyphenylglyoxylate
+    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi +hplus
+    1_l_glutamo_2_n6_l_lysinohydrazine
   }
 }

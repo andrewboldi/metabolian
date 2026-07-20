@@ -24,7 +24,7 @@ pathway 3-4-5-trihydroxy-3-meth-to-s-adenosyl-l-homocyst "3',4',5-trihydroxy-3-m
 
   branch from sah side right {
     sah
-    <-> . +malonyl-coa +sam
-    malonyl_coa_methyl_ester
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 }

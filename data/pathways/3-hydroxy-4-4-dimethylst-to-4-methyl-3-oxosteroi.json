@@ -3,13 +3,13 @@
   "id": "3-hydroxy-4-4-dimethylst-to-4-methyl-3-oxosteroi",
   "name": "3β-hydroxy-4,4-dimethylst… to 4α-methyl-3-oxosteroid",
   "category": "energy-metabolism",
-  "summary": "A 4-step route from 3β-hydroxy-4,4-dimethylsteroid to 4α-methyl-3-oxosteroid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from 3β-hydroxy-4,4-dimethylsteroid to 4α-methyl-3-oxosteroid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:60052"
+        "id": "RHEA:60048"
       },
       {
         "db": "ChEBI",
@@ -56,13 +56,13 @@
       }
     },
     {
-      "id": "3_hydroxy_4_hydroxymethyl_4_methylsteroid",
-      "name": "3β-hydroxy-4β-hydroxymethyl-4α-methylsteroid",
-      "short": "3β-hydroxy-4β-hydro…",
-      "formula": "C21H35O2R",
-      "charge": 0,
+      "id": "3_hydroxy_4_methylsteroid_4_carboxylate",
+      "name": "3β-hydroxy-4α-methylsteroid-4β-carboxylate",
+      "short": "3β-hydroxy-4α-methy…",
+      "formula": "C21H32O3R",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:143566"
+        "chebi": "CHEBI:143569"
       }
     },
     {
@@ -81,26 +81,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "3_hydroxy_4_formyl_4_methylsteroid",
-      "name": "3β-hydroxy-4β-formyl-4α-methylsteroid",
-      "short": "3β-hydroxy-4β-formy…",
-      "formula": "C21H33O2R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143568"
-      }
-    },
-    {
-      "id": "3_hydroxy_4_methylsteroid_4_carboxylate",
-      "name": "3β-hydroxy-4α-methylsteroid-4β-carboxylate",
-      "short": "3β-hydroxy-4α-methy…",
-      "formula": "C21H32O3R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:143569"
       }
     },
     {
@@ -125,6 +105,13 @@
   ],
   "enzymes": [
     {
+      "id": "ec_1_14_13_246",
+      "name": "4beta-methylsterol monooxygenase",
+      "ec": [
+        "1.14.13.246"
+      ]
+    },
+    {
       "id": "ec_1_1_1_417",
       "name": "3beta-hydroxysteroid-4beta-carboxylate 3-dehydrogenase (decarboxylating)",
       "ec": [
@@ -135,8 +122,9 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "a 3beta-hydroxy-4,4-dimethylsteroid + NADH + O2 + H(+) = a 3beta-hydroxy-4beta-hydroxym...",
-      "equation": "a 3beta-hydroxy-4,4-dimethylsteroid + NADH + O2 + H(+) = a 3beta-hydroxy-4beta-hydroxymethyl-4alpha-methylsteroid + NAD(+) + H2O",
+      "name": "4beta-methylsterol monooxygenase",
+      "equation": "a 3beta-hydroxy-4,4-dimethylsteroid + 3 NADH + 3 O2 + 2 H(+) = a 3beta-hydroxy-4alpha-methylsteroid-4beta-carboxylate + 3 NAD(+) + 4 H2O",
+      "ec": "1.14.13.246",
       "substrates": [
         {
           "metabolite": "3_hydroxy_4_4_dimethylsteroid",
@@ -144,113 +132,15 @@
         },
         {
           "metabolite": "nadh",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxy_4_hydroxymethyl_4_methylsteroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:60052"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:60052"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "a 3beta-hydroxy-4beta-hydroxymethyl-4alpha-methylsteroid + NADH + O2 + H(+) = a 3beta-h...",
-      "equation": "a 3beta-hydroxy-4beta-hydroxymethyl-4alpha-methylsteroid + NADH + O2 + H(+) = a 3beta-hydroxy-4beta-formyl-4alpha-methylsteroid + NAD(+) + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxy_4_hydroxymethyl_4_methylsteroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxy_4_formyl_4_methylsteroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 2,
-      "xrefs": {
-        "rhea": "RHEA:60056"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:60056"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r3",
-      "name": "a 3beta-hydroxy-4beta-formyl-4alpha-methylsteroid + NADH + O2 = a 3beta-hydroxy-4alpha-...",
-      "equation": "a 3beta-hydroxy-4beta-formyl-4alpha-methylsteroid + NADH + O2 = a 3beta-hydroxy-4alpha-methylsteroid-4beta-carboxylate + NAD(+) + H2O",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxy_4_formyl_4_methylsteroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
         }
       ],
       "products": [
@@ -260,30 +150,35 @@
         },
         {
           "metabolite": "nad",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_246"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:60064"
+        "rhea": "RHEA:60048"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60064"
+            "id": "RHEA:60048"
           }
         ]
       }
     },
     {
-      "id": "r4",
+      "id": "r2",
       "name": "3beta-hydroxysteroid-4beta-carboxylate 3-dehydrogenase (decarboxylating)",
       "equation": "a 3beta-hydroxy-4alpha-methylsteroid-4beta-carboxylate + NAD(+) = a 4alpha-methyl-3-oxosteroid + CO2 + NADH",
       "ec": "1.1.1.417",
@@ -317,7 +212,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:60084"
       },

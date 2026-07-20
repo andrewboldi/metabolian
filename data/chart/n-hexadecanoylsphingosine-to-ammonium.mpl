@@ -28,19 +28,25 @@ pathway n-hexadecanoylsphingosine-to-ammonium "N-hexadecanoylsphingosine… to a
 
   branch from phosphocholine side right {
     phosphocholine
-    <-> . +2_acetyl_1_alkyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_alkyl_2_acetyl_sn_glycerol
+    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_2_dipalmitoyl_sn_glycerol
   }
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_palmitoylglycerone_3_phosphate +arachidonate
-    1_arachidonoylglycerone_3_phosphate
+    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    lysophosphatidylcholine_16_0
   }
 
   branch from phosphoethanolamine side right {
     phosphoethanolamine
-    <-> . +phytosphingosine_1_phosphate
-    r_2_hydroxyhexadecanal
+    <-> . +sphinga_4e_14z_dienine_1_phosphate
+    2e_12z_hexadecadienal
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +2_amino_2_phenylacetonitrile +h2o +hplus
+    d_phenylglycine
   }
 }

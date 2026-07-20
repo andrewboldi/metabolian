@@ -1,0 +1,249 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxyestrone-to-4-methoxyestrone",
+  "name": "4-hydroxyestrone to 4-methoxyestrone…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 4-hydroxyestrone to 4-methoxyestrone 3-O-(β-D-glucuronide)(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53104"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87602"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxyestrone",
+      "name": "4-hydroxyestrone",
+      "formula": "C18H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87602"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "4_methoxyestrone",
+      "name": "4-methoxyestrone",
+      "formula": "C19H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136972"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "4_methoxyestrone_3_o_d_glucuronide",
+      "name": "4-methoxyestrone 3-O-(β-D-glucuronide)",
+      "short": "4-methoxyestrone…",
+      "formula": "C25H31O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136973"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-hydroxyestrone + S-adenosyl-L-methionine = 4-methoxyestrone + S-adenosyl-L-homocystei...",
+      "equation": "4-hydroxyestrone + S-adenosyl-L-methionine = 4-methoxyestrone + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyestrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methoxyestrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-methoxyestrone + UDP-alpha-D-glucuronate = 4-methoxyestrone 3-O-(beta-D-glucuronate) ...",
+      "equation": "4-methoxyestrone + UDP-alpha-D-glucuronate = 4-methoxyestrone 3-O-(beta-D-glucuronate) + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_methoxyestrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methoxyestrone_3_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cytidine(48) in tRNA precursor + S-adenosyl-L-methionine = 5-methylcytidine(48) in tRNA...",
+      "equation": "cytidine(48) in tRNA precursor + S-adenosyl-L-methionine = 5-methylcytidine(48) in tRNA precursor + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54136"
+          }
+        ]
+      }
+    }
+  ]
+}

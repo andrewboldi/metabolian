@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1r-6r-2-3-carboxylatop-to-2-demethylmenaquinol",
   "name": "(1R,6R)-2-(3-carboxylatop… to 2-demethylmenaquinol-8",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 7-step route from (1R,6R)-2-(3-carboxylatopropanoyl)-6-hydroxycyclohexa-2,4-diene-1-carboxylate to 2-demethylmenaquinol-8, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -197,41 +197,33 @@
       }
     },
     {
-      "id": "8_oxo_dgtp",
-      "name": "8-oxo-dGTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:77896"
-      }
-    },
-    {
-      "id": "8_oxo_dgmp",
-      "name": "8-oxo-dGMP",
-      "formula": "C10H12N5O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:63224"
-      }
-    },
-    {
-      "id": "all_trans_heptaprenyl_diphosphate",
-      "name": "all-trans-heptaprenyl diphosphate",
-      "short": "all-trans-heptapren…",
-      "formula": "C35H57O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58206"
-      }
-    },
-    {
-      "id": "2_demethylmenaquinol_7",
-      "name": "2-demethylmenaquinol-7",
-      "short": "2-demethylmenaquino…",
-      "formula": "C45H64O2",
+      "id": "8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid",
+      "name": "8-amino-3,8-dideoxy-α-D-manno-oct-2-ulosonic acid",
+      "short": "8-amino-3,8-dideoxy…",
+      "formula": "C8H15NO7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64806"
+        "chebi": "CHEBI:87091"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate",
+      "name": "CMP-8-amino-3,8-dideoxy-α-D-manno-oct-2-ulosonate",
+      "short": "CMP-8-amino-3,8-did…",
+      "formula": "C17H26N4O14P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:91089"
       }
     }
   ],
@@ -272,10 +264,10 @@
       ]
     },
     {
-      "id": "ec_3_6_1_55",
-      "name": "8-oxo-dGTP diphosphatase",
+      "id": "ec_2_7_7_90",
+      "name": "8-amino-3,8-dideoxy-manno-octulosonate cytidylyltransferase",
       "ec": [
-        "3.6.1.55"
+        "2.7.7.90"
       ]
     }
   ],
@@ -609,102 +601,45 @@
     },
     {
       "id": "r8",
-      "name": "8-oxo-dGTP diphosphatase",
-      "equation": "8-oxo-dGTP + H2O = 8-oxo-dGMP + diphosphate + H(+)",
-      "ec": "3.6.1.55",
+      "name": "8-amino-3,8-dideoxy-manno-octulosonate cytidylyltransferase",
+      "equation": "8-amino-3,8-dideoxy-alpha-D-manno-octulosonate + CTP = CMP-8-amino-3,8-dideoxy-alpha-D-manno-oct-2-ulosonate + diphosphate",
+      "ec": "2.7.7.90",
       "substrates": [
         {
-          "metabolite": "8_oxo_dgtp",
+          "metabolite": "8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "ctp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "8_oxo_dgmp",
+          "metabolite": "cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_1_55"
+          "enzyme": "ec_2_7_7_90"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:31575"
+        "rhea": "RHEA:49284"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31575"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
-      "equation": "all-trans-heptaprenyl diphosphate + 1,4-dihydroxy-2-naphthoate + H(+) = 2-demethylmenaquinol-7 + CO2 + diphosphate",
-      "ec": "2.5.1.74",
-      "substrates": [
-        {
-          "metabolite": "all_trans_heptaprenyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_4_dihydroxy_2_naphthoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_demethylmenaquinol_7",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_74"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:33211"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:33211"
+            "id": "RHEA:49284"
           }
         ]
       }

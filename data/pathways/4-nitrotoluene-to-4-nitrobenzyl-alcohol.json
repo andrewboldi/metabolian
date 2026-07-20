@@ -119,31 +119,58 @@
       }
     },
     {
-      "id": "6_deoxyerythronolide_b",
-      "name": "6-deoxyerythronolide B",
-      "short": "6-deoxyerythronolid…",
-      "formula": "C21H38O6",
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16089"
+        "chebi": "CHEBI:17347"
       }
     },
     {
-      "id": "erythronolide_b",
-      "name": "erythronolide B",
-      "formula": "C21H38O7",
+      "id": "1_hydroxytestosterone",
+      "name": "1α-hydroxytestosterone",
+      "short": "1α-hydroxytestoster…",
+      "formula": "C19H28O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:27977"
+        "chebi": "CHEBI:132358"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "4_nitrobenzoate",
+      "name": "4-nitrobenzoate",
+      "formula": "C7H4NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142863"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_15_35",
-      "name": "6-deoxyerythronolide B hydroxylase",
+      "id": "ec_1_14_15_19",
+      "name": "C-19 steroid 1alpha-hydroxylase",
       "ec": [
-        "1.14.15.35"
+        "1.14.15.19"
       ]
     }
   ],
@@ -283,12 +310,12 @@
     },
     {
       "id": "r4",
-      "name": "6-deoxyerythronolide B hydroxylase",
-      "equation": "6-deoxyerythronolide B + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = erythronolide B + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "ec": "1.14.15.35",
+      "name": "C-19 steroid 1alpha-hydroxylase",
+      "equation": "testosterone + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 1alpha-hydroxytestosterone + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.19",
       "substrates": [
         {
-          "metabolite": "6_deoxyerythronolide_b",
+          "metabolite": "testosterone",
           "stoichiometry": 1
         },
         {
@@ -306,7 +333,7 @@
       ],
       "products": [
         {
-          "metabolite": "erythronolide_b",
+          "metabolite": "1_hydroxytestosterone",
           "stoichiometry": 1
         },
         {
@@ -320,20 +347,67 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_15_35"
+          "enzyme": "ec_1_14_15_19"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:40299"
+        "rhea": "RHEA:50340"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40299"
+            "id": "RHEA:50340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "4-nitrobenzaldehyde + NAD(+) + H2O = 4-nitrobenzoate + NADH + 2 H(+)",
+      "equation": "4-nitrobenzaldehyde + NAD(+) + H2O = 4-nitrobenzoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_nitrobenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:80363"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80363"
           }
         ]
       }

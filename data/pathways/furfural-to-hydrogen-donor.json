@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "furfural-to-hydrogen-donor",
   "name": "furfural to hydrogen donor",
-  "category": "energy-metabolism",
+  "category": "cofactor-vitamin-metabolism",
   "summary": "A 3-step route from furfural to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -146,61 +146,40 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58553"
       }
     },
     {
-      "id": "10_epi_eudesmol",
-      "name": "10-epi-γ-eudesmol",
-      "formula": "C15H26O",
+      "id": "ent_manool",
+      "name": "ent-manool",
+      "formula": "C20H34O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62514"
+        "chebi": "CHEBI:76948"
       }
     },
     {
-      "id": "5_taurinomethyluridine_5_phosphate_1",
-      "name": "5-taurinomethyluridine 5'-phosphate(1−)",
-      "short": "5-taurinomethylurid…",
-      "formula": "C12H17N3O11PS",
-      "charge": -1,
+      "id": "ferroheme_o",
+      "name": "ferroheme o",
+      "formula": "C49H56FeN4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:87172"
+        "chebi": "CHEBI:60530"
       }
     },
     {
-      "id": "3_disulfanyl_l_alanine",
-      "name": "3-disulfanyl-L-alanine",
-      "short": "3-disulfanyl-L-alan…",
-      "formula": "C3H5NOS2",
-      "charge": 0,
+      "id": "fe_ii_heme_i",
+      "name": "Fe(II)-heme i",
+      "formula": "C49H56FeN4O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:61963"
-      }
-    },
-    {
-      "id": "5_taurinomethyl_2_thiouridine_5_phosphate_1",
-      "name": "5-taurinomethyl-2-thiouridine 5'-phosphate(1−)",
-      "short": "5-taurinomethyl-2-t…",
-      "formula": "C12H17N3O10PS2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87171"
-      }
-    },
-    {
-      "id": "l_cysteine",
-      "name": "L-cysteine",
-      "formula": "C3H5NOS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29950"
+        "chebi": "CHEBI:147291"
       }
     }
   ],
@@ -217,20 +196,6 @@
       "name": "2-furoyl-CoA dehydrogenase",
       "ec": [
         "1.3.99.8"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_84",
-      "name": "10-epi-gamma-eudesmol synthase",
-      "ec": [
-        "4.2.3.84"
-      ]
-    },
-    {
-      "id": "ec_2_8_1_14",
-      "name": "tRNA-5-taurinomethyluridine 2-sulfurtransferase",
-      "ec": [
-        "2.8.1.14"
       ]
     }
   ],
@@ -390,12 +355,11 @@
     },
     {
       "id": "r4",
-      "name": "10-epi-gamma-eudesmol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-gamma-eudesmol + diphosphate",
-      "ec": "4.2.3.84",
+      "name": "ent-copalyl diphosphate + H2O = ent-manool + diphosphate",
+      "equation": "ent-copalyl diphosphate + H2O = ent-manool + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -405,7 +369,7 @@
       ],
       "products": [
         {
-          "metabolite": "10_epi_eudesmol",
+          "metabolite": "ent_manool",
           "stoichiometry": 1
         },
         {
@@ -413,56 +377,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_84"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30947"
+        "rhea": "RHEA:40031"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30947"
+            "id": "RHEA:40031"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "tRNA-5-taurinomethyluridine 2-sulfurtransferase",
-      "equation": "5-taurinomethyluridine(34) in tRNA + S-sulfanyl-L-cysteinyl-[protein] + AH2 + ATP = 5-taurinomethyl-2-thiouridine(34) in tRNA + L-cysteinyl-[protein] + A + AMP + diphosphate + H(+)",
-      "ec": "2.8.1.14",
+      "name": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
+      "equation": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
       "substrates": [
         {
-          "metabolite": "5_taurinomethyluridine_5_phosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_disulfanyl_l_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_taurinomethyl_2_thiouridine_5_phosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_cysteine",
+          "metabolite": "ferroheme_o",
           "stoichiometry": 1
         },
         {
@@ -470,34 +406,31 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_8_1_14"
+          "metabolite": "fe_ii_heme_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:47040"
+        "rhea": "RHEA:63392"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47040"
+            "id": "RHEA:63392"
           }
         ]
       }

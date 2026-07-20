@@ -26,27 +26,39 @@ pathway n-acetylneuraminyl-2-8-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(
     n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side left {
+  branch from n_acetyl_d_galactosaminyl_1_4_n_acetylneuraminyl side left {
+    n_acetyl_d_galactosaminyl_1_4_n_acetylneuraminyl
+    <-> . +acetyl_coa +coa
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_7_o_acety
+  }
+
+  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side right {
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
     <-> . +gdp_l_fucose +gdp +hplus
     l_fuc_1_2_d_gal_1_3_d_galnac_1_4_neu5ac_2_8_neu
   }
 
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side right {
+  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side left {
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> . +udp_n_acetyl_d_galactosamine +udp +hplus
     n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_3_n
   }
 
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side left {
+  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side right {
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
     <-> . +udpglcnac +udp +hplus
     d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6_n
   }
 
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side right {
+  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side left {
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
     8_o_sulfo_n_acetylneuraminosyl_2_3_d_galactosyl
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
   }
 }

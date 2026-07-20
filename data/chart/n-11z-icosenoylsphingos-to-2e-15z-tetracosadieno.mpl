@@ -36,19 +36,31 @@ pathway n-11z-icosenoylsphingos-to-2e-15z-tetracosadieno "N-(11Z)-icosenoylsphin
 
   branch from 11z_eicosenoyl_coa side right {
     11z_eicosenoyl_coa
-    <-> . +o2 +h2o2
+    <-> . +fad +hplus +fadh2
     2e_11z_icosadienoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    stemar_13_ene
+    <-> ec_4_2_3_78 [4.2.3.78] +fpp
+    chamigrene
   }
 
-  branch from 2e_13z_docosadienoyl_coa side right {
-    2e_13z_docosadienoyl_coa
-    <-> . +h2o
+  branch from 13z_3_oxodocosenoyl_coa side right {
+    13z_3_oxodocosenoyl_coa
+    <-> . +nad +nadh +hplus
     3s_13z_3_hydroxydocosenoyl_coa
+  }
+
+  branch from erucoyl_coa side left {
+    erucoyl_coa
+    <-> . +sphinganine +coa +hplus
+    n_13z_docosenoyl_sphinganine
+  }
+
+  branch from 2e_15z_tetracosadienoyl_coa side right {
+    2e_15z_tetracosadienoyl_coa
+    <-> . +o2 +h2o2
+    15z_tetracosenoyl_coa
   }
 }

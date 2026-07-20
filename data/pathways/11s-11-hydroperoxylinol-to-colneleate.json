@@ -3,13 +3,13 @@
   "id": "11s-11-hydroperoxylinol-to-colneleate",
   "name": "(11S)-11-hydroperoxylinol… to colneleate",
   "category": "other",
-  "summary": "A 3-step route from (11S)-11-hydroperoxylinoleate to colneleate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from (11S)-11-hydroperoxylinoleate to colneleate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:51304"
+        "id": "RHEA:51276"
       },
       {
         "db": "ChEBI",
@@ -26,15 +26,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:57467"
-      }
-    },
-    {
-      "id": "13_r_hpode",
-      "name": "13(R)-HPODE",
-      "formula": "C18H31O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:133985"
       }
     },
     {
@@ -65,24 +56,6 @@
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30245"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
       "id": "9s_10s_11s_12z_9_10_epoxy_11_hydroxy_12_octadec",
       "name": "(9S,10S,11S,12Z)-9,10-epoxy-11-hydroxy-12-octadecenoate",
       "short": "(9S,10S,11S,12Z)-9,…",
@@ -105,42 +78,11 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "(11S)-hydroperoxy-(9Z,12Z)-octadecadienoate = (13R)-hydroperoxy-(9Z,11E)-octadecadienoate",
-      "equation": "(11S)-hydroperoxy-(9Z,12Z)-octadecadienoate = (13R)-hydroperoxy-(9Z,11E)-octadecadienoate",
+      "name": "(11S)-hydroperoxy-(9Z,12Z)-octadecadienoate = (9S)-hydroperoxy-(10E,12Z)-octadecadienoate",
+      "equation": "(11S)-hydroperoxy-(9Z,12Z)-octadecadienoate = (9S)-hydroperoxy-(10E,12Z)-octadecadienoate",
       "substrates": [
         {
           "metabolite": "11s_11_hydroperoxylinoleate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "13_r_hpode",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:51304"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:51304"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "(13R)-hydroperoxy-(9Z,11E)-octadecadienoate = (9S)-hydroperoxy-(10E,12Z)-octadecadienoate",
-      "equation": "(13R)-hydroperoxy-(9Z,11E)-octadecadienoate = (9S)-hydroperoxy-(10E,12Z)-octadecadienoate",
-      "substrates": [
-        {
-          "metabolite": "13_r_hpode",
           "stoichiometry": 1
         }
       ],
@@ -151,22 +93,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:51280"
+        "rhea": "RHEA:51276"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51280"
+            "id": "RHEA:51276"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "colneleate synthase",
       "equation": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate = colneleate + H2O",
       "ec": "4.2.1.121",
@@ -192,7 +134,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:28174"
       },
@@ -207,42 +149,7 @@
       }
     },
     {
-      "id": "r4",
-      "name": "(9Z,12Z)-octadecadienoate + O2 = (13R)-hydroperoxy-(9Z,11E)-octadecadienoate",
-      "equation": "(9Z,12Z)-octadecadienoate + O2 = (13R)-hydroperoxy-(9Z,11E)-octadecadienoate",
-      "substrates": [
-        {
-          "metabolite": "linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "13_r_hpode",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:51240"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:51240"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
+      "id": "r3",
       "name": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate = (11S)-hydroxy-(9S,10S)-epoxy-(12Z)-octade...",
       "equation": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate = (11S)-hydroxy-(9S,10S)-epoxy-(12Z)-octadecenoate",
       "substrates": [
@@ -258,7 +165,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:75591"
       },

@@ -16,27 +16,15 @@ pathway 15-methylhexadecasphing-4-to-cytidine-5-monophos "15-methylhexadecasphin
     l_serine_phosphoethanolamine_dizwitterion
   }
 
-  branch from phosphoethanolamine side left {
-    phosphoethanolamine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_2_dioleoyl_sn_glycerol
-  }
-
-  branch from cdp_ethanolamine side right {
-    cdp_ethanolamine
-    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cytidine_5_monophosphate +hplus
-    1_o_palmityl_2_arachidonoyl_sn_glycero_3_phospho
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_125 [4.2.3.125] +fpp
-    muurolene
+    <-> ec_6_3_2_56 [6.3.2.56] +2_l_alanin_3_ylcarbamoyl_methyl_3_2_aminoethylca +akg +atp +amp +hplus
+    staphyloferrin_b
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
   }
 }

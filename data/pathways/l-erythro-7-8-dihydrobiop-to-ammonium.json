@@ -1,0 +1,294 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-erythro-7-8-dihydrobiop-to-ammonium",
+  "name": "L-erythro-7,8-dihydrobiop… to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from L-erythro-7,8-dihydrobiopterin to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18953"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:43029"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_erythro_7_8_dihydrobiopterin",
+      "name": "L-erythro-7,8-dihydrobiopterin",
+      "short": "L-erythro-7,8-dihyd…",
+      "formula": "C9H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43029"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "l_sepiapterin",
+      "name": "L-sepiapterin",
+      "formula": "C9H11N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194527"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_xanthopterin_b2",
+      "name": "(S)-xanthopterin-B2",
+      "formula": "C9H10N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233231"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "1h_indole",
+      "name": "1H-indole",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16881"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_153",
+      "name": "sepiapterin reductase (L-erythro-7,8-dihydrobiopterin forming)",
+      "ec": [
+        "1.1.1.153"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_24",
+      "name": "sepiapterin deaminase",
+      "ec": [
+        "3.5.4.24"
+      ]
+    },
+    {
+      "id": "ec_4_1_99_1",
+      "name": "tryptophanase",
+      "ec": [
+        "4.1.99.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sepiapterin reductase (L-erythro-7,8-dihydrobiopterin forming)",
+      "equation": "L-erythro-7,8-dihydrobiopterin + NADP(+) = L-sepiapterin + NADPH + H(+)",
+      "ec": "1.1.1.153",
+      "substrates": [
+        {
+          "metabolite": "l_erythro_7_8_dihydrobiopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_sepiapterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18953"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18953"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sepiapterin deaminase",
+      "equation": "L-sepiapterin + H2O + H(+) = (S)-xanthopterin-B2 + NH4(+)",
+      "ec": "3.5.4.24",
+      "substrates": [
+        {
+          "metabolite": "l_sepiapterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_xanthopterin_b2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14025"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14025"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tryptophanase",
+      "equation": "L-tryptophan + H2O = indole + pyruvate + NH4(+)",
+      "ec": "4.1.99.1",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19553"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19553"
+          }
+        ]
+      }
+    }
+  ]
+}

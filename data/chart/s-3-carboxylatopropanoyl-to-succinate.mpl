@@ -4,16 +4,16 @@
 # edit the generator, not this file.
 
 pathway s-3-carboxylatopropanoyl-to-succinate "S-(3-carboxylatopropanoyl… to succinate" {
-  spacing 196
+  spacing 188
 
   spine at 0,0 {
     s_3_carboxylatopropanoyl_glutathionate
     <-> ec_3_1_2_13 [3.1.2.13] +h2o -succinate -hplus
     gsh
-    <-> . +menaquinone_7 +succinate -fumarate
-    menaquinol_7
-    <-> ec_1_3_98_1 [1.3.98.1] +dihydroorotate +fumarate -succinate
-    orotate
+    <-> ec_1_3_5_1 [1.3.5.1] +1_4_benzoquinones +succinate -hydroquinones
+    fumarate
+    <-> ec_1_3_4_1 [1.3.4.1] +coenzyme_b +coenzyme_m -succinate
+    com_s_s_cob
   }
 
   branch from gsh side left {
@@ -24,19 +24,25 @@ pathway s-3-carboxylatopropanoyl-to-succinate "S-(3-carboxylatopropanoyl… to s
 
   branch from succinate side right {
     succinate
-    <-> ec_2_8_3_2 [2.8.3.2] +oxalate +succinyl_coa
-    oxalyl_coa
+    <-> . +arginine +akg +o2 +co2
+    5_hydroxy_l_arginine
   }
 
-  branch from menaquinol_7 side left {
-    menaquinol_7
-    <-> ec_2_1_1_163 [2.1.1.163] +2_demethylmenaquinol_7 +sam +hplus
-    sah
-  }
-
-  branch from fumarate side right {
+  branch from fumarate side left {
     fumarate
-    <-> . +2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate +h2o +hplus
-    2e_2_hydroxypenta_2_4_dienoate
+    <-> . +n3_1_2_dicarboxyethyl_diaminobutanoate
+    2s_3r_diazaniumylbutanoate
+  }
+
+  branch from hydroquinones side right {
+    hydroquinones
+    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +1_4_benzoquinones
+    orotate
+  }
+
+  branch from com_s_s_cob side left {
+    com_s_s_cob
+    <-> ec_1_8_98_6 [1.8.98.6] +coenzyme_b +coenzyme_m +di_sulfido_diiron +co2 +di_sulfido_diiron
+    formate
   }
 }

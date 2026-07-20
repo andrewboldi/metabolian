@@ -1,0 +1,162 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1e-4s-5e-7r-germacra-1-to-geosmin",
+  "name": "(1E,4S,5E,7R)-germacra-1(… to (−)-geosmin",
+  "category": "other",
+  "summary": "A 2-step route from (1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol to (−)-geosmin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30459"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:46734"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+      "name": "(1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol",
+      "short": "(1E,4S,5E,7R)-germa…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46734"
+      }
+    },
+    {
+      "id": "1s_4as_1_4a_dimethyl_1_2_3_4_4a_5_6_8a_octahydr",
+      "name": "(1S,4aS)-1,4a-dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalene",
+      "short": "(1S,4aS)-1,4a-dimet…",
+      "formula": "C12H20",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61680"
+      }
+    },
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15347"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "geosmin",
+      "name": "(−)-geosmin",
+      "formula": "C12H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46702"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_99_16",
+      "name": "geosmin synthase",
+      "ec": [
+        "4.1.99.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "geosmin synthase",
+      "equation": "(1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol = (1S,4aS)-1,4a-dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalene + acetone",
+      "ec": "4.1.99.16",
+      "substrates": [
+        {
+          "metabolite": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1s_4as_1_4a_dimethyl_1_2_3_4_4a_5_6_8a_octahydr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30459"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30459"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "geosmin synthase",
+      "equation": "(1S,4aS)-1,4a-dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalene + H2O = (-)-geosmin",
+      "ec": "4.1.99.16",
+      "substrates": [
+        {
+          "metabolite": "1s_4as_1_4a_dimethyl_1_2_3_4_4a_5_6_8a_octahydr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geosmin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30455"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -24,8 +24,8 @@ pathway 2-deoxy-d-ribofuranose-to-1-hexadecyl-sn-glycero "2-deoxy-D-ribofuranose
 
   branch from 2_deoxy_d_ribofuranose_5_phosphate side left {
     2_deoxy_d_ribofuranose_5_phosphate
-    <-> . +purine_2_deoxyribonucleoside_5_phosphate +h2o
-    purine_nucleobase
+    <-> . +2_deoxyadenosine_5_monophosphate +h2o
+    adenine
   }
 
   branch from 1_palmitoylglycerone_3_phosphate side right {
@@ -36,8 +36,8 @@ pathway 2-deoxy-d-ribofuranose-to-1-hexadecyl-sn-glycero "2-deoxy-D-ribofuranose
 
   branch from 1_palmitylglycerone_3_phosphate side left {
     1_palmitylglycerone_3_phosphate
-    <-> . +1_stearoylglycerone_3_phosphate +hexadecan_1_ol +hplus
-    octadecanoate
+    <-> . +1_acylglycerone_3_phosphate +hexadecan_1_ol +hplus
+    fatty-acid
   }
 
   branch from palmitate side right {

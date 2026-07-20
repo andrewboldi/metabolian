@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "petroselinamide-to-1-oleoyl-2-6z-octadecen",
   "name": "petroselinamide to 1-oleoyl-2-(6Z)-octadecen…",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from petroselinamide to 1-oleoyl-2-(6Z)-octadecenoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -121,41 +121,49 @@
       }
     },
     {
-      "id": "2r_4s_2_4_diazaniumylpentanoate",
-      "name": "(2R,4S)-2,4-diazaniumylpentanoate",
-      "short": "(2R,4S)-2,4-diazani…",
-      "formula": "C5H13N2O2",
-      "charge": 1,
+      "id": "spermidine",
+      "name": "spermidine",
+      "formula": "C7H22N3",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:58697"
+        "chebi": "CHEBI:57834"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "r_2_amino_4_oxopentanoic_acid",
-      "name": "(R)-2-amino-4-oxopentanoic acid",
-      "short": "2-amino-4-oxopentan…",
-      "formula": "C5H9NO3",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134102"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "4_ammoniobutyl_3_oxopropyl_azanium",
+      "name": "(4-ammoniobutyl)(3-oxopropyl)azanium",
+      "short": "(4-ammoniobutyl)(3-…",
+      "formula": "C7H18N2O",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:183796"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
       }
     },
     {
@@ -168,37 +176,50 @@
       }
     },
     {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
+      "id": "2e_6z_octadecadi_2_6_enoyl_coa",
+      "name": "(2E,6Z)-octadecadi-2,6-enoyl-CoA",
+      "short": "(2E,6Z)-octadecadi-…",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:33384"
+        "chebi": "CHEBI:232772"
       }
     },
     {
-      "id": "l_seryl_amp",
-      "name": "L-seryl-AMP",
-      "formula": "C13H18N6O9P",
-      "charge": -1,
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:61231"
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "r_terpineol",
+      "name": "(R)-(+)-α-terpineol",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:300"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_4_1_12",
-      "name": "2,4-diaminopentanoate dehydrogenase",
+      "id": "ec_4_2_3_112",
+      "name": "(+)-alpha-terpineol synthase",
       "ec": [
-        "1.4.1.12"
-      ]
-    },
-    {
-      "id": "ec_1_4_1_26",
-      "name": "2,4-diaminopentanoate dehydrogenase (NAD(+))",
-      "ec": [
-        "1.4.1.26"
+        "4.2.3.112"
       ]
     }
   ],
@@ -330,16 +351,15 @@
     },
     {
       "id": "r4",
-      "name": "2,4-diaminopentanoate dehydrogenase",
-      "equation": "(2R,4S)-2,4-diaminopentanoate + NAD(+) + H2O = (2R)-2-amino-4-oxopentanoate + NH4(+) + NADH + H(+)",
-      "ec": "1.4.1.12",
+      "name": "spermidine + O2 + H2O = N-(4-aminobutyl)-3-aminopropanal + H2O2 + NH4(+)",
+      "equation": "spermidine + O2 + H2O = N-(4-aminobutyl)-3-aminopropanal + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "2r_4s_2_4_diazaniumylpentanoate",
+          "metabolite": "spermidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -349,15 +369,44 @@
       ],
       "products": [
         {
-          "metabolite": "r_2_amino_4_oxopentanoic_acid",
+          "metabolite": "4_ammoniobutyl_3_oxopropyl_azanium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(6Z)-octadecenoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,6Z)-octa...",
+      "equation": "(6Z)-octadecenoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,6Z)-octadecadienoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "substrates": [
+        {
+          "metabolite": "6z_octadecenoyl_coa",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "fad",
           "stoichiometry": 1
         },
         {
@@ -365,43 +414,49 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_4_1_12"
+          "metabolite": "2e_6z_octadecadi_2_6_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24196"
+        "rhea": "RHEA:83207"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24196"
+            "id": "RHEA:83207"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "L-serine + ATP = L-seryl-5'-AMP + diphosphate",
-      "equation": "L-serine + ATP = L-seryl-5'-AMP + diphosphate",
+      "id": "r6",
+      "name": "(+)-alpha-terpineol synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (R)-alpha-terpineol + diphosphate",
+      "ec": "4.2.3.112",
       "substrates": [
         {
-          "metabolite": "serine",
+          "metabolite": "gpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_seryl_amp",
+          "metabolite": "r_terpineol",
           "stoichiometry": 1
         },
         {
@@ -409,17 +464,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_112"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:28570"
+        "rhea": "RHEA:32555"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28570"
+            "id": "RHEA:32555"
           }
         ]
       }

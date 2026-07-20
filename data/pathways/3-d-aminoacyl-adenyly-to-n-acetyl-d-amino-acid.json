@@ -1,0 +1,318 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-d-aminoacyl-adenyly-to-n-acetyl-d-amino-acid",
+  "name": "3'-(D-α-aminoacyl)adenyly… to N-acetyl-D-amino acid…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 3'-(D-α-aminoacyl)adenylyl zwitterionic group to N-acetyl-D-amino acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13953"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:79333"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_d_aminoacyl_adenylyl_zwitterionic_group",
+      "name": "3'-(D-α-aminoacyl)adenylyl zwitterionic group",
+      "short": "3'-(D-α-aminoacyl)a…",
+      "formula": "C12H15N6O7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:79333"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "d_amino_acid",
+      "name": "D-α-amino acid",
+      "formula": "C2H4NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59871"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_d_amino_acid_anion",
+      "name": "N-acetyl-D-amino acid anion",
+      "short": "N-acetyl-D-amino…",
+      "formula": "C4H5NO3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58496"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_l_cysteinyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-cysteinyl)adenylyl zwitterionic group",
+      "short": "3'-(L-cysteinyl)ade…",
+      "formula": "C13H18N6O7PS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78517"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_96",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "ec": [
+        "3.1.1.96"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_36",
+      "name": "D-amino-acid N-acetyltransferase",
+      "ec": [
+        "2.3.1.36"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_16",
+      "name": "cysteine--tRNA ligase",
+      "ec": [
+        "6.1.1.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "equation": "a D-aminoacyl-tRNA + H2O = a tRNA + a D-alpha-amino acid + H(+)",
+      "ec": "3.1.1.96",
+      "substrates": [
+        {
+          "metabolite": "3_d_aminoacyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13953"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13953"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-amino-acid N-acetyltransferase",
+      "equation": "a D-alpha-amino acid + acetyl-CoA = an N-acetyl-D-amino acid + CoA + H(+)",
+      "ec": "2.3.1.36",
+      "substrates": [
+        {
+          "metabolite": "d_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cysteine--tRNA ligase",
+      "equation": "tRNA(Cys) + L-cysteine + ATP = L-cysteinyl-tRNA(Cys) + AMP + diphosphate",
+      "ec": "6.1.1.16",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_cysteinyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17773"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17773"
+          }
+        ]
+      }
+    }
+  ]
+}

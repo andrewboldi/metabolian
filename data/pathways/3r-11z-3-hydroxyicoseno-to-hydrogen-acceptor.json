@@ -121,6 +121,16 @@
       }
     },
     {
+      "id": "3s_11z_3_hydroxyicosenoyl_coa",
+      "name": "(3S,11Z)-3-hydroxyicosenoyl-CoA",
+      "short": "(3S,11Z)-3-hydroxyi…",
+      "formula": "C41H68N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:232717"
+      }
+    },
+    {
       "id": "gondoate",
       "name": "gondoate",
       "formula": "C20H37O2",
@@ -139,39 +149,21 @@
       }
     },
     {
-      "id": "tetrahydroalstonine",
-      "name": "tetrahydroalstonine",
-      "formula": "C21H25N2O3",
+      "id": "didehydrocampesine_a",
+      "name": "didehydrocampesine A",
+      "formula": "C16H20N3",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:142526"
+        "chebi": "CHEBI:233013"
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "alstonine",
-      "name": "alstonine",
-      "formula": "C21H21N2O3",
+      "id": "campesine_a",
+      "name": "campesine A",
+      "formula": "C16H24N3",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:142530"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
+        "chebi": "CHEBI:232509"
       }
     }
   ],
@@ -304,6 +296,41 @@
     },
     {
       "id": "r4",
+      "name": "(2E,11Z)-eicosadienoyl-CoA + H2O = (3S)-hydroxy-(11Z)-eicosenoyl-CoA",
+      "equation": "(2E,11Z)-eicosadienoyl-CoA + H2O = (3S)-hydroxy-(11Z)-eicosenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "2e_11z_icosadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_11z_3_hydroxyicosenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:83067"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "(11Z)-eicosenoyl-CoA + H2O = (11Z)-eicosenoate + CoA + H(+)",
       "equation": "(11Z)-eicosenoyl-CoA + H2O = (11Z)-eicosenoate + CoA + H(+)",
       "substrates": [
@@ -331,7 +358,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:83071"
       },
@@ -346,60 +373,40 @@
       }
     },
     {
-      "id": "r5",
-      "name": "tetrahydroalstonine + A + reduced [NADPH--hemoprotein reductase] + O2 = alstonine + AH2...",
-      "equation": "tetrahydroalstonine + A + reduced [NADPH--hemoprotein reductase] + O2 = alstonine + AH2 + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "id": "r6",
+      "name": "didehydrocampesine A + 2 AH2 = campesine A + 2 A",
+      "equation": "didehydrocampesine A + 2 AH2 = campesine A + 2 A",
       "substrates": [
         {
-          "metabolite": "tetrahydroalstonine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alstonine",
+          "metabolite": "didehydrocampesine_a",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "campesine_a",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:58128"
+        "rhea": "RHEA:83463"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58128"
+            "id": "RHEA:83463"
           }
         ]
       }

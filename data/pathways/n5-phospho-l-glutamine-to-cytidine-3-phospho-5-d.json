@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n5-phospho-l-glutamine-to-cytidine-3-phospho-5-d",
   "name": "N5-phospho-L-glutamine to cytidine 3'-phospho-5'-di…",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N5-phospho-L-glutamine(2−) to cytidine 3'-phospho-5'-diphosphoramidate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -123,60 +123,50 @@
       }
     },
     {
-      "id": "brevianamide_f",
-      "name": "brevianamide F",
-      "formula": "C16H17N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64530"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "deoxybrevianamide_e",
-      "name": "deoxybrevianamide E",
-      "formula": "C21H25N3O2",
+      "id": "dauca_4_7_diene",
+      "name": "dauca-4,7-diene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:72948"
+        "chebi": "CHEBI:155906"
       }
     },
     {
-      "id": "s_3_5_dihydroxyphenylglycine",
-      "name": "(S)-3,5-dihydroxyphenylglycine",
-      "short": "3,5-dihydroxyphenyl…",
-      "formula": "C8H9NO4",
+      "id": "n6_hydroxy_l_lysine",
+      "name": "N6-hydroxy-L-lysine",
+      "formula": "C6H14N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75204"
+        "chebi": "CHEBI:57820"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
+      "id": "1_l_glutamo_2_n6_l_lysinohydrazine",
+      "name": "1-L-glutamo-2-N6-L-lysinohydrazine",
+      "short": "1-L-glutamo-2-N6-L-…",
+      "formula": "C11H19N3O6",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:195186"
       }
     },
     {
-      "id": "3_5_dihydroxyphenylglyoxylate",
-      "name": "3,5-dihydroxyphenylglyoxylate",
-      "short": "3,5-dihydroxyphenyl…",
-      "formula": "C8H5O5",
-      "charge": -1,
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:75210"
+        "chebi": "CHEBI:456215"
       }
     }
   ],
@@ -200,20 +190,6 @@
       "name": "cytidine diphosphoramidate kinase",
       "ec": [
         "2.7.1.224"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_109",
-      "name": "brevianamide F prenyltransferase (deoxybrevianamide E-forming)",
-      "ec": [
-        "2.5.1.109"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_103",
-      "name": "(S)-3,5-dihydroxyphenylglycine transaminase",
-      "ec": [
-        "2.6.1.103"
       ]
     }
   ],
@@ -367,22 +343,17 @@
     },
     {
       "id": "r4",
-      "name": "brevianamide F prenyltransferase (deoxybrevianamide E-forming)",
-      "equation": "brevianamide F + dimethylallyl diphosphate = deoxybrevianamide E + diphosphate",
-      "ec": "2.5.1.109",
+      "name": "(2E,6E)-farnesyl diphosphate = dauca-4,7-diene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = dauca-4,7-diene + diphosphate",
       "substrates": [
         {
-          "metabolite": "brevianamide_f",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "deoxybrevianamide_e",
+          "metabolite": "dauca_4_7_diene",
           "stoichiometry": 1
         },
         {
@@ -390,67 +361,68 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_109"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:35943"
+        "rhea": "RHEA:65072"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35943"
+            "id": "RHEA:65072"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(S)-3,5-dihydroxyphenylglycine transaminase",
-      "equation": "(S)-3,5-dihydroxyphenylglycine + 2-oxoglutarate = 2-(3,5-dihydroxyphenyl)-2-oxoacetate + L-glutamate",
-      "ec": "2.6.1.103",
+      "name": "N(6)-hydroxy-L-lysine + L-glutamate + ATP = 1-L-glutamo-2-N(6-)L-lysinohydrazine + AMP ...",
+      "equation": "N(6)-hydroxy-L-lysine + L-glutamate + ATP = 1-L-glutamo-2-N(6-)L-lysinohydrazine + AMP + diphosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "s_3_5_dihydroxyphenylglycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_5_dihydroxyphenylglyoxylate",
+          "metabolite": "n6_hydroxy_l_lysine",
           "stoichiometry": 1
         },
         {
           "metabolite": "glutamate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_6_1_103"
+          "metabolite": "1_l_glutamo_2_n6_l_lysinohydrazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:38347"
+        "rhea": "RHEA:76387"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38347"
+            "id": "RHEA:76387"
           }
         ]
       }

@@ -157,49 +157,23 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "3_acetylchlorophyllide_a",
-      "name": "3-acetylchlorophyllide a",
-      "short": "3-acetylchlorophyll…",
-      "formula": "C35H32MgN4O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:90794"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "carotene",
-      "name": "β-carotene",
-      "formula": "C40H56",
+      "id": "linoleoyl_containing_glycerolipid",
+      "name": "linoleoyl-containing glycerolipid",
+      "short": "linoleoyl-containin…",
+      "formula": "C18H31OR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17579"
+        "chebi": "CHEBI:88351"
       }
     },
     {
-      "id": "zeaxanthin",
-      "name": "zeaxanthin",
-      "formula": "C40H56O2",
+      "id": "linolenoyl_containing_glycerolipid",
+      "name": "α-linolenoyl-containing glycerolipid",
+      "short": "α-linolenoyl-contai…",
+      "formula": "C18H29OR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:27547"
+        "chebi": "CHEBI:90078"
       }
     },
     {
@@ -229,17 +203,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_396",
-      "name": "bacteriochlorophyllide-a dehydrogenase",
+      "id": "ec_1_14_19_35",
+      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
       "ec": [
-        "1.1.1.396"
-      ]
-    },
-    {
-      "id": "ec_1_14_15_24",
-      "name": "beta-carotene 3-hydroxylase",
-      "ec": [
-        "1.14.15.24"
+        "1.14.19.35"
       ]
     },
     {
@@ -461,84 +428,35 @@
     },
     {
       "id": "r5",
-      "name": "bacteriochlorophyllide-a dehydrogenase",
-      "equation": "3-devinyl-3-(1-hydroxyethyl)chlorophyllide a + NAD(+) = 3-acetyl-3-devinylchlorophyllide a + NADH + H(+)",
-      "ec": "1.1.1.396",
+      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (9Z,12Z,15Z)-octadecatrienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.35",
       "substrates": [
         {
-          "metabolite": "3_1_hydroxyethyl_chlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_acetylchlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_396"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:48764"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48764"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "beta-carotene 3-hydroxylase",
-      "equation": "all-trans-beta-carotene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = all-trans-zeaxanthin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.15.24",
-      "substrates": [
-        {
-          "metabolite": "carotene",
+          "metabolite": "linoleoyl_containing_glycerolipid",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "o2",
           "stoichiometry": 2
         },
         {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "zeaxanthin",
+          "metabolite": "linolenoyl_containing_glycerolipid",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 4
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
@@ -547,26 +465,26 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_15_24"
+          "enzyme": "ec_1_14_19_35"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:30331"
+        "rhea": "RHEA:46408"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30331"
+            "id": "RHEA:46408"
           }
         ]
       }
     },
     {
-      "id": "r7",
+      "id": "r6",
       "name": "3,8-divinyl protochlorophyllide a 8-vinyl-reductase (ferredoxin)",
       "equation": "chlorophyllide a + 2 oxidized [2Fe-2S]-[ferredoxin] = 3,8-divinyl chlorophyllide a + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
       "ec": "1.3.7.13",
@@ -600,7 +518,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:48900"
       },

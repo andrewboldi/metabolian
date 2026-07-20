@@ -201,31 +201,21 @@
       }
     },
     {
-      "id": "2_carboxylatomethoxy_succinate",
-      "name": "2-(carboxylatomethoxy)succinate",
-      "short": "2-(carboxylatometho…",
-      "formula": "C6H5O7",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57992"
-      }
-    },
-    {
-      "id": "glycolate",
-      "name": "glycolate",
-      "formula": "C2H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29805"
-      }
-    },
-    {
       "id": "aspartate",
       "name": "L-Aspartate",
       "formula": "C4H6NO4",
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
       }
     },
     {
@@ -255,6 +245,24 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:57642"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
       }
     }
   ],
@@ -309,10 +317,17 @@
       ]
     },
     {
-      "id": "ec_4_2_99_12",
-      "name": "carboxymethyloxysuccinate lyase",
+      "id": "ec_4_3_1_1",
+      "name": "aspartate ammonia-lyase",
       "ec": [
-        "4.2.99.12"
+        "4.3.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_7_7_1",
+      "name": "ferredoxin--nitrite reductase",
+      "ec": [
+        "1.7.7.1"
       ]
     }
   ],
@@ -715,41 +730,41 @@
     },
     {
       "id": "r9",
-      "name": "carboxymethyloxysuccinate lyase",
-      "equation": "carboxymethoxysuccinate = glycolate + fumarate",
-      "ec": "4.2.99.12",
+      "name": "aspartate ammonia-lyase",
+      "equation": "L-aspartate = fumarate + NH4(+)",
+      "ec": "4.3.1.1",
       "substrates": [
         {
-          "metabolite": "2_carboxylatomethoxy_succinate",
+          "metabolite": "aspartate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glycolate",
+          "metabolite": "fumarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fumarate",
+          "metabolite": "nh3",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_99_12"
+          "enzyme": "ec_4_3_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:12336"
+        "rhea": "RHEA:16601"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12336"
+            "id": "RHEA:16601"
           }
         ]
       }
@@ -828,6 +843,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:29223"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "ferredoxin--nitrite reductase",
+      "equation": "6 oxidized [2Fe-2S]-[ferredoxin] + NH4(+) + 2 H2O = nitrite + 6 reduced [2Fe-2S]-[ferredoxin] + 8 H(+)",
+      "ec": "1.7.7.1",
+      "substrates": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 8
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_7_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:18041"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18041"
           }
         ]
       }

@@ -35,10 +35,4 @@ pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-h
     <-> . +n_acetylsphingosine +2_oleoyl_sn_glycero_3_phosphoserine
     1_o_stearoyl_n_acetylsphingosine
   }
-
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> . +1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3 +serine
-    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphose
-  }
 }

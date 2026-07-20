@@ -26,27 +26,39 @@ pathway udp-4-amino-4-deoxy-l-a-to-cdp "UDP-4-amino-4-deoxy-β-L-a… to CDP" {
     d_abequose_1_3_d_mannopyranosyl_1_4_l_rhamnopyr
   }
 
-  branch from 4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc side left {
-    4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc
-    <-> ec_2_4_2_43 [2.4.2.43] +kdo_2_lipid_a_6_e_coli +ditrans_polycis_undecaprenyl_phosphate
-    l_ara4n_2_kdo_2_lipid_a
-  }
-
-  branch from formate side right {
+  branch from formate side left {
     formate
-    <-> . +methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia +h2o
-    16s_deshydroxymethyl_stemmadenine
+    <-> . +32_ketoeburicol +fmnh2 +o2 +fmn +h2o +hplus
+    4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie
   }
 
-  branch from ditrans_polycis_undecaprenyl_phosphate side left {
+  branch from ditrans_polycis_undecaprenyl_phosphate side right {
     ditrans_polycis_undecaprenyl_phosphate
-    <-> ec_2_7_8_40 [2.7.8.40] +udp_n_acetyl_d_galactosamine +ump
-    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
+    <-> ec_2_7_4_29 [2.7.4.29] +ditrans_polycis_undecaprenyl_diphosphate +kdo_2_lipid_a_6_e_coli
+    kdo_2_lipid_a_1_diphosphate_7_e_coli
+  }
+
+  branch from d_galactosyl_ditrans_octacis_undecaprenyl_dipho side left {
+    d_galactosyl_ditrans_octacis_undecaprenyl_dipho
+    <-> ec_2_4_1_379 [2.4.1.379] +gdp_d_mannose +gdp +hplus
+    d_mannopyranosyl_1_3_d_galactopyranosyl_diphosp
   }
 
   branch from ump side right {
     ump
-    <-> . +h2o +pi +hplus
-    utp
+    <-> . +uridylyl_l_tyrosine_1 +h2o +hplus
+    l_tyrosine
+  }
+
+  branch from l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos side left {
+    l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos
+    <-> ec_2_4_1_383 [2.4.1.383] +gdp_d_mannose +gdp +hplus
+    d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> . +dtdp_6_deoxy_l_mannose +l_argininium +hplus
+    n_6_deoxy_l_mannosyl_l_arginyl_2
   }
 }

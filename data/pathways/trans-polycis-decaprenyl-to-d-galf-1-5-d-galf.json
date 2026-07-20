@@ -136,12 +136,12 @@
       }
     },
     {
-      "id": "dttp",
-      "name": "dTTP",
-      "formula": "C10H13N2O14P3",
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37568"
+        "chebi": "CHEBI:61404"
       }
     },
     {
@@ -151,6 +151,15 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:63528"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57667"
       }
     }
   ],
@@ -379,11 +388,11 @@
     },
     {
       "id": "r5",
-      "name": "dTTP + dTMP = 2 dTDP",
-      "equation": "dTTP + dTMP = 2 dTDP",
+      "name": "dATP + dTMP = dADP + dTDP",
+      "equation": "dATP + dTMP = dADP + dTDP",
       "substrates": [
         {
-          "metabolite": "dttp",
+          "metabolite": "datp",
           "stoichiometry": 1
         },
         {
@@ -393,21 +402,25 @@
       ],
       "products": [
         {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "dtdp",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:62156"
+        "rhea": "RHEA:82683"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62156"
+            "id": "RHEA:82683"
           }
         ]
       }

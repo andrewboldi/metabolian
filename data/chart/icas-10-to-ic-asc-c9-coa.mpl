@@ -8,9 +8,7 @@ pathway icas-10-to-ic-asc-c9-coa "icas#10 to IC-asc-ΔC9-CoA" {
 
   spine at 0,0 {
     icas_10
-    <-> . +atp +hplus -ppi
-    ic_asc_c9_amp
-    <-> . +coa -amp -hplus
+    <-> . +atp +coa -amp -ppi
     ic_asc_c9_coa
     <-> . +o2 -h2o2
     ic_asc_c9_coa
@@ -18,7 +16,7 @@ pathway icas-10-to-ic-asc-c9-coa "icas#10 to IC-asc-ΔC9-CoA" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_65 [4.2.3.65] +fpp
-    zingiberene
+    <-> ec_4_2_3_106 [4.2.3.106] +gpp
+    e_ocimene
   }
 }

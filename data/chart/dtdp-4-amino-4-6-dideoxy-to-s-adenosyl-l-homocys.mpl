@@ -18,13 +18,13 @@ pathway dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys "dTDP-4-amino-4,6-dideo
 
   branch from methylene_thf side left {
     methylene_thf
-    <-> ec_1_5_1_20 [1.5.1.20] +nad +nadh +hplus
-    6s_5_methyltetrahydrofolate
+    <-> ec_1_5_1_15 [1.5.1.15] +nad +nadh
+    methenyl_thf
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_34 [2.1.1.34] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> . +gibberellin_a1 +sam
+    gibberellin_a1_methyl_ester
   }
 }

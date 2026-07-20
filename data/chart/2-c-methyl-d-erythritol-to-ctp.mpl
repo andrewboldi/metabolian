@@ -28,19 +28,25 @@ pathway 2-c-methyl-d-erythritol-to-ctp "2-C-methyl-D-erythritol… to CTP" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_6_1_6 [4.6.1.6] +ctp
-    3_5_cyclic_cmp
+    <-> ec_4_2_3_26 [4.2.3.26] +gpp +h2o
+    r_linalool
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +n_acetyllactosamine +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_6_d_galactosyl_1_4_n_acety
+    <-> ec_2_4_3_1 [2.4.3.1] +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco
   }
 
   branch from cdp side right {
     cdp
     <-> ec_2_7_1_161 [2.7.1.161] +riboflavin +ctp +hplus
     fmn
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> . +nh3 +atp +adp +pi +hplus
+    utp
   }
 }

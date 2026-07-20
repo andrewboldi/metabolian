@@ -18,7 +18,7 @@ pathway l-idarate-to-4-o-feruloyl-d-quinate "L-idarate to 4-O-feruloyl-D-quinate
 
   branch from quinate side left {
     quinate
-    <-> ec_1_1_1_24 [1.1.1.24] +nad +nadh +hplus
-    3_dehydroquinate
+    <-> ec_2_3_1_324 [2.3.1.324] +chlorogenate
+    3_5_di_o_caffeoyl_quinate
   }
 }

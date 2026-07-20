@@ -20,13 +20,13 @@ pathway iridodial-lactol-to-s-adenosyl-l-homocysteine "(+)-iridodial lactol to S
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_s_18_r_eetetr
+    <-> . +estrone +fmnh2 +o2 +h2o +hplus
+    6_hydroxyestrone
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_100 [2.1.1.100] +s_2e_6e_farnesyl_l_cysteinate +sam
-    s_2e_6e_farnesyl_l_cysteine_methyl_ester
+    <-> ec_2_1_1_95 [2.1.1.95] +tocotrienol +sam +hplus
+    tocotrienol
   }
 }

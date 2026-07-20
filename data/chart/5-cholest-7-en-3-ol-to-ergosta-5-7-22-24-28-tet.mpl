@@ -40,13 +40,19 @@ pathway 5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet "5α-cholest-7-en-3β-ol
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_142 [2.1.1.142] +cycloartenol +sam +hplus
-    cyclolaudenol
+    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from episterol side right {
     episterol
     <-> . +acyl_coa +coa
     episterol_ester
+  }
+
+  branch from ergosterol side left {
+    ergosterol
+    <-> ec_2_3_2_37 [2.3.2.37] +3_l_aspartate_adenylyl_1_group +amp_3_end_1
+    1_ergostan_3_yl_l_aspartate
   }
 }

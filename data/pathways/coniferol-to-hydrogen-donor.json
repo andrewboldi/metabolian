@@ -1,0 +1,251 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "coniferol-to-hydrogen-donor",
+  "name": "coniferol to hydrogen donor",
+  "category": "other",
+  "summary": "A 2-step route from coniferol to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23944"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17745"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "coniferol",
+      "name": "coniferol",
+      "formula": "C10H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17745"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "coniferin",
+      "name": "coniferin",
+      "formula": "C16H22O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16220"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "coniferaldehyde_d_glucoside",
+      "name": "coniferaldehyde β-D-glucoside",
+      "short": "coniferaldehyde…",
+      "formula": "C16H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136949"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "2r_9s_annullatin_h",
+      "name": "(2R,9S)-annullatin H",
+      "formula": "C17H26O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195225"
+      }
+    },
+    {
+      "id": "2r_annullatin_f",
+      "name": "(2R)-annullatin F",
+      "formula": "C17H24O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195226"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_111",
+      "name": "coniferyl-alcohol glucosyltransferase",
+      "ec": [
+        "2.4.1.111"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "coniferyl-alcohol glucosyltransferase",
+      "equation": "(E)-coniferol + UDP-alpha-D-glucose = 4-O-(beta-D-glucosyl)-(E)-coniferol + UDP + H(+)",
+      "ec": "2.4.1.111",
+      "substrates": [
+        {
+          "metabolite": "coniferol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coniferin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_111"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-O-(beta-D-glucosyl)-(E)-coniferol + A = 4-O-(beta-D-glucosyl)-4-(E)-coniferyl aldehyd...",
+      "equation": "4-O-(beta-D-glucosyl)-(E)-coniferol + A = 4-O-(beta-D-glucosyl)-4-(E)-coniferyl aldehyde + AH2",
+      "substrates": [
+        {
+          "metabolite": "coniferin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coniferaldehyde_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:76463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2R,9S)-annullatin H + A = (2R)-annullatin F + AH2",
+      "equation": "(2R,9S)-annullatin H + A = (2R)-annullatin F + AH2",
+      "substrates": [
+        {
+          "metabolite": "2r_9s_annullatin_h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_annullatin_f",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76427"
+          }
+        ]
+      }
+    }
+  ]
+}

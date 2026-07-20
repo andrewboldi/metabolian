@@ -1,0 +1,181 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cysteamine-s-phosphate-to-s-acetylcysteaminium",
+  "name": "cysteamine S-phosphate to S-acetylcysteaminium",
+  "category": "other",
+  "summary": "A 2-step route from cysteamine S-phosphate(1−) to S-acetylcysteaminium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37251"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:74631"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cysteamine_s_phosphate",
+      "name": "cysteamine S-phosphate",
+      "short": "cysteamine S-P",
+      "formula": "C2H7NO3PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74631"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cysteaminium",
+      "name": "cysteaminium",
+      "formula": "C2H8NS",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58029"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "s_acetylcysteaminium",
+      "name": "S-acetylcysteaminium",
+      "formula": "C4H10NOS",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58295"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_11",
+      "name": "thioethanolamine S-acetyltransferase",
+      "ec": [
+        "2.3.1.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cysteamine S-phosphate + H2O = cysteamine + phosphate",
+      "equation": "cysteamine S-phosphate + H2O = cysteamine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "cysteamine_s_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cysteaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37251"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thioethanolamine S-acetyltransferase",
+      "equation": "cysteamine + acetyl-CoA = S-acetylcysteamine + CoA",
+      "ec": "2.3.1.11",
+      "substrates": [
+        {
+          "metabolite": "cysteaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acetylcysteaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23280"
+          }
+        ]
+      }
+    }
+  ]
+}

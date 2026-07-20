@@ -22,25 +22,19 @@ pathway d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal "α-D-GalNAc-(1→3)-[α-L-Fuc
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_serine +h2o
-    l_serine
+    <-> . +o2 +h2o2
+    n_acetyl_d_galactosamino_1_5_lactone
   }
 
-  branch from l_fucopyranose side right {
-    l_fucopyranose
-    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac +h2o
-    d_galactosyl_1_3_n_acetyl_d_galactosaminide
-  }
-
-  branch from d_galnac_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac side left {
+  branch from d_galnac_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac side right {
     d_galnac_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac
     <-> . +l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco +udp +hplus
     udp_n_acetyl_d_galactosamine
   }
 
-  branch from d_galactopyranose side right {
-    d_galactopyranose
-    <-> . +d_galp_1_6_d_manp_1_4_d_manp_1_4_d_manp +h2o
-    d_manp_1_4_d_manp_1_4_d_manp
+  branch from l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco side left {
+    l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
+    <-> . +udp_d_galactose +udp +hplus
+    d_gal_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac
   }
 }

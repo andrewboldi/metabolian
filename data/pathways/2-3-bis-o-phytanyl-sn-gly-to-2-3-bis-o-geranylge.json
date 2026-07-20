@@ -171,22 +171,22 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58635"
       }
     },
     {
-      "id": "1e_4e_germacrene_b",
-      "name": "(1E,4E)-germacrene B",
-      "formula": "C15H24",
+      "id": "isopimara_7_15_diene",
+      "name": "isopimara-7,15-diene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:5337"
+        "chebi": "CHEBI:52280"
       }
     },
     {
@@ -197,6 +197,36 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:74853"
+      }
+    },
+    {
+      "id": "n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace",
+      "name": "α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→3)-N-acetyl-β-D-galactosaminyl-(1→4)-[α-N-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3)]-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide",
+      "short": "α-N-acetylneuramino…",
+      "formula": "C63H98N5O47R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:82940"
+      }
+    },
+    {
+      "id": "cmp_n_acetyl_neuraminate",
+      "name": "CMP-N-acetyl-β-neuraminate",
+      "short": "CMP-N-acetyl-β-neur…",
+      "formula": "C20H29N4O16P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57812"
+      }
+    },
+    {
+      "id": "neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac",
+      "name": "α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)-β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer",
+      "short": "α-Neu5Ac-(2→8)-α-Ne…",
+      "formula": "C74H114N6O55R2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:90862"
       }
     }
   ],
@@ -223,10 +253,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_71",
-      "name": "(E,E)-germacrene B synthase",
+      "id": "ec_4_2_3_44",
+      "name": "isopimara-7,15-diene synthase",
       "ec": [
-        "4.2.3.71"
+        "4.2.3.44"
       ]
     }
   ],
@@ -497,18 +527,18 @@
     },
     {
       "id": "r7",
-      "name": "(E,E)-germacrene B synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (1E,4E)-germacrene B + diphosphate",
-      "ec": "4.2.3.71",
+      "name": "isopimara-7,15-diene synthase",
+      "equation": "(+)-copalyl diphosphate = isopimara-7,15-diene + diphosphate",
+      "ec": "4.2.3.44",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1e_4e_germacrene_b",
+          "metabolite": "isopimara_7_15_diene",
           "stoichiometry": 1
         },
         {
@@ -518,20 +548,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_71"
+          "enzyme": "ec_4_2_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:25444"
+        "rhea": "RHEA:26128"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25444"
+            "id": "RHEA:26128"
           }
         ]
       }
@@ -571,6 +601,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:84215"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "a ganglioside GT1b + CMP-N-acetyl-beta-neuraminate = a ganglioside GQ1b + CMP + H(+)",
+      "equation": "a ganglioside GT1b + CMP-N-acetyl-beta-neuraminate = a ganglioside GQ1b + CMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:48932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48932"
           }
         ]
       }

@@ -20,13 +20,13 @@ pathway di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox "di-μ-sulfido-diiron to [(R
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +25r_cholest_5_ene_3_26_diol +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_hydroxycholest_5_en_26_al
+    <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
+    25r_26_hydroxycholestanol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_17_estradiol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    12_r_hete
   }
 }

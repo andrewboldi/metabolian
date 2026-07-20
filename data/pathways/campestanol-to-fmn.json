@@ -100,6 +100,16 @@
       }
     },
     {
+      "id": "5_22s_24r_22_hydroxyergostan_3_one",
+      "name": "(5α,22S,24R)-22-hydroxyergostan-3-one",
+      "short": "(5α,22S,24R)-22-hyd…",
+      "formula": "C28H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59411"
+      }
+    },
+    {
       "id": "cholesterol",
       "name": "Cholesterol",
       "formula": "C27H46O",
@@ -109,13 +119,13 @@
       }
     },
     {
-      "id": "4_hydroxycholesterol",
-      "name": "4β-hydroxycholesterol",
-      "short": "4β-hydroxycholester…",
+      "id": "hydroxycholesterol_27",
+      "name": "27-Hydroxycholesterol",
+      "short": "27-Hydroxycholester…",
       "formula": "C27H46O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:85778"
+        "chebi": "CHEBI:17703"
       }
     },
     {
@@ -294,8 +304,59 @@
     },
     {
       "id": "r4",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 4beta-hydroxycholesterol + ...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 4beta-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "6-deoxycathasterone + reduced [NADPH--hemoprotein reductase] + O2 = (22S,24R)-22-hydrox...",
+      "equation": "6-deoxycathasterone + reduced [NADPH--hemoprotein reductase] + O2 = (22S,24R)-22-hydroxy-5alpha-ergostan-3-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_deoxycathasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_22s_24r_22_hydroxyergostan_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69975"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69975"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxi...",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "cholesterol",
@@ -312,7 +373,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_hydroxycholesterol",
+          "metabolite": "hydroxycholesterol_27",
           "stoichiometry": 1
         },
         {
@@ -329,22 +390,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46128"
+        "rhea": "RHEA:50264"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46128"
+            "id": "RHEA:50264"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "3beta,22alpha-dihydroxysteroid 3-dehydrogenase",
       "equation": "6-deoxoteasterone + reduced [NADPH--hemoprotein reductase] + O2 = 3-dehydro-6-deoxoteasterone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
       "ec": "1.14.19.79",
@@ -386,7 +447,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:69983"
       },

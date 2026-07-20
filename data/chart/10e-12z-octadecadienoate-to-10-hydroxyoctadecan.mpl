@@ -31,10 +31,4 @@ pathway 10e-12z-octadecadienoate-to-10-hydroxyoctadecan "(10E,12Z)-octadecadieno
     <-> . +nadh +hplus +nad
     10_home_11e
   }
-
-  branch from 10_hydroxyoctadecanoate side left {
-    10_hydroxyoctadecanoate
-    <-> . +h2o
-    10e_octadecenoate
-  }
 }

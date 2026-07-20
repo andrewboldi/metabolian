@@ -4,35 +4,31 @@
 # edit the generator, not this file.
 
 pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to diphosphate" {
-  spacing 152
+  spacing 236
 
   spine at 0,0 {
     5_end_nad_phospho_ribonucleoside
-    <-> . +h2o -nad -hplus
-    5_end_ribonucleotide_2
-    <-> . +atp +hplus -ppi
-    adenosine_5_diphospho_5_ribonucleotide_2
-    <-> . +gtp -amp -hplus
-    5_end_gtp_ribonucleotide_5
-    <-> . +h2o -ppi -hplus
-    5_end_gmp_ribonucleotide_3
-  }
-
-  branch from 5_end_ribonucleotide_2 side left {
-    5_end_ribonucleotide_2
-    <-> . +sam +sah
-    5_end_bisphopshomethylribonucleoside
-  }
-
-  branch from ppi side right {
+    <-> . +h2o -nmn -hplus
+    5_end_phospho_adenosine_phospho_ribonucleoside_3
+    <-> ec_2_7_7_1 [2.7.7.1] +nmn +atp +hplus -nad
     ppi
-    <-> ec_4_2_3_60 [4.2.3.60] +fpp
-    germacrene_c
   }
 
-  branch from 5_end_gtp_ribonucleotide_5 side left {
-    5_end_gtp_ribonucleotide_5
-    <-> . +sam +sah
-    5_methyltriphosphate_guanosine_ribonucleotide_4
+  branch from 5_end_phospho_adenosine_phospho_ribonucleoside_3 side left {
+    5_end_phospho_adenosine_phospho_ribonucleoside_3
+    <-> . +5_fad_phosphoribonucleoside_2 +h2o +hplus
+    fmn
+  }
+
+  branch from nmn side right {
+    nmn
+    <-> . +h2o +pi
+    n_ribosylnicotinamide
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_1_7_10 [3.1.7.10] +geranylgeranyl_diphosphate +h2o
+    13e_labda_7_13_dien_15_ol
   }
 }

@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2s-heptan-2-aminium-to-2s-2-hydroxy-2-methylhe",
+  "name": "(2S)-heptan-2-aminium to (2S)-2-hydroxy-2-methylhe…",
+  "category": "redox-detox",
+  "summary": "A 2-step route from (2S)-heptan-2-aminium to (2S)-2-hydroxy-2-methylheptanenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77035"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195504"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2s_heptan_2_aminium",
+      "name": "(2S)-heptan-2-aminium",
+      "short": "heptan-2-aminium",
+      "formula": "C7H18N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195504"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "heptan_2_one",
+      "name": "heptan-2-one",
+      "formula": "C7H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:5672"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    },
+    {
+      "id": "2s_2_hydroxy_2_methylheptanenitrile",
+      "name": "(2S)-2-hydroxy-2-methylheptanenitrile",
+      "short": "2-hydroxy-2-methylh…",
+      "formula": "C8H15NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197346"
+      }
+    },
+    {
+      "id": "n_acetylputrescinium",
+      "name": "N-acetylputrescinium",
+      "formula": "C6H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58263"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_acetamidobutanal",
+      "name": "4-acetamidobutanal",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:7386"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2S)-heptan-2-amine + NAD(+) + H2O = heptan-2-one + NH4(+) + NADH + H(+)",
+      "equation": "(2S)-heptan-2-amine + NAD(+) + H2O = heptan-2-one + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2s_heptan_2_aminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "heptan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "heptan-2-one + hydrogen cyanide = (2S)-2-hydroxy-2-methylheptanenitrile",
+      "equation": "heptan-2-one + hydrogen cyanide = (2S)-2-hydroxy-2-methylheptanenitrile",
+      "substrates": [
+        {
+          "metabolite": "heptan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxy_2_methylheptanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77483"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77483"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
+      "equation": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_acetamidobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70283"
+          }
+        ]
+      }
+    }
+  ]
+}

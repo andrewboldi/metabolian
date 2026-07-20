@@ -4,27 +4,25 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-fmn "geranyl diphosphate to FMN" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     gpp
-    <-> . +h2o -ppi
-    linalool
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    2e_2_6_dimethylocta_2_7_diene_1_6_diol
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    6e_8_oxolinalool
+    <-> ec_4_2_3_108 [4.2.3.108] +h2o -ppi
+    1_8_cineole
+    <-> ec_1_14_14_56 [1.14.14.56] +fmnh2 +o2 -fmn -h2o -hplus
+    2_exo_hydroxy_1_8_cineole
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_124 [2.5.1.124] +2_o_3_dimethylflaviolin_7_olate +gpp
-    6_linalyl_2_o_3_dimethylflaviolin_7_olate
+    <-> ec_4_2_3_199 [4.2.3.199] +fpp
+    5_epi_eremophilene
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    13_s_hete
+    <-> ec_1_14_14_65 [1.14.14.65] +ferruginol +fmnh2 +o2 +h2o +hplus
+    sugiol
   }
 }

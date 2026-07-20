@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-threitol-to-dihydroxyacetone",
   "name": "L-threitol to dihydroxyacetone",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from L-threitol to dihydroxyacetone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,32 +138,13 @@
       }
     },
     {
-      "id": "3_oxoisoapionate_4_phosphate",
-      "name": "3-oxoisoapionate 4-phosphate",
-      "short": "3-oxoisoapionate 4-P",
-      "formula": "C5H6O9P",
-      "charge": -3,
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:141357"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o",
-      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-N6-methyl-2'-O-methyladenosine(2−)",
-      "short": "5'-(N7-methyl…",
-      "formula": "C23H30N10O17P3",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85959"
+        "chebi": "CHEBI:61976"
       }
     },
     {
@@ -185,13 +166,12 @@
       }
     },
     {
-      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyladen",
-      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-2'-O-methyladenosine(2−)",
-      "short": "5'-(N7-methyl…",
-      "formula": "C22H28N10O17P3",
-      "charge": -2,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:85958"
+        "chebi": "CHEBI:29969"
       }
     },
     {
@@ -204,21 +184,12 @@
       }
     },
     {
-      "id": "serinol",
-      "name": "serinol",
-      "formula": "C3H10NO2",
-      "charge": 1,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:194490"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -238,10 +209,10 @@
       ]
     },
     {
-      "id": "ec_4_1_1_121",
-      "name": "3-oxoisoapionate-4-phosphate decarboxylase",
+      "id": "ec_1_14_11_65",
+      "name": "[histone H3]-dimethyl-L-lysine(9) demethylase",
       "ec": [
-        "4.1.1.121"
+        "1.14.11.65"
       ]
     }
   ],
@@ -420,147 +391,57 @@
     },
     {
       "id": "r5",
-      "name": "3-oxoisoapionate-4-phosphate decarboxylase",
-      "equation": "3-oxoisoapionate 4-phosphate + H(+) = L-erythrulose 1-phosphate + CO2",
-      "ec": "4.1.1.121",
+      "name": "[histone H3]-dimethyl-L-lysine(9) demethylase",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(9)-[histone H3] + 2 2-oxoglutarate + 2 O2 = L-lysyl(9)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
+      "ec": "1.14.11.65",
       "substrates": [
         {
-          "metabolite": "3_oxoisoapionate_4_phosphate",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "akg",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "l_erythrulose_1_phosphate",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 2
+        },
+        {
           "metabolite": "co2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_1_121"
+          "enzyme": "ec_1_14_11_65"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:57072"
+        "rhea": "RHEA:60188"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57072"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(N(6),2'-O-dimethyladenosine) in mRNA + 2...",
-      "equation": "a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(N(6),2'-O-dimethyladenosine) in mRNA + 2-oxoglutarate + O2 = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenosine) in mRNA + formaldehyde + succinate + CO2",
-      "substrates": [
-        {
-          "metabolite": "5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyladen",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "formaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:57896"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57896"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "serinol + NAD(+) + H2O = dihydroxyacetone + NH4(+) + NADH + H(+)",
-      "equation": "serinol + NAD(+) + H2O = dihydroxyacetone + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "serinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dihydroxyacetone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:75915"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75915"
+            "id": "RHEA:60188"
           }
         ]
       }

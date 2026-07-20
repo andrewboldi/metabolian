@@ -149,32 +149,23 @@
       }
     },
     {
-      "id": "r_2_benzylsuccinate",
-      "name": "(R)-2-benzylsuccinate",
-      "short": "2-benzylsuccinate",
-      "formula": "C11H10O4",
-      "charge": -2,
+      "id": "deacetoxycephalosporin_c",
+      "name": "deacetoxycephalosporin C",
+      "short": "deacetoxycephalospo…",
+      "formula": "C14H18N3O6S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58692"
+        "chebi": "CHEBI:58415"
       }
     },
     {
-      "id": "succinyl_coa",
-      "name": "Succinyl-CoA",
-      "formula": "C25H35N7O19P3S",
-      "charge": -5,
+      "id": "deacetylcephalosporin_c",
+      "name": "deacetylcephalosporin C",
+      "short": "deacetylcephalospor…",
+      "formula": "C14H18N3O7S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57292"
-      }
-    },
-    {
-      "id": "r_2_benzylsuccinyl_coa",
-      "name": "(R)-2-benzylsuccinyl-CoA",
-      "short": "2-benzylsuccinyl-CoA",
-      "formula": "C32H41N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57253"
+        "chebi": "CHEBI:58366"
       }
     },
     {
@@ -214,22 +205,22 @@
       }
     },
     {
-      "id": "phenylethanolaminium",
-      "name": "phenylethanolaminium",
-      "formula": "C8H12NO",
-      "charge": 1,
+      "id": "l_isoaspartate",
+      "name": "L-β-isoaspartate",
+      "formula": "C4H4NO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57741"
+        "chebi": "CHEBI:90596"
       }
     },
     {
-      "id": "n_methylphenylethanolaminium",
-      "name": "N-methylphenylethanolaminium",
-      "short": "N-methylphenylethan…",
-      "formula": "C9H14NO",
-      "charge": 1,
+      "id": "l_isoaspartate_methyl_ester",
+      "name": "L-isoaspartate α-methyl ester",
+      "short": "L-isoaspartate…",
+      "formula": "C5H7NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57946"
+        "chebi": "CHEBI:90598"
       }
     }
   ],
@@ -263,17 +254,10 @@
       ]
     },
     {
-      "id": "ec_2_8_3_15",
-      "name": "succinyl-CoA:(R)-benzylsuccinate CoA-transferase",
+      "id": "ec_1_14_11_26",
+      "name": "deacetoxycephalosporin-C hydroxylase",
       "ec": [
-        "2.8.3.15"
-      ]
-    },
-    {
-      "id": "ec_2_8_3_28",
-      "name": "phenylsuccinyl-CoA transferase",
-      "ec": [
-        "2.8.3.28"
+        "1.14.11.26"
       ]
     },
     {
@@ -291,10 +275,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_28",
-      "name": "phenylethanolamine N-methyltransferase",
+      "id": "ec_2_1_1_77",
+      "name": "protein-L-isoaspartate(D-aspartate) O-methyltransferase",
       "ec": [
-        "2.1.1.28"
+        "2.1.1.77"
       ]
     }
   ],
@@ -497,45 +481,53 @@
     },
     {
       "id": "r5",
-      "name": "succinyl-CoA:(R)-benzylsuccinate CoA-transferase",
-      "equation": "(R)-2-benzylsuccinate + succinyl-CoA = (R)-2-benzylsuccinyl-CoA + succinate",
-      "ec": "2.8.3.15",
+      "name": "deacetoxycephalosporin-C hydroxylase",
+      "equation": "deacetoxycephalosporin C + 2-oxoglutarate + O2 = deacetylcephalosporin C + succinate + CO2",
+      "ec": "1.14.11.26",
       "substrates": [
         {
-          "metabolite": "r_2_benzylsuccinate",
+          "metabolite": "deacetoxycephalosporin_c",
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinyl_coa",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_2_benzylsuccinyl_coa",
+          "metabolite": "deacetylcephalosporin_c",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_8_3_15"
+          "enzyme": "ec_1_14_11_26"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:16469"
+        "rhea": "RHEA:16805"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16469"
+            "id": "RHEA:16805"
           }
         ]
       }
@@ -644,12 +636,12 @@
     },
     {
       "id": "r8",
-      "name": "phenylethanolamine N-methyltransferase",
-      "equation": "phenylethanolamine + S-adenosyl-L-methionine = N-methylphenylethanolamine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.28",
+      "name": "protein-L-isoaspartate(D-aspartate) O-methyltransferase",
+      "equation": "[protein]-L-isoaspartate + S-adenosyl-L-methionine = [protein]-L-isoaspartate alpha-methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.77",
       "substrates": [
         {
-          "metabolite": "phenylethanolaminium",
+          "metabolite": "l_isoaspartate",
           "stoichiometry": 1
         },
         {
@@ -659,34 +651,30 @@
       ],
       "products": [
         {
-          "metabolite": "n_methylphenylethanolaminium",
+          "metabolite": "l_isoaspartate_methyl_ester",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_28"
+          "enzyme": "ec_2_1_1_77"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:12176"
+        "rhea": "RHEA:12705"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12176"
+            "id": "RHEA:12705"
           }
         ]
       }

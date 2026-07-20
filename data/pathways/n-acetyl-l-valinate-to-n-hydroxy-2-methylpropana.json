@@ -147,41 +147,31 @@
       }
     },
     {
-      "id": "n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_muramate",
-      "name": "N-acetyl-β-D-glucosaminyl-(1→4)-N-acetyl-β-D-muramate derivative",
-      "short": "N-acetyl-β-D-glucos…",
-      "formula": "C19H29N2O12R2",
-      "charge": -1,
+      "id": "e_e_piperonyl_coa",
+      "name": "(E,E)-piperonyl-CoA",
+      "formula": "C33H40N7O19P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:235330"
+        "chebi": "CHEBI:57325"
       }
     },
     {
-      "id": "n_acetyl_d_glucosaminyl_1_4_d_muramate_zwitterio",
-      "name": "N-acetyl-β-D-glucosaminyl-(1→4)-β-D-muramate zwitterion derivative",
-      "short": "N-acetyl-β-D-glucos…",
-      "formula": "C17H28N2O11R2",
+      "id": "e_e_piperlonguminine",
+      "name": "(E,E)-Piperlonguminine",
+      "short": "(E,E)-Piperlongumin…",
+      "formula": "C16H19NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:235333"
+        "chebi": "CHEBI:173942"
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -397,96 +387,43 @@
     },
     {
       "id": "r5",
-      "name": "an N-acetyl-beta-D-glucosaminyl-(1->4)-N-acetyl-beta-D-muramate derivative + H2O = an N...",
-      "equation": "an N-acetyl-beta-D-glucosaminyl-(1->4)-N-acetyl-beta-D-muramate derivative + H2O = an N-acetyl-beta-D-glucosaminyl-(1->4)-beta-D-muramate derivative + acetate",
+      "name": "(E,E)-piperoyl-CoA + 2-methylpropan-1-amine = (E,E)-piperlonguminine + CoA + H(+)",
+      "equation": "(E,E)-piperoyl-CoA + 2-methylpropan-1-amine = (E,E)-piperlonguminine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_muramate",
+          "metabolite": "e_e_piperonyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "2_methylpropanaminium",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_d_glucosaminyl_1_4_d_muramate_zwitterio",
+          "metabolite": "e_e_piperlonguminine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:85955"
+        "rhea": "RHEA:73667"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:85955"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "isobutylamine N-monooxygenase",
-      "equation": "2-methylpropan-1-amine + FMNH2 + O2 = N-(2-methylpropyl)hydroxylamine + FMN + H2O + 2 H(+)",
-      "ec": "1.14.14.30",
-      "substrates": [
-        {
-          "metabolite": "2_methylpropanaminium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_hydroxy_2_methylpropanamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_30"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:49804"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:49804"
+            "id": "RHEA:73667"
           }
         ]
       }

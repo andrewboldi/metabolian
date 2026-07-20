@@ -32,19 +32,31 @@ pathway acetylacetone-to-3-carboxy-cis-cis-muconate "acetylacetone to 3-carboxy-
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylajmalinium +h2o +hplus
-    ajmalinium
+    <-> . +2_acetamido_5_oxopentanoate +h2o
+    l_glutamic_5_semialdehyde
   }
 
   branch from g3p side left {
     g3p
-    <-> ec_2_2_1_14 [2.2.1.14] +6_deoxy_6_sulfo_d_fructofuranose +l_3_sulfolactaldehyde
-    d_fructofuranose_6_phosphate
+    <-> ec_1_2_1_90 [1.2.1.90] +nad +h2o +nadh +hplus
+    pg3
   }
 
-  branch from 2_amino_2_3_7_trideoxy_d_lyxo_hept_6_ulosonic_ac side right {
-    2_amino_2_3_7_trideoxy_d_lyxo_hept_6_ulosonic_ac
-    <-> . +nad +h2o +nh3 +nadh +hplus
-    3_7_dideoxy_d_threo_hepto_2_6_diuolosonate
+  branch from 3_dehydroquinate side right {
+    3_dehydroquinate
+    <-> ec_1_1_1_24 [1.1.1.24] +nad +nadh +hplus
+    quinate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_2 [1.4.1.2] +glutamate +nad +h2o +nadh +hplus
+    akg
+  }
+
+  branch from 3_dehydroshikimate side right {
+    3_dehydroshikimate
+    <-> ec_1_1_1_282 [1.1.1.282] +nad +nadh +hplus
+    shikimate
   }
 }

@@ -4,43 +4,19 @@
 # edit the generator, not this file.
 
 pathway 1-z-alk-1-enyl-sn-glyce-to-carboxylic-acid-anion "1-(Z)-alk-1-enyl-sn-glyce… to carboxylic acid anion" {
-  spacing 260
+  spacing 276
 
   spine at 0,0 {
     1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
-    <-> ec_3_1_4_39 [3.1.4.39] +h2o -ethanolaminium -hplus
-    1_z_alk_1_enyl_sn_glycero_3_phosphate
-    <-> . +acyl_coa -coa
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate
-    <-> . +h2o -pi
-    1_z_alk_1_enyl_2_acyl_sn_glycerol
-    <-> ec_2_7_8_1 [2.7.8.1] +cdp_ethanolamine -cytidine_5_monophosphate -hplus
+    <-> ec_2_3_1_121 [2.3.1.121] +acyl_coa -coa
     1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
     <-> . +h2o -carboxylic_acid_anion -hplus
     1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from ethanolaminium side left {
-    ethanolaminium
-    <-> . +1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho +serine
-    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
-  }
-
-  branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano side right {
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
-    <-> . +serine +ethanolaminium
-    1_1z_alkenyl_2_acyl_sn_glycero_3_phospho_l_serin
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
-  }
-
-  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine side right {
+  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine side left {
     1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
-    <-> ec_3_3_2_2 [3.3.2.2] +h2o +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    ch2_containing_aldehyde
+    <-> . +oleoyl_coa +coa
+    1_z_alk_1_enyl_2_oleoyl_sn_glycero_3_phosphoetha
   }
 }

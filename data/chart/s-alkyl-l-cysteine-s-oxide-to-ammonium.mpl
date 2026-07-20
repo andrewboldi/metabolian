@@ -24,7 +24,7 @@ pathway s-alkyl-l-cysteine-s-oxide-to-ammonium "S-alkyl-L-cysteine S-oxide to am
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_20 [3.5.4.20] +pyrithiamine +h2o +hplus
-    1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro
+    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +h2o
+    aspartate
   }
 }

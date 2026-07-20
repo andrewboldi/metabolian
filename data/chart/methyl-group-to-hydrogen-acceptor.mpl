@@ -12,7 +12,9 @@ pathway methyl-group-to-hydrogen-acceptor "methyl group to hydrogen acceptor" {
     h_group
     <-> ec_2_8_1_7 [2.8.1.7] +cysteine -alanine
     thiol_group
-    <-> ec_2_8_4_3 [2.8.4.3] +n6_dimethylallyladenine_5_monophosphate_1 +hydrogen_donor +sam -h_group -5_deoxyadenosine -methionine -hydrogen_acceptor -sah -hplus
+    <-> . +n6_dimethylallyladenine_5_monophosphate_1 +hydrogen_donor +sam -h_group -5_deoxyadenosine -methionine -hydrogen_acceptor -hplus
+    2_thio_n6_dimethylallyladenine_5_monophosphate_1
+    <-> . +sam -sah -hplus
     2_methylthio_n6_dimethylallyladenine_5_monophosp
     <-> ec_1_14_99_69 [1.14.99.69] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     n6_2e_4_hydroxy_3_methylbut_2_en_1_yl_2_methylsu
@@ -20,25 +22,37 @@ pathway methyl-group-to-hydrogen-acceptor "methyl group to hydrogen acceptor" {
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_54 [1.14.11.54] +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    adenosine_5_monophosphate_1
+    <-> . +n_n_dimethyl_l_arginine_1 +akg +o2 +succinate +co2
+    n_methyl_argininium_1
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_40 [1.14.11.40] +l_enduracididine +akg +o2 +co2
-    3s_3_hydroxy_l_enduracididine
+    <-> . +l_aspartate +akg +o2 +co2
+    3s_3_hydroxy_l_aspartate
   }
 
   branch from alanine side left {
     alanine
-    <-> ec_4_1_1_12 [4.1.1.12] +hplus +co2
-    aspartate
+    <-> ec_1_5_1_17 [1.5.1.17] +nad +h2o +pyruvate +nadh +hplus
+    2_2_iminodipropanoate
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_2_1_1_224 [2.1.1.224] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
-    8_methyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
+    2_methyladenosine_5_monophosphate_1
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_1_21_98_3 [1.21.98.3] +magnesium_protoporphyrin_13_monomethyl_ester +sam +h2o +5_deoxyadenosine +hplus
+    2_4_divinyl_protochlorophyllide_a
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +linoleoyl_coa +hydrogen_donor +o2 +h2o
+    linolenoyl_coa
   }
 }

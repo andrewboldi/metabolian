@@ -106,6 +106,16 @@
       }
     },
     {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -116,12 +126,13 @@
       }
     },
     {
-      "id": "epi_cedrol",
-      "name": "epi-cedrol",
-      "formula": "C15H26O",
-      "charge": 0,
+      "id": "2_cis_6_trans_10_trans_geranylgeranyl_diphosphat",
+      "name": "2-cis,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-cis,6-trans,10-tr…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:52226"
+        "chebi": "CHEBI:62639"
       }
     }
   ],
@@ -145,13 +156,6 @@
       "name": "3-deoxy-D-glycero-D-galacto-nononate cytidylyltransferase",
       "ec": [
         "2.7.7.92"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_39",
-      "name": "epi-cedrol synthase",
-      "ec": [
-        "4.2.3.39"
       ]
     }
   ],
@@ -297,22 +301,21 @@
     },
     {
       "id": "r4",
-      "name": "epi-cedrol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = epi-cedrol + diphosphate",
-      "ec": "4.2.3.39",
+      "name": "isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2Z,6E,10E)-geranylgeranyl dip...",
+      "equation": "isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2Z,6E,10E)-geranylgeranyl diphosphate + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "ipp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "epi_cedrol",
+          "metabolite": "2_cis_6_trans_10_trans_geranylgeranyl_diphosphat",
           "stoichiometry": 1
         },
         {
@@ -320,22 +323,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_39"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:26115"
+        "rhea": "RHEA:31279"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26115"
+            "id": "RHEA:31279"
           }
         ]
       }

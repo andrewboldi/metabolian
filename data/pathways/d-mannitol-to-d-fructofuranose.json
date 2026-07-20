@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-mannitol-to-d-fructofuranose",
   "name": "D-mannitol to D-fructofuranose",
-  "category": "energy-metabolism",
-  "summary": "A 3-step route from D-mannitol to D-fructofuranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "carbohydrate-metabolism",
+  "summary": "A 4-step route from D-mannitol to D-fructofuranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:12084"
+        "id": "RHEA:17597"
       },
       {
         "db": "ChEBI",
@@ -28,12 +28,12 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:29034"
       }
     },
     {
@@ -46,12 +46,12 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:29033"
       }
     },
     {
@@ -64,31 +64,40 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "d_fructofuranose_6_phosphate",
-      "name": "D-fructofuranose 6-phosphate",
-      "short": "D-fructofuranose 6-P",
-      "formula": "C6H11O9P",
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:61527"
+        "chebi": "CHEBI:58885"
       }
     },
     {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
+      "id": "sucrose",
+      "name": "sucrose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17992"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:456216"
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "6_o_d_glucopyranosyl_d_fructofuranose",
+      "name": "6-O-α-D-glucopyranosyl-D-fructofuranose",
+      "short": "6-O-α-D-glucopyrano…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18394"
       }
     },
     {
@@ -101,52 +110,59 @@
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "d_glucose",
+      "name": "α-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:17925"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_1_1_67",
-      "name": "mannitol 2-dehydrogenase",
+      "id": "ec_1_1_2_2",
+      "name": "mannitol dehydrogenase (cytochrome)",
       "ec": [
-        "1.1.1.67"
+        "1.1.2.2"
       ]
     },
     {
-      "id": "ec_2_7_1_1",
-      "name": "hexokinase",
+      "id": "ec_2_4_1_13",
+      "name": "sucrose synthase",
       "ec": [
-        "2.7.1.1"
+        "2.4.1.13"
       ]
     },
     {
-      "id": "ec_2_7_1_4",
-      "name": "fructokinase",
+      "id": "ec_5_4_99_11",
+      "name": "isomaltulose synthase",
       "ec": [
-        "2.7.1.4"
+        "5.4.99.11"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_219",
+      "name": "palatinase",
+      "ec": [
+        "3.2.1.219"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "mannitol 2-dehydrogenase",
-      "equation": "D-mannitol + NAD(+) = D-fructose + NADH + H(+)",
-      "ec": "1.1.1.67",
+      "name": "mannitol dehydrogenase (cytochrome)",
+      "equation": "D-mannitol + 2 Fe(III)-[cytochrome c] = D-fructose + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "1.1.2.2",
       "substrates": [
         {
           "metabolite": "d_mannitol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
+          "metabolite": "iron",
+          "stoichiometry": 2
         }
       ],
       "products": [
@@ -155,56 +171,56 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
+          "metabolite": "fe2",
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_67"
+          "enzyme": "ec_1_1_2_2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:12084"
+        "rhea": "RHEA:17597"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12084"
+            "id": "RHEA:17597"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "hexokinase",
-      "equation": "D-fructose + ATP = D-fructose 6-phosphate + ADP + H(+)",
-      "ec": "2.7.1.1",
+      "name": "sucrose synthase",
+      "equation": "D-fructose + UDP-alpha-D-glucose = sucrose + UDP + H(+)",
+      "ec": "2.4.1.13",
       "substrates": [
         {
           "metabolite": "d_fructofuranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "udp_d_glucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_fructofuranose_6_phosphate",
+          "metabolite": "sucrose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
@@ -214,31 +230,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_1"
+          "enzyme": "ec_2_4_1_13"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:16125"
+        "rhea": "RHEA:55092"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16125"
+            "id": "RHEA:55092"
           }
         ]
       }
     },
     {
       "id": "r3",
-      "name": "D-fructose 6-phosphate + H2O = D-fructose + phosphate",
-      "equation": "D-fructose 6-phosphate + H2O = D-fructose + phosphate",
+      "name": "isomaltulose synthase",
+      "equation": "sucrose = 6-O-alpha-D-glucopyranosyl-D-fructose",
+      "ec": "5.4.99.11",
       "substrates": [
         {
-          "metabolite": "d_fructofuranose_6_phosphate",
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_d_glucopyranosyl_d_fructofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "palatinase",
+      "equation": "6-O-alpha-D-glucopyranosyl-D-fructose + H2O = alpha-D-glucose + D-fructose",
+      "ec": "3.2.1.219",
+      "substrates": [
+        {
+          "metabolite": "6_o_d_glucopyranosyl_d_fructofuranose",
           "stoichiometry": 1
         },
         {
@@ -248,25 +302,30 @@
       ],
       "products": [
         {
-          "metabolite": "d_fructofuranose",
+          "metabolite": "d_glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "d_fructofuranose",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_219"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:28558"
+        "rhea": "RHEA:68808"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28558"
+            "id": "RHEA:68808"
           }
         ]
       }

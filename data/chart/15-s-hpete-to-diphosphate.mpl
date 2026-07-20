@@ -8,24 +8,10 @@ pathway 15-s-hpete-to-diphosphate "15(S)-HPETE to diphosphate" {
 
   spine at 0,0 {
     15_s_hpete
-    <-> . +hydrogen_donor -hydrogen_acceptor -h2o
-    15_s_hete
-    <-> ec_1_1_1_232 [1.1.1.232] +nad -nadh -hplus
+    <-> ec_4_2_1_152 [4.2.1.152] -h2o
     15_oxo_ete
     <-> . +atp +coa -amp -ppi
     15_oxo_ete_coa
-  }
-
-  branch from 15_s_hete side left {
-    15_s_hete
-    <-> . +o2
-    5s_15s_5_hydroperoxy_15_hete
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +dopamine +hydrogen_donor +h2o
-    m_tyraminium
   }
 
   branch from 15_oxo_ete side left {
@@ -36,7 +22,7 @@ pathway 15-s-hpete-to-diphosphate "15(S)-HPETE to diphosphate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_84 [2.7.7.84] +atp
-    pppa2_p5_a2_p5_a
+    <-> . +peregrinol_diphosphate
+    labd_13_16_14_diene_9_ol
   }
 }

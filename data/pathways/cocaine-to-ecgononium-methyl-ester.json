@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cocaine-to-ecgononium-methyl-ester",
+  "name": "cocaine to ecgononium methyl ester",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from cocaine(1+) to ecgononium methyl ester(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27506"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60056"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cocaine",
+      "name": "cocaine",
+      "formula": "C17H22NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:60056"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ecgoninium_methyl_ester",
+      "name": "ecgoninium methyl ester",
+      "short": "ecgoninium methyl…",
+      "formula": "C10H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59908"
+      }
+    },
+    {
+      "id": "benzoate",
+      "name": "benzoate",
+      "formula": "C7H5O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16150"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "ecgononium_methyl_ester",
+      "name": "ecgononium methyl ester",
+      "short": "ecgononium methyl…",
+      "formula": "C10H16NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:66941"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57369"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_84",
+      "name": "cocaine esterase",
+      "ec": [
+        "3.1.1.84"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_334",
+      "name": "methylecgonone reductase",
+      "ec": [
+        "1.1.1.334"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_334",
+      "name": "cocaine synthase",
+      "ec": [
+        "2.3.1.334"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cocaine esterase",
+      "equation": "cocaine + H2O = ecgonine methyl ester + benzoate + H(+)",
+      "ec": "3.1.1.84",
+      "substrates": [
+        {
+          "metabolite": "cocaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ecgoninium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27506"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27506"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methylecgonone reductase",
+      "equation": "ecgonine methyl ester + NADP(+) = ecgonone methyl ester + NADPH + H(+)",
+      "ec": "1.1.1.334",
+      "substrates": [
+        {
+          "metabolite": "ecgoninium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ecgononium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_334"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34211"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cocaine synthase",
+      "equation": "ecgonine methyl ester + benzoyl-CoA = cocaine + CoA",
+      "ec": "2.3.1.334",
+      "substrates": [
+        {
+          "metabolite": "ecgoninium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cocaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_334"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:81559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81559"
+          }
+        ]
+      }
+    }
+  ]
+}

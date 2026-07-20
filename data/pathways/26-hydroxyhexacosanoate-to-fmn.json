@@ -1,0 +1,283 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "26-hydroxyhexacosanoate-to-fmn",
+  "name": "26-hydroxyhexacosanoate to FMN",
+  "category": "other",
+  "summary": "A 2-step route from 26-hydroxyhexacosanoate to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39059"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76305"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "26_hydroxyhexacosanoate",
+      "name": "26-hydroxyhexacosanoate",
+      "short": "26-hydroxyhexacosan…",
+      "formula": "C26H51O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76305"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "26_oxohexacosanoate",
+      "name": "26-oxohexacosanoate",
+      "formula": "C26H49O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76311"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hexacosanedioate",
+      "name": "hexacosanedioate",
+      "formula": "C26H48O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:76312"
+      }
+    },
+    {
+      "id": "fenbendazole",
+      "name": "fenbendazole",
+      "formula": "C15H13N3O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77092"
+      }
+    },
+    {
+      "id": "hydroxyfenbendazole",
+      "name": "hydroxyfenbendazole",
+      "formula": "C15H13N3O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140184"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_75",
+      "name": "fenbendazole monooxygenase (4'-hydroxylating)",
+      "ec": [
+        "1.14.14.75"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "26-hydroxyhexacosanoate + reduced [NADPH--hemoprotein reductase] + O2 = 26-oxohexacosan...",
+      "equation": "26-hydroxyhexacosanoate + reduced [NADPH--hemoprotein reductase] + O2 = 26-oxohexacosanoate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "26_hydroxyhexacosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "26_oxohexacosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39059"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39059"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "26-oxohexacosanoate + reduced [NADPH--hemoprotein reductase] + O2 = hexacosanedioate + ...",
+      "equation": "26-oxohexacosanoate + reduced [NADPH--hemoprotein reductase] + O2 = hexacosanedioate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "26_oxohexacosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexacosanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39047"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "fenbendazole monooxygenase (4'-hydroxylating)",
+      "equation": "fenbendazole + reduced [NADPH--hemoprotein reductase] + O2 = 4'-hydroxyfenbendazole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.75",
+      "substrates": [
+        {
+          "metabolite": "fenbendazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyfenbendazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:56292"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56292"
+          }
+        ]
+      }
+    }
+  ]
+}

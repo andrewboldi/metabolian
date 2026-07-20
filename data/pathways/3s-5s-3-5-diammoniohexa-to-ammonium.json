@@ -121,86 +121,51 @@
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "2s_2_amino_3_methylbutan_1_ol",
+      "name": "(2S)-2-amino-3-methylbutan-1-ol",
+      "short": "2-amino-3-methylbut…",
+      "formula": "C5H14NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74411"
+        "chebi": "CHEBI:195496"
       }
     },
     {
-      "id": "inosine_5_phosphate_1",
-      "name": "inosine 5'-phosphate(1−)",
-      "short": "inosine 5'-P(1−)",
-      "formula": "C10H10N4O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:82852"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "acetoacetyl_coa",
-      "name": "Acetoacetyl-CoA",
-      "formula": "C25H36N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57286"
-      }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "3_aminobutanoic_acid",
-      "name": "3-aminobutanoic acid",
-      "formula": "C4H9NO2",
+      "id": "1_hydroxy_3_methylbutan_2_one",
+      "name": "1-hydroxy-3-methylbutan-2-one",
+      "short": "1-hydroxy-3-methylb…",
+      "formula": "C5H10O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:150018"
+        "chebi": "CHEBI:195497"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "4_hydroxybutyryl_coa",
-      "name": "4-hydroxybutyryl-CoA",
-      "formula": "C25H38N7O18P3S",
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58574"
+        "chebi": "CHEBI:57371"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     }
   ],
@@ -224,27 +189,6 @@
       "name": "3-aminobutyryl-CoA ammonia-lyase",
       "ec": [
         "4.3.1.14"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_33",
-      "name": "tRNA(adenine(34)) deaminase",
-      "ec": [
-        "3.5.4.33"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_111",
-      "name": "3-aminobutanoyl-CoA transaminase",
-      "ec": [
-        "2.6.1.111"
-      ]
-    },
-    {
-      "id": "ec_4_2_1_120",
-      "name": "4-hydroxybutanoyl-CoA dehydratase",
-      "ec": [
-        "4.2.1.120"
       ]
     }
   ],
@@ -394,16 +338,33 @@
     },
     {
       "id": "r4",
-      "name": "tRNA(adenine(34)) deaminase",
-      "equation": "adenosine(34) in tRNA + H2O + H(+) = inosine(34) in tRNA + NH4(+)",
-      "ec": "3.5.4.33",
+      "name": "(2S)-2-amino-3-methylbutan-1-ol + NAD(+) + H2O = 1-hydroxy-3-methylbutan-2-one + NH4(+)...",
+      "equation": "(2S)-2-amino-3-methylbutan-1-ol + NAD(+) + H2O = 1-hydroxy-3-methylbutan-2-one + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "2s_2_amino_3_methylbutan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hydroxy_3_methylbutan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -411,128 +372,32 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "inosine_5_phosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_4_33"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:43168"
+        "rhea": "RHEA:77011"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43168"
+            "id": "RHEA:77011"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "3-aminobutanoyl-CoA transaminase",
-      "equation": "(3S)-3-aminobutanoyl-CoA + 2-oxoglutarate = acetoacetyl-CoA + L-glutamate",
-      "ec": "2.6.1.111",
+      "name": "butanoyl-CoA + O2 = (2E)-butenoyl-CoA + H2O2",
+      "equation": "butanoyl-CoA + O2 = (2E)-butenoyl-CoA + H2O2",
       "substrates": [
         {
-          "metabolite": "l_3_aminobutanoyl_coa",
+          "metabolite": "butyryl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "acetoacetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_111"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:50936"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:50936"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "3-aminobutanoate + pyruvate = acetoacetate + L-alanine",
-      "equation": "3-aminobutanoate + pyruvate = acetoacetate + L-alanine",
-      "substrates": [
-        {
-          "metabolite": "3_aminobutanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "acetoacetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:64308"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64308"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "4-hydroxybutanoyl-CoA dehydratase",
-      "equation": "4-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
-      "ec": "4.2.1.120",
-      "substrates": [
-        {
-          "metabolite": "4_hydroxybutyryl_coa",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
@@ -542,26 +407,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_120"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:26530"
+        "rhea": "RHEA:41964"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26530"
+            "id": "RHEA:41964"
           }
         ]
       }

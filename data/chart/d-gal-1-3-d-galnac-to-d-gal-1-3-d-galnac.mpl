@@ -26,8 +26,8 @@ pathway d-gal-1-3-d-galnac-to-d-gal-1-3-d-galnac "β-D-Gal-(1→3)-β-D-GalNAc-�
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
   }
 
   branch from n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d side left {
@@ -38,7 +38,7 @@ pathway d-gal-1-3-d-galnac-to-d-gal-1-3-d-galnac "β-D-Gal-(1→3)-β-D-GalNAc-�
 
   branch from d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer side right {
     d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
-    <-> . +udpglcnac +udp +hplus
-    d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6_n
+    <-> . +gdp_l_fucose +gdp +hplus
+    l_fuc_1_2_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_gl
   }
 }

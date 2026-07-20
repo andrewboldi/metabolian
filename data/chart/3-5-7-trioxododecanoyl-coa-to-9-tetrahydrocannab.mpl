@@ -18,21 +18,15 @@ pathway 3-5-7-trioxododecanoyl-coa-to-9-tetrahydrocannab "3,5,7-trioxododecanoyl
     9_tetrahydrocannabinol
   }
 
-  branch from olivetolate side left {
-    olivetolate
-    <-> . +neryl_diphosphate +ppi
-    cannabinerolate
-  }
-
-  branch from cannabigerolate side right {
+  branch from cannabigerolate side left {
     cannabigerolate
     <-> ec_1_21_3_8 [1.21.3.8] +o2 +h2o2
     cannabidiolate
   }
 
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_123 [4.2.3.123] +fpp
-    sesquiphellandrene
+    <-> . +1r_2r_3r_prephytoene_diphosphate +nadh +hplus +nad
+    lycopaoctaene
   }
 }

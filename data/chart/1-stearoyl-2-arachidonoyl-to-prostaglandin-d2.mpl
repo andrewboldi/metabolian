@@ -18,21 +18,15 @@ pathway 1-stearoyl-2-arachidonoyl-to-prostaglandin-d2 "1-stearoyl-2-arachidonoyl
     prostaglandin_d2_2_glyceryl_ester
   }
 
-  branch from octadecanoate side left {
-    octadecanoate
-    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +h2o +hplus
-    mg_0_0_22_6_4z_7z_10z_13z_16z_19z_0_0
-  }
-
-  branch from prostaglandin_h2_2_glyceryl_ester side right {
+  branch from prostaglandin_h2_2_glyceryl_ester side left {
     prostaglandin_h2_2_glyceryl_ester
     <-> .
     prostaglandin_e2_2_glyceryl_ester
   }
 
-  branch from hydrogen_acceptor side left {
+  branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_64 [1.14.99.64] +adonixanthin +hydrogen_donor +o2 +h2o
-    astaxanthin
+    <-> . +andilesin_b +hydrogen_donor
+    andilesin_c
   }
 }

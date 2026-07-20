@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-9-10-labda-8-20-13-to-fmn",
   "name": "5α,9α,10β-labda-8(20),13-… to FMN",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,30 +120,39 @@
       }
     },
     {
-      "id": "guaiene",
-      "name": "α-guaiene",
-      "formula": "C15H24",
+      "id": "isoafricanol",
+      "name": "(+)-isoafricanol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63443"
+        "chebi": "CHEBI:137522"
       }
     },
     {
-      "id": "17_estradiol",
-      "name": "17β-estradiol",
-      "formula": "C18H24O2",
-      "charge": 0,
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:16469"
+        "chebi": "CHEBI:32682"
       }
     },
     {
-      "id": "16_hydroxyestradiol",
-      "name": "16β-hydroxyestradiol",
-      "formula": "C18H24O3",
+      "id": "citrulline",
+      "name": "L-Citrulline",
+      "formula": "C6H13N3O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87620"
+        "chebi": "CHEBI:57743"
+      }
+    },
+    {
+      "id": "no",
+      "name": "Nitric oxide (NO)",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16480"
       }
     },
     {
@@ -179,10 +188,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_87",
-      "name": "alpha-guaiene synthase",
+      "id": "ec_4_2_3_157",
+      "name": "(+)-isoafricanol synthase",
       "ec": [
-        "4.2.3.87"
+        "4.2.3.157"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_47",
+      "name": "nitric-oxide synthase (flavodoxin)",
+      "ec": [
+        "1.14.14.47"
       ]
     }
   ],
@@ -344,18 +360,22 @@
     },
     {
       "id": "r4",
-      "name": "alpha-guaiene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-guaiene + diphosphate",
-      "ec": "4.2.3.87",
+      "name": "(+)-isoafricanol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-isoafricanol + diphosphate",
+      "ec": "4.2.3.157",
       "substrates": [
         {
           "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "guaiene",
+          "metabolite": "isoafricanol",
           "stoichiometry": 1
         },
         {
@@ -365,71 +385,81 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_87"
+          "enzyme": "ec_4_2_3_157"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31807"
+        "rhea": "RHEA:53616"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31807"
+            "id": "RHEA:53616"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16beta,17beta-estriol ...",
-      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16beta,17beta-estriol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "nitric-oxide synthase (flavodoxin)",
+      "equation": "3 reduced [flavodoxin] + 2 L-arginine + 4 O2 = 3 oxidized [flavodoxin] + 2 L-citrulline + 2 nitric oxide + 4 H2O + 5 H(+)",
+      "ec": "1.14.14.47",
       "substrates": [
         {
-          "metabolite": "17_estradiol",
-          "stoichiometry": 1
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "metabolite": "arginine",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "products": [
         {
-          "metabolite": "16_hydroxyestradiol",
-          "stoichiometry": 1
+          "metabolite": "fmn",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
+          "metabolite": "citrulline",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "no",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 4
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 5
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_47"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:47336"
+        "rhea": "RHEA:52324"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47336"
+            "id": "RHEA:52324"
           }
         ]
       }

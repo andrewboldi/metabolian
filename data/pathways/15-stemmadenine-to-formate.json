@@ -1,0 +1,195 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "15-stemmadenine-to-formate",
+  "name": "15α-stemmadenine to formate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 15α-stemmadenine(1+) to formate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58564"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142674"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "15_stemmadenine",
+      "name": "15α-stemmadenine",
+      "formula": "C21H27N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142674"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia",
+      "name": "methyl (1S,2S,16E)-16-ethylidene-2-formyl-4,14-diazatetracyclo[12.2.2.03,11.05,10]octadeca-3(11),5(10),6,8-tetraene-2-carboxylate",
+      "short": "methyl (1S,2S,16E)-…",
+      "formula": "C21H24N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142667"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "16r_deshydroxymethyl_stemmadenine",
+      "name": "(16R)-deshydroxymethyl-stemmadenine",
+      "short": "deshydroxymethyl-st…",
+      "formula": "C20H25N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142670"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_439",
+      "name": "17-dehydrostemmadenine reductase",
+      "ec": [
+        "1.1.1.439"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "17-dehydrostemmadenine reductase",
+      "equation": "15alpha-stemmadenine + NADP(+) = 17-dehydrostemmadenine + NADPH + 2 H(+)",
+      "ec": "1.1.1.439",
+      "substrates": [
+        {
+          "metabolite": "15_stemmadenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_439"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "17-dehydrostemmadenine + H2O = (16R)-deshydroxymethyl-stemmadenine + formate",
+      "equation": "17-dehydrostemmadenine + H2O = (16R)-deshydroxymethyl-stemmadenine + formate",
+      "substrates": [
+        {
+          "metabolite": "methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16r_deshydroxymethyl_stemmadenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58552"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58552"
+          }
+        ]
+      }
+    }
+  ]
+}

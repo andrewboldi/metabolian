@@ -30,14 +30,14 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-
 
   branch from d_glucopyranuronate side left {
     d_glucopyranuronate
-    <-> ec_3_1_1_19 [3.1.1.19] +h2o +hplus
-    d_glucurono_6_2_lactone
+    <-> . +4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside +h2o +hplus
+    4z_15z_bilirubin_ix_c12_d_glucuronoside
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_3_1_6_20 [3.1.6.20] +s_2_sulfodisulfanyl_l_cysteine_1 +h2o +hplus
-    3_trisulfanyl_l_alanine
+    <-> ec_1_14_11_77 [1.14.11.77] +heptyl_sulfate +akg +o2 +succinate +co2 +hplus
+    heptanal
   }
 
   branch from n_acetyl_d_galactosamine_1_phosphate side left {
@@ -50,5 +50,11 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-
     udp_n_acetyl_d_galactosamine
     <-> ec_2_4_1_244 [2.4.1.244] +n_acetyl_d_glucosaminide +udp +hplus
     n_acetyl_d_galactosaminyl_1_4_n_acetyl_d_glucosa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_45 [2.7.7.45] +gtp +hplus
+    p1_p4_bis_5_guanosyl_tetraphosphate
   }
 }

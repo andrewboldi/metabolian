@@ -1,0 +1,262 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-3s-2-alkyl-3-hydroxy-to-cis-alkene",
+  "name": "(2R,3S)-2-alkyl-3-hydroxy… to cis-alkene",
+  "category": "other",
+  "summary": "A 2-step route from (2R,3S)-2-alkyl-3-hydroxyalkanoate to cis-alkene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23060"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138340"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_3s_2_alkyl_3_hydroxyalkanoate",
+      "name": "(2R,3S)-2-alkyl-3-hydroxyalkanoate",
+      "short": "(2R,3S)-2-alkyl-3-h…",
+      "formula": "C3H3O3R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138340"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "cis_3_4_dialkyloxetan_2_one",
+      "name": "cis-3,4-dialkyloxetan-2-one",
+      "short": "cis-3,4-dialkyloxet…",
+      "formula": "C3H2O2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138483"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "cis_alkene",
+      "name": "cis-alkene",
+      "formula": "C2H2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139021"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "humulene",
+      "name": "γ-humulene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49290"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_6_1_3_1",
+      "name": "olefin beta-lactone synthetase",
+      "ec": [
+        "6.1.3.1"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_114",
+      "name": "cis-3-alkyl-4-alkyloxetan-2-one decarboxylase",
+      "ec": [
+        "4.1.1.114"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_56",
+      "name": "gamma-humulene synthase",
+      "ec": [
+        "4.2.3.56"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "olefin beta-lactone synthetase",
+      "equation": "a (2R,3S)-2-alkyl-3-hydroxyalkanoate + ATP = a cis-3-alkyl-4-alkyloxetan-2-one + AMP + diphosphate",
+      "ec": "6.1.3.1",
+      "substrates": [
+        {
+          "metabolite": "2r_3s_2_alkyl_3_hydroxyalkanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_3_4_dialkyloxetan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cis-3-alkyl-4-alkyloxetan-2-one decarboxylase",
+      "equation": "a cis-3-alkyl-4-alkyloxetan-2-one = a cis-alkene + CO2",
+      "ec": "4.1.1.114",
+      "substrates": [
+        {
+          "metabolite": "cis_3_4_dialkyloxetan_2_one",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_alkene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18345"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "gamma-humulene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = gamma-humulene + diphosphate",
+      "ec": "4.2.3.56",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "humulene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25456"
+          }
+        ]
+      }
+    }
+  ]
+}

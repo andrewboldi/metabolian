@@ -24,19 +24,7 @@ pathway n-acetylneuraminosyl-2-to-n-acetylneuraminate "α-N-acetylneuraminosyl-(
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_10 [2.4.3.10] +neup5ac_2_3_d_galp_1_3_d_glcpnac_1_3_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
-    neup5ac_2_3_d_galp_1_3_neup5ac_2_6_d_glcpnac_1
-  }
-
-  branch from neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac side left {
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
-    <-> . +cmp_n_acetyl_neuraminate +cytidine_5_monophosphate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
-  }
-
-  branch from n_acetylneuraminate side right {
-    n_acetylneuraminate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +h2o
-    gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_8_neu5ac
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
+    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
   }
 }

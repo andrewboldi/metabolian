@@ -118,30 +118,32 @@
       }
     },
     {
-      "id": "chloride",
-      "name": "chloride",
-      "formula": "Cl",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17996"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "chloromethane",
-      "name": "chloromethane",
-      "formula": "CH3Cl",
-      "charge": 0,
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36014"
+        "chebi": "CHEBI:74483"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_165",
-      "name": "methyl halide transferase",
+      "id": "ec_2_1_1_204",
+      "name": "tRNA (cytosine(38)-C(5))-methyltransferase",
       "ec": [
-        "2.1.1.165"
+        "2.1.1.204"
       ]
     }
   ],
@@ -316,12 +318,12 @@
     },
     {
       "id": "r5",
-      "name": "methyl halide transferase",
-      "equation": "chloride + S-adenosyl-L-methionine = chloromethane + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.165",
+      "name": "tRNA (cytosine(38)-C(5))-methyltransferase",
+      "equation": "cytidine(38) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(38) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.204",
       "substrates": [
         {
-          "metabolite": "chloride",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -331,30 +333,34 @@
       ],
       "products": [
         {
-          "metabolite": "chloromethane",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_165"
+          "enzyme": "ec_2_1_1_204"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27361"
+        "rhea": "RHEA:42956"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27361"
+            "id": "RHEA:42956"
           }
         ]
       }

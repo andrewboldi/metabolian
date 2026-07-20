@@ -24,7 +24,7 @@ pathway n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo "N,N-dihydroxy-L-tyrosi
 
   branch from fmn side right {
     fmn
-    <-> . +5_hepe +fmnh2 +o2 +h2o +hplus
-    5_20_dihepe
+    <-> . +lathosterol +fmnh2 +o2 +h2o +hplus
+    cholestanol_7_8_epoxide
   }
 }

@@ -1,0 +1,163 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "delphinidin-to-ternatin-c5",
+  "name": "delphinidin… to ternatin C5",
+  "category": "other",
+  "summary": "A 2-step route from delphinidin 3-O-(6''-O-malonyl)-β-D-glucoside(2−) to ternatin C5(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:26498"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77887"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "delphinidin_3_o_6_o_malonyl_d_glucoside",
+      "name": "delphinidin 3-O-(6''-O-malonyl)-β-D-glucoside",
+      "short": "delphinidin…",
+      "formula": "C24H20O15",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77887"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d",
+      "name": "delphinidin-5-olate 3-O-(6''-O-carboxylatoacetyl)-β-D-glucoside-3'-O-β-D-glucoside",
+      "short": "delphinidin-5-olate…",
+      "formula": "C30H31O20",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58913"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "ternatin_c5",
+      "name": "ternatin C5",
+      "formula": "C36H40O25",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58912"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside + UDP-alpha-D-glucose = delphinidin 3-...",
+      "equation": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside + UDP-alpha-D-glucose = delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside-3'-O-beta-D-glucoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "delphinidin_3_o_6_o_malonyl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:26498"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26498"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside-3'-O-beta-D-glucoside + UDP-alpha-D-gl...",
+      "equation": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside-3'-O-beta-D-glucoside + UDP-alpha-D-glucose = ternatin C5 + UDP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ternatin_c5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:26502"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26502"
+          }
+        ]
+      }
+    }
+  ]
+}

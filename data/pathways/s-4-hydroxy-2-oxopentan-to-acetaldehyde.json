@@ -47,6 +47,15 @@
       }
     },
     {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
       "id": "acetoin",
       "name": "acetoin",
       "formula": "C4H8O2",
@@ -56,31 +65,12 @@
       }
     },
     {
-      "id": "r5p",
-      "name": "D-Ribose 5-phosphate",
-      "formula": "C5H9O8P",
-      "charge": -2,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58273"
-      }
-    },
-    {
-      "id": "1_deoxy_d_altro_heptulose_7_phosphate",
-      "name": "1-deoxy-D-altro-heptulose 7-phosphate",
-      "short": "1-deoxy-D-altro-hep…",
-      "formula": "C7H13O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57764"
-      }
-    },
-    {
-      "id": "3_aminobutan_2_ol",
-      "name": "3-aminobutan-2-ol",
-      "formula": "C4H12NO",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:195440"
+        "chebi": "CHEBI:16526"
       }
     },
     {
@@ -93,21 +83,21 @@
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:57288"
       }
     },
     {
@@ -117,15 +107,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
       }
     }
   ],
@@ -138,10 +119,10 @@
       ]
     },
     {
-      "id": "ec_2_2_1_4",
-      "name": "acetoin--ribose-5-phosphate transaldolase",
+      "id": "ec_2_3_1_190",
+      "name": "acetoin dehydrogenase system",
       "ec": [
-        "2.2.1.4"
+        "2.3.1.190"
       ]
     }
   ],
@@ -189,87 +170,55 @@
     },
     {
       "id": "r2",
-      "name": "2 acetaldehyde = acetoin",
-      "equation": "2 acetaldehyde = acetoin",
+      "name": "acetaldehyde + pyruvate + H(+) = acetoin + CO2",
+      "equation": "acetaldehyde + pyruvate + H(+) = acetoin + CO2",
       "substrates": [
         {
           "metabolite": "acetaldehyde",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
           "metabolite": "acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:54364"
+        "rhea": "RHEA:54368"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54364"
+            "id": "RHEA:54368"
           }
         ]
       }
     },
     {
       "id": "r3",
-      "name": "acetoin--ribose-5-phosphate transaldolase",
-      "equation": "aldehydo-D-ribose 5-phosphate + acetoin = 1-deoxy-D-altro-heptulose 7-phosphate + acetaldehyde",
-      "ec": "2.2.1.4",
+      "name": "acetoin dehydrogenase system",
+      "equation": "acetoin + NAD(+) + CoA = acetaldehyde + acetyl-CoA + NADH + H(+)",
+      "ec": "2.3.1.190",
       "substrates": [
-        {
-          "metabolite": "r5p",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "acetoin",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_deoxy_d_altro_heptulose_7_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetaldehyde",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_2_1_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 3,
-      "xrefs": {
-        "rhea": "RHEA:21504"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:21504"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "3-aminobutan-2-ol + NAD(+) + H2O = acetoin + NH4(+) + NADH + H(+)",
-      "equation": "3-aminobutan-2-ol + NAD(+) + H2O = acetoin + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_aminobutan_2_ol",
           "stoichiometry": 1
         },
         {
@@ -277,17 +226,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "acetoin",
+          "metabolite": "acetaldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
@@ -299,17 +248,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_190"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:76879"
+        "rhea": "RHEA:27369"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76879"
+            "id": "RHEA:27369"
           }
         ]
       }

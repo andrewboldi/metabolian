@@ -138,57 +138,58 @@
       }
     },
     {
-      "id": "mandelate",
-      "name": "mandelate",
-      "formula": "C8H7O3",
+      "id": "benzylaminium",
+      "name": "benzylaminium",
+      "formula": "C7H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:225238"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:25147"
+        "chebi": "CHEBI:57540"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:28938"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:57945"
       }
     },
     {
-      "id": "benzyl_alcohol",
-      "name": "benzyl alcohol",
-      "formula": "C7H8O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17987"
-      }
-    },
-    {
-      "id": "jasmonate",
-      "name": "jasmonate",
-      "formula": "C12H17O3",
+      "id": "gossypetin",
+      "name": "gossypetin",
+      "formula": "C15H9O8",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58431"
+        "chebi": "CHEBI:77862"
       }
     },
     {
-      "id": "methyl_jasmonate",
-      "name": "(−)-methyl jasmonate",
-      "formula": "C13H20O3",
-      "charge": 0,
+      "id": "3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate",
+      "name": "3',4',5,7-pentahydroxy-8-methoxyflavon-3-olate",
+      "short": "3',4',5,7-pentahydr…",
+      "formula": "C16H11O8",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15929"
+        "chebi": "CHEBI:58544"
       }
     }
   ],
@@ -222,10 +223,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_141",
-      "name": "jasmonate O-methyltransferase",
+      "id": "ec_2_1_1_88",
+      "name": "8-hydroxyquercetin 8-O-methyltransferase",
       "ec": [
-        "2.1.1.141"
+        "2.1.1.88"
       ]
     }
   ],
@@ -424,54 +425,19 @@
     },
     {
       "id": "r5",
-      "name": "mandelate + O2 = phenylglyoxylate + H2O2",
-      "equation": "mandelate + O2 = phenylglyoxylate + H2O2",
+      "name": "benzylamine + NAD(+) + H2O = benzaldehyde + NH4(+) + NADH + H(+)",
+      "equation": "benzylamine + NAD(+) + H2O = benzaldehyde + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "mandelate",
+          "metabolite": "benzylaminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "phenylglyoxylate",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68968"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68968"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "benzyl alcohol + NADP(+) = benzaldehyde + NADPH + H(+)",
-      "equation": "benzyl alcohol + NADP(+) = benzaldehyde + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "benzyl_alcohol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -481,7 +447,11 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -490,28 +460,28 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59944"
+        "rhea": "RHEA:76863"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59944"
+            "id": "RHEA:76863"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "jasmonate O-methyltransferase",
-      "equation": "jasmonate + S-adenosyl-L-methionine = methyl (-)-jasmonate + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.141",
+      "id": "r6",
+      "name": "8-hydroxyquercetin 8-O-methyltransferase",
+      "equation": "3,3',4',5,7,8-hexahydroxyflavone + S-adenosyl-L-methionine = 3,3',4',5,7-pentahydroxy-8-methoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.88",
       "substrates": [
         {
-          "metabolite": "jasmonate",
+          "metabolite": "gossypetin",
           "stoichiometry": 1
         },
         {
@@ -521,30 +491,34 @@
       ],
       "products": [
         {
-          "metabolite": "methyl_jasmonate",
+          "metabolite": "3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_141"
+          "enzyme": "ec_2_1_1_88"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:13349"
+        "rhea": "RHEA:16593"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13349"
+            "id": "RHEA:16593"
           }
         ]
       }

@@ -22,14 +22,14 @@ pathway protoaustinoid-a-to-succinate "protoaustinoid A to succinate" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_19_13 [1.14.19.13] +9z_12z_hexadecadienoyl_coa +hydrogen_donor +o2 +h2o
-    9z_12z_hexadeca_9_12_15_trienoyl_coa
+    <-> . +1_hydroxy_carotene +hydrogen_donor
+    1_hydroxytorulene
   }
 
   branch from succinate side right {
     succinate
-    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2 +h2o
-    5_formyl_cmp_1
+    <-> . +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 
   branch from preaustinoid_a1 side left {

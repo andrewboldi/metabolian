@@ -103,59 +103,12 @@
       }
     },
     {
-      "id": "stearoyl_coa",
-      "name": "stearoyl-CoA",
-      "formula": "C39H66N7O17P3S",
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57394"
-      }
-    },
-    {
-      "id": "1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp",
-      "name": "1-hexadecanoyl-2-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
-      "short": "1-hexadecanoyl-2-oc…",
-      "formula": "C40H78O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:72839"
-      }
-    },
-    {
-      "id": "n_oleoyl_l_asparagine",
-      "name": "N-oleoyl-L-asparagine",
-      "short": "N-oleoyl-L-asparagi…",
-      "formula": "C22H39N2O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:149730"
-      }
-    },
-    {
-      "id": "l_asparagine",
-      "name": "L-asparagine",
-      "formula": "C4H8N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58048"
-      }
-    },
-    {
-      "id": "ethyl_hexadecanoate",
-      "name": "ethyl hexadecanoate",
-      "formula": "C18H36O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:84932"
-      }
-    },
-    {
-      "id": "ethanol",
-      "name": "ethanol",
-      "formula": "C2H6O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16236"
+        "chebi": "CHEBI:57387"
       }
     }
   ],
@@ -288,21 +241,21 @@
     },
     {
       "id": "r4",
-      "name": "1-hexadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) + octadecanoyl-CoA = 1-hexadecanoy...",
-      "equation": "1-hexadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) + octadecanoyl-CoA = 1-hexadecanoyl-2-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) + CoA",
+      "name": "1-hexadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) + (9Z)-octadecenoyl-CoA = 1-hexade...",
+      "equation": "1-hexadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) + (9Z)-octadecenoyl-CoA = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + CoA",
       "substrates": [
         {
           "metabolite": "1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero",
           "stoichiometry": 1
         },
         {
-          "metabolite": "stearoyl_coa",
+          "metabolite": "oleoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp",
+          "metabolite": "1_palmitoyl_2_oleoyl_sn_glycero_3_phospho_1_sn_g",
           "stoichiometry": 1
         },
         {
@@ -313,96 +266,14 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:35887"
+        "rhea": "RHEA:35891"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35887"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "N-(9Z-octadecenoyl)-L-asparagine + H2O = L-asparagine + (9Z)-octadecenoate",
-      "equation": "N-(9Z-octadecenoyl)-L-asparagine + H2O = L-asparagine + (9Z)-octadecenoate",
-      "substrates": [
-        {
-          "metabolite": "n_oleoyl_l_asparagine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_asparagine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "oleate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64136"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64136"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "ethyl hexadecanoate + H2O = ethanol + hexadecanoate + H(+)",
-      "equation": "ethyl hexadecanoate + H2O = ethanol + hexadecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ethyl_hexadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ethanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:50132"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:50132"
+            "id": "RHEA:35891"
           }
         ]
       }

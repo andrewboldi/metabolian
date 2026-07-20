@@ -16,15 +16,9 @@ pathway 2-11r-hydroxy-5z-8z-1-to-diphosphate "2-[(11R)-hydroxy-(5Z,8Z,1… to di
     11_oxo_ete_coa
   }
 
-  branch from 11_r_hete side left {
-    11_r_hete
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_135 [4.2.3.135] +fpp
-    6_protoilludene
+    <-> . +spectinomycin +atp
+    9_o_adenylylspectinomycin
   }
 }

@@ -30,21 +30,9 @@ pathway hexachlorocyclohexane-to-maleylacetate "γ-hexachlorocyclohexane to male
     1_2_4_trichlorobenzene
   }
 
-  branch from 2_5_dichloro_2_5_cyclohexadiene_1_4_diol side right {
-    2_5_dichloro_2_5_cyclohexadiene_1_4_diol
-    <-> . +h2o +chloride +hplus
-    2_4_5_trichlorocyclohexa_2_5_dien_1_ol
-  }
-
-  branch from gssg side left {
+  branch from gssg side right {
     gssg
-    <-> . +12_s_hpete +gsh +h2o
-    12_s_hete
-  }
-
-  branch from maleylacetate side right {
-    maleylacetate
-    <-> ec_1_3_1_32 [1.3.1.32] +nadp +nadph +hplus
-    3_oxoadipate
+    <-> . +15_s_hpete +gsh +h2o
+    15_s_hete
   }
 }

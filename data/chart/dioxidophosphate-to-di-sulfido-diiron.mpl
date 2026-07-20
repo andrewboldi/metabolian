@@ -18,19 +18,13 @@ pathway dioxidophosphate-to-di-sulfido-diiron "dioxidophosphate to di-μ-sulfido
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_42 [1.14.11.42] +7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp +akg +o2 +co2
-    7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo
+    <-> . +palmitoyl_coa +akg +o2 +co2
+    2_hydroxypalmitoyl_coa
   }
 
-  branch from h2 side right {
-    h2
-    <-> ec_1_8_98_5 [1.8.98.5] +coenzyme_b +coenzyme_m +di_sulfido_diiron +hplus +di_sulfido_diiron
-    com_s_s_cob
-  }
-
-  branch from di_sulfido_diiron side left {
+  branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
-    calcitroate
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +o2 +hplus +di_sulfido_diiron +h2o
+    pikromycin
   }
 }

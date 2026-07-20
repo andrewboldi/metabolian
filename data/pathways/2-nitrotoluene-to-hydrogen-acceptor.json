@@ -1,0 +1,372 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-nitrotoluene-to-hydrogen-acceptor",
+  "name": "2-nitrotoluene to hydrogen acceptor",
+  "category": "redox-detox",
+  "summary": "A 2-step route from 2-nitrotoluene to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57768"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:33098"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_nitrotoluene",
+      "name": "2-nitrotoluene",
+      "formula": "C7H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33098"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_methylcatechol",
+      "name": "3-methylcatechol",
+      "formula": "C7H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18404"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16301"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "versicolin",
+      "name": "Versicolin",
+      "formula": "C7H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:204745"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_4_6_trinitrotoluene",
+      "name": "2,4,6-trinitrotoluene",
+      "short": "2,4,6-trinitrotolue…",
+      "formula": "C7H5N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46053"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "2_glutathionyl_4_6_dinitrotoluene",
+      "name": "2-glutathionyl-4,6-dinitrotoluene",
+      "short": "2-glutathionyl-4,6-…",
+      "formula": "C17H20N5O10S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231531"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_arachidonoyl_sn_glycero_3_phosphocholine",
+      "name": "2-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "2-arachidonoyl-sn-g…",
+      "formula": "C28H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76079"
+      }
+    },
+    {
+      "id": "2_15s_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g",
+      "name": "2-[(15S)-hydroxy-(5Z,8Z,11Z,13E)-icosatetraenoyl]-sn-glycero-3-phosphocholine",
+      "short": "2-[(15S)-hydroxy-(5…",
+      "formula": "C28H50NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137584"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_12_23",
+      "name": "nitroarene dioxygenase",
+      "ec": [
+        "1.14.12.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nitroarene dioxygenase",
+      "equation": "2-nitrotoluene + NADH + O2 = 3-methylcatechol + nitrite + NAD(+)",
+      "ec": "1.14.12.23",
+      "substrates": [
+        {
+          "metabolite": "2_nitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57768"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-methylcatechol + AH2 + O2 = 3-methylbenzene-1,2,4-triol + A + H2O",
+      "equation": "3-methylcatechol + AH2 + O2 = 3-methylbenzene-1,2,4-triol + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_methylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "versicolin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84151"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84151"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,4,6-trinitrotoluene + glutathione = S-(4,6-dinitrotoluyl)glutathione + nitrite + H(+)",
+      "equation": "2,4,6-trinitrotoluene + glutathione = S-(4,6-dinitrotoluyl)glutathione + nitrite + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_4_6_trinitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_glutathionyl_4_6_dinitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + AH2 + O2 = 2-[(15S)-hy...",
+      "equation": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + AH2 + O2 = 2-[(15S)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoyl]-sn-glycero-3-phosphocholine + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_arachidonoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_15s_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53684"
+          }
+        ]
+      }
+    }
+  ]
+}

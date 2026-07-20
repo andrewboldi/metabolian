@@ -130,22 +130,22 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
+      "id": "mutildienyl_diphosphate",
+      "name": "mutildienyl diphosphate",
+      "short": "mutildienyl PP",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:142454"
       }
     },
     {
-      "id": "terpinene",
-      "name": "α-terpinene",
-      "formula": "C10H16",
+      "id": "premutilin",
+      "name": "premutilin",
+      "formula": "C20H34O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10334"
+        "chebi": "CHEBI:142455"
       }
     }
   ],
@@ -169,13 +169,6 @@
       "name": "carnitine--CoA ligase",
       "ec": [
         "6.2.1.48"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_115",
-      "name": "alpha-terpinene synthase",
-      "ec": [
-        "4.2.3.115"
       ]
     }
   ],
@@ -397,18 +390,21 @@
     },
     {
       "id": "r6",
-      "name": "alpha-terpinene synthase",
-      "equation": "(2E)-geranyl diphosphate = alpha-terpinene + diphosphate",
-      "ec": "4.2.3.115",
+      "name": "mutildienyl diphosphate + H2O = premutilin + diphosphate",
+      "equation": "mutildienyl diphosphate + H2O = premutilin + diphosphate",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "mutildienyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "terpinene",
+          "metabolite": "premutilin",
           "stoichiometry": 1
         },
         {
@@ -416,22 +412,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_115"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:32563"
+        "rhea": "RHEA:57924"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32563"
+            "id": "RHEA:57924"
           }
         ]
       }

@@ -1,0 +1,324 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-methylethanolaminium-to-s-adenosyl-l-homocyste",
+  "name": "N-methylethanolaminium… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from N-methylethanolaminium phosphate(1−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25321"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57781"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_methylethanolaminium_phosphate",
+      "name": "N-methylethanolaminium phosphate",
+      "short": "N-methylethanolamin…",
+      "formula": "C3H9NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57781"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_n_dimethylethanolamine_phosphate",
+      "name": "N,N-dimethylethanolamine phosphate",
+      "short": "N,N-dimethylethanol…",
+      "formula": "C4H11NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58641"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "phosphocholine",
+      "name": "Phosphocholine",
+      "formula": "C5H13NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:295975"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "2_o_methyluridine_5_monophosphate_1",
+      "name": "2'-O-methyluridine 5'-monophosphate(1−)",
+      "short": "2'-O-methyluridine…",
+      "formula": "C10H12N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74478"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-2-(9…",
+      "formula": "C42H82NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73001"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_palmitoyl_2_oleoyl_sn_glycerol",
+      "name": "1-palmitoyl-2-oleoyl-sn-glycerol",
+      "short": "1-palmitoyl-2-oleoy…",
+      "formula": "C37H70O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75466"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_103",
+      "name": "phosphoethanolamine N-methyltransferase",
+      "ec": [
+        "2.1.1.103"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphoethanolamine N-methyltransferase",
+      "equation": "N-methylethanolamine phosphate + S-adenosyl-L-methionine = N,N-dimethylethanolamine phosphate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.103",
+      "substrates": [
+        {
+          "metabolite": "n_methylethanolaminium_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethylethanolamine_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoethanolamine N-methyltransferase",
+      "equation": "N,N-dimethylethanolamine phosphate + S-adenosyl-L-methionine = phosphocholine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.103",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethylethanolamine_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25325"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a uridine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methyluridine in 21S rRNA + S-...",
+      "equation": "a uridine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methyluridine in 21S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methyluridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1-hexadecanoyl-2...",
+      "equation": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycerol + phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_palmitoyl_2_oleoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78939"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78939"
+          }
+        ]
+      }
+    }
+  ]
+}

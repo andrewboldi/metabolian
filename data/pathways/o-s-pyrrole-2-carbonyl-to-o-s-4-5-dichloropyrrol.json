@@ -1,0 +1,202 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-s-pyrrole-2-carbonyl-to-o-s-4-5-dichloropyrrol",
+  "name": "O-[S-(pyrrole-2-carbonyl)… to O-[S-(4,5-dichloropyrrole…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from O-[S-(pyrrole-2-carbonyl)pantetheine-4'-phosphoryl]serine(1−) residue to O-[S-(4,5-dichloropyrrole-2-carbonyl)pantetheine-4'-phosphoryl]serine(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56384"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl",
+      "name": "O-[S-(pyrrole-2-carbonyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(pyrrole-2-car…",
+      "formula": "C19H28N4O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138623"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho",
+      "name": "O-[S-(5-chloropyrrole-2-carbonyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(5-chloropyrro…",
+      "formula": "C19H27ClN4O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140221"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o_s_4_5_dichloropyrrole_2_carbonyl_pantetheine_4",
+      "name": "O-[S-(4,5-dichloropyrrole-2-carbonyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(4,5-dichlorop…",
+      "formula": "C19H26Cl2N4O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140219"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(1H-pyrrole-2-carbonyl)-[peptidyl-carrier protein] + FADH2 + chloride + O2 = (5-chloro-...",
+      "equation": "(1H-pyrrole-2-carbonyl)-[peptidyl-carrier protein] + FADH2 + chloride + O2 = (5-chloro-1H-pyrrole-2-carbonyl)-[peptidyl-carrier protein] + FAD + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(5-chloro-1H-pyrrole-2-carbonyl)-[peptidyl-carrier protein] + FADH2 + chloride + O2 = (...",
+      "equation": "(5-chloro-1H-pyrrole-2-carbonyl)-[peptidyl-carrier protein] + FADH2 + chloride + O2 = (4,5-dichloro-1H-pyrrole-2-carbonyl)-[peptidyl-carrier protein] + FAD + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_4_5_dichloropyrrole_2_carbonyl_pantetheine_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56388"
+          }
+        ]
+      }
+    }
+  ]
+}

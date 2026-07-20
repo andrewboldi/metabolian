@@ -24,7 +24,7 @@ pathway p-cumate-to-2-methylpropanoyl "p-cumate to 2-methylpropanoyl…" {
 
   branch from isobutyrate side left {
     isobutyrate
-    <-> . +n6_isobutyryl_l_lysine +h2o
-    l_lysinium
+    <-> . +1r_2r_3s_8r_10r_11r_15s_16s_3_acetyloxy_15_4r_4 +fmnh2 +o2 +fmn +h2o +hplus
+    1r_2r_3s_8r_10r_11r_15s_16s_3_acetyloxy_15_1_hy
   }
 }

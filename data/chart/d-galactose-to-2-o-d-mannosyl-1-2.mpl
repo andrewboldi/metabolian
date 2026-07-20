@@ -24,14 +24,14 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
 
   branch from d_galactose_1_phosphate side left {
     d_galactose_1_phosphate
-    <-> . +udp_d_galactose +h2o +hplus
+    <-> . +udp_d_glucose +h2o +hplus
     ump
   }
 
   branch from g1p side right {
     g1p
-    <-> ec_2_4_1_139 [2.4.1.139] +h2o +pi
-    maltose
+    <-> ec_2_4_1_7 [2.4.1.7] +sucrose +pi
+    d_fructofuranose
   }
 
   branch from udp_d_galactose side left {
@@ -42,7 +42,13 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
 
   branch from ppi side right {
     ppi
-    <-> ec_6_2_1_14 [6.2.1.14] +pimelate +atp +coa +amp
-    pimeloyl_coa
+    <-> ec_6_1_1_14 [6.1.1.14] +amp_3_end_1 +glycine +atp +amp
+    3_glycyladenylyl_zwitterionic_group
+  }
+
+  branch from 2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate side left {
+    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
+    <-> ec_2_4_1_266 [2.4.1.266] +pg3 +adp +hplus
+    adp_d_glucoside
   }
 }

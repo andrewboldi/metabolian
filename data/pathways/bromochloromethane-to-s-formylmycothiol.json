@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "bromochloromethane-to-s-formylmycothiol",
   "name": "bromochloromethane to S-formylmycothiol",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from bromochloromethane to S-formylmycothiol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,57 +119,40 @@
       }
     },
     {
-      "id": "codeine",
-      "name": "codeine",
-      "formula": "C18H22NO3",
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57871"
+        "chebi": "CHEBI:61976"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:13193"
       }
     },
     {
-      "id": "morphine",
-      "name": "morphine",
-      "formula": "C17H20NO3",
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58097"
+        "chebi": "CHEBI:61929"
       }
     },
     {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30031"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:17499"
       }
     }
   ],
@@ -179,13 +162,6 @@
       "name": "S-(hydroxymethyl)mycothiol dehydrogenase",
       "ec": [
         "1.1.1.306"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_32",
-      "name": "codeine 3-O-demethylase",
-      "ec": [
-        "1.14.11.32"
       ]
     }
   ],
@@ -323,26 +299,25 @@
     },
     {
       "id": "r4",
-      "name": "codeine 3-O-demethylase",
-      "equation": "codeine + 2-oxoglutarate + O2 = morphine + formaldehyde + succinate + CO2",
-      "ec": "1.14.11.32",
+      "name": "N(6),N(6)-dimethyl-L-lysyl-[protein] + A + H2O = N(6)-methyl-L-lysyl-[protein] + formal...",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl-[protein] + A + H2O = N(6)-methyl-L-lysyl-[protein] + formaldehyde + AH2",
       "substrates": [
         {
-          "metabolite": "codeine",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "morphine",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -350,30 +325,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinate",
+          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_32"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:27413"
+        "rhea": "RHEA:33451"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27413"
+            "id": "RHEA:33451"
           }
         ]
       }

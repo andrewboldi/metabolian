@@ -20,8 +20,8 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
 
   branch from n_acetyl_d_glucosamine side left {
     n_acetyl_d_glucosamine
-    <-> ec_2_4_1_280 [2.4.1.280] +n_n_diacetylchitobiose +pi
-    n_acetyl_d_glucosamine_1_phosphate
+    <-> . +o2 +h2o2
+    n_acetyl_d_glucosamino_1_5_lactone
   }
 
   branch from l_asparagine side right {
@@ -36,9 +36,9 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
     cdp
   }
 
-  branch from glucosamine6p side right {
-    glucosamine6p
-    <-> ec_5_4_2_10 [5.4.2.10]
-    d_glucosamine_1_phosphate
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_14 [2.8.3.14] +5_hydroxypentanoate +acetyl_coa
+    5_hydroxypentanoyl_coa
   }
 }

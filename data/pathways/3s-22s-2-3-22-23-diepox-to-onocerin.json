@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3s-22s-2-3-22-23-diepox-to-onocerin",
+  "name": "(3S,22S)-2,3:22,23-diepox… to α-onocerin",
+  "category": "other",
+  "summary": "A 2-step route from (3S,22S)-2,3:22,23-diepoxy-2,3,22,23-tetrahydrosqualene to α-onocerin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:54664"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138307"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3s_22s_2_3_22_23_diepoxy_2_3_22_23_tetrahydrosq",
+      "name": "(3S,22S)-2,3:22,23-diepoxy-2,3,22,23-tetrahydrosqualene",
+      "short": "(3S,22S)-2,3:22,23-…",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138307"
+      }
+    },
+    {
+      "id": "21s_21_22_epoxypolypoda_8_26_13_17_trien_3_ol",
+      "name": "(21S)-21,22-epoxypolypoda-8(26)-13,17-trien-3β-ol",
+      "short": "21,22-epoxypolypoda…",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138305"
+      }
+    },
+    {
+      "id": "onocerin",
+      "name": "α-onocerin",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138303"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_65",
+      "name": "pre-alpha-onocerin synthase",
+      "ec": [
+        "5.4.99.65"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_66",
+      "name": "alpha-onocerin synthase",
+      "ec": [
+        "5.4.99.66"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pre-alpha-onocerin synthase",
+      "equation": "(3S,22S)-2,3:22,23-diepoxysqualene = pre-alpha-onocerin",
+      "ec": "5.4.99.65",
+      "substrates": [
+        {
+          "metabolite": "3s_22s_2_3_22_23_diepoxy_2_3_22_23_tetrahydrosq",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "21s_21_22_epoxypolypoda_8_26_13_17_trien_3_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:54664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alpha-onocerin synthase",
+      "equation": "pre-alpha-onocerin = alpha-onocerin",
+      "ec": "5.4.99.66",
+      "substrates": [
+        {
+          "metabolite": "21s_21_22_epoxypolypoda_8_26_13_17_trien_3_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "onocerin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54668"
+          }
+        ]
+      }
+    }
+  ]
+}

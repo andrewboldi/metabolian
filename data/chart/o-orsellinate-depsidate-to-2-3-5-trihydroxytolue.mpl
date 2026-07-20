@@ -21,4 +21,10 @@ pathway o-orsellinate-depsidate-to-2-3-5-trihydroxytolue "o-orsellinate depsidat
     <-> . +acetyl_coa +hplus +co2 +coa
     malonyl-coa
   }
+
+  branch from orcinol side right {
+    orcinol
+    <-> . +sam +sah +hplus
+    3_methoxy_5_methylphenol
+  }
 }

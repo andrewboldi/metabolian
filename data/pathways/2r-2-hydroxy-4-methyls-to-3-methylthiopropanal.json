@@ -1,0 +1,172 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-2-hydroxy-4-methyls-to-3-methylthiopropanal",
+  "name": "(2R)-2-hydroxy-4-(methyls… to 3-methylthiopropanal",
+  "category": "other",
+  "summary": "A 2-step route from (2R)-2-hydroxy-4-(methylsulfanyl)butanoate to 3-methylthiopropanal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:64468"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:155852"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_2_hydroxy_4_methylsulfanyl_butanoate",
+      "name": "(2R)-2-hydroxy-4-(methylsulfanyl)butanoate",
+      "short": "2-hydroxy-4-(methyl…",
+      "formula": "C5H9O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:155852"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "4_methylthio_2_oxobutanoate",
+      "name": "4-methylthio-2-oxobutanoate",
+      "short": "4-methylthio-2-oxob…",
+      "formula": "C5H7O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16723"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_methylthiopropanal",
+      "name": "3-methylthiopropanal",
+      "formula": "C4H8OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49017"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2R)-2-hydroxy-4-(methylsulfanyl)butanoate + NADP(+) = 4-methylsulfanyl-2-oxobutanoate ...",
+      "equation": "(2R)-2-hydroxy-4-(methylsulfanyl)butanoate + NADP(+) = 4-methylsulfanyl-2-oxobutanoate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2r_2_hydroxy_4_methylsulfanyl_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylthio_2_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:64468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-methylsulfanyl-2-oxobutanoate + H(+) = 3-methylsulfanylpropanal + CO2",
+      "equation": "4-methylsulfanyl-2-oxobutanoate + H(+) = 3-methylsulfanylpropanal + CO2",
+      "substrates": [
+        {
+          "metabolite": "4_methylthio_2_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylthiopropanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55076"
+          }
+        ]
+      }
+    }
+  ]
+}

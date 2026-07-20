@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cetoleate-to-7z-octadecenoyl-coa",
   "name": "cetoleate to (7Z)-octadecenoyl-CoA",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 9-step route from cetoleate to (7Z)-octadecenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -216,23 +216,30 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "r_lipoate",
+      "name": "(R)-lipoate",
+      "formula": "C8H13O2S2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:83088"
       }
     },
     {
-      "id": "15_cis_4_4_diapophytoene",
-      "name": "15-cis-4,4'-diapophytoene",
-      "short": "15-cis-4,4'-diapoph…",
-      "formula": "C30H48",
-      "charge": 0,
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:62738"
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "r_lipoyl_gmp",
+      "name": "(R)-lipoyl-GMP",
+      "formula": "C18H25N5O9PS2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86460"
       }
     },
     {
@@ -263,17 +270,27 @@
       "xrefs": {
         "chebi": "CHEBI:235451"
       }
-    }
-  ],
-  "enzymes": [
+    },
     {
-      "id": "ec_2_5_1_96",
-      "name": "4,4'-diapophytoene synthase",
-      "ec": [
-        "2.5.1.96"
-      ]
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "ce_18_1_7z",
+      "name": "CE 18:1(7Z)",
+      "formula": "C45H78O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:152049"
+      }
     }
   ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -644,41 +661,43 @@
     },
     {
       "id": "r10",
-      "name": "4,4'-diapophytoene synthase",
-      "equation": "2 (2E,6E)-farnesyl diphosphate = 15-cis-4,4'-diapophytoene + 2 diphosphate",
-      "ec": "2.5.1.96",
+      "name": "(R)-lipoate + GTP + H(+) = (R)-lipoyl-GMP + diphosphate",
+      "equation": "(R)-lipoate + GTP + H(+) = (R)-lipoyl-GMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
-          "stoichiometry": 2
+          "metabolite": "r_lipoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "15_cis_4_4_diapophytoene",
+          "metabolite": "r_lipoyl_gmp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_96"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:31547"
+        "rhea": "RHEA:46700"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31547"
+            "id": "RHEA:46700"
           }
         ]
       }
@@ -812,6 +831,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:86199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "(7Z)-octadecenoyl-CoA + cholesterol = cholesteryl (7Z)-octadecenoate + CoA",
+      "equation": "(7Z)-octadecenoyl-CoA + cholesterol = cholesteryl (7Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "7z_octadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ce_18_1_7z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:64328"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64328"
           }
         ]
       }

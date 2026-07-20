@@ -28,8 +28,8 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
 
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
-    prenol
+    <-> . +fpp
+    germacrene_a
   }
 
   branch from 5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam side left {
@@ -40,7 +40,7 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_7_2_11 [2.7.2.11] +atp +adp
-    l_glutamyl_phosphate
+    <-> ec_2_6_1_9 [2.6.1.9] +akg +3_imidazol_4_yl_2_oxopropyl_phosphate
+    l_histidinol_phosphate
   }
 }

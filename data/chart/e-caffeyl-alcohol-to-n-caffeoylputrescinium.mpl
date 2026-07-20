@@ -16,15 +16,9 @@ pathway e-caffeyl-alcohol-to-n-caffeoylputrescinium "(E)-caffeyl alcohol to N-ca
     n_caffeoylputrescinium
   }
 
-  branch from 3_4_dihydroxycinnamaldehyde side left {
-    3_4_dihydroxycinnamaldehyde
-    <-> . +4_hydroxycinnamaldehyde +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
-
-  branch from trans_caffeoyl_coa side right {
+  branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
-    avenanthramide_c
+    <-> ec_2_3_1_140 [2.3.1.140] +2r_3_3_4_dihydroxyphenyl_lactate +coa
+    r_rosmarinate
   }
 }

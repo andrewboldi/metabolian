@@ -20,7 +20,7 @@ pathway all-trans-13-14-dihydrore-to-fmn "all-trans-13,14-dihydrore… to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    4_24s_dihydroxycholesterol
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate
   }
 }

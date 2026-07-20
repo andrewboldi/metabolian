@@ -20,19 +20,19 @@ pathway n-acetyl-alaninate-to-alanine "N-acetyl-β-alaninate to β-alanine" {
 
   branch from alanine side left {
     alanine
-    <-> . +dopamine +atp +amp +ppi +hplus
-    n_alanyldopamine
+    <-> ec_6_3_2_11 [6.3.2.11] +ornithine +atp +adp +pi +hplus
+    alanyl_l_ornithine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol +h2o +hplus
-    1_hexadecyl_sn_glycero_3_phosphoethanolamine
+    <-> . +o2 +pi +hplus
+    1r_1_hydroxyethyl_phosphonate
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
-    6_methoxymellein
+    <-> ec_2_1_1_34 [2.1.1.34] +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

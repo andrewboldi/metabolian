@@ -18,8 +18,8 @@ pathway 2-deoxy-d-glucoside-to-2-deoxy-d-glucopyranose "2-deoxy-α-D-glucoside t
 
   branch from alcohol side left {
     alcohol
-    <-> ec_3_2_1_85 [3.2.1.85] +6_phospho_d_galactoside +h2o
-    d_galactopyranose_6_phosphate
+    <-> ec_1_11_1_27 [1.11.1.27] +peroxol +gsh +h2o
+    gssg
   }
 
   branch from 2_deoxy_d_glucopyranose_6_phosphate side right {

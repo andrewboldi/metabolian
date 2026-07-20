@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4s-4-hydroxy-l-arginini-to-succinate",
+  "name": "(4S)-4-hydroxy-L-arginini… to succinate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (4S)-4-hydroxy-L-argininium to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77003"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195526"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4s_4_hydroxy_l_argininium",
+      "name": "(4S)-4-hydroxy-L-argininium",
+      "short": "4-hydroxy-L-arginin…",
+      "formula": "C6H15N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195526"
+      }
+    },
+    {
+      "id": "l_enduracididine",
+      "name": "L-enduracididine",
+      "formula": "C6H13N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:73936"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3s_3_hydroxy_l_enduracididine",
+      "name": "(3S)-3-hydroxy-L-enduracididine",
+      "short": "3-hydroxy-L-endurac…",
+      "formula": "C6H13N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:73937"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "aculene_d",
+      "name": "aculene D",
+      "formula": "C14H20O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:155910"
+      }
+    },
+    {
+      "id": "aculene_c",
+      "name": "aculene C",
+      "formula": "C14H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:155912"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_40",
+      "name": "enduracididine beta-hydroxylase",
+      "ec": [
+        "1.14.11.40"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(4S)-4-hydroxy-L-arginine = L-enduracididine + H2O",
+      "equation": "(4S)-4-hydroxy-L-arginine = L-enduracididine + H2O",
+      "substrates": [
+        {
+          "metabolite": "4s_4_hydroxy_l_argininium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_enduracididine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77003"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "enduracididine beta-hydroxylase",
+      "equation": "L-enduracididine + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-enduracididine + succinate + CO2",
+      "ec": "1.14.11.40",
+      "substrates": [
+        {
+          "metabolite": "l_enduracididine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_hydroxy_l_enduracididine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36603"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36603"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aculene D + 2-oxoglutarate + O2 = aculene C + succinate + CO2 + H2O",
+      "equation": "aculene D + 2-oxoglutarate + O2 = aculene C + succinate + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "aculene_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aculene_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65112"
+          }
+        ]
+      }
+    }
+  ]
+}

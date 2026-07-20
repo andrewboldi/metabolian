@@ -1,0 +1,186 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "20-methylhenicosanoyl-coa-to-1-o-20-methylhenico",
+  "name": "20-methylhenicosanoyl-CoA to 1-O-20-methylhenicosyl…",
+  "category": "other",
+  "summary": "A 2-step route from 20-methylhenicosanoyl-CoA(4−) to 1-O-20-methylhenicosyl oleate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81771"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232000"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "20_methylhenicosanoyl_coa",
+      "name": "20-methylhenicosanoyl-CoA",
+      "short": "20-methylhenicosano…",
+      "formula": "C43H74N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:232000"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "20_methylhenicosan_1_ol",
+      "name": "20-methylhenicosan-1-ol",
+      "short": "20-methylhenicosan-…",
+      "formula": "C22H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84915"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57387"
+      }
+    },
+    {
+      "id": "1_o_20_methylhenicosyl_oleate",
+      "name": "1-O-20-methylhenicosyl oleate",
+      "short": "1-O-20-methylhenico…",
+      "formula": "C40H78O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232012"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "20-methylheneicosanoyl-CoA + 2 NADPH + 2 H(+) = 20-methylheneicosan-1-ol + 2 NADP(+) + CoA",
+      "equation": "20-methylheneicosanoyl-CoA + 2 NADPH + 2 H(+) = 20-methylheneicosan-1-ol + 2 NADP(+) + CoA",
+      "substrates": [
+        {
+          "metabolite": "20_methylhenicosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_methylhenicosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "20-methylheneicosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-20-methylheneicosyl (9Z)-octadec...",
+      "equation": "20-methylheneicosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-20-methylheneicosyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "20_methylhenicosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_20_methylhenicosyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:81811"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81811"
+          }
+        ]
+      }
+    }
+  ]
+}

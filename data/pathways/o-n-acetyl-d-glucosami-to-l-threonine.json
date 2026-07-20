@@ -103,30 +103,22 @@
       }
     },
     {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57692"
-      }
-    },
-    {
-      "id": "fmn_l_threonine_2",
-      "name": "FMN-L-threonine(2−)",
-      "formula": "C21H24N5O10P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:74257"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:58223"
       }
     }
   ],
@@ -153,10 +145,10 @@
       ]
     },
     {
-      "id": "ec_2_7_1_180",
-      "name": "FAD:protein FMN transferase",
+      "id": "ec_2_4_1_255",
+      "name": "protein O-GlcNAc transferase",
       "ec": [
-        "2.7.1.180"
+        "2.4.1.255"
       ]
     }
   ],
@@ -302,26 +294,26 @@
     },
     {
       "id": "r4",
-      "name": "FAD:protein FMN transferase",
-      "equation": "L-threonyl-[protein] + FAD = FMN-L-threonyl-[protein] + AMP + H(+)",
-      "ec": "2.7.1.180",
+      "name": "protein O-GlcNAc transferase",
+      "equation": "L-threonyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = 3-O-(N-acetyl-beta-D-glucosaminyl)-L-threonyl-[protein] + UDP + H(+)",
+      "ec": "2.4.1.255",
       "substrates": [
         {
           "metabolite": "l_threonine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fad",
+          "metabolite": "udpglcnac",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fmn_l_threonine_2",
+          "metabolite": "o_n_acetyl_d_glucosaminyl_l_threonine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
@@ -331,20 +323,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_180"
+          "enzyme": "ec_2_4_1_255"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:36847"
+        "rhea": "RHEA:48908"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36847"
+            "id": "RHEA:48908"
           }
         ]
       }

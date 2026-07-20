@@ -22,8 +22,8 @@ pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroxi
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_19 [2.8.2.19] +d_glucosyl_1_6_d_glucosyl_1_6_d_glucosyl_1_3_1 +3_phosphonato_5_adenylyl_sulfate +hplus
-    6_o_sulfonato_d_glc_1_6_d_glc_1_6_d_glc_1_3_1_o
+    <-> ec_2_8_2_14 [2.8.2.14] +taurolithocholate +3_phosphonato_5_adenylyl_sulfate +hplus
+    taurolithocholic_acid_sulfate
   }
 
   branch from z_phenyl_n_sulfonatooxy_methanimidothioate side right {
@@ -34,13 +34,13 @@ pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroxi
 
   branch from glucose side left {
     glucose
-    <-> ec_2_4_1_8 [2.4.1.8] +maltose +pi
-    d_glucose_1_phosphate
+    <-> ec_3_2_1_191 [3.2.1.191] +ginsenoside_rb2 +h2o
+    ginsenoside_c_y
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_3_1_6_8 [3.1.6.8] +d_galactosylceramide_sulfate +h2o +hplus
-    n_acyl_d_galactosylsphingosine
+    <-> ec_3_1_6_20 [3.1.6.20] +s_2_sulfodisulfanyl_l_cysteine_1 +h2o +hplus
+    3_trisulfanyl_l_alanine
   }
 }

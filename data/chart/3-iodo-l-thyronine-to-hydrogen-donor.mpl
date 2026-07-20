@@ -12,27 +12,11 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor "3'-iodo-L-thyronine to hydrogen do
     3_5_diiodo_l_thyronine
     <-> . +iodide +hydrogen_acceptor +hplus -hydrogen_donor
     3_3_5_triiodo_l_thyronine
-    <-> . +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
-    3_3_5_triiodo_l_thyronine_sulfate
-    <-> . +iodide +hydrogen_acceptor +hplus -hydrogen_donor
-    l_thyroxine_sulfate
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +o2 +hydrogen_acceptor +h2o
-    7z_10z_13r_14e_16z_19z_13_hydroxydocosapentaeno
-  }
-
-  branch from 3_3_5_triiodo_l_thyronine_sulfate side right {
-    3_3_5_triiodo_l_thyronine_sulfate
-    <-> . +iodide +hydrogen_acceptor +hplus +hydrogen_donor
-    3_3_diiodo_l_thyronine_sulfate
-  }
-
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_28 [2.8.2.28] +quercetin_3_3_bissulfate +3_phosphonato_5_adenylyl_sulfate +hplus
-    quercetin_3_3_7_trissulfate
+    <-> . +chrodrimanin_f +hydrogen_acceptor
+    chrodrimanin_h
   }
 }

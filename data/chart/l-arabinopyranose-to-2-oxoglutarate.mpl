@@ -22,7 +22,7 @@ pathway l-arabinopyranose-to-2-oxoglutarate "α-L-arabinopyranose to 2-oxoglutar
 
   branch from akg side left {
     akg
-    <-> ec_2_3_3_14 [2.3.3.14] +acetyl_coa +h2o +coa +hplus
-    2r_homocitrate
+    <-> . +n_4_carboxy_4_oxobutanoyl_l_ethylglycylglycine +h2o
+    n_2s_2_ammoniobutanoyl_glycinate
   }
 }

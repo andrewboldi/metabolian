@@ -1,0 +1,346 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-3-cyclic-ump-to-uridine",
+  "name": "2',3'-cyclic UMP to uridine",
+  "category": "nucleotide-metabolism",
+  "summary": "A 4-step route from 2',3'-cyclic UMP(1−) to uridine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27878"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60873"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_3_cyclic_ump",
+      "name": "2',3'-cyclic UMP",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60873"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_ump",
+      "name": "3'-UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60784"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "uridine",
+      "name": "uridine",
+      "formula": "C9H12N2O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16704"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP (uridine 5'-monophosphate)",
+      "short": "UMP (uridine 5'-MP)",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57865"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_16",
+      "name": "2',3'-cyclic-nucleotide 2'-phosphodiesterase",
+      "ec": [
+        "3.1.4.16"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_48",
+      "name": "uridine/cytidine kinase",
+      "ec": [
+        "2.7.1.48"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2',3'-cyclic-nucleotide 2'-phosphodiesterase",
+      "equation": "2',3'-cyclophospho-UMP + H2O = 3'-UMP + H(+)",
+      "ec": "3.1.4.16",
+      "substrates": [
+        {
+          "metabolite": "2_3_cyclic_ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27878"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3'-UMP + H2O = uridine + phosphate",
+      "equation": "3'-UMP + H2O = uridine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "3_ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27890"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27890"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "uridine/cytidine kinase",
+      "equation": "uridine + ATP = UMP + ADP + H(+)",
+      "ec": "2.7.1.48",
+      "substrates": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16825"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16825"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "UMP + H2O = uridine + phosphate",
+      "equation": "UMP + H2O = uridine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:29359"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "UTP + 2 H2O = UMP + 2 phosphate + 2 H(+)",
+      "equation": "UTP + 2 H2O = UMP + 2 phosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64896"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64896"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -16,21 +16,9 @@ pathway 1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce "1-octadecanoyl-2-hexan
     1_o_oleoyl_n_acetylsphingosine
   }
 
-  branch from hexanoate side left {
-    hexanoate
-    <-> . +nadp +h2o +nadph +hplus
-    hexanal
-  }
-
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side right {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine
-    1_o_linoleoyl_n_acetylsphingosine
-  }
-
   branch from 1_o_oleoyl_n_acetylsphingosine side left {
     1_o_oleoyl_n_acetylsphingosine
-    <-> . +1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +n_acetylsphingosine
-    1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +n_acetylsphingosine
+    oleoyl_sn_glycero_3_phosphocholine
   }
 }

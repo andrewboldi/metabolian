@@ -26,13 +26,13 @@ pathway 1-alkyl-2-acetylglycerol-to-monoacylglycerol "1-alkyl-2-acetylglycerol t
 
   branch from acyl_sn_glycero_3_phosphocholine side right {
     acyl_sn_glycero_3_phosphocholine
-    <-> . +1_alkyl_2_acetyl_sn_glycerol +phosphatidylcholine
-    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
+    1_3_diacyl_sn_glycerol
   }
 
   branch from phosphocholine side left {
     phosphocholine
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_oleoyl_sn_glycerol
+    <-> . +1_linoleoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_linoleoyl_sn_glycerol
   }
 }

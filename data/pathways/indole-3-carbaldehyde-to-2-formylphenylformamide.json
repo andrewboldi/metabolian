@@ -102,21 +102,22 @@
       }
     },
     {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
-      }
-    },
-    {
       "id": "l_tryptophan",
       "name": "L-tryptophan",
       "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76565"
       }
     }
   ],
@@ -133,13 +134,6 @@
       "name": "indole 2,3-dioxygenase",
       "ec": [
         "1.13.11.17"
-      ]
-    },
-    {
-      "id": "ec_4_2_1_122",
-      "name": "tryptophan synthase (indole-salvaging)",
-      "ec": [
-        "4.2.1.122"
       ]
     }
   ],
@@ -279,45 +273,35 @@
     },
     {
       "id": "r4",
-      "name": "tryptophan synthase (indole-salvaging)",
-      "equation": "indole + L-serine = L-tryptophan + H2O",
-      "ec": "4.2.1.122",
+      "name": "L-tryptophan = indole + 2-aminoprop-2-enoate",
+      "equation": "L-tryptophan = indole + 2-aminoprop-2-enoate",
       "substrates": [
         {
-          "metabolite": "1h_indole",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "1h_indole",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "2_ammonioprop_2_enoate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_122"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:26434"
+        "rhea": "RHEA:42976"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26434"
+            "id": "RHEA:42976"
           }
         ]
       }

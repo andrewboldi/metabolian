@@ -32,13 +32,13 @@ pathway l-rhamnofuranose-to-hydrogen-donor "L-rhamnofuranose to hydrogen donor" 
 
   branch from dlactate side right {
     dlactate
-    <-> ec_3_1_6_17 [3.1.6.17] +r_2_o_sulfonatolactate +h2o +hplus
-    sulfate
+    <-> ec_1_1_99_40 [1.1.99.40] +r_2_hydroxyglutarate +pyruvate
+    akg
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_22 [1.14.99.22] +ecdysone +o2 +hydrogen_acceptor +h2o
-    20_hydroxyecdysone
+    <-> ec_1_3_99_18 [1.3.99.18] +quinaldate +hydrogen_acceptor +h2o
+    kynurenate
   }
 }

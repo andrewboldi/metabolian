@@ -18,19 +18,19 @@ pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
 
   branch from acetate side left {
     acetate
-    <-> . +o_acetyl_l_homoserine +cysteine +hplus
-    cystathionine
+    <-> . +1_o_acetyl_adp_d_ribose +h2o +hplus
+    adp_d_ribose
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_7 [2.8.2.7] +udp_n_acetyl_d_galactosamine_4_sulfate +3_phosphonato_5_adenylyl_sulfate +hplus
-    udp_n_acetyl_d_galactosamine_4_6_bissulfate
+    <-> ec_2_8_2_32 [2.8.2.32] +5_scymnol +3_phosphonato_5_adenylyl_sulfate +hplus
+    5_scymnol_sulfate
   }
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +pentyl_sulfate +akg +o2 +succinate +co2 +hplus
-    pentanal
+    <-> . +z_n_sulfonatooxy_alkenimidothioate
+    alkenyl_isothiocyanate
   }
 }

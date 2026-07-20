@@ -3,13 +3,13 @@
   "id": "molybdopterin-adenine-to-diphosphate",
   "name": "molybdopterin adenine… to diphosphate",
   "category": "nucleotide-metabolism",
-  "summary": "A 4-step route from molybdopterin adenine dinucleotide(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from molybdopterin adenine dinucleotide(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:78687"
+        "id": "RHEA:35047"
       },
       {
         "db": "ChEBI",
@@ -38,44 +38,6 @@
       }
     },
     {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "mo_vi_o3_molybdopterin_adenosine_dinucleotide",
-      "name": "Mo(VI)O3-molybdopterin adenosine dinucleotide",
-      "short": "Mo(VI)O3-molybdopte…",
-      "formula": "C20H22MoN10O15P2S2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:231441"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "mo_vi_o2_oh_molybdopterin_adenosine_dinucleotide",
-      "name": "Mo(VI)O2(OH)-molybdopterin adenosine dinucleotide",
-      "short": "Mo(VI)O2(OH)-molybd…",
-      "formula": "C20H22MoN10O15P2S2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:231442"
-      }
-    },
-    {
       "id": "mo_vi_o2_oh_molybdopterin_cofactor",
       "name": "Mo(VI)O2(OH)-molybdopterin cofactor",
       "short": "Mo(VI)O2(OH)-molybd…",
@@ -92,6 +54,15 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -124,35 +95,6 @@
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "mo_vi_molybdopterin_guanine_dinucleotide",
-      "name": "Mo(VI)-molybdopterin guanine dinucleotide",
-      "short": "Mo(VI)-molybdopteri…",
-      "formula": "C20H22MoN10O16P2S2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:71310"
-      }
-    },
-    {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:128769"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -163,17 +105,23 @@
       }
     },
     {
-      "id": "2_cis_6_trans_10_trans_geranylgeranyl_diphosphat",
-      "name": "2-cis,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-cis,6-trans,10-tr…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "epi_isozizaene",
+      "name": "(+)-epi-isozizaene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62639"
+        "chebi": "CHEBI:51458"
       }
     }
   ],
   "enzymes": [
+    {
+      "id": "ec_2_10_1_1",
+      "name": "molybdopterin molybdotransferase",
+      "ec": [
+        "2.10.1.1"
+      ]
+    },
     {
       "id": "ec_2_7_7_76",
       "name": "molybdenum cofactor cytidylyltransferase",
@@ -182,18 +130,19 @@
       ]
     },
     {
-      "id": "ec_2_7_7_77",
-      "name": "molybdenum cofactor guanylyltransferase",
+      "id": "ec_4_2_3_37",
+      "name": "epi-isozizaene synthase",
       "ec": [
-        "2.7.7.77"
+        "4.2.3.37"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "adenylyl-molybdopterin + molybdate + H(+) = adenylyl MoO3-molybdopterin cofactor + H2O",
-      "equation": "adenylyl-molybdopterin + molybdate + H(+) = adenylyl MoO3-molybdopterin cofactor + H2O",
+      "name": "molybdopterin molybdotransferase",
+      "equation": "adenylyl-molybdopterin + molybdate = Mo-molybdopterin + AMP + H(+)",
+      "ec": "2.10.1.1",
       "substrates": [
         {
           "metabolite": "molybdopterin_adenine_dinucleotide",
@@ -201,80 +150,6 @@
         },
         {
           "metabolite": "molybdate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "mo_vi_o3_molybdopterin_adenosine_dinucleotide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:78687"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78687"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "adenylyl MoO3-molybdopterin cofactor = adenylyl MoO2(OH)-molybdopterin cofactor",
-      "equation": "adenylyl MoO3-molybdopterin cofactor = adenylyl MoO2(OH)-molybdopterin cofactor",
-      "substrates": [
-        {
-          "metabolite": "mo_vi_o3_molybdopterin_adenosine_dinucleotide",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "mo_vi_o2_oh_molybdopterin_adenosine_dinucleotide",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 2,
-      "xrefs": {
-        "rhea": "RHEA:79031"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:79031"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r3",
-      "name": "adenylyl MoO2(OH)-molybdopterin cofactor + H2O = Mo-molybdopterin + AMP + 2 H(+)",
-      "equation": "adenylyl MoO2(OH)-molybdopterin cofactor + H2O = Mo-molybdopterin + AMP + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "mo_vi_o2_oh_molybdopterin_adenosine_dinucleotide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -289,26 +164,31 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_10_1_1"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:79035"
+        "rhea": "RHEA:35047"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:79035"
+            "id": "RHEA:35047"
           }
         ]
       }
     },
     {
-      "id": "r4",
+      "id": "r2",
       "name": "molybdenum cofactor cytidylyltransferase",
       "equation": "Mo-molybdopterin + CTP + H(+) = Mo-molybdopterin cytosine dinucleotide + diphosphate",
       "ec": "2.7.7.76",
@@ -342,7 +222,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:31335"
       },
@@ -357,27 +237,19 @@
       }
     },
     {
-      "id": "r5",
-      "name": "molybdenum cofactor guanylyltransferase",
-      "equation": "Mo-molybdopterin + GTP + H(+) = Mo-molybdopterin guanine dinucleotide + diphosphate",
-      "ec": "2.7.7.77",
+      "id": "r3",
+      "name": "epi-isozizaene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-epi-isozizaene + diphosphate",
+      "ec": "4.2.3.37",
       "substrates": [
         {
-          "metabolite": "mo_vi_o2_oh_molybdopterin_cofactor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "mo_vi_molybdopterin_guanine_dinucleotide",
+          "metabolite": "epi_isozizaene",
           "stoichiometry": 1
         },
         {
@@ -387,59 +259,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_77"
+          "enzyme": "ec_4_2_3_37"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:34243"
+        "rhea": "RHEA:25992"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34243"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2Z,6E,10E)-geranylgeranyl dip...",
-      "equation": "isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2Z,6E,10E)-geranylgeranyl diphosphate + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_cis_6_trans_10_trans_geranylgeranyl_diphosphat",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:31279"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:31279"
+            "id": "RHEA:25992"
           }
         ]
       }

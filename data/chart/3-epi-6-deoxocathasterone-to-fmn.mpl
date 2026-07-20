@@ -20,8 +20,8 @@ pathway 3-epi-6-deoxocathasterone-to-fmn "3-epi-6-deoxocathasterone to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_152 [1.14.14.152] +amyrin +fmnh2 +o2 +h2o +hplus
-    11_oxo_amyrin
+    <-> ec_1_14_14_87 [1.14.14.87] +s_naringenin +fmnh2 +o2 +h2o +hplus
+    2_hydroxy_2_3_dihydrogenistein
   }
 
   branch from 6_hydroxytyphasterol side right {

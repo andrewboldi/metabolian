@@ -147,42 +147,39 @@
       }
     },
     {
-      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
-      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
-      "short": "all-cis-5,8,11,14,1…",
-      "formula": "C20H29O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58562"
-      }
-    },
-    {
-      "id": "17_s_18_r_eetetr",
-      "name": "17(S),18(R)-EETeTr",
-      "formula": "C20H29O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:76635"
-      }
-    },
-    {
-      "id": "s_2e_6e_farnesyl_l_cysteinate",
-      "name": "S-[(2E,6E)-farnesyl]-L-cysteinate",
-      "short": "S-[(2E,6E)-farnesyl…",
-      "formula": "C18H29NO2S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90510"
-      }
-    },
-    {
-      "id": "s_2e_6e_farnesyl_l_cysteine_methyl_ester",
-      "name": "S-[(2E,6E)-farnesyl]-L-cysteine methyl ester",
-      "short": "S-[(2E,6E)-farnesyl…",
-      "formula": "C19H32NO2S",
+      "id": "estrone",
+      "name": "estrone",
+      "formula": "C18H22O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90511"
+        "chebi": "CHEBI:17263"
+      }
+    },
+    {
+      "id": "6_hydroxyestrone",
+      "name": "6β-hydroxyestrone",
+      "formula": "C18H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87626"
+      }
+    },
+    {
+      "id": "tocotrienol",
+      "name": "γ-tocotrienol",
+      "formula": "C28H42O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33277"
+      }
+    },
+    {
+      "id": "tocotrienol",
+      "name": "α-tocotrienol",
+      "formula": "C29H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33270"
       }
     }
   ],
@@ -216,10 +213,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_100",
-      "name": "protein-S-isoprenylcysteine O-methyltransferase",
+      "id": "ec_2_1_1_95",
+      "name": "tocopherol C-methyltransferase",
       "ec": [
-        "2.1.1.100"
+        "2.1.1.95"
       ]
     }
   ],
@@ -434,11 +431,11 @@
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (17S,18R)-epoxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyestrone + oxidized...",
+      "equation": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyestrone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "metabolite": "estrone",
           "stoichiometry": 1
         },
         {
@@ -452,7 +449,7 @@
       ],
       "products": [
         {
-          "metabolite": "17_s_18_r_eetetr",
+          "metabolite": "6_hydroxyestrone",
           "stoichiometry": 1
         },
         {
@@ -471,26 +468,26 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:39783"
+        "rhea": "RHEA:47340"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39783"
+            "id": "RHEA:47340"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "protein-S-isoprenylcysteine O-methyltransferase",
-      "equation": "[protein]-C-terminal S-[(2E,6E)-farnesyl]-L-cysteine + S-adenosyl-L-methionine = [protein]-C-terminal S-[(2E,6E)-farnesyl]-L-cysteine methyl ester + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.100",
+      "name": "tocopherol C-methyltransferase",
+      "equation": "gamma-tocotrienol + S-adenosyl-L-methionine = alpha-tocotrienol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.95",
       "substrates": [
         {
-          "metabolite": "s_2e_6e_farnesyl_l_cysteinate",
+          "metabolite": "tocotrienol",
           "stoichiometry": 1
         },
         {
@@ -500,30 +497,34 @@
       ],
       "products": [
         {
-          "metabolite": "s_2e_6e_farnesyl_l_cysteine_methyl_ester",
+          "metabolite": "tocotrienol",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_100"
+          "enzyme": "ec_2_1_1_95"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:21672"
+        "rhea": "RHEA:38095"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21672"
+            "id": "RHEA:38095"
           }
         ]
       }

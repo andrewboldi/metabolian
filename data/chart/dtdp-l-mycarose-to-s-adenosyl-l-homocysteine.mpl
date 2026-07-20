@@ -24,7 +24,7 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-ad
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_115 [2.1.1.115] +1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium +sam +hplus
-    1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini
+    <-> ec_2_1_1_144 [2.1.1.144] +trans_aconitate +sam
+    2e_3_methoxycarbonyl_pent_2_enedioate
   }
 }

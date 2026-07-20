@@ -18,7 +18,7 @@ pathway 4-hydroxycholesterol-to-di-sulfido-diiron "4β-hydroxycholesterol to di-
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +epothilone_c +di_sulfido_diiron +o2 +hplus +h2o
-    epothilone_a
+    <-> . +protochlorophyllide +di_sulfido_diiron +o2 +hplus +h2o
+    protochlorophyllide_b
   }
 }

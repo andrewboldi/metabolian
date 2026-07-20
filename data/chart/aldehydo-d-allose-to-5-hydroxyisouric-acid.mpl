@@ -34,8 +34,8 @@ pathway aldehydo-d-allose-to-5-hydroxyisouric-acid "aldehydo-D-allose to 5-hydro
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_2_24 [6.3.2.24] +tyrosine +arginine +atp +amp +hplus
-    l_tyrosiniumyl_l_arginine
+    <-> ec_4_2_3_7 [4.2.3.7] +fpp
+    pentalenene
   }
 
   branch from hypoxanthine side left {

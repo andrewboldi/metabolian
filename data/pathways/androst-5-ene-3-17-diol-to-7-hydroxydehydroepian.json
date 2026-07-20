@@ -150,58 +150,30 @@
       }
     },
     {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "dehydroepiandrosterone_3_d_glucoside",
-      "name": "dehydroepiandrosterone 3-β-D-glucoside",
-      "short": "dehydroepiandroster…",
-      "formula": "C25H38O7",
+      "id": "dolabradiene",
+      "name": "dolabradiene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145051"
+        "chebi": "CHEBI:141822"
       }
     },
     {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "s_scoulerine",
-      "name": "(S)-scoulerine",
-      "formula": "C19H21NO4",
+      "id": "15_16_epoxydolabrene",
+      "name": "15,16-epoxydolabrene",
+      "formula": "C20H32O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17129"
-      }
-    },
-    {
-      "id": "s_nandinine",
-      "name": "(S)-nandinine",
-      "formula": "C19H19NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:132749"
+        "chebi": "CHEBI:141821"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_19_73",
-      "name": "(S)-nandinine synthase",
+      "id": "ec_1_14_14_159",
+      "name": "dolabradiene monooxygenase",
       "ec": [
-        "1.14.19.73"
+        "1.14.14.159"
       ]
     }
   ],
@@ -388,55 +360,12 @@
     },
     {
       "id": "r5",
-      "name": "3beta-hydroxyandrost-5-en-17-one + UDP-alpha-D-glucose = dehydroepiandrosterone 3-beta-...",
-      "equation": "3beta-hydroxyandrost-5-en-17-one + UDP-alpha-D-glucose = dehydroepiandrosterone 3-beta-D-glucoside + UDP + H(+)",
+      "name": "dolabradiene monooxygenase",
+      "equation": "dolabradiene + reduced [NADPH--hemoprotein reductase] + O2 = 15,16-epoxydolabrene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.159",
       "substrates": [
         {
-          "metabolite": "dehydroepiandrosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dehydroepiandrosterone_3_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:61812"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:61812"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(S)-nandinine synthase",
-      "equation": "(S)-scoulerine + reduced [NADPH--hemoprotein reductase] + O2 = (S)-nandinine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "ec": "1.14.19.73",
-      "substrates": [
-        {
-          "metabolite": "s_scoulerine",
+          "metabolite": "dolabradiene",
           "stoichiometry": 1
         },
         {
@@ -450,7 +379,7 @@
       ],
       "products": [
         {
-          "metabolite": "s_nandinine",
+          "metabolite": "15_16_epoxydolabrene",
           "stoichiometry": 1
         },
         {
@@ -459,7 +388,7 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
@@ -468,20 +397,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_19_73"
+          "enzyme": "ec_1_14_14_159"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50364"
+        "rhea": "RHEA:57516"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50364"
+            "id": "RHEA:57516"
           }
         ]
       }

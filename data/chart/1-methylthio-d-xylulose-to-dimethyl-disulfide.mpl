@@ -15,16 +15,4 @@ pathway 1-methylthio-d-xylulose-to-dimethyl-disulfide "1-methylthio-D-xyluloseâ€
     <-> ec_1_8_1_21 [1.8.1.21] +nad -nadh -hplus
     dimethyl_disulfide
   }
-
-  branch from gsh side left {
-    gsh
-    <-> ec_4_4_1_34 [4.4.1.34] +s_1_hydroxy_2_methylbut_3_en_2_yl_glutathione
-    3r_3_4_epoxy_3_methylbut_1_ene
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +dihydropyriculol +hydrogen_donor
-    pyriculol
-  }
 }

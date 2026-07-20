@@ -134,21 +134,41 @@
       }
     },
     {
-      "id": "3_5_cyclic_cmp",
-      "name": "3',5'-cyclic CMP",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58003"
+        "chebi": "CHEBI:58057"
       }
     },
     {
-      "id": "n_acetyllactosamine",
-      "name": "N-acetyllactosamine",
-      "formula": "C14H25NO11",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16153"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_linalool",
+      "name": "(R)-linalool",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi",
+      "name": "β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-N-acylsphingosine",
+      "short": "β-D-galactosyl-(1→4…",
+      "formula": "C31H56NO13R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17950"
       }
     },
     {
@@ -162,13 +182,13 @@
       }
     },
     {
-      "id": "n_acetylneuraminyl_2_6_d_galactosyl_1_4_n_acety",
-      "name": "α-N-acetylneuraminyl-(2→6)-β-D-galactosyl-(1→4)-N-acetyl-β-D-glucosamine",
+      "id": "n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco",
+      "name": "α-N-acetylneuraminyl-(2→6)-β-D-galactosyl-(1→4)-β-D-glucosylceramide",
       "short": "α-N-acetylneuraminy…",
-      "formula": "C25H41N2O19",
+      "formula": "C42H72N2O21R",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60040"
+        "chebi": "CHEBI:60079"
       }
     },
     {
@@ -187,6 +207,33 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
       }
     }
   ],
@@ -234,10 +281,10 @@
       ]
     },
     {
-      "id": "ec_4_6_1_6",
-      "name": "cytidylate cyclase",
+      "id": "ec_4_2_3_26",
+      "name": "R-linalool synthase",
       "ec": [
-        "4.6.1.6"
+        "4.2.3.26"
       ]
     },
     {
@@ -526,18 +573,22 @@
     },
     {
       "id": "r7",
-      "name": "cytidylate cyclase",
-      "equation": "CTP = 3',5'-cyclic CMP + diphosphate",
-      "ec": "4.6.1.6",
+      "name": "R-linalool synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (R)-linalool + diphosphate",
+      "ec": "4.2.3.26",
       "substrates": [
         {
-          "metabolite": "ctp",
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_5_cyclic_cmp",
+          "metabolite": "r_linalool",
           "stoichiometry": 1
         },
         {
@@ -547,20 +598,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_6_1_6"
+          "enzyme": "ec_4_2_3_26"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:14737"
+        "rhea": "RHEA:15809"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14737"
+            "id": "RHEA:15809"
           }
         ]
       }
@@ -568,11 +619,11 @@
     {
       "id": "r8",
       "name": "beta-galactoside alpha-(2,6)-sialyltransferase",
-      "equation": "N-acetyllactosamine + CMP-N-acetyl-beta-neuraminate = N-acetyl-alpha-neuraminyl-(2->6)-beta-D-galactosyl-(1->4)-N-acetyl-beta-D-glucosamine + CMP + H(+)",
+      "equation": "a beta-D-Gal-(1->4)-beta-D-Glc-(1<->1)-Cer(d18:1(4E)) + CMP-N-acetyl-beta-neuraminate = N-acetyl-alpha-neuraminyl-(2->6)-beta-D-galactosyl-(1->4)-beta-D-glucosyl-(1<->1)-ceramide + CMP + H(+)",
       "ec": "2.4.3.1",
       "substrates": [
         {
-          "metabolite": "n_acetyllactosamine",
+          "metabolite": "d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi",
           "stoichiometry": 1
         },
         {
@@ -582,7 +633,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_acetylneuraminyl_2_6_d_galactosyl_1_4_n_acety",
+          "metabolite": "n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco",
           "stoichiometry": 1
         },
         {
@@ -602,14 +653,14 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:11836"
+        "rhea": "RHEA:21552"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11836"
+            "id": "RHEA:21552"
           }
         ]
       }
@@ -659,6 +710,57 @@
           {
             "db": "Rhea",
             "id": "RHEA:25021"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "UTP + NH4(+) + ATP = CTP + ADP + phosphate + 2 H(+)",
+      "equation": "UTP + NH4(+) + ATP = CTP + ADP + phosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:16597"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16597"
           }
         ]
       }

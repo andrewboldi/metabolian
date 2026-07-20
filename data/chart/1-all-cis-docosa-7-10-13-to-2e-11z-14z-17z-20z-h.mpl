@@ -28,27 +28,21 @@ pathway 1-all-cis-docosa-7-10-13-to-2e-11z-14z-17z-20z-h "1-(all-cis-docosa-7,10
     2e_11z_14z_17z_20z_hexacosapentaenoyl_coa
   }
 
-  branch from glycerol side left {
-    glycerol
-    <-> ec_2_4_1_359 [2.4.1.359] +2_o_d_glucopyranosyl_glycerol +pi
-    g1p
-  }
-
-  branch from 7z_10z_13z_16z_docosatetraenoyl_coa side right {
+  branch from 7z_10z_13z_16z_docosatetraenoyl_coa side left {
     7z_10z_13z_16z_docosatetraenoyl_coa
     <-> . +fe2 +o2 +hplus +iron +h2o
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
+    7z_10z_13z_16z_19z_docosapentaenoyl_coa
   }
 
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_2_5_1_89 [2.5.1.89] +geranylgeranyl_diphosphate +ipp
-    tri_trans_poly_cis_undecaprenyl_diphosphate
+    <-> ec_4_2_3_102 [4.2.3.102] +fpp
+    sesquithujene
   }
 
-  branch from 9z_12z_15z_18z_tetracosatetraenoyl_coa side right {
-    9z_12z_15z_18z_tetracosatetraenoyl_coa
-    <-> . +hydrogen_donor +o2 +hydrogen_acceptor +h2o
-    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
+  branch from 2e_11z_14z_17z_20z_hexacosapentaenoyl_coa side left {
+    2e_11z_14z_17z_20z_hexacosapentaenoyl_coa
+    <-> . +nadph +hplus +nadp
+    11z_14z_17z_20z_hexacosatetraenoyl_coa
   }
 }

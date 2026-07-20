@@ -189,42 +189,48 @@
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9α,10β-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "cyclic_amp_amp_gmp",
+      "name": "cyclic AMP-AMP-GMP",
+      "formula": "C30H33N15O19P3",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58635"
+        "chebi": "CHEBI:143810"
       }
     },
     {
-      "id": "neoabietadiene",
-      "name": "neoabietadiene",
-      "formula": "C20H32",
-      "charge": 0,
+      "id": "s_reticulinium",
+      "name": "(S)-reticulinium",
+      "formula": "C19H24NO4",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:29651"
+        "chebi": "CHEBI:57873"
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
-      "charge": -1,
+      "id": "s_tembetarine",
+      "name": "(S)-tembetarine",
+      "formula": "C20H26NO4",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
-      }
-    },
-    {
-      "id": "n2_methylguanosine_5_monophosphate_1",
-      "name": "N2-methylguanosine 5'-monophosphate(1−)",
-      "short": "N2-methylguanosine…",
-      "formula": "C11H13N5O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74481"
+        "chebi": "CHEBI:134199"
       }
     }
   ],
@@ -258,17 +264,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_132",
-      "name": "neoabietadiene synthase",
+      "id": "ec_2_1_1_337",
+      "name": "reticuline N-methyltransferase",
       "ec": [
-        "4.2.3.132"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_173",
-      "name": "23S rRNA (guanine(2445)-N(2))-methyltransferase",
-      "ec": [
-        "2.1.1.173"
+        "2.1.1.337"
       ]
     }
   ],
@@ -522,53 +521,51 @@
     },
     {
       "id": "r6",
-      "name": "neoabietadiene synthase",
-      "equation": "(+)-copalyl diphosphate = neoabietadiene + diphosphate",
-      "ec": "4.2.3.132",
+      "name": "GTP + 2 ATP = 3',3',3'-cAAG + 3 diphosphate",
+      "equation": "GTP + 2 ATP = 3',3',3'-cAAG + 3 diphosphate",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "gtp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "neoabietadiene",
+          "metabolite": "cyclic_amp_amp_gmp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_132"
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:33987"
+        "rhea": "RHEA:60476"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33987"
+            "id": "RHEA:60476"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "23S rRNA (guanine(2445)-N(2))-methyltransferase",
-      "equation": "guanosine(2445) in 23S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(2445) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.173",
+      "name": "reticuline N-methyltransferase",
+      "equation": "(S)-reticuline + S-adenosyl-L-methionine = (S)-tembetarine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.337",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "s_reticulinium",
           "stoichiometry": 1
         },
         {
@@ -578,7 +575,7 @@
       ],
       "products": [
         {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "metabolite": "s_tembetarine",
           "stoichiometry": 1
         },
         {
@@ -592,20 +589,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_173"
+          "enzyme": "ec_2_1_1_337"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:42740"
+        "rhea": "RHEA:51520"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42740"
+            "id": "RHEA:51520"
           }
         ]
       }

@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-o-desmethylmycophenolate-to-mycophenolate",
+  "name": "6-O-desmethylmycophenolate to mycophenolate…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 6-O-desmethylmycophenolate to mycophenolate 7-O-β-D-glucuronide(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81843"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231832"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_o_desmethylmycophenolate",
+      "name": "6-O-desmethylmycophenolate",
+      "short": "6-O-desmethylmycoph…",
+      "formula": "C16H17O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231832"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "mycophenolate",
+      "name": "mycophenolate",
+      "formula": "C17H19O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62932"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "mycophenolate_7_o_d_glucuronide",
+      "name": "mycophenolate 7-O-β-D-glucuronide",
+      "short": "mycophenolate…",
+      "formula": "C23H26O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149486"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "n3_methyluridine_5_monophosphate_1",
+      "name": "N3-methyluridine 5'-monophosphate(1−)",
+      "short": "N3-methyluridine…",
+      "formula": "C10H12N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74502"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_312",
+      "name": "25S rRNA (uracil(2843)-N(3))-methyltransferase",
+      "ec": [
+        "2.1.1.312"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6-O-desmethylmycophenolate + S-adenosyl-L-methionine = mycophenolate + S-adenosyl-L-hom...",
+      "equation": "6-O-desmethylmycophenolate + S-adenosyl-L-methionine = mycophenolate + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_o_desmethylmycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81843"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81843"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolate 7-O-beta-D-glucuronide + UDP + ...",
+      "equation": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolate 7-O-beta-D-glucuronide + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolate_7_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:63704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "25S rRNA (uracil(2843)-N(3))-methyltransferase",
+      "equation": "uridine(2843) in 25S rRNA + S-adenosyl-L-methionine = N(3)-methyluridine(2843) in 25S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.312",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n3_methyluridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_312"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43184"
+          }
+        ]
+      }
+    }
+  ]
+}

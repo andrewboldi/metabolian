@@ -36,13 +36,13 @@ pathway l-threonate-to-n6-3-o-phospho-d-erythru "L-threonate to N6-(3-O-phospho-
 
   branch from s7p side right {
     s7p
-    <-> ec_4_2_3_154 [4.2.3.154] +pi +h2o +hplus
-    r_demethyl_4_deoxygadusol
+    <-> ec_4_2_3_152 [4.2.3.152] +pi
+    2_epi_5_epi_valiolone
   }
 
-  branch from d_fructofuranose_6_phosphate side left {
-    d_fructofuranose_6_phosphate
-    <-> ec_2_4_1_329 [2.4.1.329] +sucrose_6f_phosphate +pi
-    g1p
+  branch from e4p side left {
+    e4p
+    <-> ec_2_2_1_14 [2.2.1.14] +6_deoxy_6_sulfo_d_fructofuranose +s7p
+    l_3_sulfolactaldehyde
   }
 }

@@ -1,0 +1,181 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-2-hydroxyhexadecanoyl-to-formate",
+  "name": "(R)-2-hydroxyhexadecanoyl… to formate",
+  "category": "other",
+  "summary": "A 2-step route from (R)-2-hydroxyhexadecanoyl-CoA(4−) to formate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55212"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138654"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_2_hydroxyhexadecanoyl_coa",
+      "name": "(R)-2-hydroxyhexadecanoyl-CoA",
+      "short": "2-hydroxyhexadecano…",
+      "formula": "C37H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138654"
+      }
+    },
+    {
+      "id": "pentadecanal",
+      "name": "pentadecanal",
+      "formula": "C15H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17302"
+      }
+    },
+    {
+      "id": "formyl_coa",
+      "name": "formyl-CoA",
+      "formula": "C22H32N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57376"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_2_10",
+      "name": "formyl-CoA hydrolase",
+      "ec": [
+        "3.1.2.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2R)-hydroxyhexadecanoyl-CoA = pentadecanal + formyl-CoA",
+      "equation": "(2R)-hydroxyhexadecanoyl-CoA = pentadecanal + formyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxyhexadecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "formyl-CoA hydrolase",
+      "equation": "formyl-CoA + H2O = formate + CoA + H(+)",
+      "ec": "3.1.2.10",
+      "substrates": [
+        {
+          "metabolite": "formyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19741"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19741"
+          }
+        ]
+      }
+    }
+  ]
+}

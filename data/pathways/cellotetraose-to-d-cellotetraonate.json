@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cellotetraose-to-d-cellotetraonate",
+  "name": "cellotetraose to D-cellotetraonate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from cellotetraose to D-cellotetraonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59660"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62974"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cellotetraose",
+      "name": "cellotetraose",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62974"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_cellotetraono_1_5_lactone",
+      "name": "D-cellotetraono-1,5-lactone",
+      "short": "D-cellotetraono-1,5…",
+      "formula": "C24H40O21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143172"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_cellotetraonate",
+      "name": "D-cellotetraonate",
+      "formula": "C24H41O22",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143176"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-cellotetraose + O2 = D-cellotetraono-1,5-lactone + H2O2",
+      "equation": "D-cellotetraose + O2 = D-cellotetraono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "cellotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_cellotetraono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-cellotetraono-1,5-lactone + H2O = D-cellotetraonate + H(+)",
+      "equation": "D-cellotetraono-1,5-lactone + H2O = D-cellotetraonate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_cellotetraono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_cellotetraonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59696"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59696"
+          }
+        ]
+      }
+    }
+  ]
+}

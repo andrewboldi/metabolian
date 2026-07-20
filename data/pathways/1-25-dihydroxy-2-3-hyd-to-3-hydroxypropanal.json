@@ -1,0 +1,195 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-25-dihydroxy-2-3-hyd-to-3-hydroxypropanal",
+  "name": "1α,25-dihydroxy-2β-(3-hyd… to 3-hydroxypropanal",
+  "category": "other",
+  "summary": "A 2-step route from 1α,25-dihydroxy-2β-(3-hydroxypropoxy)vitamin D3 to 3-hydroxypropanal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:62820"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:73927"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_25_dihydroxy_2_3_hydroxypropoxy_vitamin_d3",
+      "name": "1α,25-dihydroxy-2β-(3-hydroxypropoxy)vitamin D3",
+      "short": "1α,25-dihydroxy-2β-…",
+      "formula": "C30H50O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73927"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_25_dihydroxy_2_1_3_dihydroxypropoxy_vitamin_d3",
+      "name": "1α,25-dihydroxy-2β-(1,3-dihydroxypropoxy)vitamin D3",
+      "short": "1α,25-dihydroxy-2β-…",
+      "formula": "C30H50O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146141"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_2_25_trihydroxy_vitamin_d3",
+      "name": "1α,2β,25-trihydroxy vitamin D3",
+      "short": "1α,2β,25-trihydroxy…",
+      "formula": "C27H44O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87395"
+      }
+    },
+    {
+      "id": "3_hydroxypropanal",
+      "name": "3-hydroxypropanal",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17871"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1alpha,25-dihydroxy-2beta-(3-hydroxypropoxy)-cholecalciferol + 2 Fe(II)-[cytochrome b5]...",
+      "equation": "1alpha,25-dihydroxy-2beta-(3-hydroxypropoxy)-cholecalciferol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 1alpha,25-dihydroxy-2beta-(1,3-dihydroxypropoxy)-cholecalciferol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "1_25_dihydroxy_2_3_hydroxypropoxy_vitamin_d3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_25_dihydroxy_2_1_3_dihydroxypropoxy_vitamin_d3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:62820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1alpha,25-dihydroxy-2beta-(1,3-dihydroxypropoxy)-cholecalciferol = 1alpha,2beta,25-trih...",
+      "equation": "1alpha,25-dihydroxy-2beta-(1,3-dihydroxypropoxy)-cholecalciferol = 1alpha,2beta,25-trihydroxycholecalciferol + 3-hydroxypropanal",
+      "substrates": [
+        {
+          "metabolite": "1_25_dihydroxy_2_1_3_dihydroxypropoxy_vitamin_d3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_25_trihydroxy_vitamin_d3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_hydroxypropanal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:62920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62920"
+          }
+        ]
+      }
+    }
+  ]
+}

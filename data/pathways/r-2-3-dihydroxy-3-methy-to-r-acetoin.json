@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-2-3-dihydroxy-3-methy-to-r-acetoin",
+  "name": "(R)-2,3-dihydroxy-3-methy… to (R)-acetoin",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (R)-2,3-dihydroxy-3-methylbutanoate to (R)-acetoin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22068"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:49072"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_2_3_dihydroxy_3_methylbutanoate",
+      "name": "(R)-2,3-dihydroxy-3-methylbutanoate",
+      "short": "2,3-dihydroxy-3-met…",
+      "formula": "C5H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:49072"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2s_2_hydroxy_2_methyl_3_oxobutanoate",
+      "name": "(2S)-2-hydroxy-2-methyl-3-oxobutanoate",
+      "short": "2-hydroxy-2-methyl-…",
+      "formula": "C5H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58476"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_acetoin",
+      "name": "(R)-acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15686"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "3_hydroxy_3_methyl_2_oxobutanoate",
+      "name": "3-hydroxy-3-methyl-2-oxobutanoate",
+      "short": "3-hydroxy-3-methyl-…",
+      "formula": "C5H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11812"
+      }
+    },
+    {
+      "id": "meso_butane_2_3_diol",
+      "name": "meso-butane-2,3-diol",
+      "formula": "C4H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75460"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_86",
+      "name": "ketol-acid reductoisomerase (NADP(+))",
+      "ec": [
+        "1.1.1.86"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_383",
+      "name": "ketol-acid reductoisomerase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.383"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_5",
+      "name": "acetolactate decarboxylase",
+      "ec": [
+        "4.1.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ketol-acid reductoisomerase (NADP(+))",
+      "equation": "(2R)-2,3-dihydroxy-3-methylbutanoate + NADP(+) = (2S)-2-acetolactate + NADPH + H(+)",
+      "ec": "1.1.1.86",
+      "substrates": [
+        {
+          "metabolite": "r_2_3_dihydroxy_3_methylbutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxy_2_methyl_3_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_86"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acetolactate decarboxylase",
+      "equation": "(2S)-2-acetolactate + H(+) = (R)-acetoin + CO2",
+      "ec": "4.1.1.5",
+      "substrates": [
+        {
+          "metabolite": "2s_2_hydroxy_2_methyl_3_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2S)-2-acetolactate = 3-hydroxy-3-methyl-2-oxobutanoate",
+      "equation": "(2S)-2-acetolactate = 3-hydroxy-3-methyl-2-oxobutanoate",
+      "substrates": [
+        {
+          "metabolite": "2s_2_hydroxy_2_methyl_3_oxobutanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_3_methyl_2_oxobutanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:31255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(R,S)-butane-2,3-diol + NAD(+) = (R)-acetoin + NADH + H(+)",
+      "equation": "(R,S)-butane-2,3-diol + NAD(+) = (R)-acetoin + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "meso_butane_2_3_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:75423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75423"
+          }
+        ]
+      }
+    }
+  ]
+}

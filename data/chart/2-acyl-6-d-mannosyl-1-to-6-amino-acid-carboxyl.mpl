@@ -28,19 +28,19 @@ pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-
 
   branch from dag side left {
     dag
-    <-> . +n_tetracosanoylsphinganine +1_phosphatidyl_1d_myo_inositol
-    ins_1_p_cer_d18_0_24_0
+    <-> ec_2_7_8_42 [2.7.8.42] +kdo_2_lipid_iva +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    7_o_2_aminoethyl_phosphoryl_kdo_2_4_kdo_2_6_lipi
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_111 [3.1.1.111] +3_sn_phosphatidyl_l_serine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoserine
+    <-> . +1_alkyl_2_3_diacyl_sn_glycerol +h2o +hplus
+    1_alkyl_2_acyl_sn_glycerol
   }
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> . +sphinga_4e_14z_dienine_1_phosphate
-    2e_12z_hexadecadienal
+    <-> . +hplus +co2
+    pser
   }
 }

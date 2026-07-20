@@ -27,4 +27,16 @@ pathway 3s-7z-10z-3-hydroxyhexa-to-2e-8z-tetradecadieno "(3S,7Z,10Z)-3-hydroxyhe
     <-> .
     2e_8z_tetradecadienoyl_coa
   }
+
+  branch from 2e_7z_10z_hexadecatrienoyl_coa side left {
+    2e_7z_10z_hexadecatrienoyl_coa
+    <-> .
+    3e_7z_10z_hexadecatrienoyl_coa
+  }
+
+  branch from 2e_8z_tetradecadienoyl_coa side right {
+    2e_8z_tetradecadienoyl_coa
+    <-> . +h2o
+    3s_8z_3_hydroxytetradecenoyl_coa
+  }
 }

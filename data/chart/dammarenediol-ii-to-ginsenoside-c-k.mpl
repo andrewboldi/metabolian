@@ -28,19 +28,13 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 +h2o +hplus
-    monacolin_l_carboxylate
+    <-> . +5_hepe +fmnh2 +o2 +h2o +hplus
+    5_20_dihepe
   }
 
   branch from ginsenoside_f2 side right {
     ginsenoside_f2
     <-> ec_2_4_1_363 [2.4.1.363] +udp_d_glucose +udp +hplus
     20s_ginsenoside_rh2
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +campesterol_3_d_glucoside +h2o
-    campesterol
   }
 }

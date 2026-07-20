@@ -111,30 +111,12 @@
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "fatty_acyl_amp",
+      "name": "fatty acyl-AMP",
+      "formula": "C11H12N5O8PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "fatty_acyl_coa",
-      "name": "fatty acyl-CoA",
-      "formula": "C22H31N7O17P3SR",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:77636"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:83622"
       }
     },
     {
@@ -147,42 +129,23 @@
       }
     },
     {
-      "id": "phosphatidylcholine",
-      "name": "Phosphatidylcholine",
-      "formula": "C10H18NO8PR2",
-      "charge": 0,
+      "id": "1_acyl_sn_glycero_3_phosphoserine",
+      "name": "1-acyl-sn-glycero-3-phosphoserine",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C7H12NO9PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57643"
+        "chebi": "CHEBI:64379"
       }
     },
     {
-      "id": "2_acyl_sn_glycero_3_phosphocholine",
-      "name": "2-acyl-sn-glycero-3-phosphocholine",
-      "short": "2-acyl-sn-glycero-3…",
-      "formula": "C9H19NO7PR",
-      "charge": 0,
+      "id": "sn_glycero_3_phosphoserine",
+      "name": "sn-glycero-3-phosphoserine",
+      "short": "sn-glycero-3-phosph…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57875"
-      }
-    },
-    {
-      "id": "15_methylhexadecasphinganine",
-      "name": "15-methylhexadecasphinganine",
-      "short": "15-methylhexadecasp…",
-      "formula": "C17H38NO2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:70829"
-      }
-    },
-    {
-      "id": "n_acyl_15_methylhexadecasphinganine",
-      "name": "N-acyl-15-methylhexadecasphinganine",
-      "short": "N-acyl-15-methylhex…",
-      "formula": "C18H36NO3R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:70845"
+        "chebi": "CHEBI:64765"
       }
     },
     {
@@ -196,21 +159,28 @@
       }
     },
     {
-      "id": "germacrene_a",
-      "name": "germacrene A",
+      "id": "e_e_farnesene",
+      "name": "(E,E)-α-farnesene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:36517"
+        "chebi": "CHEBI:10280"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_3_1_1_32",
-      "name": "phospholipase A1",
+      "id": "ec_3_1_1_111",
+      "name": "phosphatidylserine sn-1 acylhydrolase",
       "ec": [
-        "3.1.1.32"
+        "3.1.1.111"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_46",
+      "name": "alpha-farnesene synthase",
+      "ec": [
+        "4.2.3.46"
       ]
     }
   ],
@@ -311,8 +281,8 @@
     },
     {
       "id": "r3",
-      "name": "a fatty acid + ATP + CoA = a fatty acyl-CoA + AMP + diphosphate",
-      "equation": "a fatty acid + ATP + CoA = a fatty acyl-CoA + AMP + diphosphate",
+      "name": "a fatty acid + ATP + H(+) = a fatty acyl-AMP + diphosphate",
+      "equation": "a fatty acid + ATP + H(+) = a fatty acyl-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "fatty-acid",
@@ -323,17 +293,13 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fatty_acyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "fatty_acyl_amp",
           "stoichiometry": 1
         },
         {
@@ -344,26 +310,26 @@
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:38883"
+        "rhea": "RHEA:44600"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38883"
+            "id": "RHEA:44600"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "phospholipase A1",
-      "equation": "a 1,2-diacyl-sn-glycero-3-phosphocholine + H2O = a 2-acyl-sn-glycero-3-phosphocholine + a fatty acid + H(+)",
-      "ec": "3.1.1.32",
+      "name": "phosphatidylserine sn-1 acylhydrolase",
+      "equation": "a 1-acyl-sn-glycero-3-phospho-L-serine + H2O = sn-glycero-3-phospho-L-serine + a fatty acid + H(+)",
+      "ec": "3.1.1.111",
       "substrates": [
         {
-          "metabolite": "phosphatidylcholine",
+          "metabolite": "1_acyl_sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
@@ -373,7 +339,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_acyl_sn_glycero_3_phosphocholine",
+          "metabolite": "sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
@@ -387,71 +353,29 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_1_32"
+          "enzyme": "ec_3_1_1_111"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:18689"
+        "rhea": "RHEA:32979"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18689"
+            "id": "RHEA:32979"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "15-methylhexadecasphinganine + a fatty acyl-CoA = an N-acyl-15-methylhexadecasphinganin...",
-      "equation": "15-methylhexadecasphinganine + a fatty acyl-CoA = an N-acyl-15-methylhexadecasphinganine + CoA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "15_methylhexadecasphinganine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fatty_acyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acyl_15_methylhexadecasphinganine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:34603"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:34603"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
+      "name": "alpha-farnesene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (3E,6E)-alpha-farnesene + diphosphate",
+      "ec": "4.2.3.46",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -460,7 +384,7 @@
       ],
       "products": [
         {
-          "metabolite": "germacrene_a",
+          "metabolite": "e_e_farnesene",
           "stoichiometry": 1
         },
         {
@@ -468,17 +392,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_46"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25452"
+        "rhea": "RHEA:27421"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25452"
+            "id": "RHEA:27421"
           }
         ]
       }

@@ -20,19 +20,13 @@ pathway 3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l "3-methylpalmitoyl-CoA t
 
   branch from succinate side left {
     succinate
-    <-> . +ornithine +akg +o2 +co2
-    3s_3_hydroxy_l_ornithine
+    <-> . +hexanoyl_coa +akg +o2 +co2
+    2_hydroxyhexanoyl_coa
   }
 
   branch from formyl_coa side right {
     formyl_coa
     <-> . +2_hydroxystearoyl_coa
     heptadecanal
-  }
-
-  branch from oxalyl_coa side left {
-    oxalyl_coa
-    <-> ec_1_2_1_17 [1.2.1.17] +nadp +coa +nadph +hplus
-    glyoxylate
   }
 }

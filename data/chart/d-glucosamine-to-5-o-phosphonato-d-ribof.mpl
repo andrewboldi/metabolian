@@ -34,13 +34,13 @@ pathway d-glucosamine-to-5-o-phosphonato-d-ribof "α-D-glucosamine… to 5-O-pho
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_8 [4.2.3.8] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    casbene
+    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    3e_7e_dolabella_3_7_dien_18_ol
   }
 
   branch from adenine side right {
     adenine
-    <-> ec_2_4_2_1 [2.4.2.1] +adenosine +pi
-    r1p
+    <-> ec_2_4_2_1 [2.4.2.1] +2_deoxyadenosine +pi
+    2_deoxy_d_ribose_1_phosphate
   }
 }

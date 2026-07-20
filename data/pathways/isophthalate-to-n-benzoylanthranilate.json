@@ -119,12 +119,13 @@
       }
     },
     {
-      "id": "datp",
-      "name": "dATP",
-      "formula": "C10H12N5O12P3",
-      "charge": -4,
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:61404"
+        "chebi": "CHEBI:58057"
       }
     },
     {
@@ -137,32 +138,49 @@
       }
     },
     {
-      "id": "2_deoxyadenosine_5_monophosphate",
-      "name": "2'-deoxyadenosine 5'-monophosphate",
-      "short": "2'-deoxyadenosine…",
-      "formula": "C10H12N5O6P",
-      "charge": -2,
+      "id": "s_terpineol",
+      "name": "(S)-(−)-α-terpineol",
+      "formula": "C10H18O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58245"
+        "chebi": "CHEBI:128"
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57384"
+        "chebi": "CHEBI:57783"
       }
     },
     {
-      "id": "2_4_6_trihydroxybenzophenone",
-      "name": "2,4,6-trihydroxybenzophenone",
-      "short": "2,4,6-trihydroxyben…",
-      "formula": "C13H9O4",
-      "charge": -1,
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77765"
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_3_epoxy_2_3_dihydrobenzoyl_coa",
+      "name": "2,3-epoxy-2,3-dihydrobenzoyl-CoA",
+      "short": "2,3-epoxy-2,3-dihyd…",
+      "formula": "C28H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:88118"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     }
   ],
@@ -189,17 +207,17 @@
       ]
     },
     {
-      "id": "ec_3_6_1_9",
-      "name": "nucleotide diphosphatase",
+      "id": "ec_4_2_3_111",
+      "name": "(-)-alpha-terpineol synthase",
       "ec": [
-        "3.6.1.9"
+        "4.2.3.111"
       ]
     },
     {
-      "id": "ec_2_3_1_220",
-      "name": "2,4,6-trihydroxybenzophenone synthase",
+      "id": "ec_1_14_13_208",
+      "name": "benzoyl-CoA 2,3-epoxidase",
       "ec": [
-        "2.3.1.220"
+        "1.14.13.208"
       ]
     }
   ],
@@ -349,12 +367,12 @@
     },
     {
       "id": "r4",
-      "name": "nucleotide diphosphatase",
-      "equation": "dATP + H2O = dAMP + diphosphate + H(+)",
-      "ec": "3.6.1.9",
+      "name": "(-)-alpha-terpineol synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (S)-alpha-terpineol + diphosphate",
+      "ec": "4.2.3.111",
       "substrates": [
         {
-          "metabolite": "datp",
+          "metabolite": "gpp",
           "stoichiometry": 1
         },
         {
@@ -364,87 +382,87 @@
       ],
       "products": [
         {
-          "metabolite": "2_deoxyadenosine_5_monophosphate",
+          "metabolite": "s_terpineol",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_1_9"
+          "enzyme": "ec_4_2_3_111"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:28334"
+        "rhea": "RHEA:32551"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28334"
+            "id": "RHEA:32551"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "2,4,6-trihydroxybenzophenone synthase",
-      "equation": "benzoyl-CoA + 3 malonyl-CoA + 2 H(+) = 2,4,6-trihydroxybenzophenone + 3 CO2 + 4 CoA",
-      "ec": "2.3.1.220",
+      "name": "benzoyl-CoA 2,3-epoxidase",
+      "equation": "benzoyl-CoA + NADPH + O2 + H(+) = 2,3-epoxy-2,3-dihydrobenzoyl-CoA + NADP(+) + H2O",
+      "ec": "1.14.13.208",
       "substrates": [
         {
           "metabolite": "benzoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_4_6_trihydroxybenzophenone",
+          "metabolite": "2_3_epoxy_2_3_dihydrobenzoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 3
+          "metabolite": "nadp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
-          "stoichiometry": 4
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_220"
+          "enzyme": "ec_1_14_13_208"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:35143"
+        "rhea": "RHEA:48312"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35143"
+            "id": "RHEA:48312"
           }
         ]
       }

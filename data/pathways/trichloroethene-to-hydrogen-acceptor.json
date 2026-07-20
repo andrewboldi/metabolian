@@ -92,50 +92,21 @@
       }
     },
     {
-      "id": "mo_vi_o2_oh_molybdopterin_cofactor",
-      "name": "Mo(VI)O2(OH)-molybdopterin cofactor",
-      "short": "Mo(VI)O2(OH)-molybd…",
-      "formula": "C10H10MoN5O9PS2",
-      "charge": -4,
+      "id": "cannabigerolate",
+      "name": "cannabigerolate",
+      "formula": "C22H31O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:71302"
+        "chebi": "CHEBI:66962"
       }
     },
     {
-      "id": "cysteine",
-      "name": "L-Cysteine",
-      "formula": "C3H7NO2S",
-      "charge": 0,
+      "id": "cannabichromenate",
+      "name": "cannabichromenate",
+      "formula": "C22H29O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:35235"
-      }
-    },
-    {
-      "id": "mo_vi_o_s_oh_molybdopterin_cofactor",
-      "name": "Mo(VI)(=O)(=S)(OH)-molybdopterin cofactor",
-      "short": "Mo(VI)(=O)(=S)(OH)-…",
-      "formula": "C10H10MoN5O8PS3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:82685"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:167554"
       }
     },
     {
@@ -164,16 +135,18 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
-    {
-      "id": "ec_2_8_1_9",
-      "name": "molybdenum cofactor sulfurtransferase",
-      "ec": [
-        "2.8.1.9"
-      ]
-    },
     {
       "id": "ec_1_13_12_19",
       "name": "2-oxoglutarate dioxygenase (ethylene-forming)",
@@ -326,16 +299,21 @@
     },
     {
       "id": "r4",
-      "name": "molybdenum cofactor sulfurtransferase",
-      "equation": "Mo-molybdopterin + L-cysteine + AH2 = thio-Mo-molybdopterin + L-alanine + A + H2O",
-      "ec": "2.8.1.9",
+      "name": "cannabigerolate + A = cannabichromenate + AH2",
+      "equation": "cannabigerolate + A = cannabichromenate + AH2",
       "substrates": [
         {
-          "metabolite": "mo_vi_o2_oh_molybdopterin_cofactor",
+          "metabolite": "cannabigerolate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cysteine",
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cannabichromenate",
           "stoichiometry": 1
         },
         {
@@ -343,40 +321,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "mo_vi_o_s_oh_molybdopterin_cofactor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_1_9"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42636"
+        "rhea": "RHEA:60432"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42636"
+            "id": "RHEA:60432"
           }
         ]
       }

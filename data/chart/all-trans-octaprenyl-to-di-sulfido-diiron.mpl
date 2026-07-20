@@ -22,19 +22,19 @@ pathway all-trans-octaprenyl-to-di-sulfido-diiron "all-trans-octaprenyl… to di
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_111 [4.2.3.111] +gpp +h2o
-    s_terpineol
+    <-> . +c_terminal_gly_gly_1 +atp +hplus
+    c_terminal_gly_gly_amp_1_group
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +7z_10z_hexadecadienoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    7z_10z_13z_hexadecatrienoyl_containing_glycerol
+    <-> . +julichrome_q6 +di_sulfido_diiron +o2 +hplus +h2o
+    julichrome_q6_6
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_288 [2.1.1.288] +aklanonate +sam
-    methyl_aklanonate
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 }

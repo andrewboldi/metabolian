@@ -20,17 +20,11 @@ pathway dehydroepiandrosterone-to-9-hydroxyandrost-4-en "dehydroepiandrosteroneâ
 
   branch from dehydroepiandrosterone side left {
     dehydroepiandrosterone
-    <-> . +3_phosphonato_5_adenylyl_sulfate +dehydroepiandrosterone_sulfate +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +udp_d_glucose +udp +hplus
+    dehydroepiandrosterone_3_d_glucoside
   }
 
-  branch from sulfate side right {
-    sulfate
-    <-> ec_4_8_1_8 [4.8.1.8] +z_n_sulfonatooxy_prop_2_enimidothioate
-    2_thiiran_2_yl_acetonitrile
-  }
-
-  branch from androst_4_ene_3_17_dione side left {
+  branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
     16_hydroxyandrost_4_ene_3_17_dione

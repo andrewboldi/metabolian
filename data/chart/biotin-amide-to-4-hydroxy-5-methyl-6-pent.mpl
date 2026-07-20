@@ -22,25 +22,31 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-m
 
   branch from biotinate side left {
     biotinate
-    <-> ec_6_2_1_11 [6.2.1.11] +atp +coa +amp +ppi
-    biotinyl_coa
+    <-> . +atp +hplus +ppi
+    biotinyl_5_amp
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_4 [3.5.1.4] +n_acylammonia +h2o
-    monocarboxylic_acid_anion
+    <-> ec_4_3_1_13 [4.3.1.13] +h2o +hplus +pyruvate +co2
+    o_carbamoyl_l_serine
   }
 
-  branch from biotinyl_l_lysine side left {
-    biotinyl_l_lysine
-    <-> . +l_lysinium +amp +hplus
-    biotinyl_5_amp
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_34 [2.5.1.34] +dmapp +l_tryptophan
-    4_3_methylbut_2_enyl_l_tryptophan
+    <-> ec_4_6_1_1 [4.6.1.1] +atp
+    camp
+  }
+
+  branch from acetyl-acp side right {
+    acetyl-acp
+    <-> ec_2_3_1_38 [2.3.1.38] +acetyl_coa +coa
+    holo-acp
+  }
+
+  branch from methylmalonyl_coa side left {
+    methylmalonyl_coa
+    <-> . +stearoyl_coa +malonyl-coa +hplus +co2 +coa
+    4_hydroxy_5_methyl_6_heptadecylpyran_2_one
   }
 }

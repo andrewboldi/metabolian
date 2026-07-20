@@ -18,8 +18,8 @@ pathway 19-hydroxytestosterone-to-hydrogen-acceptor "19-hydroxytestosterone to h
 
   branch from fmn side left {
     fmn
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
-    1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho
+    <-> ec_1_14_14_74 [1.14.14.74] +albendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyalbendazole
   }
 
   branch from 17_estradiol side right {
@@ -30,7 +30,7 @@ pathway 19-hydroxytestosterone-to-hydrogen-acceptor "19-hydroxytestosterone to h
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_99_64 [1.14.99.64] +zeaxanthin +hydrogen_donor +o2 +h2o
-    adonixanthin
+    <-> . +andilesin_d +hydrogen_donor
+    andilesin_a
   }
 }

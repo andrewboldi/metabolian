@@ -1,0 +1,196 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "propan-1-ol-to-propionate",
+  "name": "propan-1-ol to propionate",
+  "category": "other",
+  "summary": "A 2-step route from propan-1-ol to propionate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:62204"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28831"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "propan_1_ol",
+      "name": "propan-1-ol",
+      "formula": "C3H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28831"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "propanal",
+      "name": "propanal",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17153"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "propionate",
+      "name": "Propionate",
+      "formula": "C3H5O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17272"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-propanol + 2 Fe(III)-[cytochrome c] = propanal + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "equation": "1-propanol + 2 Fe(III)-[cytochrome c] = propanal + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "propan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:62204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "propanal + NAD(+) + H2O = propanoate + NADH + 2 H(+)",
+      "equation": "propanal + NAD(+) + H2O = propanoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "propanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:67256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67256"
+          }
+        ]
+      }
+    }
+  ]
+}

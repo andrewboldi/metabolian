@@ -102,31 +102,22 @@
       }
     },
     {
-      "id": "nucleoside_5_monophosphate",
-      "name": "nucleoside 5'-monophosphate",
-      "short": "nucleoside 5'-MP",
-      "formula": "C5H8O7PR",
+      "id": "2_deoxycytidine",
+      "name": "2'-deoxycytidine",
+      "formula": "C9H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15698"
+      }
+    },
+    {
+      "id": "2_deoxycytosine_5_monophosphate",
+      "name": "2'-deoxycytosine 5'-monophosphate",
+      "short": "2'-deoxycytosine…",
+      "formula": "C9H12N3O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58043"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:57566"
       }
     },
     {
@@ -155,6 +146,34 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58043"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
@@ -180,10 +199,24 @@
       ]
     },
     {
+      "id": "ec_2_7_1_74",
+      "name": "deoxycytidine kinase",
+      "ec": [
+        "2.7.1.74"
+      ]
+    },
+    {
       "id": "ec_2_4_1_n2",
       "name": "loliose synthase",
       "ec": [
         "2.4.1.n2"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
       ]
     }
   ],
@@ -329,39 +362,49 @@
     },
     {
       "id": "r4",
-      "name": "a ribonucleoside 5'-phosphate + GTP = a ribonucleoside 5'-diphosphate + GDP",
-      "equation": "a ribonucleoside 5'-phosphate + GTP = a ribonucleoside 5'-diphosphate + GDP",
+      "name": "deoxycytidine kinase",
+      "equation": "2'-deoxycytidine + a ribonucleoside 5'-triphosphate = dCMP + a ribonucleoside 5'-diphosphate + H(+)",
+      "ec": "2.7.1.74",
       "substrates": [
         {
-          "metabolite": "nucleoside_5_monophosphate",
+          "metabolite": "2_deoxycytidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
+          "metabolite": "nucleoside_5_triphoshate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "nucleoside_5_diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gdp",
+          "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:79887"
+        "rhea": "RHEA:20061"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:79887"
+            "id": "RHEA:20061"
           }
         ]
       }
@@ -411,6 +454,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:25670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "nucleotide diphosphatase",
+      "equation": "a ribonucleoside 5'-triphosphate + H2O = a ribonucleoside 5'-phosphate + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23996"
           }
         ]
       }

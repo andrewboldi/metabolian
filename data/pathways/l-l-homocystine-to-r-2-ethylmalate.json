@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-l-homocystine-to-r-2-ethylmalate",
   "name": "L,L-homocystine to (R)-2-ethylmalate",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from L,L-homocystine zwitterion to (R)-2-ethylmalate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -130,75 +130,85 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "l_homocysteine_thiolactone",
+      "name": "L-homocysteine thiolactone",
+      "short": "L-homocysteine…",
+      "formula": "C4H8NOS",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:233452"
       }
     },
     {
-      "id": "l_homocysteinyl_amp",
-      "name": "L-homocysteinyl-AMP",
-      "formula": "C14H21N6O8PS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:233461"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "methylarsonate",
-      "name": "methylarsonate",
-      "formula": "CH4AsO3",
+      "id": "13_s_hpode",
+      "name": "13(S)-HPODE",
+      "formula": "C18H31O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:33409"
+        "chebi": "CHEBI:57466"
       }
     },
     {
-      "id": "methylarsonous_acid",
-      "name": "methylarsonous acid",
-      "formula": "CH5AsO2",
-      "charge": 0,
+      "id": "13_s_hode",
+      "name": "13(S)-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17826"
+        "chebi": "CHEBI:90850"
       }
     },
     {
-      "id": "threonine",
-      "name": "L-Threonine",
+      "id": "l_homoserine",
+      "name": "L-homoserine",
       "formula": "C4H9NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57926"
+        "chebi": "CHEBI:57476"
       }
     },
     {
-      "id": "cysteine",
-      "name": "L-Cysteine",
-      "formula": "C3H7NO2S",
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "sulfur_atom",
+      "name": "sulfur atom",
+      "formula": "S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35235"
+        "chebi": "CHEBI:26833"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hydroxylamine",
+      "name": "hydroxylamine",
+      "formula": "H3NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15429"
+      }
+    },
+    {
+      "id": "hydrazine",
+      "name": "hydrazine",
+      "formula": "H4N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15571"
       }
     }
   ],
@@ -225,20 +235,6 @@
       ]
     },
     {
-      "id": "ec_1_20_4_2",
-      "name": "methylarsonate reductase",
-      "ec": [
-        "1.20.4.2"
-      ]
-    },
-    {
-      "id": "ec_4_3_1_19",
-      "name": "threonine ammonia-lyase",
-      "ec": [
-        "4.3.1.19"
-      ]
-    },
-    {
       "id": "ec_4_4_1_1",
       "name": "cystathionine gamma-lyase",
       "ec": [
@@ -246,10 +242,10 @@
       ]
     },
     {
-      "id": "ec_4_4_1_28",
-      "name": "L-cysteine desulfidase",
+      "id": "ec_1_8_1_18",
+      "name": "NAD(P)H sulfur oxidoreductase (CoA-dependent)",
       "ec": [
-        "4.4.1.28"
+        "1.8.1.18"
       ]
     }
   ],
@@ -407,69 +403,60 @@
     },
     {
       "id": "r4",
-      "name": "L-homocysteine + ATP + H(+) = L-homocysteinyl-AMP + diphosphate",
-      "equation": "L-homocysteine + ATP + H(+) = L-homocysteinyl-AMP + diphosphate",
+      "name": "L-homocysteine thiolactone + H2O = L-homocysteine + H(+)",
+      "equation": "L-homocysteine thiolactone + H2O = L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "homocysteine",
+          "metabolite": "l_homocysteine_thiolactone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_homocysteinyl_amp",
+          "metabolite": "homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:83879"
+        "rhea": "RHEA:83867"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:83879"
+            "id": "RHEA:83867"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "methylarsonate reductase",
-      "equation": "methylarsonate + 2 glutathione + H(+) = methylarsonous acid + glutathione disulfide + H2O",
-      "ec": "1.20.4.2",
+      "name": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-oc...",
+      "equation": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-octadecadienoate + glutathione disulfide + H2O",
       "substrates": [
         {
-          "metabolite": "methylarsonate",
+          "metabolite": "13_s_hpode",
           "stoichiometry": 1
         },
         {
           "metabolite": "gsh",
           "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "methylarsonous_acid",
+          "metabolite": "13_s_hode",
           "stoichiometry": 1
         },
         {
@@ -481,34 +468,29 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_20_4_2"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:15969"
+        "rhea": "RHEA:48888"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15969"
+            "id": "RHEA:48888"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "threonine ammonia-lyase",
-      "equation": "L-threonine = 2-oxobutanoate + NH4(+)",
-      "ec": "4.3.1.19",
+      "name": "cystathionine gamma-lyase",
+      "equation": "L-homoserine = 2-oxobutanoate + NH4(+)",
+      "ec": "4.4.1.1",
       "substrates": [
         {
-          "metabolite": "threonine",
+          "metabolite": "l_homoserine",
           "stoichiometry": 1
         }
       ],
@@ -524,50 +506,90 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_19"
+          "enzyme": "ec_4_4_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:22108"
+        "rhea": "RHEA:24923"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22108"
+            "id": "RHEA:24923"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "cystathionine gamma-lyase",
-      "equation": "L-cysteine + H2O = hydrogen sulfide + pyruvate + NH4(+) + H(+)",
-      "ec": "4.4.1.1",
+      "name": "NAD(P)H sulfur oxidoreductase (CoA-dependent)",
+      "equation": "hydrogen sulfide + NADP(+) = sulfur + NADPH",
+      "ec": "1.8.1.18",
       "substrates": [
-        {
-          "metabolite": "cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "h2s",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:36595"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "hydroxylamine + NH4(+) = hydrazine + H2O + H(+)",
+      "equation": "hydroxylamine + NH4(+) = hydrazine + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hydroxylamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydrazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -575,22 +597,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_4_1_1"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:24931"
+        "rhea": "RHEA:11928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24931"
+            "id": "RHEA:11928"
           }
         ]
       }

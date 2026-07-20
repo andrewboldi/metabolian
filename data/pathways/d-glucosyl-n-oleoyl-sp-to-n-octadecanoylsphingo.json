@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo",
   "name": "β-D-glucosyl-N-(oleoyl)sp… to N-octadecanoylsphingosine",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from β-D-glucosyl-N-(oleoyl)sphingosine to N-octadecanoylsphingosine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -158,33 +158,22 @@
       }
     },
     {
-      "id": "13_9z_octadecenoyloxy_octadecanoate",
-      "name": "13-[(9Z)-octadecenoyloxy]octadecanoate",
-      "short": "13-[(9Z)-octadeceno…",
-      "formula": "C36H67O4",
+      "id": "n_oleoyl_l_tryptophan",
+      "name": "N-oleoyl-L-tryptophan",
+      "short": "N-oleoyl-L-tryptoph…",
+      "formula": "C29H43N2O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:136303"
+        "chebi": "CHEBI:149733"
       }
     },
     {
-      "id": "13_hydroxyoctadecanoate",
-      "name": "13-hydroxyoctadecanoate",
-      "short": "13-hydroxyoctadecan…",
-      "formula": "C18H35O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136304"
-      }
-    },
-    {
-      "id": "d_glucosyl_n_octadecanoylsphingosine",
-      "name": "β-D-glucosyl-N-octadecanoylsphingosine",
-      "short": "β-D-glucosyl-N-octa…",
-      "formula": "C42H81NO8",
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84719"
+        "chebi": "CHEBI:57912"
       }
     }
   ],
@@ -399,11 +388,11 @@
     },
     {
       "id": "r6",
-      "name": "13-(9Z-octadecenoyloxy)-octadecanoate + H2O = 13-hydroxy-octadecanoate + (9Z)-octadecen...",
-      "equation": "13-(9Z-octadecenoyloxy)-octadecanoate + H2O = 13-hydroxy-octadecanoate + (9Z)-octadecenoate + H(+)",
+      "name": "N-(9Z-octadecenoyl)-L-tryptophan + H2O = L-tryptophan + (9Z)-octadecenoate",
+      "equation": "N-(9Z-octadecenoyl)-L-tryptophan + H2O = L-tryptophan + (9Z)-octadecenoate",
       "substrates": [
         {
-          "metabolite": "13_9z_octadecenoyloxy_octadecanoate",
+          "metabolite": "n_oleoyl_l_tryptophan",
           "stoichiometry": 1
         },
         {
@@ -413,68 +402,25 @@
       ],
       "products": [
         {
-          "metabolite": "13_hydroxyoctadecanoate",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         },
         {
           "metabolite": "oleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:52064"
+        "rhea": "RHEA:64176"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52064"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + cholesterol = cholesteryl 3-beta...",
-      "equation": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + cholesterol = cholesteryl 3-beta-D-glucoside + N-octadecanoylsphing-4-enine",
-      "substrates": [
-        {
-          "metabolite": "d_glucosyl_n_octadecanoylsphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cholesteryl_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_octadecanoylsphingosine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:70311"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70311"
+            "id": "RHEA:64176"
           }
         ]
       }

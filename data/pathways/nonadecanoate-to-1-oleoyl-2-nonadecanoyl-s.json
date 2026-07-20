@@ -1,0 +1,253 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nonadecanoate-to-1-oleoyl-2-nonadecanoyl-s",
+  "name": "nonadecanoate to 1-oleoyl-2-nonadecanoyl-s…",
+  "category": "other",
+  "summary": "A 2-step route from nonadecanoate to 1-oleoyl-2-nonadecanoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:44092"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78796"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nonadecanoate",
+      "name": "nonadecanoate",
+      "formula": "C19H37O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78796"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nonadecanoyl_coa",
+      "name": "nonadecanoyl-CoA",
+      "formula": "C40H68N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:75105"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "1_oleoyl_sn_glycero_3_phosphate",
+      "name": "1-oleoyl-sn-glycero-3-phosphate",
+      "short": "1-oleoyl-sn-glycero…",
+      "formula": "C21H39O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:74544"
+      }
+    },
+    {
+      "id": "1_oleoyl_2_nonadecanoyl_sn_glycero_3_phosphate",
+      "name": "1-oleoyl-2-nonadecanoyl-sn-glycero-3-phosphate",
+      "short": "1-oleoyl-2-nonadeca…",
+      "formula": "C40H75O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75104"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "germacrene_c",
+      "name": "germacrene C",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61478"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_60",
+      "name": "germacrene C synthase",
+      "ec": [
+        "4.2.3.60"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nonadecanoate + ATP + CoA = nonadecanoyl-CoA + AMP + diphosphate",
+      "equation": "nonadecanoate + ATP + CoA = nonadecanoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "nonadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nonadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:44092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nonadecanoyl-CoA + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphate = 1-(9Z)-octadecenoyl-2-n...",
+      "equation": "nonadecanoyl-CoA + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphate = 1-(9Z)-octadecenoyl-2-nonadecanoyl-sn-glycero-3-phosphate + CoA",
+      "substrates": [
+        {
+          "metabolite": "nonadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_oleoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_oleoyl_2_nonadecanoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37595"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "germacrene C synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = germacrene C + diphosphate",
+      "ec": "4.2.3.60",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germacrene_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28302"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28302"
+          }
+        ]
+      }
+    }
+  ]
+}

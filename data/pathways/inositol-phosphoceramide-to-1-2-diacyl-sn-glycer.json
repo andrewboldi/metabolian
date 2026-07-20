@@ -1,0 +1,184 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "inositol-phosphoceramide-to-1-2-diacyl-sn-glycer",
+  "name": "inositol phosphoceramide to 1,2-diacyl-sn-glycerol",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from inositol phosphoceramide(1−) to 1,2-diacyl-sn-glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55952"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64916"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "inositol_phosphoceramide",
+      "name": "inositol phosphoceramide",
+      "short": "inositol phosphocer…",
+      "formula": "C10H17NO11PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64916"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "mannosylinositol_phosphorylceramide",
+      "name": "mannosylinositol phosphorylceramide",
+      "short": "mannosylinositol…",
+      "formula": "C16H27NO16PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64997"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_phosphatidyl_1d_myo_inositol",
+      "name": "1-phosphatidyl-1D-myo-inositol",
+      "short": "1-phosphatidyl-1D-m…",
+      "formula": "C11H16O13PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57880"
+      }
+    },
+    {
+      "id": "mannosyl_diphosphorylinositol_ceramide",
+      "name": "mannosyl diphosphorylinositol ceramide",
+      "short": "mannosyl diphosphor…",
+      "formula": "C22H37NO24P2R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:74997"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "an inositol-1-phosphoceramide + GDP-alpha-D-mannose = a mannosylinositol-1-phospho-N-ac...",
+      "equation": "an inositol-1-phosphoceramide + GDP-alpha-D-mannose = a mannosylinositol-1-phospho-N-acyl-sphingoid base + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "inositol_phosphoceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mannosylinositol_phosphorylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a mannosylinositol-1-phospho-N-acyl-sphingoid base + a 1,2-diacyl-sn-glycero-3-phospho-...",
+      "equation": "a mannosylinositol-1-phospho-N-acyl-sphingoid base + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = an inositol phosphomannosylnositol-1-phospho-N-acylsphingoid base + a 1,2-diacyl-sn-glycerol",
+      "substrates": [
+        {
+          "metabolite": "mannosylinositol_phosphorylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mannosyl_diphosphorylinositol_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55604"
+          }
+        ]
+      }
+    }
+  ]
+}

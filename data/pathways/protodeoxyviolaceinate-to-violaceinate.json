@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "protodeoxyviolaceinate-to-violaceinate",
+  "name": "protodeoxyviolaceinate to violaceinate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from protodeoxyviolaceinate to violaceinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49372"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:90907"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "protodeoxyviolaceinate",
+      "name": "protodeoxyviolaceinate",
+      "short": "protodeoxyviolacein…",
+      "formula": "C21H14N3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90907"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "protoviolaceinate",
+      "name": "protoviolaceinate",
+      "formula": "C21H14N3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90898"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "violaceinate",
+      "name": "violaceinate",
+      "formula": "C21H14N3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90900"
+      }
+    },
+    {
+      "id": "violacein",
+      "name": "violacein",
+      "formula": "C20H13N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131914"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_217",
+      "name": "protodeoxyviolaceinate monooxygenase",
+      "ec": [
+        "1.14.13.217"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_224",
+      "name": "violacein synthase",
+      "ec": [
+        "1.14.13.224"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protodeoxyviolaceinate monooxygenase",
+      "equation": "protodeoxyviolaceinate + NADH + O2 + H(+) = protoviolaceinate + NAD(+) + H2O",
+      "ec": "1.14.13.217",
+      "substrates": [
+        {
+          "metabolite": "protodeoxyviolaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "protoviolaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_217"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49372"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "violacein synthase",
+      "equation": "protoviolaceinate + NADH + O2 + H(+) = violaceinate + NAD(+) + H2O",
+      "ec": "1.14.13.224",
+      "substrates": [
+        {
+          "metabolite": "protoviolaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "violaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_224"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "violacein synthase",
+      "equation": "protoviolaceinate + NADH + 2 O2 + 2 H(+) = violacein + CO2 + NAD(+) + 2 H2O",
+      "ec": "1.14.13.224",
+      "substrates": [
+        {
+          "metabolite": "protoviolaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "violacein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_224"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49720"
+          }
+        ]
+      }
+    }
+  ]
+}

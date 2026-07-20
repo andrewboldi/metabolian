@@ -1,0 +1,232 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isonicotinyl-coa-to-l-lysinium",
+  "name": "isonicotinyl-CoA to L-lysinium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from isonicotinyl-CoA(4−) to L-lysinium residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83539"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:233145"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isonicotinyl_coa",
+      "name": "isonicotinyl-CoA",
+      "formula": "C27H35N8O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:233145"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_isonicotinyl_l_lysine",
+      "name": "N6-isonicotinyl-L-lysine",
+      "short": "N6-isonicotinyl-L-l…",
+      "formula": "C12H15N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233146"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "isonicotinate",
+      "name": "isonicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38186"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "n6_acyl_l_lysine",
+      "name": "N6-acyl-L-lysine",
+      "formula": "C7H11N2O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137967"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isonicotinyl-CoA + L-lysyl-[protein] = N(6)-isonicotinyl-L-lysyl-[protein] + CoA + H(+)",
+      "equation": "isonicotinyl-CoA + L-lysyl-[protein] = N(6)-isonicotinyl-L-lysyl-[protein] + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "isonicotinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_isonicotinyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(6)-isonicotinyl-L-lysyl-[protein] + H2O = isonicotinate + L-lysyl-[protein]",
+      "equation": "N(6)-isonicotinyl-L-lysyl-[protein] + H2O = isonicotinate + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n6_isonicotinyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isonicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:83543"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "an acyl-CoA + L-lysyl-[protein] = N(6)-acyl-L-lysyl-[protein] + CoA + H(+)",
+      "equation": "an acyl-CoA + L-lysyl-[protein] = N(6)-acyl-L-lysyl-[protein] + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_acyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53916"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53916"
+          }
+        ]
+      }
+    }
+  ]
+}

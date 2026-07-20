@@ -30,25 +30,19 @@ pathway tetradecanedioate-to-decanedioyl-coa "tetradecanedioate to decanedioyl-C
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    sibirene
+    <-> ec_2_5_1_31 [2.5.1.31] +ipp +fpp
+    ditrans_polycis_undecaprenyl_diphosphate
   }
 
   branch from dodecanedioyl_coa side right {
     dodecanedioyl_coa
-    <-> . +atp +coa +amp +ppi
+    <-> . +h2o +coa +hplus
     dodecanedioate
   }
 
-  branch from trans_2_dodecenedioyl_coa side left {
-    trans_2_dodecenedioyl_coa
-    <-> . +dodecanedioyl_coa +hydrogen_acceptor
-    hydrogen_donor
-  }
-
-  branch from decanedioyl_coa side right {
+  branch from decanedioyl_coa side left {
     decanedioyl_coa
-    <-> . +hydrogen_acceptor +hydrogen_donor
-    trans_2_decenedioyl_coa
+    <-> . +h2o +coa +hplus
+    sebacate
   }
 }

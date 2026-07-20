@@ -26,15 +26,15 @@ pathway d-threitol-to-r-3-hydroxy-2-oxo-4-ph "D-threitol to (R)-3-hydroxy-2-oxo-
     erythritol
   }
 
-  branch from 4_o_phosphonato_d_erythronate side right {
+  branch from e4p side right {
+    e4p
+    <-> . +h2o +pi
+    d_erythrose
+  }
+
+  branch from 4_o_phosphonato_d_erythronate side left {
     4_o_phosphonato_d_erythronate
     <-> . +nad +nadh +hplus
     r_2_hydroxy_3_oxo_4_phosphonatooxy_butanoate
-  }
-
-  branch from r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate side left {
-    r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate
-    <-> ec_2_6_1_52 [2.6.1.52] +4_phosphonatooxy_l_threonine +akg
-    glutamate
   }
 }

@@ -18,27 +18,27 @@ pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L
     l_glutamyl_phosphate
   }
 
-  branch from halide_anion side left {
-    halide_anion
-    <-> ec_3_8_1_3 [3.8.1.3] +haloacetate +h2o +hplus
-    glycolate
-  }
-
-  branch from 2_oxo_monocarboxylic_acid_anion side right {
+  branch from 2_oxo_monocarboxylic_acid_anion side left {
     2_oxo_monocarboxylic_acid_anion
     <-> ec_1_2_1_23 [1.2.1.23] +nad +h2o +nadh +hplus
     2_oxo_aldehyde
   }
 
-  branch from hydroquinones side left {
+  branch from hydroquinones side right {
     hydroquinones
     <-> ec_1_1_5_3 [1.1.5.3] +1_4_benzoquinones +sn_glycerol_3_phosphate
     dhap
   }
 
-  branch from l_glutamic_5_semialdehyde side right {
+  branch from l_glutamic_5_semialdehyde side left {
     l_glutamic_5_semialdehyde
     <-> ec_1_2_1_88 [1.2.1.88] +nad +h2o +nadh +hplus
     glutamate
+  }
+
+  branch from l_amino_acid side right {
+    l_amino_acid
+    <-> . +glycocholate +glycine
+    n_choloyl_l_amino_acid_anion
   }
 }

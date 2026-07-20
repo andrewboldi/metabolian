@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isopentenyl-diphosphate-to-diphosphate-27810",
+  "name": "isopentenyl diphosphate to diphosphate",
+  "category": "other",
+  "summary": "A 2-step route from isopentenyl diphosphate(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27810"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:128769"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "santalene",
+      "name": "(+)-α-santalene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61677"
+      }
+    },
+    {
+      "id": "nerylneryl_diphosphate",
+      "name": "nerylneryl diphosphate",
+      "short": "nerylneryl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:139032"
+      }
+    },
+    {
+      "id": "c_terminal_gly_gly_1",
+      "name": "C-terminal Gly-Gly(1−)",
+      "short": "C-terminal…",
+      "formula": "C4H6N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90778"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "c_terminal_gly_gly_amp_1_group",
+      "name": "C-terminal Gly-Gly-AMP(1−) group",
+      "short": "C-terminal…",
+      "formula": "C14H18N7O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90618"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_92",
+      "name": "(2Z,6Z)-farnesyl diphosphate synthase",
+      "ec": [
+        "2.5.1.92"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_50",
+      "name": "(+)-alpha-santalene synthase [(2Z,6Z)-farnesyl diphosphate cyclizing]",
+      "ec": [
+        "4.2.3.50"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_100",
+      "name": "SAMP-activating enzyme",
+      "ec": [
+        "2.7.7.100"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2Z,6Z)-farnesyl diphosphate synthase",
+      "equation": "2 isopentenyl diphosphate + dimethylallyl diphosphate = (2Z,6Z)-farnesyl diphosphate + 2 diphosphate",
+      "ec": "2.5.1.92",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27810"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(+)-alpha-santalene synthase [(2Z,6Z)-farnesyl diphosphate cyclizing]",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = (+)-alpha-santalene + diphosphate",
+      "ec": "4.2.3.50",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "santalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2Z,6Z)-farnesyl diphosphate + isopentenyl diphosphate = nerylneryl diphosphate + dipho...",
+      "equation": "(2Z,6Z)-farnesyl diphosphate + isopentenyl diphosphate = nerylneryl diphosphate + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nerylneryl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "SAMP-activating enzyme",
+      "equation": "[small archaeal modifier protein]-C-terminal Gly-Gly + ATP + H(+) = [small archaeal modifier protein]-C-terminal Gly-Gly-AMP + diphosphate",
+      "ec": "2.7.7.100",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_gly_gly_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_gly_gly_amp_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56100"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-methylhexanamide-to-3-oxooctanoyl-coa",
   "name": "N-methylhexanamide to 3-oxooctanoyl-CoA",
-  "category": "redox-detox",
+  "category": "other",
   "summary": "A 3-step route from N-methylhexanamide to 3-oxooctanoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -146,40 +146,31 @@
       }
     },
     {
-      "id": "4_methylamino_butyric_acid",
-      "name": "4-(methylamino)butyric acid",
-      "short": "4-(methylamino)buty…",
-      "formula": "C5H11NO2",
+      "id": "carbofuran",
+      "name": "carbofuran",
+      "formula": "C12H15NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:66882"
+        "chebi": "CHEBI:34611"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol",
+      "name": "2,2-dimethyl-2,3-dihydro-1-benzofuran-7-ol",
+      "short": "2,2-dimethyl-2,3-di…",
+      "formula": "C10H12O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:38474"
       }
     },
     {
-      "id": "4_oxobutanoate",
-      "name": "4-oxobutanoate",
-      "formula": "C4H5O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57706"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:16526"
       }
     },
     {
@@ -202,31 +193,50 @@
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:61481"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "2_deoxycytosine_5_monophosphate",
+      "name": "2'-deoxycytosine 5'-monophosphate",
+      "short": "2'-deoxycytosine…",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57566"
       }
     },
     {
-      "id": "cadinene",
-      "name": "(+)-δ-cadinene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "s_3_hydroxyoctanoyl_coa",
+      "name": "(S)-3-hydroxyoctanoyl-CoA",
+      "short": "3-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15385"
+        "chebi": "CHEBI:62617"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -239,10 +249,10 @@
       ]
     },
     {
-      "id": "ec_1_5_3_21",
-      "name": "4-methylaminobutanoate oxidase (methylamine-forming)",
+      "id": "ec_3_5_1_137",
+      "name": "N-methylcarbamate hydrolase",
       "ec": [
-        "1.5.3.21"
+        "3.5.1.137"
       ]
     },
     {
@@ -253,10 +263,24 @@
       ]
     },
     {
-      "id": "ec_4_2_3_13",
-      "name": "(+)-delta-cadinene synthase",
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
       "ec": [
-        "4.2.3.13"
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_12",
+      "name": "dCTP diphosphatase",
+      "ec": [
+        "3.6.1.12"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_65",
+      "name": "(d)CTP diphosphatase",
+      "ec": [
+        "3.6.1.65"
       ]
     }
   ],
@@ -437,26 +461,26 @@
     },
     {
       "id": "r5",
-      "name": "4-methylaminobutanoate oxidase (methylamine-forming)",
-      "equation": "4-(methylamino)butanoate + O2 + H2O = succinate semialdehyde + methylamine + H2O2",
-      "ec": "1.5.3.21",
+      "name": "N-methylcarbamate hydrolase",
+      "equation": "carbofuran + H2O + H(+) = 2,2-dimethyl-2,3-dihydro-1-benzofuran-7-ol + methylamine + CO2",
+      "ec": "3.5.1.137",
       "substrates": [
         {
-          "metabolite": "4_methylamino_butyric_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "carbofuran",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_oxobutanoate",
+          "metabolite": "2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol",
           "stoichiometry": 1
         },
         {
@@ -464,26 +488,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_5_3_21"
+          "enzyme": "ec_3_5_1_137"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33915"
+        "rhea": "RHEA:74191"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33915"
+            "id": "RHEA:74191"
           }
         ]
       }
@@ -543,41 +567,92 @@
     },
     {
       "id": "r7",
-      "name": "(+)-delta-cadinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (1S,8aR)-delta-cadinene + diphosphate",
-      "ec": "4.2.3.13",
+      "name": "nucleotide diphosphatase",
+      "equation": "dCTP + H2O = dCMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cadinene",
+          "metabolite": "2_deoxycytosine_5_monophosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_13"
+          "enzyme": "ec_3_6_1_9"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:19525"
+        "rhea": "RHEA:22636"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19525"
+            "id": "RHEA:22636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "(3S)-hydroxyoctanoyl-CoA + NAD(+) = 3-oxooctanoyl-CoA + NADH + H(+)",
+      "equation": "(3S)-hydroxyoctanoyl-CoA + NAD(+) = 3-oxooctanoyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxooctanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:31195"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31195"
           }
         ]
       }

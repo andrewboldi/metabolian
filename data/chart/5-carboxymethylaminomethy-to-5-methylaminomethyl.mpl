@@ -22,25 +22,25 @@ pathway 5-carboxymethylaminomethy-to-5-methylaminomethyl "5-carboxymethylaminome
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_4_3_2_5 [4.3.2.5] +c_terminal_xaa_2s_hydroxyglycino_1
-    c_terminal_amino_acid_amide
+    <-> . +n_octanoyl_2s_hydroxyglycinate
+    octanamide
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +c20_dihydroceramide +o2 +hydrogen_acceptor +h2o
-    c20_ceramide
+    <-> . +s_3_2_1_1_dimethylallyl_indol_3_yl_methyl_6_7_8 +hydrogen_acceptor +hplus
+    1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_210 [2.1.1.210] +demethylspheroidene +sam +hplus
-    spheroidene
+    <-> ec_2_1_1_207 [2.1.1.207] +5_carboxymethylaminomethyluridine_5_monophosphat +sam +hplus
+    5_carboxymethylaminomethyl_2_o_methyluridine_5_m
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_79 [4.2.3.79] +fpp
-    thujopsene
+    <-> ec_4_2_3_138 [4.2.3.138] +fpp +h2o
+    epi_bisabolol
   }
 }

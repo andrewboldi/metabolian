@@ -1,0 +1,240 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "galactosylceramide-to-sulfate",
+  "name": "β-galactosylceramide to sulfate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from β-galactosylceramide to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:43304"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:143593"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "galactosylceramide",
+      "name": "β-galactosylceramide",
+      "formula": "C10H17NO8R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143593"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "1_3_o_sulfonato_d_galactosyl_ceramide",
+      "name": "1-(3-O-sulfonato-β-D-galactosyl)ceramide",
+      "short": "1-(3-O-sulfonato-β-…",
+      "formula": "C10H16NO11SR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82953"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "2_hydroxy_17_estradiol",
+      "name": "2-hydroxy-17β-estradiol",
+      "short": "2-hydroxy-17β-estra…",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28744"
+      }
+    },
+    {
+      "id": "2_hydroxy_17_estradiol_3_sulfate",
+      "name": "2-hydroxy-17β-estradiol 3-sulfate",
+      "short": "2-hydroxy-17β-estra…",
+      "formula": "C18H23O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133942"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a beta-D-Gal-(1<->1')-ceramide + 3'-phosphoadenylyl sulfate = 1-(3-O-sulfo-beta-D-galac...",
+      "equation": "a beta-D-Gal-(1<->1')-ceramide + 3'-phosphoadenylyl sulfate = 1-(3-O-sulfo-beta-D-galactosyl)-ceramide + adenosine 3',5'-bisphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "galactosylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_o_sulfonato_d_galactosyl_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:43304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43304"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-(3-O-sulfo-beta-D-galactosyl)-ceramide + H2O = a beta-D-Gal-(1<->1')-ceramide + sulfa...",
+      "equation": "1-(3-O-sulfo-beta-D-galactosyl)-ceramide + H2O = a beta-D-Gal-(1<->1')-ceramide + sulfate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_3_o_sulfonato_d_galactosyl_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "galactosylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:74519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-hydroxy-17beta-estradiol + 3'-phosphoadenylyl sulfate = 2-hydroxy-17beta-estradiol 3-...",
+      "equation": "2-hydroxy-17beta-estradiol + 3'-phosphoadenylyl sulfate = 2-hydroxy-17beta-estradiol 3-sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_17_estradiol_3_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51076"
+          }
+        ]
+      }
+    }
+  ]
+}

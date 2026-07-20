@@ -87,32 +87,31 @@
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
+      "id": "dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose",
+      "name": "dTDP-4-ammonio-2,3,4,6-tetradeoxy-α-D-glucose",
+      "short": "dTDP-4-ammonio-2,3,…",
+      "formula": "C16H26N3O12P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:90945"
       }
     },
     {
-      "id": "n7_methylguanosine_5_phosphate_zwitterion",
-      "name": "N7-methylguanosine 5'-phosphate zwitterion",
-      "short": "N7-methylguanosine…",
-      "formula": "C11H14N5O7P",
-      "charge": 0,
+      "id": "dtdp_d_forosamine",
+      "name": "dTDP-α-D-forosamine",
+      "formula": "C18H30N3O12P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74480"
+        "chebi": "CHEBI:90947"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_33",
-      "name": "tRNA (guanine(46)-N(7))-methyltransferase",
+      "id": "ec_2_1_1_324",
+      "name": "dTDP-4-amino-2,3,4,6-tetradeoxy-D-glucose N,N-dimethyltransferase",
       "ec": [
-        "2.1.1.33"
+        "2.1.1.324"
       ]
     }
   ],
@@ -248,45 +247,49 @@
     },
     {
       "id": "r4",
-      "name": "tRNA (guanine(46)-N(7))-methyltransferase",
-      "equation": "guanosine(46) in tRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(46) in tRNA + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.33",
+      "name": "dTDP-4-amino-2,3,4,6-tetradeoxy-D-glucose N,N-dimethyltransferase",
+      "equation": "dTDP-4-amino-2,3,4,6-tetradeoxy-alpha-D-erythro-hexopyranose + 2 S-adenosyl-L-methionine = dTDP-alpha-D-forosamine + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.324",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
+          "metabolite": "dtdp_d_forosamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_33"
+          "enzyme": "ec_2_1_1_324"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42708"
+        "rhea": "RHEA:49148"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42708"
+            "id": "RHEA:49148"
           }
         ]
       }

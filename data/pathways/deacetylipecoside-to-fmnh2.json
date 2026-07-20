@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "deacetylipecoside-to-fmnh2",
   "name": "deacetylipecoside to FMNH2",
-  "category": "cofactor-vitamin-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from deacetylipecoside(1+) to FMNH2(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,77 +120,68 @@
       }
     },
     {
-      "id": "3_s_strictosidinium",
-      "name": "3α(S)-strictosidinium",
-      "short": "3α(S)-strictosidini…",
-      "formula": "C27H35N2O9",
-      "charge": 1,
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58193"
+        "chebi": "CHEBI:57379"
       }
     },
     {
-      "id": "tryptaminium",
-      "name": "tryptaminium",
-      "formula": "C10H13N2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:57887"
-      }
-    },
-    {
-      "id": "deacetylisoipecoside",
-      "name": "deacetylisoipecoside",
-      "formula": "C25H34NO11",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:58091"
-      }
-    },
-    {
-      "id": "riboflavin",
-      "name": "riboflavin",
-      "formula": "C17H19N4O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57986"
-      }
-    },
-    {
-      "id": "g1p",
-      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
-      "short": "alpha-D-Glucose…",
-      "formula": "C6H11O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58601"
-      }
-    },
-    {
-      "id": "glucose",
-      "name": "D-Glucose",
-      "formula": "C6H12O6",
+      "id": "n_palmitoyl_dopamine",
+      "name": "N-palmitoyl dopamine",
+      "formula": "C24H41NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4167"
+        "chebi": "CHEBI:134058"
       }
     },
     {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 2,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:33737"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 1,
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:33738"
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "n_hydroxy_l_tyrosinate",
+      "name": "N-hydroxy-L-tyrosinate",
+      "short": "N-hydroxy-L-tyrosin…",
+      "formula": "C9H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58547"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "24s_24_hydroxycholesterol",
+      "name": "(24S)-24-hydroxycholesterol",
+      "short": "24-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34310"
       }
     }
   ],
@@ -210,31 +201,10 @@
       ]
     },
     {
-      "id": "ec_3_5_99_13",
-      "name": "strictosidine synthase",
+      "id": "ec_1_14_14_25",
+      "name": "cholesterol 24-hydroxylase",
       "ec": [
-        "3.5.99.13"
-      ]
-    },
-    {
-      "id": "ec_3_5_99_15",
-      "name": "deacetylisoipecoside synthase",
-      "ec": [
-        "3.5.99.15"
-      ]
-    },
-    {
-      "id": "ec_2_7_1_42",
-      "name": "riboflavin phosphotransferase",
-      "ec": [
-        "2.7.1.42"
-      ]
-    },
-    {
-      "id": "ec_1_17_7_1",
-      "name": "(E)-4-hydroxy-3-methylbut-2-enyl-diphosphate synthase (ferredoxin)",
-      "ec": [
-        "1.17.7.1"
+        "1.14.14.25"
       ]
     }
   ],
@@ -390,166 +360,129 @@
     },
     {
       "id": "r4",
-      "name": "strictosidine synthase",
-      "equation": "3alpha(S)-strictosidine + H2O = secologanin + tryptamine",
-      "ec": "3.5.99.13",
+      "name": "dopamine + hexadecanoyl-CoA = N-hexadecanoyl-dopamine + CoA + H(+)",
+      "equation": "dopamine + hexadecanoyl-CoA = N-hexadecanoyl-dopamine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "3_s_strictosidinium",
+          "metabolite": "dopamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "palmitoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "secologanin",
+          "metabolite": "n_palmitoyl_dopamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "tryptaminium",
+          "metabolite": "coa",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_3_5_99_13"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:15013"
+        "rhea": "RHEA:51376"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15013"
+            "id": "RHEA:51376"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "deacetylisoipecoside synthase",
-      "equation": "deacetylisoipecoside + H2O = secologanin + dopamine",
-      "ec": "3.5.99.15",
+      "name": "L-tyrosine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-tyrosine + oxidi...",
+      "equation": "L-tyrosine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-tyrosine + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "deacetylisoipecoside",
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "secologanin",
+          "metabolite": "n_hydroxy_l_tyrosinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dopamine",
+          "metabolite": "fmn",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_3_5_99_15"
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:21756"
+        "rhea": "RHEA:22464"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21756"
+            "id": "RHEA:22464"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "riboflavin phosphotransferase",
-      "equation": "riboflavin + alpha-D-glucose 1-phosphate = FMN + D-glucose",
-      "ec": "2.7.1.42",
+      "name": "cholesterol 24-hydroxylase",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.25",
       "substrates": [
         {
-          "metabolite": "riboflavin",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "g1p",
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
+        {
+          "metabolite": "24s_24_hydroxycholesterol",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "fmn",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_1_42"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:20409"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:20409"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(E)-4-hydroxy-3-methylbut-2-enyl-diphosphate synthase (ferredoxin)",
-      "equation": "(2E)-4-hydroxy-3-methylbut-2-enyl diphosphate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = 2-C-methyl-D-erythritol 2,4-cyclic diphosphate + 2 reduced [2Fe-2S]-[ferredoxin] + H(+)",
-      "ec": "1.17.7.1",
-      "substrates": [
-        {
-          "metabolite": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_c_methyl_d_erythritol_2_4_cyclic_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
@@ -558,20 +491,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_17_7_1"
+          "enzyme": "ec_1_14_14_25"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:26119"
+        "rhea": "RHEA:22716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26119"
+            "id": "RHEA:22716"
           }
         ]
       }

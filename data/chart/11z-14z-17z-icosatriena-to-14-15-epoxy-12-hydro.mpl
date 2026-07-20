@@ -18,8 +18,8 @@ pathway 11z-14z-17z-icosatriena-to-14-15-epoxy-12-hydro "(11Z,14Z,17Z)-icosatrie
 
   branch from nh3 side left {
     nh3
-    <-> ec_2_3_2_14 [2.3.2.14] +d_alanine +glutamine
-    l_glutamyl_d_alaninate
+    <-> . +4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_hexaprenyl_4_5_dihydroxybenzoate
   }
 
   branch from 12_hpetre side right {

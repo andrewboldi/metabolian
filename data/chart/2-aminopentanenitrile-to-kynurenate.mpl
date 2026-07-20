@@ -18,19 +18,13 @@ pathway 2-aminopentanenitrile-to-kynurenate "2-aminopentanenitrile to kynurenate
 
   branch from nh3 side left {
     nh3
-    <-> . +aspartate +o2 +h2o +h2o2
-    oxaloacetate
+    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
+    2_4_dihydroxypteridine
   }
 
-  branch from 2_oxopentanoate side right {
-    2_oxopentanoate
-    <-> . +fad +hplus +fadh2
-    2r_hydroxypentanoate
-  }
-
-  branch from kynurenate side left {
+  branch from kynurenate side right {
     kynurenate
-    <-> ec_2_6_1_63 [2.6.1.63] +l_kynurenine +glyoxylate +h2o
-    glycine
+    <-> . +l_kynurenine +pyruvate +h2o
+    alanine
   }
 }

@@ -193,31 +193,22 @@
       }
     },
     {
-      "id": "linalool",
-      "name": "linalool",
-      "formula": "C10H18O",
+      "id": "phylloquinone",
+      "name": "phylloquinone",
+      "formula": "C31H46O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17580"
+        "chebi": "CHEBI:18067"
       }
     },
     {
-      "id": "6e_8_oxolinalool",
-      "name": "(6E)-8-oxolinalool",
-      "formula": "C10H16O2",
+      "id": "hydroxyphylloquinone",
+      "name": "ω-hydroxyphylloquinone",
+      "short": "ω-hydroxyphylloquin…",
+      "formula": "C31H46O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64259"
-      }
-    },
-    {
-      "id": "1_s_5_r_5_hydroxyaverantin",
-      "name": "(1'S,5'R)-5'-hydroxyaverantin",
-      "short": "(1'S,5'R)-5'-hydrox…",
-      "formula": "C20H20O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:71536"
+        "chebi": "CHEBI:78276"
       }
     },
     {
@@ -230,13 +221,41 @@
       }
     },
     {
-      "id": "3s_versiconol_acetate",
-      "name": "(3S)-versiconol acetate",
-      "short": "versiconol acetate",
-      "formula": "C20H17O9",
-      "charge": -1,
+      "id": "7_acetyl_epi_neemfruitin_b",
+      "name": "7-acetyl-epi-neemfruitin B",
+      "short": "7-acetyl-epi-neemfr…",
+      "formula": "C34H48O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:72673"
+        "chebi": "CHEBI:231469"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "1s_3br_4r_5ar_9ar_9br_11as_1_4r_5_2s_3_3_dimeth",
+      "name": "(1S,3bR,4R,5aR,9aR,9bR,11aS)-1-[(4R)-5-[(2S)-3,3-dimethyloxiran-2-yl]-1,4-dihydroxybutan-2-yl]-3b,6,6,9a,11a-pentamethyl-7-oxo-1H,2H,3bH,4H,5H,5aH,6H,7H,9aH,9bH,10H,11H,11aH-cyclopenta[a]phenanthren-4-yl acetate",
+      "short": "(1S,3bR,4R,5aR,9aR,…",
+      "formula": "C32H48O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231471"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
       }
     }
   ],
@@ -284,10 +303,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_84",
-      "name": "linalool 8-monooxygenase",
+      "id": "ec_1_14_14_78",
+      "name": "phylloquinone omega-hydroxylase",
       "ec": [
-        "1.14.14.84"
+        "1.14.14.78"
       ]
     },
     {
@@ -697,112 +716,63 @@
     },
     {
       "id": "r9",
-      "name": "linalool 8-monooxygenase",
-      "equation": "linalool + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (6E)-8-oxolinalool + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.84",
+      "name": "phylloquinone omega-hydroxylase",
+      "equation": "phylloquinone + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxyphylloquinone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.78",
       "substrates": [
         {
-          "metabolite": "linalool",
+          "metabolite": "phylloquinone",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6e_8_oxolinalool",
+          "metabolite": "hydroxyphylloquinone",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_84"
+          "enzyme": "ec_1_14_14_78"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:32635"
+        "rhea": "RHEA:41516"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32635"
+            "id": "RHEA:41516"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "5'-hydroxyaverantin dehydrogenase",
-      "equation": "(1'S,5'R)-5'-hydroxyaverantin + NAD(+) = (S)-5'-oxoaverantin + NADH + 2 H(+)",
-      "ec": "1.1.1.352",
-      "substrates": [
-        {
-          "metabolite": "1_s_5_r_5_hydroxyaverantin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_5_oxoaverantin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_352"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:35479"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:35479"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
       "name": "versiconal hemiacetal acetate reductase",
       "equation": "(2S)-versicolorone + NADP(+) = 1'-hydroxyversicolorone + NADPH + H(+)",
       "ec": "1.1.1.353",
@@ -836,7 +806,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:35691"
       },
@@ -851,27 +821,34 @@
       }
     },
     {
-      "id": "r12",
-      "name": "versiconal hemiacetal acetate reductase",
-      "equation": "(3S)-versiconol acetate + NADP(+) = (2S,3S)-versiconal hemiacetal acetate + NADPH + H(+)",
-      "ec": "1.1.1.353",
+      "id": "r11",
+      "name": "7-acetyl-epi-neemfruitin B + AH2 + H2O = (1S,3bR,4R,5aR,9aR,9bR,11aS)-1-[(4R)-5-[(2S)-3...",
+      "equation": "7-acetyl-epi-neemfruitin B + AH2 + H2O = (1S,3bR,4R,5aR,9aR,9bR,11aS)-1-[(4R)-5-[(2S)-3,3-dimethyloxiran-2-yl]-1,4-dihydroxybutan-2-yl]-3b,6,6,9a,11a-pentamethyl-7-oxo-1H,2H,3bH,4H,5H,5aH,6H,7H,9aH,9bH,10H,11H,11aH-cyclopenta[a]phenanthren-4-yl acetate + acetate + A + H(+)",
       "substrates": [
         {
-          "metabolite": "3s_versiconol_acetate",
+          "metabolite": "7_acetyl_epi_neemfruitin_b",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2s_3s_versiconal_hemiacetal_acetate",
+          "metabolite": "1s_3br_4r_5ar_9ar_9br_11as_1_4r_5_2s_3_3_dimeth",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
@@ -879,22 +856,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_353"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:35695"
+        "rhea": "RHEA:80343"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35695"
+            "id": "RHEA:80343"
           }
         ]
       }

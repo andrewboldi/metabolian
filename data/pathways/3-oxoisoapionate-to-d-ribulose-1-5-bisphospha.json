@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-oxoisoapionate-to-d-ribulose-1-5-bisphospha",
+  "name": "3-oxoisoapionate… to D-ribulose 1,5-bisphospha…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from 3-oxoisoapionate 4-phosphate(3−) to D-ribulose 1,5-bisphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57076"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:141357"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_oxoisoapionate_4_phosphate",
+      "name": "3-oxoisoapionate 4-phosphate",
+      "short": "3-oxoisoapionate 4-P",
+      "formula": "C5H6O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:141357"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pg3",
+      "name": "3-Phospho-D-glycerate",
+      "short": "3-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58272"
+      }
+    },
+    {
+      "id": "glycolate",
+      "name": "glycolate",
+      "formula": "C2H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29805"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_ribulose_1_5_bisphosphate",
+      "name": "D-ribulose 1,5-bisphosphate",
+      "short": "D-ribulose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57870"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "n2_1_hydroxy_2_oxoethyl_gmp",
+      "name": "N2-(1-hydroxy-2-oxoethyl)-GMP",
+      "short": "N2-(1-hydroxy-2-oxo…",
+      "formula": "C12H14N5O10P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:141576"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "Guanosine 5'-monophosphate (GMP)",
+      "short": "Guanosine 5'-MP…",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58115"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_7_1_28",
+      "name": "3-oxoisoapionate-4-phosphate transcarboxylase/hydrolase",
+      "ec": [
+        "3.7.1.28"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_39",
+      "name": "ribulose-bisphosphate carboxylase",
+      "ec": [
+        "4.1.1.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-oxoisoapionate-4-phosphate transcarboxylase/hydrolase",
+      "equation": "3-oxoisoapionate 4-phosphate + H2O = (2R)-3-phosphoglycerate + glycolate + H(+)",
+      "ec": "3.7.1.28",
+      "substrates": [
+        {
+          "metabolite": "3_oxoisoapionate_4_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribulose-bisphosphate carboxylase",
+      "equation": "2 (2R)-3-phosphoglycerate + 2 H(+) = D-ribulose 1,5-bisphosphate + CO2 + H2O",
+      "ec": "4.1.1.39",
+      "substrates": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(2)-(1-hydroxy-2-oxoethyl)-GMP + H2O = glycolate + GMP + H(+)",
+      "equation": "N(2)-(1-hydroxy-2-oxoethyl)-GMP + H2O = glycolate + GMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n2_1_hydroxy_2_oxoethyl_gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57304"
+          }
+        ]
+      }
+    }
+  ]
+}

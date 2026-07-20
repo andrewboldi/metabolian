@@ -18,13 +18,7 @@ pathway geranylgeranyl-diphosphate-to-hydrogen-acceptor "geranylgeranyl diphosph
 
   branch from ppi side left {
     ppi
-    <-> . +linoleate +atp +coa +amp
-    linoleoyl_coa
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +dihydroserpentine +hydrogen_donor
-    serpentine
+    <-> . +gpp +h2o
+    4_terpineol
   }
 }

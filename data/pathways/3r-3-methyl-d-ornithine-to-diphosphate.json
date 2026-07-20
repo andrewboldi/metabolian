@@ -157,13 +157,21 @@
       }
     },
     {
-      "id": "cytidine_5_monophosphate_1",
-      "name": "cytidine 5'-monophosphate(1−)",
-      "short": "cytidine 5'-MP(1−)",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
+      "id": "d_isoleucine",
+      "name": "D-isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:82748"
+        "chebi": "CHEBI:193151"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
       }
     },
     {
@@ -176,32 +184,31 @@
       }
     },
     {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
+      "id": "r_3_methyl_2_oxovalerate",
+      "name": "(R)-3-methyl-2-oxovalerate",
+      "short": "3-methyl-2-oxovaler…",
+      "formula": "C6H9O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:65315"
+        "chebi": "CHEBI:228255"
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58057"
-      }
-    },
-    {
-      "id": "e_ocimene",
-      "name": "(E)-β-ocimene",
-      "formula": "C10H16",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64280"
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "cyclic_hexaadenylate",
+      "name": "cyclic hexaadenylate",
+      "formula": "C60H66N30O36P6",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:142456"
       }
     }
   ],
@@ -218,20 +225,6 @@
       "name": "pyrrolysine--tRNA(Pyl) ligase",
       "ec": [
         "6.1.1.26"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_35",
-      "name": "tRNA(cytosine(8)) deaminase",
-      "ec": [
-        "3.5.4.35"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_106",
-      "name": "(E)-beta-ocimene synthase",
-      "ec": [
-        "4.2.3.106"
       ]
     }
   ],
@@ -395,26 +388,29 @@
     },
     {
       "id": "r4",
-      "name": "tRNA(cytosine(8)) deaminase",
-      "equation": "cytidine(8) in tRNA + H2O + H(+) = uridine(8) in tRNA + NH4(+)",
-      "ec": "3.5.4.35",
+      "name": "D-isoleucine + O2 + H2O = (R)-3-methyl-2-oxopentanoate + H2O2 + NH4(+)",
+      "equation": "D-isoleucine + O2 + H2O = (R)-3-methyl-2-oxopentanoate + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "cytidine_5_monophosphate_1",
+          "metabolite": "d_isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "uridine_5_monophosphate_1",
+          "metabolite": "r_3_methyl_2_oxovalerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -422,63 +418,52 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_4_35"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50964"
+        "rhea": "RHEA:78235"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50964"
+            "id": "RHEA:78235"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(E)-beta-ocimene synthase",
-      "equation": "(2E)-geranyl diphosphate = (E)-beta-ocimene + diphosphate",
-      "ec": "4.2.3.106",
+      "name": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
+      "equation": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
       "substrates": [
         {
-          "metabolite": "gpp",
-          "stoichiometry": 1
+          "metabolite": "atp",
+          "stoichiometry": 6
         }
       ],
       "products": [
         {
-          "metabolite": "e_ocimene",
+          "metabolite": "cyclic_hexaadenylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_106"
+          "stoichiometry": 6
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:32691"
+        "rhea": "RHEA:58276"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32691"
+            "id": "RHEA:58276"
           }
         ]
       }

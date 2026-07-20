@@ -18,7 +18,7 @@ pathway l-pentahomomethionine-to-e-8-methylsulfanyl-oct "L-pentahomomethionine t
 
   branch from fmn side left {
     fmn
-    <-> . +valine +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_l_valinate
+    <-> ec_1_14_14_42 [1.14.14.42] +l_tetrahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_7_methylsulfanyl_heptanal_oxime
   }
 }

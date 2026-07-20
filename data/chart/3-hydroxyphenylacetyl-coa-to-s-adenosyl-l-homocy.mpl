@@ -20,13 +20,13 @@ pathway 3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "3-hydroxyphenylacetyl-
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_72 [4.2.3.72] +fpp
-    gurjunene
+    <-> ec_4_2_3_139 [4.2.3.139] +fpp
+    valerena_4_7_11_diene
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_164 [2.1.1.164] +4_demethylrebeccamycin +sam +hplus
-    rebeccamycin
+    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 }

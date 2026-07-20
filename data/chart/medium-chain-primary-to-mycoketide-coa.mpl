@@ -20,8 +20,8 @@ pathway medium-chain-primary-to-mycoketide-coa "medium-chain primary… to mycok
 
   branch from medium_chain_fatty_acid_anion side left {
     medium_chain_fatty_acid_anion
-    <-> ec_6_2_1_47 [6.2.1.47] +holo-acp +atp +amp +ppi
-    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
+    <-> . +atp +hplus +ppi
+    medium_chain_fatty_acyl_amp
   }
 
   branch from medium_chain_fatty_acyl_coa side right {
@@ -32,7 +32,7 @@ pathway medium-chain-primary-to-mycoketide-coa "medium-chain primary… to mycok
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_30 [2.5.1.30] +ipp +fpp
-    all_trans_heptaprenyl_diphosphate
+    <-> ec_4_2_3_101 [4.2.3.101] +fpp
+    7_epi_sesquithujene
   }
 }

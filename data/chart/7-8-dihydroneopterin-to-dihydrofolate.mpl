@@ -45,4 +45,16 @@ pathway 7-8-dihydroneopterin-to-dihydrofolate "7,8-dihydroneopterin to dihydrofo
     <-> . +nad +nadh +hplus
     6s_5_6_7_8_tetrahydropteroate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_75 [4.2.3.75] +fpp
+    germacrene_d
+  }
+
+  branch from dhf side right {
+    dhf
+    <-> . +5_amino_1_5_phospho_d_ribosyl_imidazole_4_thioca +10_formyldihydrofolate +h2o
+    6_mercaptopurine_riboside_5_phosphate
+  }
 }

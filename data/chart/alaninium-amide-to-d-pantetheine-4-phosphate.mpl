@@ -24,25 +24,31 @@ pathway alaninium-amide-to-d-pantetheine-4-phosphate "β-alaninium amide to D-pa
     d_pantetheine_4_phosphate
   }
 
-  branch from nh3 side left {
+  branch from alanine side left {
+    alanine
+    <-> ec_6_3_2_11 [6.3.2.11] +arginine +atp +adp +pi +hplus
+    alanyl_l_argininium
+  }
+
+  branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_84 [3.5.1.84] +biuret +h2o
-    urea_1_carboxylate
+    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
+    n_terminal_5_oxo_l_proline
   }
 
-  branch from cytidine_5_monophosphate side right {
+  branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_3_6_1_53 [3.6.1.53] +cdp_choline +h2o +hplus
-    phosphocholine
+    <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +n_acylsphingosine +hplus
+    n_acylsphingosine_1_phosphoethanolamine
   }
 
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_2_5_1_36 [2.5.1.36] +3_6_9_trihydroxypterocarpan +dmapp
-    6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero
+    <-> ec_4_2_3_120 [4.2.3.120] +gpp
+    pinene
   }
 
-  branch from d_pantetheine_4_phosphate side right {
+  branch from d_pantetheine_4_phosphate side left {
     d_pantetheine_4_phosphate
     <-> ec_3_6_1_77 [3.6.1.77] +coa +h2o +hplus
     adenosine_3_5_bismonophosphate

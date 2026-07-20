@@ -139,13 +139,31 @@
       }
     },
     {
-      "id": "2d_2_3_5_4_6_pentahydroxycyclohexanone",
-      "name": "2D-2,3,5/4,6-pentahydroxycyclohexanone",
-      "short": "2D-2,3,5/4,6-pentah…",
-      "formula": "C6H10O6",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_dehydro_scyllo_inosose",
+      "name": "3-dehydro-scyllo-inosose",
+      "short": "3-dehydro-scyllo-in…",
+      "formula": "C6H8O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50920"
+        "chebi": "CHEBI:137015"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -162,13 +180,6 @@
       "name": "quinoprotein inositol dehydrogenase",
       "ec": [
         "1.1.5.n1"
-      ]
-    },
-    {
-      "id": "ec_5_3_99_11",
-      "name": "2-keto-myo-inositol isomerase",
-      "ec": [
-        "5.3.99.11"
       ]
     }
   ],
@@ -363,37 +374,43 @@
     },
     {
       "id": "r5",
-      "name": "2-keto-myo-inositol isomerase",
-      "equation": "scyllo-inosose = scyllo-inosine",
-      "ec": "5.3.99.11",
+      "name": "scyllo-inosose + NAD(+) = 3-dehydro-scyllo-inosose + NADH + H(+)",
+      "equation": "scyllo-inosose + NAD(+) = 3-dehydro-scyllo-inosose + NADH + H(+)",
       "substrates": [
         {
           "metabolite": "myo_2_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2d_2_3_5_4_6_pentahydroxycyclohexanone",
+          "metabolite": "3_dehydro_scyllo_inosose",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_5_3_99_11"
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25776"
+        "rhea": "RHEA:53284"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25776"
+            "id": "RHEA:53284"
           }
         ]
       }

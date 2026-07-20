@@ -16,21 +16,9 @@ pathway 3-palmitoyl-sn-glycerol-to-2-oleoyl-sn-glycero-3 "3-palmitoyl-sn-glycero
     1_o_stearoyl_n_acetylsphingosine
   }
 
-  branch from 1_oleoyl_3_palmitoyl_sn_glycerol side left {
-    1_oleoyl_3_palmitoyl_sn_glycerol
-    <-> . +3_palmitoyl_sn_glycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
-    1_o_oleoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from 2_oleoyl_sn_glycero_3_phosphocholine side right {
+  branch from 2_oleoyl_sn_glycero_3_phosphocholine side left {
     2_oleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    oleate
-  }
-
-  branch from 1_o_stearoyl_n_acetylsphingosine side left {
-    1_o_stearoyl_n_acetylsphingosine
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch +n_acetylsphingosine
-    2_arachidonoyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +coa
+    oleoyl_coa
   }
 }

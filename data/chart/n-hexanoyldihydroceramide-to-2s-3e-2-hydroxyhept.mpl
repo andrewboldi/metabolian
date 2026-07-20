@@ -26,19 +26,19 @@ pathway n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept "N-hexanoyldihydroceram
 
   branch from sphinganine side right {
     sphinganine
-    <-> ec_1_1_1_102 [1.1.1.102] +nadp +nadph +hplus
-    ketosphinganine
+    <-> ec_2_7_1_91 [2.7.1.91] +atp +adp +hplus
+    sphinganine_1_phosphate
   }
 
-  branch from hexanal side left {
-    hexanal
-    <-> . +nadp +nadph +hplus
-    hexan_1_ol
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    humulene
+    <-> ec_4_2_3_47 [4.2.3.47] +fpp
+    trans_farnesene
+  }
+
+  branch from 2e_hexenal side right {
+    2e_hexenal
+    <-> . +nadp +nadph +hplus
+    e_hex_2_en_1_ol
   }
 }

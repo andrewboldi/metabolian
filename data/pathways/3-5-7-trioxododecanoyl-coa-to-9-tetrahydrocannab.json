@@ -131,24 +131,6 @@
       }
     },
     {
-      "id": "neryl_diphosphate",
-      "name": "neryl diphosphate",
-      "formula": "C10H17O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57665"
-      }
-    },
-    {
-      "id": "cannabinerolate",
-      "name": "cannabinerolate",
-      "formula": "C22H31O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:66961"
-      }
-    },
-    {
       "id": "cannabidiolate",
       "name": "cannabidiolate",
       "formula": "C22H29O4",
@@ -158,22 +140,40 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "1r_2r_3r_prephytoene_diphosphate",
+      "name": "(1R,2R,3R)-prephytoene diphosphate",
+      "short": "(1R,2R,3R)-prephyto…",
+      "formula": "C40H65O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58011"
       }
     },
     {
-      "id": "sesquiphellandrene",
-      "name": "β-sesquiphellandrene",
-      "formula": "C15H24",
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "lycopaoctaene",
+      "name": "lycopaoctaene",
+      "formula": "C40H66",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64361"
+        "chebi": "CHEBI:142538"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
       }
     }
   ],
@@ -204,13 +204,6 @@
       "name": "cannabidiolic acid synthase",
       "ec": [
         "1.21.3.8"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_123",
-      "name": "beta-sesquiphellandrene synthase",
-      "ec": [
-        "4.2.3.123"
       ]
     }
   ],
@@ -391,45 +384,6 @@
     },
     {
       "id": "r5",
-      "name": "olivetolate + neryl diphosphate = cannabinerolate + diphosphate",
-      "equation": "olivetolate + neryl diphosphate = cannabinerolate + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "olivetolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "neryl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cannabinerolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:34131"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:34131"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "cannabidiolic acid synthase",
       "equation": "cannabigerolate + O2 = cannabidiolate + H2O2",
       "ec": "1.21.3.8",
@@ -459,7 +413,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:34411"
       },
@@ -474,42 +428,48 @@
       }
     },
     {
-      "id": "r7",
-      "name": "beta-sesquiphellandrene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-sesquiphellandrene + diphosphate",
-      "ec": "4.2.3.123",
+      "id": "r6",
+      "name": "(1R,2R,3R)-prephytoene diphosphate + NADH + H(+) = all-trans-lycopaoctaene + diphosphat...",
+      "equation": "(1R,2R,3R)-prephytoene diphosphate + NADH + H(+) = all-trans-lycopaoctaene + diphosphate + NAD(+)",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "1r_2r_3r_prephytoene_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sesquiphellandrene",
+          "metabolite": "lycopaoctaene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_4_2_3_123"
+          "metabolite": "nad",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:32699"
+        "rhea": "RHEA:58940"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32699"
+            "id": "RHEA:58940"
           }
         ]
       }

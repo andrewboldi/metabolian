@@ -18,7 +18,7 @@ pathway geranyl-diphosphate-to-2z-5-isopropyl-2-methyl "geranyl diphosphate to (
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_96 [4.2.3.96] +fpp +h2o
-    avermitilol
+    <-> ec_4_2_3_189 [4.2.3.189] +peregrinol_diphosphate
+    9_13_r_epoxylabd_14_ene
   }
 }

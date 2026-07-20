@@ -18,7 +18,7 @@ pathway 3-hydroxy-2-methylpropano-to-propionyl-coa "3-hydroxy-2-methylpropano…
 
   branch from propionyl_coa side left {
     propionyl_coa
-    <-> ec_2_1_3_1 [2.1.3.1] +s_methylmalonyl_coa +pyruvate
-    oxaloacetate
+    <-> ec_2_3_1_94 [2.3.1.94] +s_methylmalonyl_coa +nadph +hplus +co2 +nadp +coa +h2o
+    6_deoxyerythronolide_b
   }
 }

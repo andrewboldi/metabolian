@@ -227,23 +227,59 @@
       }
     },
     {
-      "id": "all_trans_3_4_didehydro_13_14_dihydroretinol",
-      "name": "all-trans-3,4-didehydro-13,14-dihydroretinol",
-      "short": "all-trans-3,4-dideh…",
-      "formula": "C20H30O",
-      "charge": 0,
+      "id": "3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa",
+      "name": "(3R,7Z,10Z,13Z,16Z)-3-hydroxydocosatetraenoyl-CoA",
+      "short": "(3R,7Z,10Z,13Z,16Z)…",
+      "formula": "C43H66N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:142226"
+        "chebi": "CHEBI:76415"
       }
     },
     {
-      "id": "all_trans_3_4_didehydroretinol",
-      "name": "all-trans-3,4-didehydroretinol",
-      "short": "all-trans-3,4-dideh…",
-      "formula": "C20H28O",
+      "id": "okaramine_a",
+      "name": "okaramine A",
+      "formula": "C32H32N4O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132246"
+        "chebi": "CHEBI:232464"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "12_deshydroxyl_okaramine_e",
+      "name": "12-deshydroxyl okaramine E",
+      "short": "12-deshydroxyl…",
+      "formula": "C32H32N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232466"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -645,39 +681,94 @@
     },
     {
       "id": "r11",
-      "name": "all-trans-3,4-didehydro-13,14-dihydroretinol + A = all-trans-3,4-didehydroretinol + AH2",
-      "equation": "all-trans-3,4-didehydro-13,14-dihydroretinol + A = all-trans-3,4-didehydroretinol + AH2",
+      "name": "(3R)-hydroxy-(7Z,10Z,13Z,16Z)-docosatetraenoyl-CoA = (2E,7Z,10Z,13Z,16Z)-docosapentaeno...",
+      "equation": "(3R)-hydroxy-(7Z,10Z,13Z,16Z)-docosatetraenoyl-CoA = (2E,7Z,10Z,13Z,16Z)-docosapentaenoyl-CoA + H2O",
       "substrates": [
         {
-          "metabolite": "all_trans_3_4_didehydro_13_14_dihydroretinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_3_4_didehydroretinol",
+          "metabolite": "2e_7z_10z_13z_16z_docosapentaenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:57736"
+        "rhea": "RHEA:39327"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57736"
+            "id": "RHEA:39327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "okaramine A + 2-oxoglutarate + AH2 + O2 = 12-deshydroxyl okaramine E + succinate + A + ...",
+      "equation": "okaramine A + 2-oxoglutarate + AH2 + O2 = 12-deshydroxyl okaramine E + succinate + A + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "okaramine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_deshydroxyl_okaramine_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:82719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82719"
           }
         ]
       }

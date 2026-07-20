@@ -129,13 +129,13 @@
       }
     },
     {
-      "id": "n6_methyladenosine_5_monophosphate_1",
-      "name": "N6-methyladenosine 5'-monophosphate(1−)",
-      "short": "N6-methyladenosine…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
+      "id": "n_methyl_argininium_1",
+      "name": "Nω-methyl-argininium(1+)",
+      "short": "Nω-methyl-argininiu…",
+      "formula": "C7H15N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74449"
+        "chebi": "CHEBI:65280"
       }
     },
     {
@@ -148,13 +148,12 @@
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74411"
+        "chebi": "CHEBI:29965"
       }
     },
     {
@@ -176,22 +175,22 @@
       }
     },
     {
-      "id": "malonyl-acp",
-      "name": "Malonyl-[ACP]",
-      "formula": "C17H26N3O11PS",
-      "charge": -2,
+      "id": "trans_aconitate",
+      "name": "trans-aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:78449"
+        "chebi": "CHEBI:15708"
       }
     },
     {
-      "id": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
-      "name": "O-[S-(methoxycarbonylacetyl)pantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(methoxycarbon…",
-      "formula": "C18H29N3O11PS",
-      "charge": -1,
+      "id": "2e_2_methoxycarbonylmethyl_but_2_enedioate",
+      "name": "(2E)-2-(methoxycarbonylmethyl)but-2-enedioate",
+      "short": "2-(methoxycarbonylm…",
+      "formula": "C7H6O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:78845"
+        "chebi": "CHEBI:57469"
       }
     }
   ],
@@ -218,17 +217,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_53",
-      "name": "mRNA N(6)-methyladenine demethylase",
+      "id": "ec_2_1_1_145",
+      "name": "trans-aconitate 3-methyltransferase",
       "ec": [
-        "1.14.11.53"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_197",
-      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
-      "ec": [
-        "2.1.1.197"
+        "2.1.1.145"
       ]
     }
   ],
@@ -455,12 +447,11 @@
     },
     {
       "id": "r5",
-      "name": "mRNA N(6)-methyladenine demethylase",
-      "equation": "an N(6)-methyladenosine in mRNA + 2-oxoglutarate + O2 = an adenosine in mRNA + formaldehyde + succinate + CO2",
-      "ec": "1.14.11.53",
+      "name": "N(omega)-methyl-L-arginyl-[protein] + 2-oxoglutarate + O2 = L-arginyl-[protein] + forma...",
+      "equation": "N(omega)-methyl-L-arginyl-[protein] + 2-oxoglutarate + O2 = L-arginyl-[protein] + formaldehyde + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "n6_methyladenosine_5_monophosphate_1",
+          "metabolite": "n_methyl_argininium_1",
           "stoichiometry": 1
         },
         {
@@ -474,7 +465,7 @@
       ],
       "products": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
@@ -490,34 +481,29 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_53"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49520"
+        "rhea": "RHEA:58356"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49520"
+            "id": "RHEA:58356"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
-      "equation": "malonyl-[ACP] + S-adenosyl-L-methionine = malonyl-[ACP] methyl ester + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.197",
+      "name": "trans-aconitate 3-methyltransferase",
+      "equation": "trans-aconitate + S-adenosyl-L-methionine = (E)-2-(methoxycarbonylmethyl)but-2-enedioate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.145",
       "substrates": [
         {
-          "metabolite": "malonyl-acp",
+          "metabolite": "trans_aconitate",
           "stoichiometry": 1
         },
         {
@@ -527,7 +513,7 @@
       ],
       "products": [
         {
-          "metabolite": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
+          "metabolite": "2e_2_methoxycarbonylmethyl_but_2_enedioate",
           "stoichiometry": 1
         },
         {
@@ -537,20 +523,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_197"
+          "enzyme": "ec_2_1_1_145"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:17105"
+        "rhea": "RHEA:22200"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17105"
+            "id": "RHEA:22200"
           }
         ]
       }

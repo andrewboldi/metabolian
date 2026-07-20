@@ -24,7 +24,7 @@ pathway d-ribosylnicotinate-to-diphosphate "D-ribosylnicotinate to diphosphate" 
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_94 [4.2.3.94] +fpp
-    curcumene
+    <-> ec_4_2_3_193 [4.2.3.193] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    12e_labda_8_17_12_14_triene
   }
 }

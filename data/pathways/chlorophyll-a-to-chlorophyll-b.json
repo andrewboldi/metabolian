@@ -1,0 +1,224 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "chlorophyll-a-to-chlorophyll-b",
+  "name": "chlorophyll a to chlorophyll b",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from chlorophyll a(1−) to chlorophyll b(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53544"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58416"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "chlorophyll_a",
+      "name": "chlorophyll a",
+      "formula": "C55H71MgN4O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58416"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "71_hydroxychlorophyll_a",
+      "name": "71-hydroxychlorophyll a",
+      "short": "71-hydroxychlorophy…",
+      "formula": "C55H71MgN4O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83377"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "chlorophyll_b",
+      "name": "chlorophyll b",
+      "formula": "C55H69MgN4O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61721"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_7_2",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "ec": [
+        "1.17.7.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_294",
+      "name": "chlorophyll(ide) b reductase",
+      "ec": [
+        "1.1.1.294"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "equation": "chlorophyll a + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = 7(1)-hydroxychlorophyll a + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.17.7.2",
+      "substrates": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "71_hydroxychlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_7_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "chlorophyll(ide) b reductase",
+      "equation": "7(1)-hydroxychlorophyll a + NAD(+) = chlorophyll b + NADH + H(+)",
+      "ec": "1.1.1.294",
+      "substrates": [
+        {
+          "metabolite": "71_hydroxychlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyll_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_294"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43488"
+          }
+        ]
+      }
+    }
+  ]
+}

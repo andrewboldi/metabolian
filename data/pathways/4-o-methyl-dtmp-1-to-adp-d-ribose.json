@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "4-o-methyl-dtmp-1-to-adp-d-ribose",
   "name": "4-O-methyl-dTMP(1−) to ADP-D-ribose",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 4-O-methyl-dTMP(1−) residue to ADP-D-ribose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -131,32 +131,42 @@
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
+      "id": "n6_malonyl_l_lysine_1",
+      "name": "N6-malonyl-L-lysine(1−)",
+      "short": "N6-malonyl-L-lysine…",
+      "formula": "C9H13N2O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58349"
+        "chebi": "CHEBI:87831"
       }
     },
     {
-      "id": "2_phospho_cyclic_adp_ribose",
-      "name": "2'-phospho-cyclic ADP-ribose",
-      "short": "2'-phospho-cyclic…",
-      "formula": "C15H19N5O16P3",
+      "id": "2_o_malonyl_adp_d_ribose",
+      "name": "2''-O-malonyl-ADP-D-ribose",
+      "short": "2''-O-malonyl-ADP-D…",
+      "formula": "C18H22N5O17P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:75970"
+        "chebi": "CHEBI:87833"
       }
     },
     {
-      "id": "cyclic_adp_d_ribose",
-      "name": "cyclic ADP-β-D-ribose",
-      "short": "cyclic ADP-β-D-ribo…",
-      "formula": "C15H19N5O13P2",
-      "charge": -2,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:73672"
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "6_n_adp_d_ribosyl_l_lysinium_1",
+      "name": "6-N-(ADP-D-ribosyl)-L-lysinium(1−)",
+      "short": "6-N-(ADP-D-ribosyl)…",
+      "formula": "C21H32N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142515"
       }
     }
   ],
@@ -355,46 +365,58 @@
     },
     {
       "id": "r5",
-      "name": "NADP(+) = 2'-phospho-cyclic ADP-ribose + nicotinamide",
-      "equation": "NADP(+) = 2'-phospho-cyclic ADP-ribose + nicotinamide",
+      "name": "N(6)-malonyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-malonyl-ADP-D-ribose + nicotinami...",
+      "equation": "N(6)-malonyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-malonyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
       "substrates": [
         {
-          "metabolite": "nadp",
+          "metabolite": "n6_malonyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_phospho_cyclic_adp_ribose",
+          "metabolite": "2_o_malonyl_adp_d_ribose",
           "stoichiometry": 1
         },
         {
           "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:38603"
+        "rhea": "RHEA:47672"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38603"
+            "id": "RHEA:47672"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "cyclic ADP-beta-D-ribose + H2O = ADP-D-ribose",
-      "equation": "cyclic ADP-beta-D-ribose + H2O = ADP-D-ribose",
+      "name": "N(6)-(ADP-D-ribosyl)-L-lysyl-[protein] + H2O = ADP-D-ribose + L-lysyl-[protein]",
+      "equation": "N(6)-(ADP-D-ribosyl)-L-lysyl-[protein] + H2O = ADP-D-ribose + L-lysyl-[protein]",
       "substrates": [
         {
-          "metabolite": "cyclic_adp_d_ribose",
+          "metabolite": "6_n_adp_d_ribosyl_l_lysinium_1",
           "stoichiometry": 1
         },
         {
@@ -406,19 +428,23 @@
         {
           "metabolite": "adp_d_ribose",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:38615"
+        "rhea": "RHEA:58244"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38615"
+            "id": "RHEA:58244"
           }
         ]
       }

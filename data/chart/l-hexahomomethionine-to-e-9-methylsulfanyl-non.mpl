@@ -18,7 +18,7 @@ pathway l-hexahomomethionine-to-e-9-methylsulfanyl-non "L-hexahomomethionine to 
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_134 [1.14.14.134] +amyrin +fmnh2 +o2 +h2o +hplus
-    24_hydroxy_amyrin
+    <-> ec_1_14_14_156 [1.14.14.156] +l_tryptophan +fmnh2 +o2 +co2 +h2o +hplus
+    e_indol_3_ylacetaldehyde_oxime
   }
 }

@@ -18,8 +18,8 @@ pathway z-4-hydroxyphenyl-acet-to-hydrogen-cyanide "(Z)-(4-hydroxyphenyl)acet…
 
   branch from fmn side left {
     fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_10z_13z_16z_19_20_epoxydocosatetraenoate
+    <-> . +4a_5_dihydro_ml_236c_carboxylate +fmnh2 +o2 +h2o +hplus
+    3_hydroxy_3_5_dihydro_ml_236c_carboxylate
   }
 
   branch from 4_hydroxybenzaldehyde side right {
@@ -30,7 +30,7 @@ pathway z-4-hydroxyphenyl-acet-to-hydrogen-cyanide "(Z)-(4-hydroxyphenyl)acet…
 
   branch from hydrogen_cyanide side left {
     hydrogen_cyanide
-    <-> ec_4_1_2_47 [4.1.2.47] +monosubstituted_aliphatic_s_cyanohydrin
-    aldehyde
+    <-> . +cyclohexanecarbaldehyde
+    2s_2_cyclohexyl_2_hydroxyacetonitrile
   }
 }

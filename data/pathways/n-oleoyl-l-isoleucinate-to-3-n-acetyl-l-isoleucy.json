@@ -139,61 +139,52 @@
       }
     },
     {
-      "id": "n_7_isojasmonyl_l_isoleucinate",
-      "name": "N-[(+)-7-isojasmonyl]-L-isoleucinate",
-      "short": "N-[(+)-7-isojasmony…",
-      "formula": "C18H28NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136180"
-      }
-    },
-    {
-      "id": "7_isojasmonate",
-      "name": "(+)-7-isojasmonate",
-      "formula": "C12H17O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136179"
-      }
-    },
-    {
-      "id": "n_9z_octadecenoyl_sphinganine",
-      "name": "N-[(9Z)-octadecenoyl]sphinganine",
-      "short": "N-[(9Z)-octadecenoy…",
-      "formula": "C36H71NO3",
+      "id": "d_alloisoleucine",
+      "name": "D-alloisoleucine",
+      "formula": "C6H13NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74100"
+        "chebi": "CHEBI:85306"
       }
     },
     {
-      "id": "sphinganine",
-      "name": "Sphinganine",
-      "formula": "C18H40NO2",
-      "charge": 1,
+      "id": "s_s_bis_2_oleoylglycero_1_phosphate",
+      "name": "(S,S)-bis-(2-oleoylglycero)-1-phosphate",
+      "short": "(S,S)-bis-(2-oleoyl…",
+      "formula": "C42H78O10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57817"
+        "chebi": "CHEBI:139156"
       }
     },
     {
-      "id": "geranylgeranyl_diphosphate",
-      "name": "geranylgeranyl diphosphate",
-      "short": "geranylgeranyl PP",
-      "formula": "C20H33O7P2",
+      "id": "s_s_2_oleoylglycero_1_phospho_1_glycerol",
+      "name": "(S,S)-2-oleoylglycero-1-phospho-1'-glycerol",
+      "short": "(S,S)-2-oleoylglyce…",
+      "formula": "C24H46O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:139157"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57533"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "fusicocca_2_10_14_diene",
-      "name": "fusicocca-2,10(14)-diene",
-      "short": "fusicocca-2,10(14)-…",
-      "formula": "C20H32",
+      "id": "15_cis_4_4_diapophytoene",
+      "name": "15-cis-4,4'-diapophytoene",
+      "short": "15-cis-4,4'-diapoph…",
+      "formula": "C30H48",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:52463"
+        "chebi": "CHEBI:62738"
       }
     }
   ],
@@ -206,17 +197,17 @@
       ]
     },
     {
-      "id": "ec_3_5_1_127",
-      "name": "jasmonoyl-L-amino acid hydrolase",
+      "id": "ec_5_1_1_21",
+      "name": "isoleucine 2-epimerase",
       "ec": [
-        "3.5.1.127"
+        "5.1.1.21"
       ]
     },
     {
-      "id": "ec_4_2_3_43",
-      "name": "fusicocca-2,10(14)-diene synthase",
+      "id": "ec_2_5_1_96",
+      "name": "4,4'-diapophytoene synthase",
       "ec": [
-        "4.2.3.43"
+        "2.5.1.96"
       ]
     }
   ],
@@ -358,56 +349,48 @@
     },
     {
       "id": "r4",
-      "name": "jasmonoyl-L-amino acid hydrolase",
-      "equation": "L-isoleucine-(+)-7-isojasmonate + H2O = (+)-7-isojasmonate + L-isoleucine",
-      "ec": "3.5.1.127",
+      "name": "isoleucine 2-epimerase",
+      "equation": "L-isoleucine = D-allo-isoleucine",
+      "ec": "5.1.1.21",
       "substrates": [
-        {
-          "metabolite": "n_7_isojasmonyl_l_isoleucinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_isojasmonate",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "isoleucine",
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "d_alloisoleucine",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_127"
+          "enzyme": "ec_5_1_1_21"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:52032"
+        "rhea": "RHEA:45560"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52032"
+            "id": "RHEA:45560"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N-(9Z-octadecenoyl)-sphinganine + H2O = sphinganine + (9Z)-octadecenoate",
-      "equation": "N-(9Z-octadecenoyl)-sphinganine + H2O = sphinganine + (9Z)-octadecenoate",
+      "name": "(S,S)-2-(9Z-octadecenoyl)-sn-glycero-1-phospho-(2'-(9Z-octadecenoyl)-1'-sn-glycerol) + ...",
+      "equation": "(S,S)-2-(9Z-octadecenoyl)-sn-glycero-1-phospho-(2'-(9Z-octadecenoyl)-1'-sn-glycerol) + H2O = (S,S)-2-(9Z-octadecenoyl)-sn-glycero-1-phospho-(1'-sn-glycerol) + (9Z)-octadecenoate + H(+)",
       "substrates": [
         {
-          "metabolite": "n_9z_octadecenoyl_sphinganine",
+          "metabolite": "s_s_bis_2_oleoylglycero_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -417,66 +400,70 @@
       ],
       "products": [
         {
-          "metabolite": "sphinganine",
+          "metabolite": "s_s_2_oleoylglycero_1_phospho_1_glycerol",
           "stoichiometry": 1
         },
         {
           "metabolite": "oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:45372"
+        "rhea": "RHEA:55716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45372"
+            "id": "RHEA:55716"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "fusicocca-2,10(14)-diene synthase",
-      "equation": "geranylgeranyl diphosphate = fusicocca-2,10(14)-diene + diphosphate",
-      "ec": "4.2.3.43",
+      "name": "4,4'-diapophytoene synthase",
+      "equation": "2 (2E,6E)-farnesyl diphosphate = 15-cis-4,4'-diapophytoene + 2 diphosphate",
+      "ec": "2.5.1.96",
       "substrates": [
         {
-          "metabolite": "geranylgeranyl_diphosphate",
-          "stoichiometry": 1
+          "metabolite": "fpp",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "fusicocca_2_10_14_diene",
+          "metabolite": "15_cis_4_4_diapophytoene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_43"
+          "enzyme": "ec_2_5_1_96"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:26245"
+        "rhea": "RHEA:31547"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26245"
+            "id": "RHEA:31547"
           }
         ]
       }

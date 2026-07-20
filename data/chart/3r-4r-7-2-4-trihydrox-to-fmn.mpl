@@ -20,13 +20,13 @@ pathway 3r-4r-7-2-4-trihydrox-to-fmn "(3R,4R)-7,2',4'-trihydrox… to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_78 [1.14.14.78] +menaquinone_4 +fmnh2 +o2 +h2o +hplus
-    hydroxymenaquinone_4
+    <-> . +1_4_cineole +fmnh2 +o2 +h2o +hplus
+    2_exo_hydroxy_1_4_cineole
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_74 [4.2.3.74] +fpp +h2o
-    presilphiperfolan_8_ol
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_8_14_15_diene
   }
 }

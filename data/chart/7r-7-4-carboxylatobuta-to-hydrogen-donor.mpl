@@ -30,13 +30,19 @@ pathway 7r-7-4-carboxylatobuta-to-hydrogen-donor "(7R)-7-(4-carboxylatobuta… t
 
   branch from succinate side left {
     succinate
-    <-> . +pentalenolactone_d +akg +o2 +co2 +h2o
-    pentalenolactone_e
+    <-> ec_1_14_11_57 [1.14.11.57] +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
   }
 
   branch from akg side right {
     akg
-    <-> ec_1_4_1_13 [1.4.1.13] +glutamate +nadp +nadph +hplus
-    glutamine
+    <-> . +hplus +co2
+    s_oxalatosuccinate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +spermidine +hydrogen_acceptor +trimethylenediaminium
+    1_pyrrolinium
   }
 }

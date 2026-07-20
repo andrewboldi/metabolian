@@ -109,12 +109,12 @@
       }
     },
     {
-      "id": "oleoyl_coa",
-      "name": "oleoyl-CoA",
-      "formula": "C39H64N7O17P3S",
-      "charge": -4,
+      "id": "adonixanthin",
+      "name": "adonixanthin",
+      "formula": "C40H54O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57387"
+        "chebi": "CHEBI:80217"
       }
     },
     {
@@ -127,12 +127,12 @@
       }
     },
     {
-      "id": "linoleoyl_coa",
-      "name": "linoleoyl-CoA",
-      "formula": "C39H62N7O17P3S",
-      "charge": -4,
+      "id": "astaxanthin",
+      "name": "astaxanthin",
+      "formula": "C40H52O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57383"
+        "chebi": "CHEBI:40968"
       }
     },
     {
@@ -145,7 +145,15 @@
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_64",
+      "name": "zeaxanthin 4-ketolase",
+      "ec": [
+        "1.14.99.64"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -305,47 +313,53 @@
     },
     {
       "id": "r5",
-      "name": "(9Z)-octadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-octadecadienoyl-CoA + A + 2 H2O",
-      "equation": "(9Z)-octadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-octadecadienoyl-CoA + A + 2 H2O",
+      "name": "zeaxanthin 4-ketolase",
+      "equation": "all-trans-adonixanthin + 2 AH2 + 2 O2 = all-trans-(3S,3'S)-astaxanthin + 2 A + 3 H2O",
+      "ec": "1.14.99.64",
       "substrates": [
         {
-          "metabolite": "oleoyl_coa",
+          "metabolite": "adonixanthin",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "linoleoyl_coa",
+          "metabolite": "astaxanthin",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_64"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:36863"
+        "rhea": "RHEA:56772"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36863"
+            "id": "RHEA:56772"
           }
         ]
       }

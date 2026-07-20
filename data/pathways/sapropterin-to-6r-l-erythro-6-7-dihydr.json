@@ -1,0 +1,323 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sapropterin-to-6r-l-erythro-6-7-dihydr",
+  "name": "sapropterin to (6R)-L-erythro-6,7-dihydr…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from sapropterin to (6R)-L-erythro-6,7-dihydrobiopterin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18201"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59560"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sapropterin",
+      "name": "sapropterin",
+      "formula": "C9H15N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59560"
+      }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
+      "name": "4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin",
+      "short": "4a-hydroxy-L-erythr…",
+      "formula": "C9H15N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15642"
+      }
+    },
+    {
+      "id": "ldopa",
+      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
+      "short": "3,4-Dihydroxy-L-phe…",
+      "formula": "C9H11NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57504"
+      }
+    },
+    {
+      "id": "bh2",
+      "name": "Dihydrobiopterin (BH2)",
+      "short": "Dihydrobiopterin…",
+      "formula": "C9H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43120"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+      "name": "5-(L-alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde",
+      "short": "5-(L-alanin-3-yl)-2…",
+      "formula": "C9H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58227"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_16_2",
+      "name": "tyrosine 3-monooxygenase",
+      "ec": [
+        "1.14.16.2"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_96",
+      "name": "4a-hydroxytetrahydrobiopterin dehydratase",
+      "ec": [
+        "4.2.1.96"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_30",
+      "name": "stizolobinate synthase",
+      "ec": [
+        "1.13.11.30"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tyrosine 3-monooxygenase",
+      "equation": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + L-tyrosine + O2 = (4aS,6R)-4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin + L-dopa",
+      "ec": "1.14.16.2",
+      "substrates": [
+        {
+          "metabolite": "sapropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ldopa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_16_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18201"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4a-hydroxytetrahydrobiopterin dehydratase",
+      "equation": "(4aS,6R)-4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin = (6R)-L-erythro-6,7-dihydrobiopterin + H2O",
+      "ec": "4.2.1.96",
+      "substrates": [
+        {
+          "metabolite": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11920"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "stizolobinate synthase",
+      "equation": "L-dopa + O2 = 5-(L-alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde + H(+)",
+      "ec": "1.13.11.30",
+      "substrates": [
+        {
+          "metabolite": "ldopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18465"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + L-phenylalanine + O2 = (6R)-L-erythro-6,7-...",
+      "equation": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + L-phenylalanine + O2 = (6R)-L-erythro-6,7-dihydrobiopterin + L-tyrosine + H2O",
+      "substrates": [
+        {
+          "metabolite": "sapropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30787"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -159,32 +159,22 @@
       }
     },
     {
-      "id": "succinyl_coa",
-      "name": "Succinyl-CoA",
-      "formula": "C25H35N7O19P3S",
-      "charge": -5,
+      "id": "octanoyl_coa",
+      "name": "octanoyl-CoA",
+      "formula": "C29H46N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57292"
+        "chebi": "CHEBI:57386"
       }
     },
     {
-      "id": "malate",
-      "name": "L-Malate ((S)-malate)",
-      "short": "L-Malate ((S)-malat…",
-      "formula": "C4H4O5",
-      "charge": -2,
+      "id": "2_hydroxyoctanoyl_coa",
+      "name": "2-hydroxyoctanoyl-CoA",
+      "short": "2-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15589"
-      }
-    },
-    {
-      "id": "3s_3_carboxy_3_hydroxypropanoyl_coa",
-      "name": "(3S)-3-carboxy-3-hydroxypropanoyl-CoA",
-      "short": "3-carboxy-3-hydroxy…",
-      "formula": "C25H35N7O20P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57317"
+        "chebi": "CHEBI:138290"
       }
     },
     {
@@ -204,13 +194,6 @@
       "name": "(R)-dichlorprop dioxygenase (2-oxoglutarate)",
       "ec": [
         "1.14.11.44"
-      ]
-    },
-    {
-      "id": "ec_2_8_3_22",
-      "name": "succinyl-CoA--L-malate CoA-transferase",
-      "ec": [
-        "2.8.3.22"
       ]
     }
   ],
@@ -415,45 +398,47 @@
     },
     {
       "id": "r5",
-      "name": "succinyl-CoA--L-malate CoA-transferase",
-      "equation": "succinyl-CoA + (S)-malate = (S)-malyl-CoA + succinate",
-      "ec": "2.8.3.22",
+      "name": "octanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyoctanoyl-CoA + succinate + CO2",
+      "equation": "octanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyoctanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "succinyl_coa",
+          "metabolite": "octanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malate",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_3_carboxy_3_hydroxypropanoyl_coa",
+          "metabolite": "2_hydroxyoctanoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_8_3_22"
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:38255"
+        "rhea": "RHEA:54600"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38255"
+            "id": "RHEA:54600"
           }
         ]
       }

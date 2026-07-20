@@ -18,25 +18,19 @@ pathway a-lipid-a-to-o-pantetheine-4-phospho "a lipid A to O-(pantetheine-4'-pho
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
     2_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_alkyl_2_acetyl_sn_glycerol +phosphatidylcholine
-    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+    <-> . +3_acyl_sn_glycerol +phosphatidylcholine
+    1_3_diacyl_sn_glycerol
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphoethanolamine side right {
-    2_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +n_acetylsphingosine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    1_o_acyl_n_acetylsphingosine
-  }
-
-  branch from phosphatidylcholine side left {
+  branch from phosphatidylcholine side right {
     phosphatidylcholine
-    <-> . +h2o +fatty-acid +hplus
-    acyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_diglyceride +1_o_acyl_sn_glycero_3_phosphocholine
+    triglyceride
   }
 
-  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side right {
-    1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    <-> . +c_terminal_amino_acid_phosphatidylethanolamine_a +h2o
-    c_terminal_amino_acid_glycine
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +l_serine +coa +hplus
+    adenosine_3_5_bismonophosphate
   }
 }

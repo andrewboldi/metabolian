@@ -18,13 +18,13 @@ pathway selenite-to-glutathionate "selenite to glutathionate" {
 
   branch from gssg side left {
     gssg
-    <-> . +13_s_hpode +gsh +h2o
-    13_s_hode
+    <-> . +12_r_hpete +gsh +h2o
+    12_r_hete
   }
 
   branch from gsh side right {
     gsh
-    <-> ec_3_1_2_7 [3.1.2.7] +s_acylglutathionate +h2o +hplus
-    carboxylic_acid_anion
+    <-> . +prostaglandin_a2
+    s_pga2_s_glutathione_conjugate
   }
 }

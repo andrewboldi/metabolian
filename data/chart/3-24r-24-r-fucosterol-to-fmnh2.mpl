@@ -26,19 +26,19 @@ pathway 3-24r-24-r-fucosterol-to-fmnh2 "(3β,24R,24'R)-fucosterol… to FMNH2" {
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> ec_2_1_2_1 [2.1.2.1] +threonine
-    glycine
+    <-> . +2_ethoxyphenol +fadh2 +o2 +fad +h2o +hplus
+    catechol
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_96 [1.14.14.96] +trans_5_o_4_coumaroyl_d_quinate +fmnh2 +o2 +h2o +hplus
-    trans_5_o_caffeoyl_d_quinate
+    <-> ec_1_14_14_90 [1.14.14.90] +2_unsubstituted_isoflavones +fmnh2 +o2 +h2o +hplus
+    2_hydroxyisoflavones
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_82 [1.14.14.82] +3_unsubstituted_flavone +o2 +fmn +h2o +hplus
-    3_hydroxyflavonoid
+    <-> ec_1_97_1_4 [1.97.1.4] +glycine +sam +fmnh +5_deoxyadenosine +methionine +hplus
+    glycyl_radical
   }
 }

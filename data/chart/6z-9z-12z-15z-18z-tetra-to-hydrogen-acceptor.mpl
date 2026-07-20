@@ -34,9 +34,15 @@ pathway 6z-9z-12z-15z-18z-tetra-to-hydrogen-acceptor "(6Z,9Z,12Z,15Z,18Z)-tetraâ
     3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
   }
 
-  branch from hydrogen_acceptor side right {
+  branch from 2e_7z_10z_13z_16z_docosapentaenoyl_coa side right {
+    2e_7z_10z_13z_16z_docosapentaenoyl_coa
+    <-> . +h2o
+    3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa
+  }
+
+  branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +all_trans_3_4_didehydro_13_14_dihydroretinol +hydrogen_donor
-    all_trans_3_4_didehydroretinol
+    <-> . +okaramine_a +akg +hydrogen_donor +o2 +succinate +co2 +h2o
+    12_deshydroxyl_okaramine_e
   }
 }

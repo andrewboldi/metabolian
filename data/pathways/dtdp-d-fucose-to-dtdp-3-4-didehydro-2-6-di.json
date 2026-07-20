@@ -1,0 +1,261 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dtdp-d-fucose-to-dtdp-3-4-didehydro-2-6-di",
+  "name": "dTDP-α-D-fucose to dTDP-3,4-didehydro-2,6-di…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from dTDP-α-D-fucose(2−) to dTDP-3,4-didehydro-2,6-dideoxy-α-D-glucose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36583"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:73933"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dtdp_d_fucose",
+      "name": "dTDP-α-D-fucose",
+      "formula": "C16H24N2O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:73933"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "dtdp_4_dehydro_6_deoxy_d_glucose",
+      "name": "dTDP-4-dehydro-6-deoxy-α-D-glucose",
+      "short": "dTDP-4-dehydro-6-de…",
+      "formula": "C16H22N2O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57649"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "dtdp_3_4_didehydro_2_6_dideoxy_d_glucose",
+      "name": "dTDP-3,4-didehydro-2,6-dideoxy-α-D-glucose",
+      "short": "dTDP-3,4-didehydro-…",
+      "formula": "C16H20N2O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:84540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
+      "name": "dTDP-4-dehydro-2,6-dideoxy-α-D-glucose",
+      "short": "dTDP-4-dehydro-2,6-…",
+      "formula": "C16H22N2O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:84537"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_266",
+      "name": "dTDP-4-dehydro-6-deoxyglucose reductase",
+      "ec": [
+        "1.1.1.266"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_159",
+      "name": "dTDP-4-dehydro-6-deoxy-alpha-D-glucopyranose 2,3-dehydratase",
+      "ec": [
+        "4.2.1.159"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_384",
+      "name": "dTDP-3,4-didehydro-2,6-dideoxy-alpha-D-glucose 3-reductase",
+      "ec": [
+        "1.1.1.384"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dTDP-4-dehydro-6-deoxyglucose reductase",
+      "equation": "dTDP-alpha-D-fucose + NADP(+) = dTDP-4-dehydro-6-deoxy-alpha-D-glucose + NADPH + H(+)",
+      "ec": "1.1.1.266",
+      "substrates": [
+        {
+          "metabolite": "dtdp_d_fucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_4_dehydro_6_deoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_266"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36583"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36583"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dTDP-4-dehydro-6-deoxy-alpha-D-glucopyranose 2,3-dehydratase",
+      "equation": "dTDP-4-dehydro-6-deoxy-alpha-D-glucose = dTDP-3,4-didehydro-2,6-dideoxy-alpha-D-glucose + H2O",
+      "ec": "4.2.1.159",
+      "substrates": [
+        {
+          "metabolite": "dtdp_4_dehydro_6_deoxy_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_3_4_didehydro_2_6_dideoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dTDP-3,4-didehydro-2,6-dideoxy-alpha-D-glucose 3-reductase",
+      "equation": "dTDP-4-dehydro-2,6-dideoxy-alpha-D-glucose + NADP(+) = dTDP-3,4-didehydro-2,6-dideoxy-alpha-D-glucose + NADPH + H(+)",
+      "ec": "1.1.1.384",
+      "substrates": [
+        {
+          "metabolite": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_3_4_didehydro_2_6_dideoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_384"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44624"
+          }
+        ]
+      }
+    }
+  ]
+}

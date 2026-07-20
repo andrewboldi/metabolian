@@ -30,13 +30,7 @@ pathway d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo "β-D-glucosyl-N-(oleoyl
 
   branch from oleate side left {
     oleate
-    <-> . +13_9z_octadecenoyloxy_octadecanoate +h2o +hplus
-    13_hydroxyoctadecanoate
-  }
-
-  branch from n_octadecanoylsphingosine side right {
-    n_octadecanoylsphingosine
-    <-> . +cholesterol +cholesteryl_d_glucoside
-    d_glucosyl_n_octadecanoylsphingosine
+    <-> . +n_oleoyl_l_tryptophan +h2o
+    l_tryptophan
   }
 }

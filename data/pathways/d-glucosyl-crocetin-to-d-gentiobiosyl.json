@@ -1,0 +1,191 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucosyl-crocetin-to-d-gentiobiosyl",
+  "name": "β-D-glucosyl crocetin to β-D-gentiobiosyl…",
+  "category": "other",
+  "summary": "A 2-step route from β-D-glucosyl crocetin(1−) to β-D-gentiobiosyl β-D-glucosyl crocetin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42388"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62766"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucosyl_crocetin",
+      "name": "β-D-glucosyl crocetin",
+      "short": "β-D-glucosyl…",
+      "formula": "C26H33O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62766"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "d_gentiobiosyl_crocetin",
+      "name": "β-D-gentiobiosyl crocetin",
+      "short": "β-D-gentiobiosyl…",
+      "formula": "C32H43O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62770"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_gentiobiosyl_d_glucosyl_crocetin",
+      "name": "β-D-gentiobiosyl β-D-glucosyl crocetin",
+      "short": "β-D-gentiobiosyl…",
+      "formula": "C38H54O19",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62771"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_330",
+      "name": "beta-D-glucosyl crocetin beta-1,6-glucosyltransferase",
+      "ec": [
+        "2.4.1.330"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_271",
+      "name": "crocetin glucosyltransferase",
+      "ec": [
+        "2.4.1.271"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-D-glucosyl crocetin beta-1,6-glucosyltransferase",
+      "equation": "beta-D-glucosyl crocetin + UDP-alpha-D-glucose = beta-D-gentiobiosyl crocetin + UDP + H(+)",
+      "ec": "2.4.1.330",
+      "substrates": [
+        {
+          "metabolite": "d_glucosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gentiobiosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_330"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "crocetin glucosyltransferase",
+      "equation": "beta-D-gentiobiosyl crocetin + UDP-alpha-D-glucose = beta-D-gentiobiosyl beta-D-glucosyl crocetin + UDP",
+      "ec": "2.4.1.271",
+      "substrates": [
+        {
+          "metabolite": "d_gentiobiosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gentiobiosyl_d_glucosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_271"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31471"
+          }
+        ]
+      }
+    }
+  ]
+}

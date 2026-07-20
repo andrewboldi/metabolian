@@ -1,0 +1,178 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-hexadecanoyl-1-1z-oc-to-palmitoyl-ethanolamide",
+  "name": "N-hexadecanoyl-1-[(1Z)-oc… to palmitoyl ethanolamide",
+  "category": "other",
+  "summary": "A 2-step route from N-hexadecanoyl-1-[(1Z)-octadecenoyl]-2-oleoyl-sn-glycero-3-phosphoethanolamine(1−) to palmitoyl ethanolamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55240"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138663"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_hexadecanoyl_1_1z_octadecenoyl_2_oleoyl_sn_gly",
+      "name": "N-hexadecanoyl-1-[(1Z)-octadecenoyl]-2-oleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "N-hexadecanoyl-1-[(…",
+      "formula": "C57H109NO8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138663"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_1z_octadecenyl_sn_glycero_3_phospho_n_hexadeca",
+      "name": "1-(1Z-octadecenyl)-sn-glycero-3-phospho-(N-hexadecanoyl)ethanolamine",
+      "short": "1-(1Z-octadecenyl)-…",
+      "formula": "C39H77NO7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137009"
+      }
+    },
+    {
+      "id": "oleate",
+      "name": "oleate",
+      "formula": "C18H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30823"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_1z_octadecenyl_sn_glycero_3_phosphate",
+      "name": "1-(1Z-octadecenyl)-sn-glycero-3-phosphate",
+      "short": "1-(1Z-octadecenyl)-…",
+      "formula": "C21H41O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137017"
+      }
+    },
+    {
+      "id": "palmitoyl_ethanolamide",
+      "name": "palmitoyl ethanolamide",
+      "short": "palmitoyl…",
+      "formula": "C18H37NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71464"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-O-(1Z-octadecenoyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-N-hexadecanoyl-ethanolam...",
+      "equation": "1-O-(1Z-octadecenoyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-N-hexadecanoyl-ethanolamine + H2O = 1-O-(1Z-octadecenyl)-sn-glycero-3-phospho-N-hexadecanoyl-ethanolamine + (9Z)-octadecenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_hexadecanoyl_1_1z_octadecenoyl_2_oleoyl_sn_gly",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_1z_octadecenyl_sn_glycero_3_phospho_n_hexadeca",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-O-(1Z-octadecenyl)-sn-glycero-3-phospho-N-hexadecanoyl-ethanolamine + H2O = 1-O-(1Z-o...",
+      "equation": "1-O-(1Z-octadecenyl)-sn-glycero-3-phospho-N-hexadecanoyl-ethanolamine + H2O = 1-O-(1Z-octadecenyl)-sn-glycero-3-phosphate + N-hexadecanoylethanolamine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_1z_octadecenyl_sn_glycero_3_phospho_n_hexadeca",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_1z_octadecenyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_ethanolamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53184"
+          }
+        ]
+      }
+    }
+  ]
+}

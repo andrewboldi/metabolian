@@ -40,7 +40,19 @@ pathway s-5-oxo-2-5-dihydro-2-f-to-propionyl-coa "(S)-5-oxo-2,5-dihydro-2-f… t
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_2 [1.14.11.2] +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
+    <-> ec_1_14_11_28 [1.14.11.28] +l_proline +akg +o2 +co2
+    cis_3_hydroxy_l_proline
+  }
+
+  branch from propionate side left {
+    propionate
+    <-> . +propionamide +h2o
+    nh3
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> . +l_lysinium +coa +hplus
+    n6_succinyl_l_lysine_1
   }
 }

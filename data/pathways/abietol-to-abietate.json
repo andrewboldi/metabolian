@@ -119,22 +119,23 @@
       }
     },
     {
-      "id": "5z_8z_11z_icosatrienoate",
-      "name": "(5Z,8Z,11Z)-icosatrienoate",
-      "short": "(5Z,8Z,11Z)-icosatr…",
-      "formula": "C20H33O2",
-      "charge": -1,
+      "id": "3_5_unsubstituted_flavanone",
+      "name": "3',5'-unsubstituted flavanone",
+      "short": "3',5'-unsubstituted…",
+      "formula": "C15H2O2R10",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78043"
+        "chebi": "CHEBI:138897"
       }
     },
     {
-      "id": "19_hetre",
-      "name": "19-HETrE",
-      "formula": "C20H33O3",
-      "charge": -1,
+      "id": "3_5_dihydroxyflavanone",
+      "name": "3',5'-dihydroxyflavanone",
+      "short": "3',5'-dihydroxyflav…",
+      "formula": "C15H2O4R10",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132024"
+        "chebi": "CHEBI:48025"
       }
     }
   ],
@@ -144,6 +145,13 @@
       "name": "abieta-7,13-dien-18-al dehydrogenase",
       "ec": [
         "1.2.1.74"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_81",
+      "name": "flavonoid 3',5'-hydroxylase",
+      "ec": [
+        "1.14.14.81"
       ]
     }
   ],
@@ -289,51 +297,57 @@
     },
     {
       "id": "r4",
-      "name": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-...",
-      "equation": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "flavonoid 3',5'-hydroxylase",
+      "equation": "a 3',5'-unsubstituted flavanone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = a 3',5'-dihydroxyflavanone + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "ec": "1.14.14.81",
       "substrates": [
         {
-          "metabolite": "5z_8z_11z_icosatrienoate",
+          "metabolite": "3_5_unsubstituted_flavanone",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "19_hetre",
+          "metabolite": "3_5_dihydroxyflavanone",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_81"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50076"
+        "rhea": "RHEA:55448"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50076"
+            "id": "RHEA:55448"
           }
         ]
       }

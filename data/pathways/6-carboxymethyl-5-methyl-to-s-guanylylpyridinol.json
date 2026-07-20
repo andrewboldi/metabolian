@@ -142,23 +142,23 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "e_2_methylgeranyl_diphosphate",
-      "name": "(E)-2-methylgeranyl diphosphate",
-      "short": "2-methylgeranyl PP",
-      "formula": "C11H19O7P2",
-      "charge": -3,
+      "id": "2_o_methyladenosine_5_monophosphate_1",
+      "name": "2'-O-methyladenosine 5'-monophosphate(1−)",
+      "short": "2'-O-methyladenosin…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:61984"
+        "chebi": "CHEBI:74477"
       }
     },
     {
@@ -172,13 +172,22 @@
       }
     },
     {
-      "id": "15_cis_4_4_diapophytoene",
-      "name": "15-cis-4,4'-diapophytoene",
-      "short": "15-cis-4,4'-diapoph…",
-      "formula": "C30H48",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62738"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_12_hydroxysqualene",
+      "name": "(R)-12-hydroxysqualene",
+      "short": "12-hydroxysqualene",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88123"
       }
     }
   ],
@@ -205,10 +214,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_255",
-      "name": "geranyl diphosphate 2-C-methyltransferase",
+      "id": "ec_2_1_1_230",
+      "name": "23S rRNA (adenosine(1067)-2'-O)-methyltransferase",
       "ec": [
-        "2.1.1.255"
+        "2.1.1.230"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_156",
+      "name": "hydroxysqualene synthase",
+      "ec": [
+        "4.2.3.156"
       ]
     }
   ],
@@ -405,12 +421,12 @@
     },
     {
       "id": "r5",
-      "name": "geranyl diphosphate 2-C-methyltransferase",
-      "equation": "(2E)-geranyl diphosphate + S-adenosyl-L-methionine = (E)-2-methylgeranyl diphosphate + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.255",
+      "name": "23S rRNA (adenosine(1067)-2'-O)-methyltransferase",
+      "equation": "adenosine(1067) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methyladenosine(1067) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.230",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -420,7 +436,7 @@
       ],
       "products": [
         {
-          "metabolite": "e_2_methylgeranyl_diphosphate",
+          "metabolite": "2_o_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -434,37 +450,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_255"
+          "enzyme": "ec_2_1_1_230"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:32519"
+        "rhea": "RHEA:43212"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32519"
+            "id": "RHEA:43212"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "presqualene diphosphate = 15-cis-4,4'-diapophytoene + diphosphate",
-      "equation": "presqualene diphosphate = 15-cis-4,4'-diapophytoene + diphosphate",
+      "name": "hydroxysqualene synthase",
+      "equation": "presqualene diphosphate + H2O = hydroxysqualene + diphosphate",
+      "ec": "4.2.3.156",
       "substrates": [
         {
           "metabolite": "presqualene_pp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "15_cis_4_4_diapophytoene",
+          "metabolite": "r_12_hydroxysqualene",
           "stoichiometry": 1
         },
         {
@@ -472,17 +493,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_156"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:31551"
+        "rhea": "RHEA:47984"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31551"
+            "id": "RHEA:47984"
           }
         ]
       }

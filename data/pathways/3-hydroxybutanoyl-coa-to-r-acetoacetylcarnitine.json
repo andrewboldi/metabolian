@@ -1,0 +1,266 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxybutanoyl-coa-to-r-acetoacetylcarnitine",
+  "name": "3-hydroxybutanoyl-CoA to (R)-acetoacetylcarnitine",
+  "category": "other",
+  "summary": "A 2-step route from 3-hydroxybutanoyl-CoA(4−) to (R)-acetoacetylcarnitine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42048"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78611"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxybutanoyl_coa",
+      "name": "3-hydroxybutanoyl-CoA",
+      "short": "3-hydroxybutanoyl-C…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:78611"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "acetoacetyl_coa",
+      "name": "Acetoacetyl-CoA",
+      "formula": "C25H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57286"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "r_acetoacetylcarnitine",
+      "name": "(R)-acetoacetylcarnitine",
+      "short": "acetoacetylcarnitine",
+      "formula": "C11H19NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84841"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "r_3_hydroxybutanoyl_coa",
+      "name": "(R)-3-hydroxybutanoyl-CoA",
+      "short": "3-hydroxybutanoyl-C…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57315"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_36",
+      "name": "acetoacetyl-CoA reductase",
+      "ec": [
+        "1.1.1.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-hydroxybutanoyl-CoA + NAD(+) = acetoacetyl-CoA + NADH + H(+)",
+      "equation": "3-hydroxybutanoyl-CoA + NAD(+) = acetoacetyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxybutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acetoacetyl-CoA + (R)-carnitine = O-3-oxobutanoyl-(R)-carnitine + CoA",
+      "equation": "acetoacetyl-CoA + (R)-carnitine = O-3-oxobutanoyl-(R)-carnitine + CoA",
+      "substrates": [
+        {
+          "metabolite": "acetoacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_acetoacetylcarnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "acetoacetyl-CoA reductase",
+      "equation": "(3R)-3-hydroxybutanoyl-CoA + NADP(+) = acetoacetyl-CoA + NADPH + H(+)",
+      "ec": "1.1.1.36",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxybutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45796"
+          }
+        ]
+      }
+    }
+  ]
+}

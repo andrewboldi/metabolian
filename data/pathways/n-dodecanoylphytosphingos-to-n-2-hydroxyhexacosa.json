@@ -130,51 +130,49 @@
       }
     },
     {
-      "id": "phytosphingosine_1_phosphate",
-      "name": "phytosphingosine 1-phosphate",
-      "short": "phytosphingosine 1-P",
-      "formula": "C18H39NO6P",
-      "charge": -1,
+      "id": "sphinganine",
+      "name": "Sphinganine",
+      "formula": "C18H40NO2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:64795"
+        "chebi": "CHEBI:57817"
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:57618"
       }
     },
     {
-      "id": "trilaurin",
-      "name": "trilaurin",
-      "formula": "C39H74O6",
+      "id": "8_hydroxylaurate",
+      "name": "8-hydroxylaurate",
+      "formula": "C12H23O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167541"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "n_2_3_dihydroxyhexacosanoyl_4r_hydroxysphinganin",
+      "name": "N-(2,3-dihydroxyhexacosanoyl)-(4R)-hydroxysphinganine",
+      "short": "N-(2,3-dihydroxyhex…",
+      "formula": "C44H89NO6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77389"
-      }
-    },
-    {
-      "id": "2_3_didodecanoyl_sn_glycerol",
-      "name": "2,3-didodecanoyl-sn-glycerol",
-      "short": "2,3-didodecanoyl-sn…",
-      "formula": "C27H52O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77390"
-      }
-    },
-    {
-      "id": "2_hydroxyhexacosanoyl_coa",
-      "name": "2-hydroxyhexacosanoyl-CoA",
-      "short": "2-hydroxyhexacosano…",
-      "formula": "C47H82N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:134414"
+        "chebi": "CHEBI:60384"
       }
     }
   ],
@@ -315,16 +313,24 @@
     },
     {
       "id": "r4",
-      "name": "(4R)-hydroxysphinganine 1-phosphate + H2O = (4R)-hydroxysphinganine + phosphate",
-      "equation": "(4R)-hydroxysphinganine 1-phosphate + H2O = (4R)-hydroxysphinganine + phosphate",
+      "name": "sphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4R)-hydroxysphinganine + 2 Fe(I...",
+      "equation": "sphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4R)-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + H2O",
       "substrates": [
         {
-          "metabolite": "phytosphingosine_1_phosphate",
+          "metabolite": "sphinganine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
@@ -333,46 +339,58 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:33067"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:33067"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "tridodecanoylglycerol + H2O = 2,3-didodecanoyl-sn-glycerol + dodecanoate + H(+)",
-      "equation": "tridodecanoylglycerol + H2O = 2,3-didodecanoyl-sn-glycerol + dodecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "trilaurin",
-          "stoichiometry": 1
+          "metabolite": "iron",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:33519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxid...",
+      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
         {
-          "metabolite": "2_3_didodecanoyl_sn_glycerol",
+          "metabolite": "dodecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dodecanoate",
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_hydroxylaurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -383,29 +401,33 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:40619"
+        "rhea": "RHEA:66888"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40619"
+            "id": "RHEA:66888"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "2-hydroxyhexacosanoyl-CoA + (4R)-hydroxysphinganine = N-(2-hydroxyhexacosanyl)-(4R)-hyd...",
-      "equation": "2-hydroxyhexacosanoyl-CoA + (4R)-hydroxysphinganine = N-(2-hydroxyhexacosanyl)-(4R)-hydroxysphinganine + CoA + H(+)",
+      "name": "an N-(2,3-dihydroxyhexacosanoyl)-(4R)-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + ...",
+      "equation": "an N-(2,3-dihydroxyhexacosanoyl)-(4R)-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + H2O = N-(2-hydroxyhexacosanyl)-(4R)-hydroxysphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "2_hydroxyhexacosanoyl_coa",
+          "metabolite": "n_2_3_dihydroxyhexacosanoyl_4r_hydroxysphinganin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "phytosphingosine",
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -415,25 +437,29 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:33487"
+        "rhea": "RHEA:33671"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33487"
+            "id": "RHEA:33671"
           }
         ]
       }

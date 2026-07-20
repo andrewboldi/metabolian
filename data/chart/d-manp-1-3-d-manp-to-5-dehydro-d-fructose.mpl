@@ -8,10 +8,8 @@ pathway d-manp-1-3-d-manp-to-5-dehydro-d-fructose "α-D-Manp-(1→3)-[α-D-Manp-
 
   spine at 0,0 {
     d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1_4
-    <-> . +h2o -n_acetyl_d_glucosamine
-    n_3r_4r_5s_6r_5_2s_3s_4s_5r_6r_3_5_dihydroxy_4_2
     <-> . +h2o -d_mannopyranose
-    n_3r_4r_5s_6r_5_2s_3s_4s_5r_6r_3_5_dihydroxy_6_h
+    d_manp_1_6_d_manp_1_4_d_glcpnac_1_4_d_glcpnac
     <-> ec_5_3_1_7 [5.3.1.7] +d_mannopyranose
     d_fructofuranose
     <-> ec_1_1_1_124 [1.1.1.124] +nadp -nadph -hplus
@@ -20,7 +18,13 @@ pathway d-manp-1-3-d-manp-to-5-dehydro-d-fructose "α-D-Manp-(1→3)-[α-D-Manp-
 
   branch from d_mannopyranose side left {
     d_mannopyranose
-    <-> ec_3_2_1_170 [3.2.1.170] +2_d_mannosyl_d_glycerate +h2o
-    d_glycerate
+    <-> . +n_3r_4r_5s_6r_5_2s_3s_4s_5r_6r_3_5_dihydroxy_4_2 +h2o
+    d_manp_1_6_d_manp_1_4_d_glcpnac
+  }
+
+  branch from d_fructofuranose side right {
+    d_fructofuranose
+    <-> . +h2o +pi
+    d_fructofuranose_1_phosphate
   }
 }

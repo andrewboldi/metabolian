@@ -18,19 +18,19 @@ pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphin
 
   branch from phytosphingosine side left {
     phytosphingosine
-    <-> . +h2o +pi
-    phytosphingosine_1_phosphate
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    sphinganine
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +trilaurin +h2o +hplus
-    2_3_didodecanoyl_sn_glycerol
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    8_hydroxylaurate
   }
 
   branch from n_2_hydroxyhexacosanyl_4r_phytosphingosine side left {
     n_2_hydroxyhexacosanyl_4r_phytosphingosine
-    <-> . +phytosphingosine +coa +hplus
-    2_hydroxyhexacosanoyl_coa
+    <-> . +iron +h2o +fe2 +o2 +hplus
+    n_2_3_dihydroxyhexacosanoyl_4r_hydroxysphinganin
   }
 }

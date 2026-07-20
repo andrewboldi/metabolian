@@ -1,0 +1,182 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-palmitoyl-2-acyl-sn-gly-to-1-stearoyl-2-acyl-s",
+  "name": "1-palmitoyl-2-acyl-sn-gly… to 1-stearoyl-2-acyl-sn-glyc…",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from 1-palmitoyl-2-acyl-sn-glycero-3-phosphoethanolamine zwitterion to 1-stearoyl-2-acyl-sn-glycero-3-phosphoethanolamine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40599"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77370"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_palmitoyl_2_acyl_sn_glycero_3_phosphoethanolam",
+      "name": "1-palmitoyl-2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-palmitoyl-2-acyl-…",
+      "formula": "C22H43NO8PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77370"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_acyl_sn_glycero_3_phosphoethanolamine",
+      "name": "2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C6H13NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65213"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "1_stearoyl_2_acyl_sn_glycero_3_phosphoethanolami",
+      "name": "1-stearoyl-2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-stearoyl-2-acyl-s…",
+      "formula": "C24H47NO8PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189703"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-hexadecanoyl-2-acyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-ph...",
+      "equation": "1-hexadecanoyl-2-acyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-phosphoethanolamine + hexadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_palmitoyl_2_acyl_sn_glycero_3_phosphoethanolam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 2-acyl-sn-glycero-3-phosphoethanolamine + octadecanoyl-CoA = 1-octadecanoyl-2-acyl-sn...",
+      "equation": "a 2-acyl-sn-glycero-3-phosphoethanolamine + octadecanoyl-CoA = 1-octadecanoyl-2-acyl-sn-glycero-3-phosphoethanolamine + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_stearoyl_2_acyl_sn_glycero_3_phosphoethanolami",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70583"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70583"
+          }
+        ]
+      }
+    }
+  ]
+}

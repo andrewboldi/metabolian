@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "18-r-hepe-to-hydrogen-acceptor",
+  "name": "18(R)-HEPE to hydrogen acceptor",
+  "category": "other",
+  "summary": "A 2-step route from 18(R)-HEPE(1−) to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51968"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:90818"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "18_r_hepe",
+      "name": "18(R)-HEPE",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90818"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i",
+      "name": "5(S)-hydroperoxy-18(R)-hydroxy-(6E,8Z,11Z,14Z,16E)-icosapentaenoate",
+      "short": "5(S)-hydroperoxy-18…",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132218"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "resolvin_e2",
+      "name": "resolvin E2",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133368"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(18R)-hydroxy-(5Z,8Z,11Z,14Z,16E)-eicosapentaenoate + O2 = (5S)-hydroperoxy-(18R)-hydro...",
+      "equation": "(18R)-hydroxy-(5Z,8Z,11Z,14Z,16E)-eicosapentaenoate + O2 = (5S)-hydroperoxy-(18R)-hydroxy-(6E,8Z,11Z,14Z,16E)-eicosapentaenoate",
+      "substrates": [
+        {
+          "metabolite": "18_r_hepe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(5S)-hydroperoxy-(18R)-hydroxy-(6E,8Z,11Z,14Z,16E)-eicosapentaenoate + AH2 = resolvin E...",
+      "equation": "(5S)-hydroperoxy-(18R)-hydroxy-(6E,8Z,11Z,14Z,16E)-eicosapentaenoate + AH2 = resolvin E2 + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "resolvin_e2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52020"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52020"
+          }
+        ]
+      }
+    }
+  ]
+}

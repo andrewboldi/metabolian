@@ -1,0 +1,224 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-methylpretetramide-to-4-de-dimethylamino-4-oxo",
+  "name": "6-methylpretetramide to 4-de(dimethylamino)-4-oxo…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 6-methylpretetramide(1−) to 4-de(dimethylamino)-4-oxoanhydrotetracycline(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50008"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:132734"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_methylpretetramide",
+      "name": "6-methylpretetramide",
+      "formula": "C20H14NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132734"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_hydroxy_6_methylpretetramide",
+      "name": "4-hydroxy-6-methylpretetramide",
+      "short": "4-hydroxy-6-methylp…",
+      "formula": "C20H15NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28464"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_de_dimethylamino_4_oxoanhydrotetracycline",
+      "name": "4-de(dimethylamino)-4-oxoanhydrotetracycline",
+      "short": "4-de(dimethylamino)…",
+      "formula": "C20H14NO8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132737"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_232",
+      "name": "6-methylpretetramide 4-monooxygenase",
+      "ec": [
+        "1.14.13.232"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_233",
+      "name": "4-hydroxy-6-methylpretetramide 12a-monooxygenase",
+      "ec": [
+        "1.14.13.233"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6-methylpretetramide 4-monooxygenase",
+      "equation": "6-methylpretetramide + NADPH + O2 + 2 H(+) = 4-hydroxy-6-methylpretetramide + NADP(+) + H2O",
+      "ec": "1.14.13.232",
+      "substrates": [
+        {
+          "metabolite": "6_methylpretetramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_6_methylpretetramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_232"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50008"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxy-6-methylpretetramide 12a-monooxygenase",
+      "equation": "4-hydroxy-6-methylpretetramide + NADPH + O2 = 4-dedimethylamino-4-oxo-anhydrotetracycline + NADP(+) + H2O",
+      "ec": "1.14.13.233",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_6_methylpretetramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_de_dimethylamino_4_oxoanhydrotetracycline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_233"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50356"
+          }
+        ]
+      }
+    }
+  ]
+}

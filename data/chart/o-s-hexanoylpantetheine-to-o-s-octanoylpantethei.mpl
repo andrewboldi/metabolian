@@ -26,7 +26,7 @@ pathway o-s-hexanoylpantetheine-to-o-s-octanoylpantethei "O-(S-hexanoylpantethei
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +l_arginyl_amp +amp +hplus
+    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
   }
 }

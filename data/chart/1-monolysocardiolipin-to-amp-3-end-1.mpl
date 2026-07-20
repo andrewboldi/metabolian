@@ -16,10 +16,10 @@ pathway 1-monolysocardiolipin-to-amp-3-end-1 "1-monolysocardiolipin to AMP 3'-en
     1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s
   }
 
-  branch from cardiolipin side left {
-    cardiolipin
-    <-> . +2_monolysocardiolipin
-    2_2_dilysocardiolipin
+  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
+    1_o_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
   }
 
   branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side right {
@@ -30,7 +30,7 @@ pathway 1-monolysocardiolipin-to-amp-3-end-1 "1-monolysocardiolipin to AMP 3'-en
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_3_1_1_96 [3.1.1.96] +3_glycyladenylyl_zwitterionic_group +h2o +hplus
-    glycine
+    <-> . +3_l_seryl_adenylyl_1_group +h2o
+    serine
   }
 }

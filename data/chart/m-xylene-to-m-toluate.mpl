@@ -18,7 +18,7 @@ pathway m-xylene-to-m-toluate "m-xylene to m-toluate" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +glutamate +h2o +di_sulfido_diiron +nh3 +hplus
-    akg
+    <-> ec_1_3_1_109 [1.3.1.109] +butyryl_coa +di_sulfido_diiron +nad +nadh
+    crotonoyl_coa
   }
 }

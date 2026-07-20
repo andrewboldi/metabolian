@@ -1,0 +1,253 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fatty-acyl-coa-to-1-2-diacyl-sn-glycerol",
+  "name": "fatty acyl-CoA to 1,2-diacyl-sn-glycerol",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from fatty acyl-CoA(4−) to 1,2-diacyl-sn-glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34735"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77636"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fatty_acyl_coa",
+      "name": "fatty acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77636"
+      }
+    },
+    {
+      "id": "sphinganine",
+      "name": "Sphinganine",
+      "formula": "C18H40NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57817"
+      }
+    },
+    {
+      "id": "dihydroceramide",
+      "name": "Dihydroceramide",
+      "formula": "C19H38NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31488"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_phosphatidyl_1d_myo_inositol",
+      "name": "1-phosphatidyl-1D-myo-inositol",
+      "short": "1-phosphatidyl-1D-m…",
+      "formula": "C11H16O13PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57880"
+      }
+    },
+    {
+      "id": "inositol_phosphodihydroceramide",
+      "name": "inositol phosphodihydroceramide",
+      "short": "inositol phosphodih…",
+      "formula": "C25H48NO11PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64941"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "d_glucosyl_1_1_n_acylsphinganine",
+      "name": "β-D-glucosyl-(1↔1')-N-acylsphinganine",
+      "short": "β-D-glucosyl-(1↔1')…",
+      "formula": "C25H48NO8R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82919"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a fatty acyl-CoA + sphinganine = an N-acylsphinganine + CoA + H(+)",
+      "equation": "a fatty acyl-CoA + sphinganine = an N-acylsphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sphinganine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "an N-acylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = an N-acyls...",
+      "equation": "an N-acylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = an N-acylsphinganine-(1D-myo-inositol) + a 1,2-diacyl-sn-glycerol",
+      "substrates": [
+        {
+          "metabolite": "dihydroceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "inositol_phosphodihydroceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "an N-acylsphinganine + UDP-alpha-D-glucose = an N-acyl-beta-D-glucosyl-(1<->1')-sphinga...",
+      "equation": "an N-acylsphinganine + UDP-alpha-D-glucose = an N-acyl-beta-D-glucosyl-(1<->1')-sphinganine + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dihydroceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosyl_1_1_n_acylsphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43360"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43360"
+          }
+        ]
+      }
+    }
+  ]
+}

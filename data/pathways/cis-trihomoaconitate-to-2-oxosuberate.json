@@ -1,0 +1,181 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cis-trihomoaconitate-to-2-oxosuberate",
+  "name": "cis-trihomoaconitate to 2-oxosuberate",
+  "category": "other",
+  "summary": "A 2-step route from cis-trihomoaconitate(3−) to 2-oxosuberate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:68420"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:72712"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cis_trihomoaconitate",
+      "name": "cis-trihomoaconitate",
+      "formula": "C9H9O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:72712"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "threo_isotrihomocitrate",
+      "name": "(−)-threo-isotrihomocitrate",
+      "short": "(−)-threo-isotrihom…",
+      "formula": "C9H11O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:177881"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_oxosuberate",
+      "name": "2-oxosuberate",
+      "formula": "C8H10O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:177882"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_114",
+      "name": "methanogen homoaconitase",
+      "ec": [
+        "4.2.1.114"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methanogen homoaconitase",
+      "equation": "cis-(homo)3aconitate + H2O = (2R,3S)-iso(homo)3citrate",
+      "ec": "4.2.1.114",
+      "substrates": [
+        {
+          "metabolite": "cis_trihomoaconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "threo_isotrihomocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:68420"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68420"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2R,3S)-iso(homo)3citrate + NAD(+) = 2-oxosuberate + CO2 + NADH",
+      "equation": "(2R,3S)-iso(homo)3citrate + NAD(+) = 2-oxosuberate + CO2 + NADH",
+      "substrates": [
+        {
+          "metabolite": "threo_isotrihomocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxosuberate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:68408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68408"
+          }
+        ]
+      }
+    }
+  ]
+}

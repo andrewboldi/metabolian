@@ -36,19 +36,25 @@ pathway pyrimidine-ribonucleoside-to-5-amino-1-5-phospho "pyrimidine ribonucleos
 
   branch from d_ribofuranose_5_phosphate side right {
     d_ribofuranose_5_phosphate
-    <-> ec_3_2_2_14 [3.2.2.14] +nmn +h2o +hplus
-    nicotinamide
+    <-> ec_3_2_2_12 [3.2.2.12] +imp +h2o
+    hypoxanthine
   }
 
   branch from thf side left {
     thf
-    <-> ec_2_1_2_1 [2.1.2.1] +methylene_thf +glycine +h2o
-    serine
+    <-> ec_2_1_2_5 [2.1.2.5] +6s_5_formyltetrahydrofolate +glutamate +hplus
+    n_formyl_l_glutamate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_5_4_99_1 [5.4.99.1]
-    threo_3_methyl_l_aspartate
+    <-> ec_2_6_1_27 [2.6.1.27] +l_tryptophan +akg
+    3_indol_3_yl_pyruvate
+  }
+
+  branch from air side left {
+    air
+    <-> ec_4_1_99_23 [4.1.99.23] +hydrogen_donor +sam +5_deoxyadenosine +formate +methionine +hydrogen_acceptor +nh3 +pi +hplus
+    5_hydroxybenzimidazole
   }
 }

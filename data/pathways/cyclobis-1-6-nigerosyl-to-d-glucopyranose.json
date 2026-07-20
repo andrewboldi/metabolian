@@ -3,13 +3,13 @@
   "id": "cyclobis-1-6-nigerosyl-to-d-glucopyranose",
   "name": "cyclobis-(1→6)-α-nigerosyl to D-glucopyranose",
   "category": "other",
-  "summary": "A 3-step route from cyclobis-(1→6)-α-nigerosyl to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from cyclobis-(1→6)-α-nigerosyl to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:52744"
+        "id": "RHEA:24844"
       },
       {
         "db": "ChEBI",
@@ -38,16 +38,6 @@
       }
     },
     {
-      "id": "d_glcp_1_6_d_glcp_1_3_d_glcp_1_6_d_glcp",
-      "name": "α-D-Glcp-(1→6)-α-D-Glcp-(1→3)-α-D-Glcp-(1→6)-D-Glcp",
-      "short": "α-D-Glcp-(1→6)-α-D-…",
-      "formula": "C24H42O21",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:136823"
-      }
-    },
-    {
       "id": "isomaltose",
       "name": "isomaltose",
       "formula": "C12H22O11",
@@ -73,29 +63,16 @@
       "xrefs": {
         "chebi": "CHEBI:4167"
       }
-    },
-    {
-      "id": "6_o_methyldeacetylisoipecoside",
-      "name": "6-O-methyldeacetylisoipecoside",
-      "short": "6-O-methyldeacetyli…",
-      "formula": "C26H36NO11",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:229555"
-      }
-    },
-    {
-      "id": "6_o_methyldeacetylisoipecoside_aglycone",
-      "name": "6-O-methyldeacetylisoipecoside aglycone",
-      "short": "6-O-methyldeacetyli…",
-      "formula": "C20H26NO6",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:229556"
-      }
     }
   ],
   "enzymes": [
+    {
+      "id": "ec_3_2_1_204",
+      "name": "1,3-alpha-isomaltosidase",
+      "ec": [
+        "3.2.1.204"
+      ]
+    },
     {
       "id": "ec_3_2_1_205",
       "name": "isomaltose glucohydrolase",
@@ -107,8 +84,9 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "cyclobis-(1->3)-alpha-D-isomaltosyl + H2O = alpha-isomaltosyl-(1->3)-isomaltose",
-      "equation": "cyclobis-(1->3)-alpha-D-isomaltosyl + H2O = alpha-isomaltosyl-(1->3)-isomaltose",
+      "name": "1,3-alpha-isomaltosidase",
+      "equation": "cyclobis-(1->3)-alpha-D-isomaltosyl + 2 H2O = 2 isomaltose",
+      "ec": "3.2.1.204",
       "substrates": [
         {
           "metabolite": "cyclobis_1_6_nigerosyl",
@@ -116,42 +94,7 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_glcp_1_6_d_glcp_1_3_d_glcp_1_6_d_glcp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:52744"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52744"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "alpha-isomaltosyl-(1->3)-isomaltose + H2O = 2 isomaltose",
-      "equation": "alpha-isomaltosyl-(1->3)-isomaltose + H2O = 2 isomaltose",
-      "substrates": [
-        {
-          "metabolite": "d_glcp_1_6_d_glcp_1_3_d_glcp_1_6_d_glcp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
@@ -160,23 +103,28 @@
           "stoichiometry": 2
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_204"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:52748"
+        "rhea": "RHEA:24844"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52748"
+            "id": "RHEA:24844"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "isomaltose glucohydrolase",
       "equation": "isomaltose + H2O = beta-D-glucose + D-glucose",
       "ec": "3.2.1.205",
@@ -206,7 +154,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:52752"
       },
@@ -216,45 +164,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:52752"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "6-O-methyldeacetylisoipecoside + H2O = 6-O-methyldeacetylisoipecoside aglycone + D-glucose",
-      "equation": "6-O-methyldeacetylisoipecoside + H2O = 6-O-methyldeacetylisoipecoside aglycone + D-glucose",
-      "substrates": [
-        {
-          "metabolite": "6_o_methyldeacetylisoipecoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_o_methyldeacetylisoipecoside_aglycone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:78891"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78891"
           }
         ]
       }

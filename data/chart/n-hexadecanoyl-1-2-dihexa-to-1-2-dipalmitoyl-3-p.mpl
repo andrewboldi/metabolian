@@ -22,9 +22,9 @@ pathway n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p "N-hexadecanoyl-1,2-dih
     holo-acp
   }
 
-  branch from palmitoyl_ethanolamide side right {
-    palmitoyl_ethanolamide
-    <-> . +n_1_dipalmitoyl_2_linoleoyl_sn_glycero_3_phospho +h2o +hplus
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+  branch from 1_2_dipalmitoyl_sn_glycerol side right {
+    1_2_dipalmitoyl_sn_glycerol
+    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam +h2o +hplus
+    phosphoethanolamine
   }
 }

@@ -24,7 +24,7 @@ pathway l-arabinopyranose-to-l-xylulose "α-L-arabinopyranose to L-xylulose" {
 
   branch from l_xylulose side right {
     l_xylulose
-    <-> ec_1_1_1_10 [1.1.1.10] +nadp +nadph +hplus
+    <-> ec_1_1_1_15 [1.1.1.15] +nad +nadh +hplus
     xylitol
   }
 }

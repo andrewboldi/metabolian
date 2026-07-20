@@ -23,7 +23,7 @@ pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl
   branch from tetradecanoate side left {
     tetradecanoate
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    13_hydroxytetradecanoate
+    9_hydroxymyristate
   }
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side right {
@@ -32,13 +32,7 @@ pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl
     1_stearoyl_sn_glycerol
   }
 
-  branch from choline side left {
-    choline
-    <-> . +1_o_acyl_sn_glycero_3_phosphocholine
-    1_acyl_sn_glycero_2_3_cyclic_phosphate
-  }
-
-  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphate side right {
+  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphate side left {
     1_stearoyl_2_oleoyl_sn_glycero_3_phosphate
     <-> . +ctp +hplus +ppi
     cdp_1_stearoyl_2_oleoyl_sn_glycerol

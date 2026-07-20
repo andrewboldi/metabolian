@@ -141,22 +141,30 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:30245"
       }
     },
     {
-      "id": "eudesmol",
-      "name": "β-eudesmol",
-      "formula": "C15H26O",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:10417"
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
       }
     }
   ],
@@ -166,13 +174,6 @@
       "name": "RNA 3'-terminal-phosphate cyclase (ATP)",
       "ec": [
         "6.5.1.4"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_68",
-      "name": "beta-eudesmol synthase",
-      "ec": [
-        "4.2.3.68"
       ]
     }
   ],
@@ -380,22 +381,29 @@
     },
     {
       "id": "r6",
-      "name": "beta-eudesmol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = beta-eudesmol + diphosphate",
-      "ec": "4.2.3.68",
+      "name": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
+      "equation": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "linoleate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "eudesmol",
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -403,22 +411,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_68"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:29495"
+        "rhea": "RHEA:33651"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29495"
+            "id": "RHEA:33651"
           }
         ]
       }

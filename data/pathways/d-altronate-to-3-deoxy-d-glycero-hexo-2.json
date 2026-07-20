@@ -1,0 +1,195 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-altronate-to-3-deoxy-d-glycero-hexo-2",
+  "name": "D-altronate to 3-deoxy-D-glycero-hexo-2,…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from D-altronate to 3-deoxy-D-glycero-hexo-2,5-diulosonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15957"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17360"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_altronate",
+      "name": "D-altronate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17360"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_d_gluconate",
+      "name": "2-dehydro-3-deoxy-D-gluconate",
+      "short": "2-dehydro-3-deoxy-D…",
+      "formula": "C6H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57990"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_deoxy_d_glycero_hexo_2_5_diulosonate",
+      "name": "3-deoxy-D-glycero-hexo-2,5-diulosonate",
+      "short": "3-deoxy-D-glycero-h…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29071"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_7",
+      "name": "altronate dehydratase",
+      "ec": [
+        "4.2.1.7"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_127",
+      "name": "2-dehydro-3-deoxy-D-gluconate 5-dehydrogenase",
+      "ec": [
+        "1.1.1.127"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "altronate dehydratase",
+      "equation": "D-altronate = 2-dehydro-3-deoxy-D-gluconate + H2O",
+      "ec": "4.2.1.7",
+      "substrates": [
+        {
+          "metabolite": "d_altronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15957"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-dehydro-3-deoxy-D-gluconate 5-dehydrogenase",
+      "equation": "2-dehydro-3-deoxy-D-gluconate + NAD(+) = 3-deoxy-D-glycero-2,5-hexodiulosonate + NADH + H(+)",
+      "ec": "1.1.1.127",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_deoxy_d_glycero_hexo_2_5_diulosonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_127"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24232"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ditrans-polycis-undecapre-to-d-mannosyl-ditrans",
+  "name": "ditrans,polycis-undecapre… to D-mannosyl ditrans,polyci…",
+  "category": "other",
+  "summary": "A 2-step route from ditrans,polycis-undecaprenyl diphosphate(3−) to D-mannosyl ditrans,polycis-undecaprenyl phosphate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28094"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58405"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ditrans_polycis_undecaprenyl_diphosphate",
+      "name": "ditrans,polycis-undecaprenyl diphosphate",
+      "short": "ditrans,polycis-und…",
+      "formula": "C55H89O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58405"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ditrans_polycis_undecaprenyl_phosphate",
+      "name": "ditrans,polycis-undecaprenyl phosphate",
+      "short": "ditrans,polycis-und…",
+      "formula": "C55H89O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60392"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "d_mannosyl_ditrans_polycis_undecaprenyl_phosphat",
+      "name": "D-mannosyl ditrans,polycis-undecaprenyl phosphate",
+      "short": "D-mannosyl…",
+      "formula": "C61H100O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61761"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_27",
+      "name": "undecaprenyl-diphosphate phosphatase",
+      "ec": [
+        "3.6.1.27"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_54",
+      "name": "undecaprenyl-phosphate mannosyltransferase",
+      "ec": [
+        "2.4.1.54"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "undecaprenyl-diphosphate phosphatase",
+      "equation": "di-trans,octa-cis-undecaprenyl diphosphate + H2O = di-trans,octa-cis-undecaprenyl phosphate + phosphate + H(+)",
+      "ec": "3.6.1.27",
+      "substrates": [
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28094"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28094"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "undecaprenyl-phosphate mannosyltransferase",
+      "equation": "di-trans,octa-cis-undecaprenyl phosphate + GDP-alpha-D-mannose = D-mannosyl di-trans,octa-cis-undecaprenyl phosphate + GDP",
+      "ec": "2.4.1.54",
+      "substrates": [
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannosyl_ditrans_polycis_undecaprenyl_phosphat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28118"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28118"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -26,7 +26,7 @@ pathway atrazine-to-n-isopropyl-l-glutamine "atrazine to N-isopropyl-L-glutamine
 
   branch from cyanuric_acid side right {
     cyanuric_acid
-    <-> . +h2o +co2
-    biuret
+    <-> ec_3_5_2_15 [3.5.2.15] +h2o +hplus
+    1_carboxybiuret
   }
 }

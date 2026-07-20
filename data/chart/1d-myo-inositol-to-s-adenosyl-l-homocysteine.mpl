@@ -18,7 +18,7 @@ pathway 1d-myo-inositol-to-s-adenosyl-l-homocysteine "1D-myo-inositol… to S-ad
 
   branch from sah side left {
     sah
-    <-> . +3_methyl_1_2_didehydro_2_3_dihydrobotryococcene +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_a +sam
+    mitomycin_a
   }
 }

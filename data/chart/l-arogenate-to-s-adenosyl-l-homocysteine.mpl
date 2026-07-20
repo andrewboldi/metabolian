@@ -36,8 +36,8 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
 
   branch from aspartate side right {
     aspartate
-    <-> ec_3_5_1_26 [3.5.1.26] +n4_n_acetyl_d_glucosaminyl_l_asparagine +h2o +hplus
-    n_acetyl_d_glucosaminylamine
+    <-> ec_4_1_1_11 [4.1.1.11] +hplus +co2
+    alanine
   }
 
   branch from 3_4_hydroxyphenyl_pyruvate side left {
@@ -50,5 +50,17 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
     4_hydroxyphenyl_acetaldehyde
     <-> . +tyraminium +o2 +h2o +h2o2
     nh3
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_84 [2.1.1.84] +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone +sam
+    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_36 [1.14.14.36] +tyrosine +fmnh2 +o2 +co2 +h2o +hplus
+    e_4_hydroxyphenyl_acetaldehyde_oxime
   }
 }

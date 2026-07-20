@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "deoxycholoyl-coa-to-fmn",
+  "name": "deoxycholoyl-CoA to FMN",
+  "category": "other",
+  "summary": "A 2-step route from deoxycholoyl-CoA(4−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53796"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58810"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "deoxycholoyl_coa",
+      "name": "deoxycholoyl-CoA",
+      "formula": "C45H70N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58810"
+      }
+    },
+    {
+      "id": "ursodeoxycholate",
+      "name": "ursodeoxycholate",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78604"
+      }
+    },
+    {
+      "id": "ursodeoxycholoyl_coa",
+      "name": "ursodeoxycholoyl-CoA",
+      "formula": "C45H70N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:137679"
+      }
+    },
+    {
+      "id": "deoxycholate",
+      "name": "deoxycholate",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:23614"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1_hydroxydeoxycholate",
+      "name": "1β-hydroxydeoxycholate",
+      "short": "1β-hydroxydeoxychol…",
+      "formula": "C24H39O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134124"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "germacra_1_10_4_11_13_trien_12_oate",
+      "name": "germacra-1(10),4,11(13)-trien-12-oate",
+      "short": "germacra-1(10),4,11…",
+      "formula": "C15H21O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61301"
+      }
+    },
+    {
+      "id": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+      "name": "8α-hydroxygermacra-1(10),4,11(13)-trien-12-oate",
+      "short": "8α-hydroxygermacra-…",
+      "formula": "C15H21O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142490"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "deoxycholoyl-CoA + ursodeoxycholate = ursodeoxycholoyl-CoA + deoxycholate",
+      "equation": "deoxycholoyl-CoA + ursodeoxycholate = ursodeoxycholoyl-CoA + deoxycholate",
+      "substrates": [
+        {
+          "metabolite": "deoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ursodeoxycholate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ursodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "deoxycholate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "deoxycholate + reduced [NADPH--hemoprotein reductase] + O2 = 1beta-hydroxydeoxycholate ...",
+      "equation": "deoxycholate + reduced [NADPH--hemoprotein reductase] + O2 = 1beta-hydroxydeoxycholate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "deoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hydroxydeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "germacra-1(10),4,11(13)-trien-12-oate + reduced [NADPH--hemoprotein reductase] + O2 = 8...",
+      "equation": "germacra-1(10),4,11(13)-trien-12-oate + reduced [NADPH--hemoprotein reductase] + O2 = 8alpha-hydroxygermacra-1(10),4,11(13)-trien-12-oate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "germacra_1_10_4_11_13_trien_12_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58032"
+          }
+        ]
+      }
+    }
+  ]
+}

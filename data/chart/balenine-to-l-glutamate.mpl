@@ -20,15 +20,21 @@ pathway balenine-to-l-glutamate "balenine to L-glutamate" {
     n_methylformamide
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_4_3_1_28 [4.3.1.28] +l_lysinium
-    l_pipecolic_acid
+  branch from alanine side left {
+    alanine
+    <-> ec_3_4_13_4 [3.4.13.4] +alanyl_l_argininium +h2o
+    arginine
   }
 
-  branch from glutamate side right {
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_3_8 [4.3.3.8] +l_mimosine +h2o +pyruvate
+    3_hydroxypyridin_4_1h_one
+  }
+
+  branch from glutamate side left {
     glutamate
-    <-> . +l_alanyl_l_glutamate +h2o
-    alanine
+    <-> ec_6_2_1_68 [6.2.1.68] +holo-acp +atp +amp +ppi
+    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
   }
 }

@@ -1,0 +1,354 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n2-4-aminobutanoyl-l-or-to-glycine",
+  "name": "N2-(4-aminobutanoyl)-L-or… to glycine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from N2-(4-aminobutanoyl)-L-ornithine(1+) to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59624"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:143160"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n2_4_aminobutanoyl_l_ornithine",
+      "name": "N2-(4-aminobutanoyl)-L-ornithine",
+      "short": "N2-(4-aminobutanoyl…",
+      "formula": "C9H20N3O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143160"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "ornithine",
+      "name": "L-Ornithine",
+      "formula": "C5H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:46911"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "4_oxobutanoate",
+      "name": "4-oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57706"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "l_homoarginine",
+      "name": "L-homoarginine",
+      "formula": "C7H17N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143006"
+      }
+    },
+    {
+      "id": "hexacosanoyl_coa",
+      "name": "hexacosanoyl-CoA",
+      "formula": "C47H82N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:64868"
+      }
+    },
+    {
+      "id": "n_hexacosanoylglycinate",
+      "name": "N-hexacosanoylglycinate",
+      "short": "N-hexacosanoylglyci…",
+      "formula": "C28H54NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87414"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_4_13_4",
+      "name": "Xaa-Arg dipeptidase",
+      "ec": [
+        "3.4.13.4"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_96",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "ec": [
+        "2.6.1.96"
+      ]
+    },
+    {
+      "id": "ec_2_1_4_3",
+      "name": "L-arginine:L-lysine amidinotransferase",
+      "ec": [
+        "2.1.4.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Xaa-Arg dipeptidase",
+      "equation": "N(2)-(4-aminobutanoyl)-L-ornithine + H2O = 4-aminobutanoate + L-ornithine",
+      "ec": "3.4.13.4",
+      "substrates": [
+        {
+          "metabolite": "n2_4_aminobutanoyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_13_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59624"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "equation": "4-aminobutanoate + glyoxylate = succinate semialdehyde + glycine",
+      "ec": "2.6.1.96",
+      "substrates": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32267"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32267"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-arginine:L-lysine amidinotransferase",
+      "equation": "L-lysine + L-arginine = L-homoarginine + L-ornithine",
+      "ec": "2.1.4.3",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homoarginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_4_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hexacosanoyl-CoA + glycine = N-hexacosanoylglycine + CoA + H(+)",
+      "equation": "hexacosanoyl-CoA + glycine = N-hexacosanoylglycine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hexacosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hexacosanoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49772"
+          }
+        ]
+      }
+    }
+  ]
+}

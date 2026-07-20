@@ -1,0 +1,243 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sungeidine-f-to-sulfate",
+  "name": "Sungeidine F to sulfate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from Sungeidine F to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79727"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:220887"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sungeidine_f",
+      "name": "Sungeidine F",
+      "formula": "C30H21NO4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:220887"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "sulfosungeidine_f",
+      "name": "sulfosungeidine F",
+      "formula": "C30H20NO7S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:230528"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sungeidine_a",
+      "name": "Sungeidine A",
+      "formula": "C30H19NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:220866"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "octanoyl_coa",
+      "name": "octanoyl-CoA",
+      "formula": "C29H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57386"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_octanoyl_4_phosphopantetheine",
+      "name": "S-octanoyl-4'-phosphopantetheine",
+      "short": "S-octanoyl-4'-phosp…",
+      "formula": "C19H35N2O8PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:132013"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sungeidine F + 3'-phosphoadenylyl sulfate = sulfosungeidine F + adenosine 3',5'-bisphos...",
+      "equation": "sungeidine F + 3'-phosphoadenylyl sulfate = sulfosungeidine F + adenosine 3',5'-bisphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sungeidine_f",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfosungeidine_f",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79727"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sulfosungeidine F = sungeidine A + sulfate + H(+)",
+      "equation": "sulfosungeidine F = sungeidine A + sulfate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sulfosungeidine_f",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sungeidine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79731"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79731"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "octanoyl-CoA + H2O = S-octanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + ...",
+      "equation": "octanoyl-CoA + H2O = S-octanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_octanoyl_4_phosphopantetheine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50016"
+          }
+        ]
+      }
+    }
+  ]
+}

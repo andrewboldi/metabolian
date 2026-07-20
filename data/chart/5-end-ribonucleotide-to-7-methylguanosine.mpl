@@ -20,16 +20,28 @@ pathway 5-end-ribonucleotide-to-7-methylguanosine "5'-end ribonucleotide… to 7
     7_methylguanosine
   }
 
-  branch from ppi side left {
+  branch from 5_end_ribonucleoside_5_diphosphate_3 side left {
+    5_end_ribonucleoside_5_diphosphate_3
+    <-> . +n_5_guanylyl_l_lysine_1 +hplus +5_5_triphosphoguanosine_ribonucleotide_3
+    l_lysinium
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_66 [4.2.3.66] +fpp
-    selinene
+    <-> ec_4_2_3_129 [4.2.3.129] +fpp
+    sativene
+  }
+
+  branch from 5_n7_methyl_5_triphosphoguanosine_ribonucleoside side left {
+    5_n7_methyl_5_triphosphoguanosine_ribonucleoside
+    <-> ec_2_1_1_57 [2.1.1.57] +sam +sah +hplus
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_103 [2.1.1.103] +n_methylethanolaminium_phosphate +sam +hplus
-    n_n_dimethylethanolamine_phosphate
+    <-> ec_2_1_1_186 [2.1.1.186] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from 7_methylguanosine_5_phosphate side left {

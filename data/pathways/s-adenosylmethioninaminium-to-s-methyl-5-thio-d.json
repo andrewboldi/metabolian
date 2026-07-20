@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-adenosylmethioninaminium-to-s-methyl-5-thio-d",
   "name": "S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribos…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribose 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -122,41 +122,32 @@
       }
     },
     {
-      "id": "nocardicin_e",
-      "name": "nocardicin E",
-      "formula": "C19H15N3O7",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:77885"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "isonocardicin_a",
-      "name": "isonocardicin A",
-      "formula": "C23H22N4O9",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:77633"
-      }
-    },
-    {
-      "id": "n4_aminopropylspermidine",
-      "name": "N4-aminopropylspermidine",
-      "short": "N4-aminopropylsperm…",
+      "id": "spermine",
+      "name": "spermine",
       "formula": "C10H30N4",
       "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:82770"
+        "chebi": "CHEBI:45725"
+      }
+    },
+    {
+      "id": "n4_aminopropylspermine",
+      "name": "N4-aminopropylspermine",
+      "short": "N4-aminopropylsperm…",
+      "formula": "C13H38N5",
+      "charge": 5,
+      "xrefs": {
+        "chebi": "CHEBI:82772"
+      }
+    },
+    {
+      "id": "n4_bis_aminopropyl_spermidine",
+      "name": "N4-bis(aminopropyl)spermidine",
+      "short": "N4-bis(aminopropyl)…",
+      "formula": "C13H38N5",
+      "charge": 5,
+      "xrefs": {
+        "chebi": "CHEBI:82771"
       }
     }
   ],
@@ -190,10 +181,10 @@
       ]
     },
     {
-      "id": "ec_2_5_1_38",
-      "name": "isonocardicin synthase",
+      "id": "ec_2_5_1_128",
+      "name": "N(4)-bis(aminopropyl)spermidine synthase",
       "ec": [
-        "2.5.1.38"
+        "2.5.1.128"
       ]
     }
   ],
@@ -343,22 +334,21 @@
     },
     {
       "id": "r4",
-      "name": "isonocardicin synthase",
-      "equation": "nocardicin E + S-adenosyl-L-methionine = isonocardicin A + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "2.5.1.38",
+      "name": "spermine + S-adenosyl 3-(methylsulfanyl)propylamine = N(4)-aminopropylspermine + S-meth...",
+      "equation": "spermine + S-adenosyl 3-(methylsulfanyl)propylamine = N(4)-aminopropylspermine + S-methyl-5'-thioadenosine + H(+)",
       "substrates": [
         {
-          "metabolite": "nocardicin_e",
+          "metabolite": "spermine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "s_adenosylmethioninaminium",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "isonocardicin_a",
+          "metabolite": "n4_aminopropylspermine",
           "stoichiometry": 1
         },
         {
@@ -370,34 +360,30 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_38"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19845"
+        "rhea": "RHEA:42880"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19845"
+            "id": "RHEA:42880"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = N(4)-aminopropylspermidine + S-...",
-      "equation": "S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = N(4)-aminopropylspermidine + S-methyl-5'-thioadenosine + H(+)",
+      "name": "N(4)-bis(aminopropyl)spermidine synthase",
+      "equation": "2 S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = N(4)-bis(aminopropyl)spermidine + 2 S-methyl-5'-thioadenosine + 2 H(+)",
+      "ec": "2.5.1.128",
       "substrates": [
         {
           "metabolite": "s_adenosylmethioninaminium",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "spermidine",
@@ -406,29 +392,34 @@
       ],
       "products": [
         {
-          "metabolite": "n4_aminopropylspermidine",
+          "metabolite": "n4_bis_aminopropyl_spermidine",
           "stoichiometry": 1
         },
         {
           "metabolite": "5_s_methyl_5_thioadenosine",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_128"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:42876"
+        "rhea": "RHEA:44132"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42876"
+            "id": "RHEA:44132"
           }
         ]
       }

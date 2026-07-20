@@ -1,0 +1,380 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fatty-acid-ethyl-ester-to-acetate",
+  "name": "fatty acid ethyl ester to acetate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from fatty acid ethyl ester to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50148"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78206"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fatty_acid_ethyl_ester",
+      "name": "fatty acid ethyl ester",
+      "short": "fatty acid ethyl…",
+      "formula": "C3H5O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78206"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16236"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "ethyl_acetate",
+      "name": "ethyl acetate",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27750"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C7H12NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64612"
+      }
+    },
+    {
+      "id": "2_acyl_sn_glycero_3_phosphoethanolamine",
+      "name": "2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C6H13NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65213"
+      }
+    },
+    {
+      "id": "n_acetyl_l_tryptophanate",
+      "name": "N-acetyl-L-tryptophanate",
+      "short": "N-acetyl-L-tryptoph…",
+      "formula": "C13H13N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143877"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_268",
+      "name": "ethanol O-acetyltransferase",
+      "ec": [
+        "2.3.1.268"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_113",
+      "name": "ethyl acetate hydrolase",
+      "ec": [
+        "3.1.1.113"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a fatty acid ethyl ester + H2O = ethanol + a fatty acid + H(+)",
+      "equation": "a fatty acid ethyl ester + H2O = ethanol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "fatty_acid_ethyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ethanol O-acetyltransferase",
+      "equation": "ethanol + acetyl-CoA = ethyl acetate + CoA",
+      "ec": "2.3.1.268",
+      "substrates": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_268"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ethyl acetate hydrolase",
+      "equation": "ethyl acetate + H2O = ethanol + acetate + H(+)",
+      "ec": "3.1.1.113",
+      "substrates": [
+        {
+          "metabolite": "ethyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_113"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-phosphoetha...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-phosphoethanolamine + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-acetyl-L-tryptophan + H2O = L-tryptophan + acetate",
+      "equation": "N-acetyl-L-tryptophan + H2O = L-tryptophan + acetate",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_l_tryptophanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:86767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86767"
+          }
+        ]
+      }
+    }
+  ]
+}

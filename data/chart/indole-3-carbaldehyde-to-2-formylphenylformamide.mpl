@@ -18,7 +18,7 @@ pathway indole-3-carbaldehyde-to-2-formylphenylformamide "indole-3-carbaldehyde 
 
   branch from 1h_indole side left {
     1h_indole
-    <-> ec_4_2_1_122 [4.2.1.122] +serine +h2o
-    l_tryptophan
+    <-> . +l_tryptophan
+    2_ammonioprop_2_enoate
   }
 }

@@ -111,40 +111,39 @@
       }
     },
     {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
-      "charge": -2,
+      "id": "phenylacetyl_coa",
+      "name": "phenylacetyl-CoA",
+      "formula": "C29H38N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:16452"
+        "chebi": "CHEBI:57390"
       }
     },
     {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
+      "id": "phenylacetylglycine",
+      "name": "phenylacetylglycine",
+      "formula": "C10H10NO3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36655"
+        "chebi": "CHEBI:60874"
       }
     },
     {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:29991"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "n2_acetyl_l_ornithine",
-      "name": "N2-acetyl-L-ornithine",
-      "short": "N2-acetyl-L-ornithi…",
-      "formula": "C7H14N2O3",
-      "charge": 0,
+      "id": "neamine",
+      "name": "neamine",
+      "formula": "C12H30N4O6",
+      "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:57805"
+        "chebi": "CHEBI:65076"
       }
     },
     {
@@ -157,13 +156,12 @@
       }
     },
     {
-      "id": "2_acetamido_5_oxopentanoate",
-      "name": "2-acetamido-5-oxopentanoate",
-      "short": "2-acetamido-5-oxope…",
-      "formula": "C7H10NO4",
-      "charge": -1,
+      "id": "6_oxoparomamine",
+      "name": "6'-oxoparomamine",
+      "formula": "C12H26N3O7",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:29123"
+        "chebi": "CHEBI:65016"
       }
     }
   ],
@@ -197,17 +195,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_35",
-      "name": "glycine--oxaloacetate transaminase",
+      "id": "ec_2_3_1_192",
+      "name": "glycine N-phenylacetyltransferase",
       "ec": [
-        "2.6.1.35"
+        "2.3.1.192"
       ]
     },
     {
-      "id": "ec_2_6_1_11",
-      "name": "acetylornithine transaminase",
+      "id": "ec_2_6_1_93",
+      "name": "neamine transaminase",
       "ec": [
-        "2.6.1.11"
+        "2.6.1.93"
       ]
     }
   ],
@@ -404,12 +402,12 @@
     },
     {
       "id": "r5",
-      "name": "glycine--oxaloacetate transaminase",
-      "equation": "oxaloacetate + glycine = glyoxylate + L-aspartate",
-      "ec": "2.6.1.35",
+      "name": "glycine N-phenylacetyltransferase",
+      "equation": "phenylacetyl-CoA + glycine = phenylacetylglycine + CoA + H(+)",
+      "ec": "2.3.1.192",
       "substrates": [
         {
-          "metabolite": "oxaloacetate",
+          "metabolite": "phenylacetyl_coa",
           "stoichiometry": 1
         },
         {
@@ -419,42 +417,46 @@
       ],
       "products": [
         {
-          "metabolite": "glyoxylate",
+          "metabolite": "phenylacetylglycine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "aspartate",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_35"
+          "enzyme": "ec_2_3_1_192"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:17141"
+        "rhea": "RHEA:27850"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17141"
+            "id": "RHEA:27850"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "acetylornithine transaminase",
-      "equation": "N(2)-acetyl-L-ornithine + 2-oxoglutarate = N-acetyl-L-glutamate 5-semialdehyde + L-glutamate",
-      "ec": "2.6.1.11",
+      "name": "neamine transaminase",
+      "equation": "neamine + 2-oxoglutarate = 6'-oxoparomamine + L-glutamate",
+      "ec": "2.6.1.93",
       "substrates": [
         {
-          "metabolite": "n2_acetyl_l_ornithine",
+          "metabolite": "neamine",
           "stoichiometry": 1
         },
         {
@@ -464,7 +466,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_acetamido_5_oxopentanoate",
+          "metabolite": "6_oxoparomamine",
           "stoichiometry": 1
         },
         {
@@ -474,20 +476,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_11"
+          "enzyme": "ec_2_6_1_93"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:18049"
+        "rhea": "RHEA:34039"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18049"
+            "id": "RHEA:34039"
           }
         ]
       }

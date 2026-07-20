@@ -16,9 +16,15 @@ pathway n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r "N-acetyl-D-muramoyl-L-a
     2_acetamido_3_o_1r_1_carboxylatoethyl_2_deoxy_d
   }
 
-  branch from alanine side left {
+  branch from 2_acetamido_3_o_1r_1_carboxylatoethyl_2_deoxy_d side left {
+    2_acetamido_3_o_1r_1_carboxylatoethyl_2_deoxy_d
+    <-> ec_2_7_1_221 [2.7.1.221] +atp +adp +hplus
+    n_acetyl_d_muramate_1_phosphate
+  }
+
+  branch from alanine side right {
     alanine
-    <-> ec_2_6_1_30 [2.6.1.30] +pyridoxaminium +pyruvate
-    pyridoxal
+    <-> ec_2_6_1_115 [2.6.1.115] +2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae +pyruvate
+    2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae
   }
 }

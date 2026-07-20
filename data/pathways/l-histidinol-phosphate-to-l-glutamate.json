@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-histidinol-phosphate-to-l-glutamate",
   "name": "L-histidinol phosphate to L-glutamate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from L-histidinol phosphate(1−) to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,21 +120,33 @@
       }
     },
     {
-      "id": "ala_his",
-      "name": "Ala-His",
-      "formula": "C9H14N4O3",
-      "charge": 0,
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74388"
+        "chebi": "CHEBI:59789"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "n_methyl_l_histidine",
+      "name": "Nα-methyl-L-histidine",
+      "short": "Nα-methyl-L-histidi…",
+      "formula": "C7H11N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
+        "chebi": "CHEBI:75895"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
       }
     },
     {
@@ -148,15 +160,6 @@
       }
     },
     {
-      "id": "cysteine",
-      "name": "L-Cysteine",
-      "formula": "C3H7NO2S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:35235"
-      }
-    },
-    {
       "id": "atp",
       "name": "ATP",
       "formula": "C10H12N5O13P3",
@@ -166,13 +169,13 @@
       }
     },
     {
-      "id": "glu_cys",
-      "name": "γ-L-Glutamyl-L-cysteine",
-      "short": "γ-L-Glutamyl-L-cyst…",
-      "formula": "C8H13N2O5S",
-      "charge": -1,
+      "id": "l_glutamyl_phosphate",
+      "name": "L-γ-glutamyl phosphate",
+      "short": "L-γ-glutamyl P",
+      "formula": "C5H8NO7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58173"
+        "chebi": "CHEBI:58274"
       }
     },
     {
@@ -215,10 +218,10 @@
       ]
     },
     {
-      "id": "ec_6_3_2_2",
-      "name": "glutamate--cysteine ligase",
+      "id": "ec_2_7_2_11",
+      "name": "glutamate 5-kinase",
       "ec": [
-        "6.3.2.2"
+        "2.7.2.11"
       ]
     }
   ],
@@ -368,39 +371,43 @@
     },
     {
       "id": "r4",
-      "name": "L-alanyl-L-histidine + H2O = L-histidine + L-alanine",
-      "equation": "L-alanyl-L-histidine + H2O = L-histidine + L-alanine",
+      "name": "L-histidine + S-adenosyl-L-methionine = N(alpha)-methyl-L-histidine + S-adenosyl-L-homo...",
+      "equation": "L-histidine + S-adenosyl-L-methionine = N(alpha)-methyl-L-histidine + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
-        {
-          "metabolite": "ala_his",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "l_histidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methyl_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:37283"
+        "rhea": "RHEA:38475"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37283"
+            "id": "RHEA:38475"
           }
         ]
       }
@@ -456,14 +463,10 @@
     },
     {
       "id": "r6",
-      "name": "glutamate--cysteine ligase",
-      "equation": "L-cysteine + L-glutamate + ATP = gamma-L-glutamyl-L-cysteine + ADP + phosphate + H(+)",
-      "ec": "6.3.2.2",
+      "name": "glutamate 5-kinase",
+      "equation": "L-glutamate + ATP = L-glutamyl 5-phosphate + ADP",
+      "ec": "2.7.2.11",
       "substrates": [
-        {
-          "metabolite": "cysteine",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "glutamate",
           "stoichiometry": 1
@@ -475,38 +478,30 @@
       ],
       "products": [
         {
-          "metabolite": "glu_cys",
+          "metabolite": "l_glutamyl_phosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "adp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_2_2"
+          "enzyme": "ec_2_7_2_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:13285"
+        "rhea": "RHEA:14877"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13285"
+            "id": "RHEA:14877"
           }
         ]
       }

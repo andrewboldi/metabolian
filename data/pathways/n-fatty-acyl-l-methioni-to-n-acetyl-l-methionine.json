@@ -1,0 +1,244 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-fatty-acyl-l-methioni-to-n-acetyl-l-methionine",
+  "name": "N-(fatty acyl)-L-methioni… to N-acetyl-L-methionine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from N-(fatty acyl)-L-methionine(1−) to N-acetyl-L-methionine(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:64156"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:149737"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_fatty_acyl_l_methionine",
+      "name": "N-(fatty acyl)-L-methionine",
+      "short": "N-(fatty acyl)-L-me…",
+      "formula": "C6H9NO3SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_l_methionine",
+      "name": "N-acetyl-L-methionine",
+      "short": "N-acetyl-L-methioni…",
+      "formula": "C7H12NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71670"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha",
+      "name": "3-[α-D-galactosyl-(1→6)-β-D-galactosyl]-1,2-bis(long-chain acyl)-sn-glycerol",
+      "short": "3-[α-D-galactosyl-(…",
+      "formula": "C17H26O15R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90463"
+      }
+    },
+    {
+      "id": "3_d_galactosyl_1_6_d_galactosyl_mono_long_chain",
+      "name": "3-[α-D-galactosyl-(1→6)-β-D-galactosyl]-mono(long-chain acyl)-sn-glycerol",
+      "short": "3-[α-D-galactosyl-(…",
+      "formula": "C16H27O14R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90774"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "an N-(fatty acyl)-L-methionine + H2O = a fatty acid + L-methionine",
+      "equation": "an N-(fatty acyl)-L-methionine + H2O = a fatty acid + L-methionine",
+      "substrates": [
+        {
+          "metabolite": "n_fatty_acyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:64156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-methionine + acetyl-CoA = N-acetyl-L-methionine + CoA + H(+)",
+      "equation": "L-methionine + acetyl-CoA = N-acetyl-L-methionine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "long chain 1,2-diacyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + H...",
+      "equation": "long chain 1,2-diacyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + H2O = long chain acyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_d_galactosyl_1_6_d_galactosyl_mono_long_chain",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48708"
+          }
+        ]
+      }
+    }
+  ]
+}

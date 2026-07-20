@@ -1,0 +1,195 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cis-3-octenoyl-coa-to-3-hydroxyoctanoyl-coa",
+  "name": "cis-3-octenoyl-CoA to 3-hydroxyoctanoyl-CoA",
+  "category": "redox-detox",
+  "summary": "A 2-step route from cis-3-octenoyl-CoA(4−) to 3-hydroxyoctanoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46044"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85640"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cis_3_octenoyl_coa",
+      "name": "cis-3-octenoyl-CoA",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85640"
+      }
+    },
+    {
+      "id": "trans_oct_2_enoyl_coa",
+      "name": "trans-oct-2-enoyl-CoA",
+      "short": "trans-oct-2-enoyl-C…",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62242"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxyoctanoyl_coa",
+      "name": "3-hydroxyoctanoyl-CoA",
+      "short": "3-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86040"
+      }
+    },
+    {
+      "id": "octanoyl_coa",
+      "name": "octanoyl-CoA",
+      "formula": "C29H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57386"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3Z)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "equation": "(3Z)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "cis_3_octenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "equation": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "octanoyl-CoA + O2 = (2E)-octenoyl-CoA + H2O2",
+      "equation": "octanoyl-CoA + O2 = (2E)-octenoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40175"
+          }
+        ]
+      }
+    }
+  ]
+}

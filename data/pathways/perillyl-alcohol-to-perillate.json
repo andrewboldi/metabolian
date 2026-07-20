@@ -1,0 +1,192 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "perillyl-alcohol-to-perillate",
+  "name": "perillyl alcohol to perillate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from perillyl alcohol to perillate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10664"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15420"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "perillyl_alcohol",
+      "name": "perillyl alcohol",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15420"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "perillyl_aldehyde",
+      "name": "perillyl aldehyde",
+      "formula": "C10H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15421"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "perillate",
+      "name": "perillate",
+      "formula": "C10H13O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62641"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_144",
+      "name": "perillyl-alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.144"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "perillyl-alcohol dehydrogenase",
+      "equation": "perillyl alcohol + NAD(+) = perillyl aldehyde + NADH + H(+)",
+      "ec": "1.1.1.144",
+      "substrates": [
+        {
+          "metabolite": "perillyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "perillyl_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_144"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "perillyl aldehyde + NAD(+) + H2O = perillate + NADH + 2 H(+)",
+      "equation": "perillyl aldehyde + NAD(+) + H2O = perillate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "perillyl_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "perillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31299"
+          }
+        ]
+      }
+    }
+  ]
+}

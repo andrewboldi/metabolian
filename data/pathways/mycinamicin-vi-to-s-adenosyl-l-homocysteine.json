@@ -1,0 +1,270 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "mycinamicin-vi-to-s-adenosyl-l-homocysteine",
+  "name": "mycinamicin VI to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from mycinamicin VI(1+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31643"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:63311"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mycinamicin_vi",
+      "name": "mycinamicin VI",
+      "formula": "C35H58NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63311"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "mycinamicin_iii",
+      "name": "mycinamicin III",
+      "formula": "C36H60NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63308"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "mycinamicin_iv",
+      "name": "mycinamicin IV",
+      "formula": "C37H62NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63310"
+      }
+    },
+    {
+      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyladen",
+      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-2'-O-methyladenosine(2−)",
+      "short": "5'-(N7-methyl…",
+      "formula": "C22H28N10O17P3",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85958"
+      }
+    },
+    {
+      "id": "5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o",
+      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-N6-methyl-2'-O-methyladenosine(2−)",
+      "short": "5'-(N7-methyl…",
+      "formula": "C23H30N10O17P3",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85959"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_238",
+      "name": "mycinamicin VI 2''-O-methyltransferase",
+      "ec": [
+        "2.1.1.238"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_237",
+      "name": "mycinamicin III 3''-O-methyltransferase",
+      "ec": [
+        "2.1.1.237"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_62",
+      "name": "mRNA (2'-O-methyladenosine-N(6)-)-methyltransferase",
+      "ec": [
+        "2.1.1.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mycinamicin VI 2''-O-methyltransferase",
+      "equation": "mycinamicin VI + S-adenosyl-L-methionine = mycinamicin III + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.238",
+      "substrates": [
+        {
+          "metabolite": "mycinamicin_vi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycinamicin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_238"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31643"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31643"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mycinamicin III 3''-O-methyltransferase",
+      "equation": "mycinamicin III + S-adenosyl-L-methionine = mycinamicin IV + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.237",
+      "substrates": [
+        {
+          "metabolite": "mycinamicin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycinamicin_iv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_237"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31639"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "mRNA (2'-O-methyladenosine-N(6)-)-methyltransferase",
+      "equation": "a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenosine) in mRNA + S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(N(6),2'-O-dimethyladenosine) in mRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.62",
+      "substrates": [
+        {
+          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyladen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22744"
+          }
+        ]
+      }
+    }
+  ]
+}

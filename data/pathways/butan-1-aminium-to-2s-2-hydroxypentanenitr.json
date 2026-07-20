@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "butan-1-aminium-to-2s-2-hydroxypentanenitr",
+  "name": "butan-1-aminium to (2S)-2-hydroxypentanenitr…",
+  "category": "other",
+  "summary": "A 2-step route from butan-1-aminium to (2S)-2-hydroxypentanenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:76827"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195458"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "butan_1_aminium",
+      "name": "butan-1-aminium",
+      "formula": "C4H12N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195458"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "butanal",
+      "name": "butanal",
+      "formula": "C4H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15743"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    },
+    {
+      "id": "2s_2_hydroxypentanenitrile",
+      "name": "(2S)-2-hydroxypentanenitrile",
+      "short": "2-hydroxypentanenit…",
+      "formula": "C5H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197363"
+      }
+    },
+    {
+      "id": "5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr",
+      "name": "5-[(4-hydroxyphenyl)methyl]-3-imino-4,4-dimethylpyrrolidin-2-one",
+      "short": "5-[(4-hydroxyphenyl…",
+      "formula": "C13H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:150864"
+      }
+    },
+    {
+      "id": "premycofactocin",
+      "name": "premycofactocin",
+      "formula": "C13H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:150862"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "butylamine + NAD(+) + H2O = butanal + NH4(+) + NADH + H(+)",
+      "equation": "butylamine + NAD(+) + H2O = butanal + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "butan_1_aminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:76827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "butanal + hydrogen cyanide = (2S)-2-hydroxypentanenitrile",
+      "equation": "butanal + hydrogen cyanide = (2S)-2-hydroxypentanenitrile",
+      "substrates": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxypentanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77523"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5-[(4-hydroxyphenyl)methyl]-3-imino-4,4-dimethylpyrrolidin-2-one + H2O + H(+) = pre-myc...",
+      "equation": "5-[(4-hydroxyphenyl)methyl]-3-imino-4,4-dimethylpyrrolidin-2-one + H2O + H(+) = pre-mycofactocin + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "premycofactocin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65516"
+          }
+        ]
+      }
+    }
+  ]
+}

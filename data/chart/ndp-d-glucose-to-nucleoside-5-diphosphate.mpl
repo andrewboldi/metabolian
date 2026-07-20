@@ -18,13 +18,19 @@ pathway ndp-d-glucose-to-nucleoside-5-diphosphate "NDP-α-D-glucose to nucleosid
 
   branch from nucleoside_5_diphosphate side left {
     nucleoside_5_diphosphate
-    <-> . +gtp +gdp
-    nucleoside_5_monophosphate
+    <-> ec_2_7_1_74 [2.7.1.74] +2_deoxycytidine +nucleoside_5_triphoshate +hplus
+    2_deoxycytosine_5_monophosphate
   }
 
   branch from sucrose side right {
     sucrose
     <-> ec_2_4_1_n2 [2.4.1.n2] +udp_d_galactose +udp +hplus
     loliose
+  }
+
+  branch from nucleoside_5_triphoshate side left {
+    nucleoside_5_triphoshate
+    <-> ec_3_6_1_9 [3.6.1.9] +h2o +ppi +hplus
+    nucleoside_5_monophosphate
   }
 }

@@ -18,21 +18,9 @@ pathway s-allantoin-to-oxalurate "(S)-(+)-allantoin to oxalurate" {
     oxalurate
   }
 
-  branch from s_2_ureidoglycine side left {
-    s_2_ureidoglycine
-    <-> ec_2_6_1_112 [2.6.1.112] +glyoxylate +oxalurate
-    glycine
-  }
-
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> . +2_amino_2_phenylacetonitrile +h2o +hplus
-    d_phenylglycine
-  }
-
-  branch from oxalurate side left {
-    oxalurate
-    <-> ec_2_1_3_5 [2.1.3.5] +carbamoyl_p +pi
-    oxamate
+    <-> . +pentan_3_aminium +nadp +h2o +nadph +hplus
+    pentan_3_one
   }
 }

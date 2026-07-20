@@ -3,7 +3,7 @@
   "id": "17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste",
   "name": "17-O-acetylnorajmaline to S-adenosyl-L-homocysteine",
   "category": "amino-acid-metabolism",
-  "summary": "A 3-step route from 17-O-acetylnorajmaline(1+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from 17-O-acetylnorajmaline(1+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -94,15 +94,6 @@
       }
     },
     {
-      "id": "4_methylajmaline",
-      "name": "4-methylajmaline",
-      "formula": "C21H29N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:230509"
-      }
-    },
-    {
       "id": "4_methylnorajmaline",
       "name": "4-methylnorajmaline",
       "formula": "C20H27N2O2",
@@ -112,49 +103,41 @@
       }
     },
     {
-      "id": "2_hydroxyglutarate",
-      "name": "2-hydroxyglutarate",
-      "formula": "C5H6O5",
-      "charge": -2,
+      "id": "4_o_d_glucosyl_trans_ferulate",
+      "name": "4-O-β-D-glucosyl-trans-ferulate",
+      "short": "4-O-β-D-glucosyl-tr…",
+      "formula": "C16H19O9",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:11596"
+        "chebi": "CHEBI:141767"
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
+      "id": "glucovanillin",
+      "name": "Glucovanillin",
+      "formula": "C14H18O8",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57288"
+        "chebi": "CHEBI:179508"
       }
     },
     {
-      "id": "2_hydroxyglutaryl_coa",
-      "name": "2-hydroxyglutaryl-CoA",
-      "short": "2-hydroxyglutaryl-C…",
-      "formula": "C26H37N7O20P3S",
-      "charge": -5,
+      "id": "apigenin_7_olate",
+      "name": "apigenin-7-olate",
+      "formula": "C15H9O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78628"
+        "chebi": "CHEBI:58470"
       }
     },
     {
-      "id": "columbamine",
-      "name": "columbamine",
-      "formula": "C20H20NO4",
-      "charge": 1,
+      "id": "5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o",
+      "name": "5-hydroxy-2-(4-methoxyphenyl)-4-oxo-4H-chromen-7-olate",
+      "short": "5-hydroxy-2-(4-meth…",
+      "formula": "C16H11O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15920"
-      }
-    },
-    {
-      "id": "palmatine",
-      "name": "palmatine",
-      "formula": "C21H22NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:16096"
+        "chebi": "CHEBI:57284"
       }
     }
   ],
@@ -181,10 +164,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_118",
-      "name": "columbamine O-methyltransferase",
+      "id": "ec_4_1_2_65",
+      "name": "ferulate hydratase/lyase",
       "ec": [
-        "2.1.1.118"
+        "4.1.2.65"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_75",
+      "name": "apigenin 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.75"
       ]
     }
   ],
@@ -290,55 +280,6 @@
     {
       "id": "r3",
       "name": "ajmaline N-methyltransferase",
-      "equation": "ajmaline + S-adenosyl-L-methionine = 4-methylajmaline + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.393",
-      "substrates": [
-        {
-          "metabolite": "ajmalinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_methylajmaline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_393"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 3,
-      "xrefs": {
-        "rhea": "RHEA:79631"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:79631"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "ajmaline N-methyltransferase",
       "equation": "norajmaline + S-adenosyl-L-methionine = 4-methylnorajmaline + S-adenosyl-L-homocysteine + H(+)",
       "ec": "2.1.1.393",
       "substrates": [
@@ -371,7 +312,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:79627"
       },
@@ -386,22 +327,23 @@
       }
     },
     {
-      "id": "r5",
-      "name": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
-      "equation": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
+      "id": "r4",
+      "name": "ferulate hydratase/lyase",
+      "equation": "4-O-beta-D-glucosyl-trans-ferulate + H2O = 4-O-beta-D-glucosyl-vanillin + acetate",
+      "ec": "4.1.2.65",
       "substrates": [
         {
-          "metabolite": "2_hydroxyglutarate",
+          "metabolite": "4_o_d_glucosyl_trans_ferulate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_hydroxyglutaryl_coa",
+          "metabolite": "glucovanillin",
           "stoichiometry": 1
         },
         {
@@ -409,29 +351,34 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_65"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42076"
+        "rhea": "RHEA:76503"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42076"
+            "id": "RHEA:76503"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "columbamine O-methyltransferase",
-      "equation": "columbamine + S-adenosyl-L-methionine = palmatine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.118",
+      "id": "r5",
+      "name": "apigenin 4'-O-methyltransferase",
+      "equation": "apigenin + S-adenosyl-L-methionine = acacetin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.75",
       "substrates": [
         {
-          "metabolite": "columbamine",
+          "metabolite": "apigenin_7_olate",
           "stoichiometry": 1
         },
         {
@@ -441,7 +388,7 @@
       ],
       "products": [
         {
-          "metabolite": "palmatine",
+          "metabolite": "5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o",
           "stoichiometry": 1
         },
         {
@@ -455,20 +402,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_118"
+          "enzyme": "ec_2_1_1_75"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:15373"
+        "rhea": "RHEA:20429"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15373"
+            "id": "RHEA:20429"
           }
         ]
       }

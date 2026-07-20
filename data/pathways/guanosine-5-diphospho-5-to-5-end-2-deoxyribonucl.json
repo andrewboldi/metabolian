@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "guanosine-5-diphospho-5-to-5-end-2-deoxyribonucl",
+  "name": "guanosine-5'-diphospho-5'… to 5'-end 2'-deoxyribonucleo…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from guanosine-5'-diphospho-5'-(2'-deoxyribonucleotide)(2−) residue to 5'-end 2'-deoxyribonucleoside residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52136"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136418"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "guanosine_5_diphospho_5_2_deoxyribonucleotide_2",
+      "name": "guanosine-5'-diphospho-5'-(2'-deoxyribonucleotide)(2−)",
+      "short": "guanosine-5'-diphos…",
+      "formula": "C15H19N5O13P2R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136418"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_end_2_deoxyribonucleotide_2",
+      "name": "5'-end 2'-deoxyribonucleotide(2−)",
+      "short": "5'-end 2'-deoxyribo…",
+      "formula": "C5H7O6PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136412"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "Guanosine 5'-monophosphate (GMP)",
+      "short": "Guanosine 5'-MP…",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58115"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5_end_2_deoxyribonucleoside",
+      "name": "5'-end 2'-deoxyribonucleoside",
+      "short": "5'-end 2'-deoxyribo…",
+      "formula": "C5H8O3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136416"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "5_end_2_deoxyribose_deoxyribonucleotide",
+      "name": "5'-end 2'-deoxyribose-deoxyribonucleotide",
+      "short": "5'-end 2'-deoxyribo…",
+      "formula": "C10H15O12P2R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:195194"
+      }
+    },
+    {
+      "id": "2e_4s_4_hydroxypenten_2_al_5_phosphate",
+      "name": "(2E,4S)-4-hydroxypenten-2-al-5-phosphate",
+      "short": "(2E,4S)-4-hydroxype…",
+      "formula": "C5H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:195195"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_70",
+      "name": "guanosine-5'-diphospho-5'-[DNA] diphosphatase",
+      "ec": [
+        "3.6.1.70"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "guanosine-5'-diphospho-5'-[DNA] diphosphatase",
+      "equation": "a 5'-end guanosine-5'-diphospho-5'-(2'-deoxyribonucleoside)-DNA + H2O = a 5'-end 5'-phospho-2'-deoxyribonucleoside-DNA + GMP + 2 H(+)",
+      "ec": "3.6.1.70",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_diphospho_5_2_deoxyribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 5'-end 5'-phospho-2'-deoxyribonucleotide in single-stranded DNA + H2O = a 5'-end 5'-d...",
+      "equation": "a 5'-end 5'-phospho-2'-deoxyribonucleotide in single-stranded DNA + H2O = a 5'-end 5'-dephospho-2'-deoxyribonucleotide in single-stranded DNA + phosphate",
+      "substrates": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 5'-end 2'-deoxyribose-2'-deoxyribonucleotide-DNA = (2E,4S)-4-hydroxypenten-2-al-5-pho...",
+      "equation": "a 5'-end 2'-deoxyribose-2'-deoxyribonucleotide-DNA = (2E,4S)-4-hydroxypenten-2-al-5-phosphate + a 5'-end 5'-phospho-2'-deoxyribonucleoside-DNA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "5_end_2_deoxyribose_deoxyribonucleotide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_4s_4_hydroxypenten_2_al_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_end_2_deoxyribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76255"
+          }
+        ]
+      }
+    }
+  ]
+}

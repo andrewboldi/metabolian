@@ -30,8 +30,8 @@ pathway 17-o-acetylnorajmaline-to-cortalcerone "17-O-acetylnorajmaline to cortal
 
   branch from glucose side right {
     glucose
-    <-> ec_2_4_1_230 [2.4.1.230] +d_glcp_1_2_d_glcp +pi
-    d_glucose_1_phosphate
+    <-> ec_3_2_1_182 [3.2.1.182] +diboa_d_glucoside +h2o
+    diboa
   }
 
   branch from 2_dehydro_d_glucopyranose side left {

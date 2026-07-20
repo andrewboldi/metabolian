@@ -32,13 +32,19 @@ pathway 2-3-bis-o-phytanyl-sn-gly-to-2-3-bis-o-geranylge "2,3-bis-O-phytanyl-sn-
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_71 [4.2.3.71] +fpp
-    1e_4e_germacrene_b
+    <-> ec_4_2_3_44 [4.2.3.44] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_7_15_diene
   }
 
   branch from 2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l side right {
     2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l
     <-> . +hydrogen_donor +hydrogen_acceptor
     2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 }

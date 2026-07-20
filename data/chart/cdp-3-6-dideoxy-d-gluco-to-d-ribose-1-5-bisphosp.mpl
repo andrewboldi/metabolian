@@ -26,7 +26,7 @@ pathway cdp-3-6-dideoxy-d-gluco-to-d-ribose-1-5-bisphosp "CDP-3,6-dideoxy-α-D-g
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_3_1_4_40 [3.1.4.40] +cmp_n_acyl_neuraminate +h2o +hplus
-    n_acylneuraminate
+    <-> ec_3_6_1_53 [3.6.1.53] +cdp_choline +h2o +hplus
+    phosphocholine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lanosteryl-palmitate-to-hydrogen-donor "lanosteryl palmitate to hydrogen donor" {
-  spacing 192
+  spacing 236
 
   spine at 0,0 {
     lanosteryl_palmitate
@@ -12,14 +12,16 @@ pathway lanosteryl-palmitate-to-hydrogen-donor "lanosteryl palmitate to hydrogen
     lanosterol
     <-> ec_1_14_14_154 [1.14.14.154] +fmnh2 +o2 -formate -fmn -h2o -hplus
     ffmas
-    <-> ec_1_17_98_4 [1.17.98.4] +formate +hydrogen_acceptor +hplus -co2
+    <-> ec_1_17_98_5 [1.17.98.5] +formate +hplus -co2
+    h2
+    <-> ec_1_12_99_6 [1.12.99.6] +hydrogen_acceptor
     hydrogen_donor
   }
 
   branch from lanosterol side left {
     lanosterol
-    <-> . +nadph +hplus +nadp
-    24_25_dihydrolanosterol
+    <-> ec_5_4_99_7 [5.4.99.7]
+    epoxysqualene
   }
 
   branch from palmitate side right {
@@ -38,5 +40,17 @@ pathway lanosteryl-palmitate-to-hydrogen-donor "lanosteryl palmitate to hydrogen
     formate
     <-> . +eburicol +fmnh2 +o2 +fmn +h2o +hplus
     4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +hydroxy_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    oxo_fatty_acid_anion
+  }
+
+  branch from h2 side right {
+    h2
+    <-> ec_1_18_6_2 [1.18.6.2] +dinitrogen +di_sulfido_diiron +atp +h2o +nh3 +adp +pi +hplus
+    di_sulfido_diiron
   }
 }

@@ -22,15 +22,9 @@ pathway o-s-3r-hydroxyhexadeca-to-o-pantetheine-4-phosph "O-[S-(3R)-hydroxyhexad
     o_s_c40_phthioceranylpantetheine_4_phosphoryl_l
   }
 
-  branch from palmitate side right {
-    palmitate
-    <-> . +12_pahsa +h2o +hplus
-    12_hydroxyoctadecanoate
-  }
-
-  branch from holo-acp side left {
+  branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_59 [6.2.1.59] +icosanoate +atp +amp +ppi
-    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
+    <-> . +medium_chain_fatty_acyl_amp +amp +hplus
+    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
   }
 }

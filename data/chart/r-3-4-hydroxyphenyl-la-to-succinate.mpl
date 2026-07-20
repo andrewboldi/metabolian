@@ -42,13 +42,25 @@ pathway r-3-4-hydroxyphenyl-la-to-succinate "(R)-3-(4-hydroxyphenyl)la… to suc
 
   branch from acetoacetate side left {
     acetoacetate
-    <-> . +acetyl_coa +acetoacetyl_coa
-    acetate
+    <-> . +ywa1 +h2o +hplus
+    naphthalene_1_3_6_8_tetrol
   }
 
   branch from fumarate side right {
     fumarate
-    <-> ec_4_2_1_2 [4.2.1.2] +h2o
-    malate
+    <-> . +2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate +h2o +hplus
+    2e_2_hydroxypenta_2_4_dienoate
+  }
+
+  branch from acetoacetyl_coa side left {
+    acetoacetyl_coa
+    <-> ec_2_3_1_194 [2.3.1.194] +acetyl_coa +hplus +co2 +coa
+    malonyl-coa
+  }
+
+  branch from hmg_coa side right {
+    hmg_coa
+    <-> ec_2_8_3_13 [2.8.3.13] +3_hydroxy_3_methylglutarate +malonyl-coa
+    malonate
   }
 }

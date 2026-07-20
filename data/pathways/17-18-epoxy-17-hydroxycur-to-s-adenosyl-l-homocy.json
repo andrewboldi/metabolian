@@ -185,41 +185,41 @@
       }
     },
     {
-      "id": "c7a_hydroxy_4_cholesten_3_one",
-      "name": "7alpha-Hydroxycholest-4-en-3-one",
-      "short": "7alpha-Hydroxychole…",
-      "formula": "C27H44O2",
-      "charge": 0,
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17899"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "dihydroxy_4_cholesten_3_one_7a12a",
-      "name": "7alpha,12alpha-Dihydroxy-4-cholesten-3-one",
-      "short": "7alpha,12alpha-Dihy…",
-      "formula": "C27H44O3",
-      "charge": 0,
+      "id": "12_hete",
+      "name": "12-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:28477"
+        "chebi": "CHEBI:90718"
       }
     },
     {
-      "id": "trans_resveratrol",
-      "name": "trans-resveratrol",
-      "formula": "C14H12O3",
-      "charge": 0,
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:45713"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "pterostilbene",
-      "name": "pterostilbene",
-      "formula": "C16H16O3",
+      "id": "n7_methylguanosine_5_phosphate_zwitterion",
+      "name": "N7-methylguanosine 5'-phosphate zwitterion",
+      "short": "N7-methylguanosine…",
+      "formula": "C11H14N5O7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:8630"
+        "chebi": "CHEBI:74480"
       }
     }
   ],
@@ -253,17 +253,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_139",
-      "name": "5beta-cholestane-3alpha,7alpha-diol 12alpha-hydroxylase",
+      "id": "ec_2_1_1_309",
+      "name": "18S rRNA (guanine(1575)-N(7))-methyltransferase",
       "ec": [
-        "1.14.14.139"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_240",
-      "name": "trans-resveratrol di-O-methyltransferase",
-      "ec": [
-        "2.1.1.240"
+        "2.1.1.309"
       ]
     }
   ],
@@ -613,12 +606,11 @@
     },
     {
       "id": "r8",
-      "name": "5beta-cholestane-3alpha,7alpha-diol 12alpha-hydroxylase",
-      "equation": "7alpha-hydroxycholest-4-en-3-one + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha,12alpha-dihydroxycholest-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.139",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 12-hy...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "c7a_hydroxy_4_cholesten_3_one",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -632,7 +624,7 @@
       ],
       "products": [
         {
-          "metabolite": "dihydroxy_4_cholesten_3_one_7a12a",
+          "metabolite": "12_hete",
           "stoichiometry": 1
         },
         {
@@ -648,71 +640,62 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_139"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:46752"
+        "rhea": "RHEA:51484"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46752"
+            "id": "RHEA:51484"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "trans-resveratrol di-O-methyltransferase",
-      "equation": "trans-resveratrol + 2 S-adenosyl-L-methionine = pterostilbene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
-      "ec": "2.1.1.240",
+      "name": "18S rRNA (guanine(1575)-N(7))-methyltransferase",
+      "equation": "guanosine(1575) in yeast 18S rRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(1575) in yeast 18S rRNA + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.309",
       "substrates": [
         {
-          "metabolite": "trans_resveratrol",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pterostilbene",
+          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_240"
+          "enzyme": "ec_2_1_1_309"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:32103"
+        "rhea": "RHEA:43172"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32103"
+            "id": "RHEA:43172"
           }
         ]
       }

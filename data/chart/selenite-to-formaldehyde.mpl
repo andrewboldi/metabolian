@@ -24,9 +24,15 @@ pathway selenite-to-formaldehyde "selenite to formaldehyde" {
     hydroquinones
   }
 
-  branch from formaldehyde side right {
+  branch from trimethylammonium side right {
+    trimethylammonium
+    <-> ec_1_14_13_239 [1.14.13.239] +carnitine +nadh +o2 +hplus +nad +h2o
+    3r_3_hydroxy_4_oxobutanoate
+  }
+
+  branch from formaldehyde side left {
     formaldehyde
-    <-> . +5_5_dehydrodivanillate +nadh +o2 +hplus +nad +h2o
-    5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
+    <-> . +n_n_dimethyl_l_arginine_1 +akg +o2 +succinate +co2
+    n_methyl_argininium_1
   }
 }

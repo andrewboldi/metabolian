@@ -1,0 +1,208 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-o-octadecyl-2-oleoyl-sn-to-ethanolaminium",
+  "name": "1-O-octadecyl-2-oleoyl-sn… to ethanolaminium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 1-O-octadecyl-2-oleoyl-sn-glycero-3-phosphoethanolamine zwitterion to ethanolaminium(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61956"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:145178"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_o_octadecyl_2_oleoyl_sn_glycero_3_phosphoethan",
+      "name": "1-O-octadecyl-2-oleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-O-octadecyl-2-ole…",
+      "formula": "C41H82NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145178"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3",
+      "name": "1-(1Z-octadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(1Z-octadecenyl)-…",
+      "formula": "C41H80NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78340"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphose",
+      "name": "1-(1Z-octadecenyl)-2-oleoyl-sn-glycero-3-phosphoserine",
+      "short": "1-(1Z-octadecenyl)-…",
+      "formula": "C42H79NO9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78341"
+      }
+    },
+    {
+      "id": "ethanolaminium",
+      "name": "ethanolaminium",
+      "formula": "C2H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57603"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-O-octadecyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + 2 Fe(II)-[cytochro...",
+      "equation": "1-O-octadecyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 1-(1Z-octadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "1_o_octadecyl_2_oleoyl_sn_glycero_3_phosphoethan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-(1Z-octadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-...",
+      "equation": "1-(1Z-octadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-(1Z-octadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + ethanolamine",
+      "substrates": [
+        {
+          "metabolite": "1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethanolaminium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41600"
+          }
+        ]
+      }
+    }
+  ]
+}

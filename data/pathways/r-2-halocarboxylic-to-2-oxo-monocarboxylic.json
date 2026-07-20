@@ -1,0 +1,227 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-2-halocarboxylic-to-2-oxo-monocarboxylic",
+  "name": "(R)-2-halocarboxylic… to 2-oxo monocarboxylic…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (R)-2-halocarboxylic acid anion to 2-oxo monocarboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22188"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137406"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_2_halocarboxylic_acid_anion",
+      "name": "(R)-2-halocarboxylic acid anion",
+      "short": "2-halocarboxylic…",
+      "formula": "C2HO2RX",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137406"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2s_2_hydroxy_monocarboxylic_acid_anion",
+      "name": "(2S)-2-hydroxy monocarboxylic acid anion",
+      "short": "2-hydroxy…",
+      "formula": "C2H2O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58123"
+      }
+    },
+    {
+      "id": "halide_anion",
+      "name": "halide anion",
+      "formula": "X",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16042"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_oxo_monocarboxylic_acid_anion",
+      "name": "2-oxo monocarboxylic acid anion",
+      "short": "2-oxo monocarboxyli…",
+      "formula": "C2O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35179"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_8_1_9",
+      "name": "(R)-2-haloacid dehalogenase",
+      "ec": [
+        "3.8.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_8_1_10",
+      "name": "2-haloacid dehalogenase (configuration-inverting)",
+      "ec": [
+        "3.8.1.10"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_337",
+      "name": "L-2-hydroxycarboxylate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.337"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_375",
+      "name": "L-2-hydroxycarboxylate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.375"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-2-haloacid dehalogenase",
+      "equation": "an (R)-2-haloacid + H2O = a (2S)-2-hydroxycarboxylate + a halide anion + H(+)",
+      "ec": "3.8.1.9",
+      "substrates": [
+        {
+          "metabolite": "r_2_halocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxy_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "halide_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_8_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-2-hydroxycarboxylate dehydrogenase (NAD(+))",
+      "equation": "a (2S)-2-hydroxycarboxylate + NAD(+) = a 2-oxocarboxylate + NADH + H(+)",
+      "ec": "1.1.1.337",
+      "substrates": [
+        {
+          "metabolite": "2s_2_hydroxy_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_337"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34555"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-4-dehydropantoate-to-3-methyl-2-oxobutanoate",
+  "name": "(R)-4-dehydropantoate to 3-methyl-2-oxobutanoate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (R)-4-dehydropantoate to 3-methyl-2-oxobutanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19349"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57849"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_4_dehydropantoate",
+      "name": "(R)-4-dehydropantoate",
+      "short": "4-dehydropantoate",
+      "formula": "C6H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57849"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_3_3_dimethylmalate",
+      "name": "(R)-3,3-dimethylmalate",
+      "short": "3,3-dimethylmalate",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57424"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "kiv",
+      "name": "3-Methyl-2-oxobutanoate",
+      "short": "3-Methyl-2-oxobutan…",
+      "formula": "C5H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11851"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_33",
+      "name": "(R)-dehydropantoate dehydrogenase",
+      "ec": [
+        "1.2.1.33"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_84",
+      "name": "dimethylmalate dehydrogenase",
+      "ec": [
+        "1.1.1.84"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-dehydropantoate dehydrogenase",
+      "equation": "(R)-4-dehydropantoate + NAD(+) + H2O = (R)-3,3-dimethylmalate + NADH + 2 H(+)",
+      "ec": "1.2.1.33",
+      "substrates": [
+        {
+          "metabolite": "r_4_dehydropantoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_3_dimethylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19349"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dimethylmalate dehydrogenase",
+      "equation": "(R)-3,3-dimethylmalate + NAD(+) = 3-methyl-2-oxobutanoate + CO2 + NADH",
+      "ec": "1.1.1.84",
+      "substrates": [
+        {
+          "metabolite": "r_3_3_dimethylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13321"
+          }
+        ]
+      }
+    }
+  ]
+}

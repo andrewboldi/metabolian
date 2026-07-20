@@ -24,14 +24,14 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_donor
-    7_8_dihydromethanopterin
+    <-> . +dopamine +hydrogen_donor +h2o
+    m_tyraminium
   }
 
   branch from fmn side right {
     fmn
-    <-> . +3_17_dihydroxy_9_10_secoandrosta_1_3_5_10_triene +fmnh2 +o2 +h2o +hplus
-    3_4_17_trihydroxy_9_10_secoandrosta_1_3_5_10_tri
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    17_hete
   }
 
   branch from 1_n6_etheno_2_deoxyadenosine_5_monophosphate_1 side left {
@@ -42,7 +42,19 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
 
   branch from 2_deoxyadenosine_5_monophosphate_1 side right {
     2_deoxyadenosine_5_monophosphate_1
-    <-> . +acetyl_coa +hydrogen_donor +nh3 +o2 +hydrogen_acceptor +coa +h2o +hplus
-    n6_methylcarbamoyl_2_deoxyadenosine_5_monophosph
+    <-> . +akg +o2 +formaldehyde +succinate +co2 +hplus
+    1_methyldeoxyadenosine_5_monophosphate
+  }
+
+  branch from glyoxal side left {
+    glyoxal
+    <-> . +l_argininium
+    n_1_hydroxy_2_oxoethyl_l_argininium
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_68 [1.14.11.68] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +formaldehyde +co2
+    n6_methyl_l_lysinium
   }
 }

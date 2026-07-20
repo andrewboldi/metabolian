@@ -19,18 +19,12 @@ pathway all-cis-icosa-8-11-14-tri-to-fmn "all-cis-icosa-8,11,14-tri… to FMN" {
   branch from prostaglandin_h1 side left {
     prostaglandin_h1
     <-> .
-    prostaglandin_e1
+    prostaglandin_d1
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_17_99_8 [1.17.99.8] +4r_limonene +h2o +hydrogen_donor
-    r_perillyl_alcohol
-  }
-
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate
+    <-> . +pinocembrin +fmnh2 +o2 +h2o +hplus
+    2s_2_hydroxypinocembrin
   }
 }

@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-azaniumyl-4-5-dihydroxy-to-3-acetamido-4-hydro",
+  "name": "2-azaniumyl-4,5-dihydroxy… to 3-acetamido-4-hydroxybenz…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 2-azaniumyl-4,5-dihydroxy-6-oxo-7-(phosphonatooxy)heptanoate(2−) to 3-acetamido-4-hydroxybenzoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:26317"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58898"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_azaniumyl_4_5_dihydroxy_6_oxo_7_phosphonatooxy",
+      "name": "2-azaniumyl-4,5-dihydroxy-6-oxo-7-(phosphonatooxy)heptanoate",
+      "short": "2-azaniumyl-4,5-dih…",
+      "formula": "C7H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58898"
+      }
+    },
+    {
+      "id": "3_amino_4_hydroxybenzoate",
+      "name": "3-amino-4-hydroxybenzoate",
+      "short": "3-amino-4-hydroxybe…",
+      "formula": "C7H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60005"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "3_acetamido_4_hydroxybenzoate",
+      "name": "3-acetamido-4-hydroxybenzoate",
+      "short": "3-acetamido-4-hydro…",
+      "formula": "C9H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140533"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_amino_2_4_dihydroxybenzoate",
+      "name": "3-amino-2,4-dihydroxybenzoate",
+      "short": "3-amino-2,4-dihydro…",
+      "formula": "C7H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:180657"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_99_20",
+      "name": "3-amino-4-hydroxybenzoate synthase",
+      "ec": [
+        "4.1.99.20"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_249",
+      "name": "3-amino-4-hydroxybenzoate 2-monooxygenase",
+      "ec": [
+        "1.14.13.249"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-amino-4-hydroxybenzoate synthase",
+      "equation": "2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate = 3-amino-4-hydroxybenzoate + phosphate + 2 H2O + H(+)",
+      "ec": "4.1.99.20",
+      "substrates": [
+        {
+          "metabolite": "2_azaniumyl_4_5_dihydroxy_6_oxo_7_phosphonatooxy",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_amino_4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:26317"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26317"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-amino-4-hydroxybenzoate + acetyl-CoA = 3-acetylamino-4-hydroxybenzoate + CoA",
+      "equation": "3-amino-4-hydroxybenzoate + acetyl-CoA = 3-acetylamino-4-hydroxybenzoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "3_amino_4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_acetamido_4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-amino-4-hydroxybenzoate 2-monooxygenase",
+      "equation": "3-amino-4-hydroxybenzoate + NADPH + O2 + H(+) = 3-amino-2,4-dihydroxybenzoate + NADP(+) + H2O",
+      "ec": "1.14.13.249",
+      "substrates": [
+        {
+          "metabolite": "3_amino_4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_amino_2_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_249"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:68992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68992"
+          }
+        ]
+      }
+    }
+  ]
+}

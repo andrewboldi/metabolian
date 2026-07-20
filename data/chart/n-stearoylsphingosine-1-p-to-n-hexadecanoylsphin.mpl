@@ -20,8 +20,8 @@ pathway n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin "N-stearoylsphingosine-
 
   branch from n_octadecanoylsphingosine side left {
     n_octadecanoylsphingosine
-    <-> . +d_glucosyl_n_octadecanoylsphingosine +h2o
-    glucose
+    <-> . +d_glucosyl_n_octadecanoylsphingosine +cholesterol
+    cholesteryl_d_glucoside
   }
 
   branch from phosphocholine side right {
@@ -30,13 +30,7 @@ pathway n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin "N-stearoylsphingosine-
     1_o_octadecyl_2_acetyl_sn_glycerol
   }
 
-  branch from octadecanoate side left {
-    octadecanoate
-    <-> . +octadecanoate_ester +h2o +hplus
-    aliphatic_alcohol
-  }
-
-  branch from n_hexadecanoylsphingosine side right {
+  branch from n_hexadecanoylsphingosine side left {
     n_hexadecanoylsphingosine
     <-> . +n_hexadecanoyl_d_galactosylsphingosine +h2o
     d_galactose

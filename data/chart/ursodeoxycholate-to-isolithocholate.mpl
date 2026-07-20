@@ -8,12 +8,26 @@ pathway ursodeoxycholate-to-isolithocholate "ursodeoxycholate to isolithocholate
 
   spine at 0,0 {
     ursodeoxycholate
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    muricholate
     <-> . +lithocholyl_coa -lithocholate
-    ursodeoxycholoyl_coa
+    muricholoyl_coa
     <-> ec_1_1_1_52 [1.1.1.52] +lithocholate +nad -nadh -hplus
     3_oxo_5_cholanate
     <-> ec_1_1_1_391 [1.1.1.391] +nadh +hplus -nad
     isolithocholate
+  }
+
+  branch from muricholate side left {
+    muricholate
+    <-> . +allodeoxycholoyl_coa +muricholoyl_coa
+    allodeoxycholate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_151 [1.14.14.151] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
+    2_hydroxy_5_epi_aristolochene
   }
 
   branch from lithocholate side left {

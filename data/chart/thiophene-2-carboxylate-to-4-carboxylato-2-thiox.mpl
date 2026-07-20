@@ -18,13 +18,13 @@ pathway thiophene-2-carboxylate-to-4-carboxylato-2-thiox "thiophene-2-carboxylat
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_38 [4.2.3.38] +fpp
-    e_r_bisabolene
+    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_pentaprenyl_diphosphate
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_n1 [1.3.99.n1] +3_hydroxybenzoyl_coa +hydrogen_donor +atp +h2o +adp +pi +hplus
-    3_hydroxycyclohexa_1_5_diene_1_carbonyl_coa
+    <-> ec_2_8_1_9 [2.8.1.9] +mo_vi_o2_oh_molybdopterin_cofactor +cysteine +hydrogen_donor +alanine +h2o
+    mo_vi_o_s_oh_molybdopterin_cofactor
   }
 }

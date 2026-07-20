@@ -20,13 +20,7 @@ pathway dibenzothiophene-to-biphenyl-2-3-diol "dibenzothiophene to biphenyl-2,3-
 
   branch from fmn side left {
     fmn
-    <-> . +22_oxodocosanoate +fmnh2 +o2 +h2o +hplus
-    docosanedioate
-  }
-
-  branch from sulfite side right {
-    sulfite
-    <-> . +nad +h2o +nadh +hplus
-    h2s
+    <-> . +22r_22_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    7_22r_dihydroxycholesterol
   }
 }

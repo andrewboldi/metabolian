@@ -1,0 +1,404 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-3-phenyllactate-to-l-phenylalanine",
+  "name": "(R)-3-phenyllactate to L-phenylalanine",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (R)-3-phenyllactate to L-phenylalanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38351"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:11009"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_3_phenyllactate",
+      "name": "(R)-3-phenyllactate",
+      "formula": "C9H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11009"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18005"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "l_kynurenine",
+      "name": "L-kynurenine",
+      "formula": "C10H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57959"
+      }
+    },
+    {
+      "id": "4_2_aminophenyl_2_4_dioxobutanoate",
+      "name": "4-(2-aminophenyl)-2,4-dioxobutanoate",
+      "short": "4-(2-aminophenyl)-2…",
+      "formula": "C10H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58147"
+      }
+    },
+    {
+      "id": "d_tartrate",
+      "name": "D-tartrate",
+      "formula": "C4H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30927"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_arogenate",
+      "name": "L-arogenate",
+      "formula": "C10H12NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58180"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_110",
+      "name": "aromatic 2-oxoacid reductase",
+      "ec": [
+        "1.1.1.110"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_70",
+      "name": "aspartate--phenylpyruvate transaminase",
+      "ec": [
+        "2.6.1.70"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_81",
+      "name": "D(-)-tartrate dehydratase",
+      "ec": [
+        "4.2.1.81"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_91",
+      "name": "arogenate dehydratase",
+      "ec": [
+        "4.2.1.91"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aromatic 2-oxoacid reductase",
+      "equation": "(R)-3-phenyllactate + NAD(+) = 3-phenylpyruvate + NADH + H(+)",
+      "ec": "1.1.1.110",
+      "substrates": [
+        {
+          "metabolite": "r_3_phenyllactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_110"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aspartate--phenylpyruvate transaminase",
+      "equation": "3-phenylpyruvate + L-aspartate = oxaloacetate + L-phenylalanine",
+      "ec": "2.6.1.70",
+      "substrates": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14097"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14097"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-phenylpyruvate + L-kynurenine = 4-(2-aminophenyl)-2,4-dioxobutanoate + L-phenylalanine",
+      "equation": "3-phenylpyruvate + L-kynurenine = 4-(2-aminophenyl)-2,4-dioxobutanoate + L-phenylalanine",
+      "substrates": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_kynurenine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_2_aminophenyl_2_4_dioxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D(-)-tartrate dehydratase",
+      "equation": "(S,S)-tartrate = oxaloacetate + H2O",
+      "ec": "4.2.1.81",
+      "substrates": [
+        {
+          "metabolite": "d_tartrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18289"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18289"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "arogenate dehydratase",
+      "equation": "L-arogenate + H(+) = L-phenylalanine + CO2 + H2O",
+      "ec": "4.2.1.91",
+      "substrates": [
+        {
+          "metabolite": "l_arogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12536"
+          }
+        ]
+      }
+    }
+  ]
+}

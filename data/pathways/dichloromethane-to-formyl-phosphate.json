@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dichloromethane-to-formyl-phosphate",
   "name": "dichloromethane to formyl phosphate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from dichloromethane to formyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -118,21 +118,21 @@
       }
     },
     {
-      "id": "methanesulfonate",
-      "name": "methanesulfonate",
-      "formula": "CH3O3S",
-      "charge": -1,
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:25224"
+        "chebi": "CHEBI:60344"
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57618"
+        "chebi": "CHEBI:17499"
       }
     },
     {
@@ -145,41 +145,41 @@
       }
     },
     {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
-      }
-    },
-    {
-      "id": "sulfite",
-      "name": "sulfite",
-      "formula": "O3S",
+      "id": "5_oxo_bilirubin",
+      "name": "5-oxo-δ-bilirubin",
+      "formula": "C33H32N4O7",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:17359"
+        "chebi": "CHEBI:74361"
       }
     },
     {
-      "id": "n_formyl_l_methionyl_group",
-      "name": "N-formyl-L-methionyl group",
-      "short": "N-formyl-L-methiony…",
-      "formula": "C6H10NO2S",
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49298"
+        "chebi": "CHEBI:13193"
       }
     },
     {
-      "id": "l_methioniniumyl_group",
-      "name": "L-methioniniumyl group",
-      "short": "L-methioniniumyl…",
-      "formula": "C5H11NOS",
-      "charge": 1,
+      "id": "2_amino_5_formylamino_6_1_d_ribosylamino_pyrimid",
+      "name": "2-amino-5-formylamino-6-(1-D-ribosylamino)pyrimidin-4(3H)-one 5'-phosphate",
+      "short": "2-amino-5-formylami…",
+      "formula": "C10H14N5O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:64731"
+        "chebi": "CHEBI:57258"
+      }
+    },
+    {
+      "id": "2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on",
+      "name": "2,5-diamino-6-(1-D-ribosylamino)pyrimidin-4(3H)-one 5'-phosphate",
+      "short": "2,5-diamino-6-(1-D-…",
+      "formula": "C9H14N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59545"
       }
     }
   ],
@@ -199,17 +199,17 @@
       ]
     },
     {
-      "id": "ec_1_14_14_34",
-      "name": "methanesulfonate monooxygenase (FMNH2)",
+      "id": "ec_1_14_99_48",
+      "name": "heme oxygenase (staphylobilin-producing)",
       "ec": [
-        "1.14.14.34"
+        "1.14.99.48"
       ]
     },
     {
-      "id": "ec_3_5_1_88",
-      "name": "peptide deformylase",
+      "id": "ec_3_5_1_102",
+      "name": "2-amino-5-formylamino-6-ribosylaminopyrimidin-4(3H)-one 5'-monophosphate",
       "ec": [
-        "3.5.1.88"
+        "3.5.1.102"
       ]
     }
   ],
@@ -357,30 +357,34 @@
     },
     {
       "id": "r4",
-      "name": "methanesulfonate monooxygenase (FMNH2)",
-      "equation": "methanesulfonate + FMNH2 + O2 = FMN + sulfite + formaldehyde + H2O + 2 H(+)",
-      "ec": "1.14.14.34",
+      "name": "heme oxygenase (staphylobilin-producing)",
+      "equation": "heme b + 5 AH2 + 4 O2 + 2 H(+) = delta-staphylobilin + Fe(2+) + formaldehyde + 5 A + 4 H2O",
+      "ec": "1.14.99.48",
       "substrates": [
         {
-          "metabolite": "methanesulfonate",
+          "metabolite": "ferroheme_b",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 5
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "fmn",
+          "metabolite": "5_oxo_bilirubin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sulfite",
+          "metabolite": "fe2",
           "stoichiometry": 1
         },
         {
@@ -388,42 +392,42 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 5
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "metabolite": "h2o",
+          "stoichiometry": 4
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_34"
+          "enzyme": "ec_1_14_99_48"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:29307"
+        "rhea": "RHEA:37039"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29307"
+            "id": "RHEA:37039"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "peptide deformylase",
-      "equation": "N-terminal N-formyl-L-methionyl-[peptide] + H2O = N-terminal L-methionyl-[peptide] + formate",
-      "ec": "3.5.1.88",
+      "name": "2-amino-5-formylamino-6-ribosylaminopyrimidin-4(3H)-one 5'-monophosphate",
+      "equation": "2-amino-5-formylamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one + H2O = 2,5-diamino-6-(1-D-ribosylamino)pyrimidin-4(3H)-one 5'-phosphate + formate + H(+)",
+      "ec": "3.5.1.102",
       "substrates": [
         {
-          "metabolite": "n_formyl_l_methionyl_group",
+          "metabolite": "2_amino_5_formylamino_6_1_d_ribosylamino_pyrimid",
           "stoichiometry": 1
         },
         {
@@ -433,30 +437,34 @@
       ],
       "products": [
         {
-          "metabolite": "l_methioniniumyl_group",
+          "metabolite": "2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on",
           "stoichiometry": 1
         },
         {
           "metabolite": "formate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_88"
+          "enzyme": "ec_3_5_1_102"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24420"
+        "rhea": "RHEA:27282"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24420"
+            "id": "RHEA:27282"
           }
         ]
       }

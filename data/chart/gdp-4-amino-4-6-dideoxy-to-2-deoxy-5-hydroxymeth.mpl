@@ -20,22 +20,10 @@ pathway gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth "GDP-4-amino-4,6-dideox
     2_deoxy_5_hydroxymethyl_cytidine_5_diphosphate
   }
 
-  branch from 3_4_dihydroxybenzoate side left {
-    3_4_dihydroxybenzoate
-    <-> . +udp_d_glucose +udp +hplus
-    4_d_glucosyloxy_3_hydroxybenzoate
-  }
-
-  branch from methylene_thf side right {
-    methylene_thf
-    <-> ec_1_5_1_15 [1.5.1.15] +nad +nadh
-    methenyl_thf
-  }
-
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +o2 +hplus +di_sulfido_diiron +h2o
-    pulcherriminate
+    <-> . +20s_23_dihydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    20s_23_24_trihydroxyvitamin_d3
   }
 
   branch from 5_hydroxymethyldeoxycytidylate side right {

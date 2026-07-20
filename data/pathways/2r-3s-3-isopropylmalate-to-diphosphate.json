@@ -232,39 +232,30 @@
       }
     },
     {
-      "id": "d_leucine",
-      "name": "D-leucine",
+      "id": "leucine",
+      "name": "L-Leucine",
       "formula": "C6H13NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:143079"
+        "chebi": "CHEBI:57427"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:57305"
       }
     },
     {
@@ -306,12 +297,12 @@
       }
     },
     {
-      "id": "trichodiene",
-      "name": "trichodiene",
+      "id": "germacrene_a",
+      "name": "(+)-germacrene A",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15861"
+        "chebi": "CHEBI:41595"
       }
     }
   ],
@@ -359,10 +350,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_6",
-      "name": "trichodiene synthase",
+      "id": "ec_4_2_3_23",
+      "name": "germacrene-A synthase",
       "ec": [
-        "4.2.3.6"
+        "4.2.3.23"
       ]
     }
   ],
@@ -782,19 +773,15 @@
     },
     {
       "id": "r10",
-      "name": "D-leucine + O2 + H2O = 4-methyl-2-oxopentanoate + H2O2 + NH4(+)",
-      "equation": "D-leucine + O2 + H2O = 4-methyl-2-oxopentanoate + H2O2 + NH4(+)",
+      "name": "L-leucine + glyoxylate = 4-methyl-2-oxopentanoate + glycine",
+      "equation": "L-leucine + glyoxylate = 4-methyl-2-oxopentanoate + glycine",
       "substrates": [
         {
-          "metabolite": "d_leucine",
+          "metabolite": "leucine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "glyoxylate",
           "stoichiometry": 1
         }
       ],
@@ -804,25 +791,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
+          "metabolite": "glycine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:78211"
+        "rhea": "RHEA:69128"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78211"
+            "id": "RHEA:69128"
           }
         ]
       }
@@ -931,9 +914,9 @@
     },
     {
       "id": "r13",
-      "name": "trichodiene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = trichodiene + diphosphate",
-      "ec": "4.2.3.6",
+      "name": "germacrene-A synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-(R)-germacrene A + diphosphate",
+      "ec": "4.2.3.23",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -942,7 +925,7 @@
       ],
       "products": [
         {
-          "metabolite": "trichodiene",
+          "metabolite": "germacrene_a",
           "stoichiometry": 1
         },
         {
@@ -952,20 +935,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_6"
+          "enzyme": "ec_4_2_3_23"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:12052"
+        "rhea": "RHEA:12516"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12052"
+            "id": "RHEA:12516"
           }
         ]
       }

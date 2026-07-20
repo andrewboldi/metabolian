@@ -26,7 +26,7 @@ pathway 5-cholestan-3-one-to-di-sulfido-diiron "5α-cholestan-3-one to di-μ-sul
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_2_7_12 [1.2.7.12] +n_formylmethanofuran +h2o +di_sulfido_diiron +co2 +hplus
-    methanofuranate
+    <-> ec_1_14_15_32 [1.14.15.32] +pentalenene +di_sulfido_diiron +o2 +hplus +h2o
+    pentalen_13_al
   }
 }

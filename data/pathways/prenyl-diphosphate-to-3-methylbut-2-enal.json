@@ -1,0 +1,265 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prenyl-diphosphate-to-3-methylbut-2-enal",
+  "name": "prenyl diphosphate to 3-methylbut-2-enal",
+  "category": "other",
+  "summary": "A 2-step route from prenyl diphosphate(3−) to 3-methylbut-2-enal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21496"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "prenol",
+      "name": "prenol",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16019"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_methylbut_2_enal",
+      "name": "3-methylbut-2-enal",
+      "formula": "C5H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15825"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "2z_6e_hedycaryol",
+      "name": "(2Z,6E)-hedycaryol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138044"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_7_1",
+      "name": "prenyl-diphosphatase",
+      "ec": [
+        "3.1.7.1"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_187",
+      "name": "(2Z,6E)-hedycaryol synthase",
+      "ec": [
+        "4.2.3.187"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prenyl-diphosphatase",
+      "equation": "dimethylallyl diphosphate + H2O = prenol + diphosphate",
+      "ec": "3.1.7.1",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_7_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prenol + NADP(+) = 3-methyl-2-butenal + NADPH + H(+)",
+      "equation": "prenol + NADP(+) = 3-methyl-2-butenal + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "prenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylbut_2_enal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58420"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58420"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2Z,6E)-hedycaryol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (2Z,6E)-hedycaryol + diphosphate",
+      "ec": "4.2.3.187",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_6e_hedycaryol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_187"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54060"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,13 +18,19 @@ pathway s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami "(S)-4-amino-5-oxopentan
 
   branch from 3_l_glutamate_adenylyl_1_group side left {
     3_l_glutamate_adenylyl_1_group
-    <-> ec_6_1_1_17 [6.1.1.17] +amp_3_end_1 +glutamate +atp +amp
+    <-> ec_6_1_1_24 [6.1.1.24] +amp_3_end_1 +glutamate +atp +amp
     ppi
   }
 
-  branch from glutamate side right {
+  branch from 3_l_glutaminyl_adenylyl_zwitterionic_group side right {
+    3_l_glutaminyl_adenylyl_zwitterionic_group
+    <-> . +nh3 +pi +hplus
+    3_5_phosphooxy_l_glutamate_adenylyl_2_group
+  }
+
+  branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_17 [2.6.1.17] +n_3_carboxylatopropionyl_ll_2_6_diaminopimelate +akg
-    l_2_succinylamino_6_oxoheptanedioate
+    <-> ec_5_4_99_1 [5.4.99.1]
+    threo_3_methyl_l_aspartate
   }
 }

@@ -20,7 +20,7 @@ pathway trans-polycis-decaprenyl-to-d-galf-1-5-d-galf "trans,polycis-decaprenylâ
 
   branch from dtdp side left {
     dtdp
-    <-> . +dtmp
-    dttp
+    <-> . +datp +dtmp
+    dadp
   }
 }

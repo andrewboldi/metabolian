@@ -20,22 +20,22 @@ pathway carotene-to-all-trans-neoxanthin "β-carotene to all-trans-neoxanthin" {
     all_trans_neoxanthin
   }
 
-  branch from cryptoxanthin side left {
-    cryptoxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3s_5r_6s_cryptoxanthin_5_6_epoxide
-  }
-
-  branch from di_sulfido_diiron side right {
+  branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_40 [1.14.19.40] +o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1 +di_sulfido_diiron +o2 +hplus +h2o
-    o_s_5_hexynoylpantetheine_4_phosphoryl_serine_1
+    <-> . +stearoyl_coa +di_sulfido_diiron +o2 +hplus +h2o
+    oleoyl_coa
   }
 
-  branch from zeaxanthin side left {
+  branch from zeaxanthin side right {
     zeaxanthin
     <-> . +antheraxanthin +ascorbate +h2o
     l_dehydroascorbate
+  }
+
+  branch from antheraxanthin side left {
+    antheraxanthin
+    <-> ec_5_3_99_8 [5.3.99.8]
+    capsanthin
   }
 
   branch from all_trans_violaxanthin side right {

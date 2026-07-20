@@ -163,60 +163,51 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "exo_bergamotene",
-      "name": "(−)-exo-α-bergamotene",
-      "short": "(−)-exo-α-bergamote…",
-      "formula": "C15H24",
+      "id": "r_cembrene_a",
+      "name": "(R)-cembrene A",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62756"
+        "chebi": "CHEBI:82800"
       }
     },
     {
-      "id": "hancockiamide_h",
-      "name": "hancockiamide H",
-      "formula": "C20H25N2O3",
-      "charge": 1,
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:231794"
+        "chebi": "CHEBI:77016"
       }
     },
     {
-      "id": "17_estradiol",
-      "name": "17β-estradiol",
-      "formula": "C18H24O2",
-      "charge": 0,
+      "id": "4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19R,20S)-19,20-epoxydocosapentaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16469"
-      }
-    },
-    {
-      "id": "2_hydroxy_17_estradiol",
-      "name": "2-hydroxy-17β-estradiol",
-      "short": "2-hydroxy-17β-estra…",
-      "formula": "C18H24O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28744"
+        "chebi": "CHEBI:136410"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_81",
-      "name": "exo-alpha-bergamotene synthase",
+      "id": "ec_4_2_3_150",
+      "name": "cembrene A synthase",
       "ec": [
-        "4.2.3.81"
+        "4.2.3.150"
       ]
     }
   ],
@@ -407,18 +398,18 @@
     },
     {
       "id": "r5",
-      "name": "exo-alpha-bergamotene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (1S,5S,6R)-alpha-bergamotene + diphosphate",
-      "ec": "4.2.3.81",
+      "name": "cembrene A synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (R)-cembrene A + diphosphate",
+      "ec": "4.2.3.150",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "exo_bergamotene",
+          "metabolite": "r_cembrene_a",
           "stoichiometry": 1
         },
         {
@@ -428,78 +419,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_81"
+          "enzyme": "ec_4_2_3_150"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31427"
+        "rhea": "RHEA:42996"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31427"
+            "id": "RHEA:42996"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "hancockiamide H + (E)-cinnamate + ATP = hancockiamide G + AMP + diphosphate",
-      "equation": "hancockiamide H + (E)-cinnamate + ATP = hancockiamide G + AMP + diphosphate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (19R,20S)-epoxy-(4Z,7Z,10Z,13Z,16Z)-docosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "hancockiamide_h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_cinnamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hancockiamide_g",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:81135"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:81135"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 2-hydroxy-17beta-estra...",
-      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 2-hydroxy-17beta-estradiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "17_estradiol",
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
           "stoichiometry": 1
         },
         {
@@ -513,7 +457,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxy_17_estradiol",
+          "metabolite": "4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent",
           "stoichiometry": 1
         },
         {
@@ -530,16 +474,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:47212"
+        "rhea": "RHEA:52120"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47212"
+            "id": "RHEA:52120"
           }
         ]
       }

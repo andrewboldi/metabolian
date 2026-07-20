@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-1-deoxy-d-fructopyra-to-dapdiamide-c",
   "name": "N-(1-deoxy-β-D-fructopyra… to dapdiamide C",
-  "category": "amino-acid-metabolism",
-  "summary": "A 3-step route from N-(1-deoxy-β-D-fructopyranos-1-yl)-L-leucine betaine to dapdiamide C zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "redox-detox",
+  "summary": "A 2-step route from N-(1-deoxy-β-D-fructopyranos-1-yl)-L-leucine betaine to dapdiamide C zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:77871"
+        "id": "RHEA:77867"
       },
       {
         "db": "ChEBI",
@@ -38,34 +38,6 @@
       }
     },
     {
-      "id": "2s_4_methyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox",
-      "name": "(2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanoate",
-      "short": "4-methyl-2-[(E)-{[(…",
-      "formula": "C12H20NO7",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:228156"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
       "id": "h2o",
       "name": "Water",
       "formula": "H2O",
@@ -91,6 +63,15 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:57427"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     },
     {
@@ -140,49 +121,12 @@
       }
     },
     {
-      "id": "2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y",
-      "name": "(2S)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanedioate",
-      "short": "2-[(E)-{[(2R,3S,4R,…",
-      "formula": "C11H15NO9",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:228150"
-      }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32682"
-      }
-    },
-    {
-      "id": "n_amidino_l_leucine",
-      "name": "N-amidino-L-leucine",
-      "formula": "C7H15N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:232120"
-      }
-    },
-    {
-      "id": "ornithine",
-      "name": "L-Ornithine",
-      "formula": "C5H13N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:46911"
+        "chebi": "CHEBI:15378"
       }
     }
   ],
@@ -193,20 +137,13 @@
       "ec": [
         "6.3.2.47"
       ]
-    },
-    {
-      "id": "ec_2_1_4_4",
-      "name": "valine amidinotransferase",
-      "ec": [
-        "2.1.4.4"
-      ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 = (2S)-4-methyl-2-[(E)-{[(2R,3S,4R...",
-      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 = (2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanoate + H2O2 + H(+)",
+      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 + H2O = 2-dehydro-D-glucose + L-le...",
+      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 + H2O = 2-dehydro-D-glucose + L-leucine + H2O2",
       "substrates": [
         {
           "metabolite": "n_1_deoxy_d_fructopyranos_1_yl_l_leucine_betaine",
@@ -215,52 +152,9 @@
         {
           "metabolite": "o2",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2s_4_methyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:77871"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77871"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "(2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pe...",
-      "equation": "(2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanoate + H2O + H(+) = 2-dehydro-D-glucose + L-leucine",
-      "substrates": [
-        {
-          "metabolite": "2s_4_methyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox",
-          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
@@ -272,25 +166,29 @@
         {
           "metabolite": "leucine",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:77875"
+        "rhea": "RHEA:77867"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77875"
+            "id": "RHEA:77867"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "dapdiamide synthase",
       "equation": "N(3)-fumaramoyl-(S)-2,3-diaminopropanoate + L-leucine + ATP = dapdiamide C + ADP + phosphate + H(+)",
       "ec": "6.3.2.47",
@@ -332,7 +230,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:44352"
       },
@@ -342,94 +240,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:44352"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "(2S)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanedioa...",
-      "equation": "(2S)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanedioate + H2O + H(+) = 2-dehydro-D-glucose + L-glutamate",
-      "substrates": [
-        {
-          "metabolite": "2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_dehydro_d_glucopyranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:77839"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77839"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "valine amidinotransferase",
-      "equation": "L-leucine + L-arginine = N-amidino-L-leucine + L-ornithine",
-      "ec": "2.1.4.4",
-      "substrates": [
-        {
-          "metabolite": "leucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_amidino_l_leucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ornithine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_4_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:82227"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:82227"
           }
         ]
       }

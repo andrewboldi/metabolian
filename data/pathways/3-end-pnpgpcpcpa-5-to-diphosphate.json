@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-end-pnpgpcpcpa-5-to-diphosphate",
   "name": "3'-end pNpGpCpCpA(5−) to diphosphate",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 6-step route from 3'-end pNpGpCpCpA(5−) residue to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -172,6 +172,26 @@
       }
     },
     {
+      "id": "ribonucleotide_ribonucleotide_2",
+      "name": "ribonucleotide-ribonucleotide(2−)",
+      "short": "ribonucleotide-ribo…",
+      "formula": "C10H14O12P2R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:173118"
+      }
+    },
+    {
+      "id": "5_end_ribonucleoside",
+      "name": "5'-end ribonucleoside",
+      "short": "5'-end ribonucleosi…",
+      "formula": "C5H8O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138284"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -182,42 +202,12 @@
       }
     },
     {
-      "id": "epicubenol",
-      "name": "(+)-epicubenol",
-      "formula": "C15H26O",
+      "id": "muurolene",
+      "name": "α-muurolene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61686"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "3_end_2_o_methylribonucleotide_1",
-      "name": "3'-end 2'-O-methylribonucleotide(1−)",
-      "short": "3'-end 2'-O-methylr…",
-      "formula": "C6H10O6PR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74898"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
+        "chebi": "CHEBI:64797"
       }
     },
     {
@@ -254,17 +244,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_64",
-      "name": "(+)-epicubenol synthase",
+      "id": "ec_4_6_1_19",
+      "name": "ribonuclease T2",
       "ec": [
-        "4.2.3.64"
+        "4.6.1.19"
       ]
     },
     {
-      "id": "ec_2_1_1_386",
-      "name": "small RNA 2'-O-methyltransferase",
+      "id": "ec_4_2_3_125",
+      "name": "alpha-muurolene synthase",
       "ec": [
-        "2.1.1.386"
+        "4.2.3.125"
       ]
     }
   ],
@@ -539,12 +529,12 @@
     },
     {
       "id": "r7",
-      "name": "(+)-epicubenol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-epicubenol + diphosphate",
-      "ec": "4.2.3.64",
+      "name": "ribonuclease T2",
+      "equation": "a ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end 3'-phospho-ribonucleotide-RNA + a 5'-end dephospho-ribonucleoside-RNA + H(+)",
+      "ec": "4.6.1.19",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "ribonucleotide_ribonucleotide_2",
           "stoichiometry": 1
         },
         {
@@ -554,56 +544,11 @@
       ],
       "products": [
         {
-          "metabolite": "epicubenol",
+          "metabolite": "3_end_ribonucleotide_3_phosphate_3",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_64"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:29479"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:29479"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "small RNA 2'-O-methyltransferase",
-      "equation": "small RNA 3'-end nucleotide + S-adenosyl-L-methionine = small RNA 3'-end 2'-O-methylnucleotide + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.386",
-      "substrates": [
-        {
-          "metabolite": "3_end_ribonucleotide_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_end_2_o_methylribonucleotide_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
+          "metabolite": "5_end_ribonucleoside",
           "stoichiometry": 1
         },
         {
@@ -613,41 +558,38 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_386"
+          "enzyme": "ec_4_6_1_19"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:37887"
+        "rhea": "RHEA:68052"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37887"
+            "id": "RHEA:68052"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "a tRNA with a 3' CC end + ATP = a tRNA with a 3' CCA end + diphosphate",
-      "equation": "a tRNA with a 3' CC end + ATP = a tRNA with a 3' CCA end + diphosphate",
+      "id": "r8",
+      "name": "alpha-muurolene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = alpha-muurolene + diphosphate",
+      "ec": "4.2.3.125",
       "substrates": [
         {
-          "metabolite": "trna_3_terminal_nucleotidyl_cytidyl_cytidine_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden",
+          "metabolite": "muurolene",
           "stoichiometry": 1
         },
         {
@@ -655,17 +597,61 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_125"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:60012"
+        "rhea": "RHEA:33103"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60012"
+            "id": "RHEA:33103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "a tRNA precursor + 2 CTP = a tRNA with a 3' CC end + 2 diphosphate",
+      "equation": "a tRNA precursor + 2 CTP = a tRNA with a 3' CC end + 2 diphosphate",
+      "substrates": [
+        {
+          "metabolite": "3_end_ribonucleotide_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trna_3_terminal_nucleotidyl_cytidyl_cytidine_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:60008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60008"
           }
         ]
       }

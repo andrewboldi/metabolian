@@ -20,27 +20,39 @@ pathway 5-methyltetrahydropteroyl-to-n6-r-s8-succinyldih "5-methyltetrahydropter
     n6_r_s8_succinyldihydrolipoyl_l_lysine_1
   }
 
-  branch from tetrahydropteroyltri_l_glutamate side left {
-    tetrahydropteroyltri_l_glutamate
-    <-> ec_2_1_1_14 [2.1.1.14] +l_selenohomocysteine +5_methyltetrahydropteroyltri_l_glutamate
-    l_selenomethionine
-  }
-
-  branch from methionine side right {
+  branch from methionine side left {
     methionine
     <-> ec_1_1_99_38 [1.1.99.38] +2_deoxy_scyllo_inosamine +sam +5_deoxyadenosine +hplus
     3_ammonio_2_3_dideoxy_scyllo_inosose
   }
 
-  branch from 3_l_methionyl_adenylyl_zwitterionic_group side left {
+  branch from 3_l_methionyl_adenylyl_zwitterionic_group side right {
     3_l_methionyl_adenylyl_zwitterionic_group
     <-> . +acetyl_coa +coa +hplus
     3_n_acetyl_l_methionyl_adenylyl
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
-    sabinene_hydrate
+    <-> ec_2_5_1_41 [2.5.1.41] +sn_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    sn_3_o_geranylgeranyl_glycerol_1_phosphate
+  }
+
+  branch from thf side right {
+    thf
+    <-> . +methylene_thf +h2o
+    formaldehyde
+  }
+
+  branch from methylene_thf side left {
+    methylene_thf
+    <-> ec_1_5_1_5 [1.5.1.5] +nadp +nadph
+    methenyl_thf
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_36 [3.5.4.36] +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
   }
 }

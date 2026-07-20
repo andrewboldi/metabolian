@@ -20,27 +20,39 @@ pathway scutellarein-to-succinate "scutellarein to succinate" {
     pilosin
   }
 
-  branch from sah side left {
+  branch from scutellarein_7_methyl_ether side left {
+    scutellarein_7_methyl_ether
+    <-> . +sam +sah +hplus
+    cirsimaritin
+  }
+
+  branch from sah side right {
     sah
-    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
-    dtdp_d_ravidosamine
+    <-> ec_2_1_1_208 [2.1.1.208] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
-  branch from ladanein side right {
+  branch from ladanein side left {
     ladanein
-    <-> . +sam +sah
-    scutellarein_7_olate_4_methyl_ether
+    <-> . +apigenin_7_4_dimethyl_ether +fmnh2 +o2 +h2o +hplus
+    fmn
   }
 
-  branch from di_sulfido_diiron side left {
+  branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_6 [1.14.15.6] +di_sulfido_diiron +cholesterol +o2 +hplus +pregnenolone +h2o
-    4_methylpentanal
+    <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20s_23_25_trihydroxyvitamin_d3
   }
 
-  branch from formaldehyde side right {
+  branch from formaldehyde side left {
     formaldehyde
-    <-> . +n3_methylcytidine_5_monophosphate_1 +akg +o2 +succinate +co2
-    cytidine_5_monophosphate_1
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +eriodictyol +akg +o2 +co2
+    taxifolin
   }
 }

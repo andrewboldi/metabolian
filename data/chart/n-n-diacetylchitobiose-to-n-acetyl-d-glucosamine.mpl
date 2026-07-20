@@ -18,13 +18,13 @@ pathway n-n-diacetylchitobiose-to-n-acetyl-d-glucosamine "N,N'-diacetylchitobios
 
   branch from n_acetyl_d_glucosamine side left {
     n_acetyl_d_glucosamine
-    <-> . +utp +udp +hplus
-    n_acetyl_d_glucosamine_6_phosphate
+    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +h2o
+    n4_d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1
   }
 
   branch from acetate side right {
     acetate
-    <-> . +16_17_dihydroxypregnenolone +fmnh2 +o2 +fmn +h2o +hplus
-    16_hydroxydehydroepiandrosterone
+    <-> . +21s_21_acetyl_1_hydroxy_apo_melianone +acetyl_coa +coa +hplus
+    epi_neemfruitin_b
   }
 }

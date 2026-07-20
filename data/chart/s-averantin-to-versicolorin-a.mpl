@@ -28,25 +28,19 @@ pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_84 [1.14.14.84] +linalool +fmnh2 +o2 +h2o +hplus
-    6e_8_oxolinalool
+    <-> ec_1_14_14_78 [1.14.14.78] +phylloquinone +fmnh2 +o2 +h2o +hplus
+    hydroxyphylloquinone
   }
 
-  branch from s_5_oxoaverantin side right {
-    s_5_oxoaverantin
-    <-> ec_1_1_1_352 [1.1.1.352] +nad +nadh +hplus
-    1_s_5_r_5_hydroxyaverantin
-  }
-
-  branch from hydroxyversicolorone side left {
+  branch from hydroxyversicolorone side right {
     hydroxyversicolorone
     <-> ec_1_1_1_353 [1.1.1.353] +nadp +nadph +hplus
     2s_versicolorone
   }
 
-  branch from 2s_3s_versiconal_hemiacetal_acetate side right {
-    2s_3s_versiconal_hemiacetal_acetate
-    <-> ec_1_1_1_353 [1.1.1.353] +nadp +nadph +hplus
-    3s_versiconol_acetate
+  branch from acetate side left {
+    acetate
+    <-> . +7_acetyl_epi_neemfruitin_b +hydrogen_donor +h2o +hydrogen_acceptor +hplus
+    1s_3br_4r_5ar_9ar_9br_11as_1_4r_5_2s_3_3_dimeth
   }
 }

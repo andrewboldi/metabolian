@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "primary-linear-alkyl-to-hydrogen-donor",
+  "name": "primary linear alkyl… to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from primary linear alkyl sulfate ester(1−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:67908"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:157685"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "primary_linear_alkyl_sulfate_ester",
+      "name": "primary linear alkyl sulfate ester",
+      "short": "primary linear…",
+      "formula": "CH2O4SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:157685"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "primary_alcohol",
+      "name": "primary alcohol",
+      "formula": "CH3OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15734"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17478"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_6_21",
+      "name": "linear primary-alkylsulfatase",
+      "ec": [
+        "3.1.6.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_20",
+      "name": "alkan-1-ol dehydrogenase (acceptor)",
+      "ec": [
+        "1.1.99.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "linear primary-alkylsulfatase",
+      "equation": "a primary linear alkyl sulfate ester + H2O = a primary alcohol + sulfate + H(+)",
+      "ec": "3.1.6.21",
+      "substrates": [
+        {
+          "metabolite": "primary_linear_alkyl_sulfate_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_6_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:67908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alkan-1-ol dehydrogenase (acceptor)",
+      "equation": "a primary alcohol + A = an aldehyde + AH2",
+      "ec": "1.1.99.20",
+      "substrates": [
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14685"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(6)-methyl-L-lysyl(4)-[histone H3] + A + H2O = L-lysyl(4)-[histone H3] + formaldehyde ...",
+      "equation": "N(6)-methyl-L-lysyl(4)-[histone H3] + A + H2O = L-lysyl(4)-[histone H3] + formaldehyde + AH2",
+      "substrates": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:60256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60256"
+          }
+        ]
+      }
+    }
+  ]
+}

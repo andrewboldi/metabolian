@@ -18,15 +18,9 @@ pathway cdp-dipalmitoyl-sn-glycer-to-1-2-dihexadecanoyl "CDP-dipalmitoyl-sn-glyc
     1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
   }
 
-  branch from 1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino side left {
-    1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino
-    <-> . +h2o +pi
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_d_myo_in
-  }
-
-  branch from cytidine_5_monophosphate side right {
+  branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_6 [2.4.3.6] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety
+    <-> . +gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1 +cmp_n_acetyl_neuraminate +hplus
+    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
   }
 }

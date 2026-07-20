@@ -29,4 +29,10 @@ pathway 3s-3-hydroxyoleoyl-coa-to-o-5z-tetradecenoyl-l "(3S)-3-hydroxyoleoyl-CoA
     <-> . +nad +nadh +hplus
     3r_9z_hydroxyoctadec_9_enoyl_coa
   }
+
+  branch from 2e_7z_hexadecadienoyl_coa side right {
+    2e_7z_hexadecadienoyl_coa
+    <-> . +h2o
+    3r_7z_hydroxyhexadec_7_enoyl_coa
+  }
 }

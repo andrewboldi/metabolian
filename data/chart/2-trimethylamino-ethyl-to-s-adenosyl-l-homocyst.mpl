@@ -20,8 +20,8 @@ pathway 2-trimethylamino-ethyl-to-s-adenosyl-l-homocyst "[2-(trimethylamino)ethy
 
   branch from succinate side left {
     succinate
-    <-> ec_2_8_3_15 [2.8.3.15] +r_2_benzylsuccinate +succinyl_coa
-    r_2_benzylsuccinyl_coa
+    <-> ec_1_14_11_26 [1.14.11.26] +deacetoxycephalosporin_c +akg +o2 +co2
+    deacetylcephalosporin_c
   }
 
   branch from betaine side right {
@@ -38,7 +38,7 @@ pathway 2-trimethylamino-ethyl-to-s-adenosyl-l-homocyst "[2-(trimethylamino)ethy
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_28 [2.1.1.28] +phenylethanolaminium +sam +hplus
-    n_methylphenylethanolaminium
+    <-> ec_2_1_1_77 [2.1.1.77] +l_isoaspartate +sam
+    l_isoaspartate_methyl_ester
   }
 }

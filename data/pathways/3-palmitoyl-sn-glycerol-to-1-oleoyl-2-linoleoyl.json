@@ -1,0 +1,228 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-palmitoyl-sn-glycerol-to-1-oleoyl-2-linoleoyl",
+  "name": "3-palmitoyl-sn-glycerol to 1-oleoyl-2-linoleoyl-sn-g…",
+  "category": "other",
+  "summary": "A 2-step route from 3-palmitoyl-sn-glycerol to 1-oleoyl-2-linoleoyl-sn-glycero-3-phosphocholine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77727"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64757"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_palmitoyl_sn_glycerol",
+      "name": "3-palmitoyl-sn-glycerol",
+      "short": "3-palmitoyl-sn-glyc…",
+      "formula": "C19H38O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64757"
+      }
+    },
+    {
+      "id": "1_2_dioleoyl_sn_glycero_3_phosphocholine",
+      "name": "1,2-dioleoyl-sn-glycero-3-phosphocholine",
+      "short": "1,2-dioleoyl-sn-gly…",
+      "formula": "C44H84NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74669"
+      }
+    },
+    {
+      "id": "1_oleoyl_3_palmitoyl_sn_glycerol",
+      "name": "1-oleoyl-3-palmitoyl-sn-glycerol",
+      "short": "1-oleoyl-3-palmitoy…",
+      "formula": "C37H70O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75867"
+      }
+    },
+    {
+      "id": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+      "name": "1-O-oleoyl-sn-glycero-3-phosphocholine",
+      "short": "1-O-oleoyl-sn-glyce…",
+      "formula": "C26H52NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28610"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "1_oleoyl_2_linoleoyl_sn_glycero_3_phosphocholine",
+      "name": "1-oleoyl-2-linoleoyl-sn-glycero-3-phosphocholine",
+      "short": "1-oleoyl-2-linoleoy…",
+      "formula": "C44H82NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74670"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "2_oleoylglycerol",
+      "name": "2-oleoylglycerol",
+      "formula": "C21H40O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73990"
+      }
+    },
+    {
+      "id": "1_2_dioleoylglycerol",
+      "name": "1,2-dioleoylglycerol",
+      "formula": "C39H72O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52323"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-hexadecanoyl-sn-glycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine = 1-(...",
+      "equation": "3-hexadecanoyl-sn-glycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine = 1-(9Z)-octadecenoyl-3-hexadecanoyl-sn-glycerol + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "3_palmitoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dioleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_oleoyl_3_palmitoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77727"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + (9Z,12Z)-octadecadienoyl-CoA = 1-(9Z)...",
+      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + (9Z,12Z)-octadecadienoyl-CoA = 1-(9Z)-octadecenoyl-2-(9Z,12Z)-octadecadienoyl-sn-glycero-3-phosphocholine + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_oleoyl_2_linoleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37391"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-(9Z-octadecenoyl)-glycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine = 1...",
+      "equation": "2-(9Z-octadecenoyl)-glycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine = 1,2-di-(9Z-octadecenoyl)-glycerol + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "2_oleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dioleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dioleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44244"
+          }
+        ]
+      }
+    }
+  ]
+}

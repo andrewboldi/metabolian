@@ -22,7 +22,13 @@ pathway 3r-7z-hydroxyoctadec-7-to-cis-tetradec-3-enoyl "(3R,7Z)-hydroxyoctadec-7
     cis_tetradec_3_enoyl_coa
   }
 
-  branch from 3_oxo_5z_hexadec_5_enoyl_coa side left {
+  branch from 3_oxo_7z_octadec_7_enoyl_coa side left {
+    3_oxo_7z_octadec_7_enoyl_coa
+    <-> . +nad +nadh +hplus
+    3s_hydroxy_7z_octadec_7_enoyl_coa
+  }
+
+  branch from 3_oxo_5z_hexadec_5_enoyl_coa side right {
     3_oxo_5z_hexadec_5_enoyl_coa
     <-> . +nad +nadh +hplus
     3r_5z_hydroxyhexadec_5_enoyl_coa

@@ -21,10 +21,4 @@ pathway n-octanoylsphingosine-to-n-15z-tetracosenoylsphi "N-octanoylsphingosineâ
     <-> . +c8_d_glucosyl_n_acylsphingosine +cholesterol
     cholesteryl_d_glucoside
   }
-
-  branch from octanoate side right {
-    octanoate
-    <-> . +iron +h2o +fe2 +hplus
-    octanal
-  }
 }

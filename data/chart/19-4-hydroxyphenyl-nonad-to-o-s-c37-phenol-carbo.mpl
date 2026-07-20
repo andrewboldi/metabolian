@@ -18,8 +18,8 @@ pathway 19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo "19-(4-hydroxyphenyl)no
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_42 [4.2.3.42] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    aphidicolan_16_ol
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    curcumene
   }
 
   branch from o_s_19_4_hydroxyphenyl_nonadecanoyl_pantetheine side right {

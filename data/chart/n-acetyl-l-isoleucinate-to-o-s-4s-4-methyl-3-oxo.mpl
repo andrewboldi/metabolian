@@ -18,27 +18,9 @@ pathway n-acetyl-l-isoleucinate-to-o-s-4s-4-methyl-3-oxo "N-acetyl-L-isoleucinat
     o_s_4s_4_methyl_3_oxohexanoyl_pantetheine_4_phos
   }
 
-  branch from isoleucine side left {
-    isoleucine
-    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
-    n_amidino_l_isoleucine
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +3_17_dihydroxy_5_pregnan_20_one +fmnh2 +o2 +fmn +h2o +hplus
-    androsterone
-  }
-
   branch from nh3 side left {
     nh3
-    <-> . +dehydroglycine +h2o
-    glyoxylate
-  }
-
-  branch from mbutyryl_coa side right {
-    mbutyryl_coa
-    <-> . +fad +hplus +fadh2
-    tiglyl_coa
+    <-> . +erythro_3_methyl_l_aspartate
+    mesaconate
   }
 }

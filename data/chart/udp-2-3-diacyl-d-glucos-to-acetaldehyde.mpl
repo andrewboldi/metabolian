@@ -18,7 +18,7 @@ pathway udp-2-3-diacyl-d-glucos-to-acetaldehyde "UDP-2,3-diacyl-α-D-glucos… t
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_47 [1.14.11.47] +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
+    <-> ec_1_14_11_58 [1.14.11.58] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +akg +o2 +co2
+    n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine
   }
 }

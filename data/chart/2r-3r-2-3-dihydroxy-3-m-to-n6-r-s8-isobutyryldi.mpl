@@ -24,8 +24,8 @@ pathway 2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi "(2R,3R)-2,3-dihydroxy-3
 
   branch from kiv side right {
     kiv
-    <-> . +nadp +nadph +hplus
-    r_2_hydroxy_3_methylbutyrate
+    <-> . +valine +glyoxylate
+    glycine
   }
 
   branch from isoleucine side left {

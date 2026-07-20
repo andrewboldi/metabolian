@@ -18,13 +18,19 @@ pathway petroselinamide-to-1-oleoyl-2-6z-octadecen "petroselinamide to 1-oleoyl-
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_12 [1.4.1.12] +2r_4s_2_4_diazaniumylpentanoate +nad +h2o +nadh +hplus
-    r_2_amino_4_oxopentanoic_acid
+    <-> . +spermidine +o2 +h2o +h2o2
+    4_ammoniobutyl_3_oxopropyl_azanium
   }
 
-  branch from ppi side right {
+  branch from 6z_octadecenoyl_coa side right {
+    6z_octadecenoyl_coa
+    <-> . +fad +hplus +fadh2
+    2e_6z_octadecadi_2_6_enoyl_coa
+  }
+
+  branch from ppi side left {
     ppi
-    <-> . +serine +atp
-    l_seryl_amp
+    <-> ec_4_2_3_112 [4.2.3.112] +gpp +h2o
+    r_terpineol
   }
 }

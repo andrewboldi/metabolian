@@ -18,7 +18,7 @@ pathway tricetin-to-s-adenosyl-l-homocysteine "tricetin to S-adenosyl-L-homocyst
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a34 +sam
-    gibberellin_a34_methyl_ester
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

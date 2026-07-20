@@ -138,51 +138,59 @@
       }
     },
     {
-      "id": "1_oleoyl_sn_glycero_3_phosphate",
-      "name": "1-oleoyl-sn-glycero-3-phosphate",
-      "short": "1-oleoyl-sn-glycero…",
-      "formula": "C21H39O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:74544"
-      }
-    },
-    {
-      "id": "1_oleoyl_2_heptadecanoyl_sn_glycero_3_phosphate",
-      "name": "1-oleoyl-2-heptadecanoyl-sn-glycero-3-phosphate",
-      "short": "1-oleoyl-2-heptadec…",
-      "formula": "C38H71O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:74558"
-      }
-    },
-    {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:57692"
       }
     },
     {
-      "id": "sabinene",
-      "name": "(−)-sabinene",
-      "formula": "C10H16",
+      "id": "trans_2_heptadecenoyl_coa",
+      "name": "trans-2-heptadecenoyl-CoA",
+      "short": "trans-2-heptadeceno…",
+      "formula": "C38H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77551"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "e_bisabolene",
+      "name": "(E)-γ-bisabolene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50028"
+        "chebi": "CHEBI:49239"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_109",
-      "name": "(-)-sabinene synthase",
+      "id": "ec_4_2_3_59",
+      "name": "(E)-gamma-bisabolene synthase",
       "ec": [
-        "4.2.3.109"
+        "4.2.3.59"
       ]
     }
   ],
@@ -338,57 +346,61 @@
     },
     {
       "id": "r4",
-      "name": "heptadecanoyl-CoA + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphate = 1-(9Z)-octadecenoyl-2-...",
-      "equation": "heptadecanoyl-CoA + 1-(9Z-octadecenoyl)-sn-glycero-3-phosphate = 1-(9Z)-octadecenoyl-2-heptadecanoyl-sn-glycero-3-phosphate + CoA",
+      "name": "heptadecanoyl-CoA + FAD + H(+) = trans-2-heptadecenoyl-CoA + FADH2",
+      "equation": "heptadecanoyl-CoA + FAD + H(+) = trans-2-heptadecenoyl-CoA + FADH2",
       "substrates": [
         {
           "metabolite": "heptadecanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_oleoyl_sn_glycero_3_phosphate",
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_oleoyl_2_heptadecanoyl_sn_glycero_3_phosphate",
+          "metabolite": "trans_2_heptadecenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "fadh2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:37155"
+        "rhea": "RHEA:40863"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37155"
+            "id": "RHEA:40863"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(-)-sabinene synthase",
-      "equation": "(2E)-geranyl diphosphate = (1S,5S)-sabinene + diphosphate",
-      "ec": "4.2.3.109",
+      "name": "(E)-gamma-bisabolene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (E)-gamma-bisabolene + diphosphate",
+      "ec": "4.2.3.59",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sabinene",
+          "metabolite": "e_bisabolene",
           "stoichiometry": 1
         },
         {
@@ -398,20 +410,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_109"
+          "enzyme": "ec_4_2_3_59"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25508"
+        "rhea": "RHEA:28298"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25508"
+            "id": "RHEA:28298"
           }
         ]
       }

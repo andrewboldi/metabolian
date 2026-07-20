@@ -16,21 +16,15 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-1-9z-octadec-9-enoy "1,2-dioleoyl-sn-glycer
     1_9z_octadec_9_enoyl_2_hexadecanoyl_sn_glycero_3
   }
 
-  branch from 1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol side left {
-    1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> . +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc +coa
-    oleoyl_coa
-  }
-
-  branch from 1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc side right {
+  branch from 1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc side left {
     1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
     <-> . +lauroyl_coa +coa
     1_oleoyl_2_lauroyl_sn_glycero_3_phospho_1_sn_gly
   }
 
-  branch from oleate side left {
+  branch from oleate side right {
     oleate
-    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
-    sn_glycero_3_phosphoserine
+    <-> . +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
   }
 }

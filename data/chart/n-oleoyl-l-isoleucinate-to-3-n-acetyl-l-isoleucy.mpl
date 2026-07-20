@@ -18,19 +18,19 @@ pathway n-oleoyl-l-isoleucinate-to-3-n-acetyl-l-isoleucy "N-oleoyl-L-isoleucinat
 
   branch from isoleucine side left {
     isoleucine
-    <-> ec_3_5_1_127 [3.5.1.127] +n_7_isojasmonyl_l_isoleucinate +h2o
-    7_isojasmonate
+    <-> ec_5_1_1_21 [5.1.1.21]
+    d_alloisoleucine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +n_9z_octadecenoyl_sphinganine +h2o
-    sphinganine
+    <-> . +s_s_bis_2_oleoylglycero_1_phosphate +h2o +hplus
+    s_s_2_oleoylglycero_1_phospho_1_glycerol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_43 [4.2.3.43] +geranylgeranyl_diphosphate
-    fusicocca_2_10_14_diene
+    <-> ec_2_5_1_96 [2.5.1.96] +fpp
+    15_cis_4_4_diapophytoene
   }
 }

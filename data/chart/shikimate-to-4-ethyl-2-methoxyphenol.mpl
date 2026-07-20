@@ -24,8 +24,8 @@ pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphen
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_55 [1.14.14.55] +quinine +fmnh2 +o2 +h2o +hplus
-    3_hydroxyquininium
+    <-> ec_1_14_14_23 [1.14.14.23] +cholesterol +fmnh2 +o2 +h2o +hplus
+    hydroxycholesterol_7a
   }
 
   branch from shikimate side right {
@@ -36,13 +36,25 @@ pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphen
 
   branch from trans_caffeate side left {
     trans_caffeate
-    <-> . +udp_d_glucose +udp
-    1_caffeoyl_d_glucose
+    <-> . +atp +coa +amp +ppi
+    trans_caffeoyl_coa
   }
 
   branch from trans_ferulate side right {
     trans_ferulate
-    <-> . +udp_d_glucuronate +udp +hplus
-    e_4_o_d_glucuronosyl_ferulate
+    <-> . +h2o +coa +hplus
+    trans_feruloyl_coa
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_26 [2.1.1.26] +2_iodophenol +sam +hplus
+    1_iodo_2_methoxybenzene
+  }
+
+  branch from 2_methoxy_4_vinylphenol side right {
+    2_methoxy_4_vinylphenol
+    <-> ec_1_13_11_94 [1.13.11.94] +o2 +formaldehyde
+    vanillin
   }
 }

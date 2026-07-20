@@ -159,60 +159,32 @@
       }
     },
     {
-      "id": "dump",
-      "name": "dUMP",
-      "formula": "C9H10N2O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:133902"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:61961"
       }
     },
     {
-      "id": "5_methyltriphosphate_guanosine_ribonucleotide_4",
-      "name": "5'-methyltriphosphate-guanosine-ribonucleotide(4−)",
-      "short": "5'-methyltriphospha…",
-      "formula": "C16H21N5O20P4R",
-      "charge": -4,
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:142789"
+        "chebi": "CHEBI:61929"
       }
     },
     {
-      "id": "5_end_gtp_ribonucleotide_5",
-      "name": "5'-end GTP-ribonucleotide(5−)",
-      "short": "5'-end GTP-ribonucl…",
-      "formula": "C15H18N5O20P4R",
-      "charge": -5,
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:138278"
-      }
-    },
-    {
-      "id": "l_histidine",
-      "name": "L-histidine",
-      "formula": "C6H7N3O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29979"
-      }
-    },
-    {
-      "id": "3s_3_hydroxy_l_histidine",
-      "name": "(3S)-3-hydroxy-L-histidine",
-      "short": "3-hydroxy-L-histidi…",
-      "formula": "C6H7N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138021"
+        "chebi": "CHEBI:61976"
       }
     },
     {
@@ -243,6 +215,26 @@
       "xrefs": {
         "chebi": "CHEBI:36655"
       }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
+      }
     }
   ],
   "enzymes": [
@@ -261,17 +253,17 @@
       ]
     },
     {
-      "id": "ec_3_5_4_38",
-      "name": "single-stranded DNA cytosine deaminase",
+      "id": "ec_1_14_11_69",
+      "name": "[histone H3]-trimethyl-L-lysine(36) demethylase",
       "ec": [
-        "3.5.4.38"
+        "1.14.11.69"
       ]
     },
     {
-      "id": "ec_1_14_11_n4",
-      "name": "ankyrin-repeat-histidine dioxagenase",
+      "id": "ec_2_1_1_202",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
       "ec": [
-        "1.14.11.n4"
+        "2.1.1.202"
       ]
     }
   ],
@@ -549,60 +541,68 @@
     },
     {
       "id": "r6",
-      "name": "single-stranded DNA cytosine deaminase",
-      "equation": "a 2'-deoxycytidine in single-stranded DNA + H2O + H(+) = a 2'-deoxyuridine in single-stranded DNA + NH4(+)",
-      "ec": "3.5.4.38",
+      "name": "[histone H3]-trimethyl-L-lysine(36) demethylase",
+      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 2 2-oxoglutarate + 2 O2 = N(6)-methyl-L-lysyl(36)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
+      "ec": "1.14.11.69",
       "substrates": [
         {
-          "metabolite": "2_deoxycytidine_5_monophosphate_1",
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "akg",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "o2",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "dump",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
+          "metabolite": "formaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_38"
+          "enzyme": "ec_1_14_11_69"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:50948"
+        "rhea": "RHEA:60236"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50948"
+            "id": "RHEA:60236"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "a 5'-end methyltriphosphate-guanosine-ribonucleotide-snRNA + 2-oxoglutarate + O2 = a 5'...",
-      "equation": "a 5'-end methyltriphosphate-guanosine-ribonucleotide-snRNA + 2-oxoglutarate + O2 = a 5'-end triphospho-guanosine-ribonucleotide-snRNA + formaldehyde + succinate + CO2 + H(+)",
+      "name": "N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 2-oxoglutarate + O2 = N(6),N(6)-dim...",
+      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 2-oxoglutarate + O2 = N(6),N(6)-dimethyl-L-lysyl(36)-[histone H3] + formaldehyde + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "5_methyltriphosphate_guanosine_ribonucleotide_4",
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
           "stoichiometry": 1
         },
         {
@@ -616,7 +616,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_end_gtp_ribonucleotide_5",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
@@ -630,82 +630,25 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:58784"
+        "rhea": "RHEA:60240"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58784"
+            "id": "RHEA:60240"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "equation": "L-histidyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-histidyl-[ankyrin-repeat domain protein] + succinate + CO2",
-      "ec": "1.14.11.n4",
-      "substrates": [
-        {
-          "metabolite": "l_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_3_hydroxy_l_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_n4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:54264"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:54264"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
       "name": "a 5-methyl-2'-deoxycytidine in DNA + L-ascorbate + O2 = a (8S,9S)-5-glyceryl-2'-deoxycy...",
       "equation": "a 5-methyl-2'-deoxycytidine in DNA + L-ascorbate + O2 = a (8S,9S)-5-glyceryl-2'-deoxycytidine in DNA + glyoxylate + CO2",
       "substrates": [
@@ -737,7 +680,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:60132"
       },
@@ -747,6 +690,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:60132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
+      "equation": "cytidine(40) in tRNA precursor + S-adenosyl-L-methionine = 5-methylcytidine(40) in tRNA precursor + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.202",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_202"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:42944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42944"
           }
         ]
       }

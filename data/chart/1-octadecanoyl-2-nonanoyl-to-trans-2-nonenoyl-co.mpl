@@ -22,21 +22,21 @@ pathway 1-octadecanoyl-2-nonanoyl-to-trans-2-nonenoyl-co "1-octadecanoyl-2-nonan
     nonanal
   }
 
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side right {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_1z_octadecenyl_sn_glycero_3_phosphoethanolamin +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
-    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
-  }
-
-  branch from nonanoyl_coa side left {
+  branch from nonanoyl_coa side right {
     nonanoyl_coa
     <-> . +l_serine +coa
     o_nonanoyl_l_serine
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_47 [4.2.3.47] +fpp
-    trans_farnesene
+    <-> ec_4_2_3_88 [4.2.3.88] +fpp
+    viridiflorene
+  }
+
+  branch from trans_2_nonenoyl_coa side right {
+    trans_2_nonenoyl_coa
+    <-> .
+    3e_nonenoyl_coa
   }
 }

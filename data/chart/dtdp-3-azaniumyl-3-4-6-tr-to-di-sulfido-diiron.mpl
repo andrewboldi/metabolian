@@ -18,8 +18,8 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_105 [2.1.1.105] +n_benzoyl_4_hydroxyanthranilate +sam +hplus
-    n_benzoyl_4_methoxyanthranilate
+    <-> ec_2_1_1_171 [2.1.1.171] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 
   branch from 10_deoxymethymycin side right {
@@ -30,13 +30,13 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from dtdp side left {
     dtdp
-    <-> . +dttp +2_deoxyguanosine_5_monophosphate
-    dgdp
+    <-> ec_2_4_1_381 [2.4.1.381] +d_mannopyranosyl_1_2_d_mannopyranosyl_1_3_d_gal +dtdp_6_deoxy_l_mannose +hplus
+    l_rha_1_2_d_man_1_2_d_man_1_3_d_gal_ditrans_oct
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_17_7_4 [1.17.7.4] +ipp +h2o +di_sulfido_diiron +hplus
-    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+    <-> ec_1_14_15_21 [1.14.15.21] +zeaxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    all_trans_violaxanthin
   }
 }

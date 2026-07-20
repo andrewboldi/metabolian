@@ -26,8 +26,8 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-2-arachidonoyl-sn-g "1-oleoyl-sn-glycero-3-
 
   branch from oleate side right {
     oleate
-    <-> . +h2o +coa +hplus
-    oleoyl_coa
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    sn_glycero_3_phosphoserine
   }
 
   branch from 2_arachidonoylglycerol side left {
@@ -40,5 +40,11 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-2-arachidonoyl-sn-g "1-oleoyl-sn-glycero-3-
     1d_myo_inositol_1_phosphate
     <-> . +1_phosphatidyl_1d_myo_inositol +h2o +hplus
     dag
+  }
+
+  branch from 2_arachidonoyl_sn_glycero_3_phosphate side left {
+    2_arachidonoyl_sn_glycero_3_phosphate
+    <-> . +1_acyl_2_arachidonoyl_sn_glycero_3_phosphate +h2o +hplus
+    fatty-acid
   }
 }

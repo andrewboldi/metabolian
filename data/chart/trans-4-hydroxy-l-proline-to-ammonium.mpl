@@ -18,13 +18,13 @@ pathway trans-4-hydroxy-l-proline-to-ammonium "trans-4-hydroxy-L-proline to ammo
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +1_4_benzoquinones +hydrogen_acceptor
-    hydroquinones
+    <-> . +cyathatriol +hydrogen_acceptor
+    cyathin_a3
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +l_threo_3_phenylserine
-    keto_phenylpyruvate
+    <-> . +5_hydroxyoctan_4_aminium +nad +h2o +nadh +hplus
+    5_hydroxy_4_octanone
   }
 }

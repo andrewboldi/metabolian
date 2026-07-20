@@ -18,13 +18,13 @@ pathway l-fucose-to-diphosphate "α-L-fucose to diphosphate" {
 
   branch from gdp_l_fucose side left {
     gdp_l_fucose
-    <-> ec_2_4_1_68 [2.4.1.68] +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 +gdp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    <-> ec_1_1_1_271 [1.1.1.271] +nadp +nadph +hplus
+    gdp_4_dehydro_6_deoxy_d_mannose
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_1 [2.5.1.1] +ipp +dmapp
-    gpp
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
   }
 }

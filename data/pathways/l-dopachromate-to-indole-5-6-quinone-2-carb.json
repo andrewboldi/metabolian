@@ -1,0 +1,156 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-dopachromate-to-indole-5-6-quinone-2-carb",
+  "name": "L-dopachromate to indole-5,6-quinone-2-carb…",
+  "category": "cofactor-vitamin-metabolism",
+  "summary": "A 2-step route from L-dopachromate to indole-5,6-quinone-2-carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13041"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57509"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_dopachromate",
+      "name": "L-dopachromate",
+      "formula": "C9H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57509"
+      }
+    },
+    {
+      "id": "5_6_dihydroxyindole_2_carboxylate",
+      "name": "5,6-dihydroxyindole-2-carboxylate",
+      "short": "5,6-dihydroxyindole…",
+      "formula": "C9H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16875"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "indole_5_6_quinone_2_carboxylate",
+      "name": "indole-5,6-quinone-2-carboxylate",
+      "short": "indole-5,6-quinone-…",
+      "formula": "C9H4NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:177869"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_3_12",
+      "name": "L-dopachrome isomerase",
+      "ec": [
+        "5.3.3.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-dopachrome isomerase",
+      "equation": "L-dopachrome = 5,6-dihydroxyindole-2-carboxylate",
+      "ec": "5.3.3.12",
+      "substrates": [
+        {
+          "metabolite": "l_dopachromate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_6_dihydroxyindole_2_carboxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13041"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2 5,6-dihydroxyindole-2-carboxylate + O2 = 2 indole-5,6-quinone-2-carboxylate + 2 H2O",
+      "equation": "2 5,6-dihydroxyindole-2-carboxylate + O2 = 2 indole-5,6-quinone-2-carboxylate + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "5_6_dihydroxyindole_2_carboxylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indole_5_6_quinone_2_carboxylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:68388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68388"
+          }
+        ]
+      }
+    }
+  ]
+}

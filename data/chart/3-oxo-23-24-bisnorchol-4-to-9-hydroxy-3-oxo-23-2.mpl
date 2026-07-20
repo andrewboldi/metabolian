@@ -24,7 +24,7 @@ pathway 3-oxo-23-24-bisnorchol-4-to-9-hydroxy-3-oxo-23-2 "3-oxo-23,24-bisnorchol
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_113 [4.2.3.113] +gpp
-    terpinolene
+    <-> ec_4_2_3_55 [4.2.3.55] +fpp
+    s_bisabolene
   }
 }

@@ -18,7 +18,7 @@ pathway cis-cis-2-ammonio-3-3-ox-to-ammonium "cis,cis-2-ammonio-3-(3-ox… to am
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_3 [1.4.3.3] +d_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
+    <-> . +1s_3_methyl_cyclohexylammonium +nadp +h2o +nadph +hplus
+    3_methylcyclohexanone
   }
 }

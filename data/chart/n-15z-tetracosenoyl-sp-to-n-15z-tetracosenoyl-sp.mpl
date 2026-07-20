@@ -20,8 +20,8 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
 
   branch from phosphocholine side left {
     phosphocholine
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_2_dipalmitoyl_sn_glycerol
+    <-> . +1_lauroyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_lauroyl_sn_glycerol
   }
 
   branch from 15z_tetracosenoate side right {
@@ -32,13 +32,19 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
 
   branch from sphingosine side left {
     sphingosine
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    sphinga_4e_14z_dienine
+    <-> . +icosanoyl_coa +coa +hplus
+    n_icosanoylsphingosine
   }
 
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    3_oxo_17z_hexacosenoyl_coa
+    <-> . +nadph +hplus +nadp
+    2e_15z_tetracosadienoyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_72 [4.2.3.72] +fpp
+    gurjunene
   }
 }

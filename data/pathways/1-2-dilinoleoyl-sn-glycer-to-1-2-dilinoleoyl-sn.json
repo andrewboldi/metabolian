@@ -1,0 +1,243 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-dilinoleoyl-sn-glycer-to-1-2-dilinoleoyl-sn",
+  "name": "1,2-dilinoleoyl-sn-glycer… to 1,2-dilinoleoyl-sn-glycer…",
+  "category": "other",
+  "summary": "A 2-step route from 1,2-dilinoleoyl-sn-glycerol to 1,2-dilinoleoyl-sn-glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40355"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77127"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_dilinoleoyl_sn_glycerol",
+      "name": "1,2-dilinoleoyl-sn-glycerol",
+      "short": "1,2-dilinoleoyl-sn-…",
+      "formula": "C39H68O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77127"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "1_2_dilinoleoyl_sn_glycero_3_phosphate",
+      "name": "1,2-dilinoleoyl-sn-glycero-3-phosphate",
+      "short": "1,2-dilinoleoyl-sn-…",
+      "formula": "C39H67O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77128"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "1_2_di_9z_12z_octadecadienoyl_3_d_galactosyl_sn",
+      "name": "1,2-di-(9Z,12Z-octadecadienoyl)-3-(β-D-galactosyl)-sn-glycerol",
+      "short": "1,2-di-(9Z,12Z-octa…",
+      "formula": "C45H78O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90506"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycerol + ATP = 1,2-di-(9Z,12Z-octadecadienoyl)-sn-...",
+      "equation": "1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycerol + ATP = 1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + ADP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_dilinoleoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dilinoleoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40355"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + H2O = 1,2-di-(9Z,12Z-octadecad...",
+      "equation": "1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + H2O = 1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycerol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "1_2_dilinoleoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dilinoleoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycerol + UDP-alpha-D-galactose = 1,2-di-(9Z,12Z-oc...",
+      "equation": "1,2-di-(9Z,12Z-octadecadienoyl)-sn-glycerol + UDP-alpha-D-galactose = 1,2-di-(9Z,12Z-octadecadienoyl)-3-beta-D-galactosyl-sn-glycerol + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_dilinoleoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_di_9z_12z_octadecadienoyl_3_d_galactosyl_sn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48492"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48492"
+          }
+        ]
+      }
+    }
+  ]
+}

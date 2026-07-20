@@ -1,0 +1,180 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-ribitol-1-phosphate-to-d-ribofuranose",
+  "name": "D-ribitol 1-phosphate to D-ribofuranose",
+  "category": "other",
+  "summary": "A 2-step route from D-ribitol 1-phosphate(2−) to D-ribofuranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47652"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87817"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_ribitol_1_phosphate",
+      "name": "D-ribitol 1-phosphate",
+      "short": "D-ribitol 1-P",
+      "formula": "C5H11O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:87817"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ribitol",
+      "name": "ribitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15963"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "d_ribofuranose",
+      "name": "D-ribofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47013"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-ribitol 1-phosphate + H2O = ribitol + phosphate",
+      "equation": "D-ribitol 1-phosphate + H2O = ribitol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "d_ribitol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ribitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribitol + NADP(+) = D-ribose + NADPH + H(+)",
+      "equation": "ribitol + NADP(+) = D-ribose + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ribitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59932"
+          }
+        ]
+      }
+    }
+  ]
+}

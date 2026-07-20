@@ -32,13 +32,13 @@ pathway sedoheptulose-to-2-oxoglutarate "sedoheptulose to 2-oxoglutarate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_6_2_1_28 [6.2.1.28] +25r_3_7_dihydroxy_5_cholestan_26_oate +atp +coa +amp
-    25r_3_7_dihydroxy_5_cholestan_26_oyl_coa
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
   }
 
   branch from akg side left {
     akg
-    <-> ec_2_6_1_54 [2.6.1.54] +pyridoxamine_5_phosphate +plp
-    d_glutamate
+    <-> ec_1_1_1_42 [1.1.1.42] +nadp +co2 +nadph
+    d_threo_isocitrate
   }
 }

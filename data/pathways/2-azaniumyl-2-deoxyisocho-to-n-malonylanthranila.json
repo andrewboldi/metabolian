@@ -1,0 +1,279 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-azaniumyl-2-deoxyisocho-to-n-malonylanthranila",
+  "name": "2-azaniumyl-2-deoxyisocho… to N-malonylanthranilate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 2-azaniumyl-2-deoxyisochorismate to N-malonylanthranilate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55680"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58792"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_azaniumyl_2_deoxyisochorismate",
+      "name": "2-azaniumyl-2-deoxyisochorismate",
+      "short": "2-azaniumyl-2-deoxy…",
+      "formula": "C10H10NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58792"
+      }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "n_malonylanthranilate",
+      "name": "N-malonylanthranilate",
+      "short": "N-malonylanthranila…",
+      "formula": "C10H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16872"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine",
+      "name": "(3R)-3-(1H-Indol-3-ylmethyl)-3H-1,4-benzodiazepine-2,5-diol",
+      "short": "3-(1H-Indol-3-ylmet…",
+      "formula": "C18H15N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188914"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_113",
+      "name": "anthranilate N-malonyltransferase",
+      "ec": [
+        "2.3.1.113"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2S)-2-amino-4-deoxychorismate = anthranilate + pyruvate + H(+)",
+      "equation": "(2S)-2-amino-4-deoxychorismate = anthranilate + pyruvate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "anthranilate N-malonyltransferase",
+      "equation": "anthranilate + malonyl-CoA = N-malonylanthranilate + CoA",
+      "ec": "2.3.1.113",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_malonylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_113"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17557"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "anthranilate + L-tryptophan + 2 ATP = (R)-benzodiazepinedione + 2 AMP + 2 diphosphate +...",
+      "equation": "anthranilate + L-tryptophan + 2 ATP = (R)-benzodiazepinedione + 2 AMP + 2 diphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73003"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73003"
+          }
+        ]
+      }
+    }
+  ]
+}

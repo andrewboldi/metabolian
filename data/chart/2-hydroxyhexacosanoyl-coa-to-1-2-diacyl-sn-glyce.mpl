@@ -26,8 +26,8 @@ pathway 2-hydroxyhexacosanoyl-coa-to-1-2-diacyl-sn-glyce "2-hydroxyhexacosanoyl-
 
   branch from dag side right {
     dag
-    <-> ec_4_6_1_13 [4.6.1.13] +1_phosphatidyl_1d_myo_inositol
-    1d_myo_inositol_1_2_cyclic_phosphate
+    <-> ec_2_4_1_184 [2.4.1.184] +1_2_diacyl_3_d_galactosyl_sn_glycerol
+    3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl
   }
 
   branch from 1_2_diacyl_sn_glycerol_3_phosphate side left {

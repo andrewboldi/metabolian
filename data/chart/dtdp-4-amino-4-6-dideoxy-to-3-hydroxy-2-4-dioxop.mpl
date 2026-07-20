@@ -20,27 +20,27 @@ pathway dtdp-4-amino-4-6-dideoxy-to-3-hydroxy-2-4-dioxop "dTDP-4-amino-4,6-dideo
     3_hydroxy_2_4_dioxopentyl_phosphate
   }
 
-  branch from dtdp_3_dehydro_4_6_dideoxy_d_glucose side left {
-    dtdp_3_dehydro_4_6_dideoxy_d_glucose
-    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
-    glutamate
-  }
-
-  branch from 5_deoxyadenosine side right {
+  branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
-    2_methyladenosine_5_monophosphate_1
+    <-> . +glycine +fmnh2 +sam +fmnh +methionine +hplus
+    glycyl_radical
   }
 
-  branch from methionine side left {
+  branch from methionine side right {
     methionine
-    <-> . +met_ala +h2o
-    alanine
+    <-> . +ctp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
+    3_deoxy_3_4_didehydro_ctp
   }
 
-  branch from hydrogen_acceptor side right {
+  branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_8_ol +h2o +hydrogen_donor
-    8_hydroxyquinolin_2_1h_one
+    <-> . +3_hydroxychol_5_en_24_oyl_coa +hydrogen_donor
+    3_hydroxychola_5_22_dien_24_oyl_coa
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +pyrazinecarboxamide +h2o
+    pyrazine_2_carboxylate
   }
 }

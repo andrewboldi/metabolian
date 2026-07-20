@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dioxidophosphate-to-di-sulfido-diiron",
   "name": "dioxidophosphate to di-μ-sulfido-diiron",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from dioxidophosphate(1−) to di-μ-sulfido-diiron(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -127,13 +127,12 @@
       }
     },
     {
-      "id": "7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp",
-      "name": "7-[(3S)-3-amino-3-carboxypropyl]wyosine 5'-monophosphate(1−)",
-      "short": "7-[(3S)-3-amino-3-c…",
-      "formula": "C18H22N6O9P",
-      "charge": -1,
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:73543"
+        "chebi": "CHEBI:57379"
       }
     },
     {
@@ -146,59 +145,31 @@
       }
     },
     {
-      "id": "7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo",
-      "name": "7-(2-hydroxy-3-amino-3-carboxypropyl)wyosine 5'-monophosphate(1−)",
-      "short": "7-(2-hydroxy-3-amin…",
-      "formula": "C18H22N6O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:73603"
-      }
-    },
-    {
-      "id": "coenzyme_b",
-      "name": "coenzyme B",
-      "formula": "C11H19NO7PS",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58596"
-      }
-    },
-    {
-      "id": "coenzyme_m",
-      "name": "coenzyme M",
-      "formula": "C2H5O3S2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58319"
-      }
-    },
-    {
-      "id": "com_s_s_cob",
-      "name": "CoM-S-S-CoB",
-      "formula": "C13H22NO10PS3",
+      "id": "2_hydroxypalmitoyl_coa",
+      "name": "2-hydroxypalmitoyl-CoA",
+      "short": "2-hydroxypalmitoyl-…",
+      "formula": "C37H62N7O18P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58411"
+        "chebi": "CHEBI:74115"
       }
     },
     {
-      "id": "1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol",
-      "name": "(1S)-1-hydroxy-23-oxo-24,25,26,27-tetranorcalciol",
-      "short": "1-hydroxy-23-oxo-24…",
-      "formula": "C23H34O3",
-      "charge": 0,
+      "id": "narbomycin",
+      "name": "narbomycin",
+      "formula": "C28H48NO7",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:47820"
+        "chebi": "CHEBI:76801"
       }
     },
     {
-      "id": "calcitroate",
-      "name": "calcitroate",
-      "formula": "C23H33O4",
-      "charge": -1,
+      "id": "pikromycin",
+      "name": "pikromycin",
+      "formula": "C28H48NO8",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58715"
+        "chebi": "CHEBI:76800"
       }
     }
   ],
@@ -211,24 +182,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_42",
-      "name": "tRNA(Phe) (7-(3-amino-3-carboxypropyl)wyosine(37)-C(2))-hydroxylase",
+      "id": "ec_1_14_15_33",
+      "name": "pikromycin synthase",
       "ec": [
-        "1.14.11.42"
-      ]
-    },
-    {
-      "id": "ec_1_8_98_5",
-      "name": "H2:CoB-CoM heterodisulfide,ferredoxin reductase",
-      "ec": [
-        "1.8.98.5"
-      ]
-    },
-    {
-      "id": "ec_1_14_15_16",
-      "name": "vitamin D3 24-hydroxylase",
-      "ec": [
-        "1.14.15.16"
+        "1.14.15.33"
       ]
     }
   ],
@@ -370,12 +327,11 @@
     },
     {
       "id": "r4",
-      "name": "tRNA(Phe) (7-(3-amino-3-carboxypropyl)wyosine(37)-C(2))-hydroxylase",
-      "equation": "7-[(3S)-3-amino-3-carboxypropyl]wyosine(37) in tRNA(Phe) + 2-oxoglutarate + O2 = 7-(2-hydroxy-3-amino-3-carboxypropyl)wyosine(37) in tRNA(Phe) + succinate + CO2",
-      "ec": "1.14.11.42",
+      "name": "hexadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyhexadecanoyl-CoA + succinate + CO2",
+      "equation": "hexadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyhexadecanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp",
+          "metabolite": "palmitoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -389,7 +345,7 @@
       ],
       "products": [
         {
-          "metabolite": "7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo",
+          "metabolite": "2_hydroxypalmitoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -401,91 +357,29 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_42"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:37899"
+        "rhea": "RHEA:54596"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37899"
+            "id": "RHEA:54596"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "H2:CoB-CoM heterodisulfide,ferredoxin reductase",
-      "equation": "coenzyme B + coenzyme M + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+) = coenzyme M-coenzyme B heterodisulfide + 2 H2 + 2 oxidized [2Fe-2S]-[ferredoxin]",
-      "ec": "1.8.98.5",
+      "name": "pikromycin synthase",
+      "equation": "narbomycin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pikromycin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.33",
       "substrates": [
         {
-          "metabolite": "coenzyme_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coenzyme_m",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "com_s_s_cob",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_8_98_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:55748"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:55748"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "vitamin D3 24-hydroxylase",
-      "equation": "(1S)-1-hydroxy-23-oxo-24,25,26,27-tetranorcalciol + 2 reduced [adrenodoxin] + O2 + H(+) = calcitroate + 2 oxidized [adrenodoxin] + H2O",
-      "ec": "1.14.15.16",
-      "substrates": [
-        {
-          "metabolite": "1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol",
+          "metabolite": "narbomycin",
           "stoichiometry": 1
         },
         {
@@ -498,12 +392,12 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "calcitroate",
+          "metabolite": "pikromycin",
           "stoichiometry": 1
         },
         {
@@ -517,20 +411,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_15_16"
+          "enzyme": "ec_1_14_15_33"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24988"
+        "rhea": "RHEA:39887"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24988"
+            "id": "RHEA:39887"
           }
         ]
       }

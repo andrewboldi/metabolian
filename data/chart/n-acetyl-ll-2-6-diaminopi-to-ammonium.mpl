@@ -18,8 +18,8 @@ pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to a
 
   branch from acetate side left {
     acetate
-    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
-    1_o_octadecyl_sn_glycero_3_phosphocholine
+    <-> . +n_acetyl_l_aspartate +h2o
+    aspartate
   }
 
   branch from meso_2_6_diaminopimelic_acid_dizwitterion side right {
@@ -30,7 +30,7 @@ pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to a
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_67 [3.5.1.67] +4_methylene_l_glutamine +h2o
-    4_methylene_l_glutamate
+    <-> ec_4_3_1_24 [4.3.1.24] +l_phenylalanine
+    trans_cinnamate
   }
 }

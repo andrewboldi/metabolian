@@ -1,0 +1,244 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "c30-botryococcene-to-s-adenosyl-l-homocysteine-3",
+  "name": "C30 botryococcene to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from C30 botryococcene to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34667"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:70786"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "c30_botryococcene",
+      "name": "C30 botryococcene",
+      "formula": "C30H50",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70786"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "20_methyl_21_22_didehydro_20_21_dihydrobotryococ",
+      "name": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene",
+      "short": "20-methyl-21,22-did…",
+      "formula": "C31H52",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70864"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
+      "short": "3,20-dimethyl-1,2,2…",
+      "formula": "C32H54",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70865"
+      }
+    },
+    {
+      "id": "n_demethylindolmycin",
+      "name": "N-demethylindolmycin",
+      "formula": "C13H14N3O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:91178"
+      }
+    },
+    {
+      "id": "indolmycin",
+      "name": "indolmycin",
+      "formula": "C14H16N3O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:91179"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_328",
+      "name": "N-demethylindolmycin N-methyltransferase",
+      "ec": [
+        "2.1.1.328"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "C30 botryococcene + S-adenosyl-L-methionine = 20-methyl-21,22-didehydro-20,21-dihydrobo...",
+      "equation": "C30 botryococcene + S-adenosyl-L-methionine = 20-methyl-21,22-didehydro-20,21-dihydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "c30_botryococcene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_methyl_21_22_didehydro_20_21_dihydrobotryococ",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34667"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-d...",
+      "equation": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "20_methyl_21_22_didehydro_20_21_dihydrobotryococ",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34663"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-demethylindolmycin N-methyltransferase",
+      "equation": "N-demethylindolmycin + S-adenosyl-L-methionine = indolmycin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.328",
+      "substrates": [
+        {
+          "metabolite": "n_demethylindolmycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indolmycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_328"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24726"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24726"
+          }
+        ]
+      }
+    }
+  ]
+}

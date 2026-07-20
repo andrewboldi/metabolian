@@ -16,15 +16,21 @@ pathway 3-oxoorientin-to-s-adenosyl-l-homocysteine "3''-oxoorientin to S-adenosy
     velutin
   }
 
-  branch from luteolin_7_olate side left {
+  branch from 1_5_anhydro_d_erythro_hex_1_en_3_ulose side left {
+    1_5_anhydro_d_erythro_hex_1_en_3_ulose
+    <-> . +luteolin_7_olate
+    3_dehydroisoorientin
+  }
+
+  branch from luteolin_7_olate side right {
     luteolin_7_olate
     <-> . +udp_d_glucose +udp +hplus
     isoorientin
   }
 
-  branch from sah side right {
+  branch from sah side left {
     sah
-    <-> ec_2_1_1_231 [2.1.1.231] +4_hydroxyflavanones +sam +hplus
-    4_methoxyflavanones
+    <-> ec_2_1_1_218 [2.1.1.218] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 }

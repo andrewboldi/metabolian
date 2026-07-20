@@ -18,31 +18,31 @@ pathway tripalmitin-to-palmitoyl-coa "tripalmitin to palmitoyl-CoA" {
     e_hexadec_2_enoate
     <-> . +atp +coa -amp -ppi
     trans_hexadecenoyl_coa
-    <-> . +nadph +hplus -nadp
+    <-> . +nadh +hplus -nad
     palmitoyl_coa
   }
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    choline_alfoscerate
+    <-> . +9z_12z_octadecadien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
+    1_9z_12z_octadecadienylglycerone_3_phosphate
   }
 
   branch from hexadecanal side right {
     hexadecanal
-    <-> . +nadp +nadph +hplus
+    <-> ec_1_1_1_164 [1.1.1.164] +nad +nadh +hplus
     hexadecan_1_ol
   }
 
-  branch from trans_hexadecenoyl_coa side left {
-    trans_hexadecenoyl_coa
-    <-> . +h2o
-    hydroxyhexadecanoyl_coa
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
+    ditrans_polycis_tetradecaprenyl_diphosphate
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> ec_2_3_1_139 [2.3.1.139] +ecdysone +coa
+    ecdysone_palmitate
   }
 }

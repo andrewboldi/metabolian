@@ -26,7 +26,7 @@ pathway n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp "N4-[α-D-mannosyl-(1→2)-α-…
 
   branch from n_acetyl_d_glucosamine side right {
     n_acetyl_d_glucosamine
-    <-> . +o2 +h2o2
-    n_acetyl_d_glucosamino_1_5_lactone
+    <-> . +gtp +gdp +hplus
+    n_acetyl_d_glucosamine_6_phosphate
   }
 }

@@ -20,7 +20,7 @@ pathway prenyl-diphosphate-to-r-r-chrysanthemate "prenyl diphosphate to (R,R)-ch
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_88 [4.2.3.88] +fpp
-    viridiflorene
+    <-> ec_4_2_3_158 [4.2.3.158] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    spiroviolene
   }
 }

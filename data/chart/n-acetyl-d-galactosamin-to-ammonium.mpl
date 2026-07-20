@@ -20,19 +20,13 @@ pathway n-acetyl-d-galactosamin-to-ammonium "N-acetyl-β-D-galactosamin… to am
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> . +o2 +h2o2
-    n_acetyl_d_galactosamino_1_5_lactone
+    <-> ec_1_1_3_29 [1.1.3.29] +o2 +h2o +h2o2 +hplus
+    n_acetyl_d_galactosaminate
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +ac_o_9_sialylglycoconjugate_anion +h2o +hplus
-    sialylglycoconjugate_anion
-  }
-
-  branch from nh3 side left {
+  branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_45 [3.5.4.45] +ammeline +h2o +hplus
-    ammelide
+    <-> . +l_cystine +o2 +h2o +h2o2
+    2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop
   }
 }

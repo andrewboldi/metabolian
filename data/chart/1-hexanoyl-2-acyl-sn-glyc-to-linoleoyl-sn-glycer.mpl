@@ -18,25 +18,25 @@ pathway 1-hexanoyl-2-acyl-sn-glyc-to-linoleoyl-sn-glycer "1-hexanoyl-2-acyl-sn-g
 
   branch from hexanoate side left {
     hexanoate
-    <-> . +o2 +h2o +h2o2 +hplus
-    hexanal
+    <-> . +n6_hexanoyl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side right {
     2_acyl_sn_glycero_3_phosphocholine
-    <-> ec_2_3_1_251 [2.3.1.251] +a_lipid_iva +phosphatidylcholine
-    a_lipid_ivb
+    <-> . +1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano +phosphatidylcholine +hplus
+    n_acyl_1_1z_alkenyl_2_acyl_sn_glycero_3_phosphoe
   }
 
   branch from choline_alfoscerate side left {
     choline_alfoscerate
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_z_alk_1_enyl_2_palmitoyl_sn_glycero_3_phosphoe
   }
 
   branch from phosphatidylcholine side right {
     phosphatidylcholine
-    <-> . +cholesterol +1_o_acyl_sn_glycero_3_phosphocholine
-    cholesteryl_ester
+    <-> . +n_hexadecanoylphytosphingosine +dag
+    n_hexadecanoylphytosphingosine_1_phosphocholine
   }
 }

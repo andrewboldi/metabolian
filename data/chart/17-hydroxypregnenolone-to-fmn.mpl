@@ -18,7 +18,7 @@ pathway 17-hydroxypregnenolone-to-fmn "17α-hydroxypregnenolone to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate
+    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
+    2s_2_hydroxynaringenin
   }
 }

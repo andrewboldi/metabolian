@@ -28,13 +28,13 @@ pathway d-manp-1-2-d-manp-to-l-glutamate "β-D-Manp-(1→2)-β-D-Manp-(… to L-
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> ec_1_1_3_40 [1.1.3.40] +o2 +h2o2
-    d_mannitol
+    <-> . +n4_d_man_1_3_d_gal_1_4_d_glcnac_1_2_d_man_1_6_d +h2o
+    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_6_d_man_1_4_d
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_80 [2.6.1.80] +s_s_s_nicotianamine_trizwitterion +akg
-    3_deamino_3_oxonicotianaminium
+    <-> ec_6_3_1_17 [6.3.1.17] +citrate +atp +adp +pi +hplus
+    citrylglutamate
   }
 }

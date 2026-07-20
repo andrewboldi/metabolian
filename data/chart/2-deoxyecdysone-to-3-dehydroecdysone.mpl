@@ -16,21 +16,15 @@ pathway 2-deoxyecdysone-to-3-dehydroecdysone "2-deoxyecdysone… to 3-dehydroecd
     3_dehydroecdysone
   }
 
-  branch from 2_deoxyecdysone side left {
-    2_deoxyecdysone
-    <-> ec_1_14_15_44 [1.14.15.44] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    2_22_dideoxyecdysone
-  }
-
-  branch from ecdysone side right {
+  branch from ecdysone side left {
     ecdysone
-    <-> ec_2_3_1_139 [2.3.1.139] +palmitoyl_coa +coa
-    ecdysone_palmitate
+    <-> . +h2o +pi
+    ecdysone_22_phosphate
   }
 
-  branch from di_sulfido_diiron side left {
+  branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_15 [1.14.15.15] +triol_ca +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_7_12_trihydroxy_5_cholestan_26_oate
+    <-> . +25_hydroxy_24_oxocalciol +di_sulfido_diiron +o2 +hplus +h2o
+    23_s_25_dihydroxy_24_oxovitamin_d3
   }
 }

@@ -30,8 +30,8 @@ pathway vinylacetyl-coa-to-o-s-hexanoylpantetheine "vinylacetyl-CoA to O-(S-hexa
 
   branch from crotonoyl_coa side left {
     crotonoyl_coa
-    <-> ec_4_2_1_55 [4.2.1.55] +h2o
-    r_3_hydroxybutanoyl_coa
+    <-> . +butyryl_coa +hydrogen_acceptor
+    hydrogen_donor
   }
 
   branch from n6_e_but_2_enoyl_l_lysine side right {
@@ -42,13 +42,25 @@ pathway vinylacetyl-coa-to-o-s-hexanoylpantetheine "vinylacetyl-CoA to O-(S-hexa
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +succinyl_coa +coa +hplus
-    n6_succinyl_l_lysine_1
+    <-> ec_2_3_1_108 [2.3.1.108] +acetyl_coa +coa +hplus
+    n6_acetyl_l_lysine
   }
 
   branch from butenoyl-acp side right {
     butenoyl-acp
-    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_butanoic_acid +holo-acp +hplus +h2o
-    glycine
+    <-> . +h2o
+    hydroxybutyryl-acp
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_6 [4.2.3.6] +fpp
+    trichodiene
+  }
+
+  branch from o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine side right {
+    o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine
+    <-> . +malonyl-acp +hplus +co2 +coa
+    butyryl_coa
   }
 }

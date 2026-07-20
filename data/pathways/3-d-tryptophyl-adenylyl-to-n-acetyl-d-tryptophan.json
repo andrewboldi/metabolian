@@ -1,0 +1,374 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-d-tryptophyl-adenylyl-to-n-acetyl-d-tryptophan",
+  "name": "3'-(D-tryptophyl)adenylyl… to N-acetyl-D-tryptophanate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 3'-(D-tryptophyl)adenylyl(1−) group to N-acetyl-D-tryptophanate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69799"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:188450"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_d_tryptophyl_adenylyl_1_group",
+      "name": "3'-(D-tryptophyl)adenylyl(1−) group",
+      "short": "3'-(D-tryptophyl)ad…",
+      "formula": "C21H22N7O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188450"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "d_tryptophan",
+      "name": "D-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57719"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_d_tryptophanate",
+      "name": "N-acetyl-D-tryptophanate",
+      "short": "N-acetyl-D-tryptoph…",
+      "formula": "C13H13N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57877"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_l_threonyl_adenylyl_1_group",
+      "name": "3'-(L-threonyl)adenylyl(1−) group",
+      "short": "3'-(L-threonyl)aden…",
+      "formula": "C14H19N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78534"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_formyl_d_kynurenine",
+      "name": "N-formyl-D-kynurenine",
+      "short": "N-formyl-D-kynureni…",
+      "formula": "C11H12N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60051"
+      }
+    },
+    {
+      "id": "n_acetyl_l_tryptophanate",
+      "name": "N-acetyl-L-tryptophanate",
+      "short": "N-acetyl-L-tryptoph…",
+      "formula": "C13H13N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143877"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_96",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "ec": [
+        "3.1.1.96"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_34",
+      "name": "D-tryptophan N-acetyltransferase",
+      "ec": [
+        "2.3.1.34"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_52",
+      "name": "indoleamine 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.52"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "equation": "D-tryptophanyl-tRNA(Trp) + H2O = tRNA(Trp) + D-tryptophan",
+      "ec": "3.1.1.96",
+      "substrates": [
+        {
+          "metabolite": "3_d_tryptophyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_tryptophan",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-tryptophan N-acetyltransferase",
+      "equation": "D-tryptophan + acetyl-CoA = N-acetyl-D-tryptophan + CoA + H(+)",
+      "ec": "2.3.1.34",
+      "substrates": [
+        {
+          "metabolite": "d_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_tryptophanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-threonyl-tRNA(Val) + H2O = tRNA(Val) + L-threonine",
+      "equation": "L-threonyl-tRNA(Val) + H2O = tRNA(Val) + L-threonine",
+      "substrates": [
+        {
+          "metabolite": "3_l_threonyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:74231"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "indoleamine 2,3-dioxygenase",
+      "equation": "D-tryptophan + O2 = N-formyl-D-kynurenine",
+      "ec": "1.13.11.52",
+      "substrates": [
+        {
+          "metabolite": "d_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_formyl_d_kynurenine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_52"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:14189"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14189"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-acetyl-L-tryptophan = N-acetyl-D-tryptophan",
+      "equation": "N-acetyl-L-tryptophan = N-acetyl-D-tryptophan",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_l_tryptophanate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_tryptophanate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:60568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60568"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -34,13 +34,13 @@ pathway 11z-14z-3-oxoicosa-11-1-to-hydrogen-acceptor "(11Z,14Z)-3-oxoicosa-11,1â
 
   branch from arachidonoyl_coa side left {
     arachidonoyl_coa
-    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
-    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s
+    <-> . +1_palmitoyl_sn_glycerol_3_phosphate +coa
+    1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +ajmalicine +fmnh2 +o2 +hydrogen_donor +fmn +h2o +hplus
-    serpentine
+    <-> . +terremutin +hydrogen_donor
+    terreate
   }
 }

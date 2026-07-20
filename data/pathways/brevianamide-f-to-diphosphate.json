@@ -259,61 +259,112 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "icosanoate",
+      "name": "icosanoate",
+      "formula": "C20H39O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:32360"
       }
     },
     {
-      "id": "muurolene",
-      "name": "γ-muurolene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:64798"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "progesterone",
-      "name": "progesterone",
-      "formula": "C21H30O2",
-      "charge": 0,
+      "id": "icosanoyl_amp",
+      "name": "icosanoyl-AMP",
+      "formula": "C30H51N5O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17026"
+        "chebi": "CHEBI:142979"
       }
     },
     {
-      "id": "11_deoxycorticosterone",
-      "name": "11-deoxycorticosterone",
-      "short": "11-deoxycorticoster…",
-      "formula": "C21H30O3",
+      "id": "fenbendazole",
+      "name": "fenbendazole",
+      "formula": "C15H13N3O2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16973"
+        "chebi": "CHEBI:77092"
       }
     },
     {
-      "id": "n_methyl_l_histidine",
-      "name": "Nα-methyl-L-histidine",
-      "short": "Nα-methyl-L-histidi…",
-      "formula": "C7H11N3O2",
+      "id": "oxfendazole",
+      "name": "oxfendazole",
+      "formula": "C15H13N3O3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75895"
+        "chebi": "CHEBI:35812"
       }
     },
     {
-      "id": "n_n_dimethyl_l_histidine",
-      "name": "Nα,Nα-dimethyl-L-histidine",
-      "short": "Nα,Nα-dimethyl-L-hi…",
-      "formula": "C8H13N3O2",
+      "id": "ribonucleotide",
+      "name": "ribonucleotide",
+      "formula": "C5H7O6PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90675"
+      }
+    },
+    {
+      "id": "2_o_methylribonucleotide_1",
+      "name": "2'-O-methylribonucleotide(1−)",
+      "short": "2'-O-methylribonucl…",
+      "formula": "C6H9O6PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90676"
+      }
+    },
+    {
+      "id": "gardenin_b",
+      "name": "gardenin B",
+      "formula": "C19H18O7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57610"
+        "chebi": "CHEBI:79628"
+      }
+    },
+    {
+      "id": "nevadensin_7_olate",
+      "name": "nevadensin-7-olate",
+      "formula": "C18H15O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192756"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "preandiloid_a",
+      "name": "preandiloid A",
+      "formula": "C25H34O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232432"
+      }
+    },
+    {
+      "id": "preandiloid_b",
+      "name": "preandiloid B",
+      "formula": "C25H32O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232433"
       }
     }
   ],
@@ -375,17 +426,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_126",
-      "name": "gamma-muurolene synthase",
+      "id": "ec_1_14_14_73",
+      "name": "albendazole monooxygenase (sufoxide-forming)",
       "ec": [
-        "4.2.3.126"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_16",
-      "name": "steroid 21-monooxygenase",
-      "ec": [
-        "1.14.14.16"
+        "1.14.14.73"
       ]
     }
   ],
@@ -863,18 +907,25 @@
     },
     {
       "id": "r10",
-      "name": "gamma-muurolene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = gamma-muurolene + diphosphate",
-      "ec": "4.2.3.126",
+      "name": "eicosanoate + ATP + H(+) = icosanoyl-AMP + diphosphate",
+      "equation": "eicosanoate + ATP + H(+) = icosanoyl-AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "icosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "muurolene",
+          "metabolite": "icosanoyl_amp",
           "stoichiometry": 1
         },
         {
@@ -882,34 +933,29 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_126"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:33107"
+        "rhea": "RHEA:59192"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33107"
+            "id": "RHEA:59192"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "steroid 21-monooxygenase",
-      "equation": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 21-hydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.16",
+      "name": "albendazole monooxygenase (sufoxide-forming)",
+      "equation": "fenbendazole + reduced [NADPH--hemoprotein reductase] + O2 = fenbendazole S-oxide + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.73",
       "substrates": [
         {
-          "metabolite": "progesterone",
+          "metabolite": "fenbendazole",
           "stoichiometry": 1
         },
         {
@@ -923,7 +969,7 @@
       ],
       "products": [
         {
-          "metabolite": "11_deoxycorticosterone",
+          "metabolite": "oxfendazole",
           "stoichiometry": 1
         },
         {
@@ -941,31 +987,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_16"
+          "enzyme": "ec_1_14_14_73"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:50304"
+        "rhea": "RHEA:55928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50304"
+            "id": "RHEA:55928"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "N(alpha)-methyl-L-histidine + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-hi...",
-      "equation": "N(alpha)-methyl-L-histidine + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-histidine + S-adenosyl-L-homocysteine + H(+)",
+      "name": "a ribonucleotide in rRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in rRN...",
+      "equation": "a ribonucleotide in rRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in rRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "n_methyl_l_histidine",
+          "metabolite": "ribonucleotide",
           "stoichiometry": 1
         },
         {
@@ -975,7 +1021,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_n_dimethyl_l_histidine",
+          "metabolite": "2_o_methylribonucleotide_1",
           "stoichiometry": 1
         },
         {
@@ -990,14 +1036,108 @@
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:38479"
+        "rhea": "RHEA:48628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38479"
+            "id": "RHEA:48628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "gardenin B + 2-oxoglutarate + O2 = nevadensin + formaldehyde + succinate + CO2 + H(+)",
+      "equation": "gardenin B + 2-oxoglutarate + O2 = nevadensin + formaldehyde + succinate + CO2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "gardenin_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nevadensin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:73443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73443"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "preandiloid A + A = preandiloid B + AH2",
+      "equation": "preandiloid A + A = preandiloid B + AH2",
+      "substrates": [
+        {
+          "metabolite": "preandiloid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "preandiloid_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:82627"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82627"
           }
         ]
       }

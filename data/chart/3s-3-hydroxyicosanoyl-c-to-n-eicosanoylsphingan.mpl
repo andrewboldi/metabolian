@@ -18,7 +18,7 @@ pathway 3s-3-hydroxyicosanoyl-c-to-n-eicosanoylsphingan "(3S)-3-hydroxyicosanoyl
 
   branch from icosanoyl_coa side left {
     icosanoyl_coa
-    <-> . +2_oleoylglycerol +coa
-    1_icosanoyl_2_oleoyl_sn_glycerol
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
+    1_palmitoyl_2_icosanoyl_sn_glycero_3_phosphochol
   }
 }

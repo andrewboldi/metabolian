@@ -30,19 +30,19 @@ pathway coenzyme-b-to-n5-formyl-5-6-7-8-tetrahy "coenzyme B to N5-formyl-5,6,7,8
 
   branch from com_s_s_cob side right {
     com_s_s_cob
-    <-> ec_1_8_98_1 [1.8.98.1] +methanophenazine +coenzyme_b +coenzyme_m
-    dihydromethanophenazine
+    <-> ec_1_8_7_3 [1.8.7.3] +coenzyme_b +coenzyme_m +di_sulfido_diiron +hplus
+    di_sulfido_diiron
   }
 
   branch from methanol side left {
     methanol
-    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a +h2o +hplus +co2
-    pyropheophorbide_a_anion
+    <-> ec_3_3_2_14 [3.3.2.14] +2_4_dinitroanisole +h2o +hplus
+    2_4_dinitrophenol
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_5_3_4 [1.5.3.4] +n6_methyl_l_lysinium +o2 +h2o +h2o2
-    l_lysinium
+    <-> ec_1_14_14_34 [1.14.14.34] +methanesulfonate +fmnh2 +o2 +sulfite +h2o +hplus
+    fmn
   }
 }

@@ -24,8 +24,8 @@ pathway phosphate-monoester-to-6-phospho-2-dehydro-d-glu "phosphate monoester…
 
   branch from alcohol side left {
     alcohol
-    <-> ec_3_2_1_149 [3.2.1.149] +6_o_d_xylopyranosyl_d_glucopyranoside +h2o
-    d_xylp_1_6_d_glcp
+    <-> ec_1_11_1_26 [1.11.1.26] +nadh +hplus +nad +h2o
+    peroxol
   }
 
   branch from d_glucose side right {
@@ -42,7 +42,7 @@ pathway phosphate-monoester-to-6-phospho-2-dehydro-d-glu "phosphate monoester…
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_19 [1.3.99.19] +quinoline_4_carboxylate +hydrogen_acceptor +h2o
-    2_oxo_1_2_dihydroquinoline_4_carboxylate
+    <-> ec_1_7_99_1 [1.7.99.1] +hydrogen_acceptor +nh3 +h2o +hplus
+    hydroxylamine
   }
 }

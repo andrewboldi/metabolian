@@ -18,13 +18,13 @@ pathway 6-d-glucosaminyl-1-ph-to-1-acyl-2-hexadecanoyl-s "6-(α-D-glucosaminyl)-
 
   branch from 1_acyl_sn_glycerol_3_phosphate side left {
     1_acyl_sn_glycerol_3_phosphate
-    <-> . +linoleoyl_coa +coa
-    1_acyl_2_linoleoyl_sn_glycero_3_phosphate
+    <-> . +arachidonoyl_coa +coa
+    1_acyl_2_arachidonoyl_sn_glycero_3_phosphate
   }
 
   branch from phosphatidylcholine side right {
     phosphatidylcholine
-    <-> . +1_alkyl_2_acyl_sn_glycerol +2_acyl_sn_glycero_3_phosphocholine
-    1_alkyl_2_3_diacyl_sn_glycerol
+    <-> . +all_trans_retinol +2_acyl_sn_glycero_3_phosphocholine
+    all_trans_retinyl_ester
   }
 }

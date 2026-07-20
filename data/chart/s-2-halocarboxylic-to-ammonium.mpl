@@ -18,27 +18,21 @@ pathway s-2-halocarboxylic-to-ammonium "(S)-2-halocarboxylic… to ammonium" {
     2_oxo_monocarboxylic_acid_anion
   }
 
-  branch from 2s_2_hydroxy_monocarboxylic_acid_anion side left {
-    2s_2_hydroxy_monocarboxylic_acid_anion
-    <-> ec_3_8_1_9 [3.8.1.9] +h2o +halide_anion +hplus
-    r_2_halocarboxylic_acid_anion
-  }
-
-  branch from halide_anion side right {
-    halide_anion
-    <-> ec_1_14_12_13 [1.14.12.13] +2_halobenzoate +nadh +o2 +hplus +co2 +nad
-    catechol
-  }
-
   branch from 2_oxo_monocarboxylic_acid_anion side left {
     2_oxo_monocarboxylic_acid_anion
-    <-> ec_1_1_1_345 [1.1.1.345] +nad +nadh +hplus
+    <-> ec_1_1_1_272 [1.1.1.272] +nadp +nadph +hplus
     2r_2_hydroxy_monocarboxylic_acid_anion
   }
 
   branch from l_amino_acid side right {
     l_amino_acid
-    <-> ec_3_4_13_19 [3.4.13.19] +h2o
-    l_aminoacyl_l_amino_acid
+    <-> . +acetyl_coa +coa +hplus
+    n_acetyl_l_amino_acid_anion
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +ldopa
+    trans_caffeate
   }
 }

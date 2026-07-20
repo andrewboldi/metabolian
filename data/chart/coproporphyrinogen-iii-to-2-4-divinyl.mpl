@@ -24,27 +24,9 @@ pathway coproporphyrinogen-iii-to-2-4-divinyl "coproporphyrinogen III to 2,4-div
     2_4_divinyl_protochlorophyllide_a
   }
 
-  branch from protoporphyrinogen9 side left {
-    protoporphyrinogen9
-    <-> . +hydrogen_acceptor +protoporphyrin9
-    hydrogen_donor
-  }
-
-  branch from protoporphyrin9 side right {
-    protoporphyrin9
-    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrinogen9 +1_4_benzoquinones
-    hydroquinones
-  }
-
   branch from sah side left {
     sah
-    <-> . +c30_botryococcene +sam +hplus
-    20_methyl_21_22_didehydro_20_21_dihydrobotryococ
-  }
-
-  branch from 2_4_divinyl_protochlorophyllide_a side right {
-    2_4_divinyl_protochlorophyllide_a
-    <-> ec_1_3_7_13 [1.3.7.13] +protochlorophyllide +di_sulfido_diiron +hplus
-    di_sulfido_diiron
+    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_b +sam
+    mitomycin_b
   }
 }

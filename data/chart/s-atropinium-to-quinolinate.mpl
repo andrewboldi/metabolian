@@ -24,8 +24,8 @@ pathway s-atropinium-to-quinolinate "(S)-atropinium to quinolinate" {
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_25 [1.14.11.25] +2_deoxymugineate +akg +o2 +co2 +hplus
-    3_epi_3_hydroxy_2_deoxymugineate
+    <-> ec_1_14_11_10 [1.14.11.10] +2_deoxyuridine +akg +o2 +uracil +co2
+    2_deoxy_d_ribono_1_4_lactone
   }
 
   branch from ubiquinol_8 side right {
@@ -36,13 +36,25 @@ pathway s-atropinium-to-quinolinate "(S)-atropinium to quinolinate" {
 
   branch from fumarate side left {
     fumarate
-    <-> ec_4_3_1_1 [4.3.1.1] +aspartate
-    nh3
+    <-> ec_4_3_99_5 [4.3.99.5] +nitrite +hplus
+    2_nitrobutanedioate
   }
 
   branch from ubiquinone_8 side right {
     ubiquinone_8
-    <-> . +ubiquinol_8 +pyruvate
-    dlactate
+    <-> . +malate +ubiquinol_8
+    oxaloacetate
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> ec_1_7_3_6 [1.7.3.6] +o2 +h2o +hplus
+    hydroxylamine
+  }
+
+  branch from iminoaspartate side right {
+    iminoaspartate
+    <-> ec_4_2_1_184 [4.2.1.184] +h2o
+    3s_3_hydroxy_d_aspartate
   }
 }

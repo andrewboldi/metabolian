@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "19e-geissoschizine-to-perakine",
   "name": "(19E)-geissoschizine to perakine",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 5-step route from (19E)-geissoschizine to perakine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -155,42 +155,21 @@
       }
     },
     {
-      "id": "hydroxy_fatty_acid_anion",
-      "name": "ω-hydroxy fatty acid anion",
-      "short": "ω-hydroxy fatty…",
-      "formula": "C2H3O3R",
+      "id": "5_hete",
+      "name": "5-HETE",
+      "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76307"
+        "chebi": "CHEBI:65341"
       }
     },
     {
-      "id": "oxo_fatty_acid_anion",
-      "name": "ω-oxo fatty acid anion",
-      "short": "ω-oxo fatty acid…",
-      "formula": "C2HO3R",
+      "id": "5_20_dihete",
+      "name": "5,20-DiHETE",
+      "formula": "C20H31O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76309"
-      }
-    },
-    {
-      "id": "chlorophyllide_a",
-      "name": "chlorophyllide a",
-      "formula": "C35H32MgN4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:83348"
-      }
-    },
-    {
-      "id": "3_vinylbacteriochlorophyllide_d",
-      "name": "3-vinylbacteriochlorophyllide d",
-      "short": "3-vinylbacteriochlo…",
-      "formula": "C33H31MgN4O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90963"
+        "chebi": "CHEBI:90715"
       }
     },
     {
@@ -248,13 +227,6 @@
       "name": "vinorine hydroxylase",
       "ec": [
         "1.14.14.104"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_100",
-      "name": "chlorophyllide a hydrolase",
-      "ec": [
-        "3.1.1.100"
       ]
     },
     {
@@ -507,11 +479,11 @@
     },
     {
       "id": "r6",
-      "name": "an omega-hydroxy fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-ox...",
-      "equation": "an omega-hydroxy fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-oxo fatty acid + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "name": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + ...",
+      "equation": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 5,20-dihydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "hydroxy_fatty_acid_anion",
+          "metabolite": "5_hete",
           "stoichiometry": 1
         },
         {
@@ -525,7 +497,7 @@
       ],
       "products": [
         {
-          "metabolite": "oxo_fatty_acid_anion",
+          "metabolite": "5_20_dihete",
           "stoichiometry": 1
         },
         {
@@ -534,7 +506,7 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
@@ -544,73 +516,20 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:40123"
+        "rhea": "RHEA:48656"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40123"
+            "id": "RHEA:48656"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "chlorophyllide a hydrolase",
-      "equation": "chlorophyllide a + H2O + H(+) = 8-ethyl-12-methyl-3-vinylbacteriochlorophyllide d + methanol + CO2",
-      "ec": "3.1.1.100",
-      "substrates": [
-        {
-          "metabolite": "chlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_vinylbacteriochlorophyllide_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "methanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_100"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:49184"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:49184"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "perakine reductase",
       "equation": "raucaffrinoline + NADP(+) = perakine + NADPH + H(+)",
       "ec": "1.1.1.317",
@@ -644,7 +563,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:31675"
       },

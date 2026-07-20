@@ -30,8 +30,8 @@ pathway avenacoside-a-to-mycothione "avenacoside A to mycothione" {
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_42 [3.2.1.42] +h2o +gdp +hplus
-    gdp_d_glucose
+    <-> ec_3_2_1_188 [3.2.1.188] +avenacoside_b +h2o
+    26_desglucoavenacoside_b
   }
 
   branch from g6p side right {
@@ -42,13 +42,19 @@ pathway avenacoside-a-to-mycothione "avenacoside A to mycothione" {
 
   branch from 1d_myo_inositol_3_phosphate side left {
     1d_myo_inositol_3_phosphate
-    <-> ec_2_7_8_39 [2.7.8.39] +cdp_2_3_bis_o_phytanyl_sn_glycerol +cytidine_5_monophosphate +hplus
-    1_archaetidyl_1d_myo_inositol_3_phosphate
+    <-> ec_2_7_8_34 [2.7.8.34] +cdp_1l_myo_inositol +cytidine_5_monophosphate +hplus
+    bis_1l_myo_inositol_3_1_phosphate_1_phosphate
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_33 [3.1.1.33] +h2o +glucose +hplus
-    6_o_acetyl_d_glucose
+    <-> ec_3_7_1_1 [3.7.1.1] +oxaloacetate +h2o +hplus
+    oxalate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_8 [4.2.3.8] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    casbene
   }
 }

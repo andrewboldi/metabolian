@@ -24,8 +24,8 @@ pathway 6-methylsalicylate-to-3-hydroxybenzaldehyde "6-methylsalicylate to 3-hyd
 
   branch from fmn side right {
     fmn
-    <-> . +edta +fmnh2 +o2 +glyoxylate +h2o +hplus
-    ethylenediaminetriacetate
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    1_hydroxytestosterone
   }
 
   branch from 3_hydroxybenzaldehyde side left {

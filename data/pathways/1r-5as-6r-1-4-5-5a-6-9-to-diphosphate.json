@@ -124,42 +124,23 @@
       }
     },
     {
-      "id": "1r_1_4_5_10_tetrahydrophenazine_1_carboxylate",
-      "name": "(1R)-1,4,5,10-tetrahydrophenazine-1-carboxylate",
-      "short": "1,4,5,10-tetrahydro…",
-      "formula": "C13H11N2O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:132005"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
+      "id": "exo_bergamotene",
+      "name": "(−)-exo-α-bergamotene",
+      "short": "(−)-exo-α-bergamote…",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "e_e_e_geranylgeraniol",
-      "name": "(E,E,E)-geranylgeraniol",
-      "short": "(E,E,E)-geranylgera…",
-      "formula": "C20H34O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:46762"
+        "chebi": "CHEBI:62756"
       }
     }
   ],
@@ -179,10 +160,10 @@
       ]
     },
     {
-      "id": "ec_3_1_7_5",
-      "name": "geranylgeranyl diphosphate diphosphatase",
+      "id": "ec_4_2_3_81",
+      "name": "exo-alpha-bergamotene synthase",
       "ec": [
-        "3.1.7.5"
+        "4.2.3.81"
       ]
     }
   ],
@@ -357,53 +338,18 @@
     },
     {
       "id": "r5",
-      "name": "(1R,10aS)-1,4,10,10a-tetrahydrophenazine-1-carboxylate = (1R)-1,4,5,10-tetrahydrophenaz...",
-      "equation": "(1R,10aS)-1,4,10,10a-tetrahydrophenazine-1-carboxylate = (1R)-1,4,5,10-tetrahydrophenazine-1-carboxylate",
+      "name": "exo-alpha-bergamotene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (1S,5S,6R)-alpha-bergamotene + diphosphate",
+      "ec": "4.2.3.81",
       "substrates": [
         {
-          "metabolite": "1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1r_1_4_5_10_tetrahydrophenazine_1_carboxylate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:49944"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:49944"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "geranylgeranyl diphosphate diphosphatase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (2E,6E,10E)-geranylgeraniol + diphosphate",
-      "ec": "3.1.7.5",
-      "substrates": [
-        {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "e_e_e_geranylgeraniol",
+          "metabolite": "exo_bergamotene",
           "stoichiometry": 1
         },
         {
@@ -413,20 +359,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_7_5"
+          "enzyme": "ec_4_2_3_81"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:26237"
+        "rhea": "RHEA:31427"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26237"
+            "id": "RHEA:31427"
           }
         ]
       }

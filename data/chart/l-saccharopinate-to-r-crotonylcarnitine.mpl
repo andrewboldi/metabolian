@@ -30,19 +30,31 @@ pathway l-saccharopinate-to-r-crotonylcarnitine "L-saccharopinate to (R)-crotony
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_59 [2.6.1.59] +dtdp_4_amino_4_6_dideoxy_d_galactose +akg
-    dtdp_4_dehydro_6_deoxy_d_glucose
+    <-> ec_1_4_1_3 [1.4.1.3] +nadp +h2o +akg +nadph +hplus
+    nh3
   }
 
   branch from l_2_aminoadipate side left {
     l_2_aminoadipate
-    <-> . +2_oxoadipate +l_kynurenine +h2o
-    kynurenate
+    <-> . +2_oxoadipate +l_kynurenine
+    4_2_aminophenyl_2_4_dioxobutanoate
   }
 
   branch from 2_oxoadipate side right {
     2_oxoadipate
-    <-> ec_1_1_1_172 [1.1.1.172] +nad +nadh +hplus
-    2_hydroxyadipate
+    <-> ec_1_13_11_93 [1.13.11.93] +o2 +co2
+    r_2_hydroxyglutarate
+  }
+
+  branch from glutaryl_coa side left {
+    glutaryl_coa
+    <-> . +o2 +h2o2
+    trans_4_carboxybut_2_enoyl_coa
+  }
+
+  branch from crotonoyl_coa side right {
+    crotonoyl_coa
+    <-> ec_1_3_8_1 [1.3.8.1] +fad +hplus +fadh2
+    butyryl_coa
   }
 }

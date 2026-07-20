@@ -16,19 +16,13 @@ pathway dihydroisopentenyldehydro-to-hydrogen-donor "dihydroisopentenyldehydroâ€
     bisanhydrobacterioruberin
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +cannabigerolate +hydrogen_acceptor
-    cannabichromenate
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_100 [2.5.1.100] +fumigaclavine_a +dmapp
-    fumigaclavine_c
+    <-> . +peregrinol_diphosphate +h2o
+    viteagnusin_d
   }
 
-  branch from bisanhydrobacterioruberin side left {
+  branch from bisanhydrobacterioruberin side right {
     bisanhydrobacterioruberin
     <-> ec_4_2_1_161 [4.2.1.161] +h2o
     bacterioruberin

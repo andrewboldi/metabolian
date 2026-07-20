@@ -1,0 +1,321 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-ammoniopentanamide-to-wortmanamide-a",
+  "name": "5-ammoniopentanamide to wortmanamide A",
+  "category": "other",
+  "summary": "A 2-step route from 5-ammoniopentanamide to wortmanamide A(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15677"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58382"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_ammoniopentanamide",
+      "name": "5-ammoniopentanamide",
+      "formula": "C5H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58382"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_aminopentanoic_acid",
+      "name": "5-aminopentanoic acid",
+      "short": "5-aminopentanoic…",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:356010"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "wortmanamide_a",
+      "name": "wortmanamide A",
+      "formula": "C21H36NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167452"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "1s_2_methyl_cyclohexylammonium",
+      "name": "(1S)-2-methyl-cyclohexylammonium",
+      "short": "2-methyl-cyclohexyl…",
+      "formula": "C7H16N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195387"
+      }
+    },
+    {
+      "id": "2_methylcyclohexanone",
+      "name": "2-methylcyclohexanone",
+      "short": "2-methylcyclohexano…",
+      "formula": "C7H12O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195390"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_30",
+      "name": "5-aminopentanamidase",
+      "ec": [
+        "3.5.1.30"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "5-aminopentanamidase",
+      "equation": "5-aminopentanamide + H2O = 5-aminopentanoate + NH4(+)",
+      "ec": "3.5.1.30",
+      "substrates": [
+        {
+          "metabolite": "5_ammoniopentanamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_aminopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15677"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15677"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5-aminopentanoate + 7 malonyl-CoA + acetyl-CoA + 11 NADPH + 17 H(+) = wortmanamide A + ...",
+      "equation": "5-aminopentanoate + 7 malonyl-CoA + acetyl-CoA + 11 NADPH + 17 H(+) = wortmanamide A + 7 CO2 + 11 NADP(+) + 8 CoA + 6 H2O",
+      "substrates": [
+        {
+          "metabolite": "5_aminopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 17
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "wortmanamide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 6
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:66808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(1S)-2-methyl-cyclohexylamine + NADP(+) + H2O = 2-methylcyclohexanone + NH4(+) + NADPH ...",
+      "equation": "(1S)-2-methyl-cyclohexylamine + NADP(+) + H2O = 2-methylcyclohexanone + NH4(+) + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1s_2_methyl_cyclohexylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylcyclohexanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76907"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76907"
+          }
+        ]
+      }
+    }
+  ]
+}

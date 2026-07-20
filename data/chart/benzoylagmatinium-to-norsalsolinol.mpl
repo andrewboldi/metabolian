@@ -24,25 +24,37 @@ pathway benzoylagmatinium-to-norsalsolinol "benzoylagmatinium to norsalsolinol" 
 
   branch from agmatinium side left {
     agmatinium
-    <-> ec_2_3_1_64 [2.3.1.64] +4_coumaroyl_coa +coa +hplus
-    p_coumaroylagmatine
+    <-> ec_4_1_1_19 [4.1.1.19] +hplus +co2
+    arginine
   }
 
   branch from 4_hydroxybenzoate side right {
     4_hydroxybenzoate
-    <-> ec_6_2_1_27 [6.2.1.27] +atp +coa +amp +ppi
-    4_hydroxybenzoyl_coa
+    <-> ec_4_1_3_40 [4.1.3.40] +pyruvate
+    chorismate
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_88 [1.14.14.88] +formononetin +fmnh2 +o2 +h2o +hplus
-    calycosin
+    <-> . +l_tryptophan +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_tryptophanate
   }
 
   branch from phenol side right {
     phenol
-    <-> . +tyrosine
-    2_ammonioprop_2_enoate
+    <-> ec_4_1_99_2 [4.1.99.2] +tyrosine +h2o +pyruvate
+    nh3
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
+    6_methoxymellein
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_13_179 [1.14.13.179] +theobromine +nadph +o2 +hplus +nadp +h2o
+    7_methylxanthine
   }
 }

@@ -13,7 +13,7 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
     <-> . +n_dodecanoylsphingosine +h2o -sphingosine
     dodecanoate
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    11_hydroxylaurate
+    9_hydroxylaurate
   }
 
   branch from cholesteryl_d_galactoside side left {
@@ -28,15 +28,9 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
     cholesteryl_d_glucoside
   }
 
-  branch from dodecanoate side left {
-    dodecanoate
-    <-> . +2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl +h2o +hplus
-    1_d_galactosyl_monododecanoyl_sn_glycerol
-  }
-
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> . +pregnenolone +fmnh2 +o2 +h2o +hplus
-    7_hydroxypregnenolone
+    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
+    s_nandinine
   }
 }

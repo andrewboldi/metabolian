@@ -36,13 +36,19 @@ pathway 2s-3-sulfopropanediol-to-adp-d-ribose "(2S)-3-sulfopropanediol to ADP-D-
 
   branch from l_argininium side left {
     l_argininium
-    <-> ec_3_9_1_2 [3.9.1.2] +h2o +pi
+    <-> ec_2_7_14_1 [2.7.14.1] +atp +adp +hplus
     n_phospho_l_arginine_1
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_succinyl_l_lysine_1 +nad +h2o +l_lysinium
-    2_o_succinyl_adp_d_ribose
+    <-> . +l_lysinium +nad +hplus
+    6_n_adp_d_ribosyl_l_lysinium_1
+  }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> . +o_adp_d_ribosyl_l_serine_2 +h2o
+    l_serine
   }
 }

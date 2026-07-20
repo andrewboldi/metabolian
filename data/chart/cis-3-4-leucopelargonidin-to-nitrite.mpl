@@ -32,8 +32,8 @@ pathway cis-3-4-leucopelargonidin-to-nitrite "cis-3,4-leucopelargonidin to nitri
 
   branch from fumarate side right {
     fumarate
-    <-> ec_4_2_99_12 [4.2.99.12] +2_carboxylatomethoxy_succinate
-    glycolate
+    <-> ec_4_3_1_1 [4.3.1.1] +aspartate
+    nh3
   }
 
   branch from menaquinone_8 side left {
@@ -46,5 +46,11 @@ pathway cis-3-4-leucopelargonidin-to-nitrite "cis-3,4-leucopelargonidin to nitri
     menaquinol_8
     <-> . +menaquinone_8 +sn_glycerol_3_phosphate
     dhap
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> ec_1_7_7_1 [1.7.7.1] +di_sulfido_diiron +nh3 +h2o +hplus
+    di_sulfido_diiron
   }
 }

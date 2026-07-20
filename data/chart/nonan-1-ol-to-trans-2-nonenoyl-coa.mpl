@@ -20,21 +20,9 @@ pathway nonan-1-ol-to-trans-2-nonenoyl-coa "nonan-1-ol to trans-2-nonenoyl-CoA" 
     trans_2_nonenoyl_coa
   }
 
-  branch from nonanal side left {
-    nonanal
-    <-> . +hydrogen_cyanide
-    2s_2_hydroxydecanenitrile
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_90 [2.5.1.90] +ipp +fpp
-    all_trans_octaprenyl_diphosphate
-  }
-
-  branch from trans_2_nonenoyl_coa side left {
-    trans_2_nonenoyl_coa
-    <-> .
-    3e_nonenoyl_coa
+    <-> ec_4_2_3_100 [4.2.3.100] +fpp
+    bicyclogermacrene
   }
 }

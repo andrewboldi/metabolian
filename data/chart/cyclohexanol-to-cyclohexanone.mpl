@@ -24,7 +24,7 @@ pathway cyclohexanol-to-cyclohexanone "cyclohexanol to cyclohexanone" {
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_36 [1.3.99.36] +c_terminal_l_cys_l_leu_l_val_l_cys_1 +hydrogen_acceptor +h2s +co2
-    c_terminal_l_ala_l_leu_l_valinamide_n_ch_ch_s
+    <-> ec_1_3_99_16 [1.3.99.16] +isoquinoline +hydrogen_acceptor +h2o
+    isoquinolin_1_2h_one
   }
 }

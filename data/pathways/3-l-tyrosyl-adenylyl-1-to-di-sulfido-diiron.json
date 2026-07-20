@@ -1,0 +1,353 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-l-tyrosyl-adenylyl-1-to-di-sulfido-diiron",
+  "name": "3'-(L-tyrosyl)adenylyl(1−… to di-μ-sulfido-diiron",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 3'-(L-tyrosyl)adenylyl(1−) group to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46448"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78536"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_l_tyrosyl_adenylyl_1_group",
+      "name": "3'-(L-tyrosyl)adenylyl(1−) group",
+      "short": "3'-(L-tyrosyl)adeny…",
+      "formula": "C19H21N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78536"
+      }
+    },
+    {
+      "id": "cyclo_l_tyrosyl_l_tyrosyl",
+      "name": "cyclo(L-tyrosyl-L-tyrosyl)",
+      "short": "cyclo(L-tyrosyl-L-t…",
+      "formula": "C18H18N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65063"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "mycocyclosin",
+      "name": "mycocyclosin",
+      "formula": "C18H16N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71596"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_n_acetylglycyl_adenylyl",
+      "name": "3'-(N-acetylglycyl)adenylyl",
+      "short": "3'-(N-acetylglycyl)…",
+      "formula": "C14H17N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232036"
+      }
+    },
+    {
+      "id": "n_acetylglycinate",
+      "name": "N-acetylglycinate",
+      "formula": "C4H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61887"
+      }
+    },
+    {
+      "id": "cortisol",
+      "name": "Cortisol (hydrocortisone)",
+      "short": "Cortisol (hydrocort…",
+      "formula": "C21H30O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17650"
+      }
+    },
+    {
+      "id": "18_hydroxycortisol",
+      "name": "18-hydroxycortisol",
+      "formula": "C21H30O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89455"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_2_21",
+      "name": "cyclo(L-tyrosyl-L-tyrosyl) synthase",
+      "ec": [
+        "2.3.2.21"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_70",
+      "name": "mycocyclosin synthase",
+      "ec": [
+        "1.14.19.70"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cyclo(L-tyrosyl-L-tyrosyl) synthase",
+      "equation": "2 L-tyrosyl-tRNA(Tyr) = cyclo(L-tyrosyl-L-tyrosyl) + 2 tRNA(Tyr)",
+      "ec": "2.3.2.21",
+      "substrates": [
+        {
+          "metabolite": "3_l_tyrosyl_adenylyl_1_group",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclo_l_tyrosyl_l_tyrosyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mycocyclosin synthase",
+      "equation": "cyclo(L-tyrosyl-L-tyrosyl) + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = mycoclysin + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.70",
+      "substrates": [
+        {
+          "metabolite": "cyclo_l_tyrosyl_l_tyrosyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycocyclosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-acetylglycyl-tRNA(Gly) + H2O = N-acetylglycine + tRNA(Gly) + H(+)",
+      "equation": "N-acetylglycyl-tRNA(Gly) + H2O = N-acetylglycine + tRNA(Gly) + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_n_acetylglycyl_adenylyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:81979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cortisol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-hydroxycortisol + 2 oxidized [adr...",
+      "equation": "cortisol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-hydroxycortisol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "cortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "18_hydroxycortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:76019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76019"
+          }
+        ]
+      }
+    }
+  ]
+}

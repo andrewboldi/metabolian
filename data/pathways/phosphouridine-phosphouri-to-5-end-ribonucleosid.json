@@ -1,0 +1,327 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phosphouridine-phosphouri-to-5-end-ribonucleosid",
+  "name": "phosphouridine-phosphouri… to 5'-end ribonucleoside",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from phosphouridine-phosphouridine-phosphoribonucleotide(3−) residue to 5'-end ribonucleoside residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:67732"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:173079"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phosphouridine_phosphouridine_phosphoribonucleot",
+      "name": "phosphouridine-phosphouridine-phosphoribonucleotide(3−)",
+      "short": "phosphouridine-phos…",
+      "formula": "C23H27N4O22P3R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:173079"
+      }
+    },
+    {
+      "id": "3_end_uridine_uridine_2_3_cyclophosphate_3",
+      "name": "3'-end uridine-uridine 2',3'-cyclophosphate(3−)",
+      "short": "3'-end uridine-urid…",
+      "formula": "C18H19N4O18P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:173080"
+      }
+    },
+    {
+      "id": "5_end_ribonucleoside",
+      "name": "5'-end ribonucleoside",
+      "short": "5'-end ribonucleosi…",
+      "formula": "C5H8O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138284"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "5_end_ribonucleotide_2",
+      "name": "5'-end ribonucleotide(2−)",
+      "short": "5'-end ribonucleoti…",
+      "formula": "C5H7O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:138282"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "a_3_terminal_ribonucleotide_3_5_diphosphoguanosi",
+      "name": "a 3'-terminal ribonucleotide 3'-(5'-diphosphoguanosine)(3−)",
+      "short": "a 3'-terminal…",
+      "formula": "C15H19N5O16P3R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:176907"
+      }
+    },
+    {
+      "id": "ribonucleotide_ribonucleotide_2",
+      "name": "ribonucleotide-ribonucleotide(2−)",
+      "short": "ribonucleotide-ribo…",
+      "formula": "C10H14O12P2R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:173118"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "Guanosine 5'-monophosphate (GMP)",
+      "short": "Guanosine 5'-MP…",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58115"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_78",
+      "name": "polynucleotide 5'-hydroxyl-kinase",
+      "ec": [
+        "2.7.1.78"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_33",
+      "name": "polynucleotide 5'-phosphatase",
+      "ec": [
+        "3.1.3.33"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "uridylyl-uridylyl-ribonucleotide-RNA = a 3'-end uridylyl-2',3'-cyclophospho-uridine-RNA...",
+      "equation": "uridylyl-uridylyl-ribonucleotide-RNA = a 3'-end uridylyl-2',3'-cyclophospho-uridine-RNA + a 5'-end dephospho-ribonucleoside-RNA",
+      "substrates": [
+        {
+          "metabolite": "phosphouridine_phosphouridine_phosphoribonucleot",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_end_uridine_uridine_2_3_cyclophosphate_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_end_ribonucleoside",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:67732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "polynucleotide 5'-hydroxyl-kinase",
+      "equation": "a 5'-end dephospho-ribonucleoside-RNA + ATP = a 5'-end 5'-phospho-ribonucleoside-RNA + ADP + H(+)",
+      "ec": "2.7.1.78",
+      "substrates": [
+        {
+          "metabolite": "5_end_ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_ribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "polynucleotide 5'-phosphatase",
+      "equation": "a 5'-end 5'-phospho-ribonucleoside-RNA + H2O = a 5'-end dephospho-ribonucleoside-RNA + phosphate",
+      "ec": "3.1.3.33",
+      "substrates": [
+        {
+          "metabolite": "5_end_ribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:67772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a 3'-terminal ribonucleotide 3'-(5'-diphosphoguanosine)-RNA + a 5'-end dephospho-ribonu...",
+      "equation": "a 3'-terminal ribonucleotide 3'-(5'-diphosphoguanosine)-RNA + a 5'-end dephospho-ribonucleoside-RNA = a ribonucleotidyl-ribonucleotide-RNA + GMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "a_3_terminal_ribonucleotide_3_5_diphosphoguanosi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_end_ribonucleoside",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ribonucleotide_ribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:68092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68092"
+          }
+        ]
+      }
+    }
+  ]
+}

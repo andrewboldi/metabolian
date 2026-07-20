@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-s-fatty-acylpantethein-to-carboxylic-acid-anio",
+  "name": "O-(S-fatty acylpantethein… to carboxylic acid anion",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from O-(S-fatty acylpantetheine-4'-phosphoryl)-L-serine(1−) residue to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42292"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138651"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-(S-fatty acylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-fatty…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138651"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "acyl_monophosphate",
+      "name": "acyl monophosphate",
+      "formula": "CO5PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59918"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "d_hexose",
+      "name": "D-hexose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4194"
+      }
+    },
+    {
+      "id": "d_hexose_phosphate",
+      "name": "D-hexose phosphate",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:140159"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "o_s_3_6_8_9_tetrahydroxy_1_oxo_3_2_oxopropyl_1_2",
+      "name": "O-(S-3,6,8,9-tetrahydroxy-1-oxo-3-(2-oxopropyl)-1,2,3,4-tetrahydroanthracene-2-carboxylpantetheine-4'-phosphoryl)-L-serine(2−)",
+      "short": "O-(S-3,6,8,9-tetrah…",
+      "formula": "C32H39N3O15PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149685"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_274",
+      "name": "phosphate acyltransferase",
+      "ec": [
+        "2.3.1.274"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_61",
+      "name": "acyl-phosphate--hexose phosphotransferase",
+      "ec": [
+        "2.7.1.61"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphate acyltransferase",
+      "equation": "a fatty acyl-[ACP] + phosphate = an acyl phosphate + holo-[ACP]",
+      "ec": "2.3.1.274",
+      "substrates": [
+        {
+          "metabolite": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acyl_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_274"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42292"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acyl-phosphate--hexose phosphotransferase",
+      "equation": "a D-hexose + an acyl phosphate = a D-hexose phosphate + a carboxylate + H(+)",
+      "ec": "2.7.1.61",
+      "substrates": [
+        {
+          "metabolite": "d_hexose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_monophosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_hexose_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13077"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "holo-[ACP] + 8 malonyl-CoA + acetyl-CoA + 8 H(+) = 3,6,8,9-tetrahydroxy-1-oxo-3-(2-oxop...",
+      "equation": "holo-[ACP] + 8 malonyl-CoA + acetyl-CoA + 8 H(+) = 3,6,8,9-tetrahydroxy-1-oxo-3-(2-oxopropyl)-1,2,3,4-tetrahydroanthracene-2-carboxyl-[ACP] + 8 CO2 + 9 CoA + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 8
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_3_6_8_9_tetrahydroxy_1_oxo_3_2_oxopropyl_1_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64072"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64072"
+          }
+        ]
+      }
+    }
+  ]
+}

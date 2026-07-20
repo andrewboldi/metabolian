@@ -132,22 +132,31 @@
       }
     },
     {
-      "id": "terpentedienyl_diphosphate",
-      "name": "terpentedienyl diphosphate",
-      "short": "terpentedienyl PP",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58821"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "terpentetriene",
-      "name": "terpentetriene",
-      "formula": "C20H32",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50302"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "10_epi_eudesmol",
+      "name": "10-epi-γ-eudesmol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62514"
       }
     },
     {
@@ -178,23 +187,22 @@
       }
     },
     {
-      "id": "3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone",
-      "name": "3',4',5,6-tetrahydroxy-3,7-dimethoxyflavone",
-      "short": "3',4',5,6-tetrahydr…",
-      "formula": "C17H13O8",
+      "id": "tricetin",
+      "name": "tricetin",
+      "formula": "C15H9O7",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77769"
+        "chebi": "CHEBI:60045"
       }
     },
     {
-      "id": "3_4_5_trihydroxy_3_6_7_trimethoxyflavone",
-      "name": "3',4',5-trihydroxy-3,6,7-trimethoxyflavone",
-      "short": "3',4',5-trihydroxy-…",
-      "formula": "C18H16O8",
-      "charge": 0,
+      "id": "3_4_5_o_trimethyltricetin",
+      "name": "3',4',5'-O-trimethyltricetin",
+      "short": "3',4',5'-O-trimethy…",
+      "formula": "C18H15O7",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:18016"
+        "chebi": "CHEBI:60020"
       }
     }
   ],
@@ -221,17 +229,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_36",
-      "name": "terpentetriene synthase",
+      "id": "ec_4_2_3_84",
+      "name": "10-epi-gamma-eudesmol synthase",
       "ec": [
-        "4.2.3.36"
+        "4.2.3.84"
       ]
     },
     {
-      "id": "ec_2_1_1_84",
-      "name": "methylquercetagetin 6-O-methyltransferase",
+      "id": "ec_2_1_1_169",
+      "name": "tricetin 3',4',5'-O-trimethyltransferase",
       "ec": [
-        "2.1.1.84"
+        "2.1.1.169"
       ]
     }
   ],
@@ -389,18 +397,22 @@
     },
     {
       "id": "r4",
-      "name": "terpentetriene synthase",
-      "equation": "terpentedienyl diphosphate = terpentetriene + diphosphate",
-      "ec": "4.2.3.36",
+      "name": "10-epi-gamma-eudesmol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-gamma-eudesmol + diphosphate",
+      "ec": "4.2.3.84",
       "substrates": [
         {
-          "metabolite": "terpentedienyl_diphosphate",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "terpentetriene",
+          "metabolite": "10_epi_eudesmol",
           "stoichiometry": 1
         },
         {
@@ -410,20 +422,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_36"
+          "enzyme": "ec_4_2_3_84"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25617"
+        "rhea": "RHEA:30947"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25617"
+            "id": "RHEA:30947"
           }
         ]
       }
@@ -473,45 +485,49 @@
     },
     {
       "id": "r6",
-      "name": "methylquercetagetin 6-O-methyltransferase",
-      "equation": "3',4',5,6-tetrahydroxy-3,7-dimethoxyflavone + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,6,7-trimethoxyflavone + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.84",
+      "name": "tricetin 3',4',5'-O-trimethyltransferase",
+      "equation": "tricetin + 3 S-adenosyl-L-methionine = 3',4',5'-O-trimethyltricetin + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.169",
       "substrates": [
         {
-          "metabolite": "3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone",
+          "metabolite": "tricetin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "3_4_5_trihydroxy_3_6_7_trimethoxyflavone",
+          "metabolite": "3_4_5_o_trimethyltricetin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_84"
+          "enzyme": "ec_2_1_1_169"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:18717"
+        "rhea": "RHEA:32351"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18717"
+            "id": "RHEA:32351"
           }
         ]
       }

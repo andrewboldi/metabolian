@@ -28,25 +28,25 @@ pathway 3-5-dimethylorsellinate-to-succinate "3,5-dimethylorsellinate to succina
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_140 [4.2.3.140] +copal_8_ol_diphosphate
-    cis_abienol
+    <-> . +arginine +atp +hplus
+    l_arginyl_amp
   }
 
   branch from succinate side right {
     succinate
-    <-> . +3_methyldodecanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methyldodecanoyl_coa
+    <-> . +thebaine +akg +o2 +formaldehyde +co2 +hplus
+    6_o_demethylthebaine
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +dehydroprobetaenone_i +hydrogen_acceptor
-    probetaenone_i
+  branch from chermesin_d side left {
+    chermesin_d
+    <-> . +sam +sah
+    chermesin_d_methyl_ester
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +betaenone_c +hydrogen_donor
-    betaenone_b
+  branch from sah side right {
+    sah
+    <-> . +lanosterol +sam +hplus
+    eburicol
   }
 }

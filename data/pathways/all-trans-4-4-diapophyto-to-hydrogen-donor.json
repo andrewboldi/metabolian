@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "all-trans-4-4-diapophyto-to-hydrogen-donor",
   "name": "all-trans-4,4'-diapophyto… to hydrogen donor",
-  "category": "energy-metabolism",
+  "category": "redox-detox",
   "summary": "A 5-step route from all-trans-4,4'-diapophytofluene to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -151,50 +151,43 @@
       }
     },
     {
-      "id": "ferroheme_b",
-      "name": "ferroheme b",
-      "formula": "C34H30FeN4O4",
-      "charge": -2,
+      "id": "2_4_6_trinitrotoluene",
+      "name": "2,4,6-trinitrotoluene",
+      "short": "2,4,6-trinitrotolue…",
+      "formula": "C7H5N3O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60344"
+        "chebi": "CHEBI:46053"
       }
     },
     {
-      "id": "mycobilin_b",
-      "name": "mycobilin b",
-      "formula": "C34H32N4O7",
-      "charge": -2,
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:136508"
+        "chebi": "CHEBI:57925"
       }
     },
     {
-      "id": "fe2",
-      "name": "Ferrous iron (Fe2+)",
-      "formula": "Fe",
-      "charge": 2,
+      "id": "s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione",
+      "name": "S-(2,6-dinitro-4-hydroxylaminotoluyl)glutathione",
+      "short": "S-(2,6-dinitro-4-hy…",
+      "formula": "C17H21N6O11S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29033"
+        "chebi": "CHEBI:231532"
       }
     },
     {
-      "id": "3_hydroxy_16_methoxy_2_3_dihydrotabersoninium",
-      "name": "3-hydroxy-16-methoxy-2,3-dihydrotabersoninium",
-      "short": "3-hydroxy-16-methox…",
-      "formula": "C22H29N2O4",
-      "charge": 1,
+      "id": "s_2_4_dinitro_6_hydroxylaminotoluyl_glutathione",
+      "name": "S-(2,4-dinitro-6-hydroxylaminotoluyl)glutathione",
+      "short": "S-(2,4-dinitro-6-hy…",
+      "formula": "C17H21N6O11S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58485"
-      }
-    },
-    {
-      "id": "3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd",
-      "name": "(3R)-1,2-didehydro-3-hydroxy-16-methoxy-2,3-dihydrotabersoninium",
-      "short": "1,2-didehydro-3-hyd…",
-      "formula": "C22H27N2O4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:136640"
+        "chebi": "CHEBI:231533"
       }
     }
   ],
@@ -218,20 +211,6 @@
       "name": "4,4'-diapophytoene desaturase (4,4'-diapolycopene-forming)",
       "ec": [
         "1.3.8.2"
-      ]
-    },
-    {
-      "id": "ec_1_14_99_57",
-      "name": "heme oxygenase (mycobilin-producing)",
-      "ec": [
-        "1.14.99.57"
-      ]
-    },
-    {
-      "id": "ec_1_1_99_41",
-      "name": "3-hydroxy-1,2-didehydro-2,3-dihydrotabersonine reductase",
-      "ec": [
-        "1.1.99.41"
       ]
     }
   ],
@@ -474,7 +453,7 @@
     {
       "id": "r6",
       "name": "4,4'-diapophytoene desaturase (4,4'-diapolycopene-forming)",
-      "equation": "15-cis-4,4'-diapophytoene + 4 FAD + 4 H(+) = all-trans-4,4'-diapolycopene + 4 FADH2",
+      "equation": "15-cis-4,4'-diapophytoene + 3 FAD + 3 H(+) = all-trans-4,4'-diaponeurosporene + 3 FADH2",
       "ec": "1.3.8.2",
       "substrates": [
         {
@@ -483,21 +462,21 @@
         },
         {
           "metabolite": "fad",
-          "stoichiometry": 4
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "4_4_diapolycopene",
+          "metabolite": "4_4_diaponeurosporene",
           "stoichiometry": 1
         },
         {
           "metabolite": "fadh2",
-          "stoichiometry": 4
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
@@ -508,97 +487,76 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:31391"
+        "rhea": "RHEA:42800"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31391"
+            "id": "RHEA:42800"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "heme oxygenase (mycobilin-producing)",
-      "equation": "heme b + 3 AH2 + 3 O2 + 2 H(+) = mycobilin b + Fe(2+) + 3 A + 3 H2O",
-      "ec": "1.14.99.57",
+      "name": "2,4,6-trinitrotoluene + glutathione + AH2 = S-(2,6-dinitro-4-hydroxylaminotoluyl)glutat...",
+      "equation": "2,4,6-trinitrotoluene + glutathione + AH2 = S-(2,6-dinitro-4-hydroxylaminotoluyl)glutathione + A + H2O",
       "substrates": [
         {
-          "metabolite": "ferroheme_b",
+          "metabolite": "2_4_6_trinitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "mycobilin_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fe2",
+          "metabolite": "s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_99_57"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:52236"
+        "rhea": "RHEA:80523"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52236"
+            "id": "RHEA:80523"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "3-hydroxy-1,2-didehydro-2,3-dihydrotabersonine reductase",
-      "equation": "(3R)-3-hydroxy-16-methoxy-2,3-dihydrotabersonine + A = (3R)-1,2-didehydro-3-hydroxy-16-methoxy-2,3-dihydrotabersonine + AH2",
-      "ec": "1.1.99.41",
+      "name": "2,4,6-trinitrotoluene + glutathione + AH2 = S-(2,4-dinitro-6-hydroxylaminotoluyl)glutat...",
+      "equation": "2,4,6-trinitrotoluene + glutathione + AH2 = S-(2,4-dinitro-6-hydroxylaminotoluyl)glutathione + A + H2O",
       "substrates": [
         {
-          "metabolite": "3_hydroxy_16_methoxy_2_3_dihydrotabersoninium",
+          "metabolite": "2_4_6_trinitrotoluene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd",
+          "metabolite": "gsh",
           "stoichiometry": 1
         },
         {
@@ -606,22 +564,31 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_1_99_41"
+          "metabolite": "s_2_4_dinitro_6_hydroxylaminotoluyl_glutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:52484"
+        "rhea": "RHEA:80531"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52484"
+            "id": "RHEA:80531"
           }
         ]
       }

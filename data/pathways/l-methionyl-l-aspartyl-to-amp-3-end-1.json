@@ -124,24 +124,6 @@
       }
     },
     {
-      "id": "l_asparaginyl_group",
-      "name": "L-asparaginyl group",
-      "formula": "C4H7N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50348"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
       "id": "n_acetyl_l_methionyl_l_alanyl_l_serinate",
       "name": "N-acetyl-L-methionyl-L-alanyl-L-serinate",
       "short": "N-acetyl-L-methiony…",
@@ -161,22 +143,22 @@
       }
     },
     {
-      "id": "3_l_alanyl_adenylyl_zwitterionic_group",
-      "name": "3'-(L-alanyl)adenylyl zwitterionic group",
-      "short": "3'-(L-alanyl)adenyl…",
-      "formula": "C13H18N6O7P",
+      "id": "3_glycyladenylyl_zwitterionic_group",
+      "name": "3'-glycyladenylyl zwitterionic group",
+      "short": "3'-glycyladenylyl…",
+      "formula": "C12H16N6O7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78497"
+        "chebi": "CHEBI:78522"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
+        "chebi": "CHEBI:57305"
       }
     }
   ],
@@ -196,10 +178,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_121",
-      "name": "protein N-terminal asparagine amidohydrolase",
+      "id": "ec_3_1_1_96",
+      "name": "D-aminoacyl-tRNA deacylase",
       "ec": [
-        "3.5.1.121"
+        "3.1.1.96"
       ]
     }
   ],
@@ -343,55 +325,6 @@
     },
     {
       "id": "r4",
-      "name": "protein N-terminal asparagine amidohydrolase",
-      "equation": "N-terminal L-asparaginyl-[protein] + H2O + H(+) = N-terminal L-aspartyl-[protein] + NH4(+)",
-      "ec": "3.5.1.121",
-      "substrates": [
-        {
-          "metabolite": "l_asparaginyl_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_aspartyl_zwitterionic_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_121"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:50676"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:50676"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "N(alpha)-acetyl-L-methionyl-L-alanyl-L-serine + H2O = L-alanyl-L-serine + N-acetyl-L-me...",
       "equation": "N(alpha)-acetyl-L-methionyl-L-alanyl-L-serine + H2O = L-alanyl-L-serine + N-acetyl-L-methionine",
       "substrates": [
@@ -415,7 +348,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:83503"
       },
@@ -430,12 +363,13 @@
       }
     },
     {
-      "id": "r6",
-      "name": "L-alanyl-tRNA(Thr) + H2O = tRNA(Thr) + L-alanine + H(+)",
-      "equation": "L-alanyl-tRNA(Thr) + H2O = tRNA(Thr) + L-alanine + H(+)",
+      "id": "r5",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "equation": "glycyl-tRNA(Ala) + H2O = tRNA(Ala) + glycine + H(+)",
+      "ec": "3.1.1.96",
       "substrates": [
         {
-          "metabolite": "3_l_alanyl_adenylyl_zwitterionic_group",
+          "metabolite": "3_glycyladenylyl_zwitterionic_group",
           "stoichiometry": 1
         },
         {
@@ -449,7 +383,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "glycine",
           "stoichiometry": 1
         },
         {
@@ -457,17 +391,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_96"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:17793"
+        "rhea": "RHEA:53744"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17793"
+            "id": "RHEA:53744"
           }
         ]
       }

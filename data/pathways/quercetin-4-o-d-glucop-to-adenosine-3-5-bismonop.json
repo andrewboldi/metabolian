@@ -133,50 +133,33 @@
       }
     },
     {
-      "id": "sucrose",
-      "name": "sucrose",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17992"
-      }
-    },
-    {
-      "id": "6_kestotriose",
-      "name": "6-kestotriose",
-      "formula": "C18H32O16",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64833"
-      }
-    },
-    {
-      "id": "quercetin_3_3_bissulfate",
-      "name": "quercetin 3,3'-bissulfate",
+      "id": "quercetin_3_o_d_glucopyranoside",
+      "name": "quercetin 3-O-β-D-glucopyranoside",
       "short": "quercetin…",
-      "formula": "C15H7O13S2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58305"
-      }
-    },
-    {
-      "id": "methyl_l_tyrosinate",
-      "name": "methyl L-tyrosinate",
-      "formula": "C10H13NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17215"
-      }
-    },
-    {
-      "id": "l_tyrosine_methyl_ester_4_sulfate",
-      "name": "L-tyrosine methyl ester 4-sulfate",
-      "short": "L-tyrosine methyl…",
-      "formula": "C10H12NO6S",
+      "formula": "C21H19O12",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58377"
+        "chebi": "CHEBI:144437"
+      }
+    },
+    {
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57371"
+      }
+    },
+    {
+      "id": "s_butyryl_4_phosphopantetheine",
+      "name": "S-butyryl-4'-phosphopantetheine",
+      "short": "S-butyryl-4'-phosph…",
+      "formula": "C15H27N2O8PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:132011"
       }
     }
   ],
@@ -200,20 +183,6 @@
       "name": "isoflavone 3'-O-methyltransferase",
       "ec": [
         "2.1.1.398"
-      ]
-    },
-    {
-      "id": "ec_2_8_2_26",
-      "name": "quercetin-3-sulfate 3'-sulfotransferase",
-      "ec": [
-        "2.8.2.26"
-      ]
-    },
-    {
-      "id": "ec_2_8_2_9",
-      "name": "tyrosine-ester sulfotransferase",
-      "ec": [
-        "2.8.2.9"
       ]
     }
   ],
@@ -406,17 +375,21 @@
     },
     {
       "id": "r5",
-      "name": "2 sucrose = 6-kestotriose + beta-D-glucose",
-      "equation": "2 sucrose = 6-kestotriose + beta-D-glucose",
+      "name": "quercetin 3-O-beta-D-glucoside + H2O = quercetin + beta-D-glucose",
+      "equation": "quercetin 3-O-beta-D-glucoside + H2O = quercetin + beta-D-glucose",
       "substrates": [
         {
-          "metabolite": "sucrose",
-          "stoichiometry": 2
+          "metabolite": "quercetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_kestotriose",
+          "metabolite": "quercetin_7_olate",
           "stoichiometry": 1
         },
         {
@@ -427,36 +400,35 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33251"
+        "rhea": "RHEA:69655"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33251"
+            "id": "RHEA:69655"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "quercetin-3-sulfate 3'-sulfotransferase",
-      "equation": "quercetin 3-sulfate + 3'-phosphoadenylyl sulfate = quercetin 3,3'-bissulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "ec": "2.8.2.26",
+      "name": "butanoyl-CoA + H2O = S-butanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + ...",
+      "equation": "butanoyl-CoA + H2O = S-butanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "quercetin_3_sulfate",
+          "metabolite": "butyryl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "quercetin_3_3_bissulfate",
+          "metabolite": "s_butyryl_4_phosphopantetheine",
           "stoichiometry": 1
         },
         {
@@ -465,74 +437,20 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_2_26"
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:22504"
+        "rhea": "RHEA:49976"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22504"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "tyrosine-ester sulfotransferase",
-      "equation": "L-tyrosine methyl ester + 3'-phosphoadenylyl sulfate = L-tyrosine methyl ester 4-sulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "ec": "2.8.2.9",
-      "substrates": [
-        {
-          "metabolite": "methyl_l_tyrosinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_tyrosine_methyl_ester_4_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_2_9"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:19977"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:19977"
+            "id": "RHEA:49976"
           }
         ]
       }

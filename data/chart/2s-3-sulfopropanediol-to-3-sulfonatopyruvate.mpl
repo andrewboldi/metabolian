@@ -15,10 +15,4 @@ pathway 2s-3-sulfopropanediol-to-3-sulfonatopyruvate "(2S)-3-sulfopropanediol to
     <-> ec_1_1_1_310 [1.1.1.310] +nad -nadh -hplus
     3_sulfonatopyruvate
   }
-
-  branch from 3_sulfonatopyruvate side left {
-    3_sulfonatopyruvate
-    <-> ec_1_1_1_338 [1.1.1.338] +nadp +nadph +hplus
-    r_3_sulfolactate
-  }
 }

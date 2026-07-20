@@ -1,0 +1,208 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sucrose-6f-phosphate-to-maltose-1-phosphate",
+  "name": "sucrose 6F-phosphate to maltose 1-phosphate",
+  "category": "carbohydrate-metabolism",
+  "summary": "A 2-step route from sucrose 6F-phosphate(2−) to maltose 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38863"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57723"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sucrose_6f_phosphate",
+      "name": "sucrose 6F-phosphate",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57723"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "d_fructofuranose_6_phosphate",
+      "name": "β-D-fructofuranose 6-phosphate",
+      "short": "β-D-fructofuranose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57634"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "adp_d_glucoside",
+      "name": "ADP α-D-glucoside",
+      "formula": "C16H23N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57498"
+      }
+    },
+    {
+      "id": "maltose_1_phosphate",
+      "name": "maltose 1-phosphate",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63576"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_329",
+      "name": "sucrose 6(F)-phosphate phosphorylase",
+      "ec": [
+        "2.4.1.329"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_342",
+      "name": "alpha-maltose-1-phosphate synthase",
+      "ec": [
+        "2.4.1.342"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sucrose 6(F)-phosphate phosphorylase",
+      "equation": "sucrose 6(F)-phosphate + phosphate = beta-D-fructose 6-phosphate + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.329",
+      "substrates": [
+        {
+          "metabolite": "sucrose_6f_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_329"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38863"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alpha-maltose-1-phosphate synthase",
+      "equation": "ADP-alpha-D-glucose + alpha-D-glucose 1-phosphate = alpha-maltose 1-phosphate + ADP + H(+)",
+      "ec": "2.4.1.342",
+      "substrates": [
+        {
+          "metabolite": "adp_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maltose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_342"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50692"
+          }
+        ]
+      }
+    }
+  ]
+}

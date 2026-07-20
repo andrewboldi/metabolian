@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "gly-asn-to-3-n-acetyl-l-asparaginy",
   "name": "Gly-Asn to 3'-(N-acetyl-L-asparaginy…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from Gly-Asn zwitterion to 3'-(N-acetyl-L-asparaginyl)adenylyl(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,40 +138,58 @@
       }
     },
     {
-      "id": "3_cyano_l_alanine",
-      "name": "3-cyano-L-alanine",
-      "formula": "C4H6N2O2",
-      "charge": 0,
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:77860"
+        "chebi": "CHEBI:16810"
       }
     },
     {
-      "id": "n_benzyloxycarbonylglycinate",
-      "name": "N-benzyloxycarbonylglycinate",
-      "short": "N-benzyloxycarbonyl…",
-      "formula": "C10H10NO4",
+      "id": "2_oxosuccinamate",
+      "name": "2-oxosuccinamate",
+      "formula": "C4H4NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:368997"
+        "chebi": "CHEBI:57735"
       }
     },
     {
-      "id": "benzyl_alcohol",
-      "name": "benzyl alcohol",
-      "formula": "C7H8O",
-      "charge": 0,
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17987"
+        "chebi": "CHEBI:29985"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
+      "id": "corynebactin",
+      "name": "corynebactin",
+      "formula": "C39H42N6O18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31432"
       }
     },
     {
@@ -203,22 +221,22 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57533"
       }
     },
     {
-      "id": "guaia_6_9_diene",
-      "name": "(+)-guaia-6,9-diene",
-      "formula": "C15H24",
+      "id": "elisabethatriene",
+      "name": "elisabethatriene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49204"
+        "chebi": "CHEBI:52461"
       }
     }
   ],
@@ -231,17 +249,17 @@
       ]
     },
     {
-      "id": "ec_4_2_1_65",
-      "name": "3-cyanoalanine hydratase",
+      "id": "ec_2_6_1_14",
+      "name": "asparagine--oxo-acid transaminase",
       "ec": [
-        "4.2.1.65"
+        "2.6.1.14"
       ]
     },
     {
-      "id": "ec_3_5_1_58",
-      "name": "N-benzyloxycarbonylglycine hydrolase",
+      "id": "ec_4_2_3_41",
+      "name": "elisabethatriene synthase",
       "ec": [
-        "3.5.1.58"
+        "4.2.3.41"
       ]
     }
   ],
@@ -383,94 +401,104 @@
     },
     {
       "id": "r4",
-      "name": "3-cyanoalanine hydratase",
-      "equation": "L-asparagine = 3-cyano-L-alanine + H2O",
-      "ec": "4.2.1.65",
+      "name": "asparagine--oxo-acid transaminase",
+      "equation": "L-asparagine + 2-oxoglutarate = 2-oxosuccinamate + L-glutamate",
+      "ec": "2.6.1.14",
       "substrates": [
         {
           "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_cyano_l_alanine",
+          "metabolite": "2_oxosuccinamate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "glutamate",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_1_65"
+          "enzyme": "ec_2_6_1_14"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:15385"
+        "rhea": "RHEA:52528"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15385"
+            "id": "RHEA:52528"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N-benzyloxycarbonylglycine hydrolase",
-      "equation": "N-benzyloxycarbonylglycine + H2O + H(+) = benzyl alcohol + glycine + CO2",
-      "ec": "3.5.1.58",
+      "name": "3 2,3-dihydroxybenzoate + 3 L-threonine + 3 glycine + 6 ATP = corynebactin + 6 AMP + 6 ...",
+      "equation": "3 2,3-dihydroxybenzoate + 3 L-threonine + 3 glycine + 6 ATP = corynebactin + 6 AMP + 6 diphosphate + 3 H2O + 3 H(+)",
       "substrates": [
         {
-          "metabolite": "n_benzyloxycarbonylglycinate",
-          "stoichiometry": 1
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "threonine",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "glycine",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 6
         }
       ],
       "products": [
         {
-          "metabolite": "benzyl_alcohol",
+          "metabolite": "corynebactin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
-          "stoichiometry": 1
+          "metabolite": "amp",
+          "stoichiometry": 6
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "ppi",
+          "stoichiometry": 6
+        },
         {
-          "enzyme": "ec_3_5_1_58"
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:20900"
+        "rhea": "RHEA:33811"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20900"
+            "id": "RHEA:33811"
           }
         ]
       }
@@ -520,17 +548,18 @@
     },
     {
       "id": "r7",
-      "name": "(2E,6E)-farnesyl diphosphate = (+)-guaia-6,9-diene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-guaia-6,9-diene + diphosphate",
+      "name": "elisabethatriene synthase",
+      "equation": "geranylgeranyl diphosphate = elisabethatriene + diphosphate",
+      "ec": "4.2.3.41",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "geranylgeranyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "guaia_6_9_diene",
+          "metabolite": "elisabethatriene",
           "stoichiometry": 1
         },
         {
@@ -538,17 +567,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_41"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:25448"
+        "rhea": "RHEA:26241"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25448"
+            "id": "RHEA:26241"
           }
         ]
       }

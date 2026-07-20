@@ -1,0 +1,310 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-formyl-l-methionyl-group-to-n-acetyl-l-methion",
+  "name": "N-formyl-L-methionyl group to N-acetyl-L-methionyl",
+  "category": "other",
+  "summary": "A 2-step route from N-formyl-L-methionyl group to N-acetyl-L-methionyl residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24420"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:49298"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_formyl_l_methionyl_group",
+      "name": "N-formyl-L-methionyl group",
+      "short": "N-formyl-L-methiony…",
+      "formula": "C6H10NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49298"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_methioniniumyl_group",
+      "name": "L-methioniniumyl group",
+      "short": "L-methioniniumyl…",
+      "formula": "C5H11NOS",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:64731"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_l_methionyl",
+      "name": "N-acetyl-L-methionyl",
+      "formula": "C7H12NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133414"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxylanost_8_en_32_al",
+      "name": "3β-hydroxylanost-8-en-32-al",
+      "short": "3β-hydroxylanost-8-…",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87060"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_4_dimethyl_8_14_cholestadien_3_ol",
+      "name": "4,4-dimethyl-8,14-cholestadien-3β-ol",
+      "short": "4,4-dimethyl-8,14-c…",
+      "formula": "C29H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78904"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_88",
+      "name": "peptide deformylase",
+      "ec": [
+        "3.5.1.88"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_259",
+      "name": "N-terminal methionine N(alpha)-acetyltransferase NatF",
+      "ec": [
+        "2.3.1.259"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "peptide deformylase",
+      "equation": "N-terminal N-formyl-L-methionyl-[peptide] + H2O = N-terminal L-methionyl-[peptide] + formate",
+      "ec": "3.5.1.88",
+      "substrates": [
+        {
+          "metabolite": "n_formyl_l_methionyl_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_methioniniumyl_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24420"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24420"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-terminal methionine N(alpha)-acetyltransferase NatF",
+      "equation": "N-terminal L-methionyl-[transmembrane protein] + acetyl-CoA = N-terminal N(alpha)-acetyl-L-methionyl-[transmembrane protein] + CoA + H(+)",
+      "ec": "2.3.1.259",
+      "substrates": [
+        {
+          "metabolite": "l_methioniniumyl_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_methionyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_259"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "32-oxo-24,25-dihydrolanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 4,4-dime...",
+      "equation": "32-oxo-24,25-dihydrolanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 4,4-dimethyl-8,14-cholestadien-3beta-ol + formate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxylanost_8_en_32_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_dimethyl_8_14_cholestadien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:75083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75083"
+          }
+        ]
+      }
+    }
+  ]
+}

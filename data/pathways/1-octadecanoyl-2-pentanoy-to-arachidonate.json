@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-octadecanoyl-2-pentanoy-to-arachidonate",
   "name": "1-octadecanoyl-2-pentanoy… to arachidonate",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 1-octadecanoyl-2-pentanoyl-sn-glycero-3-phosphocholine to arachidonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -112,63 +112,6 @@
       }
     },
     {
-      "id": "1_stearoyl_2_palmitoyl_sn_glycero_3_phosphocholi",
-      "name": "1-stearoyl-2-palmitoyl-sn-glycero-3-phosphocholine",
-      "short": "1-stearoyl-2-palmit…",
-      "formula": "C42H84NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:75026"
-      }
-    },
-    {
-      "id": "palmitate",
-      "name": "Palmitate",
-      "formula": "C16H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:7896"
-      }
-    },
-    {
-      "id": "1_stearoyl_2_arachidonoyl_sn_glycerol",
-      "name": "1-stearoyl-2-arachidonoyl-sn-glycerol",
-      "short": "1-stearoyl-2-arachi…",
-      "formula": "C41H72O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:75728"
-      }
-    },
-    {
-      "id": "cdp_choline",
-      "name": "CDP-choline",
-      "formula": "C14H25N4O11P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58779"
-      }
-    },
-    {
-      "id": "cytidine_5_monophosphate",
-      "name": "cytidine 5'-monophosphate",
-      "short": "cytidine 5'-MP",
-      "formula": "C9H12N3O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:60377"
-      }
-    },
-    {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
       "id": "o2",
       "name": "Dioxygen (O2)",
       "formula": "O2",
@@ -178,21 +121,33 @@
       }
     },
     {
-      "id": "18_hete",
-      "name": "18-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "1_stearoyl_2_15_hydroperoxyarachidonoyl_sn_glyce",
+      "name": "1-stearoyl-2-(15-hydroperoxyarachidonoyl)-sn-glycero-3-phosphocholine",
+      "short": "1-stearoyl-2-(15-hy…",
+      "formula": "C46H84NO10P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63590"
+        "chebi": "CHEBI:146283"
       }
     },
     {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
+      "id": "1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc",
+      "name": "1-palmitoyl-2-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "1-palmitoyl-2-arach…",
+      "formula": "C44H80NO8P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58210"
+        "chebi": "CHEBI:73003"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C24H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72998"
       }
     }
   ],
@@ -368,11 +323,46 @@
     },
     {
       "id": "r5",
-      "name": "1-octadecanoyl-2-hexadecanoyl-sn-glycero-3-phosphocholine + H2O = 1-octadecanoyl-sn-gly...",
-      "equation": "1-octadecanoyl-2-hexadecanoyl-sn-glycero-3-phosphocholine + H2O = 1-octadecanoyl-sn-glycero-3-phosphocholine + hexadecanoate + H(+)",
+      "name": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + O2 = 1-...",
+      "equation": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + O2 = 1-octadecanoyl-2-(15-hydroperoxy-5Z,8Z,11Z,13E-eicosatetraenoyl)-sn-glycero-3-phosphocholine",
       "substrates": [
         {
-          "metabolite": "1_stearoyl_2_palmitoyl_sn_glycero_3_phosphocholi",
+          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_stearoyl_2_15_hydroperoxyarachidonoyl_sn_glyce",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:63264"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = 1...",
+      "equation": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = 1-hexadecanoyl-sn-glycero-3-phosphocholine + (5Z,8Z,11Z,14Z)-eicosatetraenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc",
           "stoichiometry": 1
         },
         {
@@ -382,54 +372,11 @@
       ],
       "products": [
         {
-          "metabolite": "1_stearoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "palmitate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:56440"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:56440"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + CDP-choline = 1-octadec...",
-      "equation": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + CDP-choline = 1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + CMP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cdp_choline",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cytidine_5_monophosphate",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -440,65 +387,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:54344"
+        "rhea": "RHEA:40427"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54344"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hy...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "arachidonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "18_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:39811"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:39811"
+            "id": "RHEA:40427"
           }
         ]
       }

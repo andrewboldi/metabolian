@@ -1,0 +1,312 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetylcadaverine-to-5-s-methyl-5-thioadenos",
+  "name": "N-acetylcadaverine to 5'-S-methyl-5'-thioadenos…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from N-acetylcadaverine(1+) to 5'-S-methyl-5'-thioadenosine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51892"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134408"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetylcadaverine",
+      "name": "N-acetylcadaverine",
+      "formula": "C7H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:134408"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cadaverine",
+      "name": "cadaverine",
+      "formula": "C5H16N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58384"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "s_adenosylmethioninaminium",
+      "name": "S-adenosylmethioninaminium",
+      "short": "S-adenosylmethionin…",
+      "formula": "C14H24N6O3S",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:57443"
+      }
+    },
+    {
+      "id": "aminopropylcadaverine",
+      "name": "aminopropylcadaverine",
+      "short": "aminopropylcadaveri…",
+      "formula": "C8H24N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:64858"
+      }
+    },
+    {
+      "id": "5_s_methyl_5_thioadenosine",
+      "name": "5'-S-methyl-5'-thioadenosine",
+      "short": "5'-S-methyl-5'-thio…",
+      "formula": "C11H15N5O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17509"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_lysinium",
+      "name": "D-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32557"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "s_azetidine_2_carboxylate",
+      "name": "(S)-azetidine-2-carboxylate",
+      "short": "azetidine-2-carboxy…",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231534"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_116",
+      "name": "D-ornithine/D-lysine decarboxylase",
+      "ec": [
+        "4.1.1.116"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acetylcadaverine + H2O = cadaverine + acetate",
+      "equation": "N-acetylcadaverine + H2O = cadaverine + acetate",
+      "substrates": [
+        {
+          "metabolite": "n_acetylcadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cadaverine + S-adenosyl 3-(methylsulfanyl)propylamine = aminopropylcadaverine + S-methy...",
+      "equation": "cadaverine + S-adenosyl 3-(methylsulfanyl)propylamine = aminopropylcadaverine + S-methyl-5'-thioadenosine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_adenosylmethioninaminium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aminopropylcadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33387"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33387"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-ornithine/D-lysine decarboxylase",
+      "equation": "D-lysine + H(+) = cadaverine + CO2",
+      "ec": "4.1.1.116",
+      "substrates": [
+        {
+          "metabolite": "d_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59052"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "S-adenosyl-L-methionine = (S)-azetidine-2-carboxylate + S-methyl-5'-thioadenosine + H(+)",
+      "equation": "S-adenosyl-L-methionine = (S)-azetidine-2-carboxylate + S-methyl-5'-thioadenosine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_azetidine_2_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:80503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80503"
+          }
+        ]
+      }
+    }
+  ]
+}

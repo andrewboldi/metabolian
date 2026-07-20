@@ -20,19 +20,13 @@ pathway cobalt-precorrin-6b-to-l-glutamate "cobalt-precorrin-6B to L-glutamate" 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_76 [2.1.1.76] +quercetin_7_olate +sam +hplus
-    3_4_5_trihydroxy_3_methoxyflavon_7_olate
+    <-> ec_2_1_1_163 [2.1.1.163] +6_methoxy_2_octaprenyl_1_4_benzoquinone +sam +hplus
+    3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone
   }
 
-  branch from cob_ii_yrinate side right {
-    cob_ii_yrinate
-    <-> . +glutamine +atp +h2o +glutamate +adp +pi +hplus
-    cob_ii_yrinate_c_monoamide
-  }
-
-  branch from glutamate side left {
+  branch from glutamate side right {
     glutamate
-    <-> ec_4_1_3_27 [4.1.3.27] +chorismate +glutamine +pyruvate +hplus
-    anthranilate
+    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
+    dtdp_3_dehydro_4_6_dideoxy_d_glucose
   }
 }

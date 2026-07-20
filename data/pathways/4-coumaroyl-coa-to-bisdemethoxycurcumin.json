@@ -1,0 +1,219 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-coumaroyl-coa-to-bisdemethoxycurcumin",
+  "name": "4-coumaroyl-CoA to bisdemethoxycurcumin",
+  "category": "other",
+  "summary": "A 2-step route from 4-coumaroyl-CoA(4−) to bisdemethoxycurcumin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35115"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57355"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_coumaroyl_coa",
+      "name": "4-coumaroyl-CoA",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57355"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_coumaroyl_acetyl_coa",
+      "name": "(4-coumaroyl)acetyl-CoA",
+      "short": "(4-coumaroyl)acetyl…",
+      "formula": "C32H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71211"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "bisdemethoxycurcumin",
+      "name": "bisdemethoxycurcumin",
+      "formula": "C19H16O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71045"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_218",
+      "name": "phenylpropanoylacetyl-CoA synthase",
+      "ec": [
+        "2.3.1.218"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_219",
+      "name": "demethoxycurcumin synthase",
+      "ec": [
+        "2.3.1.219"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phenylpropanoylacetyl-CoA synthase",
+      "equation": "4-coumaroyl-CoA + malonyl-CoA + H(+) = (4-coumaroyl)acetyl-CoA + CO2 + CoA",
+      "ec": "2.3.1.218",
+      "substrates": [
+        {
+          "metabolite": "4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_coumaroyl_acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_218"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35115"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "demethoxycurcumin synthase",
+      "equation": "(4-coumaroyl)acetyl-CoA + 4-coumaroyl-CoA + H2O = bisdemethoxycurcumin + CO2 + 2 CoA",
+      "ec": "2.3.1.219",
+      "substrates": [
+        {
+          "metabolite": "4_coumaroyl_acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bisdemethoxycurcumin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_219"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35119"
+          }
+        ]
+      }
+    }
+  ]
+}

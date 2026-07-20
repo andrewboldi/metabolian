@@ -20,19 +20,19 @@ pathway 3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid "3-methyl fatty acid an
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    phellandrene
+    <-> ec_4_2_3_194 [4.2.3.194] +fpp +h2o
+    drimenol
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_46 [1.14.11.46] +2_aminoethyl_phosphonic_acid +akg +o2 +co2
-    1r_2_amino_1_hydroxyethyl_phosphonate
+    <-> . +butyryl_coa +akg +o2 +co2
+    2_hydroxybutanoyl_coa
   }
 
   branch from formyl_coa side left {
     formyl_coa
-    <-> . +2r_2_hydroxyoctadecanoyl_coa
-    heptadecanal
+    <-> ec_4_1_1_8 [4.1.1.8] +hplus +co2
+    oxalyl_coa
   }
 }

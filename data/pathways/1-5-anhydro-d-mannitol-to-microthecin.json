@@ -1,0 +1,288 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-5-anhydro-d-mannitol-to-microthecin",
+  "name": "1,5-anhydro-D-mannitol to microthecin",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 1,5-anhydro-D-mannitol to microthecin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24208"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:49182"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_5_anhydro_d_mannitol",
+      "name": "1,5-anhydro-D-mannitol",
+      "short": "1,5-anhydro-D-manni…",
+      "formula": "C6H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49182"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "1_5_anhydro_d_fructose",
+      "name": "1,5-anhydro-D-fructose",
+      "short": "1,5-anhydro-D-fruct…",
+      "formula": "C6H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16715"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ascopyrone_m",
+      "name": "ascopyrone M",
+      "formula": "C6H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50070"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "microthecin",
+      "name": "microthecin",
+      "formula": "C6H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51835"
+      }
+    },
+    {
+      "id": "ascopyrone_p",
+      "name": "ascopyrone P",
+      "formula": "C6H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50071"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_292",
+      "name": "1,5-anhydro-D-fructose reductase (1,5-anhydro-D-mannitol-forming)",
+      "ec": [
+        "1.1.1.292"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_111",
+      "name": "1,5-anhydro-D-fructose dehydratase",
+      "ec": [
+        "4.2.1.111"
+      ]
+    },
+    {
+      "id": "ec_5_3_2_7",
+      "name": "ascopyrone tautomerase",
+      "ec": [
+        "5.3.2.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1,5-anhydro-D-fructose reductase (1,5-anhydro-D-mannitol-forming)",
+      "equation": "1,5-anhydro-D-mannitol + NADP(+) = 1,5-anhydro-D-fructose + NADPH + H(+)",
+      "ec": "1.1.1.292",
+      "substrates": [
+        {
+          "metabolite": "1_5_anhydro_d_mannitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_5_anhydro_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_292"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,5-anhydro-D-fructose dehydratase",
+      "equation": "1,5-anhydro-D-fructose = ascopyrone M + H2O",
+      "ec": "4.2.1.111",
+      "substrates": [
+        {
+          "metabolite": "1_5_anhydro_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ascopyrone_m",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_111"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15725"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ascopyrone M = microthecin",
+      "equation": "ascopyrone M = microthecin",
+      "substrates": [
+        {
+          "metabolite": "ascopyrone_m",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "microthecin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13745"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ascopyrone tautomerase",
+      "equation": "ascopyrone M = ascopyrone P",
+      "ec": "5.3.2.7",
+      "substrates": [
+        {
+          "metabolite": "ascopyrone_m",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ascopyrone_p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22568"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cyanidin-to-cyanidin-3-o-d-xylosyl",
+  "name": "cyanidin to cyanidin 3-O-[β-D-xylosyl…",
+  "category": "other",
+  "summary": "A 2-step route from cyanidin(1−) to cyanidin 3-O-[β-D-xylosyl-(1→2)-β-D-galactoside](1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35631"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:71682"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cyanidin",
+      "name": "cyanidin",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71682"
+      }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_d_galactoside",
+      "name": "cyanidin 3-O-β-D-galactoside",
+      "short": "cyanidin 3-O-β-D-ga…",
+      "formula": "C21H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77935"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_xylose",
+      "name": "UDP-α-D-xylose",
+      "formula": "C14H20N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57632"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_d_xylosyl_1_2_d_galactoside",
+      "name": "cyanidin 3-O-[β-D-xylosyl-(1→2)-β-D-galactoside]",
+      "short": "cyanidin 3-O-[β-D-x…",
+      "formula": "C26H27O15",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71516"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_294",
+      "name": "cyanidin 3-O-galactosyltransferase",
+      "ec": [
+        "2.4.1.294"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_50",
+      "name": "cyanidin 3-O-galactoside 2''-O-xylosyltransferase",
+      "ec": [
+        "2.4.2.50"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cyanidin 3-O-galactosyltransferase",
+      "equation": "cyanidin + UDP-alpha-D-galactose = cyanidin 3-O-beta-D-galactoside + UDP + H(+)",
+      "ec": "2.4.1.294",
+      "substrates": [
+        {
+          "metabolite": "cyanidin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_d_galactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_294"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35631"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35631"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cyanidin 3-O-galactoside 2''-O-xylosyltransferase",
+      "equation": "cyanidin 3-O-beta-D-galactoside + UDP-alpha-D-xylose = cyanidin 3-O-[beta-D-xylosyl-(1->2)-beta-D-galactoside] + UDP + H(+)",
+      "ec": "2.4.2.50",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_d_galactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_d_xylosyl_1_2_d_galactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35435"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35435"
+          }
+        ]
+      }
+    }
+  ]
+}

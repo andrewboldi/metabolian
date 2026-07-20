@@ -1,0 +1,318 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-palmitoyl-2-acyl-sn-gly-to-fatty-acid-anion",
+  "name": "1-palmitoyl-2-acyl-sn-gly… to fatty acid anion",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from 1-palmitoyl-2-acyl-sn-glycero-3-phosphocholine to fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53452"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77369"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine",
+      "name": "1-palmitoyl-2-acyl-sn-glycero-3-phosphocholine",
+      "short": "1-palmitoyl-2-acyl-…",
+      "formula": "C25H49NO8PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77369"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "cholesteryl_ester",
+      "name": "cholesteryl ester",
+      "formula": "C28H45O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17002"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C24H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72998"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos",
+      "name": "1-hexadecanoyl-2-(9-oxononanoyl)-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-2-(9…",
+      "formula": "C33H64NO9P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61042"
+      }
+    },
+    {
+      "id": "9_oxononanoate",
+      "name": "9-oxononanoate",
+      "formula": "C9H15O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77812"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "cholest_5_en_3_one",
+      "name": "cholest-5-en-3-one",
+      "formula": "C27H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63906"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_13",
+      "name": "sterol esterase",
+      "ec": [
+        "3.1.1.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 1-hexadecanoyl-2-acyl-sn-glycero-3-phosphocholine + cholesterol = a cholesterol ester...",
+      "equation": "a 1-hexadecanoyl-2-acyl-sn-glycero-3-phosphocholine + cholesterol = a cholesterol ester + 1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sterol esterase",
+      "equation": "a cholesterol ester + H2O = cholesterol + a fatty acid + H(+)",
+      "ec": "3.1.1.13",
+      "substrates": [
+        {
+          "metabolite": "cholesteryl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36403"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1-hexadecanoyl-2-(9-oxononanoyl)-sn-glycero-3-phosphocholine + H2O = 9-oxononanoate + 1...",
+      "equation": "1-hexadecanoyl-2-(9-oxononanoyl)-sn-glycero-3-phosphocholine + H2O = 9-oxononanoate + 1-hexadecanoyl-sn-glycero-3-phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_oxononanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cholesterol + NAD(+) = cholest-5-en-3-one + NADH + H(+)",
+      "equation": "cholesterol + NAD(+) = cholest-5-en-3-one + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholest_5_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:35459"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35459"
+          }
+        ]
+      }
+    }
+  ]
+}

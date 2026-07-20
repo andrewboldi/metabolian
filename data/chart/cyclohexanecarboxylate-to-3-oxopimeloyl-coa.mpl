@@ -24,21 +24,9 @@ pathway cyclohexanecarboxylate-to-3-oxopimeloyl-coa "cyclohexanecarboxylate to 3
     3_oxopimeloyl_coa
   }
 
-  branch from cyclohexane_1_carbonyl_coa side left {
-    cyclohexane_1_carbonyl_coa
-    <-> ec_2_3_1_315 [2.3.1.315] +cyclohexanecarboxylate +butyryl_coa
-    butyrate
-  }
-
-  branch from succinate side right {
+  branch from succinate side left {
     succinate
-    <-> . +isovaleryl_coa +akg +o2 +co2
-    2_hydroxyisovaleryl_coa
-  }
-
-  branch from 6_oxocyclohex_1_ene_1_carbonyl_coa side left {
-    6_oxocyclohex_1_ene_1_carbonyl_coa
-    <-> . +h2o
-    2_hydroxy_6_oxocyclohexane_1_carbonyl_coa
+    <-> ec_1_14_11_76 [1.14.11.76] +glutamate +akg +o2 +co2
+    3r_3_hydroxy_l_glutamate
   }
 }

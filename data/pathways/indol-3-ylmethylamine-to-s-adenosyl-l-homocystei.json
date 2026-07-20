@@ -1,0 +1,245 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "indol-3-ylmethylamine-to-s-adenosyl-l-homocystei",
+  "name": "indol-3-ylmethylamine to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from indol-3-ylmethylamine(1+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52268"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136514"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "indol_3_ylmethylamine",
+      "name": "indol-3-ylmethylamine",
+      "short": "indol-3-ylmethylami…",
+      "formula": "C9H11N2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:136514"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "3_methylaminomethyl_indole",
+      "name": "3-(methylaminomethyl)indole",
+      "short": "3-(methylaminomethy…",
+      "formula": "C10H13N2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:136515"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gramine",
+      "name": "gramine",
+      "formula": "C11H15N2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:136516"
+      }
+    },
+    {
+      "id": "6a_hydroxymaackiain",
+      "name": "(+)-6a-hydroxymaackiain",
+      "short": "(+)-6a-hydroxymaack…",
+      "formula": "C16H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43129"
+      }
+    },
+    {
+      "id": "pisatin",
+      "name": "(+)-pisatin",
+      "formula": "C17H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67347"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_270",
+      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
+      "ec": [
+        "2.1.1.270"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-(aminomethyl)indole + S-adenosyl-L-methionine = (1H-indol-3-yl)-N-methylmethanamine +...",
+      "equation": "3-(aminomethyl)indole + S-adenosyl-L-methionine = (1H-indol-3-yl)-N-methylmethanamine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "indol_3_ylmethylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylaminomethyl_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(1H-indol-3-yl)-N-methylmethanamine + S-adenosyl-L-methionine = gramine + S-adenosyl-L-...",
+      "equation": "(1H-indol-3-yl)-N-methylmethanamine + S-adenosyl-L-methionine = gramine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_methylaminomethyl_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gramine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
+      "equation": "(+)-6a-hydroxymaackiain + S-adenosyl-L-methionine = (+)-pisatin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.270",
+      "substrates": [
+        {
+          "metabolite": "6a_hydroxymaackiain",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pisatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_270"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:35471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35471"
+          }
+        ]
+      }
+    }
+  ]
+}

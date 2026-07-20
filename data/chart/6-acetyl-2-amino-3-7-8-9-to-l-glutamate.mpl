@@ -24,25 +24,37 @@ pathway 6-acetyl-2-amino-3-7-8-9-to-l-glutamate "6-acetyl-2-amino-3,7,8,9-… to
 
   branch from r_dyspropterin side left {
     r_dyspropterin
-    <-> ec_1_1_1_220 [1.1.1.220] +nadp +nadph +hplus
-    6r_6_lactoyl_5_6_7_8_tetrahydropterin
+    <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate +hplus
+    triphosphate
   }
 
   branch from gsh side right {
     gsh
-    <-> ec_1_8_4_4 [1.8.4.4] +l_cystine +gssg
-    cysteine
+    <-> ec_6_3_2_3 [6.3.2.3] +glycine +atp +adp +pi +hplus
+    glu_cys
   }
 
   branch from 5_6_7_8_tetrahydropterin_6_carboxylate side left {
     5_6_7_8_tetrahydropterin_6_carboxylate
-    <-> ec_4_1_2_50 [4.1.2.50] +7_8_dihydroneopterin_3_triphosphate +h2o +acetaldehyde +hplus
-    triphosphate
+    <-> ec_4_1_2_50 [4.1.2.50] +h2o +triphosphate +acetaldehyde +hplus
+    7_8_dihydroneopterin_3_triphosphate
   }
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> ec_4_1_2_42 [4.1.2.42] +d_threonine
-    glycine
+    <-> ec_4_1_2_36 [4.1.2.36] +lactate
+    formate
+  }
+
+  branch from 7_carboxylato_7_deazaguanine side left {
+    7_carboxylato_7_deazaguanine
+    <-> . +atp +hplus +ppi
+    7_carboxyadenylyl_7_carbaguanine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_57 [3.5.1.57] +l_tryptophanamide +h2o
+    l_tryptophan
   }
 }

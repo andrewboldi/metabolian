@@ -18,19 +18,19 @@ pathway n5-l-1-carboxyethyl-l-o-to-ammonium "N5-(L-1-carboxyethyl)-L-o… to amm
 
   branch from ornithine side left {
     ornithine
-    <-> ec_3_5_3_1 [3.5.3.1] +arginine +h2o
-    urea
+    <-> ec_1_14_13_195 [1.14.13.195] +nadph +o2 +nadp +h2o
+    n5_hydroxy_l_ornithine
   }
 
   branch from citrulline side right {
     citrulline
-    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +nadh +o2 +nad +h2o +hplus
+    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +nadph +o2 +nadp +h2o +hplus
     no
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_19 [1.4.1.19] +l_tryptophan +nadp +h2o +nadph +hplus
-    3_indol_3_yl_pyruvate
+    <-> ec_4_3_1_17 [4.3.1.17] +pyruvate
+    serine
   }
 }

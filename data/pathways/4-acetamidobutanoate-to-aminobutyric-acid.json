@@ -1,0 +1,308 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-acetamidobutanoate-to-aminobutyric-acid",
+  "name": "4-acetamidobutanoate to γ-aminobutyric acid",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 4-acetamidobutanoate to γ-aminobutyric acid zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15897"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:11951"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_acetamidobutanoate",
+      "name": "4-acetamidobutanoate",
+      "formula": "C6H10NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11951"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "4_guanidinobutanoic_acid",
+      "name": "4-guanidinobutanoic acid",
+      "short": "4-guanidinobutanoic…",
+      "formula": "C5H11N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57486"
+      }
+    },
+    {
+      "id": "ornithine",
+      "name": "L-Ornithine",
+      "formula": "C5H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:46911"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "β-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57966"
+      }
+    },
+    {
+      "id": "3_guanidinopropanoic_acid",
+      "name": "3-guanidinopropanoic acid",
+      "short": "3-guanidinopropanoi…",
+      "formula": "C4H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57593"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_63",
+      "name": "4-acetamidobutyrate deacetylase",
+      "ec": [
+        "3.5.1.63"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_7",
+      "name": "guanidinobutyrase",
+      "ec": [
+        "3.5.3.7"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_17",
+      "name": "guanidinopropionase",
+      "ec": [
+        "3.5.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-acetamidobutyrate deacetylase",
+      "equation": "4-acetamidobutanoate + H2O = 4-aminobutanoate + acetate",
+      "ec": "3.5.1.63",
+      "substrates": [
+        {
+          "metabolite": "4_acetamidobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15897"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-aminobutanoate + L-arginine = 4-guanidinobutanoate + L-ornithine",
+      "equation": "4-aminobutanoate + L-arginine = 4-guanidinobutanoate + L-ornithine",
+      "substrates": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_guanidinobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:75939"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75939"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "guanidinobutyrase",
+      "equation": "4-guanidinobutanoate + H2O = urea + 4-aminobutanoate",
+      "ec": "3.5.3.7",
+      "substrates": [
+        {
+          "metabolite": "4_guanidinobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19501"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-alanine + L-arginine = 3-guanidinopropanoate + L-ornithine",
+      "equation": "beta-alanine + L-arginine = 3-guanidinopropanoate + L-ornithine",
+      "substrates": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_guanidinopropanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:75943"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75943"
+          }
+        ]
+      }
+    }
+  ]
+}

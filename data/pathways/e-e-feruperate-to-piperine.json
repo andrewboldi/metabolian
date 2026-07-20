@@ -145,42 +145,50 @@
       }
     },
     {
-      "id": "testosterone",
-      "name": "testosterone",
-      "formula": "C19H28O2",
-      "charge": 0,
+      "id": "e_e_piperoyl_amp",
+      "name": "(E,E)-piperoyl-AMP",
+      "formula": "C22H21N5O10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17347"
+        "chebi": "CHEBI:192833"
       }
     },
     {
-      "id": "2_hydroxytestosterone",
-      "name": "2-hydroxytestosterone",
-      "short": "2-hydroxytestostero…",
-      "formula": "C19H28O3",
-      "charge": 0,
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:86013"
+        "chebi": "CHEBI:77016"
       }
     },
     {
-      "id": "2_methylpropanaminium",
-      "name": "2-methylpropanaminium",
-      "short": "2-methylpropanamini…",
-      "formula": "C4H12N",
+      "id": "4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate",
+      "name": "(4Z,7Z,10Z,13Z,19Z)-16,17-epoxydocosapentaenoate",
+      "short": "(4Z,7Z,10Z,13Z,19Z)…",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133932"
+      }
+    },
+    {
+      "id": "pyrrolidinium_ion",
+      "name": "pyrrolidinium ion",
+      "formula": "C4H10N",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57601"
+        "chebi": "CHEBI:52145"
       }
     },
     {
-      "id": "e_e_piperlonguminine",
-      "name": "(E,E)-Piperlonguminine",
-      "short": "(E,E)-Piperlongumin…",
-      "formula": "C16H19NO3",
+      "id": "piperyline",
+      "name": "piperyline",
+      "formula": "C16H17NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:173942"
+        "chebi": "CHEBI:9691"
       }
     },
     {
@@ -194,12 +202,13 @@
       }
     },
     {
-      "id": "selinene",
-      "name": "(+)-δ-selinene",
+      "id": "e_2_epi_caryophyllene",
+      "name": "(E)-2-epi-β-caryophyllene",
+      "short": "2-epi-β-caryophylle…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49279"
+        "chebi": "CHEBI:68667"
       }
     }
   ],
@@ -212,10 +221,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_76",
-      "name": "(+)-delta-selinene synthase",
+      "id": "ec_4_2_3_137",
+      "name": "(E)-2-epi-beta-caryophyllene synthase",
       "ec": [
-        "4.2.3.76"
+        "4.2.3.137"
       ]
     }
   ],
@@ -369,11 +378,54 @@
     },
     {
       "id": "r4",
-      "name": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 2-hydroxytestosterone + ox...",
-      "equation": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 2-hydroxytestosterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(E,E)-piperate + ATP + H(+) = (E,E)-piperoyl-AMP + diphosphate",
+      "equation": "(E,E)-piperate + ATP + H(+) = (E,E)-piperoyl-AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "testosterone",
+          "metabolite": "e_e_piperate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_e_piperoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:73575"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 16,17-epoxy-(4Z,7Z,10Z,13Z,19Z)-docosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
           "stoichiometry": 1
         },
         {
@@ -387,7 +439,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxytestosterone",
+          "metabolite": "4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate",
           "stoichiometry": 1
         },
         {
@@ -404,37 +456,37 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46300"
+        "rhea": "RHEA:51084"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46300"
+            "id": "RHEA:51084"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(E,E)-piperoyl-CoA + 2-methylpropan-1-amine = (E,E)-piperlonguminine + CoA + H(+)",
-      "equation": "(E,E)-piperoyl-CoA + 2-methylpropan-1-amine = (E,E)-piperlonguminine + CoA + H(+)",
+      "id": "r6",
+      "name": "pyrrolidine + (E,E)-piperoyl-CoA = piperyline + CoA + H(+)",
+      "equation": "pyrrolidine + (E,E)-piperoyl-CoA = piperyline + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "e_e_piperonyl_coa",
+          "metabolite": "pyrrolidinium_ion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_methylpropanaminium",
+          "metabolite": "e_e_piperonyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_e_piperlonguminine",
+          "metabolite": "piperyline",
           "stoichiometry": 1
         },
         {
@@ -447,25 +499,25 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:73667"
+        "rhea": "RHEA:73663"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73667"
+            "id": "RHEA:73663"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(+)-delta-selinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-delta-selinene + diphosphate",
-      "ec": "4.2.3.76",
+      "id": "r7",
+      "name": "(E)-2-epi-beta-caryophyllene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (E)-2-epi-beta-caryophyllene + diphosphate",
+      "ec": "4.2.3.137",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -474,7 +526,7 @@
       ],
       "products": [
         {
-          "metabolite": "selinene",
+          "metabolite": "e_2_epi_caryophyllene",
           "stoichiometry": 1
         },
         {
@@ -484,20 +536,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_76"
+          "enzyme": "ec_4_2_3_137"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:30423"
+        "rhea": "RHEA:34703"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30423"
+            "id": "RHEA:34703"
           }
         ]
       }

@@ -22,13 +22,13 @@ pathway phytanoyl-coa-to-pristanate "phytanoyl-CoA to pristanate" {
 
   branch from succinate side left {
     succinate
-    <-> . +icosanoyl_coa +akg +o2 +co2
-    2_hydroxyicosanoyl_coa
+    <-> . +n_7_carboxy_7_demethylgeranyl_l_glutamate +akg +o2 +co2 +h2o
+    isodomoate_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_91 [4.2.3.91] +fpp +h2o
-    cubebol
+    <-> ec_4_2_3_161 [4.2.3.161] +fpp
+    3s_asterisca_2_9_6_diene
   }
 }

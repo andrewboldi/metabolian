@@ -18,13 +18,13 @@ pathway dtdp-5-5-di-c-methyl-l-to-novobiocin "dTDP-5,5-di-C-methyl-β-L-… to n
 
   branch from dtdp side left {
     dtdp
-    <-> . +dtmp +ctp
-    cdp
+    <-> . +dctp +dtmp
+    dcdp
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_97 [2.1.1.97] +3_hydroxyanthranilate +sam +hplus
-    3_hydroxy_4_methylanthranilate
+    <-> ec_2_1_1_164 [2.1.1.164] +4_demethylrebeccamycin +sam +hplus
+    rebeccamycin
   }
 }

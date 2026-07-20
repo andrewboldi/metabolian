@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "galactitol-to-keto-d-tagatose",
+  "name": "galactitol to keto-D-tagatose…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from galactitol to keto-D-tagatose 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20685"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16813"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "galactitol",
+      "name": "galactitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16813"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "keto_d_tagatose",
+      "name": "keto-D-tagatose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47693"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "keto_d_tagatose_6_phosphate",
+      "name": "keto-D-tagatose 6-phosphate",
+      "short": "keto-D-tagatose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:134283"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_16",
+      "name": "galactitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.16"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_101",
+      "name": "tagatose kinase",
+      "ec": [
+        "2.7.1.101"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "galactitol 2-dehydrogenase",
+      "equation": "galactitol + NAD(+) = keto-D-tagatose + NADH + H(+)",
+      "ec": "1.1.1.16",
+      "substrates": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_tagatose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20685"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tagatose kinase",
+      "equation": "keto-D-tagatose + ATP = keto-D-tagatose 6-phosphate + ADP + H(+)",
+      "ec": "2.7.1.101",
+      "substrates": [
+        {
+          "metabolite": "keto_d_tagatose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_tagatose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_101"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15513"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15513"
+          }
+        ]
+      }
+    }
+  ]
+}

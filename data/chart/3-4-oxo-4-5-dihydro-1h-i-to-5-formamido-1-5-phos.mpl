@@ -20,8 +20,8 @@ pathway 3-4-oxo-4-5-dihydro-1h-i-to-5-formamido-1-5-phos "3-(4-oxo-4,5-dihydro-1
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_3_21 [3.5.3.21] +methylenediurea +h2o +hplus +co2
-    n_hydroxymethyl_urea
+    <-> ec_1_13_99_3 [1.13.99.3] +l_tryptophan +o2 +hplus +co2
+    3_indoleglycolaldehyde
   }
 
   branch from formate side right {
@@ -32,7 +32,7 @@ pathway 3-4-oxo-4-5-dihydro-1h-i-to-5-formamido-1-5-phos "3-(4-oxo-4,5-dihydro-1
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_1_2 [6.3.1.2] +nh3 +atp +adp +pi +hplus
-    glutamine
+    <-> ec_2_3_1_1 [2.3.1.1] +acetyl_coa +coa +hplus
+    nag
   }
 }

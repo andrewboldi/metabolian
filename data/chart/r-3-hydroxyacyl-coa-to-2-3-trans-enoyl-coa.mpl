@@ -16,13 +16,7 @@ pathway r-3-hydroxyacyl-coa-to-2-3-trans-enoyl-coa "(R)-3-hydroxyacyl-CoA to 2,3
     2_3_trans_enoyl_coa
   }
 
-  branch from 2_3_trans_enoyl_coa side left {
-    2_3_trans_enoyl_coa
-    <-> ec_4_2_1_17 [4.2.1.17] +h2o
-    s_3_hydroxyacyl_coa
-  }
-
-  branch from 3_substituted_propionyl_coa side right {
+  branch from 3_substituted_propionyl_coa side left {
     3_substituted_propionyl_coa
     <-> ec_1_3_1_8 [1.3.1.8] +nadp +nadph +hplus
     2_3_dehydroacyl_coa

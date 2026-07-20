@@ -1,0 +1,210 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-3-hydroxytetradecanoy-to-cis-tetradec-3-enoyl",
+  "name": "(S)-3-hydroxytetradecanoy… to cis-tetradec-3-enoyl-CoA",
+  "category": "other",
+  "summary": "A 2-step route from (S)-3-hydroxytetradecanoyl-CoA(4−) to cis-tetradec-3-enoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31171"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62614"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_3_hydroxytetradecanoyl_coa",
+      "name": "(S)-3-hydroxytetradecanoyl-CoA",
+      "short": "3-hydroxytetradecan…",
+      "formula": "C35H58N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62614"
+      }
+    },
+    {
+      "id": "trans_tetradec_2_enoyl_coa",
+      "name": "trans-tetradec-2-enoyl-CoA",
+      "short": "trans-tetradec-2-en…",
+      "formula": "C35H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61405"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cis_tetradec_3_enoyl_coa",
+      "name": "cis-tetradec-3-enoyl-CoA",
+      "short": "cis-tetradec-3-enoy…",
+      "formula": "C35H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61968"
+      }
+    },
+    {
+      "id": "myristoyl_coa",
+      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
+      "short": "Myristoyl-CoA…",
+      "formula": "C35H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57385"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3S)-hydroxytetradecanoyl-CoA = (2E)-tetradecenoyl-CoA + H2O",
+      "equation": "(3S)-hydroxytetradecanoyl-CoA = (2E)-tetradecenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxytetradecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_tetradec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31171"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-tetradecenoyl-CoA = (3Z)-tetradecenoyl-CoA",
+      "equation": "(2E)-tetradecenoyl-CoA = (3Z)-tetradecenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_tetradec_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_tetradec_3_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29847"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29847"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tetradecanoyl-CoA + FAD + H(+) = (2E)-tetradecenoyl-CoA + FADH2",
+      "equation": "tetradecanoyl-CoA + FAD + H(+) = (2E)-tetradecenoyl-CoA + FADH2",
+      "substrates": [
+        {
+          "metabolite": "myristoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_tetradec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28358"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28358"
+          }
+        ]
+      }
+    }
+  ]
+}

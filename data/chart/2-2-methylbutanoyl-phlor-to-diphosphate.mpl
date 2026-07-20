@@ -18,7 +18,7 @@ pathway 2-2-methylbutanoyl-phlor-to-diphosphate "2-(2-methylbutanoyl)phlor… to
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_45 [4.2.3.45] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    phyllocladan_16_ol
+    <-> ec_3_6_1_55 [3.6.1.55] +8_oxo_dgtp +h2o +hplus
+    8_oxo_dgmp
   }
 }

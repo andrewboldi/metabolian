@@ -24,8 +24,8 @@ pathway geranyl-diphosphate-to-geranate "geranyl diphosphate to geranate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_122 [4.2.3.122] +gpp
-    pinene
+    <-> . +1r_2r_3r_prephytoene_diphosphate +nadph +hplus +nadp
+    lycopaoctaene
   }
 
   branch from geranial side left {

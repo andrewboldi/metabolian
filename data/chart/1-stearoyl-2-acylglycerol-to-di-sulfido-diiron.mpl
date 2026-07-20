@@ -20,8 +20,8 @@ pathway 1-stearoyl-2-acylglycerol-to-di-sulfido-diiron "1-stearoyl 2-acylglycero
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +di_sulfido_diiron +o2 +hplus +h2o
-    3_3_biflaviolin
+    <-> ec_1_14_15_31 [1.14.15.31] +2_hydroxy_5_methyl_1_naphthoate +di_sulfido_diiron +o2 +hplus +h2o
+    2_7_dihydroxy_5_methyl_1_naphthoate
   }
 
   branch from 1_linoleoyl_2_acylglycerolipid side right {

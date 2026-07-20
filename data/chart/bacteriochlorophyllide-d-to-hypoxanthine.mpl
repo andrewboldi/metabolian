@@ -18,19 +18,19 @@ pathway bacteriochlorophyllide-d-to-hypoxanthine "bacteriochlorophyllide d to hy
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_1_21_98_4 [1.21.98.4] +exxxy_peptide +sam +methionine +hplus
-    e_y_cross_linked_exxxy_peptide_residues
+    <-> ec_2_1_1_394 [2.1.1.394] +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +hydrogen_donor +sam +methionine +hydrogen_acceptor +sah +hplus
+    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
   }
 
   branch from methionine side right {
     methionine
-    <-> ec_2_3_1_311 [2.3.1.311] +uridine_5_monophosphate_1 +acetyl_coa +sam +h2o +5_deoxyadenosine +coa +hplus
-    5_carboxymethyl_uridine_5_monophosphate_2
+    <-> ec_2_1_1_394 [2.1.1.394] +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
+    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_36 [3.5.4.36] +cytidine_5_monophosphate_1 +h2o +hplus
-    uridine_5_monophosphate_1
+    <-> ec_1_4_3_25 [1.4.3.25] +arginine +o2 +h2o +h2o2
+    5_guanidino_2_oxopentanoic_acid
   }
 }

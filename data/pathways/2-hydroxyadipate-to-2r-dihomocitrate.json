@@ -1,0 +1,210 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-hydroxyadipate-to-2r-dihomocitrate",
+  "name": "2-hydroxyadipate to (2R)-dihomocitrate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 2-hydroxyadipate(2−) to (2R)-dihomocitrate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14793"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57987"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_hydroxyadipate",
+      "name": "2-hydroxyadipate",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57987"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_oxoadipate",
+      "name": "2-oxoadipate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57499"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2r_dihomocitrate",
+      "name": "(2R)-dihomocitrate",
+      "formula": "C8H9O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:72697"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_172",
+      "name": "2-oxoadipate reductase",
+      "ec": [
+        "1.1.1.172"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-oxoadipate reductase",
+      "equation": "2-hydroxyadipate + NAD(+) = 2-oxoadipate + NADH + H(+)",
+      "ec": "1.1.1.172",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_172"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14793"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxoadipate + acetyl-CoA + H2O = (R)-dihomocitrate + CoA + H(+)",
+      "equation": "2-oxoadipate + acetyl-CoA + H2O = (R)-dihomocitrate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_dihomocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44924"
+          }
+        ]
+      }
+    }
+  ]
+}

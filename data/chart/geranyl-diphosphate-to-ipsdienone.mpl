@@ -18,13 +18,13 @@ pathway geranyl-diphosphate-to-ipsdienone "geranyl diphosphate to ipsdienone" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_93 [4.2.3.93] +fpp
-    guaiene
+    <-> ec_4_2_3_162 [4.2.3.162] +fpp
+    amorphene
   }
 
   branch from fmn side right {
     fmn
-    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
-    5_20_dihete
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    15_r_hete
   }
 }

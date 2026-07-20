@@ -206,13 +206,13 @@
       }
     },
     {
-      "id": "sn_glycerol_3_phosphate",
-      "name": "sn-glycerol 3-phosphate",
-      "short": "sn-glycerol 3-P",
-      "formula": "C3H7O6P",
-      "charge": -2,
+      "id": "2_acyl_sn_glycero_3_phosphoserine",
+      "name": "2-acyl-sn-glycero-3-phosphoserine",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C7H12NO9PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57597"
+        "chebi": "CHEBI:65214"
       }
     },
     {
@@ -225,22 +225,62 @@
       }
     },
     {
-      "id": "3_sn_phosphatidyl_l_serine",
-      "name": "3-sn-phosphatidyl-L-serine",
-      "short": "3-sn-phosphatidyl-L…",
-      "formula": "C8H11NO10PR2",
+      "id": "1_acyl_sn_glycero_2_3_cyclic_phosphate",
+      "name": "1-acyl-sn-glycero-2,3-cyclic phosphate",
+      "short": "1-acyl-sn-glycero-2…",
+      "formula": "C4H5O6PR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57262"
+        "chebi": "CHEBI:143947"
       }
     },
     {
-      "id": "acyl_monophosphate",
-      "name": "acyl monophosphate",
-      "formula": "CO5PR",
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "1_acyl_2_linoleoyl_sn_glycero_3_phosphate",
+      "name": "1-acyl-2-linoleoyl-sn-glycero-3-phosphate",
+      "short": "1-acyl-2-linoleoyl-…",
+      "formula": "C22H36O8PR",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:59918"
+        "chebi": "CHEBI:74920"
+      }
+    },
+    {
+      "id": "1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate",
+      "name": "1-acyl-2-hexadecenoyl-sn-glycero-3-phosphate",
+      "short": "1-acyl-2-hexadeceno…",
+      "formula": "C20H34O8PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77811"
+      }
+    },
+    {
+      "id": "2_16_1_lysophosphatidate",
+      "name": "2-16:1-lysophosphatidate",
+      "short": "2-16:1-lysophosphat…",
+      "formula": "C19H35O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77810"
+      }
+    },
+    {
+      "id": "1_3_diacyl_sn_glycerol",
+      "name": "1,3-diacyl-sn-glycerol",
+      "short": "1,3-diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77272"
       }
     }
   ],
@@ -271,20 +311,6 @@
       "name": "1-acylglycerophosphocholine O-acyltransferase",
       "ec": [
         "2.3.1.23"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_198",
-      "name": "glycerol-3-phosphate 2-O-acyltransferase",
-      "ec": [
-        "2.3.1.198"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_275",
-      "name": "acyl phosphate:glycerol-3-phosphate acyltransferase",
-      "ec": [
-        "2.3.1.275"
       ]
     }
   ],
@@ -641,16 +667,15 @@
     },
     {
       "id": "r9",
-      "name": "glycerol-3-phosphate 2-O-acyltransferase",
-      "equation": "sn-glycerol 3-phosphate + an acyl-CoA = a 2-acyl-sn-glycerol 3-phosphate + CoA",
-      "ec": "2.3.1.198",
+      "name": "a 2-acyl-sn-glycero-3-phospho-L-serine + H2O = a 2-acyl-sn-glycerol 3-phosphate + L-ser...",
+      "equation": "a 2-acyl-sn-glycero-3-phospho-L-serine + H2O = a 2-acyl-sn-glycerol 3-phosphate + L-serine + H(+)",
       "substrates": [
         {
-          "metabolite": "sn_glycerol_3_phosphate",
+          "metabolite": "2_acyl_sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acyl_coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -660,47 +685,42 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "serine",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_3_1_198"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:33559"
+        "rhea": "RHEA:41716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33559"
+            "id": "RHEA:41716"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "a 1,2-diacyl-sn-glycero-3-phosphocholine + L-serine = a 1,2-diacyl-sn-glycero-3-phospho...",
-      "equation": "a 1,2-diacyl-sn-glycero-3-phosphocholine + L-serine = a 1,2-diacyl-sn-glycero-3-phospho-L-serine + choline",
+      "name": "a 1-acyl-sn-glycero-3-phosphocholine = a 1-acyl-sn-glycero-2,3-cyclic phosphate + choline",
+      "equation": "a 1-acyl-sn-glycero-3-phosphocholine = a 1-acyl-sn-glycero-2,3-cyclic phosphate + choline",
       "substrates": [
         {
-          "metabolite": "phosphatidylcholine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_sn_phosphatidyl_l_serine",
+          "metabolite": "1_acyl_sn_glycero_2_3_cyclic_phosphate",
           "stoichiometry": 1
         },
         {
@@ -711,59 +731,135 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:45088"
+        "rhea": "RHEA:60700"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45088"
+            "id": "RHEA:60700"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "acyl phosphate:glycerol-3-phosphate acyltransferase",
-      "equation": "an acyl phosphate + sn-glycerol 3-phosphate = a 1-acyl-sn-glycero-3-phosphate + phosphate",
-      "ec": "2.3.1.275",
+      "name": "a 1-acyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = a 1-acyl-2-(9Z,12Z)-oc...",
+      "equation": "a 1-acyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = a 1-acyl-2-(9Z,12Z)-octadecadienoyl-sn-glycero-3-phosphate + CoA",
       "substrates": [
-        {
-          "metabolite": "acyl_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "1_acyl_sn_glycerol_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "linoleoyl_coa",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_3_1_275"
+          "metabolite": "1_acyl_2_linoleoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:34075"
+        "rhea": "RHEA:37435"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34075"
+            "id": "RHEA:37435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "1-acyl-2-hexadecenoyl-sn-glycero-3-phosphate + H2O = 2-hexadecenoyl-sn-glycero-3-phosph...",
+      "equation": "1-acyl-2-hexadecenoyl-sn-glycero-3-phosphate + H2O = 2-hexadecenoyl-sn-glycero-3-phosphate + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_16_1_lysophosphatidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:41171"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "a 1-acyl-sn-glycerol + an acyl-CoA = a 1,3-diacyl-sn-glycerol + CoA",
+      "equation": "a 1-acyl-sn-glycerol + an acyl-CoA = a 1,3-diacyl-sn-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_diacyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:77559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77559"
           }
         ]
       }

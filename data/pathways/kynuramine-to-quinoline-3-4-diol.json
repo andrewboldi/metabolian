@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "kynuramine-to-quinoline-3-4-diol",
   "name": "kynuramine to quinoline-3,4-diol",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from kynuramine(1+) to quinoline-3,4-diol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,31 +119,22 @@
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
+      "id": "chorismate",
+      "name": "chorismate",
+      "formula": "C10H8O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57912"
+        "chebi": "CHEBI:29748"
       }
     },
     {
-      "id": "3_indoleglycolaldehyde",
-      "name": "3-indoleglycolaldehyde",
-      "short": "3-indoleglycolaldeh…",
-      "formula": "C10H9NO2",
-      "charge": 0,
+      "id": "2_azaniumyl_2_deoxyisochorismate",
+      "name": "2-azaniumyl-2-deoxyisochorismate",
+      "short": "2-azaniumyl-2-deoxy…",
+      "formula": "C10H10NO5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15976"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:58792"
       }
     }
   ],
@@ -153,13 +144,6 @@
       "name": "4-hydroxyquinoline 3-monooxygenase",
       "ec": [
         "1.14.13.62"
-      ]
-    },
-    {
-      "id": "ec_1_13_99_3",
-      "name": "tryptophan 2'-dioxygenase",
-      "ec": [
-        "1.13.99.3"
       ]
     }
   ],
@@ -305,53 +289,39 @@
     },
     {
       "id": "r4",
-      "name": "tryptophan 2'-dioxygenase",
-      "equation": "L-tryptophan + O2 + H(+) = 3-indoleglycolaldehyde + NH4(+) + CO2",
-      "ec": "1.13.99.3",
+      "name": "chorismate + NH4(+) = (2S)-2-amino-4-deoxychorismate + H2O",
+      "equation": "chorismate + NH4(+) = (2S)-2-amino-4-deoxychorismate + H2O",
       "substrates": [
         {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_indoleglycolaldehyde",
+          "metabolite": "chorismate",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_13_99_3"
+          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:22620"
+        "rhea": "RHEA:55676"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22620"
+            "id": "RHEA:55676"
           }
         ]
       }

@@ -18,7 +18,7 @@ pathway chlorobenzene-to-2-chloro-cis-cis-muconate "chlorobenzene to 2-chloro-ci
 
   branch from 3_chlorocatechol side left {
     3_chlorocatechol
-    <-> . +1_chloro_3_nitrobenzene +nadh +o2 +nad
-    nitrite
+    <-> . +nadh +o2 +hplus +nad +h2o
+    2_chlorophenol
   }
 }

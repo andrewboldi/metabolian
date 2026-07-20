@@ -22,14 +22,14 @@ pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
 
   branch from lithocholate side left {
     lithocholate
-    <-> ec_1_1_1_392 [1.1.1.392] +nadp +nadph +hplus
-    3_oxo_5_cholanate
+    <-> ec_6_2_1_7 [6.2.1.7] +atp +coa +lithocholyl_coa +amp
+    ppi
   }
 
   branch from chenodeoxycholate side right {
     chenodeoxycholate
-    <-> . +glycine +h2o
-    glycochenodeoxycholate
+    <-> . +nadp +nadph +hplus
+    7_hydroxy_3_oxo_5_cholan_24_oate
   }
 
   branch from ursodeoxycholate side left {

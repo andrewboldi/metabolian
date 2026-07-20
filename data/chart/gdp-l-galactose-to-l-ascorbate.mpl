@@ -18,27 +18,21 @@ pathway gdp-l-galactose-to-l-ascorbate "GDP-β-L-galactose to L-ascorbate" {
     ascorbate
   }
 
-  branch from l_galactose_1_phosphate side left {
-    l_galactose_1_phosphate
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp_l_galactose +g1p
-    gdp_d_glucose
-  }
-
-  branch from l_galactopyranose side right {
+  branch from l_galactopyranose side left {
     l_galactopyranose
     <-> ec_1_1_1_122 [1.1.1.122] +nad +nadh +hplus
     l_galactono_1_5_lactone
   }
 
-  branch from l_galactono_1_4_lactone side left {
+  branch from l_galactono_1_4_lactone side right {
     l_galactono_1_4_lactone
-    <-> ec_1_3_2_3 [1.3.2.3] +iron +fe2 +hplus
-    l_dehydroascorbate
+    <-> ec_3_1_1_120 [3.1.1.120] +h2o +hplus
+    l_galactonate
   }
 
-  branch from ascorbate side right {
+  branch from ascorbate side left {
     ascorbate
-    <-> . +hplus
-    l_xylo_hex_3_ulonolactone
+    <-> . +iron +fe2 +hplus
+    l_dehydroascorbate
   }
 }

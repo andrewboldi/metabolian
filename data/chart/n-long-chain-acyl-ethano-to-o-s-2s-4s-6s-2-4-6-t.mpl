@@ -24,19 +24,19 @@ pathway n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t "N-(long-chain-acyl)eth
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +5z_8z_11z_14z_17z_icosapentaenoylethanolamine +h2o
-    all_cis_5_8_11_14_17_icosapentaenoate
+    <-> . +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_oleoyl_sn_glycero_3_phosphate
   }
 
   branch from long_chain_fatty_acyl_coa side left {
     long_chain_fatty_acyl_coa
-    <-> ec_2_3_1_279 [2.3.1.279] +trehalose +coa
-    2_o_long_chain_fatty_acyl_trehalose
+    <-> ec_1_2_1_50 [1.2.1.50] +nadp +coa +nadph +hplus
+    long_chain_fatty_aldehyde
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_16 [6.1.1.16] +amp_3_end_1 +cysteine +atp +amp
-    3_l_cysteinyl_adenylyl_zwitterionic_group
+    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
+    3_l_glutaminyl_adenylyl_zwitterionic_group
   }
 }

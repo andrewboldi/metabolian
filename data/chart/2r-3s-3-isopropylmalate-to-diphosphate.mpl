@@ -30,8 +30,8 @@ pathway 2r-3s-3-isopropylmalate-to-diphosphate "(2R,3S)-3-isopropylmalate to dip
 
   branch from kic side left {
     kic
-    <-> . +d_leucine +o2 +h2o +h2o2
-    nh3
+    <-> . +leucine +glyoxylate
+    glycine
   }
 
   branch from 3_methylbutanal side right {
@@ -48,7 +48,7 @@ pathway 2r-3s-3-isopropylmalate-to-diphosphate "(2R,3S)-3-isopropylmalate to dip
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_6 [4.2.3.6] +fpp
-    trichodiene
+    <-> ec_4_2_3_23 [4.2.3.23] +fpp
+    germacrene_a
   }
 }

@@ -4,35 +4,25 @@
 # edit the generator, not this file.
 
 pathway c2-c8-saturated-to-fatty-acid-anion "C2-C8-saturated… to fatty acid anion" {
-  spacing 152
+  spacing 224
 
   spine at 0,0 {
     c2_c8_saturated_long_chain_fatty_acyl_pantethein
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    7s_7_hydroxy_c2_c8_saturated_long_chain_fatty_a
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    7r_8r_7_8_dihydroxy_c2_c8_saturated_long_chain
-    <-> . +fmnh2 +o2 -fatty_aldehyde -fmn -h2o -hplus
-    o_s_7_oxoheptanoyl_pantetheine_4_phosphoryl_seri
+    <-> ec_1_14_14_46 [1.14.14.46] +fmnh2 +o2 -fatty_aldehyde -fmn -h2o -hplus
+    o_s_pimeloylpantetheine_4_phosphoryl_serine_2
     <-> . +fatty_aldehyde +nadp +h2o -nadph -hplus
     fatty-acid
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    19_hete
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    4_hydroxy_17_estradiol
   }
 
-  branch from fatty_aldehyde side right {
-    fatty_aldehyde
-    <-> . +hplus +co2 +h2o
-    2r_2_hydroperoxy_fatty_acid_anion
-  }
-
-  branch from fatty-acid side left {
+  branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_118 [3.1.1.118] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
-    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
+    <-> . +2_monolysocardiolipin +h2o +hplus
+    2_2_dilysocardiolipin
   }
 }

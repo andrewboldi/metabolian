@@ -26,19 +26,19 @@ pathway 1-2-dilinoleoyl-sn-glycer-to-linoleate "1,2-dilinoleoyl-sn-glycer… to 
 
   branch from 2_linoleoyl_sn_glycero_3_phosphocholine side right {
     2_linoleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    octadecanoate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from tetradecanoate side left {
     tetradecanoate
-    <-> . +1_tetradecanoyl_2_4z_7z_10z_13z_16z_19z_docosahe +h2o +hplus
-    2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    7_hydroxymyristate
   }
 
   branch from linoleate side right {
     linoleate
-    <-> ec_1_13_11_61 [1.13.11.61] +o2
-    9_r_hpode
+    <-> ec_1_13_11_58 [1.13.11.58] +o2
+    9_s_hpode
   }
 }

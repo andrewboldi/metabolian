@@ -152,67 +152,82 @@
       }
     },
     {
-      "id": "tricetin",
-      "name": "tricetin",
-      "formula": "C15H9O7",
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60045"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "3_5_di_o_methyltricetin",
-      "name": "3',5'-di-O-methyltricetin",
-      "short": "3',5'-di-O-methyltr…",
-      "formula": "C17H13O7",
+      "id": "2_o_methyladenosine_5_monophosphate_1",
+      "name": "2'-O-methyladenosine 5'-monophosphate(1−)",
+      "short": "2'-O-methyladenosin…",
+      "formula": "C11H13N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60016"
+        "chebi": "CHEBI:74477"
       }
     },
     {
-      "id": "dehydroepiandrosterone",
-      "name": "dehydroepiandrosterone",
-      "short": "dehydroepiandroster…",
-      "formula": "C19H28O2",
-      "charge": 0,
+      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
+      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
+      "short": "all-cis-5,8,11,14,1…",
+      "formula": "C20H29O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:28689"
+        "chebi": "CHEBI:58562"
       }
     },
     {
-      "id": "16_hydroxydehydroepiandrosterone",
-      "name": "16α-hydroxydehydroepiandrosterone",
-      "short": "16α-hydroxydehydroe…",
-      "formula": "C19H28O3",
-      "charge": 0,
+      "id": "5z_8z_14z_17z_11_12_epoxyicosatetraenoate",
+      "name": "(5Z,8Z,14Z,17Z)-11,12-epoxyicosatetraenoate",
+      "short": "(5Z,8Z,14Z,17Z)-11,…",
+      "formula": "C20H29O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:27771"
+        "chebi": "CHEBI:136441"
       }
     },
     {
-      "id": "santalene",
-      "name": "(+)-α-santalene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "1_2_diarachidonoyl_sn_glycero_3_phosphate",
+      "name": "1,2-diarachidonoyl-sn-glycero-3-phosphate",
+      "short": "1,2-diarachidonoyl-…",
+      "formula": "C43H67O8P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:61677"
+        "chebi": "CHEBI:77126"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cdp_1_2_diarachidonoyl_sn_glycerol",
+      "name": "CDP-1,2-diarachidonoyl-sn-glycerol",
+      "short": "CDP-1,2-diarachidon…",
+      "formula": "C52H79N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85351"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_175",
-      "name": "tricin synthase",
+      "id": "ec_2_1_1_225",
+      "name": "tRNA:m(4)X modification enzyme",
       "ec": [
-        "2.1.1.175"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_82",
-      "name": "alpha-santalene synthase",
-      "ec": [
-        "4.2.3.82"
+        "2.1.1.225"
       ]
     }
   ],
@@ -387,60 +402,60 @@
     },
     {
       "id": "r5",
-      "name": "tricin synthase",
-      "equation": "tricetin + 2 S-adenosyl-L-methionine = 3',5'-di-O-methyltricetin + 2 S-adenosyl-L-homocysteine + 2 H(+)",
-      "ec": "2.1.1.175",
+      "name": "tRNA:m(4)X modification enzyme",
+      "equation": "adenosine(4) in tRNA(His) + S-adenosyl-L-methionine = 2'-O-methyladenosine(4) in tRNA(His) + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.225",
       "substrates": [
         {
-          "metabolite": "tricetin",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_5_di_o_methyltricetin",
+          "metabolite": "2_o_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_175"
+          "enzyme": "ec_2_1_1_225"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:32347"
+        "rhea": "RHEA:43196"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32347"
+            "id": "RHEA:43196"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "3beta-hydroxyandrost-5-en-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3beta,...",
-      "equation": "3beta-hydroxyandrost-5-en-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3beta,16alpha-dihydroxy-androst-5-en-17-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 1...",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 11,12-epoxy-(5Z,8Z,14Z,17Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "dehydroepiandrosterone",
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
           "stoichiometry": 1
         },
         {
@@ -454,7 +469,7 @@
       ],
       "products": [
         {
-          "metabolite": "16_hydroxydehydroepiandrosterone",
+          "metabolite": "5z_8z_14z_17z_11_12_epoxyicosatetraenoate",
           "stoichiometry": 1
         },
         {
@@ -473,32 +488,39 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:47220"
+        "rhea": "RHEA:52172"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47220"
+            "id": "RHEA:52172"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "alpha-santalene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-alpha-santalene + diphosphate",
-      "ec": "4.2.3.82",
+      "name": "1,2-di-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate + CTP + H(+) = 1,2-di-(5...",
+      "equation": "1,2-di-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate + CTP + H(+) = 1,2-di-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "1_2_diarachidonoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "santalene",
+          "metabolite": "cdp_1_2_diarachidonoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -506,22 +528,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_82"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:31435"
+        "rhea": "RHEA:45656"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31435"
+            "id": "RHEA:45656"
           }
         ]
       }

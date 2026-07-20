@@ -16,21 +16,27 @@ pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-
     fatty_acid_methyl_ester
   }
 
-  branch from dag side left {
+  branch from triacyl_sn_glycerol side left {
+    triacyl_sn_glycerol
+    <-> . +acyl_coa +coa
+    2_3_diacyl_sn_glycerol
+  }
+
+  branch from dag side right {
     dag
     <-> ec_3_1_4_3 [3.1.4.3] +phosphatidylcholine +h2o +hplus
     phosphocholine
   }
 
-  branch from fatty-acid side right {
+  branch from fatty-acid side left {
     fatty-acid
     <-> ec_3_1_2_20 [3.1.2.20] +h2o +coa +hplus
     fatty_acyl_coa
   }
 
-  branch from sah side left {
+  branch from sah side right {
     sah
-    <-> ec_2_1_1_77 [2.1.1.77] +l_isoaspartate +sam
-    l_isoaspartate_methyl_ester
+    <-> ec_2_1_1_27 [2.1.1.27] +tyraminium +sam +hplus
+    n_methyltyraminium
   }
 }

@@ -1,0 +1,251 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isethionate-to-ethyl-benzoate",
+  "name": "isethionate to ethyl benzoate",
+  "category": "other",
+  "summary": "A 2-step route from isethionate to ethyl benzoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81427"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61904"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isethionate",
+      "name": "isethionate",
+      "formula": "C2H5O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61904"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16236"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57369"
+      }
+    },
+    {
+      "id": "ethyl_benzoate",
+      "name": "ethyl benzoate",
+      "formula": "C9H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156074"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "2_3_bis_o_phytanyl_sn_glycerol_1_phospholipid_an",
+      "name": "2,3-bis-O-phytanyl-sn-glycerol 1-phospholipid anion",
+      "short": "2,3-bis-O-phytanyl-…",
+      "formula": "C43H87O6PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138139"
+      }
+    },
+    {
+      "id": "2_3_bis_o_geranylgeranyl_sn_glycerol_1_phospholi",
+      "name": "2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phospholipid anion",
+      "short": "2,3-bis-O-(geranylg…",
+      "formula": "C43H71O6PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138140"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxyethane-1-sulfonate + AH2 = ethanol + sulfite + A + H(+)",
+      "equation": "2-hydroxyethane-1-sulfonate + AH2 = ethanol + sulfite + A + H(+)",
+      "substrates": [
+        {
+          "metabolite": "isethionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ethanol + benzoyl-CoA = ethyl benzoate + CoA",
+      "equation": "ethanol + benzoyl-CoA = ethyl benzoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethyl_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:64680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 2,3-bis-O-phytanyl-sn-glycerol 1-phospholipid + 8 A = a 2,3-bis-O-(geranylgeranyl)-sn...",
+      "equation": "a 2,3-bis-O-phytanyl-sn-glycerol 1-phospholipid + 8 A = a 2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phospholipid + 8 AH2",
+      "substrates": [
+        {
+          "metabolite": "2_3_bis_o_phytanyl_sn_glycerol_1_phospholipid_an",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 8
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_bis_o_geranylgeranyl_sn_glycerol_1_phospholi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 8
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64376"
+          }
+        ]
+      }
+    }
+  ]
+}

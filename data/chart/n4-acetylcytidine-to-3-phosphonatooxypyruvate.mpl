@@ -18,13 +18,7 @@ pathway n4-acetylcytidine-to-3-phosphonatooxypyruvate "N4-acetylcytidine to 3-ph
     php
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa
-    glucovanillin
-  }
-
-  branch from pg3 side right {
+  branch from pg3 side left {
     pg3
     <-> ec_2_7_7_106 [2.7.7.106] +gtp +hplus +ppi
     3_r_glyceryl_diphospho_5_guanosine

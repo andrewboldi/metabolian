@@ -1,0 +1,273 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pheophorbide-a-to-red-chlorophyll-catabolite",
+  "name": "pheophorbide a to red chlorophyll catabolite",
+  "category": "other",
+  "summary": "A 2-step route from pheophorbide a(2−) to red chlorophyll catabolite(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48160"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58687"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pheophorbide_a",
+      "name": "pheophorbide a",
+      "formula": "C35H34N4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58687"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "epoxypheophorbide_a",
+      "name": "epoxypheophorbide a",
+      "formula": "C35H35N4O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:88233"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "red_chlorophyll_catabolite",
+      "name": "red chlorophyll catabolite",
+      "short": "red chlorophyll…",
+      "formula": "C35H36N4O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58716"
+      }
+    },
+    {
+      "id": "4_hydroxy_3_all_trans_heptaprenylbenzoate",
+      "name": "4-hydroxy-3-all-trans-heptaprenylbenzoate",
+      "short": "4-hydroxy-3-all-tra…",
+      "formula": "C42H61O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84496"
+      }
+    },
+    {
+      "id": "3_4_dihydroxy_5_all_trans_heptaprenylbenzoate",
+      "name": "3,4-dihydroxy-5-all-trans-heptaprenylbenzoate",
+      "short": "3,4-dihydroxy-5-all…",
+      "formula": "C42H61O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84450"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_45",
+      "name": "4-hydroxy-3-polyprenylbenzoate 5-hydroxylase",
+      "ec": [
+        "1.14.15.45"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 3 H(+) = epoxypheophorbide a + ...",
+      "equation": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 3 H(+) = epoxypheophorbide a + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "pheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxypheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "epoxypheophorbide a + H2O = red chlorophyll catabolite + H(+)",
+      "equation": "epoxypheophorbide a + H2O = red chlorophyll catabolite + H(+)",
+      "substrates": [
+        {
+          "metabolite": "epoxypheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "red_chlorophyll_catabolite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-hydroxy-3-polyprenylbenzoate 5-hydroxylase",
+      "equation": "4-hydroxy-3-(all-trans-heptaprenyl)benzoate + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3,4-dihydroxy-5-(all-trans-heptaprenyl)benzoate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.45",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_3_all_trans_heptaprenylbenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxy_5_all_trans_heptaprenylbenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:81247"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81247"
+          }
+        ]
+      }
+    }
+  ]
+}

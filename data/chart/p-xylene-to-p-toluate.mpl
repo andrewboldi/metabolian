@@ -18,7 +18,7 @@ pathway p-xylene-to-p-toluate "p-xylene to p-toluate" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_17_7_2 [1.17.7.2] +chlorophyllide_a +h2o +di_sulfido_diiron +hplus
-    71_hydroxychlorophyllide_a
+    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    1_acyl_2_palmitoleoylglycerolipid
   }
 }

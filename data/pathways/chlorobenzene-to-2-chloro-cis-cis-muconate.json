@@ -93,22 +93,21 @@
       }
     },
     {
-      "id": "1_chloro_3_nitrobenzene",
-      "name": "1-chloro-3-nitrobenzene",
-      "short": "1-chloro-3-nitroben…",
-      "formula": "C6H4ClNO2",
+      "id": "2_chlorophenol",
+      "name": "2-chlorophenol",
+      "formula": "C6H5ClO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:82420"
+        "chebi": "CHEBI:47083"
       }
     },
     {
-      "id": "nitrite",
-      "name": "nitrite",
-      "formula": "NO2",
-      "charge": -1,
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16301"
+        "chebi": "CHEBI:15377"
       }
     }
   ],
@@ -272,11 +271,11 @@
     },
     {
       "id": "r4",
-      "name": "1-chloro-3-nitrobenzene + NADH + O2 = 3-chlorocatechol + nitrite + NAD(+)",
-      "equation": "1-chloro-3-nitrobenzene + NADH + O2 = 3-chlorocatechol + nitrite + NAD(+)",
+      "name": "2-chlorophenol + NADH + O2 + H(+) = 3-chlorocatechol + NAD(+) + H2O",
+      "equation": "2-chlorophenol + NADH + O2 + H(+) = 3-chlorocatechol + NAD(+) + H2O",
       "substrates": [
         {
-          "metabolite": "1_chloro_3_nitrobenzene",
+          "metabolite": "2_chlorophenol",
           "stoichiometry": 1
         },
         {
@@ -286,6 +285,10 @@
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
@@ -294,25 +297,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nitrite",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:57808"
+        "rhea": "RHEA:80623"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57808"
+            "id": "RHEA:80623"
           }
         ]
       }

@@ -18,27 +18,21 @@ pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal
     d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6_n
   }
 
-  branch from d_gal_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac side left {
-    d_gal_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac
-    <-> . +udp_d_galactose +udp +hplus
-    l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
-  }
-
-  branch from n_acetyl_d_galactosamine side right {
+  branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_threonine +h2o
-    l_threonine
+    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_serine +h2o
+    l_serine
   }
 
-  branch from l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco side left {
+  branch from l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco side right {
     l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco
-    <-> ec_2_4_1_69 [2.4.1.69] +gdp_l_fucose +gdp +hplus
-    d_galactosyl_1_3_n_acetyl_d_glucosaminide
+    <-> . +udp_d_galactose +udp +hplus
+    d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_glcnac
   }
 
-  branch from d_galactopyranose side right {
-    d_galactopyranose
-    <-> . +d_manp_1_4_d_galp_1_6_d_manp_1_4_d_manp_1_4_d_m +h2o
-    d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp
+  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminide side left {
+    d_galactosyl_1_3_n_acetyl_d_galactosaminide
+    <-> . +gdp_l_fucose +gdp +hplus
+    l_fuc_1_2_d_gal_1_3_d_galnac
   }
 }

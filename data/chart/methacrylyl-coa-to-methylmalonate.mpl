@@ -23,10 +23,4 @@ pathway methacrylyl-coa-to-methylmalonate "methacrylyl-CoA to methylmalonate" {
     <-> . +nad +coa +co2 +nadh
     propionyl_coa
   }
-
-  branch from methylmalonate side right {
-    methylmalonate
-    <-> ec_3_1_2_17 [3.1.2.17] +h2o +coa +hplus
-    s_methylmalonyl_coa
-  }
 }

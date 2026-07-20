@@ -18,13 +18,7 @@ pathway n2-l-glutamino-1-group-to-c-terminal-5-phospho-l "N2-L-glutamino(1−) g
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_20 [4.3.1.20] +3r_3_hydroxy_l_aspartate
-    oxaloacetate
-  }
-
-  branch from c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro side right {
-    c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro
-    <-> ec_1_2_1_106 [1.2.1.106] +pi +nadp +nadph +hplus
-    c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl
+    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nad +h2o +nadh +hplus
+    5_guanidino_2_oxopentanoic_acid
   }
 }

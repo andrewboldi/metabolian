@@ -8,23 +8,17 @@ pathway 2r-hydroxyhexanoate-to-ammonium "(2R)-hydroxyhexanoate to ammonium" {
 
   spine at 0,0 {
     2r_hydroxyhexanoate
-    <-> . +nad -nadh -hplus
+    <-> . +fad +hplus -fadh2
     2_oxohexanoate
-    <-> . +n_n_dimethyl_l_argininium -5_3_3_dimethylguanidino_2_oxopentanoate
+    <-> . +l_kynurenine -4_2_aminophenyl_2_4_dioxobutanoate
     l_2_aminohexanoic_acid
     <-> . +o2 +h2o -h2o2 -nh3
     2_oxohexanoate
   }
 
-  branch from 5_3_3_dimethylguanidino_2_oxopentanoate side left {
-    5_3_3_dimethylguanidino_2_oxopentanoate
-    <-> . +n_n_dimethyl_l_argininium +pyruvate
-    alanine
-  }
-
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> . +3_oxocyclopentanecarbonitrile +h2o
-    3_oxocyclopentanecarboxylate
+    <-> . +adp_1_deoxy_o_didehydro_ribofuranosylium +l_argininium +hplus
+    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
   }
 }

@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-pyridoxate-to-ammonium",
+  "name": "5-pyridoxate to ammonium",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 5-pyridoxate to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11152"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30960"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_pyridoxate",
+      "name": "5-pyridoxate",
+      "formula": "C8H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30960"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_acetamidomethylene_2_hydroxymethyl_succinate",
+      "name": "3-(acetamidomethylene)-2-(hydroxymethyl)succinate",
+      "short": "3-(acetamidomethyle…",
+      "formula": "C8H9NO6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:19418"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_hydroxymethyl_4_oxobutanoate",
+      "name": "2-(hydroxymethyl)-4-oxobutanoate",
+      "short": "2-(hydroxymethyl)-4…",
+      "formula": "C5H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58135"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "s_isoleucinol",
+      "name": "(S)-isoleucinol",
+      "formula": "C6H16NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195448"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3s_1_hydroxy_3_methylpentan_2_one",
+      "name": "(3S)-1-hydroxy-3-methylpentan-2-one",
+      "short": "1-hydroxy-3-methylp…",
+      "formula": "C6H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195449"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_241",
+      "name": "5-pyridoxate monooxygenase",
+      "ec": [
+        "1.14.13.241"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_66",
+      "name": "2-(hydroxymethyl)-3-(acetamidomethylene)succinate hydrolase",
+      "ec": [
+        "3.5.1.66"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "5-pyridoxate monooxygenase",
+      "equation": "5-pyridoxate + NADPH + O2 = 2-(acetamidomethylene)-3-(hydroxymethyl)succinate + NADP(+)",
+      "ec": "1.14.13.241",
+      "substrates": [
+        {
+          "metabolite": "5_pyridoxate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_acetamidomethylene_2_hydroxymethyl_succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_241"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-(hydroxymethyl)-3-(acetamidomethylene)succinate hydrolase",
+      "equation": "2-(acetamidomethylene)-3-(hydroxymethyl)succinate + 2 H2O + H(+) = 2-(hydroxymethyl)-4-oxobutanoate + acetate + NH4(+) + CO2",
+      "ec": "3.5.1.66",
+      "substrates": [
+        {
+          "metabolite": "3_acetamidomethylene_2_hydroxymethyl_succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxymethyl_4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17677"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17677"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-isoleucinol + NAD(+) + H2O = (3S)-1-hydroxy-3-methylpentan-2-one + NH4(+) + NADH + ...",
+      "equation": "(S)-isoleucinol + NAD(+) + H2O = (3S)-1-hydroxy-3-methylpentan-2-one + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_isoleucinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_1_hydroxy_3_methylpentan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76807"
+          }
+        ]
+      }
+    }
+  ]
+}

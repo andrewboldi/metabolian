@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "p-cumate-to-2-methylpropanoyl",
   "name": "p-cumate to 2-methylpropanoyl…",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 6-step route from p-cumate to 2-methylpropanoyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -168,22 +168,41 @@
       }
     },
     {
-      "id": "n6_isobutyryl_l_lysine",
-      "name": "N6-isobutyryl-L-lysine",
-      "short": "N6-isobutyryl-L-lys…",
-      "formula": "C10H18N2O2",
+      "id": "1r_2r_3s_8r_10r_11r_15s_16s_3_acetyloxy_15_4r_4",
+      "name": "(1R,2R,3S,8R,10R,11R,15S,16S)-3-(acetyloxy)-15-[(4R)-4-[(2S)-3,3-dimethyloxiran-2-yl]-1,4-dihydroxybutan-2-yl]-2,7,7,11,16-pentamethyl-5-oxo-6-oxatetracyclo[9.7.0.02,8.012,16]octadec-12-en-10-yl acetate",
+      "short": "(1R,2R,3S,8R,10R,11…",
+      "formula": "C34H52O9",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:234239"
+        "chebi": "CHEBI:231480"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "1r_2r_3s_8r_10r_11r_15s_16s_3_acetyloxy_15_1_hy",
+      "name": "(1R,2R,3S,8R,10R,11R,15S,16S)-3-(acetyloxy)-15-(1-hydroxy-4-oxobutan-2-yl)-2,7,7,11,16-pentamethyl-5-oxo-6-oxatetracyclo[9.7.0.02,8.012,16]octadec-12-en-10-yl acetate",
+      "short": "(1R,2R,3S,8R,10R,11…",
+      "formula": "C30H44O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231481"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
       }
     }
   ],
@@ -481,39 +500,55 @@
     },
     {
       "id": "r7",
-      "name": "N(6)-isobutanoyl-L-lysyl-[protein] + H2O = 2-methylpropanoate + L-lysyl-[protein]",
-      "equation": "N(6)-isobutanoyl-L-lysyl-[protein] + H2O = 2-methylpropanoate + L-lysyl-[protein]",
+      "name": "(1R,2R,3S,8R,10R,11R,15S,16S)-3-(acetyloxy)-15-[(4R)-4-[(2S)-3,3-dimethyloxiran-2-yl]-1...",
+      "equation": "(1R,2R,3S,8R,10R,11R,15S,16S)-3-(acetyloxy)-15-[(4R)-4-[(2S)-3,3-dimethyloxiran-2-yl]-1,4-dihydroxybutan-2-yl]-2,7,7,11,16-pentamethyl-5-oxo-6-oxatetracyclo[9.7.0.0(2,8).0(12,16)]octadec-12-en-10-yl acetate + reduced [NADPH--hemoprotein reductase] + O2 = (1R,2R,3S,8R,10R,11R,15S,16S)-3-(acetyloxy)-15-(1-hydroxy-4-oxobutan-2-yl)-2,7,7,11,16-pentamethyl-5-oxo-6-oxatetracyclo[9.7.0.0(2,8).0(12,16)]octadec-12-en-10-yl acetate + 2-methylpropanoate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "n6_isobutyryl_l_lysine",
+          "metabolite": "1r_2r_3s_8r_10r_11r_15s_16s_3_acetyloxy_15_4r_4",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
+          "metabolite": "1r_2r_3s_8r_10r_11r_15s_16s_3_acetyloxy_15_1_hy",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "isobutyrate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "fmn",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:85283"
+        "rhea": "RHEA:80347"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:85283"
+            "id": "RHEA:80347"
           }
         ]
       }

@@ -132,42 +132,42 @@
       }
     },
     {
-      "id": "menaquinone_4",
-      "name": "menaquinone-4",
-      "formula": "C31H40O2",
+      "id": "1_4_cineole",
+      "name": "1,4-cineole",
+      "formula": "C10H18O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78277"
+        "chebi": "CHEBI:80788"
       }
     },
     {
-      "id": "hydroxymenaquinone_4",
-      "name": "ω-hydroxymenaquinone-4",
-      "short": "ω-hydroxymenaquinon…",
-      "formula": "C31H40O3",
+      "id": "2_exo_hydroxy_1_4_cineole",
+      "name": "2-exo-hydroxy-1,4-cineole",
+      "short": "2-exo-hydroxy-1,4-c…",
+      "formula": "C10H18O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78278"
+        "chebi": "CHEBI:90956"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9β,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58622"
       }
     },
     {
-      "id": "presilphiperfolan_8_ol",
-      "name": "presilphiperfolan-8β-ol",
-      "short": "presilphiperfolan-8…",
-      "formula": "C15H26O",
+      "id": "isopimara_8_14_15_diene",
+      "name": "isopimara-8(14),15-diene",
+      "short": "isopimara-8(14),15-…",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60968"
+        "chebi": "CHEBI:63708"
       }
     }
   ],
@@ -198,20 +198,6 @@
       "name": "glyceollin synthase",
       "ec": [
         "1.14.14.135"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_78",
-      "name": "phylloquinone omega-hydroxylase",
-      "ec": [
-        "1.14.14.78"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_74",
-      "name": "presilphiperfolanol synthase",
-      "ec": [
-        "4.2.3.74"
       ]
     }
   ],
@@ -418,12 +404,11 @@
     },
     {
       "id": "r5",
-      "name": "phylloquinone omega-hydroxylase",
-      "equation": "menaquinone-4 + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxymenaquinone-4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.78",
+      "name": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole +...",
+      "equation": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "menaquinone_4",
+          "metabolite": "1_4_cineole",
           "stoichiometry": 1
         },
         {
@@ -437,7 +422,7 @@
       ],
       "products": [
         {
-          "metabolite": "hydroxymenaquinone_4",
+          "metabolite": "2_exo_hydroxy_1_4_cineole",
           "stoichiometry": 1
         },
         {
@@ -453,44 +438,34 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_78"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:41520"
+        "rhea": "RHEA:49160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41520"
+            "id": "RHEA:49160"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "presilphiperfolanol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = presilphiperfolan-8beta-ol + diphosphate",
-      "ec": "4.2.3.74",
+      "name": "9alpha-copalyl diphosphate = isopimara-8(14),15-diene + diphosphate",
+      "equation": "9alpha-copalyl diphosphate = isopimara-8(14),15-diene + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "presilphiperfolan_8_ol",
+          "metabolite": "isopimara_8_14_15_diene",
           "stoichiometry": 1
         },
         {
@@ -498,22 +473,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_74"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:27954"
+        "rhea": "RHEA:32007"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27954"
+            "id": "RHEA:32007"
           }
         ]
       }

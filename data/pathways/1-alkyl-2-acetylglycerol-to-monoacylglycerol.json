@@ -141,42 +141,42 @@
       }
     },
     {
-      "id": "1_alkyl_2_acetyl_sn_glycerol",
-      "name": "1-alkyl-2-acetyl-sn-glycerol",
-      "short": "1-alkyl-2-acetyl-sn…",
-      "formula": "C5H9O4R",
+      "id": "1_acyl_sn_glycerol",
+      "name": "1-acyl-sn-glycerol",
+      "formula": "C4H7O4R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16291"
+        "chebi": "CHEBI:64683"
       }
     },
     {
-      "id": "1_alkyl_2_acetyl_3_acyl_sn_glycerol",
-      "name": "1-alkyl-2-acetyl-3-acyl-sn-glycerol",
-      "short": "1-alkyl-2-acetyl-3-…",
-      "formula": "C6H8O5R2",
+      "id": "1_3_diacyl_sn_glycerol",
+      "name": "1,3-diacyl-sn-glycerol",
+      "short": "1,3-diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17473"
+        "chebi": "CHEBI:77272"
       }
     },
     {
-      "id": "1_o_oleoyl_sn_glycero_3_phosphocholine",
-      "name": "1-O-oleoyl-sn-glycero-3-phosphocholine",
-      "short": "1-O-oleoyl-sn-glyce…",
-      "formula": "C26H52NO7P",
+      "id": "1_linoleoyl_sn_glycero_3_phosphocholine",
+      "name": "1-linoleoyl-sn-glycero-3-phosphocholine",
+      "short": "1-linoleoyl-sn-glyc…",
+      "formula": "C26H50NO7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28610"
+        "chebi": "CHEBI:28733"
       }
     },
     {
-      "id": "1_oleoyl_sn_glycerol",
-      "name": "1-oleoyl-sn-glycerol",
-      "formula": "C21H40O4",
+      "id": "1_linoleoyl_sn_glycerol",
+      "name": "1-linoleoyl-sn-glycerol",
+      "short": "1-linoleoyl-sn-glyc…",
+      "formula": "C21H38O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75757"
+        "chebi": "CHEBI:75561"
       }
     }
   ],
@@ -401,11 +401,11 @@
     },
     {
       "id": "r6",
-      "name": "a 1-O-alkyl-2-acetyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1-O-alk...",
-      "equation": "a 1-O-alkyl-2-acetyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1-O-alkyl-2-acetyl-3-acyl-sn-glycerol + a monoacyl-sn-glycero-3-phosphocholine",
+      "name": "a 1-acyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero...",
+      "equation": "a 1-acyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero-3-phosphocholine + a 1,3-diacyl-sn-glycerol",
       "substrates": [
         {
-          "metabolite": "1_alkyl_2_acetyl_sn_glycerol",
+          "metabolite": "1_acyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -415,36 +415,36 @@
       ],
       "products": [
         {
-          "metabolite": "1_alkyl_2_acetyl_3_acyl_sn_glycerol",
+          "metabolite": "acyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_3_diacyl_sn_glycerol",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:44460"
+        "rhea": "RHEA:44464"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44460"
+            "id": "RHEA:44464"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1-(9Z-octadecenoyl)-sn-glycerol...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1-(9Z-octadecenoyl)-sn-glycerol + phosphocholine + H(+)",
+      "name": "1-(9Z,12Z)-octadecadienoyl-sn-glycero-3-phosphocholine + H2O = 1-(9Z,12Z-octadecadienoy...",
+      "equation": "1-(9Z,12Z)-octadecadienoyl-sn-glycero-3-phosphocholine + H2O = 1-(9Z,12Z-octadecadienoyl)-sn-glycerol + phosphocholine + H(+)",
       "substrates": [
         {
-          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_linoleoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
@@ -454,7 +454,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_oleoyl_sn_glycerol",
+          "metabolite": "1_linoleoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -469,14 +469,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:41091"
+        "rhea": "RHEA:41115"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41091"
+            "id": "RHEA:41115"
           }
         ]
       }

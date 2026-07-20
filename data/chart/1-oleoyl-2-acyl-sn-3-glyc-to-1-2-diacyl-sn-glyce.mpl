@@ -24,8 +24,8 @@ pathway 1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce "1-oleoyl-2-acyl-sn-3-g
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> ec_2_7_1_138 [2.7.1.138] +atp +adp +hplus
-    n_acylsphingosine_1_phosphate
+    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
+    1_o_acyl_n_acylsphingosine
   }
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
@@ -36,7 +36,13 @@ pathway 1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce "1-oleoyl-2-acyl-sn-3-g
 
   branch from oleate side right {
     oleate
-    <-> . +1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +h2o +1_o_oleoyl_sn_glycero_3_phosphocholine +hplus
+    1_2_dioleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from phosphatidylcholine side left {
+    phosphatidylcholine
+    <-> . +1_acyl_sn_glycerol +1_o_acyl_sn_glycero_3_phosphocholine
+    1_3_diacyl_sn_glycerol
   }
 }

@@ -1,0 +1,334 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "zeinoxanthin-to-meso-zeaxanthin",
+  "name": "zeinoxanthin to meso-zeaxanthin",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from zeinoxanthin to meso-zeaxanthin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57352"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:65244"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "zeinoxanthin",
+      "name": "zeinoxanthin",
+      "formula": "C40H56O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65244"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "lutein",
+      "name": "lutein",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28838"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "meso_zeaxanthin",
+      "name": "meso-zeaxanthin",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138919"
+      }
+    },
+    {
+      "id": "3r_6r_hydroxy_ionone",
+      "name": "(3R,6R)-hydroxy-α-ionone",
+      "short": "(3R,6R)-hydroxy-α-i…",
+      "formula": "C13H20O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177904"
+      }
+    },
+    {
+      "id": "3r_3_hydroxy_10_apo_carotenal",
+      "name": "(3R)-3-hydroxy-10'-apo-β-carotenal",
+      "short": "3-hydroxy-10'-apo-β…",
+      "formula": "C27H36O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177902"
+      }
+    },
+    {
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16469"
+      }
+    },
+    {
+      "id": "16_hydroxyestradiol",
+      "name": "16β-hydroxyestradiol",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87620"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_158",
+      "name": "carotene epsilon-hydroxylase",
+      "ec": [
+        "1.14.14.158"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_22",
+      "name": "lutein isomerase",
+      "ec": [
+        "5.3.3.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "carotene epsilon-hydroxylase",
+      "equation": "zeinoxanthin + reduced [NADPH--hemoprotein reductase] + O2 = lutein + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.158",
+      "substrates": [
+        {
+          "metabolite": "zeinoxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lutein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_158"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "lutein isomerase",
+      "equation": "lutein = (3R,3'S)-zeaxanthin",
+      "ec": "5.3.3.22",
+      "substrates": [
+        {
+          "metabolite": "lutein",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "meso_zeaxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12729"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lutein + O2 = (3R,6R)-hydroxy-alpha-ionone + (3R)-3-hydroxy-10'-apo-beta-carotenal",
+      "equation": "lutein + O2 = (3R,6R)-hydroxy-alpha-ionone + (3R)-3-hydroxy-10'-apo-beta-carotenal",
+      "substrates": [
+        {
+          "metabolite": "lutein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_6r_hydroxy_ionone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3r_3_hydroxy_10_apo_carotenal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:68428"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16beta,17beta-estriol ...",
+      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16beta,17beta-estriol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxyestradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47336"
+          }
+        ]
+      }
+    }
+  ]
+}

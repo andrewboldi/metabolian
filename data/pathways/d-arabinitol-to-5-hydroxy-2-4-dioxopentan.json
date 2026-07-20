@@ -130,31 +130,31 @@
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "d_arabinono_1_5_lactone",
-      "name": "D-arabinono-1,5-lactone",
-      "short": "D-arabinono-1,5-lac…",
-      "formula": "C5H8O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:194242"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57783"
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "aldehydo_d_arabinose_5_phosphate",
+      "name": "aldehydo-D-arabinose 5-phosphate",
+      "short": "aldehydo-D-arabinos…",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57693"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
       }
     },
     {
@@ -219,10 +219,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_435",
-      "name": "L-fucose dehydrogenase",
+      "id": "ec_2_7_1_54",
+      "name": "D-arabinokinase",
       "ec": [
-        "1.1.1.435"
+        "2.7.1.54"
       ]
     },
     {
@@ -465,26 +465,26 @@
     },
     {
       "id": "r6",
-      "name": "L-fucose dehydrogenase",
-      "equation": "D-arabinose + NADP(+) = D-arabinono-1,5-lactone + NADPH + H(+)",
-      "ec": "1.1.1.435",
+      "name": "D-arabinokinase",
+      "equation": "D-arabinose + ATP = D-arabinose 5-phosphate + ADP + H(+)",
+      "ec": "2.7.1.54",
       "substrates": [
         {
           "metabolite": "d_arabinopyranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_arabinono_1_5_lactone",
+          "metabolite": "aldehydo_d_arabinose_5_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -494,20 +494,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_435"
+          "enzyme": "ec_2_7_1_54"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:75267"
+        "rhea": "RHEA:24588"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75267"
+            "id": "RHEA:24588"
           }
         ]
       }

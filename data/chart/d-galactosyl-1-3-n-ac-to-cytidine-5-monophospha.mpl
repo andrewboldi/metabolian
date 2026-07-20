@@ -20,19 +20,19 @@ pathway d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha "β-D-galactosyl-(1→3)
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_99_15 [2.4.99.15] +kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
-    kdo_3_lipid_iva
+    <-> ec_2_4_3_10 [2.4.3.10] +neup5ac_2_3_d_galp_1_3_d_glcpnac_1_3_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
+    neup5ac_2_3_d_galp_1_3_neup5ac_2_6_d_glcpnac_1
   }
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +h2o
-    d_glucosyl_n_acylsphingosine
+    <-> . +galactosylceramide +h2o
+    n_acylsphingoid
   }
 
   branch from n_acetylneuraminate side left {
     n_acetylneuraminate
-    <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +h2o
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
     d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
   }
 }

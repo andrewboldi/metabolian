@@ -1,0 +1,201 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-2-hydroxy-4-methylpen-to-n6-r-s8-isopentanoyl",
+  "name": "(R)-2-hydroxy-4-methylpen… to N6-[(R)-S8-isopentanoyldi…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from (R)-2-hydroxy-4-methylpentanoate to N6-[(R)-S8-isopentanoyldihydrolipoyl]-L-lysine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82499"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:55535"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_2_hydroxy_4_methylpentanoate",
+      "name": "(R)-2-hydroxy-4-methylpentanoate",
+      "short": "2-hydroxy-4-methylp…",
+      "formula": "C6H11O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:55535"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "kic",
+      "name": "4-Methyl-2-oxopentanoate",
+      "short": "4-Methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17865"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "n6_r_lipoyl_l_lysine",
+      "name": "N6-[(R)-lipoyl]-L-lysine",
+      "short": "N6-[(R)-lipoyl]-L-l…",
+      "formula": "C14H24N2O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83099"
+      }
+    },
+    {
+      "id": "n6_r_s8_isopentanoyldihydrolipoyl_l_lysine",
+      "name": "N6-[(R)-S8-isopentanoyldihydrolipoyl]-L-lysine",
+      "short": "N6-[(R)-S8-isopenta…",
+      "formula": "C19H34N2O3S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233973"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_4_4",
+      "name": "3-methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)",
+      "ec": [
+        "1.2.4.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2R)-hydroxy-4-methylpentanoate + FAD + H(+) = 4-methyl-2-oxopentanoate + FADH2",
+      "equation": "(2R)-hydroxy-4-methylpentanoate + FAD + H(+) = 4-methyl-2-oxopentanoate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxy_4_methylpentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kic",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82499"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82499"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)",
+      "equation": "N(6)-[(R)-lipoyl]-L-lysyl-[protein] + 4-methyl-2-oxopentanoate + H(+) = N(6)-[(R)-S(8)-3-methylbutanoyldihydrolipoyl]-L-lysyl-[protein] + CO2",
+      "ec": "1.2.4.4",
+      "substrates": [
+        {
+          "metabolite": "n6_r_lipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "kic",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_s8_isopentanoyldihydrolipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84639"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -141,21 +141,70 @@
       }
     },
     {
-      "id": "gly_met",
-      "name": "Gly-Met",
-      "formula": "C7H14N2O3S",
-      "charge": 0,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74393"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "2_methyladenosine_5_monophosphate_1",
+      "name": "2-methyladenosine 5'-monophosphate(1−)",
+      "short": "2-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74497"
+      }
+    },
+    {
+      "id": "5_deoxyadenosine",
+      "name": "5'-deoxyadenosine",
+      "formula": "C10H13N5O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:17319"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
       }
     }
   ],
@@ -172,6 +221,13 @@
       "name": "adenosine tuberculosinyltransferase",
       "ec": [
         "2.5.1.153"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_192",
+      "name": "23S rRNA (adenine(2503)-C(2))-methyltransferase",
+      "ec": [
+        "2.1.1.192"
       ]
     }
   ],
@@ -393,39 +449,61 @@
     },
     {
       "id": "r6",
-      "name": "glycyl-L-methionine + H2O = L-methionine + glycine",
-      "equation": "glycyl-L-methionine + H2O = L-methionine + glycine",
+      "name": "23S rRNA (adenine(2503)-C(2))-methyltransferase",
+      "equation": "adenosine(2503) in 23S rRNA + 2 reduced [2Fe-2S]-[ferredoxin] + 2 S-adenosyl-L-methionine = 2-methyladenosine(2503) in 23S rRNA + 5'-deoxyadenosine + L-methionine + 2 oxidized [2Fe-2S]-[ferredoxin] + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.192",
       "substrates": [
         {
-          "metabolite": "gly_met",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
         }
       ],
       "products": [
+        {
+          "metabolite": "2_methyladenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "methionine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sah",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_192"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:37323"
+        "rhea": "RHEA:42916"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37323"
+            "id": "RHEA:42916"
           }
         ]
       }

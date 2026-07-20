@@ -48,7 +48,19 @@ pathway r-3-4-hydroxyphenyl-la-to-s-adenosyl-l-homocyst "(R)-3-(4-hydroxyphenyl)
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_75 [4.2.3.75] +fpp
-    germacrene_d
+    <-> ec_6_1_1_11 [6.1.1.11] +amp_3_end_1 +serine +atp +amp +hplus
+    3_l_seryl_adenylyl_1_group
+  }
+
+  branch from r_r_2_3_dimethyl_6_phytylhydroquinone side left {
+    r_r_2_3_dimethyl_6_phytylhydroquinone
+    <-> ec_5_5_1_24 [5.5.1.24]
+    tocopherol
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_69 [2.1.1.69] +bergaptol +sam
+    5_methoxypsoralen
   }
 }

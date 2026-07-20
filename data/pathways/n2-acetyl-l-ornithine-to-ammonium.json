@@ -121,39 +121,58 @@
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "nag",
-      "name": "N-Acetyl-L-glutamate",
-      "formula": "C7H9NO5",
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:44337"
+        "chebi": "CHEBI:16810"
       }
     },
     {
-      "id": "n2_acetyl_l_lysine",
-      "name": "N2-acetyl-L-lysine",
-      "formula": "C8H16N2O3",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61512"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
+      "id": "3s_3_hydroxy_l_ornithine",
+      "name": "(3S)-3-hydroxy-L-ornithine",
+      "short": "3-hydroxy-L-ornithi…",
+      "formula": "C5H13N2O3",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:77411"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "acetamide",
+      "name": "acetamide",
+      "formula": "C2H5NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27856"
       }
     },
     {
@@ -228,6 +247,25 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "1_4_5_6_tetrahydro_6_oxonicotinate",
+      "name": "1,4,5,6-tetrahydro-6-oxonicotinate",
+      "short": "1,4,5,6-tetrahydro-…",
+      "formula": "C6H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57777"
+      }
+    },
+    {
+      "id": "2_formylglutarate",
+      "name": "2-formylglutarate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58776"
+      }
     }
   ],
   "enzymes": [
@@ -260,10 +298,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_35",
-      "name": "glutamate N-acetyltransferase",
+      "id": "ec_3_5_1_4",
+      "name": "amidase",
       "ec": [
-        "2.3.1.35"
+        "3.5.1.4"
       ]
     },
     {
@@ -278,6 +316,13 @@
       "name": "2-amino-4-oxopentanoate thiolase",
       "ec": [
         "2.3.1.263"
+      ]
+    },
+    {
+      "id": "ec_3_5_2_18",
+      "name": "enamidase",
+      "ec": [
+        "3.5.2.18"
       ]
     }
   ],
@@ -460,56 +505,59 @@
     },
     {
       "id": "r5",
-      "name": "glutamate N-acetyltransferase",
-      "equation": "N(2)-acetyl-L-ornithine + L-glutamate = N-acetyl-L-glutamate + L-ornithine",
-      "ec": "2.3.1.35",
+      "name": "L-ornithine + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-ornithine + succinate + CO2",
+      "equation": "L-ornithine + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-ornithine + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "n2_acetyl_l_ornithine",
+          "metabolite": "ornithine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nag",
+          "metabolite": "3s_3_hydroxy_l_ornithine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ornithine",
+          "metabolite": "succinate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_3_1_35"
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:15349"
+        "rhea": "RHEA:40931"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15349"
+            "id": "RHEA:40931"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "N-acetyl-L-lysine + H2O = L-lysine + acetate",
-      "equation": "N-acetyl-L-lysine + H2O = L-lysine + acetate",
+      "name": "amidase",
+      "equation": "acetamide + H2O = acetate + NH4(+)",
+      "ec": "3.5.1.4",
       "substrates": [
         {
-          "metabolite": "n2_acetyl_l_lysine",
+          "metabolite": "acetamide",
           "stoichiometry": 1
         },
         {
@@ -519,25 +567,30 @@
       ],
       "products": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
+          "metabolite": "nh3",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:28598"
+        "rhea": "RHEA:45048"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28598"
+            "id": "RHEA:45048"
           }
         ]
       }
@@ -640,6 +693,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:51436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "enamidase",
+      "equation": "1,4,5,6-tetrahydro-6-oxonicotinate + 2 H2O = 2-formylglutarate + NH4(+)",
+      "ec": "3.5.2.18",
+      "substrates": [
+        {
+          "metabolite": "1_4_5_6_tetrahydro_6_oxonicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_formylglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:17209"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17209"
           }
         ]
       }

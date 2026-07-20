@@ -24,14 +24,14 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
 
   branch from cholest_4_en_3_one side left {
     cholest_4_en_3_one
-    <-> ec_1_17_99_10 [1.17.99.10] +hydrogen_acceptor +h2o +hydrogen_donor
-    25_hydroxycholest_4_en_3_one
+    <-> ec_5_3_3_1 [5.3.3.1]
+    cholest_5_en_3_one
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_4_7_1 [1.4.7.1] +glutamate +di_sulfido_diiron +akg +hplus
-    glutamine
+    <-> ec_1_14_15_5 [1.14.15.5] +corticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    18_hydroxycorticosterone
   }
 
   branch from 25s_4_dafachronate side left {
@@ -44,5 +44,17 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
     25s_3_oxocholest_4_en_26_oyl_coa
     <-> .
     25r_3_oxocholest_4_en_26_oyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_27 [4.2.3.27] +dmapp
+    isoprene
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_acceptor +h2o
+    chlorite
   }
 }

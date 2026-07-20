@@ -20,13 +20,13 @@ pathway 4-hydroxy-3-all-trans-hex-to-di-sulfido-diiron "4-hydroxy-3-all-trans-he
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    linolenoyl_containing_glycerolipid
+    <-> . +4_amino_3_all_trans_hexaprenylbenzoate +di_sulfido_diiron +o2 +hplus +h2o
+    4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_270 [2.1.1.270] +6a_hydroxymaackiain +sam +hplus
-    pisatin
+    <-> ec_2_1_1_317 [2.1.1.317] +n_acyl_4e_8e_sphinga_4_8_dienine +sam +hplus
+    n_acyl_4e_8e_9_methylsphinga_4_8_dienine
   }
 }

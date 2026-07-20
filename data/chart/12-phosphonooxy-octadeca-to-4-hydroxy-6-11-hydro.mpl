@@ -18,8 +18,8 @@ pathway 12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro "12-(phosphonooxy)octad
 
   branch from 12_hydroxyoctadecanoate side left {
     12_hydroxyoctadecanoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    12_18_dihydroxyoctadecanoate
+    <-> . +12_9z_octadecenoyloxy_octadecanoate +h2o +hplus
+    oleate
   }
 
   branch from 12_hydroxyoctadecanoyl_coa side right {
@@ -30,7 +30,7 @@ pathway 12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro "12-(phosphonooxy)octad
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_31 [4.2.3.31] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_pimara_9_11_15_diene
+    <-> ec_4_2_3_70 [4.2.3.70] +fpp +h2o
+    patchouli_alcohol
   }
 }

@@ -18,8 +18,8 @@ pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-gluta
 
   branch from l_histidine side left {
     l_histidine
-    <-> . +ala_his +h2o
-    alanine
+    <-> . +sam +sah +hplus
+    n_methyl_l_histidine
   }
 
   branch from 3_imidazol_5_yl_pyruvate side right {
@@ -30,7 +30,7 @@ pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-gluta
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_2_2 [6.3.2.2] +cysteine +atp +adp +pi +hplus
-    glu_cys
+    <-> ec_2_7_2_11 [2.7.2.11] +atp +adp
+    l_glutamyl_phosphate
   }
 }

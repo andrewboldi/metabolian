@@ -24,8 +24,8 @@ pathway dodecan-1-ol-to-9z-12z-pentadecadienoyl "dodecan-1-ol to (9Z,12Z)-pentad
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoylglycerone_3_phosphate +linoleate
+    1_linoleoylglycerone_3_phosphate
   }
 
   branch from pentadecanoyl_coa side right {
@@ -36,7 +36,7 @@ pathway dodecan-1-ol-to-9z-12z-pentadecadienoyl "dodecan-1-ol to (9Z,12Z)-pentad
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> ec_2_5_1_89 [2.5.1.89] +geranylgeranyl_diphosphate +ipp
+    tri_trans_poly_cis_undecaprenyl_diphosphate
   }
 }

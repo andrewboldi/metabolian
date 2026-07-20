@@ -22,15 +22,15 @@ pathway dibenzofuran-to-maleate "dibenzofuran to maleate" {
     maleate
   }
 
-  branch from biphenyl_2_2_3_triol side left {
-    biphenyl_2_2_3_triol
-    <-> ec_1_14_13_44 [1.14.13.44] +nadh +o2 +hplus +nad +h2o
-    biphenyl_2_2_diol
+  branch from salicylate side left {
+    salicylate
+    <-> . +o2 +h2o +h2o2 +hplus
+    salicylaldehyde
   }
 
   branch from 2_5_dihydroxybenzoate side right {
     2_5_dihydroxybenzoate
-    <-> ec_1_14_13_24 [1.14.13.24] +nadh +o2 +hplus +nad +h2o
-    3_hydroxybenzoate
+    <-> . +h2o +coa +hplus
+    2_5_dihydroxybenzoyl_coa
   }
 }

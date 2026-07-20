@@ -15,10 +15,4 @@ pathway 2r-3s-2-4-7-trihydroxy-to-d-glucose "(2R,3S)-2,4',7-trihydroxy… to β-
     <-> . +h2o -d_glucose -hplus
     daidzein
   }
-
-  branch from d_glucose side left {
-    d_glucose
-    <-> . +phlorizin +h2o
-    phloretin
-  }
 }

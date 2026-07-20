@@ -165,22 +165,21 @@
       }
     },
     {
-      "id": "l_aspartate",
-      "name": "L-aspartate",
-      "formula": "C4H4NO3",
-      "charge": -1,
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:29961"
+        "chebi": "CHEBI:15562"
       }
     },
     {
-      "id": "3_hydroxy_l_aspartate",
-      "name": "3-hydroxy-L-aspartate",
-      "short": "3-hydroxy-L-asparta…",
-      "formula": "C4H4NO4",
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17427"
+        "chebi": "CHEBI:36655"
       }
     },
     {
@@ -225,10 +224,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_16",
-      "name": "peptide-aspartate beta-dioxygenase",
+      "id": "ec_4_1_3_1",
+      "name": "isocitrate lyase",
       "ec": [
-        "1.14.11.16"
+        "4.1.3.1"
       ]
     },
     {
@@ -409,53 +408,41 @@
     },
     {
       "id": "r4",
-      "name": "peptide-aspartate beta-dioxygenase",
-      "equation": "L-aspartyl-[protein] + 2-oxoglutarate + O2 = 3-hydroxy-L-aspartyl-[protein] + succinate + CO2",
-      "ec": "1.14.11.16",
+      "name": "isocitrate lyase",
+      "equation": "D-threo-isocitrate = glyoxylate + succinate",
+      "ec": "4.1.3.1",
       "substrates": [
         {
-          "metabolite": "l_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "d_threo_isocitrate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_hydroxy_l_aspartate",
+          "metabolite": "glyoxylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_16"
+          "enzyme": "ec_4_1_3_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:11508"
+        "rhea": "RHEA:13245"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11508"
+            "id": "RHEA:13245"
           }
         ]
       }

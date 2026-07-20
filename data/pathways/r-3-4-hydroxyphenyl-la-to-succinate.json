@@ -278,22 +278,60 @@
       }
     },
     {
-      "id": "acetate",
-      "name": "Acetate",
-      "formula": "C2H3O2",
-      "charge": -1,
+      "id": "ywa1",
+      "name": "YWA1",
+      "formula": "C14H12O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30089"
+        "chebi": "CHEBI:133763"
       }
     },
     {
-      "id": "malate",
-      "name": "L-Malate ((S)-malate)",
-      "short": "L-Malate ((S)-malat…",
-      "formula": "C4H4O5",
+      "id": "naphthalene_1_3_6_8_tetrol",
+      "name": "naphthalene-1,3,6,8-tetrol",
+      "short": "naphthalene-1,3,6,8…",
+      "formula": "C10H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18365"
+      }
+    },
+    {
+      "id": "2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate",
+      "name": "(2E,4Z,7E)-2-hydroxy-6-oxonona-2,4,7-trienedioate",
+      "short": "(2E,4Z,7E)-2-hydrox…",
+      "formula": "C9H6O6",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:15589"
+        "chebi": "CHEBI:61450"
+      }
+    },
+    {
+      "id": "2e_2_hydroxypenta_2_4_dienoate",
+      "name": "(2E)-2-hydroxypenta-2,4-dienoate",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60886"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "malonate",
+      "name": "malonate",
+      "formula": "C3H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15792"
       }
     }
   ],
@@ -390,10 +428,10 @@
       ]
     },
     {
-      "id": "ec_4_2_1_2",
-      "name": "fumarate hydratase",
+      "id": "ec_2_3_1_194",
+      "name": "acetoacetyl-CoA synthase",
       "ec": [
-        "4.2.1.2"
+        "2.3.1.194"
       ]
     }
   ],
@@ -919,15 +957,106 @@
     },
     {
       "id": "r12",
-      "name": "acetoacetate + acetyl-CoA = acetoacetyl-CoA + acetate",
-      "equation": "acetoacetate + acetyl-CoA = acetoacetyl-CoA + acetate",
+      "name": "naphtopyrone YWA1 + H2O = naphthalene-1,3,6,8-tetrol + acetoacetate + H(+)",
+      "equation": "naphtopyrone YWA1 + H2O = naphthalene-1,3,6,8-tetrol + acetoacetate + H(+)",
       "substrates": [
+        {
+          "metabolite": "ywa1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "naphthalene_1_3_6_8_tetrol",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "acetoacetate",
           "stoichiometry": 1
         },
         {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:62700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "(2E,4Z,7E)-2-hydroxy-6-oxonona-2,4,7-trienedioate + H2O = (2E)-2-hydroxypenta-2,4-dieno...",
+      "equation": "(2E,4Z,7E)-2-hydroxy-6-oxonona-2,4,7-trienedioate + H2O = (2E)-2-hydroxypenta-2,4-dienoate + fumarate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:25046"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25046"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "acetoacetyl-CoA synthase",
+      "equation": "malonyl-CoA + acetyl-CoA + H(+) = acetoacetyl-CoA + CO2 + CoA",
+      "ec": "2.3.1.194",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
@@ -937,62 +1066,75 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:27806"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:27806"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r13",
-      "name": "fumarate hydratase",
-      "equation": "(S)-malate = fumarate + H2O",
-      "ec": "4.2.1.2",
-      "substrates": [
-        {
-          "metabolite": "malate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "fumarate",
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_1_2"
+          "enzyme": "ec_2_3_1_194"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 13,
+      "pathwayStep": 14,
       "xrefs": {
-        "rhea": "RHEA:12460"
+        "rhea": "RHEA:28250"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12460"
+            "id": "RHEA:28250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "succinate--hydroxymethylglutarate CoA-transferase",
+      "equation": "3-hydroxy-3-methylglutarate + malonyl-CoA = (3S)-3-hydroxy-3-methylglutaryl-CoA + malonate",
+      "ec": "2.8.3.13",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_3_methylglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hmg_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:24948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24948"
           }
         ]
       }

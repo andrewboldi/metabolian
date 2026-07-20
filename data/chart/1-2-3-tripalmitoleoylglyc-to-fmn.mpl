@@ -8,18 +8,16 @@ pathway 1-2-3-tripalmitoleoylglyc-to-fmn "1,2,3-tripalmitoleoylglyc… to FMN" {
 
   spine at 0,0 {
     1_2_3_tripalmitoleoylglycerol
-    <-> . +9_hydroxyoctadecanoate -9_9z_hexadecenoyloxy_octadecanoate
-    2_3_dipalmitoleoyl_sn_glycerol
-    <-> . +9_9z_hexadecenoyloxy_octadecanoate +h2o -9_hydroxyoctadecanoate -hplus
-    palmitoleate
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +h2o -palmitoleate -hplus
+    1_3_dipalmitoleoylglycerol
+    <-> . +palmitoleate +fmnh2 +o2 -fmn -h2o -hplus
     9z_16_hydroxyhexadec_9_enoate
   }
 
-  branch from 9_9z_hexadecenoyloxy_octadecanoate side left {
-    9_9z_hexadecenoyloxy_octadecanoate
-    <-> . +1_2_3_tripalmitoleoylglycerol +9_hydroxyoctadecanoate
+  branch from 1_3_dipalmitoleoylglycerol side left {
     1_3_dipalmitoleoylglycerol
+    <-> . +1_2_3_tripalmitoleoylglycerol +9_hydroxyoctadecanoate
+    9_9z_hexadecenoyloxy_octadecanoate
   }
 
   branch from palmitoleate side right {
@@ -28,15 +26,9 @@ pathway 1-2-3-tripalmitoleoylglyc-to-fmn "1,2,3-tripalmitoleoylglyc… to FMN" {
     palmitoleoyl_coa
   }
 
-  branch from 9_hydroxyoctadecanoate side left {
-    9_hydroxyoctadecanoate
-    <-> . +1_palmitoyl_2_3_dioleoyl_sn_glycerol +9_9z_octadecenoyloxy_octadecanoate
-    1_palmitoyl_3_oleoyl_sn_glycerol
-  }
-
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_25_dihydroxycholesterol
+    <-> . +all_trans_retinol +fmnh2 +o2 +h2o +hplus
+    all_trans_retinal
   }
 }

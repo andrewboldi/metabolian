@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-nitrophenolate-to-nitrite",
   "name": "2-nitrophenolate to nitrite",
-  "category": "redox-detox",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 2-nitrophenolate to nitrite, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -118,42 +118,6 @@
       }
     },
     {
-      "id": "phenol",
-      "name": "phenol",
-      "formula": "C6H6O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15882"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:33737"
-      }
-    },
-    {
       "id": "nh3",
       "name": "Ammonia (NH3)",
       "formula": "H4N",
@@ -163,50 +127,21 @@
       }
     },
     {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:33738"
-      }
-    },
-    {
-      "id": "3_aci_nitropropanoate",
-      "name": "3-aci-nitropropanoate",
-      "short": "3-aci-nitropropanoa…",
-      "formula": "C3H4NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136067"
-      }
-    },
-    {
-      "id": "3_oxopropanoate",
-      "name": "3-oxopropanoate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:33190"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "butan_1_ol",
+      "name": "butan-1-ol",
+      "formula": "C4H10O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:28885"
       }
     },
     {
-      "id": "1_4_benzosemiquinones",
-      "name": "1,4-benzosemiquinones",
-      "short": "1,4-benzosemiquinon…",
-      "formula": "C6HO2R4",
+      "id": "butanal",
+      "name": "butanal",
+      "formula": "C4H8O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134225"
+        "chebi": "CHEBI:15743"
       }
     }
   ],
@@ -240,24 +175,17 @@
       ]
     },
     {
-      "id": "ec_1_14_13_244",
-      "name": "phenol 2-monooxygenase (NADH)",
+      "id": "ec_1_7_1_4",
+      "name": "nitrite reductase [NAD(P)H]",
       "ec": [
-        "1.14.13.244"
+        "1.7.1.4"
       ]
     },
     {
-      "id": "ec_1_7_7_1",
-      "name": "ferredoxin--nitrite reductase",
+      "id": "ec_1_1_5_11",
+      "name": "1-butanol dehydrogenase (quinone)",
       "ec": [
-        "1.7.7.1"
-      ]
-    },
-    {
-      "id": "ec_1_6_5_5",
-      "name": "NADPH:quinone reductase",
-      "ec": [
-        "1.6.5.5"
+        "1.1.5.11"
       ]
     }
   ],
@@ -427,214 +355,98 @@
     },
     {
       "id": "r4",
-      "name": "phenol 2-monooxygenase (NADH)",
-      "equation": "phenol + NADH + O2 + H(+) = catechol + NAD(+) + H2O",
-      "ec": "1.14.13.244",
+      "name": "nitrite reductase [NAD(P)H]",
+      "equation": "NH4(+) + 3 NADP(+) + 2 H2O = nitrite + 3 NADPH + 5 H(+)",
+      "ec": "1.7.1.4",
       "substrates": [
         {
-          "metabolite": "phenol",
+          "metabolite": "nh3",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
+          "metabolite": "nadp",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "catechol",
+          "metabolite": "nitrite",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
+          "metabolite": "nadph",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "hplus",
+          "stoichiometry": 5
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_244"
+          "enzyme": "ec_1_7_1_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:57952"
+        "rhea": "RHEA:24632"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57952"
+            "id": "RHEA:24632"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "ferredoxin--nitrite reductase",
-      "equation": "6 oxidized [2Fe-2S]-[ferredoxin] + NH4(+) + 2 H2O = nitrite + 6 reduced [2Fe-2S]-[ferredoxin] + 8 H(+)",
-      "ec": "1.7.7.1",
+      "name": "1-butanol dehydrogenase (quinone)",
+      "equation": "butan-1-ol + a quinone = butanal + a quinol",
+      "ec": "1.1.5.11",
       "substrates": [
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "nh3",
+          "metabolite": "butan_1_ol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nitrite",
+          "metabolite": "butanal",
           "stoichiometry": 1
         },
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 8
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_7_7_1"
+          "enzyme": "ec_1_1_5_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:18041"
+        "rhea": "RHEA:49808"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18041"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "3 propionate 3-nitronate + 3 O2 + H2O = 3 3-oxopropanoate + 2 nitrate + nitrite + H2O2 ...",
-      "equation": "3 propionate 3-nitronate + 3 O2 + H2O = 3 3-oxopropanoate + 2 nitrate + nitrite + H2O2 + 3 H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_aci_nitropropanoate",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_oxopropanoate",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "nitrate",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nitrite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:57332"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57332"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "NADPH:quinone reductase",
-      "equation": "2 a quinone + NADPH + H(+) = 2 a 1,4-benzosemiquinone + NADP(+)",
-      "ec": "1.6.5.5",
-      "substrates": [
-        {
-          "metabolite": "1_4_benzoquinones",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_4_benzosemiquinones",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_6_5_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:14269"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:14269"
+            "id": "RHEA:49808"
           }
         ]
       }

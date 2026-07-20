@@ -1,0 +1,312 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n8-acetylspermidinium-to-glutathionylspermidiniu",
+  "name": "N8-acetylspermidinium to glutathionylspermidinium",
+  "category": "redox-detox",
+  "summary": "A 2-step route from N8-acetylspermidinium(2+) to glutathionylspermidinium(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23928"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58535"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n8_acetylspermidinium",
+      "name": "N8-acetylspermidinium",
+      "short": "N8-acetylspermidini…",
+      "formula": "C9H23N3O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58535"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "spermidine",
+      "name": "spermidine",
+      "formula": "C7H22N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57834"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "glutathionylspermidinium",
+      "name": "glutathionylspermidinium",
+      "short": "glutathionylspermid…",
+      "formula": "C17H36N6O5S",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:57835"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "l_glutamylspermidine",
+      "name": "γ-L-glutamylspermidine",
+      "short": "γ-L-glutamylspermid…",
+      "formula": "C12H28N4O3",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:193051"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_48",
+      "name": "acetylspermidine deacetylase",
+      "ec": [
+        "3.5.1.48"
+      ]
+    },
+    {
+      "id": "ec_6_3_1_8",
+      "name": "glutathionylspermidine synthase",
+      "ec": [
+        "6.3.1.8"
+      ]
+    },
+    {
+      "id": "ec_6_3_1_9",
+      "name": "trypanothione synthase",
+      "ec": [
+        "6.3.1.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acetylspermidine deacetylase",
+      "equation": "N(8)-acetylspermidine + H2O = spermidine + acetate",
+      "ec": "3.5.1.48",
+      "substrates": [
+        {
+          "metabolite": "n8_acetylspermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glutathionylspermidine synthase",
+      "equation": "spermidine + glutathione + ATP = glutathionylspermidine + ADP + phosphate + H(+)",
+      "ec": "6.3.1.8",
+      "substrates": [
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutathionylspermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "spermidine + L-glutamate + ATP = gamma-L-glutamylspermidine + ADP + phosphate + H(+)",
+      "equation": "spermidine + L-glutamate + ATP = gamma-L-glutamylspermidine + ADP + phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamylspermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73891"
+          }
+        ]
+      }
+    }
+  ]
+}

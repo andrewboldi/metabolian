@@ -1,0 +1,286 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-alkylphthalic-monoamide-to-s-adenosyl-l-homocy",
+  "name": "N-alkylphthalic monoamide to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from N-alkylphthalic monoamide(1−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18297"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:65295"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_alkylphthalic_monoamide",
+      "name": "N-alkylphthalic monoamide",
+      "short": "N-alkylphthalic…",
+      "formula": "C8H5NO3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65295"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "phthalate",
+      "name": "phthalate",
+      "formula": "C8H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17563"
+      }
+    },
+    {
+      "id": "primary_ammonium_ion",
+      "name": "primary ammonium ion",
+      "formula": "H3NR",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65296"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "methylated_primary_amine",
+      "name": "methylated primary amine",
+      "short": "methylated primary…",
+      "formula": "CH5NR",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:131823"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxyanthranilate",
+      "name": "3-hydroxyanthranilate",
+      "short": "3-hydroxyanthranila…",
+      "formula": "C7H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36559"
+      }
+    },
+    {
+      "id": "3_hydroxy_4_methylanthranilate",
+      "name": "3-hydroxy-4-methylanthranilate",
+      "short": "3-hydroxy-4-methyla…",
+      "formula": "C8H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36558"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_79",
+      "name": "phthalyl amidase",
+      "ec": [
+        "3.5.1.79"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_49",
+      "name": "amine N-methyltransferase",
+      "ec": [
+        "2.1.1.49"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_97",
+      "name": "3-hydroxyanthranilate 4-C-methyltransferase",
+      "ec": [
+        "2.1.1.97"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phthalyl amidase",
+      "equation": "a phtalamide + H2O = phthalate + a primary amine",
+      "ec": "3.5.1.79",
+      "substrates": [
+        {
+          "metabolite": "n_alkylphthalic_monoamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phthalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "primary_ammonium_ion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18297"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "amine N-methyltransferase",
+      "equation": "a primary amine + S-adenosyl-L-methionine = a methylated primary amine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.49",
+      "substrates": [
+        {
+          "metabolite": "primary_ammonium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylated_primary_amine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-hydroxyanthranilate 4-C-methyltransferase",
+      "equation": "3-hydroxyanthranilate + S-adenosyl-L-methionine = 3-hydroxy-4-methylanthranilate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.97",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_4_methylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_97"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17833"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17833"
+          }
+        ]
+      }
+    }
+  ]
+}

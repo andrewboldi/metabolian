@@ -20,7 +20,7 @@ pathway futalosinate-to-diphosphate "futalosinate to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate +h2o
-    13e_labda_7_13_dien_15_ol
+    <-> . +9r_13r_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt +atp +coa +amp
+    9s_13s_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt
   }
 }

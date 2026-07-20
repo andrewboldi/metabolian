@@ -24,14 +24,14 @@ pathway quinolinone-b-to-penigequinolone-a "Quinolinone B to penigequinolone A" 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_77 [4.2.3.77] +fpp
-    germacrene_d
+    <-> . +gtp +atp
+    c_gmp_amp
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_2_99_10 [1.2.99.10] +4_4_diapolycopen_4_al +hydrogen_acceptor +h2o +hplus
-    4_4_diapolycopen_4_oate
+    <-> ec_1_17_99_8 [1.17.99.8] +4r_limonene +hydrogen_acceptor +h2o
+    r_perillyl_alcohol
   }
 
   branch from 1_e_5_3_3_dimethyloxiran_2_yl_3_hydroxy_3_methy side left {

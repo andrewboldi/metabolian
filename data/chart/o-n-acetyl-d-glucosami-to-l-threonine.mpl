@@ -18,7 +18,7 @@ pathway o-n-acetyl-d-glucosami-to-l-threonine "O-(N-acetyl-β-D-glucosami… to 
 
   branch from l_threonine side left {
     l_threonine
-    <-> ec_2_7_1_180 [2.7.1.180] +fad +amp +hplus
-    fmn_l_threonine_2
+    <-> ec_2_4_1_255 [2.4.1.255] +o_n_acetyl_d_glucosaminyl_l_threonine +udp +hplus
+    udpglcnac
   }
 }

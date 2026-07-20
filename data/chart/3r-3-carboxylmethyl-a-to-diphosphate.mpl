@@ -18,19 +18,19 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate "(3R)-3-[(carboxylmethyl)a… to di
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_aspartate +akg +o2 +co2
-    3s_3_hydroxy_l_aspartate
+    <-> ec_1_14_11_70 [1.14.11.70] +deoxycylindrospermopsin +akg +o2 +co2
+    7_epi_cylindrospermopsin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_53 [4.2.3.53] +2_cis_6_cis_farnesyl_diphosphate
-    endo_bergamotene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    z_biformene
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_244 [2.3.1.244] +malonyl-coa +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
-    o_s_2_methylbutanoylpantetheine_4_phosphoryl_ser
+    <-> . +o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p +h2o +hplus
+    4a_5_dihydro_ml_236c_carboxylate
   }
 }

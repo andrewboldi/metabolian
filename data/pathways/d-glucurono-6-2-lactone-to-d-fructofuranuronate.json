@@ -1,0 +1,229 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucurono-6-2-lactone-to-d-fructofuranuronate",
+  "name": "D-glucurono-6,2-lactone to D-fructofuranuronate",
+  "category": "other",
+  "summary": "A 2-step route from D-glucurono-6,2-lactone to D-fructofuranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13337"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17039"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucurono_6_2_lactone",
+      "name": "D-glucurono-6,2-lactone",
+      "short": "D-glucurono-6,2-lac…",
+      "formula": "C6H8O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17039"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucopyranuronate",
+      "name": "D-glucopyranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58720"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_fructofuranuronate",
+      "name": "D-fructofuranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59863"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_19",
+      "name": "uronolactonase",
+      "ec": [
+        "3.1.1.19"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_12",
+      "name": "glucuronate isomerase",
+      "ec": [
+        "5.3.1.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "uronolactonase",
+      "equation": "D-glucurono-6,2-lactone + H2O = D-glucuronate + H(+)",
+      "ec": "3.1.1.19",
+      "substrates": [
+        {
+          "metabolite": "d_glucurono_6_2_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13337"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13337"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucuronate isomerase",
+      "equation": "D-glucuronate = D-fructuronate",
+      "ec": "5.3.1.12",
+      "substrates": [
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13049"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13049"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UDP-alpha-D-glucuronate + H2O = D-glucuronate + UDP + H(+)",
+      "equation": "UDP-alpha-D-glucuronate + H2O = D-glucuronate + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:26073"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26073"
+          }
+        ]
+      }
+    }
+  ]
+}

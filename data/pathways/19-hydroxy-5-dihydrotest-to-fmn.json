@@ -1,0 +1,295 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "19-hydroxy-5-dihydrotest-to-fmn",
+  "name": "19-hydroxy-5α-dihydrotest… to FMN",
+  "category": "other",
+  "summary": "A 2-step route from 19-hydroxy-5α-dihydrotestosterone to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53204"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137031"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "19_hydroxy_5_dihydrotestosterone",
+      "name": "19-hydroxy-5α-dihydrotestosterone",
+      "short": "19-hydroxy-5α-dihyd…",
+      "formula": "C19H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137031"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "19_oxo_5_dihydrotestosterone",
+      "name": "19-oxo-5α-dihydrotestosterone",
+      "short": "19-oxo-5α-dihydrote…",
+      "formula": "C19H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137032"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "17_hydroxy_5_estr_1_10_en_3_one",
+      "name": "17β-hydroxy-5α-estr-1(10)-en-3-one",
+      "short": "17β-hydroxy-5α-estr…",
+      "formula": "C18H26O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137110"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+      "name": "8β-hydroxygermacra-1(10),4,11(13)-trien-12-oate",
+      "short": "8β-hydroxygermacra-…",
+      "formula": "C15H21O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142464"
+      }
+    },
+    {
+      "id": "eupatolide",
+      "name": "eupatolide",
+      "formula": "C15H20O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4935"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_169",
+      "name": "eupatolide synthase",
+      "ec": [
+        "1.14.14.169"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "17beta,19-dihydroxy-3-oxo-5alpha-androstanone + reduced [NADPH--hemoprotein reductase] ...",
+      "equation": "17beta,19-dihydroxy-3-oxo-5alpha-androstanone + reduced [NADPH--hemoprotein reductase] + O2 = 17beta-hydroxy-3,19-dioxo-5alpha-androstanone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "19_hydroxy_5_dihydrotestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "19_oxo_5_dihydrotestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "17beta-hydroxy-3,19-dioxo-5alpha-androstanone + reduced [NADPH--hemoprotein reductase] ...",
+      "equation": "17beta-hydroxy-3,19-dioxo-5alpha-androstanone + reduced [NADPH--hemoprotein reductase] + O2 = 17beta-hydroxy-3-oxo-19-nor-5alpha-androst-1-ene + formate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "19_oxo_5_dihydrotestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17_hydroxy_5_estr_1_10_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53276"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "eupatolide synthase",
+      "equation": "8beta-hydroxygermacra-1(10),4,11(13)-trien-12-oate + reduced [NADPH--hemoprotein reductase] + O2 = eupatolide + oxidized [NADPH--hemoprotein reductase] + 2 H2O",
+      "ec": "1.14.14.169",
+      "substrates": [
+        {
+          "metabolite": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "eupatolide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_169"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57972"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,15 +18,9 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-diphosphate "(1R,5aS,6R)-1,4,5,5a,6,9-… to d
     5_10_dihydro_9_dimethylallylphenazine_1_carboxyl
   }
 
-  branch from 1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox side left {
-    1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox
-    <-> .
-    1r_1_4_5_10_tetrahydrophenazine_1_carboxylate
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_3_1_7_5 [3.1.7.5] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    e_e_e_geranylgeraniol
+    <-> ec_4_2_3_81 [4.2.3.81] +fpp
+    exo_bergamotene
   }
 }

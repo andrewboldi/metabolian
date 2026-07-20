@@ -24,13 +24,13 @@ pathway s-benzyl-l-cysteinylglyci-to-thiobenzaldehyde "S-benzyl-L-cysteinylglyci
 
   branch from glycine side right {
     glycine
-    <-> ec_4_1_3_41 [4.1.3.41] +3s_3_hydroxy_d_aspartate
-    glyoxylate
+    <-> . +icosanoyl_coa +coa +hplus
+    n_icosanoylglycinate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
-    3_5_cyclic_imp
+    <-> . +copper +tyraminium +h2o +4_hydroxyphenyl_acetaldehyde +hplus
+    copper
   }
 }

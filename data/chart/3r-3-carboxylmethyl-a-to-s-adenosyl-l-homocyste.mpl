@@ -18,25 +18,25 @@ pathway 3r-3-carboxylmethyl-a-to-s-adenosyl-l-homocyste "(3R)-3-[(carboxylmethyl
 
   branch from glycine side left {
     glycine
-    <-> . +cysgly +h2o
-    cysteine
+    <-> . +palmitoyl_coa +coa +hplus
+    n_hexadecanoylglycinate
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +icosanoyl_amp +amp +hplus
+    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_19_15 [1.14.19.15] +11z_hexadec_11_enoyl_coa +hydrogen_donor +o2 +h2o
-    10e_12z_hexadecadienoyl_coa
+    <-> . +ilicicolinate_b +hydrogen_donor +atp +amp +ppi
+    ilicicolin_b
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_238 [2.1.1.238] +mycinamicin_vi +sam +hplus
-    mycinamicin_iii
+    <-> ec_2_1_1_214 [2.1.1.214] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 }

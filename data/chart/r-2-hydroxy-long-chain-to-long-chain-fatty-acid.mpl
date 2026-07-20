@@ -20,13 +20,13 @@ pathway r-2-hydroxy-long-chain-to-long-chain-fatty-acid "(R)-2-hydroxy-long-chai
 
   branch from long_chain_fatty_aldehyde side left {
     long_chain_fatty_aldehyde
-    <-> ec_1_2_1_80 [1.2.1.80] +holo-acp +nad +nadh +hplus
-    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+    <-> ec_1_1_3_20 [1.1.3.20] +o2 +h2o2
+    long_chain_primary_fatty_alcohol
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    lysophosphatidylcholine_16_0
+    <-> . +1_o_palmitoyl_2_o_5_oxovaleryl_sn_glycero_3_phos +h2o +hplus
+    2_5_oxovaleroyl_sn_glycero_3_phosphocholine
   }
 }

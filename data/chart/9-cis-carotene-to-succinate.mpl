@@ -26,19 +26,19 @@ pathway 9-cis-carotene-to-succinate "9-cis-β-carotene to succinate" {
 
   branch from fmn side left {
     fmn
-    <-> . +n_arachidonoylserotonin +fmnh2 +o2 +h2o +hplus
-    n_arachidonoyl_2_oxoserotonin
+    <-> ec_1_14_14_73 [1.14.14.73] +albendazole +fmnh2 +o2 +h2o +hplus
+    albendazole_s_oxide
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_95 [2.1.1.95] +tocotrienol +sam +hplus
-    tocotrienol
+    <-> ec_2_1_1_322 [2.1.1.322] +l_argininium +sam +hplus
+    n5_methyl_argininium_1
   }
 
   branch from succinate side left {
     succinate
-    <-> . +3_methylnonanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methylnonanoyl_coa
+    <-> . +2_aminophenyl_succinate +succinyl_coa
+    2_2_aminophenyl_succinyl_coa
   }
 }

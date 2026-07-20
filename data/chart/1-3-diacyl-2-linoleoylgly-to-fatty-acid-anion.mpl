@@ -13,32 +13,24 @@ pathway 1-3-diacyl-2-linoleoylgly-to-fatty-acid-anion "1,3-diacyl-2-linoleoylgly
     <-> . +1_monoglyceride +1_3_diglyceride -glycerol
     triglyceride
     <-> . +h2o -fatty-acid -hplus
-    1_2_diglyceride
-    <-> . +h2o -fatty-acid -hplus
-    monoacylglycerol
-  }
-
-  branch from n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin side left {
-    n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin
-    <-> ec_2_3_1_296 [2.3.1.296] +n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
-    diglyceride
-  }
-
-  branch from 1_3_diglyceride side right {
     1_3_diglyceride
-    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
-    2_acyl_sn_glycero_3_phosphocholine
   }
 
-  branch from glycerol side left {
-    glycerol
-    <-> . +h2o +fatty-acid +hplus
-    3_acyl_sn_glycerol
+  branch from 1_3_diglyceride side left {
+    1_3_diglyceride
+    <-> . +1_monoglyceride +coa
+    acyl_coa
   }
 
-  branch from 1_2_diglyceride side right {
-    1_2_diglyceride
-    <-> . +n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin +n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin
-    1_2_diacyl_3_linoleoylglycerol
+  branch from triglyceride side right {
+    triglyceride
+    <-> . +9_hydroxyoctadecanoate +2_3_diacyl_sn_glycerol
+    9_acyloxy_stearate
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +n_fatty_acyl_l_glutamine +h2o
+    glutamine
   }
 }

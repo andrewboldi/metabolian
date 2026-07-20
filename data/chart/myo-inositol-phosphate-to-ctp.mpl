@@ -32,13 +32,19 @@ pathway myo-inositol-phosphate-to-ctp "myo-inositol phosphate to CTP" {
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_3_6_1_8 [3.6.1.8] +ctp +h2o +hplus
-    ppi
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
   }
 
   branch from cdp side right {
     cdp
     <-> ec_2_7_1_216 [2.7.1.216] +2_trans_6_trans_farnesol +ctp +hplus
     2e_6e_farnesyl_monophosphate
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
+    glutamate
   }
 }

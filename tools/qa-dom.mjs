@@ -382,7 +382,7 @@ if (asJson) {
 //
 // Measured over the sampled set (all hand-authored sheets + an evenly spaced
 // slice of the ingested ones); run with --all for the atlas-wide number.
-const BUDGET = { textOverlaps: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 12 };
+const BUDGET = { textOverlaps: 0, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 11 };
 
 // labelsOverCells is budgeted, not zeroed. Raising the placer's cell-overlap
 // weight from 1 to 3 moved the number not at all: these 12 captions have no

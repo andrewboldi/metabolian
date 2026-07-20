@@ -40,13 +40,13 @@ pathway naphthalene-to-catechol "naphthalene to catechol" {
 
   branch from salicylate side left {
     salicylate
-    <-> . +udp_d_glucose +udp
-    d_glucosyl_salicylate
+    <-> ec_6_2_1_61 [6.2.1.61] +holo-acp +atp +amp +ppi
+    o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s
   }
 
   branch from phenol side right {
     phenol
-    <-> . +nadh +o2 +hplus +nad +h2o
-    quinol
+    <-> . +tyrosine
+    2_ammonioprop_2_enoate
   }
 }

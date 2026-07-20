@@ -18,7 +18,7 @@ pathway 4-hydroxy-3-all-trans-hep-to-s-adenosyl-l-homocy "4-hydroxy-3-all-trans-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_174 [2.1.1.174] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_337 [2.1.1.337] +s_tetrahydropapaverine +sam +hplus
+    s_laudanosine
   }
 }

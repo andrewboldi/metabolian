@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2e-6e-farnesyl-l-cy-to-methanol",
+  "name": "S-[(2E,6E)-farnesyl]-L-cy… to methanol",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from S-[(2E,6E)-farnesyl]-L-cysteinate residue to methanol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21672"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:90510"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_2e_6e_farnesyl_l_cysteinate",
+      "name": "S-[(2E,6E)-farnesyl]-L-cysteinate",
+      "short": "S-[(2E,6E)-farnesyl…",
+      "formula": "C18H29NO2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90510"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "s_2e_6e_farnesyl_l_cysteine_methyl_ester",
+      "name": "S-[(2E,6E)-farnesyl]-L-cysteine methyl ester",
+      "short": "S-[(2E,6E)-farnesyl…",
+      "formula": "C19H32NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90511"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17790"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_100",
+      "name": "protein-S-isoprenylcysteine O-methyltransferase",
+      "ec": [
+        "2.1.1.100"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_n2",
+      "name": "protein-S-isoprenylcysteine alpha-carbonyl methylesterase",
+      "ec": [
+        "3.1.1.n2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protein-S-isoprenylcysteine O-methyltransferase",
+      "equation": "[protein]-C-terminal S-[(2E,6E)-farnesyl]-L-cysteine + S-adenosyl-L-methionine = [protein]-C-terminal S-[(2E,6E)-farnesyl]-L-cysteine methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.100",
+      "substrates": [
+        {
+          "metabolite": "s_2e_6e_farnesyl_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2e_6e_farnesyl_l_cysteine_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "protein-S-isoprenylcysteine alpha-carbonyl methylesterase",
+      "equation": "[protein]-C-terminal S-[(2E,6E)-farnesyl]-L-cysteine methyl ester + H2O = [protein]-C-terminal S-[(2E,6E)-farnesyl]-L-cysteine + methanol + H(+)",
+      "ec": "3.1.1.n2",
+      "substrates": [
+        {
+          "metabolite": "s_2e_6e_farnesyl_l_cysteine_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2e_6e_farnesyl_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_n2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48520"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cytidine(1400) in 16S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1400) in 16S rR...",
+      "equation": "cytidine(1400) in 16S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1400) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47732"
+          }
+        ]
+      }
+    }
+  ]
+}

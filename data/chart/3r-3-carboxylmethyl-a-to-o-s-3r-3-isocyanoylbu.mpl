@@ -20,13 +20,13 @@ pathway 3r-3-carboxylmethyl-a-to-o-s-3r-3-isocyanoylbu "(3R)-3-[(carboxylmethyl)
 
   branch from succinate side left {
     succinate
-    <-> . +palmitoyl_coa +akg +o2 +co2
-    2_hydroxypalmitoyl_coa
+    <-> ec_1_14_11_75 [1.14.11.75] +31_hydroxy_l_isoleucine +akg +o2 +co2
+    4s_31_4_dihydroxy_l_isoleucine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_80 [2.5.1.80] +dmapp +l_tryptophan
-    7_3_methylbut_2_enyl_l_tryptophan
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    13_epi_manool
   }
 }

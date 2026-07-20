@@ -26,21 +26,21 @@ pathway 1-o-palmitoyl-2-o-5-oxov-to-l-lysinium "1-O-palmitoyl-2-O-(5-oxov… to 
     1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from glutarate side right {
-    glutarate
-    <-> . +3_hydroxy_3_methylglutarate +glutaryl_coa
-    hmg_coa
-  }
-
-  branch from glutaryl_coa side left {
+  branch from glutaryl_coa side right {
     glutaryl_coa
     <-> . +fad +hplus +fadh2 +co2
     crotonoyl_coa
   }
 
-  branch from nicotinamide side right {
+  branch from nicotinamide side left {
     nicotinamide
-    <-> ec_2_4_99_20 [2.4.99.20] +nicotinate +nadp
-    nicotinate_adenine_dinucleotide_phosphate
+    <-> . +nad +hplus
+    cyclic_adp_d_ribose
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> . +n6_succinyl_l_lysine_1 +nad +h2o +nicotinamide
+    2_o_succinyl_adp_d_ribose
   }
 }

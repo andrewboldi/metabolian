@@ -18,13 +18,13 @@ pathway 5-6-dihydrothymine-to-l-alanine "5,6-dihydrothymine to L-alanine" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_5_1_2 [4.5.1.2] +h2o +chloride +pyruvate +hplus
-    3_chloro_d_alanine
+    <-> . +iminodiacetonitrile +h2o
+    n_cyanomethyl_glycinate
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_4_1_1_64 [4.1.1.64] +2_2_dialkylglycine +pyruvate +hplus +co2
-    dialkyl_ketone
+    <-> . +ala_gln +h2o
+    glutamine
   }
 }

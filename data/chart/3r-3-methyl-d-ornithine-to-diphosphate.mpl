@@ -18,13 +18,13 @@ pathway 3r-3-methyl-d-ornithine-to-diphosphate "(3R)-3-methyl-D-ornithine to dip
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_35 [3.5.4.35] +cytidine_5_monophosphate_1 +h2o +hplus
-    uridine_5_monophosphate_1
+    <-> . +d_isoleucine +o2 +h2o +h2o2
+    r_3_methyl_2_oxovalerate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_106 [4.2.3.106] +gpp
-    e_ocimene
+    <-> . +atp
+    cyclic_hexaadenylate
   }
 }

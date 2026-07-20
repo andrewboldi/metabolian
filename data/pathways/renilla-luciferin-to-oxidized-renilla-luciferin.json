@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "renilla-luciferin-to-oxidized-renilla-luciferin",
+  "name": "Renilla luciferin to oxidized Renilla luciferin",
+  "category": "other",
+  "summary": "A 2-step route from Renilla luciferin to oxidized Renilla luciferin(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:54120"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16531"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "renilla_luciferin",
+      "name": "Renilla luciferin",
+      "formula": "C26H21N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16531"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "coelenterazine_h_dioxetanone",
+      "name": "coelenterazine h dioxetanone",
+      "short": "coelenterazine h…",
+      "formula": "C26H21N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138063"
+      }
+    },
+    {
+      "id": "oxidized_renilla_luciferin",
+      "name": "oxidized Renilla luciferin",
+      "short": "oxidized Renilla…",
+      "formula": "C25H20N3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138275"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "coelenterazine h + O2 = coelenterazine h dioxetanone",
+      "equation": "coelenterazine h + O2 = coelenterazine h dioxetanone",
+      "substrates": [
+        {
+          "metabolite": "renilla_luciferin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coelenterazine_h_dioxetanone",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:54120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "coelenterazine h dioxetanone = excited coelenteramide h monoanion + CO2 + H(+)",
+      "equation": "coelenterazine h dioxetanone = excited coelenteramide h monoanion + CO2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "coelenterazine_h_dioxetanone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxidized_renilla_luciferin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54124"
+          }
+        ]
+      }
+    }
+  ]
+}

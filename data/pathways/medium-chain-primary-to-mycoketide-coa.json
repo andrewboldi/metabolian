@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "medium-chain-primary-to-mycoketide-coa",
   "name": "medium-chain primary… to mycoketide-CoA",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 4-step route from medium-chain primary fatty alcohol to mycoketide-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -186,23 +186,13 @@
       }
     },
     {
-      "id": "holo-acp",
-      "name": "Holo-[acyl-carrier protein]",
-      "short": "Holo-[acyl-carrier…",
-      "formula": "C14H25N3O8PS",
+      "id": "medium_chain_fatty_acyl_amp",
+      "name": "medium-chain fatty acyl-AMP",
+      "short": "medium-chain fatty…",
+      "formula": "C11H12N5O8PR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:64479"
-      }
-    },
-    {
-      "id": "o_s_medium_chain_fatty_acyl_pantetheine_4_phosph",
-      "name": "O-[S-(medium-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(medium-chain…",
-      "formula": "C15H24N3O9PSR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:133242"
+        "chebi": "CHEBI:141140"
       }
     },
     {
@@ -225,16 +215,6 @@
       }
     },
     {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:128769"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -245,13 +225,12 @@
       }
     },
     {
-      "id": "all_trans_heptaprenyl_diphosphate",
-      "name": "all-trans-heptaprenyl diphosphate",
-      "short": "all-trans-heptapren…",
-      "formula": "C35H57O7P2",
-      "charge": -3,
+      "id": "7_epi_sesquithujene",
+      "name": "7-epi-sesquithujene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58206"
+        "chebi": "CHEBI:63710"
       }
     }
   ],
@@ -271,17 +250,10 @@
       ]
     },
     {
-      "id": "ec_6_2_1_47",
-      "name": "medium-chain-fatty-acid--[acyl-carrier-protein] ligase",
+      "id": "ec_4_2_3_101",
+      "name": "7-epi-sesquithujene synthase",
       "ec": [
-        "6.2.1.47"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_30",
-      "name": "heptaprenyl diphosphate synthase",
-      "ec": [
-        "2.5.1.30"
+        "4.2.3.101"
       ]
     }
   ],
@@ -500,30 +472,25 @@
     },
     {
       "id": "r5",
-      "name": "medium-chain-fatty-acid--[acyl-carrier-protein] ligase",
-      "equation": "a medium-chain fatty acid + holo-[ACP] + ATP = a medium-chain fatty acyl-[ACP] + AMP + diphosphate",
-      "ec": "6.2.1.47",
+      "name": "a medium-chain fatty acid + ATP + H(+) = a medium-chain fatty acyl-AMP + diphosphate",
+      "equation": "a medium-chain fatty acid + ATP + H(+) = a medium-chain fatty acyl-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "medium_chain_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "holo-acp",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_medium_chain_fatty_acyl_pantetheine_4_phosph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "medium_chain_fatty_acyl_amp",
           "stoichiometry": 1
         },
         {
@@ -531,22 +498,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_2_1_47"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50460"
+        "rhea": "RHEA:56920"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50460"
+            "id": "RHEA:56920"
           }
         ]
       }
@@ -592,14 +554,10 @@
     },
     {
       "id": "r7",
-      "name": "heptaprenyl diphosphate synthase",
-      "equation": "4 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-heptaprenyl diphosphate + 4 diphosphate",
-      "ec": "2.5.1.30",
+      "name": "7-epi-sesquithujene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = 7-epi-sesquithujene + diphosphate",
+      "ec": "4.2.3.101",
       "substrates": [
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 4
-        },
         {
           "metabolite": "fpp",
           "stoichiometry": 1
@@ -607,30 +565,30 @@
       ],
       "products": [
         {
-          "metabolite": "all_trans_heptaprenyl_diphosphate",
+          "metabolite": "7_epi_sesquithujene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 4
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_30"
+          "enzyme": "ec_4_2_3_101"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:27794"
+        "rhea": "RHEA:31995"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27794"
+            "id": "RHEA:31995"
           }
         ]
       }

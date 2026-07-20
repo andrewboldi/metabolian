@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ala-thr-to-l-2-amino-3-oxobutanoic",
+  "name": "Ala-Thr to L-2-amino-3-oxobutanoic…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from Ala-Thr zwitterion to L-2-amino-3-oxobutanoic acid zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37299"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:74390"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ala_thr",
+      "name": "Ala-Thr",
+      "formula": "C7H14N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74390"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "amino_oxobutanoate",
+      "name": "L-2-Amino-3-oxobutanoate",
+      "short": "L-2-Amino-3-oxobuta…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78948"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "l_threonyl_amp",
+      "name": "L-threonyl-AMP",
+      "formula": "C14H20N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64847"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "l_alaninamide",
+      "name": "L-alaninamide",
+      "formula": "C3H9N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:74169"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_103",
+      "name": "L-threonine 3-dehydrogenase",
+      "ec": [
+        "1.1.1.103"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
+      "equation": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "ala_thr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-threonine 3-dehydrogenase",
+      "equation": "L-threonine + NAD(+) = (2S)-2-amino-3-oxobutanoate + NADH + H(+)",
+      "ec": "1.1.1.103",
+      "substrates": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amino_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13161"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-threonine + ATP = L-threonyl-5'-AMP + diphosphate",
+      "equation": "L-threonine + ATP = L-threonyl-5'-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_threonyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33403"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-alaninamide + H2O = L-alanine + NH4(+)",
+      "equation": "L-alaninamide + H2O = L-alanine + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "l_alaninamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37231"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37231"
+          }
+        ]
+      }
+    }
+  ]
+}

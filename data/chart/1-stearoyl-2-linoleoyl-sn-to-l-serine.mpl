@@ -18,8 +18,8 @@ pathway 1-stearoyl-2-linoleoyl-sn-to-l-serine "1-stearoyl-2-linoleoyl-sn… to L
 
   branch from 1_stearoyl_sn_glycero_3_phosphoserine side left {
     1_stearoyl_sn_glycero_3_phosphoserine
-    <-> . +1_stearoyl_2_9_10_epoxyoctadecanoyl_sn_glycero_3 +h2o +hplus
-    9_10_epoxyoctadecanoate
+    <-> . +1_stearoyl_2_10_hydroxyoctadecanoyl_sn_glycero_3 +h2o +hplus
+    10_hydroxyoctadecanoate
   }
 
   branch from linoleate side right {
@@ -30,13 +30,25 @@ pathway 1-stearoyl-2-linoleoyl-sn-to-l-serine "1-stearoyl-2-linoleoyl-sn… to L
 
   branch from sn_glycero_3_phosphoserine side left {
     sn_glycero_3_phosphoserine
-    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
-    carboxylic_acid_anion
+    <-> . +1_palmitoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    palmitate
   }
 
   branch from octadecanoate side right {
     octadecanoate
-    <-> . +nad +h2o +nadh +hplus
-    octadecanal
+    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    2_linoleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from sn_glycerol_3_phosphate side left {
+    sn_glycerol_3_phosphate
+    <-> . +linoleoyl_coa +coa
+    1_linoleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from serine side right {
+    serine
+    <-> ec_3_1_3_3 [3.1.3.3] +h2o +pi
+    pser
   }
 }

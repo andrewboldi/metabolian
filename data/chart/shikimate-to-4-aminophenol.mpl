@@ -18,31 +18,31 @@ pathway shikimate-to-4-aminophenol "shikimate to 4-aminophenol" {
     4_amino_4_deoxychorismate
     <-> ec_4_1_3_38 [4.1.3.38] -pyruvate -hplus
     4_aminobenzoate
-    <-> ec_1_14_13_27 [1.14.13.27] +nadh +o2 +hplus -co2 -nad -h2o
+    <-> ec_1_14_13_27 [1.14.13.27] +nadph +o2 +hplus -co2 -nadp -h2o
     4_aminophenol
   }
 
   branch from chorismate side left {
     chorismate
-    <-> ec_3_3_2_13 [3.3.2.13] +h2o +pyruvate
-    3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbox
+    <-> ec_5_4_4_2 [5.4.4.2]
+    isochorismate
   }
 
   branch from 4_amino_4_deoxychorismate side right {
     4_amino_4_deoxychorismate
-    <-> . +chorismate +h2o
-    nh3
+    <-> ec_5_4_99_67 [5.4.99.67]
+    4_amino_4_deoxyprephenate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
-    6_oxoparomamine
+    <-> . +nadp +h2o +nadph +hplus
+    l_glutamic_5_semialdehyde
   }
 
   branch from 4_aminobenzoate side right {
     4_aminobenzoate
-    <-> . +h2o +glutamate
-    n_4_aminobenzoyl_l_glutamate
+    <-> . +l_tyrosine +ascorbate +l_lysinium +o2 +l_allysine +l_dehydroascorbate +h2o +hplus
+    glycine
   }
 }

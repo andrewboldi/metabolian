@@ -1,0 +1,183 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-s-3-carboxymethyl-3-h-to-o-s-3-alkylbut-2-enoy",
+  "name": "O-[S-(3-carboxymethyl-3-h… to O-[S-(3-alkylbut-2-enoyl)…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from O-[S-(3-carboxymethyl-3-hydroxyacyl)-pantetheine-4'-phosphoryl]-L-serine(2−) residue to O-[S-(3-alkylbut-2-enoyl)-pantetheine-4'-phosphoryl]-L-serine(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78995"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:229667"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_s_3_carboxymethyl_3_hydroxyacyl_pantetheine_4",
+      "name": "O-[S-(3-carboxymethyl-3-hydroxyacyl)-pantetheine-4'-phosphoryl]-L-serine(2−)",
+      "short": "O-[S-(3-carboxymeth…",
+      "formula": "C20H31N3O12PSR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229667"
+      }
+    },
+    {
+      "id": "o_s_4_carboxy_3_alkylbut_2e_enoyl_pantetheine_4",
+      "name": "O-[S-(4-carboxy-3-alkylbut-(2E)-enoyl)-pantetheine-4'-phosphoryl]-L-serine(2−)",
+      "short": "O-[S-(4-carboxy-3-a…",
+      "formula": "C20H29N3O11PSR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229663"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o_s_3_alkylbut_2_enoyl_pantetheine_4_phosphoryl",
+      "name": "O-[S-(3-alkylbut-2-enoyl)-pantetheine-4'-phosphoryl]-L-serine(1−)",
+      "short": "O-[S-(3-alkylbut-2-…",
+      "formula": "C19H30N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229664"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_181",
+      "name": "3-carboxymethyl-3-hydroxy-acyl-[ACP] dehydratase",
+      "ec": [
+        "4.2.1.181"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_125",
+      "name": "4-carboxy-3-alkylbut-2-enoyl-[ACP] decarboxylase",
+      "ec": [
+        "4.1.1.125"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-carboxymethyl-3-hydroxy-acyl-[ACP] dehydratase",
+      "equation": "a 3-carboxymethyl-3-hydroxyacyl-[ACP] = a 4-carboxy-3-alkylbut-(2E)-enoyl-[ACP] + H2O",
+      "ec": "4.2.1.181",
+      "substrates": [
+        {
+          "metabolite": "o_s_3_carboxymethyl_3_hydroxyacyl_pantetheine_4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_4_carboxy_3_alkylbut_2e_enoyl_pantetheine_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_181"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78995"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-carboxy-3-alkylbut-2-enoyl-[ACP] decarboxylase",
+      "equation": "a 4-carboxy-3-alkylbut-(2E)-enoyl-[ACP] + H(+) = a 3-alkylbut-(2E)-enoyl-[ACP] + CO2",
+      "ec": "4.1.1.125",
+      "substrates": [
+        {
+          "metabolite": "o_s_4_carboxy_3_alkylbut_2e_enoyl_pantetheine_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_3_alkylbut_2_enoyl_pantetheine_4_phosphoryl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_125"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:78991"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78991"
+          }
+        ]
+      }
+    }
+  ]
+}

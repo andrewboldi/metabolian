@@ -21,10 +21,4 @@ pathway d-apiose-to-d-fructofuranose "D-apiose to β-D-fructofuranose…" {
     <-> . +e4p -d_fructofuranose_6_phosphate
     glycolaldehyde
   }
-
-  branch from 3_oxoisoapionate side left {
-    3_oxoisoapionate
-    <-> ec_2_7_1_231 [2.7.1.231] +atp +adp +hplus
-    3_oxoisoapionate_4_phosphate
-  }
 }

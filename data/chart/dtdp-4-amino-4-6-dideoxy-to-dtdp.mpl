@@ -20,8 +20,8 @@ pathway dtdp-4-amino-4-6-dideoxy-to-dtdp "dTDP-4-amino-4,6-dideoxy-… to dTDP" 
 
   branch from dtdp side left {
     dtdp
-    <-> . +dtdp_6_deoxy_l_mannose +l_argininium +hplus
-    n_6_deoxy_l_mannosyl_l_arginyl_2
+    <-> . +dtmp +ctp
+    cdp
   }
 
   branch from dttp side right {

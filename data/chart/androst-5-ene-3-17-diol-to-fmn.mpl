@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway androst-5-ene-3-17-diol-to-fmn "androst-5-ene-3β,17β-diol to FMN" {
-  spacing 228
+  spacing 152
 
   spine at 0,0 {
     androst_5_ene_3_17_diol
@@ -12,27 +12,19 @@ pathway androst-5-ene-3-17-diol-to-fmn "androst-5-ene-3β,17β-diol to FMN" {
     17_hydroxy_5_androsten_3_one
     <-> .
     testosterone
-    <-> ec_1_1_1_51 [1.1.1.51] +nadp -nadph -hplus
-    androst_4_ene_3_17_dione
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    6_hydroxyandrost_4_ene_3_17_dione
+    19_hydroxytestosterone
   }
 
   branch from testosterone side left {
     testosterone
-    <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    1_hydroxytestosterone
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    2_hydroxytestosterone
   }
 
-  branch from androst_4_ene_3_17_dione side right {
-    androst_4_ene_3_17_dione
-    <-> ec_1_14_14_197 [1.14.14.197] +fmnh2 +o2 +fmn +h2o +hplus
-    11_hydroxyandrost_4_ene_3_17_dione
-  }
-
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent
+    <-> . +germacra_1_10_4_11_13_trien_12_ol +fmnh2 +o2 +h2o +hplus
+    germacra_1_10_4_11_13_trien_12_al
   }
 }

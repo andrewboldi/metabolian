@@ -143,6 +143,25 @@
       }
     },
     {
+      "id": "n_5_guanylyl_l_lysine_1",
+      "name": "Nε-(5'-guanylyl)-L-lysine(1−)",
+      "short": "Nε-(5'-guanylyl)-L-…",
+      "formula": "C16H23N7O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138294"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -153,32 +172,42 @@
       }
     },
     {
-      "id": "selinene",
-      "name": "(+)-β-selinene",
+      "id": "sativene",
+      "name": "(+)-sativene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10443"
+        "chebi": "CHEBI:231783"
       }
     },
     {
-      "id": "n_methylethanolaminium_phosphate",
-      "name": "N-methylethanolaminium phosphate",
-      "short": "N-methylethanolamin…",
-      "formula": "C3H9NO4P",
-      "charge": -1,
+      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
+      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)(2−)",
+      "short": "5'-(N7-methyl…",
+      "formula": "C17H24N5O17P3R",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57781"
+        "chebi": "CHEBI:167609"
       }
     },
     {
-      "id": "n_n_dimethylethanolamine_phosphate",
-      "name": "N,N-dimethylethanolamine phosphate",
-      "short": "N,N-dimethylethanol…",
-      "formula": "C4H11NO4P",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58641"
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "2_o_methylcytidine_5_monophosphate_1",
+      "name": "2'-O-methylcytidine 5'-monophosphate(1−)",
+      "short": "2'-O-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74495"
       }
     },
     {
@@ -228,24 +257,24 @@
       ]
     },
     {
-      "id": "ec_4_2_3_66",
-      "name": "beta-selinene cyclase",
+      "id": "ec_4_2_3_129",
+      "name": "(+)-sativene synthase",
       "ec": [
-        "4.2.3.66"
+        "4.2.3.129"
       ]
     },
     {
-      "id": "ec_4_2_3_198",
-      "name": "alpha-selinene synthase",
+      "id": "ec_2_1_1_57",
+      "name": "methyltransferase cap1",
       "ec": [
-        "4.2.3.198"
+        "2.1.1.57"
       ]
     },
     {
-      "id": "ec_2_1_1_103",
-      "name": "phosphoethanolamine N-methyltransferase",
+      "id": "ec_2_1_1_186",
+      "name": "23S rRNA (cytidine(2498)-2'-O)-methyltransferase",
       "ec": [
-        "2.1.1.103"
+        "2.1.1.186"
       ]
     }
   ],
@@ -489,9 +518,52 @@
     },
     {
       "id": "r6",
-      "name": "beta-selinene cyclase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-selinene + diphosphate",
-      "ec": "4.2.3.66",
+      "name": "N(epsilon)-GMP-L-lysyl-[protein] + a 5'-end diphospho-ribonucleoside in mRNA + 2 H(+) =...",
+      "equation": "N(epsilon)-GMP-L-lysyl-[protein] + a 5'-end diphospho-ribonucleoside in mRNA + 2 H(+) = a 5'-end (5'-triphosphoguanosine)-ribonucleoside in mRNA + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n_5_guanylyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_end_ribonucleoside_5_diphosphate_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_5_triphosphoguanosine_ribonucleotide_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:67016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(+)-sativene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-sativene + diphosphate",
+      "ec": "4.2.3.129",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -500,7 +572,7 @@
       ],
       "products": [
         {
-          "metabolite": "selinene",
+          "metabolite": "sativene",
           "stoichiometry": 1
         },
         {
@@ -510,32 +582,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_66"
+          "enzyme": "ec_4_2_3_129"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:29483"
+        "rhea": "RHEA:33119"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29483"
+            "id": "RHEA:33119"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "phosphoethanolamine N-methyltransferase",
-      "equation": "N-methylethanolamine phosphate + S-adenosyl-L-methionine = N,N-dimethylethanolamine phosphate + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.103",
+      "id": "r8",
+      "name": "methyltransferase cap1",
+      "equation": "a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-ribonucleoside in mRNA + S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside) in mRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.57",
       "substrates": [
         {
-          "metabolite": "n_methylethanolaminium_phosphate",
+          "metabolite": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside",
           "stoichiometry": 1
         },
         {
@@ -545,7 +617,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_n_dimethylethanolamine_phosphate",
+          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
           "stoichiometry": 1
         },
         {
@@ -559,26 +631,75 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_103"
+          "enzyme": "ec_2_1_1_57"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:25321"
+        "rhea": "RHEA:67020"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25321"
+            "id": "RHEA:67020"
           }
         ]
       }
     },
     {
-      "id": "r8",
+      "id": "r9",
+      "name": "23S rRNA (cytidine(2498)-2'-O)-methyltransferase",
+      "equation": "cytidine(2498) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methylcytidine(2498) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.186",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_186"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:42788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "N(7)-methyl-GTP + H2O = N(7)-methyl-GMP + diphosphate + H(+)",
       "equation": "N(7)-methyl-GTP + H2O = N(7)-methyl-GMP + diphosphate + H(+)",
       "substrates": [
@@ -606,7 +727,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:58744"
       },

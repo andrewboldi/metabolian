@@ -28,19 +28,19 @@ pathway 1-hydroxy-2-naphthoate-to-cis-cis-muconate "1-hydroxy-2-naphthoate to ci
 
   branch from phthalate side left {
     phthalate
-    <-> ec_3_5_1_79 [3.5.1.79] +n_alkylphthalic_monoamide +h2o
-    primary_ammonium_ion
+    <-> ec_1_11_1_19 [1.11.1.19] +reactive_blue_5_quinol_form +h2o2 +2_amino_6_chloro_4_3_sulfonatoanilino_1_3_5_tria +h2o +hplus
+    2_2_disulfonatoazobenzene
   }
 
   branch from 3_4_dihydroxybenzoate side right {
     3_4_dihydroxybenzoate
-    <-> ec_4_1_1_69 [4.1.1.69] +hplus +co2
-    3_4_dihydroxyphthalate
+    <-> . +nad +h2o +nadh +hplus
+    3_4_dihydroxybenzaldehyde
   }
 
   branch from catechol side left {
     catechol
-    <-> ec_1_14_14_20 [1.14.14.20] +fadh2 +o2 +fad +h2o +hplus
+    <-> ec_1_14_13_244 [1.14.13.244] +nadh +o2 +hplus +nad +h2o
     phenol
   }
 

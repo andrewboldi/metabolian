@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "angiotensin-i-dizwitterion-to-his-pro",
   "name": "angiotensin I dizwitterion to His-Pro",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from angiotensin I dizwitterion to His-Pro zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -95,22 +95,13 @@
       }
     },
     {
-      "id": "r_3_phenyllactate",
-      "name": "(R)-3-phenyllactate",
-      "formula": "C9H9O3",
-      "charge": -1,
+      "id": "o_isoindolinone_l_homoserine",
+      "name": "O-isoindolinone-L-homoserine",
+      "short": "O-isoindolinone-L-h…",
+      "formula": "C13H16N2O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:11009"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
+        "chebi": "CHEBI:234544"
       }
     },
     {
@@ -123,40 +114,31 @@
       }
     },
     {
-      "id": "pf1022b",
-      "name": "PF1022B",
-      "formula": "C64H84N4O12",
+      "id": "l_leucyl_o_isoindolinone_l_homoserine",
+      "name": "L-leucyl-(O-isoindolinone)-L-homoserine",
+      "short": "L-leucyl-(O-isoindo…",
+      "formula": "C19H27N3O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:180462"
+        "chebi": "CHEBI:234545"
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
       }
     },
     {
@@ -167,36 +149,9 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "ile5_angiotensin_ii_dizwitterion",
-      "name": "Ile5-angiotensin II dizwitterion",
-      "short": "Ile5-angiotensin…",
-      "formula": "C50H71N13O12",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58506"
-      }
-    },
-    {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58095"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_3_4_17_23",
-      "name": "angiotensin-converting enzyme 2",
-      "ec": [
-        "3.4.17.23"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -317,104 +272,51 @@
     },
     {
       "id": "r4",
-      "name": "4 (R)-3-phenyllactate + 4 L-leucine + 4 S-adenosyl-L-methionine + 8 ATP = PF1022B + 8 A...",
-      "equation": "4 (R)-3-phenyllactate + 4 L-leucine + 4 S-adenosyl-L-methionine + 8 ATP = PF1022B + 8 AMP + 4 S-adenosyl-L-homocysteine + 8 diphosphate + 8 H(+)",
+      "name": "O-isoindolinone-L-homoserine + L-leucine + ATP = L-leucyl-(O-isoindolinone)-L-homoserin...",
+      "equation": "O-isoindolinone-L-homoserine + L-leucine + ATP = L-leucyl-(O-isoindolinone)-L-homoserine + ADP + phosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "r_3_phenyllactate",
-          "stoichiometry": 4
+          "metabolite": "o_isoindolinone_l_homoserine",
+          "stoichiometry": 1
         },
         {
           "metabolite": "leucine",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 4
+          "stoichiometry": 1
         },
         {
           "metabolite": "atp",
-          "stoichiometry": 8
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pf1022b",
+          "metabolite": "l_leucyl_o_isoindolinone_l_homoserine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 8
+          "metabolite": "adp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 8
+          "metabolite": "pi",
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 8
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:68756"
+        "rhea": "RHEA:85783"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68756"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "angiotensin-converting enzyme 2",
-      "equation": "angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine",
-      "ec": "3.4.17.23",
-      "substrates": [
-        {
-          "metabolite": "ile5_angiotensin_ii_dizwitterion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ile5_angiotensin_ii_1_7_dizwitterion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_4_17_23"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:26554"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:26554"
+            "id": "RHEA:85783"
           }
         ]
       }

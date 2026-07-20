@@ -226,59 +226,41 @@
       }
     },
     {
-      "id": "alkanesulfonate_oxoanion",
-      "name": "alkanesulfonate oxoanion",
-      "short": "alkanesulfonate…",
-      "formula": "CH2O3SR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:134249"
-      }
-    },
-    {
-      "id": "aldehyde",
-      "name": "aldehyde",
-      "formula": "CHOR",
+      "id": "squalene",
+      "name": "Squalene",
+      "formula": "C30H50",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17478"
+        "chebi": "CHEBI:15440"
       }
     },
     {
-      "id": "sulfite",
-      "name": "sulfite",
-      "formula": "O3S",
+      "id": "epoxysqualene",
+      "name": "(S)-2,3-Epoxysqualene (2,3-oxidosqualene)",
+      "short": "2,3-Epoxysqualene…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15441"
+      }
+    },
+    {
+      "id": "2r_3z_phycocyanobilin",
+      "name": "(2R,3Z)-phycocyanobilin",
+      "short": "(2R,3Z)-phycocyanob…",
+      "formula": "C33H36N4O6",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:17359"
+        "chebi": "CHEBI:57437"
       }
     },
     {
-      "id": "3_indol_3_yl_pyruvate",
-      "name": "3-(indol-3-yl)pyruvate",
-      "short": "3-(indol-3-yl)pyruv…",
-      "formula": "C11H8NO3",
-      "charge": -1,
+      "id": "biliverdin",
+      "name": "biliverdin",
+      "formula": "C33H32N4O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:17640"
-      }
-    },
-    {
-      "id": "indol_3_ylacetyl_coa",
-      "name": "indol-3-ylacetyl-CoA",
-      "formula": "C31H39N8O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57271"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:57991"
       }
     },
     {
@@ -289,6 +271,53 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:58750"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "amorpha_4_11_diene",
+      "name": "amorpha-4,11-diene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52026"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "thca_24oxo_coa",
+      "name": "3alpha,7alpha,12alpha-Trihydroxy-5beta-24-oxocholestanoyl-CoA",
+      "short": "3alpha,7alpha,12alp…",
+      "formula": "C48H74N7O21P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58507"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -322,17 +351,24 @@
       ]
     },
     {
-      "id": "ec_1_14_14_5",
-      "name": "alkanesulfonate monooxygenase",
+      "id": "ec_1_14_14_17",
+      "name": "squalene monooxygenase",
       "ec": [
-        "1.14.14.5"
+        "1.14.14.17"
       ]
     },
     {
-      "id": "ec_1_2_7_8",
-      "name": "indolepyruvate ferredoxin oxidoreductase",
+      "id": "ec_1_3_7_5",
+      "name": "phycocyanobilin:ferredoxin oxidoreductase",
       "ec": [
-        "1.2.7.8"
+        "1.3.7.5"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_24",
+      "name": "amorpha-4,11-diene synthase",
+      "ec": [
+        "4.2.3.24"
       ]
     }
   ],
@@ -743,12 +779,12 @@
     },
     {
       "id": "r9",
-      "name": "alkanesulfonate monooxygenase",
-      "equation": "an alkanesulfonate + FMNH2 + O2 = an aldehyde + FMN + sulfite + H2O + 2 H(+)",
-      "ec": "1.14.14.5",
+      "name": "squalene monooxygenase",
+      "equation": "squalene + reduced [NADPH--hemoprotein reductase] + O2 = (S)-2,3-epoxysqualene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.17",
       "substrates": [
         {
-          "metabolite": "alkanesulfonate_oxoanion",
+          "metabolite": "squalene",
           "stoichiometry": 1
         },
         {
@@ -762,15 +798,11 @@
       ],
       "products": [
         {
-          "metabolite": "aldehyde",
+          "metabolite": "epoxysqualene",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfite",
           "stoichiometry": 1
         },
         {
@@ -779,82 +811,74 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_5"
+          "enzyme": "ec_1_14_14_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:23064"
+        "rhea": "RHEA:25282"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23064"
+            "id": "RHEA:25282"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "indolepyruvate ferredoxin oxidoreductase",
-      "equation": "indole-3-pyruvate + 2 oxidized [2Fe-2S]-[ferredoxin] + CoA = (indol-3-yl)acetyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + CO2 + H(+)",
-      "ec": "1.2.7.8",
+      "name": "phycocyanobilin:ferredoxin oxidoreductase",
+      "equation": "(2R,3Z)-phycocyanobilin + 4 oxidized [2Fe-2S]-[ferredoxin] = biliverdin IXalpha + 4 reduced [2Fe-2S]-[ferredoxin] + 4 H(+)",
+      "ec": "1.3.7.5",
       "substrates": [
         {
-          "metabolite": "3_indol_3_yl_pyruvate",
+          "metabolite": "2r_3z_phycocyanobilin",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "products": [
         {
-          "metabolite": "indol_3_ylacetyl_coa",
+          "metabolite": "biliverdin",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
+          "stoichiometry": 4
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_7_8"
+          "enzyme": "ec_1_3_7_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:12645"
+        "rhea": "RHEA:15309"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12645"
+            "id": "RHEA:15309"
           }
         ]
       }
@@ -906,6 +930,90 @@
           {
             "db": "Rhea",
             "id": "RHEA:82331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "amorpha-4,11-diene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-amorpha-4,11-diene + diphosphate",
+      "ec": "4.2.3.24",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amorpha_4_11_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:18325"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "(24R,25R)-3alpha,7alpha,12alpha,24-tetrahydroxy-5beta-cholestan-26-oyl-CoA + NAD(+) = 3...",
+      "equation": "(24R,25R)-3alpha,7alpha,12alpha,24-tetrahydroxy-5beta-cholestan-26-oyl-CoA + NAD(+) = 3alpha,7alpha,12alpha-trihydroxy-24-oxo-5beta-cholestan-26-oyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "thca_24oh_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca_24oxo_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:47088"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47088"
           }
         ]
       }

@@ -16,27 +16,15 @@ pathway 2-nitrophenolate-to-nitrite "2-nitrophenolate to nitrite" {
     1_4_benzoquinones
   }
 
-  branch from catechol side left {
-    catechol
-    <-> ec_1_14_13_244 [1.14.13.244] +nadh +o2 +hplus +nad +h2o
-    phenol
-  }
-
-  branch from nitrite side right {
+  branch from nitrite side left {
     nitrite
-    <-> ec_1_7_7_1 [1.7.7.1] +di_sulfido_diiron +nh3 +h2o +hplus
-    di_sulfido_diiron
-  }
-
-  branch from nitrate side left {
-    nitrate
-    <-> . +3_aci_nitropropanoate +o2 +h2o +nitrite +h2o2 +hplus
-    3_oxopropanoate
+    <-> ec_1_7_1_4 [1.7.1.4] +nadp +h2o +nadph +hplus
+    nh3
   }
 
   branch from 1_4_benzoquinones side right {
     1_4_benzoquinones
-    <-> ec_1_6_5_5 [1.6.5.5] +nadph +hplus +nadp
-    1_4_benzosemiquinones
+    <-> ec_1_1_5_11 [1.1.5.11] +butan_1_ol +hydroquinones
+    butanal
   }
 }

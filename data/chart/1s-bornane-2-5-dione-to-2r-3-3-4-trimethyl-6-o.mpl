@@ -20,13 +20,13 @@ pathway 1s-bornane-2-5-dione-to-2r-3-3-4-trimethyl-6-o "(1S)-bornane-2,5-dione t
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_r_18_s_eetetr
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    estriol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_48 [4.2.3.48] +fpp +h2o
-    3s_6e_nerolidol
+    <-> ec_4_2_3_90 [4.2.3.90] +fpp
+    5_epi_selinene
   }
 }

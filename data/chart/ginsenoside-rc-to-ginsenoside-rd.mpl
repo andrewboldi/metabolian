@@ -21,10 +21,4 @@ pathway ginsenoside-rc-to-ginsenoside-rd "ginsenoside Rc to ginsenoside Rd" {
     <-> ec_2_4_1_365 [2.4.1.365] +udp_d_glucose +udp +hplus
     20s_ginsenoside_rh2
   }
-
-  branch from glucose side right {
-    glucose
-    <-> . +sinigrin +h2o +hplus
-    z_n_sulfonatooxy_prop_2_enimidothioate
-  }
 }

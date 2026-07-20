@@ -20,25 +20,19 @@ pathway 5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos "5-aminoimidazol-3-iumâ
 
   branch from carbon_monoxide side left {
     carbon_monoxide
-    <-> ec_1_13_11_48 [1.13.11.48] +3_hydroxy_2_methylquinolin_4_1h_one +o2 +hplus
-    n_acetylanthranilate
+    <-> . +tert_butylisonitrile +h2o +hplus
+    tert_butylammonium
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> . +neomycin_c +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    framycetin
+    <-> ec_2_1_1_379 [2.1.1.379] +l_argininium +hydrogen_donor +sam +methionine +hydrogen_acceptor +sah +hplus
+    5s_c_methyl_l_argininium
   }
 
   branch from methionine side left {
     methionine
-    <-> ec_1_21_98_3 [1.21.98.3] +magnesium_protoporphyrin_13_monomethyl_ester +sam +h2o +5_deoxyadenosine +hplus
-    2_4_divinyl_protochlorophyllide_a
-  }
-
-  branch from 4_amino_2_methyl_5_diphosphonatooxymethylpyrimid side right {
-    4_amino_2_methyl_5_diphosphonatooxymethylpyrimid
-    <-> ec_2_5_1_3 [2.5.1.3] +2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate +hplus +co2 +ppi
-    thiamine_1_monophosphate
+    <-> . +gtp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
+    3_deoxy_3_4_didehydro_gtp
   }
 }

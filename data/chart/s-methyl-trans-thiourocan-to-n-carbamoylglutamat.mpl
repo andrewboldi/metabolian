@@ -15,4 +15,10 @@ pathway s-methyl-trans-thiourocan-to-n-carbamoylglutamat "S-methyl-trans-thiouro
     <-> . +h2o -hplus
     n_carbamoylglutamate
   }
+
+  branch from hydantoin_5_propionate side left {
+    hydantoin_5_propionate
+    <-> . +3_5_oxo_2_sulfanylideneimidazolidin_4_yl_propano +h2o +hplus
+    h2s
+  }
 }

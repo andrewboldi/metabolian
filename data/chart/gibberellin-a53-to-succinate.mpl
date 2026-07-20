@@ -18,19 +18,13 @@ pathway gibberellin-a53-to-succinate "gibberellin A53 to succinate" {
 
   branch from gibberellin_a20 side left {
     gibberellin_a20
-    <-> ec_2_1_1_275 [2.1.1.275] +sam +sah
-    gibberellin_a20_methyl_ester
+    <-> . +o2 +hplus +co2 +h2o
+    gibberellin_a19
   }
 
   branch from succinate side right {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
-  }
-
-  branch from gibberellin_a1 side left {
-    gibberellin_a1
-    <-> . +sam +sah
-    gibberellin_a1_methyl_ester
+    <-> ec_1_14_11_73 [1.14.11.73] +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 }

@@ -8,9 +8,7 @@ pathway amyrin-to-fmn "β-amyrin to FMN" {
 
   spine at 0,0 {
     amyrin
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    11_hydroxy_amyrin
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_152 [1.14.14.152] +fmnh2 +o2 -fmn -h2o -hplus
     11_oxo_amyrin
     <-> ec_1_14_14_115 [1.14.14.115] +fmnh2 +o2 -fmn -h2o -hplus
     glycyrrhetinate
@@ -18,8 +16,8 @@ pathway amyrin-to-fmn "β-amyrin to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    17_hete
+    <-> . +thromboxane_a2 +fmnh2 +o2 +h2o +hplus
+    18_hydroxythromboxane_a2
   }
 
   branch from glycyrrhetinate side right {

@@ -24,19 +24,19 @@ pathway 2-amino-4-phosphonobutano-to-succinate "2-amino-4-phosphonobutano… to 
 
   branch from ppi side left {
     ppi
-    <-> . +l_selenomethionine +atp +h2o +pi
-    l_adenosylselenomethionine
+    <-> ec_2_7_7_86 [2.7.7.86] +gtp +atp
+    2_3_cgamp
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +l_serine +cdp_choline +hplus
-    o_phosphocholine_l_serine
+    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cdp_ethanolamine +hplus
+    1_o_palmityl_2_arachidonoyl_sn_glycero_3_phospho
   }
 
   branch from succinate side left {
     succinate
-    <-> . +decanoyl_coa +akg +o2 +co2
-    2_hydroxydecanoyl_coa
+    <-> . +chrodrimanin_h +akg +o2 +co2 +h2o
+    chrodrimanin_e
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sapienate-to-3e-tetradecenoyl-coa",
   "name": "sapienate to (3E)-tetradecenoyl-CoA",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 7-step route from sapienate to (3E)-tetradecenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -251,34 +251,37 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
+      "name": "1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycero-3-phosphate",
+      "short": "1-stearoyl-2-(4Z,7Z…",
+      "formula": "C43H71O8P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:77130"
       }
     },
     {
-      "id": "longipinene",
-      "name": "α-longipinene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:62753"
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+      "name": "CDP-1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycerol",
+      "short": "CDP-1-stearoyl-2-(4…",
+      "formula": "C52H83N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85354"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_80",
-      "name": "alpha-longipinene synthase",
-      "ec": [
-        "4.2.3.80"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -626,18 +629,25 @@
     },
     {
       "id": "r9",
-      "name": "alpha-longipinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-longipinene + diphosphate",
-      "ec": "4.2.3.80",
+      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphate + CTP +...",
+      "equation": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "longipinene",
+          "metabolite": "cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
           "stoichiometry": 1
         },
         {
@@ -645,22 +655,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_80"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:31439"
+        "rhea": "RHEA:45668"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31439"
+            "id": "RHEA:45668"
           }
         ]
       }

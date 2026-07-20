@@ -28,8 +28,8 @@ pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol 
 
   branch from phloroglucinol side left {
     phloroglucinol
-    <-> ec_2_3_1_253 [2.3.1.253] +hplus +co2 +coa
-    malonyl-coa
+    <-> ec_2_3_1_272 [2.3.1.272] +2_4_6_trihydroxyacetophenone +hplus
+    2_4_diacetylphloroglucinol
   }
 
   branch from sah side right {
@@ -44,9 +44,9 @@ pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol 
     d_ribofuranose_5_phosphate
   }
 
-  branch from s_4_5_dihydroxypentane_2_3_dione side right {
-    s_4_5_dihydroxypentane_2_3_dione
-    <-> .
-    2r_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one
+  branch from homocysteine side right {
+    homocysteine
+    <-> . +h2s +hplus
+    l_homolanthionine_dizwitterion
   }
 }

@@ -1,0 +1,362 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-2s-2-amino-2-carboxy-to-ammonium",
+  "name": "N-[(2S)-2-amino-2-carboxy… to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate(2−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51928"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134610"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_2s_2_amino_2_carboxyethyl_l_glutamate",
+      "name": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate",
+      "short": "N-[(2S)-2-amino-2-c…",
+      "formula": "C8H12N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:134610"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_amino_l_alanine",
+      "name": "3-amino-L-alanine",
+      "formula": "C3H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57721"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "s_2_hydroxyglutarate",
+      "name": "(S)-2-hydroxyglutarate",
+      "short": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16782"
+      }
+    },
+    {
+      "id": "5_7_dibromo_l_tryptophan",
+      "name": "5,7-dibromo-L-tryptophan",
+      "short": "5,7-dibromo-L-trypt…",
+      "formula": "C11H10Br2N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231978"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_7_dibromo_indole_3_carbaldehyde",
+      "name": "5,7-dibromo-indole-3-carbaldehyde",
+      "short": "5,7-dibromo-indole-…",
+      "formula": "C9H5Br2NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231980"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_5_1_51",
+      "name": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate dehydrogenase",
+      "ec": [
+        "1.5.1.51"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_15",
+      "name": "diaminopropionate ammonia-lyase",
+      "ec": [
+        "4.3.1.15"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate dehydrogenase",
+      "equation": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate + NAD(+) + H2O = (S)-2,3-diaminopropanoate + 2-oxoglutarate + NADH + H(+)",
+      "ec": "1.5.1.51",
+      "substrates": [
+        {
+          "metabolite": "n_2s_2_amino_2_carboxyethyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_amino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "diaminopropionate ammonia-lyase",
+      "equation": "(S)-2,3-diaminopropanoate + H2O + H(+) = pyruvate + 2 NH4(+)",
+      "ec": "4.3.1.15",
+      "substrates": [
+        {
+          "metabolite": "3_amino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22084"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
+      "equation": "(S)-2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57172"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "5,7-dibromo-L-tryptophan + O2 = 5,7-dibromo-indole-3-carbaldehyde + glyoxylate + NH4(+)",
+      "equation": "5,7-dibromo-L-tryptophan + O2 = 5,7-dibromo-indole-3-carbaldehyde + glyoxylate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "5_7_dibromo_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_7_dibromo_indole_3_carbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81799"
+          }
+        ]
+      }
+    }
+  ]
+}

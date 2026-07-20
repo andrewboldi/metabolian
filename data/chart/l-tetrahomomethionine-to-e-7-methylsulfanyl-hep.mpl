@@ -18,7 +18,7 @@ pathway l-tetrahomomethionine-to-e-7-methylsulfanyl-hep "L-tetrahomomethionine t
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_158 [1.14.14.158] +carotene +fmnh2 +o2 +h2o +hplus
-    cryptoxanthin
+    <-> ec_1_14_14_40 [1.14.14.40] +l_phenylalanine +fmnh2 +o2 +co2 +h2o +hplus
+    e_phenylacetaldehyde_oxime
   }
 }

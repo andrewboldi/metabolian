@@ -4,26 +4,24 @@
 # edit the generator, not this file.
 
 pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ€¦ to D-glucopyranose" {
-  spacing 280
+  spacing 216
 
   spine at 0,0 {
     1_lauroyl_sn_glycero_3_phosphocholine
     <-> . +h2o -choline -hplus
     1_lauroyl_sn_glycerol_3_phosphate
-    <-> ec_2_3_1_91 [2.3.1.91] +1_o_sinapoyl_d_glucose +choline -glucose
-    sinapine
-    <-> ec_3_1_1_49 [3.1.1.49] +h2o -choline -hplus
-    trans_sinapate
-    <-> ec_2_4_1_120 [2.4.1.120] +udp_d_glucose -udp
-    1_o_sinapoyl_d_glucose
-    <-> ec_2_3_1_92 [2.3.1.92] +malate -glucose
-    sinapoyl_s_malate
-    <-> ec_2_7_1_142 [2.7.1.142] +sn_glycerol_3_phosphate +glucose -glycerol
-    g6p
-    <-> ec_2_4_1_15 [2.4.1.15] +udp_d_glucose -udp -hplus
-    trehalose_6_phosphate
-    <-> ec_3_2_1_93 [3.2.1.93] +h2o -glucose
-    g6p
+    <-> ec_2_7_1_32 [2.7.1.32] +choline +atp -adp -hplus
+    phosphocholine
+    <-> ec_2_7_7_15 [2.7.7.15] +ctp +hplus -ppi
+    cdp_choline
+    <-> ec_2_7_8_3 [2.7.8.3] +n_acylsphingosine -cytidine_5_monophosphate -hplus
+    sphingomyelin
+    <-> ec_3_1_4_12 [3.1.4.12] +h2o -n_acylsphingosine -hplus
+    phosphocholine
+    <-> ec_2_4_1_80 [2.4.1.80] +n_acylsphingosine +udp_d_glucose -udp -hplus
+    d_glucosyl_n_acylsphingosine
+    <-> ec_3_2_1_45 [3.2.1.45] +h2o -glucose
+    n_acylsphingosine
   }
 
   branch from 1_lauroyl_sn_glycerol_3_phosphate side left {
@@ -34,19 +32,31 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ
 
   branch from choline side right {
     choline
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_palmitoyl_sn_glycerol_3_phosphate
+    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_myristoyl_sn_glycerol_3_phosphate
   }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_191 [3.2.1.191] +ginsenoside_rb1 +h2o
-    gypenoside_lxxv
+  branch from phosphocholine side left {
+    phosphocholine
+    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_myristoyl_sn_glycerol
   }
 
-  branch from trans_sinapate side right {
-    trans_sinapate
-    <-> ec_2_4_1_299 [2.4.1.299] +cyanidin_3_o_d_glucoside +1_o_sinapoyl_d_glucose
-    cyanin_betaine
+  branch from cdp_choline side right {
+    cdp_choline
+    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cytidine_5_monophosphate +hplus
+    1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
+    2_trans_6_trans_farnesol
+  }
+
+  branch from sphingomyelin side right {
+    sphingomyelin
+    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +n_acylsphingosine
+    1_2_dipalmitoyl_sn_glycerol
   }
 }

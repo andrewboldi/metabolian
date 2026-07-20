@@ -20,14 +20,14 @@ pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
 
   branch from ornithine side left {
     ornithine
-    <-> ec_2_3_1_35 [2.3.1.35] +n2_acetyl_l_ornithine +glutamate
-    nag
+    <-> . +akg +o2 +succinate +co2
+    3s_3_hydroxy_l_ornithine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +n2_acetyl_l_lysine +h2o
-    l_lysinium
+    <-> ec_3_5_1_4 [3.5.1.4] +h2o +nh3
+    acetamide
   }
 
   branch from d_ornithinium side left {
@@ -40,5 +40,11 @@ pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
     r_2_amino_4_oxopentanoic_acid
     <-> ec_2_3_1_263 [2.3.1.263] +acetyl_coa +coa
     d_alanine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
+    2_formylglutarate
   }
 }

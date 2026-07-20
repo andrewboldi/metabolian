@@ -167,61 +167,6 @@
       }
     },
     {
-      "id": "1_n2_etheno_2_deoxyguanosine_5_monophosphate_1",
-      "name": "1,N2-etheno-2'-deoxyguanosine 5'-monophosphate(1−)",
-      "short": "1,N2-etheno-2'-deox…",
-      "formula": "C12H11N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:189586"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "glyoxal",
-      "name": "glyoxal",
-      "formula": "C2H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:34779"
-      }
-    },
-    {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30031"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
       "id": "s_1_hydroxy_2_oxopropyl_l_cysteine",
       "name": "S-(1-hydroxy-2-oxopropyl)-L-cysteine",
       "short": "S-(1-hydroxy-2-oxop…",
@@ -232,21 +177,12 @@
       }
     },
     {
-      "id": "steroid",
-      "name": "steroid",
-      "formula": "C19H31R",
+      "id": "h2",
+      "name": "Dihydrogen (H2)",
+      "formula": "H2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35341"
-      }
-    },
-    {
-      "id": "11_hydroxy_steroid",
-      "name": "11β-hydroxy steroid",
-      "formula": "C19H31OR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:35346"
+        "chebi": "CHEBI:18276"
       }
     }
   ],
@@ -280,10 +216,10 @@
       ]
     },
     {
-      "id": "ec_1_14_15_4",
-      "name": "steroid 11beta-monooxygenase",
+      "id": "ec_1_12_1_4",
+      "name": "hydrogenase (NAD(+), ferredoxin)",
       "ec": [
-        "1.14.15.4"
+        "1.12.1.4"
       ]
     }
   ],
@@ -515,61 +451,6 @@
     },
     {
       "id": "r6",
-      "name": "a 1,N(2)-etheno-2'-deoxyguanosine in double-stranded DNA + 2-oxoglutarate + O2 + H2O = ...",
-      "equation": "a 1,N(2)-etheno-2'-deoxyguanosine in double-stranded DNA + 2-oxoglutarate + O2 + H2O = a 2'-deoxyguanosine in double-stranded DNA + glyoxal + succinate + CO2",
-      "substrates": [
-        {
-          "metabolite": "1_n2_etheno_2_deoxyguanosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_deoxyguanosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glyoxal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:70487"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70487"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "protein deglycase",
       "equation": "S-(1-hydroxy-2-oxopropyl)-L-cysteinyl-[protein] + H2O = lactate + L-cysteinyl-[protein] + H(+)",
       "ec": "3.5.1.124",
@@ -603,7 +484,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:49556"
       },
@@ -618,58 +499,54 @@
       }
     },
     {
-      "id": "r8",
-      "name": "steroid 11beta-monooxygenase",
-      "equation": "a steroid + 2 reduced [adrenodoxin] + O2 + 2 H(+) = an 11beta-hydroxysteroid + 2 oxidized [adrenodoxin] + H2O",
-      "ec": "1.14.15.4",
+      "id": "r7",
+      "name": "hydrogenase (NAD(+), ferredoxin)",
+      "equation": "2 H2 + 2 oxidized [2Fe-2S]-[ferredoxin] + NAD(+) = 2 reduced [2Fe-2S]-[ferredoxin] + NADH + 3 H(+)",
+      "ec": "1.12.1.4",
       "substrates": [
         {
-          "metabolite": "steroid",
-          "stoichiometry": 1
+          "metabolite": "h2",
+          "stoichiometry": 2
         },
         {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "o2",
+          "metabolite": "nad",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "11_hydroxy_steroid",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nadh",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_15_4"
+          "enzyme": "ec_1_12_1_4"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:15629"
+        "rhea": "RHEA:30279"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15629"
+            "id": "RHEA:30279"
           }
         ]
       }

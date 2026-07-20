@@ -1,0 +1,196 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexan-1-ol-to-hexanoate",
+  "name": "hexan-1-ol to hexanoate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from hexan-1-ol to hexanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58404"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87393"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexan_1_ol",
+      "name": "hexan-1-ol",
+      "formula": "C6H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87393"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "hexanal",
+      "name": "hexanal",
+      "formula": "C6H12O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88528"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hexanoate",
+      "name": "hexanoate",
+      "formula": "C6H11O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17120"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hexan-1-ol + NADP(+) = hexanal + NADPH + H(+)",
+      "equation": "hexan-1-ol + NADP(+) = hexanal + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hexan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexanal + O2 + H2O = hexanoate + H2O2 + H(+)",
+      "equation": "hexanal + O2 + H2O = hexanoate + H2O2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hexanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58964"
+          }
+        ]
+      }
+    }
+  ]
+}

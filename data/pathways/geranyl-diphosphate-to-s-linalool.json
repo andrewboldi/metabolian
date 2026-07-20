@@ -1,0 +1,312 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranyl-diphosphate-to-s-linalool",
+  "name": "geranyl diphosphate to (S)-linalool",
+  "category": "other",
+  "summary": "A 3-step route from geranyl diphosphate(3−) to (S)-linalool, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47944"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "geranyl_phosphate",
+      "name": "geranyl phosphate",
+      "formula": "C10H17O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:88107"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "geraniol",
+      "name": "geraniol",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17447"
+      }
+    },
+    {
+      "id": "s_linalool",
+      "name": "(S)-linalool",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:98"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "geranial",
+      "name": "geranial",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16980"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_68",
+      "name": "geranyl diphosphate phosphohydrolase",
+      "ec": [
+        "3.6.1.68"
+      ]
+    },
+    {
+      "id": "ec_5_4_4_4",
+      "name": "geraniol isomerase",
+      "ec": [
+        "5.4.4.4"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_347",
+      "name": "geraniol dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.347"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "geranyl diphosphate phosphohydrolase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (2E)-geranyl phosphate + phosphate + H(+)",
+      "ec": "3.6.1.68",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geranyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-geranyl phosphate + H2O = (2E)-geraniol + phosphate",
+      "equation": "(2E)-geranyl phosphate + H2O = (2E)-geraniol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "geranyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geraniol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:68020"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "geraniol isomerase",
+      "equation": "(2E)-geraniol = (S)-linalool",
+      "ec": "5.4.4.4",
+      "substrates": [
+        {
+          "metabolite": "geraniol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_linalool",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "geraniol dehydrogenase (NAD(+))",
+      "equation": "(2E)-geraniol + NAD(+) = (2E)-geranial + NADH + H(+)",
+      "ec": "1.1.1.347",
+      "substrates": [
+        {
+          "metabolite": "geraniol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geranial",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_347"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34347"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34347"
+          }
+        ]
+      }
+    }
+  ]
+}

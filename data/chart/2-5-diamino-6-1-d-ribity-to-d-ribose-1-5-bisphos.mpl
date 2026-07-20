@@ -18,27 +18,9 @@ pathway 2-5-diamino-6-1-d-ribity-to-d-ribose-1-5-bisphos "2,5-diamino-6-(1-D-rib
     d_ribose_1_5_bisphosphate
   }
 
-  branch from 5_amino_6_5_phosphoribitylamino_uracil side left {
-    5_amino_6_5_phosphoribitylamino_uracil
-    <-> ec_3_1_3_104 [3.1.3.104] +h2o +pi
-    5_amino_6_d_ribitylamino_uracil
-  }
-
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> . +utp +atp +adp +pi +hplus
-    ctp
-  }
-
-  branch from 5_amino_6_5_phospho_d_ribosylamino_uracil side left {
-    5_amino_6_5_phospho_d_ribosylamino_uracil
-    <-> ec_3_5_4_26 [3.5.4.26] +h2o +hplus +nh3
-    2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin
-  }
-
-  branch from d_ribofuranose_5_phosphate side right {
-    d_ribofuranose_5_phosphate
-    <-> .
-    r5p
+    <-> ec_3_5_4_12 [3.5.4.12] +2_deoxycytosine_5_monophosphate +h2o +hplus
+    dump
   }
 }

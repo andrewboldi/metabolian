@@ -20,19 +20,13 @@ pathway alfacalcidol-to-di-sulfido-diiron "alfacalcidol to di-μ-sulfido-diiron"
 
   branch from calcitriol side left {
     calcitriol
-    <-> . +alfacalcidol +fmnh2 +o2 +h2o +hplus
-    fmn
+    <-> ec_1_14_15_22 [1.14.15.22] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    calcidiol
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +epi_isozizaene +di_sulfido_diiron +o2 +hplus +h2o
-    5r_albaflavenol
-  }
-
-  branch from 1s_1_25_dihydroxy_24_oxocalciol side left {
-    1s_1_25_dihydroxy_24_oxocalciol
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    25_hydroxy_24_oxocalciol
+    <-> ec_1_14_15_33 [1.14.15.33] +10_deoxymethymycin +di_sulfido_diiron +o2 +hplus +h2o
+    novamethymycin
   }
 }

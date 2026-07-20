@@ -18,21 +18,33 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero "1,3-dioleoyl-2-palmito
     8e_10s_10_hydroperoxy_8_octadecenoate
   }
 
-  branch from palmitate side left {
+  branch from 1_3_dioleoylglycerol side left {
+    1_3_dioleoylglycerol
+    <-> . +triolein +coa
+    oleoyl_coa
+  }
+
+  branch from palmitate side right {
     palmitate
-    <-> ec_3_1_1_64 [3.1.1.64] +all_trans_retinyl_palmitate +h2o +hplus
-    11_cis_retinol
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    2_oleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from triolein side left {
+    triolein
+    <-> . +oleoyl_coa +coa
+    2_3_dioleoyl_sn_glycerol
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
-    sn_glycerol_3_phosphate
+    <-> . +2_monoglyceride +h2o +hplus
+    fatty-acid
   }
 
   branch from oleate side left {
     oleate
-    <-> . +h2o +glycerol +hplus
-    2_oleoylglycerol
+    <-> . +1_2_dioleoylglycerol +h2o +hplus
+    monooleoylglycerol
   }
 }

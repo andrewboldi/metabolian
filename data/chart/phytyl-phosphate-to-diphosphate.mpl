@@ -16,27 +16,21 @@ pathway phytyl-phosphate-to-diphosphate "phytyl phosphate to diphosphate" {
     s_geranylgeranyl_l_cysteine
   }
 
-  branch from phytyl_diphosphate side left {
-    phytyl_diphosphate
-    <-> . +hydrogen_acceptor +hydrogen_donor
-    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-  }
-
-  branch from cdp side right {
+  branch from cdp side left {
     cdp
     <-> . +e_e_e_geranylgeraniol +ctp +hplus
     2e_6e_10e_geranylgeranyl_phosphate
   }
 
-  branch from geranylgeranyl_diphosphate side left {
+  branch from geranylgeranyl_diphosphate side right {
     geranylgeranyl_diphosphate
-    <-> ec_5_5_1_16 [5.5.1.16]
-    tuberculosinyl_diphosphate
+    <-> . +ppi
+    araneosene
   }
 
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_141 [4.2.3.141] +copal_8_ol_diphosphate +h2o
-    sclareol
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    syn_isopimara_7_15_diene
   }
 }

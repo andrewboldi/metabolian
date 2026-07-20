@@ -16,21 +16,15 @@ pathway l-methionyl-l-aspartyl-to-amp-3-end-1 "L-methionyl-L-aspartyl… to AMP 
     l_leucyl_l_aspartyl_zwitterionic
   }
 
-  branch from l_aspartyl_zwitterionic_group side left {
-    l_aspartyl_zwitterionic_group
-    <-> ec_3_5_1_121 [3.5.1.121] +l_asparaginyl_group +h2o +hplus
-    nh3
-  }
-
-  branch from n_acetyl_l_methionine side right {
+  branch from n_acetyl_l_methionine side left {
     n_acetyl_l_methionine
     <-> . +n_acetyl_l_methionyl_l_alanyl_l_serinate +h2o
     ala_ser
   }
 
-  branch from amp_3_end_1 side left {
+  branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
-    alanine
+    <-> ec_3_1_1_96 [3.1.1.96] +3_glycyladenylyl_zwitterionic_group +h2o +hplus
+    glycine
   }
 }

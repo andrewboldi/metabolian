@@ -20,25 +20,31 @@ pathway a-lipid-iia-to-arachidonate "a lipid IIA to arachidonate" {
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
     2_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diacyl_sn_glycerol
+    <-> . +3_acyl_sn_glycerol +phosphatidylcholine
+    1_3_diglyceride
   }
 
   branch from 1_acyl_sn_glycero_3_phosphoethanolamine side right {
     1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +oleoyl_coa +coa
-    1_acyl_2_oleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +octanoyl_coa +coa
+    1_acyl_2_octanoyl_sn_glycero_3_phosphoethanolami
   }
 
   branch from phosphatidylcholine side left {
     phosphatidylcholine
-    <-> . +1_3_diacyl_sn_glycerol +2_acyl_sn_glycero_3_phosphocholine
-    3_acyl_sn_glycerol
+    <-> . +1_alkyl_2_acetyl_sn_glycerol +1_o_acyl_sn_glycero_3_phosphocholine
+    1_alkyl_2_acetyl_3_acyl_sn_glycerol
   }
 
   branch from 1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano side right {
     1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano
     <-> . +h2o +fatty-acid +hplus
     2_arachidonoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from arachidonate side left {
+    arachidonate
+    <-> . +1_octadecanoyl_2_arachidonoyl_sn_glycero_3_phosp +h2o +hplus
+    1_octadecanoyl_sn_glycero_3_phospho_d_myo_inosit
   }
 }

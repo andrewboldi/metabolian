@@ -1,0 +1,271 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-3-diiodothyronamine-to-hydrogen-donor",
+  "name": "3,3'-diiodothyronamine to hydrogen donor",
+  "category": "other",
+  "summary": "A 2-step route from 3,3'-diiodothyronamine(1+) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83795"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:233341"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_3_diiodothyronamine",
+      "name": "3,3'-diiodothyronamine",
+      "short": "3,3'-diiodothyronam…",
+      "formula": "C14H14I2NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233341"
+      }
+    },
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_3_5_triiodothyronamine",
+      "name": "3,3',5'-triiodothyronamine",
+      "short": "3,3',5'-triiodothyr…",
+      "formula": "C14H13I3NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233343"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "3_3_5_5_tetraiodothyronamine",
+      "name": "3,3',5,5'-tetraiodothyronamine",
+      "short": "3,3',5,5'-tetraiodo…",
+      "formula": "C14H12I4NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233344"
+      }
+    },
+    {
+      "id": "cholest_4_6_dien_3_one",
+      "name": "cholest-4,6-dien-3-one",
+      "short": "cholest-4,6-dien-3-…",
+      "formula": "C27H42O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157665"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "25_hydroxycholest_4_6_dien_3_one",
+      "name": "25-hydroxycholest-4,6-dien-3-one",
+      "short": "25-hydroxycholest-4…",
+      "formula": "C27H42O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157664"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_99_10",
+      "name": "steroid C-25 hydroxylase",
+      "ec": [
+        "1.17.99.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3,3'-diiodothyronamine + iodide + A + H(+) = 3,3',5'-triiodothyronamine + AH2",
+      "equation": "3,3'-diiodothyronamine + iodide + A + H(+) = 3,3',5'-triiodothyronamine + AH2",
+      "substrates": [
+        {
+          "metabolite": "3_3_diiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_5_triiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3,3',5'-triiodothyronamine + iodide + A + H(+) = 3,3',5,5'-tetraiodothyronamine + AH2",
+      "equation": "3,3',5'-triiodothyronamine + iodide + A + H(+) = 3,3',5,5'-tetraiodothyronamine + AH2",
+      "substrates": [
+        {
+          "metabolite": "3_3_5_triiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_5_5_tetraiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:83807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "steroid C-25 hydroxylase",
+      "equation": "cholest-4,6-dien-3-one + A + H2O = 25-hydroxycholest-4,6-dien-3-one + AH2",
+      "ec": "1.17.99.10",
+      "substrates": [
+        {
+          "metabolite": "cholest_4_6_dien_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25_hydroxycholest_4_6_dien_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66536"
+          }
+        ]
+      }
+    }
+  ]
+}

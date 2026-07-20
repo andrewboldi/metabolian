@@ -1,0 +1,265 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pseudomonate-c-to-pseudomonic-acid",
+  "name": "pseudomonate C to pseudomonic acid…",
+  "category": "other",
+  "summary": "A 2-step route from pseudomonate C to pseudomonic acid C—holothin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59152"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142974"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pseudomonate_c",
+      "name": "pseudomonate C",
+      "formula": "C26H43O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142974"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "pseudomonoyl_coa_c",
+      "name": "pseudomonoyl-CoA C",
+      "formula": "C47H74N7O23P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:142977"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "holothin",
+      "name": "holothin",
+      "formula": "C5H4N2OS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194488"
+      }
+    },
+    {
+      "id": "pseudomonic_acid_c_holothin",
+      "name": "pseudomonic acid C—holothin",
+      "short": "pseudomonic acid…",
+      "formula": "C31H46N2O8S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194489"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cadinene",
+      "name": "(−)-δ-cadinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63703"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_6_2_1_60",
+      "name": "marinolic acid--CoA ligase",
+      "ec": [
+        "6.2.1.60"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_97",
+      "name": "(-)-delta-cadinene synthase",
+      "ec": [
+        "4.2.3.97"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "marinolic acid--CoA ligase",
+      "equation": "pseudomonate C + ATP + CoA = pseudomonoyl-CoA C + AMP + diphosphate",
+      "ec": "6.2.1.60",
+      "substrates": [
+        {
+          "metabolite": "pseudomonate_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudomonoyl_coa_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pseudomonoyl-CoA C + holothin = pseudomonic acid C--holothin + CoA",
+      "equation": "pseudomonoyl-CoA C + holothin = pseudomonic acid C--holothin + CoA",
+      "substrates": [
+        {
+          "metabolite": "pseudomonoyl_coa_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holothin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudomonic_acid_c_holothin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:75891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(-)-delta-cadinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-delta-cadinene + diphosphate",
+      "ec": "4.2.3.97",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_97"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32015"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32015"
+          }
+        ]
+      }
+    }
+  ]
+}

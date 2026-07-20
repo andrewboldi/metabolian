@@ -18,13 +18,7 @@ pathway angiotensin-i-dizwitterion-to-his-pro "angiotensin I dizwitterion to His
 
   branch from leucine side left {
     leucine
-    <-> . +r_3_phenyllactate +sam +atp +amp +sah +ppi +hplus
-    pf1022b
-  }
-
-  branch from ile5_angiotensin_ii_1_7_dizwitterion side right {
-    ile5_angiotensin_ii_1_7_dizwitterion
-    <-> ec_3_4_17_23 [3.4.17.23] +ile5_angiotensin_ii_dizwitterion +h2o
-    l_phenylalanine
+    <-> . +o_isoindolinone_l_homoserine +atp +adp +pi +hplus
+    l_leucyl_o_isoindolinone_l_homoserine
   }
 }

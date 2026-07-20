@@ -18,13 +18,13 @@ pathway 7r-7-5-carboxy-5-oxope-to-cephalosporin-c "(7R)-7-(5-carboxy-5-oxope… 
 
   branch from akg side left {
     akg
-    <-> ec_2_3_3_4 [2.3.3.4] +lauroyl_coa +h2o +coa +hplus
-    3s_4s_3_hydroxytetradecane_1_3_4_tricarboxylate
+    <-> ec_2_6_1_49 [2.6.1.49] +ldopa +glutamate
+    3_4_dihydroxyphenylpyruvate
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_12 [2.8.3.12] +e_glutaconate +acetyl_coa
-    trans_4_carboxybut_2_enoyl_coa
+    <-> . +1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin +h2o +hplus
+    1_tetradecyl_sn_glycero_3_phosphocholine
   }
 }

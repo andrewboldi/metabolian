@@ -168,22 +168,21 @@
       }
     },
     {
-      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
-      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
-      "short": "all-cis-5,8,11,14,1…",
-      "formula": "C20H29O2",
-      "charge": -1,
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58562"
+        "chebi": "CHEBI:16469"
       }
     },
     {
-      "id": "17_r_18_s_eetetr",
-      "name": "17(R),18(S)-EETeTr",
-      "formula": "C20H29O3",
-      "charge": -1,
+      "id": "estriol",
+      "name": "estriol",
+      "formula": "C18H24O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76634"
+        "chebi": "CHEBI:27974"
       }
     },
     {
@@ -197,12 +196,12 @@
       }
     },
     {
-      "id": "3s_6e_nerolidol",
-      "name": "(3S,6E)-nerolidol",
-      "formula": "C15H26O",
+      "id": "5_epi_selinene",
+      "name": "5-epi-α-selinene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:59958"
+        "chebi": "CHEBI:63445"
       }
     }
   ],
@@ -229,10 +228,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_48",
-      "name": "(3S,6E)-nerolidol synthase",
+      "id": "ec_4_2_3_90",
+      "name": "5-epi-alpha-selinene synthase",
       "ec": [
-        "4.2.3.48"
+        "4.2.3.90"
       ]
     }
   ],
@@ -441,11 +440,11 @@
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (17R,18S)-epoxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha,17beta-estriol...",
+      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha,17beta-estriol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
@@ -459,7 +458,7 @@
       ],
       "products": [
         {
-          "metabolite": "17_r_18_s_eetetr",
+          "metabolite": "estriol",
           "stoichiometry": 1
         },
         {
@@ -478,36 +477,32 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:39779"
+        "rhea": "RHEA:47332"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39779"
+            "id": "RHEA:47332"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(3S,6E)-nerolidol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (3S,6E)-nerolidol + diphosphate",
-      "ec": "4.2.3.48",
+      "name": "5-epi-alpha-selinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = 5-epi-alpha-selinene + diphosphate",
+      "ec": "4.2.3.90",
       "substrates": [
         {
           "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_6e_nerolidol",
+          "metabolite": "5_epi_selinene",
           "stoichiometry": 1
         },
         {
@@ -517,20 +512,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_48"
+          "enzyme": "ec_4_2_3_90"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:27530"
+        "rhea": "RHEA:31819"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27530"
+            "id": "RHEA:31819"
           }
         ]
       }

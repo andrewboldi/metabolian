@@ -151,15 +151,6 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
       "id": "glyoxylate",
       "name": "Glyoxylate",
       "formula": "C2HO3",
@@ -169,32 +160,32 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "purines_2_deoxy_d_ribonucleoside",
-      "name": "purines 2'-deoxy-D-ribonucleoside",
-      "short": "purines 2'-deoxy-D-…",
-      "formula": "C10H11N4O3R2",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:142361"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "2_deoxy_d_ribose_1_phosphate",
-      "name": "2-deoxy-α-D-ribose 1-phosphate",
-      "short": "2-deoxy-α-D-ribose…",
+      "id": "purine_2_deoxyribonucleoside_5_phosphate",
+      "name": "purine 2'-deoxyribonucleoside 5'-phosphate",
+      "short": "purine 2'-deoxyribo…",
+      "formula": "C10H10N4O6PR2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142198"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribofuranose_5_phosphate",
+      "name": "2-deoxy-D-ribofuranose 5-phosphate",
+      "short": "2-deoxy-D-ribofuran…",
       "formula": "C5H9O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57259"
+        "chebi": "CHEBI:62877"
       }
     },
     {
@@ -243,6 +234,53 @@
       "xrefs": {
         "chebi": "CHEBI:16659"
       }
+    },
+    {
+      "id": "n2_1_hydroxy_2_oxoethyl_gtp",
+      "name": "N2-(1-hydroxy-2-oxoethyl)-GTP",
+      "short": "N2-(1-hydroxy-2-oxo…",
+      "formula": "C12H14N5O16P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:141571"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15589"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -275,10 +313,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_26",
-      "name": "glyoxylate reductase",
+      "id": "ec_1_1_3_15",
+      "name": "(S)-2-hydroxy-acid oxidase",
       "ec": [
-        "1.1.1.26"
+        "1.1.3.15"
       ]
     },
     {
@@ -293,6 +331,13 @@
       "name": "glycerate 3-kinase",
       "ec": [
         "2.7.1.31"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_9",
+      "name": "malate synthase",
+      "ec": [
+        "2.3.3.9"
       ]
     }
   ],
@@ -518,16 +563,16 @@
     },
     {
       "id": "r6",
-      "name": "glyoxylate reductase",
-      "equation": "glycolate + NAD(+) = glyoxylate + NADH + H(+)",
-      "ec": "1.1.1.26",
+      "name": "(S)-2-hydroxy-acid oxidase",
+      "equation": "glycolate + O2 = glyoxylate + H2O2",
+      "ec": "1.1.3.15",
       "substrates": [
         {
           "metabolite": "glycolate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
@@ -537,46 +582,41 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_26"
+          "enzyme": "ec_1_1_3_15"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:18229"
+        "rhea": "RHEA:25311"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18229"
+            "id": "RHEA:25311"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "purine-nucleoside phosphorylase",
-      "equation": "a purine 2'-deoxy-D-ribonucleoside + phosphate = a purine nucleobase + 2-deoxy-alpha-D-ribose 1-phosphate",
-      "ec": "2.4.2.1",
+      "name": "a purine 2'-deoxyribonucleoside 5'-phosphate + H2O = a purine nucleobase + 2-deoxy-D-ri...",
+      "equation": "a purine 2'-deoxyribonucleoside 5'-phosphate + H2O = a purine nucleobase + 2-deoxy-D-ribose 5-phosphate",
       "substrates": [
         {
-          "metabolite": "purines_2_deoxy_d_ribonucleoside",
+          "metabolite": "purine_2_deoxyribonucleoside_5_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -586,26 +626,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "metabolite": "2_deoxy_d_ribofuranose_5_phosphate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_2_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:36431"
+        "rhea": "RHEA:51132"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36431"
+            "id": "RHEA:51132"
           }
         ]
       }
@@ -743,6 +778,102 @@
           {
             "db": "Rhea",
             "id": "RHEA:23516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "N(2)-(1-hydroxy-2-oxoethyl)-GTP + H2O = glycolate + GTP + H(+)",
+      "equation": "N(2)-(1-hydroxy-2-oxoethyl)-GTP + H2O = glycolate + GTP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n2_1_hydroxy_2_oxoethyl_gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:57252"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "malate synthase",
+      "equation": "glyoxylate + acetyl-CoA + H2O = (S)-malate + CoA + H(+)",
+      "ec": "2.3.3.9",
+      "substrates": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:18181"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18181"
           }
         ]
       }

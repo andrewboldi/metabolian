@@ -1,50 +1,30 @@
 {
   "$schema": "../../schema/pathway.schema.json",
   "id": "7-8-dihydroneopterin-to-tetrahydromonapterin",
-  "name": "7,8-dihydroneopterin… to tetrahydromonapterin",
+  "name": "7,8-dihydroneopterin to tetrahydromonapterin",
   "category": "energy-metabolism",
-  "summary": "A 3-step route from 7,8-dihydroneopterin 3'-triphosphate(4−) to tetrahydromonapterin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from 7,8-dihydroneopterin to tetrahydromonapterin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:28346"
+        "id": "RHEA:45328"
       },
       {
         "db": "ChEBI",
-        "id": "CHEBI:58462"
+        "id": "CHEBI:17001"
       }
     ]
   },
   "metabolites": [
     {
-      "id": "7_8_dihydroneopterin_3_triphosphate",
-      "name": "7,8-dihydroneopterin 3'-triphosphate",
-      "short": "7,8-dihydroneopteri…",
-      "formula": "C9H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58462"
-      }
-    },
-    {
-      "id": "7_8_dihydromonapterin_3_triphosphate",
-      "name": "7,8-dihydromonapterin 3-triphosphate",
-      "short": "7,8-dihydromonapter…",
-      "formula": "C9H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61186"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
+      "id": "7_8_dihydroneopterin",
+      "name": "7,8-dihydroneopterin",
+      "formula": "C9H13N5O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:17001"
       }
     },
     {
@@ -58,12 +38,12 @@
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:57783"
       }
     },
     {
@@ -73,15 +53,6 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
       }
     },
     {
@@ -101,23 +72,14 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
-    },
-    {
-      "id": "7_8_dihydroneopterin",
-      "name": "7,8-dihydroneopterin",
-      "formula": "C9H13N5O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17001"
-      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_5_1_99_7",
-      "name": "dihydroneopterin triphosphate 2'-epimerase",
+      "id": "ec_5_1_99_8",
+      "name": "7,8-dihydroneopterin epimerase",
       "ec": [
-        "5.1.99.7"
+        "5.1.99.8"
       ]
     },
     {
@@ -126,98 +88,48 @@
       "ec": [
         "1.5.1.50"
       ]
-    },
-    {
-      "id": "ec_5_1_99_8",
-      "name": "7,8-dihydroneopterin epimerase",
-      "ec": [
-        "5.1.99.8"
-      ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "dihydroneopterin triphosphate 2'-epimerase",
-      "equation": "7,8-dihydroneopterin 3'-triphosphate = 7,8-dihydromonapterin 3'-triphosphate",
-      "ec": "5.1.99.7",
+      "name": "7,8-dihydroneopterin epimerase",
+      "equation": "7,8-dihydroneopterin = 7,8-dihydromonapterin",
+      "ec": "5.1.99.8",
       "substrates": [
         {
-          "metabolite": "7_8_dihydroneopterin_3_triphosphate",
+          "metabolite": "7_8_dihydroneopterin",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_8_dihydromonapterin_3_triphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_1_99_7"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:28346"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:28346"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "7,8-dihydromonapterin 3'-triphosphate + 3 H2O = 7,8-dihydromonapterin + 3 phosphate + 2...",
-      "equation": "7,8-dihydromonapterin 3'-triphosphate + 3 H2O = 7,8-dihydromonapterin + 3 phosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "7_8_dihydromonapterin_3_triphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
         }
       ],
       "products": [
         {
           "metabolite": "7_8_dihydromonapterin",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "pi",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "enzyme": "ec_5_1_99_8"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:34843"
+        "rhea": "RHEA:45328"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34843"
+            "id": "RHEA:45328"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "dihydromonapterin reductase",
       "equation": "7,8-dihydromonapterin + NADPH + H(+) = 5,6,7,8-tetrahydromonapterin + NADP(+)",
       "ec": "1.5.1.50",
@@ -251,7 +163,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:34847"
       },
@@ -261,43 +173,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:34847"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "7,8-dihydroneopterin epimerase",
-      "equation": "7,8-dihydroneopterin = 7,8-dihydromonapterin",
-      "ec": "5.1.99.8",
-      "substrates": [
-        {
-          "metabolite": "7_8_dihydroneopterin",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_8_dihydromonapterin",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_1_99_8"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:45328"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:45328"
           }
         ]
       }

@@ -18,14 +18,14 @@ pathway purines-d-ribonucleoside-to-glyoxylate "purines D-ribonucleoside to glyo
     2_phosphonatoglycolate
     <-> ec_3_1_3_18 [3.1.3.18] +h2o -pi
     glycolate
-    <-> ec_1_1_1_26 [1.1.1.26] +nad -nadh -hplus
+    <-> ec_1_1_3_15 [1.1.3.15] +o2 -h2o2
     glyoxylate
   }
 
   branch from purine_nucleobase side left {
     purine_nucleobase
-    <-> ec_2_4_2_1 [2.4.2.1] +purines_2_deoxy_d_ribonucleoside +pi
-    2_deoxy_d_ribose_1_phosphate
+    <-> . +purine_2_deoxyribonucleoside_5_phosphate +h2o
+    2_deoxy_d_ribofuranose_5_phosphate
   }
 
   branch from d_ribose_1_5_bisphosphate side right {
@@ -44,5 +44,17 @@ pathway purines-d-ribonucleoside-to-glyoxylate "purines D-ribonucleoside to glyo
     pg3
     <-> ec_2_7_1_31 [2.7.1.31] +atp +adp +hplus
     d_glycerate
+  }
+
+  branch from glycolate side left {
+    glycolate
+    <-> . +h2o +gtp +hplus
+    n2_1_hydroxy_2_oxoethyl_gtp
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_2_3_3_9 [2.3.3.9] +acetyl_coa +h2o +coa +hplus
+    malate
   }
 }

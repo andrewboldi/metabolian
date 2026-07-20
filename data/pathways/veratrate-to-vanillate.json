@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "veratrate-to-vanillate",
   "name": "veratrate to vanillate",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from veratrate(1-) to vanillate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -130,21 +130,21 @@
       }
     },
     {
-      "id": "l_proline_betaine",
-      "name": "L-proline betaine",
-      "formula": "C7H13NO2",
+      "id": "chlorotoluron",
+      "name": "chlorotoluron",
+      "formula": "C10H13ClN2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35280"
+        "chebi": "CHEBI:81981"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:33738"
       }
     },
     {
@@ -157,40 +157,41 @@
       }
     },
     {
-      "id": "n_methylproline",
-      "name": "N-methylproline",
-      "formula": "C6H11NO2",
+      "id": "3_3_chloro_4_methylphenyl_1_methylurea",
+      "name": "3-(3-chloro-4-methylphenyl)-1-methylurea",
+      "short": "3-(3-chloro-4-methy…",
+      "formula": "C9H11ClN2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133743"
+        "chebi": "CHEBI:157701"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:33737"
       }
     },
     {
-      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
-      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
-      "short": "all-cis-5,8,11,14,1…",
-      "formula": "C20H29O2",
-      "charge": -1,
+      "id": "verruculide_c",
+      "name": "verruculide C",
+      "formula": "C25H34O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58562"
+        "chebi": "CHEBI:156409"
       }
     },
     {
-      "id": "15_r_hepe",
-      "name": "15(R)-HEPE",
-      "formula": "C20H29O3",
-      "charge": -1,
+      "id": "verruculide_c_epoxide",
+      "name": "verruculide C epoxide",
+      "short": "verruculide C…",
+      "formula": "C25H34O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90819"
+        "chebi": "CHEBI:156410"
       }
     }
   ],
@@ -207,13 +208,6 @@
       "name": "cyanidin 3-O-glucoside 7-O-glucosyltransferase (acyl-glucose)",
       "ec": [
         "2.4.1.300"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_247",
-      "name": "stachydrine N-demethylase",
-      "ec": [
-        "1.14.13.247"
       ]
     }
   ],
@@ -361,17 +355,16 @@
     },
     {
       "id": "r4",
-      "name": "stachydrine N-demethylase",
-      "equation": "L-proline betaine + NADH + O2 + H(+) = N-methyl-L-proline + formaldehyde + NAD(+) + H2O",
-      "ec": "1.14.13.247",
+      "name": "chlorotoluron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3-chloro-4-methylphe...",
+      "equation": "chlorotoluron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3-chloro-4-methylphenyl)-1-methylurea + formaldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "l_proline_betaine",
+          "metabolite": "chlorotoluron",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
@@ -379,12 +372,12 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "n_methylproline",
+          "metabolite": "3_3_chloro_4_methylphenyl_1_methylurea",
           "stoichiometry": 1
         },
         {
@@ -392,41 +385,36 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_247"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:61616"
+        "rhea": "RHEA:65776"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61616"
+            "id": "RHEA:65776"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (15R)-hydroxy-(5Z,8Z,11Z,13E,17Z)-ei...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (15R)-hydroxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + A + H2O",
+      "name": "verruculide C + AH2 + O2 = verruculide C epoxide + A + H2O",
+      "equation": "verruculide C + AH2 + O2 = verruculide C epoxide + A + H2O",
       "substrates": [
         {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "metabolite": "verruculide_c",
           "stoichiometry": 1
         },
         {
@@ -440,7 +428,7 @@
       ],
       "products": [
         {
-          "metabolite": "15_r_hepe",
+          "metabolite": "verruculide_c_epoxide",
           "stoichiometry": 1
         },
         {
@@ -455,14 +443,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:48840"
+        "rhea": "RHEA:65256"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48840"
+            "id": "RHEA:65256"
           }
         ]
       }

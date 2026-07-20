@@ -169,59 +169,41 @@
       }
     },
     {
-      "id": "2_3_dihydroxybenzoate",
-      "name": "2,3-dihydroxybenzoate",
-      "short": "2,3-dihydroxybenzoa…",
-      "formula": "C7H5O4",
-      "charge": -1,
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:36654"
+        "chebi": "CHEBI:58553"
       }
     },
     {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
+      "id": "ent_copalol",
+      "name": "(−)-ent-copalol",
+      "formula": "C20H34O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:33384"
+        "chebi": "CHEBI:76950"
       }
     },
     {
-      "id": "enterobactin",
-      "name": "enterobactin",
-      "formula": "C30H26N3O15",
+      "id": "icosanoate",
+      "name": "icosanoate",
+      "formula": "C20H39O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77805"
+        "chebi": "CHEBI:32360"
       }
     },
     {
-      "id": "l_serine",
-      "name": "L-serine",
-      "formula": "C3H5NO2",
-      "charge": 0,
+      "id": "o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1",
+      "name": "O-(S-icosanoylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-icosanoylpante…",
+      "formula": "C34H63N3O9PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29999"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "adenosine_3_5_bismonophosphate",
-      "name": "adenosine 3',5'-bismonophosphate",
-      "short": "adenosine…",
-      "formula": "C10H11N5O10P2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58343"
+        "chebi": "CHEBI:87848"
       }
     }
   ],
@@ -234,10 +216,10 @@
       ]
     },
     {
-      "id": "ec_6_3_2_14",
-      "name": "enterobactin synthase",
+      "id": "ec_6_2_1_59",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
       "ec": [
-        "6.3.2.14"
+        "6.2.1.59"
       ]
     }
   ],
@@ -453,100 +435,92 @@
     },
     {
       "id": "r6",
-      "name": "enterobactin synthase",
-      "equation": "3 2,3-dihydroxybenzoate + 3 L-serine + 6 ATP = enterobactin + 6 AMP + 6 diphosphate + 4 H(+)",
-      "ec": "6.3.2.14",
+      "name": "ent-copalyl diphosphate + H2O = (-)-ent-copalol + diphosphate",
+      "equation": "ent-copalyl diphosphate + H2O = (-)-ent-copalol + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_3_dihydroxybenzoate",
-          "stoichiometry": 3
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "serine",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 6
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "enterobactin",
+          "metabolite": "ent_copalol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 6
-        },
-        {
           "metabolite": "ppi",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_2_14"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:30571"
+        "rhea": "RHEA:40019"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30571"
+            "id": "RHEA:40019"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "apo-[peptidyl-carrier protein] + CoA = holo-[peptidyl-carrier protein] + adenosine 3',5...",
-      "equation": "apo-[peptidyl-carrier protein] + CoA = holo-[peptidyl-carrier protein] + adenosine 3',5'-bisphosphate + H(+)",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "equation": "eicosanoate + holo-[(phenol)carboxyphthiodiolenone synthase] + ATP = icosanoyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
+      "ec": "6.2.1.59",
       "substrates": [
         {
-          "metabolite": "l_serine",
+          "metabolite": "icosanoate",
           "stoichiometry": 1
         },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adenosine_3_5_bismonophosphate",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "amp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_59"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:46228"
+        "rhea": "RHEA:59156"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46228"
+            "id": "RHEA:59156"
           }
         ]
       }

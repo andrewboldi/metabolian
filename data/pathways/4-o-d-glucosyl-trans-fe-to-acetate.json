@@ -1,0 +1,142 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-o-d-glucosyl-trans-fe-to-acetate",
+  "name": "4-O-β-D-glucosyl-trans-fe… to acetate",
+  "category": "other",
+  "summary": "A 2-step route from 4-O-β-D-glucosyl-trans-ferulate to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79443"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:141767"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_o_d_glucosyl_trans_ferulate",
+      "name": "4-O-β-D-glucosyl-trans-ferulate",
+      "short": "4-O-β-D-glucosyl-tr…",
+      "formula": "C16H19O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141767"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa",
+      "name": "3-hydroxy-3-(4-O-β-D-glucosyl-3-methoxyphenyl)propanoate",
+      "short": "3-hydroxy-3-(4-O-β-…",
+      "formula": "C16H21O10",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229974"
+      }
+    },
+    {
+      "id": "glucovanillin",
+      "name": "Glucovanillin",
+      "formula": "C14H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:179508"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-O-beta-D-glucosyl-trans-ferulate + H2O = 3-hydroxy-3-(4-O-beta-D-glucosyl-3-methoxyph...",
+      "equation": "4-O-beta-D-glucosyl-trans-ferulate + H2O = 3-hydroxy-3-(4-O-beta-D-glucosyl-3-methoxyphenyl)propanoate",
+      "substrates": [
+        {
+          "metabolite": "4_o_d_glucosyl_trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79443"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-hydroxy-3-(4-O-beta-D-glucosyl-3-methoxyphenyl)propanoate = 4-O-beta-D-glucosyl-vanil...",
+      "equation": "3-hydroxy-3-(4-O-beta-D-glucosyl-3-methoxyphenyl)propanoate = 4-O-beta-D-glucosyl-vanillin + acetate",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucovanillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79447"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-ethylmalonyl-coa-to-mesaconyl-coa",
+  "name": "(R)-ethylmalonyl-CoA to mesaconyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (R)-ethylmalonyl-CoA(5−) to mesaconyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45576"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85316"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_ethylmalonyl_coa",
+      "name": "(R)-ethylmalonyl-CoA",
+      "formula": "C26H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:85316"
+      }
+    },
+    {
+      "id": "2s_methylsuccinyl_coa",
+      "name": "(2S)-methylsuccinyl-CoA",
+      "short": "methylsuccinyl-CoA",
+      "formula": "C26H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:84866"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "mesaconyl_coa",
+      "name": "mesaconyl-CoA",
+      "formula": "C26H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:75635"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_63",
+      "name": "ethylmalonyl-CoA mutase",
+      "ec": [
+        "5.4.99.63"
+      ]
+    },
+    {
+      "id": "ec_1_3_8_12",
+      "name": "(2S)-methylsuccinyl-CoA dehydrogenase",
+      "ec": [
+        "1.3.8.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ethylmalonyl-CoA mutase",
+      "equation": "(2R)-ethylmalonyl-CoA = (2S)-methylsuccinyl-CoA",
+      "ec": "5.4.99.63",
+      "substrates": [
+        {
+          "metabolite": "r_ethylmalonyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_methylsuccinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2S)-methylsuccinyl-CoA dehydrogenase",
+      "equation": "(2S)-methylsuccinyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = 2-methylfumaryl-CoA + reduced [electron-transfer flavoprotein]",
+      "ec": "1.3.8.12",
+      "substrates": [
+        {
+          "metabolite": "2s_methylsuccinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mesaconyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:45028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45028"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -146,21 +146,12 @@
       }
     },
     {
-      "id": "l_kynurenine",
-      "name": "L-kynurenine",
-      "formula": "C10H12N2O3",
+      "id": "aniline",
+      "name": "aniline",
+      "formula": "C6H7N",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57959"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
+        "chebi": "CHEBI:17296"
       }
     },
     {
@@ -183,31 +174,23 @@
       }
     },
     {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
-      "charge": -1,
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:78442"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
-      "charge": 0,
+      "id": "1r_2r_3r_prephytoene_diphosphate",
+      "name": "(1R,2R,3R)-prephytoene diphosphate",
+      "short": "(1R,2R,3R)-prephyto…",
+      "formula": "C40H65O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58095"
-      }
-    },
-    {
-      "id": "3_l_phenylalanyl_adenylyl_1_group",
-      "name": "3'-(L-phenylalanyl)adenylyl(1−) group",
-      "short": "3'-(L-phenylalanyl)…",
-      "formula": "C19H21N6O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78531"
+        "chebi": "CHEBI:58011"
       }
     }
   ],
@@ -234,10 +217,10 @@
       ]
     },
     {
-      "id": "ec_3_7_1_3",
-      "name": "kynureninase",
+      "id": "ec_4_1_1_24",
+      "name": "aminobenzoate decarboxylase",
       "ec": [
-        "3.7.1.3"
+        "4.1.1.24"
       ]
     },
     {
@@ -245,13 +228,6 @@
       "name": "anthraniloyl-CoA anthraniloyltransferase",
       "ec": [
         "2.3.1.262"
-      ]
-    },
-    {
-      "id": "ec_6_1_1_20",
-      "name": "phenylalanine--tRNA ligase",
-      "ec": [
-        "6.1.1.20"
       ]
     }
   ],
@@ -417,26 +393,12 @@
     },
     {
       "id": "r4",
-      "name": "kynureninase",
-      "equation": "L-kynurenine + H2O = anthranilate + L-alanine + H(+)",
-      "ec": "3.7.1.3",
+      "name": "aminobenzoate decarboxylase",
+      "equation": "anthranilate + H(+) = aniline + CO2",
+      "ec": "4.1.1.24",
       "substrates": [
         {
-          "metabolite": "l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
           "metabolite": "anthranilate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
           "stoichiometry": 1
         },
         {
@@ -444,22 +406,32 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "aniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_7_1_3"
+          "enzyme": "ec_4_1_1_24"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:16813"
+        "rhea": "RHEA:24730"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16813"
+            "id": "RHEA:24730"
           }
         ]
       }
@@ -519,57 +491,35 @@
     },
     {
       "id": "r6",
-      "name": "phenylalanine--tRNA ligase",
-      "equation": "tRNA(Phe) + L-phenylalanine + ATP = L-phenylalanyl-tRNA(Phe) + AMP + diphosphate + H(+)",
-      "ec": "6.1.1.20",
+      "name": "2 (2E,6E,10E)-geranylgeranyl diphosphate = (1R,2R,3R)-prephytoene diphosphate + diphosp...",
+      "equation": "2 (2E,6E,10E)-geranylgeranyl diphosphate = (1R,2R,3R)-prephytoene diphosphate + diphosphate",
       "substrates": [
         {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "3_l_phenylalanyl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "1r_2r_3r_prephytoene_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_1_1_20"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:19413"
+        "rhea": "RHEA:22296"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19413"
+            "id": "RHEA:22296"
           }
         ]
       }

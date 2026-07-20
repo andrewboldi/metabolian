@@ -316,22 +316,76 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:78442"
       }
     },
     {
-      "id": "germacrene_d",
-      "name": "(−)-germacrene D",
-      "formula": "C15H24",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49044"
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78533"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "tocopherol",
+      "name": "γ-tocopherol",
+      "formula": "C28H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18185"
+      }
+    },
+    {
+      "id": "bergaptol",
+      "name": "bergaptol",
+      "formula": "C11H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77728"
+      }
+    },
+    {
+      "id": "5_methoxypsoralen",
+      "name": "5-methoxypsoralen",
+      "formula": "C12H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18293"
       }
     }
   ],
@@ -421,10 +475,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_75",
-      "name": "(-)-germacrene D synthase",
+      "id": "ec_6_1_1_11",
+      "name": "serine--tRNA ligase",
       "ec": [
-        "4.2.3.75"
+        "6.1.1.11"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_69",
+      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
+      "ec": [
+        "2.1.1.69"
       ]
     }
   ],
@@ -1009,41 +1070,139 @@
     },
     {
       "id": "r13",
-      "name": "(-)-germacrene D synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-germacrene D + diphosphate",
-      "ec": "4.2.3.75",
+      "name": "serine--tRNA ligase",
+      "equation": "tRNA(Ser) + L-serine + ATP = L-seryl-tRNA(Ser) + AMP + diphosphate + H(+)",
+      "ec": "6.1.1.11",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "germacrene_d",
+          "metabolite": "3_l_seryl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_75"
+          "enzyme": "ec_6_1_1_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:12016"
+        "rhea": "RHEA:12292"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12016"
+            "id": "RHEA:12292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "tocopherol cyclase",
+      "equation": "gamma-tocopherol = 2,3-dimethyl-6-phytylbenzene-1,4-diol",
+      "ec": "5.5.1.24",
+      "substrates": [
+        {
+          "metabolite": "tocopherol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_r_2_3_dimethyl_6_phytylhydroquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:37983"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
+      "equation": "bergaptol + S-adenosyl-L-methionine = bergapten + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.69",
+      "substrates": [
+        {
+          "metabolite": "bergaptol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methoxypsoralen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:11808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11808"
           }
         ]
       }

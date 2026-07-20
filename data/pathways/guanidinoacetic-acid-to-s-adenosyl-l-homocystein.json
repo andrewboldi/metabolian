@@ -102,39 +102,22 @@
       }
     },
     {
-      "id": "tellurite",
-      "name": "tellurite",
-      "formula": "O3Te",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30477"
-      }
-    },
-    {
-      "id": "methanetelluronate",
-      "name": "methanetelluronate",
-      "formula": "CH3O3Te",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:71624"
-      }
-    },
-    {
-      "id": "taurocyamine",
-      "name": "taurocyamine",
-      "formula": "C3H9N3O3S",
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H8N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58064"
+        "chebi": "CHEBI:30011"
       }
     },
     {
-      "id": "taurine",
-      "name": "Taurine",
-      "formula": "C2H7NO3S",
+      "id": "n5_methyl_l_glutamine",
+      "name": "N5-methyl-L-glutamine",
+      "short": "N5-methyl-L-glutami…",
+      "formula": "C6H10N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:507393"
+        "chebi": "CHEBI:61891"
       }
     }
   ],
@@ -158,20 +141,6 @@
       "name": "sarcosine/dimethylglycine N-methyltransferase",
       "ec": [
         "2.1.1.157"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_265",
-      "name": "tellurite methyltransferase",
-      "ec": [
-        "2.1.1.265"
-      ]
-    },
-    {
-      "id": "ec_3_5_3_17",
-      "name": "guanidinopropionase",
-      "ec": [
-        "3.5.3.17"
       ]
     }
   ],
@@ -321,12 +290,11 @@
     },
     {
       "id": "r4",
-      "name": "tellurite methyltransferase",
-      "equation": "tellurite + S-adenosyl-L-methionine = methanetellurite + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.265",
+      "name": "L-glutamine(104)-[histone H2A] + S-adenosyl-L-methionine = N(5)-methyl-L-glutamine(104)...",
+      "equation": "L-glutamine(104)-[histone H2A] + S-adenosyl-L-methionine = N(5)-methyl-L-glutamine(104)-[histone H2A] + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "tellurite",
+          "metabolite": "l_glutamine",
           "stoichiometry": 1
         },
         {
@@ -336,75 +304,29 @@
       ],
       "products": [
         {
-          "metabolite": "methanetelluronate",
+          "metabolite": "n5_methyl_l_glutamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_1_1_265"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:34539"
+        "rhea": "RHEA:43228"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34539"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "guanidinopropionase",
-      "equation": "taurocyamine + H2O = urea + taurine",
-      "ec": "3.5.3.17",
-      "substrates": [
-        {
-          "metabolite": "taurocyamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "urea",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_3_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:75931"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75931"
+            "id": "RHEA:43228"
           }
         ]
       }

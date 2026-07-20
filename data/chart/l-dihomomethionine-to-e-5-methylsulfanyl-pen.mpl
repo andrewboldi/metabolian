@@ -18,7 +18,7 @@ pathway l-dihomomethionine-to-e-5-methylsulfanyl-pen "L-dihomomethionine to (E)-
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_19_63 [1.14.19.63] +pratensein +fmnh2 +o2 +h2o +hplus
-    5_hydroxypseudobaptigenin
+    <-> ec_1_14_14_114 [1.14.14.114] +amorpha_4_11_diene +fmnh2 +o2 +h2o +hplus
+    artemisinate
   }
 }

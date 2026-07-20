@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-aci-nitro-2-1h-indol-3-to-l-glutamate",
+  "name": "1-aci-nitro-2-(1H-indol-3… to L-glutamate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from 1-aci-nitro-2-(1H-indol-3-yl)ethane to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52188"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136445"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_aci_nitro_2_1h_indol_3_yl_ethane",
+      "name": "1-aci-nitro-2-(1H-indol-3-yl)ethane",
+      "short": "1-aci-nitro-2-(1H-i…",
+      "formula": "C10H10N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136445"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima",
+      "name": "(E)-1-(glutathion-S-yl)-2-(indol-3-yl)acetohydroximate",
+      "short": "1-(glutathion-S-yl)…",
+      "formula": "C20H24N5O7S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136444"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_e_n_hydroxy_2_indol_3_yl_ethanimidoyl_l_cystei",
+      "name": "S-[(E)-N-hydroxy-2-(indol-3-yl)ethanimidoyl]-L-cysteinylglycine",
+      "short": "S-[(E)-N-hydroxy-2-…",
+      "formula": "C15H18N4O4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136831"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "3_sulfino_l_alanine",
+      "name": "3-sulfino-L-alanine",
+      "formula": "C3H6NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61085"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "3_sulfinatopyruvate",
+      "name": "3-sulfinatopyruvate",
+      "formula": "C3H2O5S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:140699"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_4_19_16",
+      "name": "glucosinolate gamma-glutamyl hydrolase",
+      "ec": [
+        "3.4.19.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-aci-nitro-2-(1H-indol-3-yl)ethane + glutathione = (E)-1-(glutathione-S-yl)-2-(1H-indo...",
+      "equation": "1-aci-nitro-2-(1H-indol-3-yl)ethane + glutathione = (E)-1-(glutathione-S-yl)-2-(1H-indol-3-yl)acetohydroximate + H2O",
+      "substrates": [
+        {
+          "metabolite": "1_aci_nitro_2_1h_indol_3_yl_ethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucosinolate gamma-glutamyl hydrolase",
+      "equation": "(E)-1-(glutathione-S-yl)-2-(1H-indol-3-yl)acetohydroximate + H2O = (E)-1-(glycyl-L-cystein-S-yl)-2-(1H-indol-3-yl)acetohydroximate + L-glutamate",
+      "ec": "3.4.19.16",
+      "substrates": [
+        {
+          "metabolite": "e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_e_n_hydroxy_2_indol_3_yl_ethanimidoyl_l_cystei",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_19_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-sulfino-L-alanine + 2-oxoglutarate = 3-sulfinopyruvate + L-glutamate",
+      "equation": "3-sulfino-L-alanine + 2-oxoglutarate = 3-sulfinopyruvate + L-glutamate",
+      "substrates": [
+        {
+          "metabolite": "3_sulfino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_sulfinatopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70295"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70295"
+          }
+        ]
+      }
+    }
+  ]
+}

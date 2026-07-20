@@ -1,0 +1,221 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-dopachrome-to-indole-5-6-quinone",
+  "name": "D-dopachrome to indole-5,6-quinone",
+  "category": "cofactor-vitamin-metabolism",
+  "summary": "A 2-step route from D-dopachrome(1−) to indole-5,6-quinone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18441"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58782"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_dopachrome",
+      "name": "D-dopachrome",
+      "formula": "C9H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58782"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5_6_dihydroxyindole",
+      "name": "5,6-dihydroxyindole",
+      "formula": "C8H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27404"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "indole_5_6_quinone",
+      "name": "indole-5,6-quinone",
+      "formula": "C8H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27406"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dopaminechrome_keto_form",
+      "name": "dopaminechrome (keto form)",
+      "short": "dopaminechrome…",
+      "formula": "C8H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189002"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_84",
+      "name": "D-dopachrome decarboxylase",
+      "ec": [
+        "4.1.1.84"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-dopachrome decarboxylase",
+      "equation": "D-dopachrome + H(+) = 5,6-dihydroxyindole + CO2",
+      "ec": "4.1.1.84",
+      "substrates": [
+        {
+          "metabolite": "d_dopachrome",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_6_dihydroxyindole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18441"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18441"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2 5,6-dihydroxyindole + O2 = 2 indole-5,6-quinone + 2 H2O",
+      "equation": "2 5,6-dihydroxyindole + O2 = 2 indole-5,6-quinone + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "5_6_dihydroxyindole",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indole_5_6_quinone",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33515"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33515"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dopaminechrome = 5,6-dihydroxyindole",
+      "equation": "dopaminechrome = 5,6-dihydroxyindole",
+      "substrates": [
+        {
+          "metabolite": "dopaminechrome_keto_form",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_6_dihydroxyindole",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70199"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70199"
+          }
+        ]
+      }
+    }
+  ]
+}

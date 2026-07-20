@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-dha-l-phenylalanine-to-14-hpdhe",
+  "name": "N-DHA-L-phenylalanine to 14-HPDHE",
+  "category": "other",
+  "summary": "A 2-step route from N-DHA-L-phenylalanine(1−) to 14-HPDHE(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:64132"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:149701"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_dha_l_phenylalanine",
+      "name": "N-DHA-L-phenylalanine",
+      "short": "N-DHA-L-phenylalani…",
+      "formula": "C31H40NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149701"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "14_hpdhe",
+      "name": "14-HPDHE",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83336"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "21_hdohe",
+      "name": "21-HDoHE",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132025"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_3_ammonio_3_phenylpropanoate",
+      "name": "(S)-3-ammonio-3-phenylpropanoate",
+      "short": "3-ammonio-3-phenylp…",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:68506"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_3_11",
+      "name": "phenylalanine aminomutase (D-beta-phenylalanine forming)",
+      "ec": [
+        "5.4.3.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-L-phenylalanine + H2O = (4Z,7Z,10Z,13Z,16Z,19...",
+      "equation": "N-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-L-phenylalanine + H2O = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + L-phenylalanine",
+      "substrates": [
+        {
+          "metabolite": "n_dha_l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:64132"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + O2 = 14-hydroperoxy-(4Z,7Z,10Z,12E,16Z,19Z)-...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + O2 = 14-hydroperoxy-(4Z,7Z,10Z,12E,16Z,19Z)-docosahexaenoate",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "14_hpdhe",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 21-hydroxy-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "21_hdohe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50088"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phenylalanine aminomutase (D-beta-phenylalanine forming)",
+      "equation": "L-phenylalanine = (S)-3-amino-3-phenylpropanoate",
+      "ec": "5.4.3.11",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_3_ammonio_3_phenylpropanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_3_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34527"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34527"
+          }
+        ]
+      }
+    }
+  ]
+}

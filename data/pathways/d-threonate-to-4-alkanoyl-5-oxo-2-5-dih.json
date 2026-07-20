@@ -161,41 +161,23 @@
       }
     },
     {
-      "id": "o_s_hexanoylpantetheine_4_phosphoryl_serine_1",
-      "name": "O-(S-hexanoylpantetheine-4'-phosphoryl)serine(1−)",
-      "short": "O-(S-hexanoylpantet…",
-      "formula": "C20H35N3O9PS",
+      "id": "long_chain_fatty_aldehyde",
+      "name": "long-chain fatty aldehyde",
+      "short": "long-chain fatty…",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17176"
+      }
+    },
+    {
+      "id": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
+      "name": "O-[S-(long-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(long-chain…",
+      "formula": "C15H24N3O9PSR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78459"
-      }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "norsolorinic_acid_anthrone",
-      "name": "norsolorinic acid anthrone",
-      "short": "norsolorinic acid…",
-      "formula": "C20H19O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77904"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:133243"
       }
     },
     {
@@ -243,10 +225,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_221",
-      "name": "noranthrone synthase",
+      "id": "ec_1_2_1_80",
+      "name": "long-chain acyl-[acyl-carrier-protein] reductase",
       "ec": [
-        "2.3.1.221"
+        "1.2.1.80"
       ]
     },
     {
@@ -475,26 +457,12 @@
     },
     {
       "id": "r6",
-      "name": "noranthrone synthase",
-      "equation": "hexanoyl-[ACP] + 7 malonyl-CoA + 6 H(+) = noranthrone + holo-[ACP] + 7 CO2 + 7 CoA + 2 H2O",
-      "ec": "2.3.1.221",
+      "name": "long-chain acyl-[acyl-carrier-protein] reductase",
+      "equation": "a long-chain fatty aldehyde + holo-[ACP] + NAD(+) = a long-chain fatty acyl-[ACP] + NADH + H(+)",
+      "ec": "1.2.1.80",
       "substrates": [
         {
-          "metabolite": "o_s_hexanoylpantetheine_4_phosphoryl_serine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 6
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "norsolorinic_acid_anthrone",
+          "metabolite": "long_chain_fatty_aldehyde",
           "stoichiometry": 1
         },
         {
@@ -502,34 +470,40 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 7
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
-          "stoichiometry": 7
+          "metabolite": "nadh",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_221"
+          "enzyme": "ec_1_2_1_80"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:35179"
+        "rhea": "RHEA:54180"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35179"
+            "id": "RHEA:54180"
           }
         ]
       }

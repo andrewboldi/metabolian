@@ -19,7 +19,7 @@ pathway s-3-hydroxyhexanoyl-coa-to-trans-hex-2-enoyl-co "(S)-3-hydroxyhexanoyl-C
   branch from trans_hex_2_enoyl_coa side left {
     trans_hex_2_enoyl_coa
     <-> .
-    trans_3_hexenoyl_coa
+    z_hex_3_enoyl_coa
   }
 
   branch from hexanoyl_coa side right {

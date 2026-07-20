@@ -103,40 +103,58 @@
       }
     },
     {
-      "id": "1_4_benzoquinones",
-      "name": "1,4-benzoquinones",
-      "formula": "C6O2R4",
+      "id": "cyathatriol",
+      "name": "cyathatriol",
+      "formula": "C20H32O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132124"
+        "chebi": "CHEBI:194349"
       }
     },
     {
-      "id": "hydroquinones",
-      "name": "hydroquinones",
-      "formula": "C6H2O2R4",
+      "id": "cyathin_a3",
+      "name": "cyathin A3",
+      "formula": "C20H30O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:24646"
+        "chebi": "CHEBI:3985"
       }
     },
     {
-      "id": "l_threo_3_phenylserine",
-      "name": "L-threo-3-phenylserine",
-      "short": "L-threo-3-phenylser…",
-      "formula": "C9H11NO3",
-      "charge": 0,
+      "id": "5_hydroxyoctan_4_aminium",
+      "name": "5-hydroxyoctan-4-aminium",
+      "short": "5-hydroxyoctan-4-am…",
+      "formula": "C8H20NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57901"
+        "chebi": "CHEBI:195506"
       }
     },
     {
-      "id": "keto_phenylpyruvate",
-      "name": "keto-phenylpyruvate",
-      "formula": "C9H7O3",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:18005"
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "5_hydroxy_4_octanone",
+      "name": "5-Hydroxy-4-octanone",
+      "formula": "C8H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:179933"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -288,21 +306,11 @@
     },
     {
       "id": "r4",
-      "name": "a quinone + AH2 = a quinol + A",
-      "equation": "a quinone + AH2 = a quinol + A",
+      "name": "cyathatriol + A = cyathin A3 + AH2",
+      "equation": "cyathatriol + A = cyathin A3 + AH2",
       "substrates": [
         {
-          "metabolite": "1_4_benzoquinones",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hydroquinones",
+          "metabolite": "cyathatriol",
           "stoichiometry": 1
         },
         {
@@ -310,52 +318,78 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "cyathin_a3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:51920"
+        "rhea": "RHEA:75579"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51920"
+            "id": "RHEA:75579"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-threo-3-phenylserine = 3-phenylpyruvate + NH4(+)",
-      "equation": "L-threo-3-phenylserine = 3-phenylpyruvate + NH4(+)",
+      "name": "5-hydroxyoctan-4-amine + NAD(+) + H2O = 5-hydroxyoctan-4-one + NH4(+) + NADH + H(+)",
+      "equation": "5-hydroxyoctan-4-amine + NAD(+) + H2O = 5-hydroxyoctan-4-one + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "l_threo_3_phenylserine",
+          "metabolite": "5_hydroxyoctan_4_aminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "keto_phenylpyruvate",
+          "metabolite": "5_hydroxy_4_octanone",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46328"
+        "rhea": "RHEA:77043"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46328"
+            "id": "RHEA:77043"
           }
         ]
       }

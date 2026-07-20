@@ -261,21 +261,22 @@
       }
     },
     {
-      "id": "gdp_d_glucose",
-      "name": "GDP-α-D-glucose",
-      "formula": "C16H23N5O16P2",
-      "charge": -2,
+      "id": "avenacoside_b",
+      "name": "avenacoside B",
+      "formula": "C57H92O28",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62230"
+        "chebi": "CHEBI:2938"
       }
     },
     {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
-      "charge": -3,
+      "id": "26_desglucoavenacoside_b",
+      "name": "26-desglucoavenacoside B",
+      "short": "26-desglucoavenacos…",
+      "formula": "C51H82O23",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:75931"
       }
     },
     {
@@ -298,23 +299,22 @@
       }
     },
     {
-      "id": "cdp_2_3_bis_o_phytanyl_sn_glycerol",
-      "name": "CDP-2,3-bis-O-(phytanyl)-sn-glycerol",
-      "short": "CDP-2,3-bis-O-(phyt…",
-      "formula": "C52H99N3O13P2",
+      "id": "cdp_1l_myo_inositol",
+      "name": "CDP-1L-myo-inositol",
+      "formula": "C15H23N3O16P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:74004"
+        "chebi": "CHEBI:62573"
       }
     },
     {
-      "id": "1_archaetidyl_1d_myo_inositol_3_phosphate",
-      "name": "1-archaetidyl-1D-myo-inositol 3-phosphate",
-      "short": "1-archaetidyl-1D-my…",
-      "formula": "C49H97O14P2",
+      "id": "bis_1l_myo_inositol_3_1_phosphate_1_phosphate",
+      "name": "bis(1L-myo-inositol) 3,1'-phosphate 1-phosphate",
+      "short": "bis(1L-myo-inositol…",
+      "formula": "C12H21O17P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:74006"
+        "chebi": "CHEBI:62576"
       }
     },
     {
@@ -328,12 +328,40 @@
       }
     },
     {
-      "id": "6_o_acetyl_d_glucose",
-      "name": "6-O-acetyl-D-glucose",
-      "formula": "C8H14O7",
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "oxalate",
+      "name": "oxalate",
+      "formula": "C2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30623"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "casbene",
+      "name": "casbene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17901"
+        "chebi": "CHEBI:17695"
       }
     }
   ],
@@ -388,10 +416,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_42",
-      "name": "GDP-glucosidase",
+      "id": "ec_3_2_1_188",
+      "name": "avenacosidase",
       "ec": [
-        "3.2.1.42"
+        "3.2.1.188"
       ]
     },
     {
@@ -402,17 +430,24 @@
       ]
     },
     {
-      "id": "ec_2_7_8_39",
-      "name": "archaetidylinositol phosphate synthase",
+      "id": "ec_2_7_8_34",
+      "name": "CDP-L-myo-inositol myo-inositolphosphotransferase",
       "ec": [
-        "2.7.8.39"
+        "2.7.8.34"
       ]
     },
     {
-      "id": "ec_3_1_1_33",
-      "name": "6-acetylglucose deacetylase",
+      "id": "ec_3_7_1_1",
+      "name": "oxaloacetase",
       "ec": [
-        "3.1.1.33"
+        "3.7.1.1"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_8",
+      "name": "casbene synthase",
+      "ec": [
+        "4.2.3.8"
       ]
     }
   ],
@@ -832,12 +867,12 @@
     },
     {
       "id": "r10",
-      "name": "GDP-glucosidase",
-      "equation": "GDP-alpha-D-glucose + H2O = D-glucose + GDP + H(+)",
-      "ec": "3.2.1.42",
+      "name": "avenacosidase",
+      "equation": "avenacoside B + H2O = 26-desgluco-avenacoside B + D-glucose",
+      "ec": "3.2.1.188",
       "substrates": [
         {
-          "metabolite": "gdp_d_glucose",
+          "metabolite": "avenacoside_b",
           "stoichiometry": 1
         },
         {
@@ -847,34 +882,30 @@
       ],
       "products": [
         {
+          "metabolite": "26_desglucoavenacoside_b",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_42"
+          "enzyme": "ec_3_2_1_188"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:15049"
+        "rhea": "RHEA:38911"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15049"
+            "id": "RHEA:38911"
           }
         ]
       }
@@ -930,12 +961,12 @@
     },
     {
       "id": "r12",
-      "name": "archaetidylinositol phosphate synthase",
-      "equation": "CDP-2,3-bis-O-(phytanyl)-sn-glycerol + 1D-myo-inositol 3-phosphate = saturated 1-archaetidyl-1D-myo-inositol 3-phosphate + CMP + H(+)",
-      "ec": "2.7.8.39",
+      "name": "CDP-L-myo-inositol myo-inositolphosphotransferase",
+      "equation": "CDP-1L-myo-inositol + 1D-myo-inositol 3-phosphate = bis(1L-myo-inositol) 3,1'-phosphate 1-phosphate + CMP + H(+)",
+      "ec": "2.7.8.34",
       "substrates": [
         {
-          "metabolite": "cdp_2_3_bis_o_phytanyl_sn_glycerol",
+          "metabolite": "cdp_1l_myo_inositol",
           "stoichiometry": 1
         },
         {
@@ -945,7 +976,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_archaetidyl_1d_myo_inositol_3_phosphate",
+          "metabolite": "bis_1l_myo_inositol_3_1_phosphate_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -959,32 +990,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_8_39"
+          "enzyme": "ec_2_7_8_34"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:36823"
+        "rhea": "RHEA:31327"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36823"
+            "id": "RHEA:31327"
           }
         ]
       }
     },
     {
       "id": "r13",
-      "name": "6-acetylglucose deacetylase",
-      "equation": "6-acetyl-D-glucose + H2O = D-glucose + acetate + H(+)",
-      "ec": "3.1.1.33",
+      "name": "oxaloacetase",
+      "equation": "oxaloacetate + H2O = oxalate + acetate + H(+)",
+      "ec": "3.7.1.1",
       "substrates": [
         {
-          "metabolite": "6_o_acetyl_d_glucose",
+          "metabolite": "oxaloacetate",
           "stoichiometry": 1
         },
         {
@@ -994,7 +1025,7 @@
       ],
       "products": [
         {
-          "metabolite": "glucose",
+          "metabolite": "oxalate",
           "stoichiometry": 1
         },
         {
@@ -1008,20 +1039,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_1_33"
+          "enzyme": "ec_3_7_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:18485"
+        "rhea": "RHEA:24432"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18485"
+            "id": "RHEA:24432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "casbene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = casbene + diphosphate",
+      "ec": "4.2.3.8",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "casbene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:14901"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14901"
           }
         ]
       }

@@ -214,6 +214,16 @@
       }
     },
     {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -224,12 +234,13 @@
       }
     },
     {
-      "id": "sibirene",
-      "name": "sibirene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "ditrans_polycis_undecaprenyl_diphosphate",
+      "name": "ditrans,polycis-undecaprenyl diphosphate",
+      "short": "ditrans,polycis-und…",
+      "formula": "C55H89O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:49231"
+        "chebi": "CHEBI:58405"
       }
     },
     {
@@ -242,40 +253,21 @@
       }
     },
     {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
-      "charge": 0,
+      "id": "sebacate",
+      "name": "sebacate",
+      "formula": "C10H16O4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17499"
-      }
-    },
-    {
-      "id": "trans_2_decenedioyl_coa",
-      "name": "trans-2-decenedioyl-CoA",
-      "short": "trans-2-decenedioyl…",
-      "formula": "C31H45N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:76347"
+        "chebi": "CHEBI:76283"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_56",
-      "name": "gamma-humulene synthase",
+      "id": "ec_2_5_1_31",
+      "name": "ditrans,polycis-undecaprenyl-diphosphate synthase [(2E,6E)-farnesyl-",
       "ec": [
-        "4.2.3.56"
+        "2.5.1.31"
       ]
     }
   ],
@@ -641,10 +633,14 @@
     },
     {
       "id": "r10",
-      "name": "gamma-humulene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = sibirene + diphosphate",
-      "ec": "4.2.3.56",
+      "name": "ditrans,polycis-undecaprenyl-diphosphate synthase [(2E,6E)-farnesyl-",
+      "equation": "8 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = di-trans,octa-cis-undecaprenyl diphosphate + 8 diphosphate",
+      "ec": "2.5.1.31",
       "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 8
+        },
         {
           "metabolite": "fpp",
           "stoichiometry": 1
@@ -652,155 +648,116 @@
       ],
       "products": [
         {
-          "metabolite": "sibirene",
+          "metabolite": "ditrans_polycis_undecaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 8
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_56"
+          "enzyme": "ec_2_5_1_31"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:25460"
+        "rhea": "RHEA:27551"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25460"
+            "id": "RHEA:27551"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "dodecanedioate + ATP + CoA = dodecanedioyl-CoA + AMP + diphosphate",
-      "equation": "dodecanedioate + ATP + CoA = dodecanedioyl-CoA + AMP + diphosphate",
+      "name": "dodecanedioyl-CoA + H2O = dodecanedioate + CoA + H(+)",
+      "equation": "dodecanedioyl-CoA + H2O = dodecanedioate + CoA + H(+)",
       "substrates": [
-        {
-          "metabolite": "dodecanedioate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "dodecanedioyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dodecanedioate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:40239"
+        "rhea": "RHEA:40595"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40239"
+            "id": "RHEA:40595"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "dodecanedioyl-CoA + A = (2E)-dodecenedioyl-CoA + AH2",
-      "equation": "dodecanedioyl-CoA + A = (2E)-dodecenedioyl-CoA + AH2",
-      "substrates": [
-        {
-          "metabolite": "dodecanedioyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_2_dodecenedioyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:40303"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:40303"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r13",
-      "name": "decanedioyl-CoA + A = (2E)-decenedioyl-CoA + AH2",
-      "equation": "decanedioyl-CoA + A = (2E)-decenedioyl-CoA + AH2",
+      "name": "decanedioyl-CoA + H2O = decanedioate + CoA + H(+)",
+      "equation": "decanedioyl-CoA + H2O = decanedioate + CoA + H(+)",
       "substrates": [
         {
           "metabolite": "decanedioyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trans_2_decenedioyl_coa",
+          "metabolite": "sebacate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 13,
+      "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:40307"
+        "rhea": "RHEA:40591"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40307"
+            "id": "RHEA:40591"
           }
         ]
       }

@@ -18,8 +18,8 @@ pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenyl
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_24 [1.14.99.24] +pregna_4_9_11_diene_3_20_dione +o2 +hydrogen_acceptor +h2o
-    9_11_epoxypregn_4_ene_3_20_dione
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_7_ol +hydrogen_acceptor +h2o
+    7_hydroxyquinolin_2_1h_one
   }
 
   branch from acetophenone side right {

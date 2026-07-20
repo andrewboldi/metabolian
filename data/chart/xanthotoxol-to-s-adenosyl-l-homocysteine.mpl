@@ -18,13 +18,13 @@ pathway xanthotoxol-to-s-adenosyl-l-homocysteine "xanthotoxol to S-adenosyl-L-ho
 
   branch from sah side left {
     sah
-    <-> . +precorrin_6y +sam +co2 +hplus
-    precorrin_7
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from fmn side right {
     fmn
-    <-> . +12_hete +fmnh2 +o2 +h2o +hplus
-    12_20_dihete
+    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
+    9_r_hode
   }
 }

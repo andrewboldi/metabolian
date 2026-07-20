@@ -30,7 +30,7 @@ pathway 14-demethyllanosterol-to-3-hydroxy-5-cholest-8-e "14-demethyllanosterol 
 
   branch from 3_hydroxy_5_cholest_8_ene_4_carboxylate side left {
     3_hydroxy_5_cholest_8_ene_4_carboxylate
-    <-> . +nad +co2 +nadh
+    <-> . +nadp +co2 +nadph
     5_cholest_8_en_3_one
   }
 }

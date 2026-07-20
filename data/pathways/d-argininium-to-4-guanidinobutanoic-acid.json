@@ -139,66 +139,30 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:16810"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "4_aminobenzoate",
-      "name": "4-aminobenzoate",
-      "formula": "C7H6NO2",
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17836"
+        "chebi": "CHEBI:29985"
       }
     },
     {
-      "id": "4_nitrobenzoate",
-      "name": "4-nitrobenzoate",
-      "formula": "C7H4NO4",
-      "charge": -1,
+      "id": "ornithine",
+      "name": "L-Ornithine",
+      "formula": "C5H13N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:142863"
-      }
-    },
-    {
-      "id": "3_amino_d_alanine",
-      "name": "3-amino-D-alanine",
-      "formula": "C3H8N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:136599"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "agmatinium",
-      "name": "agmatinium",
-      "formula": "C5H16N4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:58145"
+        "chebi": "CHEBI:46911"
       }
     }
   ],
@@ -225,24 +189,17 @@
       ]
     },
     {
-      "id": "ec_1_4_3_25",
-      "name": "L-arginine oxidase",
+      "id": "ec_2_6_1_125",
+      "name": "L-arginine:2-oxoglutarate transaminase",
       "ec": [
-        "1.4.3.25"
+        "2.6.1.125"
       ]
     },
     {
-      "id": "ec_1_14_99_68",
-      "name": "4-aminobenzoate N-oxygenase",
+      "id": "ec_3_5_3_27",
+      "name": "arginine dihydrolase",
       "ec": [
-        "1.14.99.68"
-      ]
-    },
-    {
-      "id": "ec_4_3_1_15",
-      "name": "diaminopropionate ammonia-lyase",
-      "ec": [
-        "4.3.1.15"
+        "3.5.3.27"
       ]
     }
   ],
@@ -400,20 +357,16 @@
     },
     {
       "id": "r4",
-      "name": "L-arginine oxidase",
-      "equation": "L-arginine + O2 + H2O = 5-guanidino-2-oxopentanoate + H2O2 + NH4(+)",
-      "ec": "1.4.3.25",
+      "name": "L-arginine:2-oxoglutarate transaminase",
+      "equation": "L-arginine + 2-oxoglutarate = 5-guanidino-2-oxopentanoate + L-glutamate",
+      "ec": "2.6.1.125",
       "substrates": [
         {
           "metabolite": "arginine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
@@ -423,179 +376,79 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
+          "metabolite": "glutamate",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_3_25"
+          "enzyme": "ec_2_6_1_125"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:51404"
+        "rhea": "RHEA:78819"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51404"
+            "id": "RHEA:78819"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "4-aminobenzoate N-oxygenase",
-      "equation": "4-aminobenzoate + AH2 + 2 O2 = 4-nitrobenzoate + A + 2 H2O",
-      "ec": "1.14.99.68",
+      "name": "arginine dihydrolase",
+      "equation": "L-arginine + 2 H2O + 2 H(+) = L-ornithine + 2 NH4(+) + CO2",
+      "ec": "3.5.3.27",
       "substrates": [
         {
-          "metabolite": "4_aminobenzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_nitrobenzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "arginine",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_99_68"
+          "enzyme": "ec_3_5_3_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:58888"
+        "rhea": "RHEA:78779"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58888"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "diaminopropionate ammonia-lyase",
-      "equation": "(R)-2,3-diaminopropanoate + H2O + H(+) = pyruvate + 2 NH4(+)",
-      "ec": "4.3.1.15",
-      "substrates": [
-        {
-          "metabolite": "3_amino_d_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_3_1_15"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:52432"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52432"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "agmatine + O2 + H2O = 4-guanidinobutanal + H2O2 + NH4(+)",
-      "equation": "agmatine + O2 + H2O = 4-guanidinobutanal + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "agmatinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_guanidiniumylbutanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:69144"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69144"
+            "id": "RHEA:78779"
           }
         ]
       }

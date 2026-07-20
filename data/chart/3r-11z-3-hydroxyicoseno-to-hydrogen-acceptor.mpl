@@ -16,15 +16,21 @@ pathway 3r-11z-3-hydroxyicoseno-to-hydrogen-acceptor "(3R,11Z)-3-hydroxyicosenoâ
     8z_11z_icosadienoyl_coa
   }
 
-  branch from 11z_eicosenoyl_coa side left {
+  branch from 2e_11z_icosadienoyl_coa side left {
+    2e_11z_icosadienoyl_coa
+    <-> . +h2o
+    3s_11z_3_hydroxyicosenoyl_coa
+  }
+
+  branch from 11z_eicosenoyl_coa side right {
     11z_eicosenoyl_coa
     <-> . +h2o +coa +hplus
     gondoate
   }
 
-  branch from hydrogen_acceptor side right {
+  branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +tetrahydroalstonine +fmnh2 +o2 +hydrogen_donor +fmn +h2o +hplus
-    alstonine
+    <-> . +didehydrocampesine_a +hydrogen_donor
+    campesine_a
   }
 }

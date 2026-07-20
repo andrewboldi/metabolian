@@ -4,15 +4,17 @@
 # edit the generator, not this file.
 
 pathway d-mannitol-to-d-fructofuranose "D-mannitol to D-fructofuranose" {
-  spacing 160
+  spacing 204
 
   spine at 0,0 {
     d_mannitol
-    <-> ec_1_1_1_67 [1.1.1.67] +nad -nadh -hplus
+    <-> ec_1_1_2_2 [1.1.2.2] +iron -fe2 -hplus
     d_fructofuranose
-    <-> ec_2_7_1_1 [2.7.1.1] +atp -adp -hplus
-    d_fructofuranose_6_phosphate
-    <-> . +h2o -pi
-    d_fructofuranose
+    <-> ec_2_4_1_13 [2.4.1.13] +udp_d_glucose -udp -hplus
+    sucrose
+    <-> ec_5_4_99_11 [5.4.99.11]
+    6_o_d_glucopyranosyl_d_fructofuranose
+    <-> ec_3_2_1_219 [3.2.1.219] +h2o -d_fructofuranose
+    d_glucose
   }
 }

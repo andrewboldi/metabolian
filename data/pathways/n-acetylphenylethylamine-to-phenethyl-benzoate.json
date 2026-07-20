@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acetylphenylethylamine-to-phenethyl-benzoate",
   "name": "N-acetylphenylethylamine to phenethyl benzoate",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 4-step route from N-acetylphenylethylamine to phenethyl benzoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -155,41 +155,60 @@
       }
     },
     {
-      "id": "acetoin",
-      "name": "acetoin",
-      "formula": "C4H8O2",
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15688"
+        "chebi": "CHEBI:18407"
       }
     },
     {
-      "id": "3_phenethylamino_butan_2_one",
-      "name": "3-(phenethylamino)-butan-2-one",
-      "short": "3-(phenethylamino)-…",
-      "formula": "C12H18NO",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:143110"
-      }
-    },
-    {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32682"
-      }
-    },
-    {
-      "id": "5_guanidino_2_oxopentanoic_acid",
-      "name": "5-guanidino-2-oxopentanoic acid",
-      "short": "5-guanidino-2-oxope…",
-      "formula": "C6H11N3O3",
+      "id": "2s_2_hydroxy_3_phenylpropanenitrile",
+      "name": "(2S)-2-hydroxy-3-phenylpropanenitrile",
+      "short": "2-hydroxy-3-phenylp…",
+      "formula": "C9H9NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58489"
+        "chebi": "CHEBI:197323"
+      }
+    },
+    {
+      "id": "3_5_dimethylcyclohexan_1_aminium",
+      "name": "3,5-dimethylcyclohexan-1-aminium",
+      "short": "3,5-dimethylcyclohe…",
+      "formula": "C8H18N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195510"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_5_dimethylcyclohexanone",
+      "name": "3,5-dimethylcyclohexanone",
+      "short": "3,5-dimethylcyclohe…",
+      "formula": "C8H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195509"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -206,13 +225,6 @@
       "name": "primary-amine oxidase",
       "ec": [
         "1.4.3.21"
-      ]
-    },
-    {
-      "id": "ec_1_4_1_25",
-      "name": "L-arginine dehydrogenase",
-      "ec": [
-        "1.4.1.25"
       ]
     }
   ],
@@ -399,55 +411,50 @@
     },
     {
       "id": "r5",
-      "name": "acetoin + 2-phenylethylamine = schleiferon A + H2O",
-      "equation": "acetoin + 2-phenylethylamine = schleiferon A + H2O",
+      "name": "2-phenylacetaldehyde + hydrogen cyanide = (2S)-2-hydroxy-3-phenylpropanenitrile",
+      "equation": "2-phenylacetaldehyde + hydrogen cyanide = (2S)-2-hydroxy-3-phenylpropanenitrile",
       "substrates": [
         {
-          "metabolite": "acetoin",
+          "metabolite": "phenylacetaldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_phenylethanaminium",
+          "metabolite": "hydrogen_cyanide",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_phenethylamino_butan_2_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "2s_2_hydroxy_3_phenylpropanenitrile",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:85475"
+        "rhea": "RHEA:77499"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:85475"
+            "id": "RHEA:77499"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-arginine dehydrogenase",
-      "equation": "L-arginine + NAD(+) + H2O = 5-guanidino-2-oxopentanoate + NH4(+) + NADH + H(+)",
-      "ec": "1.4.1.25",
+      "name": "3,5-dimethylcyclohexanamine + NADP(+) + H2O = 3,5-dimethylcyclohexanone + NH4(+) + NADP...",
+      "equation": "3,5-dimethylcyclohexanamine + NADP(+) + H2O = 3,5-dimethylcyclohexanone + NH4(+) + NADPH + H(+)",
       "substrates": [
         {
-          "metabolite": "arginine",
+          "metabolite": "3_5_dimethylcyclohexan_1_aminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
@@ -457,7 +464,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "metabolite": "3_5_dimethylcyclohexanone",
           "stoichiometry": 1
         },
         {
@@ -465,7 +472,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -473,22 +480,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_4_1_25"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:47632"
+        "rhea": "RHEA:77051"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47632"
+            "id": "RHEA:77051"
           }
         ]
       }

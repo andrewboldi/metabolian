@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-acyl-2-arachidonoyl-sn-to-1-acyl-2-arachidonoy",
+  "name": "1-acyl-2-arachidonoyl-sn-… to 1-acyl-2-arachidonoyl-sn-…",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from 1-acyl-2-arachidonoyl-sn-glycero-3-phosphocholine to 1-acyl-2-arachidonoyl-sn-glycero-3-phosphocholine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40651"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75063"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_acyl_2_arachidonoyl_sn_glycero_3_phosphocholin",
+      "name": "1-acyl-2-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "1-acyl-2-arachidono…",
+      "formula": "C29H49NO8PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75063"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_o_acyl_sn_glycero_3_phosphocholine",
+      "name": "1-O-acyl-sn-glycero-3-phosphocholine",
+      "short": "1-O-acyl-sn-glycero…",
+      "formula": "C9H19NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58168"
+      }
+    },
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "11_r_hpete",
+      "name": "11(R)-HPETE",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82628"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-acyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = a 1-acyl-...",
+      "equation": "1-acyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = a 1-acyl-sn-glycero-3-phosphocholine + (5Z,8Z,11Z,14Z)-eicosatetraenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_2_arachidonoyl_sn_glycero_3_phosphocholin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40651"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + a 1-acyl-sn-glycero-3-phosphocholine = 1-acyl-2-...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + a 1-acyl-sn-glycero-3-phosphocholine = 1-acyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + CoA",
+      "substrates": [
+        {
+          "metabolite": "arachidonoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_arachidonoyl_sn_glycero_3_phosphocholin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + O2 = 11R-hydroperoxy-(5Z,8Z,12E,14Z)-eicosatetraenoate",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + O2 = 11R-hydroperoxy-(5Z,8Z,12E,14Z)-eicosatetraenoate",
+      "substrates": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_r_hpete",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42280"
+          }
+        ]
+      }
+    }
+  ]
+}

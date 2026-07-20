@@ -26,13 +26,19 @@ pathway isobutanol-to-diphosphate "isobutanol to diphosphate" {
 
   branch from isobutyryl_coa side right {
     isobutyryl_coa
-    <-> ec_2_3_1_156 [2.3.1.156] +malonyl-coa +hplus +co2 +coa
-    2_isobutyrylphloroglucinol
+    <-> . +carnitine +coa
+    o_isobutyryl_l_carnitine
   }
 
-  branch from ppi side left {
+  branch from isobutyrate side left {
+    isobutyrate
+    <-> . +1s_3br_4r_5ar_9ar_9br_11as_1_4r_5_2s_3_3_dimeth +fmnh2 +o2 +fmn +h2o +hplus
+    1s_3br_4r_5ar_9ar_9br_11as_1_1_hydroxy_4_oxobut
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_62 [4.2.3.62] +2_cis_6_trans_farnesyl_diphosphate
-    cadinene
+    <-> ec_4_2_3_122 [4.2.3.122] +gpp
+    pinene
   }
 }

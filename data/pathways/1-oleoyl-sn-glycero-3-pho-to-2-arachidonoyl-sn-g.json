@@ -161,12 +161,23 @@
       }
     },
     {
-      "id": "oleoyl_coa",
-      "name": "oleoyl-CoA",
-      "formula": "C39H64N7O17P3S",
-      "charge": -4,
+      "id": "1_oleoyl_sn_glycero_3_phosphoserine",
+      "name": "1-oleoyl-sn-glycero-3-phosphoserine",
+      "short": "1-oleoyl-sn-glycero…",
+      "formula": "C24H45NO9P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57387"
+        "chebi": "CHEBI:74617"
+      }
+    },
+    {
+      "id": "sn_glycero_3_phosphoserine",
+      "name": "sn-glycero-3-phosphoserine",
+      "short": "sn-glycero-3-phosph…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64765"
       }
     },
     {
@@ -206,6 +217,25 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "1_acyl_2_arachidonoyl_sn_glycero_3_phosphate",
+      "name": "1-acyl-2-arachidonoyl-sn-glycero-3-phosphate",
+      "short": "1-acyl-2-arachidono…",
+      "formula": "C24H36O8PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:74922"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
       }
     }
   ],
@@ -424,11 +454,11 @@
     },
     {
       "id": "r6",
-      "name": "(9Z)-octadecenoyl-CoA + H2O = (9Z)-octadecenoate + CoA + H(+)",
-      "equation": "(9Z)-octadecenoyl-CoA + H2O = (9Z)-octadecenoate + CoA + H(+)",
+      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + H2O = sn-glycero-3-phospho-L-serine...",
+      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + H2O = sn-glycero-3-phospho-L-serine + (9Z)-octadecenoate + H(+)",
       "substrates": [
         {
-          "metabolite": "oleoyl_coa",
+          "metabolite": "1_oleoyl_sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
@@ -438,11 +468,11 @@
       ],
       "products": [
         {
-          "metabolite": "oleate",
+          "metabolite": "sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "oleate",
           "stoichiometry": 1
         },
         {
@@ -453,14 +483,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:40139"
+        "rhea": "RHEA:40499"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40139"
+            "id": "RHEA:40499"
           }
         ]
       }
@@ -539,6 +569,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:43484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "a 1-acyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate + H2O = 2-(5Z,8Z,11Z...",
+      "equation": "a 1-acyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate + H2O = 2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_2_arachidonoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_arachidonoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:73975"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73975"
           }
         ]
       }

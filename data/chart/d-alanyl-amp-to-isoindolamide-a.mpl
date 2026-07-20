@@ -22,7 +22,7 @@ pathway d-alanyl-amp-to-isoindolamide-a "D-alanyl-AMP to isoindolamide A" {
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_cysteinyl_amp +amp +hplus
-    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
+    <-> . +o_s_3_2_4_dioxopentyl_2_3_6_8_9_pentahydroxy_1_o +hplus
+    3_acetyl_4a_6_7_9_12a_pentahydroxy_4_5_dioxo_1_4
   }
 }

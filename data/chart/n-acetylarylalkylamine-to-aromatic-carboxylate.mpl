@@ -18,13 +18,13 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
 
   branch from acetate side left {
     acetate
-    <-> ec_2_5_1_51 [2.5.1.51] +1h_pyrazole +o_acetyl_l_serine +hplus
-    3_pyrazol_1_yl_l_alanine
+    <-> ec_1_13_12_4 [1.13.12.4] +o2 +co2 +h2o
+    lactate
   }
 
   branch from arenecarbaldehyde side right {
     arenecarbaldehyde
-    <-> ec_1_1_1_90 [1.1.1.90] +nad +nadh +hplus
+    <-> ec_1_1_3_7 [1.1.3.7] +o2 +h2o2
     aromatic_primary_alcohol
   }
 
@@ -36,7 +36,7 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_7_1_62 [2.7.1.62] +phosphoramidate +d_hexose +hplus
-    d_hexose_1_phosphate
+    <-> ec_2_7_2_2 [2.7.2.2] +hco3 +atp +adp +h2o +hplus
+    carbamoyl_p
   }
 }

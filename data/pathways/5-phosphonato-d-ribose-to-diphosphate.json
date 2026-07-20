@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-phosphonato-d-ribose-to-diphosphate",
   "name": "5-phosphonato-α-D-ribose… to diphosphate",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from 5-phosphonato-α-D-ribose cyclic-1,2-phosphate(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -76,21 +76,22 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:37563"
       }
     },
     {
-      "id": "adp_d_ribose",
-      "name": "ADP-D-ribose",
-      "formula": "C15H21N5O14P2",
+      "id": "cdp_d_ribose",
+      "name": "CDP-D-ribose",
+      "formula": "C14H21N3O15P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57967"
+        "chebi": "CHEBI:137525"
       }
     },
     {
@@ -103,52 +104,22 @@
       }
     },
     {
-      "id": "s_adp_d_ribosyl_l_cysteine_2",
-      "name": "S-(ADP-D-ribosyl)-L-cysteine(2−)",
-      "short": "S-(ADP-D-ribosyl)-L…",
-      "formula": "C18H24N6O14P2S",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:140607"
-      }
-    },
-    {
-      "id": "l_cysteine",
-      "name": "L-cysteine",
-      "formula": "C3H5NOS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29950"
-      }
-    },
-    {
-      "id": "sn_glycerol_1_phosphate",
-      "name": "sn-glycerol 1-phosphate",
-      "short": "sn-glycerol 1-P",
-      "formula": "C3H7O6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57685"
-      }
-    },
-    {
-      "id": "all_trans_heptaprenyl_diphosphate",
-      "name": "all-trans-heptaprenyl diphosphate",
-      "short": "all-trans-heptapren…",
-      "formula": "C35H57O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58206"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "3_heptaprenyl_sn_glycero_1_phosphate",
-      "name": "3-heptaprenyl-sn-glycero-1-phosphate",
-      "short": "3-heptaprenyl-sn-gl…",
-      "formula": "C38H63O6P",
-      "charge": -2,
+      "id": "sesquisabinene_a",
+      "name": "sesquisabinene A",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64781"
+        "chebi": "CHEBI:143551"
       }
     }
   ],
@@ -158,20 +129,6 @@
       "name": "phosphoribosyl 1,2-cyclic phosphate 1,2-diphosphodiesterase",
       "ec": [
         "3.1.4.57"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_96",
-      "name": "ADP-D-ribose pyrophosphorylase",
-      "ec": [
-        "2.7.7.96"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_n9",
-      "name": "heptaprenylglyceryl phosphate synthase",
-      "ec": [
-        "2.5.1.n9"
       ]
     }
   ],
@@ -268,16 +225,15 @@
     },
     {
       "id": "r3",
-      "name": "ADP-D-ribose pyrophosphorylase",
-      "equation": "D-ribose 5-phosphate + ATP + H(+) = ADP-D-ribose + diphosphate",
-      "ec": "2.7.7.96",
+      "name": "D-ribose 5-phosphate + CTP + H(+) = CDP-D-ribose + diphosphate",
+      "equation": "D-ribose 5-phosphate + CTP + H(+) = CDP-D-ribose + diphosphate",
       "substrates": [
         {
           "metabolite": "d_ribofuranose_5_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "ctp",
           "stoichiometry": 1
         },
         {
@@ -287,7 +243,7 @@
       ],
       "products": [
         {
-          "metabolite": "adp_d_ribose",
+          "metabolite": "cdp_d_ribose",
           "stoichiometry": 1
         },
         {
@@ -295,83 +251,34 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_96"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:50248"
+        "rhea": "RHEA:53872"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50248"
+            "id": "RHEA:53872"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + H2O = ADP-D-ribose + L-cysteinyl-[protein]",
-      "equation": "S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + H2O = ADP-D-ribose + L-cysteinyl-[protein]",
+      "name": "(2E,6E)-farnesyl diphosphate = sesquisabinene A + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = sesquisabinene A + diphosphate",
       "substrates": [
         {
-          "metabolite": "s_adp_d_ribosyl_l_cysteine_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "adp_d_ribose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_cysteine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:58240"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:58240"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "heptaprenylglyceryl phosphate synthase",
-      "equation": "sn-glycerol 1-phosphate + all-trans-heptaprenyl diphosphate = 3-heptaprenyl-sn-glycero-1-phosphate + diphosphate",
-      "ec": "2.5.1.n9",
-      "substrates": [
-        {
-          "metabolite": "sn_glycerol_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "all_trans_heptaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_heptaprenyl_sn_glycero_1_phosphate",
+          "metabolite": "sesquisabinene_a",
           "stoichiometry": 1
         },
         {
@@ -379,22 +286,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_n9"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:33495"
+        "rhea": "RHEA:60020"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33495"
+            "id": "RHEA:60020"
           }
         ]
       }

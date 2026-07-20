@@ -1,0 +1,182 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-14-16-trihydroxyconfer-to-14-deacetyl-astellol",
+  "name": "7β,14,16-trihydroxyconfer… to 14-deacetyl astellolide A",
+  "category": "other",
+  "summary": "A 2-step route from 7β,14,16-trihydroxyconfertifolin to 14-deacetyl astellolide A, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81067"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231784"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_14_16_trihydroxyconfertifolin",
+      "name": "7β,14,16-trihydroxyconfertifolin",
+      "short": "7β,14,16-trihydroxy…",
+      "formula": "C15H22O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231784"
+      }
+    },
+    {
+      "id": "benzoate",
+      "name": "benzoate",
+      "formula": "C7H5O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16150"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "dideacetyl_astellolide_a",
+      "name": "dideacetyl astellolide A",
+      "short": "dideacetyl…",
+      "formula": "C22H26O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231786"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "14_deacetyl_astellolide_a",
+      "name": "14-deacetyl astellolide A",
+      "short": "14-deacetyl…",
+      "formula": "C24H28O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149667"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "7beta,14,16-trihydroxyconfertifolin + benzoate + H(+) = dideacetyl astellolide A + H2O",
+      "equation": "7beta,14,16-trihydroxyconfertifolin + benzoate + H(+) = dideacetyl astellolide A + H2O",
+      "substrates": [
+        {
+          "metabolite": "7_14_16_trihydroxyconfertifolin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dideacetyl_astellolide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81067"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dideacetyl astellolide A + acetyl-CoA = 14-deacetyl astellolide A + CoA",
+      "equation": "dideacetyl astellolide A + acetyl-CoA = 14-deacetyl astellolide A + CoA",
+      "substrates": [
+        {
+          "metabolite": "dideacetyl_astellolide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "14_deacetyl_astellolide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:81075"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81075"
+          }
+        ]
+      }
+    }
+  ]
+}

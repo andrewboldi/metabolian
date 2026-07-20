@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-saccharopinate-to-l-2-aminoadipate",
   "name": "L-saccharopinate to L-2-aminoadipate",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from L-saccharopinate(1−) to L-2-aminoadipate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -110,24 +110,6 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
       "id": "nh3",
       "name": "Ammonia (NH3)",
       "formula": "H4N",
@@ -137,13 +119,12 @@
       }
     },
     {
-      "id": "6_acetamido_3_aminohexanoic_acid",
-      "name": "6-acetamido-3-aminohexanoic acid",
-      "short": "6-acetamido-3-amino…",
-      "formula": "C8H16N2O3",
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58498"
+        "chebi": "CHEBI:58095"
       }
     },
     {
@@ -156,22 +137,60 @@
       }
     },
     {
-      "id": "6_acetamido_3_oxohexanoate",
-      "name": "6-acetamido-3-oxohexanoate",
-      "short": "6-acetamido-3-oxohe…",
-      "formula": "C8H12NO4",
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17982"
+        "chebi": "CHEBI:18005"
       }
     },
     {
-      "id": "l_pipecolic_acid",
-      "name": "L-pipecolic acid",
-      "formula": "C6H11NO2",
+      "id": "7_n_5s_5_amino_5_carboxypentyl_formamidino_7_dea",
+      "name": "7-N-[(5S)-5-amino-5-carboxypentyl]formamidino-7-deazaguanosine 5'-monophosphate zwitterion",
+      "short": "7-N-[(5S)-5-amino-5…",
+      "formula": "C18H26N7O9P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61185"
+        "chebi": "CHEBI:145542"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "archaeosine_5_phosphate_zwitterionic",
+      "name": "archaeosine 5'-phosphate zwitterionic",
+      "short": "archaeosine 5'-P…",
+      "formula": "C12H15N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138803"
+      }
+    },
+    {
+      "id": "5_deoxyadenosine",
+      "name": "5'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17319"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
       }
     }
   ],
@@ -184,24 +203,17 @@
       ]
     },
     {
-      "id": "ec_1_4_3_20",
-      "name": "L-lysine 6-oxidase",
+      "id": "ec_2_6_1_5",
+      "name": "tyrosine transaminase",
       "ec": [
-        "1.4.3.20"
+        "2.6.1.5"
       ]
     },
     {
-      "id": "ec_2_6_1_65",
-      "name": "N(6)-acetyl-beta-lysine transaminase",
+      "id": "ec_2_6_1_57",
+      "name": "aromatic-amino-acid transaminase",
       "ec": [
-        "2.6.1.65"
-      ]
-    },
-    {
-      "id": "ec_1_5_3_7",
-      "name": "L-pipecolate oxidase",
-      "ec": [
-        "1.5.3.7"
+        "2.6.1.57"
       ]
     }
   ],
@@ -351,16 +363,15 @@
     },
     {
       "id": "r4",
-      "name": "L-lysine 6-oxidase",
-      "equation": "L-lysine + O2 + H2O = (S)-2-amino-6-oxohexanoate + H2O2 + NH4(+)",
-      "ec": "1.4.3.20",
+      "name": "L-lysine + NAD(+) + H2O = (S)-2-amino-6-oxohexanoate + NH4(+) + NADH + H(+)",
+      "equation": "L-lysine + NAD(+) + H2O = (S)-2-amino-6-oxohexanoate + NH4(+) + NADH + H(+)",
       "substrates": [
         {
           "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -374,42 +385,41 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "nh3",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "nadh",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_1_4_3_20"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:22548"
+        "rhea": "RHEA:25117"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22548"
+            "id": "RHEA:25117"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N(6)-acetyl-beta-lysine transaminase",
-      "equation": "6-acetamido-3-aminohexanoate + 2-oxoglutarate = 6-acetamido-3-oxohexanoate + L-glutamate",
-      "ec": "2.6.1.65",
+      "name": "tyrosine transaminase",
+      "equation": "L-phenylalanine + 2-oxoglutarate = 3-phenylpyruvate + L-glutamate",
+      "ec": "2.6.1.5",
       "substrates": [
         {
-          "metabolite": "6_acetamido_3_aminohexanoic_acid",
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         },
         {
@@ -419,7 +429,7 @@
       ],
       "products": [
         {
-          "metabolite": "6_acetamido_3_oxohexanoate",
+          "metabolite": "keto_phenylpyruvate",
           "stoichiometry": 1
         },
         {
@@ -429,69 +439,71 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_65"
+          "enzyme": "ec_2_6_1_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:16889"
+        "rhea": "RHEA:25152"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16889"
+            "id": "RHEA:25152"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-pipecolate oxidase",
-      "equation": "L-pipecolate + O2 = L-1-piperideine-6-carboxylate + H2O2 + H(+)",
-      "ec": "1.5.3.7",
+      "name": "7-N-[(5S)-5-amino-5-carboxypentyl]formamidino-7-deazaguanosine(15) in tRNA + S-adenosyl...",
+      "equation": "7-N-[(5S)-5-amino-5-carboxypentyl]formamidino-7-deazaguanosine(15) in tRNA + S-adenosyl-L-methionine = archaeosine(15) in tRNA + L-1-piperideine-6-carboxylate + 5'-deoxyadenosine + L-methionine + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "l_pipecolic_acid",
+          "metabolite": "7_n_5s_5_amino_5_carboxypentyl_formamidino_7_dea",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
+          "metabolite": "archaeosine_5_phosphate_zwitterionic",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "s_1_piperideine_6_carboxylate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_5_3_7"
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:11992"
+        "rhea": "RHEA:63220"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11992"
+            "id": "RHEA:63220"
           }
         ]
       }

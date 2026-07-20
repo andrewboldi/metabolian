@@ -4,21 +4,13 @@
 # edit the generator, not this file.
 
 pathway 2-1-2-epoxy-1-2-dihydrop-to-3-oxo-5-6-dehydrosub "2-(1,2-epoxy-1,2-dihydrop… to 3-oxo-5,6-dehydrosuberyl-…" {
-  spacing 280
+  spacing 268
 
   spine at 0,0 {
     2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa
     <-> ec_5_3_3_18 [5.3.3.18]
     2_oxepin_2_3h_ylideneacetyl_coa
-    <-> ec_3_3_2_12 [3.3.2.12] +h2o
-    3_8_dioxooct_5_enoyl_coa
-    <-> ec_1_2_1_91 [1.2.1.91] +nadp +h2o -nadph -hplus
+    <-> . +nadp +h2o -nadph -hplus
     3_oxo_5_6_dehydrosuberyl_coa
-  }
-
-  branch from 3_oxo_5_6_dehydrosuberyl_coa side left {
-    3_oxo_5_6_dehydrosuberyl_coa
-    <-> ec_2_3_1_223 [2.3.1.223] +acetyl_coa +coa
-    2_3_didehydroadipoyl_coa
   }
 }

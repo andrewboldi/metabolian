@@ -26,19 +26,19 @@ pathway 8-apo-caroten-8-al-to-fmn "8'-apo-β,ψ-caroten-8'-al to FMN" {
 
   branch from all_trans_retinal side right {
     all_trans_retinal
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    <-> ec_1_1_1_105 [1.1.1.105] +nad +nadh +hplus
     all_trans_retinol
   }
 
   branch from all_trans_retinoate side left {
     all_trans_retinoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    all_trans_18_hydroxyretinoate
+    <-> . +udp_d_glucuronate +udp
+    1_o_all_trans_retinoyl_d_glucuronate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_10 [1.14.14.10] +nitrilotriacetate +fmnh2 +o2 +glyoxylate +h2o
-    ammoniodiacetate
+    <-> ec_1_14_14_42 [1.14.14.42] +l_pentahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_8_methylsulfanyl_octanal_oxime
   }
 }

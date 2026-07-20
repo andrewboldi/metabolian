@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-mandelate-to-1-2-benzoquinone",
   "name": "(S)-mandelate to 1,2-benzoquinone",
-  "category": "energy-metabolism",
+  "category": "redox-detox",
   "summary": "A 8-step route from (S)-mandelate to 1,2-benzoquinone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -191,59 +191,86 @@
       }
     },
     {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
-      "charge": 0,
+      "id": "mandelate",
+      "name": "mandelate",
+      "formula": "C8H7O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:13193"
+        "chebi": "CHEBI:25147"
       }
     },
     {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17499"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "benzyl_alcohol",
-      "name": "benzyl alcohol",
-      "formula": "C7H8O",
-      "charge": 0,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:17987"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "benzyl_benzoate",
-      "name": "benzyl benzoate",
-      "formula": "C14H12O2",
-      "charge": 0,
+      "id": "2_4_6_trihydroxybenzophenone",
+      "name": "2,4,6-trihydroxybenzophenone",
+      "short": "2,4,6-trihydroxyben…",
+      "formula": "C13H9O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:41237"
+        "chebi": "CHEBI:77765"
       }
     },
     {
-      "id": "7_14_16_trihydroxyconfertifolin",
-      "name": "7β,14,16-trihydroxyconfertifolin",
-      "short": "7β,14,16-trihydroxy…",
-      "formula": "C15H22O5",
-      "charge": 0,
+      "id": "n_carboxylatomethyl_d_alanine",
+      "name": "N-(carboxylatomethyl)-D-alanine",
+      "short": "N-(carboxylatomethy…",
+      "formula": "C5H8NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:231784"
+        "chebi": "CHEBI:57773"
       }
     },
     {
-      "id": "dideacetyl_astellolide_a",
-      "name": "dideacetyl astellolide A",
-      "short": "dideacetyl…",
-      "formula": "C22H26O6",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "phenol",
+      "name": "phenol",
+      "formula": "C6H6O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:231786"
+        "chebi": "CHEBI:15882"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
       }
     }
   ],
@@ -312,17 +339,24 @@
       ]
     },
     {
-      "id": "ec_1_1_99_31",
-      "name": "(S)-mandelate dehydrogenase",
+      "id": "ec_2_3_1_220",
+      "name": "2,4,6-trihydroxybenzophenone synthase",
       "ec": [
-        "1.1.99.31"
+        "2.3.1.220"
       ]
     },
     {
-      "id": "ec_2_3_1_196",
-      "name": "benzyl alcohol O-benzoyltransferase",
+      "id": "ec_1_5_1_22",
+      "name": "strombine dehydrogenase",
       "ec": [
-        "2.3.1.196"
+        "1.5.1.22"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_20",
+      "name": "phenol 2-monooxygenase (FADH2)",
+      "ec": [
+        "1.14.14.20"
       ]
     }
   ],
@@ -754,16 +788,15 @@
     },
     {
       "id": "r10",
-      "name": "(S)-mandelate dehydrogenase",
-      "equation": "(S)-mandelate + A = phenylglyoxylate + AH2",
-      "ec": "1.1.99.31",
+      "name": "mandelate + O2 = phenylglyoxylate + H2O2",
+      "equation": "mandelate + O2 = phenylglyoxylate + H2O2",
       "substrates": [
         {
-          "metabolite": "s_mandelate",
+          "metabolite": "mandelate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
@@ -773,96 +806,90 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "h2o2",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_99_31"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:15749"
+        "rhea": "RHEA:68968"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15749"
+            "id": "RHEA:68968"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "benzyl alcohol O-benzoyltransferase",
-      "equation": "benzyl alcohol + benzoyl-CoA = benzyl benzoate + CoA",
-      "ec": "2.3.1.196",
+      "name": "2,4,6-trihydroxybenzophenone synthase",
+      "equation": "benzoyl-CoA + 3 malonyl-CoA + 2 H(+) = 2,4,6-trihydroxybenzophenone + 3 CO2 + 4 CoA",
+      "ec": "2.3.1.220",
       "substrates": [
-        {
-          "metabolite": "benzyl_alcohol",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "benzoyl_coa",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "benzyl_benzoate",
+          "metabolite": "2_4_6_trihydroxybenzophenone",
           "stoichiometry": 1
         },
         {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
           "metabolite": "coa",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_196"
+          "enzyme": "ec_2_3_1_220"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:30411"
+        "rhea": "RHEA:35143"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30411"
+            "id": "RHEA:35143"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "7beta,14,16-trihydroxyconfertifolin + benzoate + H(+) = dideacetyl astellolide A + H2O",
-      "equation": "7beta,14,16-trihydroxyconfertifolin + benzoate + H(+) = dideacetyl astellolide A + H2O",
+      "name": "strombine dehydrogenase",
+      "equation": "N-(carboxymethyl)-D-alanine + NAD(+) + H2O = glycine + pyruvate + NADH + H(+)",
+      "ec": "1.5.1.22",
       "substrates": [
         {
-          "metabolite": "7_14_16_trihydroxyconfertifolin",
+          "metabolite": "n_carboxylatomethyl_d_alanine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "benzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dideacetyl_astellolide_a",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -870,17 +897,97 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_22"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:81067"
+        "rhea": "RHEA:14061"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:81067"
+            "id": "RHEA:14061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "phenol 2-monooxygenase (FADH2)",
+      "equation": "phenol + FADH2 + O2 = catechol + FAD + H2O + H(+)",
+      "ec": "1.14.14.20",
+      "substrates": [
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:49280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49280"
           }
         ]
       }

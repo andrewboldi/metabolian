@@ -18,25 +18,25 @@ pathway casomorphin-7-human-to-2-methylbutanal "β-casomorphin-7 (human) to 2-me
 
   branch from isoleucine side left {
     isoleucine
-    <-> . +7_isojasmonate +atp +amp +ppi +hplus
-    n_7_isojasmonyl_l_isoleucinate
+    <-> ec_1_14_11_74 [1.14.11.74] +akg +o2 +succinate +co2
+    31_hydroxy_l_isoleucine
   }
 
   branch from kmv side right {
     kmv
-    <-> . +isoleucine +glyoxylate
-    glycine
+    <-> . +d_alloisoleucine +o2 +h2o +h2o2
+    nh3
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_5 [2.6.1.5] +l_phenylalanine +akg
-    keto_phenylpyruvate
+    <-> ec_3_4_19_16 [3.4.19.16] +glucys_ian_gly +h2o
+    cys_ian_gly
   }
 
   branch from 2_methylbutanal side right {
     2_methylbutanal
-    <-> . +2_methylbutan_1_aminium +nad +h2o +nadh +hplus
-    nh3
+    <-> . +nad +h2o +nh3 +nadh +hplus
+    2_methylbutan_1_aminium
   }
 }

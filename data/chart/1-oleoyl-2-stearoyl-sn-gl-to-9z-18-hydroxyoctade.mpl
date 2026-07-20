@@ -26,7 +26,7 @@ pathway 1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade "1-oleoyl-2-stearoyl-sn
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_trihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_6_methylsulfanyl_hexanal_oxime
+    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 +h2o +hplus
+    monacolin_l_carboxylate
   }
 }

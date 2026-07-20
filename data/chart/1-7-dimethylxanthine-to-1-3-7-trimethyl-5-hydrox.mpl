@@ -16,13 +16,19 @@ pathway 1-7-dimethylxanthine-to-1-3-7-trimethyl-5-hydrox "1,7-dimethylxanthine t
     1_3_7_trimethyl_5_hydroxyisouric_acid
   }
 
-  branch from sah side left {
+  branch from caffeine side left {
+    caffeine
+    <-> ec_1_14_13_178 [1.14.13.178] +nadph +o2 +hplus +formaldehyde +nadp +h2o
+    theobromine
+  }
+
+  branch from sah side right {
     sah
     <-> ec_2_1_1_17 [2.1.1.17] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +sam +hplus
     1_2_diacyl_sn_glycero_3_phospho_n_methylethanola
   }
 
-  branch from 1_3_7_trimethyluric_acid side right {
+  branch from 1_3_7_trimethyluric_acid side left {
     1_3_7_trimethyluric_acid
     <-> . +sam +sah +hplus
     1_3_7_9_tetramethyluric_acid

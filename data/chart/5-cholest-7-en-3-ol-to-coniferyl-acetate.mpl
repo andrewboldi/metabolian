@@ -20,7 +20,7 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to con
     ergosta_5_7_22_24_28_tetraen_3_yl_acetate
     <-> . +h2o -acetate -hplus
     ergosta_5_7_22_24_28_tetraen_3_ol
-    <-> ec_1_1_1_318 [1.1.1.318] +eugenol +acetate +nadp -nadph
+    <-> ec_1_1_1_319 [1.1.1.319] +trans_isoeugenol +acetate +nadp -nadph
     coniferyl_acetate
   }
 
@@ -32,19 +32,13 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to con
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_67 [2.1.1.67] +mercaptopurine +sam +hplus
-    6_methylthiopurine
+    <-> ec_2_1_1_301 [2.1.1.301] +l_alaniniumyl_group +sam +hplus
+    n_n_dimethyl_l_alanyl_group
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_4_1_3_26 [4.1.3.26] +3_hydroxy_3_4_methylpent_3_en_1_yl_glutaryl_coa
-    7_methyl_3_oxooct_6_enoyl_coa
-  }
-
-  branch from coniferyl_acetate side right {
-    coniferyl_acetate
-    <-> . +acetyl_coa +coa
-    coniferol
+    <-> . +1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 }

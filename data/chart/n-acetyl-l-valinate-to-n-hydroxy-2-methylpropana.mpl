@@ -22,15 +22,9 @@ pathway n-acetyl-l-valinate-to-n-hydroxy-2-methylpropana "N-acetyl-L-valinate to
     n_amidino_l_valine
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_muramate +h2o
-    n_acetyl_d_glucosaminyl_1_4_d_muramate_zwitterio
-  }
-
-  branch from 2_methylpropanaminium side left {
+  branch from 2_methylpropanaminium side right {
     2_methylpropanaminium
-    <-> ec_1_14_14_30 [1.14.14.30] +fmnh2 +o2 +n_hydroxy_2_methylpropanamine +h2o +hplus
-    fmn
+    <-> . +e_e_piperonyl_coa +coa +hplus
+    e_e_piperlonguminine
   }
 }

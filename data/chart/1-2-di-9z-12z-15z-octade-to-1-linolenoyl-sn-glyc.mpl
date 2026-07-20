@@ -20,7 +20,7 @@ pathway 1-2-di-9z-12z-15z-octade-to-1-linolenoyl-sn-glyc "1,2-di-(9Z,12Z,15Z-oct
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
-    chloromethane
+    <-> ec_2_1_1_204 [2.1.1.204] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 }

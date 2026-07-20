@@ -160,60 +160,51 @@
       }
     },
     {
-      "id": "palmitoyl_coa",
-      "name": "Palmitoyl-CoA",
-      "formula": "C37H62N7O17P3S",
-      "charge": -4,
+      "id": "31_hydroxy_l_isoleucine",
+      "name": "31-hydroxy-L-isoleucine",
+      "short": "31-hydroxy-L-isoleu…",
+      "formula": "C6H13NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57379"
+        "chebi": "CHEBI:149627"
       }
     },
     {
-      "id": "2_hydroxypalmitoyl_coa",
-      "name": "2-hydroxypalmitoyl-CoA",
-      "short": "2-hydroxypalmitoyl-…",
-      "formula": "C37H62N7O18P3S",
-      "charge": -4,
+      "id": "4s_31_4_dihydroxy_l_isoleucine",
+      "name": "(4S)-31,4-dihydroxy-L-isoleucine",
+      "short": "31,4-dihydroxy-L-is…",
+      "formula": "C6H13NO4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74115"
+        "chebi": "CHEBI:149628"
       }
     },
     {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:58635"
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
+      "id": "13_epi_manool",
+      "name": "13-epi-manool",
+      "formula": "C20H34O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
-      "id": "7_3_methylbut_2_enyl_l_tryptophan",
-      "name": "7-(3-methylbut-2-enyl)-L-tryptophan",
-      "short": "7-(3-methylbut-2-en…",
-      "formula": "C16H20N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:62497"
+        "chebi": "CHEBI:76944"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_5_1_80",
-      "name": "7-dimethylallyltryptophan synthase",
+      "id": "ec_1_14_11_75",
+      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
       "ec": [
-        "2.5.1.80"
+        "1.14.11.75"
       ]
     }
   ],
@@ -404,11 +395,12 @@
     },
     {
       "id": "r5",
-      "name": "hexadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyhexadecanoyl-CoA + succinate + CO2",
-      "equation": "hexadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyhexadecanoyl-CoA + succinate + CO2",
+      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
+      "equation": "3(1)-hydroxy-L-isoleucine + 2-oxoglutarate + O2 = (4S)-3(1),4-dihydroxy-L-isoleucine + succinate + CO2",
+      "ec": "1.14.11.75",
       "substrates": [
         {
-          "metabolite": "palmitoyl_coa",
+          "metabolite": "31_hydroxy_l_isoleucine",
           "stoichiometry": 1
         },
         {
@@ -422,7 +414,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxypalmitoyl_coa",
+          "metabolite": "4s_31_4_dihydroxy_l_isoleucine",
           "stoichiometry": 1
         },
         {
@@ -434,39 +426,43 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_75"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54596"
+        "rhea": "RHEA:63876"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54596"
+            "id": "RHEA:63876"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "7-dimethylallyltryptophan synthase",
-      "equation": "dimethylallyl diphosphate + L-tryptophan = 7-(3-methylbut-2-enyl)-L-tryptophan + diphosphate",
-      "ec": "2.5.1.80",
+      "name": "(+)-copalyl diphosphate + H2O = 13-epi-manool + diphosphate",
+      "equation": "(+)-copalyl diphosphate + H2O = 13-epi-manool + diphosphate",
       "substrates": [
         {
-          "metabolite": "dmapp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "7_3_methylbut_2_enyl_l_tryptophan",
+          "metabolite": "13_epi_manool",
           "stoichiometry": 1
         },
         {
@@ -474,22 +470,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_80"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:30563"
+        "rhea": "RHEA:40015"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30563"
+            "id": "RHEA:40015"
           }
         ]
       }

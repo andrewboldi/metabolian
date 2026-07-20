@@ -1,0 +1,394 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "codeine-to-morphiniumone",
+  "name": "codeine to morphiniumone",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from codeine(1+) to morphiniumone(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27413"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57871"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "codeine",
+      "name": "codeine",
+      "formula": "C18H22NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57871"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "morphine",
+      "name": "morphine",
+      "formula": "C17H20NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58097"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "morphiniumone",
+      "name": "morphiniumone",
+      "formula": "C17H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57728"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_l_arginine_1",
+      "name": "Nω,N'ω-dimethyl-L-arginine(1+)",
+      "short": "Nω,N'ω-dimethyl-L-a…",
+      "formula": "C8H17N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:88221"
+      }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50347"
+      }
+    },
+    {
+      "id": "3s_3_hydroxy_l_asparagine",
+      "name": "(3S)-3-hydroxy-L-asparagine",
+      "short": "3-hydroxy-L-asparag…",
+      "formula": "C4H6N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138107"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_32",
+      "name": "codeine 3-O-demethylase",
+      "ec": [
+        "1.14.11.32"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_218",
+      "name": "morphine 6-dehydrogenase",
+      "ec": [
+        "1.1.1.218"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_30",
+      "name": "hypoxia-inducible factor-asparagine dioxygenase",
+      "ec": [
+        "1.14.11.30"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "codeine 3-O-demethylase",
+      "equation": "codeine + 2-oxoglutarate + O2 = morphine + formaldehyde + succinate + CO2",
+      "ec": "1.14.11.32",
+      "substrates": [
+        {
+          "metabolite": "codeine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "morphine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27413"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "morphine 6-dehydrogenase",
+      "equation": "morphine + NAD(+) = morphinone + NADH + H(+)",
+      "ec": "1.1.1.218",
+      "substrates": [
+        {
+          "metabolite": "morphine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "morphiniumone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_218"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14317"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14317"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(omega),N(omega)'-dimethyl-L-arginyl-[protein] + 2 2-oxoglutarate + 2 O2 = L-arginyl-[...",
+      "equation": "N(omega),N(omega)'-dimethyl-L-arginyl-[protein] + 2 2-oxoglutarate + 2 O2 = L-arginyl-[protein] + 2 formaldehyde + 2 succinate + 2 CO2",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hypoxia-inducible factor-asparagine dioxygenase",
+      "equation": "L-asparaginyl-[hypoxia-inducible factor alpha subunit] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-asparaginyl-[hypoxia-inducible factor alpha subunit] + succinate + CO2",
+      "ec": "1.14.11.30",
+      "substrates": [
+        {
+          "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_hydroxy_l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54268"
+          }
+        ]
+      }
+    }
+  ]
+}

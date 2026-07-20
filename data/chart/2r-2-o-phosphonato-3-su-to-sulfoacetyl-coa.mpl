@@ -18,21 +18,9 @@ pathway 2r-2-o-phosphonato-3-su-to-sulfoacetyl-coa "(2R)-2-O-phosphonato-3-su…
     sulfoacetyl_coa
   }
 
-  branch from r_3_sulfolactate side left {
-    r_3_sulfolactate
-    <-> ec_1_1_1_308 [1.1.1.308] +nad +h2o +nadh +hplus
-    2r_3_sulfopropanediol
-  }
-
-  branch from sulfonatoacetaldehyde side right {
+  branch from sulfonatoacetaldehyde side left {
     sulfonatoacetaldehyde
-    <-> ec_1_1_1_433 [1.1.1.433] +nad +nadh +hplus
-    isethionate
-  }
-
-  branch from sulfoacetyl_coa side left {
-    sulfoacetyl_coa
-    <-> . +atp +coa +adp +pi
-    sulfonatoacetate
+    <-> . +taurine +iron +h2o +fe2 +hplus
+    nh3
   }
 }

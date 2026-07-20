@@ -24,25 +24,31 @@ pathway n-1-dipalmitoyl-2-linoleo-to-1-butyryl-2-oleoyl "N,1-dipalmitoyl-2-linol
 
   branch from linoleate side left {
     linoleate
-    <-> ec_1_13_11_58 [1.13.11.58] +o2
-    9_s_hpode
+    <-> ec_1_13_11_60 [1.13.11.60] +o2
+    8_r_hpode
   }
 
-  branch from palmitoyl_ethanolamide side right {
-    palmitoyl_ethanolamide
-    <-> . +n_hexadecanoyl_1_1z_octadecenoyl_2_oleoyl_sn_gly +h2o +hplus
-    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_palmitoyl_sn_glycerol_3_phosphate side left {
+  branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
     1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +atp +adp +hplus
-    1_hexadecanoyl_sn_glycerol
+    <-> . +stearoyl_coa +coa
+    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
+  }
+
+  branch from 1_palmitoyl_2_oleoyl_sn_glycero_3_phosphate side left {
+    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphate
+    <-> . +h2o +pi
+    1_palmitoyl_2_oleoyl_sn_glycerol
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    2_linoleoyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi +h2o +hplus
+    2_azelaoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 2_oleoylglycerol side left {
+    2_oleoylglycerol
+    <-> . +lauroyl_coa +coa
+    1_lauroyl_2_oleoyl_sn_glycerol
   }
 }

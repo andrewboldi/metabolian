@@ -112,75 +112,49 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "3_phenylpropanal",
-      "name": "3-phenylpropanal",
-      "formula": "C9H10O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:39940"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:57692"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
+      "id": "trans_cinnamate",
+      "name": "trans-cinnamate",
+      "formula": "C9H7O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:15669"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "e_3_indol_3_yl_acrylate",
+      "name": "(E)-3-(indol-3-yl)acrylate",
+      "short": "3-(indol-3-yl)acryl…",
+      "formula": "C11H8NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:131929"
       }
     }
   ],
@@ -207,10 +181,17 @@
       ]
     },
     {
-      "id": "ec_4_3_1_17",
-      "name": "L-serine ammonia-lyase",
+      "id": "ec_1_3_8_15",
+      "name": "3-(aryl)acrylate reductase",
       "ec": [
-        "4.3.1.17"
+        "1.3.8.15"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_31",
+      "name": "L-tryptophan ammonia lyase",
+      "ec": [
+        "4.3.1.31"
       ]
     }
   ],
@@ -364,19 +345,16 @@
     },
     {
       "id": "r4",
-      "name": "3-phenylpropanoate + ATP + NADPH + H(+) = 3-phenylpropanal + AMP + diphosphate + NADP(+)",
-      "equation": "3-phenylpropanoate + ATP + NADPH + H(+) = 3-phenylpropanal + AMP + diphosphate + NADP(+)",
+      "name": "3-(aryl)acrylate reductase",
+      "equation": "3-phenylpropanoate + oxidized [electron-transfer flavoprotein] + H(+) = (E)-cinnamate + reduced [electron-transfer flavoprotein]",
+      "ec": "1.3.8.15",
       "substrates": [
         {
           "metabolite": "3_phenylpropionate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "fad",
           "stoichiometry": 1
         },
         {
@@ -386,51 +364,48 @@
       ],
       "products": [
         {
-          "metabolite": "3_phenylpropanal",
+          "metabolite": "trans_cinnamate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "fadh2",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
+          "enzyme": "ec_1_3_8_15"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:68904"
+        "rhea": "RHEA:59996"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68904"
+            "id": "RHEA:59996"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-serine ammonia-lyase",
-      "equation": "L-serine = pyruvate + NH4(+)",
-      "ec": "4.3.1.17",
+      "name": "L-tryptophan ammonia lyase",
+      "equation": "L-tryptophan = (E)-3-(indol-3-yl)acrylate + NH4(+)",
+      "ec": "4.3.1.31",
       "substrates": [
         {
-          "metabolite": "serine",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pyruvate",
+          "metabolite": "e_3_indol_3_yl_acrylate",
           "stoichiometry": 1
         },
         {
@@ -440,20 +415,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_17"
+          "enzyme": "ec_4_3_1_31"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:19169"
+        "rhea": "RHEA:41259"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19169"
+            "id": "RHEA:41259"
           }
         ]
       }

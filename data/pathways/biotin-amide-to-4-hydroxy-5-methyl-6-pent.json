@@ -201,34 +201,6 @@
       }
     },
     {
-      "id": "biotinyl_coa",
-      "name": "biotinyl-CoA",
-      "formula": "C31H46N9O18P3S2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57370"
-      }
-    },
-    {
-      "id": "n_acylammonia",
-      "name": "N-acylammonia",
-      "formula": "CH2NOR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:83628"
-      }
-    },
-    {
-      "id": "monocarboxylic_acid_anion",
-      "name": "monocarboxylic acid anion",
-      "short": "monocarboxylic…",
-      "formula": "CO2R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:35757"
-      }
-    },
-    {
       "id": "biotinyl_5_amp",
       "name": "biotinyl-5'-AMP",
       "formula": "C20H27N7O9PS",
@@ -238,32 +210,69 @@
       }
     },
     {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
-      "charge": -3,
+      "id": "o_carbamoyl_l_serine",
+      "name": "O-carbamoyl-L-serine",
+      "formula": "C4H8N2O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:57594"
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57912"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "4_3_methylbut_2_enyl_l_tryptophan",
-      "name": "4-(3-methylbut-2-enyl)-L-tryptophan",
-      "short": "4-(3-methylbut-2-en…",
-      "formula": "C16H20N2O2",
+      "id": "camp",
+      "name": "3',5'-Cyclic AMP (cAMP)",
+      "short": "3',5'-Cyclic AMP…",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58165"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "4_hydroxy_5_methyl_6_heptadecylpyran_2_one",
+      "name": "4-hydroxy-5-methyl-6-heptadecylpyran-2-one",
+      "short": "4-hydroxy-5-methyl-…",
+      "formula": "C23H40O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58209"
+        "chebi": "CHEBI:84255"
       }
     }
   ],
@@ -283,24 +292,24 @@
       ]
     },
     {
-      "id": "ec_6_2_1_11",
-      "name": "biotin--CoA ligase",
+      "id": "ec_4_3_1_13",
+      "name": "carbamoyl-serine ammonia-lyase",
       "ec": [
-        "6.2.1.11"
+        "4.3.1.13"
       ]
     },
     {
-      "id": "ec_3_5_1_4",
-      "name": "amidase",
+      "id": "ec_4_6_1_1",
+      "name": "adenylate cyclase",
       "ec": [
-        "3.5.1.4"
+        "4.6.1.1"
       ]
     },
     {
-      "id": "ec_2_5_1_34",
-      "name": "4-dimethylallyltryptophan synthase",
+      "id": "ec_2_3_1_38",
+      "name": "[acyl-carrier-protein] S-acetyltransferase",
       "ec": [
-        "2.5.1.34"
+        "2.3.1.38"
       ]
     }
   ],
@@ -538,9 +547,8 @@
     },
     {
       "id": "r6",
-      "name": "biotin--CoA ligase",
-      "equation": "biotin + ATP + CoA = biotinyl-CoA + AMP + diphosphate",
-      "ec": "6.2.1.11",
+      "name": "biotin + ATP + H(+) = biotinyl-5'-AMP + diphosphate",
+      "equation": "biotin + ATP + H(+) = biotinyl-5'-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "biotinate",
@@ -551,17 +559,102 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "biotinyl_coa",
+          "metabolite": "biotinyl_5_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:31115"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "carbamoyl-serine ammonia-lyase",
+      "equation": "O-carbamoyl-L-serine + H2O + H(+) = pyruvate + 2 NH4(+) + CO2",
+      "ec": "4.3.1.13",
+      "substrates": [
+        {
+          "metabolite": "o_carbamoyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:15445"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "adenylate cyclase",
+      "equation": "ATP = 3',5'-cyclic AMP + diphosphate",
+      "ec": "4.6.1.1",
+      "substrates": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "camp",
           "stoichiometry": 1
         },
         {
@@ -571,90 +664,84 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_11"
+          "enzyme": "ec_4_6_1_1"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:19681"
+        "rhea": "RHEA:15389"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19681"
+            "id": "RHEA:15389"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "amidase",
-      "equation": "a monocarboxylic acid amide + H2O = a monocarboxylate + NH4(+)",
-      "ec": "3.5.1.4",
+      "id": "r9",
+      "name": "[acyl-carrier-protein] S-acetyltransferase",
+      "equation": "holo-[ACP] + acetyl-CoA = acetyl-[ACP] + CoA",
+      "ec": "2.3.1.38",
       "substrates": [
         {
-          "metabolite": "n_acylammonia",
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "monocarboxylic_acid_anion",
+          "metabolite": "acetyl-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_4"
+          "enzyme": "ec_2_3_1_38"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:12020"
+        "rhea": "RHEA:41788"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12020"
+            "id": "RHEA:41788"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "biotinyl-5'-AMP + L-lysyl-[protein] = N(6)-biotinyl-L-lysyl-[protein] + AMP + 2 H(+)",
-      "equation": "biotinyl-5'-AMP + L-lysyl-[protein] = N(6)-biotinyl-L-lysyl-[protein] + AMP + 2 H(+)",
+      "id": "r10",
+      "name": "methylmalonyl-CoA + octadecanoyl-CoA + malonyl-CoA + 2 H(+) = 4-hydroxy-5-methyl-6-hept...",
+      "equation": "methylmalonyl-CoA + octadecanoyl-CoA + malonyl-CoA + 2 H(+) = 4-hydroxy-5-methyl-6-heptadecylpyran-2-one + 2 CO2 + 3 CoA",
       "substrates": [
         {
-          "metabolite": "biotinyl_5_amp",
+          "metabolite": "methylmalonyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "biotinyl_l_lysine",
+          "metabolite": "stearoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "malonyl-coa",
           "stoichiometry": 1
         },
         {
@@ -662,62 +749,31 @@
           "stoichiometry": 2
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:59732"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59732"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "4-dimethylallyltryptophan synthase",
-      "equation": "dimethylallyl diphosphate + L-tryptophan = 4-(3-methylbut-2-enyl)-L-tryptophan + diphosphate",
-      "ec": "2.5.1.34",
-      "substrates": [
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "4_3_methylbut_2_enyl_l_tryptophan",
+          "metabolite": "4_hydroxy_5_methyl_6_heptadecylpyran_2_one",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
         {
-          "enzyme": "ec_2_5_1_34"
+          "metabolite": "coa",
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:14173"
+        "rhea": "RHEA:44300"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14173"
+            "id": "RHEA:44300"
           }
         ]
       }

@@ -3,13 +3,13 @@
   "id": "fe-coproporphyrin-iii-to-protoporphyrin",
   "name": "Fe-coproporphyrin III to protoporphyrin",
   "category": "redox-detox",
-  "summary": "A 3-step route from Fe-coproporphyrin III(4−) to protoporphyrin(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 2-step route from Fe-coproporphyrin III(4−) to protoporphyrin(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:57940"
+        "id": "RHEA:56516"
       },
       {
         "db": "ChEBI",
@@ -47,12 +47,12 @@
       }
     },
     {
-      "id": "harderoheme_iii",
-      "name": "harderoheme III",
-      "formula": "C35H31FeN4O6",
-      "charge": -3,
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:142463"
+        "chebi": "CHEBI:60344"
       }
     },
     {
@@ -71,15 +71,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "ferroheme_b",
-      "name": "ferroheme b",
-      "formula": "C34H30FeN4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:60344"
       }
     },
     {
@@ -130,6 +121,13 @@
   ],
   "enzymes": [
     {
+      "id": "ec_1_3_98_5",
+      "name": "hydrogen peroxide-dependent heme synthase",
+      "ec": [
+        "1.3.98.5"
+      ]
+    },
+    {
       "id": "ec_4_98_1_1",
       "name": "protoporphyrin ferrochelatase",
       "ec": [
@@ -140,8 +138,9 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "Fe-coproporphyrin III + H2O2 + H(+) = harderoheme III + CO2 + 2 H2O",
-      "equation": "Fe-coproporphyrin III + H2O2 + H(+) = harderoheme III + CO2 + 2 H2O",
+      "name": "hydrogen peroxide-dependent heme synthase",
+      "equation": "Fe-coproporphyrin III + 2 H2O2 + 2 H(+) = heme b + 2 CO2 + 4 H2O",
+      "ec": "1.3.98.5",
       "substrates": [
         {
           "metabolite": "fe_coproporphyrin_iii",
@@ -149,58 +148,11 @@
         },
         {
           "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "harderoheme_iii",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:57940"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57940"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "harderoheme III + H2O2 + H(+) = heme b + CO2 + 2 H2O",
-      "equation": "harderoheme III + H2O2 + H(+) = heme b + CO2 + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "harderoheme_iii",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
@@ -210,30 +162,35 @@
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_98_5"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:57944"
+        "rhea": "RHEA:56516"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57944"
+            "id": "RHEA:56516"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "protoporphyrin ferrochelatase",
       "equation": "heme b + 2 H(+) = protoporphyrin IX + Fe(2+)",
       "ec": "4.98.1.1",
@@ -263,7 +220,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:22584"
       },
@@ -278,7 +235,7 @@
       }
     },
     {
-      "id": "r4",
+      "id": "r3",
       "name": "2 oxidized [cytochrome P450] + NADH = 2 reduced [cytochrome P450] + NAD(+) + H(+)",
       "equation": "2 oxidized [cytochrome P450] + NADH = 2 reduced [cytochrome P450] + NAD(+) + H(+)",
       "substrates": [
@@ -306,7 +263,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:57420"
       },

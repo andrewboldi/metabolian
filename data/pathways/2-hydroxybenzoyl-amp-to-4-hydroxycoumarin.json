@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-hydroxybenzoyl-amp-to-4-hydroxycoumarin",
+  "name": "2-hydroxybenzoyl-AMP to 4-hydroxycoumarin",
+  "category": "other",
+  "summary": "A 2-step route from 2-hydroxybenzoyl-AMP(1−) to 4-hydroxycoumarin(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51788"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:86458"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_hydroxybenzoyl_amp",
+      "name": "2-hydroxybenzoyl-AMP",
+      "formula": "C17H17N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86458"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "2_hydroxybenzoyl_coa",
+      "name": "2-hydroxybenzoyl-CoA",
+      "formula": "C28H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:67148"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "4_hydroxycoumarin",
+      "name": "4-hydroxycoumarin",
+      "formula": "C9H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77858"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_5_dihydroxybenzoyl_coa",
+      "name": "2,5-dihydroxybenzoyl-CoA",
+      "short": "2,5-dihydroxybenzoy…",
+      "formula": "C28H36N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:88147"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_208",
+      "name": "4-hydroxycoumarin synthase",
+      "ec": [
+        "2.3.1.208"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_209",
+      "name": "salicyloyl-CoA 5-hydroxylase",
+      "ec": [
+        "1.14.13.209"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxybenzoyl-5'-AMP + CoA = 2-hydroxybenzoyl-CoA + AMP + H(+)",
+      "equation": "2-hydroxybenzoyl-5'-AMP + CoA = 2-hydroxybenzoyl-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxybenzoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxycoumarin synthase",
+      "equation": "2-hydroxybenzoyl-CoA + malonyl-CoA = 4-hydroxycoumarin + CO2 + 2 CoA",
+      "ec": "2.3.1.208",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxycoumarin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_208"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "salicyloyl-CoA 5-hydroxylase",
+      "equation": "2-hydroxybenzoyl-CoA + NADH + O2 + H(+) = 2,5-dihydroxybenzoyl-CoA + NAD(+) + H2O",
+      "ec": "1.14.13.209",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_dihydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_209"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48008"
+          }
+        ]
+      }
+    }
+  ]
+}

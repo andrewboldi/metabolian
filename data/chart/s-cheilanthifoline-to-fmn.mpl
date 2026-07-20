@@ -20,13 +20,13 @@ pathway s-cheilanthifoline-to-fmn "(S)-cheilanthifoline to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    7_hydroxyestradiol
+    <-> ec_1_14_14_186 [1.14.14.186] +tryptaminium +fmnh2 +o2 +h2o +hplus
+    serotonin
   }
 
   branch from sah side right {
     sah
-    <-> . +20_methyl_21_22_didehydro_20_21_dihydrobotryococ +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_7 +sam +hplus
+    ubiquinol_7
   }
 }

@@ -137,70 +137,26 @@
       }
     },
     {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
+      "id": "spectinomycin",
+      "name": "spectinomycin",
+      "formula": "C14H25N2O7",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32395"
+        "chebi": "CHEBI:146260"
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "9_o_adenylylspectinomycin",
+      "name": "9-O-adenylylspectinomycin",
+      "short": "9-O-adenylylspectin…",
+      "formula": "C24H36N7O13P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "6_protoilludene",
-      "name": "Δ6-protoilludene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:68655"
+        "chebi": "CHEBI:146261"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_135",
-      "name": "Delta(6)-protoilludene synthase",
-      "ec": [
-        "4.2.3.135"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -337,69 +293,21 @@
     },
     {
       "id": "r4",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R)...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R)-hydroxy-(5Z,8Z,12E,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "spectinomycin + ATP = 9-O-adenylylspectinomycin + diphosphate",
+      "equation": "spectinomycin + ATP = 9-O-adenylylspectinomycin + diphosphate",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "spectinomycin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "11_r_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:52492"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52492"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "Delta(6)-protoilludene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = Delta(6)-protoilludene + diphosphate",
-      "ec": "4.2.3.135",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_protoilludene",
+          "metabolite": "9_o_adenylylspectinomycin",
           "stoichiometry": 1
         },
         {
@@ -407,22 +315,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_135"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:34695"
+        "rhea": "RHEA:63228"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34695"
+            "id": "RHEA:63228"
           }
         ]
       }

@@ -18,14 +18,14 @@ pathway phosphatidylcholine-to-n-acylsphingosine "phosphatidylcholine to N-acyls
 
   branch from 1_2_diglyceride side left {
     1_2_diglyceride
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +triglyceride
-    2_o_acyl_3_o_d_galactosyl_sn_glycerol
+    <-> . +2_monoglyceride +phosphatidylcholine
+    acyl_sn_glycero_3_phosphocholine
   }
 
   branch from choline side right {
     choline
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
+    <-> . +1_myristoyl_sn_glycero_3_phosphocholine
+    1_myristoyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from n_acylsphingosine side left {

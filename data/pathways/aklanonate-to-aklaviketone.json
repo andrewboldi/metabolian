@@ -1,0 +1,331 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aklanonate-to-aklaviketone",
+  "name": "aklanonate to aklaviketone",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from aklanonate(2−) to aklaviketone(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37875"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77987"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aklanonate",
+      "name": "aklanonate",
+      "formula": "C21H14O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77987"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "methyl_aklanonate",
+      "name": "methyl aklanonate",
+      "formula": "C22H17O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77988"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "aklaviketone",
+      "name": "aklaviketone",
+      "formula": "C22H17O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77994"
+      }
+    },
+    {
+      "id": "bromide",
+      "name": "bromide",
+      "formula": "Br",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15858"
+      }
+    },
+    {
+      "id": "bromomethane",
+      "name": "bromomethane",
+      "formula": "CH3Br",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:39275"
+      }
+    },
+    {
+      "id": "aklavinone",
+      "name": "aklavinone",
+      "formula": "C22H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31181"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_288",
+      "name": "aklanonic acid methyltransferase",
+      "ec": [
+        "2.1.1.288"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_23",
+      "name": "aklanonic acid methyl ester cyclase",
+      "ec": [
+        "5.5.1.23"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_165",
+      "name": "methyl halide transferase",
+      "ec": [
+        "2.1.1.165"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_362",
+      "name": "aklaviketone reductase",
+      "ec": [
+        "1.1.1.362"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aklanonic acid methyltransferase",
+      "equation": "aklanonate + S-adenosyl-L-methionine = methyl aklanonate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.288",
+      "substrates": [
+        {
+          "metabolite": "aklanonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_aklanonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_288"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37875"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37875"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aklanonic acid methyl ester cyclase",
+      "equation": "methyl aklanonate = aklaviketone",
+      "ec": "5.5.1.23",
+      "substrates": [
+        {
+          "metabolite": "methyl_aklanonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aklaviketone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methyl halide transferase",
+      "equation": "bromide + S-adenosyl-L-methionine = bromomethane + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.165",
+      "substrates": [
+        {
+          "metabolite": "bromide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bromomethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_165"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27365"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aklaviketone reductase",
+      "equation": "aklavinone + NADP(+) = aklaviketone + NADPH + 2 H(+)",
+      "ec": "1.1.1.362",
+      "substrates": [
+        {
+          "metabolite": "aklavinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aklaviketone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_362"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37411"
+          }
+        ]
+      }
+    }
+  ]
+}

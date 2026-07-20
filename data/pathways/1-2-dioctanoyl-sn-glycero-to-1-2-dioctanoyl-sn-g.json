@@ -1,0 +1,200 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-dioctanoyl-sn-glycero-to-1-2-dioctanoyl-sn-g",
+  "name": "1,2-dioctanoyl-sn-glycero… to 1,2-dioctanoyl-sn-glycero…",
+  "category": "other",
+  "summary": "A 2-step route from 1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,5-bisphosphate)(5−) to 1,2-dioctanoyl-sn-glycero-3-phospho-1D-myo-inositol(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45632"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85342"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_dioctanoyl_sn_glycero_3_phospho_1d_myo_inosi",
+      "name": "1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,5-bisphosphate)",
+      "short": "1,2-dioctanoyl-sn-g…",
+      "formula": "C25H44O19P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:85342"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_2_dioctanoyl_sn_glycero_3_phospho_1_d_myo_inos",
+      "name": "1,2-dioctanoyl-sn-glycero-3-phospho-(1'D-myo-inositol-5'-phosphate)",
+      "short": "1,2-dioctanoyl-sn-g…",
+      "formula": "C25H45O16P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:78911"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "1_2_dioctanoyl_sn_glycero_3_phospho_1d_myo_inosi",
+      "name": "1,2-dioctanoyl-sn-glycero-3-phospho-1D-myo-inositol",
+      "short": "1,2-dioctanoyl-sn-g…",
+      "formula": "C25H46O13P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65221"
+      }
+    },
+    {
+      "id": "1_2_dioctanoyl_sn_glycero_3_phospho_1_d_myo_inos",
+      "name": "1,2-dioctanoyl-sn-glycero-3-phospho-(1'-D-myo-inositol-3'-phosphate)",
+      "short": "1,2-dioctanoyl-sn-g…",
+      "formula": "C25H45O16P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:78934"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,5-bisphosphate) + H2O = 1,2-dioc...",
+      "equation": "1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,5-bisphosphate) + H2O = 1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol-5-phosphate) + phosphate",
+      "substrates": [
+        {
+          "metabolite": "1_2_dioctanoyl_sn_glycero_3_phospho_1d_myo_inosi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dioctanoyl_sn_glycero_3_phospho_1_d_myo_inos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol-5-phosphate) + H2O = 1,2-dioctanoy...",
+      "equation": "1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol-5-phosphate) + H2O = 1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol) + phosphate",
+      "substrates": [
+        {
+          "metabolite": "1_2_dioctanoyl_sn_glycero_3_phospho_1_d_myo_inos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dioctanoyl_sn_glycero_3_phospho_1d_myo_inosi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:42308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1,2-dioctanoyl-sn-glycero-3-phospho-(1-D-myo-inositol-3-phosphate) + H2O = 1,2-dioctano...",
+      "equation": "1,2-dioctanoyl-sn-glycero-3-phospho-(1-D-myo-inositol-3-phosphate) + H2O = 1,2-dioctanoyl-sn-glycero-3-phospho-(1D-myo-inositol) + phosphate",
+      "substrates": [
+        {
+          "metabolite": "1_2_dioctanoyl_sn_glycero_3_phospho_1_d_myo_inos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dioctanoyl_sn_glycero_3_phospho_1d_myo_inosi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42328"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42328"
+          }
+        ]
+      }
+    }
+  ]
+}

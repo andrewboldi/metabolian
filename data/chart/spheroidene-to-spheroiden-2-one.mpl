@@ -18,7 +18,7 @@ pathway spheroidene-to-spheroiden-2-one "spheroidene to spheroiden-2-one" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +pheophorbide_a +di_sulfido_diiron +o2 +hplus +h2o
-    epoxypheophorbide_a
+    <-> . +5_7_dibromo_indole_3_carbonitrile +2_3_5_tribromoindole +di_sulfido_diiron +o2 +hplus +h2o
+    aetokthonotoxin
   }
 }

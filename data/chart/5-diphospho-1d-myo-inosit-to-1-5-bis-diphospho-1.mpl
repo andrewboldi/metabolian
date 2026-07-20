@@ -24,14 +24,14 @@ pathway 5-diphospho-1d-myo-inosit-to-1-5-bis-diphospho-1 "5-diphospho-1D-myo-ino
 
   branch from myo_inositol_1_3_4_5_6_pentakisphosphate side left {
     myo_inositol_1_3_4_5_6_pentakisphosphate
-    <-> ec_2_7_1_151 [2.7.1.151] +atp +adp +hplus
-    1d_myo_inositol_1_4_5_trisphosphate
+    <-> . +atp +adp +hplus
+    1d_myo_inositol_1_4_5_6_tetrakisphosphate
   }
 
   branch from myo_inositol_hexakisphosphate side right {
     myo_inositol_hexakisphosphate
-    <-> ec_3_1_3_72 [3.1.3.72] +h2o +pi
-    1l_myo_inositol_1_2_3_4_6_pentakisphosphate
+    <-> ec_3_1_3_26 [3.1.3.26] +h2o +pi
+    1d_myo_inositol_1_2_3_5_6_pentakisphosphate
   }
 
   branch from 5_diphospho_1d_myo_inositol_pentakisphosphate side left {

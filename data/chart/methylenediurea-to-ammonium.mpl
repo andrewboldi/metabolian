@@ -18,7 +18,7 @@ pathway methylenediurea-to-ammonium "methylenediurea to ammonium" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_5 [1.4.3.5] +o2 +h2o +plp +h2o2
-    pyridoxamine_5_phosphate
+    <-> ec_3_5_1_53 [3.5.1.53] +n_carbamoylputrescinium +h2o +hplus +co2
+    1_4_butanediammonium
   }
 }

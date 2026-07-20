@@ -1,0 +1,203 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cyanidin-to-cyanidin-3-o-2-o-d-glu",
+  "name": "cyanidin to cyanidin 3-O-(2-O-β-D-glu…",
+  "category": "other",
+  "summary": "A 2-step route from cyanidin(1−) to cyanidin 3-O-(2-O-β-D-glucuronosyl)-β-D-glucoside(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:60100"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:71682"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cyanidin",
+      "name": "cyanidin",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71682"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_d_glucoside",
+      "name": "cyanidin 3-O-β-D-glucoside",
+      "short": "cyanidin 3-O-β-D-gl…",
+      "formula": "C21H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77857"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_2_o_d_glucuronosyl_d_glucoside",
+      "name": "cyanidin 3-O-(2-O-β-D-glucuronosyl)-β-D-glucoside",
+      "short": "cyanidin 3-O-(2-O-β…",
+      "formula": "C27H26O17",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77824"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_115",
+      "name": "anthocyanidin 3-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.115"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_254",
+      "name": "cyanidin-3-O-glucoside 2''-O-glucuronosyltransferase",
+      "ec": [
+        "2.4.1.254"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "anthocyanidin 3-O-glucosyltransferase",
+      "equation": "cyanidin + UDP-alpha-D-glucose = cyanidin 3-O-beta-D-glucoside + UDP + H(+)",
+      "ec": "2.4.1.115",
+      "substrates": [
+        {
+          "metabolite": "cyanidin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:60100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cyanidin-3-O-glucoside 2''-O-glucuronosyltransferase",
+      "equation": "cyanidin 3-O-beta-D-glucoside + UDP-alpha-D-glucuronate = cyanidin 3-O-(2-O-beta-D-glucuronosyl)-beta-D-glucoside + UDP + H(+)",
+      "ec": "2.4.1.254",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_2_o_d_glucuronosyl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_254"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28258"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28258"
+          }
+        ]
+      }
+    }
+  ]
+}

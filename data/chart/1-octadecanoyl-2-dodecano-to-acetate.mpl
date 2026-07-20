@@ -15,16 +15,4 @@ pathway 1-octadecanoyl-2-dodecano-to-acetate "1-octadecanoyl-2-dodecano… to ac
     <-> . +h2o -acetate -hplus
     1_stearoyl_sn_glycero_3_phosphocholine
   }
-
-  branch from dodecanoate side left {
-    dodecanoate
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_didodecanoyl +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_monododecanoyl_s
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> ec_3_1_1_106 [3.1.1.106] +3_o_acetyl_adp_d_ribose +h2o +hplus
-    adp_d_ribose
-  }
 }

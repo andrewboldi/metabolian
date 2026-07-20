@@ -146,24 +146,6 @@
       }
     },
     {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17499"
-      }
-    },
-    {
       "id": "16_hydroxyestrone_16_o_d_glucuronide",
       "name": "16α-hydroxyestrone 16-O-(β-D-glucuronide)",
       "short": "16α-hydroxyestrone…",
@@ -174,21 +156,21 @@
       }
     },
     {
-      "id": "lithocholate",
-      "name": "lithocholate",
-      "formula": "C24H39O3",
-      "charge": -1,
+      "id": "carotene",
+      "name": "α-carotene",
+      "formula": "C40H56",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29744"
+        "chebi": "CHEBI:28425"
       }
     },
     {
-      "id": "hyodeoxycholate",
-      "name": "hyodeoxycholate",
-      "formula": "C24H39O4",
-      "charge": -1,
+      "id": "cryptoxanthin",
+      "name": "α-cryptoxanthin",
+      "formula": "C40H56O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58875"
+        "chebi": "CHEBI:10223"
       }
     }
   ],
@@ -201,10 +183,17 @@
       ]
     },
     {
-      "id": "ec_1_14_14_57",
-      "name": "taurochenodeoxycholate 6alpha-hydroxylase",
+      "id": "ec_1_1_1_62",
+      "name": "17beta-estradiol 17-dehydrogenase",
       "ec": [
-        "1.14.14.57"
+        "1.1.1.62"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_158",
+      "name": "carotene epsilon-hydroxylase",
+      "ec": [
+        "1.14.14.158"
       ]
     }
   ],
@@ -354,15 +343,16 @@
     },
     {
       "id": "r4",
-      "name": "17beta-estradiol + A = estrone + AH2",
-      "equation": "17beta-estradiol + A = estrone + AH2",
+      "name": "17beta-estradiol 17-dehydrogenase",
+      "equation": "17beta-estradiol + NADP(+) = estrone + NADPH + H(+)",
+      "ec": "1.1.1.62",
       "substrates": [
         {
           "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
@@ -372,21 +362,30 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "nadph",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_62"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42228"
+        "rhea": "RHEA:24616"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42228"
+            "id": "RHEA:24616"
           }
         ]
       }
@@ -436,12 +435,12 @@
     },
     {
       "id": "r6",
-      "name": "taurochenodeoxycholate 6alpha-hydroxylase",
-      "equation": "lithocholate + reduced [NADPH--hemoprotein reductase] + O2 = hyodeoxycholate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.57",
+      "name": "carotene epsilon-hydroxylase",
+      "equation": "alpha-carotene + reduced [NADPH--hemoprotein reductase] + O2 = alpha-cryptoxanthin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.158",
       "substrates": [
         {
-          "metabolite": "lithocholate",
+          "metabolite": "carotene",
           "stoichiometry": 1
         },
         {
@@ -455,7 +454,7 @@
       ],
       "products": [
         {
-          "metabolite": "hyodeoxycholate",
+          "metabolite": "cryptoxanthin",
           "stoichiometry": 1
         },
         {
@@ -473,20 +472,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_57"
+          "enzyme": "ec_1_14_14_158"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:23644"
+        "rhea": "RHEA:30399"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23644"
+            "id": "RHEA:30399"
           }
         ]
       }

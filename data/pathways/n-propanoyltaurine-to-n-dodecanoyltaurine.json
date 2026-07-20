@@ -1,0 +1,179 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-propanoyltaurine-to-n-dodecanoyltaurine",
+  "name": "N-propanoyltaurine to N-dodecanoyltaurine",
+  "category": "other",
+  "summary": "A 2-step route from N-propanoyltaurine(1−) to N-dodecanoyltaurine(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81111"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231795"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_propanoyltaurine",
+      "name": "N-propanoyltaurine",
+      "formula": "C5H10NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231795"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "propionate",
+      "name": "Propionate",
+      "formula": "C3H5O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17272"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:507393"
+      }
+    },
+    {
+      "id": "lauroyl_coa",
+      "name": "lauroyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57375"
+      }
+    },
+    {
+      "id": "n_dodecanoyltaurine",
+      "name": "N-dodecanoyltaurine",
+      "formula": "C14H28NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132042"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-propanoyltaurine + H2O = propanoate + taurine",
+      "equation": "N-propanoyltaurine + H2O = propanoate + taurine",
+      "substrates": [
+        {
+          "metabolite": "n_propanoyltaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81111"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81111"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dodecanoyl-CoA + taurine = N-dodecanoyl-taurine + CoA + H(+)",
+      "equation": "dodecanoyl-CoA + taurine = N-dodecanoyl-taurine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "lauroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_dodecanoyltaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50100"
+          }
+        ]
+      }
+    }
+  ]
+}

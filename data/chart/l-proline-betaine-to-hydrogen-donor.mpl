@@ -18,27 +18,33 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
     1_pyrroline_2_carboxylic_acid
   }
 
-  branch from n_methylproline side left {
-    n_methylproline
-    <-> ec_2_1_1_388 [2.1.1.388] +cobalt +l_proline_betaine +hplus
-    methyl_co
-  }
-
-  branch from formaldehyde side right {
+  branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_179 [1.14.13.179] +theobromine +nadph +o2 +hplus +nadp +h2o
-    7_methylxanthine
+    <-> ec_1_14_11_53 [1.14.11.53] +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 
-  branch from l_proline side left {
+  branch from l_proline side right {
     l_proline
-    <-> ec_1_14_11_56 [1.14.11.56] +akg +o2 +succinate +co2
-    cis_4_hydroxy_l_proline
+    <-> . +l_tryptophan +atp +amp +ppi +hplus
+    brevianamide_f
   }
 
-  branch from d_proline side right {
+  branch from d_proline side left {
     d_proline
     <-> . +akg +o2 +succinate +co2
     cis_4_hydroxy_d_proline
+  }
+
+  branch from 1_pyrroline_2_carboxylic_acid side right {
+    1_pyrroline_2_carboxylic_acid
+    <-> ec_4_2_1_77 [4.2.1.77] +h2o
+    trans_3_hydroxy_l_proline
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +15_cis_phytoene +hydrogen_acceptor
+    all_trans_phytofluene
   }
 }

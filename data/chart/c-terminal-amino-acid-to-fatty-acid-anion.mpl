@@ -24,7 +24,7 @@ pathway c-terminal-amino-acid-to-fatty-acid-anion "C-terminal amino acid-… to 
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +2_monolysocardiolipin +h2o +hplus
-    2_2_dilysocardiolipin
+    <-> . +n_fatty_acyl_l_serine +h2o
+    serine
   }
 }

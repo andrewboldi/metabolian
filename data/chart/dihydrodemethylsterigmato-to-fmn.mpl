@@ -18,19 +18,13 @@ pathway dihydrodemethylsterigmato-to-fmn "dihydrodemethylsterigmato… to FMN" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_237 [2.1.1.237] +mycinamicin_iii +sam +hplus
-    mycinamicin_iv
+    <-> ec_2_1_1_213 [2.1.1.213] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_n2_dimethylguanosine_5_monophosphate_1
   }
 
-  branch from methanol side right {
-    methanol
-    <-> . +h2o +chloride +hplus
-    chloromethane
-  }
-
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_25s_cholest_5_en_3_24_26_triol
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate
   }
 }

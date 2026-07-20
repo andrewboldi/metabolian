@@ -16,27 +16,27 @@ pathway acetylsalicylate-to-acetate "acetylsalicylate to acetate" {
     adp_d_ribose
   }
 
-  branch from nicotinamide side left {
+  branch from salicylate side left {
+    salicylate
+    <-> . +udp_d_glucose +udp +hplus
+    2_d_glucopyranosyloxy_benzoate
+  }
+
+  branch from nicotinamide side right {
     nicotinamide
-    <-> . +nad +hplus
-    cyclic_adp_d_ribose
+    <-> . +n6_acyl_l_lysine +nad +h2o +l_lysinium
+    o_acyl_adp_d_ribose
   }
 
-  branch from l_lysinium side right {
+  branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_5_1_46 [2.5.1.46] +spermidine +trimethylenediaminium
-    deoxyhypusine_2
+    <-> ec_2_1_1_127 [2.1.1.127] +sam +sah +hplus
+    n6_n6_n6_trimethyl_l_lysine
   }
 
-  branch from adp_d_ribose side left {
+  branch from adp_d_ribose side right {
     adp_d_ribose
-    <-> . +4_adp_d_ribosyl_l_aspartyl_2 +h2o +hplus
-    l_aspartate
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +o2 +pi +hplus
-    1r_1_hydroxyethyl_phosphonate
+    <-> . +n4_adp_d_ribosyl_l_asparagine_2 +h2o
+    l_asparagine
   }
 }

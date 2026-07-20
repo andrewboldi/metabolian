@@ -86,41 +86,27 @@
       }
     },
     {
-      "id": "gibberellin_a34",
-      "name": "gibberellin A34",
-      "formula": "C19H23O6",
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:73258"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "gibberellin_a34_methyl_ester",
-      "name": "gibberellin A34 methyl ester",
-      "short": "gibberellin A34…",
-      "formula": "C20H26O6",
-      "charge": 0,
+      "id": "2_o_methylguanosine_5_monophosphate_1",
+      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
+      "short": "2'-O-methylguanosin…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:73260"
+        "chebi": "CHEBI:74445"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_1_1_275",
-      "name": "gibberellin A9 O-methyltransferase",
-      "ec": [
-        "2.1.1.275"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_276",
-      "name": "gibberellin A4 carboxyl methyltransferase",
-      "ec": [
-        "2.1.1.276"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -253,12 +239,11 @@
     },
     {
       "id": "r4",
-      "name": "gibberellin A9 O-methyltransferase",
-      "equation": "gibberellin A34 + S-adenosyl-L-methionine = O-methyl gibberellin A34 + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.275",
+      "name": "a guanosine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methylguanosine in 21S rRNA ...",
+      "equation": "a guanosine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methylguanosine in 21S rRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "gibberellin_a34",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -268,30 +253,29 @@
       ],
       "products": [
         {
-          "metabolite": "gibberellin_a34_methyl_ester",
+          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_1_1_275"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:36127"
+        "rhea": "RHEA:47772"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36127"
+            "id": "RHEA:47772"
           }
         ]
       }

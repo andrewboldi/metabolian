@@ -24,8 +24,8 @@ pathway 3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli "3-(1-hydroxyethyl)bact
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_12_1_4 [1.12.1.4] +di_sulfido_diiron +nad +nadh +hplus
-    h2
+    <-> . +cholesterol +o2 +hplus +di_sulfido_diiron +h2o
+    25r_cholest_5_ene_3_26_diol
   }
 
   branch from divinyl_chlorophyllide_a side left {

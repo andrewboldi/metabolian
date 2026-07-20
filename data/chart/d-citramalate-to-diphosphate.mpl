@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-citramalate-to-diphosphate "D-citramalate to diphosphate" {
-  spacing 192
+  spacing 184
 
   spine at 0,0 {
     d_citramalate
@@ -16,35 +16,21 @@ pathway d-citramalate-to-diphosphate "D-citramalate to diphosphate" {
     2_methyl_3_oxosuccinate
     <-> . +hplus -co2
     oxobut
-    <-> . +cysteine -l_aminobutyrate
-    mercaptopyruvate
-    <-> . +l_cysteine -pyruvate
-    3_disulfanyl_l_alanine
-    <-> ec_2_8_1_13 [2.8.1.13] +uridine_5_monophosphate_1 +hydrogen_donor +atp -l_cysteine -hydrogen_acceptor -amp -ppi -hplus
-    2_thiouridine_5_phosphate_1
+    <-> . +l_phenylalanine -keto_phenylpyruvate
+    l_aminobutyrate
+    <-> . +keto_phenylpyruvate +atp +h2o -amp -ppi -hplus
+    phenguignardate
   }
 
-  branch from mercaptopyruvate side left {
-    mercaptopyruvate
-    <-> . +cysteine +o2 +h2o +h2o2
-    nh3
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
-    3e_phycocyanobilin
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i +hydrogen_donor +h2o
-    resolvin_e2
+  branch from keto_phenylpyruvate side left {
+    keto_phenylpyruvate
+    <-> . +3_hydroxy_l_kynurenine +l_phenylalanine
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    isopimara_8_14_15_diene
+    <-> ec_4_2_3_177 [4.2.3.177] +gpp
+    thujene
   }
 }

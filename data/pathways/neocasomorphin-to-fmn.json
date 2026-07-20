@@ -120,50 +120,49 @@
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:36655"
       }
     },
     {
-      "id": "31_hydroxy_l_isoleucine",
-      "name": "31-hydroxy-L-isoleucine",
-      "short": "31-hydroxy-L-isoleu…",
-      "formula": "C6H13NO3",
+      "id": "kmv",
+      "name": "(S)-3-Methyl-2-oxopentanoate",
+      "short": "3-Methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35146"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:149627"
+        "chebi": "CHEBI:57305"
       }
     },
     {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:30031"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "epiandrosterone",
-      "name": "epiandrosterone",
-      "formula": "C19H30O2",
-      "charge": 0,
+      "id": "14r_15s_eet",
+      "name": "(14R,15S)-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:541975"
-      }
-    },
-    {
-      "id": "3_5_7_3_7_dihydroxyandrostan_17_one",
-      "name": "(3β,5α,7α)-3,7-dihydroxyandrostan-17-one",
-      "short": "(3β,5α,7α)-3,7-dihy…",
-      "formula": "C19H30O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:85816"
+        "chebi": "CHEBI:131965"
       }
     },
     {
@@ -208,13 +207,6 @@
       "name": "(E)-2-methylbutanal oxime monooxygenase",
       "ec": [
         "1.14.14.41"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_74",
-      "name": "L-isoleucine 3(1)-dioxygenase",
-      "ec": [
-        "1.14.11.74"
       ]
     }
   ],
@@ -378,64 +370,50 @@
     },
     {
       "id": "r4",
-      "name": "L-isoleucine 3(1)-dioxygenase",
-      "equation": "L-isoleucine + 2-oxoglutarate + O2 = 3(1)-hydroxy-L-isoleucine + succinate + CO2",
-      "ec": "1.14.11.74",
+      "name": "L-isoleucine + glyoxylate = (S)-3-methyl-2-oxopentanoate + glycine",
+      "equation": "L-isoleucine + glyoxylate = (S)-3-methyl-2-oxopentanoate + glycine",
       "substrates": [
         {
           "metabolite": "isoleucine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "glyoxylate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "31_hydroxy_l_isoleucine",
+          "metabolite": "kmv",
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinate",
+          "metabolite": "glycine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_74"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:63872"
+        "rhea": "RHEA:81615"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63872"
+            "id": "RHEA:81615"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "3beta-hydroxy-5alpha-androstan-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3...",
-      "equation": "3beta-hydroxy-5alpha-androstan-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3beta,7alpha-dihydroxy-5alpha-androstan-17-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,15S)-epoxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "epiandrosterone",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -449,7 +427,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_5_7_3_7_dihydroxyandrostan_17_one",
+          "metabolite": "14r_15s_eet",
           "stoichiometry": 1
         },
         {
@@ -468,14 +446,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:43896"
+        "rhea": "RHEA:49860"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43896"
+            "id": "RHEA:49860"
           }
         ]
       }

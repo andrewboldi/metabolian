@@ -22,27 +22,27 @@ pathway epiandrosterone-to-di-sulfido-diiron "epiandrosterone to di-μ-sulfido-d
     9_hydroxyandrosta_1_4_diene_3_17_dione
   }
 
-  branch from 5_androstane_3_17_diol side left {
-    5_androstane_3_17_diol
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    5_androstane_3_6_17_triol
-  }
-
-  branch from 17_hydroxy_5_androstan_3_one side right {
+  branch from 17_hydroxy_5_androstan_3_one side left {
     17_hydroxy_5_androstan_3_one
-    <-> . +nadp +nadph +hplus
-    5_androstane_3_17_diol
-  }
-
-  branch from 5_androstane_3_17_dione side left {
-    5_androstane_3_17_dione
-    <-> ec_1_1_1_209 [1.1.1.209] +nad +nadh +hplus
-    androsterone
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    19_hydroxy_5_dihydrotestosterone
   }
 
   branch from 5_androst_1_ene_3_17_dione side right {
     5_androst_1_ene_3_17_dione
     <-> ec_1_17_99_11 [1.17.99.11] +hydrogen_acceptor +h2o +hydrogen_donor
     5_androstan_1_3_17_trione
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +7_chloro_l_tryptophan +o2 +hydrogen_acceptor +co2 +h2o
+    monodechloroaminopyrrolnitrin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_3_7_13 [1.3.7.13] +protochlorophyllide +di_sulfido_diiron +hplus
+    2_4_divinyl_protochlorophyllide_a
   }
 }

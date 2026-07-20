@@ -1,0 +1,402 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "z-phenylacetaldehyde-to-hydrogen-cyanide",
+  "name": "(Z)-phenylacetaldehyde… to hydrogen cyanide",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (Z)-phenylacetaldehyde oxime to hydrogen cyanide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20069"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:50723"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "z_phenylacetaldehyde_oxime",
+      "name": "(Z)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50723"
+      }
+    },
+    {
+      "id": "phenylacetonitrile",
+      "name": "phenylacetonitrile",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:25979"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "r_mandelonitrile",
+      "name": "(R)-mandelonitrile",
+      "formula": "C8H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18450"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "benzaldehyde",
+      "name": "benzaldehyde",
+      "formula": "C7H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17169"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    },
+    {
+      "id": "17_hydroxy_5_androstan_3_one",
+      "name": "17β-hydroxy-5α-androstan-3-one",
+      "short": "17β-hydroxy-5α-andr…",
+      "formula": "C19H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16330"
+      }
+    },
+    {
+      "id": "18_hydroxy_5_dihydrotestosterone",
+      "name": "18-hydroxy-5α-dihydrotestosterone",
+      "short": "18-hydroxy-5α-dihyd…",
+      "formula": "C19H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137037"
+      }
+    },
+    {
+      "id": "2_2_dimethylpropanal",
+      "name": "2,2-dimethylpropanal",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141557"
+      }
+    },
+    {
+      "id": "2s_2_hydroxy_3_3_dimethylbutanenitrile",
+      "name": "(2S)-2-hydroxy-3,3-dimethylbutanenitrile",
+      "short": "2-hydroxy-3,3-dimet…",
+      "formula": "C6H11NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197355"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_8_1_4",
+      "name": "phenylacetaldoxime dehydratase",
+      "ec": [
+        "4.8.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_77",
+      "name": "phenylacetonitrile alpha-monooxygenase",
+      "ec": [
+        "1.14.14.77"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_10",
+      "name": "(R)-mandelonitrile lyase",
+      "ec": [
+        "4.1.2.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phenylacetaldoxime dehydratase",
+      "equation": "(Z)-phenylacetaldehyde oxime = phenylacetonitrile + H2O",
+      "ec": "4.8.1.4",
+      "substrates": [
+        {
+          "metabolite": "z_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylacetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_8_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20069"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phenylacetonitrile alpha-monooxygenase",
+      "equation": "phenylacetonitrile + reduced [NADPH--hemoprotein reductase] + O2 = (R)-mandelonitrile + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.77",
+      "substrates": [
+        {
+          "metabolite": "phenylacetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_mandelonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(R)-mandelonitrile lyase",
+      "equation": "(R)-mandelonitrile = benzaldehyde + hydrogen cyanide",
+      "ec": "4.1.2.10",
+      "substrates": [
+        {
+          "metabolite": "r_mandelonitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18313"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18313"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "17beta-hydroxy-5alpha-androstan-3-one + reduced [NADPH--hemoprotein reductase] + O2 = 1...",
+      "equation": "17beta-hydroxy-5alpha-androstan-3-one + reduced [NADPH--hemoprotein reductase] + O2 = 17beta,18-dihydroxy-3-oxo-5alpha-androstanone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "17_hydroxy_5_androstan_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "18_hydroxy_5_dihydrotestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2,2-dimethylpropanal + hydrogen cyanide = (2S)-2-hydroxy-3,3-dimethylbutanenitrile",
+      "equation": "2,2-dimethylpropanal + hydrogen cyanide = (2S)-2-hydroxy-3,3-dimethylbutanenitrile",
+      "substrates": [
+        {
+          "metabolite": "2_2_dimethylpropanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxy_3_3_dimethylbutanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:77407"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77407"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,8 +18,8 @@ pathway monosaccharide-1-phosphate-to-diphosphate "monosaccharide 1-phosphate to
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_172 [4.2.3.172] +fpp +h2o
-    10_epi_juneol
+    <-> ec_2_5_1_70 [2.5.1.70] +s_naringenin +dmapp
+    sophoraflavanone_b
   }
 
   branch from nicotinamide side right {

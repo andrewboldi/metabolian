@@ -24,19 +24,13 @@ pathway quercetin-4-o-d-glucop-to-adenosine-3-5-bismonop "quercetin 4'-O-β-D-gl
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +sucrose
-    6_kestotriose
+    <-> . +h2o +quercetin_7_olate
+    quercetin_3_o_d_glucopyranoside
   }
 
-  branch from quercetin_3_sulfate side left {
-    quercetin_3_sulfate
-    <-> ec_2_8_2_26 [2.8.2.26] +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    quercetin_3_3_bissulfate
-  }
-
-  branch from adenosine_3_5_bismonophosphate side right {
+  branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_9 [2.8.2.9] +methyl_l_tyrosinate +3_phosphonato_5_adenylyl_sulfate +hplus
-    l_tyrosine_methyl_ester_4_sulfate
+    <-> . +butyryl_coa +h2o +hplus
+    s_butyryl_4_phosphopantetheine
   }
 }

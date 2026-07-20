@@ -22,14 +22,14 @@ pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_39 [6.2.1.39] +glutamate +atp +adp +pi
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
+    <-> . +l_seryl_amp +amp
+    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
   }
 
   branch from fmn side right {
     fmn
-    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxyprogesterone
+    <-> . +e_phenylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
+    1_aci_nitro_2_phenyl_ethane
   }
 
   branch from mevinolinate side left {

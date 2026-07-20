@@ -18,7 +18,7 @@ pathway 1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade "1-O-palmityl-2-acetyl-
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +d_galactoside +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminyl_2_6_d_galactoside
+    <-> . +neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga +cmp_n_acetyl_neuraminate +hplus
+    neuac_2_3_d_gal_1_3_neuac_2_6_d_galnac_1_3_d_ga
   }
 }

@@ -22,7 +22,7 @@ pathway l-threonate-to-2-oxoglutarate "L-threonate to 2-oxoglutarate" {
 
   branch from akg side left {
     akg
-    <-> . +n_4_carboxy_4_oxobutanoyl_l_ethylglycylglycine +h2o
-    n_2s_2_ammoniobutanoyl_glycinate
+    <-> . +fad +hplus +fadh2
+    2_hydroxyglutarate
   }
 }

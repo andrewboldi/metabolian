@@ -18,7 +18,7 @@ pathway kynuramine-to-quinoline-3-4-diol "kynuramine to quinoline-3,4-diol" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_13_99_3 [1.13.99.3] +l_tryptophan +o2 +hplus +co2
-    3_indoleglycolaldehyde
+    <-> . +chorismate +h2o
+    2_azaniumyl_2_deoxyisochorismate
   }
 }

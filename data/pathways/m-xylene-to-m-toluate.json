@@ -128,30 +128,22 @@
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:29985"
+        "chebi": "CHEBI:57371"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
+      "id": "crotonoyl_coa",
+      "name": "Crotonoyl-CoA",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:57332"
       }
     }
   ],
@@ -161,6 +153,13 @@
       "name": "toluene methyl-monooxygenase",
       "ec": [
         "1.14.15.26"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_109",
+      "name": "butanoyl-CoA dehydrogenase complex (NAD(+), ferredoxin)",
+      "ec": [
+        "1.3.1.109"
       ]
     }
   ],
@@ -310,51 +309,53 @@
     },
     {
       "id": "r4",
-      "name": "2 oxidized [2Fe-2S]-[ferredoxin] + L-glutamate + H2O = 2 reduced [2Fe-2S]-[ferredoxin] ...",
-      "equation": "2 oxidized [2Fe-2S]-[ferredoxin] + L-glutamate + H2O = 2 reduced [2Fe-2S]-[ferredoxin] + 2-oxoglutarate + NH4(+) + 2 H(+)",
+      "name": "butanoyl-CoA dehydrogenase complex (NAD(+), ferredoxin)",
+      "equation": "butanoyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + 2 NAD(+) = (2E)-butenoyl-CoA + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 NADH",
+      "ec": "1.3.1.109",
       "substrates": [
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "nad",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
+          "metabolite": "crotonoyl_coa",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "nadh",
           "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_109"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:32191"
+        "rhea": "RHEA:46960"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32191"
+            "id": "RHEA:46960"
           }
         ]
       }

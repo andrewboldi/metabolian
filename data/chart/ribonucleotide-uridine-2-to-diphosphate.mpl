@@ -30,7 +30,7 @@ pathway ribonucleotide-uridine-2-to-diphosphate "ribonucleotide-uridine(2−) to
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_68 [4.2.3.68] +fpp +h2o
-    eudesmol
+    <-> . +linoleate +atp +coa +amp
+    linoleoyl_coa
   }
 }

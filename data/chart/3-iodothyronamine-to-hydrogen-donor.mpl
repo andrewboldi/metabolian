@@ -12,19 +12,11 @@ pathway 3-iodothyronamine-to-hydrogen-donor "3'-iodothyronamine to hydrogen dono
     3_5_diiodothyronamine
     <-> . +iodide +hydrogen_acceptor +hplus -hydrogen_donor
     3_3_5_triiodothyronamine
-    <-> . +iodide +hydrogen_acceptor +hplus -hydrogen_donor
-    3_3_5_5_tetraiodothyronamine
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
-    11_r_hepe
-  }
-
-  branch from 3_3_5_triiodothyronamine side right {
-    3_3_5_triiodothyronamine
-    <-> . +iodide +hydrogen_acceptor +hplus +hydrogen_donor
-    3_3_diiodothyronamine
+    <-> ec_1_17_99_10 [1.17.99.10] +dehydrocholesterol_7 +hydrogen_acceptor +h2o
+    cholesta_5_7_dien_3_25_diol
   }
 }

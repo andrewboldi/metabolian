@@ -20,25 +20,19 @@ pathway galactosylceramide-to-cytidine-5-monophosphate "galactosylceramide to cy
 
   branch from n_acylsphingoid side left {
     n_acylsphingoid
-    <-> . +man_1_6_ins_1_p_cer +h2o +hplus
-    d_mannosyl_1_6_1d_myo_inositol_1_phosphate
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +h2o
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
   }
 
-  branch from d_galactopyranose side right {
-    d_galactopyranose
-    <-> . +d_galactosyl_n_octadecanoylsphingosine +h2o
-    n_octadecanoylsphingosine
-  }
-
-  branch from galactosylceramide side left {
+  branch from galactosylceramide side right {
     galactosylceramide
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    1_3_o_sulfonato_d_galactosyl_ceramide
+    <-> . +udp_d_galactose +udp +hplus
+    d_galactosyl_1_4_d_galactosyl_1_1_ceramide
   }
 
-  branch from cytidine_5_monophosphate side right {
+  branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 }

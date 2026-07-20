@@ -155,31 +155,49 @@
       }
     },
     {
-      "id": "3_oxo_5_cholanate",
-      "name": "3-oxo-5β-cholanate",
-      "formula": "C24H37O3",
-      "charge": -1,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:11867"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "glycochenodeoxycholate",
-      "name": "Glycochenodeoxycholate",
-      "short": "Glycochenodeoxychol…",
-      "formula": "C26H42NO5",
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "7_hydroxy_3_oxo_5_cholan_24_oate",
+      "name": "7α-hydroxy-3-oxo-5β-cholan-24-oate",
+      "short": "7α-hydroxy-3-oxo-5β…",
+      "formula": "C24H37O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36252"
+        "chebi": "CHEBI:87731"
       }
     },
     {
@@ -212,10 +230,10 @@
   ],
   "enzymes": [
     {
-      "id": "ec_1_1_1_392",
-      "name": "3alpha-hydroxycholanate dehydrogenase (NADP(+))",
+      "id": "ec_6_2_1_7",
+      "name": "cholate--CoA ligase",
       "ec": [
-        "1.1.1.392"
+        "6.2.1.7"
       ]
     }
   ],
@@ -437,12 +455,64 @@
     },
     {
       "id": "r6",
-      "name": "3alpha-hydroxycholanate dehydrogenase (NADP(+))",
-      "equation": "lithocholate + NADP(+) = 3-oxo-5beta-cholan-24-oate + NADPH + H(+)",
-      "ec": "1.1.1.392",
+      "name": "cholate--CoA ligase",
+      "equation": "lithocholate + ATP + CoA = lithocholoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.7",
       "substrates": [
         {
           "metabolite": "lithocholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lithocholyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:47136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "chenodeoxycholate + NADP(+) = 3-oxochenodeoxycholate + NADPH + H(+)",
+      "equation": "chenodeoxycholate + NADP(+) = 3-oxochenodeoxycholate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholate",
           "stoichiometry": 1
         },
         {
@@ -452,7 +522,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_oxo_5_cholanate",
+          "metabolite": "7_hydroxy_3_oxo_5_cholan_24_oate",
           "stoichiometry": 1
         },
         {
@@ -464,61 +534,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_392"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:47496"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:47496"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "chenodeoxycholate + glycine = glycochenodeoxycholate + H2O",
-      "equation": "chenodeoxycholate + glycine = glycochenodeoxycholate + H2O",
-      "substrates": [
-        {
-          "metabolite": "chenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glycochenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:47112"
+        "rhea": "RHEA:47504"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47112"
+            "id": "RHEA:47504"
           }
         ]
       }

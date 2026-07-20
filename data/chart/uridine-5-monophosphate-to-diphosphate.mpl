@@ -4,27 +4,37 @@
 # edit the generator, not this file.
 
 pathway uridine-5-monophosphate-to-diphosphate "uridine 5'-monophosphate(… to diphosphate" {
-  spacing 244
+  spacing 252
 
   spine at 0,0 {
     uridine_5_monophosphate_1
-    <-> ec_2_1_1_189 [2.1.1.189] +sam -sah -hplus
-    5_methyluridine_5_monophosphate_1
-    <-> ec_2_8_1_15 [2.8.1.15] +c_terminal_n_glycylaminoethanethioate_1 +atp +h2o -5_methyl_2_thiouridine_5_phosphate_1 -amp -ppi -hplus
-    c_terminal_gly_gly_1
-    <-> . +atp +hplus -ppi
-    c_terminal_gly_gly_amp_1_group
+    <-> . +5_10_methylenetetrahydrofolate +taurine +gtp +hydrogen_acceptor +h2o -dhf -gdp -hydrogen_donor -pi -hplus
+    5_taurinomethyluridine_5_phosphate_1
+    <-> ec_2_8_1_14 [2.8.1.14] +3_disulfanyl_l_alanine +hydrogen_donor +atp -l_cysteine -hydrogen_acceptor -amp -ppi -hplus
+    5_taurinomethyl_2_thiouridine_5_phosphate_1
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_230 [2.1.1.230] +adenosine_5_monophosphate_1 +sam +hplus
-    2_o_methyladenosine_5_monophosphate_1
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_17_99_10 [1.17.99.10] +cholest_4_en_3_one +hydrogen_acceptor +h2o
+    25_hydroxycholest_4_en_3_one
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
+    3e_phycocyanobilin
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_17_99_10 [1.17.99.10] +cholest_1_4_dien_3_one +h2o +hydrogen_donor
+    25_hydroxycholest_1_4_dien_3_one
   }
 
   branch from ppi side right {
     ppi
-    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +ctp +hplus
-    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> . +1_2_dilinoleoyl_sn_glycero_3_phosphate +ctp +hplus
+    cdp_1_2_dilinoleoyl_sn_glycerol
   }
 }

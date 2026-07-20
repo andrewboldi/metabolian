@@ -26,25 +26,19 @@ pathway n-fatty-acyl-l-isoleuci-to-fmn "N-(fatty acyl)-L-isoleuci… to FMN" {
 
   branch from isoleucine side left {
     isoleucine
-    <-> . +l_asparagine +l_histidine +ornithine +l_lysinium +leucine +cysteine +aspartate +l_phenylalanine +glutamate +atp +amp +ppi +h2o +hplus
-    bacitracin_a
+    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
+    n_amidino_l_isoleucine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoglycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoglycerol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    1_hydroxy_fatty_acid_anion
-  }
-
-  branch from 2_hydroxy_2_methylbutanenitrile side right {
-    2_hydroxy_2_methylbutanenitrile
-    <-> . +hydrogen_cyanide
-    butan_2_one
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11s_12r_eet
   }
 }

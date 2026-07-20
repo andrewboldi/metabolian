@@ -24,13 +24,13 @@ pathway l-threonylcarbamoyladenyl-to-s-adenosyl-l-homocy "L-threonylcarbamoylade
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +dihydro_ferroheme_d1 +hydrogen_donor
-    ferroheme_d1
+    <-> . +preandiloid_b +hydrogen_donor
+    preandiloid_c
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_35 [2.1.1.35] +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
+    <-> . +malonyl-coa +acetyl_coa +sam +co2 +coa
+    3_5_dimethylorsellinate
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-hydroxy-9-10-secoandros-to-diphosphate",
   "name": "3-hydroxy-9,10-secoandros… to diphosphate",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 4-step route from 3-hydroxy-9,10-secoandrosta-1,3,5(10)-triene-9,17-dione to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -160,22 +160,22 @@
       }
     },
     {
-      "id": "9_pimara_7_15_diene",
-      "name": "9β-pimara-7,15-diene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50067"
-      }
-    },
-    {
-      "id": "9_pimara_7_15_dien_19_oate",
-      "name": "9β-pimara-7,15-dien-19-oate",
-      "short": "9β-pimara-7,15-dien…",
+      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
+      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
+      "short": "all-cis-5,8,11,14,1…",
       "formula": "C20H29O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:63659"
+        "chebi": "CHEBI:58562"
+      }
+    },
+    {
+      "id": "19_hepe",
+      "name": "19-HEPE",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76636"
       }
     },
     {
@@ -189,30 +189,23 @@
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:58635"
       }
     },
     {
-      "id": "biotinate",
-      "name": "biotinate",
-      "formula": "C10H15N2O3S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57586"
-      }
-    },
-    {
-      "id": "biotinyl_l_lysine",
-      "name": "biotinyl-L-lysine",
-      "formula": "C16H26N4O3S",
+      "id": "abieta_8_14_12_diene",
+      "name": "abieta-8(14),12-diene",
+      "short": "abieta-8(14),12-die…",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:83144"
+        "chebi": "CHEBI:29616"
       }
     }
   ],
@@ -246,13 +239,6 @@
       ]
     },
     {
-      "id": "ec_1_14_14_111",
-      "name": "9beta-pimara-7,15-diene oxidase",
-      "ec": [
-        "1.14.14.111"
-      ]
-    },
-    {
       "id": "ec_4_2_1_132",
       "name": "2-hydroxyhexa-2,4-dienoate hydratase",
       "ec": [
@@ -260,10 +246,10 @@
       ]
     },
     {
-      "id": "ec_6_3_4_11",
-      "name": "biotin--[methylcrotonoyl-CoA-carboxylase] ligase",
+      "id": "ec_4_2_3_32",
+      "name": "levopimaradiene synthase",
       "ec": [
-        "6.3.4.11"
+        "4.2.3.32"
       ]
     }
   ],
@@ -474,57 +460,51 @@
     },
     {
       "id": "r5",
-      "name": "9beta-pimara-7,15-diene oxidase",
-      "equation": "9beta-pimara-7,15-diene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = 9beta-pimara-7,15-dien-19-oate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
-      "ec": "1.14.14.111",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 1...",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "9_pimara_7_15_diene",
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "9_pimara_7_15_dien_19_oate",
+          "metabolite": "19_hepe",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 4
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_111"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31951"
+        "rhea": "RHEA:39787"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31951"
+            "id": "RHEA:39787"
           }
         ]
       }
@@ -572,57 +552,41 @@
     },
     {
       "id": "r7",
-      "name": "biotin--[methylcrotonoyl-CoA-carboxylase] ligase",
-      "equation": "apo-[3-methylcrotonoyl-CoA:carbon-dioxide ligase (ADP-forming)] + biotin + ATP = holo-[3-methylcrotonoyl-CoA:carbon-dioxide ligase (ADP-forming)] + AMP + diphosphate + H(+)",
-      "ec": "6.3.4.11",
+      "name": "levopimaradiene synthase",
+      "equation": "(+)-copalyl diphosphate = abieta-8(14),12-diene + diphosphate",
+      "ec": "4.2.3.32",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "biotinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "biotinyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "abieta_8_14_12_diene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_4_11"
+          "enzyme": "ec_4_2_3_32"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:24376"
+        "rhea": "RHEA:25548"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24376"
+            "id": "RHEA:25548"
           }
         ]
       }

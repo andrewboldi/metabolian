@@ -26,13 +26,7 @@ pathway dtdp-d-glucose-to-n-tetracosanoylsphingosine "dTDP-α-D-glucose to N-tet
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +fatty_acid_ethyl_ester +h2o +hplus
-    ethanol
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +6_o_methyl_n_deacetylipecoside +h2o
-    6_o_methyl_n_deacetylipecoside_aglycone
+    <-> . +1_acyl_3_o_d_galactosyl_sn_glycerol +h2o +hplus
+    3_o_d_galactopyranosyl_sn_glycerol
   }
 }

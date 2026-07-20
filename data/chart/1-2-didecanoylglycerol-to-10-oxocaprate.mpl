@@ -18,7 +18,7 @@ pathway 1-2-didecanoylglycerol-to-10-oxocaprate "1,2-didecanoylglycerol to 10-ox
 
   branch from fmn side left {
     fmn
-    <-> . +methyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    hydroxy_fatty_acid_anion
+    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    4_24s_dihydroxycholesterol
   }
 }

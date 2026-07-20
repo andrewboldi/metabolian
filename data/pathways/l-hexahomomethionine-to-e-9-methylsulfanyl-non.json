@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-hexahomomethionine-to-e-9-methylsulfanyl-non",
   "name": "L-hexahomomethionine to (E)-9-(methylsulfanyl)non…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from L-hexahomomethionine zwitterion to (E)-9-(methylsulfanyl)nonanal oxime, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -112,30 +112,31 @@
       }
     },
     {
-      "id": "amyrin",
-      "name": "β-amyrin",
-      "formula": "C30H50O",
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10352"
+        "chebi": "CHEBI:57912"
       }
     },
     {
-      "id": "24_hydroxy_amyrin",
-      "name": "24-hydroxy-β-amyrin",
-      "formula": "C30H50O2",
+      "id": "e_indol_3_ylacetaldehyde_oxime",
+      "name": "(E)-indol-3-ylacetaldehyde oxime",
+      "short": "indol-3-ylacetaldeh…",
+      "formula": "C10H10N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62459"
+        "chebi": "CHEBI:17545"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_14_134",
-      "name": "beta-amyrin 24-hydroxylase",
+      "id": "ec_1_14_14_156",
+      "name": "tryptophan N-monooxygenase",
       "ec": [
-        "1.14.14.134"
+        "1.14.14.156"
       ]
     }
   ],
@@ -287,57 +288,61 @@
     },
     {
       "id": "r4",
-      "name": "beta-amyrin 24-hydroxylase",
-      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 24-hydroxy-beta-amyrin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.134",
+      "name": "tryptophan N-monooxygenase",
+      "equation": "L-tryptophan + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-(indol-3-yl)acetaldehyde oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.156",
       "substrates": [
         {
-          "metabolite": "amyrin",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "24_hydroxy_amyrin",
+          "metabolite": "e_indol_3_ylacetaldehyde_oxime",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_134"
+          "enzyme": "ec_1_14_14_156"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30991"
+        "rhea": "RHEA:33279"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30991"
+            "id": "RHEA:33279"
           }
         ]
       }

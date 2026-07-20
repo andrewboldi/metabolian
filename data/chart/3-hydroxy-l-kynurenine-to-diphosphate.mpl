@@ -18,19 +18,19 @@ pathway 3-hydroxy-l-kynurenine-to-diphosphate "3-hydroxy-L-kynurenine to diphosp
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_184 [2.1.1.184] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_n6_dimethyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from alanine side right {
     alanine
-    <-> . +plp +pyruvate
-    pyridoxamine_5_phosphate
+    <-> . +n_n_dimethyl_l_argininium +pyruvate
+    5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_143 [4.2.3.143] +fpp +h2o
-    kunzeaol
+    <-> . +6_hydroxymellein +fpp
+    verruculide_c
   }
 }

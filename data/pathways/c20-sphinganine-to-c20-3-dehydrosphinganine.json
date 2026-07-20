@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "c20-sphinganine-to-c20-3-dehydrosphinganine",
+  "name": "C20 sphinganine… to C20 3-dehydrosphinganine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from C20 sphinganine 1-phosphate(1−) to C20 3-dehydrosphinganine(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33391"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64886"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "c20_sphinganine_1_phosphate",
+      "name": "C20 sphinganine 1-phosphate",
+      "short": "C20 sphinganine 1-P",
+      "formula": "C20H43NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64886"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "c20_sphinganine",
+      "name": "C20 sphinganine",
+      "formula": "C20H44NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:64887"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "c20_3_dehydrosphinganine",
+      "name": "C20 3-dehydrosphinganine",
+      "short": "C20 3-dehydrosphing…",
+      "formula": "C20H42NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65073"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "C20 sphinganine 1-phosphate + H2O = C20 sphinganine + phosphate",
+      "equation": "C20 sphinganine 1-phosphate + H2O = C20 sphinganine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "c20_sphinganine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c20_sphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33391"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "C20 sphinganine + NADP(+) = 3-oxoeicosasphinganine + NADPH + H(+)",
+      "equation": "C20 sphinganine + NADP(+) = 3-oxoeicosasphinganine + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "c20_sphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c20_3_dehydrosphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33695"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "octadecanoyl-CoA + L-serine + H(+) = 3-oxoeicosasphinganine + CO2 + CoA",
+      "equation": "octadecanoyl-CoA + L-serine + H(+) = 3-oxoeicosasphinganine + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c20_3_dehydrosphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33683"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33683"
+          }
+        ]
+      }
+    }
+  ]
+}

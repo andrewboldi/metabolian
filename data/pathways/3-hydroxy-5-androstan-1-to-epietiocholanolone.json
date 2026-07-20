@@ -1,0 +1,199 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxy-5-androstan-1-to-epietiocholanolone",
+  "name": "3α-hydroxy-5β-androstan-1… to epietiocholanolone",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 3α-hydroxy-5β-androstan-17-one to epietiocholanolone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10356"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28195"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxy_5_androstan_17_one",
+      "name": "3α-hydroxy-5β-androstan-17-one",
+      "short": "3α-hydroxy-5β-andro…",
+      "formula": "C19H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28195"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "5_androstane_3_17_dione",
+      "name": "5β-androstane-3,17-dione",
+      "short": "5β-androstane-3,17-…",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16985"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "epietiocholanolone",
+      "name": "epietiocholanolone",
+      "formula": "C19H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89524"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_152",
+      "name": "3alpha-hydroxy-5beta-androstane-17-one 3alpha-dehydrogenase",
+      "ec": [
+        "1.1.1.152"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3alpha-hydroxy-5beta-androstane-17-one 3alpha-dehydrogenase",
+      "equation": "3alpha-hydroxy-5beta-androstan-17-one + NAD(+) = 5beta-androstane-3,17-dione + NADH + H(+)",
+      "ec": "1.1.1.152",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_5_androstan_17_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_androstane_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_152"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10356"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5beta-androstane-3,17-dione + NADPH + H(+) = 3beta-hydroxy-5beta-androstane-17-one + NA...",
+      "equation": "5beta-androstane-3,17-dione + NADPH + H(+) = 3beta-hydroxy-5beta-androstane-17-one + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "5_androstane_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epietiocholanolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69036"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n2-4-aminobutanoyl-l-ly-to-l-alanine",
+  "name": "N2-(4-aminobutanoyl)-L-ly… to L-alanine",
+  "category": "redox-detox",
+  "summary": "A 2-step route from N2-(4-aminobutanoyl)-L-lysinium to L-alanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59620"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:143159"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n2_4_aminobutanoyl_l_lysinium",
+      "name": "N2-(4-aminobutanoyl)-L-lysinium",
+      "short": "N2-(4-aminobutanoyl…",
+      "formula": "C10H22N3O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143159"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "4_oxobutanoate",
+      "name": "4-oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57706"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "4_ammoniobutanal",
+      "name": "4-ammoniobutanal",
+      "formula": "C4H10NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58264"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_2_ammoniohexano_6_lactam",
+      "name": "L-2-ammoniohexano-6-lactam",
+      "short": "L-2-ammoniohexano-6…",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58113"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_4_13_4",
+      "name": "Xaa-Arg dipeptidase",
+      "ec": [
+        "3.4.13.4"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_96",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "ec": [
+        "2.6.1.96"
+      ]
+    },
+    {
+      "id": "ec_3_5_2_11",
+      "name": "L-lysine-lactamase",
+      "ec": [
+        "3.5.2.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Xaa-Arg dipeptidase",
+      "equation": "N(2)-(4-aminobutanoyl)-L-lysine + H2O = 4-aminobutanoate + L-lysine",
+      "ec": "3.4.13.4",
+      "substrates": [
+        {
+          "metabolite": "n2_4_aminobutanoyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_13_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "equation": "4-aminobutanoate + pyruvate = succinate semialdehyde + L-alanine",
+      "ec": "2.6.1.96",
+      "substrates": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-aminobutanal + NADP(+) + H2O = 4-aminobutanoate + NADPH + 2 H(+)",
+      "equation": "4-aminobutanal + NADP(+) + H2O = 4-aminobutanoate + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30803"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-lysine-lactamase",
+      "equation": "L-2-aminohexano-6-lactam + H2O = L-lysine",
+      "ec": "3.5.2.11",
+      "substrates": [
+        {
+          "metabolite": "l_2_ammoniohexano_6_lactam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
+      "equation": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61264"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61264"
+          }
+        ]
+      }
+    }
+  ]
+}

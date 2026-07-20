@@ -24,13 +24,13 @@ pathway 11z-14z-icosadienamide-to-glutathione-disulfide "(11Z,14Z)-icosadienamid
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
-    n_terminal_5_oxo_l_proline
+    <-> . +5_methoxytryptamine +o2 +h2o +h2o2
+    5_methoxyindoleacetaldehyde
   }
 
   branch from gssg side left {
     gssg
-    <-> . +9_s_hpode +gsh +h2o
-    9_s_hode
+    <-> . +5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13 +gsh +h2o
+    15_s_hepe
   }
 }

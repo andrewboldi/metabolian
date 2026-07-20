@@ -203,57 +203,67 @@
       }
     },
     {
-      "id": "n_methyl_l_alanine",
-      "name": "N-methyl-L-alanine",
-      "formula": "C4H9NO2",
+      "id": "carbaryl",
+      "name": "carbaryl",
+      "formula": "C12H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58175"
+        "chebi": "CHEBI:3390"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "1_7_dimethylxanthine",
-      "name": "1,7-dimethylxanthine",
-      "formula": "C7H8N4O2",
+      "id": "1_naphthol",
+      "name": "1-naphthol",
+      "formula": "C10H8O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:25858"
+        "chebi": "CHEBI:10319"
       }
     },
     {
-      "id": "7_methylxanthine",
-      "name": "7-methylxanthine",
-      "formula": "C6H6N4O2",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:48991"
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61976"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
       }
     }
   ],
@@ -294,17 +304,10 @@
       ]
     },
     {
-      "id": "ec_1_4_1_17",
-      "name": "N-methylalanine dehydrogenase",
+      "id": "ec_1_14_11_27",
+      "name": "[histone H3]-dimethyl-L-lysine(36) demethylase",
       "ec": [
-        "1.4.1.17"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_178",
-      "name": "methylxanthine N(1)-demethylase",
-      "ec": [
-        "1.14.13.178"
+        "1.14.11.27"
       ]
     }
   ],
@@ -568,34 +571,15 @@
     },
     {
       "id": "r6",
-      "name": "N-methylalanine dehydrogenase",
-      "equation": "N-methyl-L-alanine + NADP(+) + H2O = methylamine + pyruvate + NADPH + H(+)",
-      "ec": "1.4.1.17",
+      "name": "carbaryl + H2O + H(+) = 1-naphthol + methylamine + CO2",
+      "equation": "carbaryl + H2O + H(+) = 1-naphthol + methylamine + CO2",
       "substrates": [
         {
-          "metabolite": "n_methyl_l_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
+          "metabolite": "carbaryl",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methylamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -603,83 +587,88 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_4_1_17"
+          "metabolite": "1_naphthol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:21768"
+        "rhea": "RHEA:62380"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21768"
+            "id": "RHEA:62380"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "methylxanthine N(1)-demethylase",
-      "equation": "1,7-dimethylxanthine + NADPH + O2 + H(+) = 7-methylxanthine + formaldehyde + NADP(+) + H2O",
-      "ec": "1.14.13.178",
+      "name": "[histone H3]-dimethyl-L-lysine(36) demethylase",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(36)-[histone H3] + 2 2-oxoglutarate + 2 O2 = L-lysyl(36)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
+      "ec": "1.14.11.27",
       "substrates": [
         {
-          "metabolite": "1_7_dimethylxanthine",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
-          "stoichiometry": 1
+          "metabolite": "akg",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "7_methylxanthine",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
           "metabolite": "formaldehyde",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
+          "metabolite": "succinate",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "co2",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_178"
+          "enzyme": "ec_1_14_11_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:36283"
+        "rhea": "RHEA:42032"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36283"
+            "id": "RHEA:42032"
           }
         ]
       }

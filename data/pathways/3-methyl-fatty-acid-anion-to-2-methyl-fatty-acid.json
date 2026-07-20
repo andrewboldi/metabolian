@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid",
   "name": "3-methyl fatty acid anion to 2-methyl fatty acid anion",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 4-step route from 3-methyl fatty acid anion to 2-methyl fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -186,61 +186,51 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "phellandrene",
-      "name": "β-phellandrene",
-      "formula": "C10H16",
+      "id": "drimenol",
+      "name": "drimenol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:48741"
+        "chebi": "CHEBI:61148"
       }
     },
     {
-      "id": "2_aminoethyl_phosphonic_acid",
-      "name": "(2-aminoethyl)phosphonic acid",
-      "short": "(2-aminoethyl)phosp…",
-      "formula": "C2H8NO3P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57418"
-      }
-    },
-    {
-      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
-      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
-      "short": "(2-amino-1-hydroxye…",
-      "formula": "C2H8NO4P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:141612"
-      }
-    },
-    {
-      "id": "2r_2_hydroxyoctadecanoyl_coa",
-      "name": "(2R)-2-hydroxyoctadecanoyl-CoA",
-      "short": "2-hydroxyoctadecano…",
-      "formula": "C39H66N7O18P3S",
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:171666"
+        "chebi": "CHEBI:57371"
       }
     },
     {
-      "id": "heptadecanal",
-      "name": "heptadecanal",
-      "formula": "C17H34O",
-      "charge": 0,
+      "id": "2_hydroxybutanoyl_coa",
+      "name": "2-hydroxybutanoyl-CoA",
+      "short": "2-hydroxybutanoyl-C…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138631"
+        "chebi": "CHEBI:138628"
+      }
+    },
+    {
+      "id": "oxalyl_coa",
+      "name": "oxalyl-CoA",
+      "formula": "C23H31N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57388"
       }
     }
   ],
@@ -253,10 +243,17 @@
       ]
     },
     {
-      "id": "ec_1_14_11_46",
-      "name": "2-aminoethylphosphonate dioxygenase",
+      "id": "ec_4_2_3_194",
+      "name": "(-)-drimenol synthase",
       "ec": [
-        "1.14.11.46"
+        "4.2.3.194"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_8",
+      "name": "oxalyl-CoA decarboxylase",
+      "ec": [
+        "4.1.1.8"
       ]
     }
   ],
@@ -445,17 +442,22 @@
     },
     {
       "id": "r5",
-      "name": "(2E)-geranyl diphosphate = beta-phellandrene + diphosphate",
-      "equation": "(2E)-geranyl diphosphate = beta-phellandrene + diphosphate",
+      "name": "(-)-drimenol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (5S,9S,10S)-drim-7-en-11-ol + diphosphate",
+      "ec": "4.2.3.194",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "phellandrene",
+          "metabolite": "drimenol",
           "stoichiometry": 1
         },
         {
@@ -463,29 +465,33 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_194"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25504"
+        "rhea": "RHEA:28290"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25504"
+            "id": "RHEA:28290"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "2-aminoethylphosphonate dioxygenase",
-      "equation": "(2-aminoethyl)phosphonate + 2-oxoglutarate + O2 = (1R)-(2-amino-1-hydroxyethyl)phosphonate + succinate + CO2",
-      "ec": "1.14.11.46",
+      "name": "butanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxybutanoyl-CoA + succinate + CO2",
+      "equation": "butanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxybutanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "2_aminoethyl_phosphonic_acid",
+          "metabolite": "butyryl_coa",
           "stoichiometry": 1
         },
         {
@@ -499,7 +505,7 @@
       ],
       "products": [
         {
-          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "metabolite": "2_hydroxybutanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -511,57 +517,62 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_46"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:41440"
+        "rhea": "RHEA:55176"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41440"
+            "id": "RHEA:55176"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "(2R)-2-hydroxyoctadecanoyl-CoA = heptadecanal + formyl-CoA",
-      "equation": "(2R)-2-hydroxyoctadecanoyl-CoA = heptadecanal + formyl-CoA",
+      "name": "oxalyl-CoA decarboxylase",
+      "equation": "oxalyl-CoA + H(+) = formyl-CoA + CO2",
+      "ec": "4.1.1.8",
       "substrates": [
         {
-          "metabolite": "2r_2_hydroxyoctadecanoyl_coa",
+          "metabolite": "oxalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "heptadecanal",
+          "metabolite": "formyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "formyl_coa",
+          "metabolite": "co2",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_8"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:67448"
+        "rhea": "RHEA:19333"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67448"
+            "id": "RHEA:19333"
           }
         ]
       }

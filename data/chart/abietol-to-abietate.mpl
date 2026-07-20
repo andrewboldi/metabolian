@@ -18,7 +18,7 @@ pathway abietol-to-abietate "abietol to abietate" {
 
   branch from fmn side left {
     fmn
-    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
-    19_hetre
+    <-> ec_1_14_14_81 [1.14.14.81] +3_5_unsubstituted_flavanone +fmnh2 +o2 +h2o +hplus
+    3_5_dihydroxyflavanone
   }
 }

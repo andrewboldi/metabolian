@@ -15,4 +15,10 @@ pathway 3r-8z-11z-14z-17z-3-hyd-to-10z-13z-16z-19z-3-ox "(3R,8Z,11Z,14Z,17Z)-3-h
     <-> . +malonyl-coa +hplus -co2 -coa
     10z_13z_16z_19z_3_oxodocosatetraenoyl_coa
   }
+
+  branch from 2e_8z_11z_14z_17z_icosapentaenoyl_coa side left {
+    2e_8z_11z_14z_17z_icosapentaenoyl_coa
+    <-> .
+    3e_8z_11z_14z_17z_icosapentaenoyl_coa
+  }
 }

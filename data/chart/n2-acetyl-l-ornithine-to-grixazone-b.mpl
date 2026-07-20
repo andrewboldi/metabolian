@@ -34,19 +34,31 @@ pathway n2-acetyl-l-ornithine-to-grixazone-b "N2-acetyl-L-ornithine to grixazone
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_94 [3.1.1.94] +3s_versiconol_acetate +h2o +hplus
-    s_versiconol
+    <-> . +dihydroprecondylocarpine_acetate +hplus
+    catharanthine
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_23 [6.1.1.23] +amp_3_end_1 +aspartate +atp +amp
-    3_l_aspartate_adenylyl_1_group
+    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
+    3_l_lysyl_adenylyl_1_group
   }
 
   branch from arginine side right {
     arginine
-    <-> ec_2_6_1_84 [2.6.1.84] +pyruvate +alanine
-    5_guanidino_2_oxopentanoic_acid
+    <-> ec_1_5_1_11 [1.5.1.11] +nad +h2o +pyruvate +nadh +hplus
+    d_octopine_dizwitterion
+  }
+
+  branch from n_acetyl_l_cysteinate side left {
+    n_acetyl_l_cysteinate
+    <-> . +n_acetyl_l_cys_l_glu_1 +h2o
+    l_glutamyl_zwitterionic_group
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_2_3_3_2 [2.3.3.2] +lauroyl_coa +h2o +coa +hplus
+    2s_3s_2_hydroxytridecane_1_2_3_tricarboxylate
   }
 }

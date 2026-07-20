@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-d-ribofuranosyl-1-4-to-cobamamide",
   "name": "1-(β-D-ribofuranosyl)-1,4… to cobamamide",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 6-step route from 1-(β-D-ribofuranosyl)-1,4-dihydronicotinamide to cobamamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -216,39 +216,32 @@
       }
     },
     {
-      "id": "quinate",
-      "name": "(−)-quinate",
-      "formula": "C7H11O6",
-      "charge": -1,
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29751"
+        "chebi": "CHEBI:60039"
       }
     },
     {
-      "id": "3_dehydroquinate",
-      "name": "3-dehydroquinate",
-      "formula": "C7H9O6",
+      "id": "s_1_pyrroline_5_carboxylate",
+      "name": "(S)-1-pyrroline-5-carboxylate",
+      "short": "1-pyrroline-5-carbo…",
+      "formula": "C5H6NO2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:32364"
+        "chebi": "CHEBI:17388"
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
+      "id": "d_ribofuranose_5_phosphate",
+      "name": "D-ribofuranose 5-phosphate",
+      "short": "D-ribofuranose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:78346"
       }
     },
     {
@@ -258,6 +251,24 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:58527"
+      }
+    },
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61402"
+      }
+    },
+    {
+      "id": "ribazole",
+      "name": "α-ribazole",
+      "formula": "C14H18N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10329"
       }
     }
   ],
@@ -305,17 +316,31 @@
       ]
     },
     {
-      "id": "ec_1_1_5_8",
-      "name": "quinate/shikimate dehydrogenase (quinone)",
+      "id": "ec_1_5_5_2",
+      "name": "proline dehydrogenase",
       "ec": [
-        "1.1.5.8"
+        "1.5.5.2"
       ]
     },
     {
-      "id": "ec_2_7_7_1",
-      "name": "nicotinamide-nucleotide adenylyltransferase",
+      "id": "ec_3_2_2_14",
+      "name": "NMN nucleosidase",
       "ec": [
-        "2.7.7.1"
+        "3.2.2.14"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_17",
+      "name": "adenosine-phosphate deaminase",
+      "ec": [
+        "3.5.4.17"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_18",
+      "name": "ATP deaminase",
+      "ec": [
+        "3.5.4.18"
       ]
     }
   ],
@@ -651,12 +676,12 @@
     },
     {
       "id": "r8",
-      "name": "quinate/shikimate dehydrogenase (quinone)",
-      "equation": "L-quinate + a quinone = 3-dehydroquinate + a quinol",
-      "ec": "1.1.5.8",
+      "name": "proline dehydrogenase",
+      "equation": "L-proline + a quinone = (S)-1-pyrroline-5-carboxylate + a quinol + H(+)",
+      "ec": "1.5.5.2",
       "substrates": [
         {
-          "metabolite": "quinate",
+          "metabolite": "l_proline",
           "stoichiometry": 1
         },
         {
@@ -666,46 +691,11 @@
       ],
       "products": [
         {
-          "metabolite": "3_dehydroquinate",
+          "metabolite": "s_1_pyrroline_5_carboxylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydroquinones",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_5_8"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:23672"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:23672"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "nicotinamide-nucleotide adenylyltransferase",
-      "equation": "beta-nicotinamide D-ribonucleotide + ATP + H(+) = diphosphate + NAD(+)",
-      "ec": "2.7.7.1",
-      "substrates": [
-        {
-          "metabolite": "nmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -713,32 +703,71 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_1"
+          "enzyme": "ec_1_5_5_2"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:21360"
+        "rhea": "RHEA:23784"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21360"
+            "id": "RHEA:23784"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "NMN nucleosidase",
+      "equation": "beta-nicotinamide D-ribonucleotide + H2O = D-ribose 5-phosphate + nicotinamide + H(+)",
+      "ec": "3.2.2.14",
+      "substrates": [
+        {
+          "metabolite": "nmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:23140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23140"
           }
         ]
       }
@@ -778,6 +807,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:30935"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "adenosine-phosphate deaminase",
+      "equation": "ATP + H2O + H(+) = ITP + NH4(+)",
+      "ec": "3.5.4.17",
+      "substrates": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:13037"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "adenosylcobalamin/alpha-ribazole phosphatase",
+      "equation": "alpha-ribazole 5'-phosphate + H2O = alpha-ribazole + phosphate",
+      "ec": "3.1.3.73",
+      "substrates": [
+        {
+          "metabolite": "ribazole_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ribazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:24456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24456"
           }
         ]
       }

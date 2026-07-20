@@ -1,0 +1,231 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-3-dihydroxybenzoyl-to-n-2-3-dihydroxybenzoyl",
+  "name": "2,3-dihydroxybenzoyl… to N-(2,3-dihydroxybenzoyl)-…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from 2,3-dihydroxybenzoyl 5'-adenylate(1−) to N-(2,3-dihydroxybenzoyl)-L-serinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28566"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57417"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_3_dihydroxybenzoyl_5_adenylate",
+      "name": "2,3-dihydroxybenzoyl 5'-adenylate",
+      "short": "2,3-dihydroxybenzoy…",
+      "formula": "C17H17N5O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57417"
+      }
+    },
+    {
+      "id": "l_seryl_amp",
+      "name": "L-seryl-AMP",
+      "formula": "C13H18N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61231"
+      }
+    },
+    {
+      "id": "enterobactin",
+      "name": "enterobactin",
+      "formula": "C30H26N3O15",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77805"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_2_3_dihydroxybenzoyl_l_serinate",
+      "name": "N-(2,3-dihydroxybenzoyl)-L-serinate",
+      "short": "N-(2,3-dihydroxyben…",
+      "formula": "C10H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58154"
+      }
+    },
+    {
+      "id": "n_2_3_dihydroxybenzoyl_l_serine_trimer",
+      "name": "N-(2,3-dihydroxybenzoyl)-L-serine trimer",
+      "short": "N-(2,3-dihydroxyben…",
+      "formula": "C30H28N3O16",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143020"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_107",
+      "name": "apo-salmochelin esterase",
+      "ec": [
+        "3.1.1.107"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3 2,3-dihydroxybenzoyl-5'-AMP + 3 L-seryl-5'-AMP = enterobactin + 6 AMP + 7 H(+)",
+      "equation": "3 2,3-dihydroxybenzoyl-5'-AMP + 3 L-seryl-5'-AMP = enterobactin + 6 AMP + 7 H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoyl_5_adenylate",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "l_seryl_amp",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 7
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28566"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "enterobactin + 3 H2O = 3 N-(2,3-dihydroxybenzoyl)-L-serine + 2 H(+)",
+      "equation": "enterobactin + 3 H2O = 3 N-(2,3-dihydroxybenzoyl)-L-serine + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serinate",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28018"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "apo-salmochelin esterase",
+      "equation": "enterobactin + H2O = N-(2,3-dihydroxybenzoyl)-L-serine trimer",
+      "ec": "3.1.1.107",
+      "substrates": [
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serine_trimer",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_107"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:60384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60384"
+          }
+        ]
+      }
+    }
+  ]
+}

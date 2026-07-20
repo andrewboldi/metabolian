@@ -18,25 +18,31 @@ pathway l-l-homocystine-to-r-2-ethylmalate "L,L-homocystine to (R)-2-ethylmalate
 
   branch from homocysteine side left {
     homocysteine
-    <-> . +atp +hplus +ppi
-    l_homocysteinyl_amp
+    <-> . +h2o +hplus
+    l_homocysteine_thiolactone
   }
 
   branch from gssg side right {
     gssg
-    <-> ec_1_20_4_2 [1.20.4.2] +methylarsonate +gsh +hplus +h2o
-    methylarsonous_acid
+    <-> . +13_s_hpode +gsh +h2o
+    13_s_hode
   }
 
   branch from oxobut side left {
     oxobut
-    <-> ec_4_3_1_19 [4.3.1.19] +nh3
-    threonine
+    <-> ec_4_4_1_1 [4.4.1.1] +nh3
+    l_homoserine
   }
 
   branch from h2s side right {
     h2s
-    <-> ec_4_4_1_1 [4.4.1.1] +h2o +pyruvate +nh3 +hplus
-    cysteine
+    <-> ec_1_8_1_18 [1.8.1.18] +nadp +nadph
+    sulfur_atom
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +hydroxylamine +h2o +hplus
+    hydrazine
   }
 }

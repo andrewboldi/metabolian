@@ -150,6 +150,25 @@
       }
     },
     {
+      "id": "1_alkyl_2_acyl_sn_glycero_3_phosphate",
+      "name": "1-alkyl-2-acyl-sn-glycero-3-phosphate",
+      "short": "1-alkyl-2-acyl-sn-g…",
+      "formula": "C4H5O7PR2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:73332"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
       "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
       "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
       "short": "1,2-diacyl-sn-glyce…",
@@ -198,23 +217,31 @@
       }
     },
     {
-      "id": "2_acetamido_5_oxopentanoate",
-      "name": "2-acetamido-5-oxopentanoate",
-      "short": "2-acetamido-5-oxope…",
-      "formula": "C7H10NO4",
-      "charge": -1,
+      "id": "1_alkyl_3_acyl_sn_glycerol",
+      "name": "1-alkyl-3-acyl-sn-glycerol",
+      "short": "1-alkyl-3-acyl-sn-g…",
+      "formula": "C4H6O4R2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29123"
+        "chebi": "CHEBI:77274"
       }
     },
     {
-      "id": "l_glutamic_5_semialdehyde",
-      "name": "L-glutamic 5-semialdehyde",
-      "short": "L-glutamic…",
-      "formula": "C5H9NO3",
+      "id": "triacetin",
+      "name": "triacetin",
+      "formula": "C9H14O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58066"
+        "chebi": "CHEBI:9661"
+      }
+    },
+    {
+      "id": "diacetin",
+      "name": "diacetin",
+      "formula": "C7H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88156"
       }
     }
   ],
@@ -509,6 +536,49 @@
     },
     {
       "id": "r6",
+      "name": "1-O-alkyl-2-acyl-sn-glycero-3-phosphate + H2O = a 1-O-alkyl-sn-glycero-3-phosphate + a ...",
+      "equation": "1-O-alkyl-2-acyl-sn-glycero-3-phosphate + H2O = a 1-O-alkyl-sn-glycero-3-phosphate + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_alkyl_2_acyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:44888"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "L-serine-phosphatidylethanolamine phosphatidyltransferase",
       "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + L-serine = a 1,2-diacyl-sn-glycero-3-phospho-L-serine + ethanolamine",
       "ec": "2.7.8.29",
@@ -538,7 +608,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:27606"
       },
@@ -553,7 +623,7 @@
       }
     },
     {
-      "id": "r7",
+      "id": "r8",
       "name": "1-alkyl-2-acetylglycerol O-acyltransferase",
       "equation": "a 1-O-alkyl-2-acetyl-sn-glycerol + an acyl-CoA = a 1-O-alkyl-2-acetyl-3-acyl-sn-glycerol + CoA",
       "ec": "2.3.1.125",
@@ -583,7 +653,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:21996"
       },
@@ -598,12 +668,12 @@
       }
     },
     {
-      "id": "r8",
-      "name": "N-acetyl-L-glutamate 5-semialdehyde + H2O = L-glutamate 5-semialdehyde + acetate",
-      "equation": "N-acetyl-L-glutamate 5-semialdehyde + H2O = L-glutamate 5-semialdehyde + acetate",
+      "id": "r9",
+      "name": "1-O-alkyl-3-acyl-sn-glycerol + H2O = a 1-O-alkyl-sn-glycerol + a fatty acid + H(+)",
+      "equation": "1-O-alkyl-3-acyl-sn-glycerol + H2O = a 1-O-alkyl-sn-glycerol + a fatty acid + H(+)",
       "substrates": [
         {
-          "metabolite": "2_acetamido_5_oxopentanoate",
+          "metabolite": "1_alkyl_3_acyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -613,25 +683,72 @@
       ],
       "products": [
         {
-          "metabolite": "l_glutamic_5_semialdehyde",
+          "metabolite": "1_o_alkyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:30503"
+        "rhea": "RHEA:44944"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30503"
+            "id": "RHEA:44944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "triacetin + H2O = diacetylglycerol + acetate + H(+)",
+      "equation": "triacetin + H2O = diacetylglycerol + acetate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "triacetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diacetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:48028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48028"
           }
         ]
       }

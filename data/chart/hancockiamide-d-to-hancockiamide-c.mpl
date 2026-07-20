@@ -24,19 +24,13 @@ pathway hancockiamide-d-to-hancockiamide-c "hancockiamide D to Hancockiamide C" 
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_81 [4.2.3.81] +fpp
-    exo_bergamotene
+    <-> ec_4_2_3_150 [4.2.3.150] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    r_cembrene_a
   }
 
-  branch from hancockiamide_g side left {
-    hancockiamide_g
-    <-> . +trans_cinnamate +atp +amp +ppi
-    hancockiamide_h
-  }
-
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    2_hydroxy_17_estradiol
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent
   }
 }

@@ -143,42 +143,43 @@
       }
     },
     {
-      "id": "linoleoyl_containing_glycerolipid",
-      "name": "linoleoyl-containing glycerolipid",
-      "short": "linoleoyl-containin…",
-      "formula": "C18H31OR",
-      "charge": 0,
+      "id": "4_amino_3_all_trans_hexaprenylbenzoate",
+      "name": "4-amino-3-all-trans-hexaprenylbenzoate",
+      "short": "4-amino-3-all-trans…",
+      "formula": "C37H54NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:88351"
+        "chebi": "CHEBI:142618"
       }
     },
     {
-      "id": "linolenoyl_containing_glycerolipid",
-      "name": "α-linolenoyl-containing glycerolipid",
-      "short": "α-linolenoyl-contai…",
-      "formula": "C18H29OR",
-      "charge": 0,
+      "id": "4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate",
+      "name": "4-amino-5-hydroxy-3-all-trans-hexaprenylbenzoate",
+      "short": "4-amino-5-hydroxy-3…",
+      "formula": "C37H54NO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90078"
+        "chebi": "CHEBI:142619"
       }
     },
     {
-      "id": "6a_hydroxymaackiain",
-      "name": "(+)-6a-hydroxymaackiain",
-      "short": "(+)-6a-hydroxymaack…",
-      "formula": "C16H12O6",
+      "id": "n_acyl_4e_8e_sphinga_4_8_dienine",
+      "name": "N-acyl-(4E,8E)-sphinga-4,8-dienine",
+      "short": "N-acyl-(4E,8E)-sphi…",
+      "formula": "C19H34NO3R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:43129"
+        "chebi": "CHEBI:85953"
       }
     },
     {
-      "id": "pisatin",
-      "name": "(+)-pisatin",
-      "formula": "C17H14O6",
+      "id": "n_acyl_4e_8e_9_methylsphinga_4_8_dienine",
+      "name": "N-acyl-(4E,8E)-9-methylsphinga-4,8-dienine",
+      "short": "N-acyl-(4E,8E)-9-me…",
+      "formula": "C20H36NO3R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:67347"
+        "chebi": "CHEBI:87033"
       }
     }
   ],
@@ -212,17 +213,10 @@
       ]
     },
     {
-      "id": "ec_1_14_19_35",
-      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "id": "ec_2_1_1_317",
+      "name": "sphingolipid C(9)-methyltransferase",
       "ec": [
-        "1.14.19.35"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_270",
-      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
-      "ec": [
-        "2.1.1.270"
+        "2.1.1.317"
       ]
     }
   ],
@@ -437,12 +431,11 @@
     },
     {
       "id": "r5",
-      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
-      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (9Z,12Z,15Z)-octadecatrienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.35",
+      "name": "4-amino-3-(all-trans-hexaprenyl)benzoate + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+...",
+      "equation": "4-amino-3-(all-trans-hexaprenyl)benzoate + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 4-amino-5-hydroxy-3-(all-trans-hexaprenyl)benzoate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "linoleoyl_containing_glycerolipid",
+          "metabolite": "4_amino_3_all_trans_hexaprenylbenzoate",
           "stoichiometry": 1
         },
         {
@@ -460,7 +453,7 @@
       ],
       "products": [
         {
-          "metabolite": "linolenoyl_containing_glycerolipid",
+          "metabolite": "4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate",
           "stoichiometry": 1
         },
         {
@@ -469,37 +462,32 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_35"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46408"
+        "rhea": "RHEA:58392"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46408"
+            "id": "RHEA:58392"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
-      "equation": "(+)-6a-hydroxymaackiain + S-adenosyl-L-methionine = (+)-pisatin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.270",
+      "name": "sphingolipid C(9)-methyltransferase",
+      "equation": "a (4E,8E)-4-sphinga-4,8-dienine ceramide + S-adenosyl-L-methionine = a 9-methyl-(4E,8E)-sphinga-4,8-dienine ceramide + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.317",
       "substrates": [
         {
-          "metabolite": "6a_hydroxymaackiain",
+          "metabolite": "n_acyl_4e_8e_sphinga_4_8_dienine",
           "stoichiometry": 1
         },
         {
@@ -509,7 +497,7 @@
       ],
       "products": [
         {
-          "metabolite": "pisatin",
+          "metabolite": "n_acyl_4e_8e_9_methylsphinga_4_8_dienine",
           "stoichiometry": 1
         },
         {
@@ -523,20 +511,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_270"
+          "enzyme": "ec_2_1_1_317"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:35471"
+        "rhea": "RHEA:46804"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35471"
+            "id": "RHEA:46804"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli",
   "name": "3-(1-hydroxyethyl)bacteri… to divinyl chlorophyllide a",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 3-(1-hydroxyethyl)bacteriochlorophyllide a(2−) to divinyl chlorophyllide a(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -157,30 +157,22 @@
       }
     },
     {
-      "id": "h2",
-      "name": "Dihydrogen (H2)",
-      "formula": "H2",
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18276"
+        "chebi": "CHEBI:16113"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "25r_cholest_5_ene_3_26_diol",
+      "name": "(25R)-cholest-5-ene-3β,26-diol",
+      "short": "cholest-5-ene-3β,26…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:76591"
       }
     },
     {
@@ -221,13 +213,6 @@
       "name": "chlorophyllide a oxygenase",
       "ec": [
         "1.14.13.122"
-      ]
-    },
-    {
-      "id": "ec_1_12_1_4",
-      "name": "hydrogenase (NAD(+), ferredoxin)",
-      "ec": [
-        "1.12.1.4"
       ]
     },
     {
@@ -453,53 +438,51 @@
     },
     {
       "id": "r5",
-      "name": "hydrogenase (NAD(+), ferredoxin)",
-      "equation": "2 H2 + 2 oxidized [2Fe-2S]-[ferredoxin] + NAD(+) = 2 reduced [2Fe-2S]-[ferredoxin] + NADH + 3 H(+)",
-      "ec": "1.12.1.4",
+      "name": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (25R)-cholest-5-ene-3beta,26-diol...",
+      "equation": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (25R)-cholest-5-ene-3beta,26-diol + 2 oxidized [adrenodoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "h2",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "nad",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
+          "stoichiometry": 2
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_12_1_4"
+          "metabolite": "25r_cholest_5_ene_3_26_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:30279"
+        "rhea": "RHEA:46400"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30279"
+            "id": "RHEA:46400"
           }
         ]
       }

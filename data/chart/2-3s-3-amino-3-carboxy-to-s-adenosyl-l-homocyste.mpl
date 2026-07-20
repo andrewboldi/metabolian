@@ -18,7 +18,7 @@ pathway 2-3s-3-amino-3-carboxy-to-s-adenosyl-l-homocyste "2-[(3S)-3-amino-3-carb
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_33 [2.1.1.33] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> ec_2_1_1_324 [2.1.1.324] +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +sam +hplus
+    dtdp_d_forosamine
   }
 }

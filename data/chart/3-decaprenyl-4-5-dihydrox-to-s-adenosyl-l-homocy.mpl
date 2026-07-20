@@ -20,13 +20,13 @@ pathway 3-decaprenyl-4-5-dihydrox-to-s-adenosyl-l-homocy "3-decaprenyl-4,5-dihyd
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_172 [2.1.1.172] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_337 [2.1.1.337] +r_reticulinium +sam +hplus
+    r_tembetarine
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_1_109 [1.3.1.109] +butyryl_coa +di_sulfido_diiron +nad +nadh
-    crotonoyl_coa
+    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
+    1_linolenoyl_2_acyl_3_d_galactosyl_1_6_d_galacto
   }
 }

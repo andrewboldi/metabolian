@@ -26,14 +26,14 @@ pathway 4-hydroxy-3-octaprenylben-to-s-adenosyl-l-homocy "4-hydroxy-3-octaprenyl
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_283 [2.1.1.283] +emodin +sam +hplus
-    questin_2_olate
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +5s_hydroperoxy_18s_hydroxy_6e_8z_11z_14z_16e_ic +hydrogen_donor +h2o
-    18s_resolvin_e2
+    <-> . +hercynyl_seglcnac_selenoxide +hydrogen_donor +selenoneine +h2o
+    2_acetamidoglucal
   }
 
   branch from ubiquinol_8 side left {

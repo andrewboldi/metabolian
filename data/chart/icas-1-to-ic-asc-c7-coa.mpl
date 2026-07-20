@@ -8,9 +8,7 @@ pathway icas-1-to-ic-asc-c7-coa "icas#1 to IC-asc-ΔC7-CoA" {
 
   spine at 0,0 {
     icas_1
-    <-> . +atp +hplus -ppi
-    ic_asc_c7_amp
-    <-> . +coa -amp -hplus
+    <-> . +atp +coa -amp -ppi
     ic_asc_c7_coa
     <-> . +o2 -h2o2
     ic_asc_c7_coa
@@ -18,7 +16,7 @@ pathway icas-1-to-ic-asc-c7-coa "icas#1 to IC-asc-ΔC7-CoA" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_63 [4.2.3.63] +fpp
-    cubenene
+    <-> ec_4_2_3_123 [4.2.3.123] +fpp
+    sesquiphellandrene
   }
 }

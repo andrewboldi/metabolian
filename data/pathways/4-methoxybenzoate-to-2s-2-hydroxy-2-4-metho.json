@@ -1,0 +1,265 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-methoxybenzoate-to-2s-2-hydroxy-2-4-metho",
+  "name": "4-methoxybenzoate to (2S)-2-hydroxy-2-(4-metho…",
+  "category": "other",
+  "summary": "A 2-step route from 4-methoxybenzoate to (2S)-2-hydroxy-2-(4-methoxyphenyl)acetonitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:68900"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16639"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_methoxybenzoate",
+      "name": "4-methoxybenzoate",
+      "formula": "C8H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16639"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "p_methoxybenzaldehyde",
+      "name": "p-methoxybenzaldehyde",
+      "short": "p-methoxybenzaldehy…",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28235"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    },
+    {
+      "id": "2s_2_hydroxy_2_4_methoxyphenyl_acetonitrile",
+      "name": "(2S)-2-hydroxy-2-(4-methoxyphenyl)acetonitrile",
+      "short": "2-hydroxy-2-(4-meth…",
+      "formula": "C9H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197328"
+      }
+    },
+    {
+      "id": "pppa2_p5_a2_p5_a",
+      "name": "pppA2'p5'A2'p5'A",
+      "formula": "C30H34N15O25P5",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:67143"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_7_84",
+      "name": "2'-5' oligoadenylate synthase",
+      "ec": [
+        "2.7.7.84"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-methoxybenzoate + ATP + NADPH + H(+) = 4-methoxybenzaldehyde + AMP + diphosphate + NA...",
+      "equation": "4-methoxybenzoate + ATP + NADPH + H(+) = 4-methoxybenzaldehyde + AMP + diphosphate + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "4_methoxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p_methoxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:68900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-methoxybenzaldehyde + hydrogen cyanide = (2S)-2-hydroxy-2-(4-methoxyphenyl)acetonitrile",
+      "equation": "4-methoxybenzaldehyde + hydrogen cyanide = (2S)-2-hydroxy-2-(4-methoxyphenyl)acetonitrile",
+      "substrates": [
+        {
+          "metabolite": "p_methoxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxy_2_4_methoxyphenyl_acetonitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2'-5' oligoadenylate synthase",
+      "equation": "3 ATP = 5'-triphosphoadenylyl-(2'->5')-adenylyl-(2'->5')-adenosine + 2 diphosphate",
+      "ec": "2.7.7.84",
+      "substrates": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pppa2_p5_a2_p5_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34407"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34407"
+          }
+        ]
+      }
+    }
+  ]
+}

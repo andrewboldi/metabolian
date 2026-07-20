@@ -1,0 +1,290 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prenyl-diphosphate-to-di-sulfido-diiron",
+  "name": "prenyl diphosphate to di-μ-sulfido-diiron",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from prenyl diphosphate(3−) to di-μ-sulfido-diiron(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24825"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
+      "name": "(2E)-4-hydroxy-3-methylbut-2-enyl diphosphate",
+      "short": "4-hydroxy-3-methylb…",
+      "formula": "C5H9O8P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128753"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_c_methyl_d_erythritol_2_4_cyclic_diphosphate",
+      "name": "2-C-methyl-D-erythritol 2,4-cyclic diphosphate",
+      "short": "2-C-methyl-D-erythr…",
+      "formula": "C5H10O9P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58483"
+      }
+    },
+    {
+      "id": "ent_kaurene",
+      "name": "ent-kaurene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15415"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "ent_kaur_16_en_19_ol",
+      "name": "ent-kaur-16-en-19-ol",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15416"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_7_4",
+      "name": "4-hydroxy-3-methylbut-2-enyl diphosphate reductase",
+      "ec": [
+        "1.17.7.4"
+      ]
+    },
+    {
+      "id": "ec_1_17_7_1",
+      "name": "(E)-4-hydroxy-3-methylbut-2-enyl-diphosphate synthase (ferredoxin)",
+      "ec": [
+        "1.17.7.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-hydroxy-3-methylbut-2-enyl diphosphate reductase",
+      "equation": "dimethylallyl diphosphate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = (2E)-4-hydroxy-3-methylbut-2-enyl diphosphate + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.17.7.4",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_7_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24825"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24825"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-4-hydroxy-3-methylbut-2-enyl-diphosphate synthase (ferredoxin)",
+      "equation": "(2E)-4-hydroxy-3-methylbut-2-enyl diphosphate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = 2-C-methyl-D-erythritol 2,4-cyclic diphosphate + 2 reduced [2Fe-2S]-[ferredoxin] + H(+)",
+      "ec": "1.17.7.1",
+      "substrates": [
+        {
+          "metabolite": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_c_methyl_d_erythritol_2_4_cyclic_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_7_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:26119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ent-kaur-16-ene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = ent-kaur-16-en-19-ol ...",
+      "equation": "ent-kaur-16-ene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = ent-kaur-16-en-19-ol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "ent_kaurene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_kaur_16_en_19_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61536"
+          }
+        ]
+      }
+    }
+  ]
+}

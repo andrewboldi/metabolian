@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cmp-n-acyl-neuraminate-to-diphosphate",
+  "name": "CMP-N-acyl-β-neuraminate to diphosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from CMP-N-acyl-β-neuraminate(2−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20185"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:68671"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cmp_n_acyl_neuraminate",
+      "name": "CMP-N-acyl-β-neuraminate",
+      "short": "CMP-N-acyl-β-neuram…",
+      "formula": "C19H26N4O16PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:68671"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acylneuraminate",
+      "name": "N-acylneuraminate",
+      "formula": "C10H15NO9R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60073"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco",
+      "name": "α-N-acetylneuraminyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "α-N-acetylneuraminy…",
+      "formula": "C27H43N2O21R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:79210"
+      }
+    },
+    {
+      "id": "cmp_n_acetyl_9_o_acetylneuraminate",
+      "name": "CMP-N-β-acetyl-9-O-acetylneuraminate",
+      "short": "CMP-N-β-acetyl-9-O-…",
+      "formula": "C22H31N4O17P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229947"
+      }
+    },
+    {
+      "id": "n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetylneu",
+      "name": "α-N-acetyl-9-O-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "α-N-acetyl-9-O-acet…",
+      "formula": "C40H61N3O30R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:230459"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "4_epi_cubebol",
+      "name": "(+)-4-epi-cubebol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138041"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_40",
+      "name": "CMP-N-acylneuraminate phosphodiesterase",
+      "ec": [
+        "3.1.4.40"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_43",
+      "name": "N-acylneuraminate cytidylyltransferase",
+      "ec": [
+        "2.7.7.43"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_170",
+      "name": "4-epi-cubebol synthase",
+      "ec": [
+        "4.2.3.170"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "CMP-N-acylneuraminate phosphodiesterase",
+      "equation": "a CMP-N-acyl-beta-neuraminate + H2O = an N-acylneuraminate + CMP + H(+)",
+      "ec": "3.1.4.40",
+      "substrates": [
+        {
+          "metabolite": "cmp_n_acyl_neuraminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylneuraminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20185"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acylneuraminate cytidylyltransferase",
+      "equation": "an N-acylneuraminate + CTP = a CMP-N-acyl-beta-neuraminate + diphosphate",
+      "ec": "2.7.7.43",
+      "substrates": [
+        {
+          "metabolite": "n_acylneuraminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cmp_n_acyl_neuraminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11344"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11344"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a ganglioside GM3 + CMP-N-acetyl-9-O-acetyl-beta-neuraminate = a ganglioside Ac-O-9-GD3...",
+      "equation": "a ganglioside GM3 + CMP-N-acetyl-9-O-acetyl-beta-neuraminate = a ganglioside Ac-O-9-GD3 + CMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_n_acetyl_9_o_acetylneuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetylneu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82099"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82099"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4-epi-cubebol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 4-epi-cubebol + diphosphate",
+      "ec": "4.2.3.170",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_epi_cubebol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_170"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54048"
+          }
+        ]
+      }
+    }
+  ]
+}

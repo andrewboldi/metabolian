@@ -17,10 +17,4 @@ pathway d-arabinitol-1-phosphate-to-n6-r-s8-acetyldihydr "D-arabinitol 1-phospha
     <-> ec_2_3_1_12 [2.3.1.12] +n6_r_dihydrolipoyl_l_lysine +acetyl_coa -coa
     n6_r_s8_acetyldihydrolipoyl_l_lysine
   }
-
-  branch from n6_r_dihydrolipoyl_l_lysine side left {
-    n6_r_dihydrolipoyl_l_lysine
-    <-> . +3s_3_carboxy_3_hydroxypropanoyl_coa +coa
-    n6_r_s8_3s_3_carboxy_3_hydroxypropanoyl_dihydrol
-  }
 }

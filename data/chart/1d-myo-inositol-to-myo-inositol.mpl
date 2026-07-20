@@ -20,7 +20,13 @@ pathway 1d-myo-inositol-to-myo-inositol "1D-myo-inositol… to myo-inositol…" 
 
   branch from myo_inositol_1_3_4_5_6_pentakisphosphate side left {
     myo_inositol_1_3_4_5_6_pentakisphosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +h2o +pi
-    1d_myo_inositol_1_4_5_6_tetrakisphosphate
+    <-> ec_2_7_1_151 [2.7.1.151] +atp +adp +hplus
+    1d_myo_inositol_1_4_5_trisphosphate
+  }
+
+  branch from 1d_myo_inositol_3_4_5_6_tetrakisphosphate side right {
+    1d_myo_inositol_3_4_5_6_tetrakisphosphate
+    <-> . +1d_myo_inositol_1_3_4_trisphosphate +myo_inositol_1_3_4_5_6_pentakisphosphate
+    1d_myo_inositol_1_3_4_5_tetrakisphosphate
   }
 }

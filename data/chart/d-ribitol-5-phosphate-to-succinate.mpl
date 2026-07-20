@@ -24,13 +24,13 @@ pathway d-ribitol-5-phosphate-to-succinate "D-ribitol 5-phosphate to succinate" 
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadph +o2 +hplus +nadp +h2o
-    xanthine
+    <-> ec_1_14_14_35 [1.14.14.35] +sulfonyldimethane +fmnh2 +o2 +fmn +h2o +hplus
+    methanesulfinate
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_39 [1.14.11.39] +l_asparagine +akg +o2 +co2
-    3s_3_hydroxy_l_asparagine
+    <-> ec_2_8_3_20 [2.8.3.20] +r_malate +succinyl_coa
+    3r_3_carboxy_3_hydroxypropanoyl_coa
   }
 }

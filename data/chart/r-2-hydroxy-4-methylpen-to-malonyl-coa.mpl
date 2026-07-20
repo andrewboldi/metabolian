@@ -24,8 +24,8 @@ pathway r-2-hydroxy-4-methylpen-to-malonyl-coa "(R)-2-hydroxy-4-methylpen… to 
 
   branch from kic side left {
     kic
-    <-> . +leucine +glyoxylate
-    glycine
+    <-> . +leucine +o2 +h2o +h2o2
+    nh3
   }
 
   branch from isovaleryl_coa side right {
@@ -34,15 +34,15 @@ pathway r-2-hydroxy-4-methylpen-to-malonyl-coa "(R)-2-hydroxy-4-methylpen… to 
     n_isovaleryl_l_homoserine_lactone
   }
 
-  branch from methylcrotonyl_coa side left {
-    methylcrotonyl_coa
-    <-> . +h2o
-    3_hydroxyisovaleryl_coa
+  branch from biotinyl_l_lysine side left {
+    biotinyl_l_lysine
+    <-> ec_6_3_4_11 [6.3.4.11] +l_lysinium +biotinate +atp +amp +hplus
+    ppi
   }
 
-  branch from methylglutaconyl_coa side right {
-    methylglutaconyl_coa
-    <-> ec_4_2_1_18 [4.2.1.18] +h2o
-    hmg_coa
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +acetyl_coa +hplus +co2 +coa +h2o
+    3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap
   }
 }

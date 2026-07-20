@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "roxarsone-iii-to-arsenite",
   "name": "roxarsone (III) to arsenite",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from roxarsone (III) to arsenite(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -156,40 +156,69 @@
       }
     },
     {
-      "id": "methylarsonous_acid",
-      "name": "methylarsonous acid",
-      "formula": "CH5AsO2",
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "2_4_dihydroxy_3_methyl_6_2_oxopropyl_benzaldehyd",
+      "name": "2,4-dihydroxy-3-methyl-6-(2-oxopropyl)benzaldehyde",
+      "short": "2,4-dihydroxy-3-met…",
+      "formula": "C11H12O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17826"
+        "chebi": "CHEBI:155860"
       }
     },
     {
-      "id": "methanol",
-      "name": "methanol",
-      "formula": "CH4O",
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17790"
+        "chebi": "CHEBI:57856"
       }
     },
     {
-      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C22H31O2",
-      "charge": -1,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77016"
+        "chebi": "CHEBI:16526"
       }
     },
     {
-      "id": "17_r_hdohe",
-      "name": "17(R)-HDoHE",
-      "formula": "C22H31O3",
-      "charge": -1,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:90814"
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -417,11 +446,15 @@
     },
     {
       "id": "r5",
-      "name": "methylarsonous acid + AH2 + O2 = arsenite + methanol + A + H(+)",
-      "equation": "methylarsonous acid + AH2 + O2 = arsenite + methanol + A + H(+)",
+      "name": "4 malonyl-CoA + acetyl-CoA + AH2 + S-adenosyl-L-methionine + 3 H(+) = 2,4-dihydroxy-3-m...",
+      "equation": "4 malonyl-CoA + acetyl-CoA + AH2 + S-adenosyl-L-methionine + 3 H(+) = 2,4-dihydroxy-3-methyl-6-(2-oxopropyl)benzaldehyde + A + S-adenosyl-L-homocysteine + 4 CO2 + 5 CoA + H2O",
       "substrates": [
         {
-          "metabolite": "methylarsonous_acid",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
@@ -429,69 +462,34 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "arsenite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "methanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "sam",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:82323"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:82323"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + AH2 + O2 = 17R-hydroxy-(4Z,7Z,10Z,13Z,15E,19...",
-      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + AH2 + O2 = 17R-hydroxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + A + H2O",
-      "substrates": [
-        {
-          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "17_r_hdohe",
+          "metabolite": "2_4_dihydroxy_3_methyl_6_2_oxopropyl_benzaldehyd",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 5
         },
         {
           "metabolite": "h2o",
@@ -499,16 +497,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:48816"
+        "rhea": "RHEA:64508"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48816"
+            "id": "RHEA:64508"
           }
         ]
       }

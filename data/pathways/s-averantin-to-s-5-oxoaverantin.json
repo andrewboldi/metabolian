@@ -1,0 +1,316 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-averantin-to-s-5-oxoaverantin",
+  "name": "(S)-averantin to (S)-5'-oxoaverantin",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (S)-averantin(1−) to (S)-5'-oxoaverantin(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35575"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77899"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_averantin",
+      "name": "(S)-averantin",
+      "formula": "C20H19O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77899"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1_s_5_r_5_hydroxyaverantin",
+      "name": "(1'S,5'R)-5'-hydroxyaverantin",
+      "short": "(1'S,5'R)-5'-hydrox…",
+      "formula": "C20H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71536"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "s_5_oxoaverantin",
+      "name": "(S)-5'-oxoaverantin",
+      "formula": "C20H17O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77933"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "menaquinone_4",
+      "name": "menaquinone-4",
+      "formula": "C31H40O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78277"
+      }
+    },
+    {
+      "id": "hydroxymenaquinone_4",
+      "name": "ω-hydroxymenaquinone-4",
+      "short": "ω-hydroxymenaquinon…",
+      "formula": "C31H40O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78278"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_116",
+      "name": "averantin hydroxylase",
+      "ec": [
+        "1.14.14.116"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_352",
+      "name": "5'-hydroxyaverantin dehydrogenase",
+      "ec": [
+        "1.1.1.352"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_78",
+      "name": "phylloquinone omega-hydroxylase",
+      "ec": [
+        "1.14.14.78"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "averantin hydroxylase",
+      "equation": "(1'S)-averantin + reduced [NADPH--hemoprotein reductase] + O2 = (1'S,5'R)-5'-hydroxyaverantin + oxidized [NADPH--hemoprotein reductase] + H2O",
+      "ec": "1.14.14.116",
+      "substrates": [
+        {
+          "metabolite": "s_averantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_s_5_r_5_hydroxyaverantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35575"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5'-hydroxyaverantin dehydrogenase",
+      "equation": "(1'S,5'R)-5'-hydroxyaverantin + NAD(+) = (S)-5'-oxoaverantin + NADH + 2 H(+)",
+      "ec": "1.1.1.352",
+      "substrates": [
+        {
+          "metabolite": "1_s_5_r_5_hydroxyaverantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_5_oxoaverantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_352"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35479"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35479"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phylloquinone omega-hydroxylase",
+      "equation": "menaquinone-4 + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxymenaquinone-4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.78",
+      "substrates": [
+        {
+          "metabolite": "menaquinone_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxymenaquinone_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41520"
+          }
+        ]
+      }
+    }
+  ]
+}

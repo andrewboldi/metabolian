@@ -18,27 +18,27 @@ pathway biotinate-sulfoxide-to-3-cyanopyridine "biotinate sulfoxide to 3-cyanopy
     3_cyanopyridine
   }
 
-  branch from biotinate side left {
-    biotinate
-    <-> . +atp +hplus +ppi
+  branch from biotinyl_l_lysine side left {
+    biotinyl_l_lysine
+    <-> . +l_lysinium +amp +hplus
     biotinyl_5_amp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_25 [4.2.3.25] +gpp +h2o
-    s_linalool
+    <-> ec_4_2_3_30 [4.2.3.30] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_pimara_8_14_15_diene
   }
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_propanoyl_l_lysine +nad +h2o +l_lysinium
-    3_o_propanoyl_adp_d_ribose
+    <-> . +nadp
+    2_phospho_cyclic_adp_ribose
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_1_4_3_13 [1.4.3.13] +o2 +h2o +h2o2 +nh3
-    l_allysine
+    <-> ec_2_5_1_46 [2.5.1.46] +spermidine +trimethylenediaminium
+    deoxyhypusine_2
   }
 }

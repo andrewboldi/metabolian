@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-4-oxo-4-5-dihydro-1h-i-to-5-formamido-1-5-phos",
   "name": "3-(4-oxo-4,5-dihydro-1H-i… to 5-formamido-1-(5-phospho-…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from 3-(4-oxo-4,5-dihydro-1H-imidazol-5-yl)propanoate(1−) to 5-formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -129,12 +129,21 @@
       }
     },
     {
-      "id": "methylenediurea",
-      "name": "methylenediurea",
-      "formula": "C3H8N4O2",
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10790"
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
       }
     },
     {
@@ -147,13 +156,13 @@
       }
     },
     {
-      "id": "n_hydroxymethyl_urea",
-      "name": "N-(hydroxymethyl)urea",
-      "short": "N-(hydroxymethyl)ur…",
-      "formula": "C2H6N2O2",
+      "id": "3_indoleglycolaldehyde",
+      "name": "3-indoleglycolaldehyde",
+      "short": "3-indoleglycolaldeh…",
+      "formula": "C10H9NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16481"
+        "chebi": "CHEBI:15976"
       }
     },
     {
@@ -203,12 +212,30 @@
       }
     },
     {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
-      "charge": 0,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58359"
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "nag",
+      "name": "N-Acetyl-L-glutamate",
+      "formula": "C7H9NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:44337"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -242,17 +269,17 @@
       ]
     },
     {
-      "id": "ec_3_5_3_21",
-      "name": "methylenediurea deaminase",
+      "id": "ec_1_13_99_3",
+      "name": "tryptophan 2'-dioxygenase",
       "ec": [
-        "3.5.3.21"
+        "1.13.99.3"
       ]
     },
     {
-      "id": "ec_6_3_1_2",
-      "name": "glutamine synthetase",
+      "id": "ec_2_3_1_1",
+      "name": "amino-acid N-acetyltransferase",
       "ec": [
-        "6.3.1.2"
+        "2.3.1.1"
       ]
     }
   ],
@@ -443,31 +470,31 @@
     },
     {
       "id": "r5",
-      "name": "methylenediurea deaminase",
-      "equation": "methylenediurea + 2 H2O + 2 H(+) = N-(hydroxymethyl)urea + 2 NH4(+) + CO2",
-      "ec": "3.5.3.21",
+      "name": "tryptophan 2'-dioxygenase",
+      "equation": "L-tryptophan + O2 + H(+) = 3-indoleglycolaldehyde + NH4(+) + CO2",
+      "ec": "1.13.99.3",
       "substrates": [
         {
-          "metabolite": "methylenediurea",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "o2",
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_hydroxymethyl_urea",
+          "metabolite": "3_indoleglycolaldehyde",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "co2",
@@ -476,20 +503,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_3_21"
+          "enzyme": "ec_1_13_99_3"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:15929"
+        "rhea": "RHEA:22620"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15929"
+            "id": "RHEA:22620"
           }
         ]
       }
@@ -543,34 +570,26 @@
     },
     {
       "id": "r7",
-      "name": "glutamine synthetase",
-      "equation": "L-glutamate + NH4(+) + ATP = L-glutamine + ADP + phosphate + H(+)",
-      "ec": "6.3.1.2",
+      "name": "amino-acid N-acetyltransferase",
+      "equation": "L-glutamate + acetyl-CoA = N-acetyl-L-glutamate + CoA + H(+)",
+      "ec": "2.3.1.1",
       "substrates": [
         {
           "metabolite": "glutamate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glutamine",
+          "metabolite": "nag",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
@@ -580,20 +599,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_1_2"
+          "enzyme": "ec_2_3_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:16169"
+        "rhea": "RHEA:24292"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16169"
+            "id": "RHEA:24292"
           }
         ]
       }

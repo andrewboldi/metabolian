@@ -18,19 +18,19 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate-74935 "(3R)-3-[(carboxylmethyl)a…
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_20_4 [1.14.20.4] +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o
-    4_unsubstituted_3_hydroxyanthocyanidin_betaine
+    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +formaldehyde +co2
+    n6_n6_dimethyl_l_lysine_1
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_54 [4.2.3.54] +2_cis_6_cis_farnesyl_diphosphate
-    endo_bergamotene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    copalol
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_46 [6.2.1.46] +l_alloisoleucine +atp +amp +ppi
-    o_s_l_alloisoleucyl_pantetheine_4_phosphoryl_ser
+    <-> . +ml_236a_carboxylate +o_s_2_methylbutanoylpantetheine_4_phosphoryl_ser
+    mevinic_acid_anion
   }
 }

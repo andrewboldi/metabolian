@@ -1,0 +1,213 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "homoisocitrate-to-kynurenate",
+  "name": "(−)-homoisocitrate to kynurenate",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from (−)-homoisocitrate(3−) to kynurenate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11900"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15404"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "homoisocitrate",
+      "name": "(−)-homoisocitrate",
+      "formula": "C7H7O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15404"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_oxoadipate",
+      "name": "2-oxoadipate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57499"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "l_kynurenine",
+      "name": "L-kynurenine",
+      "formula": "C10H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57959"
+      }
+    },
+    {
+      "id": "l_2_aminoadipate",
+      "name": "L-2-aminoadipate",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58672"
+      }
+    },
+    {
+      "id": "kynurenate",
+      "name": "kynurenate",
+      "formula": "C10H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58454"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_87",
+      "name": "homoisocitrate dehydrogenase",
+      "ec": [
+        "1.1.1.87"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_286",
+      "name": "isocitrate--homoisocitrate dehydrogenase",
+      "ec": [
+        "1.1.1.286"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "homoisocitrate dehydrogenase",
+      "equation": "(2R,3S)-homoisocitrate + NAD(+) = 2-oxoadipate + CO2 + NADH",
+      "ec": "1.1.1.87",
+      "substrates": [
+        {
+          "metabolite": "homoisocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxoadipate + L-kynurenine = L-2-aminoadipate + kynurenate + H2O",
+      "equation": "2-oxoadipate + L-kynurenine = L-2-aminoadipate + kynurenate + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_kynurenine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_2_aminoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "kynurenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70047"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70047"
+          }
+        ]
+      }
+    }
+  ]
+}

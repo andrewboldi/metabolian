@@ -147,21 +147,12 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:57540"
       }
     },
     {
@@ -174,49 +165,57 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "l_tartrate",
-      "name": "L-tartrate",
-      "formula": "C4H4O6",
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:30924"
+        "chebi": "CHEBI:57945"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "6_amino_2_oxohexanoic_acid",
-      "name": "6-amino-2-oxohexanoic acid",
-      "short": "6-amino-2-oxohexano…",
-      "formula": "C6H11NO3",
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16947"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58183"
+        "chebi": "CHEBI:33384"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:17180"
       }
     }
   ],
@@ -236,24 +235,38 @@
       ]
     },
     {
-      "id": "ec_1_14_13_245",
-      "name": "assimilatory dimethylsulfide S-monooxygenase",
+      "id": "ec_1_8_1_17",
+      "name": "dimethylsulfone reductase",
       "ec": [
-        "1.14.13.245"
+        "1.8.1.17"
       ]
     },
     {
-      "id": "ec_4_2_1_32",
-      "name": "L(+)-tartrate dehydratase",
+      "id": "ec_2_3_3_1",
+      "name": "citrate (Si)-synthase",
       "ec": [
-        "4.2.1.32"
+        "2.3.3.1"
       ]
     },
     {
-      "id": "ec_1_4_3_14",
-      "name": "L-lysine oxidase",
+      "id": "ec_2_3_3_3",
+      "name": "citrate (Re)-synthase",
       "ec": [
-        "1.4.3.14"
+        "2.3.3.3"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_16",
+      "name": "citrate synthase (unknown stereospecificity)",
+      "ec": [
+        "2.3.3.16"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_7",
+      "name": "serine 2-dehydrogenase",
+      "ec": [
+        "1.4.1.7"
       ]
     }
   ],
@@ -487,30 +500,12 @@
     },
     {
       "id": "r6",
-      "name": "assimilatory dimethylsulfide S-monooxygenase",
-      "equation": "dimethyl sulfoxide + NADH + O2 + H(+) = dimethyl sulfone + NAD(+) + H2O",
-      "ec": "1.14.13.245",
+      "name": "dimethylsulfone reductase",
+      "equation": "dimethyl sulfoxide + NAD(+) + H2O = dimethyl sulfone + NADH + H(+)",
+      "ec": "1.8.1.17",
       "substrates": [
         {
           "metabolite": "dimethyl_sulfoxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sulfonyldimethane",
           "stoichiometry": 1
         },
         {
@@ -522,40 +517,52 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "sulfonyldimethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_245"
+          "enzyme": "ec_1_8_1_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:57956"
+        "rhea": "RHEA:30219"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57956"
+            "id": "RHEA:30219"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "L(+)-tartrate dehydratase",
-      "equation": "(2R,3R)-tartrate = oxaloacetate + H2O",
-      "ec": "4.2.1.32",
+      "name": "citrate (Si)-synthase",
+      "equation": "oxaloacetate + acetyl-CoA + H2O = citrate + CoA + H(+)",
+      "ec": "2.3.3.1",
       "substrates": [
         {
-          "metabolite": "l_tartrate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
           "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
@@ -563,38 +570,52 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_1_32"
+          "enzyme": "ec_2_3_3_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:15413"
+        "rhea": "RHEA:16845"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15413"
+            "id": "RHEA:16845"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "L-lysine oxidase",
-      "equation": "L-lysine + O2 + H2O = 6-amino-2-oxohexanoate + H2O2 + NH4(+)",
-      "ec": "1.4.3.14",
+      "name": "serine 2-dehydrogenase",
+      "equation": "L-serine + NAD(+) + H2O = 3-hydroxypyruvate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.7",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -604,34 +625,38 @@
       ],
       "products": [
         {
-          "metabolite": "6_amino_2_oxohexanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "3_hydroxypyruvate",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_3_14"
+          "enzyme": "ec_1_4_1_7"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:14437"
+        "rhea": "RHEA:20884"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14437"
+            "id": "RHEA:20884"
           }
         ]
       }

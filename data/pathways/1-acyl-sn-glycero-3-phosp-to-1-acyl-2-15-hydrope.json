@@ -1,0 +1,156 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-acyl-sn-glycero-3-phosp-to-1-acyl-2-15-hydrope",
+  "name": "1-acyl-sn-glycero-3-phosp… to 1-acyl-2-(15-hydroperoxya…",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from 1-acyl-sn-glycero-3-phospho-1D-myo-inositol(1−) to 1-acyl-2-(15-hydroperoxyarachidonoyl)-sn-glycero-3-phospho-1D-myo-inositol(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37015"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64771"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_acyl_sn_glycero_3_phospho_1d_myo_inositol",
+      "name": "1-acyl-sn-glycero-3-phospho-1D-myo-inositol",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C10H17O12PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64771"
+      }
+    },
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
+      }
+    },
+    {
+      "id": "1_acyl_2_arachidonoyl_sn_glycero_3_phospho_1d_my",
+      "name": "1-acyl-2-arachidonoyl-sn-glycero-3-phospho-1D-myo-inositol",
+      "short": "1-acyl-2-arachidono…",
+      "formula": "C30H47O13PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75243"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1_acyl_2_15_hydroperoxyarachidonoyl_sn_glycero_3",
+      "name": "1-acyl-2-(15-hydroperoxyarachidonoyl)-sn-glycero-3-phospho-1D-myo-inositol",
+      "short": "1-acyl-2-(15-hydrop…",
+      "formula": "C30H47O15PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:146285"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 1-acyl-sn-glycero-3-phospho-(1D-myo-inositol) + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA ...",
+      "equation": "a 1-acyl-sn-glycero-3-phospho-(1D-myo-inositol) + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = a 1-acyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phospho-(1D-myo-inositol) + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycero_3_phospho_1d_myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arachidonoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_arachidonoyl_sn_glycero_3_phospho_1d_my",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37015"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1-acyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phospho-(1D-myo-inositol) + O2...",
+      "equation": "a 1-acyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phospho-(1D-myo-inositol) + O2 = a 1-acyl-2-(15-hydroperoxy-5Z,8Z,11Z,13E-eicosatetraenoyl)-sn-glycero-3-phospho-(1D-myo-inositol)",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_2_arachidonoyl_sn_glycero_3_phospho_1d_my",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_15_hydroperoxyarachidonoyl_sn_glycero_3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:63276"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63276"
+          }
+        ]
+      }
+    }
+  ]
+}

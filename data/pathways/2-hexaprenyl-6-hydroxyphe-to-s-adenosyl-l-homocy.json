@@ -124,21 +124,22 @@
       }
     },
     {
-      "id": "histaminium",
-      "name": "histaminium",
-      "formula": "C5H10N3",
-      "charge": 1,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:58432"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "n_methylhistaminium",
-      "name": "Nτ-methylhistaminium",
-      "formula": "C6H12N3",
-      "charge": 1,
+      "id": "malonyl_coa_methyl_ester",
+      "name": "malonyl-CoA methyl ester",
+      "short": "malonyl-CoA methyl…",
+      "formula": "C25H36N7O19P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58600"
+        "chebi": "CHEBI:71242"
       }
     }
   ],
@@ -155,13 +156,6 @@
       "name": "2-methoxy-6-polyprenyl-1,4-benzoquinol methylase",
       "ec": [
         "2.1.1.201"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_8",
-      "name": "histamine N-methyltransferase",
-      "ec": [
-        "2.1.1.8"
       ]
     }
   ],
@@ -317,12 +311,11 @@
     },
     {
       "id": "r4",
-      "name": "histamine N-methyltransferase",
-      "equation": "histamine + S-adenosyl-L-methionine = N(tau)-methylhistamine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.8",
+      "name": "malonyl-CoA + S-adenosyl-L-methionine = malonyl-CoA methyl ester + S-adenosyl-L-homocys...",
+      "equation": "malonyl-CoA + S-adenosyl-L-methionine = malonyl-CoA methyl ester + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "histaminium",
+          "metabolite": "malonyl-coa",
           "stoichiometry": 1
         },
         {
@@ -332,34 +325,25 @@
       ],
       "products": [
         {
-          "metabolite": "n_methylhistaminium",
+          "metabolite": "malonyl_coa_methyl_ester",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_8"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19301"
+        "rhea": "RHEA:34899"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19301"
+            "id": "RHEA:34899"
           }
         ]
       }

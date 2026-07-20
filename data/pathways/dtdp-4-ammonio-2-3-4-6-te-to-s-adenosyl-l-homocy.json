@@ -1,0 +1,240 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dtdp-4-ammonio-2-3-4-6-te-to-s-adenosyl-l-homocy",
+  "name": "dTDP-4-ammonio-2,3,4,6-te… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 2-step route from dTDP-4-ammonio-2,3,4,6-tetradeoxy-α-D-glucose(1−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49152"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:90945"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose",
+      "name": "dTDP-4-ammonio-2,3,4,6-tetradeoxy-α-D-glucose",
+      "short": "dTDP-4-ammonio-2,3,…",
+      "formula": "C16H26N3O12P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90945"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "dtdp_4_methylammonio_2_3_4_6_tetradeoxy_d_glucos",
+      "name": "dTDP-4-(methylammonio)-2,3,4,6-tetradeoxy-α-D-glucose",
+      "short": "dTDP-4-(methylammon…",
+      "formula": "C17H28N3O12P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90946"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "dtdp_d_forosamine",
+      "name": "dTDP-α-D-forosamine",
+      "formula": "C18H30N3O12P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90947"
+      }
+    },
+    {
+      "id": "tellurite",
+      "name": "tellurite",
+      "formula": "O3Te",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30477"
+      }
+    },
+    {
+      "id": "methanetelluronate",
+      "name": "methanetelluronate",
+      "formula": "CH3O3Te",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71624"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_265",
+      "name": "tellurite methyltransferase",
+      "ec": [
+        "2.1.1.265"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dTDP-4-amino-2,3,4,6-tetradeoxy-alpha-D-erythro-hexopyranose + S-adenosyl-L-methionine ...",
+      "equation": "dTDP-4-amino-2,3,4,6-tetradeoxy-alpha-D-erythro-hexopyranose + S-adenosyl-L-methionine = dTDP-4-(methylamino)-2,3,4,6-tetradeoxy-alpha-D-erythro-hexopyranose + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_4_methylammonio_2_3_4_6_tetradeoxy_d_glucos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dTDP-4-(methylamino)-2,3,4,6-tetradeoxy-alpha-D-erythro-hexopyranose + S-adenosyl-L-met...",
+      "equation": "dTDP-4-(methylamino)-2,3,4,6-tetradeoxy-alpha-D-erythro-hexopyranose + S-adenosyl-L-methionine = dTDP-alpha-D-forosamine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dtdp_4_methylammonio_2_3_4_6_tetradeoxy_d_glucos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_d_forosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tellurite methyltransferase",
+      "equation": "tellurite + S-adenosyl-L-methionine = methanetellurite + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.265",
+      "substrates": [
+        {
+          "metabolite": "tellurite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methanetelluronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_265"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34539"
+          }
+        ]
+      }
+    }
+  ]
+}

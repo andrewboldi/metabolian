@@ -111,49 +111,30 @@
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
-      }
-    },
-    {
-      "id": "epi_isozizaene",
-      "name": "(+)-epi-isozizaene",
-      "formula": "C15H24",
+      "id": "calcidiol",
+      "name": "calcidiol",
+      "formula": "C27H44O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:51458"
+        "chebi": "CHEBI:17933"
       }
     },
     {
-      "id": "5r_albaflavenol",
-      "name": "(5R)-albaflavenol",
-      "formula": "C15H24O",
-      "charge": 0,
+      "id": "10_deoxymethymycin",
+      "name": "10-deoxymethymycin",
+      "formula": "C25H44NO6",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:51479"
+        "chebi": "CHEBI:63307"
       }
     },
     {
-      "id": "25_hydroxy_24_oxocalciol",
-      "name": "25-hydroxy-24-oxocalciol",
-      "short": "25-hydroxy-24-oxoca…",
-      "formula": "C27H42O3",
-      "charge": 0,
+      "id": "novamethymycin",
+      "name": "novamethymycin",
+      "formula": "C25H44NO8",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:47805"
+        "chebi": "CHEBI:77354"
       }
     }
   ],
@@ -163,6 +144,20 @@
       "name": "vitamin D3 24-hydroxylase",
       "ec": [
         "1.14.15.16"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_22",
+      "name": "vitamin D 1,25-hydroxylase",
+      "ec": [
+        "1.14.15.22"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_33",
+      "name": "pikromycin synthase",
+      "ec": [
+        "1.14.15.33"
       ]
     }
   ],
@@ -391,20 +386,25 @@
     },
     {
       "id": "r5",
-      "name": "alfacalcidol + reduced [NADPH--hemoprotein reductase] + O2 = calcitriol + oxidized [NAD...",
-      "equation": "alfacalcidol + reduced [NADPH--hemoprotein reductase] + O2 = calcitriol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "vitamin D 1,25-hydroxylase",
+      "equation": "calcidiol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = calcitriol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.22",
       "substrates": [
         {
-          "metabolite": "alfacalcidol",
+          "metabolite": "calcidiol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
@@ -413,131 +413,87 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_1_14_15_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49272"
+        "rhea": "RHEA:50700"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49272"
+            "id": "RHEA:50700"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R)-albaflavenol ...",
-      "equation": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R)-albaflavenol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "name": "pikromycin synthase",
+      "equation": "10-deoxymethymycin + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = novamethymycin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.15.33",
       "substrates": [
         {
-          "metabolite": "epi_isozizaene",
+          "metabolite": "10_deoxymethymycin",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "stoichiometry": 4
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 4
         }
       ],
       "products": [
         {
-          "metabolite": "5r_albaflavenol",
+          "metabolite": "novamethymycin",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "stoichiometry": 4
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_33"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25984"
+        "rhea": "RHEA:40547"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25984"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "25-hydroxy-24-oxocalciol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (1S)-1,25-dihydroxy-...",
-      "equation": "25-hydroxy-24-oxocalciol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (1S)-1,25-dihydroxy-24-oxocalciol + 2 oxidized [adrenodoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "25_hydroxy_24_oxocalciol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1s_1_25_dihydroxy_24_oxocalciol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:49068"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:49068"
+            "id": "RHEA:40547"
           }
         ]
       }

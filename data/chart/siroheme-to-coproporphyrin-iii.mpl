@@ -18,8 +18,8 @@ pathway siroheme-to-coproporphyrin-iii "siroheme to coproporphyrin III" {
 
   branch from fe_coproporphyrin_iii side left {
     fe_coproporphyrin_iii
-    <-> ec_1_3_98_5 [1.3.98.5] +h2o2 +hplus +co2 +h2o
-    ferroheme_b
+    <-> . +h2o2 +hplus +co2 +h2o
+    harderoheme_iii
   }
 
   branch from 5_deoxyadenosine side right {
@@ -36,7 +36,13 @@ pathway siroheme-to-coproporphyrin-iii "siroheme to coproporphyrin III" {
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_19 [2.8.3.19] +oxalate +acetyl_coa
-    oxalyl_coa
+    <-> ec_3_7_1_24 [3.7.1.24] +2_4_diacetylphloroglucinol +h2o
+    2_4_6_trihydroxyacetophenone
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_3_99_17 [1.3.99.17] +8_methylquinoline +h2o +hydrogen_donor
+    8_methylquinolin_2_1h_one
   }
 }

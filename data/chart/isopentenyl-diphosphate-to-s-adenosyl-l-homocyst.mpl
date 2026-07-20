@@ -16,21 +16,15 @@ pathway isopentenyl-diphosphate-to-s-adenosyl-l-homocyst "isopentenyl diphosphat
     menaquinol_9
   }
 
-  branch from all_trans_nonaprenyl_diphosphate side left {
-    all_trans_nonaprenyl_diphosphate
-    <-> . +ipp +ppi
-    fpp
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_107 [4.2.3.107] +gpp
-    car_3_ene
+    <-> ec_2_5_1_142 [2.5.1.142] +ipp +dmapp
+    nerylneryl_diphosphate
   }
 
-  branch from sah side left {
+  branch from sah side right {
     sah
-    <-> ec_2_1_1_279 [2.1.1.279] +trans_anol +sam +hplus
-    trans_anethole
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

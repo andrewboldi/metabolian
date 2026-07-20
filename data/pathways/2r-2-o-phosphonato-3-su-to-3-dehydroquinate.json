@@ -140,48 +140,31 @@
       }
     },
     {
-      "id": "3_sulfino_l_alanine",
-      "name": "3-sulfino-L-alanine",
-      "formula": "C3H6NO4S",
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:61085"
+        "chebi": "CHEBI:29919"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "quinate",
-      "name": "(−)-quinate",
-      "formula": "C7H11O6",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29751"
+        "chebi": "CHEBI:57540"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -212,13 +195,6 @@
       "name": "phosphoenolpyruvate carboxykinase (ATP)",
       "ec": [
         "4.1.1.49"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_282",
-      "name": "quinate/shikimate dehydrogenase [NAD(P)(+)]",
-      "ec": [
-        "1.1.1.282"
       ]
     }
   ],
@@ -409,16 +385,20 @@
     },
     {
       "id": "r5",
-      "name": "3-sulfino-L-alanine + H2O = sulfite + L-alanine + H(+)",
-      "equation": "3-sulfino-L-alanine + H2O = sulfite + L-alanine + H(+)",
+      "name": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
+      "equation": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
       "substrates": [
         {
-          "metabolite": "3_sulfino_l_alanine",
+          "metabolite": "h2s",
           "stoichiometry": 1
         },
         {
+          "metabolite": "nad",
+          "stoichiometry": 3
+        },
+        {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
@@ -427,74 +407,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
-          "stoichiometry": 1
+          "metabolite": "nadh",
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:28278"
+        "rhea": "RHEA:55316"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28278"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "quinate/shikimate dehydrogenase [NAD(P)(+)]",
-      "equation": "L-quinate + NADP(+) = 3-dehydroquinate + NADPH + H(+)",
-      "ec": "1.1.1.282",
-      "substrates": [
-        {
-          "metabolite": "quinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_dehydroquinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_282"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:18425"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:18425"
+            "id": "RHEA:55316"
           }
         ]
       }

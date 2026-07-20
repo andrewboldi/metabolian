@@ -38,13 +38,25 @@ pathway fluoroacetaldehyde-to-ammonium "fluoroacetaldehyde to ammonium" {
 
   branch from glycolate side left {
     glycolate
-    <-> ec_3_5_1_124 [3.5.1.124] +n_1_hydroxy_2_oxoethyl_l_argininium +h2o +hplus
-    l_argininium
+    <-> . +h2o +dgtp +hplus
+    n2_1_hydroxy_2_oxoethyl_dgtp
   }
 
   branch from methionine side right {
     methionine
     <-> ec_2_1_1_280 [2.1.1.280] +s_methyl_l_methionine +l_selenocysteine +hplus
     se_methyl_l_selenocysteine
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_56 [2.6.1.56] +1d_3_ammmonio_1_guanidiniumyl_1_3_dideoxy_scyllo +pyruvate
+    1d_1_guanidiniumyl_1_deoxy_3_dehydro_scyllo_inos
+  }
+
+  branch from 2_oxoglutaramate side right {
+    2_oxoglutaramate
+    <-> . +o2 +h2o +h2o2 +nh3
+    d_glutamine
   }
 }

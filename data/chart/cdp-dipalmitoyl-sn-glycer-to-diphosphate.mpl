@@ -18,25 +18,31 @@ pathway cdp-dipalmitoyl-sn-glycer-to-diphosphate "CDP-dipalmitoyl-sn-glycer… t
 
   branch from 1_2_dihexadecanoyl_sn_glycero_3_phospho_d_myo_in side left {
     1_2_dihexadecanoyl_sn_glycero_3_phospho_d_myo_in
-    <-> . +palmitoyl_coa +coa
-    1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit
+    <-> . +h2o +pi
+    1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    <-> ec_2_4_3_7 [2.4.3.7] +n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from palmitate side left {
     palmitate
-    <-> . +2_palmitoylglycerol +h2o +hplus
-    glycerol
+    <-> . +octadecan_1_ol +1_palmitoylglycerone_3_phosphate +hplus
+    1_octadecylglycerone_3_phosphate
   }
 
   branch from palmitoyl_coa side right {
     palmitoyl_coa
-    <-> ec_2_3_1_21 [2.3.1.21] +carnitine +coa
-    palmitoylcarnitine
+    <-> ec_2_3_1_50 [2.3.1.50] +serine +hplus +co2 +coa
+    ketosphinganine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_82 [2.5.1.82] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_hexaprenyl_diphosphate
   }
 }

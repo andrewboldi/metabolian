@@ -25,7 +25,9 @@ import { chebiTable, loadReactions, conjugateMap, enzymeNames, CURRENCY } from "
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = join(ROOT, "data", "pathways");
 
-const MIN_SPINE = Number(process.env.MIN_SPINE || 3);   // 2 steps is a reaction pair, not a route
+// 2 is the floor: a single reaction is not a route, and emitting ~4,100
+// one-reaction sheets would flood the master with fragments rather than inform it.
+const MIN_SPINE = Number(process.env.MIN_SPINE || 2);
 const MAX_SPINE = Number(process.env.MAX_SPINE || 9);   // longer overflows a sheet
 // High enough not to bind: spine extraction exhausts the EC-annotated corpus
 // at ~760 sheets on its own, so this is a runaway guard rather than a target.
@@ -205,7 +207,7 @@ const index = [];
  *  is what the poster does with a branch, and it raises the information on the
  *  sheet without inventing a new one. Capped per sheet and per anchor so a hub
  *  compound cannot bury its own spine. */
-const MAX_BRANCH_PER_SHEET = Number(process.env.MAX_BRANCH || 4);
+const MAX_BRANCH_PER_SHEET = Number(process.env.MAX_BRANCH || 6);
 function pickBranches(chain) {
   const onSpine = new Set(chain.flatMap((i) => [...mainsOf(reactions[i], "substrates"), ...mainsOf(reactions[i], "products")]));
   const out = [];

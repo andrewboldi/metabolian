@@ -30,8 +30,8 @@ pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavono
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_20 [1.14.11.20] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +akg +o2 +co2
-    11_o_demethyl_17_o_deacetylvindolinium
+    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
+    3s_3_hydroxy_l_arginine
   }
 
   branch from flavonols side left {

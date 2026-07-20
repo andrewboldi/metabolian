@@ -18,7 +18,7 @@ pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    19_hepe
+    <-> . +lipoxin_a4 +fmnh2 +o2 +h2o +hplus
+    20_hydroxylipoxin_a4
   }
 }

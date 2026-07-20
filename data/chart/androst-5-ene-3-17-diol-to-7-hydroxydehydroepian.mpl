@@ -18,15 +18,9 @@ pathway androst-5-ene-3-17-diol-to-7-hydroxydehydroepian "androst-5-ene-3β,17β
     7_hydroxydehydroepiandrosterone
   }
 
-  branch from dehydroepiandrosterone side left {
-    dehydroepiandrosterone
-    <-> . +udp_d_glucose +udp +hplus
-    dehydroepiandrosterone_3_d_glucoside
-  }
-
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
-    s_nandinine
+    <-> ec_1_14_14_159 [1.14.14.159] +dolabradiene +fmnh2 +o2 +h2o +hplus
+    15_16_epoxydolabrene
   }
 }

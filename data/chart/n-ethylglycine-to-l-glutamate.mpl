@@ -24,13 +24,13 @@ pathway n-ethylglycine-to-l-glutamate "N-ethylglycine to L-glutamate" {
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_4_1_1_47 [4.1.1.47] +hplus +co2
-    2_hydroxy_3_oxopropanoate
+    <-> ec_2_2_1_5 [2.2.1.5] +akg +hplus +co2
+    2_hydroxy_3_oxoadipate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_5_1_1_3 [5.1.1.3]
-    d_glutamate
+    <-> ec_2_6_1_75 [2.6.1.75] +s_4_bromophenyl_l_cysteine +akg
+    4_bromophenylsulfanyl_pyruvate
   }
 }

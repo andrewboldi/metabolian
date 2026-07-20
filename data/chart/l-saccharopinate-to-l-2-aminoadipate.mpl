@@ -18,19 +18,19 @@ pathway l-saccharopinate-to-l-2-aminoadipate "L-saccharopinate to L-2-aminoadipa
 
   branch from l_allysine side left {
     l_allysine
-    <-> ec_1_4_3_20 [1.4.3.20] +l_lysinium +o2 +h2o +h2o2
+    <-> . +l_lysinium +nad +h2o +nadh +hplus
     nh3
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_65 [2.6.1.65] +6_acetamido_3_aminohexanoic_acid +akg
-    6_acetamido_3_oxohexanoate
+    <-> ec_2_6_1_5 [2.6.1.5] +l_phenylalanine +akg
+    keto_phenylpyruvate
   }
 
   branch from s_1_piperideine_6_carboxylate side left {
     s_1_piperideine_6_carboxylate
-    <-> ec_1_5_3_7 [1.5.3.7] +o2 +h2o2 +hplus
-    l_pipecolic_acid
+    <-> . +7_n_5s_5_amino_5_carboxypentyl_formamidino_7_dea +sam +5_deoxyadenosine +methionine +hplus
+    archaeosine_5_phosphate_zwitterionic
   }
 }

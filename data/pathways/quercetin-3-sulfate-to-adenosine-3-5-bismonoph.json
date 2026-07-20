@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "quercetin-3-sulfate-to-adenosine-3-5-bismonoph",
+  "name": "quercetin 3-sulfate to adenosine 3',5'-bismonoph…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 2-step route from quercetin 3-sulfate(2−) to adenosine 3',5'-bismonophosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22504"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58254"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "quercetin_3_sulfate",
+      "name": "quercetin 3-sulfate",
+      "formula": "C15H8O10S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58254"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "quercetin_3_3_bissulfate",
+      "name": "quercetin 3,3'-bissulfate",
+      "short": "quercetin…",
+      "formula": "C15H7O13S2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58305"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "quercetin_3_3_7_trissulfate",
+      "name": "quercetin 3,3',7-trissulfate",
+      "short": "quercetin…",
+      "formula": "C15H6O16S3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77984"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_acyl_4_phosphopantetheine",
+      "name": "S-acyl-4'-phosphopantetheine",
+      "short": "S-acyl-4'-phosphopa…",
+      "formula": "C12H20N2O8PSR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:132023"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_2_26",
+      "name": "quercetin-3-sulfate 3'-sulfotransferase",
+      "ec": [
+        "2.8.2.26"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_28",
+      "name": "quercetin-3,3'-bissulfate 7-sulfotransferase",
+      "ec": [
+        "2.8.2.28"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "quercetin-3-sulfate 3'-sulfotransferase",
+      "equation": "quercetin 3-sulfate + 3'-phosphoadenylyl sulfate = quercetin 3,3'-bissulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.26",
+      "substrates": [
+        {
+          "metabolite": "quercetin_3_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quercetin_3_3_bissulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22504"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "quercetin-3,3'-bissulfate 7-sulfotransferase",
+      "equation": "quercetin 3,3'-bissulfate + 3'-phosphoadenylyl sulfate = quercetin 3,3',7-trissulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.28",
+      "substrates": [
+        {
+          "metabolite": "quercetin_3_3_bissulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quercetin_3_3_7_trissulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "an acyl-CoA + H2O = an acyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "equation": "an acyl-CoA + H2O = an acyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acyl_4_phosphopantetheine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50044"
+          }
+        ]
+      }
+    }
+  ]
+}

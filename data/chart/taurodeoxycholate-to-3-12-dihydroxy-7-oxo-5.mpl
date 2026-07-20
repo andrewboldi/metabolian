@@ -24,25 +24,37 @@ pathway taurodeoxycholate-to-3-12-dihydroxy-7-oxo-5 "taurodeoxycholate to 3α,12
 
   branch from deoxycholate side left {
     deoxycholate
-    <-> . +udp_d_glucuronate +udp
-    deoxycholic_acid_24_o_d_glucuronide
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    3_sulfodeoxycholate
   }
 
   branch from taurine side right {
     taurine
-    <-> . +lauroyl_coa +coa +hplus
-    n_dodecanoyltaurine
+    <-> . +stearoyl_coa +coa +hplus
+    n_stearoyltaurine
   }
 
-  branch from deoxycholoyl_coa side left {
-    deoxycholoyl_coa
-    <-> . +ursodeoxycholate +deoxycholate
-    ursodeoxycholoyl_coa
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    9_pimara_7_15_diene
+    <-> ec_2_5_1_80 [2.5.1.80] +dmapp +l_tryptophan
+    7_3_methylbut_2_enyl_l_tryptophan
+  }
+
+  branch from choloyl_coa side right {
+    choloyl_coa
+    <-> . +h2o +adenosine_3_5_bismonophosphate +hplus
+    s_choloyl_4_phosphopantetheine
+  }
+
+  branch from glycocholate side left {
+    glycocholate
+    <-> . +nad +nadh +hplus
+    7_oxoglycodeoxycholate
+  }
+
+  branch from cholate side right {
+    cholate
+    <-> . +nad +nadh +hplus
+    7_12_dihydroxy_3_oxo_5_cholan_24_oate
   }
 }

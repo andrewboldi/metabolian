@@ -18,8 +18,8 @@ pathway precorrin-3b-to-s-adenosyl-l-homocysteine "precorrin-3B to S-adenosyl-L-
 
   branch from sah side left {
     sah
-    <-> . +squalene +sam +hplus
-    3_methyl_1_2_didehydro_2_3_dihydrosqualene
+    <-> ec_2_1_1_266 [2.1.1.266] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from precorrin_6a side right {

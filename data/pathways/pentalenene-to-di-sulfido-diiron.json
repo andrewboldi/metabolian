@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pentalenene-to-di-sulfido-diiron",
+  "name": "pentalenene to di-μ-sulfido-diiron",
+  "category": "other",
+  "summary": "A 2-step route from pentalenene to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31703"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17251"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pentalenene",
+      "name": "pentalenene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17251"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pentalen_13_ol",
+      "name": "pentalen-13-ol",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63243"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pentalen_13_al",
+      "name": "pentalen-13-al",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63244"
+      }
+    },
+    {
+      "id": "diuron",
+      "name": "diuron",
+      "formula": "C9H10Cl2N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:116509"
+      }
+    },
+    {
+      "id": "diuron_desmethyl",
+      "name": "diuron-desmethyl",
+      "formula": "C8H8Cl2N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83466"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidiz...",
+      "equation": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "pentalenene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentalen_13_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31703"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pentalen-13-ol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-al + 2 oxi...",
+      "equation": "pentalen-13-ol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-al + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "pentalen_13_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentalen_13_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31707"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diuron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3,4-dichlorophenyl)-1-methy...",
+      "equation": "diuron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3,4-dichlorophenyl)-1-methylurea + formaldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "diuron",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diuron_desmethyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65788"
+          }
+        ]
+      }
+    }
+  ]
+}

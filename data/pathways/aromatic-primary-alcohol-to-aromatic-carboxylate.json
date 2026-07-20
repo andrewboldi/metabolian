@@ -1,0 +1,291 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aromatic-primary-alcohol-to-aromatic-carboxylate",
+  "name": "aromatic primary alcohol to aromatic carboxylate",
+  "category": "redox-detox",
+  "summary": "A 2-step route from aromatic primary alcohol to aromatic carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12076"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:33857"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aromatic_primary_alcohol",
+      "name": "aromatic primary alcohol",
+      "short": "aromatic primary…",
+      "formula": "CH3OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33857"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "arenecarbaldehyde",
+      "name": "arenecarbaldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33855"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "aromatic_carboxylate",
+      "name": "aromatic carboxylate",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:91007"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "aromatic_s_hydroxynitrile",
+      "name": "aromatic (S)-hydroxynitrile",
+      "short": "aromatic (S)-hydrox…",
+      "formula": "C2H2NOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138306"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_90",
+      "name": "aryl-alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.90"
+      ]
+    },
+    {
+      "id": "ec_1_2_3_9",
+      "name": "aryl-aldehyde oxidase",
+      "ec": [
+        "1.2.3.9"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_47",
+      "name": "(S)-hydroxynitrile lyase",
+      "ec": [
+        "4.1.2.47"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aryl-alcohol dehydrogenase",
+      "equation": "an aromatic primary alcohol + NAD(+) = an aromatic aldehyde + NADH + H(+)",
+      "ec": "1.1.1.90",
+      "substrates": [
+        {
+          "metabolite": "aromatic_primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arenecarbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aryl-aldehyde oxidase",
+      "equation": "an aromatic aldehyde + O2 + H2O = an aromatic carboxylate + H2O2 + H(+)",
+      "ec": "1.2.3.9",
+      "substrates": [
+        {
+          "metabolite": "arenecarbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aromatic_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18569"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-hydroxynitrile lyase",
+      "equation": "an aromatic (S)-hydroxynitrile = an aromatic aldehyde + hydrogen cyanide",
+      "ec": "4.1.2.47",
+      "substrates": [
+        {
+          "metabolite": "aromatic_s_hydroxynitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arenecarbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54660"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-5-diamino-6-1-d-ribity-to-7-8-dihydroneopterin",
+  "name": "2,5-diamino-6-(1-D-ribity… to 7,8-dihydroneopterin…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from 2,5-diamino-6-(1-D-ribitylamino)pyrimidin-4(3H)-one 5'-phosphate(2−) to 7,8-dihydroneopterin 3'-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27274"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58890"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_5_diamino_6_1_d_ribitylamino_pyrimidin_4_3h_on",
+      "name": "2,5-diamino-6-(1-D-ribitylamino)pyrimidin-4(3H)-one 5'-phosphate",
+      "short": "2,5-diamino-6-(1-D-…",
+      "formula": "C9H16N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58890"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on",
+      "name": "2,5-diamino-6-(1-D-ribosylamino)pyrimidin-4(3H)-one 5'-phosphate",
+      "short": "2,5-diamino-6-(1-D-…",
+      "formula": "C9H14N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59545"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "7_8_dihydroneopterin_3_phosphate",
+      "name": "7,8-dihydroneopterin 3'-phosphate",
+      "short": "7,8-dihydroneopteri…",
+      "formula": "C9H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58762"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_302",
+      "name": "2,5-diamino-6-(ribosylamino)-4(3H)-pyrimidinone 5'-phosphate reductase",
+      "ec": [
+        "1.1.1.302"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_160",
+      "name": "2,5-diamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one",
+      "ec": [
+        "4.2.1.160"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,5-diamino-6-(ribosylamino)-4(3H)-pyrimidinone 5'-phosphate reductase",
+      "equation": "2,5-diamino-6-(1-D-ribitylamino)pyrimidin-4(3H)-one 5'-phosphate + NAD(+) = 2,5-diamino-6-(1-D-ribosylamino)pyrimidin-4(3H)-one 5'-phosphate + NADH + H(+)",
+      "ec": "1.1.1.302",
+      "substrates": [
+        {
+          "metabolite": "2_5_diamino_6_1_d_ribitylamino_pyrimidin_4_3h_on",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_302"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27274"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27274"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,5-diamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one",
+      "equation": "2,5-diamino-6-(1-D-ribosylamino)pyrimidin-4(3H)-one 5'-phosphate = 7,8-dihydroneopterin 3'-phosphate + H2O",
+      "ec": "4.2.1.160",
+      "substrates": [
+        {
+          "metabolite": "2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydroneopterin_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_160"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:45136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45136"
+          }
+        ]
+      }
+    }
+  ]
+}

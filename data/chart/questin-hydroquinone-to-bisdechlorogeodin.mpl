@@ -24,7 +24,7 @@ pathway questin-hydroquinone-to-bisdechlorogeodin "questin hydroquinone to (−)
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_242 [2.1.1.242] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 }

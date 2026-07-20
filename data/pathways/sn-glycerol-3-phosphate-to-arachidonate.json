@@ -103,51 +103,40 @@
       }
     },
     {
-      "id": "1_stearoyl_2_arachidonoyl_sn_glycerol",
-      "name": "1-stearoyl-2-arachidonoyl-sn-glycerol",
-      "short": "1-stearoyl-2-arachi…",
-      "formula": "C41H72O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:75728"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:57383"
       }
     },
     {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
+      "id": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
+      "name": "1-stearoyl-2-linoleoyl-sn-glycero-3-phosphate",
+      "short": "1-stearoyl-2-linole…",
+      "formula": "C39H71O8P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:456216"
+        "chebi": "CHEBI:77098"
       }
     },
     {
-      "id": "1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc",
-      "name": "1-palmitoyl-2-arachidonoyl-sn-glycero-3-phosphocholine",
-      "short": "1-palmitoyl-2-arach…",
-      "formula": "C44H80NO8P",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73003"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C24H50NO7P",
-      "charge": 0,
+      "id": "9_r_hpete",
+      "name": "9(R)-HPETE",
+      "formula": "C20H31O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:72998"
+        "chebi": "CHEBI:77913"
       }
     }
   ],
@@ -276,86 +265,74 @@
     },
     {
       "id": "r4",
-      "name": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + ATP = 1-octadecanoyl-2-...",
-      "equation": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + ATP = 1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + ADP + H(+)",
+      "name": "1-octadecanoyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = 1-octadecanoyl-2...",
+      "equation": "1-octadecanoyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = 1-octadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + CoA",
       "substrates": [
         {
-          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycerol",
+          "metabolite": "1_stearoyl_sn_glycero_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "linoleoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate",
+          "metabolite": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:40323"
+        "rhea": "RHEA:55304"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40323"
+            "id": "RHEA:55304"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = 1...",
-      "equation": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = 1-hexadecanoyl-sn-glycero-3-phosphocholine + (5Z,8Z,11Z,14Z)-eicosatetraenoate + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + O2 = 9R-hydroperoxy(5Z,7E,11Z,14Z)-eicosatetraenoate",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + O2 = 9R-hydroperoxy(5Z,7E,11Z,14Z)-eicosatetraenoate",
       "substrates": [
-        {
-          "metabolite": "1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_r_hpete",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:40427"
+        "rhea": "RHEA:41247"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40427"
+            "id": "RHEA:41247"
           }
         ]
       }

@@ -30,7 +30,7 @@ pathway 9z-12z-15z-18z-21z-tetr-to-6z-9z-12z-15z-18z-21 "(9Z,12Z,15Z,18Z,21Z)-te
 
   branch from 4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa side right {
     4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +atp +coa +amp
-    ppi
+    <-> . +fad +hplus +fadh2
+    2e_4z_7z_10z_13z_16z_19z_docosaheptaenoyl_coa
   }
 }

@@ -18,25 +18,13 @@ pathway gluconapin-to-sulfate "gluconapin to sulfate" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_3_99_33 [1.3.99.33] +dihydrourocanate +hydrogen_donor
-    urocanate
-  }
-
-  branch from z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani side right {
-    z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani
-    <-> . +sulfate
-    s_goitrin
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +z_glucosinolate +h2o +hplus
-    z_n_sulfonatooxy_alkanimidothioate
+    <-> ec_1_14_99_64 [1.14.99.64] +zeaxanthin +hydrogen_donor +o2 +h2o
+    adonixanthin
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +dodecyl_sulfate +akg +o2 +succinate +co2 +hplus
-    dodecanal
+    <-> . +o2 +hplus
+    h2s
   }
 }

@@ -1,0 +1,261 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-icosanoylglycerol-to-2-hydroxyarachidate",
+  "name": "1-icosanoylglycerol to 2-hydroxyarachidate",
+  "category": "other",
+  "summary": "A 2-step route from 1-icosanoylglycerol to 2-hydroxyarachidate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47072"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142495"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_icosanoylglycerol",
+      "name": "1-icosanoylglycerol",
+      "formula": "C23H46O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142495"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "icosanoate",
+      "name": "icosanoate",
+      "formula": "C20H39O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32360"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_hydroxyarachidate",
+      "name": "2-hydroxyarachidate",
+      "formula": "C20H39O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76732"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "icosanoyl_coa",
+      "name": "icosanoyl-CoA",
+      "formula": "C41H70N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57380"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-eicosanoylglycerol + H2O = eicosanoate + glycerol + H(+)",
+      "equation": "1-eicosanoylglycerol + H2O = eicosanoate + glycerol + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_icosanoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "icosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47072"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47072"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "eicosanoate + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 2-hydroxyeicosanoate + 2 Fe(III)...",
+      "equation": "eicosanoate + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 2-hydroxyeicosanoate + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "icosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyarachidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39823"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39823"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "eicosanoyl-CoA + H2O = eicosanoate + CoA + H(+)",
+      "equation": "eicosanoyl-CoA + H2O = eicosanoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "icosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "icosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40147"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40147"
+          }
+        ]
+      }
+    }
+  ]
+}

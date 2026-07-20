@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "pentanamide-to-3-propylmalate",
   "name": "pentanamide to 3-propylmalate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from pentanamide to 3-propylmalate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -192,31 +192,31 @@
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:78442"
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:58315"
       }
     },
     {
-      "id": "phosphonatoenolpyruvate",
-      "name": "phosphonatoenolpyruvate",
-      "short": "phosphonatoenolpyru…",
-      "formula": "C3H2O6P",
-      "charge": -3,
+      "id": "3_l_tyrosyl_adenylyl_1_group",
+      "name": "3'-(L-tyrosyl)adenylyl(1−) group",
+      "short": "3'-(L-tyrosyl)adeny…",
+      "formula": "C19H21N6O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58702"
+        "chebi": "CHEBI:78536"
       }
     }
   ],
@@ -243,10 +243,10 @@
       ]
     },
     {
-      "id": "ec_2_7_9_1",
-      "name": "pyruvate, phosphate dikinase",
+      "id": "ec_6_1_1_1",
+      "name": "tyrosine--tRNA ligase",
       "ec": [
-        "2.7.9.1"
+        "6.1.1.1"
       ]
     }
   ],
@@ -533,16 +533,16 @@
     },
     {
       "id": "r7",
-      "name": "pyruvate, phosphate dikinase",
-      "equation": "pyruvate + phosphate + ATP = phosphoenolpyruvate + AMP + diphosphate + H(+)",
-      "ec": "2.7.9.1",
+      "name": "tyrosine--tRNA ligase",
+      "equation": "tRNA(Tyr) + L-tyrosine + ATP = L-tyrosyl-tRNA(Tyr) + AMP + diphosphate + H(+)",
+      "ec": "6.1.1.1",
       "substrates": [
         {
-          "metabolite": "pyruvate",
+          "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
@@ -552,7 +552,7 @@
       ],
       "products": [
         {
-          "metabolite": "phosphonatoenolpyruvate",
+          "metabolite": "3_l_tyrosyl_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
@@ -570,20 +570,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_9_1"
+          "enzyme": "ec_6_1_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:10756"
+        "rhea": "RHEA:10220"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10756"
+            "id": "RHEA:10220"
           }
         ]
       }

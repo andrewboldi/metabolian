@@ -103,25 +103,33 @@
       }
     },
     {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:32395"
+        "chebi": "CHEBI:10352"
       }
     },
     {
-      "id": "16_hete",
-      "name": "16-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "maniladiol",
+      "name": "maniladiol",
+      "formula": "C30H50O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132019"
+        "chebi": "CHEBI:138945"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_63",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "ec": [
+        "1.14.14.63"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -278,11 +286,12 @@
     },
     {
       "id": "r4",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 16-hy...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 16-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = maniladiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.63",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "amyrin",
           "stoichiometry": 1
         },
         {
@@ -296,7 +305,7 @@
       ],
       "products": [
         {
-          "metabolite": "16_hete",
+          "metabolite": "maniladiol",
           "stoichiometry": 1
         },
         {
@@ -312,17 +321,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_63"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:49972"
+        "rhea": "RHEA:55440"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49972"
+            "id": "RHEA:55440"
           }
         ]
       }

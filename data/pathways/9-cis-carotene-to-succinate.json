@@ -207,60 +207,69 @@
       }
     },
     {
-      "id": "n_arachidonoylserotonin",
-      "name": "N-arachidonoylserotonin",
-      "short": "N-arachidonoylserot…",
-      "formula": "C30H42N2O2",
+      "id": "albendazole",
+      "name": "albendazole",
+      "formula": "C12H15N3O2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132255"
+        "chebi": "CHEBI:16664"
       }
     },
     {
-      "id": "n_arachidonoyl_2_oxoserotonin",
-      "name": "N-arachidonoyl-2-oxoserotonin",
-      "short": "N-arachidonoyl-2-ox…",
-      "formula": "C30H42N2O3",
+      "id": "albendazole_s_oxide",
+      "name": "albendazole S-oxide",
+      "formula": "C12H15N3O3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132256"
+        "chebi": "CHEBI:16959"
       }
     },
     {
-      "id": "tocotrienol",
-      "name": "δ-tocotrienol",
-      "formula": "C27H40O2",
-      "charge": 0,
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:33276"
+        "chebi": "CHEBI:29965"
       }
     },
     {
-      "id": "tocotrienol",
-      "name": "β-tocotrienol",
-      "formula": "C28H42O2",
-      "charge": 0,
+      "id": "n5_methyl_argininium_1",
+      "name": "N5-methyl-argininium(1+)",
+      "short": "N5-methyl-argininiu…",
+      "formula": "C7H15N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:33275"
+        "chebi": "CHEBI:88222"
       }
     },
     {
-      "id": "3_methylnonanoyl_coa",
-      "name": "3-methylnonanoyl-CoA",
-      "formula": "C31H50N7O17P3S",
-      "charge": -4,
+      "id": "2_aminophenyl_succinate",
+      "name": "(2-aminophenyl)succinate",
+      "short": "(2-aminophenyl)succ…",
+      "formula": "C10H9NO4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:138634"
+        "chebi": "CHEBI:188439"
       }
     },
     {
-      "id": "2_hydroxy_3_methylnonanoyl_coa",
-      "name": "2-hydroxy-3-methylnonanoyl-CoA",
-      "short": "2-hydroxy-3-methyln…",
-      "formula": "C31H50N7O18P3S",
-      "charge": -4,
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:138633"
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "2_2_aminophenyl_succinyl_coa",
+      "name": "2-(2-aminophenyl)succinyl-CoA",
+      "short": "2-(2-aminophenyl)su…",
+      "formula": "C31H40N8O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:188441"
       }
     }
   ],
@@ -280,10 +289,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_95",
-      "name": "tocopherol C-methyltransferase",
+      "id": "ec_1_14_14_73",
+      "name": "albendazole monooxygenase (sufoxide-forming)",
       "ec": [
-        "2.1.1.95"
+        "1.14.14.73"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_322",
+      "name": "type IV protein arginine methyltransferase",
+      "ec": [
+        "2.1.1.322"
       ]
     }
   ],
@@ -619,11 +635,12 @@
     },
     {
       "id": "r8",
-      "name": "N-[(5Z,8Z,11Z,14Z)-eicosatetraenoyl]-serotonin + reduced [NADPH--hemoprotein reductase]...",
-      "equation": "N-[(5Z,8Z,11Z,14Z)-eicosatetraenoyl]-serotonin + reduced [NADPH--hemoprotein reductase] + O2 = 2-oxo-N-[(5Z,8Z,11Z,14Z)-eicosatetraenoyl]-serotonin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "albendazole monooxygenase (sufoxide-forming)",
+      "equation": "albendazole + reduced [NADPH--hemoprotein reductase] + O2 = albendazole S-oxide + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.73",
       "substrates": [
         {
-          "metabolite": "n_arachidonoylserotonin",
+          "metabolite": "albendazole",
           "stoichiometry": 1
         },
         {
@@ -637,7 +654,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_arachidonoyl_2_oxoserotonin",
+          "metabolite": "albendazole_s_oxide",
           "stoichiometry": 1
         },
         {
@@ -653,29 +670,34 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_73"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:50296"
+        "rhea": "RHEA:55924"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50296"
+            "id": "RHEA:55924"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "tocopherol C-methyltransferase",
-      "equation": "delta-tocotrienol + S-adenosyl-L-methionine = beta-tocotrienol + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.95",
+      "name": "type IV protein arginine methyltransferase",
+      "equation": "L-arginyl-[protein] + S-adenosyl-L-methionine = N(5)-methyl-L-arginyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.322",
       "substrates": [
         {
-          "metabolite": "tocotrienol",
+          "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
@@ -685,7 +707,7 @@
       ],
       "products": [
         {
-          "metabolite": "tocotrienol",
+          "metabolite": "n5_methyl_argininium_1",
           "stoichiometry": 1
         },
         {
@@ -699,67 +721,59 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_95"
+          "enzyme": "ec_2_1_1_322"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:38091"
+        "rhea": "RHEA:48116"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38091"
+            "id": "RHEA:48116"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "3-methylnonanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylnonanoyl-CoA + succinate...",
-      "equation": "3-methylnonanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylnonanoyl-CoA + succinate + CO2",
+      "name": "(2-aminophenyl)succinate + succinyl-CoA = 2-(2-aminophenyl)succinyl-CoA + succinate",
+      "equation": "(2-aminophenyl)succinate + succinyl-CoA = 2-(2-aminophenyl)succinyl-CoA + succinate",
       "substrates": [
         {
-          "metabolite": "3_methylnonanoyl_coa",
+          "metabolite": "2_aminophenyl_succinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "succinyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_hydroxy_3_methylnonanoyl_coa",
+          "metabolite": "2_2_aminophenyl_succinyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:55180"
+        "rhea": "RHEA:69783"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55180"
+            "id": "RHEA:69783"
           }
         ]
       }

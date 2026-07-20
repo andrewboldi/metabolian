@@ -18,8 +18,8 @@ pathway 3-s-strictosidinium-to-4-21-dehydrogeissoschizin "3α(S)-strictosidinium
 
   branch from glucose side left {
     glucose
-    <-> ec_2_4_1_20 [2.4.1.20] +cellobiose +pi
-    g1p
+    <-> ec_3_2_1_191 [3.2.1.191] +ginsenoside_rb1 +h2o
+    gypenoside_lxxv
   }
 
   branch from 4_21_dehydrogeissoschizine side right {

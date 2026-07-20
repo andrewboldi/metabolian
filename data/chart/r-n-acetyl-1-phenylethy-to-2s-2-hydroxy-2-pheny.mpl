@@ -16,15 +16,9 @@ pathway r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny "(R)-N-acetyl-1-phenylet
     2s_2_hydroxy_2_phenylpropanenitrile
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +melatonin +h2o
-    5_methoxytryptamine
-  }
-
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
-    <-> ec_3_5_5_6 [3.5.5.6] +3_5_dibromo_4_oxidobenzonitrile +h2o
-    3_5_dibromo_4_oxidobenzoate
+    <-> ec_2_3_2_13 [2.3.2.13] +l_glutamine +l_lysinium
+    n6_glutamyl_lysine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway linalool-to-6e-8-oxogeranial "linalool to (6E)-8-oxogeranial" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     linalool
@@ -12,9 +12,7 @@ pathway linalool-to-6e-8-oxogeranial "linalool to (6E)-8-oxogeranial" {
     geraniol
     <-> ec_1_14_14_83 [1.14.14.83] +fmnh2 +o2 -fmn -h2o -hplus
     6e_8_hydroxygeraniol
-    <-> . +nadp -nadph -hplus
-    6e_8_oxogeraniol
-    <-> . +nadp -nadph -hplus
+    <-> ec_1_1_1_324 [1.1.1.324] +nadp -nadph -hplus
     6e_8_oxogeranial
   }
 
@@ -26,14 +24,14 @@ pathway linalool-to-6e-8-oxogeranial "linalool to (6E)-8-oxogeranial" {
 
   branch from 6e_8_hydroxygeraniol side right {
     6e_8_hydroxygeraniol
-    <-> . +nadp +nadph +hplus
+    <-> . +nad +nadh +hplus
     6e_8_hydroxygeranial
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11_12_eet
+    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    1_hydroxy_long_chain_fatty_acid_anion
   }
 
   branch from 6e_8_oxogeranial side right {

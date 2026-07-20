@@ -175,40 +175,41 @@
       }
     },
     {
-      "id": "o_demethylpuromycin",
-      "name": "O-demethylpuromycin",
-      "formula": "C21H28N7O5",
+      "id": "pavine",
+      "name": "pavine",
+      "formula": "C20H24NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58037"
+        "chebi": "CHEBI:76921"
       }
     },
     {
-      "id": "puromycin",
-      "name": "puromycin",
-      "formula": "C22H30N7O5",
+      "id": "argemonine",
+      "name": "argemonine",
+      "formula": "C21H26NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:60255"
+        "chebi": "CHEBI:76922"
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
+      "id": "20s_hydroxyvitamin_d3",
+      "name": "(20S)-hydroxyvitamin D3",
+      "short": "hydroxyvitamin D3",
+      "formula": "C27H44O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:90983"
       }
     },
     {
-      "id": "22r_22_hydroxycholesterol",
-      "name": "(22R)-22-hydroxycholesterol",
-      "short": "22-hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "20_s_25_dihydroxyvitamin_d3",
+      "name": "20(S),25-dihydroxyvitamin D3",
+      "short": "20(S),25-dihydroxyv…",
+      "formula": "C27H44O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:67237"
+        "chebi": "CHEBI:90984"
       }
     }
   ],
@@ -235,10 +236,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_38",
-      "name": "O-demethylpuromycin O-methyltransferase",
+      "id": "ec_2_1_1_300",
+      "name": "pavine N-methyltransferase",
       "ec": [
-        "2.1.1.38"
+        "2.1.1.300"
       ]
     }
   ],
@@ -416,12 +417,12 @@
     },
     {
       "id": "r4",
-      "name": "O-demethylpuromycin O-methyltransferase",
-      "equation": "O-demethylpuromycin + S-adenosyl-L-methionine = puromycin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.38",
+      "name": "pavine N-methyltransferase",
+      "equation": "(+-)-pavine + S-adenosyl-L-methionine = N-methylpavine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.300",
       "substrates": [
         {
-          "metabolite": "o_demethylpuromycin",
+          "metabolite": "pavine",
           "stoichiometry": 1
         },
         {
@@ -431,7 +432,7 @@
       ],
       "products": [
         {
-          "metabolite": "puromycin",
+          "metabolite": "argemonine",
           "stoichiometry": 1
         },
         {
@@ -445,36 +446,36 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_38"
+          "enzyme": "ec_2_1_1_300"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:22280"
+        "rhea": "RHEA:39979"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22280"
+            "id": "RHEA:39979"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (22R)-hydroxycholesterol + 2 oxid...",
-      "equation": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (22R)-hydroxycholesterol + 2 oxidized [adrenodoxin] + H2O",
+      "name": "20S-hydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,25-dihydroxych...",
+      "equation": "20S-hydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,25-dihydroxycholecalciferol + 2 oxidized [adrenodoxin] + H2O",
       "substrates": [
+        {
+          "metabolite": "20s_hydroxyvitamin_d3",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
@@ -487,7 +488,7 @@
       ],
       "products": [
         {
-          "metabolite": "22r_22_hydroxycholesterol",
+          "metabolite": "20_s_25_dihydroxyvitamin_d3",
           "stoichiometry": 1
         },
         {
@@ -502,14 +503,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:34335"
+        "rhea": "RHEA:49212"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34335"
+            "id": "RHEA:49212"
           }
         ]
       }

@@ -26,25 +26,37 @@ pathway ent-kaurene-to-s-adenosyl-l-homocysteine "ent-kaurene to S-adenosyl-L-ho
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    4_hydroxy_17_estradiol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    10_hete
   }
 
-  branch from di_sulfido_diiron side right {
+  branch from ent_kaur_16_en_19_oate side right {
+    ent_kaur_16_en_19_oate
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    ent_7_hydroxykaur_16_en_19_oate
+  }
+
+  branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +25r_3_hydroxycholest_5_en_26_al +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_hydroxycholest_5_en_26_oate
+    <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
+    n_2_ethyl_6_methylphenyl_2_chloroacetamide
+  }
+
+  branch from gibberellin_a12 side right {
+    gibberellin_a12
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    gibberellin_a15_2_diacid_form
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +arachidonate +o2 +hydrogen_acceptor +h2o
-    15_r_hete
+    <-> . +malonyl-coa +acetyl_coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
+    clavatol
   }
 
-  branch from sah side right {
-    sah
-    <-> . +3_methyl_1_2_didehydro_2_3_dihydrosqualene +sam +hplus
-    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+  branch from gibberellin_a9 side right {
+    gibberellin_a9
+    <-> . +o2 +hplus +co2 +h2o
+    gibberellin_a24
   }
 }

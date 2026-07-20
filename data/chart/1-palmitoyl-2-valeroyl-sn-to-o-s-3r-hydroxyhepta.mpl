@@ -22,23 +22,17 @@ pathway 1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta "1-palmitoyl-2-valeroyl
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +arachidonoyl_coa +coa
-    1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
+    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 
-  branch from pentanal side right {
-    pentanal
-    <-> . +pentan_1_aminium +nadp +h2o +nadph +hplus
-    nh3
-  }
-
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_120 [4.2.3.120] +gpp
-    pinene
+    <-> ec_2_5_1_91 [2.5.1.91] +ipp +fpp
+    all_trans_decaprenyl_diphosphate
   }
 
-  branch from pentanoyl_coa side right {
+  branch from pentanoyl_coa side left {
     pentanoyl_coa
     <-> . +o2 +h2o2
     2e_pentenoyl_coa

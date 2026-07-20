@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "methyl-fatty-acid-anion-to-oxo-fatty-acid-anion",
+  "name": "ω-methyl fatty acid anion to ω-oxo fatty acid anion",
+  "category": "lipid-metabolism",
+  "summary": "A 2-step route from ω-methyl fatty acid anion to ω-oxo fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39023"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76619"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "methyl_fatty_acid_anion",
+      "name": "ω-methyl fatty acid anion",
+      "short": "ω-methyl fatty…",
+      "formula": "C2H3O2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76619"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hydroxy_fatty_acid_anion",
+      "name": "ω-hydroxy fatty acid anion",
+      "short": "ω-hydroxy fatty…",
+      "formula": "C2H3O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76307"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "oxo_fatty_acid_anion",
+      "name": "ω-oxo fatty acid anion",
+      "short": "ω-oxo fatty acid…",
+      "formula": "C2HO3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76309"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "epiandrosterone",
+      "name": "epiandrosterone",
+      "formula": "C19H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:541975"
+      }
+    },
+    {
+      "id": "3_5_7_3_7_dihydroxyandrostan_17_one",
+      "name": "(3β,5α,7α)-3,7-dihydroxyandrostan-17-one",
+      "short": "(3β,5α,7α)-3,7-dihy…",
+      "formula": "C19H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85816"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "an omega-methyl fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-hyd...",
+      "equation": "an omega-methyl fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-hydroxy fatty acid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "methyl_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxy_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39023"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "an omega-hydroxy fatty acid + NAD(+) = an omega-oxo fatty acid + NADH + H(+)",
+      "equation": "an omega-hydroxy fatty acid + NAD(+) = an omega-oxo fatty acid + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hydroxy_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxo_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3beta-hydroxy-5alpha-androstan-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3...",
+      "equation": "3beta-hydroxy-5alpha-androstan-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3beta,7alpha-dihydroxy-5alpha-androstan-17-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "epiandrosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_7_3_7_dihydroxyandrostan_17_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43896"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43896"
+          }
+        ]
+      }
+    }
+  ]
+}

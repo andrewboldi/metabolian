@@ -18,19 +18,19 @@ pathway gly-pro-to-l-glutamate "Gly-Pro to L-glutamate" {
 
   branch from l_proline side left {
     l_proline
-    <-> . +l_tryptophan +atp +amp +ppi +hplus
-    brevianamide_f
+    <-> . +atp +ppi
+    3_l_prolyl_amp
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_3_1_29 [2.3.1.29] +acetyl_coa +coa
-    amino_oxobutanoate
+    <-> . +atp +hplus +ppi
+    glycyl_amp
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_1 [2.6.1.1] +aspartate +akg
-    oxaloacetate
+    <-> ec_2_6_1_107 [2.6.1.107] +2s_3s_methylphenylalanine +akg
+    3s_3_methyl_2_oxo_3_phenylpropanoate
   }
 }

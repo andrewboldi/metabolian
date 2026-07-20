@@ -20,19 +20,19 @@ pathway 2-acetamido-2-deoxy-3-o-to-ammonium "2-acetamido-2-deoxy-3-O-(… to amm
 
   branch from sulfate side left {
     sulfate
-    <-> ec_3_1_6_3 [3.1.6.3] +d_glucopyranose_6_sulfate +h2o +hplus
-    glucose
+    <-> ec_1_14_11_77 [1.14.11.77] +2_ethylhexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    2_ethylhexanal
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_23 [4.2.3.23] +fpp
-    germacrene_a
+    <-> ec_2_7_7_39 [2.7.7.39] +sn_glycerol_3_phosphate +ctp +hplus
+    2r_cdp_glycerol
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_5_4 [3.5.5.4] +3_cyano_l_alanine +h2o
-    aspartate
+    <-> ec_3_5_4_11 [3.5.4.11] +2_aminopteridin_4_ol +h2o +hplus
+    lumazine
   }
 }

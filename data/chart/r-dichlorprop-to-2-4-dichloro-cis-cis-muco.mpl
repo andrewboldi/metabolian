@@ -16,19 +16,13 @@ pathway r-dichlorprop-to-2-4-dichloro-cis-cis-muco "(R)-dichlorprop to 2,4-dichl
     2_4_dichloro_cis_cis_muconate
   }
 
-  branch from 2_4_dichlorophenol side left {
-    2_4_dichlorophenol
-    <-> . +2_4_dichlorophenoxy_acetate +akg +o2 +succinate +co2
-    glyoxylate
-  }
-
-  branch from succinate side right {
+  branch from succinate side left {
     succinate
-    <-> ec_2_8_3_22 [2.8.3.22] +l_citramalate +succinyl_coa
-    3s_citramalyl_coa
+    <-> . +decanoyl_coa +akg +o2 +co2
+    2_hydroxydecanoyl_coa
   }
 
-  branch from 2_4_dichloro_cis_cis_muconate side left {
+  branch from 2_4_dichloro_cis_cis_muconate side right {
     2_4_dichloro_cis_cis_muconate
     <-> ec_5_5_1_11 [5.5.1.11] +hplus
     2_4_dichloro_5_oxo_2_5_dihydro_2_furylacetate

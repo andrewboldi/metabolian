@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "imidazole-4-acetaldehyde-to-5-hydroxyimidazole-4",
+  "name": "imidazole-4-acetaldehyde to 5-hydroxyimidazole-4-acet…",
+  "category": "energy-metabolism",
+  "summary": "A 2-step route from imidazole-4-acetaldehyde to 5-hydroxyimidazole-4-acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31059"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27398"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "imidazole_4_acetaldehyde",
+      "name": "imidazole-4-acetaldehyde",
+      "short": "imidazole-4-acetald…",
+      "formula": "C5H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27398"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "imidazol_4_ylacetate",
+      "name": "imidazol-4-ylacetate",
+      "formula": "C5H5N2O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57969"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_hydroxyimidazole_4_acetate",
+      "name": "5-hydroxyimidazole-4-acetate",
+      "short": "5-hydroxyimidazole-…",
+      "formula": "C5H5N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58565"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_5",
+      "name": "imidazoleacetate 4-monooxygenase",
+      "ec": [
+        "1.14.13.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "imidazole-4-acetaldehyde + NAD(+) + H2O = imidazole-4-acetate + NADH + 2 H(+)",
+      "equation": "imidazole-4-acetaldehyde + NAD(+) + H2O = imidazole-4-acetate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "imidazole_4_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "imidazol_4_ylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31059"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31059"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "imidazoleacetate 4-monooxygenase",
+      "equation": "imidazole-4-acetate + NADH + O2 + H(+) = 5-hydroxyimidazole-4-acetate + NAD(+) + H2O",
+      "ec": "1.14.13.5",
+      "substrates": [
+        {
+          "metabolite": "imidazol_4_ylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxyimidazole_4_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19425"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19425"
+          }
+        ]
+      }
+    }
+  ]
+}

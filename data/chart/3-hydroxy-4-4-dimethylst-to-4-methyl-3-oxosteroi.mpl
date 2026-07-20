@@ -8,11 +8,7 @@ pathway 3-hydroxy-4-4-dimethylst-to-4-methyl-3-oxosteroi "3β-hydroxy-4,4-dimeth
 
   spine at 0,0 {
     3_hydroxy_4_4_dimethylsteroid
-    <-> . +nadh +o2 +hplus -nad -h2o
-    3_hydroxy_4_hydroxymethyl_4_methylsteroid
-    <-> . +nadh +o2 +hplus -nad -h2o
-    3_hydroxy_4_formyl_4_methylsteroid
-    <-> . +nadh +o2 -nad -h2o
+    <-> ec_1_14_13_246 [1.14.13.246] +nadh +o2 +hplus -nad -h2o
     3_hydroxy_4_methylsteroid_4_carboxylate
     <-> ec_1_1_1_417 [1.1.1.417] +nad -co2 -nadh
     4_methyl_3_oxosteroid

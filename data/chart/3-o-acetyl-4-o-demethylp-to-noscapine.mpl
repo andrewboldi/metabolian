@@ -18,13 +18,7 @@ pathway 3-o-acetyl-4-o-demethylp-to-noscapine "3-O-acetyl-4'-O-demethylp… to (
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
-    8_methoxyfurocoumarin
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_l_glutaminate +h2o
-    glutamine
+    <-> ec_2_1_1_95 [2.1.1.95] +tocotrienol +sam +hplus
+    tocotrienol
   }
 }

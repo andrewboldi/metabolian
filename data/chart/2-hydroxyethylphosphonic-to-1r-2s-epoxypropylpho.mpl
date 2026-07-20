@@ -18,27 +18,39 @@ pathway 2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho "2-hydroxyethylphosphon
     1r_2s_epoxypropylphosphonate
   }
 
-  branch from cytidine_5_hydroxy_2_hydroxyethyl_phosphonoyl_ph side left {
-    cytidine_5_hydroxy_2_hydroxyethyl_phosphonoyl_ph
-    <-> . +methylcobalamin +sam +cytidine_5_hydroxy_s_2_hydroxypropyl_phosphonoyl +5_deoxyadenosine +methionine
-    cob_iii_alamin
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_3_6_1_9 [3.6.1.9] +xtp +h2o +hplus
-    xmp
+    <-> ec_4_2_3_116 [4.2.3.116] +gpp
+    camphene
   }
 
-  branch from 5_deoxyadenosine side left {
+  branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> . +ctp +hydrogen_donor +sam +methionine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_ctp
+    <-> . +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +methylcobalamin +sam +cob_iii_alamin +methionine
+    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
   }
 
-  branch from methionine side right {
+  branch from methionine side left {
     methionine
-    <-> . +n_fatty_acyl_l_methionine +h2o
-    fatty-acid
+    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
+    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +ajmalicine +fmnh2 +o2 +hydrogen_donor +fmn +h2o +hplus
+    serpentine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_172 [2.1.1.172] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
   }
 }

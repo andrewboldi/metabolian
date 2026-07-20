@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "geranyl-diphosphate-to-carvone",
   "name": "geranyl diphosphate to (+)-carvone",
-  "category": "energy-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from geranyl diphosphate(3−) to (+)-carvone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,49 +137,52 @@
       }
     },
     {
-      "id": "2_hydroxy_datp",
-      "name": "2-hydroxy-dATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:77897"
-      }
-    },
-    {
-      "id": "2_hydroxy_damp",
-      "name": "2-hydroxy-dAMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:63212"
-      }
-    },
-    {
-      "id": "progesterone",
-      "name": "progesterone",
-      "formula": "C21H30O2",
+      "id": "umbelliferone",
+      "name": "umbelliferone",
+      "formula": "C9H6O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17026"
+        "chebi": "CHEBI:27510"
       }
     },
     {
-      "id": "6_hydroxyprogesterone",
-      "name": "6β-hydroxyprogesterone",
-      "short": "6β-hydroxyprogester…",
-      "formula": "C21H30O3",
+      "id": "8_geranylumbelliferone",
+      "name": "8-geranylumbelliferone",
+      "short": "8-geranylumbellifer…",
+      "formula": "C19H22O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62117"
+        "chebi": "CHEBI:134358"
       }
     },
     {
-      "id": "cis_carveol",
-      "name": "(+)-cis-carveol",
-      "formula": "C10H16O",
+      "id": "e_phenylacetaldehyde_oxime",
+      "name": "(E)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:232"
+        "chebi": "CHEBI:47793"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "z_1_glutathione_s_yl_2_phenylacetohydroximate",
+      "name": "(Z)-1-(glutathione-S-yl)-2-phenylacetohydroximate",
+      "short": "1-(glutathione-S-yl…",
+      "formula": "C18H23N4O7S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136447"
       }
     }
   ],
@@ -213,17 +216,17 @@
       ]
     },
     {
-      "id": "ec_3_6_1_56",
-      "name": "2-hydroxy-dATP diphosphatase",
+      "id": "ec_2_5_1_138",
+      "name": "coumarin 8-geranyltransferase",
       "ec": [
-        "3.6.1.56"
+        "2.5.1.138"
       ]
     },
     {
-      "id": "ec_1_1_1_n4",
-      "name": "(-)-trans-carveol dehydrogenase",
+      "id": "ec_1_14_14_45",
+      "name": "aromatic aldoxime N-monooxygenase",
       "ec": [
-        "1.1.1.n4"
+        "1.14.14.45"
       ]
     }
   ],
@@ -434,60 +437,61 @@
     },
     {
       "id": "r5",
-      "name": "2-hydroxy-dATP diphosphatase",
-      "equation": "2-oxo-dATP + H2O = 2-oxo-dAMP + diphosphate + H(+)",
-      "ec": "3.6.1.56",
+      "name": "coumarin 8-geranyltransferase",
+      "equation": "umbelliferone + (2E)-geranyl diphosphate = 8-geranylumbelliferone + diphosphate",
+      "ec": "2.5.1.138",
       "substrates": [
         {
-          "metabolite": "2_hydroxy_datp",
+          "metabolite": "umbelliferone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "gpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_hydroxy_damp",
+          "metabolite": "8_geranylumbelliferone",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_1_56"
+          "enzyme": "ec_2_5_1_138"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31583"
+        "rhea": "RHEA:51860"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31583"
+            "id": "RHEA:51860"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone ...",
-      "equation": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "aromatic aldoxime N-monooxygenase",
+      "equation": "(E)-phenylacetaldehyde oxime + glutathione + reduced [NADPH--hemoprotein reductase] + O2 = (Z)-1-(glutathione-S-yl)-2-phenylacetohydroximate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.45",
       "substrates": [
         {
-          "metabolite": "progesterone",
+          "metabolite": "e_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
           "stoichiometry": 1
         },
         {
@@ -501,7 +505,7 @@
       ],
       "products": [
         {
-          "metabolite": "6_hydroxyprogesterone",
+          "metabolite": "z_1_glutathione_s_yl_2_phenylacetohydroximate",
           "stoichiometry": 1
         },
         {
@@ -510,51 +514,7 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:47252"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:47252"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(-)-trans-carveol dehydrogenase",
-      "equation": "(1S,5S)-carveol + NAD(+) = (S)-carvone + NADH + H(+)",
-      "ec": "1.1.1.n4",
-      "substrates": [
-        {
-          "metabolite": "cis_carveol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "carvone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
@@ -563,20 +523,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_n4"
+          "enzyme": "ec_1_14_14_45"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25848"
+        "rhea": "RHEA:52192"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25848"
+            "id": "RHEA:52192"
           }
         ]
       }

@@ -140,59 +140,71 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:128769"
       }
     },
     {
-      "id": "e_r_bisabolene",
-      "name": "(E,R)-α-bisabolene",
-      "formula": "C15H24",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57907"
+      }
+    },
+    {
+      "id": "mo_vi_o2_oh_molybdopterin_cofactor",
+      "name": "Mo(VI)O2(OH)-molybdopterin cofactor",
+      "short": "Mo(VI)O2(OH)-molybd…",
+      "formula": "C10H10MoN5O9PS2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71302"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49243"
+        "chebi": "CHEBI:35235"
       }
     },
     {
-      "id": "3_hydroxybenzoyl_coa",
-      "name": "3-hydroxybenzoyl-CoA",
-      "formula": "C28H36N7O18P3S",
+      "id": "mo_vi_o_s_oh_molybdopterin_cofactor",
+      "name": "Mo(VI)(=O)(=S)(OH)-molybdopterin cofactor",
+      "short": "Mo(VI)(=O)(=S)(OH)-…",
+      "formula": "C10H10MoN5O8PS3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57342"
+        "chebi": "CHEBI:82685"
       }
     },
     {
-      "id": "3_hydroxycyclohexa_1_5_diene_1_carbonyl_coa",
-      "name": "3-hydroxycyclohexa-1,5-diene-1-carbonyl-CoA",
-      "short": "3-hydroxycyclohexa-…",
-      "formula": "C28H38N7O18P3S",
-      "charge": -4,
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58801"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:57972"
       }
     }
   ],
@@ -205,17 +217,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_38",
-      "name": "alpha-bisabolene synthase",
+      "id": "ec_2_5_1_81",
+      "name": "geranylfarnesyl diphosphate synthase",
       "ec": [
-        "4.2.3.38"
+        "2.5.1.81"
       ]
     },
     {
-      "id": "ec_1_3_99_n1",
-      "name": "3-hydroxybenzoyl-CoA reductase",
+      "id": "ec_2_8_1_9",
+      "name": "molybdenum cofactor sulfurtransferase",
       "ec": [
-        "1.3.99.n1"
+        "2.8.1.9"
       ]
     }
   ],
@@ -361,18 +373,22 @@
     },
     {
       "id": "r4",
-      "name": "alpha-bisabolene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (E,R)-alpha-bisabolene + diphosphate",
-      "ec": "4.2.3.38",
+      "name": "geranylfarnesyl diphosphate synthase",
+      "equation": "isopentenyl diphosphate + (2E,6E,10E)-geranylgeranyl diphosphate = (2E,6E,10E,14E)-geranylfarnesyl diphosphate + diphosphate",
+      "ec": "2.5.1.81",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_r_bisabolene",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -382,50 +398,50 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_38"
+          "enzyme": "ec_2_5_1_81"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25436"
+        "rhea": "RHEA:25694"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25436"
+            "id": "RHEA:25694"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "3-hydroxybenzoyl-CoA reductase",
-      "equation": "3-hydroxybenzoyl-CoA + AH2 + 2 ATP + 2 H2O = 3-hydroxycyclohexa-1,5-diene-1-carbonyl-CoA + A + 2 ADP + 2 phosphate + 2 H(+)",
-      "ec": "1.3.99.n1",
+      "name": "molybdenum cofactor sulfurtransferase",
+      "equation": "Mo-molybdopterin + L-cysteine + AH2 = thio-Mo-molybdopterin + L-alanine + A + H2O",
+      "ec": "2.8.1.9",
       "substrates": [
         {
-          "metabolite": "3_hydroxybenzoyl_coa",
+          "metabolite": "mo_vi_o2_oh_molybdopterin_cofactor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "3_hydroxycyclohexa_1_5_diene_1_carbonyl_coa",
+          "metabolite": "mo_vi_o_s_oh_molybdopterin_cofactor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
           "stoichiometry": 1
         },
         {
@@ -433,34 +449,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_3_99_n1"
+          "enzyme": "ec_2_8_1_9"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25420"
+        "rhea": "RHEA:42636"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25420"
+            "id": "RHEA:42636"
           }
         ]
       }

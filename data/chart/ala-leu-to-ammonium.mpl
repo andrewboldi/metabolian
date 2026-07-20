@@ -18,19 +18,19 @@ pathway ala-leu-to-ammonium "Ala-Leu to ammonium" {
 
   branch from leucine side left {
     leucine
-    <-> . +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +ppi +nadp +coa +h2o
-    5s_5_2_methylpropyl_3_2e_6r_8e_10e_12e_6_8_10_1
+    <-> . +isoleucine +l_asparagine +l_histidine +ornithine +l_lysinium +cysteine +aspartate +l_phenylalanine +glutamate +atp +amp +ppi +h2o +hplus
+    bacitracin_a
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_2_6_1_56 [2.6.1.56] +1d_3_ammmonio_1_guanidiniumyl_1_3_dideoxy_scyllo +pyruvate
-    1d_1_guanidiniumyl_1_deoxy_3_dehydro_scyllo_inos
+    <-> . +ala_gly +h2o
+    glycine
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_15 [1.4.1.15] +l_lysinium +nad +nadh +hplus
-    1_piperideine_2_carboxylic_acid
+    <-> . +4_guanidiniumylbutanamide +h2o
+    4_guanidinobutanoic_acid
   }
 }

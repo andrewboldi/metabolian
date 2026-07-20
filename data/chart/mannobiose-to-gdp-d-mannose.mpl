@@ -18,17 +18,11 @@ pathway mannobiose-to-gdp-d-mannose "mannobiose to GDP-α-D-mannose" {
 
   branch from d_mannose_1_phosphate side left {
     d_mannose_1_phosphate
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp_d_glucose +gdp_d_mannose
-    g1p
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp_l_galactose +gdp_d_mannose
+    l_galactose_1_phosphate
   }
 
-  branch from glucose side right {
-    glucose
-    <-> . +glucoerucin +h2o
-    z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim
-  }
-
-  branch from gdp_d_mannose side left {
+  branch from gdp_d_mannose side right {
     gdp_d_mannose
     <-> ec_1_1_1_132 [1.1.1.132] +nad +h2o +nadh +hplus
     gdp_d_mannuronate

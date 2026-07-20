@@ -16,19 +16,13 @@ pathway allocholate-to-3-12-dihydroxy-5-chola "allocholate to 3β,12α-dihydroxy
     3_12_dihydroxy_5_cholan_24_oate
   }
 
-  branch from allocholoyl_coa side left {
-    allocholoyl_coa
-    <-> . +allocholate +allodeoxycholoyl_coa
-    allodeoxycholate
-  }
-
-  branch from deoxycholate side right {
+  branch from deoxycholate side left {
     deoxycholate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    3_sulfodeoxycholate
+    <-> . +nadp +nadph +hplus
+    12_dehydrodeoxycholate
   }
 
-  branch from 12_hydroxy_3_oxo_5_cholan_24_oate side left {
+  branch from 12_hydroxy_3_oxo_5_cholan_24_oate side right {
     12_hydroxy_3_oxo_5_cholan_24_oate
     <-> . +nad +nadh +hplus
     12_hydroxy_3_oxochola_4_en_24_oate

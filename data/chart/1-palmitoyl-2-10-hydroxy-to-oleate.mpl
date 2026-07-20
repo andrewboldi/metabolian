@@ -16,21 +16,15 @@ pathway 1-palmitoyl-2-10-hydroxy-to-oleate "1-palmitoyl-2-(10-hydroxy… to olea
     1_palmitoyl_sn_glycero_3_phosphoserine
   }
 
-  branch from 10_hydroxyoctadecanoate side left {
-    10_hydroxyoctadecanoate
-    <-> . +1_stearoyl_2_10_hydroxyoctadecanoyl_sn_glycero_3 +h2o +hplus
-    1_stearoyl_sn_glycero_3_phosphoserine
-  }
-
-  branch from 1_palmitoyl_sn_glycero_3_phosphoserine side right {
+  branch from 1_palmitoyl_sn_glycero_3_phosphoserine side left {
     1_palmitoyl_sn_glycero_3_phosphoserine
     <-> . +linoleoyl_coa +coa
     1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri
   }
 
-  branch from oleate side left {
+  branch from oleate side right {
     oleate
-    <-> . +5_9z_octadecenoyloxy_octadecanoate +h2o +hplus
-    5_hydroxyoctadecanoate
+    <-> . +n_oleoyl_l_tyrosine +h2o
+    tyrosine
   }
 }

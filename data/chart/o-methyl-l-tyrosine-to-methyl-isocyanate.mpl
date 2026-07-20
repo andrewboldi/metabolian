@@ -20,19 +20,19 @@ pathway o-methyl-l-tyrosine-to-methyl-isocyanate "O-methyl-L-tyrosine to methyl 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
-    3_o_l_oleandrosyl_oleandolide
+    <-> ec_2_1_1_211 [2.1.1.211] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_50 [4.2.3.50] +2_cis_6_cis_farnesyl_diphosphate
-    santalene
+    <-> ec_2_5_1_109 [2.5.1.109] +brevianamide_f +dmapp
+    deoxybrevianamide_e
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_aspartate +akg +o2 +co2
-    3s_3_hydroxy_l_aspartate
+    <-> . +taxifolin +akg +o2 +co2 +h2o +hplus
+    quercetin_7_olate
   }
 }

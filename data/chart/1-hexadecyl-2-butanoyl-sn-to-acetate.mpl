@@ -18,19 +18,13 @@ pathway 1-hexadecyl-2-butanoyl-sn-to-acetate "1-hexadecyl-2-butanoyl-sn… to ac
 
   branch from lysophosphatidylcholine_o_16_0_0_0 side left {
     lysophosphatidylcholine_o_16_0_0_0
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet +1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph
-    1_stearoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+    1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc
   }
 
-  branch from butyrate side right {
-    butyrate
-    <-> . +h2o +coa +hplus
-    butyryl_coa
-  }
-
-  branch from acetate side left {
+  branch from acetate side right {
     acetate
-    <-> ec_3_5_1_98 [3.5.1.98] +n6_acetyl_l_lysine +h2o
-    l_lysinium
+    <-> . +n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_n_acetyl +h2o
+    n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_d_muramy
   }
 }

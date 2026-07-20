@@ -24,13 +24,13 @@ pathway l-prolinylglycine-to-l-glutamate "L-prolinylglycine to L-glutamate" {
 
   branch from glycine side right {
     glycine
-    <-> ec_2_6_1_35 [2.6.1.35] +oxaloacetate +aspartate
-    glyoxylate
+    <-> ec_2_3_1_192 [2.3.1.192] +phenylacetyl_coa +coa +hplus
+    phenylacetylglycine
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_11 [2.6.1.11] +n2_acetyl_l_ornithine +akg
-    2_acetamido_5_oxopentanoate
+    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
+    6_oxoparomamine
   }
 }

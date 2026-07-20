@@ -123,6 +123,15 @@
       }
     },
     {
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61481"
+      }
+    },
+    {
       "id": "dtmp",
       "name": "dTMP",
       "formula": "C10H13N2O8P",
@@ -132,42 +141,31 @@
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37563"
-      }
-    },
-    {
-      "id": "cdp",
-      "name": "CDP",
-      "formula": "C9H12N3O11P2",
+      "id": "dcdp",
+      "name": "dCDP",
+      "formula": "C9H12N3O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58069"
+        "chebi": "CHEBI:58593"
       }
     },
     {
-      "id": "3_hydroxyanthranilate",
-      "name": "3-hydroxyanthranilate",
-      "short": "3-hydroxyanthranila…",
-      "formula": "C7H6NO3",
-      "charge": -1,
+      "id": "4_demethylrebeccamycin",
+      "name": "4'-demethylrebeccamycin",
+      "short": "4'-demethylrebeccam…",
+      "formula": "C26H19Cl2N3O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:36559"
+        "chebi": "CHEBI:595389"
       }
     },
     {
-      "id": "3_hydroxy_4_methylanthranilate",
-      "name": "3-hydroxy-4-methylanthranilate",
-      "short": "3-hydroxy-4-methyla…",
-      "formula": "C8H8NO3",
-      "charge": -1,
+      "id": "rebeccamycin",
+      "name": "rebeccamycin",
+      "formula": "C27H21Cl2N3O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:36558"
+        "chebi": "CHEBI:135511"
       }
     }
   ],
@@ -194,10 +192,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_97",
-      "name": "3-hydroxyanthranilate 4-C-methyltransferase",
+      "id": "ec_2_1_1_164",
+      "name": "demethylrebeccamycin-D-glucose O-methyltransferase",
       "ec": [
-        "2.1.1.97"
+        "2.1.1.164"
       ]
     }
   ],
@@ -347,21 +345,21 @@
     },
     {
       "id": "r4",
-      "name": "dTMP + CTP = CDP + dTDP",
-      "equation": "dTMP + CTP = CDP + dTDP",
+      "name": "dCTP + dTMP = dCDP + dTDP",
+      "equation": "dCTP + dTMP = dCDP + dTDP",
       "substrates": [
         {
-          "metabolite": "dtmp",
+          "metabolite": "dctp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ctp",
+          "metabolite": "dtmp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cdp",
+          "metabolite": "dcdp",
           "stoichiometry": 1
         },
         {
@@ -372,26 +370,26 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:82687"
+        "rhea": "RHEA:82691"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82687"
+            "id": "RHEA:82691"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "3-hydroxyanthranilate 4-C-methyltransferase",
-      "equation": "3-hydroxyanthranilate + S-adenosyl-L-methionine = 3-hydroxy-4-methylanthranilate + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.97",
+      "name": "demethylrebeccamycin-D-glucose O-methyltransferase",
+      "equation": "4'-demethylrebeccamycin + S-adenosyl-L-methionine = rebeccamycin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.164",
       "substrates": [
         {
-          "metabolite": "3_hydroxyanthranilate",
+          "metabolite": "4_demethylrebeccamycin",
           "stoichiometry": 1
         },
         {
@@ -401,7 +399,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_hydroxy_4_methylanthranilate",
+          "metabolite": "rebeccamycin",
           "stoichiometry": 1
         },
         {
@@ -415,20 +413,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_97"
+          "enzyme": "ec_2_1_1_164"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:17833"
+        "rhea": "RHEA:27353"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17833"
+            "id": "RHEA:27353"
           }
         ]
       }

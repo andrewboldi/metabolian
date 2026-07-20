@@ -121,59 +121,104 @@
       }
     },
     {
-      "id": "d_glucopyranose_6_sulfate",
-      "name": "D-glucopyranose 6-sulfate",
-      "short": "D-glucopyranose…",
-      "formula": "C6H11O9S",
+      "id": "2_ethylhexyl_sulfate",
+      "name": "2-ethylhexyl sulfate",
+      "formula": "C8H17O4S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:145427"
+        "chebi": "CHEBI:87808"
       }
     },
     {
-      "id": "glucose",
-      "name": "D-Glucose",
-      "formula": "C6H12O6",
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4167"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "germacrene_a",
-      "name": "(+)-germacrene A",
-      "formula": "C15H24",
+      "id": "2_ethylhexanal",
+      "name": "2-ethylhexanal",
+      "formula": "C8H16O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:41595"
+        "chebi": "CHEBI:87809"
       }
     },
     {
-      "id": "3_cyano_l_alanine",
-      "name": "3-cyano-L-alanine",
-      "formula": "C4H6N2O2",
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77860"
+        "chebi": "CHEBI:16526"
       }
     },
     {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:29991"
+        "chebi": "CHEBI:57597"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "2r_cdp_glycerol",
+      "name": "(2R)-CDP-glycerol",
+      "formula": "C12H19N3O13P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58311"
+      }
+    },
+    {
+      "id": "2_aminopteridin_4_ol",
+      "name": "2-aminopteridin-4-ol",
+      "formula": "C6H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18265"
+      }
+    },
+    {
+      "id": "lumazine",
+      "name": "lumazine",
+      "formula": "C6H4N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16489"
       }
     }
   ],
@@ -200,24 +245,24 @@
       ]
     },
     {
-      "id": "ec_3_1_6_3",
-      "name": "glycosulfatase",
+      "id": "ec_1_14_11_77",
+      "name": "alkyl sulfatase",
       "ec": [
-        "3.1.6.3"
+        "1.14.11.77"
       ]
     },
     {
-      "id": "ec_4_2_3_23",
-      "name": "germacrene-A synthase",
+      "id": "ec_2_7_7_39",
+      "name": "glycerol-3-phosphate cytidylyltransferase",
       "ec": [
-        "4.2.3.23"
+        "2.7.7.39"
       ]
     },
     {
-      "id": "ec_3_5_5_4",
-      "name": "cyanoalanine nitrilase",
+      "id": "ec_3_5_4_11",
+      "name": "pterin deaminase",
       "ec": [
-        "3.5.5.4"
+        "3.5.4.11"
       ]
     }
   ],
@@ -410,26 +455,38 @@
     },
     {
       "id": "r5",
-      "name": "glycosulfatase",
-      "equation": "D-glucose 6-sulfate + H2O = sulfate + D-glucose + H(+)",
-      "ec": "3.1.6.3",
+      "name": "alkyl sulfatase",
+      "equation": "2-ethylhexyl sulfate + 2-oxoglutarate + O2 = 2-ethylhexanal + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
       "substrates": [
         {
-          "metabolite": "d_glucopyranose_6_sulfate",
+          "metabolite": "2_ethylhexyl_sulfate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
+          "metabolite": "2_ethylhexanal",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "sulfate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -439,38 +496,46 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_6_3"
+          "enzyme": "ec_1_14_11_77"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:19145"
+        "rhea": "RHEA:47620"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19145"
+            "id": "RHEA:47620"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "germacrene-A synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-(R)-germacrene A + diphosphate",
-      "ec": "4.2.3.23",
+      "name": "glycerol-3-phosphate cytidylyltransferase",
+      "equation": "sn-glycerol 3-phosphate + CTP + H(+) = CDP-glycerol + diphosphate",
+      "ec": "2.7.7.39",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "germacrene_a",
+          "metabolite": "2r_cdp_glycerol",
           "stoichiometry": 1
         },
         {
@@ -480,42 +545,46 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_23"
+          "enzyme": "ec_2_7_7_39"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:12516"
+        "rhea": "RHEA:13361"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12516"
+            "id": "RHEA:13361"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "cyanoalanine nitrilase",
-      "equation": "3-cyano-L-alanine + 2 H2O = L-aspartate + NH4(+)",
-      "ec": "3.5.5.4",
+      "name": "pterin deaminase",
+      "equation": "2-amino-4-hydroxypteridine + H2O + H(+) = 2,4-dihydroxypteridine + NH4(+)",
+      "ec": "3.5.4.11",
       "substrates": [
         {
-          "metabolite": "3_cyano_l_alanine",
+          "metabolite": "2_aminopteridin_4_ol",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "aspartate",
+          "metabolite": "lumazine",
           "stoichiometry": 1
         },
         {
@@ -525,20 +594,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_5_4"
+          "enzyme": "ec_3_5_4_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:11188"
+        "rhea": "RHEA:11904"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11188"
+            "id": "RHEA:11904"
           }
         ]
       }

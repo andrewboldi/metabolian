@@ -103,12 +103,12 @@
       }
     },
     {
-      "id": "11_hydroxylaurate",
-      "name": "11-hydroxylaurate",
+      "id": "9_hydroxylaurate",
+      "name": "9-hydroxylaurate",
       "formula": "C12H23O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76628"
+        "chebi": "CHEBI:167543"
       }
     },
     {
@@ -169,46 +169,33 @@
       }
     },
     {
-      "id": "2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl",
-      "name": "2,3-di-O-dodecanoyl-1-O-β-D-galactopyranosyl-sn-glycerol",
-      "short": "2,3-di-O-dodecanoyl…",
-      "formula": "C33H62O10",
+      "id": "s_scoulerine",
+      "name": "(S)-scoulerine",
+      "formula": "C19H21NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90342"
+        "chebi": "CHEBI:17129"
       }
     },
     {
-      "id": "1_d_galactosyl_monododecanoyl_sn_glycerol",
-      "name": "1-(β-D-galactosyl)-monododecanoyl-sn-glycerol",
-      "short": "1-(β-D-galactosyl)-…",
-      "formula": "C21H40O9",
+      "id": "s_nandinine",
+      "name": "(S)-nandinine",
+      "formula": "C19H19NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90514"
-      }
-    },
-    {
-      "id": "pregnenolone",
-      "name": "pregnenolone",
-      "formula": "C21H32O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16581"
-      }
-    },
-    {
-      "id": "7_hydroxypregnenolone",
-      "name": "7α-hydroxypregnenolone",
-      "short": "7α-hydroxypregnenol…",
-      "formula": "C21H32O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:81467"
+        "chebi": "CHEBI:132749"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_73",
+      "name": "(S)-nandinine synthase",
+      "ec": [
+        "1.14.19.73"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -290,8 +277,8 @@
     },
     {
       "id": "r3",
-      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxydodecanoate + oxi...",
-      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxydodecanoate + oxid...",
+      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "dodecanoate",
@@ -308,7 +295,7 @@
       ],
       "products": [
         {
-          "metabolite": "11_hydroxylaurate",
+          "metabolite": "9_hydroxylaurate",
           "stoichiometry": 1
         },
         {
@@ -327,14 +314,14 @@
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:39751"
+        "rhea": "RHEA:66872"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39751"
+            "id": "RHEA:66872"
           }
         ]
       }
@@ -419,54 +406,12 @@
     },
     {
       "id": "r6",
-      "name": "1-beta-D-galactosyl-2,3-didodecanoyl-sn-glycerol + H2O = 1-beta-D-galactosyl-dodecanoyl...",
-      "equation": "1-beta-D-galactosyl-2,3-didodecanoyl-sn-glycerol + H2O = 1-beta-D-galactosyl-dodecanoyl-sn-glycerol + dodecanoate + H(+)",
+      "name": "(S)-nandinine synthase",
+      "equation": "(S)-scoulerine + reduced [NADPH--hemoprotein reductase] + O2 = (S)-nandinine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.73",
       "substrates": [
         {
-          "metabolite": "2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_d_galactosyl_monododecanoyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dodecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:48536"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48536"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "pregnenolone + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha-hydroxypregnenolone...",
-      "equation": "pregnenolone + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha-hydroxypregnenolone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "pregnenolone",
+          "metabolite": "s_scoulerine",
           "stoichiometry": 1
         },
         {
@@ -480,7 +425,7 @@
       ],
       "products": [
         {
-          "metabolite": "7_hydroxypregnenolone",
+          "metabolite": "s_nandinine",
           "stoichiometry": 1
         },
         {
@@ -489,24 +434,29 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_73"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46196"
+        "rhea": "RHEA:50364"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46196"
+            "id": "RHEA:50364"
           }
         ]
       }

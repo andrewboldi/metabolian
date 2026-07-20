@@ -24,25 +24,25 @@ pathway 1-6-anhydro-n-acetyl-mu-to-s-adenosyl-l-homocyst "1,6-anhydro-N-acetyl-Î
 
   branch from n_acetyl_d_glucosamine_6_phosphate side left {
     n_acetyl_d_glucosamine_6_phosphate
-    <-> . +itp +n_acetyl_d_glucosamine +hplus
-    idp
+    <-> . +utp +udp +hplus
+    n_acetyl_d_glucosamine
   }
 
   branch from dlactate side right {
     dlactate
-    <-> ec_3_1_2_6 [3.1.2.6] +lactoylglutathione +h2o +hplus
-    gsh
+    <-> . +r_3_phenyllactate +leucine +sam +atp +amp +sah +ppi +hplus
+    pf1022c
   }
 
   branch from n_acetylneuraminate side left {
     n_acetylneuraminate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    <-> . +gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1 +h2o
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_113 [2.1.1.113] +2_deoxycytidine_5_monophosphate_1 +sam +hplus
-    n4_methyl_dcmp_1
+    <-> . +n6_methyl_l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysine_1
   }
 }

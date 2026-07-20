@@ -140,22 +140,22 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "copal_8_ol_diphosphate",
+      "name": "copal-8-ol diphosphate",
+      "short": "copal-8-ol PP",
+      "formula": "C20H35O8P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:64283"
       }
     },
     {
-      "id": "barbatene",
-      "name": "(+)-α-barbatene",
-      "formula": "C15H24",
+      "id": "sclareol",
+      "name": "sclareol",
+      "formula": "C20H36O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61690"
+        "chebi": "CHEBI:9053"
       }
     }
   ],
@@ -168,10 +168,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_69",
-      "name": "(+)-alpha-barbatene synthase",
+      "id": "ec_4_2_3_141",
+      "name": "sclareol synthase",
       "ec": [
-        "4.2.3.69"
+        "4.2.3.141"
       ]
     }
   ],
@@ -360,18 +360,22 @@
     },
     {
       "id": "r5",
-      "name": "(+)-alpha-barbatene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-alpha-barbatene + diphosphate",
-      "ec": "4.2.3.69",
+      "name": "sclareol synthase",
+      "equation": "8-hydroxycopalyl diphosphate + H2O = sclareol + diphosphate",
+      "ec": "4.2.3.141",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "copal_8_ol_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "barbatene",
+          "metabolite": "sclareol",
           "stoichiometry": 1
         },
         {
@@ -381,20 +385,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_69"
+          "enzyme": "ec_4_2_3_141"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:29499"
+        "rhea": "RHEA:34459"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29499"
+            "id": "RHEA:34459"
           }
         ]
       }

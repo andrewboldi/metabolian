@@ -18,13 +18,7 @@ pathway n-hydroxy-l-tryptophanate-to-indole-3-acetonitri "N-hydroxy-L-tryptophan
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14r_15s_eet
-  }
-
-  branch from e_indol_3_ylacetaldehyde_oxime side right {
-    e_indol_3_ylacetaldehyde_oxime
-    <-> ec_1_14_14_45 [1.14.14.45] +gsh +fmnh2 +o2 +fmn +h2o +hplus
-    e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima
+    <-> . +leukotriene_b4 +fmnh2 +o2 +h2o +hplus
+    18_hydroxyleukotriene_b4
   }
 }

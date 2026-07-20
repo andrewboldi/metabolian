@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer",
   "name": "1-tetradecanoyl-2-[(5Z,8Z… to ricinoleoyl-sn-glycero-3-…",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 1-tetradecanoyl-2-[(5Z,8Z,11Z,14Z)-eicosatetraenoyl]-sn-glycero-3-phosphocholine to ricinoleoyl-sn-glycero-3-phosphocholine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -131,13 +131,13 @@
       }
     },
     {
-      "id": "2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g",
-      "name": "2-[(11R)-hydroxy-(5Z,8Z,12E,14Z)-icosatetraenoyl]-sn-glycero-3-phosphocholine",
-      "short": "2-[(11R)-hydroxy-(5…",
+      "id": "2_15r_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g",
+      "name": "2-[(15R)-hydroxy-(5Z,8Z,11Z,13E)-icosatetraenoyl]-sn-glycero-3-phosphocholine",
+      "short": "2-[(15R)-hydroxy-(5…",
       "formula": "C28H50NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:137582"
+        "chebi": "CHEBI:137583"
       }
     },
     {
@@ -150,43 +150,63 @@
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:64479"
       }
     },
     {
-      "id": "2s_2_hydroxytetradecanoate",
-      "name": "(2S)-2-hydroxytetradecanoate",
-      "short": "2-hydroxytetradecan…",
-      "formula": "C14H27O3",
-      "charge": -1,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:85637"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "8_s_hpete",
-      "name": "8(S)-HPETE",
-      "formula": "C20H31O4",
+      "id": "o_s_tetradecanoylpantetheine_4_phosphoryl_serine",
+      "name": "O-(S-tetradecanoylpantetheine-4'-phosphoryl)serine(1−)",
+      "short": "O-(S-tetradecanoylp…",
+      "formula": "C28H51N3O9PS",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:75322"
+        "chebi": "CHEBI:78477"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_11_2_4",
-      "name": "fatty-acid peroxygenase",
-      "ec": [
-        "1.11.2.4"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -315,8 +335,8 @@
     },
     {
       "id": "r4",
-      "name": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + AH2 + O2 = 2-[(11R)-hy...",
-      "equation": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + AH2 + O2 = 2-[(11R)-hydroxy-(5Z,8Z,12E,14Z)-eicosatetraenoyl]-sn-glycero-3-phosphocholine + A + H2O",
+      "name": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + AH2 + O2 = 2-[(15R)-hy...",
+      "equation": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + AH2 + O2 = 2-[(15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoyl]-sn-glycero-3-phosphocholine + A + H2O",
       "substrates": [
         {
           "metabolite": "2_arachidonoyl_sn_glycero_3_phosphocholine",
@@ -333,7 +353,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g",
+          "metabolite": "2_15r_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g",
           "stoichiometry": 1
         },
         {
@@ -348,36 +368,72 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:53676"
+        "rhea": "RHEA:53680"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53676"
+            "id": "RHEA:53680"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "fatty-acid peroxygenase",
-      "equation": "tetradecanoate + H2O2 = (2S)-hydroxytetradecanoate + H2O",
-      "ec": "1.11.2.4",
+      "name": "tetradecanoate + holo-[ACP] + ATP = tetradecanoyl-[ACP] + AMP + diphosphate",
+      "equation": "tetradecanoate + holo-[ACP] + ATP = tetradecanoyl-[ACP] + AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "tetradecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2s_2_hydroxytetradecanoate",
+          "metabolite": "o_s_tetradecanoylpantetheine_4_phosphoryl_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64888"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + CoA + ...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "arachidonoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -385,57 +441,31 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_11_2_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:46032"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:46032"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + O2 = (8S)-hydroperoxy-(5Z,9E,11Z,14Z)-eicosatetraen...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + O2 = (8S)-hydroperoxy-(5Z,9E,11Z,14Z)-eicosatetraenoate",
-      "substrates": [
+      "products": [
         {
           "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "coa",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
+        },
         {
-          "metabolite": "8_s_hpete",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:38675"
+        "rhea": "RHEA:40151"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38675"
+            "id": "RHEA:40151"
           }
         ]
       }

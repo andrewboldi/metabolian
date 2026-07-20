@@ -24,7 +24,7 @@ pathway short-chain-fatty-aldehyde-to-short-chain-fatty "short-chain fatty aldeh
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_69 [4.2.3.69] +fpp
-    barbatene
+    <-> ec_4_2_3_141 [4.2.3.141] +copal_8_ol_diphosphate +h2o
+    sclareol
   }
 }

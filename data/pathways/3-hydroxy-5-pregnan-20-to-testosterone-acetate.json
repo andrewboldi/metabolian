@@ -102,31 +102,31 @@
       }
     },
     {
-      "id": "20s_20_hydroxypregn_4_en_3_one",
-      "name": "(20S)-20-hydroxypregn-4-en-3-one",
-      "short": "20-hydroxypregn-4-e…",
-      "formula": "C21H32O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28453"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "6_hydroxyprogesterone",
+      "name": "6β-hydroxyprogesterone",
+      "short": "6β-hydroxyprogester…",
+      "formula": "C21H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62117"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
       }
     }
   ],
@@ -311,25 +311,33 @@
     },
     {
       "id": "r4",
-      "name": "(20S)-hydroxypregn-4-en-3-one + NAD(+) = progesterone + NADH + H(+)",
-      "equation": "(20S)-hydroxypregn-4-en-3-one + NAD(+) = progesterone + NADH + H(+)",
+      "name": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone ...",
+      "equation": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
-        {
-          "metabolite": "20s_20_hydroxypregn_4_en_3_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "progesterone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxyprogesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -340,14 +348,14 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42108"
+        "rhea": "RHEA:47252"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42108"
+            "id": "RHEA:47252"
           }
         ]
       }
