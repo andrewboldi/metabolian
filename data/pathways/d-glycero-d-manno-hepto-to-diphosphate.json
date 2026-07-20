@@ -142,33 +142,31 @@
       }
     },
     {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57907"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
+      "id": "z_bisabolene",
+      "name": "(Z)-α-bisabolene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:128769"
+        "chebi": "CHEBI:49241"
       }
     },
     {
-      "id": "tetra_trans_hexa_cis_undecaprenyl_diphosphate",
-      "name": "tetra-trans,hexa-cis-undecaprenyl diphosphate",
-      "short": "tetra-trans,hexa-ci…",
-      "formula": "C55H89O7P2",
-      "charge": -3,
+      "id": "cedr_8_ene",
+      "name": "cedr-8-ene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140981"
+        "chebi": "CHEBI:10216"
       }
     }
   ],
@@ -371,39 +369,70 @@
     },
     {
       "id": "r5",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + 6 isopentenyl diphosphate = tetra-trans,h...",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + 6 isopentenyl diphosphate = tetra-trans,hexa-cis-undecaprenyl diphosphate + 6 diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
       "substrates": [
         {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 6
         }
       ],
       "products": [
         {
-          "metabolite": "tetra_trans_hexa_cis_undecaprenyl_diphosphate",
+          "metabolite": "z_bisabolene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 6
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:55384"
+        "rhea": "RHEA:68532"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55384"
+            "id": "RHEA:68532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cedr_8_ene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:68536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68536"
           }
         ]
       }

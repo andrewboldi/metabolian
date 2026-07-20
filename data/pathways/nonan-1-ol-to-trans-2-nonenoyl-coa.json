@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "nonan-1-ol-to-trans-2-nonenoyl-coa",
   "name": "nonan-1-ol to trans-2-nonenoyl-CoA",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from nonan-1-ol to trans-2-nonenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -181,31 +181,128 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:18407"
       }
     },
     {
-      "id": "bicyclogermacrene",
-      "name": "bicyclogermacrene",
-      "formula": "C15H24",
+      "id": "2s_2_hydroxydecanenitrile",
+      "name": "(2S)-2-hydroxydecanenitrile",
+      "short": "2-hydroxydecanenitr…",
+      "formula": "C10H19NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63709"
+        "chebi": "CHEBI:197365"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nonan_1_ol",
+      "name": "nonan-1-ol",
+      "formula": "C9H20O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM19926"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "4_o_dimethylallyl_l_tyrosine",
+      "name": "4-O-dimethylallyl-L-tyrosine",
+      "short": "4-O-dimethylallyl-L…",
+      "formula": "C14H19NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78314"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "2_3_cgamp",
+      "name": "2'-3'-cGAMP",
+      "formula": "C20H22N10O13P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:143093"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_100",
-      "name": "bicyclogermacrene synthase",
+      "id": "ec_1_1_1_1",
+      "name": "alcohol dehydrogenase",
       "ec": [
-        "4.2.3.100"
+        "1.1.1.1"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_122",
+      "name": "4-O-dimethylallyl-L-tyrosine synthase",
+      "ec": [
+        "2.5.1.122"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_86",
+      "name": "cyclic GMP-AMP synthase",
+      "ec": [
+        "2.7.7.86"
       ]
     }
   ],
@@ -431,18 +528,105 @@
     },
     {
       "id": "r6",
-      "name": "bicyclogermacrene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = bicyclogermacrene + diphosphate",
-      "ec": "4.2.3.100",
+      "name": "nonanal + hydrogen cyanide = (2S)-2-hydroxydecanenitrile",
+      "equation": "nonanal + hydrogen cyanide = (2S)-2-hydroxydecanenitrile",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "nonanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "bicyclogermacrene",
+          "metabolite": "2s_2_hydroxydecanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:77531"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "alcohol dehydrogenase",
+      "ec": "1.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nonanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nonan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR131477"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131477"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "4-O-dimethylallyl-L-tyrosine synthase",
+      "equation": "L-tyrosine + dimethylallyl diphosphate = 4-O-dimethylallyl-L-tyrosine + diphosphate",
+      "ec": "2.5.1.122",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_dimethylallyl_l_tyrosine",
           "stoichiometry": 1
         },
         {
@@ -452,20 +636,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_100"
+          "enzyme": "ec_2_5_1_122"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:31999"
+        "rhea": "RHEA:41584"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31999"
+            "id": "RHEA:41584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "cyclic GMP-AMP synthase",
+      "equation": "GTP + ATP = 2',3'-cGAMP + 2 diphosphate",
+      "ec": "2.7.7.86",
+      "substrates": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_cgamp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_86"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:42064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42064"
           }
         ]
       }

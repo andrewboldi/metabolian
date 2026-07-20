@@ -168,12 +168,13 @@
       }
     },
     {
-      "id": "9_hydroxymyristate",
-      "name": "9-hydroxymyristate",
+      "id": "13_hydroxytetradecanoate",
+      "name": "13-hydroxytetradecanoate",
+      "short": "13-hydroxytetradeca…",
       "formula": "C14H27O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:167544"
+        "chebi": "CHEBI:132031"
       }
     },
     {
@@ -186,6 +187,26 @@
       }
     },
     {
+      "id": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
+      "name": "1-tetradecanoyl-2-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine",
+      "short": "1-tetradecanoyl-2-[…",
+      "formula": "C40H76NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86094"
+      }
+    },
+    {
+      "id": "2_linoleoyl_sn_glycero_3_phosphocholine",
+      "name": "2-linoleoyl-sn-glycero-3-phosphocholine",
+      "short": "2-linoleoyl-sn-glyc…",
+      "formula": "C26H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76084"
+      }
+    },
+    {
       "id": "1_stearoyl_sn_glycerol",
       "name": "1-stearoyl-sn-glycerol",
       "short": "1-stearoyl-sn-glyce…",
@@ -193,6 +214,25 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:75550"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
+      "name": "1-stearoyl-2-linoleoyl-sn-glycero-3-phosphate",
+      "short": "1-stearoyl-2-linole…",
+      "formula": "C39H71O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77098"
       }
     },
     {
@@ -436,8 +476,8 @@
     },
     {
       "id": "r6",
-      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxytetradecanoate ...",
-      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxytetradecanoate...",
+      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "tetradecanoate",
@@ -454,7 +494,7 @@
       ],
       "products": [
         {
-          "metabolite": "9_hydroxymyristate",
+          "metabolite": "13_hydroxytetradecanoate",
           "stoichiometry": 1
         },
         {
@@ -473,20 +513,63 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:66916"
+        "rhea": "RHEA:50096"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66916"
+            "id": "RHEA:50096"
           }
         ]
       }
     },
     {
       "id": "r7",
+      "name": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 2-(9Z,12...",
+      "equation": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + tetradecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_linoleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:54388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "1-octadecanoyl-sn-glycero-3-phosphate + H2O = 1-octadecanoyl-sn-glycerol + phosphate",
       "equation": "1-octadecanoyl-sn-glycero-3-phosphate + H2O = 1-octadecanoyl-sn-glycerol + phosphate",
       "substrates": [
@@ -510,7 +593,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:53596"
       },
@@ -525,7 +608,46 @@
       }
     },
     {
-      "id": "r8",
+      "id": "r9",
+      "name": "1-octadecanoyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = 1-octadecanoyl-2...",
+      "equation": "1-octadecanoyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = 1-octadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_stearoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:55304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55304"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl...",
       "equation": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
       "substrates": [
@@ -553,7 +675,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:45664"
       },

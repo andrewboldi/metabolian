@@ -121,12 +121,22 @@
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "s_methylmalonyl_coa",
+      "name": "(S)-Methylmalonyl-CoA",
+      "short": "Methylmalonyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57327"
       }
     }
   ],
@@ -136,6 +146,13 @@
       "name": "3-hydroxyisobutyrate dehydrogenase",
       "ec": [
         "1.1.1.31"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_17",
+      "name": "(S)-methylmalonyl-CoA hydrolase",
+      "ec": [
+        "3.1.2.17"
       ]
     }
   ],
@@ -316,8 +333,8 @@
     },
     {
       "id": "r5",
-      "name": "(S)-2-methyl-3-oxopropanoate + NAD(+) + CoA = propanoyl-CoA + CO2 + NADH",
-      "equation": "(S)-2-methyl-3-oxopropanoate + NAD(+) + CoA = propanoyl-CoA + CO2 + NADH",
+      "name": "(S)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate +...",
+      "equation": "(S)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate + NADH + H(+)",
       "substrates": [
         {
           "metabolite": "mmsa",
@@ -330,6 +347,10 @@
         {
           "metabolite": "coa",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "products": [
@@ -338,25 +359,78 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "hco3",
           "stoichiometry": 1
         },
         {
           "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31047"
+        "rhea": "RHEA:76627"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31047"
+            "id": "RHEA:76627"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(S)-methylmalonyl-CoA hydrolase",
+      "equation": "(S)-methylmalonyl-CoA + H2O = methylmalonate + CoA + H(+)",
+      "ec": "3.1.2.17",
+      "substrates": [
+        {
+          "metabolite": "s_methylmalonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylmalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:17345"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17345"
           }
         ]
       }

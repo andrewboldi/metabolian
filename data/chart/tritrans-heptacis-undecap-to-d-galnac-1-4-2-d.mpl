@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tritrans-heptacis-undecap-to-d-galnac-1-4-2-d "tritrans,heptacis-undecap… to [α-D-GalNAc-(1→4)]2-[β-D-…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     tritrans_heptacis_undecaprenyl_phosphate
@@ -18,5 +18,17 @@ pathway tritrans-heptacis-undecap-to-d-galnac-1-4-2-d "tritrans,heptacis-undecap
     d_galnac_1_4_4_d_galnac_1_3_d_dinacbac_tritrans
     <-> ec_2_4_1_293 [2.4.1.293] +udp_d_glucose -udp -hplus
     d_galnac_1_4_2_d_glc_1_3_d_galnac_1_4_2_d_galna
+  }
+
+  branch from n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis side left {
+    n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis
+    <-> . +udp +h +alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci
+    udp_alpha_d_galactose
+  }
+
+  branch from n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis side right {
+    n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis
+    <-> . +udp +h +alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill
+    udp_alpha_d_glucose
   }
 }

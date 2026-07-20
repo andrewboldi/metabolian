@@ -111,32 +111,48 @@
       }
     },
     {
-      "id": "ldopa",
-      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
-      "short": "3,4-Dihydroxy-L-phe…",
-      "formula": "C9H11NO4",
-      "charge": 0,
+      "id": "l_saccharopinate",
+      "name": "L-saccharopinate",
+      "formula": "C11H19N2O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57504"
+        "chebi": "CHEBI:57951"
       }
     },
     {
-      "id": "3_4_dihydroxyphenylpyruvate",
-      "name": "3,4-dihydroxyphenylpyruvate",
-      "short": "3,4-dihydroxyphenyl…",
-      "formula": "C9H7O5",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29055"
+        "chebi": "CHEBI:57540"
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:29985"
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "2r_homocitrate",
+      "name": "(2R)-homocitrate",
+      "formula": "C7H7O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58884"
       }
     },
     {
@@ -157,6 +173,26 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:78102"
+      }
+    },
+    {
+      "id": "1_dodecyl_2_acetyl_sn_glycero_3_phosphocholine",
+      "name": "1-dodecyl-2-acetyl-sn-glycero-3-phosphocholine",
+      "short": "1-dodecyl-2-acetyl-…",
+      "formula": "C22H46NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78103"
+      }
+    },
+    {
+      "id": "1_dodecyl_sn_glycero_3_phosphocholine",
+      "name": "1-dodecyl-sn-glycero-3-phosphocholine",
+      "short": "1-dodecyl-sn-glycer…",
+      "formula": "C20H44NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78104"
       }
     }
   ],
@@ -183,10 +219,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_49",
-      "name": "dihydroxyphenylalanine transaminase",
+      "id": "ec_1_5_1_7",
+      "name": "saccharopine dehydrogenase (NAD(+), L-lysine-forming)",
       "ec": [
-        "2.6.1.49"
+        "1.5.1.7"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_14",
+      "name": "homocitrate synthase",
+      "ec": [
+        "2.3.3.14"
       ]
     }
   ],
@@ -332,51 +375,116 @@
     },
     {
       "id": "r4",
-      "name": "dihydroxyphenylalanine transaminase",
-      "equation": "L-dopa + 2-oxoglutarate = 3-(3,4-dihydroxyphenyl)pyruvate + L-glutamate",
-      "ec": "2.6.1.49",
+      "name": "saccharopine dehydrogenase (NAD(+), L-lysine-forming)",
+      "equation": "L-saccharopine + NAD(+) + H2O = L-lysine + 2-oxoglutarate + NADH + H(+)",
+      "ec": "1.5.1.7",
       "substrates": [
         {
-          "metabolite": "ldopa",
+          "metabolite": "l_saccharopinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_4_dihydroxyphenylpyruvate",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_49"
+          "enzyme": "ec_1_5_1_7"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:15273"
+        "rhea": "RHEA:12440"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15273"
+            "id": "RHEA:12440"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "homocitrate synthase",
+      "equation": "acetyl-CoA + 2-oxoglutarate + H2O = (2R)-homocitrate + CoA + H(+)",
+      "ec": "2.3.3.14",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_homocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12929"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12929"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "1-O-tetradecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-tetradecyl-sn-glycero-3...",
       "equation": "1-O-tetradecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-tetradecyl-sn-glycero-3-phosphocholine + acetate + H(+)",
       "substrates": [
@@ -404,7 +512,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:41368"
       },
@@ -414,6 +522,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:41368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "1-O-dodecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-dodecyl-sn-glycero-3-phosp...",
+      "equation": "1-O-dodecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-dodecyl-sn-glycero-3-phosphocholine + acetate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_dodecyl_2_acetyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_dodecyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:41372"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41372"
           }
         ]
       }

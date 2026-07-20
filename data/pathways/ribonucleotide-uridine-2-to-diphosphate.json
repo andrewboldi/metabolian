@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "ribonucleotide-uridine-2-to-diphosphate",
   "name": "ribonucleotide-uridine(2−) to diphosphate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from ribonucleotide-uridine(2−) residue to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -122,6 +122,25 @@
       }
     },
     {
+      "id": "adenylyl_uridine_2",
+      "name": "adenylyl-uridine(2−)",
+      "formula": "C19H21N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231879"
+      }
+    },
+    {
+      "id": "a_3_end_2_3_cyclophospho_amp_2",
+      "name": "a 3'-end 2',3'-cyclophospho-AMP(2−)",
+      "short": "a 3'-end 2',3'-cycl…",
+      "formula": "C10H10N5O8P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231881"
+      }
+    },
+    {
       "id": "3_end_ribonucleotide_1",
       "name": "3'-end ribonucleotide(1−)",
       "short": "3'-end ribonucleoti…",
@@ -141,30 +160,63 @@
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
+      "id": "bacteriochlorophyllide_a",
+      "name": "bacteriochlorophyllide a",
+      "short": "bacteriochlorophyll…",
+      "formula": "C35H34MgN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:90795"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "geranylgeranyl_bacteriochlorophyllide_a",
+      "name": "geranylgeranyl bacteriochlorophyllide a",
+      "short": "geranylgeranyl…",
+      "formula": "C55H67MgN4O6",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:30245"
+        "chebi": "CHEBI:90849"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid",
+      "name": "8-amino-3,8-dideoxy-α-D-manno-oct-2-ulosonic acid",
+      "short": "8-amino-3,8-dideoxy…",
+      "formula": "C8H15NO7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:87091"
       }
     },
     {
-      "id": "linoleoyl_coa",
-      "name": "linoleoyl-CoA",
-      "formula": "C39H62N7O17P3S",
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57383"
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate",
+      "name": "CMP-8-amino-3,8-dideoxy-α-D-manno-oct-2-ulosonate",
+      "short": "CMP-8-amino-3,8-did…",
+      "formula": "C17H26N4O14P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:91089"
       }
     }
   ],
@@ -174,6 +226,20 @@
       "name": "RNA 3'-terminal-phosphate cyclase (ATP)",
       "ec": [
         "6.5.1.4"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_133",
+      "name": "bacteriochlorophyll a synthase",
+      "ec": [
+        "2.5.1.133"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_90",
+      "name": "8-amino-3,8-dideoxy-manno-octulosonate cytidylyltransferase",
+      "ec": [
+        "2.7.7.90"
       ]
     }
   ],
@@ -338,6 +404,41 @@
     },
     {
       "id": "r5",
+      "name": "an adenylyl-uridine-RNA = a 3'-end 2',3'-cyclophospho-AMP-RNA + a 5'-end dephospho-urid...",
+      "equation": "an adenylyl-uridine-RNA = a 3'-end 2',3'-cyclophospho-AMP-RNA + a 5'-end dephospho-uridine-RNA",
+      "substrates": [
+        {
+          "metabolite": "adenylyl_uridine_2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "a_3_end_2_3_cyclophospho_amp_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dephospho_uridine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "a 3'-end 2',3'-cyclophospho-ribonucleotide-RNA + 2 H2O = a 3'-end ribonucleotide-RNA + ...",
       "equation": "a 3'-end 2',3'-cyclophospho-ribonucleotide-RNA + 2 H2O = a 3'-end ribonucleotide-RNA + phosphate + H(+)",
       "substrates": [
@@ -365,7 +466,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:85011"
       },
@@ -380,30 +481,27 @@
       }
     },
     {
-      "id": "r6",
-      "name": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
-      "equation": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
+      "id": "r7",
+      "name": "bacteriochlorophyll a synthase",
+      "equation": "bacteriochlorophyllide a + (2E,6E,10E)-geranylgeranyl diphosphate + H(+) = geranylgeranyl-bacteriochlorophyllide a + diphosphate",
+      "ec": "2.5.1.133",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "bacteriochlorophyllide_a",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "linoleoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "geranylgeranyl_bacteriochlorophyllide_a",
           "stoichiometry": 1
         },
         {
@@ -411,17 +509,67 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_133"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:33651"
+        "rhea": "RHEA:49228"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33651"
+            "id": "RHEA:49228"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "8-amino-3,8-dideoxy-manno-octulosonate cytidylyltransferase",
+      "equation": "8-amino-3,8-dideoxy-alpha-D-manno-octulosonate + CTP = CMP-8-amino-3,8-dideoxy-alpha-D-manno-oct-2-ulosonate + diphosphate",
+      "ec": "2.7.7.90",
+      "substrates": [
+        {
+          "metabolite": "8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:49284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49284"
           }
         ]
       }

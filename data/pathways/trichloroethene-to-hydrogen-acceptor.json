@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "trichloroethene-to-hydrogen-acceptor",
   "name": "trichloroethene to hydrogen acceptor",
-  "category": "other",
+  "category": "cofactor-vitamin-metabolism",
   "summary": "A 3-step route from trichloroethene to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -92,21 +92,50 @@
       }
     },
     {
-      "id": "cannabigerolate",
-      "name": "cannabigerolate",
-      "formula": "C22H31O4",
-      "charge": -1,
+      "id": "9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo",
+      "name": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one",
+      "short": "9,10-dihydroxy-7-me…",
+      "formula": "C17H14O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:66962"
+        "chebi": "CHEBI:146010"
       }
     },
     {
-      "id": "cannabichromenate",
-      "name": "cannabichromenate",
-      "formula": "C22H29O4",
-      "charge": -1,
+      "id": "3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h",
+      "name": "(3S)-9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H,3H,4H-naphtho[2,3-c]pyran-1-one",
+      "short": "9,10-dihydroxy-7-me…",
+      "formula": "C17H16O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:167554"
+        "chebi": "CHEBI:146011"
+      }
+    },
+    {
+      "id": "ferroheme_o",
+      "name": "ferroheme o",
+      "formula": "C49H56FeN4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60530"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fe_ii_heme_i",
+      "name": "Fe(II)-heme i",
+      "formula": "C49H56FeN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:147291"
       }
     },
     {
@@ -134,15 +163,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
       }
     }
   ],
@@ -299,11 +319,21 @@
     },
     {
       "id": "r4",
-      "name": "cannabigerolate + A = cannabichromenate + AH2",
-      "equation": "cannabigerolate + A = cannabichromenate + AH2",
+      "name": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one + AH2 = (3S)-9,10-...",
+      "equation": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one + AH2 = (3S)-9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H,3H,4H-naphtho[2,3-c]pyran-1-one + A",
       "substrates": [
         {
-          "metabolite": "cannabigerolate",
+          "metabolite": "9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h",
           "stoichiometry": 1
         },
         {
@@ -311,9 +341,42 @@
           "stoichiometry": 1
         }
       ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
+      "equation": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "products": [
         {
-          "metabolite": "cannabichromenate",
+          "metabolite": "fe_ii_heme_i",
           "stoichiometry": 1
         },
         {
@@ -322,22 +385,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:60432"
+        "rhea": "RHEA:63392"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60432"
+            "id": "RHEA:63392"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "2-oxoglutarate dioxygenase (ethylene-forming)",
       "equation": "2-oxoglutarate + O2 + 2 H(+) = ethene + 3 CO2 + H2O",
       "ec": "1.13.12.19",
@@ -375,7 +438,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:31523"
       },

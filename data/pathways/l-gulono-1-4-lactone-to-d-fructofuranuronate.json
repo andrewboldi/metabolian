@@ -1,0 +1,454 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-gulono-1-4-lactone-to-d-fructofuranuronate",
+  "name": "L-gulono-1,4-lactone to D-fructofuranuronate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-gulono-1,4-lactone to D-fructofuranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18925"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17587"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_gulono_1_4_lactone",
+      "name": "L-gulono-1,4-lactone",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17587"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "d_glucurono_6_3_lactone",
+      "name": "D-glucurono-6,3-lactone",
+      "short": "D-glucurono-6,3-lac…",
+      "formula": "C6H8O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18268"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucopyranuronate",
+      "name": "D-glucopyranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58720"
+      }
+    },
+    {
+      "id": "d_fructofuranuronate",
+      "name": "D-fructofuranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59863"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "d_glucarate",
+      "name": "D-glucarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30612"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "baicalin",
+      "name": "baicalin",
+      "formula": "C21H17O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61283"
+      }
+    },
+    {
+      "id": "baicalein",
+      "name": "baicalein",
+      "formula": "C15H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78324"
+      }
+    },
+    {
+      "id": "wogonin_7_o_d_glucuronate",
+      "name": "wogonin 7-O-β-D-glucuronate",
+      "short": "wogonin 7-O-β-D-glu…",
+      "formula": "C22H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61285"
+      }
+    },
+    {
+      "id": "wogonin",
+      "name": "wogonin",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78338"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_20",
+      "name": "glucuronolactone reductase",
+      "ec": [
+        "1.1.1.20"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_12",
+      "name": "glucuronate isomerase",
+      "ec": [
+        "5.3.1.12"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_167",
+      "name": "baicalin-beta-D-glucuronidase",
+      "ec": [
+        "3.2.1.167"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucuronolactone reductase",
+      "equation": "L-gulono-1,4-lactone + NADP(+) = D-glucurono-3,6-lactone + NADPH + H(+)",
+      "ec": "1.1.1.20",
+      "substrates": [
+        {
+          "metabolite": "l_gulono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucurono_6_3_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18925"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18925"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-glucurono-3,6-lactone + H2O = D-glucuronate + H(+)",
+      "equation": "D-glucurono-3,6-lactone + H2O = D-glucuronate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_glucurono_6_3_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucuronate isomerase",
+      "equation": "D-glucuronate = D-fructuronate",
+      "ec": "5.3.1.12",
+      "substrates": [
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13049"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13049"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-glucurono-3,6-lactone + NAD(+) + 2 H2O = D-glucarate + NADH + 3 H(+)",
+      "equation": "D-glucurono-3,6-lactone + NAD(+) + 2 H2O = D-glucarate + NADH + 3 H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_glucurono_6_3_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30883"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "baicalin-beta-D-glucuronidase",
+      "equation": "baicalin + H2O = baicalein + D-glucuronate + H(+)",
+      "ec": "3.2.1.167",
+      "substrates": [
+        {
+          "metabolite": "baicalin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "baicalein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_167"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28130"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "baicalin-beta-D-glucuronidase",
+      "equation": "wogonin 7-O-beta-D-glucuronate + H2O = wogonin + D-glucuronate + H(+)",
+      "ec": "3.2.1.167",
+      "substrates": [
+        {
+          "metabolite": "wogonin_7_o_d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "wogonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_167"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:28326"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28326"
+          }
+        ]
+      }
+    }
+  ]
+}

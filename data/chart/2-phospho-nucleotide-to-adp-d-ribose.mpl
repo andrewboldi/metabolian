@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-phospho-nucleotide-to-adp-d-ribose "2'-phospho-nucleotide… to ADP-D-ribose" {
-  spacing 208
+  spacing 232
 
   spine at 0,0 {
     2_phospho_nucleotide_5_phosphate_3
@@ -18,8 +18,20 @@ pathway 2-phospho-nucleotide-to-adp-d-ribose "2'-phospho-nucleotide… to ADP-D-
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_propanoyl_l_lysine +nad +h2o +l_lysinium
-    3_o_propanoyl_adp_d_ribose
+    <-> . +nadp
+    2_phospho_cyclic_adp_ribose
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +nad +hplus
+    cyclic_adp_d_ribose
+  }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> . +4_adp_d_ribosyl_l_aspartyl_2 +h2o +hplus
+    l_aspartate
   }
 
   branch from adp_d_ribose side right {

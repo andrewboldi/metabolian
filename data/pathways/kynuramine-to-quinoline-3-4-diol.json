@@ -119,22 +119,39 @@
       }
     },
     {
-      "id": "chorismate",
-      "name": "chorismate",
-      "formula": "C10H8O6",
-      "charge": -2,
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29748"
+        "chebi": "CHEBI:58359"
       }
     },
     {
-      "id": "2_azaniumyl_2_deoxyisochorismate",
-      "name": "2-azaniumyl-2-deoxyisochorismate",
-      "short": "2-azaniumyl-2-deoxy…",
-      "formula": "C10H10NO5",
+      "id": "2_oxoglutaramate",
+      "name": "2-oxoglutaramate",
+      "formula": "C5H6NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58792"
+        "chebi": "CHEBI:16769"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
       }
     }
   ],
@@ -289,21 +306,15 @@
     },
     {
       "id": "r4",
-      "name": "chorismate + NH4(+) = (2S)-2-amino-4-deoxychorismate + H2O",
-      "equation": "chorismate + NH4(+) = (2S)-2-amino-4-deoxychorismate + H2O",
+      "name": "L-glutamine + O2 + H2O = 2-oxoglutaramate + H2O2 + NH4(+)",
+      "equation": "L-glutamine + O2 + H2O = 2-oxoglutaramate + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "chorismate",
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -311,17 +322,78 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutaramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:55676"
+        "rhea": "RHEA:61260"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55676"
+            "id": "RHEA:61260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
+      "equation": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61264"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61264"
           }
         ]
       }

@@ -14,7 +14,7 @@ pathway 2-3-cyclic-ump-to-d-ribose-1-5-bisphospha "2',3'-cyclic UMP to α-D-ribo
     uridine
     <-> ec_2_4_2_2 [2.4.2.2] +pi -uracil
     r1p
-    <-> ec_2_7_1_212 [2.7.1.212] +adp -amp -hplus
+    <-> ec_2_7_1_239 [2.7.1.239] +atp -adp -hplus
     d_ribose_1_5_bisphosphate
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r",
   "name": "N-acetyl-D-muramoyl-L-ala… to 2-acetamido-3-O-[(1R)-1-c…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N-acetyl-D-muramoyl-L-alaninate to 2-acetamido-3-O-[(1R)-1-carboxylatoethyl]-2-deoxy-D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -140,6 +140,25 @@
       "xrefs": {
         "chebi": "CHEBI:141054"
       }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "3_indol_3_yl_pyruvate",
+      "name": "3-(indol-3-yl)pyruvate",
+      "short": "3-(indol-3-yl)pyruv…",
+      "formula": "C11H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17640"
+      }
     }
   ],
   "enzymes": [
@@ -162,6 +181,13 @@
       "name": "5-hydroxydodecatetraenal 1-aminotransferase",
       "ec": [
         "2.6.1.115"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_99",
+      "name": "L-tryptophan--pyruvate aminotransferase",
+      "ec": [
+        "2.6.1.99"
       ]
     }
   ],
@@ -383,6 +409,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:24024"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-tryptophan--pyruvate aminotransferase",
+      "equation": "L-tryptophan + pyruvate = indole-3-pyruvate + L-alanine",
+      "ec": "2.6.1.99",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_indol_3_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:27586"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27586"
           }
         ]
       }

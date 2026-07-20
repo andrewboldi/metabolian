@@ -4,29 +4,248 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glossary — Metabolian</title>
-  <meta name="description" content="Search every metabolite and enzyme in the Metabolian atlas — formulae, EC numbers, genes, and links to source databases." />
+  <meta name="description" content="Every metabolite and enzyme in the Metabolian atlas — formulae, EC numbers, genes, and links to the source database each entry is grounded in." />
   <meta name="color-scheme" content="dark light" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+  <style>
+    /* ==========================================================================
+       Content-page chrome — shared by about / learn / glossary.
+
+       Scoped under `body[data-page]` for two reasons: it composes with page.css
+       regardless of the order Vite emits stylesheets in (every selector here is
+       specificity >= (0,2,1), page.css's are (0,1,x)), and it can never leak
+       into the chart sheet.
+
+       Every custom property is referenced WITH a fallback. The token rebuild
+       (warm neutrals, sheet-derived accent, --mark, tracking scale, 2px radii)
+       ships in tokens.css, which is a different unit of this redesign — these
+       pages must read correctly before and after it lands.
+       ========================================================================== */
+
+    html { scroll-padding-top: calc(58px + 2.5rem); }
+
+    /* The sheet's own hover ink (chart.css uses #D43900 for .enz-name:hover).
+       Deferred to the --mark token once it exists; until then, theme-matched
+       literals so the fallback is not a cool-blue accent on a warm page. */
+    body[data-page] { --_mark: var(--mark, #f56d4a); }
+    :root[data-theme="light"] body[data-page] { --_mark: var(--mark, #b03400); }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) body[data-page] { --_mark: var(--mark, #b03400); }
+    }
+
+    /* --- page header: eyebrow / title / lead / instrument readout ---------- */
+    body[data-page] .page-head {
+      padding-block: var(--sp-8) var(--sp-6);
+      border-bottom: 0;                        /* hairlines as box-shadow: no layout cost */
+      box-shadow: 0 1px 0 var(--line);
+    }
+    body[data-page] .page-head h1 {
+      font-size: var(--step-3); max-width: 20ch; margin-top: var(--sp-4);
+      letter-spacing: var(--track-3, -0.03em); line-height: var(--lead-tight, 1.1);
+      text-wrap: balance;
+    }
+    body[data-page] .page-head .lead { margin-top: var(--sp-4); max-width: 62ch; }
+    /* The eyebrow is a label on the instrument, not a highlight. */
+    body[data-page] .eyebrow { color: var(--text-faint); letter-spacing: 0.22em; }
+    body[data-page] .eyebrow::before { background: currentColor; opacity: 0.5; }
+
+    body[data-page] .readout {
+      display: flex; flex-wrap: wrap; margin-top: var(--sp-6); padding-top: var(--sp-2);
+      box-shadow: inset 0 1px 0 var(--line);
+      font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: 0.02em;
+      font-variant-numeric: tabular-nums lining-nums;   /* scoped, never global */
+    }
+    body[data-page] .readout > div {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.5rem var(--sp-5) 0.5rem 0;
+    }
+    body[data-page] .readout > div + div { padding-left: var(--sp-5); box-shadow: inset 1px 0 0 var(--line); }
+    body[data-page] .readout dt { text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint); font-size: 0.88em; }
+    body[data-page] .readout dd { margin: 0; color: var(--text); }
+
+    /* ==========================================================================
+       Glossary: a specimen table, not a card grid.
+
+       27,196 entries is the densest surface on the site, and a card costs ~300px
+       of chrome per term to say four things. These rules re-lay the DOM that
+       src/pages/glossary.ts builds — which this unit does not own — into
+       hairline-ruled rows. The markup contract is therefore load-bearing:
+
+         article.term
+           div      (inline flex, set in JS)  -> name + kind        [col 1]
+           p.muted  (optional, inline styles) -> description        [col 2]
+           div.chips                          -> identifiers        [col 3]
+
+       Each child is pinned to its cell explicitly rather than auto-placed,
+       because the description is optional and would otherwise slide the chips
+       into the wrong column on every term that lacks one.
+
+       Column widths follow the measured data, not the DOM order: of 27,196
+       entries only 369 (1.4%) carry a description, while 79% carry identifiers.
+       A reserved description column would therefore be empty on 98.6% of rows,
+       so the description drops to a second grid row on the rare terms that have
+       one, and the width it would have wasted goes to the identifier chips.
+       ========================================================================== */
+    body[data-page="glossary"] { --_cols: minmax(0, 34rem) minmax(0, 1fr); }
+
+    /* Stays display:grid with one column: glossary.ts appends its "showing first
+       400" / "no matches" notices with an inline `grid-column: 1/-1`. */
+    body[data-page="glossary"] .glossary-list {
+      display: grid; grid-template-columns: minmax(0, 1fr);
+      gap: 0; margin-top: 0; align-content: start;
+      min-height: 75vh;                        /* CLS reservation for async rows */
+    }
+
+    body[data-page="glossary"] .term {
+      display: grid; grid-template-columns: var(--_cols); gap: 0 var(--sp-4);
+      align-items: baseline;
+      background: none; border: 0; border-radius: 0;
+      padding: 0.6rem 0.5rem;
+      box-shadow: 0 1px 0 var(--line);
+      content-visibility: auto;
+      contain-intrinsic-size: auto 56px;       /* re-estimated for a row, not a card */
+    }
+    body[data-page="glossary"] .term > div:first-child { grid-column: 1; grid-row: 1; }
+    body[data-page="glossary"] .term > p {
+      grid-column: 1 / -1; grid-row: 2;
+      margin-top: 0 !important;                /* beats the inline margin set in glossary.ts */
+      max-width: 80ch; color: var(--text-dim);
+      display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
+      overflow: hidden;
+    }
+    body[data-page="glossary"] .term > .chips {
+      grid-column: 2; grid-row: 1; margin-top: 0;
+      display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: flex-end;
+    }
+
+    body[data-page="glossary"] .term__name {
+      font-family: var(--font-body); font-weight: 500; font-size: var(--step-0);
+      letter-spacing: var(--track-0, -0.005em); color: var(--text);
+    }
+    /* The kind tag reads as a dot plus a neutral label rather than coloured text.
+       --node-metabolite / --node-enzyme are tuned for a dark panel and drop to
+       ~1.9:1 as text on the light theme's background; carrying the hue on a
+       6px dot keeps the colour coding and the contrast at the same time. */
+    body[data-page="glossary"] .term__kind {
+      display: inline-flex; align-items: center; gap: 0.4em;
+      font-size: var(--step--1); letter-spacing: 0.14em; color: var(--text-faint);
+    }
+    body[data-page="glossary"] .term__kind::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%; flex: none;
+      background: var(--_k, var(--text-faint));
+    }
+    body[data-page="glossary"] .term__kind[data-k="metabolite"] { --_k: var(--node-metabolite); }
+    body[data-page="glossary"] .term__kind[data-k="enzyme"] { --_k: var(--node-enzyme); }
+
+    @media (any-hover: hover) {
+      body[data-page="glossary"] .term:hover { background: var(--panel); }
+      body[data-page="glossary"] .term:hover .term__name { color: var(--_mark); }
+    }
+
+    /* --- sticky control deck + column header -------------------------------
+       page.css makes .glossary-controls itself sticky; stickiness moves up to a
+       wrapper so the controls and the column header travel as one plate. */
+    body[data-page="glossary"] .gl-sticky {
+      position: sticky; top: 58px; z-index: 10; margin-top: var(--sp-6);
+      background: color-mix(in oklab, var(--bg) 92%, transparent);
+      backdrop-filter: blur(10px);
+    }
+    body[data-page="glossary"] .glossary-controls {
+      position: static; background: none; backdrop-filter: none; z-index: auto;
+      margin-block: 0; padding-block: var(--sp-4) var(--sp-3);
+      display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center;
+    }
+    body[data-page="glossary"] .count-note { margin-left: auto; }
+
+    /* An unstyled browser input on an instrument page; and you are typing an
+       identifier, so the field is set in mono. */
+    body[data-page="glossary"] .search {
+      flex: 1 1 18rem; max-width: 26rem; min-width: 0;
+      font-family: var(--font-mono); font-size: var(--step-0); color: var(--text);
+      background: var(--panel); border: 0; border-radius: var(--radius, 2px);
+      box-shadow: inset 0 0 0 1px var(--line-strong);
+      padding: 0.55rem 0.75rem;
+    }
+    body[data-page="glossary"] .search::placeholder { color: var(--text-faint); }
+    body[data-page="glossary"] .search:focus-visible { box-shadow: inset 0 0 0 1px var(--accent); }
+
+    body[data-page="glossary"] .pill {
+      border: 0; box-shadow: inset 0 0 0 1px var(--line-strong);
+      padding: 0.35rem 0.8rem; letter-spacing: 0.12em; line-height: 1.35;
+    }
+    body[data-page="glossary"] .pill[aria-pressed="true"] {
+      background: var(--accent); color: var(--accent-ink); box-shadow: none;
+    }
+
+    body[data-page="glossary"] .gl-head {
+      display: grid; grid-template-columns: var(--_cols); gap: 0 var(--sp-4);
+      padding: 0.45rem 0.5rem; box-shadow: inset 0 -1px 0 var(--line-strong);
+      font-family: var(--font-mono); font-size: var(--step--1);
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-faint);
+    }
+    body[data-page="glossary"] .gl-head > :last-child { text-align: right; }
+
+    @media (max-width: 900px) {
+      body[data-page="glossary"] .gl-head { display: none; }
+      body[data-page="glossary"] .term {
+        grid-template-columns: minmax(0, 1fr); gap: 0.35rem 0; padding: 0.85rem 0.25rem;
+      }
+      body[data-page="glossary"] .term > div:first-child,
+      body[data-page="glossary"] .term > p,
+      body[data-page="glossary"] .term > .chips { grid-column: 1; }
+      body[data-page="glossary"] .term > .chips { justify-content: flex-start; }
+      body[data-page="glossary"] .count-note { margin-left: 0; }
+    }
+
+    /* --- motion: opt-in, never opt-out ---------------------------------------
+       Stillness is the cascade default. A transition added here later without a
+       reduced-motion kill-list simply never renders for a reader who asked for
+       stillness, instead of escaping one. Enumerated properties, never `all`. */
+    @media (prefers-reduced-motion: no-preference) {
+      body[data-page="glossary"] .term,
+      body[data-page="glossary"] .pill {
+        transition: var(--t-fast, 120ms) var(--ease, cubic-bezier(0.22, 1, 0.36, 1));
+        transition-property: background-color, color, box-shadow;
+      }
+    }
+  </style>
 </head>
-<body>
+<body data-page="glossary">
+  <a class="skip" href="#main">Skip to content</a>
   <div id="app-header"></div>
   <main id="main">
     <header class="page-head">
       <div class="wrap">
-        <p class="eyebrow">Reference</p>
-        <h1>Glossary</h1>
-        <p class="lead">Every metabolite and enzyme in the atlas, searchable, with formulae, codes, and links to the databases each entry is grounded in.</p>
+        <p class="eyebrow">Reference · Index</p>
+        <h1>Every molecule and enzyme in the atlas</h1>
+        <p class="lead">27,196 entries, searchable, each with the formula, codes, and source-database links it was built from. Search by name, gene, or description; the list renders the first 400 matches, so narrow the query to see further.</p>
+        <dl class="readout" aria-label="Index summary">
+          <div><dt>Entries</dt><dd>27,196</dd></div>
+          <div><dt>Metabolites</dt><dd>21,235</dd></div>
+          <div><dt>Enzymes</dt><dd>5,961</dd></div>
+          <div><dt>Source</dt><dd>graph/glossary.json</dd></div>
+        </dl>
       </div>
     </header>
+
     <div class="wrap">
-      <div class="glossary-controls">
-        <input class="search" id="glossary-search" type="search" placeholder="Search terms, genes, descriptions…" aria-label="Search glossary" />
-        <div class="filter-pills" role="group" aria-label="Filter by kind">
-          <button class="pill" data-kind="all" aria-pressed="true">All</button>
-          <button class="pill" data-kind="metabolite" aria-pressed="false">Metabolites</button>
-          <button class="pill" data-kind="enzyme" aria-pressed="false">Enzymes</button>
+      <div class="gl-sticky">
+        <div class="glossary-controls">
+          <input class="search" id="glossary-search" type="search" placeholder="Search name, gene, description…" aria-label="Search glossary" />
+          <div class="filter-pills" role="group" aria-label="Filter by kind">
+            <button class="pill" data-kind="all" aria-pressed="true">All</button>
+            <button class="pill" data-kind="metabolite" aria-pressed="false">Metabolites</button>
+            <button class="pill" data-kind="enzyme" aria-pressed="false">Enzymes</button>
+          </div>
+          <span class="count-note" id="glossary-count"></span>
         </div>
-        <span class="count-note" id="glossary-count"></span>
+        <!-- Column labels for a list of articles, not a real table: decorative to
+             assistive tech, which reads each entry's own name and kind instead. -->
+        <div class="gl-head" aria-hidden="true">
+          <span>Term / Kind</span>
+          <span>Description</span>
+          <span>Identifiers</span>
+        </div>
       </div>
       <div class="glossary-list" id="glossary-list"></div>
     </div>

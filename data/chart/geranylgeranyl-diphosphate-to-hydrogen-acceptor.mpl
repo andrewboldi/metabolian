@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranylgeranyl-diphosphate-to-hydrogen-acceptor "geranylgeranyl diphosphate to hydrogen acceptor" {
-  spacing 208
+  spacing 220
 
   spine at 0,0 {
     geranylgeranyl_diphosphate
@@ -18,7 +18,13 @@ pathway geranylgeranyl-diphosphate-to-hydrogen-acceptor "geranylgeranyl diphosph
 
   branch from ppi side left {
     ppi
-    <-> . +gpp +h2o
-    4_terpineol
+    <-> . +didemethylasterriquinone_d +dmapp
+    asterriquinone_c1
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +harmol +dmapp
+    6_3_dimethylallyl_harmol
   }
 }

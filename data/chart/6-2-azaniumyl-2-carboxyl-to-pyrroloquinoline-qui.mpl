@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-2-azaniumyl-2-carboxyl-to-pyrroloquinoline-qui "6-(2-azaniumyl-2-carboxyl… to pyrroloquinoline quinone" {
-  spacing 204
+  spacing 222
 
   spine at 0,0 {
     6_2_azaniumyl_2_carboxylatoethyl_7_8_dioxo_1_2_3
@@ -24,7 +24,13 @@ pathway 6-2-azaniumyl-2-carboxyl-to-pyrroloquinoline-qui "6-(2-azaniumyl-2-carbo
 
   branch from myo_2_inosose side right {
     myo_2_inosose
-    <-> . +nad +nadh +hplus
-    3_dehydro_scyllo_inosose
+    <-> ec_5_3_99_11 [5.3.99.11]
+    2d_2_3_5_4_6_pentahydroxycyclohexanone
+  }
+
+  branch from myo_2_inosose side left {
+    myo_2_inosose
+    <-> ec_1_1_1_371 [1.1.1.371] +nadp +nadph +hplus
+    scyllo_inositol
   }
 }

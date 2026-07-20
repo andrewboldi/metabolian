@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway protoaustinoid-a-to-succinate-65176 "protoaustinoid A to succinate" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     protoaustinoid_a
@@ -18,19 +18,37 @@ pathway protoaustinoid-a-to-succinate-65176 "protoaustinoid A to succinate" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +1_1_dihydroxyneurosporene +hydrogen_acceptor
-    1_hydroxy_demethylspheroidene
+    <-> . +cannabigerolate +hydrogen_acceptor
+    cannabichromenate
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +dopamine +hydrogen_acceptor +h2o
+    m_tyraminium
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +dehydroprobetaenone_i +hydrogen_donor
+    probetaenone_i
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +1_1_dihydroxy_1_1_2_2_tetrahydrolycopene +hydrogen_donor
-    1_1_dihydroxy_3_4_didehydrolycopene
+    <-> . +betaenone_c +hydrogen_donor
+    betaenone_b
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
+    <-> . +taxifolin +akg +o2 +co2 +h2o +hplus
+    quercetin_7_olate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_70 [1.14.11.70] +deoxycylindrospermopsin +akg +o2 +co2
+    7_epi_cylindrospermopsin
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-1-hydroxyethyl-bacteri-to-chlorophyllide-b",
   "name": "3-(1-hydroxyethyl)bacteri… to chlorophyllide b",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from 3-(1-hydroxyethyl)bacteriochlorophyllide a(2−) to chlorophyllide b(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -157,23 +157,70 @@
       }
     },
     {
-      "id": "linoleoyl_containing_glycerolipid",
-      "name": "linoleoyl-containing glycerolipid",
-      "short": "linoleoyl-containin…",
-      "formula": "C18H31OR",
-      "charge": 0,
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:88351"
+        "chebi": "CHEBI:57540"
       }
     },
     {
-      "id": "linolenoyl_containing_glycerolipid",
-      "name": "α-linolenoyl-containing glycerolipid",
-      "short": "α-linolenoyl-contai…",
-      "formula": "C18H29OR",
+      "id": "3_acetylchlorophyllide_a",
+      "name": "3-acetylchlorophyllide a",
+      "short": "3-acetylchlorophyll…",
+      "formula": "C35H32MgN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:90794"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-5-hexenoylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-5-hexenoylpant…",
+      "formula": "C20H33N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86298"
+      }
+    },
+    {
+      "id": "o_s_5_hexynoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-5-hexynoylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-5-hexynoylpant…",
+      "formula": "C20H31N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86299"
+      }
+    },
+    {
+      "id": "calcidiol",
+      "name": "calcidiol",
+      "formula": "C27H44O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90078"
+        "chebi": "CHEBI:17933"
+      }
+    },
+    {
+      "id": "23s_23_25_dihydroxycalciol",
+      "name": "(23S)-23,25-dihydroxycalciol",
+      "short": "23,25-dihydroxycalc…",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47214"
       }
     },
     {
@@ -203,10 +250,17 @@
       ]
     },
     {
-      "id": "ec_1_14_19_35",
-      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "id": "ec_1_1_1_396",
+      "name": "bacteriochlorophyllide-a dehydrogenase",
       "ec": [
-        "1.14.19.35"
+        "1.1.1.396"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_40",
+      "name": "hex-5-enoyl-[acyl-carrier protein] acetylenase",
+      "ec": [
+        "1.14.19.40"
       ]
     },
     {
@@ -428,12 +482,61 @@
     },
     {
       "id": "r5",
-      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
-      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (9Z,12Z,15Z)-octadecatrienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.35",
+      "name": "bacteriochlorophyllide-a dehydrogenase",
+      "equation": "3-devinyl-3-(1-hydroxyethyl)chlorophyllide a + NAD(+) = 3-acetyl-3-devinylchlorophyllide a + NADH + H(+)",
+      "ec": "1.1.1.396",
       "substrates": [
         {
-          "metabolite": "linoleoyl_containing_glycerolipid",
+          "metabolite": "3_1_hydroxyethyl_chlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_acetylchlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_396"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:48764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "hex-5-enoyl-[acyl-carrier protein] acetylenase",
+      "equation": "5-hexenoyl-[ACP] + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 5-hexynoyl-[ACP] + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.40",
+      "substrates": [
+        {
+          "metabolite": "o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1",
           "stoichiometry": 1
         },
         {
@@ -451,7 +554,7 @@
       ],
       "products": [
         {
-          "metabolite": "linolenoyl_containing_glycerolipid",
+          "metabolite": "o_s_5_hexynoylpantetheine_4_phosphoryl_serine_1",
           "stoichiometry": 1
         },
         {
@@ -465,26 +568,77 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_19_35"
+          "enzyme": "ec_1_14_19_40"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46408"
+        "rhea": "RHEA:46568"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46408"
+            "id": "RHEA:46568"
           }
         ]
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "calcidiol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (23S)-23,25-dihydroxycalciol + 2 ox...",
+      "equation": "calcidiol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (23S)-23,25-dihydroxycalciol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "calcidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "23s_23_25_dihydroxycalciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:46616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "3,8-divinyl protochlorophyllide a 8-vinyl-reductase (ferredoxin)",
       "equation": "chlorophyllide a + 2 oxidized [2Fe-2S]-[ferredoxin] = 3,8-divinyl chlorophyllide a + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
       "ec": "1.3.7.13",
@@ -518,7 +672,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:48900"
       },

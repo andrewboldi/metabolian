@@ -160,12 +160,22 @@
       }
     },
     {
-      "id": "12_hete",
-      "name": "12-HETE",
-      "formula": "C20H31O3",
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90718"
+        "chebi": "CHEBI:30807"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
       }
     },
     {
@@ -178,22 +188,13 @@
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "o_s_tetradecanoylpantetheine_4_phosphoryl_serine",
+      "name": "O-(S-tetradecanoylpantetheine-4'-phosphoryl)serine(1−)",
+      "short": "O-(S-tetradecanoylp…",
+      "formula": "C28H51N3O9PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa",
-      "name": "12-hydroxy-(5Z,8Z,10E,14Z)-icosatetraenoyl-CoA",
-      "short": "12-hydroxy-(5Z,8Z,1…",
-      "formula": "C41H62N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:136408"
+        "chebi": "CHEBI:78477"
       }
     },
     {
@@ -206,31 +207,75 @@
       }
     },
     {
-      "id": "3_demethylubiquinol_6",
-      "name": "3-demethylubiquinol-6",
-      "short": "3-demethylubiquinol…",
-      "formula": "C38H58O4",
+      "id": "siccayne",
+      "name": "siccayne",
+      "formula": "C11H10O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64253"
+        "chebi": "CHEBI:156304"
       }
     },
     {
-      "id": "ubiquinol_6",
-      "name": "ubiquinol-6",
-      "formula": "C39H60O4",
+      "id": "pestalodiol",
+      "name": "pestalodiol",
+      "formula": "C16H18O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:52970"
+        "chebi": "CHEBI:156305"
+      }
+    },
+    {
+      "id": "cycloartenol",
+      "name": "cycloartenol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17030"
+      }
+    },
+    {
+      "id": "24_methylenecycloartanol",
+      "name": "24-methylenecycloartanol",
+      "short": "24-methylenecycloar…",
+      "formula": "C31H52O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1307"
+      }
+    },
+    {
+      "id": "demethyldeoxyspectinabilin",
+      "name": "demethyldeoxyspectinabilin",
+      "short": "demethyldeoxyspecti…",
+      "formula": "C27H30NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142872"
+      }
+    },
+    {
+      "id": "deoxyspectinabilin",
+      "name": "deoxyspectinabilin",
+      "formula": "C28H33NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142843"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_64",
-      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "id": "ec_2_1_1_41",
+      "name": "sterol 24-C-methyltransferase",
       "ec": [
-        "2.1.1.64"
+        "2.1.1.41"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_353",
+      "name": "demethylluteothin O-methyltransferase",
+      "ec": [
+        "2.1.1.353"
       ]
     }
   ],
@@ -452,25 +497,25 @@
     },
     {
       "id": "r6",
-      "name": "12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + ATP + CoA = 12-hydroxy-(5Z,8Z,10E,14Z)-e...",
-      "equation": "12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + ATP + CoA = 12-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoyl-CoA + AMP + diphosphate",
+      "name": "tetradecanoate + holo-[ACP] + ATP = tetradecanoyl-[ACP] + AMP + diphosphate",
+      "equation": "tetradecanoate + holo-[ACP] + ATP = tetradecanoyl-[ACP] + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "12_hete",
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa",
+          "metabolite": "o_s_tetradecanoylpantetheine_4_phosphoryl_serine",
           "stoichiometry": 1
         },
         {
@@ -485,26 +530,65 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:52112"
+        "rhea": "RHEA:64888"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52112"
+            "id": "RHEA:64888"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "3-demethylubiquinol 3-O-methyltransferase",
-      "equation": "3-demethylubiquinol-6 + S-adenosyl-L-methionine = ubiquinol-6 + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.64",
+      "name": "siccayne + dimethylallyl diphosphate = pestalodiol + diphosphate",
+      "equation": "siccayne + dimethylallyl diphosphate = pestalodiol + diphosphate",
       "substrates": [
         {
-          "metabolite": "3_demethylubiquinol_6",
+          "metabolite": "siccayne",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pestalodiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:65064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "sterol 24-C-methyltransferase",
+      "equation": "cycloartenol + S-adenosyl-L-methionine = 24-methylenecycloartanol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.41",
+      "substrates": [
+        {
+          "metabolite": "cycloartenol",
           "stoichiometry": 1
         },
         {
@@ -514,7 +598,7 @@
       ],
       "products": [
         {
-          "metabolite": "ubiquinol_6",
+          "metabolite": "24_methylenecycloartanol",
           "stoichiometry": 1
         },
         {
@@ -528,20 +612,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_64"
+          "enzyme": "ec_2_1_1_41"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:44400"
+        "rhea": "RHEA:59012"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44400"
+            "id": "RHEA:59012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "demethylluteothin O-methyltransferase",
+      "equation": "demethyldeoxyspectinabilin + S-adenosyl-L-methionine = deoxyspectinabilin + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.353",
+      "substrates": [
+        {
+          "metabolite": "demethyldeoxyspectinabilin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deoxyspectinabilin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_353"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:59068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59068"
           }
         ]
       }

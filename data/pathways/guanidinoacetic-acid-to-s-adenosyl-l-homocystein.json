@@ -102,22 +102,41 @@
       }
     },
     {
-      "id": "l_glutamine",
-      "name": "L-glutamine",
-      "formula": "C5H8N2O2",
-      "charge": 0,
+      "id": "nocamycin_e",
+      "name": "nocamycin E",
+      "formula": "C25H29NO9",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:30011"
+        "chebi": "CHEBI:141048"
       }
     },
     {
-      "id": "n5_methyl_l_glutamine",
-      "name": "N5-methyl-L-glutamine",
-      "short": "N5-methyl-L-glutami…",
-      "formula": "C6H10N2O2",
-      "charge": 0,
+      "id": "nocamycin_i",
+      "name": "nocamycin I",
+      "formula": "C26H32NO9",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:61891"
+        "chebi": "CHEBI:141049"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "2_o_methyladenosine_5_monophosphate_1",
+      "name": "2'-O-methyladenosine 5'-monophosphate(1−)",
+      "short": "2'-O-methyladenosin…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74477"
       }
     }
   ],
@@ -141,6 +160,13 @@
       "name": "sarcosine/dimethylglycine N-methyltransferase",
       "ec": [
         "2.1.1.157"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_351",
+      "name": "nocamycin O-methyltransferase",
+      "ec": [
+        "2.1.1.351"
       ]
     }
   ],
@@ -290,11 +316,12 @@
     },
     {
       "id": "r4",
-      "name": "L-glutamine(104)-[histone H2A] + S-adenosyl-L-methionine = N(5)-methyl-L-glutamine(104)...",
-      "equation": "L-glutamine(104)-[histone H2A] + S-adenosyl-L-methionine = N(5)-methyl-L-glutamine(104)-[histone H2A] + S-adenosyl-L-homocysteine + H(+)",
+      "name": "nocamycin O-methyltransferase",
+      "equation": "nocamycin E + S-adenosyl-L-methionine = nocamycin I + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.351",
       "substrates": [
         {
-          "metabolite": "l_glutamine",
+          "metabolite": "nocamycin_e",
           "stoichiometry": 1
         },
         {
@@ -304,7 +331,51 @@
       ],
       "products": [
         {
-          "metabolite": "n5_methyl_l_glutamine",
+          "metabolite": "nocamycin_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_351"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56844"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56844"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "adenosine(32) in tRNA + S-adenosyl-L-methionine = 2'-O-methyladenosine(32) in tRNA + S-...",
+      "equation": "adenosine(32) in tRNA + S-adenosyl-L-methionine = 2'-O-methyladenosine(32) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -317,16 +388,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:43228"
+        "rhea": "RHEA:56884"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43228"
+            "id": "RHEA:56884"
           }
         ]
       }

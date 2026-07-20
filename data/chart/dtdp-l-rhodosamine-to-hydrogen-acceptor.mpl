@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-rhodosamine-to-hydrogen-acceptor "dTDP-β-L-rhodosamine to hydrogen acceptor" {
-  spacing 216
+  spacing 228
 
   spine at 0,0 {
     dtdp_l_rhodosamine
@@ -16,15 +16,15 @@ pathway dtdp-l-rhodosamine-to-hydrogen-acceptor "dTDP-β-L-rhodosamine to hydrog
     11_deoxy_rhodomycin
   }
 
-  branch from methanol side left {
-    methanol
-    <-> . +voacangine +h2o +hplus
-    de_ester_voacangine
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +7_chloro_l_tryptophan +hydrogen_donor +o2 +co2 +h2o
+    monodechloroaminopyrrolnitrin
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +3_substituted_propionyl_coa +hydrogen_donor
-    2_3_dehydroacyl_coa
+    <-> . +8_s_15_s_dihpete +hydrogen_donor +h2o
+    8_s_15_s_dihete
   }
 }

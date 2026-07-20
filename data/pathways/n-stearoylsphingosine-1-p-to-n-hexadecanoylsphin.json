@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin",
   "name": "N-stearoylsphingosine-1-p… to N-hexadecanoylsphingosine…",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from N-stearoylsphingosine-1-phosphocholine to N-hexadecanoylsphingosine 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -150,42 +150,69 @@
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:4167"
       }
     },
     {
-      "id": "cholesteryl_d_glucoside",
-      "name": "cholesteryl β-D-glucoside",
-      "short": "cholesteryl…",
-      "formula": "C33H56O6",
+      "id": "d_galactosyl_n_octadecanoylsphingosine",
+      "name": "β-D-galactosyl-N-octadecanoylsphingosine",
+      "short": "β-D-galactosyl-N-oc…",
+      "formula": "C42H81NO8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17495"
+        "chebi": "CHEBI:84720"
       }
     },
     {
-      "id": "2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho",
-      "name": "2-O-acetyl-1-O-octadecyl-sn-glycero-3-phosphocholine",
-      "short": "2-O-acetyl-1-O-octa…",
-      "formula": "C28H58NO7P",
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:52450"
+        "chebi": "CHEBI:4139"
       }
     },
     {
-      "id": "1_o_octadecyl_2_acetyl_sn_glycerol",
-      "name": "1-O-octadecyl-2-acetyl-sn-glycerol",
-      "short": "1-O-octadecyl-2-ace…",
-      "formula": "C23H46O4",
+      "id": "ethyl_octadecanoate",
+      "name": "ethyl octadecanoate",
+      "formula": "C20H40O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:147296"
+        "chebi": "CHEBI:84936"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16236"
+      }
+    },
+    {
+      "id": "12_octadecanoyloxy_octadecanoate",
+      "name": "12-(octadecanoyloxy)octadecanoate",
+      "short": "12-(octadecanoyloxy…",
+      "formula": "C36H69O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136330"
+      }
+    },
+    {
+      "id": "12_hydroxyoctadecanoate",
+      "name": "12-hydroxyoctadecanoate",
+      "short": "12-hydroxyoctadecan…",
+      "formula": "C18H35O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84201"
       }
     },
     {
@@ -380,50 +407,11 @@
     },
     {
       "id": "r5",
-      "name": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + cholesterol = cholesteryl 3-beta...",
-      "equation": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + cholesterol = cholesteryl 3-beta-D-glucoside + N-octadecanoylsphing-4-enine",
+      "name": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + H2O = N-octadecanoylsphing-4-eni...",
+      "equation": "beta-D-glucosyl-(1<->1)-N-octadecanoylsphing-4-enine + H2O = N-octadecanoylsphing-4-enine + D-glucose",
       "substrates": [
         {
           "metabolite": "d_glucosyl_n_octadecanoylsphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cholesteryl_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_octadecanoylsphingosine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70311"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70311"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "1-O-octadecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-octadecyl-2-acetyl-sn-gl...",
-      "equation": "1-O-octadecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-octadecyl-2-acetyl-sn-glycerol + phosphocholine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho",
           "stoichiometry": 1
         },
         {
@@ -433,11 +421,89 @@
       ],
       "products": [
         {
-          "metabolite": "1_o_octadecyl_2_acetyl_sn_glycerol",
+          "metabolite": "n_octadecanoylsphingosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "phosphocholine",
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:59284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "beta-D-galactosyl-(1<->1')-N-octadecanoylsphing-4-enine + H2O = N-octadecanoylsphing-4-...",
+      "equation": "beta-D-galactosyl-(1<->1')-N-octadecanoylsphing-4-enine + H2O = N-octadecanoylsphing-4-enine + D-galactose",
+      "substrates": [
+        {
+          "metabolite": "d_galactosyl_n_octadecanoylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_octadecanoylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:59292"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "ethyl octadecanoate + H2O = ethanol + octadecanoate + H(+)",
+      "equation": "ethyl octadecanoate + H2O = ethanol + octadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ethyl_octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octadecanoate",
           "stoichiometry": 1
         },
         {
@@ -446,22 +512,65 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:63384"
+        "rhea": "RHEA:50316"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63384"
+            "id": "RHEA:50316"
           }
         ]
       }
     },
     {
-      "id": "r7",
+      "id": "r8",
+      "name": "12-octadecanoyloxy-octadecanoate + H2O = 12-hydroxyoctadecanoate + octadecanoate + H(+)",
+      "equation": "12-octadecanoyloxy-octadecanoate + H2O = 12-hydroxyoctadecanoate + octadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "12_octadecanoyloxy_octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:52080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
       "name": "beta-D-galactosyl-(1<->1')-N-hexadecanoylsphing-4-enine + H2O = beta-D-galactose + N-he...",
       "equation": "beta-D-galactosyl-(1<->1')-N-hexadecanoylsphing-4-enine + H2O = beta-D-galactose + N-hexadecanoylsphing-4-enine",
       "substrates": [
@@ -485,7 +594,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:69703"
       },

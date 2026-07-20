@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-7z-hydroxyoctadec-7-to-cis-tetradec-3-enoyl "(3R,7Z)-hydroxyoctadec-7-… to cis-tetradec-3-enoyl-CoA" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     3r_7z_hydroxyoctadec_7_enoyl_coa

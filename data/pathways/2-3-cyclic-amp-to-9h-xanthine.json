@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-3-cyclic-amp-to-9h-xanthine",
   "name": "2',3'-cyclic AMP to 9H-xanthine",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from 2',3'-cyclic AMP(1−) to 9H-xanthine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,76 +137,40 @@
       }
     },
     {
-      "id": "dgtp",
-      "name": "dGTP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "l_alaninamide",
+      "name": "L-alaninamide",
+      "formula": "C3H9N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:61429"
+        "chebi": "CHEBI:74169"
       }
     },
     {
-      "id": "dgdp",
-      "name": "dGDP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58595"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "n6_hydroxyadenine",
-      "name": "N6-hydroxyadenine",
-      "formula": "C5H5N5O",
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78235"
+        "chebi": "CHEBI:57972"
       }
     },
     {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
+      "id": "d_lysinium",
+      "name": "D-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32557"
+      }
+    },
+    {
+      "id": "6_amino_2_oxohexanoic_acid",
+      "name": "6-amino-2-oxohexanoic acid",
+      "short": "6-amino-2-oxohexano…",
+      "formula": "C6H11NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17499"
-      }
-    },
-    {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37563"
-      }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
+        "chebi": "CHEBI:58183"
       }
     }
   ],
@@ -237,6 +201,13 @@
       "name": "xanthine oxidase",
       "ec": [
         "1.17.3.2"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_3",
+      "name": "D-amino-acid oxidase",
+      "ec": [
+        "1.4.3.3"
       ]
     }
   ],
@@ -470,68 +441,11 @@
     },
     {
       "id": "r6",
-      "name": "dGTP + adenosine = dGDP + AMP + H(+)",
-      "equation": "dGTP + adenosine = dGDP + AMP + H(+)",
+      "name": "L-alaninamide + H2O = L-alanine + NH4(+)",
+      "equation": "L-alaninamide + H2O = L-alanine + NH4(+)",
       "substrates": [
         {
-          "metabolite": "dgtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dgdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:52536"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52536"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "N(6)-hydroxyadenine + AH2 = adenine + A + H2O",
-      "equation": "N(6)-hydroxyadenine + AH2 = adenine + A + H2O",
-      "substrates": [
-        {
-          "metabolite": "n6_hydroxyadenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "adenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "l_alaninamide",
           "stoichiometry": 1
         },
         {
@@ -539,42 +453,9 @@
           "stoichiometry": 1
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:84551"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:84551"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "CTP + H2O + H(+) = UTP + NH4(+)",
-      "equation": "CTP + H2O + H(+) = UTP + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "utp",
+          "metabolite": "alanine",
           "stoichiometry": 1
         },
         {
@@ -583,16 +464,69 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:30335"
+        "rhea": "RHEA:37231"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30335"
+            "id": "RHEA:37231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "D-amino-acid oxidase",
+      "equation": "D-lysine + O2 + H2O = 6-amino-2-oxohexanoate + H2O2 + NH4(+)",
+      "ec": "1.4.3.3",
+      "substrates": [
+        {
+          "metabolite": "d_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_amino_2_oxohexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:37583"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37583"
           }
         ]
       }

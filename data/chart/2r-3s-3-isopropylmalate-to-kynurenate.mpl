@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-3s-3-isopropylmalate-to-kynurenate "(2R,3S)-3-isopropylmalate to kynurenate" {
-  spacing 188
+  spacing 224
 
   spine at 0,0 {
     2r_3s_3_isopropylmalate
@@ -22,15 +22,33 @@ pathway 2r-3s-3-isopropylmalate-to-kynurenate "(2R,3S)-3-isopropylmalate to kynu
     alanine
   }
 
+  branch from 4_2_aminophenyl_2_4_dioxobutanoate side right {
+    4_2_aminophenyl_2_4_dioxobutanoate
+    <-> . +3_indol_3_yl_pyruvate +l_kynurenine
+    l_tryptophan
+  }
+
+  branch from leucine side left {
+    leucine
+    <-> . +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +ppi +nadp +coa +h2o
+    5s_5_2_methylpropyl_3_2e_6r_8e_10e_12e_6_8_10_1
+  }
+
   branch from leucine side right {
     leucine
-    <-> . +r_3_phenyllactate +sam +atp +amp +sah +ppi +hplus
-    pf1022b
+    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
+    pf1022a
   }
 
   branch from kynurenate side left {
     kynurenate
     <-> ec_2_6_1_63 [2.6.1.63] +l_kynurenine +glyoxylate +h2o
     glycine
+  }
+
+  branch from kynurenate side right {
+    kynurenate
+    <-> . +l_kynurenine +l_tryptophan +h2o
+    3_indol_3_yl_pyruvate
   }
 }

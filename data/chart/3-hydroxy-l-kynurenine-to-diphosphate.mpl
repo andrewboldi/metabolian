@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-l-kynurenine-to-diphosphate "3-hydroxy-L-kynurenine to diphosphate" {
-  spacing 264
+  spacing 300
 
   spine at 0,0 {
     3_hydroxy_l_kynurenine
@@ -18,19 +18,37 @@ pathway 3-hydroxy-l-kynurenine-to-diphosphate "3-hydroxy-L-kynurenine to diphosp
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> ec_2_1_1_374 [2.1.1.374] +3_bromo_2_heptyl_1_hydroxy_4_1h_quinolinone +sam +hplus
+    3_bromo_2_heptyl_1_methoxy_4_1h_quinolinone
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_374 [2.1.1.374] +3_methyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_propyl +sam +hplus
+    3_5_dimethyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_pro
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +cholate +h2o
+    l_alanocholate
   }
 
   branch from alanine side right {
     alanine
-    <-> . +n_n_dimethyl_l_argininium +pyruvate
-    5_3_3_dimethylguanidino_2_oxopentanoate
+    <-> . +taurocholate +l_alanocholate
+    taurine
   }
 
   branch from ppi side left {
     ppi
-    <-> . +6_hydroxymellein +fpp
-    verruculide_c
+    <-> ec_4_2_3_216 [4.2.3.216] +all_trans_pentaprenyl_diphosphate
+    somaliensene_a
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_217 [4.2.3.217] +all_trans_pentaprenyl_diphosphate
+    somaliensene_b
   }
 }

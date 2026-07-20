@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'-mo… to tetralinoleoyl cardiolipin" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     1_2_2_trilinoleoyl_1_monolysocardiolipin
@@ -22,21 +22,45 @@ pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'
     linoleate
   }
 
+  branch from tetralinoleoyl_cardiolipin side right {
+    tetralinoleoyl_cardiolipin
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +trilinoleoyl_2_monolysocardiolipin
+    1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +acetyl_coa +coa
+    1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine
+  }
+
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +lauroyl_coa +coa
-    1_palmitoyl_2_lauroyl_sn_glycero_3_phosphocholin
+    <-> . +octanoyl_coa +coa
+    1_palmitoyl_2_capryloyl_sn_glycero_3_phosphochol
   }
 
   branch from 1_1_2_trilinoleoyl_2_oleoyl_cardiolipin side left {
+    1_1_2_trilinoleoyl_2_oleoyl_cardiolipin
+    <-> . +trilinoleoyl_2_monolysocardiolipin +coa
+    oleoyl_coa
+  }
+
+  branch from 1_1_2_trilinoleoyl_2_oleoyl_cardiolipin side right {
     1_1_2_trilinoleoyl_2_oleoyl_cardiolipin
     <-> . +trilinoleoyl_2_monolysocardiolipin +1_2_dioleoyl_sn_glycero_3_phosphocholine
     1_o_oleoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from trilinoleoyl_2_monolysocardiolipin side right {
+  branch from trilinoleoyl_2_monolysocardiolipin side left {
     trilinoleoyl_2_monolysocardiolipin
     <-> . +palmitoyl_coa +coa
     1_1_2_trilinoleoyl_2_palmitoyl_cardiolipin
+  }
+
+  branch from trilinoleoyl_2_monolysocardiolipin side right {
+    trilinoleoyl_2_monolysocardiolipin
+    <-> . +1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp +tetralinoleoyl_cardiolipin
+    1_linoleoyl_sn_glycero_3_phosphocholine
   }
 }

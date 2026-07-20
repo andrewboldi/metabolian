@@ -1,0 +1,418 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-sulfino-l-alanine-to-l-glutamate",
+  "name": "3-sulfino-L-alanine to L-glutamate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3-sulfino-L-alanine(1−) to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16877"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61085"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_sulfino_l_alanine",
+      "name": "3-sulfino-L-alanine",
+      "formula": "C3H6NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61085"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hypotaurine",
+      "name": "hypotaurine",
+      "formula": "C2H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57853"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:507393"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "sulfonatoacetaldehyde",
+      "name": "sulfonatoacetaldehyde",
+      "short": "sulfonatoacetaldehy…",
+      "formula": "C2H3O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58246"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "n_tetracosanoyltaurine",
+      "name": "N-tetracosanoyltaurine",
+      "short": "N-tetracosanoyltaur…",
+      "formula": "C26H52NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132049"
+      }
+    },
+    {
+      "id": "tetracosanoate",
+      "name": "tetracosanoate",
+      "formula": "C24H47O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:31014"
+      }
+    },
+    {
+      "id": "n_nervonoyltaurine",
+      "name": "N-nervonoyltaurine",
+      "formula": "C26H50NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:146198"
+      }
+    },
+    {
+      "id": "15z_tetracosenoate",
+      "name": "(15Z)-tetracosenoate",
+      "formula": "C24H45O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32392"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_29",
+      "name": "sulfinoalanine decarboxylase",
+      "ec": [
+        "4.1.1.29"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_8",
+      "name": "flavin-containing monooxygenase",
+      "ec": [
+        "1.14.13.8"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_55",
+      "name": "taurine--2-oxoglutarate transaminase",
+      "ec": [
+        "2.6.1.55"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sulfinoalanine decarboxylase",
+      "equation": "3-sulfino-L-alanine + H(+) = hypotaurine + CO2",
+      "ec": "4.1.1.29",
+      "substrates": [
+        {
+          "metabolite": "3_sulfino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hypotaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16877"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "flavin-containing monooxygenase",
+      "equation": "hypotaurine + NADPH + O2 + H(+) = taurine + NADP(+) + H2O",
+      "ec": "1.14.13.8",
+      "substrates": [
+        {
+          "metabolite": "hypotaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "taurine--2-oxoglutarate transaminase",
+      "equation": "taurine + 2-oxoglutarate = sulfoacetaldehyde + L-glutamate",
+      "ec": "2.6.1.55",
+      "substrates": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-tetracosanoyl-taurine + H2O = tetracosanoate + taurine",
+      "equation": "N-tetracosanoyl-taurine + H2O = tetracosanoate + taurine",
+      "substrates": [
+        {
+          "metabolite": "n_tetracosanoyltaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetracosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63140"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-(15Z-tetracosenoyl)-taurine + H2O = (15Z)-tetracosenoate + taurine",
+      "equation": "N-(15Z-tetracosenoyl)-taurine + H2O = (15Z)-tetracosenoate + taurine",
+      "substrates": [
+        {
+          "metabolite": "n_nervonoyltaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15z_tetracosenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:63160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63160"
+          }
+        ]
+      }
+    }
+  ]
+}

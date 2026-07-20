@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway margarate-to-9z-12z-heptadecadienoyl "margarate to (9Z,12Z)-heptadecadienoyl…" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     margarate
@@ -18,13 +18,37 @@ pathway margarate-to-9z-12z-heptadecadienoyl "margarate to (9Z,12Z)-heptadecadie
 
   branch from heptadecanoyl_coa side left {
     heptadecanoyl_coa
+    <-> . +1_oleoyl_sn_glycero_3_phosphate +coa
+    1_oleoyl_2_heptadecanoyl_sn_glycero_3_phosphate
+  }
+
+  branch from heptadecanoyl_coa side right {
+    heptadecanoyl_coa
     <-> . +fad +hplus +fadh2
     trans_2_heptadecenoyl_coa
   }
 
+  branch from ppi side left {
+    ppi
+    <-> ec_3_6_1_55 [3.6.1.55] +8_oxo_dgtp +h2o +hplus
+    8_oxo_dgmp
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_59 [4.2.3.59] +fpp
-    e_bisabolene
+    <-> ec_3_6_1_56 [3.6.1.56] +2_hydroxy_datp +h2o +hplus
+    2_hydroxy_damp
+  }
+
+  branch from 9z_heptadecenoyl_coa side left {
+    9z_heptadecenoyl_coa
+    <-> . +nadp +h2o +heptadecanoyl_coa +o2 +nadph
+    h
+  }
+
+  branch from 9z_heptadecenoyl_coa side right {
+    9z_heptadecenoyl_coa
+    <-> . +r_carnitine +heptadecenoylcarnitine_8
+    coa
   }
 }

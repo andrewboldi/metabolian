@@ -235,22 +235,42 @@
       }
     },
     {
-      "id": "7_demethylmitomycin_b",
-      "name": "7-demethylmitomycin B",
-      "short": "7-demethylmitomycin…",
-      "formula": "C15H15N3O6",
-      "charge": -2,
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:84952"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "mitomycin_b",
-      "name": "mitomycin B",
-      "formula": "C16H18N3O6",
-      "charge": -1,
+      "id": "n7_methylguanosine_5_phosphate_zwitterion",
+      "name": "N7-methylguanosine 5'-phosphate zwitterion",
+      "short": "N7-methylguanosine…",
+      "formula": "C11H14N5O7P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84590"
+        "chebi": "CHEBI:74480"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61976"
       }
     }
   ],
@@ -281,13 +301,6 @@
       "name": "magnesium protoporphyrin IX methyltransferase",
       "ec": [
         "2.1.1.11"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_316",
-      "name": "mitomycin 6-O-methyltransferase",
-      "ec": [
-        "2.1.1.316"
       ]
     }
   ],
@@ -647,12 +660,11 @@
     },
     {
       "id": "r8",
-      "name": "mitomycin 6-O-methyltransferase",
-      "equation": "6-demethylmitomycin B + S-adenosyl-L-methionine = mitomycin B + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.316",
+      "name": "a guanosine in RNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in RNA + S-adeno...",
+      "equation": "a guanosine in RNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in RNA + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "7_demethylmitomycin_b",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -662,7 +674,7 @@
       ],
       "products": [
         {
-          "metabolite": "mitomycin_b",
+          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
           "stoichiometry": 1
         },
         {
@@ -670,22 +682,60 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_316"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:45100"
+        "rhea": "RHEA:60164"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45100"
+            "id": "RHEA:60164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "N(6)-methyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-ly...",
+      "equation": "N(6)-methyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:60268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60268"
           }
         ]
       }

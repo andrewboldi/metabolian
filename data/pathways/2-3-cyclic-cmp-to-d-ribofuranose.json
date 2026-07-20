@@ -116,6 +116,33 @@
       "xrefs": {
         "chebi": "CHEBI:57540"
       }
+    },
+    {
+      "id": "ribitol",
+      "name": "ribitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15963"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
     }
   ],
   "enzymes": [
@@ -303,6 +330,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:36959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ribitol + NADP(+) = D-ribose + NADPH + H(+)",
+      "equation": "ribitol + NADP(+) = D-ribose + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ribitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:59932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59932"
           }
         ]
       }

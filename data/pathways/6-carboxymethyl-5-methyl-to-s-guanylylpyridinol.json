@@ -142,33 +142,50 @@
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74411"
+        "chebi": "CHEBI:29965"
       }
     },
     {
-      "id": "2_o_methyladenosine_5_monophosphate_1",
-      "name": "2'-O-methyladenosine 5'-monophosphate(1−)",
-      "short": "2'-O-methyladenosin…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
+      "id": "n_methyl_argininium_1",
+      "name": "Nω-methyl-argininium(1+)",
+      "short": "Nω-methyl-argininiu…",
+      "formula": "C7H15N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74477"
+        "chebi": "CHEBI:65280"
       }
     },
     {
-      "id": "presqualene_pp",
-      "name": "Presqualene diphosphate",
-      "short": "Presqualene PP",
-      "formula": "C30H49O7P2",
-      "charge": -3,
+      "id": "n_n_dimethyl_l_arginine_1",
+      "name": "Nω,N'ω-dimethyl-L-arginine(1+)",
+      "short": "Nω,N'ω-dimethyl-L-a…",
+      "formula": "C8H17N4O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57310"
+        "chebi": "CHEBI:88221"
+      }
+    },
+    {
+      "id": "l_cysteinate_group",
+      "name": "L-cysteinate group",
+      "formula": "C3H5NO2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76913"
+      }
+    },
+    {
+      "id": "carbamoyl_p",
+      "name": "Carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58228"
       }
     },
     {
@@ -181,13 +198,42 @@
       }
     },
     {
-      "id": "r_12_hydroxysqualene",
-      "name": "(R)-12-hydroxysqualene",
-      "short": "12-hydroxysqualene",
-      "formula": "C30H50O",
-      "charge": 0,
+      "id": "c_terminal_s_carbamoyl_l_cysteinate",
+      "name": "C-terminal S-carbamoyl-L-cysteinate",
+      "short": "C-terminal…",
+      "formula": "C4H6N2O3S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:88123"
+        "chebi": "CHEBI:139126"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "c_terminal_gly_gly_1",
+      "name": "C-terminal Gly-Gly(1−)",
+      "short": "C-terminal…",
+      "formula": "C4H6N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90778"
+      }
+    },
+    {
+      "id": "c_terminal_gly_gly_amp_1_group",
+      "name": "C-terminal Gly-Gly-AMP(1−) group",
+      "short": "C-terminal…",
+      "formula": "C14H18N7O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90618"
       }
     }
   ],
@@ -214,17 +260,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_230",
-      "name": "23S rRNA (adenosine(1067)-2'-O)-methyltransferase",
+      "id": "ec_2_1_1_321",
+      "name": "type III protein arginine methyltransferase",
       "ec": [
-        "2.1.1.230"
+        "2.1.1.321"
       ]
     },
     {
-      "id": "ec_4_2_3_156",
-      "name": "hydroxysqualene synthase",
+      "id": "ec_2_1_1_320",
+      "name": "type II protein arginine methyltransferase",
       "ec": [
-        "4.2.3.156"
+        "2.1.1.320"
       ]
     }
   ],
@@ -421,12 +467,12 @@
     },
     {
       "id": "r5",
-      "name": "23S rRNA (adenosine(1067)-2'-O)-methyltransferase",
-      "equation": "adenosine(1067) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methyladenosine(1067) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.230",
+      "name": "type III protein arginine methyltransferase",
+      "equation": "L-arginyl-[protein] + S-adenosyl-L-methionine = N(omega)-methyl-L-arginyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.321",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
@@ -436,7 +482,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_o_methyladenosine_5_monophosphate_1",
+          "metabolite": "n_methyl_argininium_1",
           "stoichiometry": 1
         },
         {
@@ -450,32 +496,88 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_230"
+          "enzyme": "ec_2_1_1_321"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:43212"
+        "rhea": "RHEA:48100"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43212"
+            "id": "RHEA:48100"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "hydroxysqualene synthase",
-      "equation": "presqualene diphosphate + H2O = hydroxysqualene + diphosphate",
-      "ec": "4.2.3.156",
+      "name": "type II protein arginine methyltransferase",
+      "equation": "L-arginyl-[protein] + 2 S-adenosyl-L-methionine = N(omega),N(omega)'-dimethyl-L-arginyl-[protein] + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.320",
       "substrates": [
         {
-          "metabolite": "presqualene_pp",
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_320"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:48108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "C-terminal L-cysteinyl-[HypE protein] + carbamoyl phosphate + ATP + H2O = C-terminal S-...",
+      "equation": "C-terminal L-cysteinyl-[HypE protein] + carbamoyl phosphate + ATP + H2O = C-terminal S-carboxamide-L-cysteinyl-[HypE protein] + AMP + phosphate + diphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_cysteinate_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamoyl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -485,7 +587,62 @@
       ],
       "products": [
         {
-          "metabolite": "r_12_hydroxysqualene",
+          "metabolite": "c_terminal_s_carbamoyl_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:55636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "[protein]-C-terminal Gly-Gly + ATP + H(+) = [protein]-C-terminal Gly-Gly-AMP + diphosphate",
+      "equation": "[protein]-C-terminal Gly-Gly + ATP + H(+) = [protein]-C-terminal Gly-Gly-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_gly_gly_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_gly_gly_amp_1_group",
           "stoichiometry": 1
         },
         {
@@ -493,22 +650,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_156"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:47984"
+        "rhea": "RHEA:56096"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47984"
+            "id": "RHEA:56096"
           }
         ]
       }

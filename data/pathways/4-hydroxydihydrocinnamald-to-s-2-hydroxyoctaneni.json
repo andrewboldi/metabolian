@@ -1,0 +1,258 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxydihydrocinnamald-to-s-2-hydroxyoctaneni",
+  "name": "4-Hydroxydihydrocinnamald… to (S)-2-Hydroxyoctanenitrile",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-Hydroxydihydrocinnamaldehyde to (S)-2-Hydroxyoctanenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR172145"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:80671"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxydihydrocinnamaldehyde",
+      "name": "4-Hydroxydihydrocinnamaldehyde",
+      "short": "4-Hydroxydihydrocin…",
+      "formula": "C9H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80671"
+      }
+    },
+    {
+      "id": "4_hydroxylamino_n_n_dimethylaniline",
+      "name": "4-(hydroxylamino)-N,N-dimethylaniline",
+      "short": "4-(hydroxylamino)-N…",
+      "formula": "C8H12N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59991"
+      }
+    },
+    {
+      "id": "3_4_hydroxyphenyl_1_propanol",
+      "name": "3-(4-Hydroxyphenyl)-1-propanol",
+      "short": "3-(4-Hydroxyphenyl)…",
+      "formula": "C9H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:179258"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_4_nitrosoaniline",
+      "name": "N,N-dimethyl-4-nitrosoaniline",
+      "short": "N,N-dimethyl-4-nitr…",
+      "formula": "C8H10N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59990"
+      }
+    },
+    {
+      "id": "heptan_1_ol",
+      "name": "heptan-1-ol",
+      "formula": "C7H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43003"
+      }
+    },
+    {
+      "id": "heptanal",
+      "name": "heptanal",
+      "formula": "C7H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34787"
+      }
+    },
+    {
+      "id": "cyanide",
+      "name": "cyanide",
+      "formula": "CN",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107738"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_2_hydroxyoctanenitrile",
+      "name": "(S)-2-Hydroxyoctanenitrile",
+      "short": "2-Hydroxyoctanenitr…",
+      "formula": "C8H15NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1133022"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_99_36",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": [
+        "1.1.99.36"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_47",
+      "name": "(S)-hydroxynitrile lyase",
+      "ec": [
+        "4.1.2.47"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxydihydrocinnamaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_hydroxyphenyl_1_propanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR172145"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "heptan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "heptanal",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172133"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-hydroxynitrile lyase",
+      "ec": "4.1.2.47",
+      "substrates": [
+        {
+          "metabolite": "cyanide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "heptanal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_hydroxyoctanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR194827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR194827"
+          }
+        ]
+      }
+    }
+  ]
+}

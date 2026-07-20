@@ -85,23 +85,31 @@
       }
     },
     {
-      "id": "1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol",
-      "name": "1-hydroxy-3-(indol-3-ylmethyl)-6H,7H,8H-5λ5-pyrrolo[1,2-a]pyrazin-5-ylium",
-      "short": "1-hydroxy-3-(indol-…",
-      "formula": "C16H16N3O",
-      "charge": 1,
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:145928"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy",
-      "name": "1-hydroxy-3-{[2-(1,1-dimethylallyl)-indol-3-yl]methyl}-6H,7H,8H-5λ5-pyrrolo[1,2-a]pyrazin-5-ylium",
-      "short": "1-hydroxy-3-{[2-(1,…",
-      "formula": "C21H24N3O",
-      "charge": 1,
+      "id": "alpha_springene",
+      "name": "alpha-springene",
+      "formula": "C20H32",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145657"
+        "chebi": "CHEBI:192746"
+      }
+    },
+    {
+      "id": "talarodiene",
+      "name": "talarodiene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193158"
       }
     }
   ],
@@ -263,21 +271,17 @@
     },
     {
       "id": "r4",
-      "name": "1-hydroxy-3-(indol-3-ylmethyl)-6H,7H,8H-5lambda(5)-pyrrolo[1,2-a]pyrazine + dimethylall...",
-      "equation": "1-hydroxy-3-(indol-3-ylmethyl)-6H,7H,8H-5lambda(5)-pyrrolo[1,2-a]pyrazine + dimethylallyl diphosphate = 1-hydroxy-3-{[2-(1,1-dimethylallyl)-indol-3-yl]methyl}-6H,7H,8H-5lambda(5)-pyrrolo[1,2-a]pyrazine + diphosphate",
+      "name": "(2E,6E,10E)-geranylgeranyl diphosphate = (E,E,E)-alpha-springene + diphosphate",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (E,E,E)-alpha-springene + diphosphate",
       "substrates": [
         {
-          "metabolite": "1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy",
+          "metabolite": "alpha_springene",
           "stoichiometry": 1
         },
         {
@@ -288,14 +292,49 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:62736"
+        "rhea": "RHEA:74543"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62736"
+            "id": "RHEA:74543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2E,6E,10E)-geranylgeranyl diphosphate = talarodiene + diphosphate",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = talarodiene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "talarodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74547"
           }
         ]
       }

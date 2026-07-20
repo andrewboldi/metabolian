@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-vinylbacteriochlorophyl-to-s-adenosyl-l-homocy "3-vinylbacteriochlorophyl… to S-adenosyl-L-homocysteine" {
-  spacing 264
+  spacing 276
 
   spine at 0,0 {
     3_vinylbacteriochlorophyllide_d
@@ -18,7 +18,13 @@ pathway 3-vinylbacteriochlorophyl-to-s-adenosyl-l-homocy "3-vinylbacteriochlorop
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_340 [2.1.1.340] +indol_3_ylmethylamine +sam +hplus
-    gramine
+    <-> ec_2_1_1_373 [2.1.1.373] +2r_2_hydroxy_4_methylsulfanyl_butanoate +sam
+    2r_4_dimethylsulfaniumyl_2_hydroxybutanoate
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa
+    3_methylorsellinate
   }
 }

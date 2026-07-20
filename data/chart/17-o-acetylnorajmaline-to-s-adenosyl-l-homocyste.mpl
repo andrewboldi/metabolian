@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste "17-O-acetylnorajmaline to S-adenosyl-L-homocysteine" {
-  spacing 188
+  spacing 206
 
   spine at 0,0 {
     17_o_acetylnorajmaline
@@ -12,6 +12,8 @@ pathway 17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste "17-O-acetylnorajmaline
     norajmaline
     <-> ec_2_1_1_392 [2.1.1.392] +sam -sah -hplus
     ajmalinium
+    <-> ec_2_1_1_393 [2.1.1.393] +sam -sah -hplus
+    4_methylajmaline
   }
 
   branch from norajmaline side left {
@@ -20,15 +22,15 @@ pathway 17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste "17-O-acetylnorajmaline
     4_methylnorajmaline
   }
 
-  branch from acetate side right {
-    acetate
-    <-> ec_4_1_2_65 [4.1.2.65] +4_o_d_glucosyl_trans_ferulate +h2o
-    glucovanillin
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_163 [2.1.1.163] +6_methoxy_2_octaprenyl_1_4_benzoquinone +sam +hplus
+    3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_75 [2.1.1.75] +apigenin_7_olate +sam +hplus
-    5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o
+    <-> ec_2_1_1_165 [2.1.1.165] +iodide +sam
+    iodomethane
   }
 }

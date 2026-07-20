@@ -4,11 +4,11 @@
 # edit the generator, not this file.
 
 pathway r-2-hydroxybutyrate-to-diphosphate "(R)-2-hydroxybutyrate to diphosphate" {
-  spacing 208
+  spacing 220
 
   spine at 0,0 {
     r_2_hydroxybutyrate
-    <-> . +fad +hplus -fadh2
+    <-> . +nadp -nadph -hplus
     oxobut
     <-> . +tyrosine -3_4_hydroxyphenyl_pyruvate
     l_aminobutyrate
@@ -18,27 +18,15 @@ pathway r-2-hydroxybutyrate-to-diphosphate "(R)-2-hydroxybutyrate to diphosphate
     aspulvinone_h
   }
 
-  branch from 3_4_hydroxyphenyl_pyruvate side left {
-    3_4_hydroxyphenyl_pyruvate
-    <-> . +l_kynurenine +tyrosine
-    4_2_aminophenyl_2_4_dioxobutanoate
-  }
-
-  branch from aspulvinone_e side right {
+  branch from aspulvinone_e side left {
     aspulvinone_e
     <-> . +o2
     5z_3_3_4_dihydroxyphenyl_5_3_4_dihydroxyphenyl
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +hplus +co2 +coa +h2o
-    2_4_dihydroxy_6_methylbenzaldehyde
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +25s_cholestenoate +atp +coa +amp
-    25s_3_hydroxy_5_cholesten_26_oyl_coa
+  branch from aspulvinone_e side right {
+    aspulvinone_e
+    <-> . +o2 +h2o
+    2z_2_3_4_dioxocyclohexa_1_5_dien_1_yl_methylide
   }
 }

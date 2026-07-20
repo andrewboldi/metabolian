@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway a-lipid-iia-to-arachidonate "a lipid IIA to arachidonate" {
-  spacing 184
+  spacing 202
 
   spine at 0,0 {
     a_lipid_iia
@@ -18,33 +18,21 @@ pathway a-lipid-iia-to-arachidonate "a lipid IIA to arachidonate" {
     1_acyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphocholine side left {
-    2_acyl_sn_glycero_3_phosphocholine
-    <-> . +3_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diglyceride
-  }
-
-  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side right {
+  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side left {
     1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +octanoyl_coa +coa
-    1_acyl_2_octanoyl_sn_glycero_3_phosphoethanolami
+    <-> . +acyl_coa +coa
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
   }
 
-  branch from phosphatidylcholine side left {
-    phosphatidylcholine
-    <-> . +1_alkyl_2_acetyl_sn_glycerol +1_o_acyl_sn_glycero_3_phosphocholine
-    1_alkyl_2_acetyl_3_acyl_sn_glycerol
-  }
-
-  branch from 1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano side right {
-    1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano
-    <-> . +h2o +fatty-acid +hplus
-    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
+  branch from arachidonate side right {
+    arachidonate
+    <-> . +o2
+    12_r_hpete
   }
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +1_octadecanoyl_2_arachidonoyl_sn_glycero_3_phosp +h2o +hplus
-    1_octadecanoyl_sn_glycero_3_phospho_d_myo_inosit
+    <-> . +o2
+    11_r_hpete
   }
 }

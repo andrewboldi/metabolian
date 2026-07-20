@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway queuosine-to-nicotinamide "queuosine to nicotinamide" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     queuosine
@@ -18,7 +18,13 @@ pathway queuosine-to-nicotinamide "queuosine to nicotinamide" {
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +l_serine +nad +hplus
-    o_adp_d_ribosyl_l_serine_2
+    <-> . +n6_hexadecanoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_hexadecanoyl_adp_d_ribose
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +n6_tetradecanoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_tetradecanoyl_adp_d_ribose
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-n6-dimethyladenosine-to-fumarate "N6,N6-dimethyladenosine to fumarate" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     n6_n6_dimethyladenosine
@@ -20,7 +20,13 @@ pathway n6-n6-dimethyladenosine-to-fumarate "N6,N6-dimethyladenosine to fumarate
 
   branch from imp side left {
     imp
-    <-> ec_3_1_3_99 [3.1.3.99] +h2o +pi
+    <-> . +2_deoxyguanosine_5_monophosphate +inosine
+    2_deoxyguanosine
+  }
+
+  branch from imp side right {
+    imp
+    <-> . +gmp +guanosine
     inosine
   }
 }

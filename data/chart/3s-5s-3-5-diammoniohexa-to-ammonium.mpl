@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-5s-3-5-diammoniohexa-to-ammonium "(3S,5S)-3,5-diammoniohexa… to ammonium" {
-  spacing 280
+  spacing 320
 
   spine at 0,0 {
     3s_5s_3_5_diammoniohexanoate
@@ -16,15 +16,15 @@ pathway 3s-5s-3-5-diammoniohexa-to-ammonium "(3S,5S)-3,5-diammoniohexa… to amm
     crotonoyl_coa
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +2s_2_amino_3_methylbutan_1_ol +nad +h2o +nadh +hplus
-    1_hydroxy_3_methylbutan_2_one
+  branch from crotonoyl_coa side left {
+    crotonoyl_coa
+    <-> . +h2o
+    3_hydroxybutanoyl_coa
   }
 
   branch from crotonoyl_coa side right {
     crotonoyl_coa
-    <-> . +o2 +h2o2
-    butyryl_coa
+    <-> . +h2o
+    r_2_hydroxybutanoyl_coa
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gibberellin-a53-to-succinate-60800 "gibberellin A53 to succinate" {
-  spacing 168
+  spacing 192
 
   spine at 0,0 {
     gibberellin_a53
@@ -16,9 +16,27 @@ pathway gibberellin-a53-to-succinate-60800 "gibberellin A53 to succinate" {
     gibberellin_a17
   }
 
+  branch from gibberellin_a44_2_diacid_form side left {
+    gibberellin_a44_2_diacid_form
+    <-> . +2_oxoglutarate +h +o2 +succinate +gibberellin_a38 +h2o
+    co2
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_62 [1.14.11.62] +trans_4_coumaroyl_coa +akg +o2 +co2
+    trans_2_4_dihydroxy_cinnamoyl_coa
+  }
+
   branch from succinate side left {
     succinate
-    <-> ec_1_14_20_15 [1.14.20.15] +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +chloride +akg +o2 +hplus +co2 +h2o
-    o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl
+    <-> . +l_lysinium +akg +o2 +co2
+    5s_5_hydroxy_l_lysinium
+  }
+
+  branch from gibberellin_a17 side right {
+    gibberellin_a17
+    <-> . +gibberellin_a28 +co2 +succinate +h +o2
+    2_oxoglutarate
   }
 }

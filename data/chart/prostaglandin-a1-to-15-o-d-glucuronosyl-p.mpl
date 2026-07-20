@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prostaglandin-a1-to-15-o-d-glucuronosyl-p "prostaglandin A1 to 15-O-(β-D-glucuronosyl)-p…" {
-  spacing 192
+  spacing 198
 
   spine at 0,0 {
     prostaglandin_a1
@@ -14,5 +14,11 @@ pathway prostaglandin-a1-to-15-o-d-glucuronosyl-p "prostaglandin A1 to 15-O-(β-
     prostaglandin_b1
     <-> . +udp_d_glucuronate -udp -hplus
     15_o_d_glucuronosyl_prostaglandin_b1
+  }
+
+  branch from prostaglandin_b1 side left {
+    prostaglandin_b1
+    <-> ec_1_1_1_141 [1.1.1.141] +nadh +15_dehydro_prostaglandin_b1 +h
+    nad
   }
 }

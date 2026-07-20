@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi "(2R,3R)-2,3-dihydroxy-3-m… to N6-[(R)-S8-isobutyryldihy…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     2r_3r_2_3_dihydroxy_3_methylpentanoate
@@ -22,15 +22,33 @@ pathway 2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi "(2R,3R)-2,3-dihydroxy-3
     nh3
   }
 
-  branch from kiv side right {
+  branch from kmv side right {
+    kmv
+    <-> . +o2 +h2o +h2o2 +nh3
+    d_alloisoleucine
+  }
+
+  branch from kiv side left {
     kiv
     <-> . +valine +glyoxylate
     glycine
+  }
+
+  branch from kiv side right {
+    kiv
+    <-> ec_2_6_1_42 [2.6.1.42] +l_valine +4_methylsulfanyl_2_oxobutanoate
+    l_methionine
   }
 
   branch from isoleucine side left {
     isoleucine
     <-> ec_6_3_2_47 [6.3.2.47] +n3_fumaramoyl_s_2_3_diaminopropanoic_acid +atp +adp +pi +hplus
     dapdiamide_b
+  }
+
+  branch from isoleucine side right {
+    isoleucine
+    <-> ec_1_14_11_74 [1.14.11.74] +akg +o2 +succinate +co2
+    31_hydroxy_l_isoleucine
   }
 }

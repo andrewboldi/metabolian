@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     d_galactosyl_n_dodecanoyl_sphingosine
@@ -13,13 +13,13 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
     <-> . +n_dodecanoylsphingosine +h2o -sphingosine
     dodecanoate
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    9_hydroxylaurate
+    11_hydroxylaurate
   }
 
   branch from cholesteryl_d_galactoside side left {
     cholesteryl_d_galactoside
-    <-> . +n_acyl_d_galactosylsphingosine +cholesterol
-    n_acylsphingosine
+    <-> . +cholesterol +udp +hplus
+    udp_d_galactose
   }
 
   branch from n_dodecanoylsphingosine side right {
@@ -28,9 +28,39 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
     cholesteryl_d_glucoside
   }
 
+  branch from n_dodecanoylsphingosine side left {
+    n_dodecanoylsphingosine
+    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +dodecanoate
+    h2o
+  }
+
+  branch from dodecanoate side right {
+    dodecanoate
+    <-> . +h2o2 +h2o
+    2_hydroxydodecanoate
+  }
+
+  branch from dodecanoate side left {
+    dodecanoate
+    <-> . +o2 +h2o +h2o2 +hplus
+    dodecanal
+  }
+
+  branch from 11_hydroxylaurate side right {
+    11_hydroxylaurate
+    <-> . +h +dodecanoate +o2 +nadph +h2o
+    nadp
+  }
+
   branch from fmn side left {
     fmn
-    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
-    s_nandinine
+    <-> . +n_arachidonoylserotonin +fmnh2 +o2 +h2o +hplus
+    n_arachidonoyl_2_oxoserotonin
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_16 [1.14.14.16] +progesterone +fmnh2 +o2 +h2o +hplus
+    11_deoxycorticosterone
   }
 }

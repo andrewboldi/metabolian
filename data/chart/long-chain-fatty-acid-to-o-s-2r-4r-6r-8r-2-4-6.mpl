@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6 "long-chain fatty acid… to O-(S-[2R,4R,6R,8R]-2,4,6,…" {
-  spacing 256
+  spacing 298
 
   spine at 0,0 {
     long_chain_fatty_acid_ethyl_ester
@@ -18,25 +18,43 @@ pathway long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6 "long-chain fatty acid…
 
   branch from long_chain_fatty_acid_anion side left {
     long_chain_fatty_acid_anion
-    <-> . +atp +hplus +ppi
-    long_chain_fatty_acyl_amp
+    <-> . +h2o +coa +hplus
+    long_chain_fatty_acyl_coa
   }
 
   branch from ethanol side right {
     ethanol
-    <-> . +benzoyl_coa +coa
-    benzyl_acetate
+    <-> . +phosphatidylcholine +choline
+    phosphatidylethanol
   }
 
-  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side left {
+  branch from ethanol side left {
+    ethanol
+    <-> . +ethyl_hexadecanoate +h2o +hplus
+    palmitate
+  }
+
+  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side right {
     o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
     <-> ec_1_2_1_80 [1.2.1.80] +holo-acp +nadp +nadph +hplus
     long_chain_fatty_aldehyde
   }
 
+  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side left {
+    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+    <-> . +holo-acp +amp +hplus
+    long_chain_fatty_acyl_amp
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_20 [6.1.1.20] +amp_3_end_1 +l_phenylalanine +atp +amp +hplus
-    3_l_phenylalanyl_adenylyl_1_group
+    <-> ec_2_5_1_69 [2.5.1.69] +dmapp
+    r_lavandulyl_diphosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_28 [6.2.1.28] +25r_3_7_dihydroxy_5_cholestan_26_oate +atp +coa +amp
+    25r_3_7_dihydroxy_5_cholestan_26_oyl_coa
   }
 }

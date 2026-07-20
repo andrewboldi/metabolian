@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclohexanol-to-cyclohexanone "cyclohexanol to cyclohexanone" {
-  spacing 172
+  spacing 196
 
   spine at 0,0 {
     cyclohexanol
@@ -20,6 +20,18 @@ pathway cyclohexanol-to-cyclohexanone "cyclohexanol to cyclohexanone" {
     cyclohexanone
     <-> ec_4_1_3_35 [4.1.3.35] +acetyl_coa
     1_hydroxycyclohexyl_acetyl_coa
+  }
+
+  branch from cyclohexanone side right {
+    cyclohexanone
+    <-> . +cyclohexylammonium +nad +h2o +nadh +hplus
+    nh3
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_36 [1.3.99.36] +c_terminal_l_cys_l_leu_l_val_l_cys_1 +hydrogen_acceptor +h2s +co2
+    c_terminal_l_ala_l_leu_l_valinamide_n_ch_ch_s
   }
 
   branch from hydrogen_donor side right {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-dihydrocoumarin-to-2-benzylsuccinate "3,4-dihydrocoumarin to 2-benzylsuccinate" {
-  spacing 244
+  spacing 298
 
   spine at 0,0 {
     3_4_dihydrocoumarin
@@ -22,28 +22,52 @@ pathway 3-4-dihydrocoumarin-to-2-benzylsuccinate "3,4-dihydrocoumarin to 2-benzy
     2_benzylsuccinate
   }
 
-  branch from 3_2_3_dihydroxyphenyl_propanoate side left {
+  branch from 3_2_hydroxyphenyl_propanoate side left {
+    3_2_hydroxyphenyl_propanoate
+    <-> ec_1_3_1_11 [1.3.1.11] +nad +nadh +hplus
+    trans_2_coumarate
+  }
+
+  branch from 3_2_3_dihydroxyphenyl_propanoate side right {
     3_2_3_dihydroxyphenyl_propanoate
     <-> ec_1_14_13_127 [1.14.13.127] +nadh +o2 +hplus +nad +h2o
     3_3_hydroxyphenyl_propanoate
   }
 
-  branch from 2z_2_hydroxypenta_2_4_dienoate side right {
+  branch from 2z_2_hydroxypenta_2_4_dienoate side left {
     2z_2_hydroxypenta_2_4_dienoate
-    <-> ec_4_2_1_80 [4.2.1.80] +h2o
-    s_4_hydroxy_2_oxopentanoate
+    <-> ec_3_7_1_25 [3.7.1.25] +2z_4e_2_hydroxy_6_oxohepta_2_4_dienoate +h2o +hplus
+    acetate
   }
 
-  branch from succinate side left {
+  branch from succinate side right {
     succinate
     <-> . +n6_methyl_l_lysinium +akg +o2 +formaldehyde +co2
     l_lysinium
   }
 
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_16 [1.14.11.16] +l_aspartate +akg +o2 +co2
+    3_hydroxy_l_aspartate
+  }
+
   branch from fumarate side right {
+    fumarate
+    <-> ec_4_2_99_12 [4.2.99.12] +2_carboxylatomethoxy_succinate
+    glycolate
+  }
+
+  branch from fumarate side left {
     fumarate
     <-> ec_4_2_1_2 [4.2.1.2] +h2o
     malate
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_22 [1.14.99.22] +ecdysone +o2 +hydrogen_acceptor +h2o
+    20_hydroxyecdysone
   }
 
   branch from hydrogen_donor side left {

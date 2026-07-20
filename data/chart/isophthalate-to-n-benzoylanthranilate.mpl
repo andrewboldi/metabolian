@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isophthalate-to-n-benzoylanthranilate "isophthalate to N-benzoylanthranilate" {
-  spacing 196
+  spacing 220
 
   spine at 0,0 {
     isophthalate
@@ -18,13 +18,25 @@ pathway isophthalate-to-n-benzoylanthranilate "isophthalate to N-benzoylanthrani
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_111 [4.2.3.111] +gpp +h2o
-    s_terpineol
+    <-> . +2_methylhexadecanoate +atp +coa +amp
+    2_methylhexadecanoyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +3_methylundecanoate +atp +coa +amp
+    3_methylundecanoyl_coa
+  }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> ec_1_14_13_208 [1.14.13.208] +nadph +o2 +hplus +nadp +h2o
+    2_3_epoxy_2_3_dihydrobenzoyl_coa
   }
 
   branch from benzoyl_coa side right {
     benzoyl_coa
-    <-> ec_1_14_13_208 [1.14.13.208] +nadph +o2 +hplus +nadp +h2o
-    2_3_epoxy_2_3_dihydrobenzoyl_coa
+    <-> . +ethanol +coa
+    ethyl_benzoate
   }
 }

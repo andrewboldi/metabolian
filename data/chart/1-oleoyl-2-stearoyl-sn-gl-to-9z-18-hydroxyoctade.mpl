@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade "1-oleoyl-2-stearoyl-sn-gl… to (9Z)-18-hydroxyoctadec-9-…" {
-  spacing 228
+  spacing 264
 
   spine at 0,0 {
     1_oleoyl_2_stearoyl_sn_glycerol
@@ -20,13 +20,37 @@ pathway 1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade "1-oleoyl-2-stearoyl-sn
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoylglycerol +h2o +hplus
-    2_oleoylglycerol
+    <-> . +h2o +coa +hplus
+    oleoyl_coa
+  }
+
+  branch from oleate side right {
+    oleate
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    sn_glycero_3_phosphoserine
+  }
+
+  branch from 18_hydroxyoleate side left {
+    18_hydroxyoleate
+    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +18_hydroxyoleoyl_coa +amp +coa
+    atp
+  }
+
+  branch from 18_hydroxyoleate side right {
+    18_hydroxyoleate
+    <-> . +nadp +nadph
+    18_oxooleic_acid
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    18_hete
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 +h2o +hplus
-    monacolin_l_carboxylate
+    <-> . +behenate +fmnh2 +o2 +h2o +hplus
+    22_hydroxydocosanoate
   }
 }

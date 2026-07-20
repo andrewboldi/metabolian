@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-cyclic-cmp-to-cytidine-5-monophosphate "2',3'-cyclic CMP to cytidine 5'-monophosphate" {
-  spacing 240
+  spacing 252
 
   spine at 0,0 {
     2_3_cyclic_cmp
@@ -18,7 +18,13 @@ pathway 2-3-cyclic-cmp-to-cytidine-5-monophosphate "2',3'-cyclic CMP to cytidine
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +h2o +pi +hplus
-    ctp
+    <-> . +l_serine +cdp_choline +hplus
+    o_phosphocholine_l_serine
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +monosialyl_gb5 +cmp_n_acetyl_neuraminate +hplus
+    disialosyl_gb5
   }
 }

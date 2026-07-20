@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-e-feruperate-to-piperine "(E,E)-feruperate to piperine" {
-  spacing 192
+  spacing 228
 
   spine at 0,0 {
     e_e_feruperate
@@ -18,25 +18,37 @@ pathway e-e-feruperate-to-piperine "(E,E)-feruperate to piperine" {
 
   branch from e_e_piperate side left {
     e_e_piperate
-    <-> . +atp +hplus +ppi
-    e_e_piperoyl_amp
+    <-> . +atp +coa +e_e_piperoyl_coa +phosphate
+    adp
   }
 
   branch from fmn side right {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
+    1_o_8_hydroxyoleoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from e_e_piperonyl_coa side left {
+  branch from fmn side left {
+    fmn
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
+    1_o_11_hydroxyoleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from e_e_piperonyl_coa side right {
     e_e_piperonyl_coa
-    <-> . +pyrrolidinium_ion +coa +hplus
-    piperyline
+    <-> . +2_methylpropanaminium +coa +hplus
+    e_e_piperlonguminine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_160 [4.2.3.160] +fpp
+    2s_3r_6s_9s_protoillud_7_ene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_137 [4.2.3.137] +fpp
-    e_2_epi_caryophyllene
+    <-> ec_4_2_3_161 [4.2.3.161] +fpp
+    3s_asterisca_2_9_6_diene
   }
 }

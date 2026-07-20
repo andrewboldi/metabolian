@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-1-acyl-2-9-hydroxy-to-fatty-acid-anion "1'-[1-acyl-2-(9-hydroxy-(… to fatty acid anion" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     1_1_acyl_2_9_hydroxy_10e_12z_octadecadienoyl_sn
@@ -22,21 +22,33 @@ pathway 1-1-acyl-2-9-hydroxy-to-fatty-acid-anion "1'-[1-acyl-2-(9-hydroxy-(… t
     acyl_coa
   }
 
-  branch from cardiolipin side right {
+  branch from 2_monolysocardiolipin side right {
+    2_monolysocardiolipin
+    <-> . +oleoyl_coa +coa
+    2_oleoylcardiolipin
+  }
+
+  branch from cardiolipin side left {
     cardiolipin
     <-> . +2_monolysocardiolipin
     2_2_dilysocardiolipin
   }
 
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
+  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
     1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
-    1_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    1_acyl_3_o_d_galactosyl_sn_glycerol
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +n_fatty_acyl_l_phenylalanine +h2o
-    l_phenylalanine
+    <-> . +2_o_acyl_3_o_d_galactosyl_sn_glycerol +h2o +hplus
+    3_o_d_galactopyranosyl_sn_glycerol
   }
 }

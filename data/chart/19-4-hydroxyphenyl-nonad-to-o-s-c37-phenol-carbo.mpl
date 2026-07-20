@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo "19-(4-hydroxyphenyl)nonad… to O-(S-C37-(phenol)carboxyp…" {
-  spacing 220
+  spacing 232
 
   spine at 0,0 {
     19_4_hydroxyphenyl_nonadecanoate
@@ -18,13 +18,13 @@ pathway 19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo "19-(4-hydroxyphenyl)no
 
   branch from ppi side left {
     ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    curcumene
+    <-> ec_3_1_7_2 [3.1.7.2] +h2o +gtp +hplus
+    guanosine_3_diphosphate_5_triphosphate_hexaanion
   }
 
-  branch from o_s_19_4_hydroxyphenyl_nonadecanoyl_pantetheine side right {
-    o_s_19_4_hydroxyphenyl_nonadecanoyl_pantetheine
-    <-> ec_2_3_1_261 [2.3.1.261] +malonyl-coa +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_4_hydroxybenzoyl_pantetheine_4_phosphoryl_se
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_125 [4.2.3.125] +fpp
+    muurolene
   }
 }

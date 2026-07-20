@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-alk-1-enyl-2-acyl-s…" {
-  spacing 192
+  spacing 240
 
   spine at 0,0 {
     1_saturated_alkyl_2_acyl_sn_glycero_3_phosphoeth
@@ -20,25 +20,49 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-a
 
   branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano side left {
     1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
+    <-> . +h2o +phosphoethanolamine +hplus
+    1_z_alk_1_enyl_2_acyl_sn_glycerol
+  }
+
+  branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano side right {
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
     <-> . +serine +ethanolaminium
     1_1z_alkenyl_2_acyl_sn_glycero_3_phospho_l_serin
   }
 
-  branch from ethanolaminium side right {
+  branch from ethanolaminium side left {
     ethanolaminium
     <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
     1_acyl_sn_glycerol_3_phosphate
   }
 
+  branch from ethanolaminium side right {
+    ethanolaminium
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +serine
+    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine
+  }
+
   branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side left {
+    1_z_alk_1_enyl_sn_glycero_3_phosphocholine
+    <-> ec_3_3_2_2 [3.3.2.2] +h2o +choline_alfoscerate
+    ch2_containing_aldehyde
+  }
+
+  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side right {
     1_z_alk_1_enyl_sn_glycero_3_phosphocholine
     <-> . +oleoyl_coa +coa
     1_z_alk_1_enyl_2_oleoyl_sn_glycero_3_phosphochol
   }
 
-  branch from fatty-acid side right {
+  branch from fatty-acid side left {
     fatty-acid
     <-> ec_3_5_1_23 [3.5.1.23] +n_acylsphingosine +h2o
     sphingosine
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +n_acylphytosphingosine +h2o
+    phytosphingosine
   }
 }

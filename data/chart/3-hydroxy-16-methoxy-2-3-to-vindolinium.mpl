@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-16-methoxy-2-3-to-vindolinium "3-hydroxy-16-methoxy-2,3-… to vindolinium" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     3_hydroxy_16_methoxy_2_3_dihydrotabersoninium
@@ -18,8 +18,20 @@ pathway 3-hydroxy-16-methoxy-2-3-to-vindolinium "3-hydroxy-16-methoxy-2,3-… to
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_67 [2.1.1.67] +mercaptopurine +sam +hplus
-    6_methylthiopurine
+    <-> ec_2_1_1_115 [2.1.1.115] +1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium +sam +hplus
+    1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_142 [2.1.1.142] +cycloartenol +sam +hplus
+    cyclolaudenol
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_2_8_3_15 [2.8.3.15] +r_2_benzylsuccinate +succinyl_coa
+    r_2_benzylsuccinyl_coa
   }
 
   branch from succinate side right {

@@ -19,22 +19,4 @@ pathway glutathionylspermidinium-to-hydrogen-acceptor "glutathionylspermidinium 
     <-> ec_1_14_99_29 [1.14.99.29] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     hypusine_2
   }
-
-  branch from spermidine side left {
-    spermidine
-    <-> . +citrate +atp +amp +ppi +hplus
-    n_citryl_spermidine
-  }
-
-  branch from gsh side right {
-    gsh
-    <-> . +nad +nadh +hplus
-    gssg
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    9_s_hode
-  }
 }

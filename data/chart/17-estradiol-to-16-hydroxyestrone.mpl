@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-estradiol-to-16-hydroxyestrone "17α-estradiol to 16α-hydroxyestrone…" {
-  spacing 188
+  spacing 218
 
   spine at 0,0 {
     17_estradiol
@@ -22,10 +22,22 @@ pathway 17-estradiol-to-16-hydroxyestrone "17α-estradiol to 16α-hydroxyestrone
     17_estradiol
   }
 
-  branch from 16_hydroxyestrone side right {
+  branch from estrone side right {
+    estrone
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    6_hydroxyestrone
+  }
+
+  branch from 16_hydroxyestrone side left {
     16_hydroxyestrone
     <-> . +udp_d_glucuronate +udp +hplus
     16_hydroxyestrone_16_o_d_glucuronide
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +isethionate +fmnh2 +o2 +sulfite +h2o +hplus
+    glycolaldehyde
   }
 
   branch from fmn side left {

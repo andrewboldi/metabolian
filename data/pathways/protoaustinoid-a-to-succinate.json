@@ -155,22 +155,69 @@
       }
     },
     {
-      "id": "l_argininium",
-      "name": "L-argininium",
-      "formula": "C6H13N4O",
-      "charge": 1,
+      "id": "1_1_dihydroxy_1_1_2_2_tetrahydrolycopene",
+      "name": "1,1'-dihydroxy-1,1',2,2'-tetrahydrolycopene",
+      "short": "1,1'-dihydroxy-1,1'…",
+      "formula": "C40H60O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29965"
+        "chebi": "CHEBI:63065"
       }
     },
     {
-      "id": "3r_3_hydroxy_l_argininium",
-      "name": "(3R)-3-hydroxy-L-argininium",
-      "short": "3-hydroxy-L-arginin…",
-      "formula": "C6H13N4O2",
+      "id": "1_1_dihydroxy_3_4_didehydrolycopene",
+      "name": "1,1'-dihydroxy-3,4-didehydrolycopene",
+      "short": "1,1'-dihydroxy-3,4-…",
+      "formula": "C40H58O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132450"
+      }
+    },
+    {
+      "id": "eriodictyol",
+      "name": "eriodictyol",
+      "formula": "C15H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28412"
+      }
+    },
+    {
+      "id": "taxifolin",
+      "name": "(+)-taxifolin",
+      "formula": "C15H12O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17948"
+      }
+    },
+    {
+      "id": "dihydrokaempferol",
+      "name": "(+)-dihydrokaempferol",
+      "short": "(+)-dihydrokaempfer…",
+      "formula": "C15H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15401"
+      }
+    },
+    {
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58573"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:78294"
+        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -473,11 +520,50 @@
     },
     {
       "id": "r7",
-      "name": "L-arginyl-[ribosomal protein eS6] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[rib...",
-      "equation": "L-arginyl-[ribosomal protein eS6] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[ribosomal protein eS6] + succinate + CO2",
+      "name": "1,1'-dihydroxy-1,1',2,2'-tetrahydrolycopene + A = 1,1'-dihydroxy-3,4-didehydro-1,2-dihy...",
+      "equation": "1,1'-dihydroxy-1,1',2,2'-tetrahydrolycopene + A = 1,1'-dihydroxy-3,4-didehydro-1,2-dihydrolycopene + AH2",
       "substrates": [
         {
-          "metabolite": "l_argininium",
+          "metabolite": "1_1_dihydroxy_1_1_2_2_tetrahydrolycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_1_dihydroxy_3_4_didehydrolycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:59444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "(S)-eriodictyol + 2-oxoglutarate + O2 = (2R,3R)-dihydroquercetin + succinate + CO2",
+      "equation": "(S)-eriodictyol + 2-oxoglutarate + O2 = (2R,3R)-dihydroquercetin + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "eriodictyol",
           "stoichiometry": 1
         },
         {
@@ -491,7 +577,7 @@
       ],
       "products": [
         {
-          "metabolite": "3r_3_hydroxy_l_argininium",
+          "metabolite": "taxifolin",
           "stoichiometry": 1
         },
         {
@@ -504,22 +590,77 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:57160"
+        "rhea": "RHEA:61088"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57160"
+            "id": "RHEA:61088"
           }
         ]
       }
     },
     {
-      "id": "r8",
+      "id": "r9",
+      "name": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + ...",
+      "equation": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dihydrokaempferol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kaempferol_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:61132"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "preaustinoid A1 + 2-oxoglutarate + O2 = berkeleyone B + succinate + CO2 + H2O",
       "equation": "preaustinoid A1 + 2-oxoglutarate + O2 = berkeleyone B + succinate + CO2 + H2O",
       "substrates": [
@@ -555,7 +696,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:65184"
       },

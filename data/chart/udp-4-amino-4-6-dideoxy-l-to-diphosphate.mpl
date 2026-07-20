@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-4-amino-4-6-dideoxy-l-to-diphosphate "UDP-4-amino-4,6-dideoxy-L… to diphosphate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine
@@ -20,7 +20,13 @@ pathway udp-4-amino-4-6-dideoxy-l-to-diphosphate "UDP-4-amino-4,6-dideoxy-L… t
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    stemod_13_17_ene
+    <-> ec_4_2_3_194 [4.2.3.194] +fpp +h2o
+    drimenol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_57 [4.2.3.57] +fpp
+    caryophyllene
   }
 }

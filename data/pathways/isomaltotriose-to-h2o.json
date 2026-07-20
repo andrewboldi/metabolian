@@ -1,0 +1,408 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isomaltotriose-to-h2o",
+  "name": "Isomaltotriose to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from Isomaltotriose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR129862"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isomaltotriose",
+      "name": "Isomaltotriose",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104226"
+      }
+    },
+    {
+      "id": "alpha_d_glucose",
+      "name": "alpha-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105027"
+      }
+    },
+    {
+      "id": "isomaltotetraose",
+      "name": "Isomaltotetraose",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM164850"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "isomaltopentaose",
+      "name": "Isomaltopentaose",
+      "formula": "C30H52O26",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM164849"
+      }
+    },
+    {
+      "id": "isomaltohexaose",
+      "name": "Isomaltohexaose",
+      "formula": "C36H62O31",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM164848"
+      }
+    },
+    {
+      "id": "isomaltoheptaose",
+      "name": "Isomaltoheptaose",
+      "formula": "C42H72O36",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM168027"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM114"
+      }
+    },
+    {
+      "id": "l_valine",
+      "name": "L-valine",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM199"
+      }
+    },
+    {
+      "id": "valyl_proline",
+      "name": "Valyl-Proline",
+      "formula": "C10H18N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:173611"
+      }
+    },
+    {
+      "id": "l_lysine",
+      "name": "L-lysine",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1364268"
+      }
+    },
+    {
+      "id": "lysyl_proline",
+      "name": "Lysyl-proline",
+      "formula": "C11H22N3O3",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1371379"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_70",
+      "name": "glucan 1,6-alpha-glucosidase",
+      "ec": [
+        "3.2.1.70"
+      ]
+    },
+    {
+      "id": "ec_3_4_13_9",
+      "name": "Xaa-Pro dipeptidase",
+      "ec": [
+        "3.4.13.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucan 1,6-alpha-glucosidase",
+      "ec": "3.2.1.70",
+      "substrates": [
+        {
+          "metabolite": "isomaltotriose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isomaltotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR129862"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucan 1,6-alpha-glucosidase",
+      "ec": "3.2.1.70",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isomaltotetraose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isomaltopentaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR129865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucan 1,6-alpha-glucosidase",
+      "ec": "3.2.1.70",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isomaltopentaose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isomaltohexaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR129863"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glucan 1,6-alpha-glucosidase",
+      "ec": "3.2.1.70",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isomaltohexaose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isomaltoheptaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR129864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129864"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Xaa-Pro dipeptidase",
+      "ec": "3.4.13.9",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_valine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valyl_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_13_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR130375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Xaa-Pro dipeptidase",
+      "ec": "3.4.13.9",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lysyl_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_13_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR130376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130376"
+          }
+        ]
+      }
+    }
+  ]
+}

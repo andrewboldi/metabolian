@@ -102,6 +102,15 @@
       }
     },
     {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
       "id": "l_tryptophan",
       "name": "L-tryptophan",
       "formula": "C11H12N2O2",
@@ -111,13 +120,30 @@
       }
     },
     {
-      "id": "2_ammonioprop_2_enoate",
-      "name": "2-ammonioprop-2-enoate",
-      "short": "2-ammonioprop-2-eno…",
-      "formula": "C3H5NO2",
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "indoxyl",
+      "name": "indoxyl",
+      "formula": "C8H7NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76565"
+        "chebi": "CHEBI:17840"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
       }
     }
   ],
@@ -134,6 +160,13 @@
       "name": "indole 2,3-dioxygenase",
       "ec": [
         "1.13.11.17"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_122",
+      "name": "tryptophan synthase (indole-salvaging)",
+      "ec": [
+        "4.2.1.122"
       ]
     }
   ],
@@ -273,35 +306,96 @@
     },
     {
       "id": "r4",
-      "name": "L-tryptophan = indole + 2-aminoprop-2-enoate",
-      "equation": "L-tryptophan = indole + 2-aminoprop-2-enoate",
+      "name": "tryptophan synthase (indole-salvaging)",
+      "equation": "indole + L-serine = L-tryptophan + H2O",
+      "ec": "4.2.1.122",
       "substrates": [
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "1h_indole",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_ammonioprop_2_enoate",
+          "metabolite": "serine",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_122"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42976"
+        "rhea": "RHEA:26434"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42976"
+            "id": "RHEA:26434"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "indole + NADH + O2 + H(+) = indoxyl + NAD(+) + H2O",
+      "equation": "indole + NADH + O2 + H(+) = indoxyl + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indoxyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:52836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52836"
           }
         ]
       }

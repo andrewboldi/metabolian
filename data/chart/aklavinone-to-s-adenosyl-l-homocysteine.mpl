@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aklavinone-to-s-adenosyl-l-homocysteine "aklavinone to S-adenosyl-L-homocysteine" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     aklavinone
@@ -20,27 +20,27 @@ pathway aklavinone-to-s-adenosyl-l-homocysteine "aklavinone to S-adenosyl-L-homo
     10_hydroxy_13_deoxydaunorubicin_1
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +ddtmp +dttp
-    ddtdp
-  }
-
-  branch from methanol side right {
-    methanol
-    <-> ec_3_1_1_123 [3.1.1.123] +17_dehydropreakuammicine +h2o +co2
-    norfluorocurarine
-  }
-
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +c20_dihydroceramide +hydrogen_donor +o2 +h2o
-    c20_ceramide
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
+    15_r_hepe
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +hydrogen_donor +o2 +h2o
+    7z_10z_13r_14e_16z_19z_13_hydroxydocosapentaeno
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +20_methyl_21_22_didehydro_20_21_dihydrobotryococ +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
-    chloromethane
+    <-> . +c30_botryococcene +sam +hplus
+    20_methyl_21_22_didehydro_20_21_dihydrobotryococ
   }
 }

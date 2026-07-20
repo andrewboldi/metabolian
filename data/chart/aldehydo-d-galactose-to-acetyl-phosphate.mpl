@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-galactose-to-acetyl-phosphate "aldehydo-D-galactose… to acetyl phosphate" {
-  spacing 208
+  spacing 262
 
   spine at 0,0 {
     aldehydo_d_galactose_6_phosphate
@@ -28,22 +28,46 @@ pathway aldehydo-d-galactose-to-acetyl-phosphate "aldehydo-D-galactose… to ace
     galactitol_1_phosphate
   }
 
-  branch from e4p side right {
+  branch from keto_d_tagatose_6_phosphate side right {
+    keto_d_tagatose_6_phosphate
+    <-> . +d_tagatopyranose +atp +adp
+    h
+  }
+
+  branch from e4p side left {
     e4p
     <-> ec_1_13_11_79 [1.13.11.79] +fmnh2 +o2 +5_6_dimethylbenzimidazole +hplus
     dialurate
   }
 
+  branch from e4p side right {
+    e4p
+    <-> . +h2o +pi
+    d_erythrose
+  }
+
   branch from n6_acetyl_l_lysine side left {
     n6_acetyl_l_lysine
-    <-> . +o2 +h2o +l_allysine +h2o2
-    acetamide
+    <-> ec_1_4_3_13 [1.4.3.13] +acetamide +l_allysine +h2o2 +h2o
+    o2
   }
 
   branch from l_lysinium side right {
     l_lysinium
     <-> . +gtp +ppi +hplus
     n_5_guanylyl_l_lysine_1
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_2_1_1_60 [2.1.1.60] +sam +sah +hplus
+    n6_methyl_l_lysinium
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_1_1_94 [3.1.1.94] +3s_versiconol_acetate +h2o +hplus
+    s_versiconol
   }
 
   branch from acetate side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-o-methyl-dtmp-1-to-adp-d-ribose "4-O-methyl-dTMP(1−) to ADP-D-ribose" {
-  spacing 280
+  spacing 310
 
   spine at 0,0 {
     4_o_methyl_dtmp_1
@@ -18,19 +18,31 @@ pathway 4-o-methyl-dtmp-1-to-adp-d-ribose "4-O-methyl-dTMP(1−) to ADP-D-ribose
 
   branch from s_methyl_l_cysteine side left {
     s_methyl_l_cysteine
-    <-> ec_2_1_1_n11 [2.1.1.n11] +deoxyribonucleoside_5_methylphosphate +l_cysteine +hplus
-    deoxyribonucleotide_1
+    <-> . +l_cysteine +sam +hplus
+    sah
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_malonyl_l_lysine_1 +nad +h2o +l_lysinium
-    2_o_malonyl_adp_d_ribose
+    <-> . +l_cysteine +nad +hplus
+    s_adp_d_ribosyl_l_cysteine_2
+  }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +l_lysinium +nad +hplus
+    6_n_adp_d_ribosyl_l_lysinium_1
+  }
+
+  branch from adp_d_ribose side right {
+    adp_d_ribose
+    <-> . +6_n_adp_d_ribosyl_l_lysinium_1 +h2o
+    l_lysinium
   }
 
   branch from adp_d_ribose side left {
     adp_d_ribose
-    <-> . +6_n_adp_d_ribosyl_l_lysinium_1 +h2o
-    l_lysinium
+    <-> . +n4_adp_d_ribosyl_l_asparagine_2 +h2o
+    l_asparagine
   }
 }

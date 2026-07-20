@@ -113,22 +113,39 @@
       }
     },
     {
-      "id": "leukotriene_b4",
-      "name": "leukotriene B4",
-      "formula": "C20H31O4",
-      "charge": -1,
+      "id": "s_naringenin",
+      "name": "(S)-naringenin",
+      "formula": "C15H12O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57461"
+        "chebi": "CHEBI:17846"
       }
     },
     {
-      "id": "18_hydroxyleukotriene_b4",
-      "name": "18-hydroxyleukotriene B4",
-      "short": "18-hydroxyleukotrie…",
-      "formula": "C20H31O5",
-      "charge": -1,
+      "id": "2s_dihydrotricetin",
+      "name": "(2S)-dihydrotricetin",
+      "formula": "C15H12O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:137391"
+        "chebi": "CHEBI:48026"
+      }
+    },
+    {
+      "id": "taxifolin",
+      "name": "(+)-taxifolin",
+      "formula": "C15H12O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17948"
+      }
+    },
+    {
+      "id": "dihydromyricetin",
+      "name": "(+)-dihydromyricetin",
+      "formula": "C15H12O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28429"
       }
     }
   ],
@@ -279,11 +296,62 @@
     },
     {
       "id": "r4",
-      "name": "leukotriene B4 + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-leukotriene B...",
-      "equation": "leukotriene B4 + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-leukotriene B4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(2S)-naringenin + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (2S)-dihydrotriceti...",
+      "equation": "(2S)-naringenin + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (2S)-dihydrotricetin + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "leukotriene_b4",
+          "metabolite": "s_naringenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_dihydrotricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2R,3R)-dihydroquercetin + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-dihydr...",
+      "equation": "(2R,3R)-dihydroquercetin + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-dihydromyricetin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "taxifolin",
           "stoichiometry": 1
         },
         {
@@ -297,7 +365,7 @@
       ],
       "products": [
         {
-          "metabolite": "18_hydroxyleukotriene_b4",
+          "metabolite": "dihydromyricetin",
           "stoichiometry": 1
         },
         {
@@ -314,16 +382,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:53440"
+        "rhea": "RHEA:61116"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53440"
+            "id": "RHEA:61116"
           }
         ]
       }

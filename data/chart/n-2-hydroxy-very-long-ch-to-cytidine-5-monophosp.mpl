@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-2-hydroxy-very-long-ch-to-cytidine-5-monophosp "N-(2-hydroxy-very-long-ch… to cytidine 5'-monophosphate" {
-  spacing 184
+  spacing 208
 
   spine at 0,0 {
     n_2_hydroxy_very_long_chain_fatty_acyl_r_4_hydro
@@ -18,21 +18,27 @@ pathway n-2-hydroxy-very-long-ch-to-cytidine-5-monophosp "N-(2-hydroxy-very-long
     1_2_diacyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from dag side left {
-    dag
-    <-> ec_3_1_4_62 [3.1.4.62] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    phosphoethanolamine
+  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side left {
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_4_1_1_65 [4.1.1.65] +hplus +co2
+    3_sn_phosphatidyl_l_serine
   }
 
   branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side right {
     1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    <-> . +2_monoglyceride +1_acyl_sn_glycero_3_phosphoethanolamine
-    2_3_diacyl_sn_glycerol
+    <-> . +n_acetylsphingosine +2_acyl_sn_glycero_3_phosphoethanolamine
+    1_o_acyl_n_acetylsphingosine
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    <-> . +d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne +cmp_n_acetyl_neuraminate +hplus
     neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 }

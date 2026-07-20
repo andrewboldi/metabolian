@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-amino-4-phosphonobutano-to-succinate "2-amino-4-phosphonobutano… to succinate" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     2_amino_4_phosphonobutanoate
@@ -24,19 +24,37 @@ pathway 2-amino-4-phosphonobutano-to-succinate "2-amino-4-phosphonobutano… to 
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_86 [2.7.7.86] +gtp +atp
-    2_3_cgamp
+    <-> ec_2_7_7_108 [2.7.7.108] +l_tyrosine +atp
+    o_adenyl_l_tyrosine_1
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_108 [2.7.7.108] +l_threonine +atp
+    o_adenyl_l_threonine_1
+  }
+
+  branch from cmp_5_3_aminopropyl_phosphonate side left {
+    cmp_5_3_aminopropyl_phosphonate
+    <-> . +ctp +h +2_amino_4_phosphonobutanoate +co2
+    diphosphate
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cdp_ethanolamine +hplus
-    1_o_palmityl_2_arachidonoyl_sn_glycero_3_phospho
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
-  branch from succinate side left {
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+  }
+
+  branch from succinate side right {
     succinate
-    <-> . +chrodrimanin_h +akg +o2 +co2 +h2o
-    chrodrimanin_e
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +formaldehyde +co2
+    n6_methyl_l_lysinium
   }
 }

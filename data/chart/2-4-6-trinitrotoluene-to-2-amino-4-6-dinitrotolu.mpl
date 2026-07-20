@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu "2,4,6-trinitrotoluene… to 2-amino-4,6-dinitrotoluen…" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     2_4_6_trinitrotoluene_radical
@@ -24,9 +24,33 @@ pathway 2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu "2,4,6-trinitrotoluene�
     4_hydroxylamino_2_6_dinitrotoluene
   }
 
-  branch from 2_hydroxylamino_4_6_dinitrotoluene side right {
+  branch from 2_4_6_trinitrotoluene side right {
+    2_4_6_trinitrotoluene
+    <-> . +nadph +nadp
+    4_methyl_1_3_5_trinitrocyclohexa_2_4_dien_1_ide
+  }
+
+  branch from 2_hydroxylamino_4_6_dinitrotoluene side left {
     2_hydroxylamino_4_6_dinitrotoluene
     <-> . +udp_d_glucose +udp +hplus
     2_hydroxylamino_4_6_dinitrotoluene_o_d_glucoside
+  }
+
+  branch from 2_hydroxylamino_4_6_dinitrotoluene side right {
+    2_hydroxylamino_4_6_dinitrotoluene
+    <-> . +udp_d_glucose +udp +hplus
+    2_hydroxylamino_4_6_dinitrotoluene_3c_d_glucosid
+  }
+
+  branch from 2_amino_4_6_dinitrotoluene side left {
+    2_amino_4_6_dinitrotoluene
+    <-> . +nadh +h +2_hydroxylamino_4_6_dinitrotoluene +h2o
+    nad
+  }
+
+  branch from 2_amino_4_6_dinitrotoluene side right {
+    2_amino_4_6_dinitrotoluene
+    <-> . +nadh +h +nad +h2o
+    2_6_diamino_4_nitrotoluene
   }
 }

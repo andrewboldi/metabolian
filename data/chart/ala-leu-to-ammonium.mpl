@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ala-leu-to-ammonium "Ala-Leu to ammonium" {
-  spacing 156
+  spacing 192
 
   spine at 0,0 {
     ala_leu
@@ -18,19 +18,37 @@ pathway ala-leu-to-ammonium "Ala-Leu to ammonium" {
 
   branch from leucine side left {
     leucine
-    <-> . +isoleucine +l_asparagine +l_histidine +ornithine +l_lysinium +cysteine +aspartate +l_phenylalanine +glutamate +atp +amp +ppi +h2o +hplus
-    bacitracin_a
+    <-> . +r_3_phenyllactate +sam +atp +amp +sah +ppi +hplus
+    pf1022b
+  }
+
+  branch from leucine side right {
+    leucine
+    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
+    pf1022d
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +palmitoyl_coa +hplus +co2 +coa
+    1_deoxy_3_dehydrosphinganine
   }
 
   branch from alanine side right {
     alanine
-    <-> . +ala_gly +h2o
-    glycine
+    <-> . +ala_asp +h2o
+    aspartate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +4_guanidiniumylbutanamide +h2o
-    4_guanidinobutanoic_acid
+    <-> ec_4_3_1_31 [4.3.1.31] +l_tryptophan
+    e_3_indol_3_yl_acrylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_110 [3.5.1.110] +z_2_methylureidoacrylate +h2o +hplus +co2
+    z_3_amino_2_methylacrylate
   }
 }

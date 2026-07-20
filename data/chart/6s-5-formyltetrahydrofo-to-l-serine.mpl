@@ -4,14 +4,12 @@
 # edit the generator, not this file.
 
 pathway 6s-5-formyltetrahydrofo-to-l-serine "(6S)-5-formyltetrahydrofo… to L-serine" {
-  spacing 280
+  spacing 320
 
   spine at 0,0 {
     6s_5_formyltetrahydrofolate
-    <-> ec_6_3_3_2 [6.3.3.2] +atp -adp -pi
-    methenyl_thf
-    <-> . +n1_5_phospho_d_ribosyl_glycinamide +h2o -thf -hplus
-    n2_formyl_n1_5_phospho_d_ribosyl_glycinamide
+    <-> ec_2_1_2_5 [2.1.2.5] +glutamate -thf -hplus
+    n_formyl_l_glutamate
     <-> ec_1_5_3_24 [1.5.3.24] +sarcosine +thf +o2 -glycine -h2o2
     methylene_thf
     <-> ec_2_1_2_1 [2.1.2.1] +glycine +h2o -serine
@@ -20,13 +18,25 @@ pathway 6s-5-formyltetrahydrofo-to-l-serine "(6S)-5-formyltetrahydrofo… to L-s
 
   branch from glycine side left {
     glycine
-    <-> . +glycyldehydrophenylalanine +h2o
-    2_3_didehydrophenylalanine
+    <-> . +glycocholate +arginine
+    l_arginocholate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +holo-acp +hplus
+    n2_3r_3_hydroxyacyl_glycinate
+  }
+
+  branch from serine side left {
+    serine
+    <-> ec_1_1_1_387 [1.1.1.387] +nad +co2 +nadh
+    ammonioacetaldehyde
   }
 
   branch from serine side right {
     serine
-    <-> . +nad +nadh +hplus
-    l_3_oxoalanine
+    <-> ec_2_7_1_225 [2.7.1.225] +atp +adp +hplus
+    pser
   }
 }

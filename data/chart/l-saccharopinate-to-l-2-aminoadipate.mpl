@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-saccharopinate-to-l-2-aminoadipate "L-saccharopinate to L-2-aminoadipate" {
-  spacing 280
+  spacing 324
 
   spine at 0,0 {
     l_saccharopinate
@@ -18,19 +18,37 @@ pathway l-saccharopinate-to-l-2-aminoadipate "L-saccharopinate to L-2-aminoadipa
 
   branch from l_allysine side left {
     l_allysine
-    <-> . +l_lysinium +nad +h2o +nadh +hplus
+    <-> . +holo-acp +nadp +nadph +hplus
+    o_s_l_2_amino_6_adipoylpantetheine_4_phosphoryl
+  }
+
+  branch from l_allysine side right {
+    l_allysine
+    <-> . +l_lysinium +nadp +h2o +nadph +hplus
     nh3
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> . +l_alanyl_l_glutamate +h2o
+    alanine
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_5 [2.6.1.5] +l_phenylalanine +akg
-    keto_phenylpyruvate
+    <-> ec_6_3_2_33 [6.3.2.33] +5_6_7_8_tetrahydromethanopterin +atp +adp +pi +hplus
+    5_6_7_8_tetrahydrosarcinapterin
   }
 
   branch from s_1_piperideine_6_carboxylate side left {
     s_1_piperideine_6_carboxylate
-    <-> . +7_n_5s_5_amino_5_carboxypentyl_formamidino_7_dea +sam +5_deoxyadenosine +methionine +hplus
-    archaeosine_5_phosphate_zwitterionic
+    <-> ec_1_5_3_7 [1.5.3.7] +o2 +h2o2 +hplus
+    l_pipecolic_acid
+  }
+
+  branch from s_1_piperideine_6_carboxylate side right {
+    s_1_piperideine_6_carboxylate
+    <-> ec_1_4_1_18 [1.4.1.18] +nadp +nh3 +nadph +hplus
+    l_lysinium
   }
 }

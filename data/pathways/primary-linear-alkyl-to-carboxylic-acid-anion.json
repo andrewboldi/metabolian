@@ -1,0 +1,433 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "primary-linear-alkyl-to-carboxylic-acid-anion",
+  "name": "primary linear alkyl… to carboxylic acid anion",
+  "category": "redox-detox",
+  "summary": "A 3-step route from primary linear alkyl sulfate ester(1−) to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:67908"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:157685"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "primary_linear_alkyl_sulfate_ester",
+      "name": "primary linear alkyl sulfate ester",
+      "short": "primary linear…",
+      "formula": "CH2O4SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:157685"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "primary_alcohol",
+      "name": "primary alcohol",
+      "formula": "CH3OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15734"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17478"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "4s_limonene",
+      "name": "(4S)-limonene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15383"
+      }
+    },
+    {
+      "id": "s_perillyl_alcohol",
+      "name": "(S)-(−)-perillyl alcohol",
+      "short": "(−)-perillyl alcohol",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10782"
+      }
+    },
+    {
+      "id": "s_3_indol_3_ylmethyl_6_7_8_8a_tetrahydropyrrolo",
+      "name": "(S)-3-(indol-3-ylmethyl)-6,7,8,8a-tetrahydropyrrolo[1,2-a]pyrazin-1-one",
+      "short": "3-(indol-3-ylmethyl…",
+      "formula": "C16H17N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145652"
+      }
+    },
+    {
+      "id": "1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol",
+      "name": "1-hydroxy-3-(indol-3-ylmethyl)-6H,7H,8H-5λ5-pyrrolo[1,2-a]pyrazin-5-ylium",
+      "short": "1-hydroxy-3-(indol-…",
+      "formula": "C16H16N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:145928"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_6_21",
+      "name": "linear primary-alkylsulfatase",
+      "ec": [
+        "3.1.6.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_20",
+      "name": "alkan-1-ol dehydrogenase (acceptor)",
+      "ec": [
+        "1.1.99.20"
+      ]
+    },
+    {
+      "id": "ec_1_2_3_1",
+      "name": "aldehyde oxidase",
+      "ec": [
+        "1.2.3.1"
+      ]
+    },
+    {
+      "id": "ec_1_17_99_8",
+      "name": "limonene dehydrogenase",
+      "ec": [
+        "1.17.99.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "linear primary-alkylsulfatase",
+      "equation": "a primary linear alkyl sulfate ester + H2O = a primary alcohol + sulfate + H(+)",
+      "ec": "3.1.6.21",
+      "substrates": [
+        {
+          "metabolite": "primary_linear_alkyl_sulfate_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_6_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:67908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alkan-1-ol dehydrogenase (acceptor)",
+      "equation": "a primary alcohol + A = an aldehyde + AH2",
+      "ec": "1.1.99.20",
+      "substrates": [
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14685"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aldehyde oxidase",
+      "equation": "an aldehyde + O2 + H2O = a carboxylate + H2O2 + H(+)",
+      "ec": "1.2.3.1",
+      "substrates": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16829"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "limonene dehydrogenase",
+      "equation": "(4S)-limonene + A + H2O = (4S)-perillyl alcohol + AH2",
+      "ec": "1.17.99.8",
+      "substrates": [
+        {
+          "metabolite": "4s_limonene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_perillyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(S)-3-(indol-3-ylmethyl)-6,7,8,8a-tetrahydropyrrolo[1,2-a]pyrazin-1-one + A + H(+) = 1-...",
+      "equation": "(S)-3-(indol-3-ylmethyl)-6,7,8,8a-tetrahydropyrrolo[1,2-a]pyrazin-1-one + A + H(+) = 1-hydroxy-3-(indol-3-ylmethyl)-6H,7H,8H-5lambda(5)-pyrrolo[1,2-a]pyrazine + AH2",
+      "substrates": [
+        {
+          "metabolite": "s_3_indol_3_ylmethyl_6_7_8_8a_tetrahydropyrrolo",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62740"
+          }
+        ]
+      }
+    }
+  ]
+}

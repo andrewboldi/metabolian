@@ -15,10 +15,4 @@ pathway hydroxyurea-to-ammonium "hydroxyurea to ammonium" {
     <-> ec_6_3_3_5 [6.3.3.5] +atp +h2o +hplus -nh3 -adp -co2 -pi
     d_cycloserine
   }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +n_methylhistaminium +o2 +h2o +h2o2
-    1_methylimidazole_4_acetaldehyde
-  }
 }

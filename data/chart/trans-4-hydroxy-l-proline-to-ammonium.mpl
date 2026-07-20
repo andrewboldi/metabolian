@@ -15,16 +15,4 @@ pathway trans-4-hydroxy-l-proline-to-ammonium "trans-4-hydroxy-L-proline to ammo
     <-> ec_3_5_4_22 [3.5.4.22] +h2o +hplus -nh3
     2_5_dioxopentanoate
   }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +cyathatriol +hydrogen_acceptor
-    cyathin_a3
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +5_hydroxyoctan_4_aminium +nad +h2o +nadh +hplus
-    5_hydroxy_4_octanone
-  }
 }

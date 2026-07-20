@@ -1,0 +1,411 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "motiol-to-fmn",
+  "name": "motiol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from motiol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80219"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231458"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "motiol",
+      "name": "motiol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231458"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_carboxyl_motiol",
+      "name": "4β-carboxyl motiol",
+      "formula": "C30H47O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231459"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_hydroxyl_4_carboxyl_motiol",
+      "name": "2α-hydroxyl, 4β-carboxyl motiol",
+      "short": "2α-hydroxyl,…",
+      "formula": "C30H47O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231460"
+      }
+    },
+    {
+      "id": "polytolypin",
+      "name": "polytolypin",
+      "formula": "C30H44O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231461"
+      }
+    },
+    {
+      "id": "steroid",
+      "name": "steroid",
+      "formula": "C19H31R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35341"
+      }
+    },
+    {
+      "id": "15_hydroxy_steroid",
+      "name": "15α-hydroxy steroid",
+      "formula": "C19H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83147"
+      }
+    },
+    {
+      "id": "octadecanal",
+      "name": "octadecanal",
+      "formula": "C18H36O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17034"
+      }
+    },
+    {
+      "id": "heptadecane",
+      "name": "heptadecane",
+      "formula": "C17H36",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16148"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "motiol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = 4beta-carboxyl motiol + 3 ox...",
+      "equation": "motiol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = 4beta-carboxyl motiol + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "substrates": [
+        {
+          "metabolite": "motiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxyl_motiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4beta-carboxyl motiol + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha-hydroxyl, ...",
+      "equation": "4beta-carboxyl motiol + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha-hydroxyl, 4beta-carboxyl motiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_carboxyl_motiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyl_4_carboxyl_motiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80223"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80223"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2alpha-hydroxyl, 4beta-carboxyl motiol + 4 reduced [NADPH--hemoprotein reductase] + 4 O...",
+      "equation": "2alpha-hydroxyl, 4beta-carboxyl motiol + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = polytolypin + 4 oxidized [NADPH--hemoprotein reductase] + 5 H2O + 5 H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyl_4_carboxyl_motiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "polytolypin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80227"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 15alpha-hydroxy steroid + o...",
+      "equation": "a steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 15alpha-hydroxy steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_hydroxy_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:83179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "octadecanal + reduced [NADPH--hemoprotein reductase] + O2 = heptadecane + oxidized [NAD...",
+      "equation": "octadecanal + reduced [NADPH--hemoprotein reductase] + O2 = heptadecane + oxidized [NADPH--hemoprotein reductase] + CO2 + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "octadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "heptadecane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:83559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83559"
+          }
+        ]
+      }
+    }
+  ]
+}

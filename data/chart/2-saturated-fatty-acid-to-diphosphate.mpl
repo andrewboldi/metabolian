@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diphosphate" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     2_saturated_fatty_acid_anion
@@ -12,19 +12,43 @@ pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diph
     2r_2_hydroxy_fatty_acid_anion
     <-> . +o2 -co2 -h2o
     fatty-acid
-    <-> . +atp +hplus -ppi
-    fatty_acyl_amp
+    <-> . +atp +coa -amp -ppi
+    fatty_acyl_coa
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_1_1_111 [3.1.1.111] +1_acyl_sn_glycero_3_phosphoserine +h2o +hplus
-    sn_glycero_3_phosphoserine
+    <-> . +1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate +h2o +hplus
+    2_16_1_lysophosphatidate
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> ec_3_1_1_111 [3.1.1.111] +3_sn_phosphatidyl_l_serine +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from fatty_acyl_coa side left {
+    fatty_acyl_coa
+    <-> . +15_methylhexadecasphinganine +coa +hplus
+    n_acyl_15_methylhexadecasphinganine
+  }
+
+  branch from fatty_acyl_coa side right {
+    fatty_acyl_coa
+    <-> . +phytosphingosine +coa +hplus
+    n_acylphytosphingosine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_67 [4.2.3.67] +fpp
+    cis_muurola_4_14_5_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_46 [4.2.3.46] +fpp
-    e_e_farnesene
+    <-> ec_4_2_3_68 [4.2.3.68] +fpp +h2o
+    eudesmol
   }
 }

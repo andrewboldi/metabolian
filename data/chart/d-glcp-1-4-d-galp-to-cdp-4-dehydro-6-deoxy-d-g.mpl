@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g "β-D-Glcp-(1→4)-D-Galp to CDP-4-dehydro-6-deoxy-D-g…" {
-  spacing 224
+  spacing 260
 
   spine at 0,0 {
     d_glcp_1_4_d_galp
@@ -16,15 +16,39 @@ pathway d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g "β-D-Glcp-(1→4)-D-Galp
     cdp_4_dehydro_6_deoxy_d_glucose
   }
 
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_2_7_1_204 [2.7.1.204] +n_phosphonato_l_histidine +l_histidine
+    d_galactopyranose_6_phosphate
+  }
+
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_1_1_3_5 [1.1.3.5] +o2 +h2o2
+    d_galactono_1_5_lactone
+  }
+
   branch from g1p side left {
     g1p
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp_d_glucose +d_mannose_1_phosphate
-    gdp_d_mannose
+    <-> ec_2_4_1_342 [2.4.1.342] +adp_d_glucoside +adp +hplus
+    maltose_1_phosphate
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> . +h2o +gmp +hplus
+    gdp_d_glucose
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +suberate +atp +coa +amp
+    octanedioyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_140 [4.2.3.140] +copal_8_ol_diphosphate
-    cis_abienol
+    <-> ec_2_5_1_138 [2.5.1.138] +umbelliferone +gpp
+    8_geranylumbelliferone
   }
 }

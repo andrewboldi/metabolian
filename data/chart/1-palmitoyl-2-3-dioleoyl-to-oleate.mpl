@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-3-dioleoyl-to-oleate "1-palmitoyl-2,3-dioleoyl-… to oleate" {
-  spacing 152
+  spacing 230
 
   spine at 0,0 {
     1_palmitoyl_2_3_dioleoyl_sn_glycerol
@@ -32,31 +32,73 @@ pathway 1-palmitoyl-2-3-dioleoyl-to-oleate "1-palmitoyl-2,3-dioleoyl-… to olea
 
   branch from palmitate side right {
     palmitate
+    <-> . +2_palmitoylglycerol +h2o +hplus
+    glycerol
+  }
+
+  branch from palmitate side left {
+    palmitate
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
     choline_alfoscerate
   }
 
+  branch from 2_oleoylglycerol side right {
+    2_oleoylglycerol
+    <-> . +lauroyl_coa +coa
+    1_lauroyl_2_oleoyl_sn_glycerol
+  }
+
   branch from 2_oleoylglycerol side left {
     2_oleoylglycerol
-    <-> . +octanoyl_coa +coa
-    1_octanoyl_2_oleoyl_sn_glycerol
+    <-> . +myristoyl_coa +coa
+    1_myristoyl_2_oleoyl_sn_glycerol
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_3_dioleoylglycerol +h2o +hplus
-    1_oleoyl_sn_glycerol
+    <-> . +1_palmitoyl_2_3_dioleoyl_sn_glycerol +h2o +hplus
+    1_palmitoyl_3_oleoyl_sn_glycerol
   }
 
-  branch from 1_2_dioleoyl_sn_glycerol side left {
+  branch from oleate side left {
+    oleate
+    <-> . +h2o +3_oleoyl_sn_glycerol +hplus
+    1_3_dioleoylglycerol
+  }
+
+  branch from 1_2_dioleoyl_sn_glycerol side right {
     1_2_dioleoyl_sn_glycerol
     <-> . +h2o +oleate +hplus
     monooleoylglycerol
   }
 
-  branch from 1_oleoyl_3_palmitoyl_sn_glycerol side right {
+  branch from 1_2_dioleoyl_sn_glycerol side left {
+    1_2_dioleoyl_sn_glycerol
+    <-> . +atp +adp +hplus
+    1_2_dioleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from 1_2_dioleoyl_3_palmitoyl_sn_glycerol side right {
+    1_2_dioleoyl_3_palmitoyl_sn_glycerol
+    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphoethanol +1_2_dioleoyl_sn_glycerol
+    1_oleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from 1_oleoyl_3_palmitoyl_sn_glycerol side left {
     1_oleoyl_3_palmitoyl_sn_glycerol
     <-> . +3_palmitoyl_sn_glycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
     oleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from triolein side right {
+    triolein
+    <-> . +all_trans_retinol +dioleoylglycerol
+    all_trans_retinyl_oleate
+  }
+
+  branch from triolein side left {
+    triolein
+    <-> . +1_2_dioleoyl_sn_glycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
+    1_o_oleoyl_sn_glycero_3_phosphocholine
   }
 }

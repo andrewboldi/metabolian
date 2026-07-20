@@ -130,39 +130,60 @@
       }
     },
     {
-      "id": "sphinganine",
-      "name": "Sphinganine",
-      "formula": "C18H40NO2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:57817"
-      }
-    },
-    {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "8_hydroxylaurate",
-      "name": "8-hydroxylaurate",
-      "formula": "C12H23O3",
+      "id": "phytosphingosine_1_phosphate",
+      "name": "phytosphingosine 1-phosphate",
+      "short": "phytosphingosine 1-P",
+      "formula": "C18H39NO6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:167541"
+        "chebi": "CHEBI:64795"
       }
     },
     {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58210"
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2_hydroxyhexacosanoyl_coa",
+      "name": "2-hydroxyhexacosanoyl-CoA",
+      "short": "2-hydroxyhexacosano…",
+      "formula": "C47H82N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:134414"
+      }
+    },
+    {
+      "id": "lauroyl_coa",
+      "name": "lauroyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57375"
+      }
+    },
+    {
+      "id": "trilaurin",
+      "name": "trilaurin",
+      "formula": "C39H74O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77389"
+      }
+    },
+    {
+      "id": "2_3_didodecanoyl_sn_glycerol",
+      "name": "2,3-didodecanoyl-sn-glycerol",
+      "short": "2,3-didodecanoyl-sn…",
+      "formula": "C27H52O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77390"
       }
     },
     {
@@ -173,6 +194,61 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:60384"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "n_hexacosanoyl_4r_hydroxysphinganine",
+      "name": "N-hexacosanoyl-(4R)-hydroxysphinganine",
+      "short": "N-hexacosanoyl-(4R)…",
+      "formula": "C44H89NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM63797"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
       }
     }
   ],
@@ -313,24 +389,16 @@
     },
     {
       "id": "r4",
-      "name": "sphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4R)-hydroxysphinganine + 2 Fe(I...",
-      "equation": "sphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4R)-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + H2O",
+      "name": "(4R)-hydroxysphinganine 1-phosphate + H2O = (4R)-hydroxysphinganine + phosphate",
+      "equation": "(4R)-hydroxysphinganine 1-phosphate + H2O = (4R)-hydroxysphinganine + phosphate",
       "substrates": [
         {
-          "metabolite": "sphinganine",
+          "metabolite": "phytosphingosine_1_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fe2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
@@ -339,58 +407,46 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "iron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "pi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:33519"
+        "rhea": "RHEA:33067"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33519"
+            "id": "RHEA:33067"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxid...",
-      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "2-hydroxyhexacosanoyl-CoA + (4R)-hydroxysphinganine = N-(2-hydroxyhexacosanyl)-(4R)-hyd...",
+      "equation": "2-hydroxyhexacosanoyl-CoA + (4R)-hydroxysphinganine = N-(2-hydroxyhexacosanyl)-(4R)-hydroxysphinganine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "dodecanoate",
+          "metabolite": "2_hydroxyhexacosanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "phytosphingosine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "8_hydroxylaurate",
+          "metabolite": "n_2_hydroxyhexacosanyl_4r_phytosphingosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
@@ -401,20 +457,106 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:66888"
+        "rhea": "RHEA:33487"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66888"
+            "id": "RHEA:33487"
           }
         ]
       }
     },
     {
       "id": "r6",
+      "name": "dodecanoyl-CoA + H2O = dodecanoate + CoA + H(+)",
+      "equation": "dodecanoyl-CoA + H2O = dodecanoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "lauroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:30135"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "tridodecanoylglycerol + H2O = 2,3-didodecanoyl-sn-glycerol + dodecanoate + H(+)",
+      "equation": "tridodecanoylglycerol + H2O = 2,3-didodecanoyl-sn-glycerol + dodecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trilaurin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_didodecanoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:40619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "an N-(2,3-dihydroxyhexacosanoyl)-(4R)-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + ...",
       "equation": "an N-(2,3-dihydroxyhexacosanoyl)-(4R)-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + H2O = N-(2-hydroxyhexacosanyl)-(4R)-hydroxysphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+)",
       "substrates": [
@@ -450,7 +592,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:33671"
       },
@@ -460,6 +602,56 @@
           {
             "db": "Rhea",
             "id": "RHEA:33671"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "Reaction MNXR126669",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_hexacosanoyl_4r_hydroxysphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_2_hydroxyhexacosanyl_4r_phytosphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "metanetx": "MNXR126669"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR126669"
           }
         ]
       }

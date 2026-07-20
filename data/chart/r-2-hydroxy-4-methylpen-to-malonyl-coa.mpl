@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-hydroxy-4-methylpen-to-malonyl-coa "(R)-2-hydroxy-4-methylpen… to malonyl-CoA" {
-  spacing 268
+  spacing 322
 
   spine at 0,0 {
     r_2_hydroxy_4_methylpentanoate
@@ -24,25 +24,55 @@ pathway r-2-hydroxy-4-methylpen-to-malonyl-coa "(R)-2-hydroxy-4-methylpen… to 
 
   branch from kic side left {
     kic
-    <-> . +leucine +o2 +h2o +h2o2
+    <-> . +leucine +glyoxylate
+    glycine
+  }
+
+  branch from kic side right {
+    kic
+    <-> . +d_leucine +o2 +h2o +h2o2
     nh3
   }
 
-  branch from isovaleryl_coa side right {
+  branch from isovaleryl_coa side left {
     isovaleryl_coa
     <-> ec_2_3_1_228 [2.3.1.228] +sam +5_s_methyl_5_thioadenosine +coa +hplus
     n_isovaleryl_l_homoserine_lactone
   }
 
+  branch from isovaleryl_coa side right {
+    isovaleryl_coa
+    <-> ec_2_3_1_300 [2.3.1.300] +malonyl-acp +hplus +co2 +coa
+    o_s_3_oxo_5_methylhexanoylpantetheine_4_phosphor
+  }
+
+  branch from methylcrotonyl_coa side left {
+    methylcrotonyl_coa
+    <-> . +h2o
+    3_hydroxyisovaleryl_coa
+  }
+
+  branch from biotinyl_l_lysine side right {
+    biotinyl_l_lysine
+    <-> ec_6_3_4_9 [6.3.4.9] +l_lysinium +biotinate +atp +amp +hplus
+    ppi
+  }
+
   branch from biotinyl_l_lysine side left {
     biotinyl_l_lysine
-    <-> ec_6_3_4_11 [6.3.4.11] +l_lysinium +biotinate +atp +amp +hplus
-    ppi
+    <-> ec_6_3_4_11 [6.3.4.11] +biotinate +atp +amp +ppi +hplus
+    l_lysinium
   }
 
   branch from malonyl-coa side right {
     malonyl-coa
-    <-> . +acetyl_coa +hplus +co2 +coa +h2o
-    3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap
+    <-> ec_2_3_1_74 [2.3.1.74] +trans_4_coumaroyl_coa +hplus +co2 +coa
+    2_4_4_6_tetrahydroxychalcone
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_95 [2.3.1.95] +4_coumaroyl_coa +hplus +co2 +coa
+    trans_resveratrol
   }
 }

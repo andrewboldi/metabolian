@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
-  spacing 236
+  spacing 278
 
   spine at 0,0 {
     tauropinate
@@ -18,14 +18,26 @@ pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
 
   branch from taurine side left {
     taurine
-    <-> . +palmitoyl_coa +coa +hplus
-    n_hexadecanoyltaurine
+    <-> . +choloyl_coa +coa +hplus
+    taurocholate
+  }
+
+  branch from taurine side right {
+    taurine
+    <-> . +taurocholate +h2o
+    cholate
+  }
+
+  branch from sulfonatoacetaldehyde side left {
+    sulfonatoacetaldehyde
+    <-> ec_1_1_1_433 [1.1.1.433] +nad +nadh +hplus
+    isethionate
   }
 
   branch from sulfonatoacetaldehyde side right {
     sulfonatoacetaldehyde
-    <-> ec_1_1_1_433 [1.1.1.433] +nad +nadh +hplus
-    isethionate
+    <-> . +taurine +iron +h2o +fe2 +hplus
+    nh3
   }
 
   branch from alanine side left {
@@ -34,7 +46,13 @@ pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
     2_oxoglutaramate
   }
 
-  branch from sulfoacetyl_coa side right {
+  branch from alanine side right {
+    alanine
+    <-> ec_2_6_1_46 [2.6.1.46] +l_2_4_diazaniumylbutyrate +pyruvate
+    l_aspartic_acid_4_semialdehyde
+  }
+
+  branch from sulfoacetyl_coa side left {
     sulfoacetyl_coa
     <-> . +atp +coa +adp +pi
     sulfonatoacetate

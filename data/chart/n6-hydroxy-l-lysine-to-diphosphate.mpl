@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-hydroxy-l-lysine-to-diphosphate "N6-hydroxy-L-lysine to diphosphate" {
-  spacing 268
+  spacing 280
 
   spine at 0,0 {
     n6_hydroxy_l_lysine
@@ -18,7 +18,13 @@ pathway n6-hydroxy-l-lysine-to-diphosphate "N6-hydroxy-L-lysine to diphosphate" 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_179 [4.2.3.179] +fpp
-    guaia_4_6_diene
+    <-> . +8_oxo_gtp +h2o +hplus
+    8_oxo_gmp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +dadp +h2o
+    2_deoxyadenosine
   }
 }

@@ -1,0 +1,223 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetyl-d-methionine-to-3-methylthiopropylamini",
+  "name": "N-acetyl-D-methionine to 3-methylthiopropylaminium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N-acetyl-D-methionine(1−) to 3-methylthiopropylaminium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59960"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85220"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetyl_d_methionine",
+      "name": "N-acetyl-D-methionine",
+      "short": "N-acetyl-D-methioni…",
+      "formula": "C7H12NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85220"
+      }
+    },
+    {
+      "id": "n_acetyl_l_methionine",
+      "name": "N-acetyl-L-methionine",
+      "short": "N-acetyl-L-methioni…",
+      "formula": "C7H12NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71670"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_methylthiopropylaminium",
+      "name": "3-methylthiopropylaminium",
+      "short": "3-methylthiopropyla…",
+      "formula": "C4H12NS",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57866"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_57",
+      "name": "methionine decarboxylase",
+      "ec": [
+        "4.1.1.57"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acetyl-D-methionine = N-acetyl-L-methionine",
+      "equation": "N-acetyl-D-methionine = N-acetyl-L-methionine",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59960"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetyl-L-methionine + H2O = L-methionine + acetate",
+      "equation": "N-acetyl-L-methionine + H2O = L-methionine + acetate",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:67440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67440"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methionine decarboxylase",
+      "equation": "L-methionine + H(+) = 3-(methylsulfanyl)propanamine + CO2",
+      "ec": "4.1.1.57",
+      "substrates": [
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylthiopropylaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17757"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17757"
+          }
+        ]
+      }
+    }
+  ]
+}

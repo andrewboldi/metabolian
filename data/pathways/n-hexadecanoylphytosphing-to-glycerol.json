@@ -1,0 +1,251 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-hexadecanoylphytosphing-to-glycerol",
+  "name": "N-hexadecanoylphytosphing… to glycerol",
+  "category": "other",
+  "summary": "A 3-step route from N-hexadecanoylphytosphingosine to glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42144"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:65107"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_hexadecanoylphytosphingosine",
+      "name": "N-hexadecanoylphytosphingosine",
+      "short": "N-hexadecanoylphyto…",
+      "formula": "C34H69NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65107"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C7H12NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64612"
+      }
+    },
+    {
+      "id": "n_hexadecanoylphytosphingosine_1_phosphoethanola",
+      "name": "N-hexadecanoylphytosphingosine-1-phosphoethanolamine",
+      "short": "N-hexadecanoylphyto…",
+      "formula": "C36H75N2O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78656"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "9_hydroxyoctadecanoate",
+      "name": "9-hydroxyoctadecanoate",
+      "short": "9-hydroxyoctadecano…",
+      "formula": "C18H35O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136286"
+      }
+    },
+    {
+      "id": "9_acyloxy_stearate",
+      "name": "9-(acyloxy)-stearate",
+      "formula": "C19H34O4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:228230"
+      }
+    },
+    {
+      "id": "2_monoglyceride",
+      "name": "2-monoglyceride",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17389"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-hexadecanoyl-(4R)-hydroxysphinganine + a 1,2-diacyl-sn-glycero-3-phosphoethanolamine ...",
+      "equation": "N-hexadecanoyl-(4R)-hydroxysphinganine + a 1,2-diacyl-sn-glycero-3-phosphoethanolamine = N-hexadecanoyl-(4R)-hydroxysphinganine-1-phosphoethanolamine + a 1,2-diacyl-sn-glycerol",
+      "substrates": [
+        {
+          "metabolite": "n_hexadecanoylphytosphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hexadecanoylphytosphingosine_1_phosphoethanola",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "9-hydroxy-octadecanoate + a 1,2-diacyl-sn-glycerol = 9-(acyloxy)-octadecanoate + a 2-ac...",
+      "equation": "9-hydroxy-octadecanoate + a 1,2-diacyl-sn-glycerol = 9-(acyloxy)-octadecanoate + a 2-acylglycerol",
+      "substrates": [
+        {
+          "metabolite": "9_hydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_acyloxy_stearate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_monoglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77995"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 2-acylglycerol + H2O = a carboxylate + glycerol + H(+)",
+      "equation": "a 2-acylglycerol + H2O = a carboxylate + glycerol + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_monoglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32871"
+          }
+        ]
+      }
+    }
+  ]
+}

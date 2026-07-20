@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway bis-2-hydroxyethyl-to-3-5-dibromocatechol "bis(2-hydroxyethyl)… to 3,5-dibromocatechol" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     bis_2_hydroxyethyl_terephthalate
@@ -16,9 +16,7 @@ pathway bis-2-hydroxyethyl-to-3-5-dibromocatechol "bis(2-hydroxyethyl)… to 3,5
     3s_4r_3_4_dihydroxycyclohexa_1_5_diene_1_4_dica
     <-> ec_1_3_1_53 [1.3.1.53] +nad -co2 -nadh
     3_4_dihydroxybenzoate
-    <-> . +bromide +nadph +o2 +hplus -nadp -h2o
-    3_bromo_4_5_dihydroxybenzoate
-    <-> . +bromide +nadph +o2 +hplus -co2 -nadp -h2o
+    <-> ec_1_14_19_55 [1.14.19.55] +bromide +nadph +o2 +hplus -co2 -nadp -h2o
     3_5_dibromocatechol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway xtp-to-diphosphate "XTP to diphosphate" {
-  spacing 208
+  spacing 238
 
   spine at 0,0 {
     xtp
@@ -16,15 +16,33 @@ pathway xtp-to-diphosphate "XTP to diphosphate" {
     glutamate
   }
 
+  branch from xmp side left {
+    xmp
+    <-> . +h2o +pi
+    xanthosine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +n_4_aminobenzoyl_l_glutamate +h2o
+    4_aminobenzoate
+  }
+
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_95 [2.6.1.95] +neomycin_c +akg
-    6_oxoneomycin_c
+    <-> . +gly_glu +h2o
+    glycine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +gpp
-    phellandrene
+    <-> ec_2_5_1_83 [2.5.1.83] +ipp +fpp
+    all_trans_hexaprenyl_diphosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_84 [2.5.1.84] +ipp +gpp
+    all_trans_nonaprenyl_diphosphate
   }
 }

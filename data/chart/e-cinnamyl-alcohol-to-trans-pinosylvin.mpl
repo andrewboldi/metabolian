@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-cinnamyl-alcohol-to-trans-pinosylvin "(E)-cinnamyl alcohol to trans-pinosylvin" {
-  spacing 184
+  spacing 208
 
   spine at 0,0 {
     e_cinnamyl_alcohol
@@ -22,9 +22,21 @@ pathway e-cinnamyl-alcohol-to-trans-pinosylvin "(E)-cinnamyl alcohol to trans-pi
     trans_cinnamate
   }
 
-  branch from e_cinnamoyl_coa side right {
-    e_cinnamoyl_coa
-    <-> . +trans_cinnamate +atp +coa +amp
+  branch from e_cinnamaldehyde side right {
+    e_cinnamaldehyde
+    <-> . +trans_cinnamate +atp +nadph +hplus +amp +nadp
     ppi
+  }
+
+  branch from e_cinnamoyl_coa side left {
+    e_cinnamoyl_coa
+    <-> . +ecgoninium_methyl_ester +coa
+    cinnamoylcocaine
+  }
+
+  branch from trans_pinosylvin side right {
+    trans_pinosylvin
+    <-> . +s_adenosyl_l_homocysteine +h +pinosylvin_methyl_ether
+    s_adenosyl_l_methionine
   }
 }

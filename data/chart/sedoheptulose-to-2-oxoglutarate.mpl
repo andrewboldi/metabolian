@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sedoheptulose-to-2-oxoglutarate "sedoheptulose to 2-oxoglutarate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     sedoheptulose
@@ -30,15 +30,33 @@ pathway sedoheptulose-to-2-oxoglutarate "sedoheptulose to 2-oxoglutarate" {
     sedoheptulose_1_7_bisphosphate
   }
 
+  branch from s7p side right {
+    s7p
+    <-> ec_4_2_3_155 [4.2.3.155] +pi
+    2_epi_valiolone
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_42 [4.2.3.42] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    aphidicolan_16_ol
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> ec_3_1_7_5 [3.1.7.5] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    e_e_e_geranylgeraniol
   }
 
   branch from akg side left {
     akg
-    <-> ec_1_1_1_42 [1.1.1.42] +nadp +co2 +nadph
+    <-> ec_1_1_1_41 [1.1.1.41] +nad +co2 +nadh
     d_threo_isocitrate
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_1_99_24 [1.1.99.24] +4_hydroxybutyrate +4_oxobutanoate
+    r_2_hydroxyglutarate
   }
 }

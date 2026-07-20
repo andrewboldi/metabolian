@@ -1,0 +1,248 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-2-3-diacyl-d-glucos-to-uridine-5-monophospha",
+  "name": "UDP-2,3-diacyl-α-D-glucos… to uridine 5'-monophosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from UDP-2,3-diacyl-α-D-glucosamine(2−) to uridine 5'-monophosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53328"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137179"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp_2_3_diacyl_d_glucosamine",
+      "name": "UDP-2,3-diacyl-α-D-glucosamine",
+      "short": "UDP-2,3-diacyl-α-D-…",
+      "formula": "C17H21N3O18P2R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137179"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_3_diacyl_d_glucosaminyl_1_phosphate",
+      "name": "2,3-diacyl-α-D-glucosaminyl 1-phosphate",
+      "short": "2,3-diacyl-α-D-gluc…",
+      "formula": "C8H10NO10PR2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137180"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP (uridine 5'-monophosphate)",
+      "short": "UMP (uridine 5'-MP)",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57865"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "uridine",
+      "name": "uridine",
+      "formula": "C9H12N2O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16704"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_48",
+      "name": "uridine/cytidine kinase",
+      "ec": [
+        "2.7.1.48"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "UDP-2,3-diacyl-alpha-D-glucosamine + H2O = 2,3-diacyl-alpha-D-glucosaminyl 1-phosphate ...",
+      "equation": "UDP-2,3-diacyl-alpha-D-glucosamine + H2O = 2,3-diacyl-alpha-D-glucosaminyl 1-phosphate + UMP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "udp_2_3_diacyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_diacyl_d_glucosaminyl_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53328"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "UMP + H2O = uridine + phosphate",
+      "equation": "UMP + H2O = uridine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29359"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "uridine/cytidine kinase",
+      "equation": "uridine + GTP = UMP + GDP + H(+)",
+      "ec": "2.7.1.48",
+      "substrates": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27650"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27650"
+          }
+        ]
+      }
+    }
+  ]
+}

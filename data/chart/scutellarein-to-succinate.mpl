@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway scutellarein-to-succinate "scutellarein to succinate" {
-  spacing 152
+  spacing 218
 
   spine at 0,0 {
     scutellarein
@@ -22,37 +22,67 @@ pathway scutellarein-to-succinate "scutellarein to succinate" {
 
   branch from scutellarein_7_methyl_ether side left {
     scutellarein_7_methyl_ether
-    <-> . +sam +sah +hplus
-    cirsimaritin
+    <-> . +genkwanin +fmnh2 +o2 +h2o
+    fmn
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_208 [2.1.1.208] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_286 [2.1.1.286] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 
-  branch from ladanein side left {
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_287 [2.1.1.287] +sam +n1_methyladenosine_5_monophosphate_1 +hplus
+    adenosine_5_monophosphate_1
+  }
+
+  branch from ladanein side right {
     ladanein
-    <-> . +apigenin_7_4_dimethyl_ether +fmnh2 +o2 +h2o +hplus
-    fmn
+    <-> . +sam +sah
+    scutellarein_7_olate_4_methyl_ether
+  }
+
+  branch from 8_hydroxysalvigenin side left {
+    8_hydroxysalvigenin
+    <-> . +s_adenosyl_l_homocysteine +h +gardenin_b
+    s_adenosyl_l_methionine
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20s_23_25_trihydroxyvitamin_d3
+    <-> . +2_oxospirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    2_hydroxy_2_oxospirilloxanthin
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +2_hydroxy_2_oxospirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    2_2_dihydroxy_2_oxospirilloxanthin
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +diuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    diuron_desmethyl
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +fluometuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_trifluoromethyl_phenyl_1_methylurea
   }
 
   branch from succinate side right {
     succinate
-    <-> . +eriodictyol +akg +o2 +co2
-    taxifolin
+    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
+    2_phenylsuccinyl_coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
+    3_phenylsuccinyl_coa
   }
 }

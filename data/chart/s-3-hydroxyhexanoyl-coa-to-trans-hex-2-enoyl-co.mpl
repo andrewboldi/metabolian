@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxyhexanoyl-coa-to-trans-hex-2-enoyl-co "(S)-3-hydroxyhexanoyl-CoA to trans-hex-2-enoyl-CoA" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     s_3_hydroxyhexanoyl_coa
@@ -19,12 +19,24 @@ pathway s-3-hydroxyhexanoyl-coa-to-trans-hex-2-enoyl-co "(S)-3-hydroxyhexanoyl-C
   branch from trans_hex_2_enoyl_coa side left {
     trans_hex_2_enoyl_coa
     <-> .
+    trans_3_hexenoyl_coa
+  }
+
+  branch from trans_hex_2_enoyl_coa side right {
+    trans_hex_2_enoyl_coa
+    <-> .
     z_hex_3_enoyl_coa
+  }
+
+  branch from hexanoyl_coa side left {
+    hexanoyl_coa
+    <-> . +h2o +coa +hplus
+    hexanoate
   }
 
   branch from hexanoyl_coa side right {
     hexanoyl_coa
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
-    1_palmitoyl_2_hexanoyl_sn_glycero_3_phosphocholi
+    <-> . +malonyl-acp +hplus +co2 +coa
+    o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine
   }
 }

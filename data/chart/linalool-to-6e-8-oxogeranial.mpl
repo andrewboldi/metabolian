@@ -12,31 +12,45 @@ pathway linalool-to-6e-8-oxogeranial "linalool to (6E)-8-oxogeranial" {
     geraniol
     <-> ec_1_14_14_83 [1.14.14.83] +fmnh2 +o2 -fmn -h2o -hplus
     6e_8_hydroxygeraniol
-    <-> ec_1_1_1_324 [1.1.1.324] +nadp -nadph -hplus
+    <-> . +nadp -nadph -hplus
+    6e_8_oxogeraniol
+    <-> . +nadp -nadph -hplus
     6e_8_oxogeranial
   }
 
   branch from geraniol side left {
     geraniol
-    <-> . +acetyl_coa +coa
-    geranyl_acetate
+    <-> . +palmitoyl_coa +coa
+    2e_geranyl_hexadecanoate
   }
 
   branch from 6e_8_hydroxygeraniol side right {
     6e_8_hydroxygeraniol
-    <-> . +nad +nadh +hplus
+    <-> . +nadp +nadph +hplus
     6e_8_hydroxygeranial
   }
 
   branch from fmn side left {
     fmn
-    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    1_hydroxy_long_chain_fatty_acid_anion
+    <-> ec_1_14_14_179 [1.14.14.179] +3_dehydro_6_deoxoteasterone +fmnh2 +o2 +h2o +hplus
+    3_dehydroteasterone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_178 [1.14.14.178] +a_c27_steroid +fmnh2 +o2 +h2o +hplus
+    a_22s_22_hydroxy_c27_steroid
+  }
+
+  branch from 6e_8_oxogeranial side left {
+    6e_8_oxogeranial
+    <-> ec_1_3_1_123 [1.3.1.123] +nadp +nadph +hplus
+    r_8_oxocitronellyl_enol
   }
 
   branch from 6e_8_oxogeranial side right {
     6e_8_oxogeranial
-    <-> ec_1_3_1_123 [1.3.1.123] +nadp +nadph +hplus
-    r_8_oxocitronellyl_enol
+    <-> ec_1_3_1_122 [1.3.1.122] +nadp +nadph +hplus
+    s_8_oxocitronellyl_enol
   }
 }

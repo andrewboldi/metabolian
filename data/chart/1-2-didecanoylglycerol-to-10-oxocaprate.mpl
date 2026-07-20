@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-didecanoylglycerol-to-10-oxocaprate "1,2-didecanoylglycerol to 10-oxocaprate" {
-  spacing 208
+  spacing 232
 
   spine at 0,0 {
     1_2_didecanoylglycerol
@@ -16,9 +16,27 @@ pathway 1-2-didecanoylglycerol-to-10-oxocaprate "1,2-didecanoylglycerol to 10-ox
     10_oxocaprate
   }
 
+  branch from 10_hydroxycaprate side left {
+    10_hydroxycaprate
+    <-> . +decanoate +nadp +h2o +nadph
+    h
+  }
+
+  branch from 10_hydroxycaprate side right {
+    10_hydroxycaprate
+    <-> . +decanoate +h +o2 +nadph +h2o
+    nadp
+  }
+
   branch from fmn side left {
     fmn
-    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    4_24s_dihydroxycholesterol
+    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24s_7_24_dihydroxycholesterol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    4_hydroxycholesterol
   }
 }

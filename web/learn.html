@@ -3,56 +3,364 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learn — what metabolic pathways are — Metabolian</title>
-  <meta name="description" content="A friendly on-ramp to metabolism: what pathways are, anabolism vs catabolism, enzymes and EC numbers, cofactors, and how regulation works." />
+  <title>Learn — how to read a pathway — Metabolian</title>
+  <meta name="description" content="A grounded on-ramp to metabolism: what a pathway is, anabolism and catabolism, enzymes and EC numbers, cofactors, how regulation is drawn, and how to read the sheet." />
   <meta name="color-scheme" content="dark light" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+  <style>
+    /* ==========================================================================
+       Content-page chrome — shared by about / learn / glossary.
+
+       Scoped under `body[data-page]` for two reasons: it composes with page.css
+       regardless of the order Vite emits stylesheets in (every selector here is
+       specificity >= (0,2,1), page.css's are (0,1,x)), and it can never leak
+       into the chart sheet.
+
+       Every custom property is referenced WITH a fallback. The token rebuild
+       (warm neutrals, sheet-derived accent, --mark, tracking scale, 2px radii)
+       ships in tokens.css, which is a different unit of this redesign — these
+       pages must read correctly before and after it lands.
+       ========================================================================== */
+
+    html { scroll-padding-top: calc(58px + 2.5rem); }
+
+    /* The sheet's own hover ink (chart.css uses #D43900 for .enz-name:hover).
+       Deferred to the --mark token once it exists; until then, theme-matched
+       literals so the fallback is not a cool-blue accent on a warm page. */
+    body[data-page] { --_mark: var(--mark, #f56d4a); }
+    :root[data-theme="light"] body[data-page] { --_mark: var(--mark, #b03400); }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) body[data-page] { --_mark: var(--mark, #b03400); }
+    }
+
+    /* --- page header: eyebrow / title / lead / instrument readout ---------- */
+    body[data-page] .page-head {
+      padding-block: var(--sp-8) var(--sp-6);
+      border-bottom: 0;                        /* hairlines as box-shadow: no layout cost */
+      box-shadow: 0 1px 0 var(--line);
+    }
+    body[data-page] .page-head h1 {
+      font-size: var(--step-3); max-width: 20ch; margin-top: var(--sp-4);
+      letter-spacing: var(--track-3, -0.03em); line-height: var(--lead-tight, 1.1);
+      text-wrap: balance;
+    }
+    body[data-page] .page-head .lead { margin-top: var(--sp-4); max-width: 62ch; }
+    /* The eyebrow is a label on the instrument, not a highlight. */
+    body[data-page] .eyebrow { color: var(--text-faint); letter-spacing: 0.22em; }
+    body[data-page] .eyebrow::before { background: currentColor; opacity: 0.5; }
+
+    body[data-page] .readout {
+      display: flex; flex-wrap: wrap; margin-top: var(--sp-6); padding-top: var(--sp-2);
+      box-shadow: inset 0 1px 0 var(--line);
+      font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: 0.02em;
+      font-variant-numeric: tabular-nums lining-nums;   /* scoped, never global */
+    }
+    body[data-page] .readout > div {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.5rem var(--sp-5) 0.5rem 0;
+    }
+    body[data-page] .readout > div + div { padding-left: var(--sp-5); box-shadow: inset 1px 0 0 var(--line); }
+    body[data-page] .readout dt { text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint); font-size: 0.88em; }
+    body[data-page] .readout dd { margin: 0; color: var(--text); }
+
+    /* --- prose ------------------------------------------------------------- */
+    body[data-page] .prose { max-width: 68ch; }
+    body[data-page] .prose p, body[data-page] .prose li { line-height: var(--lead-copy, 1.6); }
+    body[data-page] .prose h2 {
+      display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 0.4rem; align-items: baseline;
+      font-size: var(--step-2); margin-top: var(--sp-7); padding-top: var(--sp-4);
+      box-shadow: inset 0 1px 0 var(--line);
+      letter-spacing: var(--track-2, -0.022em); line-height: var(--lead-snug, 1.2);
+    }
+    body[data-page] .prose h2 > span:last-child { text-wrap: balance; }
+    body[data-page] .prose h3 {
+      font-size: var(--step-1); margin-top: var(--sp-5);
+      letter-spacing: var(--track-1, -0.014em); line-height: var(--lead-snug, 1.2);
+    }
+    body[data-page] .h-num {
+      font-family: var(--font-mono); font-size: var(--step--1); font-weight: 400;
+      letter-spacing: 0.12em; color: var(--text-faint);
+    }
+    body[data-page] .prose code {
+      border: 0; box-shadow: inset 0 0 0 1px var(--line); border-radius: var(--radius, 2px);
+    }
+    /* Identifiers are always mono: the shipped Inter subset exposes no `zero`
+       feature, so slashed-zero silently no-ops; JetBrains Mono draws a dotted
+       zero natively, which disambiguates 0/O in a RHEA/ChEBI/EC accession. */
+    body[data-page] .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums lining-nums; }
+
+    /* --- data table: the density device ------------------------------------ */
+    body[data-page] .tscroll { overflow-x: auto; margin-top: var(--sp-5); }
+    body[data-page] .dtable { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+    body[data-page] .dtable caption {
+      text-align: left; font-family: var(--font-mono); font-size: var(--step--1);
+      text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint);
+      padding-bottom: 0.7rem;
+    }
+    body[data-page] .dtable th {
+      text-align: left; font-family: var(--font-mono); font-weight: 400; font-size: var(--step--1);
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-faint);
+      padding: 0 var(--sp-4) 0.5rem 0; box-shadow: inset 0 -1px 0 var(--line-strong); white-space: nowrap;
+    }
+    body[data-page] .dtable td {
+      padding: 0.6rem var(--sp-4) 0.6rem 0; color: var(--text-dim);
+      box-shadow: inset 0 -1px 0 var(--line); vertical-align: baseline;
+    }
+    body[data-page] .dtable tr > *:last-child { padding-right: 0; }
+    body[data-page] .dtable tbody tr:last-child td { box-shadow: none; }
+    body[data-page] .dtable .num {
+      text-align: right; font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums lining-nums; color: var(--text); white-space: nowrap;
+    }
+    body[data-page] .dtable .key { color: var(--text); font-weight: 500; white-space: nowrap; }
+
+    /* --- badge -------------------------------------------------------------
+       Colour rides on the dot and the ring, never on the label text, so the
+       badge stays legible on both themes whatever the --edge-* tokens become. */
+    body[data-page] .badge {
+      display: inline-block; font-family: var(--font-mono); font-size: var(--step--1); line-height: 1.5;
+      text-transform: uppercase; letter-spacing: 0.14em; padding: 0.05em 0.55em;
+      border-radius: var(--radius, 2px); color: var(--text); white-space: nowrap;
+      box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--_c, var(--text-faint)) 55%, transparent);
+    }
+    body[data-page] .badge::before {
+      content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--_c, var(--text-faint)); margin-right: 0.5em; vertical-align: 0.08em;
+    }
+    body[data-page] .badge[data-c="high"] { --_c: var(--edge-activate); }
+    body[data-page] .badge[data-c="medium"] { --_c: var(--edge-signal); }
+
+    /* --- callout: full hairline box with a mono label plate ----------------- */
+    body[data-page] .callout {
+      position: relative; border-left: 0; background: var(--panel-2);
+      border-radius: var(--radius, 2px); box-shadow: inset 0 0 0 1px var(--line);
+      padding: calc(var(--sp-5) + 0.9rem) var(--sp-5) var(--sp-5);
+    }
+    body[data-page] .callout::before {
+      content: attr(data-label); position: absolute; top: 0.7rem; left: var(--sp-5);
+      font-family: var(--font-mono); font-size: var(--step--1);
+      text-transform: uppercase; letter-spacing: 0.18em; color: var(--_c, var(--text-faint));
+    }
+    body[data-page] .callout p { color: var(--text); }
+
+    /* --- arrow specimens ----------------------------------------------------
+       Hand-drawn to the exact geometry of lib/arrows.ts `arrowSVG()` at 54x18,
+       and to the line/head/colour that schema/arrows.json declares for each
+       type. The vocabulary is therefore shown here at the same size and stroke
+       the legend and the chart draw it — a specimen, not an illustration. */
+    body[data-page="learn"] .spec { display: block; overflow: visible; flex: none; }
+    body[data-page="learn"] .dtable td.speccell { width: 1%; padding-right: var(--sp-5); vertical-align: middle; }
+    body[data-page="learn"] .dtable .aname {
+      font-family: var(--font-mono); color: var(--text); white-space: nowrap;
+    }
+
+    /* --- reading-progress hairline ------------------------------------------
+       Zero JS, off the main thread. Base state is scaleX(0) — with no
+       scroll-timeline support, or under reduced motion, no bar renders at all,
+       which is the correct finished page rather than a stuck full-width rule.
+       The `animation-timeline` declaration MUST follow the `animation`
+       shorthand: the shorthand resets timeline to `auto` and silently detaches. */
+    body[data-page="learn"] .readbar {
+      position: fixed; inset: 58px 0 auto 0; height: 2px; z-index: 49;
+      background: var(--_mark); transform: scaleX(0); transform-origin: 0 50%;
+      pointer-events: none;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      @supports (animation-timeline: scroll()) {
+        body[data-page="learn"] .readbar {
+          animation: readbar linear both;
+          animation-timeline: scroll(root block);
+        }
+      }
+    }
+    @keyframes readbar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    /* --- motion: opt-in, never opt-out ---------------------------------------
+       Stillness is the cascade default. A transition added here later without a
+       reduced-motion kill-list simply never renders for a reader who asked for
+       stillness, instead of escaping one. Enumerated properties, never `all`. */
+    @media (prefers-reduced-motion: no-preference) {
+      body[data-page] .prose a {
+        transition: var(--t-fast, 120ms) var(--ease, cubic-bezier(0.22, 1, 0.36, 1));
+        transition-property: color, box-shadow;
+      }
+    }
+    @media (any-hover: hover) {
+      body[data-page] .prose a:hover { color: var(--_mark); }
+    }
+  </style>
 </head>
-<body>
+<body data-page="learn">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="readbar" aria-hidden="true"></div>
   <div id="app-header"></div>
   <main id="main">
     <header class="page-head">
       <div class="wrap">
-        <p class="eyebrow">Learn</p>
-        <h1>What is a metabolic pathway?</h1>
-        <p class="lead">Metabolism is the chemistry of being alive — thousands of small reactions that build, break down, and rearrange molecules. A pathway is a connected sequence of those reactions. Here's how to read one.</p>
+        <p class="eyebrow">Learn · Primer</p>
+        <h1>How to read a metabolic pathway</h1>
+        <p class="lead">Metabolism is the chemistry of being alive — thousands of small reactions that build, break down, and rearrange molecules. A pathway is a connected sequence of them. This page teaches the notation, then hands you the sheet.</p>
+        <dl class="readout" aria-label="Page summary">
+          <div><dt>Level</dt><dd>Introductory</dd></div>
+          <div><dt>Prereq</dt><dd>None</dd></div>
+          <div><dt>Arrow types</dt><dd>30</dd></div>
+          <div><dt>Registry</dt><dd>v1.0.0</dd></div>
+        </dl>
       </div>
     </header>
+
     <div class="wrap section">
       <div class="prose">
-        <h2>Reactions, chained together</h2>
-        <p>A single reaction turns one set of molecules (<strong>substrates</strong>) into another (<strong>products</strong>), almost always sped up by a protein catalyst called an <strong>enzyme</strong>. String reactions together — the product of one becoming the substrate of the next — and you have a pathway. <a href="explore.html">Glycolysis</a>, for instance, is ten reactions that convert glucose into pyruvate.</p>
-        <h2>Anabolism vs. catabolism</h2>
+
+        <h2 id="reactions"><span class="h-num">01</span><span>Reactions, chained together</span></h2>
+        <p>A single reaction turns one set of molecules — the <strong>substrates</strong> — into another, the <strong>products</strong>, almost always sped up by a protein catalyst called an <strong>enzyme</strong>. String reactions together so the product of one becomes the substrate of the next, and you have a pathway. <a href="pathway.html?id=glycolysis">Glycolysis</a>, for instance, is ten reactions that convert glucose into pyruvate.</p>
+        <p>That chaining is the whole reason a wall chart works. Any one reaction is a fact; a pathway is an argument about where matter and energy go.</p>
+
+        <h2 id="directions"><span class="h-num">02</span><span>Anabolism and catabolism</span></h2>
         <ul>
-          <li><strong>Catabolism</strong> breaks large molecules down to release energy — glucose to pyruvate, fats to acetyl-CoA.</li>
-          <li><strong>Anabolism</strong> builds complex molecules up, spending energy — making fatty acids, nucleotides, and proteins.</li>
+          <li><strong>Catabolism</strong> breaks large molecules down and releases energy — glucose to pyruvate, fats to acetyl-CoA.</li>
+          <li><strong>Anabolism</strong> builds complex molecules up and spends energy — making fatty acids, nucleotides, and proteins.</li>
         </ul>
-        <p>The cell's energy currency, <strong>ATP</strong>, and its electron carriers, <strong>NAD⁺/NADH</strong> and <strong>FAD/FADH₂</strong>, couple these two directions together.</p>
-        <h2>Enzymes and EC numbers</h2>
-        <p>Every enzyme has a four-part <strong>EC number</strong> classifying the reaction it catalyzes — <code>2.7.1.1</code> is hexokinase, a transferase that moves a phosphate onto glucose. In Metabolian, EC numbers, gene symbols, and UniProt accessions appear as monospace chips on every enzyme, and each one opens its <a href="protein.html">3D structure</a>.</p>
-        <h2>Cofactors and coenzymes</h2>
-        <p>Many enzymes need a non-protein helper: a metal ion like Mg²⁺, or a coenzyme like NAD⁺ derived from a vitamin. These are drawn as <span style="color:var(--edge-cofactor)">cofactor arrows</span> feeding into a reaction.</p>
-        <h2>Regulation — how flux is controlled</h2>
-        <p>Pathways aren't always on. Cells tune them through several mechanisms, and Metabolian gives each its own arrow:</p>
-        <ul>
-          <li><strong style="color:var(--edge-activate)">Activation</strong> and <strong style="color:var(--edge-inhibit)">inhibition</strong> — a molecule speeds up or slows an enzyme.</li>
-          <li><strong>Allosteric</strong> control — an effector binds away from the active site and changes the enzyme's shape.</li>
-          <li><strong style="color:var(--edge-feedback)">Feedback inhibition</strong> — a pathway's end product shuts off its own first committed step.</li>
-          <li><strong style="color:var(--edge-covalent)">Covalent modification</strong> — phosphorylation and other tags flip enzymes on or off.</li>
-          <li><strong style="color:var(--edge-genetic)">Transcriptional control</strong> — the cell makes more or less of the enzyme itself.</li>
-        </ul>
-        <p>See all of them in the <a href="index.html#grammar">grammar of metabolism</a>.</p>
-        <h2>Reading the chart</h2>
-        <p>Open the <a href="explore.html">interactive chart</a>. Round nodes are metabolites, rectangles are enzymes, small diamonds are reactions. Follow solid arrows for mass flow; colored arrows for regulation. Click anything to see its details, sources, and confidence. Search for a molecule to light up everywhere it appears.</p>
-        <div class="callout">
-          <p style="color:var(--text)">New here? Start by searching <strong>glucose</strong> in the chart and trace it step by step to pyruvate — you'll have walked the most famous pathway in biochemistry.</p>
+        <p>The cell's energy currency, <strong>ATP</strong>, and its electron carriers, <strong>NAD⁺/NADH</strong> and <strong>FAD/FADH₂</strong>, couple the two directions together. This is why the chart is worth reading as a whole rather than one pathway at a time: the carriers are the wiring between otherwise unrelated regions of the sheet.</p>
+
+        <h2 id="enzymes"><span class="h-num">03</span><span>Enzymes and EC numbers</span></h2>
+        <p>Every enzyme has a four-part <strong>EC number</strong> classifying the reaction it catalyses. <code>2.7.1.1</code> is hexokinase: class 2 a transferase, 2.7 transferring a phosphorus group, 2.7.1 onto an alcohol, and the final digit naming the specific activity. Read left to right, an EC number is a sentence about chemistry.</p>
+        <p>In Metabolian, EC numbers appear as monospace chips on essentially every enzyme — 12,133 of 12,182 enzyme records carry one. Gene symbols and UniProt accessions are rarer: about 383 records have them today, and those are the enzymes that open directly in the <a href="protein.html">3D structure viewer</a>. If an enzyme has no structure link, that is a gap in our annotation, not a claim that no structure exists.</p>
+
+        <h2 id="cofactors"><span class="h-num">04</span><span>Cofactors and coenzymes</span></h2>
+        <p>Many enzymes need a non-protein helper: a metal ion like Mg²⁺, or a coenzyme like NAD⁺ derived from a vitamin. On the sheet these do not sit in the main line of flow — they arrive on their own <strong>dashed arc</strong>, curving into the reaction and away again. That convention is Michal's, and it is what keeps a dense sheet readable: the backbone of a pathway stays a straight line, and everything that merely assists bends around it.</p>
+
+        <h2 id="regulation"><span class="h-num">05</span><span>Regulation — how flux is controlled</span></h2>
+        <p>Pathways are not always on. Cells tune them through several distinct mechanisms, and each gets its own arrow, drawn below at the size and stroke the chart actually uses. The shape carries the meaning: a <strong>bar</strong> always stops something, a <strong>solid triangle</strong> always speeds it up, and a <strong>dashed</strong> line always means the effector acts somewhere other than the active site.</p>
+        <div class="tscroll">
+          <table class="dtable">
+            <caption>Regulatory arrows</caption>
+            <thead>
+              <tr><th scope="col"><span class="visually-hidden">Specimen</span></th><th scope="col">Type</th><th scope="col">What it means</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-activate)" stroke-width="2" stroke-linecap="round"/><path d="M42 9 L33 4 L33 14 Z" fill="var(--edge-activate)"/></svg></td>
+                <td class="aname">Activation</td>
+                <td>A molecule binds an enzyme and speeds it up.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-inhibit)" stroke-width="2" stroke-linecap="round"/><line x1="42" y1="3" x2="42" y2="15" stroke="var(--edge-inhibit)" stroke-width="2.4" stroke-linecap="round"/></svg></td>
+                <td class="aname">Inhibition</td>
+                <td>A molecule binds an enzyme and slows it down.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-inhibit)" stroke-width="2" stroke-dasharray="7 5" stroke-linecap="round"/><line x1="42" y1="3" x2="42" y2="15" stroke="var(--edge-inhibit)" stroke-width="2.4" stroke-linecap="round"/></svg></td>
+                <td class="aname">Allosteric inhibition</td>
+                <td>The effector binds away from the active site and changes the enzyme's shape. Dashed, because it never touches the chemistry directly.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-feedback)" stroke-width="2" stroke-linecap="round"/><line x1="42" y1="3" x2="42" y2="15" stroke="var(--edge-feedback)" stroke-width="2.4" stroke-linecap="round"/></svg></td>
+                <td class="aname">Feedback inhibition</td>
+                <td>A pathway's end product shuts off its own first committed step — the cell's thermostat.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-covalent)" stroke-width="2" stroke-linecap="round"/><path d="M42 9 L37 4 L32 9 L37 14 Z" fill="var(--edge-covalent)"/></svg></td>
+                <td class="aname">Covalent modification</td>
+                <td>Phosphorylation and other tags are attached to the enzyme, flipping it on or off. The diamond marks a chemical change to the catalyst itself.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-genetic)" stroke-width="2" stroke-dasharray="7 5" stroke-linecap="round"/><path d="M42 9 L33 4 L33 14 Z" fill="var(--edge-genetic)"/></svg></td>
+                <td class="aname">Transcriptional activation</td>
+                <td>The cell makes more of the enzyme. Slower than the others by hours, not milliseconds.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-genetic)" stroke-width="2" stroke-dasharray="7 5" stroke-linecap="round"/><line x1="42" y1="3" x2="42" y2="15" stroke="var(--edge-genetic)" stroke-width="2.4" stroke-linecap="round"/></svg></td>
+                <td class="aname">Transcriptional repression</td>
+                <td>The cell makes less of the enzyme.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <h2>Go deeper</h2>
+        <p>All 30 arrow types live in <a href="index.html#grammar">the grammar of metabolism</a>. Regulation is also the thinnest part of the atlas today — 224 regulatory links against 26,510 reactions — so a pathway drawn without regulators is usually a statement about our coverage, not about the biology. The <a href="about.html#limits">known limits</a> are stated in full.</p>
+
+        <h2 id="reading"><span class="h-num">06</span><span>Reading the sheet</span></h2>
+        <p>Open <a href="chart.html">the chart</a>. It is drawn in Michal's visual language, so a handful of marks carry the whole notation:</p>
+        <div class="tscroll">
+          <table class="dtable">
+            <caption>Marks on the sheet</caption>
+            <thead>
+              <tr><th scope="col"><span class="visually-hidden">Specimen</span></th><th scope="col">Mark</th><th scope="col">Means</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 20" width="54" height="20" aria-hidden="true"><rect x="2" y="4" width="50" height="12" fill="none" stroke="var(--text-dim)" stroke-width="1.5"/></svg></td>
+                <td class="aname">Boxed name</td>
+                <td>A metabolite, with its condensed formula set alongside in monospace.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 20" width="54" height="20" aria-hidden="true"><line x1="2" y1="14" x2="52" y2="14" stroke="var(--text-dim)" stroke-width="1.5"/><path d="M52 14 L43 9.5 L43 18.5 Z" fill="var(--text-dim)"/><path d="M12 6 H26 M29 6 H37 M40 6 H46" stroke="var(--edge-catalysis)" stroke-width="2" stroke-linecap="round"/></svg></td>
+                <td class="aname">Name on the arrow</td>
+                <td>The enzyme catalysing that step, with its EC number beneath. Click it to open the structure.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 20" width="54" height="20" aria-hidden="true"><line x1="2" y1="5" x2="52" y2="5" stroke="var(--text-dim)" stroke-width="1.5"/><path d="M40 18 Q40 5 28 5" fill="none" stroke="var(--edge-cofactor)" stroke-width="1.6"/><path d="M28 5 L33 2 M28 5 L33 8" stroke="var(--edge-cofactor)" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></td>
+                <td class="aname">Curved arc</td>
+                <td>A cofactor or coenzyme couple joining the reaction and leaving again — ATP/ADP, NAD⁺/NADH.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 20" width="54" height="20" aria-hidden="true"><rect x="2" y="3" width="50" height="14" fill="none" stroke="var(--text-faint)" stroke-width="1.2" stroke-dasharray="4 3"/></svg></td>
+                <td class="aname">Framed region</td>
+                <td>A named territory of the sheet — a compartment or a sub-pathway, titled at its corner.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Mass flows along the solid arrows. Everything coloured is a claim about control rather than matter:</p>
+        <div class="tscroll">
+          <table class="dtable">
+            <caption>Mass-flow arrows</caption>
+            <thead>
+              <tr><th scope="col"><span class="visually-hidden">Specimen</span></th><th scope="col">Type</th><th scope="col">Means</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-mass)" stroke-width="2" stroke-linecap="round"/><path d="M42 9 L33 4 M42 9 L33 14" stroke="var(--edge-mass)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></td>
+                <td class="aname">Substrate</td>
+                <td>Metabolite consumed by a reaction.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-mass)" stroke-width="2" stroke-linecap="round"/><path d="M42 9 L33 4 L33 14 Z" fill="var(--edge-mass)"/></svg></td>
+                <td class="aname">Product</td>
+                <td>Metabolite produced by a reaction.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-mass)" stroke-width="2" stroke-linecap="round"/><path d="M2 9 L11 4 L11 14 Z" fill="var(--edge-mass)"/><path d="M42 9 L33 4 L33 14 Z" fill="var(--edge-mass)"/></svg></td>
+                <td class="aname">Reversible</td>
+                <td>Runs both ways under physiological conditions. Which way it actually runs depends on concentrations.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-cofactor)" stroke-width="2" stroke-dasharray="7 5" stroke-linecap="round"/><path d="M42 9 L33 4 M42 9 L33 14" stroke="var(--edge-cofactor)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></td>
+                <td class="aname">Cofactor</td>
+                <td>A helper required for catalysis, not consumed as a substrate.</td>
+              </tr>
+              <tr>
+                <td class="speccell"><svg class="spec" viewBox="0 0 54 18" width="54" height="18" aria-hidden="true"><line x1="2" y1="9" x2="42" y2="9" stroke="var(--edge-catalysis)" stroke-width="2" stroke-linecap="round"/><circle cx="39" cy="9" r="4" fill="none" stroke="var(--edge-catalysis)" stroke-width="2"/></svg></td>
+                <td class="aname">Catalyses</td>
+                <td>Links an enzyme to the reaction it accelerates. The open circle means it is not consumed.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout" data-label="Try this">
+          <p>Search <strong>glucose</strong> in <a href="explore.html">Explore</a> and follow it step by step to pyruvate. Ten reactions later you will have walked the most famous pathway in biochemistry, and every arrow you passed will have a source you can open.</p>
+        </div>
+
+        <h2 id="deeper"><span class="h-num">07</span><span>Go deeper</span></h2>
+        <p>Metabolian is an index into these, not a replacement for them. Where an entry here carries a <span class="badge" data-c="high">high</span> confidence, it usually means one of the first two agreed with the chemistry:</p>
         <ul>
+          <li><a href="https://www.rhea-db.org" target="_blank" rel="noopener">Rhea</a> — expert-annotated, mass-balanced reaction chemistry.</li>
+          <li><a href="https://www.metanetx.org" target="_blank" rel="noopener">MetaNetX</a> — reconciles reaction and metabolite identifiers across databases.</li>
           <li><a href="https://www.genome.jp/kegg/pathway.html" target="_blank" rel="noopener">KEGG PATHWAY</a> — the reference pathway maps.</li>
           <li><a href="https://reactome.org" target="_blank" rel="noopener">Reactome</a> — curated human pathways with rich annotation.</li>
           <li><a href="https://alphafold.ebi.ac.uk" target="_blank" rel="noopener">AlphaFold DB</a> — predicted structures for nearly every protein.</li>
         </ul>
+        <p>How those sources are weighted, and where the atlas is still thin, is set out in <a href="about.html#sources">method and sources</a>.</p>
       </div>
     </div>
   </main>

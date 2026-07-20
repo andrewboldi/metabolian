@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-bis-o-phytanyl-sn-gly-to-2-3-bis-o-geranylge "2,3-bis-O-phytanyl-sn-gly… to 2,3-bis-O-(geranylgeranyl…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     2_3_bis_o_phytanyl_sn_glycerol_1_phosphate
@@ -32,19 +32,31 @@ pathway 2-3-bis-o-phytanyl-sn-gly-to-2-3-bis-o-geranylge "2,3-bis-O-phytanyl-sn-
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_44 [4.2.3.44] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    isopimara_7_15_diene
+    <-> ec_4_2_3_62 [4.2.3.62] +2_cis_6_trans_farnesyl_diphosphate
+    cadinene
   }
 
-  branch from 2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l side right {
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_65 [4.2.3.65] +fpp
+    zingiberene
+  }
+
+  branch from 2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l side left {
     2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l
     <-> . +hydrogen_donor +hydrogen_acceptor
     2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
   }
 
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+  }
+
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
     <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne
   }
 }

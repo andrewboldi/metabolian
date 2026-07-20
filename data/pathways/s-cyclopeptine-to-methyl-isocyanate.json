@@ -119,22 +119,114 @@
       }
     },
     {
-      "id": "dihydrokaempferol",
-      "name": "(+)-dihydrokaempferol",
-      "short": "(+)-dihydrokaempfer…",
-      "formula": "C15H12O6",
-      "charge": 0,
+      "id": "2_aminophenyl_succinate",
+      "name": "(2-aminophenyl)succinate",
+      "short": "(2-aminophenyl)succ…",
+      "formula": "C10H9NO4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:15401"
+        "chebi": "CHEBI:188439"
       }
     },
     {
-      "id": "kaempferol_oxoanion",
-      "name": "kaempferol oxoanion",
-      "formula": "C15H9O6",
-      "charge": -1,
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:58573"
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "2_2_aminophenyl_succinyl_coa",
+      "name": "2-(2-aminophenyl)succinyl-CoA",
+      "short": "2-(2-aminophenyl)su…",
+      "formula": "C31H40N8O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:188441"
+      }
+    },
+    {
+      "id": "3_2_aminophenyl_succinyl_coa",
+      "name": "3-(2-aminophenyl)succinyl-CoA",
+      "short": "3-(2-aminophenyl)su…",
+      "formula": "C31H40N8O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:188440"
+      }
+    },
+    {
+      "id": "cyclopeptine",
+      "name": "cyclopeptine",
+      "formula": "C17H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71320"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM25"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "methylamine",
+      "name": "methylamine",
+      "formula": "CH6N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM255"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
       }
     }
   ],
@@ -312,55 +404,176 @@
     },
     {
       "id": "r4",
-      "name": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + ...",
-      "equation": "(2R,3R)-dihydrokaempferol + 2-oxoglutarate + O2 = kaempferol + succinate + CO2 + H2O + H(+)",
+      "name": "(2-aminophenyl)succinate + succinyl-CoA = 2-(2-aminophenyl)succinyl-CoA + succinate",
+      "equation": "(2-aminophenyl)succinate + succinyl-CoA = 2-(2-aminophenyl)succinyl-CoA + succinate",
       "substrates": [
         {
-          "metabolite": "dihydrokaempferol",
+          "metabolite": "2_aminophenyl_succinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "succinyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "kaempferol_oxoanion",
+          "metabolite": "2_2_aminophenyl_succinyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:61132"
+        "rhea": "RHEA:69783"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61132"
+            "id": "RHEA:69783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2-aminophenyl)succinate + succinyl-CoA = 3-(2-aminophenyl)succinyl-CoA + succinate",
+      "equation": "(2-aminophenyl)succinate + succinyl-CoA = 3-(2-aminophenyl)succinyl-CoA + succinate",
+      "substrates": [
+        {
+          "metabolite": "2_aminophenyl_succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_2_aminophenyl_succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:69787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69787"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(-)-cyclopenine synthase",
+      "ec": "1.14.11.81",
+      "substrates": [
+        {
+          "metabolite": "cyclopeptine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "cyclopenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR200007"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200007"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR199992",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methyl_isocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR199992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199992"
           }
         ]
       }

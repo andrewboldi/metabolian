@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e "2,3-dihydroxyindole to 2-amino-5-oxocyclohex-1-e…" {
-  spacing 204
+  spacing 240
 
   spine at 0,0 {
     2_3_dihydroxyindole
@@ -18,19 +18,37 @@ pathway 2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e "2,3-dihydroxyindole to
 
   branch from anthranilate side left {
     anthranilate
-    <-> ec_4_1_1_24 [4.1.1.24] +hplus +co2
-    aniline
+    <-> ec_2_3_1_113 [2.3.1.113] +malonyl-coa +coa
+    n_malonylanthranilate
   }
 
-  branch from anthraniloyl_coa side right {
+  branch from anthranilate side right {
+    anthranilate
+    <-> ec_1_14_13_35 [1.14.13.35] +nadph +o2 +hplus +nh3 +nadp
+    2_3_dihydroxybenzoate
+  }
+
+  branch from anthraniloyl_coa side left {
     anthraniloyl_coa
     <-> ec_2_3_1_262 [2.3.1.262] +malonyl-coa +hplus +co2 +coa
     2_aminobenzoylacetyl_coa
   }
 
+  branch from anthraniloyl_coa side right {
+    anthraniloyl_coa
+    <-> . +l_cysteine +coa
+    s_anthraniloyl_l_cysteine
+  }
+
   branch from ppi side left {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    1r_2r_3r_prephytoene_diphosphate
+    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
+    3_l_threonyl_adenylyl_1_group
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_65 [2.7.7.65] +gtp
+    c_di_gmp
   }
 }

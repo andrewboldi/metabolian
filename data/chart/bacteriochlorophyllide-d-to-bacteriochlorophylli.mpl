@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway bacteriochlorophyllide-d-to-bacteriochlorophylli "bacteriochlorophyllide d to bacteriochlorophyllide e" {
-  spacing 252
+  spacing 264
 
   spine at 0,0 {
     bacteriochlorophyllide_d
@@ -20,19 +20,13 @@ pathway bacteriochlorophyllide-d-to-bacteriochlorophylli "bacteriochlorophyllide
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
-    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+    <-> ec_2_1_1_304 [2.1.1.304] +tyrosine +sam +hplus
+    3_methyl_l_tyrosine
   }
 
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> . +l_isoleucine +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    methylcyclopropylglycine
-  }
-
-  branch from methionine side left {
-    methionine
-    <-> . +3_l_methionyl_adenylyl_zwitterionic_group +h2o +hplus
-    amp_3_end_1
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_189 [2.1.1.189] +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 }

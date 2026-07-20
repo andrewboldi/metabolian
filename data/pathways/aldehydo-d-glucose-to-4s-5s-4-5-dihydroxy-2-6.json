@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6",
   "name": "aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6…",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6-dioxohexanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -167,6 +167,33 @@
       }
     },
     {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
       "id": "3_deoxy_keto_d_fructose",
       "name": "3-deoxy-keto-D-fructose",
       "short": "3-deoxy-keto-D-fruc…",
@@ -177,23 +204,68 @@
       }
     },
     {
-      "id": "n6_3_o_phospho_d_erythrulosyl_l_lysinium_1",
-      "name": "N6-(3-O-phospho-D-erythrulosyl)-L-lysinium(1−)",
-      "short": "N6-(3-O-phospho-D-e…",
-      "formula": "C10H18N2O7P",
-      "charge": -1,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:144624"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "4_hydroxy_2_oxobutanal",
-      "name": "4-hydroxy-2-oxobutanal",
-      "short": "4-hydroxy-2-oxobuta…",
-      "formula": "C4H6O3",
+      "id": "n6_acetyl_l_lysine",
+      "name": "N6-acetyl-L-lysine",
+      "formula": "C8H14N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:144586"
+        "chebi": "CHEBI:61930"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "n6_propanoyl_l_lysine",
+      "name": "N6-propanoyl-L-lysine",
+      "short": "N6-propanoyl-L-lysi…",
+      "formula": "C9H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138019"
+      }
+    },
+    {
+      "id": "3_o_propanoyl_adp_d_ribose",
+      "name": "3''-O-propanoyl-ADP-D-ribose",
+      "short": "3''-O-propanoyl-ADP…",
+      "formula": "C18H25N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:145015"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "d_gluconate",
+      "name": "D-gluconate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18391"
       }
     },
     {
@@ -220,6 +292,27 @@
       "name": "2-dehydro-3-deoxy-D-gluconate 6-dehydrogenase",
       "ec": [
         "1.1.1.126"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_48",
+      "name": "histone acetyltransferase",
+      "ec": [
+        "2.3.1.48"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_39",
+      "name": "gluconate dehydratase",
+      "ec": [
+        "4.2.1.39"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_140",
+      "name": "gluconate/galactonate dehydratase",
+      "ec": [
+        "4.2.1.140"
       ]
     },
     {
@@ -460,6 +553,54 @@
     },
     {
       "id": "r6",
+      "name": "protein-fructosamine 3-kinase",
+      "ec": "2.7.1.171",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n6_3_o_phospho_d_fructosyl_l_lysinium_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_d_fructosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_171"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR117283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117283"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "3-deoxyfructose + NADP(+) = 3-deoxyglucosone + NADPH + H(+)",
       "equation": "3-deoxyfructose + NADP(+) = 3-deoxyglucosone + NADPH + H(+)",
       "substrates": [
@@ -487,7 +628,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:58668"
       },
@@ -502,12 +643,65 @@
       }
     },
     {
-      "id": "r7",
-      "name": "N(6)-(3-O-phospho-D-erythrulosyl)-L-lysyl-[protein] + H2O = 4-hydroxy-2-oxobutanal + L-...",
-      "equation": "N(6)-(3-O-phospho-D-erythrulosyl)-L-lysyl-[protein] + H2O = 4-hydroxy-2-oxobutanal + L-lysyl-[protein] + phosphate",
+      "id": "r8",
+      "name": "histone acetyltransferase",
+      "equation": "L-lysyl-[histone] + acetyl-CoA = N(6)-acetyl-L-lysyl-[histone] + CoA + H(+)",
+      "ec": "2.3.1.48",
       "substrates": [
         {
-          "metabolite": "n6_3_o_phospho_d_erythrulosyl_l_lysinium_1",
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_acetyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:21992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "N(6)-propanoyl-L-lysyl-[protein] + NAD(+) + H2O = 3''-O-propanoyl-ADP-D-ribose + nicoti...",
+      "equation": "N(6)-propanoyl-L-lysyl-[protein] + NAD(+) + H2O = 3''-O-propanoyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n6_propanoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -517,35 +711,76 @@
       ],
       "products": [
         {
-          "metabolite": "4_hydroxy_2_oxobutanal",
+          "metabolite": "3_o_propanoyl_adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
           "stoichiometry": 1
         },
         {
           "metabolite": "l_lysinium",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:21212"
+        "rhea": "RHEA:23500"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21212"
+            "id": "RHEA:23500"
           }
         ]
       }
     },
     {
-      "id": "r8",
+      "id": "r10",
+      "name": "gluconate dehydratase",
+      "equation": "D-gluconate = 2-dehydro-3-deoxy-D-gluconate + H2O",
+      "ec": "4.2.1.39",
+      "substrates": [
+        {
+          "metabolite": "d_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:21612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
       "name": "unsaturated pyranuronate lyase",
       "equation": "4-deoxy-L-erythro-hex-4-enopyranuronate = (4S,5S)-4,5-dihydroxy-2,6-dioxohexanoate",
       "ec": "4.2.99.25",
@@ -567,7 +802,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:76571"
       },

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-saccharopinate-to-r-crotonylcarnitine "L-saccharopinate to (R)-crotonylcarnitine" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     l_saccharopinate
@@ -28,16 +28,40 @@ pathway l-saccharopinate-to-r-crotonylcarnitine "L-saccharopinate to (R)-crotony
     alanine
   }
 
+  branch from l_allysine side right {
+    l_allysine
+    <-> ec_2_6_1_36 [2.6.1.36] +akg +glutamate
+    l_lysinium
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_3_5_2_9 [3.5.2.9] +atp +h2o +adp +pi +hplus
+    5_oxo_l_prolinate
+  }
+
   branch from glutamate side right {
     glutamate
-    <-> ec_1_4_1_3 [1.4.1.3] +nadp +h2o +akg +nadph +hplus
-    nh3
+    <-> ec_2_6_1_59 [2.6.1.59] +dtdp_4_amino_4_6_dideoxy_d_galactose +akg
+    dtdp_4_dehydro_6_deoxy_d_glucose
   }
 
   branch from l_2_aminoadipate side left {
     l_2_aminoadipate
+    <-> . +2_oxoadipate +l_kynurenine +h2o
+    kynurenate
+  }
+
+  branch from l_2_aminoadipate side right {
+    l_2_aminoadipate
     <-> . +2_oxoadipate +l_kynurenine
     4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from 2_oxoadipate side left {
+    2_oxoadipate
+    <-> ec_1_1_1_172 [1.1.1.172] +nad +nadh +hplus
+    2_hydroxyadipate
   }
 
   branch from 2_oxoadipate side right {
@@ -50,6 +74,18 @@ pathway l-saccharopinate-to-r-crotonylcarnitine "L-saccharopinate to (R)-crotony
     glutaryl_coa
     <-> . +o2 +h2o2
     trans_4_carboxybut_2_enoyl_coa
+  }
+
+  branch from glutaryl_coa side right {
+    glutaryl_coa
+    <-> . +h2o +coa +hplus
+    glutarate
+  }
+
+  branch from crotonoyl_coa side left {
+    crotonoyl_coa
+    <-> ec_4_2_1_55 [4.2.1.55] +h2o
+    r_3_hydroxybutanoyl_coa
   }
 
   branch from crotonoyl_coa side right {

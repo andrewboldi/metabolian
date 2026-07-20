@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway threo-3-methyl-l-aspartate-to-3-methylfumaryl-co "threo-3-methyl-L-aspartate to 3-methylfumaryl-CoA" {
-  spacing 220
+  spacing 274
 
   spine at 0,0 {
     threo_3_methyl_l_aspartate
@@ -22,10 +22,22 @@ pathway threo-3-methyl-l-aspartate-to-3-methylfumaryl-co "threo-3-methyl-L-aspar
     l_citramalate
   }
 
+  branch from mesaconate side right {
+    mesaconate
+    <-> . +nh3
+    erythro_3_methyl_l_aspartate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_67 [3.5.1.67] +4_methylene_l_glutamine +h2o
+    4_methylene_l_glutamate
+  }
+
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_3_14 [1.4.3.14] +l_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
+    <-> ec_3_5_4_6 [3.5.4.6] +amp +h2o +hplus
+    imp
   }
 
   branch from mesaconyl_coa side left {
@@ -34,10 +46,22 @@ pathway threo-3-methyl-l-aspartate-to-3-methylfumaryl-co "threo-3-methyl-L-aspar
     l_erythro_3_methylmalyl_coa
   }
 
+  branch from mesaconyl_coa side right {
+    mesaconyl_coa
+    <-> ec_1_3_8_12 [1.3.8.12] +fad +hplus +fadh2
+    2s_methylsuccinyl_coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_20 [1.14.11.20] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +akg +o2 +co2
+    11_o_demethyl_17_o_deacetylvindolinium
+  }
+
   branch from succinate side right {
     succinate
-    <-> ec_2_8_3_2 [2.8.3.2] +oxalate +succinyl_coa
-    oxalyl_coa
+    <-> ec_1_14_11_39 [1.14.11.39] +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
   }
 
   branch from 3_methylfumaryl_coa side left {

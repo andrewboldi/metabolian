@@ -88,27 +88,62 @@
       }
     },
     {
-      "id": "n_methyl_l_histidine",
-      "name": "Nα-methyl-L-histidine",
-      "short": "Nα-methyl-L-histidi…",
-      "formula": "C7H11N3O2",
-      "charge": 0,
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:75895"
+        "chebi": "CHEBI:65315"
       }
     },
     {
-      "id": "n_n_dimethyl_l_histidine",
-      "name": "Nα,Nα-dimethyl-L-histidine",
-      "short": "Nα,Nα-dimethyl-L-hi…",
-      "formula": "C8H13N3O2",
-      "charge": 0,
+      "id": "5_methyluridine_5_monophosphate_1",
+      "name": "5-methyluridine 5'-monophosphate(1−)",
+      "short": "5-methyluridine…",
+      "formula": "C10H12N2O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57610"
+        "chebi": "CHEBI:74447"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_190",
+      "name": "23S rRNA (uracil(1939)-C(5))-methyltransferase",
+      "ec": [
+        "2.1.1.190"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_191",
+      "name": "23S rRNA (cytosine(1962)-C(5))-methyltransferase",
+      "ec": [
+        "2.1.1.191"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -241,11 +276,12 @@
     },
     {
       "id": "r4",
-      "name": "N(alpha)-methyl-L-histidine + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-hi...",
-      "equation": "N(alpha)-methyl-L-histidine + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-histidine + S-adenosyl-L-homocysteine + H(+)",
+      "name": "23S rRNA (uracil(1939)-C(5))-methyltransferase",
+      "equation": "uridine(1939) in 23S rRNA + S-adenosyl-L-methionine = 5-methyluridine(1939) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.190",
       "substrates": [
         {
-          "metabolite": "n_methyl_l_histidine",
+          "metabolite": "uridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -255,7 +291,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_n_dimethyl_l_histidine",
+          "metabolite": "5_methyluridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -267,17 +303,71 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_190"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:38479"
+        "rhea": "RHEA:42908"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38479"
+            "id": "RHEA:42908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "23S rRNA (cytosine(1962)-C(5))-methyltransferase",
+      "equation": "cytidine(1962) in 23S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1962) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.191",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42912"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42912"
           }
         ]
       }

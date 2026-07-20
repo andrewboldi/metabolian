@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-deoxy-d-glucoside-to-2-deoxy-d-glucopyranose",
   "name": "2-deoxy-α-D-glucoside to 2-deoxy-D-glucopyranose",
-  "category": "redox-detox",
+  "category": "other",
   "summary": "A 3-step route from 2-deoxy-α-D-glucoside to 2-deoxy-D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -112,23 +112,12 @@
       }
     },
     {
-      "id": "gsh",
-      "name": "Glutathione (reduced, GSH)",
-      "short": "Glutathione…",
-      "formula": "C10H16N3O6S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57925"
-      }
-    },
-    {
-      "id": "gssg",
-      "name": "Glutathione disulfide (oxidized, GSSG)",
-      "short": "Glutathione…",
-      "formula": "C20H30N6O12S2",
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58297"
+        "chebi": "CHEBI:57945"
       }
     },
     {
@@ -141,6 +130,24 @@
       }
     },
     {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29950"
+      }
+    },
+    {
+      "id": "s_hydroxy_l_cysteine",
+      "name": "S-hydroxy-L-cysteine",
+      "formula": "C3H5NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61973"
+      }
+    },
+    {
       "id": "2_deoxy_6_o_phosphonato_d_glucono_1_5_lactone",
       "name": "2-deoxy-6-O-phosphonato-D-glucono-1,5-lactone",
       "short": "2-deoxy-6-O-phospho…",
@@ -148,15 +155,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:145420"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -176,10 +174,10 @@
       ]
     },
     {
-      "id": "ec_1_11_1_27",
-      "name": "glutathione-dependent peroxiredoxin",
+      "id": "ec_1_11_1_26",
+      "name": "NADH-dependent peroxiredoxin",
       "ec": [
-        "1.11.1.27"
+        "1.11.1.26"
       ]
     }
   ],
@@ -319,17 +317,21 @@
     },
     {
       "id": "r4",
-      "name": "glutathione-dependent peroxiredoxin",
-      "equation": "a hydroperoxide + 2 glutathione = an alcohol + glutathione disulfide + H2O",
-      "ec": "1.11.1.27",
+      "name": "NADH-dependent peroxiredoxin",
+      "equation": "a hydroperoxide + NADH + H(+) = an alcohol + NAD(+) + H2O",
+      "ec": "1.11.1.26",
       "substrates": [
         {
           "metabolite": "peroxol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gsh",
-          "stoichiometry": 2
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
@@ -338,7 +340,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "gssg",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -348,26 +350,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_11_1_27"
+          "enzyme": "ec_1_11_1_26"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:62632"
+        "rhea": "RHEA:62628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62632"
+            "id": "RHEA:62628"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "a hydroperoxide + L-cysteinyl-[protein] = S-hydroxy-L-cysteinyl-[protein] + an alcohol",
+      "equation": "a hydroperoxide + L-cysteinyl-[protein] = S-hydroxy-L-cysteinyl-[protein] + an alcohol",
+      "substrates": [
+        {
+          "metabolite": "peroxol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_hydroxy_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alcohol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:67124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "2-deoxy-D-glucose 6-phosphate + NAD(+) = 2-deoxy-6-phospho-D-glucono-1,5-lactone + NADH...",
       "equation": "2-deoxy-D-glucose 6-phosphate + NAD(+) = 2-deoxy-6-phospho-D-glucono-1,5-lactone + NADH + H(+)",
       "substrates": [
@@ -395,7 +436,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:62064"
       },

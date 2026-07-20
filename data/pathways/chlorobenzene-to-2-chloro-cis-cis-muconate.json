@@ -109,6 +109,24 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "3_chlorosalicylate",
+      "name": "3-chlorosalicylate",
+      "formula": "C7H4ClO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231640"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -316,6 +334,61 @@
           {
             "db": "Rhea",
             "id": "RHEA:80623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "3-chlorosalicylate + NADH + O2 + 2 H(+) = 3-chlorocatechol + CO2 + NAD(+) + H2O",
+      "equation": "3-chlorosalicylate + NADH + O2 + 2 H(+) = 3-chlorocatechol + CO2 + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_chlorosalicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_chlorocatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:80711"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80711"
           }
         ]
       }

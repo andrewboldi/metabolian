@@ -94,6 +94,53 @@
       }
     },
     {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxyoctanoyl_coa",
+      "name": "3-hydroxyoctanoyl-CoA",
+      "short": "3-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86040"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "o_octanoyl_l_carnitine",
+      "name": "O-octanoyl-L-carnitine",
+      "short": "O-octanoyl-L-carnit…",
+      "formula": "C15H29NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18102"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
       "id": "acetyl_coa",
       "name": "Acetyl-CoA",
       "formula": "C23H34N7O17P3S",
@@ -110,18 +157,17 @@
       "xrefs": {
         "chebi": "CHEBI:62548"
       }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_137",
+      "name": "carnitine O-octanoyltransferase",
+      "ec": [
+        "2.3.1.137"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -273,6 +319,86 @@
     },
     {
       "id": "r5",
+      "name": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "equation": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "carnitine O-octanoyltransferase",
+      "equation": "octanoyl-CoA + (R)-carnitine = O-octanoyl-(R)-carnitine + CoA",
+      "ec": "2.3.1.137",
+      "substrates": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_octanoyl_l_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_137"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:17177"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "octanoyl-CoA + acetyl-CoA = 3-oxodecanoyl-CoA + CoA",
       "equation": "octanoyl-CoA + acetyl-CoA = 3-oxodecanoyl-CoA + CoA",
       "substrates": [
@@ -296,7 +422,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:31087"
       },

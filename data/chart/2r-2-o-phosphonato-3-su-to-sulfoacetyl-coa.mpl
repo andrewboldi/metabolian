@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-2-o-phosphonato-3-su-to-sulfoacetyl-coa "(2R)-2-O-phosphonato-3-su… to sulfoacetyl-CoA" {
-  spacing 244
+  spacing 250
 
   spine at 0,0 {
     2r_2_o_phosphonato_3_sulfonatolactate
@@ -18,9 +18,9 @@ pathway 2r-2-o-phosphonato-3-su-to-sulfoacetyl-coa "(2R)-2-O-phosphonato-3-su…
     sulfoacetyl_coa
   }
 
-  branch from sulfonatoacetaldehyde side left {
-    sulfonatoacetaldehyde
-    <-> . +taurine +iron +h2o +fe2 +hplus
-    nh3
+  branch from r_3_sulfolactate side left {
+    r_3_sulfolactate
+    <-> ec_1_1_1_308 [1.1.1.308] +nad +h2o +nadh +hplus
+    2r_3_sulfopropanediol
   }
 }

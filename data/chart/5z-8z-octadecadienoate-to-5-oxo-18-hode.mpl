@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5z-8z-octadecadienoate-to-5-oxo-18-hode "(5Z,8Z)-octadecadienoate to 5-oxo-18-HODE" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     5z_8z_octadecadienoate
@@ -22,11 +22,5 @@ pathway 5z-8z-octadecadienoate-to-5-oxo-18-hode "(5Z,8Z)-octadecadienoate to 5-o
     5s_hode
     <-> . +fadh2 +o2 +fad +h2o +hplus
     5s_18_dihode
-  }
-
-  branch from gssg side right {
-    gssg
-    <-> . +a_phosphatidylcholine_hydroperoxide +gsh +h2o
-    a_hydroxy_phosphatidylcholine
   }
 }

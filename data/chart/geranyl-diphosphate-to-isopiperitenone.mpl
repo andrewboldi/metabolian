@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-isopiperitenone "geranyl diphosphate to (−)-isopiperitenone" {
-  spacing 176
+  spacing 212
 
   spine at 0,0 {
     gpp
@@ -24,14 +24,26 @@ pathway geranyl-diphosphate-to-isopiperitenone "geranyl diphosphate to (−)-iso
 
   branch from ppi side right {
     ppi
-    <-> . +11_12_eet +atp +coa +amp
-    11_12_epoxy_5z_8z_14z_icosatrienoyl_coa
+    <-> . +l_tryptophan +atp +h2o +amp +hplus
+    d_tryptophan
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +l_serine +utp
+    uridylyl_l_serine_1
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_19_54 [1.14.19.54] +s_reticulinium +fmnh2 +o2 +h2o +hplus
+    reticulinylium
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    13_hete
+    <-> ec_1_14_14_76 [1.14.14.76] +ent_isokaurene +fmnh2 +o2 +h2o +hplus
+    2_3_dihydroxy_ent_isokaurene
   }
 
   branch from isopiperitenone side right {

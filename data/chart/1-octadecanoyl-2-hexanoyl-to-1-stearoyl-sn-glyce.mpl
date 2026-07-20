@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce "1-octadecanoyl-2-hexanoyl… to 1-stearoyl-sn-glycero-3-p…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     1_octadecanoyl_2_hexanoyl_sn_glycero_3_phosphoch
@@ -14,6 +14,30 @@ pathway 1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce "1-octadecanoyl-2-hexan
     1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine
     <-> . +n_acetylsphingosine -1_stearoyl_sn_glycero_3_phosphocholine
     1_o_oleoyl_n_acetylsphingosine
+  }
+
+  branch from hexanoate side left {
+    hexanoate
+    <-> . +nad +h2o +nadh +hplus
+    hexanal
+  }
+
+  branch from 1_stearoyl_sn_glycero_3_phosphocholine side right {
+    1_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine
+    1_o_linoleoyl_n_acetylsphingosine
+  }
+
+  branch from 1_stearoyl_sn_glycero_3_phosphocholine side left {
+    1_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +1_nonadecanoyl_sn_glycero_3_phosphocholine +1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine
+    1_nonadecanoyl_2_oleoyl_sn_glycero_3_phosphochol
+  }
+
+  branch from 1_o_oleoyl_n_acetylsphingosine side right {
+    1_o_oleoyl_n_acetylsphingosine
+    <-> . +1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine +n_acetylsphingosine
+    2_stearoyl_sn_glycero_3_phosphocholine
   }
 
   branch from 1_o_oleoyl_n_acetylsphingosine side left {

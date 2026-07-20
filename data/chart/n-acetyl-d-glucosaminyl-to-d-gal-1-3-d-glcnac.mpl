@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-glucosaminyl-to-d-gal-1-3-d-glcnac "N-acetyl-β-D-glucosaminyl… to β-D-Gal-(1→3)-β-D-GlcNAc-…" {
-  spacing 280
+  spacing 290
 
   spine at 0,0 {
     n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_d_g

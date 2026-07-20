@@ -102,31 +102,41 @@
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "6_hydroxyprogesterone",
-      "name": "6β-hydroxyprogesterone",
-      "short": "6β-hydroxyprogester…",
-      "formula": "C21H30O3",
+      "id": "20s_20_hydroxypregn_4_en_3_one",
+      "name": "(20S)-20-hydroxypregn-4-en-3-one",
+      "short": "20-hydroxypregn-4-e…",
+      "formula": "C21H32O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62117"
+        "chebi": "CHEBI:28453"
       }
     },
     {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58210"
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "20r_20_hydroxypregn_4_en_3_one",
+      "name": "(20R)-20-hydroxypregn-4-en-3-one",
+      "short": "20-hydroxypregn-4-e…",
+      "formula": "C21H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36729"
       }
     }
   ],
@@ -311,33 +321,25 @@
     },
     {
       "id": "r4",
-      "name": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone ...",
-      "equation": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(20S)-hydroxypregn-4-en-3-one + NAD(+) = progesterone + NADH + H(+)",
+      "equation": "(20S)-hydroxypregn-4-en-3-one + NAD(+) = progesterone + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "progesterone",
+          "metabolite": "20s_20_hydroxypregn_4_en_3_one",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_hydroxyprogesterone",
+          "metabolite": "progesterone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -348,14 +350,57 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:47252"
+        "rhea": "RHEA:42108"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47252"
+            "id": "RHEA:42108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(20R)-20-hydroxypregn-4-en-3-one + NAD(+) = progesterone + NADH + H(+)",
+      "equation": "(20R)-20-hydroxypregn-4-en-3-one + NAD(+) = progesterone + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "20r_20_hydroxypregn_4_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "progesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46016"
           }
         ]
       }

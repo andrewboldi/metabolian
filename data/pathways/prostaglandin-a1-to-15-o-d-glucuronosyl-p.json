@@ -81,6 +81,43 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "15_dehydro_prostaglandin_b1",
+      "name": "15-dehydro-prostaglandin B1",
+      "short": "15-dehydro-prostagl…",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1132192"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
     }
   ],
   "enzymes": [
@@ -89,6 +126,13 @@
       "name": "prostaglandin-A1 Delta-isomerase",
       "ec": [
         "5.3.3.9"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_141",
+      "name": "15-hydroxyprostaglandin dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.141"
       ]
     }
   ],
@@ -200,6 +244,54 @@
           {
             "db": "Rhea",
             "id": "RHEA:79935"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "15-hydroxyprostaglandin dehydrogenase (NAD(+))",
+      "ec": "1.1.1.141",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "15_dehydro_prostaglandin_b1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_b1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_141"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR192893"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192893"
           }
         ]
       }

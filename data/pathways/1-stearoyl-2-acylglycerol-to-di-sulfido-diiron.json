@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-stearoyl-2-acylglycerol-to-di-sulfido-diiron",
   "name": "1-stearoyl 2-acylglycerol… to di-μ-sulfido-diiron",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 4-step route from 1-stearoyl 2-acylglycerolipid to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -114,23 +114,42 @@
       }
     },
     {
-      "id": "2_hydroxy_5_methyl_1_naphthoate",
-      "name": "2-hydroxy-5-methyl-1-naphthoate",
-      "short": "2-hydroxy-5-methyl-…",
-      "formula": "C12H9O3",
-      "charge": -1,
+      "id": "oleoyl_containing_glycerolipid",
+      "name": "oleoyl-containing glycerolipid",
+      "short": "oleoyl-containing…",
+      "formula": "C18H33OR",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:82757"
+        "chebi": "CHEBI:88240"
       }
     },
     {
-      "id": "2_7_dihydroxy_5_methyl_1_naphthoate",
-      "name": "2,7-dihydroxy-5-methyl-1-naphthoate",
-      "short": "2,7-dihydroxy-5-met…",
-      "formula": "C12H9O4",
-      "charge": -1,
+      "id": "linoleoyl_containing_glycerolipid",
+      "name": "linoleoyl-containing glycerolipid",
+      "short": "linoleoyl-containin…",
+      "formula": "C18H31OR",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78281"
+        "chebi": "CHEBI:88351"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "25r_cholest_5_ene_3_26_diol",
+      "name": "(25R)-cholest-5-ene-3β,26-diol",
+      "short": "cholest-5-ene-3β,26…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76591"
       }
     },
     {
@@ -174,10 +193,10 @@
       ]
     },
     {
-      "id": "ec_1_14_15_31",
-      "name": "2-hydroxy-5-methyl-1-naphthoate 7-hydroxylase",
+      "id": "ec_1_14_19_23",
+      "name": "acyl-lipid (n+3)-(Z)-desaturase (ferredoxin)",
       "ec": [
-        "1.14.15.31"
+        "1.14.19.23"
       ]
     }
   ],
@@ -412,12 +431,12 @@
     },
     {
       "id": "r5",
-      "name": "2-hydroxy-5-methyl-1-naphthoate 7-hydroxylase",
-      "equation": "2-hydroxy-5-methyl-1-naphthoate + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2,7-dihydroxy-5-methyl-1-naphthoate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "ec": "1.14.15.31",
+      "name": "acyl-lipid (n+3)-(Z)-desaturase (ferredoxin)",
+      "equation": "a (9Z)-octadecenoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.23",
       "substrates": [
         {
-          "metabolite": "2_hydroxy_5_methyl_1_naphthoate",
+          "metabolite": "oleoyl_containing_glycerolipid",
           "stoichiometry": 1
         },
         {
@@ -435,7 +454,63 @@
       ],
       "products": [
         {
-          "metabolite": "2_7_dihydroxy_5_methyl_1_naphthoate",
+          "metabolite": "linoleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (25R)-cholest-5-ene-3beta,26-diol...",
+      "equation": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (25R)-cholest-5-ene-3beta,26-diol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25r_cholest_5_ene_3_26_diol",
           "stoichiometry": 1
         },
         {
@@ -447,28 +522,23 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_15_31"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:42828"
+        "rhea": "RHEA:46400"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42828"
+            "id": "RHEA:46400"
           }
         ]
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
       "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
       "equation": "a 1-[(9Z,12Z)-octadecdienoyl]-2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(9Z,12Z,15Z)-octadectrienoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
       "ec": "1.14.19.36",
@@ -510,7 +580,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:46784"
       },

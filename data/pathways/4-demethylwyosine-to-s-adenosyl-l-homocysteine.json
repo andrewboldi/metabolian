@@ -137,23 +137,33 @@
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "s_azetidine_2_carboxylate",
+      "name": "(S)-azetidine-2-carboxylate",
+      "short": "azetidine-2-carboxy…",
+      "formula": "C4H7NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74411"
+        "chebi": "CHEBI:231534"
       }
     },
     {
-      "id": "n1_methyladenosine_5_monophosphate_1",
-      "name": "N1-methyladenosine 5'-monophosphate(1−)",
-      "short": "N1-methyladenosine…",
-      "formula": "C11H13N5O6P",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74491"
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
       }
     }
   ],
@@ -184,13 +194,6 @@
       "name": "tRNA(Phe) {7-[3-amino-3-(methoxycarbonyl)propyl]wyosine(37)-N}-",
       "ec": [
         "2.3.1.231"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_157",
-      "name": "rRNA small subunit aminocarboxypropyltransferase",
-      "ec": [
-        "2.5.1.157"
       ]
     }
   ],
@@ -393,9 +396,8 @@
     },
     {
       "id": "r5",
-      "name": "rRNA small subunit aminocarboxypropyltransferase",
-      "equation": "an N(1)-methylpseudouridine in rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine in rRNA + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "2.5.1.157",
+      "name": "N(1)-methylpseudouridine(1191) in yeast 18S rRNA + S-adenosyl-L-methionine = N(1)-methy...",
+      "equation": "N(1)-methylpseudouridine(1191) in yeast 18S rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine(1191) in yeast 18S rRNA + S-methyl-5'-thioadenosine + H(+)",
       "substrates": [
         {
           "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
@@ -420,33 +422,67 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_157"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:63296"
+        "rhea": "RHEA:63300"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63296"
+            "id": "RHEA:63300"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "an adenosine in tRNA + S-adenosyl-L-methionine = an N(1)-methyladenosine in tRNA + S-ad...",
-      "equation": "an adenosine in tRNA + S-adenosyl-L-methionine = an N(1)-methyladenosine in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "S-adenosyl-L-methionine = (S)-azetidine-2-carboxylate + S-methyl-5'-thioadenosine + H(+)",
+      "equation": "S-adenosyl-L-methionine = (S)-azetidine-2-carboxylate + S-methyl-5'-thioadenosine + H(+)",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_azetidine_2_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:80503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "a cytidine in rRNA + S-adenosyl-L-methionine = a 5-methylcytidine in rRNA + S-adenosyl-...",
+      "equation": "a cytidine in rRNA + S-adenosyl-L-methionine = a 5-methylcytidine in rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -456,7 +492,7 @@
       ],
       "products": [
         {
-          "metabolite": "n1_methyladenosine_5_monophosphate_1",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -469,16 +505,59 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:49132"
+        "rhea": "RHEA:61484"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49132"
+            "id": "RHEA:61484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "cytidine(50) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(50) in tRNA + S-adeno...",
+      "equation": "cytidine(50) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(50) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:61488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61488"
           }
         ]
       }

@@ -131,23 +131,72 @@
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
-      "charge": -1,
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "metanetx": "MNXM1102167"
       }
     },
     {
-      "id": "n1_methylguanosine_5_monophosphate_1",
-      "name": "N1-methylguanosine 5'-monophosphate(1−)",
-      "short": "N1-methylguanosine…",
-      "formula": "C11H13N5O7P",
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "13s_13_dihydrodaunorubicin",
+      "name": "(13S)-13-dihydrodaunorubicin",
+      "short": "13-dihydrodaunorubi…",
+      "formula": "C27H31NO10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31031"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:73542"
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "n1_methyladenosine_5_monophosphate_1",
+      "name": "N1-methyladenosine 5'-monophosphate(1−)",
+      "short": "N1-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74491"
+      }
+    },
+    {
+      "id": "n6_n6_dimethyladenosine_5_monophosphate_1",
+      "name": "N6,N6-dimethyladenosine 5'-monophosphate(1−)",
+      "short": "N6,N6-dimethyladeno…",
+      "formula": "C12H15N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74493"
       }
     }
   ],
@@ -160,10 +209,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_228",
-      "name": "tRNA (guanine(37)-N(1))-methyltransferase",
+      "id": "ec_2_1_1_180",
+      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
       "ec": [
-        "2.1.1.228"
+        "2.1.1.180"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_184",
+      "name": "23S rRNA (adenine(2085)-N(6))-dimethyltransferase",
+      "ec": [
+        "2.1.1.184"
       ]
     }
   ],
@@ -364,12 +420,60 @@
     },
     {
       "id": "r5",
-      "name": "tRNA (guanine(37)-N(1))-methyltransferase",
-      "equation": "guanosine(37) in tRNA + S-adenosyl-L-methionine = N(1)-methylguanosine(37) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.228",
+      "name": "carminomycin 4-O-methyltransferase",
+      "ec": "2.1.1.292",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "13s_13_dihydrodaunorubicin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13r_13_dihydrocarminomycin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_292"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR118959"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
+      "equation": "adenosine(1408) in 16S rRNA + S-adenosyl-L-methionine = N(1)-methyladenosine(1408) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.180",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -379,7 +483,7 @@
       ],
       "products": [
         {
-          "metabolite": "n1_methylguanosine_5_monophosphate_1",
+          "metabolite": "n1_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -393,20 +497,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_228"
+          "enzyme": "ec_2_1_1_180"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:36899"
+        "rhea": "RHEA:42776"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36899"
+            "id": "RHEA:42776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "23S rRNA (adenine(2085)-N(6))-dimethyltransferase",
+      "equation": "adenosine(2085) in 23S rRNA + 2 S-adenosyl-L-methionine = N(6)-dimethyladenosine(2085) in 23S rRNA + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.184",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_dimethyladenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_184"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:42784"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42784"
           }
         ]
       }

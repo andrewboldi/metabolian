@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-isobutyrylphloroglucinol-to-diphosphate "2-isobutyrylphloroglucinol to diphosphate" {
-  spacing 260
+  spacing 272
 
   spine at 0,0 {
     2_isobutyrylphloroglucinol
@@ -18,7 +18,13 @@ pathway 2-isobutyrylphloroglucinol-to-diphosphate "2-isobutyrylphloroglucinol to
 
   branch from ppi side left {
     ppi
-    <-> . +1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol +dmapp
-    1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    alpha_springene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    talarodiene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 14-demethyllanosterol-to-3-dehydro-4-methylzymos "14-demethyllanosterol to 3-dehydro-4-methylzymoste…" {
-  spacing 280
+  spacing 302
 
   spine at 0,0 {
     tmas
@@ -16,5 +16,23 @@ pathway 14-demethyllanosterol-to-3-dehydro-4-methylzymos "14-demethyllanosterol 
     methylzymosterol_carboxylate
     <-> ec_1_1_1_170 [1.1.1.170] +nadp -co2 -nadph
     keto_methylzymosterol
+  }
+
+  branch from 4_hydroxymethyl_4_methylzymosterol side left {
+    4_hydroxymethyl_4_methylzymosterol
+    <-> ec_1_14_13_72 [1.14.13.72] +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +o2 +nadph +h2o
+    nadp
+  }
+
+  branch from 4_hydroxymethyl_4_methylzymosterol side right {
+    4_hydroxymethyl_4_methylzymosterol
+    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +nadp +4_methylzymosterol_4_carbaldehyde
+    h2o
+  }
+
+  branch from 4_methylzymosterol_4_carbaldehyde side left {
+    4_methylzymosterol_4_carbaldehyde
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +4_hydroxymethyl_4_methylzymosterol +h2o
+    nad
   }
 }

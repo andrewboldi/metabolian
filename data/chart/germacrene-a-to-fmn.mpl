@@ -4,29 +4,29 @@
 # edit the generator, not this file.
 
 pathway germacrene-a-to-fmn "(+)-germacrene A to FMN" {
-  spacing 160
+  spacing 172
 
   spine at 0,0 {
     germacrene_a
     <-> ec_1_14_14_95 [1.14.14.95] +fmnh2 +o2 -fmn -h2o -hplus
     germacra_1_10_4_11_13_trien_12_oate
-    <-> ec_1_14_14_150 [1.14.14.150] +fmnh2 +o2 -fmn -h2o
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    6_hydroxygermacra_1_10_4_11_13_trien_12_oate
+    <-> . +hplus -h2o
     costunolide
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    parthenolide
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    3_hydroxyparthenolide
+    3_hydroxycostunolide
   }
 
-  branch from germacra_1_10_4_11_13_trien_12_oate side left {
-    germacra_1_10_4_11_13_trien_12_oate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    6_hydroxygermacra_1_10_4_11_13_trien_12_oate
+  branch from fmn side left {
+    fmn
+    <-> . +asperaculane_g +fmnh2 +o2 +co2 +h2o
+    aculene_d
   }
 
   branch from fmn side right {
     fmn
-    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
-    24s_hydroxycholestanol
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    2_hydroxytestosterone
   }
 }

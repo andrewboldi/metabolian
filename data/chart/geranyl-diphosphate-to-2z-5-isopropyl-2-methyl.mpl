@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-2z-5-isopropyl-2-methyl "geranyl diphosphate to (2Z)-5-isopropyl-2-methyl…" {
-  spacing 176
+  spacing 188
 
   spine at 0,0 {
     gpp
@@ -18,7 +18,13 @@ pathway geranyl-diphosphate-to-2z-5-isopropyl-2-methyl "geranyl diphosphate to (
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_189 [4.2.3.189] +peregrinol_diphosphate
-    9_13_r_epoxylabd_14_ene
+    <-> . +fpp
+    gurjunene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    e_bisabolene
   }
 }

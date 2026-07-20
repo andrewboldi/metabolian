@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-2-4-diazaniumylbutyrate-to-succinate "L-2,4-diazaniumylbutyrate to succinate" {
-  spacing 196
+  spacing 202
 
   spine at 0,0 {
     l_2_4_diazaniumylbutyrate
@@ -20,11 +20,5 @@ pathway l-2-4-diazaniumylbutyrate-to-succinate "L-2,4-diazaniumylbutyrate to suc
     ectoine
     <-> ec_3_5_4_44 [3.5.4.44] +h2o
     2s_2_acetamido_4_aminobutanoic_acid
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +n_geranyl_l_glutamate +akg +o2 +co2 +h2o
-    dainate_a
   }
 }

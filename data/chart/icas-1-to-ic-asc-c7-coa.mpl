@@ -4,11 +4,13 @@
 # edit the generator, not this file.
 
 pathway icas-1-to-ic-asc-c7-coa "icas#1 to IC-asc-ΔC7-CoA" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     icas_1
-    <-> . +atp +coa -amp -ppi
+    <-> . +atp +hplus -ppi
+    ic_asc_c7_amp
+    <-> . +coa -amp -hplus
     ic_asc_c7_coa
     <-> . +o2 -h2o2
     ic_asc_c7_coa
@@ -16,7 +18,13 @@ pathway icas-1-to-ic-asc-c7-coa "icas#1 to IC-asc-ΔC7-CoA" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_123 [4.2.3.123] +fpp
-    sesquiphellandrene
+    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl +ctp +hplus
+    cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +1_2_diarachidonoyl_sn_glycero_3_phosphate +ctp +hplus
+    cdp_1_2_diarachidonoyl_sn_glycerol
   }
 }

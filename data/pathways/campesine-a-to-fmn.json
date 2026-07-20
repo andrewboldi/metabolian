@@ -1,0 +1,405 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "campesine-a-to-fmn",
+  "name": "campesine A to FMN",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from campesine A(1+) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82823"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232509"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "campesine_a",
+      "name": "campesine A",
+      "formula": "C16H24N3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232509"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "campesine_b",
+      "name": "campesine B",
+      "formula": "C17H26N3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232510"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "campesine_c",
+      "name": "campesine C",
+      "formula": "C18H26N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232511"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "campesine_d",
+      "name": "campesine D",
+      "formula": "C35H49N6O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232513"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "campesine_g",
+      "name": "campesine G",
+      "formula": "C35H47N6O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232517"
+      }
+    },
+    {
+      "id": "3_4_5_o_trimethylmyricetin_3_7_diolate",
+      "name": "3',4',5'-O-trimethylmyricetin 3,7-diolate",
+      "short": "3',4',5'-O-trimethy…",
+      "formula": "C18H14O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:194070"
+      }
+    },
+    {
+      "id": "7_3_4_5_o_tetramethylmyricetin_3_olate",
+      "name": "7,3',4',5'-O-tetramethylmyricetin 3-olate",
+      "short": "7,3',4',5'-O-tetram…",
+      "formula": "C19H17O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194071"
+      }
+    },
+    {
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58573"
+      }
+    },
+    {
+      "id": "3_o_methylkaempferol_7_olate",
+      "name": "3-O-methylkaempferol 7-olate",
+      "short": "3-O-methylkaempfero…",
+      "formula": "C16H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194073"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "campesine A + S-adenosyl-L-methionine = campesine B + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "campesine A + S-adenosyl-L-methionine = campesine B + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "campesine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "campesine_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82823"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82823"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "campesine B + campesine C + reduced [NADPH--hemoprotein reductase] + O2 = campesine D +...",
+      "equation": "campesine B + campesine C + reduced [NADPH--hemoprotein reductase] + O2 = campesine D + oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "campesine_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "campesine_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "campesine_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82831"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82831"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "campesine D + reduced [NADPH--hemoprotein reductase] + O2 = campesine G + oxidized [NAD...",
+      "equation": "campesine D + reduced [NADPH--hemoprotein reductase] + O2 = campesine G + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "campesine_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "campesine_g",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82843"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82843"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3',4',5'-O-trimethylmyricetin + S-adenosyl-L-methionine = 7,3',4',5'-O-tetramethylmyric...",
+      "equation": "3',4',5'-O-trimethylmyricetin + S-adenosyl-L-methionine = 7,3',4',5'-O-tetramethylmyricetin + S-adenosyl-L-homocysteine",
+      "substrates": [
+        {
+          "metabolite": "3_4_5_o_trimethylmyricetin_3_7_diolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_3_4_5_o_tetramethylmyricetin_3_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74739"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74739"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "kaempferol + S-adenosyl-L-methionine = 3-O-methylkaempferol + S-adenosyl-L-homocysteine...",
+      "equation": "kaempferol + S-adenosyl-L-methionine = 3-O-methylkaempferol + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "kaempferol_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_methylkaempferol_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74743"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74743"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -55,6 +55,71 @@
       }
     },
     {
+      "id": "beta_l_arabinose_1_phosphate",
+      "name": "beta-L-arabinose 1-phosphate",
+      "short": "beta-L-arabinose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105775"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "4_nitrophenol",
+      "name": "4-nitrophenol",
+      "formula": "C6H4NO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM526"
+      }
+    },
+    {
+      "id": "p_nitrophenyl_beta_l_arabinopyranoside",
+      "name": "p-Nitrophenyl-beta-L-arabinopyranoside",
+      "short": "p-Nitrophenyl-beta-…",
+      "formula": "C11H13NO7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM165059"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
       "id": "l_ribulose_5_phosphate",
       "name": "L-ribulose 5-phosphate",
       "short": "L-ribulose 5-P",
@@ -80,6 +145,15 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "l_lyxopyranose",
+      "name": "L-lyxopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62321"
       }
     },
     {
@@ -139,6 +213,27 @@
       "name": "D-tagatose 3-epimerase",
       "ec": [
         "5.1.3.31"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_46",
+      "name": "L-arabinokinase",
+      "ec": [
+        "2.7.1.46"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_21",
+      "name": "beta-glucosidase",
+      "ec": [
+        "3.2.1.21"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_22",
+      "name": "alpha-galactosidase",
+      "ec": [
+        "3.2.1.22"
       ]
     },
     {
@@ -263,6 +358,102 @@
     },
     {
       "id": "r4",
+      "name": "L-arabinokinase",
+      "ec": "2.7.1.46",
+      "substrates": [
+        {
+          "metabolite": "beta_l_arabinose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR116000"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-glucosidase",
+      "ec": "3.2.1.21",
+      "substrates": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_nitrophenol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p_nitrophenyl_beta_l_arabinopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR131246"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131246"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "L-ribulose 5-phosphate + H2O = L-ribulose + phosphate",
       "equation": "L-ribulose 5-phosphate + H2O = L-ribulose + phosphate",
       "substrates": [
@@ -286,7 +477,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:79819"
       },
@@ -301,7 +492,38 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r7",
+      "name": "L-lyxopyranose = L-xylulose",
+      "equation": "L-lyxopyranose = L-xylulose",
+      "substrates": [
+        {
+          "metabolite": "l_lyxopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:28058"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "D-iditol 2-dehydrogenase",
       "equation": "xylitol + NAD(+) = L-xylulose + NADH + H(+)",
       "ec": "1.1.1.15",
@@ -335,7 +557,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:68100"
       },

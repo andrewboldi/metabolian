@@ -15,10 +15,4 @@ pathway angiotensin-i-dizwitterion-to-his-pro "angiotensin I dizwitterion to His
     <-> . +ile5_angiotensin_ii_1_7_dizwitterion +h2o -his_pro
     angiotensin_1_5_dizwitterion
   }
-
-  branch from leucine side left {
-    leucine
-    <-> . +o_isoindolinone_l_homoserine +atp +adp +pi +hplus
-    l_leucyl_o_isoindolinone_l_homoserine
-  }
 }

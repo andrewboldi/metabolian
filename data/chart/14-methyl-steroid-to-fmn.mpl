@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 14-methyl-steroid-to-fmn "14α-methyl steroid to FMN" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     14_methyl_steroid
@@ -19,6 +19,12 @@ pathway 14-methyl-steroid-to-fmn "14α-methyl steroid to FMN" {
   branch from fmn side left {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    16_hete
+    8s_9r_eet
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    5_6_eet
   }
 }

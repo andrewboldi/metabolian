@@ -3,13 +3,13 @@
   "id": "r-dihydrolipoate-to-n6-r-s8-isopentanoyldi",
   "name": "(R)-dihydrolipoate to N6-[(R)-S8-isopentanoyldi…",
   "category": "amino-acid-metabolism",
-  "summary": "A 2-step route from (R)-dihydrolipoate to N6-[(R)-S8-isopentanoyldihydrolipoyl]-L-lysine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 3-step route from (R)-dihydrolipoate to N6-[(R)-S8-isopentanoyldihydrolipoyl]-L-lysine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:72679"
+        "id": "RHEA:72715"
       },
       {
         "db": "ChEBI",
@@ -28,21 +28,49 @@
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:29969"
-      }
-    },
-    {
       "id": "atp",
       "name": "ATP",
       "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n6_r_dihydrolipoyl_amp",
+      "name": "N6-[(R)-dihydrolipoyl]-AMP",
+      "short": "N6-[(R)-dihydrolipo…",
+      "formula": "C18H27N5O8PS2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192510"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
       }
     },
     {
@@ -62,24 +90,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -111,22 +121,31 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "6_protoilludene",
-      "name": "Δ6-protoilludene",
-      "formula": "C15H24",
+      "id": "spiroviolene",
+      "name": "(−)-spiroviolene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:68655"
+        "chebi": "CHEBI:137523"
+      }
+    },
+    {
+      "id": "tsukubadiene",
+      "name": "tsukubadiene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137528"
       }
     }
   ],
@@ -139,29 +158,75 @@
       ]
     },
     {
-      "id": "ec_4_2_3_135",
-      "name": "Delta(6)-protoilludene synthase",
+      "id": "ec_4_2_3_158",
+      "name": "(-)-spiroviolene synthase",
       "ec": [
-        "4.2.3.135"
+        "4.2.3.158"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_159",
+      "name": "tsukubadiene synthase",
+      "ec": [
+        "4.2.3.159"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "(R)-dihydrolipoate + L-lysyl-[lipoyl-carrier protein] + ATP = N(6)-[(R)-dihydrolipoyl]-...",
-      "equation": "(R)-dihydrolipoate + L-lysyl-[lipoyl-carrier protein] + ATP = N(6)-[(R)-dihydrolipoyl]-L-lysyl-[lipoyl-carrier protein] + AMP + diphosphate + H(+)",
+      "name": "(R)-dihydrolipoate + ATP + H(+) = N(6)-[(R)-dihydrolipoyl]-5'-AMP + diphosphate",
+      "equation": "(R)-dihydrolipoate + ATP + H(+) = N(6)-[(R)-dihydrolipoyl]-5'-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "r_dihydrolipoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_dihydrolipoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:72715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(6)-[(R)-dihydrolipoyl]-5'-AMP + L-lysyl-[lipoyl-carrier protein] = N(6)-[(R)-dihydrol...",
+      "equation": "N(6)-[(R)-dihydrolipoyl]-5'-AMP + L-lysyl-[lipoyl-carrier protein] = N(6)-[(R)-dihydrolipoyl]-L-lysyl-[lipoyl-carrier protein] + AMP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "n6_r_dihydrolipoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         }
       ],
@@ -175,31 +240,27 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:72679"
+        "rhea": "RHEA:72719"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72679"
+            "id": "RHEA:72719"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "dihydrolipoyllysine-residue (2-methylpropanoyl)transferase",
       "equation": "N(6)-[(R)-dihydrolipoyl]-L-lysyl-[protein] + 3-methylbutanoyl-CoA = N(6)-[(R)-S(8)-3-methylbutanoyldihydrolipoyl]-L-lysyl-[protein] + CoA",
       "ec": "2.3.1.168",
@@ -229,7 +290,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:84647"
       },
@@ -244,19 +305,19 @@
       }
     },
     {
-      "id": "r3",
-      "name": "Delta(6)-protoilludene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = Delta(6)-protoilludene + diphosphate",
-      "ec": "4.2.3.135",
+      "id": "r4",
+      "name": "(-)-spiroviolene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (-)-spiroviolene + diphosphate",
+      "ec": "4.2.3.158",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_protoilludene",
+          "metabolite": "spiroviolene",
           "stoichiometry": 1
         },
         {
@@ -266,20 +327,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_135"
+          "enzyme": "ec_4_2_3_158"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:34695"
+        "rhea": "RHEA:53620"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34695"
+            "id": "RHEA:53620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tsukubadiene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = tsukubadiene + diphosphate",
+      "ec": "4.2.3.159",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tsukubadiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:53624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53624"
           }
         ]
       }

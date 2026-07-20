@@ -3,13 +3,13 @@
   "id": "icas-10-to-ic-asc-c9-coa",
   "name": "icas#10 to IC-asc-ΔC9-CoA",
   "category": "redox-detox",
-  "summary": "A 2-step route from icas#10(1−) to IC-asc-ΔC9-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 3-step route from icas#10(1−) to IC-asc-ΔC9-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:66240"
+        "id": "RHEA:66244"
       },
       {
         "db": "ChEBI",
@@ -34,6 +34,33 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ic_asc_c9_amp",
+      "name": "IC-asc-C9-AMP",
+      "formula": "C34H44N6O13P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:166983"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -64,15 +91,6 @@
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
       "id": "o2",
       "name": "Dioxygen (O2)",
       "formula": "O2",
@@ -100,39 +118,79 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
+      "id": "all_trans_decaprenyl_diphosphate",
+      "name": "all-trans-decaprenyl diphosphate",
+      "short": "all-trans-decapreny…",
+      "formula": "C50H81O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:60721"
       }
     },
     {
-      "id": "e_ocimene",
-      "name": "(E)-β-ocimene",
-      "formula": "C10H16",
+      "id": "1_4_dihydroxy_2_naphthoate",
+      "name": "1,4-dihydroxy-2-naphthoate",
+      "short": "1,4-dihydroxy-2-nap…",
+      "formula": "C11H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11173"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_10",
+      "name": "2-demethylmenaquinol-10",
+      "short": "2-demethylmenaquino…",
+      "formula": "C60H88O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64280"
+        "chebi": "CHEBI:84546"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C43H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74298"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_106",
-      "name": "(E)-beta-ocimene synthase",
+      "id": "ec_2_5_1_74",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
       "ec": [
-        "4.2.3.106"
+        "2.5.1.74"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "IC-asc-C9 + ATP + CoA = IC-asc-C9-CoA + AMP + diphosphate",
-      "equation": "IC-asc-C9 + ATP + CoA = IC-asc-C9-CoA + AMP + diphosphate",
+      "name": "IC-asc-C9 + ATP + H(+) = IC-asc-C9-AMP + diphosphate",
+      "equation": "IC-asc-C9 + ATP + H(+) = IC-asc-C9-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "icas_10",
@@ -140,6 +198,45 @@
         },
         {
           "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ic_asc_c9_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:66244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "IC-asc-C9-AMP + CoA = IC-asc-C9-CoA + AMP + H(+)",
+      "equation": "IC-asc-C9-AMP + CoA = IC-asc-C9-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ic_asc_c9_amp",
           "stoichiometry": 1
         },
         {
@@ -157,27 +254,27 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:66240"
+        "rhea": "RHEA:66248"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66240"
+            "id": "RHEA:66248"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "IC-asc-C9-CoA + O2 = IC-asc-DeltaC9-CoA + H2O2",
       "equation": "IC-asc-C9-CoA + O2 = IC-asc-DeltaC9-CoA + H2O2",
       "substrates": [
@@ -201,7 +298,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:66236"
       },
@@ -216,19 +313,31 @@
       }
     },
     {
-      "id": "r3",
-      "name": "(E)-beta-ocimene synthase",
-      "equation": "(2E)-geranyl diphosphate = (E)-beta-ocimene + diphosphate",
-      "ec": "4.2.3.106",
+      "id": "r4",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "equation": "all-trans-decaprenyl diphosphate + 1,4-dihydroxy-2-naphthoate + H(+) = 2-demethylmenaquinol-10 + CO2 + diphosphate",
+      "ec": "2.5.1.74",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "all_trans_decaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_ocimene",
+          "metabolite": "2_demethylmenaquinol_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -238,20 +347,67 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_106"
+          "enzyme": "ec_2_5_1_74"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:32691"
+        "rhea": "RHEA:44808"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32691"
+            "id": "RHEA:44808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + ATP + CoA = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahe...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + ATP + CoA = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:44932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44932"
           }
         ]
       }

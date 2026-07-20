@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucosamine-to-5-o-phosphonato-d-ribof "α-D-glucosamine… to 5-O-phosphonato-α-D-ribof…" {
-  spacing 236
+  spacing 278
 
   spine at 0,0 {
     d_glucosamine_1_phosphate
@@ -32,15 +32,33 @@ pathway d-glucosamine-to-5-o-phosphonato-d-ribof "α-D-glucosamine… to 5-O-pho
     udp_2_acetamido_2_deoxy_d_glucuronate
   }
 
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> ec_2_4_1_138 [2.4.1.138] +d_manp_1_3_d_manp_1_2_d_manp_1_2_d_manp +udp +hplus
+    d_glcpnac_1_2_d_manp_1_3_d_manp_1_2_d_manp_1_2
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp
+    3_l_aspartate_adenylyl_1_group
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    3e_7e_dolabella_3_7_dien_18_ol
+    <-> ec_6_2_1_15 [6.2.1.15] +arachidonate +atp +coa +amp
+    arachidonoyl_coa
   }
 
   branch from adenine side right {
     adenine
-    <-> ec_2_4_2_1 [2.4.2.1] +2_deoxyadenosine +pi
-    2_deoxy_d_ribose_1_phosphate
+    <-> . +atp +h2o
+    d_ribose_5_triphosphate
+  }
+
+  branch from adenine side left {
+    adenine
+    <-> . +2_deoxyadenosine_5_monophosphate +h2o
+    2_deoxy_d_ribofuranose_5_phosphate
   }
 }

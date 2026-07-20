@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxyoctadecanoyl-coa-to-trans-2-octadecenoy "3-hydroxyoctadecanoyl-CoA to trans-2-octadecenoyl-CoA" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     3_hydroxyoctadecanoyl_coa
@@ -22,9 +22,21 @@ pathway 3-hydroxyoctadecanoyl-coa-to-trans-2-octadecenoy "3-hydroxyoctadecanoyl-
     palmitoyl_coa
   }
 
-  branch from trans_2_octadecenoyl_coa side right {
+  branch from 3_oxooctadecanoyl_coa side right {
+    3_oxooctadecanoyl_coa
+    <-> . +palmitoyl_coa +hplus +co2 +coa
+    malonyl-coa
+  }
+
+  branch from trans_2_octadecenoyl_coa side left {
     trans_2_octadecenoyl_coa
     <-> . +nadp +nadph +hplus
     stearoyl_coa
+  }
+
+  branch from trans_2_octadecenoyl_coa side right {
+    trans_2_octadecenoyl_coa
+    <-> . +h2o
+    3s_3_hydroxyoctadecanoyl_coa
   }
 }

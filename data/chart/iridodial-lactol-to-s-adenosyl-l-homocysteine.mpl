@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway iridodial-lactol-to-s-adenosyl-l-homocysteine "(+)-iridodial lactol to S-adenosyl-L-homocysteine" {
-  spacing 228
+  spacing 252
 
   spine at 0,0 {
     iridodial_lactol
@@ -20,13 +20,25 @@ pathway iridodial-lactol-to-s-adenosyl-l-homocysteine "(+)-iridodial lactol to S
 
   branch from fmn side left {
     fmn
-    <-> . +estrone +fmnh2 +o2 +h2o +hplus
-    6_hydroxyestrone
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    2_hydroxy_17_estradiol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    6_hydroxy_17_estradiol
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_187 [2.1.1.187] +guanosine_5_monophosphate_1 +sam +hplus
+    n1_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_95 [2.1.1.95] +tocotrienol +sam +hplus
-    tocotrienol
+    <-> ec_2_1_1_188 [2.1.1.188] +sam +n1_methylguanosine_5_monophosphate_1 +hplus
+    guanosine_5_monophosphate_1
   }
 }

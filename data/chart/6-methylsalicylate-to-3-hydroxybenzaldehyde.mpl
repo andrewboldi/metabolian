@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-methylsalicylate-to-3-hydroxybenzaldehyde "6-methylsalicylate to 3-hydroxybenzaldehyde" {
-  spacing 212
+  spacing 242
 
   spine at 0,0 {
     6_methylsalicylate
@@ -18,14 +18,26 @@ pathway 6-methylsalicylate-to-3-hydroxybenzaldehyde "6-methylsalicylate to 3-hyd
 
   branch from 3_hydroxybenzyl_alcohol side left {
     3_hydroxybenzyl_alcohol
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    gentisyl_alcohol
+    <-> . +acetyl_coa +coa
+    3_hydroxybenzyl_acetate
+  }
+
+  branch from 3_hydroxybenzyl_alcohol side right {
+    3_hydroxybenzyl_alcohol
+    <-> . +benzoyl_coa +coa
+    3_hydroxybenzyl_benzoate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    1_hydroxy_long_chain_fatty_acid_anion
   }
 
   branch from fmn side right {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    1_hydroxytestosterone
+    <-> . +lochnericine +fmnh2 +o2 +h2o +hplus
+    h_rhammericine
   }
 
   branch from 3_hydroxybenzaldehyde side left {

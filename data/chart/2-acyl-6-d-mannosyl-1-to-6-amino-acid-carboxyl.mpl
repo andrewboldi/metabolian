@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-(1… to 6-[amino acid carboxyl…" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     2_acyl_6_d_mannosyl_1_2_d_mannosyl_1_6_2_phospho
@@ -26,21 +26,27 @@ pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-
     6_amino_acid_carboxyl_end_amidated_6_phosphoetha
   }
 
-  branch from dag side left {
-    dag
-    <-> ec_2_7_8_42 [2.7.8.42] +kdo_2_lipid_iva +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    7_o_2_aminoethyl_phosphoryl_kdo_2_4_kdo_2_6_lipi
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +n_fatty_acyl_l_serine +h2o
+    serine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_alkyl_2_3_diacyl_sn_glycerol +h2o +hplus
-    1_alkyl_2_acyl_sn_glycerol
+    <-> . +n_fatty_acyl_l_asparagine +h2o
+    l_asparagine
   }
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> . +hplus +co2
-    pser
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_2_dioleoyl_sn_glycerol
+  }
+
+  branch from phosphoethanolamine side right {
+    phosphoethanolamine
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    1_palmitoyl_2_oleoyl_sn_glycerol
   }
 }

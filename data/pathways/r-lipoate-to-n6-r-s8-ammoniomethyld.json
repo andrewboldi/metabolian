@@ -120,51 +120,50 @@
       }
     },
     {
-      "id": "14_15_eet",
-      "name": "14,15-EET",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "l_threonine",
+      "name": "L-threonine",
+      "formula": "C4H7NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84024"
+        "chebi": "CHEBI:30013"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:46398"
       }
     },
     {
-      "id": "14_15_epoxy_5z_8z_11z_icosatrienoyl_coa",
-      "name": "14,15-epoxy-(5Z,8Z,11Z)-icosatrienoyl-CoA",
-      "short": "14,15-epoxy-(5Z,8Z,…",
-      "formula": "C41H62N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:136117"
-      }
-    },
-    {
-      "id": "l_4_hydroxy_2_oxoglutarate",
-      "name": "L-4-hydroxy-2-oxoglutarate",
-      "short": "L-4-hydroxy-2-oxogl…",
-      "formula": "C5H4O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:71685"
-      }
-    },
-    {
-      "id": "n6_r_s8_3s_3_carboxy_3_hydroxypropanoyl_dihydrol",
-      "name": "N6-[(R)-S8-((3S)-3-carboxy-3-hydroxypropanoyl)dihydrolipoyl]-L-lysine(1−)",
-      "short": "N6-[(R)-S8-((3S)-3-…",
-      "formula": "C18H29N2O6S2",
+      "id": "uridylyl_l_threonine_1",
+      "name": "uridylyl-L-threonine(1−)",
+      "short": "uridylyl-L-threonin…",
+      "formula": "C13H17N3O10P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:235520"
+        "chebi": "CHEBI:156052"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "phomopsene",
+      "name": "phomopsene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156237"
       }
     }
   ],
@@ -174,6 +173,13 @@
       "name": "glycine dehydrogenase (aminomethyl-transferring)",
       "ec": [
         "1.4.4.2"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_222",
+      "name": "phomopsene synthase",
+      "ec": [
+        "4.2.3.222"
       ]
     }
   ],
@@ -315,29 +321,21 @@
     },
     {
       "id": "r4",
-      "name": "14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoate + ATP + CoA = 14,15-epoxy-(5Z,8Z,11Z)-eicosatri...",
-      "equation": "14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoate + ATP + CoA = 14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoyl-CoA + AMP + diphosphate",
+      "name": "L-threonyl-[protein] + UTP = uridylyl-L-threonyl-[protein] + diphosphate",
+      "equation": "L-threonyl-[protein] + UTP = uridylyl-L-threonyl-[protein] + diphosphate",
       "substrates": [
         {
-          "metabolite": "14_15_eet",
+          "metabolite": "l_threonine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "utp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "14_15_epoxy_5z_8z_11z_icosatrienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "uridylyl_l_threonine_1",
           "stoichiometry": 1
         },
         {
@@ -348,57 +346,55 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:52016"
+        "rhea": "RHEA:64608"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52016"
+            "id": "RHEA:64608"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(4S)-4-hydroxy-2-oxoglutarate + N(6)-[(R)-lipoyl]-L-lysyl-[protein] + H(+) = N(6)-[(R)-...",
-      "equation": "(4S)-4-hydroxy-2-oxoglutarate + N(6)-[(R)-lipoyl]-L-lysyl-[protein] + H(+) = N(6)-[(R)-S(8)-((S)-malyl)dihydrolipoyl]-L-lysyl-[protein] + CO2",
+      "name": "phomopsene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = phomopsene + diphosphate",
+      "ec": "4.2.3.222",
       "substrates": [
         {
-          "metabolite": "l_4_hydroxy_2_oxoglutarate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n6_r_lipoyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_r_s8_3s_3_carboxy_3_hydroxypropanoyl_dihydrol",
+          "metabolite": "phomopsene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "ppi",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_222"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:86323"
+        "rhea": "RHEA:64856"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:86323"
+            "id": "RHEA:64856"
           }
         ]
       }

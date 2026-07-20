@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-ipsdienone "geranyl diphosphate to ipsdienone" {
-  spacing 156
+  spacing 180
 
   spine at 0,0 {
     gpp
@@ -18,13 +18,25 @@ pathway geranyl-diphosphate-to-ipsdienone "geranyl diphosphate to ipsdienone" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_162 [4.2.3.162] +fpp
-    amorphene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    quiannulatene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +3_methylvalerate +atp +coa +amp
+    3_methylpentanoyl_coa
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +eriodictyol +fmnh2 +o2 +h2o +hplus
+    2s_2_hydroxyeriodictyol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    15_r_hete
+    <-> . +4a_5_dihydro_ml_236c_carboxylate +fmnh2 +o2 +h2o +hplus
+    3_hydroxy_3_5_dihydro_ml_236c_carboxylate
   }
 }

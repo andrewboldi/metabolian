@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "naphthalene-to-catechol",
   "name": "naphthalene to catechol",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 8-step route from naphthalene to catechol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -194,6 +194,16 @@
       }
     },
     {
+      "id": "1r_2r_1_2_dihydronaphthalene_1_2_diol",
+      "name": "(1R,2R)-1,2-dihydronaphthalene-1,2-diol",
+      "short": "(1R,2R)-1,2-dihydro…",
+      "formula": "C10H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:38140"
+      }
+    },
+    {
       "id": "atp",
       "name": "ATP",
       "formula": "C10H12N5O13P3",
@@ -221,42 +231,85 @@
       }
     },
     {
-      "id": "holo-acp",
-      "name": "Holo-[acyl-carrier protein]",
-      "short": "Holo-[acyl-carrier…",
-      "formula": "C14H25N3O8PS",
-      "charge": -1,
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:64479"
+        "chebi": "CHEBI:58885"
       }
     },
     {
-      "id": "o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s",
-      "name": "O-(S-2-hydroxybenzoylpantetheine-4'-phosphoryl)-L-serine(1−)",
-      "short": "O-(S-2-hydroxybenzo…",
-      "formula": "C21H29N3O10PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:86464"
-      }
-    },
-    {
-      "id": "tyrosine",
-      "name": "L-Tyrosine",
-      "formula": "C9H11NO3",
+      "id": "d_glucosyl_salicylate",
+      "name": "β-D-glucosyl salicylate",
+      "short": "β-D-glucosyl…",
+      "formula": "C13H16O8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58315"
+        "chebi": "CHEBI:145681"
       }
     },
     {
-      "id": "2_ammonioprop_2_enoate",
-      "name": "2-ammonioprop-2-enoate",
-      "short": "2-ammonioprop-2-eno…",
-      "formula": "C3H5NO2",
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "o_methylsalicylate",
+      "name": "O-methylsalicylate",
+      "formula": "C8H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59128"
+      }
+    },
+    {
+      "id": "cobalt",
+      "name": "cobalt",
+      "formula": "Co",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:85033"
+      }
+    },
+    {
+      "id": "methyl_co",
+      "name": "methyl-Co",
+      "formula": "CH3Co",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:85035"
+      }
+    },
+    {
+      "id": "quinol",
+      "name": "Quinol (menaquinol)",
+      "formula": "C6H6O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76565"
+        "chebi": "CHEBI:17594"
+      }
+    },
+    {
+      "id": "phenyl_phosphate",
+      "name": "phenyl phosphate",
+      "formula": "C6H5O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:193089"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
       }
     }
   ],
@@ -325,10 +378,17 @@
       ]
     },
     {
-      "id": "ec_6_2_1_61",
-      "name": "salicylate--[aryl-carrier protein] ligase",
+      "id": "ec_2_1_1_382",
+      "name": "methoxylated aromatic compound--corrinoid protein Co-methyltransferase",
       "ec": [
-        "6.2.1.61"
+        "2.1.1.382"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_238",
+      "name": "phenol phosphorylase",
+      "ec": [
+        "2.7.1.238"
       ]
     }
   ],
@@ -780,6 +840,49 @@
     },
     {
       "id": "r10",
+      "name": "(1R,2R)-1,2-dihydronaphthalene-1,2-diol + NADP(+) = naphthalene-1,2-diol + NADPH + H(+)",
+      "equation": "(1R,2R)-1,2-dihydronaphthalene-1,2-diol + NADP(+) = naphthalene-1,2-diol + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1r_2r_1_2_dihydronaphthalene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "naphthalene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:65224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65224"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
       "name": "salicylate + ATP + NADPH + H(+) = salicylaldehyde + AMP + diphosphate + NADP(+)",
       "equation": "salicylate + ATP + NADPH + H(+) = salicylaldehyde + AMP + diphosphate + NADP(+)",
       "substrates": [
@@ -819,7 +922,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:68880"
       },
@@ -834,27 +937,166 @@
       }
     },
     {
-      "id": "r11",
-      "name": "salicylate--[aryl-carrier protein] ligase",
-      "equation": "salicylate + holo-[ACP] + ATP = salicyl-[ACP] + AMP + diphosphate",
-      "ec": "6.2.1.61",
+      "id": "r12",
+      "name": "salicylate + UDP-alpha-D-glucose = 1-O-salicyl-beta-D-glucose + UDP",
+      "equation": "salicylate + UDP-alpha-D-glucose = 1-O-salicyl-beta-D-glucose + UDP",
       "substrates": [
         {
           "metabolite": "salicylate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "holo-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "udp_d_glucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s",
+          "metabolite": "d_glucosyl_salicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:62316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "methoxylated aromatic compound--corrinoid protein Co-methyltransferase",
+      "equation": "2-methoxybenzoate + Co(I)-[methoxylated-aromatic-compound-specific corrinoid protein] + H(+) = methyl-Co(III)-[methoxylated-aromatic-compound-specific corrinoid protein] + salicylate",
+      "ec": "2.1.1.382",
+      "substrates": [
+        {
+          "metabolite": "o_methylsalicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cobalt",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_co",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "salicylate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_382"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:72619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "phenol + NADH + O2 + H(+) = hydroquinone + NAD(+) + H2O",
+      "equation": "phenol + NADH + O2 + H(+) = hydroquinone + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:55796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "phenol phosphorylase",
+      "equation": "phenol + ATP + H2O = phenyl phosphate + AMP + phosphate + 2 H(+)",
+      "ec": "2.7.1.238",
+      "substrates": [
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenyl_phosphate",
           "stoichiometry": 1
         },
         {
@@ -862,61 +1104,30 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "pi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_61"
+          "enzyme": "ec_2_7_1_238"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 15,
       "xrefs": {
-        "rhea": "RHEA:61648"
+        "rhea": "RHEA:73839"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61648"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "L-tyrosine = phenol + 2-aminoprop-2-enoate",
-      "equation": "L-tyrosine = phenol + 2-aminoprop-2-enoate",
-      "substrates": [
-        {
-          "metabolite": "tyrosine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "phenol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_ammonioprop_2_enoate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:42980"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:42980"
+            "id": "RHEA:73839"
           }
         ]
       }

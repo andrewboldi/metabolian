@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-ribose-to-l-lysinium "aldehydo-D-ribose… to L-lysinium" {
-  spacing 180
+  spacing 192
 
   spine at 0,0 {
     r5p
@@ -20,7 +20,13 @@ pathway aldehydo-d-ribose-to-l-lysinium "aldehydo-D-ribose… to L-lysinium" {
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +propionyl_coa +coa +hplus
-    n6_propanoyl_l_lysine
+    <-> ec_2_1_1_356 [2.1.1.356] +sam +sah +hplus
+    n6_n6_n6_trimethyl_l_lysine
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_1_1_369 [2.1.1.369] +sam +sah +hplus
+    n6_methyl_l_lysinium
   }
 }

@@ -137,22 +137,31 @@
       }
     },
     {
-      "id": "palmitoyl_coa",
-      "name": "Palmitoyl-CoA",
-      "formula": "C37H62N7O17P3S",
+      "id": "choloyl_coa",
+      "name": "Choloyl-CoA",
+      "formula": "C45H70N7O20P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57379"
+        "chebi": "CHEBI:57373"
       }
     },
     {
-      "id": "n_hexadecanoyltaurine",
-      "name": "N-hexadecanoyltaurine",
-      "short": "N-hexadecanoyltauri…",
-      "formula": "C18H36NO4S",
+      "id": "taurocholate",
+      "name": "Taurocholate",
+      "formula": "C26H44NO7S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:132045"
+        "chebi": "CHEBI:36257"
+      }
+    },
+    {
+      "id": "cholate",
+      "name": "Cholic acid (cholate)",
+      "short": "Cholic acid…",
+      "formula": "C24H39O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29747"
       }
     },
     {
@@ -162,6 +171,33 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:61904"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
       }
     },
     {
@@ -180,6 +216,26 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:16769"
+      }
+    },
+    {
+      "id": "l_2_4_diazaniumylbutyrate",
+      "name": "L-2,4-diazaniumylbutyrate",
+      "short": "L-2,4-diazaniumylbu…",
+      "formula": "C4H11N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58761"
+      }
+    },
+    {
+      "id": "l_aspartic_acid_4_semialdehyde",
+      "name": "L-aspartic acid 4-semialdehyde",
+      "short": "L-aspartic acid…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:537519"
       }
     },
     {
@@ -253,6 +309,13 @@
       "name": "glutamine--pyruvate transaminase",
       "ec": [
         "2.6.1.15"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_46",
+      "name": "diaminobutyrate--pyruvate transaminase",
+      "ec": [
+        "2.6.1.46"
       ]
     }
   ],
@@ -414,21 +477,21 @@
     },
     {
       "id": "r4",
-      "name": "taurine + hexadecanoyl-CoA = N-hexadecanoyl-taurine + CoA + H(+)",
-      "equation": "taurine + hexadecanoyl-CoA = N-hexadecanoyl-taurine + CoA + H(+)",
+      "name": "choloyl-CoA + taurine = taurocholate + CoA + H(+)",
+      "equation": "choloyl-CoA + taurine = taurocholate + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "taurine",
+          "metabolite": "choloyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "palmitoyl_coa",
+          "metabolite": "taurine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_hexadecanoyltaurine",
+          "metabolite": "taurocholate",
           "stoichiometry": 1
         },
         {
@@ -443,20 +506,59 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50108"
+        "rhea": "RHEA:47100"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50108"
+            "id": "RHEA:47100"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "cholate + taurine = taurocholate + H2O",
+      "equation": "cholate + taurine = taurocholate + H2O",
+      "substrates": [
+        {
+          "metabolite": "cholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurocholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:47108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "sulfoacetaldehyde reductase (NADH)",
       "equation": "2-hydroxyethane-1-sulfonate + NAD(+) = sulfoacetaldehyde + NADH + H(+)",
       "ec": "1.1.1.433",
@@ -490,7 +592,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:64516"
       },
@@ -505,7 +607,58 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "taurine + 2 Fe(III)-[cytochrome c] + H2O = sulfoacetaldehyde + 2 Fe(II)-[cytochrome c] ...",
+      "equation": "taurine + 2 Fe(III)-[cytochrome c] + H2O = sulfoacetaldehyde + 2 Fe(II)-[cytochrome c] + NH4(+) + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:81555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "glutamine--pyruvate transaminase",
       "equation": "L-glutamine + pyruvate = 2-oxoglutaramate + L-alanine",
       "ec": "2.6.1.15",
@@ -535,7 +688,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:10400"
       },
@@ -550,7 +703,52 @@
       }
     },
     {
-      "id": "r7",
+      "id": "r9",
+      "name": "diaminobutyrate--pyruvate transaminase",
+      "equation": "L-2,4-diaminobutanoate + pyruvate = L-aspartate 4-semialdehyde + L-alanine",
+      "ec": "2.6.1.46",
+      "substrates": [
+        {
+          "metabolite": "l_2_4_diazaniumylbutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_aspartic_acid_4_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:12380"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12380"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + ADP + phosphate",
       "equation": "sulfoacetate + ATP + CoA = sulfoacetyl-CoA + ADP + phosphate",
       "substrates": [
@@ -582,7 +780,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:76683"
       },

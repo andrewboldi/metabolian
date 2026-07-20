@@ -4,13 +4,13 @@
 # edit the generator, not this file.
 
 pathway 2-nitrophenolate-to-nitrite "2-nitrophenolate to nitrite" {
-  spacing 180
+  spacing 216
 
   spine at 0,0 {
     2_nitrophenolate
     <-> ec_1_14_13_31 [1.14.13.31] +nadph +o2 +hplus -nitrite -nadp -h2o
     catechol
-    <-> ec_1_7_1_2 [1.7.1.2] +nitrite +nadp +h2o -nadph -hplus
+    <-> . +nitrite +hydrogen_acceptor +h2o -hydrogen_donor
     nitrate
     <-> ec_1_7_5_1 [1.7.5.1] +hydroquinones -nitrite -h2o
     1_4_benzoquinones
@@ -18,13 +18,37 @@ pathway 2-nitrophenolate-to-nitrite "2-nitrophenolate to nitrite" {
 
   branch from nitrite side left {
     nitrite
-    <-> ec_1_7_1_4 [1.7.1.4] +nadp +h2o +nadph +hplus
-    nh3
+    <-> ec_1_7_2_6 [1.7.2.6] +iron +h2o +fe2 +hplus
+    hydroxylamine
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    nitroxyl
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +all_trans_carotene +hydrogen_acceptor
+    neurosporene
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_29 [1.3.99.29] +15_cis_phytoene +hydrogen_acceptor
+    all_trans_carotene
+  }
+
+  branch from 1_4_benzoquinones side left {
+    1_4_benzoquinones
+    <-> . +ent_glycosmisate +h2o +hydroquinones +hplus
+    dca_cc
   }
 
   branch from 1_4_benzoquinones side right {
     1_4_benzoquinones
-    <-> ec_1_1_5_11 [1.1.5.11] +butan_1_ol +hydroquinones
-    butanal
+    <-> . +ent_glycosmisate +hydroquinones
+    dca_cl
   }
 }

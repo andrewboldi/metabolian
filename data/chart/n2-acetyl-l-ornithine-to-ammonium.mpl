@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
-  spacing 204
+  spacing 264
 
   spine at 0,0 {
     n2_acetyl_l_ornithine
@@ -20,14 +20,26 @@ pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
 
   branch from ornithine side left {
     ornithine
-    <-> . +akg +o2 +succinate +co2
-    3s_3_hydroxy_l_ornithine
+    <-> ec_3_5_3_1 [3.5.3.1] +arginine +h2o
+    urea
+  }
+
+  branch from ornithine side right {
+    ornithine
+    <-> ec_3_5_3_25 [3.5.3.25] +n5_hydroxyamino_imino_methyl_l_ornithinium +h2o
+    hydroxyurea
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +triacetin +h2o +hplus
+    diacetin
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_4 [3.5.1.4] +h2o +nh3
-    acetamide
+    <-> . +n_acetylcadaverine +h2o
+    cadaverine
   }
 
   branch from d_ornithinium side left {
@@ -36,15 +48,33 @@ pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
     n5_s_citryl_d_ornithine
   }
 
-  branch from r_2_amino_4_oxopentanoic_acid side right {
+  branch from d_ornithinium side right {
+    d_ornithinium
+    <-> . +o2 +h2o +h2o2 +nh3
+    5_amino_2_oxopentanoic_acid
+  }
+
+  branch from r_2_amino_4_oxopentanoic_acid side left {
     r_2_amino_4_oxopentanoic_acid
     <-> ec_2_3_1_263 [2.3.1.263] +acetyl_coa +coa
     d_alanine
   }
 
+  branch from r_2_amino_4_oxopentanoic_acid side right {
+    r_2_amino_4_oxopentanoic_acid
+    <-> . +acetyl_coa +l_alanine
+    coa
+  }
+
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
-    2_formylglutarate
+    <-> . +utp +atp +adp +pi +hplus
+    ctp
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_99_7 [3.5.99.7] +1_aminocyclopropanecarboxylic_acid +h2o
+    oxobut
   }
 }

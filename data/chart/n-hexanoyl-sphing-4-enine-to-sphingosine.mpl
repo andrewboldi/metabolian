@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to sphingosine" {
-  spacing 212
+  spacing 254
 
   spine at 0,0 {
     n_hexanoyl_sphing_4_enine
@@ -20,8 +20,8 @@ pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to 
 
   branch from hexanoate side left {
     hexanoate
-    <-> . +hexanoate_ester +h2o +hplus
-    aliphatic_alcohol
+    <-> . +o2 +h2o +h2o2 +hplus
+    hexanal
   }
 
   branch from sphingosine side right {
@@ -30,15 +30,33 @@ pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to 
     lysophosphatidylcholine_o_16_0_0_0
   }
 
+  branch from sphingosine side left {
+    sphingosine
+    <-> . +icosanoyl_coa +coa +hplus
+    n_icosanoylsphingosine
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_6 [2.4.3.6] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety
+  }
+
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+    <-> ec_2_4_3_2 [2.4.3.2] +d_galactosyl_1_3_n_acetyl_d_galactosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety
   }
 
   branch from choline side right {
     choline
-    <-> . +phosphatidylcholine +serine
-    3_sn_phosphatidyl_l_serine
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_palmitoyl_sn_glycero_2_3_cyclic_phosphate
+  }
+
+  branch from choline side left {
+    choline
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine
+    1_acyl_sn_glycero_2_3_cyclic_phosphate
   }
 }

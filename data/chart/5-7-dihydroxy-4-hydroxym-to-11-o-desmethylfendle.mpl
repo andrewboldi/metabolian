@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-7-dihydroxy-4-hydroxym-to-11-o-desmethylfendle "5,7-dihydroxy-4-(hydroxym… to 11'-O-desmethylfendlerol" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     5_7_dihydroxy_4_hydroxymethyl_6_methylphthalide
@@ -20,19 +20,37 @@ pathway 5-7-dihydroxy-4-hydroxym-to-11-o-desmethylfendle "5,7-dihydroxy-4-(hydro
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_225 [2.1.1.225] +adenosine_5_monophosphate_1 +sam +hplus
-    2_o_methyladenosine_5_monophosphate_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    12_hete
   }
 
   branch from fmn side right {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    5z_8z_14z_17z_11_12_epoxyicosatetraenoate
+    <-> ec_1_14_19_51 [1.14.19.51] +s_reticulinium +fmnh2 +o2 +h2o +hplus
+    s_corytuberine
   }
 
   branch from ppi side left {
     ppi
-    <-> . +1_2_diarachidonoyl_sn_glycero_3_phosphate +ctp +hplus
-    cdp_1_2_diarachidonoyl_sn_glycerol
+    <-> ec_4_2_3_192 [4.2.3.192] +5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate
+    labda_7_13_16_14_triene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_193 [4.2.3.193] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    12e_labda_8_17_12_14_triene
   }
 }

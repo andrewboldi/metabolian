@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp "N4-[α-D-mannosyl-(1→2)-α-… to α-L-Fucp-(1→3)-[β-D-Galp-…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     n4_d_mannosyl_1_2_d_mannosyl_glycan_l_asparagine
@@ -20,8 +20,20 @@ pathway n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp "N4-[α-D-mannosyl-(1→2)-α-…
 
   branch from ump side left {
     ump
-    <-> ec_3_6_1_8 [3.6.1.8] +utp +h2o +hplus
-    ppi
+    <-> ec_4_1_1_23 [4.1.1.23] +hplus +co2
+    omp
+  }
+
+  branch from ump side right {
+    ump
+    <-> ec_2_7_8_18 [2.7.8.18] +udpglcnac +udp_d_galactose +hplus
+    udp_n_acetyl_6_d_galactose_1_phosphonato_d_gluco
+  }
+
+  branch from n_acetyl_d_glucosamine side left {
+    n_acetyl_d_glucosamine
+    <-> . +o2 +h2o2
+    n_acetyl_d_glucosamino_1_5_lactone
   }
 
   branch from n_acetyl_d_glucosamine side right {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-2-methylbutanoyl-phlor-to-diphosphate "2-(2-methylbutanoyl)phlor… to diphosphate" {
-  spacing 260
+  spacing 272
 
   spine at 0,0 {
     2_2_methylbutanoyl_phloroglucinol
@@ -18,7 +18,13 @@ pathway 2-2-methylbutanoyl-phlor-to-diphosphate "2-(2-methylbutanoyl)phlor… to
 
   branch from ppi side left {
     ppi
-    <-> ec_3_6_1_55 [3.6.1.55] +8_oxo_dgtp +h2o +hplus
-    8_oxo_dgmp
+    <-> . +geranylgeranyl_diphosphate +h2o
+    s_nephthenol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    elemene
   }
 }

@@ -1,0 +1,235 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-hexacosanoylsphinganine-to-fatty-acid-anion",
+  "name": "N-hexacosanoylsphinganine to fatty acid anion",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from N-hexacosanoylsphinganine to fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33719"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:52962"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_hexacosanoylsphinganine",
+      "name": "N-hexacosanoylsphinganine",
+      "short": "N-hexacosanoylsphin…",
+      "formula": "C44H89NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52962"
+      }
+    },
+    {
+      "id": "1_phosphatidyl_1d_myo_inositol",
+      "name": "1-phosphatidyl-1D-myo-inositol",
+      "short": "1-phosphatidyl-1D-m…",
+      "formula": "C11H16O13PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57880"
+      }
+    },
+    {
+      "id": "ins_1_p_cer_d18_0_26_0",
+      "name": "Ins-1-P-Cer(d18:0/26:0)",
+      "short": "Ins-1-P-Cer(d18:0/2…",
+      "formula": "C50H99NO11P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65089"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycerol",
+      "name": "1-acyl-sn-glycerol",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64683"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-hexacosanoylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = N-(he...",
+      "equation": "N-hexacosanoylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = N-(hexacosanoyl)-sphinganine-1-(1D-myo-inositol) + a 1,2-diacyl-sn-glycerol",
+      "substrates": [
+        {
+          "metabolite": "n_hexacosanoylsphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ins_1_p_cer_d18_0_26_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33719"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1,2-diacyl-sn-glycerol + H2O = a 1-acyl-sn-glycerol + a fatty acid + H(+)",
+      "equation": "a 1,2-diacyl-sn-glycerol + H2O = a 1-acyl-sn-glycerol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35663"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1-acyl-sn-glycerol + H2O = glycerol + a fatty acid + H(+)",
+      "equation": "a 1-acyl-sn-glycerol + H2O = glycerol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32875"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32875"
+          }
+        ]
+      }
+    }
+  ]
+}

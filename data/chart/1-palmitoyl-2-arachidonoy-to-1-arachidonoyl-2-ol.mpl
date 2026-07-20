@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-arachidonoy-to-1-arachidonoyl-2-ol "1-palmitoyl-2-arachidonoy… to 1-arachidonoyl-2-oleoyl-s…" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc
@@ -24,13 +24,19 @@ pathway 1-palmitoyl-2-arachidonoy-to-1-arachidonoyl-2-ol "1-palmitoyl-2-arachido
 
   branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side left {
     2_arachidonoyl_sn_glycero_3_phosphocholine
-    <-> . +o2
-    2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad
+    <-> . +stearoyl_coa +coa
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
   }
 
   branch from arachidonate side right {
     arachidonate
-    <-> . +1_arachidonyl_2_palmityl_sn_glycero_3_phosphocho +h2o +hplus
-    2_hexadecyl_sn_glycero_3_phosphocholine
+    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
+    1_heptadecanoyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from arachidonate side left {
+    arachidonate
+    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
+    1_heptadecanoyl_sn_glycero_3_phosphocholine
   }
 }

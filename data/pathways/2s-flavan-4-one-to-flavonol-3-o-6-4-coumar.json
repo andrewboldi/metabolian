@@ -205,22 +205,42 @@
       }
     },
     {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
+      "id": "2_aminoethyl_phosphonic_acid",
+      "name": "(2-aminoethyl)phosphonic acid",
+      "short": "(2-aminoethyl)phosp…",
+      "formula": "C2H8NO3P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:32682"
+        "chebi": "CHEBI:57418"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_arginine",
-      "name": "(3S)-3-hydroxy-L-arginine",
-      "short": "3-hydroxy-L-arginine",
-      "formula": "C6H15N4O3",
-      "charge": 1,
+      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
+      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
+      "short": "(2-amino-1-hydroxye…",
+      "formula": "C2H8NO4P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73938"
+        "chebi": "CHEBI:141612"
+      }
+    },
+    {
+      "id": "isoleucine",
+      "name": "L-Isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58045"
+      }
+    },
+    {
+      "id": "4s_4_hydroxy_l_isoleucine",
+      "name": "(4S)-4-hydroxy-L-isoleucine",
+      "short": "4-hydroxy-L-isoleuc…",
+      "formula": "C6H13NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78247"
       }
     },
     {
@@ -249,6 +269,44 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:58034"
+      }
+    },
+    {
+      "id": "udp_l_rhamnose",
+      "name": "UDP-β-L-rhamnose",
+      "formula": "C15H22N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83836"
+      }
+    },
+    {
+      "id": "flavonol_3_o_l_rhamnosyl_1_6_d_glucoside_s",
+      "name": "flavonol 3-O-[α-L-rhamnosyl-(1→6)-β-D-glucoside]s",
+      "short": "flavonol 3-O-[α-L-r…",
+      "formula": "C27H21O12R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17952"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
       }
     }
   ],
@@ -303,10 +361,17 @@
       ]
     },
     {
-      "id": "ec_1_14_11_41",
-      "name": "L-arginine hydroxylase",
+      "id": "ec_1_14_11_46",
+      "name": "2-aminoethylphosphonate dioxygenase",
       "ec": [
-        "1.14.11.41"
+        "1.14.11.46"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_45",
+      "name": "L-isoleucine 4-hydroxylase",
+      "ec": [
+        "1.14.11.45"
       ]
     },
     {
@@ -321,6 +386,13 @@
       "name": "flavonol-3-O-beta-glucoside O-malonyltransferase",
       "ec": [
         "2.3.1.116"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_159",
+      "name": "flavonol-3-O-glucoside L-rhamnosyltransferase",
+      "ec": [
+        "2.4.1.159"
       ]
     }
   ],
@@ -678,12 +750,12 @@
     },
     {
       "id": "r8",
-      "name": "L-arginine hydroxylase",
-      "equation": "L-arginine + 2-oxoglutarate + O2 = (2S,3S)-hydroxyarginine + succinate + CO2",
-      "ec": "1.14.11.41",
+      "name": "2-aminoethylphosphonate dioxygenase",
+      "equation": "(2-aminoethyl)phosphonate + 2-oxoglutarate + O2 = (1R)-(2-amino-1-hydroxyethyl)phosphonate + succinate + CO2",
+      "ec": "1.14.11.46",
       "substrates": [
         {
-          "metabolite": "arginine",
+          "metabolite": "2_aminoethyl_phosphonic_acid",
           "stoichiometry": 1
         },
         {
@@ -697,7 +769,7 @@
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_arginine",
+          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
           "stoichiometry": 1
         },
         {
@@ -711,26 +783,79 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_41"
+          "enzyme": "ec_1_14_11_46"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:36607"
+        "rhea": "RHEA:41440"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36607"
+            "id": "RHEA:41440"
           }
         ]
       }
     },
     {
       "id": "r9",
+      "name": "L-isoleucine 4-hydroxylase",
+      "equation": "L-isoleucine + 2-oxoglutarate + O2 = (4S)-4-hydroxy-L-isoleucine + succinate + CO2",
+      "ec": "1.14.11.45",
+      "substrates": [
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_hydroxy_l_isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:41448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "glycosylceramidase",
       "equation": "a flavonol 3-O-beta-D-glucoside + H2O = a flavonol + D-glucose",
       "ec": "3.2.1.62",
@@ -760,7 +885,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:81339"
       },
@@ -775,7 +900,7 @@
       }
     },
     {
-      "id": "r10",
+      "id": "r11",
       "name": "flavonol-3-O-beta-glucoside O-malonyltransferase",
       "equation": "a flavonol 3-O-beta-D-glucoside + malonyl-CoA = a flavonol 3-O-(6-O-malonyl-beta-D-glucoside) + CoA",
       "ec": "2.3.1.116",
@@ -805,7 +930,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:20085"
       },
@@ -815,6 +940,99 @@
           {
             "db": "Rhea",
             "id": "RHEA:20085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "flavonol-3-O-glucoside L-rhamnosyltransferase",
+      "equation": "a flavonol 3-O-beta-D-glucoside + UDP-beta-L-rhamnose = a flavonol 3-O-[alpha-L-rhamnosyl-(1->6)-beta-D-glucoside] + UDP + H(+)",
+      "ec": "2.4.1.159",
+      "substrates": [
+        {
+          "metabolite": "flavonol_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_l_rhamnose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "flavonol_3_o_l_rhamnosyl_1_6_d_glucoside_s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:22528"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22528"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "flavonol-3-O-triglucoside O-coumaroyltransferase",
+      "ec": "2.3.1.173",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "flavonol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_glu",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "flavonol_3_o_6_4_coumaroyl_d_glucosyl_1_2_d_gluc",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_173"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "metanetx": "MNXR198331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198331"
           }
         ]
       }

@@ -121,22 +121,52 @@
       }
     },
     {
-      "id": "l_serine",
-      "name": "L-serine",
-      "formula": "C3H5NO2",
+      "id": "n6_hexadecanoyl_l_lysine",
+      "name": "N6-hexadecanoyl-L-lysine",
+      "short": "N6-hexadecanoyl-L-l…",
+      "formula": "C22H42N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29999"
+        "chebi": "CHEBI:138936"
       }
     },
     {
-      "id": "o_adp_d_ribosyl_l_serine_2",
-      "name": "O-(ADP-D-ribosyl)-L-serine(2−)",
-      "short": "O-(ADP-D-ribosyl)-L…",
-      "formula": "C18H24N6O15P2",
+      "id": "2_o_hexadecanoyl_adp_d_ribose",
+      "name": "2''-O-hexadecanoyl-ADP-D-ribose",
+      "short": "2''-O-hexadecanoyl-…",
+      "formula": "C31H51N5O15P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:142556"
+        "chebi": "CHEBI:189673"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_tetradecanoyl_l_lysine",
+      "name": "N6-tetradecanoyl-L-lysine",
+      "short": "N6-tetradecanoyl-L-…",
+      "formula": "C20H38N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141129"
+      }
+    },
+    {
+      "id": "2_o_tetradecanoyl_adp_d_ribose",
+      "name": "2''-O-tetradecanoyl-ADP-D-ribose",
+      "short": "2''-O-tetradecanoyl…",
+      "formula": "C29H47N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:189674"
       }
     }
   ],
@@ -265,21 +295,25 @@
     },
     {
       "id": "r4",
-      "name": "L-seryl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-seryl-[protein] + nicotinamide + H(+)",
-      "equation": "L-seryl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-seryl-[protein] + nicotinamide + H(+)",
+      "name": "N(6)-hexadecanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-hexadecanoyl-ADP-D-ribose + ...",
+      "equation": "N(6)-hexadecanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-hexadecanoyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
       "substrates": [
         {
-          "metabolite": "l_serine",
+          "metabolite": "n6_hexadecanoyl_l_lysine",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_adp_d_ribosyl_l_serine_2",
+          "metabolite": "2_o_hexadecanoyl_adp_d_ribose",
           "stoichiometry": 1
         },
         {
@@ -287,21 +321,68 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:58232"
+        "rhea": "RHEA:70563"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58232"
+            "id": "RHEA:70563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N(6)-tetradecanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-tetradecanoyl-ADP-D-ribose ...",
+      "equation": "N(6)-tetradecanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-tetradecanoyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n6_tetradecanoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_tetradecanoyl_adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:70567"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70567"
           }
         ]
       }

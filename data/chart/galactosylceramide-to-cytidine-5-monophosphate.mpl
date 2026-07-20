@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway galactosylceramide-to-cytidine-5-monophosphate "galactosylceramide to cytidine 5'-monophosphate" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     galactosylceramide
@@ -20,8 +20,32 @@ pathway galactosylceramide-to-cytidine-5-monophosphate "galactosylceramide to cy
 
   branch from n_acylsphingoid side left {
     n_acylsphingoid
-    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +h2o
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +h2o
+    lactose
+  }
+
+  branch from n_acylsphingoid side right {
+    n_acylsphingoid
+    <-> . +man_1_6_ins_1_p_cer +h2o +hplus
+    d_mannosyl_1_6_1d_myo_inositol_1_phosphate
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_1_1_3_9 [1.1.3.9] +o2 +h2o2
+    d_galacto_hexodialdose
+  }
+
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_1_1_1_21 [1.1.1.21] +nad +nadh +hplus
+    galactitol
+  }
+
+  branch from galactosylceramide side left {
+    galactosylceramide
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    1_3_o_sulfonato_d_galactosyl_ceramide
   }
 
   branch from galactosylceramide side right {
@@ -32,7 +56,13 @@ pathway galactosylceramide-to-cytidine-5-monophosphate "galactosylceramide to cy
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
+    o3_n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_ac
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_gal_1_4_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n4_d_gal_1_4_d_glcnac_1_2_d_gal_1_4_d_glcnac_1_4
   }
 }

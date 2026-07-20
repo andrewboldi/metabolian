@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3r-11z-3-hydroxyoctadec-to-1-oleoyl-2-11z-octad",
   "name": "(3R,11Z)-3-hydroxyoctadec… to 1-oleoyl-2-(11Z)-octadece…",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from (3R,11Z)-3-hydroxyoctadecenoyl-CoA(4−) to 1-oleoyl-2-(11Z)-octadecenoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -124,35 +124,52 @@
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "13z_3_oxoicosenoyl_coa",
-      "name": "(13Z)-3-oxoicosenoyl-CoA",
-      "short": "3-oxoicosenoyl-CoA",
-      "formula": "C41H66N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:76559"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "11z_octadecenoyl_cholesterol",
+      "name": "(11Z-octadecenoyl)-cholesterol",
+      "short": "(11Z-octadecenoyl)-…",
+      "formula": "C45H78O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88768"
+      }
+    },
+    {
+      "id": "cis_vaccenate",
+      "name": "cis-vaccenate",
+      "formula": "C18H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30827"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_17",
+      "name": "enoyl-CoA hydratase",
+      "ec": [
+        "4.2.1.17"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -308,29 +325,61 @@
     },
     {
       "id": "r5",
-      "name": "(11Z)-octadecenoyl-CoA + malonyl-CoA + H(+) = 3-oxo-(13Z)-eicosenoyl-CoA + CO2 + CoA",
-      "equation": "(11Z)-octadecenoyl-CoA + malonyl-CoA + H(+) = 3-oxo-(13Z)-eicosenoyl-CoA + CO2 + CoA",
+      "name": "enoyl-CoA hydratase",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "2e_11z_octadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_11z_3_hydroxyoctadecenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR189315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR189315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(11Z)-octadecenoyl-CoA + cholesterol = cholesteryl (11Z)-octadecenoate + CoA",
+      "equation": "(11Z)-octadecenoyl-CoA + cholesterol = cholesteryl (11Z)-octadecenoate + CoA",
       "substrates": [
         {
           "metabolite": "11z_octadecenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "13z_3_oxoicosenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
+          "metabolite": "11z_octadecenoyl_cholesterol",
           "stoichiometry": 1
         },
         {
@@ -339,16 +388,59 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:39679"
+        "rhea": "RHEA:64324"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39679"
+            "id": "RHEA:64324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(11Z)-octadecenoyl-CoA + H2O = (11Z)-octadecenoate + CoA + H(+)",
+      "equation": "(11Z)-octadecenoyl-CoA + H2O = (11Z)-octadecenoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "11z_octadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_vaccenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:65240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65240"
           }
         ]
       }

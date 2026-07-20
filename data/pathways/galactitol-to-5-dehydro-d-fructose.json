@@ -1,0 +1,444 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "galactitol-to-5-dehydro-d-fructose",
+  "name": "galactitol to 5-dehydro-D-fructose",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from galactitol to 5-dehydro-D-fructose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51688"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16813"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "galactitol",
+      "name": "galactitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16813"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "keto_l_tagatose",
+      "name": "keto-L-tagatose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134275"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "keto_l_sorbose",
+      "name": "keto-L-sorbose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13172"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "5_dehydro_d_fructose",
+      "name": "5-dehydro-D-fructose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17011"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_altritol",
+      "name": "L-altritol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192698"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "l_sorbopyranose",
+      "name": "α-L-sorbopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10295"
+      }
+    },
+    {
+      "id": "d_sorbitol",
+      "name": "D-sorbitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM736685"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_406",
+      "name": "galactitol 2-dehydrogenase (L-tagatose-forming)",
+      "ec": [
+        "1.1.1.406"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_123",
+      "name": "sorbose 5-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.123"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_12",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "ec": [
+        "1.1.1.12"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_67",
+      "name": "mannitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.67"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "galactitol 2-dehydrogenase (L-tagatose-forming)",
+      "equation": "galactitol + NAD(+) = keto-L-tagatose + NADH + H(+)",
+      "ec": "1.1.1.406",
+      "substrates": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_l_tagatose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_406"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51688"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51688"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "keto-L-tagatose = keto-L-sorbose",
+      "equation": "keto-L-tagatose = keto-L-sorbose",
+      "substrates": [
+        {
+          "metabolite": "keto_l_tagatose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61780"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sorbose 5-dehydrogenase (NADP(+))",
+      "equation": "keto-L-sorbose + NADP(+) = 5-dehydro-D-fructose + NADPH + H(+)",
+      "ec": "1.1.1.123",
+      "substrates": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_123"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15001"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "ec": "1.1.1.12",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_l_tagatose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_altritol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR133605"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR118949",
+      "substrates": [
+        {
+          "metabolite": "l_sorbopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR118949"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118949"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "mannitol 2-dehydrogenase",
+      "ec": "1.1.1.67",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_sorbitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR200011"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200011"
+          }
+        ]
+      }
+    }
+  ]
+}

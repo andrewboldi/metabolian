@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-aminopropan-1-ol-to-s-lactaldehyde "2-aminopropan-1-ol to (S)-lactaldehyde" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     2_aminopropan_1_ol
@@ -18,7 +18,13 @@ pathway 2-aminopropan-1-ol-to-s-lactaldehyde "2-aminopropan-1-ol to (S)-lactalde
 
   branch from nh3 side left {
     nh3
-    <-> . +1_naphthaleneacetamide +h2o
-    1_naphthaleneacetate
+    <-> . +2_azaniumyl_2_deoxyisochorismate +glutamine +h2o +glutamate
+    4_amino_4_deoxychorismate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +n_acetylputrescinium +o2 +h2o +h2o2
+    4_acetamidobutanal
   }
 }

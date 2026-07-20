@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "15-s-hpete-to-diphosphate",
   "name": "15(S)-HPETE to diphosphate",
-  "category": "other",
-  "summary": "A 2-step route from 15(S)-HPETE(1−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 15(S)-HPETE(1−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:48636"
+        "id": "RHEA:48856"
       },
       {
         "db": "ChEBI",
@@ -28,12 +28,30 @@
       }
     },
     {
-      "id": "15_oxo_ete",
-      "name": "15-oxo-ETE",
-      "formula": "C20H29O3",
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "15_s_hete",
+      "name": "15(S)-HETE",
+      "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57410"
+        "chebi": "CHEBI:57409"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
       }
     },
     {
@@ -43,6 +61,42 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "15_oxo_ete",
+      "name": "15-oxo-ETE",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57410"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -91,6 +145,25 @@
       }
     },
     {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5s_15s_5_hydroperoxy_15_hete",
+      "name": "(5S,15S)-5-hydroperoxy-15-HETE",
+      "short": "(5S,15S)-5-hydroper…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:131564"
+      }
+    },
+    {
       "id": "15_r_hpete",
       "name": "15(R)-HPETE",
       "formula": "C20H31O4",
@@ -100,44 +173,110 @@
       }
     },
     {
-      "id": "peregrinol_diphosphate",
-      "name": "peregrinol diphosphate",
-      "short": "peregrinol PP",
-      "formula": "C20H35O8P2",
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:138232"
+        "chebi": "CHEBI:58057"
       }
     },
     {
-      "id": "labd_13_16_14_diene_9_ol",
-      "name": "labd-13(16),14-diene-9-ol",
-      "short": "labd-13(16),14-dien…",
-      "formula": "C20H34O",
+      "id": "4e_6e_2_6_dimethylocta_2_4_6_triene",
+      "name": "(4E,6E)-2,6-dimethylocta-2,4,6-triene",
+      "short": "(4E,6E)-2,6-dimethy…",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145549"
+        "chebi": "CHEBI:141222"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "maaliene",
+      "name": "β-maaliene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132831"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_1_152",
-      "name": "hydroperoxy icosatetraenoate dehydratase",
+      "id": "ec_1_1_1_232",
+      "name": "15-hydroxyicosatetraenoate dehydrogenase",
       "ec": [
-        "4.2.1.152"
+        "1.1.1.232"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "hydroperoxy icosatetraenoate dehydratase",
-      "equation": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E)-eicosatetraenoate = 15-oxo-(5Z,8Z,11Z,13E)-eicosatetraenoate + H2O",
-      "ec": "4.2.1.152",
+      "name": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + AH2 = (15S)-hydroxy-(5Z,8Z,11Z,13...",
+      "equation": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + AH2 = (15S)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + A + H2O",
       "substrates": [
         {
           "metabolite": "15_s_hpete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_s_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48856"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "15-hydroxyicosatetraenoate dehydrogenase",
+      "equation": "(15S)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + NAD(+) = 15-oxo-(5Z,8Z,11Z,13E)-eicosatetraenoate + NADH + H(+)",
+      "ec": "1.1.1.232",
+      "substrates": [
+        {
+          "metabolite": "15_s_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
@@ -147,32 +286,36 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_1_152"
+          "enzyme": "ec_1_1_1_232"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:48636"
+        "rhea": "RHEA:23260"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48636"
+            "id": "RHEA:23260"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "15-oxo-(5Z,8Z,11Z,13E)-eicosatetraenoate + ATP + CoA = 15-oxo-(5Z,8Z,11Z,13E)-eicosatet...",
       "equation": "15-oxo-(5Z,8Z,11Z,13E)-eicosatetraenoate + ATP + CoA = 15-oxo-(5Z,8Z,11Z,13E)-eicosatetraenoyl-CoA + AMP + diphosphate",
       "substrates": [
@@ -204,7 +347,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:52364"
       },
@@ -219,7 +362,42 @@
       }
     },
     {
-      "id": "r3",
+      "id": "r4",
+      "name": "(15S)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + O2 = (5S)-hydroperoxy-(15S)-hydroxy-(...",
+      "equation": "(15S)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + O2 = (5S)-hydroperoxy-(15S)-hydroxy-(6E,8Z,11Z,13E)-eicosatetraenoate",
+      "substrates": [
+        {
+          "metabolite": "15_s_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_15s_5_hydroperoxy_15_hete",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:48624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48624"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "(15R)-hydroperoxy-(5Z,8Z,11Z,13E)-eicosatetraenoate = 15-oxo-(5Z,8Z,11Z,13E)-eicosatetr...",
       "equation": "(15R)-hydroperoxy-(5Z,8Z,11Z,13E)-eicosatetraenoate = 15-oxo-(5Z,8Z,11Z,13E)-eicosatetraenoate + H2O",
       "substrates": [
@@ -239,7 +417,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:50152"
       },
@@ -254,18 +432,18 @@
       }
     },
     {
-      "id": "r4",
-      "name": "peregrinol diphosphate = labd-13(16),14-diene-9-ol + diphosphate",
-      "equation": "peregrinol diphosphate = labd-13(16),14-diene-9-ol + diphosphate",
+      "id": "r6",
+      "name": "(2E)-geranyl diphosphate = (4E,6E)-allo-ocimene + diphosphate",
+      "equation": "(2E)-geranyl diphosphate = (4E,6E)-allo-ocimene + diphosphate",
       "substrates": [
         {
-          "metabolite": "peregrinol_diphosphate",
+          "metabolite": "gpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "labd_13_16_14_diene_9_ol",
+          "metabolite": "4e_6e_2_6_dimethylocta_2_4_6_triene",
           "stoichiometry": 1
         },
         {
@@ -274,16 +452,51 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:62184"
+        "rhea": "RHEA:73947"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62184"
+            "id": "RHEA:73947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(2E,6E)-farnesyl diphosphate = beta-maaliene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-maaliene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maaliene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:73951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73951"
           }
         ]
       }

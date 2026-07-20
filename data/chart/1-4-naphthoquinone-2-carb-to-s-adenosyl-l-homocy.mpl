@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-carb… to S-adenosyl-L-homocysteine" {
-  spacing 248
+  spacing 302
 
   spine at 0,0 {
     1_4_naphthoquinone_2_carboxylate
@@ -16,21 +16,57 @@ pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-c
     phyllohydroquinone
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_84 [4.2.3.84] +fpp +h2o
-    10_epi_eudesmol
+  branch from 2_phytyl_1_4_naphthoquinone side left {
+    2_phytyl_1_4_naphthoquinone
+    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +phylloquinone +h
+    s_adenosyl_l_methionine
   }
 
-  branch from phyllohydroquinone side right {
+  branch from 2_phytyl_1_4_naphthoquinone side right {
+    2_phytyl_1_4_naphthoquinone
+    <-> ec_1_1_5_8 [1.1.5.8] +2_phytyl_1_4_dihydroxynaphthalene +3_dehydroquinate
+    l_quinate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_114 [4.2.3.114] +gpp
+    terpinene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_115 [4.2.3.115] +gpp
+    terpinene
+  }
+
+  branch from 2_phytyl_1_4_dihydroxynaphthalene side left {
+    2_phytyl_1_4_dihydroxynaphthalene
+    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +2_phytyl_1_4_naphthoquinone +1_d_ribofuranosyl_1_4_dihydronicotinamide
+    h
+  }
+
+  branch from 2_phytyl_1_4_dihydroxynaphthalene side right {
+    2_phytyl_1_4_dihydroxynaphthalene
+    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +2_phytyl_1_4_naphthoquinone
+    tetrathionate
+  }
+
+  branch from phyllohydroquinone side left {
     phyllohydroquinone
     <-> . +nadh +hplus +nad
     phylloquinone
   }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_288 [2.1.1.288] +aklanonate +sam
+    methyl_aklanonate
+  }
+
   branch from sah side left {
     sah
-    <-> ec_2_1_1_169 [2.1.1.169] +tricetin +sam +hplus
-    3_4_5_o_trimethyltricetin
+    <-> ec_2_1_1_386 [2.1.1.386] +3_end_ribonucleotide_1 +sam +hplus
+    3_end_2_o_methylribonucleotide_1
   }
 }

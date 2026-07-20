@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11z-14z-17z-icosatriena-to-14-15-epoxy-12-hydro "(11Z,14Z,17Z)-icosatriena… to 14(15)-epoxy-12-hydroxy-(…" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     11z_14z_17z_icosatrienamide
@@ -18,11 +18,17 @@ pathway 11z-14z-17z-icosatriena-to-14-15-epoxy-12-hydro "(11Z,14Z,17Z)-icosatrie
 
   branch from nh3 side left {
     nh3
-    <-> . +4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_hexaprenyl_4_5_dihydroxybenzoate
+    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteine +h2o +pyruvate
+    3_methyl_3_sulfanylhexan_1_ol
   }
 
-  branch from 12_hpetre side right {
+  branch from nh3 side right {
+    nh3
+    <-> . +3_sulfanylhexan_1_ol_l_cysteine +h2o +pyruvate
+    3_mercaptohexanol
+  }
+
+  branch from 12_hpetre side left {
     12_hpetre
     <-> .
     10_11_epoxy_12_hydroxy_14z_17z_icosadienoate

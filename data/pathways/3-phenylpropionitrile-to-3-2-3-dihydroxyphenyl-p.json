@@ -112,49 +112,81 @@
       }
     },
     {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
-      "charge": -3,
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57692"
+        "chebi": "CHEBI:59789"
       }
     },
     {
-      "id": "trans_cinnamate",
-      "name": "trans-cinnamate",
-      "formula": "C9H7O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15669"
-      }
-    },
-    {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58307"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
+      "id": "methyl_3_phenylpropanoate",
+      "name": "methyl 3-phenylpropanoate",
+      "short": "methyl 3-phenylprop…",
+      "formula": "C10H12O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57912"
+        "chebi": "CHEBI:89875"
       }
     },
     {
-      "id": "e_3_indol_3_yl_acrylate",
-      "name": "(E)-3-(indol-3-yl)acrylate",
-      "short": "3-(indol-3-yl)acryl…",
-      "formula": "C11H8NO2",
-      "charge": -1,
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:131929"
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "l_glutaminiumyl_group",
+      "name": "L-glutaminiumyl group",
+      "short": "L-glutaminiumyl…",
+      "formula": "C5H10N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:64722"
+      }
+    },
+    {
+      "id": "l_glutamyl_zwitterionic_group",
+      "name": "L-α-glutamyl zwitterionic group",
+      "short": "L-α-glutamyl…",
+      "formula": "C5H8NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64721"
+      }
+    },
+    {
+      "id": "2_iminio_3_indol_3_yl_propanoate",
+      "name": "2-iminio-3-(indol-3-yl)propanoate",
+      "short": "2-iminio-3-(indol-3…",
+      "formula": "C11H10N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59193"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "chromopyrrolate",
+      "name": "chromopyrrolate",
+      "formula": "C22H13N3O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:133898"
       }
     }
   ],
@@ -181,17 +213,17 @@
       ]
     },
     {
-      "id": "ec_1_3_8_15",
-      "name": "3-(aryl)acrylate reductase",
+      "id": "ec_3_5_1_122",
+      "name": "protein N-terminal glutamine amidohydrolase",
       "ec": [
-        "1.3.8.15"
+        "3.5.1.122"
       ]
     },
     {
-      "id": "ec_4_3_1_31",
-      "name": "L-tryptophan ammonia lyase",
+      "id": "ec_1_21_98_2",
+      "name": "dichlorochromopyrrolate synthase",
       "ec": [
-        "4.3.1.31"
+        "1.21.98.2"
       ]
     }
   ],
@@ -345,67 +377,61 @@
     },
     {
       "id": "r4",
-      "name": "3-(aryl)acrylate reductase",
-      "equation": "3-phenylpropanoate + oxidized [electron-transfer flavoprotein] + H(+) = (E)-cinnamate + reduced [electron-transfer flavoprotein]",
-      "ec": "1.3.8.15",
+      "name": "3-phenylpropanoate + S-adenosyl-L-methionine = 3-phenylpropanoic acid methyl ester + S-...",
+      "equation": "3-phenylpropanoate + S-adenosyl-L-methionine = 3-phenylpropanoic acid methyl ester + S-adenosyl-L-homocysteine",
       "substrates": [
         {
           "metabolite": "3_phenylpropionate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trans_cinnamate",
+          "metabolite": "methyl_3_phenylpropanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fadh2",
+          "metabolite": "sah",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_8_15"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:59996"
+        "rhea": "RHEA:74875"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59996"
+            "id": "RHEA:74875"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-tryptophan ammonia lyase",
-      "equation": "L-tryptophan = (E)-3-(indol-3-yl)acrylate + NH4(+)",
-      "ec": "4.3.1.31",
+      "name": "protein N-terminal glutamine amidohydrolase",
+      "equation": "N-terminal L-glutaminyl-[protein] + H2O = N-terminal L-glutamyl-[protein] + NH4(+)",
+      "ec": "3.5.1.122",
       "substrates": [
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "l_glutaminiumyl_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_3_indol_3_yl_acrylate",
+          "metabolite": "l_glutamyl_zwitterionic_group",
           "stoichiometry": 1
         },
         {
@@ -415,20 +441,73 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_31"
+          "enzyme": "ec_3_5_1_122"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:41259"
+        "rhea": "RHEA:50680"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41259"
+            "id": "RHEA:50680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "dichlorochromopyrrolate synthase",
+      "equation": "2 2-iminio-3-(indol-3-yl)propanoate + H2O2 = chromopyrrolate + NH4(+) + 2 H2O + H(+)",
+      "ec": "1.21.98.2",
+      "substrates": [
+        {
+          "metabolite": "2_iminio_3_indol_3_yl_propanoate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chromopyrrolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_98_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:50920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50920"
           }
         ]
       }

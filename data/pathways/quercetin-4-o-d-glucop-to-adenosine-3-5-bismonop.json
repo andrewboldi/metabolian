@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "quercetin-4-o-d-glucop-to-adenosine-3-5-bismonop",
   "name": "quercetin 4'-O-β-D-glucop… to adenosine 3',5'-bismonoph…",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from quercetin 4'-O-β-D-glucopyranoside(1−) to adenosine 3',5'-bismonophosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -104,62 +104,41 @@
       }
     },
     {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "isorhamnetin",
-      "name": "isorhamnetin",
-      "formula": "C16H11O7",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:144055"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
-      }
-    },
-    {
-      "id": "quercetin_3_o_d_glucopyranoside",
-      "name": "quercetin 3-O-β-D-glucopyranoside",
-      "short": "quercetin…",
-      "formula": "C21H19O12",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:144437"
-      }
-    },
-    {
-      "id": "butyryl_coa",
-      "name": "Butyryl-CoA (butanoyl-CoA)",
-      "short": "Butyryl-CoA…",
-      "formula": "C25H38N7O17P3S",
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57371"
+        "chebi": "CHEBI:57387"
       }
     },
     {
-      "id": "s_butyryl_4_phosphopantetheine",
-      "name": "S-butyryl-4'-phosphopantetheine",
-      "short": "S-butyryl-4'-phosph…",
-      "formula": "C15H27N2O8PS",
+      "id": "s_oleoyl_4_phosphopantetheine",
+      "name": "S-oleoyl-4'-phosphopantetheine",
+      "short": "S-oleoyl-4'-phospho…",
+      "formula": "C29H53N2O8PS",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:132011"
+        "chebi": "CHEBI:156553"
+      }
+    },
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
+      }
+    },
+    {
+      "id": "s_arachidonoyl_4_phosphopantetheine",
+      "name": "S-arachidonoyl-4'-phosphopantetheine",
+      "short": "S-arachidonoyl-4'-p…",
+      "formula": "C31H51N2O8PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:156554"
       }
     }
   ],
@@ -176,13 +155,6 @@
       "name": "quercetin-3-sulfate 4'-sulfotransferase",
       "ec": [
         "2.8.2.27"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_398",
-      "name": "isoflavone 3'-O-methyltransferase",
-      "ec": [
-        "2.1.1.398"
       ]
     }
   ],
@@ -326,60 +298,11 @@
     },
     {
       "id": "r4",
-      "name": "isoflavone 3'-O-methyltransferase",
-      "equation": "quercetin + S-adenosyl-L-methionine = isorhamnetin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.398",
+      "name": "(9Z)-octadecenoyl-CoA + H2O = S-(9Z-octadecenoyl)-4'-phosphopantetheine + adenosine 3',...",
+      "equation": "(9Z)-octadecenoyl-CoA + H2O = S-(9Z-octadecenoyl)-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "quercetin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isorhamnetin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_398"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:60944"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:60944"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "quercetin 3-O-beta-D-glucoside + H2O = quercetin + beta-D-glucose",
-      "equation": "quercetin 3-O-beta-D-glucoside + H2O = quercetin + beta-D-glucose",
-      "substrates": [
-        {
-          "metabolite": "quercetin_3_o_d_glucopyranoside",
+          "metabolite": "oleoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -389,46 +312,7 @@
       ],
       "products": [
         {
-          "metabolite": "quercetin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69655"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69655"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "butanoyl-CoA + H2O = S-butanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + ...",
-      "equation": "butanoyl-CoA + H2O = S-butanoyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "butyryl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_butyryl_4_phosphopantetheine",
+          "metabolite": "s_oleoyl_4_phosphopantetheine",
           "stoichiometry": 1
         },
         {
@@ -441,16 +325,59 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:49976"
+        "rhea": "RHEA:65564"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49976"
+            "id": "RHEA:65564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O = S-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-4'-phos...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O = S-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "arachidonoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_arachidonoyl_4_phosphopantetheine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65568"
           }
         ]
       }

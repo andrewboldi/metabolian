@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6-methylsalicylate-to-3-hydroxybenzaldehyde",
   "name": "6-methylsalicylate to 3-hydroxybenzaldehyde",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 6-methylsalicylate to 3-hydroxybenzaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -129,31 +129,88 @@
       }
     },
     {
-      "id": "gentisyl_alcohol",
-      "name": "gentisyl alcohol",
-      "formula": "C7H8O3",
-      "charge": 0,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:5325"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "testosterone",
-      "name": "testosterone",
-      "formula": "C19H28O2",
+      "id": "3_hydroxybenzyl_acetate",
+      "name": "3-hydroxybenzyl acetate",
+      "short": "3-hydroxybenzyl…",
+      "formula": "C9H10O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17347"
+        "chebi": "CHEBI:156232"
       }
     },
     {
-      "id": "1_hydroxytestosterone",
-      "name": "1β-hydroxytestosterone",
-      "short": "1β-hydroxytestoster…",
-      "formula": "C19H28O3",
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57369"
+      }
+    },
+    {
+      "id": "3_hydroxybenzyl_benzoate",
+      "name": "3-hydroxybenzyl benzoate",
+      "short": "3-hydroxybenzyl…",
+      "formula": "C14H12O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:137076"
+        "chebi": "CHEBI:156231"
+      }
+    },
+    {
+      "id": "1_ethyl_fatty_acid_anion",
+      "name": "(ω−1)-ethyl fatty acid anion",
+      "short": "(ω−1)-ethyl fatty…",
+      "formula": "C3H5O2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84493"
+      }
+    },
+    {
+      "id": "1_hydroxy_long_chain_fatty_acid_anion",
+      "name": "(ω−1)-hydroxy-long-chain fatty acid anion",
+      "short": "(ω−1)-hydroxy-long-…",
+      "formula": "C3H5O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144045"
+      }
+    },
+    {
+      "id": "lochnericine",
+      "name": "lochnericine",
+      "formula": "C21H25N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:144374"
+      }
+    },
+    {
+      "id": "h_rhammericine",
+      "name": "hörhammericine",
+      "formula": "C21H25N2O4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:144375"
       }
     },
     {
@@ -357,62 +414,89 @@
     },
     {
       "id": "r4",
-      "name": "3-hydroxybenzyl alcohol + reduced [NADPH--hemoprotein reductase] + O2 = gentisyl alcoho...",
-      "equation": "3-hydroxybenzyl alcohol + reduced [NADPH--hemoprotein reductase] + O2 = gentisyl alcohol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "3-hydroxybenzyl alcohol + acetyl-CoA = 3-hydroxy-benzyl acetate + CoA",
+      "equation": "3-hydroxybenzyl alcohol + acetyl-CoA = 3-hydroxy-benzyl acetate + CoA",
       "substrates": [
         {
           "metabolite": "3_hydroxybenzyl_alcohol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "gentisyl_alcohol",
+          "metabolite": "3_hydroxybenzyl_acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:62212"
+        "rhea": "RHEA:64828"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62212"
+            "id": "RHEA:64828"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 1beta-hydroxytestosterone ...",
-      "equation": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 1beta-hydroxytestosterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "3-hydroxybenzyl alcohol + benzoyl-CoA = 3-hydroxy-benzyl benzoate + CoA",
+      "equation": "3-hydroxybenzyl alcohol + benzoyl-CoA = 3-hydroxy-benzyl benzoate + CoA",
       "substrates": [
         {
-          "metabolite": "testosterone",
+          "metabolite": "3_hydroxybenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxybenzyl_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64832"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64832"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "an (omega-1)-ethyl fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an (omega...",
+      "equation": "an (omega-1)-ethyl fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an (omega-1)-hydroxy-long-chain fatty acid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_ethyl_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
@@ -426,7 +510,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_hydroxytestosterone",
+          "metabolite": "1_hydroxy_long_chain_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
@@ -443,22 +527,73 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:53260"
+        "rhea": "RHEA:60936"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53260"
+            "id": "RHEA:60936"
           }
         ]
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "lochnericine + reduced [NADPH--hemoprotein reductase] + O2 = horhammericine + oxidized ...",
+      "equation": "lochnericine + reduced [NADPH--hemoprotein reductase] + O2 = horhammericine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "lochnericine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h_rhammericine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:61048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "3-hydroxybenzoate + ATP + NADPH + H(+) = 3-hydroxybenzaldehyde + AMP + diphosphate + NA...",
       "equation": "3-hydroxybenzoate + ATP + NADPH + H(+) = 3-hydroxybenzaldehyde + AMP + diphosphate + NADP(+)",
       "substrates": [
@@ -498,7 +633,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:68884"
       },

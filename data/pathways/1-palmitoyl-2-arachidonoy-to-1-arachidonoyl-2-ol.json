@@ -189,42 +189,62 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:57394"
       }
     },
     {
-      "id": "2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad",
-      "name": "2-[(9S,11R)-epidioxy-(15S)-hydroperoxy-(5Z,13E)-prostadienoyl]-sn-glycero-3- phosphocholine",
-      "short": "2-[(9S,11R)-epidiox…",
-      "formula": "C28H50NO11P",
+      "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch",
+      "name": "1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "1-stearoyl-2-arachi…",
+      "formula": "C46H84NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138100"
+        "chebi": "CHEBI:74965"
       }
     },
     {
-      "id": "1_arachidonyl_2_palmityl_sn_glycero_3_phosphocho",
-      "name": "1-arachidonyl-2-palmityl-sn-glycero-3-phosphocholine",
-      "short": "1-arachidonyl-2-pal…",
-      "formula": "C44H82NO7P",
-      "charge": 0,
+      "id": "1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos",
+      "name": "1-heptadecanoyl-2-arachidonoyl-sn-glycero-3-phosphoserine",
+      "short": "1-heptadecanoyl-2-a…",
+      "formula": "C43H75NO10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77695"
+        "chebi": "CHEBI:84461"
       }
     },
     {
-      "id": "2_hexadecyl_sn_glycero_3_phosphocholine",
-      "name": "2-hexadecyl-sn-glycero-3-phosphocholine",
-      "short": "2-hexadecyl-sn-glyc…",
-      "formula": "C24H52NO6P",
+      "id": "1_heptadecanoyl_sn_glycero_3_phosphoserine",
+      "name": "1-heptadecanoyl-sn-glycero-3-phosphoserine",
+      "short": "1-heptadecanoyl-sn-…",
+      "formula": "C23H45NO9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84462"
+      }
+    },
+    {
+      "id": "1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos",
+      "name": "1-heptadecanoyl-2-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "1-heptadecanoyl-2-a…",
+      "formula": "C45H82NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77696"
+        "chebi": "CHEBI:84470"
+      }
+    },
+    {
+      "id": "1_heptadecanoyl_sn_glycero_3_phosphocholine",
+      "name": "1-heptadecanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-heptadecanoyl-sn-…",
+      "formula": "C25H52NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74340"
       }
     }
   ],
@@ -474,46 +494,50 @@
     },
     {
       "id": "r7",
-      "name": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + 2 O2 = 2-(prostaglandi...",
-      "equation": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + 2 O2 = 2-(prostaglandin G2)-sn-glycero-3-phosphocholine",
+      "name": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + octadecanoyl-CoA = 1-o...",
+      "equation": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + octadecanoyl-CoA = 1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + CoA",
       "substrates": [
         {
           "metabolite": "2_arachidonoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 2
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad",
+          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:54212"
+        "rhea": "RHEA:74807"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54212"
+            "id": "RHEA:74807"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "1-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-2-O-hexadecyl-sn-glycero-3-phosphocholine + H2O = 2-...",
-      "equation": "1-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-2-O-hexadecyl-sn-glycero-3-phosphocholine + H2O = 2-O-hexadecyl-sn-glycero-3-phosphocholine + (5Z,8Z,11Z,14Z)-eicosatetraenoate + H(+)",
+      "name": "1-heptadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphoserine + H2O = 1...",
+      "equation": "1-heptadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphoserine + H2O = 1-heptadecanoyl-sn-glycero-3-phosphoserine + (5Z,8Z,11Z,14Z)-eicosatetraenoate + H(+)",
       "substrates": [
         {
-          "metabolite": "1_arachidonyl_2_palmityl_sn_glycero_3_phosphocho",
+          "metabolite": "1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos",
           "stoichiometry": 1
         },
         {
@@ -523,7 +547,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_hexadecyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_heptadecanoyl_sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
@@ -538,14 +562,57 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:41271"
+        "rhea": "RHEA:44500"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41271"
+            "id": "RHEA:44500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "1-heptadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = ...",
+      "equation": "1-heptadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphocholine + H2O = 1-heptadecanoyl-sn-glycero-3-phosphocholine + (5Z,8Z,11Z,14Z)-eicosatetraenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_heptadecanoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:44520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44520"
           }
         ]
       }

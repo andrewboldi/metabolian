@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet "5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet…" {
-  spacing 196
+  spacing 250
 
   spine at 0,0 {
     lathosterol
@@ -40,14 +40,38 @@ pathway 5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet "5α-cholest-7-en-3β-ol
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_106 [2.1.1.106] +l_tryptophan +sam +hplus
+    2_methyl_l_tryptophan
   }
 
-  branch from episterol side right {
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_105 [2.1.1.105] +n_benzoyl_4_hydroxyanthranilate +sam +hplus
+    n_benzoyl_4_methoxyanthranilate
+  }
+
+  branch from episterol side left {
     episterol
-    <-> . +acyl_coa +coa
-    episterol_ester
+    <-> ec_1_14_21_6 [1.14.21.6] +nadp +ergosta_5_7_24_28_trien_3_ol +nadph
+    h
+  }
+
+  branch from ergosta_5_7_24_28_trien_3_ol side right {
+    ergosta_5_7_24_28_trien_3_ol
+    <-> . +ergosta_5_7_22_24_28_tetraen_3beta_ol +h +nadph
+    nadp
+  }
+
+  branch from ergosta_5_7_24_28_trien_3_ol side left {
+    ergosta_5_7_24_28_trien_3_ol
+    <-> . +nadh +h +o2 +nad +h2o
+    ergosta_5_7_22_24_28_tetraen_3beta_ol
+  }
+
+  branch from ergosta_5_7_dien_3_ol side right {
+    ergosta_5_7_dien_3_ol
+    <-> . +h +ergosterol +nadp
+    nadph
   }
 
   branch from ergosterol side left {

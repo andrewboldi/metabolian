@@ -160,45 +160,99 @@
       }
     },
     {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H7NO",
-      "charge": 0,
+      "id": "2_deoxyadenosine_5_monophosphate",
+      "name": "2'-deoxyadenosine 5'-monophosphate",
+      "short": "2'-deoxyadenosine…",
+      "formula": "C10H12N5O6P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:50342"
+        "chebi": "CHEBI:58245"
       }
     },
     {
-      "id": "trans_4_hydroxy_l_proline",
-      "name": "trans-4-hydroxy-L-proline",
-      "short": "trans-4-hydroxy-L-p…",
-      "formula": "C5H7NO2",
-      "charge": 0,
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:61965"
+        "chebi": "CHEBI:17996"
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9α,10β-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "2_chloro_deoxyadenosine_5_monophosphate",
+      "name": "2'-chloro-deoxyadenosine 5'-monophosphate",
+      "short": "2'-chloro-deoxyaden…",
+      "formula": "C10H11ClN5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231721"
+      }
+    },
+    {
+      "id": "2_deoxyguanosine_5_monophosphate",
+      "name": "2'-deoxyguanosine 5'-monophosphate",
+      "short": "2'-deoxyguanosine…",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57673"
+      }
+    },
+    {
+      "id": "2_chloro_deoxyguanosine_5_monophosphate",
+      "name": "2'-chloro-deoxyguanosine 5'-monophosphate",
+      "short": "2'-chloro-deoxyguan…",
+      "formula": "C10H11ClN5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231722"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58635"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "manool",
-      "name": "manool",
-      "formula": "C20H34O",
+      "id": "2e_6e_hedycaryol",
+      "name": "(2E,6E)-hedycaryol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76945"
+        "chebi": "CHEBI:138043"
+      }
+    },
+    {
+      "id": "2z_6e_hedycaryol",
+      "name": "(2Z,6E)-hedycaryol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138044"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_174",
+      "name": "(2E,6E)-hedycaryol synthase",
+      "ec": [
+        "4.2.3.174"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_187",
+      "name": "(2Z,6E)-hedycaryol synthase",
+      "ec": [
+        "4.2.3.187"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -386,11 +440,15 @@
     },
     {
       "id": "r5",
-      "name": "L-prolyl-[protein] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[protein] + succina...",
-      "equation": "L-prolyl-[protein] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[protein] + succinate + CO2",
+      "name": "dAMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dAMP + succinate + CO2 + H2O",
+      "equation": "dAMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dAMP + succinate + CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "l_proline",
+          "metabolite": "2_deoxyadenosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
           "stoichiometry": 1
         },
         {
@@ -400,11 +458,15 @@
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trans_4_hydroxy_l_proline",
+          "metabolite": "2_chloro_deoxyadenosine_5_monophosphate",
           "stoichiometry": 1
         },
         {
@@ -414,30 +476,94 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:63484"
+        "rhea": "RHEA:81831"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63484"
+            "id": "RHEA:81831"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(+)-copalyl diphosphate + H2O = manool + diphosphate",
-      "equation": "(+)-copalyl diphosphate + H2O = manool + diphosphate",
+      "name": "dGMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dGMP + succinate + CO2 + H2O",
+      "equation": "dGMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dGMP + succinate + CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "2_deoxyguanosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_chloro_deoxyguanosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:81835"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81835"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(2E,6E)-hedycaryol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (2E,6E)-hedycaryol + diphosphate",
+      "ec": "4.2.3.174",
+      "substrates": [
+        {
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
@@ -447,7 +573,7 @@
       ],
       "products": [
         {
-          "metabolite": "manool",
+          "metabolite": "2e_6e_hedycaryol",
           "stoichiometry": 1
         },
         {
@@ -455,17 +581,67 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_174"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:40011"
+        "rhea": "RHEA:54056"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40011"
+            "id": "RHEA:54056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "(2Z,6E)-hedycaryol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (2Z,6E)-hedycaryol + diphosphate",
+      "ec": "4.2.3.187",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_6e_hedycaryol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_187"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:54060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54060"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-diphosphate-74935 "(3R)-3-[(carboxylmethyl)a… to diphosphate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_butanoic_acid
@@ -18,19 +18,37 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate-74935 "(3R)-3-[(carboxylmethyl)a…
 
   branch from succinate side left {
     succinate
-    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +formaldehyde +co2
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +formaldehyde +co2
+    adenosine_5_monophosphate_1
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2
+    5_hydroxymethylcytidine_5_monophosphate_1
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_170 [4.2.3.170] +fpp +h2o
+    4_epi_cubebol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    copalol
+    <-> ec_4_2_3_173 [4.2.3.173] +fpp +h2o
+    cadinol
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +ml_236a_carboxylate +o_s_2_methylbutanoylpantetheine_4_phosphoryl_ser
-    mevinic_acid_anion
+    <-> ec_6_2_1_70 [6.2.1.70] +threonine +atp +amp +ppi
+    o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +amp
+    l_threonyl_amp
   }
 }

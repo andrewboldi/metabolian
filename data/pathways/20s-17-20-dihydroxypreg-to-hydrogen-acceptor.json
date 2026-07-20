@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "20s-17-20-dihydroxypreg-to-hydrogen-acceptor",
   "name": "(20S)-17,20-dihydroxypreg… to hydrogen acceptor",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from (20S)-17,20-dihydroxypregn-4-en-3-one to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -130,31 +130,70 @@
       }
     },
     {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 1,
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:33738"
+        "chebi": "CHEBI:57618"
       }
     },
     {
-      "id": "1_hydroxyandrost_4_ene_3_17_dione",
-      "name": "1α-hydroxyandrost-4-ene-3,17-dione",
-      "short": "1α-hydroxyandrost-4…",
-      "formula": "C19H26O3",
+      "id": "algestone",
+      "name": "algestone",
+      "formula": "C21H30O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133778"
+        "chebi": "CHEBI:763"
       }
     },
     {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 2,
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:33737"
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "5_androstane_3_17_dione",
+      "name": "5α-androstane-3,17-dione",
+      "short": "5α-androstane-3,17-…",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15994"
+      }
+    },
+    {
+      "id": "androsta_1_4_diene_3_17_dione",
+      "name": "androsta-1,4-diene-3,17-dione",
+      "short": "androsta-1,4-diene-…",
+      "formula": "C19H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:40799"
+      }
+    },
+    {
+      "id": "1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol",
+      "name": "1-hexadecyl-2-acetyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecyl-2-acety…",
+      "formula": "C23H48NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78387"
+      }
+    },
+    {
+      "id": "1_hexadecyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-hexadecyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecyl-sn-glyc…",
+      "formula": "C21H46NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78390"
       }
     },
     {
@@ -186,21 +225,40 @@
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30245"
+        "chebi": "CHEBI:16113"
       }
     },
     {
-      "id": "crepenynate",
-      "name": "crepenynate",
-      "formula": "C18H29O2",
-      "charge": -1,
+      "id": "25_hydroxycholesterol",
+      "name": "25-hydroxycholesterol",
+      "short": "25-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:14030"
+        "chebi": "CHEBI:42977"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hydroxylamine",
+      "name": "hydroxylamine",
+      "formula": "H3NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15429"
       }
     }
   ],
@@ -227,10 +285,24 @@
       ]
     },
     {
-      "id": "ec_1_14_15_19",
-      "name": "C-19 steroid 1alpha-hydroxylase",
+      "id": "ec_1_3_99_4",
+      "name": "3-oxosteroid 1-dehydrogenase",
       "ec": [
-        "1.14.15.19"
+        "1.3.99.4"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_38",
+      "name": "cholesterol 25-monooxygenase",
+      "ec": [
+        "1.14.99.38"
+      ]
+    },
+    {
+      "id": "ec_1_7_99_1",
+      "name": "hydroxylamine reductase",
+      "ec": [
+        "1.7.99.1"
       ]
     }
   ],
@@ -396,63 +468,188 @@
     },
     {
       "id": "r4",
-      "name": "C-19 steroid 1alpha-hydroxylase",
-      "equation": "androst-4-ene-3,17-dione + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 1alpha-hydroxyandrost-4-ene-3,17-dione + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "ec": "1.14.15.19",
+      "name": "17alpha-hydroxyprogesterone + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha,17a...",
+      "equation": "17alpha-hydroxyprogesterone + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha,17alpha-dihydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "androst_4_ene_3_17_dione",
+          "metabolite": "17_hydroxyprogesterone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "1_hydroxyandrost_4_ene_3_17_dione",
+          "metabolite": "algestone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "metabolite": "fmn",
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_1_14_15_19"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50812"
+        "rhea": "RHEA:53216"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50812"
+            "id": "RHEA:53216"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "androst-4-ene-3,17-dione + NADPH + H(+) = 5alpha-androstan-3,17-dione + NADP(+)",
+      "equation": "androst-4-ene-3,17-dione + NADPH + H(+) = 5alpha-androstan-3,17-dione + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "androst_4_ene_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_androstane_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-oxosteroid 1-dehydrogenase",
+      "equation": "androst-4-ene-3,17-dione + A = androsta-1,4-diene-3,17-dione + AH2",
+      "ec": "1.3.99.4",
+      "substrates": [
+        {
+          "metabolite": "androst_4_ene_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "androsta_1_4_diene_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:51056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "1-O-hexadecyl-2-acetyl-sn-glycero-3-phosphoethanolamine + H2O = 1-O-hexadecyl-sn-glycer...",
+      "equation": "1-O-hexadecyl-2-acetyl-sn-glycero-3-phosphoethanolamine + H2O = 1-O-hexadecyl-sn-glycero-3-phosphoethanolamine + acetate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hexadecyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:41708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
       "equation": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
       "substrates": [
@@ -476,7 +673,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:42076"
       },
@@ -491,12 +688,13 @@
       }
     },
     {
-      "id": "r6",
-      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = crepenynate + A + 2 H2O",
-      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = crepenynate + A + 2 H2O",
+      "id": "r9",
+      "name": "cholesterol 25-monooxygenase",
+      "equation": "cholesterol + AH2 + O2 = 25-hydroxycholesterol + A + H2O",
+      "ec": "1.14.99.38",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
@@ -510,7 +708,7 @@
       ],
       "products": [
         {
-          "metabolite": "crepenynate",
+          "metabolite": "25_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -519,20 +717,78 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_38"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:23456"
+        "rhea": "RHEA:21104"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23456"
+            "id": "RHEA:21104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "hydroxylamine reductase",
+      "equation": "A + NH4(+) + H2O = hydroxylamine + AH2 + H(+)",
+      "ec": "1.7.99.1",
+      "substrates": [
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_99_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:22052"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22052"
           }
         ]
       }

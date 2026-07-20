@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny "(R)-N-acetyl-1-phenylethy… to (2S)-2-hydroxy-2-phenylpr…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     r_n_acetyl_1_phenylethylamine
@@ -18,7 +18,13 @@ pathway r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny "(R)-N-acetyl-1-phenylet
 
   branch from nh3 side left {
     nh3
-    <-> ec_2_3_2_13 [2.3.2.13] +l_glutamine +l_lysinium
-    n6_glutamyl_lysine
+    <-> . +4_hydroxyestrone +o2 +h2o +hplus
+    pyridinestrone_3_carboxylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +hco3 +h2o +hplus
+    carbamate
   }
 }

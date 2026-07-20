@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-phenylpropionitrile-to-3-2-3-dihydroxyphenyl-p "3-phenylpropionitrile to 3-(2,3-dihydroxyphenyl)pr…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     3_phenylpropionitrile
@@ -18,13 +18,19 @@ pathway 3-phenylpropionitrile-to-3-2-3-dihydroxyphenyl-p "3-phenylpropionitrile 
 
   branch from 3_phenylpropionate side left {
     3_phenylpropionate
-    <-> ec_1_3_8_15 [1.3.8.15] +fad +hplus +fadh2
-    trans_cinnamate
+    <-> . +sam +sah
+    methyl_3_phenylpropanoate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_31 [4.3.1.31] +l_tryptophan
-    e_3_indol_3_yl_acrylate
+    <-> ec_3_5_1_122 [3.5.1.122] +l_glutaminiumyl_group +h2o
+    l_glutamyl_zwitterionic_group
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_21_98_2 [1.21.98.2] +2_iminio_3_indol_3_yl_propanoate +h2o2 +h2o +hplus
+    chromopyrrolate
   }
 }

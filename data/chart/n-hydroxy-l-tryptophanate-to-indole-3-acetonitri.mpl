@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hydroxy-l-tryptophanate-to-indole-3-acetonitri "N-hydroxy-L-tryptophanate to indole-3-acetonitrile" {
-  spacing 184
+  spacing 196
 
   spine at 0,0 {
     n_hydroxy_l_tryptophanate
@@ -18,7 +18,13 @@ pathway n-hydroxy-l-tryptophanate-to-indole-3-acetonitri "N-hydroxy-L-tryptophan
 
   branch from fmn side left {
     fmn
-    <-> . +leukotriene_b4 +fmnh2 +o2 +h2o +hplus
-    18_hydroxyleukotriene_b4
+    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
+    2s_dihydrotricetin
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +taxifolin +fmnh2 +o2 +h2o +hplus
+    dihydromyricetin
   }
 }

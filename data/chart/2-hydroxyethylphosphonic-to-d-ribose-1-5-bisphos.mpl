@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos "2-hydroxyethylphosphonic… to α-D-ribose 1,5-bisphospha…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     2_hydroxyethylphosphonic_acid
@@ -26,33 +26,57 @@ pathway 2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos "2-hydroxyethylphosphon
     hydroxymethylphosphonate
   }
 
-  branch from adenine side right {
-    adenine
-    <-> . +datp +h2o
-    2_deoxyribose_5_triphosphate
+  branch from d_ribose_1_methylphosphonate_5_phosphate side right {
+    d_ribose_1_methylphosphonate_5_phosphate
+    <-> ec_4_7_1_1 [4.7.1.1] +5_phosphonato_d_ribose_cyclic_1_2_phosphate
+    methane
   }
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    pinene
+    <-> ec_3_6_1_9 [3.6.1.9] +datp +h2o +hplus
+    2_deoxyadenosine_5_monophosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_3_6_1_9 [3.6.1.9] +dgtp +h2o +hplus
+    2_deoxyguanosine_5_monophosphate
+  }
+
+  branch from 5_deoxyadenosine side left {
+    5_deoxyadenosine
+    <-> . +2_3_di_o_phytanyl_sn_glycerol +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
+    glycerol_dibiphytanyl_glycerol_tetraether
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_4_1_99_22 [4.1.99.22] +gtp +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+    <-> ec_2_1_1_390 [2.1.1.390] +gentamicin_x2_cation +hydrogen_donor +sam +methionine +hydrogen_acceptor +sah +hplus
+    geneticin_cation
   }
 
   branch from methionine side left {
     methionine
-    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_c +sam +h2o +5_deoxyadenosine +hplus
-    bacteriochlorophyllide_e
+    <-> . +3_l_methionyl_adenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_5_3_99_13 [5.3.99.13] +2_deoxyadenosine_5_monophosphate +sam +5_deoxyadenosine +hplus
+    4_phospho_dehydrooxetanocin
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_donor
+    7_8_dihydromethanopterin
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_17z_icosatrienoyl_coa +hydrogen_donor +o2 +h2o
-    5z_11z_14z_17z_icosatetraenoyl_coa
+    <-> . +c20_dihydroceramide +hydrogen_donor +o2 +h2o
+    c20_ceramide
   }
 }

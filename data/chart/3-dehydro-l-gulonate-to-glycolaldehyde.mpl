@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-dehydro-l-gulonate-to-glycolaldehyde "3-dehydro-L-gulonate to glycolaldehyde" {
-  spacing 216
+  spacing 228
 
   spine at 0,0 {
     3_dehydro_l_gulonate
@@ -20,5 +20,17 @@ pathway 3-dehydro-l-gulonate-to-glycolaldehyde "3-dehydro-L-gulonate to glycolal
     2_dehydro_3_deoxy_l_arabinonate
     <-> ec_4_1_2_18 [4.1.2.18] -pyruvate
     glycolaldehyde
+  }
+
+  branch from 2_3_diketogulonate side left {
+    2_3_diketogulonate
+    <-> . +h2o
+    l_dehydroascorbate
+  }
+
+  branch from l_lyxonate side right {
+    l_lyxonate
+    <-> . +co2 +h2o
+    2_3_dioxo_l_gulonate
   }
 }

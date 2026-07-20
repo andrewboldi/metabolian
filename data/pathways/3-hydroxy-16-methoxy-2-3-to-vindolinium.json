@@ -140,21 +140,70 @@
       }
     },
     {
-      "id": "mercaptopurine",
-      "name": "mercaptopurine",
-      "formula": "C5H4N4S",
-      "charge": 0,
+      "id": "1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium",
+      "name": "1-benzyl-1,2,3,4-tetrahydroisoquinolin-2-ium",
+      "short": "1-benzyl-1,2,3,4-te…",
+      "formula": "C16H18N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:50667"
+        "chebi": "CHEBI:57902"
       }
     },
     {
-      "id": "6_methylthiopurine",
-      "name": "6-methylthiopurine",
-      "formula": "C6H6N4S",
+      "id": "1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini",
+      "name": "1-benzyl-2-methyl-1,2,3,4-tetrahydroisoquinolinium",
+      "short": "1-benzyl-2-methyl-1…",
+      "formula": "C17H20N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57598"
+      }
+    },
+    {
+      "id": "cycloartenol",
+      "name": "cycloartenol",
+      "formula": "C30H50O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28279"
+        "chebi": "CHEBI:17030"
+      }
+    },
+    {
+      "id": "cyclolaudenol",
+      "name": "cyclolaudenol",
+      "formula": "C31H52O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142990"
+      }
+    },
+    {
+      "id": "r_2_benzylsuccinate",
+      "name": "(R)-2-benzylsuccinate",
+      "short": "2-benzylsuccinate",
+      "formula": "C11H10O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58692"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "r_2_benzylsuccinyl_coa",
+      "name": "(R)-2-benzylsuccinyl-CoA",
+      "short": "2-benzylsuccinyl-CoA",
+      "formula": "C32H41N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57253"
       }
     },
     {
@@ -200,10 +249,31 @@
       ]
     },
     {
-      "id": "ec_2_1_1_67",
-      "name": "thiopurine S-methyltransferase",
+      "id": "ec_2_1_1_115",
+      "name": "(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline N-methyltransferase",
       "ec": [
-        "2.1.1.67"
+        "2.1.1.115"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_142",
+      "name": "cycloartenol 24-C-methyltransferase",
+      "ec": [
+        "2.1.1.142"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_15",
+      "name": "succinyl-CoA:(R)-benzylsuccinate CoA-transferase",
+      "ec": [
+        "2.8.3.15"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_28",
+      "name": "phenylsuccinyl-CoA transferase",
+      "ec": [
+        "2.8.3.28"
       ]
     },
     {
@@ -364,12 +434,12 @@
     },
     {
       "id": "r4",
-      "name": "thiopurine S-methyltransferase",
-      "equation": "mercaptopurine + S-adenosyl-L-methionine = 6-methylthiopurine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.67",
+      "name": "(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline N-methyltransferase",
+      "equation": "(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline + S-adenosyl-L-methionine = N-methyl-(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.115",
       "substrates": [
         {
-          "metabolite": "mercaptopurine",
+          "metabolite": "1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium",
           "stoichiometry": 1
         },
         {
@@ -379,7 +449,7 @@
       ],
       "products": [
         {
-          "metabolite": "6_methylthiopurine",
+          "metabolite": "1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini",
           "stoichiometry": 1
         },
         {
@@ -393,26 +463,120 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_67"
+          "enzyme": "ec_2_1_1_115"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:12609"
+        "rhea": "RHEA:13005"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12609"
+            "id": "RHEA:13005"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "cycloartenol 24-C-methyltransferase",
+      "equation": "cycloartenol + S-adenosyl-L-methionine = cyclolaudenol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.142",
+      "substrates": [
+        {
+          "metabolite": "cycloartenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclolaudenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_142"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:13137"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13137"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "succinyl-CoA:(R)-benzylsuccinate CoA-transferase",
+      "equation": "(R)-2-benzylsuccinate + succinyl-CoA = (R)-2-benzylsuccinyl-CoA + succinate",
+      "ec": "2.8.3.15",
+      "substrates": [
+        {
+          "metabolite": "r_2_benzylsuccinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_2_benzylsuccinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:16469"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16469"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "procollagen-lysine 5-dioxygenase",
       "equation": "L-lysyl-[collagen] + 2-oxoglutarate + O2 = (5R)-5-hydroxy-L-lysyl-[collagen] + succinate + CO2",
       "ec": "1.14.11.4",
@@ -450,7 +614,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:16569"
       },

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-aminopropan-1-ol-to-s-lactaldehyde",
   "name": "2-aminopropan-1-ol to (S)-lactaldehyde",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 2-aminopropan-1-ol(1+) to (S)-lactaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,22 +100,77 @@
       }
     },
     {
-      "id": "1_naphthaleneacetamide",
-      "name": "1-naphthaleneacetamide",
-      "short": "1-naphthaleneacetam…",
-      "formula": "C12H11NO",
-      "charge": 0,
+      "id": "2_azaniumyl_2_deoxyisochorismate",
+      "name": "2-azaniumyl-2-deoxyisochorismate",
+      "short": "2-azaniumyl-2-deoxy…",
+      "formula": "C10H10NO5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:81810"
+        "chebi": "CHEBI:58792"
       }
     },
     {
-      "id": "1_naphthaleneacetate",
-      "name": "1-naphthaleneacetate",
-      "formula": "C12H9O2",
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "4_amino_4_deoxychorismate",
+      "name": "4-amino-4-deoxychorismate",
+      "short": "4-amino-4-deoxychor…",
+      "formula": "C10H10NO5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:156230"
+        "chebi": "CHEBI:58406"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "n_acetylputrescinium",
+      "name": "N-acetylputrescinium",
+      "formula": "C6H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58263"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_acetamidobutanal",
+      "name": "4-acetamidobutanal",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:7386"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     }
   ],
@@ -274,11 +329,15 @@
     },
     {
       "id": "r4",
-      "name": "1-naphthaleneacetamide + H2O = 1-naphthaleneacetate + NH4(+)",
-      "equation": "1-naphthaleneacetamide + H2O = 1-naphthaleneacetate + NH4(+)",
+      "name": "(2S)-2-amino-4-deoxychorismate + L-glutamine + H2O = 4-amino-4-deoxychorismate + L-glut...",
+      "equation": "(2S)-2-amino-4-deoxychorismate + L-glutamine + H2O = 4-amino-4-deoxychorismate + L-glutamate + NH4(+)",
       "substrates": [
         {
-          "metabolite": "1_naphthaleneacetamide",
+          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
@@ -288,7 +347,11 @@
       ],
       "products": [
         {
-          "metabolite": "1_naphthaleneacetate",
+          "metabolite": "4_amino_4_deoxychorismate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
           "stoichiometry": 1
         },
         {
@@ -299,14 +362,61 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:64824"
+        "rhea": "RHEA:69568"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64824"
+            "id": "RHEA:69568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
+      "equation": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_acetamidobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:70283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70283"
           }
         ]
       }

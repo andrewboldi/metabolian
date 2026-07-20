@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-arabinopyranose-to-l-xylulose "α-L-arabinopyranose to L-xylulose" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     l_arabinopyranose
@@ -16,6 +16,18 @@ pathway l-arabinopyranose-to-l-xylulose "α-L-arabinopyranose to L-xylulose" {
     l_xylulose
   }
 
+  branch from l_arabinopyranose side left {
+    l_arabinopyranose
+    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +adp
+    atp
+  }
+
+  branch from l_arabinopyranose side right {
+    l_arabinopyranose
+    <-> ec_3_2_1_21 [3.2.1.21] +h +4_nitrophenol +h2o
+    p_nitrophenyl_beta_l_arabinopyranoside
+  }
+
   branch from l_ribulose side left {
     l_ribulose
     <-> . +h2o +pi
@@ -23,6 +35,12 @@ pathway l-arabinopyranose-to-l-xylulose "α-L-arabinopyranose to L-xylulose" {
   }
 
   branch from l_xylulose side right {
+    l_xylulose
+    <-> .
+    l_lyxopyranose
+  }
+
+  branch from l_xylulose side left {
     l_xylulose
     <-> ec_1_1_1_15 [1.1.1.15] +nad +nadh +hplus
     xylitol

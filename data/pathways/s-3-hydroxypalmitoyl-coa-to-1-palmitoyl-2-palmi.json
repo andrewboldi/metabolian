@@ -169,6 +169,97 @@
       }
     },
     {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "hexadecanoyl_coa",
+      "name": "hexadecanoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1106160"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "r_carnitine",
+      "name": "(R)-carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105737"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "3_hydroxyhexadecanoylcarnitine",
+      "name": "3-hydroxyhexadecanoylcarnitine",
+      "short": "3-hydroxyhexadecano…",
+      "formula": "C23H45NO5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM727450"
+      }
+    },
+    {
       "id": "palmitoyl_coa",
       "name": "Palmitoyl-CoA",
       "formula": "C37H62N7O17P3S",
@@ -213,6 +304,26 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:74901"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C21H44NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73004"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_2_9z_hexadec_9_enoyl_sn_glycero_3",
+      "name": "1-hexadecanoyl-2-[(9Z)-hexadec-9-enoyl]-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecanoyl-2-[(…",
+      "formula": "C37H72NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73999"
       }
     },
     {
@@ -484,6 +595,137 @@
     },
     {
       "id": "r7",
+      "name": "tetradecanoyl-CoA + malonyl-CoA + H(+) = 3-oxohexadecanoyl-CoA + CO2 + CoA",
+      "equation": "tetradecanoyl-CoA + malonyl-CoA + H(+) = 3-oxohexadecanoyl-CoA + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "myristoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxopalmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:39167"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "Reaction MNXR157364",
+      "substrates": [
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_3_hydroxypalmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "metanetx": "MNXR157364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR157364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "Reaction MNXR96392",
+      "substrates": [
+        {
+          "metabolite": "r_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_3_hydroxypalmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_hydroxyhexadecanoylcarnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "metanetx": "MNXR96392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "hexadecanoyl-CoA + FAD + H(+) = (2E)-hexadecenoyl-CoA + FADH2",
       "equation": "hexadecanoyl-CoA + FAD + H(+) = (2E)-hexadecenoyl-CoA + FADH2",
       "substrates": [
@@ -511,7 +753,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:30747"
       },
@@ -526,7 +768,7 @@
       }
     },
     {
-      "id": "r8",
+      "id": "r11",
       "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + (9Z)-hexadecenoyl-CoA = 1-(9Z-octad...",
       "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + (9Z)-hexadecenoyl-CoA = 1-(9Z-octadecenoyl)-2-(9Z-hexadecenoyl)-sn-glycero-3-phospho-L-serine + CoA",
       "substrates": [
@@ -550,7 +792,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:37399"
       },
@@ -565,7 +807,46 @@
       }
     },
     {
-      "id": "r9",
+      "id": "r12",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (9Z)-hexadecenoyl-CoA = 1-hexadecanoy...",
+      "equation": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (9Z)-hexadecenoyl-CoA = 1-hexadecanoyl-2-(9Z)-hexadecenoyl-sn-glycero-3-phosphoethanolamine + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hexadecanoyl_2_9z_hexadec_9_enoyl_sn_glycero_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:37419"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37419"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
       "name": "1'-[1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phospho]-3'-[1-(9Z-octadecenoyl)-2-(9Z-hexade...",
       "equation": "1'-[1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phospho]-3'-[1-(9Z-octadecenoyl)-2-(9Z-hexadecenoyl)-sn-glycero-3-phospho]-glycerol + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-(9Z-hexadecenoyl)-sn-glycero-3-phosphocholine + 1'-[1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phospho]-3'-[1-(9Z-octadecenoyl)-sn-glycero-3-phospho]-glycerol",
       "substrates": [
@@ -589,7 +870,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 13,
       "xrefs": {
         "rhea": "RHEA:67780"
       },

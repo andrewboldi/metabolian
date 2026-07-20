@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-8-dihydroneopterin-to-dihydrofolate "7,8-dihydroneopterin to dihydrofolate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     7_8_dihydroneopterin
@@ -34,27 +34,45 @@ pathway 7-8-dihydroneopterin-to-dihydrofolate "7,8-dihydroneopterin to dihydrofo
     ethylene_glycol
   }
 
-  branch from 7_8_dihydropterin_6_yl_methyl_diphosphate side left {
+  branch from glycolaldehyde side left {
+    glycolaldehyde
+    <-> . +4_hydroxy_l_threonine
+    glycine
+  }
+
+  branch from 7_8_dihydropterin_6_yl_methyl_diphosphate side right {
     7_8_dihydropterin_6_yl_methyl_diphosphate
     <-> . +4_aminosalicylate +ppi
     2_hydroxy_7_8_dihydropteroate
   }
 
-  branch from 7_8_dihydropteroate side right {
+  branch from 7_8_dihydropteroate side left {
     7_8_dihydropteroate
     <-> . +nad +nadh +hplus
     6s_5_6_7_8_tetrahydropteroate
   }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_28 [2.5.1.28] +ipp +dmapp
+    neryl_diphosphate
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_75 [4.2.3.75] +fpp
-    germacrene_d
+    <-> ec_6_3_1_1 [6.3.1.1] +aspartate +nh3 +atp +amp +hplus
+    l_asparagine
   }
 
   branch from dhf side right {
     dhf
-    <-> . +5_amino_1_5_phospho_d_ribosyl_imidazole_4_thioca +10_formyldihydrofolate +h2o
-    6_mercaptopurine_riboside_5_phosphate
+    <-> . +uridine_5_monophosphate_1 +5_10_methylenetetrahydrofolate +taurine +gtp +hydrogen_acceptor +h2o +gdp +hydrogen_donor +pi +hplus
+    5_taurinomethyluridine_5_phosphate_1
+  }
+
+  branch from faicar side left {
+    faicar
+    <-> ec_3_5_4_10 [3.5.4.10] +h2o
+    imp
   }
 }

@@ -4,24 +4,20 @@
 # edit the generator, not this file.
 
 pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ€¦ to D-glucopyranose" {
-  spacing 216
+  spacing 290
 
   spine at 0,0 {
     1_lauroyl_sn_glycero_3_phosphocholine
     <-> . +h2o -choline -hplus
     1_lauroyl_sn_glycerol_3_phosphate
-    <-> ec_2_7_1_32 [2.7.1.32] +choline +atp -adp -hplus
-    phosphocholine
-    <-> ec_2_7_7_15 [2.7.7.15] +ctp +hplus -ppi
-    cdp_choline
-    <-> ec_2_7_8_3 [2.7.8.3] +n_acylsphingosine -cytidine_5_monophosphate -hplus
-    sphingomyelin
-    <-> ec_3_1_4_12 [3.1.4.12] +h2o -n_acylsphingosine -hplus
-    phosphocholine
-    <-> ec_2_4_1_80 [2.4.1.80] +n_acylsphingosine +udp_d_glucose -udp -hplus
-    d_glucosyl_n_acylsphingosine
-    <-> ec_3_2_1_45 [3.2.1.45] +h2o -glucose
-    n_acylsphingosine
+    <-> ec_2_3_1_91 [2.3.1.91] +1_o_sinapoyl_d_glucose +choline -glucose
+    sinapine
+    <-> ec_3_1_1_49 [3.1.1.49] +h2o -choline -hplus
+    trans_sinapate
+    <-> ec_2_4_1_120 [2.4.1.120] +udp_d_glucose -udp
+    1_o_sinapoyl_d_glucose
+    <-> ec_2_3_1_92 [2.3.1.92] +malate -glucose
+    sinapoyl_s_malate
   }
 
   branch from 1_lauroyl_sn_glycerol_3_phosphate side left {
@@ -32,31 +28,37 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ
 
   branch from choline side right {
     choline
-    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_myristoyl_sn_glycerol_3_phosphate
+    <-> ec_3_1_4_4 [3.1.4.4] +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_acyl_sn_glycerol_3_phosphate
   }
 
-  branch from phosphocholine side left {
-    phosphocholine
-    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_myristoyl_sn_glycerol
+  branch from choline side left {
+    choline
+    <-> . +1_linoleoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_linoleoyl_sn_glycero_3_phosphate
   }
 
-  branch from cdp_choline side right {
-    cdp_choline
-    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cytidine_5_monophosphate +hplus
-    1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph
+  branch from glucose side right {
+    glucose
+    <-> ec_2_3_1_n12 [2.3.1.n12] +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +1_o_sinapoyl_d_glucose
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
-    2_trans_6_trans_farnesol
+  branch from glucose side left {
+    glucose
+    <-> ec_4_2_99_22 [4.2.99.22] +6_tuliposide_a
+    methylene_butyrolactone
   }
 
-  branch from sphingomyelin side right {
-    sphingomyelin
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +n_acylsphingosine
-    1_2_dipalmitoyl_sn_glycerol
+  branch from trans_sinapate side right {
+    trans_sinapate
+    <-> ec_2_4_1_299 [2.4.1.299] +cyanidin_3_o_d_glucoside +1_o_sinapoyl_d_glucose
+    cyanin_betaine
+  }
+
+  branch from trans_sinapate side left {
+    trans_sinapate
+    <-> . +udp_d_glucose +udp +hplus
+    4_o_d_glucosyl_trans_sinapate
   }
 }

@@ -153,21 +153,60 @@
       }
     },
     {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
+      "id": "omp",
+      "name": "Orotidine 5'-monophosphate (OMP)",
+      "short": "Orotidine 5'-MP…",
+      "formula": "C10H10N2O11P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:46398"
+        "chebi": "CHEBI:57538"
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_6_d_galactose_1_phosphonato_d_gluco",
+      "name": "UDP-N-acetyl-6-(α-D-galactose-1-phosphonato)-α-D-glucosamine",
+      "short": "UDP-N-acetyl-6-(α-D…",
+      "formula": "C23H35N3O25P3",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:68560"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosamino_1_5_lactone",
+      "name": "N-acetyl-D-glucosamino-1,5-lactone",
+      "short": "N-acetyl-D-glucosam…",
+      "formula": "C8H13NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:42870"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     },
     {
@@ -213,17 +252,17 @@
       ]
     },
     {
-      "id": "ec_3_6_1_8",
-      "name": "ATP diphosphatase",
+      "id": "ec_4_1_1_23",
+      "name": "orotidine-5'-phosphate decarboxylase",
       "ec": [
-        "3.6.1.8"
+        "4.1.1.23"
       ]
     },
     {
-      "id": "ec_3_6_1_9",
-      "name": "nucleotide diphosphatase",
+      "id": "ec_2_7_8_18",
+      "name": "UDP-galactose--UDP-N-acetylglucosamine galactose phosphotransferase",
       "ec": [
-        "3.6.1.9"
+        "2.7.8.18"
       ]
     }
   ],
@@ -420,16 +459,16 @@
     },
     {
       "id": "r5",
-      "name": "ATP diphosphatase",
-      "equation": "UTP + H2O = UMP + diphosphate + H(+)",
-      "ec": "3.6.1.8",
+      "name": "orotidine-5'-phosphate decarboxylase",
+      "equation": "orotidine 5'-phosphate + H(+) = UMP + CO2",
+      "ec": "4.1.1.23",
       "substrates": [
         {
-          "metabolite": "utp",
+          "metabolite": "omp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
@@ -439,7 +478,52 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:11596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "UDP-galactose--UDP-N-acetylglucosamine galactose phosphotransferase",
+      "equation": "UDP-N-acetyl-alpha-D-glucosamine + UDP-alpha-D-galactose = UDP-N-acetyl-6-(alpha-D-galactose-1-phospho)-alpha-D-glucosamine + UMP + H(+)",
+      "ec": "2.7.8.18",
+      "substrates": [
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_6_d_galactose_1_phosphonato_d_gluco",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
           "stoichiometry": 1
         },
         {
@@ -449,26 +533,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_1_8"
+          "enzyme": "ec_2_7_8_18"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:29395"
+        "rhea": "RHEA:22440"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29395"
+            "id": "RHEA:22440"
           }
         ]
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "N-acetyl-D-glucosamine + O2 = N-acetyl-D-glucosamino-1,5-lactone + H2O2",
+      "equation": "N-acetyl-D-glucosamine + O2 = N-acetyl-D-glucosamino-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamino_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:69504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69504"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "N-acetyl-D-glucosamine + GTP = N-acetyl-D-glucosamine 6-phosphate + GDP + H(+)",
       "equation": "N-acetyl-D-glucosamine + GTP = N-acetyl-D-glucosamine 6-phosphate + GDP + H(+)",
       "substrates": [
@@ -496,7 +619,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:74647"
       },

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-3r-hydroxyhexadeca-to-o-pantetheine-4-phosph "O-[S-(3R)-hydroxyhexadeca… to O-(pantetheine-4'-phospho…" {
-  spacing 220
+  spacing 232
 
   spine at 0,0 {
     o_s_3r_hydroxyhexadecanoylpantetheine_4_phosphor
@@ -16,15 +16,15 @@ pathway o-s-3r-hydroxyhexadeca-to-o-pantetheine-4-phosph "O-[S-(3R)-hydroxyhexad
     palmitate
   }
 
-  branch from o_s_hexadecanoylpantetheine_4_phosphoryl_serine side left {
-    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_c40_phthioceranylpantetheine_4_phosphoryl_l
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_2_3_1_305 [2.3.1.305] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +hplus
+    udp_2_acetamido_3_3r_3_hydroxyacyl_amino_2_3_did
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +medium_chain_fatty_acyl_amp +amp +hplus
-    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
+    <-> . +o_s_tetradecanoylpantetheine_4_phosphoryl_serine +l_lysinium +hplus
+    n6_tetradecanoyl_l_lysine
   }
 }

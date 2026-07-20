@@ -15,10 +15,4 @@ pathway 3-hydroxy-5-pregnan-20-to-5-pregnane-3-20-dione "3β-hydroxy-5α-pregnan
     <-> . +nad -nadh -hplus
     5_pregnane_3_20_dione
   }
-
-  branch from brexanolone side left {
-    brexanolone
-    <-> . +nadph +hplus +nadp
-    5alpha_pregnane_3alpha_20alpha_diol
-  }
 }

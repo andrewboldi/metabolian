@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 13-deoxycarminomycin-to-13-dihydrodaunorubicin "13-deoxycarminomycin to 13-dihydrodaunorubicin" {
-  spacing 200
+  spacing 218
 
   spine at 0,0 {
     13_deoxycarminomycin
@@ -18,9 +18,21 @@ pathway 13-deoxycarminomycin-to-13-dihydrodaunorubicin "13-deoxycarminomycin to 
     13_dihydrodaunorubicin
   }
 
+  branch from 13r_13_dihydrocarminomycin side left {
+    13r_13_dihydrocarminomycin
+    <-> ec_2_1_1_292 [2.1.1.292] +s_adenosyl_l_homocysteine +h +13s_13_dihydrodaunorubicin
+    s_adenosyl_l_methionine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_180 [2.1.1.180] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
+  }
+
   branch from sah side left {
     sah
-    <-> ec_2_1_1_228 [2.1.1.228] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_184 [2.1.1.184] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_n6_dimethyladenosine_5_monophosphate_1
   }
 }

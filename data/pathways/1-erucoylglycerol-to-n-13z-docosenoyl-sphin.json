@@ -174,35 +174,90 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "1e_4e_8e_humulene",
-      "name": "(1E,4E,8E)-α-humulene",
-      "short": "(1E,4E,8E)-α-humule…",
-      "formula": "C15H24",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:5768"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58553"
+      }
+    },
+    {
+      "id": "ent_copalol",
+      "name": "(−)-ent-copalol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76950"
+      }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9β,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58622"
+      }
+    },
+    {
+      "id": "syn_copalol",
+      "name": "syn-copalol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76952"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_104",
-      "name": "alpha-humulene synthase",
-      "ec": [
-        "4.2.3.104"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -421,18 +476,71 @@
     },
     {
       "id": "r6",
-      "name": "alpha-humulene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-humulene + diphosphate",
-      "ec": "4.2.3.104",
+      "name": "Reaction MNXR155970",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "erucoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1e_4e_8e_humulene",
+          "metabolite": "erucoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR155970"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR155970"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "ent-copalyl diphosphate + H2O = (-)-ent-copalol + diphosphate",
+      "equation": "ent-copalyl diphosphate + H2O = (-)-ent-copalol + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_copalol",
           "stoichiometry": 1
         },
         {
@@ -440,22 +548,56 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_104"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:31895"
+        "rhea": "RHEA:40019"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31895"
+            "id": "RHEA:40019"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "9alpha-copalyl diphosphate + H2O = syn-copalol + diphosphate",
+      "equation": "9alpha-copalyl diphosphate + H2O = syn-copalol + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "syn_copalol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:40023"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40023"
           }
         ]
       }

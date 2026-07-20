@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to testolate" {
-  spacing 208
+  spacing 256
 
   spine at 0,0 {
     20s_17_20_dihydroxypregn_4_en_3_one
@@ -20,25 +20,49 @@ pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to te
 
   branch from 17_hydroxyprogesterone side left {
     17_hydroxyprogesterone
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    algestone
+    <-> ec_1_14_14_19 [1.14.14.19] +fmnh2 +o2 +fmn +h2o +hplus
+    progesterone
   }
 
-  branch from androst_4_ene_3_17_dione side right {
+  branch from 17_hydroxyprogesterone side right {
+    17_hydroxyprogesterone
+    <-> ec_1_14_14_16 [1.14.14.16] +fmnh2 +o2 +fmn +h2o +hplus
+    11_deoxycortisol
+  }
+
+  branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
     <-> . +testosterone +hydrogen_acceptor
     hydrogen_donor
   }
 
+  branch from androst_4_ene_3_17_dione side right {
+    androst_4_ene_3_17_dione
+    <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    1_hydroxyandrost_4_ene_3_17_dione
+  }
+
   branch from acetate side left {
     acetate
-    <-> . +1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol +h2o +hplus
-    1_hexadecyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_decyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_decyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +1_palmityl_2_acetyl_sn_glycero_3_phosphate +h2o +hplus
+    1_hexadecyl_sn_glycero_3_phosphate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_148 [1.14.14.148] +s_columbianetin +fmnh2 +o2 +acetone +h2o +hplus
+    angelicin
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
-    glyceollin_iii
+    <-> ec_1_14_14_149 [1.14.14.149] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
+    capsidiol
   }
 }

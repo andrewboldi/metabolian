@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-18-epoxy-17-hydroxycur-to-s-adenosyl-l-homocy "17,18-epoxy-17-hydroxycur… to S-adenosyl-L-homocysteine" {
-  spacing 276
+  spacing 306
 
   spine at 0,0 {
     17_18_epoxy_17_hydroxycur_19_ene
@@ -30,13 +30,25 @@ pathway 17-18-epoxy-17-hydroxycur-to-s-adenosyl-l-homocy "17,18-epoxy-17-hydroxy
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    12_hete
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_10z_16z_19z_13_14_epoxydocosatetraenoate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_13z_16z_19z_10_11_epoxydocosatetraenoate
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_309 [2.1.1.309] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

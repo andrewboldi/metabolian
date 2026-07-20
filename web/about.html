@@ -3,47 +3,374 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About & method — Metabolian</title>
-  <meta name="description" content="What Metabolian is, how the atlas is built, how reactions are grounded in sources, and how to contribute." />
+  <title>Method &amp; sources — Metabolian</title>
+  <meta name="description" content="How the Metabolian atlas is built, exactly where its data comes from, what its confidence levels mean, and the coverage gaps it has not closed yet." />
   <meta name="color-scheme" content="dark light" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+  <style>
+    /* ==========================================================================
+       Content-page chrome — shared by about / learn / glossary.
+
+       Scoped under `body[data-page]` for two reasons: it composes with page.css
+       regardless of the order Vite emits stylesheets in (every selector here is
+       specificity >= (0,2,1), page.css's are (0,1,x)), and it can never leak
+       into the chart sheet.
+
+       Every custom property is referenced WITH a fallback. The token rebuild
+       (warm neutrals, sheet-derived accent, --mark, tracking scale, 2px radii)
+       ships in tokens.css, which is a different unit of this redesign — these
+       pages must read correctly before and after it lands.
+       ========================================================================== */
+
+    html { scroll-padding-top: calc(58px + 2.5rem); }
+
+    /* The sheet's own hover ink (chart.css uses #D43900 for .enz-name:hover).
+       Deferred to the --mark token once it exists; until then, theme-matched
+       literals so the fallback is not a cool-blue accent on a warm page. */
+    body[data-page] { --_mark: var(--mark, #f56d4a); }
+    :root[data-theme="light"] body[data-page] { --_mark: var(--mark, #b03400); }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) body[data-page] { --_mark: var(--mark, #b03400); }
+    }
+
+    /* --- page header: eyebrow / title / lead / instrument readout ---------- */
+    body[data-page] .page-head {
+      padding-block: var(--sp-8) var(--sp-6);
+      border-bottom: 0;                        /* hairlines as box-shadow: no layout cost */
+      box-shadow: 0 1px 0 var(--line);
+    }
+    body[data-page] .page-head h1 {
+      font-size: var(--step-3); max-width: 20ch; margin-top: var(--sp-4);
+      letter-spacing: var(--track-3, -0.03em); line-height: var(--lead-tight, 1.1);
+      text-wrap: balance;
+    }
+    body[data-page] .page-head .lead { margin-top: var(--sp-4); max-width: 62ch; }
+    /* The eyebrow is a label on the instrument, not a highlight. */
+    body[data-page] .eyebrow { color: var(--text-faint); letter-spacing: 0.22em; }
+    body[data-page] .eyebrow::before { background: currentColor; opacity: 0.5; }
+
+    body[data-page] .readout {
+      display: flex; flex-wrap: wrap; margin-top: var(--sp-6); padding-top: var(--sp-2);
+      box-shadow: inset 0 1px 0 var(--line);
+      font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: 0.02em;
+      font-variant-numeric: tabular-nums lining-nums;   /* scoped, never global */
+    }
+    body[data-page] .readout > div {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.5rem var(--sp-5) 0.5rem 0;
+    }
+    body[data-page] .readout > div + div { padding-left: var(--sp-5); box-shadow: inset 1px 0 0 var(--line); }
+    body[data-page] .readout dt { text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint); font-size: 0.88em; }
+    body[data-page] .readout dd { margin: 0; color: var(--text); }
+
+    /* --- prose ------------------------------------------------------------- */
+    body[data-page] .prose { max-width: 68ch; }
+    body[data-page] .prose p, body[data-page] .prose li { line-height: var(--lead-copy, 1.6); }
+    body[data-page] .prose h2 {
+      display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 0.4rem; align-items: baseline;
+      font-size: var(--step-2); margin-top: var(--sp-7); padding-top: var(--sp-4);
+      box-shadow: inset 0 1px 0 var(--line);
+      letter-spacing: var(--track-2, -0.022em); line-height: var(--lead-snug, 1.2);
+    }
+    body[data-page] .prose h2 > span:last-child { text-wrap: balance; }
+    body[data-page] .prose h3 {
+      font-size: var(--step-1); margin-top: var(--sp-5);
+      letter-spacing: var(--track-1, -0.014em); line-height: var(--lead-snug, 1.2);
+    }
+    body[data-page] .h-num {
+      font-family: var(--font-mono); font-size: var(--step--1); font-weight: 400;
+      letter-spacing: 0.12em; color: var(--text-faint);
+    }
+    body[data-page] .prose code {
+      border: 0; box-shadow: inset 0 0 0 1px var(--line); border-radius: var(--radius, 2px);
+    }
+    /* Identifiers are always mono: the shipped Inter subset exposes no `zero`
+       feature, so slashed-zero silently no-ops; JetBrains Mono draws a dotted
+       zero natively, which disambiguates 0/O in a RHEA/ChEBI/EC accession. */
+    body[data-page] .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums lining-nums; }
+
+    /* --- data table: the density device ------------------------------------ */
+    body[data-page] .tscroll { overflow-x: auto; margin-top: var(--sp-5); }
+    body[data-page] .dtable { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+    body[data-page] .dtable caption {
+      text-align: left; font-family: var(--font-mono); font-size: var(--step--1);
+      text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint);
+      padding-bottom: 0.7rem;
+    }
+    body[data-page] .dtable th {
+      text-align: left; font-family: var(--font-mono); font-weight: 400; font-size: var(--step--1);
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-faint);
+      padding: 0 var(--sp-4) 0.5rem 0; box-shadow: inset 0 -1px 0 var(--line-strong); white-space: nowrap;
+    }
+    body[data-page] .dtable td {
+      padding: 0.6rem var(--sp-4) 0.6rem 0; color: var(--text-dim);
+      box-shadow: inset 0 -1px 0 var(--line); vertical-align: baseline;
+    }
+    body[data-page] .dtable tr > *:last-child { padding-right: 0; }
+    body[data-page] .dtable tbody tr:last-child td { box-shadow: none; }
+    body[data-page] .dtable .num {
+      text-align: right; font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums lining-nums; color: var(--text); white-space: nowrap;
+    }
+    body[data-page] .dtable .key { color: var(--text); font-weight: 500; white-space: nowrap; }
+
+    body[data-page] .share { display: flex; align-items: center; gap: 0.6rem; min-width: 8.5rem; }
+    body[data-page] .share__track { flex: 1 1 auto; height: 3px; background: color-mix(in oklab, var(--text-faint) 28%, transparent); }
+    body[data-page] .share__fill { display: block; height: 100%; background: var(--accent); }
+    body[data-page] .share__n {
+      font-family: var(--font-mono); font-variant-numeric: tabular-nums lining-nums;
+      color: var(--text-faint); min-width: 4.5ch; text-align: right;
+    }
+
+    /* --- badge: the confidence vocabulary ----------------------------------
+       Colour rides on the dot and the ring, never on the label text, so the
+       badge stays legible on both themes whatever the --edge-* tokens become. */
+    body[data-page] .badge {
+      display: inline-block; font-family: var(--font-mono); font-size: var(--step--1); line-height: 1.5;
+      text-transform: uppercase; letter-spacing: 0.14em; padding: 0.05em 0.55em;
+      border-radius: var(--radius, 2px); color: var(--text); white-space: nowrap;
+      box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--_c, var(--text-faint)) 55%, transparent);
+    }
+    body[data-page] .badge::before {
+      content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--_c, var(--text-faint)); margin-right: 0.5em; vertical-align: 0.08em;
+    }
+    body[data-page] .badge[data-c="high"] { --_c: var(--edge-activate); }
+    body[data-page] .badge[data-c="medium"] { --_c: var(--edge-signal); }
+    body[data-page] .badge[data-c="low"] { --_c: var(--edge-feedback); }
+    body[data-page] .badge[data-c="hypothesis"] { --_c: var(--edge-inhibit); }
+
+    /* --- callout: full hairline box with a mono label plate ----------------- */
+    body[data-page] .callout {
+      position: relative; border-left: 0; background: var(--panel-2);
+      border-radius: var(--radius, 2px); box-shadow: inset 0 0 0 1px var(--line);
+      padding: calc(var(--sp-5) + 0.9rem) var(--sp-5) var(--sp-5);
+    }
+    body[data-page] .callout::before {
+      content: attr(data-label); position: absolute; top: 0.7rem; left: var(--sp-5);
+      font-family: var(--font-mono); font-size: var(--step--1);
+      text-transform: uppercase; letter-spacing: 0.18em; color: var(--_c, var(--text-faint));
+    }
+    body[data-page] .callout--warn { --_c: var(--_mark); }
+    body[data-page] .callout p { color: var(--text); }
+
+    /* --- right-rail table of contents ---------------------------------------
+       Arithmetic breakpoint: 68ch measure + gutters + a 13rem rail, not an
+       inherited 1024. Below it the rail is removed, not stacked — after the
+       document it would be navigation you reach only once you no longer need it. */
+    body[data-page="about"] .toc { display: none; }
+    @media (min-width: 1120px) {
+      body[data-page="about"] .doc {
+        display: grid; grid-template-columns: minmax(0, 1fr) 13rem;
+        gap: var(--sp-7); align-items: start;
+      }
+      body[data-page="about"] .toc { display: block; position: sticky; top: calc(58px + var(--sp-5)); }
+    }
+    body[data-page="about"] .toc__title {
+      font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase;
+      letter-spacing: 0.16em; color: var(--text-faint);
+      padding-bottom: 0.6rem; box-shadow: inset 0 -1px 0 var(--line-strong);
+    }
+    body[data-page="about"] .toc ul { list-style: none; padding: 0; margin: 0; }
+    body[data-page="about"] .toc a {
+      display: grid; grid-template-columns: 2.4rem 1fr; gap: 0.3rem;
+      padding: 0.5rem 0; font-size: var(--step--1); color: var(--text-dim);
+      text-decoration: none; box-shadow: inset 0 -1px 0 var(--line);
+    }
+
+    /* --- motion: opt-in, never opt-out ---------------------------------------
+       Stillness is the cascade default. A transition added here later without a
+       reduced-motion kill-list simply never renders for a reader who asked for
+       stillness, instead of escaping one. Enumerated properties, never `all`. */
+    @media (prefers-reduced-motion: no-preference) {
+      body[data-page] .prose a,
+      body[data-page="about"] .toc a {
+        transition: var(--t-fast, 120ms) var(--ease, cubic-bezier(0.22, 1, 0.36, 1));
+        transition-property: color, box-shadow;
+      }
+    }
+    @media (any-hover: hover) {
+      body[data-page] .prose a:hover,
+      body[data-page="about"] .toc a:hover { color: var(--_mark); }
+      body[data-page="about"] .toc a:hover { text-decoration: none; }
+    }
+  </style>
 </head>
-<body>
+<body data-page="about">
+  <a class="skip" href="#main">Skip to content</a>
   <div id="app-header"></div>
   <main id="main">
     <header class="page-head">
       <div class="wrap">
-        <p class="eyebrow">About</p>
-        <h1>A living successor to the Biochemical Pathways chart</h1>
-        <p class="lead">In the 1960s Gerhard Michal drew metabolism by hand for Boehringer/Roche. Metabolian carries that work forward as an open, interactive graph you can query, audit, and extend.</p>
+        <p class="eyebrow">Project · Method</p>
+        <h1>How the atlas is built, and what it does not yet know</h1>
+        <p class="lead">Metabolian is an open successor to Gerhard Michal's Biochemical Pathways chart — 2,496 pathway modules merged into one queryable graph. Every reaction carries the source it was drawn from and an explicit confidence. This page states the method, the exact sources, and the gaps.</p>
+        <dl class="readout" aria-label="Build summary">
+          <div><dt>Modules</dt><dd>2,496</dd></div>
+          <div><dt>Reactions</dt><dd>26,510</dd></div>
+          <div><dt>Citations</dt><dd>27,185</dd></div>
+          <div><dt>Schema</dt><dd>draft 2020-12</dd></div>
+        </dl>
       </div>
     </header>
+
     <div class="wrap section">
-      <div class="prose">
-        <h2 id="method">How the atlas is built</h2>
-        <p>Metabolian is a graph. Each <strong>pathway module</strong> is a structured file describing its metabolites, enzymes, reactions, and — crucially — the typed relationships between them. A build step validates every module against a strict schema, checks that every reference resolves, and merges the modules into one master graph, deduplicating shared molecules across pathways by their database identifiers.</p>
-        <div class="callout">
-          <p style="color:var(--text)"><strong>Grounded, not guessed.</strong> Metabolism is too consequential to hallucinate. Every reaction and regulatory link carries <em>provenance</em> — the database (KEGG, Reactome, Rhea, UniProt, ChEBI) or paper it came from — and an explicit confidence level: <span class="conf" data-c="high">high</span> <span class="conf" data-c="medium">medium</span> <span class="conf" data-c="low">low</span> <span class="conf" data-c="hypothesis">hypothesis</span>. You can see and check the source of anything on the chart.</p>
+      <div class="doc">
+        <div class="prose">
+
+          <h2 id="method"><span class="h-num">01</span><span>How the atlas is built</span></h2>
+          <p>Metabolian is a graph assembled from files. Each <strong>pathway module</strong> is one JSON document describing its own metabolites, enzymes, reactions, and — the part that makes a chart legible — the typed relationships between them. One pathway per file, so two authors are never editing the same document.</p>
+          <p>A build step validates every module against the schema, checks that every internal reference resolves, then merges all 2,496 modules into a single master graph, deduplicating shared molecules across pathways by their database identifiers. Nothing reaches the site that has not passed validation in CI.</p>
+          <div class="tscroll">
+            <table class="dtable">
+              <caption>Pipeline</caption>
+              <thead>
+                <tr><th scope="col">Stage</th><th scope="col">Artifact</th><th scope="col">Guarantee</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="key">Author</td><td class="mono">data/pathways/&lt;id&gt;.json</td><td>One file per pathway; conflict-free parallel authoring.</td></tr>
+                <tr><td class="key">Validate</td><td class="mono">tools/validate.mjs</td><td>JSON Schema draft 2020-12, plus referential integrity.</td></tr>
+                <tr><td class="key">Merge</td><td class="mono">tools/build-graph.mjs</td><td>Cross-module dedupe on database identifiers.</td></tr>
+                <tr><td class="key">Serve</td><td class="mono">graph/master.json</td><td>Namespaced node ids, plus per-pathway subgraphs.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout" data-label="Note">
+            <p><strong>Grounded, not guessed.</strong> Metabolism is too consequential to hallucinate. Every reaction and regulatory link carries provenance — the database or paper it came from — and an explicit confidence level. All 26,771 reaction and regulation records in the current build carry at least one source; there are no exceptions, because the validator rejects them.</p>
+          </div>
+
+          <h2 id="sources"><span class="h-num">02</span><span>Where the data comes from</span></h2>
+          <p>The honest headline is that this atlas has <strong>two tiers, and they are not the same thing</strong>. Twenty-seven modules are hand-curated: they declare organisms, tissues, and compartments, they carry regulation, cross-pathway relations, and literature references. The remaining 2,469 are machine-reconciled reaction sets — balanced chemistry with resolved identifiers, but no regulation, no compartments, and no tissue context.</p>
+          <div class="tscroll">
+            <table class="dtable">
+              <caption>The two tiers</caption>
+              <thead>
+                <tr><th scope="col">Tier</th><th scope="col" class="num">Modules</th><th scope="col">Carries</th><th scope="col">Grounded in</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="key">Curated</td><td class="num">27</td>
+                  <td>Organisms, tissues, compartments, regulation, relations, references</td>
+                  <td>Literature, KEGG, Reactome, UniProt, textbooks</td>
+                </tr>
+                <tr>
+                  <td class="key">Reconciled</td><td class="num">2,469</td>
+                  <td>Balanced reactions, EC numbers, formulae, ChEBI identifiers</td>
+                  <td>Rhea, MetaNetX</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>That split explains every other number on this page. It is why two databases carry almost the whole citation load:</p>
+          <div class="tscroll">
+            <table class="dtable">
+              <caption>Citations by source — 27,185 across 26,771 records</caption>
+              <thead>
+                <tr><th scope="col">Source</th><th scope="col">Role</th><th scope="col" class="num">Citations</th><th scope="col">Share</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="key">MetaNetX</td><td>Reaction reconciliation across databases</td><td class="num">13,205</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:48.6%"></span></span><span class="share__n">48.6%</span></span></td></tr>
+                <tr><td class="key">Rhea</td><td>Balanced, expert-annotated reaction chemistry</td><td class="num">13,020</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:47.9%"></span></span><span class="share__n">47.9%</span></span></td></tr>
+                <tr><td class="key">KEGG</td><td>Reaction and pathway reference identifiers</td><td class="num">340</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:1.3%"></span></span><span class="share__n">1.3%</span></span></td></tr>
+                <tr><td class="key">Textbook</td><td>Canonical, settled biochemistry</td><td class="num">281</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:1%"></span></span><span class="share__n">1.0%</span></span></td></tr>
+                <tr><td class="key">PubMed</td><td>Primary literature for specific claims</td><td class="num">208</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.8%"></span></span><span class="share__n">0.8%</span></span></td></tr>
+                <tr><td class="key">UniProt</td><td>Enzyme identity and cross-references</td><td class="num">85</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.3%"></span></span><span class="share__n">0.3%</span></span></td></tr>
+                <tr><td class="key">Review</td><td>Secondary literature</td><td class="num">38</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.15%"></span></span><span class="share__n">0.1%</span></span></td></tr>
+                <tr><td class="key">Reactome</td><td>Curated human pathway structure</td><td class="num">8</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.1%"></span></span><span class="share__n">&lt;0.1%</span></span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>A cross-reference is not a citation</h3>
+          <p>Metabolian keeps the two apart, and so should you when you read an entry. A <strong>cross-reference</strong> tells you <em>what a thing is</em> — ChEBI names the chemical, the EC list names the catalytic activity. A <strong>citation</strong> tells you <em>why we believe a reaction happens</em>. ChEBI appears everywhere on this site and is never used as evidence.</p>
+          <div class="tscroll">
+            <table class="dtable">
+              <caption>Cross-reference coverage — share of module records</caption>
+              <thead>
+                <tr><th scope="col">Identifier</th><th scope="col">Applies to</th><th scope="col" class="num">Records</th><th scope="col" class="num">Coverage</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="key">Molecular formula</td><td>Metabolites</td><td class="num">67,777</td><td class="num">99.9%</td></tr>
+                <tr><td class="key">EC number</td><td>Enzymes</td><td class="num">12,133</td><td class="num">99.6%</td></tr>
+                <tr><td class="key">ChEBI</td><td>Metabolites</td><td class="num">42,151</td><td class="num">62.1%</td></tr>
+                <tr><td class="key">Gene symbol</td><td>Enzymes</td><td class="num">384</td><td class="num">3.2%</td></tr>
+                <tr><td class="key">UniProt</td><td>Enzymes</td><td class="num">383</td><td class="num">3.1%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Counts are module records before cross-module deduplication — 67,848 metabolite records resolve to 21,235 distinct metabolites, and 12,182 enzyme records to 5,961 distinct enzymes. Figures are a snapshot of the build this page shipped with; the live totals are always in <code>graph/index.json</code>.</p>
+
+          <h2 id="confidence"><span class="h-num">03</span><span>What confidence means</span></h2>
+          <p>Every reaction and regulation carries one of four levels. They describe <em>how well established a claim is</em>, not how important it is.</p>
+          <div class="tscroll">
+            <table class="dtable">
+              <caption>Confidence across 26,771 records</caption>
+              <thead>
+                <tr><th scope="col">Level</th><th scope="col">Means</th><th scope="col" class="num">Records</th><th scope="col" class="num">Share</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="badge" data-c="high">high</span></td><td>Reconciled across reaction databases, or textbook-settled.</td><td class="num">26,700</td><td class="num">99.7%</td></tr>
+                <tr><td><span class="badge" data-c="medium">medium</span></td><td>Supported by primary or review literature.</td><td class="num">70</td><td class="num">0.3%</td></tr>
+                <tr><td><span class="badge" data-c="low">low</span></td><td>Single report, or inferred by homology.</td><td class="num">1</td><td class="num">&lt;0.1%</td></tr>
+                <tr><td><span class="badge" data-c="hypothesis">hypothesis</span></td><td>Proposed, not demonstrated. Drawn, but marked.</td><td class="num">0</td><td class="num">0%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The atlas is overwhelmingly high-confidence, and that is a statement about its <em>provenance</em>, not its completeness. It is assembled from reconciled reaction databases where the chemistry has already been balanced and cross-checked. The lower tiers exist for the hand-curated biology being added now: 54 of the 224 regulatory links are already <span class="badge" data-c="medium">medium</span>, because a regulatory claim from one paper is not the same kind of fact as a balanced reaction from Rhea.</p>
+
+          <h2 id="schema"><span class="h-num">04</span><span>The schema and the grammar of arrows</span></h2>
+          <p>What makes a pathway chart legible is that its arrows mean something. Metabolian defines <strong>30 relationship types across 7 categories</strong> in a single registry — mass flow, catalysis, regulation, covalent modification, transport, genetic control, and organizational links — each with one authoritative line style, arrowhead, and colour.</p>
+          <p>That registry is the law: it drives the legend, the chart renderer, and this documentation from the same file, so a colour can never mean two things. The full taxonomy is the <a href="index.html#grammar">grammar of metabolism</a>, and <a href="learn.html#regulation">Learn</a> shows the regulatory subset drawn at actual size.</p>
+          <p>Reactions record substrates and products with stoichiometry and compartment, catalysing enzymes with EC numbers, cofactors, reversibility, and thermodynamics or kinetics where known. Enzymes carry EC numbers almost universally; the small subset that also carries a UniProt accession opens directly in the <a href="protein.html">3D structure viewer</a> via AlphaFold and the PDB.</p>
+
+          <h2 id="limits"><span class="h-num">05</span><span>Known limits</span></h2>
+          <p>A reference work should state its own coverage. These are measured, not estimated, and they are the gaps we would most like closed.</p>
+          <ul>
+            <li><strong>Regulation is thin.</strong> The arrow grammar for regulation is complete; the data is not. There are 224 regulatory links against 26,510 reactions, and all of them live in the 27 curated modules.</li>
+            <li><strong>Structures are sparse.</strong> 383 enzyme records carry a UniProt accession, so the 3D viewer opens for a small subset of enzymes rather than all of them.</li>
+            <li><strong>Sourcing is concentrated.</strong> 96% of citations are Rhea or MetaNetX. That is good evidence of balanced chemistry and weak evidence of physiological context.</li>
+            <li><strong>Context is missing outside the curated tier.</strong> Organism, tissue, and compartment annotations exist in 27 of 2,496 modules. Treat an uncurated reaction as chemistry that occurs somewhere, not as chemistry that occurs in <em>your</em> cell type.</li>
+          </ul>
+          <div class="callout callout--warn" data-label="Caution">
+            <p><strong>Not medical advice.</strong> Metabolian is an educational and research aggregation. It is not a clinical reference and must not be used to make medical, dietary, or treatment decisions.</p>
+          </div>
+
+          <h2 id="engineering"><span class="h-num">06</span><span>How it is engineered</span></h2>
+          <ul>
+            <li>A Vite multi-page app in vanilla TypeScript. No framework. Each page ships only its own JavaScript, and heavy libraries are dynamically imported so they never land in a bundle that does not use them.</li>
+            <li>The pathway sheet is drawn as <strong>SVG</strong>, not a canvas — real text, real DOM, so browser find-in-page, text selection, and screen readers all work on the chart. An anti-collision placer positions labels against measured glyph extents.</li>
+            <li><a href="explore.html">Explore</a> is semantic DOM rather than a node-link canvas, for the same reason: a compound's neighbourhood is a ledger, and DOM gives it real focus order and keyboard navigation for free.</li>
+            <li>Protein structures render with 3Dmol.js, loaded only on the structure page.</li>
+            <li>Type is self-hosted and subset. The site makes no external network request — no CDN, no font service, no analytics.</li>
+            <li>Motion is opt-in. Nothing on this site animates for a reader whose system asks for reduced motion.</li>
+            <li>Data is validated in CI on every change, and the whole site deploys as static files to GitHub Pages.</li>
+          </ul>
+
+          <h2 id="contribute"><span class="h-num">07</span><span>Contribute</span></h2>
+          <p>Authoring a pathway means writing one module file against the schema, with citations and an honest confidence on every claim. Because it is one file per pathway, your work never collides with anyone else's. Validate a single module with <code>node tools/validate.mjs data/pathways/&lt;id&gt;.json</code> before opening a pull request.</p>
+          <p>The most valuable contributions right now are the ones that close the gaps above: regulation, tissue context, and UniProt accessions for enzymes that have none. Issues and pull requests are welcome on <a href="https://github.com/andrewboldi/metabolian">GitHub</a>.</p>
         </div>
-        <h2 id="schema">The schema &amp; the grammar of arrows</h2>
-        <p>What makes a pathway chart legible is that its arrows mean something. Metabolian defines a distinct, color-coded arrow for every relationship type — substrate and product, catalysis, cofactor use, activation and the many flavors of inhibition, allostery, feedback, covalent modification, transport, transcriptional control, and cross-pathway talk. The full taxonomy is the <a href="index.html#grammar">grammar of metabolism</a>, and the same registry drives the legend, the interactive graph, and this documentation.</p>
-        <p>Reactions record substrates and products with stoichiometry and compartment, catalyzing enzymes with EC numbers, cofactors, reversibility, thermodynamics and kinetics where known, and links to KEGG/Rhea/Reactome. Enzymes carry gene symbols, UniProt accessions, and structure links so any enzyme opens directly in the <a href="protein.html">3D viewer</a> via AlphaFold and the PDB.</p>
-        <h2>Data sources</h2>
-        <ul>
-          <li><strong>KEGG</strong> — reaction and pathway reference identifiers.</li>
-          <li><strong>Reactome &amp; MetaCyc</strong> — curated human pathway structure.</li>
-          <li><strong>Rhea &amp; ChEBI</strong> — reaction and chemical ontology.</li>
-          <li><strong>UniProt</strong> — enzyme identity, gene, and cross-references.</li>
-          <li><strong>AlphaFold DB &amp; RCSB PDB</strong> — 3D protein structures.</li>
-          <li><strong>Primary literature</strong> — for newly characterized and tissue-specific reactions.</li>
-        </ul>
-        <h2>How it's engineered</h2>
-        <p>A TypeScript multi-page app built with Vite; the interactive chart renders with a WebGL-accelerated graph engine and loads heavy modules only where needed. Structures render with 3Dmol.js; the home page's ambient graph is Three.js with reduced-motion respected everywhere. Data is validated in CI on every change, and the whole site deploys to GitHub Pages.</p>
-        <div class="callout callout--warn">
-          <p style="color:var(--text)"><strong>Not medical advice.</strong> Metabolian is an educational and research aggregation. It is not a clinical reference and must not be used to make medical, dietary, or treatment decisions.</p>
-        </div>
-        <h2>Contribute</h2>
-        <p>Authoring a pathway means writing one module file against the schema, with citations and honest confidence. Issues and pull requests are welcome on <a href="https://github.com/andrewboldi/metabolian">GitHub</a>.</p>
+
+        <nav class="toc" aria-label="On this page">
+          <div class="toc__title">On this page</div>
+          <ul>
+            <li><a href="#method"><span class="h-num">01</span><span>How it is built</span></a></li>
+            <li><a href="#sources"><span class="h-num">02</span><span>Where data comes from</span></a></li>
+            <li><a href="#confidence"><span class="h-num">03</span><span>What confidence means</span></a></li>
+            <li><a href="#schema"><span class="h-num">04</span><span>Schema &amp; arrows</span></a></li>
+            <li><a href="#limits"><span class="h-num">05</span><span>Known limits</span></a></li>
+            <li><a href="#engineering"><span class="h-num">06</span><span>How it is engineered</span></a></li>
+            <li><a href="#contribute"><span class="h-num">07</span><span>Contribute</span></a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </main>

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway paraoxon-to-maleylacetate "paraoxon to maleylacetate" {
-  spacing 208
+  spacing 256
 
   spine at 0,0 {
     paraoxon
@@ -22,27 +22,39 @@ pathway paraoxon-to-maleylacetate "paraoxon to maleylacetate" {
     maleylacetate
   }
 
-  branch from 4_nitrophenolate side left {
+  branch from diethylphosphate side left {
+    diethylphosphate
+    <-> . +ethanol +ethyl_dihydrogen_phosphate +h2o
+    h
+  }
+
+  branch from 4_nitrophenolate side right {
     4_nitrophenolate
     <-> ec_1_14_13_167 [1.14.13.167] +nadph +o2 +hplus +nitrite +nadp +h2o
     quinone
   }
 
-  branch from 2_hydroxy_4_nitrophenolate side right {
-    2_hydroxy_4_nitrophenolate
-    <-> ec_1_14_12_23 [1.14.12.23] +nadh +o2 +nitrite +nad +hplus
-    1_4_dinitrobenzene
+  branch from 4_nitrophenolate side left {
+    4_nitrophenolate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate
+    4_nitrophenyl_sulfate
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_7_1_4 [1.7.1.4] +nadp +h2o +nadph +hplus
+    nh3
   }
 
   branch from nitrite side left {
     nitrite
-    <-> ec_1_7_1_4 [1.7.1.4] +nad +h2o +nadh +hplus
-    nh3
+    <-> ec_3_5_99_9 [3.5.99.9] +2_nitroimidazole +h2o +hplus
+    1_3_dihydro_2h_imidazol_2_one
   }
 
   branch from benzene_1_2_4_triol side right {
     benzene_1_2_4_triol
-    <-> ec_1_14_13_220 [1.14.13.220] +nadh +o2 +hplus +nad +h2o
+    <-> ec_1_14_13_219 [1.14.13.219] +nadph +o2 +hplus +nadp +h2o
     resorcinol
   }
 
@@ -50,5 +62,11 @@ pathway paraoxon-to-maleylacetate "paraoxon to maleylacetate" {
     maleylacetate
     <-> ec_1_3_1_32 [1.3.1.32] +nadp +nadph +hplus
     3_oxoadipate
+  }
+
+  branch from maleylacetate side right {
+    maleylacetate
+    <-> ec_1_2_1_61 [1.2.1.61] +nad +h2o +nadh +hplus
+    2z_4e_4_hydroxymuconic_semialdehyde
   }
 }

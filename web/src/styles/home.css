@@ -1,40 +1,618 @@
-/* Home-only styles: hero, stat row, arrow legend. */
+/* Home page presentation — "Lightbox".
+ *
+ * The thesis: the chrome is the instrument the sheet is mounted in. The dark
+ * field is a darkroom, the white plate is the transparency on the stage glass.
+ * Every device here is drafting-table, not startup landing page:
+ *   - hairlines are box-shadows, never borders, so they cost no layout space
+ *   - corners are 2px (drafting instruments have corners)
+ *   - hovers resolve to the sheet's own hover ink, never a lift or a glow
+ *   - stillness is the cascade default: motion only inside no-preference
+ *
+ * Scope note: this file is imported only by src/pages/home.ts, so `#main`,
+ * `.section`, `.card`, `.btn` etc. below re-style the landing page ONLY. The
+ * `#main` prefix is deliberate — it guarantees these win over base.css
+ * regardless of how the bundler orders the two stylesheets.
+ */
 
-.hero { position: relative; overflow: clip; padding-block: clamp(3rem, 8vh, 7rem) clamp(2rem, 6vh, 5rem); isolation: isolate; }
-#hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.9; }
-.hero__inner { position: relative; }
-.hero h1 { max-width: 16ch; margin-block: 0.4em 0.5em; }
-.hero__hl { color: var(--accent); text-shadow: var(--glow); }
-.hero .lead { margin-bottom: var(--sp-6); }
-.hero__cta { display: flex; gap: var(--sp-3); flex-wrap: wrap; }
-.hero__stats { display: flex; gap: clamp(1.5rem, 5vw, 3.5rem); margin-top: var(--sp-8); flex-wrap: wrap; padding-top: var(--sp-5); border-top: 1px solid var(--line); }
-.hero__stats .stat__num { color: var(--accent); }
+/* ------------------------------------------------------------------ *
+ * 0. Local fallbacks
+ *
+ * The Lightbox token layer (--mark, --paper, --elev-paper, --hairline,
+ * --track-*, --t-*) lands in tokens.css separately. Every reference below
+ * goes through var()'s fallback arm, so this page is correct both before and
+ * after that lands, and never shadows the real token once it exists.
+ * ------------------------------------------------------------------ */
+#main {
+  --_rule: color-mix(in oklab, var(--text) 14%, transparent);
+  --_rule-strong: color-mix(in oklab, var(--text) 26%, transparent);
+  --_wash: color-mix(in oklab, var(--text) 5%, transparent);
+  --_mark: var(--mark, #f56d4a);
+  --_r: 2px;
+  --_hairline: var(--hairline, 0 0 0 1px var(--_rule));
 
-/* subtle vignette so text stays legible over the animation */
-.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: radial-gradient(120% 90% at 15% 30%, transparent 40%, color-mix(in oklab, var(--bg) 70%, transparent) 100%); }
+  /* Paper is theme-invariant: a sheet is a sheet under either lamp. In light
+     theme the plate is only ~4% brighter than the page, so the physicality has
+     to be carried entirely by the cast shadow. */
+  --_paper: var(--paper, #ffffff);
+  --_paper-edge: var(--paper-edge, #e9e5dc);
+  --_paper-deep: var(--paper-deep, #cec9bd);
+  --_elev-paper: var(--elev-paper,
+    0 1px 0 var(--_paper-edge),
+    0 2px 0 var(--_paper-deep),
+    0 22px 46px -20px rgb(0 0 0 / 0.72));
 
-.legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.1rem 2rem; }
-.legend-item { border-bottom: 1px dashed var(--line); }
-.legend-item__body { display: flex; flex-direction: column; }
-.legend-item__label { font-family: var(--font-display); font-weight: 600; font-size: var(--step-0); color: var(--text); }
-.legend-item__desc { font-size: var(--step--1); color: var(--text-faint); }
-.legend-cat { grid-column: 1 / -1; margin-top: var(--sp-5); }
-.legend-cat h3 { font-size: var(--step-1); }
-.legend-cat p { font-size: var(--step--1); }
-
-/* Entrance animation is CSS-only progressive enhancement: content is visible by
-   default (robust if JS fails, good for LCP), and only animates when motion is OK.
-   The hero headline (LCP element) rises without fading so it paints immediately. */
-[data-animate] { opacity: 1; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero [data-animate], #grammar [data-animate] { opacity: 0; animation: fadeRise 0.7s var(--ease) both; }
-  #hero-title { opacity: 1; animation-name: riseOnly; }
-  .hero__inner > [data-animate]:nth-child(1) { animation-delay: 0.02s; }
-  .hero__inner > [data-animate]:nth-child(2) { animation-delay: 0.09s; }
-  .hero__inner > [data-animate]:nth-child(3) { animation-delay: 0.16s; }
-  .hero__inner > [data-animate]:nth-child(4) { animation-delay: 0.23s; }
-  .hero__inner > [data-animate]:nth-child(5) { animation-delay: 0.30s; }
+  counter-reset: plate;
 }
-@keyframes fadeRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-@keyframes riseOnly { from { transform: translateY(14px); } to { transform: none; } }
+:root[data-theme="light"] #main {
+  --_mark: var(--mark, #b03400);
+  --_elev-paper: var(--elev-paper,
+    0 1px 0 var(--_paper-edge),
+    0 2px 0 var(--_paper-deep),
+    0 20px 38px -18px rgb(32 28 22 / 0.42));
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) #main {
+    --_mark: var(--mark, #b03400);
+    --_elev-paper: var(--elev-paper,
+      0 1px 0 var(--_paper-edge),
+      0 2px 0 var(--_paper-deep),
+      0 20px 38px -18px rgb(32 28 22 / 0.42));
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * 1. Page rhythm — full-bleed hairlines divide the page into plates
+ * ------------------------------------------------------------------ */
+#main > .section {
+  padding-block: clamp(3.25rem, 8vh, 6rem);
+  box-shadow: inset 0 1px 0 var(--_rule);
+  counter-increment: plate;
+}
+#main .section__head {
+  max-width: 60ch;
+  gap: var(--sp-4);
+  margin-bottom: clamp(1.75rem, 4vh, 2.75rem);
+}
+#main .section h2 {
+  font-size: var(--step-3);
+  line-height: var(--lead-tight, 1.1);
+  letter-spacing: var(--track-3, -0.03em);
+  text-wrap: balance;
+}
+
+/* The eyebrow is a label on the instrument, not a highlight — hence faint,
+   not accent. The plate number after it is the counter set above. */
+#main .eyebrow {
+  color: var(--text-faint);
+  font-size: var(--step--2, 0.6875rem);
+  line-height: var(--lead-label, 1.3);
+  letter-spacing: 0.22em;
+}
+#main .eyebrow::before {
+  background: currentColor;
+  opacity: 0.55;
+}
+#main .section .eyebrow::after {
+  content: counter(plate, decimal-leading-zero);
+  padding-left: 0.6rem;
+  box-shadow: inset 1px 0 0 var(--_rule);
+  opacity: 0.7;
+}
+#main .lead {
+  font-size: var(--step-1);
+  line-height: 1.55;
+  max-width: 58ch;
+  text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------------ *
+ * 2. Hero — a column of type beside a plate on the light table
+ * ------------------------------------------------------------------ */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding-block: clamp(2.5rem, 7vh, 5rem) clamp(3rem, 8vh, 5.5rem);
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  grid-template-areas: "eyebrow" "title" "lead" "cta" "sheet" "stats";
+  gap: clamp(0.9rem, 2vh, 1.5rem) clamp(2rem, 5vw, 4rem);
+  align-content: start;
+}
+/* Default placement for anything not named below, so extra markup lands in the
+   type column instead of colliding with the plate. */
+.hero__inner > * { grid-column: 1; }
+.hero__inner > .eyebrow { grid-area: eyebrow; justify-self: start; }
+.hero__inner > h1 { grid-area: title; }
+.hero__inner > .lead { grid-area: lead; }
+.hero__inner > .hero__cta { grid-area: cta; }
+.hero__inner > .hero__stats { grid-area: stats; }
+
+.hero h1 {
+  font-size: var(--step-5);
+  line-height: var(--lead-solid, 1.02);
+  letter-spacing: var(--track-5, -0.042em);
+  max-width: 22ch;
+  text-wrap: balance;
+}
+/* The sheet's own enzyme blue — no glow. Ink, not neon. */
+.hero__hl {
+  color: var(--accent);
+  text-shadow: none;
+}
+.hero .lead { max-width: 54ch; }
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+@media (min-width: 62rem) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) clamp(17.5rem, 30vw, 23.75rem);
+    grid-template-areas:
+      "eyebrow sheet"
+      "title   sheet"
+      "lead    sheet"
+      "cta     sheet"
+      "stats   sheet";
+  }
+  /* At two columns the headline no longer has the full measure, so it steps
+     down one rung — --step-5 would overrun the type column above ~1200px. */
+  .hero h1 {
+    font-size: var(--step-4);
+    letter-spacing: var(--track-4, -0.036em);
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * 3. The plate — a real fragment of the chart, drawn in the chart's own ink
+ *
+ * ::before is the next sheet down in the stack; ::after is the printed face.
+ * The artwork is an inline data: URI (no network request of any kind) drawn
+ * to the same measurements as the live renderer — 1.5-unit box rule, 1.6
+ * flux line, 2.6 on the committed step, #231F20 ink, #254991 enzyme blue,
+ * #EF2D47 cofactor arc, #13A950 activation. Those hexes are literal rather
+ * than tokens because chart.css hardcodes them too: paper is theme-invariant,
+ * and an SVG loaded as a background image cannot read custom properties.
+ *
+ * Chemistry is taken verbatim from data/pathways/glycolysis.json — the same
+ * four reactions (EC 2.7.1.1 / 5.3.1.9 / 2.7.1.11 / 4.1.2.13, KEGG R00299 /
+ * R00771 / R00756 / R01068) the atlas itself publishes. Nothing here is
+ * invented; if that module changes, this fragment should be re-checked.
+ *
+ * If real markup for the plate ever lands in index.html (an <svg>, <figure>
+ * or .hero__sheet), the :has() guard below retires these pseudo-elements and
+ * hands the grid area over to it.
+ * ------------------------------------------------------------------ */
+.hero__inner::before,
+.hero__inner::after {
+  content: "";
+  grid-area: sheet;
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 21rem);
+  aspect-ratio: 300 / 424;
+  border-radius: 1px;
+}
+.hero__inner::before {
+  background-color: var(--_paper-edge);
+  transform: rotate(-1.2deg) translate(-2%, 1.4%);
+  transform-origin: 50% 100%;
+  box-shadow: 0 14px 30px -16px rgb(0 0 0 / 0.55);
+  opacity: 0.9;
+}
+.hero__inner::after {
+  background-color: var(--_paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 424' role='img'%3E%3Cstyle%3E.p{fill:%23FFFFFF}.mb{fill:none;stroke:%23231F20;stroke-width:1.5}.fl{stroke:%23231F20;stroke-width:1.6;fill:none}.fc{stroke:%23231F20;stroke-width:2.6;fill:none}.ah{fill:%23231F20}.ca{stroke:%23EF2D47;stroke-width:1.1;fill:none}.rl{stroke:%2313A950;stroke-width:1.2;fill:none;stroke-dasharray:5 3}.mn{font:11px Inter,Helvetica,Arial,sans-serif;fill:%23231F20;text-anchor:middle;letter-spacing:.04em}.m2{font:9px Inter,Helvetica,Arial,sans-serif;fill:%23231F20;text-anchor:middle;letter-spacing:.03em}.mf{font:9px ui-monospace,SFMono-Regular,Menlo,monospace;fill:%23555555;text-anchor:middle}.en{font:10px Inter,Helvetica,Arial,sans-serif;fill:%23254991;letter-spacing:.02em}.ec{font:8.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:%23254991;opacity:.75}.cf{font:9px Inter,Helvetica,Arial,sans-serif;fill:%23EF2D47;text-anchor:end}.rg{font:700 10px Inter,Helvetica,Arial,sans-serif;fill:%2313A950;text-anchor:middle}.rt{font:9px Inter,Helvetica,Arial,sans-serif;fill:%2313A950}.hd{font:7px ui-monospace,SFMono-Regular,Menlo,monospace;fill:%23231F20;opacity:.6;letter-spacing:.14em}.hr{stroke:%23231F20;stroke-width:.6;opacity:.32}%3C/style%3E%3Crect class='p' width='300' height='424'/%3E%3Ctext class='hd' x='22' y='17'%3EGLYCOLYSIS / EMBDEN-MEYERHOF%3C/text%3E%3Ctext class='hd' x='278' y='17' text-anchor='end'%3EPLATE 01%3C/text%3E%3Cline class='hr' x1='22' y1='24' x2='278' y2='24'/%3E%3Crect class='mb' x='106' y='38' width='88' height='34'/%3E%3Ctext class='mn' x='150' y='54'%3ED-Glucose%3C/text%3E%3Ctext class='mf' x='150' y='66'%3EC6H12O6%3C/text%3E%3Cline class='fl' x1='150' y1='72' x2='150' y2='112'/%3E%3Cpath class='ah' d='M150 112 l-3.4 -7.4 h6.8 z'/%3E%3Cpath class='ca' d='M150 79 Q112 92 150 105'/%3E%3Ctext class='cf' x='105' y='84'%3EATP%3C/text%3E%3Ctext class='cf' x='105' y='106'%3EADP%3C/text%3E%3Ctext class='en' x='162' y='87'%3Ehexokinase%3C/text%3E%3Ctext class='ec' x='162' y='98'%3EEC 2.7.1.1%3C/text%3E%3Crect class='mb' x='80' y='112' width='140' height='34'/%3E%3Ctext class='mn' x='150' y='128'%3ED-Glucose 6-phosphate%3C/text%3E%3Ctext class='mf' x='150' y='140'%3EC6H11O9P%3C/text%3E%3Cline class='fl' x1='150' y1='146' x2='150' y2='190'/%3E%3Cpath class='ah' d='M150 190 l-3.4 -7.4 h6.8 z'/%3E%3Cpath class='ah' d='M150 146 l-3.4 7.4 h6.8 z'/%3E%3Ctext class='en' x='162' y='161'%3Eglucose-6-phosphate%3C/text%3E%3Ctext class='en' x='162' y='172'%3Eisomerase%3C/text%3E%3Ctext class='ec' x='162' y='183'%3EEC 5.3.1.9%3C/text%3E%3Crect class='mb' x='78' y='190' width='144' height='34'/%3E%3Ctext class='mn' x='150' y='206'%3ED-Fructose 6-phosphate%3C/text%3E%3Ctext class='mf' x='150' y='218'%3EC6H11O9P%3C/text%3E%3Cline class='fc' x1='150' y1='224' x2='150' y2='268'/%3E%3Cpath class='ah' d='M150 268 l-4.2 -8.4 h8.4 z'/%3E%3Cpath class='ca' d='M150 231 Q112 246 150 261'/%3E%3Ctext class='cf' x='105' y='236'%3EATP%3C/text%3E%3Ctext class='cf' x='105' y='262'%3EADP%3C/text%3E%3Ctext class='en' x='162' y='237'%3E6-phosphofructokinase%3C/text%3E%3Ctext class='ec' x='162' y='248'%3EEC 2.7.1.11%3C/text%3E%3Cpath class='rl' d='M240 264 C208 260 176 258 162 257'/%3E%3Ctext class='rg' x='156' y='260'%3E+%3C/text%3E%3Ctext class='rt' x='244' y='270'%3EF2,6BP%3C/text%3E%3Crect class='mb' x='62' y='268' width='176' height='34'/%3E%3Ctext class='mn' x='150' y='284'%3ED-Fructose 1,6-bisphosphate%3C/text%3E%3Ctext class='mf' x='150' y='296'%3EC6H10O12P2%3C/text%3E%3Cline class='fl' x1='150' y1='302' x2='150' y2='338'/%3E%3Cpath class='ah' d='M150 338 l-3.4 -7.4 h6.8 z'/%3E%3Cpath class='ah' d='M150 302 l-3.4 7.4 h6.8 z'/%3E%3Ctext class='en' x='162' y='313'%3Efructose-bisphosphate%3C/text%3E%3Ctext class='en' x='162' y='324'%3Ealdolase%3C/text%3E%3Ctext class='ec' x='162' y='335'%3EEC 4.1.2.13%3C/text%3E%3Cpath class='fl' d='M81 338 H219'/%3E%3Cpath class='fl' d='M81 338 V352'/%3E%3Cpath class='fl' d='M219 338 V352'/%3E%3Cpath class='ah' d='M81 352 l-3.4 -7.4 h6.8 z'/%3E%3Cpath class='ah' d='M219 352 l-3.4 -7.4 h6.8 z'/%3E%3Crect class='mb' x='22' y='356' width='118' height='32'/%3E%3Ctext class='m2' x='81' y='370'%3EDihydroxyacetone-P%3C/text%3E%3Ctext class='mf' x='81' y='382'%3EC3H5O6P%3C/text%3E%3Crect class='mb' x='160' y='356' width='118' height='32'/%3E%3Ctext class='m2' x='219' y='370'%3ED-Glyceraldehyde-3-P%3C/text%3E%3Ctext class='mf' x='219' y='382'%3EC3H5O6P%3C/text%3E%3Cline class='hr' x1='22' y1='402' x2='278' y2='402'/%3E%3Ctext class='hd' x='22' y='414'%3EKEGG R00299 R00771 R00756 R01068%3C/text%3E%3Ctext class='hd' x='278' y='414' text-anchor='end'%3EMETABOLIAN%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  box-shadow: var(--_elev-paper);
+}
+@media (min-width: 62rem) {
+  .hero__inner::before,
+  .hero__inner::after { width: 100%; }
+}
+
+.hero__inner:has(> svg, > figure, > picture, > img, > .hero__sheet)::before,
+.hero__inner:has(> svg, > figure, > picture, > img, > .hero__sheet)::after {
+  content: none;
+}
+.hero__inner > svg,
+.hero__inner > figure,
+.hero__inner > picture,
+.hero__inner > img,
+.hero__inner > .hero__sheet {
+  grid-area: sheet;
+  align-self: center;
+  justify-self: center;
+}
+
+/* ------------------------------------------------------------------ *
+ * 4. Stat readout — mono, tabular, hairline-ruled
+ *
+ * tabular-nums is scoped to exactly these figures. It must never be set on
+ * body or on a chart descendant: tnum changes digit advance widths, and
+ * tokens.css documents a font-metric mismatch doubling label overprints.
+ * ------------------------------------------------------------------ */
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding-top: var(--sp-5);
+  border-top: 0;
+  box-shadow: inset 0 1px 0 var(--_rule);
+}
+.hero__stats .stat {
+  gap: 0.3rem;
+  padding: 0.55rem 0.75rem 0.55rem 0;
+  min-width: 0;
+}
+.hero__stats .stat:nth-child(even) {
+  padding-left: clamp(0.8rem, 2vw, 1.25rem);
+  box-shadow: inset 1px 0 0 var(--_rule);
+}
+.hero__stats .stat:nth-child(n + 3) {
+  box-shadow: inset 0 1px 0 var(--_rule);
+}
+.hero__stats .stat:nth-child(even):nth-child(n + 3) {
+  box-shadow: inset 1px 0 0 var(--_rule), inset 0 1px 0 var(--_rule);
+}
+.hero__stats .stat__num {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--step-2);
+  line-height: 1.1;
+  letter-spacing: var(--track-2, -0.012em);
+  color: var(--text);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.hero__stats .stat__label {
+  font-size: var(--step--2, 0.6875rem);
+  line-height: var(--lead-label, 1.3);
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+}
+@media (min-width: 44rem) {
+  .hero__stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .hero__stats .stat {
+    padding: 0 0.75rem 0 clamp(0.8rem, 2vw, 1.25rem);
+    box-shadow: inset 1px 0 0 var(--_rule);
+  }
+  .hero__stats .stat:first-child {
+    padding-left: 0;
+    box-shadow: none;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * 5. The surface the canvas sits behind
+ *
+ * The composition is complete with no WebGL at all: ::before is the light
+ * table's own glow, so removing the canvas (or failing to get a context)
+ * subtracts nothing structural. Any canvas is masked to the plate side and
+ * held well under the type — it lights the paper, it does not compete with it.
+ * ------------------------------------------------------------------ */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+.hero::before {
+  z-index: -2;
+  inset: -15% -20% -25% 28%;
+  background: radial-gradient(
+    58% 52% at 60% 46%,
+    color-mix(in oklab, var(--accent) 16%, transparent),
+    transparent 72%
+  );
+}
+/* keeps the headline legible over whatever the canvas is doing */
+.hero::after {
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(115% 85% at 10% 34%, var(--bg) 14%, transparent 64%);
+}
+.hero canvas {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  -webkit-mask-image: radial-gradient(72% 68% at 70% 48%, #000 0%, #000 42%, transparent 76%);
+  mask-image: radial-gradient(72% 68% at 70% 48%, #000 0%, #000 42%, transparent 76%);
+}
+
+/* A canvas placed in a below-fold section (the paper-stack moment) is
+   full-bleed and edge-masked into the page rather than blended through
+   framebuffer alpha, which keeps the renderer opaque. */
+#main .section canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+}
+
+/* ------------------------------------------------------------------ *
+ * 6. The arrow legend — the site's best argument, as a specimen table
+ *
+ * 30 arrow types in a hairline-ruled three-column table (specimen / label /
+ * definition) instead of a loose list. Each row is a subgrid, so every
+ * specimen and every definition lines up on shared tracks the full height of
+ * the table, and each row keeps a real box for its rule and hover band.
+ * ------------------------------------------------------------------ */
+#legend {
+  display: grid;
+  grid-template-columns: 56px minmax(6.5rem, 15ch) minmax(0, 1fr);
+  column-gap: clamp(0.6rem, 1.4vw, 1.25rem);
+  box-shadow: inset 0 1px 0 var(--_rule);
+  /* partial CLS reservation: the table is injected after arrows.json lands */
+  min-height: 30rem;
+}
+#legend .legend-cat {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 1.25rem;
+  margin-top: clamp(1.5rem, 3.5vh, 2.5rem);
+  padding-bottom: 0.5rem;
+  box-shadow: inset 0 -1px 0 var(--_rule-strong);
+}
+#legend .legend-cat:first-child { margin-top: 0; }
+#legend .legend-cat h3 {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--step--1);
+  line-height: var(--lead-label, 1.3);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+#legend .legend-cat p {
+  flex: 1 1 24ch;
+  min-width: 0;
+  font-size: var(--step--1);
+  line-height: 1.45;
+  color: var(--text-faint);
+}
+#legend .legend-item {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  box-shadow: inset 0 -1px 0 var(--_rule);
+  transition: var(--t-fast, 120ms) var(--ease);
+  transition-property: background-color, color;
+}
+#legend .legend-item__body {
+  display: grid;
+  grid-column: 2 / -1;
+  grid-template-columns: subgrid;
+  align-items: baseline;
+}
+#legend .legend-swatch { align-self: center; }
+#legend .legend-item__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--step-0);
+  line-height: var(--lead-label, 1.3);
+  letter-spacing: var(--track-0, -0.005em);
+  color: var(--text);
+}
+#legend .legend-item__desc {
+  font-size: var(--step--1);
+  line-height: 1.45;
+  color: var(--text-faint);
+  text-wrap: pretty;
+}
+@media (any-hover: hover) {
+  #legend .legend-item:hover { background-color: var(--_wash); }
+  #legend .legend-item:hover .legend-item__label { color: var(--_mark); }
+}
+@media (max-width: 34rem) {
+  /* the definition column can no longer hold a measure — stack it under */
+  #legend { grid-template-columns: 56px minmax(0, 1fr); }
+  #legend .legend-item__body { grid-column: 2 / -1; grid-template-columns: 1fr; }
+}
+
+/* ------------------------------------------------------------------ *
+ * 7. Plates — buttons, cards, chips
+ * ------------------------------------------------------------------ */
+#main .btn {
+  border-radius: var(--_r);
+  font-weight: 600;
+  letter-spacing: var(--track--1, 0.004em);
+  transition: var(--t-base, 180ms) var(--ease);
+  transition-property: background-color, border-color, color, box-shadow;
+}
+@media (any-hover: hover) {
+  /* No lift, no glow. The fill resolves toward the sheet's hover ink. */
+  #main .btn:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: color-mix(in oklab, var(--accent) 82%, var(--_mark));
+  }
+  #main .btn--ghost:hover {
+    background-color: var(--_wash);
+    border-color: var(--_mark);
+    color: var(--_mark);
+  }
+}
+#main .btn:active { transform: none; }
+@media (prefers-reduced-motion: no-preference) {
+  #main .btn:active {
+    transform: scale(0.985);
+    will-change: transform;
+  }
+}
+
+#main .chip {
+  border-radius: var(--_r);
+  border-color: var(--_rule-strong);
+  letter-spacing: 0.06em;
+}
+
+#main .card {
+  border: 0;
+  border-radius: var(--_r);
+  padding: clamp(1.1rem, 2.4vw, 1.6rem);
+  box-shadow: var(--_hairline);
+  transition: var(--t-base, 180ms) var(--ease);
+  transition-property: background-color, box-shadow, color;
+}
+#main .card h3 {
+  font-size: var(--step-1);
+  line-height: 1.2;
+  letter-spacing: var(--track-1, -0.014em);
+  color: var(--text);
+}
+#main .card p {
+  font-size: var(--step-0);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+@media (any-hover: hover) {
+  #main .card:hover { transform: none; }
+  #main .card--link:hover {
+    transform: none;
+    background-color: var(--panel-2);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+  #main .card--link:hover h3 { color: var(--_mark); }
+}
+
+/* The three "what you can do" plates read as one ruled block, not three
+   floating cards — the density device, applied at card scale. */
+#main .grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  box-shadow: var(--_hairline);
+  border-radius: var(--_r);
+  counter-reset: plate-item;
+}
+#main .grid--3 > .card {
+  border-radius: 0;
+  box-shadow: inset 1px 0 0 var(--_rule);
+  counter-increment: plate-item;
+  display: flex;
+  flex-direction: column;
+}
+#main .grid--3 > .card:first-child { box-shadow: none; }
+#main .grid--3 > .card::before {
+  content: counter(plate-item, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: var(--step--2, 0.6875rem);
+  line-height: 1;
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
+  box-shadow: inset 0 -1px 0 var(--_rule);
+}
+/* pins every chip to the same baseline across the row */
+#main .grid--3 > .card .chip {
+  margin-top: auto;
+  align-self: flex-start;
+}
+@media (any-hover: hover) {
+  #main .grid--3 > .card--link:hover {
+    box-shadow: inset 1px 0 0 var(--_rule), inset 0 0 0 1px var(--accent);
+  }
+  #main .grid--3 > .card--link:first-child:hover {
+    box-shadow: inset 0 0 0 1px var(--accent);
+  }
+}
+@media (max-width: 60rem) {
+  #main .grid--3 { grid-template-columns: minmax(0, 1fr); }
+  #main .grid--3 > .card { box-shadow: inset 0 1px 0 var(--_rule); }
+  #main .grid--3 > .card:first-child { box-shadow: none; }
+  @media (any-hover: hover) {
+    #main .grid--3 > .card--link:hover {
+      box-shadow: inset 0 1px 0 var(--_rule), inset 0 0 0 1px var(--accent);
+    }
+    #main .grid--3 > .card--link:first-child:hover {
+      box-shadow: inset 0 0 0 1px var(--accent);
+    }
+  }
+}
+
+/* The provenance specimen in the method section. */
+#main .grid--2 .card {
+  box-shadow: var(--_hairline), 0 1px 2px rgb(0 0 0 / 0.1);
+  background-color: var(--panel-2);
+}
+#main .grid--2 .card > p:not(.muted) {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  letter-spacing: var(--track-1, -0.012em);
+  text-wrap: pretty;
+}
+#main .grid--2 .card > p.muted { line-height: 1.55; }
+
+/* ------------------------------------------------------------------ *
+ * 8. Motion — stillness is the default
+ *
+ * Nothing animates outside the no-preference block, so a rule added later
+ * cannot escape a kill-list: it simply never renders for a reader who asked
+ * for stillness. [data-animate] resolves to its final state at rest, which is
+ * also the correct finished page for browsers without scroll-driven
+ * animations (~16%) and if the module fails to load.
+ * ------------------------------------------------------------------ */
+[data-animate] { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Above the fold: a short staggered entrance. The headline is the LCP
+     element, so it rises without fading — it must paint immediately. */
+  .hero [data-animate] {
+    opacity: 0;
+    animation: fadeRise 0.6s var(--ease) both;
+  }
+  #hero-title {
+    opacity: 1;
+    animation-name: riseOnly;
+  }
+  .hero__inner > [data-animate]:nth-child(1) { animation-delay: 0.02s; }
+  .hero__inner > [data-animate]:nth-child(2) { animation-delay: 0.08s; }
+  .hero__inner > [data-animate]:nth-child(3) { animation-delay: 0.15s; }
+  .hero__inner > [data-animate]:nth-child(4) { animation-delay: 0.22s; }
+  .hero__inner > [data-animate]:nth-child(5) { animation-delay: 0.29s; }
+
+  /* Below the fold: native scroll-driven, off the main thread, no JS and no
+     IntersectionObserver — this page must never compete with the graph work.
+     Declaration order is load-bearing: the `animation` shorthand resets
+     animation-timeline to auto, so the timeline must be set after it. */
+  @supports (animation-timeline: view()) {
+    #main .section [data-animate] {
+      opacity: 1;
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 32%;
+    }
+  }
+}
+
+@keyframes fadeRise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes riseOnly {
+  from { transform: translateY(14px); }
+  to { transform: none; }
+}
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}

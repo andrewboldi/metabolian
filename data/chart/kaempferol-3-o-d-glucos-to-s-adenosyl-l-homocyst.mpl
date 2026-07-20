@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway kaempferol-3-o-d-glucos-to-s-adenosyl-l-homocyst "kaempferol 3-O-β-D-glucos… to S-adenosyl-L-homocysteine" {
-  spacing 196
+  spacing 232
 
   spine at 0,0 {
     kaempferol_3_o_d_glucoside
@@ -13,7 +13,7 @@ pathway kaempferol-3-o-d-glucos-to-s-adenosyl-l-homocyst "kaempferol 3-O-β-D-gl
     <-> ec_2_1_1_155 [2.1.1.155] +sam -sah -hplus
     kaempferide
     <-> . +sam -sah -hplus
-    3_4_o_dimethylkaempferol_7_olate
+    7_4_o_dimethylkaempferol_3_olate
   }
 
   branch from kaempferol_oxoanion side left {
@@ -22,21 +22,33 @@ pathway kaempferol-3-o-d-glucos-to-s-adenosyl-l-homocyst "kaempferol 3-O-β-D-gl
     kaempferol_3_o_d_galactoside
   }
 
-  branch from d_glucose side right {
-    d_glucose
-    <-> . +naringenin_7_o_d_glucoside +h2o
-    s_naringenin
+  branch from kaempferol_oxoanion side right {
+    kaempferol_oxoanion
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    quercetin_7_olate
   }
 
-  branch from kaempferide side left {
-    kaempferide
-    <-> . +sam +sah +hplus
-    7_4_o_dimethylkaempferol_3_olate
+  branch from d_glucose side left {
+    d_glucose
+    <-> ec_3_2_1_85 [3.2.1.85] +lactose_6_phosphate +h2o
+    d_galactopyranose_6_phosphate
+  }
+
+  branch from d_glucose side right {
+    d_glucose
+    <-> ec_5_1_3_44 [5.1.3.44]
+    d_mannose
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_223 [2.1.1.223] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_200 [2.1.1.200] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_309 [2.1.1.309] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen donor" {
-  spacing 212
+  spacing 284
 
   spine at 0,0 {
     5_cholestan_3_one
@@ -28,10 +28,34 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
     cholest_5_en_3_one
   }
 
+  branch from cholest_4_en_3_one side right {
+    cholest_4_en_3_one
+    <-> ec_1_14_15_28 [1.14.15.28] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    25r_4_dafachronate
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_2_7_8 [1.2.7.8] +3_indol_3_yl_pyruvate +coa +di_sulfido_diiron +co2 +hplus
+    indol_3_ylacetyl_coa
+  }
+
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_5 [1.14.15.5] +corticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    18_hydroxycorticosterone
+    <-> ec_1_3_7_5 [1.3.7.5] +2r_3z_phycocyanobilin +di_sulfido_diiron +hplus
+    biliverdin
+  }
+
+  branch from 25s_3_ketocholest_4_en_26_al side left {
+    25s_3_ketocholest_4_en_26_al
+    <-> . +nadh +h +25s_4_dafachronate +h2o
+    nad
+  }
+
+  branch from 25s_3_ketocholest_4_en_26_al side right {
+    25s_3_ketocholest_4_en_26_al
+    <-> . +nadh +h +nad
+    26_hydroxycholest_4_en_3_one
   }
 
   branch from 25s_4_dafachronate side left {
@@ -48,13 +72,25 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_27 [4.2.3.27] +dmapp
-    isoprene
+    <-> ec_6_2_1_14 [6.2.1.14] +pimelate +atp +coa +amp
+    pimeloyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_8 [4.2.3.8] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    casbene
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_19 [1.3.99.19] +quinoline_4_carboxylate +hydrogen_acceptor +h2o
+    2_oxo_1_2_dihydroquinoline_4_carboxylate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_acceptor +h2o
-    chlorite
+    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
+    phenylglyoxylate
   }
 }

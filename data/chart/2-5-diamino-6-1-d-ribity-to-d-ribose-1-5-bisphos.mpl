@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-5-diamino-6-1-d-ribity-to-d-ribose-1-5-bisphos "2,5-diamino-6-(1-D-ribity… to α-D-ribose 1,5-bisphospha…" {
-  spacing 260
+  spacing 272
 
   spine at 0,0 {
     2_5_diamino_6_1_d_ribitylamino_pyrimidin_4_3h_on
@@ -20,7 +20,13 @@ pathway 2-5-diamino-6-1-d-ribity-to-d-ribose-1-5-bisphos "2,5-diamino-6-(1-D-rib
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_12 [3.5.4.12] +2_deoxycytosine_5_monophosphate +h2o +hplus
-    dump
+    <-> ec_3_5_1_100 [3.5.1.100] +r_nipecotamide +h2o
+    r_nipecotic_acid
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_27 [4.3.1.27] +3r_3_hydroxy_d_aspartate
+    oxaloacetate
   }
 }

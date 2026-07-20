@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-carotene-to-succinate "9-cis-β-carotene to succinate" {
-  spacing 252
+  spacing 282
 
   spine at 0,0 {
     9_cis_carotene
@@ -24,21 +24,33 @@ pathway 9-cis-carotene-to-succinate "9-cis-β-carotene to succinate" {
     11r_hydroxymethyl_carlactonoate
   }
 
+  branch from 9_cis_10_apo_carotenal side left {
+    9_cis_10_apo_carotenal
+    <-> ec_1_13_11_69 [1.13.11.69] +2e_4e_6e_7_hydroxy_4_methylhepta_2_4_6_trienal +11r_carlactone
+    o2
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
+    9_hydroxylaurate
+  }
+
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_73 [1.14.14.73] +albendazole +fmnh2 +o2 +h2o +hplus
-    albendazole_s_oxide
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    12_hydroxymyristate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_322 [2.1.1.322] +l_argininium +sam +hplus
-    n5_methyl_argininium_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    n3_methylcytidine_5_monophosphate_1
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +2_aminophenyl_succinate +succinyl_coa
-    2_2_aminophenyl_succinyl_coa
+  branch from sah side left {
+    sah
+    <-> . +eriodictyol +sam +hplus
+    homoeriodictyol
   }
 }

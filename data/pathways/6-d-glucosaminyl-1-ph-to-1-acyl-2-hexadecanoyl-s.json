@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6-d-glucosaminyl-1-ph-to-1-acyl-2-hexadecanoyl-s",
   "name": "6-(α-D-glucosaminyl)-1-ph… to 1-acyl-2-hexadecanoyl-sn-…",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 6-(α-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol zwitterion to 1-acyl-2-hexadecanoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -143,32 +143,22 @@
       }
     },
     {
-      "id": "all_trans_retinol",
-      "name": "all-trans-retinol",
-      "formula": "C20H30O",
-      "charge": 0,
+      "id": "1_acyl_sn_glycero_3_phosphoserine",
+      "name": "1-acyl-sn-glycero-3-phosphoserine",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C7H12NO9PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17336"
+        "chebi": "CHEBI:64379"
       }
     },
     {
-      "id": "all_trans_retinyl_ester",
-      "name": "all-trans-retinyl ester",
-      "short": "all-trans-retinyl…",
-      "formula": "C21H29O2R",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63410"
-      }
-    },
-    {
-      "id": "2_acyl_sn_glycero_3_phosphocholine",
-      "name": "2-acyl-sn-glycero-3-phosphocholine",
-      "short": "2-acyl-sn-glycero-3…",
-      "formula": "C9H19NO7PR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57875"
+        "chebi": "CHEBI:33384"
       }
     }
   ],
@@ -350,39 +340,43 @@
     },
     {
       "id": "r5",
-      "name": "all-trans-retinol + a 1,2-diacyl-sn-glycero-3-phosphocholine = an all-trans-retinyl est...",
-      "equation": "all-trans-retinol + a 1,2-diacyl-sn-glycero-3-phosphocholine = an all-trans-retinyl ester + a 2-acyl-sn-glycero-3-phosphocholine",
+      "name": "a 1-acyl-sn-glycero-3-phospho-L-serine + H2O = a 1-acyl-sn-glycero-3-phosphate + L-seri...",
+      "equation": "a 1-acyl-sn-glycero-3-phospho-L-serine + H2O = a 1-acyl-sn-glycero-3-phosphate + L-serine + H(+)",
       "substrates": [
         {
-          "metabolite": "all_trans_retinol",
+          "metabolite": "1_acyl_sn_glycero_3_phosphoserine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "phosphatidylcholine",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_retinyl_ester",
+          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_acyl_sn_glycero_3_phosphocholine",
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:78175"
+        "rhea": "RHEA:38999"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78175"
+            "id": "RHEA:38999"
           }
         ]
       }

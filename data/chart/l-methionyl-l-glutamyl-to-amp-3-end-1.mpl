@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-methionyl-l-glutamyl-to-amp-3-end-1 "L-methionyl-L-glutamyl… to AMP 3'-end(1−)" {
-  spacing 276
+  spacing 288
 
   spine at 0,0 {
     l_methionyl_l_glutamyl_zwitterionic
@@ -16,15 +16,15 @@ pathway l-methionyl-l-glutamyl-to-amp-3-end-1 "L-methionyl-L-glutamyl… to AMP 
     l_leucyl_l_glutamyl_zwitterionic
   }
 
-  branch from l_glutamyl_zwitterionic_group side left {
-    l_glutamyl_zwitterionic_group
-    <-> ec_3_5_1_122 [3.5.1.122] +l_glutaminiumyl_group +h2o
-    nh3
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_2_3_2_22 [2.3.2.22] +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    cyclo_l_leucyl_l_leucyl
   }
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> . +glutamate +atp +amp +ppi
-    3_l_glutamate_adenylyl_1_group
+    <-> ec_2_3_2_6 [2.3.2.6] +l_argininiumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    l_leucyl_l_arginyl_2_group
   }
 }

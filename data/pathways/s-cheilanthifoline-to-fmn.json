@@ -130,40 +130,70 @@
       }
     },
     {
-      "id": "tryptaminium",
-      "name": "tryptaminium",
-      "formula": "C10H13N2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:57887"
-      }
-    },
-    {
-      "id": "serotonin",
-      "name": "serotonin",
-      "formula": "C10H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:350546"
-      }
-    },
-    {
-      "id": "3_demethylubiquinol_7",
-      "name": "3-demethylubiquinol-7",
-      "short": "3-demethylubiquinol…",
-      "formula": "C43H66O4",
+      "id": "s_macrocarpene",
+      "name": "(S)-β-macrocarpene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84431"
+        "chebi": "CHEBI:61344"
       }
     },
     {
-      "id": "ubiquinol_7",
-      "name": "ubiquinol-7",
-      "formula": "C44H68O4",
+      "id": "s_macrocarpen_15_ol",
+      "name": "(S)-β-macrocarpen-15-ol",
+      "short": "β-macrocarpen-15-ol",
+      "formula": "C15H24O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84432"
+        "chebi": "CHEBI:141850"
+      }
+    },
+    {
+      "id": "4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1",
+      "name": "(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)cyclohex-1-ene-1-carbaldehyde",
+      "short": "4-(5,5-dimethylcycl…",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141851"
+      }
+    },
+    {
+      "id": "s_reticulinium",
+      "name": "(S)-reticulinium",
+      "formula": "C19H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57873"
+      }
+    },
+    {
+      "id": "s_codamine",
+      "name": "(S)-codamine",
+      "formula": "C20H26NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143148"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "pre_sodorifen_diphosphate",
+      "name": "pre-sodorifen diphosphate",
+      "short": "pre-sodorifen PP",
+      "formula": "C16H27O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:143612"
       }
     }
   ],
@@ -197,17 +227,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_186",
-      "name": "tryptamine 5-hydroxylase",
+      "id": "ec_2_1_1_363",
+      "name": "pre-sodorifen synthase",
       "ec": [
-        "1.14.14.186"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_64",
-      "name": "3-demethylubiquinol 3-O-methyltransferase",
-      "ec": [
-        "2.1.1.64"
+        "2.1.1.363"
       ]
     }
   ],
@@ -430,12 +453,11 @@
     },
     {
       "id": "r5",
-      "name": "tryptamine 5-hydroxylase",
-      "equation": "tryptamine + reduced [NADPH--hemoprotein reductase] + O2 = serotonin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.186",
+      "name": "(S)-beta-macrocarpene + reduced [NADPH--hemoprotein reductase] + O2 = [(4S)-4-(5,5-dime...",
+      "equation": "(S)-beta-macrocarpene + reduced [NADPH--hemoprotein reductase] + O2 = [(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)-cyclohex-1-en-1-yl]methanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "tryptaminium",
+          "metabolite": "s_macrocarpene",
           "stoichiometry": 1
         },
         {
@@ -449,7 +471,7 @@
       ],
       "products": [
         {
-          "metabolite": "serotonin",
+          "metabolite": "s_macrocarpen_15_ol",
           "stoichiometry": 1
         },
         {
@@ -465,34 +487,79 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_186"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:52320"
+        "rhea": "RHEA:57548"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52320"
+            "id": "RHEA:57548"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "3-demethylubiquinol 3-O-methyltransferase",
-      "equation": "3-demethylubiquinol-7 + S-adenosyl-L-methionine = ubiquinol-7 + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.64",
+      "name": "[(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)-cyclohex-1-en-1-yl]methanol + reduced [NADPH--...",
+      "equation": "[(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)-cyclohex-1-en-1-yl]methanol + reduced [NADPH--hemoprotein reductase] + O2 = (4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)cyclohex-1-ene-1-carbaldehyde + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "3_demethylubiquinol_7",
+          "metabolite": "s_macrocarpen_15_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:57552"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57552"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(S)-reticuline + S-adenosyl-L-methionine = (S)-codamine + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "(S)-reticuline + S-adenosyl-L-methionine = (S)-codamine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_reticulinium",
           "stoichiometry": 1
         },
         {
@@ -502,7 +569,51 @@
       ],
       "products": [
         {
-          "metabolite": "ubiquinol_7",
+          "metabolite": "s_codamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:59532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "pre-sodorifen synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + S-adenosyl-L-methionine = pre-sodorifen diphosphate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.363",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pre_sodorifen_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -516,20 +627,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_64"
+          "enzyme": "ec_2_1_1_363"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:44404"
+        "rhea": "RHEA:60120"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44404"
+            "id": "RHEA:60120"
           }
         ]
       }

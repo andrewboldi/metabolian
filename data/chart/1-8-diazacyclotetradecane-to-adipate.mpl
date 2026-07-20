@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-8-diazacyclotetradecane-to-adipate "1,8-diazacyclotetradecane… to adipate" {
-  spacing 220
+  spacing 250
 
   spine at 0,0 {
     1_8_diazacyclotetradecane_2_9_dione
@@ -28,15 +28,27 @@ pathway 1-8-diazacyclotetradecane-to-adipate "1,8-diazacyclotetradecane… to ad
     cyclohexane_1_2_dione
   }
 
-  branch from glutamate side right {
+  branch from 6_oxohexanoate side right {
+    6_oxohexanoate
+    <-> . +nadp +nadph +hplus
+    6_hydroxyhexanoate
+  }
+
+  branch from glutamate side left {
     glutamate
     <-> ec_2_6_1_72 [2.6.1.72] +d_4_hydroxyphenylglycine +akg
     4_hydroxyphenylglyoxylate
   }
 
-  branch from glutarate side left {
-    glutarate
-    <-> . +itaconate +glutaryl_coa
-    itaconyl_coa
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_52 [2.6.1.52] +4_phosphonatooxy_l_threonine +akg
+    r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate
+  }
+
+  branch from adipoyl_coa side left {
+    adipoyl_coa
+    <-> . +coa +acetyl_coa
+    3_oxooctanedioyl_coa
   }
 }

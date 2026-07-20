@@ -1,0 +1,251 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-lauroylsphingosine-1-ph-to-glycine-betaine",
+  "name": "N-lauroylsphingosine-1-ph… to glycine betaine",
+  "category": "other",
+  "summary": "A 3-step route from N-lauroylsphingosine-1-phosphocholine to glycine betaine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:60636"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137334"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_lauroylsphingosine_1_phosphocholine",
+      "name": "N-lauroylsphingosine-1-phosphocholine",
+      "short": "N-lauroylsphingosin…",
+      "formula": "C35H71N2O6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137334"
+      }
+    },
+    {
+      "id": "n_lauroyl_sphingosine_1_3_cyclophosphate",
+      "name": "N-lauroyl-sphingosine-1,3-cyclophosphate",
+      "short": "N-lauroyl-sphingosi…",
+      "formula": "C30H57NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143884"
+      }
+    },
+    {
+      "id": "choline",
+      "name": "Choline",
+      "formula": "C5H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15354"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "betaine_aldehyde",
+      "name": "Betaine aldehyde",
+      "formula": "C5H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15710"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "betaine",
+      "name": "Glycine betaine",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17750"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-(dodecanoyl)-sphing-4-enine-1-phosphocholine = N-dodecanoyl-sphing-4-enine-1,3-cyclic...",
+      "equation": "N-(dodecanoyl)-sphing-4-enine-1-phosphocholine = N-dodecanoyl-sphing-4-enine-1,3-cyclic phosphate + choline",
+      "substrates": [
+        {
+          "metabolite": "n_lauroylsphingosine_1_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_lauroyl_sphingosine_1_3_cyclophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:60636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "choline + NAD(+) = betaine aldehyde + NADH + H(+)",
+      "equation": "choline + NAD(+) = betaine aldehyde + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betaine_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33051"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "betaine aldehyde + NADP(+) + H2O = glycine betaine + NADPH + 2 H(+)",
+      "equation": "betaine aldehyde + NADP(+) + H2O = glycine betaine + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "betaine_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30067"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30067"
+          }
+        ]
+      }
+    }
+  ]
+}

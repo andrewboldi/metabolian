@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "17-estradiol-to-sulfate",
   "name": "17α-estradiol to sulfate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 17α-estradiol to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,23 +120,114 @@
       }
     },
     {
-      "id": "udp_n_acetyl_d_galactosamine_4_sulfate",
-      "name": "UDP-N-acetyl-α-D-galactosamine 4-sulfate",
-      "short": "UDP-N-acetyl-α-D-ga…",
-      "formula": "C17H24N3O20P2S",
-      "charge": -3,
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132114"
+        "chebi": "CHEBI:13193"
       }
     },
     {
-      "id": "udp_n_acetyl_d_galactosamine_4_6_bissulfate",
-      "name": "UDP-N-acetyl-α-D-galactosamine 4,6-bissulfate",
-      "short": "UDP-N-acetyl-α-D-ga…",
-      "formula": "C17H23N3O23P2S2",
-      "charge": -4,
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132115"
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "5_cholane_3_7_12_24_tetrol",
+      "name": "5α-cholane-3α,7α,12α,24-tetrol",
+      "short": "5α-cholane-3α,7α,12…",
+      "formula": "C24H42O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50108"
+      }
+    },
+    {
+      "id": "3_7_12_trihydroxy_5_cholan_24_yl_sulfate",
+      "name": "3α,7α,12α-trihydroxy-5α-cholan-24-yl sulfate",
+      "short": "3α,7α,12α-trihydrox…",
+      "formula": "C24H41O7S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58809"
+      }
+    },
+    {
+      "id": "methyl_l_tyrosinate",
+      "name": "methyl L-tyrosinate",
+      "formula": "C10H13NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17215"
+      }
+    },
+    {
+      "id": "l_tyrosine_methyl_ester_4_sulfate",
+      "name": "L-tyrosine methyl ester 4-sulfate",
+      "short": "L-tyrosine methyl…",
+      "formula": "C10H12NO6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58377"
+      }
+    },
+    {
+      "id": "decyl_sulfate",
+      "name": "decyl sulfate",
+      "formula": "C10H21O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83020"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "decanal",
+      "name": "decanal",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31457"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
       }
     },
     {
@@ -181,10 +272,24 @@
       ]
     },
     {
-      "id": "ec_2_8_2_7",
-      "name": "UDP-N-acetylgalactosamine-4-sulfate sulfotransferase",
+      "id": "ec_2_8_2_31",
+      "name": "petromyzonol sulfotransferase",
       "ec": [
-        "2.8.2.7"
+        "2.8.2.31"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_9",
+      "name": "tyrosine-ester sulfotransferase",
+      "ec": [
+        "2.8.2.9"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_77",
+      "name": "alkyl sulfatase",
+      "ec": [
+        "1.14.11.77"
       ]
     },
     {
@@ -388,12 +493,51 @@
     },
     {
       "id": "r5",
-      "name": "UDP-N-acetylgalactosamine-4-sulfate sulfotransferase",
-      "equation": "UDP-N-acetyl-alpha-D-galactosamine 4-sulfate + 3'-phosphoadenylyl sulfate = UDP-N-acetyl-alpha-D-galactosamine 4,6-bissulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "ec": "2.8.2.7",
+      "name": "17beta-estradiol + A = estrone + AH2",
+      "equation": "17beta-estradiol + A = estrone + AH2",
       "substrates": [
         {
-          "metabolite": "udp_n_acetyl_d_galactosamine_4_sulfate",
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "estrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42228"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "petromyzonol sulfotransferase",
+      "equation": "5alpha-cholane-3alpha,7alpha,12alpha,24-tetrol + 3'-phosphoadenylyl sulfate = 3alpha,7alpha,12alpha-trihydroxy-5alpha-cholan-24-yl sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.31",
+      "substrates": [
+        {
+          "metabolite": "5_cholane_3_7_12_24_tetrol",
           "stoichiometry": 1
         },
         {
@@ -403,7 +547,7 @@
       ],
       "products": [
         {
-          "metabolite": "udp_n_acetyl_d_galactosamine_4_6_bissulfate",
+          "metabolite": "3_7_12_trihydroxy_5_cholan_24_yl_sulfate",
           "stoichiometry": 1
         },
         {
@@ -417,26 +561,136 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_8_2_7"
+          "enzyme": "ec_2_8_2_31"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:14337"
+        "rhea": "RHEA:16997"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14337"
+            "id": "RHEA:16997"
           }
         ]
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "tyrosine-ester sulfotransferase",
+      "equation": "L-tyrosine methyl ester + 3'-phosphoadenylyl sulfate = L-tyrosine methyl ester 4-sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.9",
+      "substrates": [
+        {
+          "metabolite": "methyl_l_tyrosinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tyrosine_methyl_ester_4_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:19977"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "alkyl sulfatase",
+      "equation": "decyl sulfate + 2-oxoglutarate + O2 = decanal + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
+      "substrates": [
+        {
+          "metabolite": "decyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "decanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:65744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
       "name": "branched primary-alkylsulfatase",
       "equation": "2-butyloctyl sulfate + H2O = 2-butyloctan-1-ol + sulfate + H(+)",
       "ec": "3.1.6.22",
@@ -470,7 +724,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:68464"
       },

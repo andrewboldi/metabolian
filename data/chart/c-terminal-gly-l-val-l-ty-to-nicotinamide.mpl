@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… to nicotinamide" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     c_terminal_gly_l_val_l_tyr_1
@@ -20,19 +20,37 @@ pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… 
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_99_66 [1.14.99.66] +n6_n6_dimethyl_l_lysine_1 +h2o +formaldehyde +hydrogen_donor
-    l_lysinium
+    <-> . +protoporphyrinogen9 +hydrogen_donor
+    protoporphyrin9
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_17_99_8 [1.17.99.8] +4r_limonene +h2o +hydrogen_donor
+    r_perillyl_alcohol
+  }
+
+  branch from glycino_1_group side left {
+    glycino_1_group
+    <-> . +gly_gly +h2o
+    glyciniumyl_group
   }
 
   branch from 3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr side right {
     3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr
-    <-> ec_1_4_3_26 [1.4.3.26] +o2 +h2o +h2o2 +nh3
-    premycofactocin
+    <-> . +o2 +h2o2 +hplus
+    5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr
   }
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> ec_2_4_2_31 [2.4.2.31] +l_argininium +nadp +hplus
-    n_2_phospho_adp_d_ribosyl_l_arginine_3
+    <-> . +l_tyrosine +nad +hplus
+    o_adp_d_ribosyl_l_tyrosine_2
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +l_argininium +nad +nh3 +hplus
+    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
   }
 }

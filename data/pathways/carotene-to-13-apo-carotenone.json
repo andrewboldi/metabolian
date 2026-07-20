@@ -1,23 +1,32 @@
 {
   "$schema": "../../schema/pathway.schema.json",
   "id": "carotene-to-13-apo-carotenone",
-  "name": "β-carotene to 13-apo-β-carotenone",
+  "name": "γ-carotene to 13-apo-β-carotenone",
   "category": "energy-metabolism",
-  "summary": "A 2-step route from β-carotene to 13-apo-β-carotenone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 3-step route from γ-carotene to 13-apo-β-carotenone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:26389"
+        "id": "RHEA:32239"
       },
       {
         "db": "ChEBI",
-        "id": "CHEBI:17579"
+        "id": "CHEBI:27740"
       }
     ]
   },
   "metabolites": [
+    {
+      "id": "carotene",
+      "name": "γ-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27740"
+      }
+    },
     {
       "id": "carotene",
       "name": "β-carotene",
@@ -74,56 +83,23 @@
       }
     },
     {
-      "id": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial",
-      "name": "4,9-dimethyldodeca-2,4,6,8,10-pentaenedial",
-      "short": "4,9-dimethyldodeca-…",
-      "formula": "C14H16O2",
+      "id": "9_cis_carotene",
+      "name": "9-cis-β-carotene",
+      "formula": "C40H56",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:53171"
-      }
-    },
-    {
-      "id": "cryptoxanthin",
-      "name": "β-cryptoxanthin",
-      "formula": "C40H56O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:10362"
-      }
-    },
-    {
-      "id": "3r_hydroxy_ionone",
-      "name": "(3R)-hydroxy-β-ionone",
-      "short": "hydroxy-β-ionone",
-      "formula": "C13H20O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:53173"
-      }
-    },
-    {
-      "id": "8_apo_caroten_8_al",
-      "name": "8'-apo-β,ψ-caroten-8'-al",
-      "short": "8'-apo-β,ψ-caroten-…",
-      "formula": "C30H40O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:53154"
-      }
-    },
-    {
-      "id": "2_6_dimethyldeca_2_4_6_8_tetraenedial",
-      "name": "2,6-dimethyldeca-2,4,6,8-tetraenedial",
-      "short": "2,6-dimethyldeca-2,…",
-      "formula": "C12H14O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:73152"
+        "chebi": "CHEBI:67188"
       }
     }
   ],
   "enzymes": [
+    {
+      "id": "ec_5_5_1_19",
+      "name": "lycopene beta-cyclase",
+      "ec": [
+        "5.5.1.19"
+      ]
+    },
     {
       "id": "ec_1_13_11_71",
       "name": "carotenoid-9',10'-cleaving dioxygenase",
@@ -139,16 +115,53 @@
       ]
     },
     {
-      "id": "ec_1_13_11_82",
-      "name": "8'-apo-carotenoid 13,14-cleaving dioxygenase",
+      "id": "ec_5_2_1_14",
+      "name": "beta-carotene isomerase",
       "ec": [
-        "1.13.11.82"
+        "5.2.1.14"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
+      "name": "lycopene beta-cyclase",
+      "equation": "gamma-carotene = all-trans-beta-carotene",
+      "ec": "5.5.1.19",
+      "substrates": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
       "name": "carotenoid-9',10'-cleaving dioxygenase",
       "equation": "all-trans-beta-carotene + O2 = beta-ionone + all-trans-10'-apo-beta-carotenal",
       "ec": "1.13.11.71",
@@ -178,7 +191,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:26389"
       },
@@ -193,7 +206,7 @@
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "all-trans-10'-apo-beta-carotenal 13,14-cleaving dioxygenase",
       "equation": "all-trans-10'-apo-beta-carotenal + O2 = (2E,4E,6E)-4-methylocta-2,4,6-trienedial + 13-apo-beta-carotenone",
       "ec": "1.13.11.70",
@@ -223,7 +236,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:26401"
       },
@@ -238,124 +251,38 @@
       }
     },
     {
-      "id": "r3",
-      "name": "all-trans-10'-apo-beta-carotenal + O2 = beta-ionone + 4,9-dimethyldodeca-2,4,6,8,10-pen...",
-      "equation": "all-trans-10'-apo-beta-carotenal + O2 = beta-ionone + 4,9-dimethyldodeca-2,4,6,8,10-pentaenedial",
-      "substrates": [
-        {
-          "metabolite": "10_apo_carotenal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ionone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 3,
-      "xrefs": {
-        "rhea": "RHEA:68452"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68452"
-          }
-        ]
-      }
-    },
-    {
       "id": "r4",
-      "name": "beta-cryptoxanthin + O2 = all-trans-10'-apo-beta-carotenal + (3R)-hydroxy-beta-ionone",
-      "equation": "beta-cryptoxanthin + O2 = all-trans-10'-apo-beta-carotenal + (3R)-hydroxy-beta-ionone",
+      "name": "beta-carotene isomerase",
+      "equation": "all-trans-beta-carotene = 9-cis-beta-carotene",
+      "ec": "5.2.1.14",
       "substrates": [
         {
-          "metabolite": "cryptoxanthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "carotene",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "10_apo_carotenal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3r_hydroxy_ionone",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68440"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68440"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "8'-apo-carotenoid 13,14-cleaving dioxygenase",
-      "equation": "all-trans-8'-apo-beta-carotenal + O2 = 2,6-dimethyldeca-2,4,6,8-tetraenedial + 13-apo-beta-carotenone",
-      "ec": "1.13.11.82",
-      "substrates": [
-        {
-          "metabolite": "8_apo_caroten_8_al",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_6_dimethyldeca_2_4_6_8_tetraenedial",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "13_apo_carotenone",
+          "metabolite": "9_cis_carotene",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_13_11_82"
+          "enzyme": "ec_5_2_1_14"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:36043"
+        "rhea": "RHEA:34455"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36043"
+            "id": "RHEA:34455"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alaninium-amide-to-d-pantetheine-4-phosphate "β-alaninium amide to D-pantetheine 4'-phosphate" {
-  spacing 236
+  spacing 284
 
   spine at 0,0 {
     alaninium_amide
@@ -24,33 +24,51 @@ pathway alaninium-amide-to-d-pantetheine-4-phosphate "β-alaninium amide to D-pa
     d_pantetheine_4_phosphate
   }
 
-  branch from alanine side left {
-    alanine
-    <-> ec_6_3_2_11 [6.3.2.11] +arginine +atp +adp +pi +hplus
-    alanyl_l_argininium
+  branch from nh3 side left {
+    nh3
+    <-> . +5_methylcytosine +h2o +hplus
+    thymine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
-    n_terminal_5_oxo_l_proline
+    <-> . +pyridoxaminium +o2 +h2o +h2o2
+    pyridoxal
+  }
+
+  branch from r_4_phosphonatopantothenate side left {
+    r_4_phosphonatopantothenate
+    <-> . +cysteamine +co2 +n_r_4_phosphopantothenoyl_l_cysteine +h2o
+    h
+  }
+
+  branch from r_4_phosphonatopantothenate side right {
+    r_4_phosphonatopantothenate
+    <-> ec_6_3_2_5 [6.3.2.5] +cdp +h +n_r_4_phosphopantothenoyl_l_cysteine +phosphate +l_cysteine
+    ctp
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +n_acylsphingosine +hplus
-    n_acylsphingosine_1_phosphoethanolamine
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +neu5ac_2_3_d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_g +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_glcnac_1_3_d
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_31 [2.5.1.31] +ipp +fpp
+    ditrans_polycis_undecaprenyl_diphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_120 [4.2.3.120] +gpp
-    pinene
-  }
-
-  branch from d_pantetheine_4_phosphate side left {
-    d_pantetheine_4_phosphate
-    <-> ec_3_6_1_77 [3.6.1.77] +coa +h2o +hplus
-    adenosine_3_5_bismonophosphate
+    <-> ec_2_5_1_82 [2.5.1.82] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_hexaprenyl_diphosphate
   }
 }

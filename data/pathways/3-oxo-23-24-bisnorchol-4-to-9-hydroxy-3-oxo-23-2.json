@@ -150,6 +150,44 @@
       }
     },
     {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "3_22_dioxochol_4_en_24_oyl_coa",
+      "name": "3,22-dioxochol-4-en-24-oyl-CoA",
+      "short": "3,22-dioxochol-4-en…",
+      "formula": "C45H64N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86014"
+      }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "cedr_8_ene",
+      "name": "cedr-8-ene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10216"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -160,21 +198,29 @@
       }
     },
     {
-      "id": "s_bisabolene",
-      "name": "(S)-β-bisabolene",
+      "id": "exo_bergamotene",
+      "name": "(−)-exo-α-bergamotene",
+      "short": "(−)-exo-α-bergamote…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49263"
+        "chebi": "CHEBI:62756"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_55",
-      "name": "(S)-beta-bisabolene synthase",
+      "id": "ec_4_2_3_227",
+      "name": "(-)-alpha-cedrene synthase",
       "ec": [
-        "4.2.3.55"
+        "4.2.3.227"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_81",
+      "name": "exo-alpha-bergamotene synthase",
+      "ec": [
+        "4.2.3.81"
       ]
     }
   ],
@@ -373,18 +419,57 @@
     },
     {
       "id": "r5",
-      "name": "(S)-beta-bisabolene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (S)-beta-bisabolene + diphosphate",
-      "ec": "4.2.3.55",
+      "name": "3-oxochol-4-en-22-oyl-CoA + acetyl-CoA = 3,22-dioxochol-4-en-24-oyl-CoA + CoA",
+      "equation": "3-oxochol-4-en-22-oyl-CoA + acetyl-CoA = 3,22-dioxochol-4-en-24-oyl-CoA + CoA",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "3_oxo_23_24_bisnorchol_4_en_22_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "s_bisabolene",
+          "metabolite": "3_22_dioxochol_4_en_24_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(-)-alpha-cedrene synthase",
+      "equation": "(2Z,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
+      "ec": "4.2.3.227",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cedr_8_ene",
           "stoichiometry": 1
         },
         {
@@ -394,20 +479,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_55"
+          "enzyme": "ec_4_2_3_227"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:28266"
+        "rhea": "RHEA:31423"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28266"
+            "id": "RHEA:31423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "exo-alpha-bergamotene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (1S,5S,6R)-alpha-bergamotene + diphosphate",
+      "ec": "4.2.3.81",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "exo_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:31427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31427"
           }
         ]
       }

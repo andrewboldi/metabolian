@@ -121,51 +121,23 @@
       }
     },
     {
-      "id": "2s_2_amino_3_methylbutan_1_ol",
-      "name": "(2S)-2-amino-3-methylbutan-1-ol",
-      "short": "2-amino-3-methylbut…",
-      "formula": "C5H14NO",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:195496"
-      }
-    },
-    {
-      "id": "1_hydroxy_3_methylbutan_2_one",
-      "name": "1-hydroxy-3-methylbutan-2-one",
-      "short": "1-hydroxy-3-methylb…",
-      "formula": "C5H10O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195497"
-      }
-    },
-    {
-      "id": "butyryl_coa",
-      "name": "Butyryl-CoA (butanoyl-CoA)",
-      "short": "Butyryl-CoA…",
-      "formula": "C25H38N7O17P3S",
+      "id": "3_hydroxybutanoyl_coa",
+      "name": "3-hydroxybutanoyl-CoA",
+      "short": "3-hydroxybutanoyl-C…",
+      "formula": "C25H38N7O18P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57371"
+        "chebi": "CHEBI:78611"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "r_2_hydroxybutanoyl_coa",
+      "name": "(R)-2-hydroxybutanoyl-CoA",
+      "short": "2-hydroxybutanoyl-C…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:87474"
       }
     }
   ],
@@ -338,66 +310,11 @@
     },
     {
       "id": "r4",
-      "name": "(2S)-2-amino-3-methylbutan-1-ol + NAD(+) + H2O = 1-hydroxy-3-methylbutan-2-one + NH4(+)...",
-      "equation": "(2S)-2-amino-3-methylbutan-1-ol + NAD(+) + H2O = 1-hydroxy-3-methylbutan-2-one + NH4(+) + NADH + H(+)",
+      "name": "3-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
+      "equation": "3-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
       "substrates": [
         {
-          "metabolite": "2s_2_amino_3_methylbutan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_hydroxy_3_methylbutan_2_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:77011"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77011"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "butanoyl-CoA + O2 = (2E)-butenoyl-CoA + H2O2",
-      "equation": "butanoyl-CoA + O2 = (2E)-butenoyl-CoA + H2O2",
-      "substrates": [
-        {
-          "metabolite": "butyryl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "3_hydroxybutanoyl_coa",
           "stoichiometry": 1
         }
       ],
@@ -407,21 +324,56 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:41964"
+        "rhea": "RHEA:45584"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41964"
+            "id": "RHEA:45584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2R)-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
+      "equation": "(2R)-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxybutanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "crotonoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:47176"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47176"
           }
         ]
       }

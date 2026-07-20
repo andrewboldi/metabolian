@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dibenzothiophene-to-fmn "dibenzothiophene to FMN" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     dibenzothiophene
@@ -20,7 +20,25 @@ pathway dibenzothiophene-to-fmn "dibenzothiophene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    2_hydroxy_17_estradiol
+    <-> . +pregnenolone +fmnh2 +o2 +h2o +hplus
+    7_hydroxypregnenolone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +5_androstane_3_17_diol +fmnh2 +o2 +h2o +hplus
+    5_androstane_3_6_17_triol
+  }
+
+  branch from fmn_n5_oxide side left {
+    fmn_n5_oxide
+    <-> . +fmn_n5_peroxide +dibenzothiophene_5_5_dioxide
+    2_hydroxybiphenyl_2_sulfinate
+  }
+
+  branch from fmn_n5_oxide side right {
+    fmn_n5_oxide
+    <-> . +fmn_n5_peroxide +thymine
+    z_2_methylureidoacrylate
   }
 }

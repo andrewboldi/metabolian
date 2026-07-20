@@ -101,12 +101,32 @@
       }
     },
     {
-      "id": "2_monoglyceride",
-      "name": "2-monoglyceride",
-      "formula": "C4H7O4R",
+      "id": "1_2_diacyl_sn_glycero_3_phospholipid",
+      "name": "1,2-diacyl-sn-glycero-3-phospholipid",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C5H5O8PR3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136912"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycero_3_phospholipid",
+      "name": "1-acyl-sn-glycero-3-phospholipid",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C4H6O7PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:169977"
+      }
+    },
+    {
+      "id": "triglyceride",
+      "name": "triglyceride",
+      "formula": "C6H5O6R3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17389"
+        "chebi": "CHEBI:17855"
       }
     },
     {
@@ -119,43 +139,23 @@
       }
     },
     {
-      "id": "acyl_sn_glycero_3_phosphocholine",
-      "name": "acyl-sn-glycero-3-phosphocholine",
-      "short": "acyl-sn-glycero-3-p…",
+      "id": "1_o_acyl_sn_glycero_3_phosphocholine",
+      "name": "1-O-acyl-sn-glycero-3-phosphocholine",
+      "short": "1-O-acyl-sn-glycero…",
       "formula": "C9H19NO7PR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84465"
+        "chebi": "CHEBI:58168"
       }
     },
     {
-      "id": "1_myristoyl_sn_glycero_3_phosphocholine",
-      "name": "1-myristoyl-sn-glycero-3-phosphocholine",
-      "short": "1-myristoyl-sn-glyc…",
-      "formula": "C22H46NO7P",
+      "id": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecanoyl-2-(9…",
+      "formula": "C39H76NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64489"
-      }
-    },
-    {
-      "id": "1_myristoyl_sn_glycero_2_3_cyclic_phosphate",
-      "name": "1-myristoyl-sn-glycero-2,3-cyclic-phosphate",
-      "short": "1-myristoyl-sn-glyc…",
-      "formula": "C17H32O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:143882"
-      }
-    },
-    {
-      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
-      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1,2-diacyl-sn-glyce…",
-      "formula": "C7H12NO8PR2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64612"
+        "chebi": "CHEBI:73007"
       }
     },
     {
@@ -169,13 +169,23 @@
       }
     },
     {
-      "id": "dag",
-      "name": "1,2-Diacyl-sn-glycerol",
-      "short": "1,2-Diacyl-sn-glyce…",
-      "formula": "C5H6O5R2",
+      "id": "1_palmitoyl_2_oleoyl_sn_glycerol",
+      "name": "1-palmitoyl-2-oleoyl-sn-glycerol",
+      "short": "1-palmitoyl-2-oleoy…",
+      "formula": "C37H70O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17815"
+        "chebi": "CHEBI:75466"
+      }
+    },
+    {
+      "id": "1_o_acyl_n_acylsphingosine",
+      "name": "1-O-acyl-N-acylsphingosine",
+      "short": "1-O-acyl-N-acylsphi…",
+      "formula": "C20H35NO4R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76222"
       }
     }
   ],
@@ -188,10 +198,10 @@
       ]
     },
     {
-      "id": "ec_2_7_8_48",
-      "name": "ceramide phosphoethanolamine synthase",
+      "id": "ec_2_3_1_158",
+      "name": "phospholipid:diacylglycerol acyltransferase",
       "ec": [
-        "2.7.8.48"
+        "2.3.1.158"
       ]
     }
   ],
@@ -325,11 +335,56 @@
     },
     {
       "id": "r4",
-      "name": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero-3-p...",
-      "equation": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero-3-phosphocholine + a 1,2-diacylglycerol",
+      "name": "phospholipid:diacylglycerol acyltransferase",
+      "equation": "a glycerophospholipid + a 1,2-diacylglycerol = a 1-acyl-sn-glycero-3-phospholipid + a triacylglycerol",
+      "ec": "2.3.1.158",
       "substrates": [
         {
-          "metabolite": "2_monoglyceride",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospholipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycero_3_phospholipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_158"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:77739"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77739"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "a 1,2-diacylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a triacylglycerol + a...",
+      "equation": "a 1,2-diacylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a triacylglycerol + a 1-acyl-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "1_2_diglyceride",
           "stoichiometry": 1
         },
         {
@@ -339,76 +394,40 @@
       ],
       "products": [
         {
-          "metabolite": "acyl_sn_glycero_3_phosphocholine",
+          "metabolite": "triglyceride",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_2_diglyceride",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:44824"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:44824"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "1-tetradecanoyl-sn-glycero-3-phosphocholine = 1-tetradecanoyl-sn-glycero-2,3-cyclic pho...",
-      "equation": "1-tetradecanoyl-sn-glycero-3-phosphocholine = 1-tetradecanoyl-sn-glycero-2,3-cyclic phosphate + choline",
-      "substrates": [
-        {
-          "metabolite": "1_myristoyl_sn_glycero_3_phosphocholine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_myristoyl_sn_glycero_2_3_cyclic_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "choline",
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:60604"
+        "rhea": "RHEA:77743"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60604"
+            "id": "RHEA:77743"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "ceramide phosphoethanolamine synthase",
-      "equation": "an N-acylsphing-4-enine + a 1,2-diacyl-sn-glycero-3-phosphoethanolamine = an N-acylsphing-4-enine 1-phosphoethanolamine + a 1,2-diacyl-sn-glycerol",
-      "ec": "2.7.8.48",
+      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + an N-acylsphing-4...",
+      "equation": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + an N-acylsphing-4-enine = an N-acylsphing-4-enine 1-phosphoethanolamine + 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycerol",
       "substrates": [
         {
-          "metabolite": "n_acylsphingosine",
+          "metabolite": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+          "metabolite": "n_acylsphingosine",
           "stoichiometry": 1
         }
       ],
@@ -418,26 +437,60 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "dag",
+          "metabolite": "1_palmitoyl_2_oleoyl_sn_glycerol",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_8_48"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:36079"
+        "rhea": "RHEA:41456"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36079"
+            "id": "RHEA:41456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "an N-acylsphing-4-enine + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1-O-acyl-N-acyls...",
+      "equation": "an N-acylsphing-4-enine + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1-O-acyl-N-acylsphing-4-enine + a 1-acyl-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_acyl_n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:44456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44456"
           }
         ]
       }

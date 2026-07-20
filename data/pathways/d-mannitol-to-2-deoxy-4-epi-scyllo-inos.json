@@ -9,7 +9,7 @@
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:15029"
+        "id": "RHEA:33363"
       },
       {
         "db": "ChEBI",
@@ -28,42 +28,6 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "d_mannopyranose",
-      "name": "D-mannopyranose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:4208"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
       "id": "n_phosphonato_l_histidine",
       "name": "Nπ-phosphonato-L-histidine",
       "short": "Nπ-phosphonato-L-hi…",
@@ -71,6 +35,34 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:64837"
+      }
+    },
+    {
+      "id": "d_mannitol_1_phosphate",
+      "name": "D-mannitol 1-phosphate",
+      "short": "D-mannitol 1-P",
+      "formula": "C6H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61381"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     },
     {
@@ -84,12 +76,21 @@
       }
     },
     {
-      "id": "l_histidine",
-      "name": "L-histidine",
-      "formula": "C6H7N3O",
-      "charge": 0,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:29979"
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -110,21 +111,49 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "n_uridylyl_l_histidine_1",
+      "name": "Nτ-(uridylyl)-L-histidine(1−)",
+      "short": "Nτ-(uridylyl)-L-his…",
+      "formula": "C15H17N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233474"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_1_1_255",
-      "name": "mannitol dehydrogenase",
+      "id": "ec_2_7_1_197",
+      "name": "protein-N(pi)-phosphohistidine--D-mannitol phosphotransferase",
       "ec": [
-        "1.1.1.255"
+        "2.7.1.197"
       ]
     },
     {
-      "id": "ec_2_7_1_191",
-      "name": "protein-N(pi)-phosphohistidine--D-mannose phosphotransferase",
+      "id": "ec_1_1_1_224",
+      "name": "mannose-6-phosphate 6-reductase",
       "ec": [
-        "2.7.1.191"
+        "1.1.1.224"
       ]
     },
     {
@@ -138,61 +167,12 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "mannitol dehydrogenase",
-      "equation": "D-mannitol + NAD(+) = D-mannose + NADH + H(+)",
-      "ec": "1.1.1.255",
+      "name": "protein-N(pi)-phosphohistidine--D-mannitol phosphotransferase",
+      "equation": "D-mannitol(out) + N(pros)-phospho-L-histidyl-[protein] = D-mannitol 1-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.197",
       "substrates": [
         {
           "metabolite": "d_mannitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_mannopyranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_255"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "rhea": "RHEA:15029"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:15029"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "protein-N(pi)-phosphohistidine--D-mannose phosphotransferase",
-      "equation": "D-mannose(out) + N(pros)-phospho-L-histidyl-[protein] = D-mannose 6-phosphate(in) + L-histidyl-[protein]",
-      "ec": "2.7.1.191",
-      "substrates": [
-        {
-          "metabolite": "d_mannopyranose",
           "stoichiometry": 1
         },
         {
@@ -202,7 +182,7 @@
       ],
       "products": [
         {
-          "metabolite": "d_mannopyranose_6_phosphate",
+          "metabolite": "d_mannitol_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -212,20 +192,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_191"
+          "enzyme": "ec_2_7_1_197"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:49232"
+        "rhea": "RHEA:33363"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49232"
+            "id": "RHEA:33363"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mannose-6-phosphate 6-reductase",
+      "equation": "D-mannitol 1-phosphate + NADP(+) = D-mannose 6-phosphate + NADPH + H(+)",
+      "ec": "1.1.1.224",
+      "substrates": [
+        {
+          "metabolite": "d_mannitol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_224"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14925"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14925"
           }
         ]
       }
@@ -267,6 +296,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:82407"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
+      "equation": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_uridylyl_l_histidine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:83891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83891"
           }
         ]
       }

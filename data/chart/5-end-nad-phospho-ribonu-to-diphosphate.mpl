@@ -4,13 +4,17 @@
 # edit the generator, not this file.
 
 pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to diphosphate" {
-  spacing 236
+  spacing 282
 
   spine at 0,0 {
     5_end_nad_phospho_ribonucleoside
     <-> . +h2o -nmn -hplus
     5_end_phospho_adenosine_phospho_ribonucleoside_3
-    <-> ec_2_7_7_1 [2.7.7.1] +nmn +atp +hplus -nad
+    <-> ec_3_5_1_42 [3.5.1.42] +nmn +h2o -nh3
+    nicotinate_d_ribonucleotide
+    <-> ec_2_7_7_18 [2.7.7.18] +atp +hplus -ppi
+    deamido_nad
+    <-> ec_6_3_1_5 [6.3.1.5] +nh3 +atp -amp -nad -hplus
     ppi
   }
 
@@ -22,13 +26,49 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to
 
   branch from nmn side right {
     nmn
-    <-> . +h2o +pi
+    <-> ec_2_7_1_22 [2.7.1.22] +atp +adp +hplus
     n_ribosylnicotinamide
+  }
+
+  branch from nmn side left {
+    nmn
+    <-> . +nadp +h2o +hplus
+    adenosine_2_5_bisphosphate
+  }
+
+  branch from nicotinate_d_ribonucleotide side right {
+    nicotinate_d_ribonucleotide
+    <-> . +h2o +pi
+    d_ribosylnicotinate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +serine +o2 +h2o +h2o2
+    3_hydroxypyruvate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +palmitoleamide +h2o
+    palmitoleate
+  }
+
+  branch from deamido_nad side left {
+    deamido_nad
+    <-> ec_2_7_1_236 [2.7.1.236] +atp +adp +hplus
+    nicotinate_adenine_dinucleotide_3_phosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +cerotate +atp +coa +amp
+    hexacosanoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_10 [3.1.7.10] +geranylgeranyl_diphosphate +h2o
-    13e_labda_7_13_dien_15_ol
+    <-> . +3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3 +atp +coa +amp
+    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3
   }
 }

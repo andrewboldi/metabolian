@@ -102,6 +102,16 @@
       }
     },
     {
+      "id": "r_3_hydroxydecanoyl_coa",
+      "name": "(R)-3-hydroxydecanoyl-CoA",
+      "short": "3-hydroxydecanoyl-C…",
+      "formula": "C31H50N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74272"
+      }
+    },
+    {
       "id": "2e_4z_deca_2_4_dienoyl_coa",
       "name": "(2E,4Z)-deca-2,4-dienoyl-CoA",
       "short": "(2E,4Z)-deca-2,4-di…",
@@ -138,6 +148,15 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "decanoate",
+      "name": "decanoate",
+      "formula": "C10H19O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:27689"
       }
     }
   ],
@@ -266,6 +285,41 @@
     },
     {
       "id": "r4",
+      "name": "(3R)-3-hydroxydecanoyl-CoA = (2E)-decenoyl-CoA + H2O",
+      "equation": "(3R)-3-hydroxydecanoyl-CoA = (2E)-decenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxydecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_dec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:45992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
       "equation": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
       "substrates": [
@@ -293,7 +347,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:53708"
       },
@@ -308,7 +362,7 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "decanoyl-CoA + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-decanoyl-s...",
       "equation": "decanoyl-CoA + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-decanoyl-sn-glycero-3-phosphocholine + CoA",
       "substrates": [
@@ -332,7 +386,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:37863"
       },
@@ -342,6 +396,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:37863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "decanoyl-CoA + H2O = decanoate + CoA + H(+)",
+      "equation": "decanoyl-CoA + H2O = decanoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "decanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "decanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:40059"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40059"
           }
         ]
       }

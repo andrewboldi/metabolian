@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-oleoyl-l-isoleucinate-to-3-n-acetyl-l-isoleucy "N-oleoyl-L-isoleucinate to 3'-(N-acetyl-L-isoleucyl)…" {
-  spacing 156
+  spacing 192
 
   spine at 0,0 {
     n_oleoyl_l_isoleucinate
@@ -22,15 +22,33 @@ pathway n-oleoyl-l-isoleucinate-to-3-n-acetyl-l-isoleucy "N-oleoyl-L-isoleucinat
     d_alloisoleucine
   }
 
+  branch from isoleucine side right {
+    isoleucine
+    <-> . +glyoxylate +glycine
+    kmv
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +n_oleoyl_l_tryptophan +h2o
+    l_tryptophan
+  }
+
   branch from oleate side right {
     oleate
-    <-> . +s_s_bis_2_oleoylglycero_1_phosphate +h2o +hplus
-    s_s_2_oleoylglycero_1_phospho_1_glycerol
+    <-> . +n_oleoyl_l_tyrosine +h2o
+    tyrosine
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_96 [2.5.1.96] +fpp
-    15_cis_4_4_diapophytoene
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_heptaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
+    2_demethylmenaquinol_7
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +threonine +atp
+    l_threonyl_amp
   }
 }

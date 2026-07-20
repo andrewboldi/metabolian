@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-hydr… to 1-O-oleoyl-N-acetylsphing…" {
-  spacing 152
+  spacing 194
 
   spine at 0,0 {
     1_octadecanoyl_2_15_hydroxy_5z_8z_11z_13e_eicosa
@@ -24,15 +24,39 @@ pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-h
     1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc
   }
 
-  branch from 5z_8z_11z_13e_15_hete side right {
+  branch from 1_stearoyl_sn_glycero_3_phosphoethanolamine side right {
+    1_stearoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from 5z_8z_11z_13e_15_hete side left {
     5z_8z_11z_13e_15_hete
     <-> . +atp +coa +amp +ppi
     15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa
   }
 
-  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine side left {
+  branch from 5z_8z_11z_13e_15_hete side right {
+    5z_8z_11z_13e_15_hete
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    15_20_dhete
+  }
+
+  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoethanola side left {
+    1_stearoyl_2_oleoyl_sn_glycero_3_phosphoethanola
+    <-> ec_4_1_1_65 [4.1.1.65] +co2 +1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine
+    h
+  }
+
+  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine side right {
     1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine
     <-> . +n_acetylsphingosine +2_oleoyl_sn_glycero_3_phosphoserine
     1_o_stearoyl_n_acetylsphingosine
+  }
+
+  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine side left {
+    1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
+    h2o
   }
 }

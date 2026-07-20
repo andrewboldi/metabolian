@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-2-acetamido-4-azanium-to-diphosphate",
   "name": "UDP-2-acetamido-4-azanium… to diphosphate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from UDP-2-acetamido-4-azaniumyl-2,4,6-trideoxy-α-D-glucose(1−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -152,41 +152,68 @@
       }
     },
     {
-      "id": "gdp_n_n_diacetylbacillosamine",
-      "name": "GDP-N,N'-diacetylbacillosamine",
-      "short": "GDP-N,N'-diacetylba…",
-      "formula": "C20H29N7O15P2",
-      "charge": -2,
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:86016"
+        "metanetx": "MNXM1104266"
       }
     },
     {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
+      "id": "udp_2_acetamido_4_amino_2_4_6_trideoxyglucose",
+      "name": "UDP-2-acetamido-4-amino-2,4,6-trideoxyglucose",
+      "short": "UDP-2-acetamido-4-a…",
+      "formula": "C17H27N4O15P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104915"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "terpentedienyl_diphosphate",
-      "name": "terpentedienyl diphosphate",
-      "short": "terpentedienyl PP",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58821"
-      }
-    },
-    {
-      "id": "terpentetriene",
-      "name": "terpentetriene",
-      "formula": "C20H32",
+      "id": "e_bisabolene",
+      "name": "(E)-γ-bisabolene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50302"
+        "chebi": "CHEBI:49239"
+      }
+    },
+    {
+      "id": "germacrene_c",
+      "name": "germacrene C",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61478"
       }
     }
   ],
@@ -220,10 +247,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_36",
-      "name": "terpentetriene synthase",
+      "id": "ec_4_2_3_59",
+      "name": "(E)-gamma-bisabolene synthase",
       "ec": [
-        "4.2.3.36"
+        "4.2.3.59"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_60",
+      "name": "germacrene C synthase",
+      "ec": [
+        "4.2.3.60"
       ]
     }
   ],
@@ -422,67 +456,66 @@
     },
     {
       "id": "r5",
-      "name": "UDP-N,N'-diacetylbacillosamine 2-epimerase (hydrolyzing)",
-      "equation": "GDP-N,N'-diacetylbacillosamine + H2O = 2,4-diacetamido-2,4,6-trideoxy-alpha-D-mannopyranose + GDP + H(+)",
-      "ec": "3.2.1.184",
+      "name": "UDP-N-acetylbacillosamine N-acetyltransferase",
+      "ec": "2.3.1.203",
       "substrates": [
         {
-          "metabolite": "gdp_n_n_diacetylbacillosamine",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "udp_2_acetamido_4_amino_2_4_6_trideoxyglucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gdp",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "udp_n_n_diacetylbacillosamine",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_184"
+          "enzyme": "ec_2_3_1_203"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46316"
+        "metanetx": "MNXR189236"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:46316"
+            "db": "MetaNetX",
+            "id": "MNXR189236"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "terpentetriene synthase",
-      "equation": "terpentedienyl diphosphate = terpentetriene + diphosphate",
-      "ec": "4.2.3.36",
+      "name": "(E)-gamma-bisabolene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (E)-gamma-bisabolene + diphosphate",
+      "ec": "4.2.3.59",
       "substrates": [
         {
-          "metabolite": "terpentedienyl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "terpentetriene",
+          "metabolite": "e_bisabolene",
           "stoichiometry": 1
         },
         {
@@ -492,20 +525,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_36"
+          "enzyme": "ec_4_2_3_59"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25617"
+        "rhea": "RHEA:28298"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25617"
+            "id": "RHEA:28298"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "germacrene C synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = germacrene C + diphosphate",
+      "ec": "4.2.3.60",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germacrene_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:28302"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28302"
           }
         ]
       }

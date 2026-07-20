@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alfacalcidol-to-di-sulfido-diiron "alfacalcidol to di-μ-sulfido-diiron" {
-  spacing 164
+  spacing 194
 
   spine at 0,0 {
     alfacalcidol
@@ -20,13 +20,31 @@ pathway alfacalcidol-to-di-sulfido-diiron "alfacalcidol to di-μ-sulfido-diiron"
 
   branch from calcitriol side left {
     calcitriol
+    <-> . +alfacalcidol +fmnh2 +o2 +h2o +hplus
+    fmn
+  }
+
+  branch from calcitriol side right {
+    calcitriol
     <-> ec_1_14_15_22 [1.14.15.22] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
     calcidiol
   }
 
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +25r_cholest_5_ene_3_26_diol +di_sulfido_diiron +o2 +hplus +h2o
+    25r_3_hydroxycholest_5_en_26_al
+  }
+
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_33 [1.14.15.33] +10_deoxymethymycin +di_sulfido_diiron +o2 +hplus +h2o
-    novamethymycin
+    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    corticosterone
+  }
+
+  branch from 1s_1_25_dihydroxy_24_oxocalciol side left {
+    1s_1_25_dihydroxy_24_oxocalciol
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    25_hydroxy_24_oxocalciol
   }
 }

@@ -4,27 +4,45 @@
 # edit the generator, not this file.
 
 pathway s-tetrahydrocolumbamine-to-fmn "(S)-tetrahydrocolumbamine to FMN" {
-  spacing 256
+  spacing 286
 
   spine at 0,0 {
     s_tetrahydrocolumbamine
-    <-> ec_2_1_1_89 [2.1.1.89] +sam -sah -hplus
-    tetrahydropalmatine
+    <-> ec_1_14_19_68 [1.14.19.68] +fmnh2 +o2 -fmn -h2o -hplus
+    s_canadine
     <-> ec_2_1_1_122 [2.1.1.122] +sam -sah
-    s_cis_n_methyltetrahydropalmatine
+    s_cis_n_methylcanadine
     <-> ec_1_14_14_97 [1.14.14.97] +fmnh2 +o2 -fmn -h2o -hplus
-    muramine
+    allocryptopine
   }
 
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+  branch from s_canadine side left {
+    s_canadine
+    <-> ec_1_3_3_8 [1.3.3.8] +o2 +hplus +h2o2
+    berberine
   }
 
   branch from fmn side right {
     fmn
-    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
-    7_ketocholesterol
+    <-> ec_1_14_14_164 [1.14.14.164] +fraxetin +fmnh2 +o2 +h2o +hplus
+    sideretin_reduced_form
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_165 [1.14.14.165] +indole_3_carbonyl_nitrile +fmnh2 +o2 +h2o +hplus
+    4_hydroxy_indole_3_carbonyl_nitrile
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_357 [2.1.1.357] +l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysine_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +l_lysinium +sam +hplus
+    n6_methyl_l_lysinium
   }
 }

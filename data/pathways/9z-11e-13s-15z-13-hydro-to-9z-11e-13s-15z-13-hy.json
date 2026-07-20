@@ -1,0 +1,184 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "9z-11e-13s-15z-13-hydro-to-9z-11e-13s-15z-13-hy",
+  "name": "(9Z,11E,13S,15Z)-13-hydro… to (9Z,11E,13S,15Z)-13-hydro…",
+  "category": "other",
+  "summary": "A 3-step route from (9Z,11E,13S,15Z)-13-hydroperoxyoctadeca-9,11,15-trienoate to (9Z,11E,13S,15Z)-13-hydroperoxyoctadeca-9,11,15-trienoic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83919"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58757"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t",
+      "name": "(9Z,11E,13S,15Z)-13-hydroperoxyoctadeca-9,11,15-trienoate",
+      "short": "(9Z,11E,13S,15Z)-13…",
+      "formula": "C18H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58757"
+      }
+    },
+    {
+      "id": "9z_11e_3_z_12_1_hydroxy_3_hexenyloxy_9_11_dodec",
+      "name": "(9Z,11E,3'Z)-12-(1'-hydroxy-3'-hexenyloxy)-9,11-dodecadienoate",
+      "short": "(9Z,11E,3'Z)-12-(1'…",
+      "formula": "C18H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233514"
+      }
+    },
+    {
+      "id": "9z_12_oxo_dodecenoate",
+      "name": "(9Z)-12-oxo-dodecenoate",
+      "short": "12-oxo-dodecenoate",
+      "formula": "C12H19O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233515"
+      }
+    },
+    {
+      "id": "cis_3_hexenal",
+      "name": "cis-3-hexenal",
+      "formula": "C6H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23292"
+      }
+    },
+    {
+      "id": "12_oxo_cis_dodec_9_enoic_acid",
+      "name": "12-oxo-cis-dodec-9-enoic acid",
+      "short": "12-oxo-cis-dodec-9-…",
+      "formula": "C12H20O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:19143"
+      }
+    },
+    {
+      "id": "9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t",
+      "name": "(9Z,11E,13S,15Z)-13-hydroperoxyoctadeca-9,11,15-trienoic acid",
+      "short": "(9Z,11E,13S,15Z)-13…",
+      "formula": "C18H30O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48905"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(13S)-hydroperoxy-(9Z,11E,15Z)-octadecatrienoate = (9Z,11E)-12-(1'-hydroxy-3'Z-hexenylo...",
+      "equation": "(13S)-hydroperoxy-(9Z,11E,15Z)-octadecatrienoate = (9Z,11E)-12-(1'-hydroxy-3'Z-hexenyloxy)-dodecadienoate",
+      "substrates": [
+        {
+          "metabolite": "9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_11e_3_z_12_1_hydroxy_3_hexenyloxy_9_11_dodec",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83919"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83919"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(9Z,11E)-12-(1'-hydroxy-3'Z-hexenyloxy)-dodecadienoate = 12-oxo-(9Z)-dodecenoate + (3Z)...",
+      "equation": "(9Z,11E)-12-(1'-hydroxy-3'Z-hexenyloxy)-dodecadienoate = 12-oxo-(9Z)-dodecenoate + (3Z)-hexenal",
+      "substrates": [
+        {
+          "metabolite": "9z_11e_3_z_12_1_hydroxy_3_hexenyloxy_9_11_dodec",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_12_oxo_dodecenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cis_3_hexenal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:83923"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83923"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR111453",
+      "substrates": [
+        {
+          "metabolite": "12_oxo_cis_dodec_9_enoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cis_3_hexenal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR111453"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111453"
+          }
+        ]
+      }
+    }
+  ]
+}

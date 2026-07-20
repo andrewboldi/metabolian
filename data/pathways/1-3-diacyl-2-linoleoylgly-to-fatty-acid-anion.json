@@ -3,7 +3,7 @@
   "id": "1-3-diacyl-2-linoleoylgly-to-fatty-acid-anion",
   "name": "1,3-diacyl-2-linoleoylgly… to fatty acid anion",
   "category": "lipid-metabolism",
-  "summary": "A 3-step route from 1,3-diacyl-2-linoleoylglycerol to fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 4-step route from 1,3-diacyl-2-linoleoylglycerol to fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -94,6 +94,15 @@
       }
     },
     {
+      "id": "1_2_diglyceride",
+      "name": "1,2-diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49172"
+      }
+    },
+    {
       "id": "fatty-acid",
       "name": "Fatty acid",
       "formula": "CO2R",
@@ -109,6 +118,44 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "monoacylglycerol",
+      "name": "monoacylglycerol",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17408"
+      }
+    },
+    {
+      "id": "linoleoyl_containing_1_2_3_triacyl_sn_glycerol",
+      "name": "linoleoyl containing 1,2,3-triacyl-sn-glycerol",
+      "short": "linoleoyl…",
+      "formula": "C23H36O6R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144774"
+      }
+    },
+    {
+      "id": "diglyceride",
+      "name": "diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18035"
+      }
+    },
+    {
+      "id": "1_2_diacyl_3_linoleoylglycerol",
+      "name": "1,2-diacyl-3-linoleoylglycerol",
+      "short": "1,2-diacyl-3-linole…",
+      "formula": "C23H36O6R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:228231"
       }
     },
     {
@@ -130,55 +177,54 @@
       }
     },
     {
-      "id": "9_hydroxyoctadecanoate",
-      "name": "9-hydroxyoctadecanoate",
-      "short": "9-hydroxyoctadecano…",
-      "formula": "C18H35O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136286"
-      }
-    },
-    {
-      "id": "9_acyloxy_stearate",
-      "name": "9-(acyloxy)-stearate",
-      "formula": "C19H34O4R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:228230"
-      }
-    },
-    {
-      "id": "2_3_diacyl_sn_glycerol",
-      "name": "2,3-diacyl-sn-glycerol",
-      "short": "2,3-diacyl-sn-glyce…",
-      "formula": "C5H6O5R2",
+      "id": "d_glucosylceramide",
+      "name": "β-D-glucosylceramide",
+      "formula": "C10H17NO8R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75524"
+        "chebi": "CHEBI:83264"
       }
     },
     {
-      "id": "n_fatty_acyl_l_glutamine",
-      "name": "N-(fatty acyl)-L-glutamine",
-      "short": "N-(fatty acyl)-L-gl…",
-      "formula": "C6H8N2O4R",
+      "id": "d_glucosylsphingoid_base",
+      "name": "β-D-glucosylsphingoid base",
+      "short": "β-D-glucosylsphingo…",
+      "formula": "C9H19NO7R",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:229211"
+      }
+    },
+    {
+      "id": "2_2_lysobisphosphatidate",
+      "name": "2,2'-lysobisphosphatidate",
+      "short": "2,2'-lysobisphospha…",
+      "formula": "C8H12O10PR2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:149743"
+        "chebi": "CHEBI:77717"
       }
     },
     {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
-      "charge": 0,
+      "id": "a_3_acyl_sn_glycero_1_phospho_1_sn_glycerol",
+      "name": "a 3-acyl-sn-glycero-1-phospho-(1'-sn-glycerol)",
+      "short": "a 3-acyl-sn-glycero…",
+      "formula": "C7H13O9PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58359"
+        "chebi": "CHEBI:197425"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_296",
+      "name": "omega-hydroxyceramide transacylase",
+      "ec": [
+        "2.3.1.296"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -260,8 +306,8 @@
     },
     {
       "id": "r3",
-      "name": "a triacylglycerol + H2O = a 1,3-diacylglycerol + a fatty acid + H(+)",
-      "equation": "a triacylglycerol + H2O = a 1,3-diacylglycerol + a fatty acid + H(+)",
+      "name": "a triacylglycerol + H2O = a 1,2-diacylglycerol + a fatty acid + H(+)",
+      "equation": "a triacylglycerol + H2O = a 1,2-diacylglycerol + a fatty acid + H(+)",
       "substrates": [
         {
           "metabolite": "triglyceride",
@@ -274,7 +320,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_3_diglyceride",
+          "metabolite": "1_2_diglyceride",
           "stoichiometry": 1
         },
         {
@@ -289,103 +335,25 @@
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:38495"
+        "rhea": "RHEA:35667"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38495"
+            "id": "RHEA:35667"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "a 1-acylglycerol + an acyl-CoA = a 1,3-diacylglycerol + CoA",
-      "equation": "a 1-acylglycerol + an acyl-CoA = a 1,3-diacylglycerol + CoA",
+      "name": "a 1,2-diacylglycerol + H2O = a monoacylglycerol + a fatty acid + H(+)",
+      "equation": "a 1,2-diacylglycerol + H2O = a monoacylglycerol + a fatty acid + H(+)",
       "substrates": [
         {
-          "metabolite": "1_monoglyceride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_3_diglyceride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:77571"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77571"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "9-hydroxy-octadecanoate + a triacylglycerol = 9-(acyloxy)-octadecanoate + a 2,3-diacyl-...",
-      "equation": "9-hydroxy-octadecanoate + a triacylglycerol = 9-(acyloxy)-octadecanoate + a 2,3-diacyl-sn-glycerol",
-      "substrates": [
-        {
-          "metabolite": "9_hydroxyoctadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "triglyceride",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9_acyloxy_stearate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_3_diacyl_sn_glycerol",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:77983"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77983"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "an N-(fatty acyl)-L-glutamine + H2O = L-glutamine + a fatty acid",
-      "equation": "an N-(fatty acyl)-L-glutamine + H2O = L-glutamine + a fatty acid",
-      "substrates": [
-        {
-          "metabolite": "n_fatty_acyl_l_glutamine",
+          "metabolite": "1_2_diglyceride",
           "stoichiometry": 1
         },
         {
@@ -395,7 +363,173 @@
       ],
       "products": [
         {
-          "metabolite": "glutamine",
+          "metabolite": "monoacylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "omega-hydroxyceramide transacylase",
+      "equation": "an N-(omega-hydroxy-ultra-long chain fatty acyl)-sphing-4-enine + a (9Z,12Z)-octadecadienoyl-containing triacyl-sn-glycerol = an N-(omega-(9Z,12Z-octadecadienoyloxy)-ultra-long chain fatty acyl)-sphing-4-enine + a diacylglycerol",
+      "ec": "2.3.1.296",
+      "substrates": [
+        {
+          "metabolite": "n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "linoleoyl_containing_1_2_3_triacyl_sn_glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_296"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65692"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "a 1,2-diacyl-3-(9Z,12Z-octadecadienoyl)-glycerol + an N-(omega-hydroxy-ultra-long chain...",
+      "equation": "a 1,2-diacyl-3-(9Z,12Z-octadecadienoyl)-glycerol + an N-(omega-hydroxy-ultra-long chain fatty acyl)-sphing-4-enine = an N-(omega-(9Z,12Z-octadecadienoyloxy)-ultra-long chain fatty acyl)-sphing-4-enine + a 1,2-diacylglycerol",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_3_linoleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:78007"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78007"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "a 1,3-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "equation": "a 1,3-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:78179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "a beta-D-glucosylceramide + H2O = a  beta-D-glucosyll-(1<->1')-sphingoid base + a fatty...",
+      "equation": "a beta-D-glucosylceramide + H2O = a  beta-D-glucosyll-(1<->1')-sphingoid base + a fatty acid",
+      "substrates": [
+        {
+          "metabolite": "d_glucosylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosylsphingoid_base",
           "stoichiometry": 1
         },
         {
@@ -404,16 +538,59 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:64208"
+        "rhea": "RHEA:78531"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64208"
+            "id": "RHEA:78531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "a 3-acyl-sn-glycero-1-phospho-(3'-acyl-1'-sn-glycerol) + H2O = a 3-acyl-sn-glycero-1-ph...",
+      "equation": "a 3-acyl-sn-glycero-1-phospho-(3'-acyl-1'-sn-glycerol) + H2O = a 3-acyl-sn-glycero-1-phospho-(1'-sn-glycerol) + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_2_lysobisphosphatidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "a_3_acyl_sn_glycero_1_phospho_1_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:85303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85303"
           }
         ]
       }

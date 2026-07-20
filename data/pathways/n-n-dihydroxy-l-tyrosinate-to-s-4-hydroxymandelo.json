@@ -141,23 +141,31 @@
       }
     },
     {
-      "id": "lathosterol",
-      "name": "Lathosterol (5alpha-cholest-7-en-3beta-ol)",
-      "short": "Lathosterol…",
-      "formula": "C27H46O",
-      "charge": 0,
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17168"
+        "chebi": "CHEBI:30245"
       }
     },
     {
-      "id": "cholestanol_7_8_epoxide",
-      "name": "cholestanol 7α,8α-epoxide",
-      "short": "cholestanol…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "18_hydroxylinoleate",
+      "name": "18-hydroxylinoleate",
+      "formula": "C18H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:137063"
+        "chebi": "CHEBI:132029"
+      }
+    },
+    {
+      "id": "9z_12z_17_hydroxyoctadeca_9_12_dienoate",
+      "name": "(9Z,12Z)-17-hydroxyoctadeca-9,12-dienoate",
+      "short": "(9Z,12Z)-17-hydroxy…",
+      "formula": "C18H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144041"
       }
     }
   ],
@@ -360,11 +368,11 @@
     },
     {
       "id": "r5",
-      "name": "lathosterol + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha,8alpha-epoxy-5alpha-...",
-      "equation": "lathosterol + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha,8alpha-epoxy-5alpha-cholestan-3beta-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-(9...",
+      "equation": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-(9Z,12Z)-octadecadienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "lathosterol",
+          "metabolite": "linoleate",
           "stoichiometry": 1
         },
         {
@@ -378,7 +386,7 @@
       ],
       "products": [
         {
-          "metabolite": "cholestanol_7_8_epoxide",
+          "metabolite": "18_hydroxylinoleate",
           "stoichiometry": 1
         },
         {
@@ -397,14 +405,65 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:53256"
+        "rhea": "RHEA:60580"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53256"
+            "id": "RHEA:60580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 17-hydroxy-(9...",
+      "equation": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 17-hydroxy-(9Z,12Z)-octadecadienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_12z_17_hydroxyoctadeca_9_12_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:60932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60932"
           }
         ]
       }

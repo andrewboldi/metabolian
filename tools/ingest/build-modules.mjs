@@ -21,17 +21,20 @@ import { writeFileSync, readdirSync, readFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { chebiTable, loadReactions, conjugateMap, enzymeNames, CURRENCY } from "./corpus.mjs";
+import { loadMetanetx } from "./metanetx.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = join(ROOT, "data", "pathways");
 
-// 2 is the floor: a single reaction is not a route, and emitting ~4,100
-// one-reaction sheets would flood the master with fragments rather than inform it.
-const MIN_SPINE = Number(process.env.MIN_SPINE || 2);
-const MAX_SPINE = Number(process.env.MAX_SPINE || 9);   // longer overflows a sheet
-// High enough not to bind: spine extraction exhausts the EC-annotated corpus
-// at ~760 sheets on its own, so this is a runaway guard rather than a target.
-const MAX_SHEETS = Number(process.env.MAX_SHEETS || 2500);
+const MIN_SPINE = Number(process.env.MIN_SPINE || 3);
+const MAX_SPINE = Number(process.env.MAX_SPINE || 16);  // a sheet can carry a long route
+// This one BINDS, deliberately. The corpus supports ~7,000 thin sheets, and at
+// that count the master wall chart takes 36.9s to first paint and reads as a
+// black smudge at the 2% zoom it fits at — unusable, and the exact regression
+// issue #309 was about. The same chemistry rides on ~2,500 RICHER sheets
+// instead (longer spines, more branches), which keeps the master renderable
+// without dropping a single reaction on the floor.
+const MAX_SHEETS = Number(process.env.MAX_SHEETS || 2600);
 
 // Trailing hyphens are trimmed AFTER the length cut, not before: slicing a long
 // name mid-word leaves one behind, and the schema's id pattern rejects it.
@@ -55,13 +58,28 @@ function categoryFor(ecs, names) {
 }
 
 const chebi = chebiTable();
+
+// TWO sources. Rhea is the ceiling for one curated database; MetaNetX reconciles
+// the others (KEGG, MetaCyc, SEED, BiGG) and supplies 17,523 vetted reactions
+// that are not Rhea under another name. Its participants resolve to ChEBI where
+// a mapping exists — so the two corpora share one vocabulary and dedupe against
+// each other — and to an mnx: key where none does. Both are balance-checked here
+// rather than trusted: MetaNetX is a reconciliation, not a curation, and 7,002
+// of its reactions do not balance.
+const mnx = loadMetanetx(chebi);
+for (const [id, prop] of mnx.props) {
+  const key = `mnx:${id}`;
+  if (!chebi.has(key)) chebi.set(key, { name: prop.name, stars: 0, formula: prop.formula, charge: prop.charge });
+}
+
 // The WHOLE vetted corpus, not just the EC-annotated part. Restricting to EC was
 // a workaround for the .mpl grammar demanding an enzyme token on every step: for
 // the 56% of Rhea reactions with no EC assignment the generator had been writing
 // "spontaneous", which asserts a mechanism Rhea never claims. The grammar now has
 // "." for a step with no assigned enzyme — which is what the poster draws, a
 // plain arrow — so those reactions can be carried honestly instead of dropped.
-const { reactions } = loadReactions(chebi);
+const { reactions: rheaReactions } = loadReactions(chebi);
+const reactions = [...rheaReactions, ...mnx.reactions];
 
 // ------------------------------------------------- reuse the repo's own naming
 // The hand-authored modules already carry 300+ curated ChEBI -> id/name
@@ -207,16 +225,23 @@ const index = [];
  *  is what the poster does with a branch, and it raises the information on the
  *  sheet without inventing a new one. Capped per sheet and per anchor so a hub
  *  compound cannot bury its own spine. */
-const MAX_BRANCH_PER_SHEET = Number(process.env.MAX_BRANCH || 6);
+const MAX_BRANCH_PER_SHEET = Number(process.env.MAX_BRANCH || 26);
 function pickBranches(chain) {
   const onSpine = new Set(chain.flatMap((i) => [...mainsOf(reactions[i], "substrates"), ...mainsOf(reactions[i], "products")]));
   const out = [];
   for (const i of chain) {
     for (const anchor of mainsOf(reactions[i], "products")) {
       if (out.length >= MAX_BRANCH_PER_SHEET) return out;
-      if (out.some((b) => b.anchor === anchor)) continue;      // one branch per anchor
+      // Up to two branches per anchor. One was too conservative once the sheet
+      // count had to come DOWN for the master chart to stay renderable: the same
+      // chemistry then has to ride on fewer sheets, which means each sheet must
+      // carry more of it. Two is where a hub still reads as a spine with limbs
+      // rather than a star.
+      if (out.filter((b) => b.anchor === anchor).length >= 2) continue;
       const cand = (touching.get(anchor) || []).filter((j) => !used.has(j) && !chain.includes(j));
+      let takenHere = 0;
       for (const j of cand) {
+        if (takenHere >= 2) break;
         const r = reactions[j];
         // The far end must be a compound the sheet does not already draw, or the
         // branch loops back on itself and reads as a duplicate edge.
@@ -225,7 +250,7 @@ function pickBranches(chain) {
         out.push({ anchor, far, rxnIdx: j });
         used.add(j);
         onSpine.add(far);
-        break;
+        takenHere++;
       }
     }
   }
@@ -282,7 +307,9 @@ for (const chain of sheets) {
         ...(abbrev ? { short: abbrev } : {}),
         formula: info?.formula || undefined,
         charge: info?.charge ?? undefined,
-        xrefs: { chebi: `CHEBI:${p.chebi}` },
+        xrefs: String(p.chebi).startsWith("mnx:")
+          ? { metanetx: String(p.chebi).slice(4) }
+          : { chebi: `CHEBI:${p.chebi}` },
       });
     }
   }
@@ -309,22 +336,29 @@ for (const chain of sheets) {
     summary: `A ${rxns.length}-step route from ${nameOf(first)} to ${nameOf(last)}, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.`,
     provenance: {
       confidence: "high",
-      sources: [{ db: "Rhea", id: `RHEA:${rxns[0].rhea}` }, { db: "ChEBI", id: `CHEBI:${first}` }],
+      sources: [
+        rxns[0].rhea ? { db: "Rhea", id: `RHEA:${rxns[0].rhea}` } : { db: "MetaNetX", id: rxns[0].mnx },
+        ...(String(first).startsWith("mnx:") ? [] : [{ db: "ChEBI", id: `CHEBI:${first}` }]),
+      ],
     },
     metabolites,
     enzymes,
     reactions: [...rxns, ...branchRxns].map((r, k) => ({
       id: `r${k + 1}`,
-      name: (r.ec[0] && ecNames.get(r.ec[0])) || (r.equation.length > 90 ? `${r.equation.slice(0, 87)}...` : r.equation),
-      equation: r.equation,
+      name: (r.ec[0] && ecNames.get(r.ec[0]))
+        || (r.equation ? (r.equation.length > 90 ? `${r.equation.slice(0, 87)}...` : r.equation) : `Reaction ${r.mnx}`),
+      ...(r.equation ? { equation: r.equation } : {}),
       ec: r.ec[0],
       substrates: r.substrates.map((p) => ({ metabolite: metIds.get(p.chebi), stoichiometry: p.n })),
       products: r.products.map((p) => ({ metabolite: metIds.get(p.chebi), stoichiometry: p.n })),
       catalysts: r.ec[0] ? [{ enzyme: ecSeen.get(r.ec[0]) }] : undefined,
       reversibility: "reversible",
       pathwayStep: k + 1,
-      xrefs: { rhea: `RHEA:${r.rhea}` },
-      provenance: { confidence: "high", sources: [{ db: "Rhea", id: `RHEA:${r.rhea}` }] },
+      xrefs: r.rhea ? { rhea: `RHEA:${r.rhea}` } : { metanetx: r.mnx },
+      provenance: {
+        confidence: "high",
+        sources: [r.rhea ? { db: "Rhea", id: `RHEA:${r.rhea}` } : { db: "MetaNetX", id: r.mnx }],
+      },
     })),
   };
 
@@ -345,7 +379,10 @@ for (const chain of sheets) {
   // whose label had nowhere to go and printed across two molecular formulas.
   // Cheaper and more honest than hiding the label: give the sheet more paper.
   const longestEnz = Math.max(20, ...rxns.map((r) => ((r.ec[0] && ecNames.get(r.ec[0])) || "").length));
-  const spacing = Math.min(280, 152 + Math.max(0, longestEnz - 22) * 4);
+  // ...and with how many limbs hang off the spine. A sheet with 20 branches needs
+  // more paper than one with two, and starving it is what routed 24 sheets'
+  // arrows straight through unrelated cells when branch density went up.
+  const spacing = Math.min(340, 152 + Math.max(0, longestEnz - 22) * 4 + branches.length * 6);
   lines.push(`  spacing ${spacing}`);
   lines.push("");
   lines.push("  spine at 0,0 {");

@@ -1,0 +1,337 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-tryptophanal-to-fmn",
+  "name": "L-tryptophanal to FMN",
+  "category": "other",
+  "summary": "A 4-step route from L-tryptophanal(1+) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83459"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:233078"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_tryptophanal",
+      "name": "L-tryptophanal",
+      "formula": "C11H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233078"
+      }
+    },
+    {
+      "id": "2_ammonio_3_methylbutanal",
+      "name": "2-ammonio-3-methylbutanal",
+      "short": "2-ammonio-3-methylb…",
+      "formula": "C5H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233077"
+      }
+    },
+    {
+      "id": "didehydrocampesine_a",
+      "name": "didehydrocampesine A",
+      "formula": "C16H20N3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233013"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "campesine_a",
+      "name": "campesine A",
+      "formula": "C16H24N3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232509"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "campesine_c",
+      "name": "campesine C",
+      "formula": "C18H26N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232511"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "campesine_e",
+      "name": "campesine E",
+      "formula": "C34H47N6O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232515"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-tryptophanal + L-valinal = didehydrocampesine A + 2 H2O + H(+)",
+      "equation": "L-tryptophanal + L-valinal = didehydrocampesine A + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonio_3_methylbutanal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "didehydrocampesine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83459"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83459"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "didehydrocampesine A + 2 AH2 = campesine A + 2 A",
+      "equation": "didehydrocampesine A + 2 AH2 = campesine A + 2 A",
+      "substrates": [
+        {
+          "metabolite": "didehydrocampesine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "campesine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:83463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "campesine A + acetyl-CoA = campesine C + CoA",
+      "equation": "campesine A + acetyl-CoA = campesine C + CoA",
+      "substrates": [
+        {
+          "metabolite": "campesine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "campesine_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "campesine C + campesine A + reduced [NADPH--hemoprotein reductase] + O2 = campesine E +...",
+      "equation": "campesine C + campesine A + reduced [NADPH--hemoprotein reductase] + O2 = campesine E + oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "campesine_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "campesine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "campesine_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:82839"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82839"
+          }
+        ]
+      }
+    }
+  ]
+}

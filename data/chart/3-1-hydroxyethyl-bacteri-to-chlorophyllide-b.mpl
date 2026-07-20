@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-1-hydroxyethyl-bacteri-to-chlorophyllide-b "3-(1-hydroxyethyl)bacteriâ€¦ to chlorophyllide b" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     3_1_hydroxyethyl_bacteriochlorophyllide_a
@@ -18,10 +18,22 @@ pathway 3-1-hydroxyethyl-bacteri-to-chlorophyllide-b "3-(1-hydroxyethyl)bacteriâ
     chlorophyllide_b
   }
 
+  branch from 3_1_hydroxyethyl_chlorophyllide_a side left {
+    3_1_hydroxyethyl_chlorophyllide_a
+    <-> ec_1_1_1_396 [1.1.1.396] +nad +nadh +hplus
+    3_acetylchlorophyllide_a
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_40 [1.14.19.40] +o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1 +o2 +hplus +di_sulfido_diiron +h2o
+    o_s_5_hexynoylpantetheine_4_phosphoryl_serine_1
+  }
+
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    linolenoyl_containing_glycerolipid
+    <-> . +calcidiol +o2 +hplus +di_sulfido_diiron +h2o
+    23s_23_25_dihydroxycalciol
   }
 
   branch from chlorophyllide_a side right {

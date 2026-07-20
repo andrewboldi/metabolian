@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-allose-to-5-hydroxyisouric-acid "aldehydo-D-allose to 5-hydroxyisouric acid" {
-  spacing 216
+  spacing 270
 
   spine at 0,0 {
     aldehydo_d_allose
@@ -26,6 +26,18 @@ pathway aldehydo-d-allose-to-5-hydroxyisouric-acid "aldehydo-D-allose to 5-hydro
     5_hydroxyisouric_acid
   }
 
+  branch from d_psicose_6_phosphate side left {
+    d_psicose_6_phosphate
+    <-> .
+    aldehydo_d_allose_6_phosphate
+  }
+
+  branch from d_psicose_6_phosphate side right {
+    d_psicose_6_phosphate
+    <-> .
+    beta_d_fructose_6_phosphate
+  }
+
   branch from cdp_6_keto_d_fructose side left {
     cdp_6_keto_d_fructose
     <-> . +nadp +nadph +hplus
@@ -34,19 +46,37 @@ pathway aldehydo-d-allose-to-5-hydroxyisouric-acid "aldehydo-D-allose to 5-hydro
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_7 [4.2.3.7] +fpp
-    pentalenene
+    <-> ec_4_2_3_9 [4.2.3.9] +fpp
+    aristolochene
   }
 
-  branch from hypoxanthine side left {
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
+    3_l_glutaminyl_adenylyl_zwitterionic_group
+  }
+
+  branch from hypoxanthine side right {
     hypoxanthine
-    <-> ec_2_4_2_1 [2.4.2.1] +inosine +pi
-    r1p
+    <-> . +2_deoxyinosine_5_phosphate +h2o
+    2_deoxy_d_ribofuranose_5_phosphate
   }
 
-  branch from xanthine side right {
+  branch from xanthine side left {
     xanthine
-    <-> . +xanthosine +h2o
-    d_ribofuranose
+    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadph +o2 +hplus +nadp +h2o
+    formaldehyde
+  }
+
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> ec_1_17_3_2 [1.17.3.2] +h2o2 +o2 +h2o
+    hypoxanthine
+  }
+
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> ec_1_7_3_3 [1.7.3.3] +o2 +h2o +h2o2 +allantoin
+    co2
   }
 }

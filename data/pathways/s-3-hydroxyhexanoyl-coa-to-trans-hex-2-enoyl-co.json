@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-3-hydroxyhexanoyl-coa-to-trans-hex-2-enoyl-co",
   "name": "(S)-3-hydroxyhexanoyl-CoA to trans-hex-2-enoyl-CoA",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (S)-3-hydroxyhexanoyl-CoA(4−) to trans-hex-2-enoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -102,6 +102,15 @@
       }
     },
     {
+      "id": "trans_3_hexenoyl_coa",
+      "name": "trans-3-hexenoyl-CoA",
+      "formula": "C27H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:84790"
+      }
+    },
+    {
       "id": "z_hex_3_enoyl_coa",
       "name": "(Z)-hex-3-enoyl-CoA",
       "formula": "C27H40N7O17P3S",
@@ -111,23 +120,12 @@
       }
     },
     {
-      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C24H50NO7P",
-      "charge": 0,
+      "id": "hexanoate",
+      "name": "hexanoate",
+      "formula": "C6H11O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:72998"
-      }
-    },
-    {
-      "id": "1_palmitoyl_2_hexanoyl_sn_glycero_3_phosphocholi",
-      "name": "1-palmitoyl-2-hexanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-palmitoyl-2-hexan…",
-      "formula": "C30H60NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:75301"
+        "chebi": "CHEBI:17120"
       }
     },
     {
@@ -137,6 +135,34 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78449"
+      }
+    },
+    {
+      "id": "o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine",
+      "name": "O-(S-3-oxooctanoylpantetheine-4-phosphoryl)serine(1−)",
+      "short": "O-(S-3-oxooctanoylp…",
+      "formula": "C22H37N3O10PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78460"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -265,6 +291,37 @@
     },
     {
       "id": "r4",
+      "name": "(3E)-hexenoyl-CoA = (2E)-hexenoyl-CoA",
+      "equation": "(3E)-hexenoyl-CoA = (2E)-hexenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_3_hexenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_hex_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:45736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "(3Z)-hexenoyl-CoA = (2E)-hexenoyl-CoA",
       "equation": "(3Z)-hexenoyl-CoA = (2E)-hexenoyl-CoA",
       "substrates": [
@@ -280,7 +337,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:45748"
       },
@@ -295,22 +352,73 @@
       }
     },
     {
-      "id": "r5",
-      "name": "hexanoyl-CoA + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-hexanoyl-s...",
-      "equation": "hexanoyl-CoA + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-hexanoyl-sn-glycero-3-phosphocholine + CoA",
+      "id": "r6",
+      "name": "hexanoyl-CoA + H2O = hexanoate + CoA + H(+)",
+      "equation": "hexanoyl-CoA + H2O = hexanoate + CoA + H(+)",
       "substrates": [
         {
           "metabolite": "hexanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_palmitoyl_2_hexanoyl_sn_glycero_3_phosphocholi",
+          "metabolite": "hexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:40115"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "hexanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxooctanoyl-[ACP] + CO2 + CoA",
+      "equation": "hexanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxooctanoyl-[ACP] + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -319,16 +427,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:37855"
+        "rhea": "RHEA:42256"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37855"
+            "id": "RHEA:42256"
           }
         ]
       }

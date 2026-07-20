@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acylphloroglucinol-to-diphosphate "2-acylphloroglucinol to diphosphate" {
-  spacing 260
+  spacing 272
 
   spine at 0,0 {
     2_acylphloroglucinol
@@ -18,7 +18,13 @@ pathway 2-acylphloroglucinol-to-diphosphate "2-acylphloroglucinol to diphosphate
 
   branch from ppi side left {
     ppi
-    <-> . +presqualene_pp
-    15_cis_4_4_diapophytoene
+    <-> . +linoleate +atp +coa +amp
+    linoleoyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_125 [2.5.1.125] +2_o_3_dimethylflaviolin_7_olate +gpp +hplus
+    7_o_geranyl_2_o_3_dimethylflaviolin
   }
 }

@@ -4,25 +4,39 @@
 # edit the generator, not this file.
 
 pathway 15-s-hpete-to-diphosphate "15(S)-HPETE to diphosphate" {
-  spacing 224
+  spacing 248
 
   spine at 0,0 {
     15_s_hpete
-    <-> ec_4_2_1_152 [4.2.1.152] -h2o
+    <-> . +hydrogen_donor -hydrogen_acceptor -h2o
+    15_s_hete
+    <-> ec_1_1_1_232 [1.1.1.232] +nad -nadh -hplus
     15_oxo_ete
     <-> . +atp +coa -amp -ppi
     15_oxo_ete_coa
   }
 
-  branch from 15_oxo_ete side left {
+  branch from 15_s_hete side left {
+    15_s_hete
+    <-> . +o2
+    5s_15s_5_hydroperoxy_15_hete
+  }
+
+  branch from 15_oxo_ete side right {
     15_oxo_ete
     <-> . +h2o
     15_r_hpete
   }
 
+  branch from ppi side left {
+    ppi
+    <-> . +gpp
+    4e_6e_2_6_dimethylocta_2_4_6_triene
+  }
+
   branch from ppi side right {
     ppi
-    <-> . +peregrinol_diphosphate
-    labd_13_16_14_diene_9_ol
+    <-> . +fpp
+    maaliene
   }
 }

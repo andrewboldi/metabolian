@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-valine-to-n6-r-s8-isobutyryldihy "D-valine to N6-[(R)-S8-isobutyryldihy…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     d_valine
@@ -18,25 +18,49 @@ pathway d-valine-to-n6-r-s8-isobutyryldihy "D-valine to N6-[(R)-S8-isobutyryldih
 
   branch from kiv side left {
     kiv
-    <-> . +fad +hplus +fadh2
-    r_2_hydroxy_3_methylbutyrate
+    <-> . +o2 +h2o +h2o2 +nh3
+    valine
+  }
+
+  branch from kiv side right {
+    kiv
+    <-> ec_1_2_4_4 [1.2.4.4] +co2 +2_methyl_1_hydroxypropylthiamine_diphosphate +thiamine_diphosphate
+    h
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +hydrogen_acceptor +h2o
+    4z_7z_10z_14e_16z_19z_13_hydroxydocosahexaenoat
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_acceptor
-    7_8_dihydromethanopterin
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
+    18_r_hepe
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +1_4_butanediammonium +o2 +h2o2
-    1_pyrrolinium
+    <-> ec_3_5_4_40 [3.5.4.40] +aminodeoxyfutalosinate +h2o +hplus
+    futalosinate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +2_amino_2_phenylacetonitrile +h2o +hplus
+    d_phenylglycine
+  }
+
+  branch from isobutyryl_coa side left {
+    isobutyryl_coa
+    <-> ec_2_3_1_156 [2.3.1.156] +malonyl-coa +hplus +co2 +coa
+    2_isobutyrylphloroglucinol
   }
 
   branch from isobutyryl_coa side right {
     isobutyryl_coa
-    <-> ec_1_3_8_5 [1.3.8.5] +fad +hplus +fadh2
-    methacrylyl_coa
+    <-> . +l_lysinium +coa +hplus
+    n6_isobutyryl_l_lysine
   }
 }

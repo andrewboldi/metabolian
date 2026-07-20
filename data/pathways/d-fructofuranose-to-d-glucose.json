@@ -1,0 +1,362 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-fructofuranose-to-d-glucose",
+  "name": "D-fructofuranose to β-D-glucose",
+  "category": "carbohydrate-metabolism",
+  "summary": "A 3-step route from D-fructofuranose to β-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55092"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:37721"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_fructofuranose",
+      "name": "D-fructofuranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37721"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "sucrose",
+      "name": "sucrose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17992"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_kestose",
+      "name": "1-kestose",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16885"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "1_6_kestotetraose",
+      "name": "1,6-kestotetraose",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64835"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "β-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15903"
+      }
+    },
+    {
+      "id": "ginsenoside_mx",
+      "name": "ginsenoside Mx",
+      "formula": "C41H70O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77490"
+      }
+    },
+    {
+      "id": "ginsenoside_c_mx1",
+      "name": "ginsenoside C-Mx1",
+      "formula": "C47H80O17",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM148259"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ginsenoside_mx",
+      "name": "ginsenoside Mx",
+      "formula": "C41H70O12",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368235"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_13",
+      "name": "sucrose synthase",
+      "ec": [
+        "2.4.1.13"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_99",
+      "name": "sucrose:sucrose fructosyltransferase",
+      "ec": [
+        "2.4.1.99"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sucrose synthase",
+      "equation": "D-fructose + UDP-alpha-D-glucose = sucrose + UDP + H(+)",
+      "ec": "2.4.1.13",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sucrose:sucrose fructosyltransferase",
+      "equation": "2 sucrose = 1(F)-beta-D-fructosylsucrose + D-glucose",
+      "ec": "2.4.1.99",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_kestose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1(F)-beta-D-fructosylsucrose + sucrose = 1,6-kestotetraose + beta-D-glucose",
+      "equation": "1(F)-beta-D-fructosylsucrose + sucrose = 1,6-kestotetraose + beta-D-glucose",
+      "substrates": [
+        {
+          "metabolite": "1_kestose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_6_kestotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33783"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR196815",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ginsenoside_mx",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_c_mx1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR196815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR196816",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ginsenoside_mx",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_c_mx1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR196816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196816"
+          }
+        ]
+      }
+    }
+  ]
+}

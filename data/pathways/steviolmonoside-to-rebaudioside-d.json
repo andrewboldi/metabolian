@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "steviolmonoside-to-rebaudioside-d",
+  "name": "steviolmonoside to rebaudioside D",
+  "category": "other",
+  "summary": "A 4-step route from steviolmonoside(1−) to rebaudioside D, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61740"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:145010"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "steviolmonoside",
+      "name": "steviolmonoside",
+      "formula": "C26H39O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145010"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "steviolbioside",
+      "name": "steviolbioside",
+      "formula": "C32H49O13",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145009"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "stevioside",
+      "name": "stevioside",
+      "formula": "C38H60O18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9271"
+      }
+    },
+    {
+      "id": "rebaudioside_e",
+      "name": "rebaudioside E",
+      "formula": "C44H70O23",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145018"
+      }
+    },
+    {
+      "id": "rebaudioside_d",
+      "name": "rebaudioside D",
+      "formula": "C50H80O28",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145022"
+      }
+    },
+    {
+      "id": "rebaudioside_b",
+      "name": "rebaudioside B",
+      "formula": "C38H59O18",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145013"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "steviolmonoside + UDP-alpha-D-glucose = steviolbioside + UDP + H(+)",
+      "equation": "steviolmonoside + UDP-alpha-D-glucose = steviolbioside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "steviolmonoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "steviolbioside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "steviolbioside + UDP-alpha-D-glucose = stevioside + UDP",
+      "equation": "steviolbioside + UDP-alpha-D-glucose = stevioside + UDP",
+      "substrates": [
+        {
+          "metabolite": "steviolbioside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stevioside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "stevioside + UDP-alpha-D-glucose = rebaudioside E + UDP + H(+)",
+      "equation": "stevioside + UDP-alpha-D-glucose = rebaudioside E + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "stevioside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rebaudioside_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "rebaudioside E + UDP-alpha-D-glucose = rebaudioside D + UDP + H(+)",
+      "equation": "rebaudioside E + UDP-alpha-D-glucose = rebaudioside D + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "rebaudioside_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rebaudioside_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "steviolbioside + UDP-alpha-D-glucose = rebaudioside B + UDP + H(+)",
+      "equation": "steviolbioside + UDP-alpha-D-glucose = rebaudioside B + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "steviolbioside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rebaudioside_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61752"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61752"
+          }
+        ]
+      }
+    }
+  ]
+}

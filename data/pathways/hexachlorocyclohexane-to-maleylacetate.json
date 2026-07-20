@@ -181,21 +181,49 @@
       }
     },
     {
-      "id": "15_s_hpete",
-      "name": "15(S)-HPETE",
-      "formula": "C20H31O4",
-      "charge": -1,
+      "id": "2_4_5_trichlorocyclohexa_2_5_dien_1_ol",
+      "name": "2,4,5-trichlorocyclohexa-2,5-dien-1-ol",
+      "short": "2,4,5-trichlorocycl…",
+      "formula": "C6H5Cl3O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57446"
+        "chebi": "CHEBI:28989"
       }
     },
     {
-      "id": "15_s_hete",
-      "name": "15(S)-HETE",
+      "id": "9_s_hpode",
+      "name": "9(S)-HPODE",
+      "formula": "C18H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60955"
+      }
+    },
+    {
+      "id": "9_s_hode",
+      "name": "9(S)-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77852"
+      }
+    },
+    {
+      "id": "12_r_hpete",
+      "name": "12(R)-HPETE",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75230"
+      }
+    },
+    {
+      "id": "12_r_hete",
+      "name": "12(R)-HETE",
       "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57409"
+        "chebi": "CHEBI:83343"
       }
     }
   ],
@@ -535,11 +563,54 @@
     },
     {
       "id": "r9",
-      "name": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + 2 glutathione = (15S)-hydroxy-(5Z...",
-      "equation": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + 2 glutathione = (15S)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + glutathione disulfide + H2O",
+      "name": "(3R,6R)-1,3,4,6-tetrachlorocyclohexa-1,4-diene + H2O = 2,4,5-trichlorocyclohexa-2,5-die...",
+      "equation": "(3R,6R)-1,3,4,6-tetrachlorocyclohexa-1,4-diene + H2O = 2,4,5-trichlorocyclohexa-2,5-dien-1-ol + chloride + H(+)",
       "substrates": [
         {
-          "metabolite": "15_s_hpete",
+          "metabolite": "3r_6r_1_3_4_6_tetrachlorocyclohexa_1_4_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_5_trichlorocyclohexa_2_5_dien_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:56620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate + 2 glutathione = (9S)-hydroxy-(10E,12Z)-oc...",
+      "equation": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate + 2 glutathione = (9S)-hydroxy-(10E,12Z)-octadecadienoate + glutathione disulfide + H2O",
+      "substrates": [
+        {
+          "metabolite": "9_s_hpode",
           "stoichiometry": 1
         },
         {
@@ -549,7 +620,7 @@
       ],
       "products": [
         {
-          "metabolite": "15_s_hete",
+          "metabolite": "9_s_hode",
           "stoichiometry": 1
         },
         {
@@ -562,16 +633,59 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:76695"
+        "rhea": "RHEA:76687"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76695"
+            "id": "RHEA:76687"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "(12R)-hydroperoxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + 2 glutathione = (12R)-hydroxy-(5Z...",
+      "equation": "(12R)-hydroperoxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + 2 glutathione = (12R)-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + glutathione disulfide + H2O",
+      "substrates": [
+        {
+          "metabolite": "12_r_hpete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_r_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:76691"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76691"
           }
         ]
       }

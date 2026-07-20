@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to coniferyl acetate" {
-  spacing 168
+  spacing 216
 
   spine at 0,0 {
     lathosterol
@@ -20,7 +20,7 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to con
     ergosta_5_7_22_24_28_tetraen_3_yl_acetate
     <-> . +h2o -acetate -hplus
     ergosta_5_7_22_24_28_tetraen_3_ol
-    <-> ec_1_1_1_319 [1.1.1.319] +trans_isoeugenol +acetate +nadp -nadph
+    <-> ec_1_1_1_318 [1.1.1.318] +eugenol +acetate +nadp -nadph
     coniferyl_acetate
   }
 
@@ -30,15 +30,45 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to con
     episterol
   }
 
+  branch from ergosta_5_7_24_28_trien_3_ol side right {
+    ergosta_5_7_24_28_trien_3_ol
+    <-> ec_1_3_1_21 [1.3.1.21] +h +nadph +24_methylenecholesterol
+    nadp
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
+    6_methoxymellein
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_301 [2.1.1.301] +l_alaniniumyl_group +sam +hplus
-    n_n_dimethyl_l_alanyl_group
+    <-> ec_2_1_1_118 [2.1.1.118] +columbamine +sam +hplus
+    palmatine
   }
 
   branch from acetate side left {
     acetate
-    <-> . +1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +h2o +hplus
+    1_o_hexadecyl_sn_glycerol
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_5_1_119 [2.5.1.119] +isoxazolin_5_one +o_acetyl_l_serine +hplus
+    3_5_oxoisoxazolin_4_yl_l_alanine
+  }
+
+  branch from coniferyl_acetate side left {
+    coniferyl_acetate
+    <-> . +acetyl_coa +coa
+    coniferol
+  }
+
+  branch from coniferyl_acetate side right {
+    coniferyl_acetate
+    <-> . +isoeugenol +acetate +nadp
+    nadph
   }
 }

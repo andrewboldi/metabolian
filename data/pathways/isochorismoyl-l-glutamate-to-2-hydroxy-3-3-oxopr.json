@@ -1,0 +1,258 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isochorismoyl-l-glutamate-to-2-hydroxy-3-3-oxopr",
+  "name": "isochorismoyl-L-glutamate to 2-hydroxy-3-(3-oxoprop-1-…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from isochorismoyl-L-glutamate(3−) to 2-hydroxy-3-(3-oxoprop-1-enyl)but-2-enedioate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77087"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195519"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isochorismoyl_l_glutamate",
+      "name": "isochorismoyl-L-glutamate",
+      "short": "isochorismoyl-L-glu…",
+      "formula": "C15H14NO9",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:195519"
+      }
+    },
+    {
+      "id": "n_pyruvoyl_l_glutamate",
+      "name": "N-pyruvoyl-L-glutamate",
+      "short": "N-pyruvoyl-L-glutam…",
+      "formula": "C8H9NO6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:195520"
+      }
+    },
+    {
+      "id": "salicylate",
+      "name": "salicylate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30762"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_hydroxy_3_3_oxoprop_1_enyl_but_2_enedioate",
+      "name": "2-hydroxy-3-(3-oxoprop-1-enyl)but-2-enedioate",
+      "short": "2-hydroxy-3-(3-oxop…",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58346"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_14",
+      "name": "2,3-dihydroxybenzoate 3,4-dioxygenase",
+      "ec": [
+        "1.13.11.14"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isochorismoyl-L-glutamate = N-pyruvoyl-L-glutamate + salicylate",
+      "equation": "isochorismoyl-L-glutamate = N-pyruvoyl-L-glutamate + salicylate",
+      "substrates": [
+        {
+          "metabolite": "isochorismoyl_l_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_pyruvoyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "salicylate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77087"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "salicylate + NADH + O2 + H(+) = 2,3-dihydroxybenzoate + NAD(+) + H2O",
+      "equation": "salicylate + NADH + O2 + H(+) = 2,3-dihydroxybenzoate + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "salicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,3-dihydroxybenzoate 3,4-dioxygenase",
+      "equation": "2,3-dihydroxybenzoate + O2 = 2-hydroxy-3-(3-oxoprop-1-enyl)but-2-enedioate + H(+)",
+      "ec": "1.13.11.14",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_3_oxoprop_1_enyl_but_2_enedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18477"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18477"
+          }
+        ]
+      }
+    }
+  ]
+}

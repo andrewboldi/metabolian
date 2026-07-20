@@ -113,23 +113,61 @@
       }
     },
     {
-      "id": "2e_3_methylpent_2_enoate_5_phosphate",
-      "name": "(2E)-3-methylpent-2-enoate 5-phosphate",
-      "short": "3-methylpent-2-enoa…",
-      "formula": "C6H8O6P",
-      "charge": -3,
+      "id": "prenyl_phosphate",
+      "name": "prenyl phosphate",
+      "formula": "C5H9O4P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:229665"
+        "chebi": "CHEBI:88052"
       }
     },
     {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "all_trans_heptaprenyl_diphosphate",
+      "name": "all-trans-heptaprenyl diphosphate",
+      "short": "all-trans-heptapren…",
+      "formula": "C35H57O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58206"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "2z_6z_10z_14z_18z_22z_26z_30z_34e_decaprenyl_di",
+      "name": "(2Z,6Z,10Z,14Z,18Z,22Z,26Z,30Z,34E)-decaprenyl diphosphate",
+      "short": "(2Z,6Z,10Z,14Z,18Z,…",
+      "formula": "C50H81O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:87356"
       }
     }
   ],
@@ -163,17 +201,17 @@
       ]
     },
     {
-      "id": "ec_4_1_1_126",
-      "name": "anhydromevalonate phosphate decarboxylase",
-      "ec": [
-        "4.1.1.126"
-      ]
-    },
-    {
       "id": "ec_5_3_3_2",
       "name": "isopentenyl-diphosphate Delta-isomerase",
       "ec": [
         "5.3.3.2"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_86",
+      "name": "trans,polycis-decaprenyl diphosphate synthase",
+      "ec": [
+        "2.5.1.86"
       ]
     }
   ],
@@ -372,63 +410,17 @@
     },
     {
       "id": "r5",
-      "name": "anhydromevalonate phosphate decarboxylase",
-      "equation": "(2E)-3-methyl-5-phosphooxypent-2-enoate + H(+) = isopentenyl phosphate + CO2",
-      "ec": "4.1.1.126",
+      "name": "isopentenyl-diphosphate Delta-isomerase",
+      "ec": "5.3.3.2",
       "substrates": [
         {
-          "metabolite": "2e_3_methylpent_2_enoate_5_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "prenyl_phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
           "metabolite": "isopentenyl_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_126"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:78971"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78971"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "isopentenyl-diphosphate Delta-isomerase",
-      "equation": "isopentenyl diphosphate = dimethylallyl diphosphate",
-      "ec": "5.3.3.2",
-      "substrates": [
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
@@ -438,16 +430,100 @@
         }
       ],
       "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR137709"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3 isopentenyl diphosphate + (2E,6E,10E)-geranylgeranyl diphosphate = all-trans-heptapre...",
+      "equation": "3 isopentenyl diphosphate + (2E,6E,10E)-geranylgeranyl diphosphate = all-trans-heptaprenyl diphosphate + 3 diphosphate",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_heptaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:23284"
+        "rhea": "RHEA:33215"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23284"
+            "id": "RHEA:33215"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "trans,polycis-decaprenyl diphosphate synthase",
+      "equation": "(2Z,6E)-farnesyl diphosphate + 7 isopentenyl diphosphate = (2Z,6Z,10Z,14Z,18Z,22Z,26Z,30Z,34E)-decaprenyl diphosphate + 7 diphosphate",
+      "ec": "2.5.1.86",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 7
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_6z_10z_14z_18z_22z_26z_30z_34e_decaprenyl_di",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 7
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_86"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:47096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47096"
           }
         ]
       }

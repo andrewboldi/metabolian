@@ -172,41 +172,23 @@
       }
     },
     {
-      "id": "1s_3_methyl_cyclohexylammonium",
-      "name": "(1S)-3-methyl-cyclohexylammonium",
-      "short": "3-methyl-cyclohexyl…",
-      "formula": "C7H16N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:195388"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:65315"
       }
     },
     {
-      "id": "3_methylcyclohexanone",
-      "name": "3-methylcyclohexanone",
-      "short": "3-methylcyclohexano…",
-      "formula": "C7H12O",
-      "charge": 0,
+      "id": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
+      "name": "3-(3-amino-3-carboxypropyl)uridine 5'-phosphate(1−)",
+      "short": "3-(3-amino-3-carbox…",
+      "formula": "C13H17N3O10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:195391"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:82930"
       }
     }
   ],
@@ -244,6 +226,13 @@
       "name": "D-histidine 2-aminobutanoyltransferase",
       "ec": [
         "2.5.1.152"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_25",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "ec": [
+        "2.5.1.25"
       ]
     }
   ],
@@ -487,33 +476,26 @@
     },
     {
       "id": "r6",
-      "name": "(1S)-3-methyl-cyclohexylamine + NAD(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADH + ...",
-      "equation": "(1S)-3-methyl-cyclohexylamine + NAD(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADH + H(+)",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "equation": "a uridine in tRNA + S-adenosyl-L-methionine = a 3-[(3S)-3-amino-3-carboxypropyl]uridine in tRNA + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.25",
       "substrates": [
         {
-          "metabolite": "1s_3_methyl_cyclohexylammonium",
+          "metabolite": "uridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_methylcyclohexanone",
+          "metabolite": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
+          "metabolite": "5_s_methyl_5_thioadenosine",
           "stoichiometry": 1
         },
         {
@@ -521,17 +503,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_25"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:76911"
+        "rhea": "RHEA:62432"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76911"
+            "id": "RHEA:62432"
           }
         ]
       }

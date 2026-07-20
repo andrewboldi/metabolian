@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway protodeoxyviolaceinate-to-violacein "protodeoxyviolaceinate to violacein" {
-  spacing 208
+  spacing 214
 
   spine at 0,0 {
     protodeoxyviolaceinate

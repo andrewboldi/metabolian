@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroximate to benzyl thiocyanate" {
-  spacing 248
+  spacing 290
 
   spine at 0,0 {
     phenylthioacetohydroximate
@@ -22,23 +22,41 @@ pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroxi
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_14 [2.8.2.14] +taurolithocholate +3_phosphonato_5_adenylyl_sulfate +hplus
-    taurolithocholic_acid_sulfate
+    <-> ec_2_8_2_14 [2.8.2.14] +glycolithocholate +3_phosphonato_5_adenylyl_sulfate +hplus
+    sulfoglycolithocholate
   }
 
-  branch from z_phenyl_n_sulfonatooxy_methanimidothioate side right {
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_19 [2.8.2.19] +d_glucosyl_1_6_d_glucosyl_1_6_d_glucosyl_1_3_1 +3_phosphonato_5_adenylyl_sulfate +hplus
+    6_o_sulfonato_d_glc_1_6_d_glc_1_6_d_glc_1_3_1_o
+  }
+
+  branch from z_phenyl_n_sulfonatooxy_methanimidothioate side left {
     z_phenyl_n_sulfonatooxy_methanimidothioate
     <-> . +sulfur_atom +sulfate
     phenylacetonitrile
   }
 
+  branch from glucose side right {
+    glucose
+    <-> ec_2_7_1_147 [2.7.1.147] +adp +amp +hplus
+    g6p
+  }
+
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_191 [3.2.1.191] +ginsenoside_rb2 +h2o
-    ginsenoside_c_y
+    <-> ec_3_2_1_104 [3.2.1.104] +cholesteryl_d_glucoside +h2o
+    cholesterol
   }
 
   branch from sulfate side right {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +2_ethylhexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    2_ethylhexanal
+  }
+
+  branch from sulfate side left {
     sulfate
     <-> ec_3_1_6_20 [3.1.6.20] +s_2_sulfodisulfanyl_l_cysteine_1 +h2o +hplus
     3_trisulfanyl_l_alanine

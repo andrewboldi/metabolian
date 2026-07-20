@@ -1,0 +1,197 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-s-bis-2-oleoylglycer-to-oleate",
+  "name": "(S,S)-bis-(2-oleoylglycer… to oleate",
+  "category": "other",
+  "summary": "A 3-step route from (S,S)-bis-(2-oleoylglycero)-1-phosphate(1−) to oleate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86335"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:139156"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_s_bis_2_oleoylglycero_1_phosphate",
+      "name": "(S,S)-bis-(2-oleoylglycero)-1-phosphate",
+      "short": "(S,S)-bis-(2-oleoyl…",
+      "formula": "C42H78O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:139156"
+      }
+    },
+    {
+      "id": "3_oleoyl_sn_glycero_1_phospho_2_oleoyl_1_sn_glyc",
+      "name": "3-oleoyl-sn-glycero-1-phospho-(2'-oleoyl-1'-sn-glycerol)",
+      "short": "3-oleoyl-sn-glycero…",
+      "formula": "C42H78O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:235528"
+      }
+    },
+    {
+      "id": "s_s_bis_3_oleoylglycero_1_phosphate",
+      "name": "(S,S)-bis-(3-oleoylglycero)-1-phosphate",
+      "short": "(S,S)-bis-(3-oleoyl…",
+      "formula": "C42H78O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:139150"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_s_3_oleoylglycero_1_phospho_1_glycerol",
+      "name": "(S,S)-3-oleoylglycero-1-phospho-1'-glycerol",
+      "short": "(S,S)-3-oleoylglyce…",
+      "formula": "C24H46O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:139152"
+      }
+    },
+    {
+      "id": "oleate",
+      "name": "oleate",
+      "formula": "C18H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30823"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S,S)-2-(9Z-octadecenoyl)-sn-glycero-1-phospho-(2'-(9Z-octadecenoyl)-1'-sn-glycerol) = ...",
+      "equation": "(S,S)-2-(9Z-octadecenoyl)-sn-glycero-1-phospho-(2'-(9Z-octadecenoyl)-1'-sn-glycerol) = (S,S)-3-(9Z-octadecenoyl)-sn-glycero-1-phospho-(2'-(9Z-octadecenoyl)-1'-sn-glycerol)",
+      "substrates": [
+        {
+          "metabolite": "s_s_bis_2_oleoylglycero_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oleoyl_sn_glycero_1_phospho_2_oleoyl_1_sn_glyc",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S,S)-3-(9Z-octadecenoyl)-sn-glycero-1-phospho-(2'-(9Z-octadecenoyl)-1'-sn-glycerol) = ...",
+      "equation": "(S,S)-3-(9Z-octadecenoyl)-sn-glycero-1-phospho-(2'-(9Z-octadecenoyl)-1'-sn-glycerol) = 3-(9Z-octadecenoyl)-sn-glycero-1-phospho-(3'-(9Z-octadecenoyl)-1'-sn-glycerol)",
+      "substrates": [
+        {
+          "metabolite": "3_oleoyl_sn_glycero_1_phospho_2_oleoyl_1_sn_glyc",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_bis_3_oleoylglycero_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86339"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-(9Z-octadecenoyl)-sn-glycero-1-phospho-(3'-(9Z-octadecenoyl)-1'-sn-glycerol) + H2O = ...",
+      "equation": "3-(9Z-octadecenoyl)-sn-glycero-1-phospho-(3'-(9Z-octadecenoyl)-1'-sn-glycerol) + H2O = 3-(9Z-octadecenoyl)-sn-glycero-1-phospho-(1'-sn-glycerol) + (9Z)-octadecenoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_s_bis_3_oleoylglycero_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_3_oleoylglycero_1_phospho_1_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55712"
+          }
+        ]
+      }
+    }
+  ]
+}

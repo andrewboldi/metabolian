@@ -3,13 +3,13 @@
   "id": "l-arabinitol-to-l-xylulose-5-phosphate",
   "name": "L-arabinitol to L-xylulose 5-phosphate",
   "category": "energy-metabolism",
-  "summary": "A 2-step route from L-arabinitol to L-xylulose 5-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 3-step route from L-arabinitol to L-xylulose 5-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:16381"
+        "id": "RHEA:21356"
       },
       {
         "db": "ChEBI",
@@ -37,12 +37,12 @@
       }
     },
     {
-      "id": "l_xylulose",
-      "name": "L-xylulose",
+      "id": "l_ribulose",
+      "name": "L-ribulose",
       "formula": "C5H10O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17399"
+        "chebi": "CHEBI:16880"
       }
     },
     {
@@ -73,13 +73,13 @@
       }
     },
     {
-      "id": "l_xylulose_5_phosphate",
-      "name": "L-xylulose 5-phosphate",
-      "short": "L-xylulose 5-P",
+      "id": "l_ribulose_5_phosphate",
+      "name": "L-ribulose 5-phosphate",
+      "short": "L-ribulose 5-P",
       "formula": "C5H9O8P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57829"
+        "chebi": "CHEBI:58226"
       }
     },
     {
@@ -92,62 +92,71 @@
       }
     },
     {
-      "id": "xylitol",
-      "name": "xylitol",
-      "formula": "C5H12O5",
-      "charge": 0,
+      "id": "l_xylulose_5_phosphate",
+      "name": "L-xylulose 5-phosphate",
+      "short": "L-xylulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:17151"
+        "chebi": "CHEBI:57829"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
+      "id": "3_dehydro_l_gulonate_6_phosphate",
+      "name": "3-dehydro-L-gulonate 6-phosphate",
+      "short": "3-dehydro-L-gulonat…",
+      "formula": "C6H8O10P",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58349"
+        "chebi": "CHEBI:58774"
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57783"
+        "chebi": "CHEBI:16526"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_1_1_12",
-      "name": "L-arabinitol 4-dehydrogenase",
+      "id": "ec_1_1_1_13",
+      "name": "L-arabinitol 2-dehydrogenase",
       "ec": [
-        "1.1.1.12"
+        "1.1.1.13"
       ]
     },
     {
-      "id": "ec_2_7_1_53",
-      "name": "L-xylulokinase",
+      "id": "ec_2_7_1_16",
+      "name": "ribulokinase",
       "ec": [
-        "2.7.1.53"
+        "2.7.1.16"
       ]
     },
     {
-      "id": "ec_1_1_1_10",
-      "name": "L-xylulose reductase",
+      "id": "ec_5_1_3_22",
+      "name": "L-ribulose-5-phosphate 3-epimerase",
       "ec": [
-        "1.1.1.10"
+        "5.1.3.22"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_85",
+      "name": "3-dehydro-L-gulonate-6-phosphate decarboxylase",
+      "ec": [
+        "4.1.1.85"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "L-arabinitol 4-dehydrogenase",
-      "equation": "L-arabinitol + NAD(+) = L-xylulose + NADH + H(+)",
-      "ec": "1.1.1.12",
+      "name": "L-arabinitol 2-dehydrogenase",
+      "equation": "L-arabinitol + NAD(+) = L-ribulose + NADH + H(+)",
+      "ec": "1.1.1.13",
       "substrates": [
         {
           "metabolite": "l_arabinitol",
@@ -160,7 +169,7 @@
       ],
       "products": [
         {
-          "metabolite": "l_xylulose",
+          "metabolite": "l_ribulose",
           "stoichiometry": 1
         },
         {
@@ -174,32 +183,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_12"
+          "enzyme": "ec_1_1_1_13"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:16381"
+        "rhea": "RHEA:21356"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16381"
+            "id": "RHEA:21356"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "L-xylulokinase",
-      "equation": "L-xylulose + ATP = L-xylulose 5-phosphate + ADP + H(+)",
-      "ec": "2.7.1.53",
+      "name": "ribulokinase",
+      "equation": "L-ribulose + ATP = L-ribulose 5-phosphate + ADP + H(+)",
+      "ec": "2.7.1.16",
       "substrates": [
         {
-          "metabolite": "l_xylulose",
+          "metabolite": "l_ribulose",
           "stoichiometry": 1
         },
         {
@@ -209,7 +218,7 @@
       ],
       "products": [
         {
-          "metabolite": "l_xylulose_5_phosphate",
+          "metabolite": "l_ribulose_5_phosphate",
           "stoichiometry": 1
         },
         {
@@ -223,46 +232,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_53"
+          "enzyme": "ec_2_7_1_16"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:18869"
+        "rhea": "RHEA:22072"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18869"
+            "id": "RHEA:22072"
           }
         ]
       }
     },
     {
       "id": "r3",
-      "name": "L-xylulose reductase",
-      "equation": "xylitol + NADP(+) = L-xylulose + NADPH + H(+)",
-      "ec": "1.1.1.10",
+      "name": "L-ribulose-5-phosphate 3-epimerase",
+      "equation": "L-ribulose 5-phosphate = L-xylulose 5-phosphate",
+      "ec": "5.1.3.22",
       "substrates": [
         {
-          "metabolite": "xylitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
+          "metabolite": "l_ribulose_5_phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_xylulose",
+          "metabolite": "l_xylulose_5_phosphate",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "nadph",
+          "enzyme": "ec_5_1_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-dehydro-L-gulonate-6-phosphate decarboxylase",
+      "equation": "3-dehydro-L-gulonate 6-phosphate + H(+) = L-xylulose 5-phosphate + CO2",
+      "ec": "4.1.1.85",
+      "substrates": [
+        {
+          "metabolite": "3_dehydro_l_gulonate_6_phosphate",
           "stoichiometry": 1
         },
         {
@@ -270,22 +302,32 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "l_xylulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_10"
+          "enzyme": "ec_4_1_1_85"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:17025"
+        "rhea": "RHEA:14353"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17025"
+            "id": "RHEA:14353"
           }
         ]
       }

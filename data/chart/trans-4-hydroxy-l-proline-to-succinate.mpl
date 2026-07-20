@@ -4,33 +4,35 @@
 # edit the generator, not this file.
 
 pathway trans-4-hydroxy-l-proline-to-succinate "trans-4-hydroxy-L-proline to succinate" {
-  spacing 212
+  spacing 234
 
   spine at 0,0 {
     trans_4_hydroxy_l_proline
     <-> ec_4_2_1_172 [4.2.1.172] -h2o -hplus
     s_1_pyrroline_5_carboxylate
-    <-> . +arginine +sam +atp -amp -sah -ppi -h2o -hplus
-    peramine
-    <-> . +akg +o2 -succinate -co2
-    8_hydroxyperamine
+    <-> ec_2_3_1_226 [2.3.1.226] +malonyl-coa +h2o +hplus -co2 -coa
+    5s_5_carboxymethyl_l_proline
+    <-> ec_6_3_3_6 [6.3.3.6] +atp -amp -ppi -hplus
+    3s_5s_carbapenam_3_carboxylate
+    <-> ec_1_14_20_3 [1.14.20.3] +akg +o2 -succinate -co2 -h2o
+    5r_carbapenem_3_carboxylate
   }
 
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+  branch from 3s_5s_carbapenam_3_carboxylate side left {
+    3s_5s_carbapenam_3_carboxylate
+    <-> .
+    3s_5r_carbapenam
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_107 [2.7.7.107] +2_aminoethyl_phosphonic_acid +ctp
-    cmp_2_aminoethyl_phosphonate
+    <-> ec_4_2_3_209 [4.2.3.209] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    r_axinyssene
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +sphingofungin_b1 +akg +o2 +co2
-    sphingofungin_b
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_210 [4.2.3.210] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    lydicene
   }
 }

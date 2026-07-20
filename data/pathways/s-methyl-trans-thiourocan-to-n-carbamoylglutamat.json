@@ -85,23 +85,50 @@
       }
     },
     {
-      "id": "3_5_oxo_2_sulfanylideneimidazolidin_4_yl_propano",
-      "name": "3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propanoate",
-      "short": "3-(5-oxo-2-sulfanyl…",
-      "formula": "C6H7N2O3S",
-      "charge": -1,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:233560"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "h2s",
-      "name": "Hydrogen sulfide (H2S)",
-      "short": "Hydrogen sulfide…",
-      "formula": "HS",
-      "charge": -1,
+      "id": "n_carbamoyl_l_glutamate",
+      "name": "N-carbamoyl-L-glutamate",
+      "short": "N-carbamoyl-L-gluta…",
+      "formula": "C6H8N2O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:29919"
+        "chebi": "CHEBI:229697"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a",
+      "name": "3-(4-oxo-4,5-dihydro-1H-imidazol-5-yl)propanoic acid",
+      "short": "3-(4-oxo-4,5-dihydr…",
+      "formula": "C6H8N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1372141"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
       }
     }
   ],
@@ -222,15 +249,14 @@
     },
     {
       "id": "r4",
-      "name": "3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propanoate + H2O = hydantoin-5-propanoate + h...",
-      "equation": "3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propanoate + H2O = hydantoin-5-propanoate + hydrogen sulfide + H(+)",
+      "name": "Reaction MNXR109182",
       "substrates": [
         {
-          "metabolite": "3_5_oxo_2_sulfanylideneimidazolidin_4_yl_propano",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "n_carbamoyl_l_glutamate",
           "stoichiometry": 1
         }
       ],
@@ -240,25 +266,59 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2s",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:85571"
+        "metanetx": "MNXR109182"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85571"
+            "db": "MetaNetX",
+            "id": "MNXR109182"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR134189",
+      "substrates": [
+        {
+          "metabolite": "3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hydantoin_5_propionate",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR134189"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134189"
           }
         ]
       }

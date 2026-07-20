@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15 "1-stearoyl-2-(α-linolenoy… to (15Z)-12-oxophyto-10,15-d…" {
-  spacing 168
+  spacing 192
 
   spine at 0,0 {
     1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol
@@ -24,15 +24,21 @@ pathway 1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15 "1-stearoyl-2-(α-linole
     9s_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t
   }
 
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side right {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine
-    1_o_linoleoyl_n_acetylsphingosine
+  branch from linolenate side right {
+    linolenate
+    <-> . +o2
+    9z_11r_12z_15z_11_hydroperoxyoctadecatrienoate
   }
 
   branch from 9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t side left {
     9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t
     <-> . +h2o
     ectocarpin_a
+  }
+
+  branch from 9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t side right {
+    9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t
+    <-> .
+    plasmodiophorol_a
   }
 }

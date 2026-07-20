@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
-  spacing 232
+  spacing 262
 
   spine at 0,0 {
     valienol_1_phosphate
@@ -22,19 +22,31 @@ pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_117 [4.2.3.117] +gpp
-    camphene
+    <-> ec_4_2_3_47 [4.2.3.47] +fpp
+    trans_farnesene
   }
 
-  branch from validoxylamine_a side right {
+  branch from ppi side right {
+    ppi
+    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
+    2_trans_6_trans_farnesol
+  }
+
+  branch from validoxylamine_a side left {
     validoxylamine_a
     <-> . +akg +o2 +succinate +co2 +hplus
     validoxylamine_b
   }
 
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_n4 [1.14.11.n4] +l_aspartate +akg +o2 +co2
+    3s_3_hydroxy_l_aspartate
+  }
+
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_histidine +akg +o2 +co2
-    3s_3_hydroxy_l_histidine
+    <-> ec_1_14_20_4 [1.14.20.4] +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o
+    4_unsubstituted_3_hydroxyanthocyanidin_betaine
   }
 }

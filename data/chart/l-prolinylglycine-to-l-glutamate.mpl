@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-prolinylglycine-to-l-glutamate "L-prolinylglycine to L-glutamate" {
-  spacing 240
+  spacing 276
 
   spine at 0,0 {
     l_prolinylglycine
@@ -22,15 +22,33 @@ pathway l-prolinylglycine-to-l-glutamate "L-prolinylglycine to L-glutamate" {
     1_pyrroline_2_carboxylic_acid
   }
 
+  branch from l_proline side right {
+    l_proline
+    <-> . +l_tryptophan +atp +nadph +amp +ppi +nadp +h2o +hplus
+    s_3_indol_3_ylmethyl_6_7_8_8a_tetrahydropyrrolo
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +palmitoyl_coa +hplus +co2 +coa
+    1_deoxymethyl_3_dehydrosphinganine
+  }
+
   branch from glycine side right {
     glycine
-    <-> ec_2_3_1_192 [2.3.1.192] +phenylacetyl_coa +coa +hplus
-    phenylacetylglycine
+    <-> . +ala_gly +h2o
+    alanine
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
-    6_oxoparomamine
+    <-> ec_2_6_1_102 [2.6.1.102] +gdp_4_amino_4_6_dideoxy_d_mannose +akg
+    gdp_4_dehydro_6_deoxy_d_mannose
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +d_lysinium +akg
+    6_amino_2_oxohexanoic_acid
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "gibberellin-a53-to-succinate-60800",
   "name": "gibberellin A53 to succinate",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from gibberellin A53(2−) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -110,32 +110,114 @@
       }
     },
     {
-      "id": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
-      "name": "O-[S-(L-threonyl)pantetheine-4'-phosphoryl]-L-serine residue",
-      "short": "O-[S-(L-threonyl)pa…",
-      "formula": "C18H33N4O10PS",
-      "charge": 0,
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:144927"
+        "metanetx": "MNXM1368744"
       }
     },
     {
-      "id": "chloride",
-      "name": "chloride",
-      "formula": "Cl",
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM25"
+      }
+    },
+    {
+      "id": "gibberellin_a38",
+      "name": "Gibberellin A38",
+      "formula": "C20H25O6",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17996"
+        "chebi": "CHEBI:175651"
       }
     },
     {
-      "id": "o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl",
-      "name": "O-[S-(4-chloro-L-threonyl)pantetheine-4'-phosphoryl]-L-serine residue",
-      "short": "O-[S-(4-chloro-L-th…",
-      "formula": "C18H32ClN4O10PS",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:144979"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    },
+    {
+      "id": "trans_2_4_dihydroxy_cinnamoyl_coa",
+      "name": "trans-2,4-dihydroxy-cinnamoyl-CoA",
+      "short": "trans-2,4-dihydroxy…",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:142398"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "5s_5_hydroxy_l_lysinium",
+      "name": "(5S)-5-hydroxy-L-lysinium",
+      "short": "5-hydroxy-L-lysinium",
+      "formula": "C6H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141843"
+      }
+    },
+    {
+      "id": "gibberellin_a28",
+      "name": "gibberellin A28",
+      "formula": "C20H26O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24241"
       }
     }
   ],
@@ -148,10 +230,10 @@
       ]
     },
     {
-      "id": "ec_1_14_20_15",
-      "name": "L-threonyl-[L-threonyl-carrier protein] 4-chlorinase",
+      "id": "ec_1_14_11_62",
+      "name": "trans-4-coumaroyl-CoA 2'-hydroxylase",
       "ec": [
-        "1.14.20.15"
+        "1.14.11.62"
       ]
     }
   ],
@@ -313,16 +395,66 @@
     },
     {
       "id": "r4",
-      "name": "L-threonyl-[L-threonyl-carrier protein] 4-chlorinase",
-      "equation": "L-threonyl-[peptidyl-carrier protein] + chloride + 2-oxoglutarate + O2 + H(+) = 4-chloro-L-threonyl-[peptidyl-carrier protein] + succinate + CO2 + H2O",
-      "ec": "1.14.20.15",
+      "name": "Reaction MNXR121855",
       "substrates": [
         {
-          "metabolite": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
+          "metabolite": "2_oxoglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "chloride",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gibberellin_a44_2_diacid_form",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gibberellin_a38",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR121855"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "trans-4-coumaroyl-CoA 2'-hydroxylase",
+      "equation": "(E)-4-coumaroyl-CoA + 2-oxoglutarate + O2 = (E)-2,4-dihydroxycinnamoyl-CoA + succinate + CO2",
+      "ec": "1.14.11.62",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
           "stoichiometry": 1
         },
         {
@@ -332,15 +464,11 @@
         {
           "metabolite": "o2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl",
+          "metabolite": "trans_2_4_dihydroxy_cinnamoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -350,28 +478,121 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_20_15"
+          "enzyme": "ec_1_14_11_62"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:56812"
+        "rhea": "RHEA:57868"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56812"
+            "id": "RHEA:57868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-lysyl-[protein] + 2-oxoglutarate + O2 = (5S)-5-hydroxy-L-lysyl-[protein] + succinate ...",
+      "equation": "L-lysyl-[protein] + 2-oxoglutarate + O2 = (5S)-5-hydroxy-L-lysyl-[protein] + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_5_hydroxy_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:58360"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR121861",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a28",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "gibberellin_a17",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR121861"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121861"
           }
         ]
       }

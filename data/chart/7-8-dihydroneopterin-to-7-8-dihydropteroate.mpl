@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-8-dihydroneopterin-to-7-8-dihydropteroate "7,8-dihydroneopterin to 7,8-dihydropteroate" {
-  spacing 204
+  spacing 222
 
   spine at 0,0 {
     7_8_dihydroneopterin
@@ -20,5 +20,17 @@ pathway 7-8-dihydroneopterin-to-7-8-dihydropteroate "7,8-dihydroneopterin to 7,8
     7_8_dihydroneopterin_3_phosphate
     <-> ec_3_1_4_56 [3.1.4.56] +h2o +hplus
     7_8_dihydro_d_neopterin_2_3_cyclic_phosphate
+  }
+
+  branch from 7_8_dihydroneopterin_3_phosphate side right {
+    7_8_dihydroneopterin_3_phosphate
+    <-> ec_4_2_1_160 [4.2.1.160] +h2o
+    2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on
+  }
+
+  branch from glycolaldehyde_phosphate side left {
+    glycolaldehyde_phosphate
+    <-> ec_4_1_2_59 [4.1.2.59] +dihydroneopterin_phosphate
+    6_hydroxymethyl_7_8_dihydropterin
   }
 }

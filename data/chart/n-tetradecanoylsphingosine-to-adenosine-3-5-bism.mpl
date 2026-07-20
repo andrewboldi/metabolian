@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-tetradecanoylsphingosine-to-adenosine-3-5-bism "N-tetradecanoylsphingosine to adenosine 3',5'-bismonoph…" {
-  spacing 216
+  spacing 258
 
   spine at 0,0 {
     n_tetradecanoylsphingosine
@@ -18,19 +18,43 @@ pathway n-tetradecanoylsphingosine-to-adenosine-3-5-bism "N-tetradecanoylsphingo
 
   branch from sphingosine side left {
     sphingosine
-    <-> . +sphingosine_1_phosphocholine +h2o +hplus
-    phosphocholine
+    <-> . +c24_1_coa +coa +hplus
+    n_tetracosenoylsphingosine
   }
 
-  branch from tetradecanoate side right {
+  branch from sphingosine side right {
+    sphingosine
+    <-> . +n_icosanoylsphingosine +h2o
+    icosanoate
+  }
+
+  branch from tetradecanoate side left {
     tetradecanoate
     <-> . +h2o +coa +hplus
     myristoyl_coa
   }
 
+  branch from tetradecanoate side right {
+    tetradecanoate
+    <-> . +trimyristin +h2o +hplus
+    2_3_dimyristoyl_sn_glycerol
+  }
+
+  branch from psychosine side left {
+    psychosine
+    <-> . +h2o +sphingosine
+    d_galactopyranose
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_28 [2.8.2.28] +quercetin_3_3_bissulfate +3_phosphonato_5_adenylyl_sulfate +hplus
+    quercetin_3_3_7_trissulfate
+  }
+
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_9 [2.8.2.9] +methyl_l_tyrosinate +3_phosphonato_5_adenylyl_sulfate +hplus
-    l_tyrosine_methyl_ester_4_sulfate
+    <-> ec_2_8_2_26 [2.8.2.26] +quercetin_3_sulfate +3_phosphonato_5_adenylyl_sulfate +hplus
+    quercetin_3_3_bissulfate
   }
 }

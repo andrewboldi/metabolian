@@ -171,67 +171,23 @@
       }
     },
     {
-      "id": "preandiloid_b",
-      "name": "preandiloid B",
-      "formula": "C25H32O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:232433"
-      }
-    },
-    {
-      "id": "preandiloid_c",
-      "name": "preandiloid C",
-      "formula": "C25H30O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:232434"
-      }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "3_5_dimethylorsellinate",
-      "name": "3,5-dimethylorsellinate",
-      "short": "3,5-dimethylorselli…",
-      "formula": "C10H11O4",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:131856"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:74483"
       }
     }
   ],
@@ -445,90 +401,86 @@
     },
     {
       "id": "r5",
-      "name": "preandiloid B + A = preandiloid C + AH2",
-      "equation": "preandiloid B + A = preandiloid C + AH2",
+      "name": "cytidine(72) in tRNA(Cys) + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA(Cys)...",
+      "equation": "cytidine(72) in tRNA(Cys) + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA(Cys) + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "preandiloid_b",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "preandiloid_c",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:82631"
+        "rhea": "RHEA:61584"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82631"
+            "id": "RHEA:61584"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "3 malonyl-CoA + acetyl-CoA + 2 S-adenosyl-L-methionine = 3,5-dimethylorsellinate + 2 S-...",
-      "equation": "3 malonyl-CoA + acetyl-CoA + 2 S-adenosyl-L-methionine = 3,5-dimethylorsellinate + 2 S-adenosyl-L-homocysteine + 3 CO2 + 4 CoA",
+      "name": "cytidine(72) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA + S-adeno...",
+      "equation": "cytidine(72) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "acetyl_coa",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_5_dimethylorsellinate",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 4
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:49628"
+        "rhea": "RHEA:61988"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49628"
+            "id": "RHEA:61988"
           }
         ]
       }

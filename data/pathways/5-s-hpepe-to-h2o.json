@@ -1,0 +1,497 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-s-hpepe-to-h2o",
+  "name": "5(S)-HpEPE to H2O",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 5(S)-HpEPE(1−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:85591"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195399"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_s_hpepe",
+      "name": "5(S)-HpEPE",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:195399"
+      }
+    },
+    {
+      "id": "leukotriene_a5",
+      "name": "leukotriene A5",
+      "formula": "C20H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:234473"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "leukotriene_b5",
+      "name": "leukotriene B5",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133302"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "octyl_alpha_d_mannopyranoside",
+      "name": "octyl alpha-D-mannopyranoside",
+      "short": "octyl alpha-D-manno…",
+      "formula": "C14H28O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM65379"
+      }
+    },
+    {
+      "id": "octyl_alpha_d_galactopyranoside",
+      "name": "octyl alpha-D-galactopyranoside",
+      "short": "octyl alpha-D-galac…",
+      "formula": "C14H28O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM521805"
+      }
+    },
+    {
+      "id": "octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid",
+      "name": "octyl 2-acetamido-2-deoxy-alpha-D-glucopyranoside",
+      "short": "octyl 2-acetamido-2…",
+      "formula": "C16H31NO6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107589"
+      }
+    },
+    {
+      "id": "lipid_a_e_coli",
+      "name": "lipid A (E. coli)",
+      "formula": "C94H178N2O25P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134256"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_3_39",
+      "name": "EC 3.6.3.39",
+      "ec": [
+        "3.6.3.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z,17Z)-eicosapentaenoate = leukotriene A5 + H2O",
+      "equation": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z,17Z)-eicosapentaenoate = leukotriene A5 + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_s_hpepe",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leukotriene_a5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:85591"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "leukotriene A5 + H2O = leukotriene B5",
+      "equation": "leukotriene A5 + H2O = leukotriene B5",
+      "substrates": [
+        {
+          "metabolite": "leukotriene_a5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leukotriene_b5",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:85599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR155187",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "leukotriene_b5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "leukotriene_b5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR155187"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR155187"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR174990",
+      "ec": "3.6.3.39",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octyl_alpha_d_mannopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octyl_alpha_d_mannopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR174990"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174990"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR174991",
+      "ec": "3.6.3.39",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octyl_alpha_d_galactopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octyl_alpha_d_galactopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR174991"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR174992",
+      "ec": "3.6.3.39",
+      "substrates": [
+        {
+          "metabolite": "octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR174992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR174993",
+      "ec": "3.6.3.39",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lipid_a_e_coli",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lipid_a_e_coli",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR174993"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174993"
+          }
+        ]
+      }
+    }
+  ]
+}

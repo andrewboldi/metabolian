@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n1-s-3-amino-3-carboxy-to-ammonium "N1-[(S)-3-amino-3-carboxy… to ammonium" {
-  spacing 224
+  spacing 260
 
   spine at 0,0 {
     n1_s_3_amino_3_carboxypropyl_agmatine
@@ -12,19 +12,45 @@ pathway n1-s-3-amino-3-carboxy-to-ammonium "N1-[(S)-3-amino-3-carboxy… to ammo
     n1_aminopropylagmatine
     <-> ec_3_5_3_24 [3.5.3.24] +h2o -spermidine
     urea
-    <-> . +hplus -nh3
-    isocyanic_acid
+    <-> ec_6_3_4_6 [6.3.4.6] +hco3 +atp -adp -pi -hplus
+    urea_1_carboxylate
+    <-> ec_3_5_1_54 [3.5.1.54] +h2o +hplus -co2
+    nh3
+  }
+
+  branch from n1_aminopropylagmatine side left {
+    n1_aminopropylagmatine
+    <-> ec_2_5_1_104 [2.5.1.104] +s_adenosylmethioninaminium +agmatinium +hplus
+    5_s_methyl_5_thioadenosine
+  }
+
+  branch from n1_aminopropylagmatine side right {
+    n1_aminopropylagmatine
+    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from spermidine side left {
     spermidine
-    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
-    n8_acetylspermidinium
+    <-> ec_1_5_3_14 [1.5.3.14] +o2 +h2o +trimethylenediaminium +h2o2
+    4_ammoniobutanal
+  }
+
+  branch from spermidine side right {
+    spermidine
+    <-> . +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    n4_aminopropylspermidine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +s_isoleucinol +nad +h2o +nadh +hplus
+    3s_1_hydroxy_3_methylpentan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nadp +h2o +nadph +hplus
-    ketone
+    <-> . +s_methioninol +nad +h2o +nadh +hplus
+    1_hydroxy_4_methythio_butan_2_one
   }
 }

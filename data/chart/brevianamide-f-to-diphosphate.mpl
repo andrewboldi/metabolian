@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     brevianamide_f
@@ -32,33 +32,57 @@ pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
     demethoxyfumitremorgin_c
   }
 
+  branch from tryprostatin_b side right {
+    tryprostatin_b
+    <-> ec_1_14_13_176 [1.14.13.176] +h +o2 +nadph +6_hydroxytryprostatin_b +h2o
+    nadp
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +all_trans_pentaprenyl_diphosphate
+    fusoxypene_b
+  }
+
   branch from ppi side right {
     ppi
-    <-> . +icosanoate +atp +hplus
-    icosanoyl_amp
+    <-> . +all_trans_pentaprenyl_diphosphate
+    fusoxypene_c
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_73 [1.14.14.73] +fenbendazole +fmnh2 +o2 +h2o +hplus
-    oxfendazole
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    10_hydroxymyristate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    11_hydroxymyristate
+  }
+
+  branch from tryprostatin_a side left {
+    tryprostatin_a
+    <-> ec_1_14_21_10 [1.14.21.10] +fumitremorgin_c +nadp +h2o +o2 +nadph
+    h
   }
 
   branch from sah side right {
     sah
-    <-> . +ribonucleotide +sam +hplus
-    2_o_methylribonucleotide_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +gardenin_b +akg +o2 +formaldehyde +co2 +hplus
-    nevadensin_7_olate
+  branch from sah side left {
+    sah
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +preandiloid_a +hydrogen_donor
-    preandiloid_b
+  branch from fumitremorgin_c side right {
+    fumitremorgin_c
+    <-> ec_1_14_13_177 [1.14.13.177] +h +o2 +nadph +12_13_dihydroxyfumitremorgin_c +nadp
+    h2o
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acetyl-l-valinate-to-n-hydroxy-2-methylpropana",
   "name": "N-acetyl-L-valinate to N-hydroxy-2-methylpropana…",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from N-acetyl-L-valinate to N-hydroxy-2-methylpropanamine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,58 +120,21 @@
       }
     },
     {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
+      "id": "valacyclovir",
+      "name": "valacyclovir",
+      "formula": "C13H21N6O4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32682"
+        "chebi": "CHEBI:233453"
       }
     },
     {
-      "id": "n_amidino_l_valine",
-      "name": "N-amidino-L-valine",
-      "formula": "C6H13N3O2",
+      "id": "acyclovir",
+      "name": "acyclovir",
+      "formula": "C8H11N5O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:232085"
-      }
-    },
-    {
-      "id": "ornithine",
-      "name": "L-Ornithine",
-      "formula": "C5H13N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:46911"
-      }
-    },
-    {
-      "id": "e_e_piperonyl_coa",
-      "name": "(E,E)-piperonyl-CoA",
-      "formula": "C33H40N7O19P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57325"
-      }
-    },
-    {
-      "id": "e_e_piperlonguminine",
-      "name": "(E,E)-Piperlonguminine",
-      "short": "(E,E)-Piperlongumin…",
-      "formula": "C16H19NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:173942"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:2453"
       }
     }
   ],
@@ -188,13 +151,6 @@
       "name": "isobutylamine N-monooxygenase",
       "ec": [
         "1.14.14.30"
-      ]
-    },
-    {
-      "id": "ec_2_1_4_4",
-      "name": "valine amidinotransferase",
-      "ec": [
-        "2.1.4.4"
       ]
     }
   ],
@@ -342,70 +298,25 @@
     },
     {
       "id": "r4",
-      "name": "valine amidinotransferase",
-      "equation": "L-valine + L-arginine = N-amidino-L-valine + L-ornithine",
-      "ec": "2.1.4.4",
+      "name": "valacyclovir + H2O = acyclovir + L-valine + H(+)",
+      "equation": "valacyclovir + H2O = acyclovir + L-valine + H(+)",
       "substrates": [
+        {
+          "metabolite": "valacyclovir",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acyclovir",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "valine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_amidino_l_valine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ornithine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_4_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:82195"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:82195"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(E,E)-piperoyl-CoA + 2-methylpropan-1-amine = (E,E)-piperlonguminine + CoA + H(+)",
-      "equation": "(E,E)-piperoyl-CoA + 2-methylpropan-1-amine = (E,E)-piperlonguminine + CoA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "e_e_piperonyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_methylpropanaminium",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "e_e_piperlonguminine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
@@ -414,16 +325,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:73667"
+        "rhea": "RHEA:83871"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73667"
+            "id": "RHEA:83871"
           }
         ]
       }

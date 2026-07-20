@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-iodo-l-thyronine-to-hydrogen-donor "3'-iodo-L-thyronine to hydrogen donor" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     3_iodo_l_thyronine
@@ -12,11 +12,39 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor "3'-iodo-L-thyronine to hydrogen do
     3_5_diiodo_l_thyronine
     <-> . +iodide +hydrogen_acceptor +hplus -hydrogen_donor
     3_3_5_triiodo_l_thyronine
+    <-> . +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
+    3_3_5_triiodo_l_thyronine_sulfate
+    <-> . +iodide +hydrogen_acceptor +hplus -hydrogen_donor
+    l_thyroxine_sulfate
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +chrodrimanin_f +hydrogen_acceptor
-    chrodrimanin_h
+    <-> . +coniferin +hydrogen_acceptor
+    coniferaldehyde_d_glucoside
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +urobilinogen +hydrogen_acceptor
+    bilirubin
+  }
+
+  branch from 3_3_5_triiodo_l_thyronine_sulfate side left {
+    3_3_5_triiodo_l_thyronine_sulfate
+    <-> . +iodide +hydrogen_acceptor +hplus +hydrogen_donor
+    3_3_diiodo_l_thyronine_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +hexanoyl_coa +h2o +hplus
+    s_hexanoyl_4_phosphopantetheine
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +octanoyl_coa +h2o +hplus
+    s_octanoyl_4_phosphopantetheine
   }
 }

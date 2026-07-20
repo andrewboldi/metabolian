@@ -113,6 +113,45 @@
       "xrefs": {
         "chebi": "CHEBI:57387"
       }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "pc_18_2_9z_12z_18_1_9z",
+      "name": "PC(18:2(9Z,12Z)/18:1(9Z))",
+      "short": "PC(18:2(9Z,12Z)/18:…",
+      "formula": "C44H82NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89597"
+      }
+    },
+    {
+      "id": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+      "name": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "1-octadecanoyl-2-(9…",
+      "formula": "C42H80O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:72845"
+      }
+    },
+    {
+      "id": "2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol",
+      "name": "2-oleoyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "2-oleoyl-sn-glycero…",
+      "formula": "C24H46O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141490"
+      }
     }
   ],
   "enzymes": [],
@@ -269,6 +308,84 @@
           {
             "db": "Rhea",
             "id": "RHEA:86879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + (9Z,12Z)-octadecadienoyl-CoA = 1-(9Z,...",
+      "equation": "2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + (9Z,12Z)-octadecadienoyl-CoA = 1-(9Z,12Z-octadecadienoyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_oleoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pc_18_2_9z_12z_18_1_9z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:86895"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86895"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + N-(acetyl)-s...",
+      "equation": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + N-(acetyl)-sphing-4-enine = 2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + 1-octadecanoyl-N-(acetyl)-sphing-4-enine",
+      "substrates": [
+        {
+          "metabolite": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetylsphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_stearoyl_n_acetylsphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:57144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57144"
           }
         ]
       }

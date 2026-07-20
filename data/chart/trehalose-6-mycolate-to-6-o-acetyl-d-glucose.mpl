@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose "α,α'-trehalose 6-mycolate to 6-O-acetyl-β-D-glucose" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     trehalose_6_mycolate
@@ -20,8 +20,20 @@ pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose "α,α'-trehalose 6-mycolat
 
   branch from trehalose side left {
     trehalose
+    <-> ec_3_1_3_12 [3.1.3.12] +h2o +pi
+    trehalose_6_phosphate
+  }
+
+  branch from trehalose side right {
+    trehalose
     <-> . +palmitoyl_coa +coa
     2_o_palmitoyl_trehalose
+  }
+
+  branch from d_glucose side left {
+    d_glucose
+    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +h2o
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 
   branch from d_glucose side right {
@@ -32,13 +44,25 @@ pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose "α,α'-trehalose 6-mycolat
 
   branch from g1p side left {
     g1p
-    <-> . +maltotetraose +pi
-    maltotriose
+    <-> . +maltopentaose +pi
+    maltotetraose
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> . +maltohexaose +pi
+    maltopentaose
+  }
+
+  branch from d_glucose side left {
+    d_glucose
+    <-> . +sucrose
+    6_kestotriose
   }
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +sucrose
-    6_kestotriose
+    <-> . +6_kestotriose +sucrose
+    6_6_kestotetraose
   }
 }

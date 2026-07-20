@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-leucyl-o-isoindolinone-to-hydrogen-donor",
+  "name": "L-leucyl-(O-isoindolinone… to hydrogen donor",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-leucyl-(O-isoindolinone)-L-homoserine zwitterion to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:85815"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:234545"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_leucyl_o_isoindolinone_l_homoserine",
+      "name": "L-leucyl-(O-isoindolinone)-L-homoserine",
+      "short": "L-leucyl-(O-isoindo…",
+      "formula": "C19H27N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234545"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o_isoindolinone_l_homoserine",
+      "name": "O-isoindolinone-L-homoserine",
+      "short": "O-isoindolinone-L-h…",
+      "formula": "C13H16N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234544"
+      }
+    },
+    {
+      "id": "leucine",
+      "name": "L-Leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57427"
+      }
+    },
+    {
+      "id": "d_leucine",
+      "name": "D-leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143079"
+      }
+    },
+    {
+      "id": "d_allothreonine",
+      "name": "D-allothreonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58645"
+      }
+    },
+    {
+      "id": "d_alanine",
+      "name": "D-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57416"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60039"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "fusahexin",
+      "name": "fusahexin",
+      "formula": "C30H50N6O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:191392"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-leucyl-(O-isoindolinone)-L-homoserine + H2O = O-isoindolinone-L-homoserine + L-leucine",
+      "equation": "L-leucyl-(O-isoindolinone)-L-homoserine + H2O = O-isoindolinone-L-homoserine + L-leucine",
+      "substrates": [
+        {
+          "metabolite": "l_leucyl_o_isoindolinone_l_homoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_isoindolinone_l_homoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:85815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-leucine = D-leucine",
+      "equation": "L-leucine = D-leucine",
+      "substrates": [
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_leucine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59396"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-allo-threonine + D-leucine + D-alanine + L-proline + 2 L-leucine + A = fusahexin + AH...",
+      "equation": "D-allo-threonine + D-leucine + D-alanine + L-proline + 2 L-leucine + A = fusahexin + AH2 + 6 H2O",
+      "substrates": [
+        {
+          "metabolite": "d_allothreonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fusahexin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 6
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:72047"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72047"
+          }
+        ]
+      }
+    }
+  ]
+}

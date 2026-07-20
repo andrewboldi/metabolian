@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact…" {
-  spacing 228
+  spacing 264
 
   spine at 0,0 {
     n_feruloylglycinate
@@ -18,8 +18,20 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
 
   branch from trans_ferulate side left {
     trans_ferulate
-    <-> ec_1_2_1_68 [1.2.1.68] +nad +h2o +nadh +hplus
-    coniferyl_aldehyde
+    <-> ec_4_1_2_65 [4.1.2.65] +h2o +acetate
+    vanillin
+  }
+
+  branch from trans_ferulate side right {
+    trans_ferulate
+    <-> . +h2o
+    3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_2_6_1_60 [2.6.1.60] +aromatic_l_amino_acid +glyoxylate
+    aromatic_2_oxo_monocarboxylic_acid_anion
   }
 
   branch from glycine side right {
@@ -29,6 +41,12 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
   }
 
   branch from trans_feruloyl_coa side left {
+    trans_feruloyl_coa
+    <-> ec_2_1_1_104 [2.1.1.104] +trans_caffeoyl_coa +sam +hplus
+    sah
+  }
+
+  branch from trans_feruloyl_coa side right {
     trans_feruloyl_coa
     <-> ec_1_14_11_61 [1.14.11.61] +akg +o2 +succinate +co2
     trans_6_hydroxyferuloyl_coa

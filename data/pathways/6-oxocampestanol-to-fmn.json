@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6-oxocampestanol-to-fmn",
   "name": "6-oxocampestanol to FMN",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 6-oxocampestanol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,23 +100,87 @@
       }
     },
     {
-      "id": "1_o_oleoyl_sn_glycero_3_phosphocholine",
-      "name": "1-O-oleoyl-sn-glycero-3-phosphocholine",
-      "short": "1-O-oleoyl-sn-glyce…",
-      "formula": "C26H52NO7P",
-      "charge": 0,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:28610"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho",
-      "name": "1-O-[(9R,10S)-epoxystearoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-O-[(9R,10S)-epoxy…",
-      "formula": "C26H52NO8P",
+      "id": "3s_5s_8s_9s_10r_13r_17r_17_2r_5r_5_6_dimethylhe",
+      "name": "(3S,5S,8S,9S,10R,13R,17R)-17-[(2R,5R)-5,6-Dimethylheptan-2-yl]-3-hydroxy-10,13-dimethyl-1,2,3,4,5,7,8,9,11,12,14,15,16,17-tetradecahydrocyclopenta[a]phenanthren-6-one",
+      "short": "(3S,5S,8S,9S,10R,13…",
+      "formula": "C28H48O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132280"
+        "chebi": "CHEBI:181387"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "25_hydroxycholesterol",
+      "name": "25-hydroxycholesterol",
+      "short": "25-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:42977"
+      }
+    },
+    {
+      "id": "hydroxycholesterol_27",
+      "name": "27-Hydroxycholesterol",
+      "short": "27-Hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17703"
       }
     },
     {
@@ -135,13 +199,6 @@
       "name": "brassinolide synthase",
       "ec": [
         "1.14.14.180"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_179",
-      "name": "brassinosteroid 6-oxygenase",
-      "ec": [
-        "1.14.14.179"
       ]
     }
   ],
@@ -307,11 +364,61 @@
     },
     {
       "id": "r4",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase] + O2 = 1-[(9R,10S)-epoxy-octadecanoyl]-sn-glycero-3-phosphocholine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "Reaction MNXR149916",
       "substrates": [
         {
-          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3s_5s_8s_9s_10r_13r_17r_17_2r_5r_5_6_dimethylhe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cathasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR149916"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR149916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 25-hydroxycholesterol + oxi...",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 25-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
@@ -325,7 +432,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho",
+          "metabolite": "25_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -342,37 +449,82 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50320"
+        "rhea": "RHEA:50256"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50320"
+            "id": "RHEA:50256"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "brassinosteroid 6-oxygenase",
-      "equation": "6-deoxoteasterone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = teasterone + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.179",
+      "id": "r6",
+      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxi...",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxycholesterol_27",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:50264"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR135553",
       "substrates": [
         {
           "metabolite": "6_deoxoteasterone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
@@ -381,34 +533,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "h2o",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_179"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:70043"
+        "metanetx": "MNXR135553"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70043"
+            "db": "MetaNetX",
+            "id": "MNXR135553"
           }
         ]
       }

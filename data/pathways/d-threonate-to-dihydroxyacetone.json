@@ -1,0 +1,340 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-threonate-to-dihydroxyacetone",
+  "name": "D-threonate to dihydroxyacetone",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-threonate to dihydroxyacetone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52388"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:45912"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_threonate",
+      "name": "D-threonate",
+      "formula": "C4H7O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:45912"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "4_o_phosphonato_d_threonate",
+      "name": "4-O-phosphonato-D-threonate",
+      "short": "4-O-phosphonato-D-t…",
+      "formula": "C4H6O8P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:136590"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "dhap",
+      "name": "Dihydroxyacetone phosphate",
+      "short": "Dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57642"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dihydroxyacetone",
+      "name": "dihydroxyacetone",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16016"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "s_2_hydroxy_3_oxo_4_phosphonatooxy_butanoate",
+      "name": "(S)-2-hydroxy-3-oxo-4-(phosphonatooxy)butanoate",
+      "short": "2-hydroxy-3-oxo-4-(…",
+      "formula": "C4H4O8P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:136592"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_219",
+      "name": "D-threonate 4-kinase",
+      "ec": [
+        "2.7.1.219"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_408",
+      "name": "4-phospho-D-threonate 3-dehydrogenase",
+      "ec": [
+        "1.1.1.408"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-threonate 4-kinase",
+      "equation": "D-threonate + ATP = 4-O-phospho-D-threonate + ADP + H(+)",
+      "ec": "2.7.1.219",
+      "substrates": [
+        {
+          "metabolite": "d_threonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_phosphonato_d_threonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_219"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-phospho-D-threonate 3-dehydrogenase",
+      "equation": "4-O-phospho-D-threonate + NAD(+) = dihydroxyacetone phosphate + CO2 + NADH",
+      "ec": "1.1.1.408",
+      "substrates": [
+        {
+          "metabolite": "4_o_phosphonato_d_threonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_408"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52396"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dihydroxyacetone phosphate + H2O = dihydroxyacetone + phosphate",
+      "equation": "dihydroxyacetone phosphate + H2O = dihydroxyacetone + phosphate",
+      "substrates": [
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51728"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4-O-phospho-D-threonate + NAD(+) = 3-dehydro-4-O-phospho-L-erythronate + NADH + H(+)",
+      "equation": "4-O-phospho-D-threonate + NAD(+) = 3-dehydro-4-O-phospho-L-erythronate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_o_phosphonato_d_threonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_hydroxy_3_oxo_4_phosphonatooxy_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52400"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52400"
+          }
+        ]
+      }
+    }
+  ]
+}

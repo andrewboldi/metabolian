@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     allocholate
@@ -26,15 +26,33 @@ pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
     ppi
   }
 
-  branch from chenodeoxycholate side right {
+  branch from lithocholate side right {
+    lithocholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    lithocholate_sulfate
+  }
+
+  branch from chenodeoxycholate side left {
     chenodeoxycholate
     <-> . +nadp +nadph +hplus
     7_hydroxy_3_oxo_5_cholan_24_oate
+  }
+
+  branch from chenodeoxycholate side right {
+    chenodeoxycholate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    muricholate
   }
 
   branch from ursodeoxycholate side left {
     ursodeoxycholate
     <-> . +allodeoxycholoyl_coa +allodeoxycholate
     ursodeoxycholoyl_coa
+  }
+
+  branch from ursodeoxycholate side right {
+    ursodeoxycholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    ursodeoxycholate_3_sulfate
   }
 }

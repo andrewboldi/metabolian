@@ -129,12 +129,49 @@
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57384"
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1",
+      "name": "O-[S-(L-lysyl)pantetheine-4'-phosphoryl]-L-serine(1+)",
+      "short": "O-[S-(L-lysyl)pante…",
+      "formula": "C20H39N5O9PS",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:192518"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "l_lysyl_5_amp",
+      "name": "L-lysyl-5'-AMP",
+      "formula": "C16H27N7O8P",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:176581"
       }
     },
     {
@@ -145,57 +182,17 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "o_3r_atrochrysone_carboxylpantetheine_4_phosphor",
-      "name": "O-((3R)-atrochrysone carboxylpantetheine-4'-phosphoryl)-L-serine(1−)",
-      "short": "O-((3R)-atrochryson…",
-      "formula": "C30H37N3O14PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:234110"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "2_deoxyadenosine_5_monophosphate",
-      "name": "2'-deoxyadenosine 5'-monophosphate",
-      "short": "2'-deoxyadenosine…",
-      "formula": "C10H12N5O6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58245"
-      }
-    },
-    {
-      "id": "chloride",
-      "name": "chloride",
-      "formula": "Cl",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:17996"
-      }
-    },
-    {
-      "id": "2_chloro_deoxyadenosine_5_monophosphate",
-      "name": "2'-chloro-deoxyadenosine 5'-monophosphate",
-      "short": "2'-chloro-deoxyaden…",
-      "formula": "C10H11ClN5O6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:231721"
-      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_6_2_1_77",
+      "name": "L-lysine--[L-lysyl-carrier protein] ligase",
+      "ec": [
+        "6.2.1.77"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -328,74 +325,78 @@
     },
     {
       "id": "r4",
-      "name": "holo-[ACP] + 8 malonyl-CoA + 8 H(+) = (3R)-atrochrysone 2-carbonyl-[ACP] + 8 CO2 + 8 Co...",
-      "equation": "holo-[ACP] + 8 malonyl-CoA + 8 H(+) = (3R)-atrochrysone 2-carbonyl-[ACP] + 8 CO2 + 8 CoA + 2 H2O",
+      "name": "L-lysine--[L-lysyl-carrier protein] ligase",
+      "equation": "holo-[peptidyl-carrier protein] + L-lysine + ATP = L-lysyl-[peptidyl-carrier protein] + AMP + diphosphate",
+      "ec": "6.2.1.77",
       "substrates": [
         {
           "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 8
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 8
+          "metabolite": "atp",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_3r_atrochrysone_carboxylpantetheine_4_phosphor",
+          "metabolite": "o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 8
+          "metabolite": "amp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
-          "stoichiometry": 8
-        },
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "enzyme": "ec_6_2_1_77"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:64232"
+        "rhea": "RHEA:82147"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64232"
+            "id": "RHEA:82147"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "dAMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dAMP + succinate + CO2 + H2O",
-      "equation": "dAMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dAMP + succinate + CO2 + H2O",
+      "name": "L-lysyl-5'-AMP + holo-[peptidyl-carrier protein] = L-lysyl-[peptidyl-carrier protein] +...",
+      "equation": "L-lysyl-5'-AMP + holo-[peptidyl-carrier protein] = L-lysyl-[peptidyl-carrier protein] + AMP + H(+)",
       "substrates": [
         {
-          "metabolite": "2_deoxyadenosine_5_monophosphate",
+          "metabolite": "l_lysyl_5_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "chloride",
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -403,35 +404,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "2_chloro_deoxyadenosine_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:81831"
+        "rhea": "RHEA:82155"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:81831"
+            "id": "RHEA:82155"
           }
         ]
       }

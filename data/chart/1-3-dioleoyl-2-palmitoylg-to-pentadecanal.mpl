@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… to pentadecanal" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     1_3_dioleoyl_2_palmitoylglycerol
@@ -18,19 +18,31 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… 
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoyl_sn_glycerol +h2o +hplus
+    <-> . +1_2_dioleoylglycerol +h2o +hplus
     2_oleoylglycerol
   }
 
-  branch from 1_oleoylglycerone_3_phosphate side right {
+  branch from oleate side right {
+    oleate
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 1_oleoylglycerone_3_phosphate side left {
     1_oleoylglycerone_3_phosphate
     <-> . +nadp +nadph +hplus
     1_oleoyl_sn_glycero_3_phosphate
   }
 
-  branch from palmitate side left {
+  branch from palmitate side right {
     palmitate
     <-> . +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine +h2o +hplus
     2_acyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
+    2_arachidonoyl_sn_glycero_3_phosphocholine
   }
 }

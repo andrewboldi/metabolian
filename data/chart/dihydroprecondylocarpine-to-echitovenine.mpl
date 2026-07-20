@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroprecondylocarpine-to-echitovenine "dihydroprecondylocarpine… to (+)-echitovenine" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     dihydroprecondylocarpine_acetate
@@ -18,7 +18,13 @@ pathway dihydroprecondylocarpine-to-echitovenine "dihydroprecondylocarpine… to
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_28 [1.14.14.28] +long_chain_alkane +fmnh2 +o2 +h2o +hplus
-    long_chain_fatty_alcohol
+    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
+    5_20_dihete
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +8_hete +fmnh2 +o2 +h2o +hplus
+    8_20_dihete
   }
 }

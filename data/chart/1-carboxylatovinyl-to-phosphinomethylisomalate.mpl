@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-carboxylatovinyl-to-phosphinomethylisomalate "1-carboxylatovinyl… to phosphinomethylisomalate" {
-  spacing 256
+  spacing 262
 
   spine at 0,0 {
     1_carboxylatovinyl_carboxylatophosphonate
@@ -14,5 +14,11 @@ pathway 1-carboxylatovinyl-to-phosphinomethylisomalate "1-carboxylatovinyl… to
     2_phosphinomethylmalate
     <-> ec_4_2_1_166 [4.2.1.166]
     phosphinomethylisomalate
+  }
+
+  branch from 2_phosphinomethylmalate side left {
+    2_phosphinomethylmalate
+    <-> . +h2o
+    2_phosphinatomethylidene_succinate
   }
 }

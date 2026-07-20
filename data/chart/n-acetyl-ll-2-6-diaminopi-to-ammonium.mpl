@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to ammonium" {
-  spacing 204
+  spacing 240
 
   spine at 0,0 {
     n_acetyl_ll_2_6_diaminopimelate
@@ -18,8 +18,20 @@ pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to a
 
   branch from acetate side left {
     acetate
-    <-> . +n_acetyl_l_aspartate +h2o
-    aspartate
+    <-> . +o2 +pi +hplus
+    1r_1_hydroxyethyl_phosphonate
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_4_1_2_65 [4.1.2.65] +4_o_d_glucosyl_trans_ferulate +h2o
+    glucovanillin
+  }
+
+  branch from meso_2_6_diaminopimelic_acid_dizwitterion side left {
+    meso_2_6_diaminopimelic_acid_dizwitterion
+    <-> ec_4_1_1_20 [4.1.1.20] +hplus +co2
+    l_lysinium
   }
 
   branch from meso_2_6_diaminopimelic_acid_dizwitterion side right {
@@ -30,7 +42,13 @@ pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to a
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_24 [4.3.1.24] +l_phenylalanine
-    trans_cinnamate
+    <-> ec_4_3_1_19 [4.3.1.19] +threonine
+    oxobut
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_53 [3.5.1.53] +n_carbamoylputrescinium +h2o +hplus +co2
+    1_4_butanediammonium
   }
 }

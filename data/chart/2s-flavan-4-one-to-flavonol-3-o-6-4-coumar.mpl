@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavonol 3-O-[6-(4-coumar…" {
-  spacing 256
+  spacing 298
 
   spine at 0,0 {
     2s_flavan_4_one
@@ -30,19 +30,37 @@ pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavono
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
-    3s_3_hydroxy_l_arginine
+    <-> ec_1_14_11_46 [1.14.11.46] +2_aminoethyl_phosphonic_acid +akg +o2 +co2
+    1r_2_amino_1_hydroxyethyl_phosphonate
   }
 
-  branch from flavonols side left {
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_45 [1.14.11.45] +isoleucine +akg +o2 +co2
+    4s_4_hydroxy_l_isoleucine
+  }
+
+  branch from flavonols side right {
     flavonols
     <-> ec_3_2_1_62 [3.2.1.62] +flavonol_3_o_d_glucoside +h2o
     glucose
   }
 
-  branch from flavonol_3_o_d_glucoside side right {
+  branch from flavonol_3_o_d_glucoside side left {
     flavonol_3_o_d_glucoside
     <-> ec_2_3_1_116 [2.3.1.116] +malonyl-coa +coa
     flavonol_3_o_6_o_malonyl_d_glucoside
+  }
+
+  branch from flavonol_3_o_d_glucoside side right {
+    flavonol_3_o_d_glucoside
+    <-> ec_2_4_1_159 [2.4.1.159] +udp_l_rhamnose +udp +hplus
+    flavonol_3_o_l_rhamnosyl_1_6_d_glucoside_s
+  }
+
+  branch from flavonol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_glu side left {
+    flavonol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_glu
+    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +flavonol_3_o_6_4_coumaroyl_d_glucosyl_1_2_d_gluc
+    coa
   }
 }

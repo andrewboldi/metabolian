@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetylsalicylate-to-acetate "acetylsalicylate to acetate" {
-  spacing 224
+  spacing 260
 
   spine at 0,0 {
     acetylsalicylate
@@ -16,27 +16,39 @@ pathway acetylsalicylate-to-acetate "acetylsalicylate to acetate" {
     adp_d_ribose
   }
 
-  branch from salicylate side left {
-    salicylate
-    <-> . +udp_d_glucose +udp +hplus
-    2_d_glucopyranosyloxy_benzoate
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +l_asparagine +nad +hplus
+    n4_adp_d_ribosyl_l_asparagine_2
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_acyl_l_lysine +nad +h2o +l_lysinium
-    o_acyl_adp_d_ribose
+    <-> . +l_serine +nad +hplus
+    o_adp_d_ribosyl_l_serine_2
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_1_1_127 [2.1.1.127] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +sam +sah +hplus
+    n6_methyl_l_lysinium
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> . +glyoxal
+    n6_1_hydroxy_2_oxoethyl_l_lysinium
+  }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> . +o_adp_d_ribosyl_l_serine_2 +h2o
+    l_serine
   }
 
   branch from adp_d_ribose side right {
     adp_d_ribose
-    <-> . +n4_adp_d_ribosyl_l_asparagine_2 +h2o
-    l_asparagine
+    <-> . +h2o +nicotinamide +hplus
+    nad
   }
 }

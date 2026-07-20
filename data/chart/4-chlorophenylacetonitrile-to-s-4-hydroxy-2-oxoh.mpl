@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh "4-chlorophenylacetonitrile to (S)-4-hydroxy-2-oxoheptan…" {
-  spacing 280
+  spacing 336
 
   spine at 0,0 {
     4_chlorophenylacetonitrile
@@ -26,13 +26,37 @@ pathway 4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh "4-chlorophenylacetonit
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_20 [1.4.1.20] +l_phenylalanine +nad +h2o +nadh +hplus
-    keto_phenylpyruvate
+    <-> ec_3_5_4_8 [3.5.4.8] +4_aminoimidazole +h2o +hplus
+    3_5_dihydro_4h_imidazol_4_one
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +s_alkyl_l_cysteine +h2o +pyruvate
+    alkanethiol
+  }
+
+  branch from dopac side left {
+    dopac
+    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +o2 +fad +h2o +hplus
+    4_hydroxyphenylacetate
   }
 
   branch from dopac side right {
     dopac
-    <-> . +4_hydroxyphenylacetate +fmnh2 +o2 +h2o +hplus
-    fmn
+    <-> . +nadh +o2 +hplus +nad +h2o
+    2_4_5_trihydroxyphenylacetate
+  }
+
+  branch from 2r_3e_5_oxopent_3_ene_1_2_5_tricarboxylate side left {
+    2r_3e_5_oxopent_3_ene_1_2_5_tricarboxylate
+    <-> . +hplus +co2
+    2z_4z_2_hydroxyhepta_2_4_dienedioate
+  }
+
+  branch from 2r_3e_5_oxopent_3_ene_1_2_5_tricarboxylate side right {
+    2r_3e_5_oxopent_3_ene_1_2_5_tricarboxylate
+    <-> ec_5_3_3_10 [5.3.3.10] +5_oxopent_3_ene_1_2_5_tricarboxylic_acid
+    h
   }
 }

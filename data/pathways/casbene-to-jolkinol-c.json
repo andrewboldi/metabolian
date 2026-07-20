@@ -137,12 +137,30 @@
       }
     },
     {
-      "id": "11r_12s_eet",
-      "name": "(11R,12S)-EET",
+      "id": "14r_15s_eet",
+      "name": "(14R,15S)-EET",
       "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:131970"
+        "chebi": "CHEBI:131965"
+      }
+    },
+    {
+      "id": "11s_12r_eet",
+      "name": "(11S,12R)-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:131969"
+      }
+    },
+    {
+      "id": "4_hydroxycasbene",
+      "name": "4-hydroxycasbene",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156578"
       }
     }
   ],
@@ -346,8 +364,8 @@
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R,...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R,12S)-epoxy-(5Z,8Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,15S)-epoxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "arachidonate",
@@ -364,7 +382,7 @@
       ],
       "products": [
         {
-          "metabolite": "11r_12s_eet",
+          "metabolite": "14r_15s_eet",
           "stoichiometry": 1
         },
         {
@@ -383,14 +401,116 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49880"
+        "rhea": "RHEA:49860"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49880"
+            "id": "RHEA:49860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,12R)-epoxy-(5Z,8Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11s_12r_eet",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:49876"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49876"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "4-hydroxycasbene + reduced [NADPH--hemoprotein reductase] + O2 = 4,8-dihydroxycasbene +...",
+      "equation": "4-hydroxycasbene + reduced [NADPH--hemoprotein reductase] + O2 = 4,8-dihydroxycasbene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxycasbene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_8_dihydroxycasbene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:65596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65596"
           }
         ]
       }

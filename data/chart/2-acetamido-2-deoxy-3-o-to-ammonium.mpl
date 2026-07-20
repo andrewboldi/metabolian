@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acetamido-2-deoxy-3-o-to-ammonium "2-acetamido-2-deoxy-3-O-(… to ammonium" {
-  spacing 240
+  spacing 276
 
   spine at 0,0 {
     2_acetamido_2_deoxy_3_o_4_deoxy_l_threo_hex_4_en
@@ -20,19 +20,37 @@ pathway 2-acetamido-2-deoxy-3-o-to-ammonium "2-acetamido-2-deoxy-3-O-(… to amm
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +2_ethylhexyl_sulfate +akg +o2 +succinate +co2 +hplus
-    2_ethylhexanal
+    <-> ec_3_1_6_3 [3.1.6.3] +d_glucopyranose_6_sulfate +h2o +hplus
+    glucose
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_3_1_6_8 [3.1.6.8] +d_galactosylceramide_sulfate +h2o +hplus
+    n_acyl_d_galactosylsphingosine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_172 [4.2.3.172] +fpp +h2o
+    10_epi_juneol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_39 [2.7.7.39] +sn_glycerol_3_phosphate +ctp +hplus
-    2r_cdp_glycerol
+    <-> ec_4_6_1_6 [4.6.1.6] +ctp
+    3_5_cyclic_cmp
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_11 [3.5.4.11] +2_aminopteridin_4_ol +h2o +hplus
-    lumazine
+    <-> ec_3_5_1_4 [3.5.1.4] +n_acylammonia +h2o
+    monocarboxylic_acid_anion
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_18 [1.4.1.18] +l_lysinium +nad +nadh +hplus
+    s_1_piperideine_6_carboxylate
   }
 }

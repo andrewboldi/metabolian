@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-ergosta-7-22-diene-3-to-carboxylic-acid-anion "5α-ergosta-7,22-diene-3β,… to carboxylic acid anion" {
-  spacing 196
+  spacing 208
 
   spine at 0,0 {
     5_ergosta_7_22_diene_3_5_diol
@@ -16,15 +16,15 @@ pathway 5-ergosta-7-22-diene-3-to-carboxylic-acid-anion "5α-ergosta-7,22-diene-
     ergosterol
   }
 
-  branch from ergosterol side left {
-    ergosterol
-    <-> ec_3_1_1_121 [3.1.1.121] +1_ergostan_3_yl_l_aspartate +h2o +hplus
-    aspartate
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_114 [3.5.1.114] +n_acyl_aromatic_l_amino_acid_anion +h2o
+    aromatic_l_amino_acid
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_1_97_1_13 [1.97.1.13] +aliphatic_sulfonate_oxoanion +tetra_3_sulfido_tetrairon +h2o +sulfite +hplus
-    tetra_3_sulfido_tetrairon
+    <-> ec_3_5_1_133 [3.5.1.133] +n2_acyl_l_glutaminate +h2o
+    glutamine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihydroxypyridine" {
-  spacing 224
+  spacing 248
 
   spine at 0,0 {
     s_nicotinium
@@ -22,8 +22,20 @@ pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihyd
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_38 [1.14.99.38] +cholesterol +o2 +hydrogen_acceptor +h2o
-    25_hydroxycholesterol
+    <-> ec_1_21_99_4 [1.21.99.4] +3_3_5_triiodo_l_thyronine +iodide +hydrogen_acceptor +hplus
+    l_thyroxine
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_5_99_3 [1.5.99.3] +l_pipecolic_acid +hydrogen_acceptor +hplus
+    s_1_piperideine_6_carboxylate
+  }
+
+  branch from 6_hydroxypseudooxynicotinium side left {
+    6_hydroxypseudooxynicotinium
+    <-> ec_1_5_3_6 [1.5.3.6] +o2 +h2o +h2o2
+    r_6_hydroxynicotinium
   }
 
   branch from 4_methylamino_butyric_acid side right {

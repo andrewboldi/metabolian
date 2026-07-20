@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-3-trilinolenoylglycer-to-hydrogen-acceptor "1,2,3-trilinolenoylglycer… to hydrogen acceptor" {
-  spacing 176
+  spacing 206
 
   spine at 0,0 {
     1_2_3_trilinolenoylglycerol
@@ -18,13 +18,31 @@ pathway 1-2-3-trilinolenoylglycer-to-hydrogen-acceptor "1,2,3-trilinolenoylglyce
 
   branch from linolenate side left {
     linolenate
-    <-> . +atp +coa +amp +ppi
-    linolenoyl_coa
+    <-> ec_1_13_11_77 [1.13.11.77] +o2
+    8e_10s_12z_15z_10_hydroperoxyoctadec_8_12_15_tr
+  }
+
+  branch from linolenate side right {
+    linolenate
+    <-> . +1_2_3_trilinolenoylglycerol +h2o +hplus
+    2_3_dilinolenoyl_sn_glycerol
+  }
+
+  branch from r_2_hydroperoxy_linolenate side left {
+    r_2_hydroperoxy_linolenate
+    <-> . +hplus +co2 +h2o
+    8z_11z_14z_heptadecatrienal
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_2_99_10 [1.2.99.10] +4_4_diapolycopen_4_al +h2o +hydrogen_donor +hplus
-    4_4_diapolycopen_4_oate
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
+    15_s_hepe
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
+    18_s_hepe
   }
 }

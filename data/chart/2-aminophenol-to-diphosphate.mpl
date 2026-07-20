@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-aminophenol-to-diphosphate "2-aminophenol to diphosphate" {
-  spacing 180
+  spacing 192
 
   spine at 0,0 {
     2_aminophenol
@@ -18,7 +18,13 @@ pathway 2-aminophenol-to-diphosphate "2-aminophenol to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +6_1s_5s_4_oxo_5_2z_pent_2_en_1_yl_cyclopent_2_en +atp +coa +amp
-    9s_13s_1a_1b_dinor_12_oxo_10_15_phytodienoyl_co
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    acoradiene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +acoradiene
+    fpp
   }
 }

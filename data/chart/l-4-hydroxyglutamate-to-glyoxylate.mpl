@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-4-hydroxyglutamate-to-glyoxylate "L-4-hydroxyglutamate… to glyoxylate" {
-  spacing 196
+  spacing 226
 
   spine at 0,0 {
     l_4_hydroxyglutamate_semialdehyde
@@ -16,15 +16,33 @@ pathway l-4-hydroxyglutamate-to-glyoxylate "L-4-hydroxyglutamate… to glyoxylat
     glyoxylate
   }
 
+  branch from erythro_4_hydroxy_l_glutamate side left {
+    erythro_4_hydroxy_l_glutamate
+    <-> ec_1_2_1_88 [1.2.1.88] +nadp +h2o +nadph +hplus
+    3r_5s_1_pyrroline_3_hydroxy_5_carboxylate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_103 [2.6.1.103] +s_3_5_dihydroxyphenylglycine +akg
+    3_5_dihydroxyphenylglyoxylate
+  }
+
   branch from glutamate side left {
     glutamate
-    <-> ec_5_4_3_9 [5.4.3.9]
-    isoglutamate
+    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
+    dtdp_3_dehydro_4_6_dideoxy_d_glucose
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_4_1_3_41 [4.1.3.41] +3r_3_hydroxy_d_aspartate
-    glycine
+    <-> . +propionyl_coa +h2o +coa +hplus
+    3_methylmalate
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +edta +fmnh2 +o2 +fmn +h2o +hplus
+    ethylenediaminetriacetate
   }
 }

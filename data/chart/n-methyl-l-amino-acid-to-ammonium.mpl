@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium" {
-  spacing 196
+  spacing 268
 
   spine at 0,0 {
     n_methyl_l_amino_acid
@@ -20,14 +20,26 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
 
   branch from l_amino_acid side left {
     l_amino_acid
-    <-> . +glyoxylate +2_oxo_monocarboxylic_acid_anion
-    glycine
+    <-> . +n_fatty_acyl_l_amino_acid_anion +h2o
+    fatty-acid
+  }
+
+  branch from l_amino_acid side right {
+    l_amino_acid
+    <-> ec_3_4_13_9 [3.4.13.9] +xaa_l_proline +h2o
+    l_proline
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_4_4_1_22 [4.4.1.22] +s_hydroxymethyl_glutathione
+    gsh
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_4_4_1_22 [4.4.1.22] +s_hydroxymethyl_glutathione
-    gsh
+    <-> ec_1_5_3_4 [1.5.3.4] +n6_methyl_l_lysinium +o2 +h2o +h2o2
+    l_lysinium
   }
 
   branch from 2_oxo_monocarboxylic_acid_anion side left {
@@ -36,10 +48,22 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
     2r_2_hydroxy_monocarboxylic_acid_anion
   }
 
+  branch from 2_oxo_monocarboxylic_acid_anion side right {
+    2_oxo_monocarboxylic_acid_anion
+    <-> ec_1_1_1_375 [1.1.1.375] +nadp +nadph +hplus
+    2s_2_hydroxy_monocarboxylic_acid_anion
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_6 [4.3.1.6] +alanyl_coa
+    acryloyl_coa
+  }
+
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_4 [3.5.1.4] +n_acylammonia +h2o
-    monocarboxylic_acid_anion
+    <-> ec_4_3_1_16 [4.3.1.16] +oxaloacetate
+    3s_3_hydroxy_l_aspartate
   }
 
   branch from 2_oxosuccinamate side left {
@@ -48,9 +72,21 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
     hydrogen_donor
   }
 
+  branch from 2_oxosuccinamate side right {
+    2_oxosuccinamate
+    <-> ec_2_6_1_14 [2.6.1.14] +l_asparagine +akg
+    glutamate
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> ec_1_4_3_1 [1.4.3.1] +o2 +h2o +h2o2 +nh3
+    d_aspartate
+  }
+
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_4_3_1_16 [4.3.1.16] +nh3
-    3s_3_hydroxy_l_aspartate
+    <-> ec_4_2_1_32 [4.2.1.32] +h2o
+    l_tartrate
   }
 }

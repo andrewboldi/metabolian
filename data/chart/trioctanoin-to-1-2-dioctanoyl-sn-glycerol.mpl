@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl-sn-glycerol" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     trioctanoin
@@ -18,27 +18,51 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl
     1_2_dioctanoyl_sn_glycerol
   }
 
+  branch from 1_2_dioctanoyl_sn_glycerol side left {
+    1_2_dioctanoyl_sn_glycerol
+    <-> ec_2_7_1_107 [2.7.1.107] +atp +adp +1_2_dioctanoyl_sn_glycero_3_phosphate
+    h
+  }
+
+  branch from octanoate side right {
+    octanoate
+    <-> . +1_monooctanoylglycerol +h2o +hplus
+    glycerol
+  }
+
   branch from octanoate side left {
     octanoate
-    <-> . +1_2_dioctanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    2_octanoyl_3_d_galactosyl_sn_glycerol
+    <-> . +octanoate_ester +h2o +hplus
+    aliphatic_alcohol
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +d_galactoside +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminyl_2_6_d_galactoside
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
   }
 
-  branch from 1_2_dioctanoyl_sn_glycero_3_phosphate side left {
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosylceramide +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_1_n_acylsphingosi
+  }
+
+  branch from 1_2_dioctanoyl_sn_glycero_3_phosphate side right {
     1_2_dioctanoyl_sn_glycero_3_phosphate
     <-> . +h2o +pi +hplus
     1_2_dioctanoyl_sn_glycerol_3_diphosphate
   }
 
+  branch from choline side left {
+    choline
+    <-> . +1_arachidonoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_arachidonoyl_sn_glycerol_3_phosphate
+  }
+
   branch from choline side right {
     choline
-    <-> ec_3_1_4_4 [3.1.4.4] +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_acyl_sn_glycerol_3_phosphate
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_z_alk_1_enyl_sn_glycero_3_phosphate
   }
 }

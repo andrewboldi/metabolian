@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aurachin-c-to-4-hydroxy-2-methyl-3-oxo "aurachin C to 4-hydroxy-2-methyl-3-oxo-…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     aurachin_c
@@ -20,5 +20,11 @@ pathway aurachin-c-to-4-hydroxy-2-methyl-3-oxo "aurachin C to 4-hydroxy-2-methyl
     4_hydroxy_2_methyl_3_oxo_2e_6e_farnesyl_3_4_dihy
     <-> ec_1_1_1_394 [1.1.1.394] +nad +h2o +nadh
     aurachin_b
+  }
+
+  branch from 4_hydroxy_2_methyl_3_oxo_2e_6e_farnesyl_3_4_dihy side right {
+    4_hydroxy_2_methyl_3_oxo_2e_6e_farnesyl_3_4_dihy
+    <-> . +nad +nadh +hplus
+    2_methyl_1_oxo_4_2e_6e_farnesyl_3_4_dihydroquino
   }
 }

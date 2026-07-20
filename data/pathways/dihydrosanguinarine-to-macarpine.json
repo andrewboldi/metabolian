@@ -149,23 +149,40 @@
       }
     },
     {
-      "id": "24r_24_hydroxycholesterol",
-      "name": "(24R)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "taxa_4_11_diene",
+      "name": "taxa-4,11-diene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50516"
+        "chebi": "CHEBI:30037"
       }
     },
     {
-      "id": "24r_7_24_dihydroxycholesterol",
-      "name": "(24R)-7α,24-dihydroxycholesterol",
-      "short": "7α,24-dihydroxychol…",
-      "formula": "C27H46O3",
+      "id": "taxa_4_20_11_dien_5_ol",
+      "name": "taxa-4(20),11-dien-5α-ol",
+      "short": "taxa-4(20),11-dien-…",
+      "formula": "C20H32O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50518"
+        "chebi": "CHEBI:30038"
+      }
+    },
+    {
+      "id": "10_deoxysarpagine",
+      "name": "10-deoxysarpagine",
+      "formula": "C19H22N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16060"
+      }
+    },
+    {
+      "id": "sarpagine",
+      "name": "sarpagine",
+      "formula": "C19H22N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9036"
       }
     },
     {
@@ -178,23 +195,40 @@
       }
     },
     {
-      "id": "vitexin_2_o_l_rhamnoside",
-      "name": "vitexin 2''-O-β-L-rhamnoside",
-      "short": "vitexin 2''-O-β-L-r…",
-      "formula": "C27H29O14",
-      "charge": -1,
+      "id": "methylarsonous_acid",
+      "name": "methylarsonous acid",
+      "formula": "CH5AsO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78636"
+        "chebi": "CHEBI:17826"
       }
     },
     {
-      "id": "7_o_methylvitexin_2_o_l_rhamnoside",
-      "name": "7-O-methylvitexin 2''-O-β-L-rhamnoside",
-      "short": "7-O-methylvitexin…",
-      "formula": "C28H31O14",
+      "id": "dimethylarsinate",
+      "name": "dimethylarsinate",
+      "formula": "C2H6AsO2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78640"
+        "chebi": "CHEBI:16223"
+      }
+    },
+    {
+      "id": "3_demethylstaurosporinium",
+      "name": "3'-demethylstaurosporinium",
+      "short": "3'-demethylstaurosp…",
+      "formula": "C27H25N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57473"
+      }
+    },
+    {
+      "id": "staurosporinium",
+      "name": "staurosporinium",
+      "formula": "C28H27N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57491"
       }
     }
   ],
@@ -235,10 +269,24 @@
       ]
     },
     {
-      "id": "ec_2_1_1_153",
-      "name": "vitexin 2''-O-rhamnoside 7-O-methyltransferase",
+      "id": "ec_1_14_14_176",
+      "name": "taxadiene 5alpha-hydroxylase",
       "ec": [
-        "2.1.1.153"
+        "1.14.14.176"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_136",
+      "name": "deoxysarpagine hydroxylase",
+      "ec": [
+        "1.14.14.136"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_139",
+      "name": "3'-demethylstaurosporine O-methyltransferase",
+      "ec": [
+        "2.1.1.139"
       ]
     }
   ],
@@ -506,11 +554,12 @@
     },
     {
       "id": "r6",
-      "name": "(24R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-7alpha-d...",
-      "equation": "(24R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-7alpha-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "taxadiene 5alpha-hydroxylase",
+      "equation": "taxa-4(5),11(12)-diene + reduced [NADPH--hemoprotein reductase] + O2 = taxa-4(20),11-dien-5alpha-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.176",
       "substrates": [
         {
-          "metabolite": "24r_24_hydroxycholesterol",
+          "metabolite": "taxa_4_11_diene",
           "stoichiometry": 1
         },
         {
@@ -524,7 +573,7 @@
       ],
       "products": [
         {
-          "metabolite": "24r_7_24_dihydroxycholesterol",
+          "metabolite": "taxa_4_20_11_dien_5_ol",
           "stoichiometry": 1
         },
         {
@@ -540,23 +589,85 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_176"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:16093"
+        "rhea": "RHEA:14049"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16093"
+            "id": "RHEA:14049"
           }
         ]
       }
     },
     {
       "id": "r7",
+      "name": "deoxysarpagine hydroxylase",
+      "equation": "10-deoxysarpagine + reduced [NADPH--hemoprotein reductase] + O2 = sarpagine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.136",
+      "substrates": [
+        {
+          "metabolite": "10_deoxysarpagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sarpagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_136"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:14237"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "dihydrobenzophenanthridine oxidase",
       "equation": "dihydrochelirubine + O2 + H(+) = chelirubine + H2O2",
       "ec": "1.5.3.12",
@@ -590,7 +701,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:18573"
       },
@@ -605,13 +716,12 @@
       }
     },
     {
-      "id": "r8",
-      "name": "vitexin 2''-O-rhamnoside 7-O-methyltransferase",
-      "equation": "vitexin 2''-O-beta-L-rhamnoside + S-adenosyl-L-methionine = 7-O-methylvitexin 2''-O-beta-L-rhamnoside + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.153",
+      "id": "r9",
+      "name": "methylarsonous acid + S-adenosyl-L-methionine = dimethylarsinate + S-adenosyl-L-homocys...",
+      "equation": "methylarsonous acid + S-adenosyl-L-methionine = dimethylarsinate + S-adenosyl-L-homocysteine + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "vitexin_2_o_l_rhamnoside",
+          "metabolite": "methylarsonous_acid",
           "stoichiometry": 1
         },
         {
@@ -621,7 +731,51 @@
       ],
       "products": [
         {
-          "metabolite": "7_o_methylvitexin_2_o_l_rhamnoside",
+          "metabolite": "dimethylarsinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:11684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "3'-demethylstaurosporine O-methyltransferase",
+      "equation": "3'-demethylstaurosporine + S-adenosyl-L-methionine = staurosporine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.139",
+      "substrates": [
+        {
+          "metabolite": "3_demethylstaurosporinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "staurosporinium",
           "stoichiometry": 1
         },
         {
@@ -635,20 +789,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_153"
+          "enzyme": "ec_2_1_1_139"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:11432"
+        "rhea": "RHEA:11696"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11432"
+            "id": "RHEA:11696"
           }
         ]
       }

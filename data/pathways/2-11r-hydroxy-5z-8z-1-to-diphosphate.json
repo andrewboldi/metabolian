@@ -137,26 +137,50 @@
       }
     },
     {
-      "id": "spectinomycin",
-      "name": "spectinomycin",
-      "formula": "C14H25N2O7",
-      "charge": 1,
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:146260"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "9_o_adenylylspectinomycin",
-      "name": "9-O-adenylylspectinomycin",
-      "short": "9-O-adenylylspectin…",
-      "formula": "C24H36N7O13P",
+      "id": "neoverrucosan_5_ol",
+      "name": "neoverrucosan-5β-ol",
+      "formula": "C20H34O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:146261"
+        "chebi": "CHEBI:194191"
+      }
+    },
+    {
+      "id": "verrucosan_2_ol",
+      "name": "verrucosan-2β-ol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194192"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_207",
+      "name": "neoverrucosan-5beta-ol synthase",
+      "ec": [
+        "4.2.3.207"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_208",
+      "name": "verrucosan-2beta-ol synthase",
+      "ec": [
+        "4.2.3.208"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -293,21 +317,22 @@
     },
     {
       "id": "r4",
-      "name": "spectinomycin + ATP = 9-O-adenylylspectinomycin + diphosphate",
-      "equation": "spectinomycin + ATP = 9-O-adenylylspectinomycin + diphosphate",
+      "name": "neoverrucosan-5beta-ol synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = neoverrucosan-5beta-ol + diphosphate",
+      "ec": "4.2.3.207",
       "substrates": [
         {
-          "metabolite": "spectinomycin",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "9_o_adenylylspectinomycin",
+          "metabolite": "neoverrucosan_5_ol",
           "stoichiometry": 1
         },
         {
@@ -315,17 +340,67 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_207"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:63228"
+        "rhea": "RHEA:75151"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63228"
+            "id": "RHEA:75151"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "verrucosan-2beta-ol synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = verrucosan-2beta-ol + diphosphate",
+      "ec": "4.2.3.208",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "verrucosan_2_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_208"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:75155"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75155"
           }
         ]
       }

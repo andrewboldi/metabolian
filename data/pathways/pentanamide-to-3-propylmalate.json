@@ -145,6 +145,33 @@
       }
     },
     {
+      "id": "pentanal",
+      "name": "pentanal",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84069"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
       "id": "adenosine_5_monophosphate_1",
       "name": "adenosine 5'-monophosphate(1−)",
       "short": "adenosine 5'-MP(1−)",
@@ -162,6 +189,25 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:82852"
+      }
+    },
+    {
+      "id": "blasticidin_s",
+      "name": "blasticidin S",
+      "formula": "C17H27N8O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57289"
+      }
+    },
+    {
+      "id": "deaminohydroxyblasticidin_s",
+      "name": "deaminohydroxyblasticidin S",
+      "short": "deaminohydroxyblast…",
+      "formula": "C17H26N7O6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57697"
       }
     },
     {
@@ -192,6 +238,24 @@
       }
     },
     {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "o_pentanoyl_l_serine",
+      "name": "O-pentanoyl-L-serine",
+      "formula": "C8H13NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177288"
+      }
+    },
+    {
       "id": "amp_3_end_1",
       "name": "AMP 3'-end(1−)",
       "formula": "C10H12N5O6P",
@@ -218,6 +282,25 @@
       "xrefs": {
         "chebi": "CHEBI:78536"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "premnaspirodiene",
+      "name": "premnaspirodiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46971"
+      }
     }
   ],
   "enzymes": [
@@ -243,10 +326,24 @@
       ]
     },
     {
+      "id": "ec_3_5_4_23",
+      "name": "blasticidin-S deaminase",
+      "ec": [
+        "3.5.4.23"
+      ]
+    },
+    {
       "id": "ec_6_1_1_1",
       "name": "tyrosine--tRNA ligase",
       "ec": [
         "6.1.1.1"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_21",
+      "name": "vetispiradiene synthase",
+      "ec": [
+        "4.2.3.21"
       ]
     }
   ],
@@ -441,6 +538,53 @@
     },
     {
       "id": "r5",
+      "name": "pentanal + NAD(+) + H2O = pentanoate + NADH + 2 H(+)",
+      "equation": "pentanal + NAD(+) + H2O = pentanoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "pentanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:69092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "double-stranded RNA adenine deaminase",
       "equation": "adenosine in double-stranded RNA + H2O + H(+) = inosine in double-stranded RNA + NH4(+)",
       "ec": "3.5.4.37",
@@ -474,7 +618,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:10120"
       },
@@ -489,7 +633,56 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "blasticidin-S deaminase",
+      "equation": "blasticidin S + H2O + H(+) = deaminohydroxyblasticidin S + NH4(+)",
+      "ec": "3.5.4.23",
+      "substrates": [
+        {
+          "metabolite": "blasticidin_s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deaminohydroxyblasticidin_s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:10148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "pentanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-pentenoyl-CoA +...",
       "equation": "pentanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-pentenoyl-CoA + reduced [electron-transfer flavoprotein]",
       "substrates": [
@@ -517,7 +710,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:43456"
       },
@@ -532,7 +725,46 @@
       }
     },
     {
-      "id": "r7",
+      "id": "r9",
+      "name": "pentanoyl-CoA + L-seryl-[protein] = O-pentanoyl-L-seryl-[protein] + CoA",
+      "equation": "pentanoyl-CoA + L-seryl-[protein] = O-pentanoyl-L-seryl-[protein] + CoA",
+      "substrates": [
+        {
+          "metabolite": "pentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_pentanoyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:68280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "tyrosine--tRNA ligase",
       "equation": "tRNA(Tyr) + L-tyrosine + ATP = L-tyrosyl-tRNA(Tyr) + AMP + diphosphate + H(+)",
       "ec": "6.1.1.1",
@@ -574,7 +806,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:10220"
       },
@@ -584,6 +816,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:10220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "vetispiradiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-vetispiradiene + diphosphate",
+      "ec": "4.2.3.21",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "premnaspirodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:10340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10340"
           }
         ]
       }

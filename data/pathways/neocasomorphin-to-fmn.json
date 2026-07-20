@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "neocasomorphin-to-fmn",
   "name": "neocasomorphin to FMN",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from neocasomorphin(1−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,49 +120,104 @@
       }
     },
     {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:36655"
-      }
-    },
-    {
-      "id": "kmv",
-      "name": "(S)-3-Methyl-2-oxopentanoate",
-      "short": "3-Methyl-2-oxopenta…",
-      "formula": "C6H9O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:35146"
-      }
-    },
-    {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "metanetx": "MNXM13"
       }
     },
     {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:32395"
+        "metanetx": "MNXM5"
       }
     },
     {
-      "id": "14r_15s_eet",
-      "name": "(14R,15S)-EET",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:131965"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_isoleucine",
+      "name": "L-isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM728337"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "long_chain_alkane",
+      "name": "long-chain alkane",
+      "formula": "HR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83563"
+      }
+    },
+    {
+      "id": "long_chain_fatty_alcohol",
+      "name": "long-chain fatty alcohol",
+      "short": "long-chain fatty…",
+      "formula": "HOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17135"
+      }
+    },
+    {
+      "id": "1_4_cineole",
+      "name": "1,4-cineole",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80788"
+      }
+    },
+    {
+      "id": "2_exo_hydroxy_1_4_cineole",
+      "name": "2-exo-hydroxy-1,4-cineole",
+      "short": "2-exo-hydroxy-1,4-c…",
+      "formula": "C10H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90956"
       }
     },
     {
@@ -192,6 +247,24 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "butan_2_one",
+      "name": "butan-2-one",
+      "formula": "C4H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28398"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
     }
   ],
   "enzymes": [
@@ -207,6 +280,20 @@
       "name": "(E)-2-methylbutanal oxime monooxygenase",
       "ec": [
         "1.14.14.41"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_117",
+      "name": "EC 1.14.13.117",
+      "ec": [
+        "1.14.13.117"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_28",
+      "name": "long-chain alkane monooxygenase",
+      "ec": [
+        "1.14.14.28"
       ]
     }
   ],
@@ -370,50 +457,72 @@
     },
     {
       "id": "r4",
-      "name": "L-isoleucine + glyoxylate = (S)-3-methyl-2-oxopentanoate + glycine",
-      "equation": "L-isoleucine + glyoxylate = (S)-3-methyl-2-oxopentanoate + glycine",
+      "name": "Reaction MNXR173694",
+      "ec": "1.14.13.117",
       "substrates": [
         {
-          "metabolite": "isoleucine",
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glyoxylate",
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "1e_2s_2_methylbutanal_oxime",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "kmv",
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "l_isoleucine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
-          "stoichiometry": 1
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_117"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:81615"
+        "metanetx": "MNXR173694"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:81615"
+            "db": "MetaNetX",
+            "id": "MNXR173694"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,15S)-epoxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "long-chain alkane monooxygenase",
+      "equation": "a long-chain alkane + FMNH2 + O2 = a long chain fatty alcohol + FMN + H2O + H(+)",
+      "ec": "1.14.14.28",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "long_chain_alkane",
           "stoichiometry": 1
         },
         {
@@ -427,7 +536,63 @@
       ],
       "products": [
         {
-          "metabolite": "14r_15s_eet",
+          "metabolite": "long_chain_fatty_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole +...",
+      "equation": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_4_cineole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_exo_hydroxy_1_4_cineole",
           "stoichiometry": 1
         },
         {
@@ -444,22 +609,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:49860"
+        "rhea": "RHEA:49160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49860"
+            "id": "RHEA:49160"
           }
         ]
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
       "name": "2-methylbutyronitrile + NADPH + O2 + H(+) = 2-hydroxy-2-methylbutanenitrile + NADP(+) +...",
       "equation": "2-methylbutyronitrile + NADPH + O2 + H(+) = 2-hydroxy-2-methylbutanenitrile + NADP(+) + H2O",
       "substrates": [
@@ -495,7 +660,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:28618"
       },
@@ -505,6 +670,41 @@
           {
             "db": "Rhea",
             "id": "RHEA:28618"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "butan-2-one + hydrogen cyanide = 2-hydroxy-2-methylbutanenitrile",
+      "equation": "butan-2-one + hydrogen cyanide = 2-hydroxy-2-methylbutanenitrile",
+      "substrates": [
+        {
+          "metabolite": "butan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_2_methylbutanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:77467"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77467"
           }
         ]
       }

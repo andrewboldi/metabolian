@@ -1,0 +1,280 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aldehydo-d-arabinose-to-2-d-mannosyl-3-phosph",
+  "name": "aldehydo-D-arabinose… to 2-(α-D-mannosyl)-3-phosph…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from aldehydo-D-arabinose 5-phosphate(2−) to 2-(α-D-mannosyl)-3-phosphonatoglycerate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:73007"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57693"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aldehydo_d_arabinose_5_phosphate",
+      "name": "aldehydo-D-arabinose 5-phosphate",
+      "short": "aldehydo-D-arabinos…",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57693"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17071"
+      }
+    },
+    {
+      "id": "g3p",
+      "name": "D-Glyceraldehyde 3-phosphate",
+      "short": "D-Glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59776"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pg3",
+      "name": "3-Phospho-D-glycerate",
+      "short": "3-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58272"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "2_d_mannosyl_3_phosphonatoglycerate",
+      "name": "2-(α-D-mannosyl)-3-phosphonatoglycerate",
+      "short": "2-(α-D-mannosyl)-3-…",
+      "formula": "C9H14O12P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57744"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_7_6",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (ferredoxin)",
+      "ec": [
+        "1.2.7.6"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_217",
+      "name": "mannosyl-3-phosphoglycerate synthase",
+      "ec": [
+        "2.4.1.217"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-arabinose 5-phosphate = glycolaldehyde + D-glyceraldehyde 3-phosphate",
+      "equation": "D-arabinose 5-phosphate = glycolaldehyde + D-glyceraldehyde 3-phosphate",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_arabinose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:73007"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73007"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (ferredoxin)",
+      "equation": "D-glyceraldehyde 3-phosphate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = (2R)-3-phosphoglycerate + 2 reduced [2Fe-2S]-[ferredoxin] + 3 H(+)",
+      "ec": "1.2.7.6",
+      "substrates": [
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_7_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "mannosyl-3-phosphoglycerate synthase",
+      "equation": "(2R)-3-phosphoglycerate + GDP-alpha-D-mannose = 2-O-(alpha-D-mannosyl)-3-phosphoglycerate + GDP + H(+)",
+      "ec": "2.4.1.217",
+      "substrates": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_d_mannosyl_3_phosphonatoglycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_217"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13537"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13537"
+          }
+        ]
+      }
+    }
+  ]
+}

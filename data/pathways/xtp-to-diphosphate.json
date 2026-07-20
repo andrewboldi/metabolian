@@ -129,30 +129,79 @@
       }
     },
     {
-      "id": "neomycin_c",
-      "name": "neomycin C",
-      "formula": "C23H52N6O13",
-      "charge": 6,
+      "id": "xanthosine",
+      "name": "xanthosine",
+      "formula": "C10H12N4O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:65077"
+        "chebi": "CHEBI:18107"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
+      "id": "n_4_aminobenzoyl_l_glutamate",
+      "name": "N-(4-aminobenzoyl)-L-glutamate",
+      "short": "N-(4-aminobenzoyl)-…",
+      "formula": "C12H12N2O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:60903"
       }
     },
     {
-      "id": "6_oxoneomycin_c",
-      "name": "6'''-oxoneomycin C",
-      "formula": "C23H48N5O14",
-      "charge": 5,
+      "id": "4_aminobenzoate",
+      "name": "4-aminobenzoate",
+      "formula": "C7H6NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:65068"
+        "chebi": "CHEBI:17836"
+      }
+    },
+    {
+      "id": "gly_glu",
+      "name": "Gly-Glu",
+      "formula": "C7H11N2O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73784"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "all_trans_hexaprenyl_diphosphate",
+      "name": "all-trans-hexaprenyl diphosphate",
+      "short": "all-trans-hexapreny…",
+      "formula": "C30H49O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58179"
       }
     },
     {
@@ -166,12 +215,13 @@
       }
     },
     {
-      "id": "phellandrene",
-      "name": "β-phellandrene",
-      "formula": "C10H16",
-      "charge": 0,
+      "id": "all_trans_nonaprenyl_diphosphate",
+      "name": "all-trans-nonaprenyl diphosphate",
+      "short": "all-trans-nonapreny…",
+      "formula": "C45H73O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:48741"
+        "chebi": "CHEBI:58391"
       }
     }
   ],
@@ -191,10 +241,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_95",
-      "name": "neomycin C transaminase",
+      "id": "ec_2_5_1_83",
+      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
       "ec": [
-        "2.6.1.95"
+        "2.5.1.83"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_84",
+      "name": "all-trans-nonaprenyl-diphosphate synthase [geranyl-diphosphate specific]",
+      "ec": [
+        "2.5.1.84"
       ]
     }
   ],
@@ -358,22 +415,60 @@
     },
     {
       "id": "r4",
-      "name": "neomycin C transaminase",
-      "equation": "neomycin C + 2-oxoglutarate = 6'''-deamino-6'''-oxoneomycin C + L-glutamate",
-      "ec": "2.6.1.95",
+      "name": "XMP + H2O = xanthosine + phosphate",
+      "equation": "XMP + H2O = xanthosine + phosphate",
       "substrates": [
         {
-          "metabolite": "neomycin_c",
+          "metabolite": "xmp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_oxoneomycin_c",
+          "metabolite": "xanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28530"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28530"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-(4-aminobenzoyl)-L-glutamate + H2O = 4-aminobenzoate + L-glutamate",
+      "equation": "N-(4-aminobenzoyl)-L-glutamate + H2O = 4-aminobenzoate + L-glutamate",
+      "substrates": [
+        {
+          "metabolite": "n_4_aminobenzoyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_aminobenzoate",
           "stoichiometry": 1
         },
         {
@@ -381,31 +476,115 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_95"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33959"
+        "rhea": "RHEA:35495"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33959"
+            "id": "RHEA:35495"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2E)-geranyl diphosphate = beta-phellandrene + diphosphate",
-      "equation": "(2E)-geranyl diphosphate = beta-phellandrene + diphosphate",
+      "id": "r6",
+      "name": "glycyl-L-glutamate + H2O = glycine + L-glutamate",
+      "equation": "glycyl-L-glutamate + H2O = glycine + L-glutamate",
       "substrates": [
+        {
+          "metabolite": "gly_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:36463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
+      "equation": "3 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-hexaprenyl diphosphate + 3 diphosphate",
+      "ec": "2.5.1.83",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_hexaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:27559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "all-trans-nonaprenyl-diphosphate synthase [geranyl-diphosphate specific]",
+      "equation": "7 isopentenyl diphosphate + (2E)-geranyl diphosphate = all-trans-nonaprenyl diphosphate + 7 diphosphate",
+      "ec": "2.5.1.84",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 7
+        },
         {
           "metabolite": "gpp",
           "stoichiometry": 1
@@ -413,25 +592,30 @@
       ],
       "products": [
         {
-          "metabolite": "phellandrene",
+          "metabolite": "all_trans_nonaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 7
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_84"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:25504"
+        "rhea": "RHEA:27563"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25504"
+            "id": "RHEA:27563"
           }
         ]
       }

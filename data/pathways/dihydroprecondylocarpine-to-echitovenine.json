@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dihydroprecondylocarpine-to-echitovenine",
   "name": "dihydroprecondylocarpine… to (+)-echitovenine",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from dihydroprecondylocarpine acetate to (+)-echitovenine(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -146,34 +146,43 @@
       }
     },
     {
-      "id": "long_chain_alkane",
-      "name": "long-chain alkane",
-      "formula": "HR",
-      "charge": 0,
+      "id": "5_hete",
+      "name": "5-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:83563"
+        "chebi": "CHEBI:65341"
       }
     },
     {
-      "id": "long_chain_fatty_alcohol",
-      "name": "long-chain fatty alcohol",
-      "short": "long-chain fatty…",
-      "formula": "HOR",
-      "charge": 0,
+      "id": "5_20_dihete",
+      "name": "5,20-DiHETE",
+      "formula": "C20H31O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17135"
+        "chebi": "CHEBI:90715"
+      }
+    },
+    {
+      "id": "8_hete",
+      "name": "8-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90716"
+      }
+    },
+    {
+      "id": "8_20_dihete",
+      "name": "8,20-DiHETE",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90717"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_28",
-      "name": "long-chain alkane monooxygenase",
-      "ec": [
-        "1.14.14.28"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -310,12 +319,11 @@
     },
     {
       "id": "r4",
-      "name": "long-chain alkane monooxygenase",
-      "equation": "a long-chain alkane + FMNH2 + O2 = a long chain fatty alcohol + FMN + H2O + H(+)",
-      "ec": "1.14.14.28",
+      "name": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + ...",
+      "equation": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 5,20-dihydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "long_chain_alkane",
+          "metabolite": "5_hete",
           "stoichiometry": 1
         },
         {
@@ -329,7 +337,7 @@
       ],
       "products": [
         {
-          "metabolite": "long_chain_fatty_alcohol",
+          "metabolite": "5_20_dihete",
           "stoichiometry": 1
         },
         {
@@ -345,22 +353,68 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_28"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:49060"
+        "rhea": "RHEA:48656"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49060"
+            "id": "RHEA:48656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "8-hydroxy-(5Z,9E,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + ...",
+      "equation": "8-hydroxy-(5Z,9E,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 8,20-dihydroxy-(5Z,9E,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "8_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_20_dihete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:48660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48660"
           }
         ]
       }

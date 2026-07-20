@@ -129,21 +129,48 @@
       }
     },
     {
-      "id": "albendazole",
-      "name": "albendazole",
-      "formula": "C12H15N3O2S",
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16664"
+        "metanetx": "MNXM735438"
       }
     },
     {
-      "id": "hydroxyalbendazole",
-      "name": "hydroxyalbendazole",
-      "formula": "C12H15N3O3S",
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140182"
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "dodecanoate",
+      "name": "dodecanoate",
+      "formula": "C12H23O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18262"
+      }
+    },
+    {
+      "id": "8_hydroxylaurate",
+      "name": "8-hydroxylaurate",
+      "formula": "C12H23O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167541"
+      }
+    },
+    {
+      "id": "10_hydroxylaurate",
+      "name": "10-hydroxylaurate",
+      "formula": "C12H23O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167542"
       }
     },
     {
@@ -177,21 +204,31 @@
       }
     },
     {
-      "id": "andilesin_d",
-      "name": "andilesin D",
-      "formula": "C25H30O6",
-      "charge": 0,
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:232444"
+        "chebi": "CHEBI:58052"
       }
     },
     {
-      "id": "andilesin_a",
-      "name": "andilesin A",
-      "formula": "C25H32O6",
-      "charge": 0,
+      "id": "17_estradiol_3_o_d_glucuronide",
+      "name": "17β-estradiol 3-O-(β-D-glucuronide)",
+      "short": "17β-estradiol…",
+      "formula": "C24H31O8",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:177859"
+        "chebi": "CHEBI:136641"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
       }
     }
   ],
@@ -201,13 +238,6 @@
       "name": "estradiol 6beta-monooxygenase",
       "ec": [
         "1.14.99.11"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_74",
-      "name": "albendazole monooxygenase (hydroxylating)",
-      "ec": [
-        "1.14.14.74"
       ]
     }
   ],
@@ -373,12 +403,49 @@
     },
     {
       "id": "r4",
-      "name": "albendazole monooxygenase (hydroxylating)",
-      "equation": "albendazole + reduced [NADPH--hemoprotein reductase] + O2 = hydroxyalbendazole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.74",
+      "name": "Reaction MNXR205332",
       "substrates": [
         {
-          "metabolite": "albendazole",
+          "metabolite": "19_hydroxytestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "19_oxotestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR205332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxid...",
+      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dodecanoate",
           "stoichiometry": 1
         },
         {
@@ -392,7 +459,7 @@
       ],
       "products": [
         {
-          "metabolite": "hydroxyalbendazole",
+          "metabolite": "8_hydroxylaurate",
           "stoichiometry": 1
         },
         {
@@ -408,28 +475,74 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_74"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:56288"
+        "rhea": "RHEA:66888"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56288"
+            "id": "RHEA:66888"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
+      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxydodecanoate + oxi...",
+      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10_hydroxylaurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:66892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "17beta-estradiol + 3'-phosphoadenylyl sulfate = 17beta-estradiol 3-sulfate + adenosine ...",
       "equation": "17beta-estradiol + 3'-phosphoadenylyl sulfate = 17beta-estradiol 3-sulfate + adenosine 3',5'-bisphosphate + H(+)",
       "substrates": [
@@ -457,7 +570,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:52372"
       },
@@ -472,40 +585,44 @@
       }
     },
     {
-      "id": "r6",
-      "name": "andilesin D + AH2 = andilesin A + A",
-      "equation": "andilesin D + AH2 = andilesin A + A",
+      "id": "r8",
+      "name": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 3-O-(beta-D-glucuronate) ...",
+      "equation": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 3-O-(beta-D-glucuronate) + UDP + H(+)",
       "substrates": [
         {
-          "metabolite": "andilesin_d",
+          "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "udp_d_glucuronate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "andilesin_a",
+          "metabolite": "17_estradiol_3_o_d_glucuronide",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:82643"
+        "rhea": "RHEA:52460"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82643"
+            "id": "RHEA:52460"
           }
         ]
       }

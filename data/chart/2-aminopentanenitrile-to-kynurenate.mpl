@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-aminopentanenitrile-to-kynurenate "2-aminopentanenitrile to kynurenate" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     2_aminopentanenitrile
@@ -18,13 +18,25 @@ pathway 2-aminopentanenitrile-to-kynurenate "2-aminopentanenitrile to kynurenate
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
-    2_4_dihydroxypteridine
+    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nad +h2o +nadh +hplus
+    5_guanidino_2_oxopentanoic_acid
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_25 [1.4.1.25] +nadp +h2o +5_guanidino_2_oxopentanoic_acid +nadph +hplus
+    arginine
+  }
+
+  branch from kynurenate side left {
+    kynurenate
+    <-> . +l_kynurenine +pyruvate +h2o
+    alanine
   }
 
   branch from kynurenate side right {
     kynurenate
-    <-> . +l_kynurenine +pyruvate +h2o
-    alanine
+    <-> . +l_kynurenine +oxaloacetate +h2o
+    aspartate
   }
 }

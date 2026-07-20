@@ -15,16 +15,4 @@ pathway d-argininium-to-4-guanidinobutanoic-acid "D-argininium to 4-guanidinobut
     <-> ec_1_2_1_54 [1.2.1.54] +nad +h2o -nadh -hplus
     4_guanidinobutanoic_acid
   }
-
-  branch from 5_guanidino_2_oxopentanoic_acid side left {
-    5_guanidino_2_oxopentanoic_acid
-    <-> ec_2_6_1_125 [2.6.1.125] +arginine +akg
-    glutamate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_3_27 [3.5.3.27] +arginine +h2o +hplus +co2
-    ornithine
-  }
 }

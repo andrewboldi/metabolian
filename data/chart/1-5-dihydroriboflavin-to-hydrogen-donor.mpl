@@ -4,33 +4,57 @@
 # edit the generator, not this file.
 
 pathway 1-5-dihydroriboflavin-to-hydrogen-donor "1,5-dihydroriboflavin to hydrogen donor" {
-  spacing 232
+  spacing 306
 
   spine at 0,0 {
     1_5_dihydroriboflavin
-    <-> ec_1_5_1_41 [1.5.1.41] +nad -nadh -hplus
+    <-> ec_1_5_1_30 [1.5.1.30] +nadp -nadph -hplus
     riboflavin
-    <-> ec_2_7_1_42 [2.7.1.42] +g1p -glucose
+    <-> ec_2_7_1_26 [2.7.1.26] +atp -adp -hplus
     fmn
-    <-> ec_1_1_99_35 [1.1.99.35] +glucose +hydrogen_acceptor -hydrogen_donor
-    d_glucono_1_5_lactone
+    <-> ec_2_6_1_114 [2.6.1.114] +glutamate +hydrogen_acceptor +o2 +h2o -akg -hydrogen_donor -co2 -hplus
+    8_amino_8_demethylriboflavin_5_phosphate
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_5_1_38 [1.5.1.38] +nadp +nadph +hplus
+    <-> ec_1_5_1_39 [1.5.1.39] +nad +nadh +hplus
     fmnh2
   }
 
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +6_o_methyl_n_deacetylipecoside +h2o
-    6_o_methyl_n_deacetylipecoside_aglycone
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_111 [1.14.14.111] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
+    9_pimara_7_15_dien_19_oate
+  }
+
+  branch from 8_amino_8_demethylriboflavin_5_phosphate side left {
+    8_amino_8_demethylriboflavin_5_phosphate
+    <-> . +8_amino_8_demethylriboflavin +phosphate
+    h2o
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +n_4_carboxy_4_oxobutanoyl_l_ethylglycylglycine +h2o
+    n_2s_2_ammoniobutanoyl_glycinate
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_1_5_1_8 [1.5.1.8] +l_saccharopinate +nadp +h2o +nadph +hplus
+    l_lysinium
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +15_cis_phytoene +hydrogen_acceptor
+    all_trans_phytofluene
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_19_13 [1.14.19.13] +9z_12z_hexadecadienoyl_coa +o2 +hydrogen_acceptor +h2o
-    9z_12z_hexadeca_9_12_15_trienoyl_coa
+    <-> . +all_trans_phytofluene +hydrogen_acceptor
+    all_trans_carotene
   }
 }

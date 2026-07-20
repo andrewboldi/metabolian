@@ -103,33 +103,44 @@
       }
     },
     {
-      "id": "amyrin",
-      "name": "β-amyrin",
-      "formula": "C30H50O",
+      "id": "stellata_2_6_19_triene",
+      "name": "stellata-2,6,19-triene",
+      "short": "stellata-2,6,19-tri…",
+      "formula": "C25H40",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10352"
+        "chebi": "CHEBI:138048"
       }
     },
     {
-      "id": "maniladiol",
-      "name": "maniladiol",
-      "formula": "C30H50O2",
+      "id": "stellatate",
+      "name": "stellatate",
+      "formula": "C25H37O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167454"
+      }
+    },
+    {
+      "id": "miltiradiene",
+      "name": "miltiradiene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138945"
+        "chebi": "CHEBI:65037"
+      }
+    },
+    {
+      "id": "11_oxomiltiradiene",
+      "name": "11-oxomiltiradiene",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167496"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_63",
-      "name": "beta-amyrin 16beta-monooxygenase",
-      "ec": [
-        "1.14.14.63"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -286,57 +297,102 @@
     },
     {
       "id": "r4",
-      "name": "beta-amyrin 16beta-monooxygenase",
-      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = maniladiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.63",
+      "name": "stellata-2,6,19-triene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = stellatate +...",
+      "equation": "stellata-2,6,19-triene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = stellatate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
       "substrates": [
         {
-          "metabolite": "amyrin",
+          "metabolite": "stellata_2_6_19_triene",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "maniladiol",
+          "metabolite": "stellatate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 4
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_63"
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:55440"
+        "rhea": "RHEA:66712"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55440"
+            "id": "RHEA:66712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "miltiradiene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxomiltiradiene + 2...",
+      "equation": "miltiradiene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxomiltiradiene + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "miltiradiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_oxomiltiradiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:66796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66796"
           }
         ]
       }

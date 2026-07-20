@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ribonucleotide-uridine-2-to-diphosphate "ribonucleotide-uridine(2−) to diphosphate" {
-  spacing 220
+  spacing 250
 
   spine at 0,0 {
     ribonucleotide_uridine_2
@@ -22,15 +22,27 @@ pathway ribonucleotide-uridine-2-to-diphosphate "ribonucleotide-uridine(2−) to
     a_3_end_2_3_cyclophospho_gmp_2
   }
 
-  branch from 3_end_ribonucleotide_2_3_cyclic_phosphate_2 side right {
+  branch from 5_dephospho_uridine side right {
+    5_dephospho_uridine
+    <-> . +adenylyl_uridine_2
+    a_3_end_2_3_cyclophospho_amp_2
+  }
+
+  branch from 3_end_ribonucleotide_2_3_cyclic_phosphate_2 side left {
     3_end_ribonucleotide_2_3_cyclic_phosphate_2
     <-> . +h2o +pi +hplus
     3_end_ribonucleotide_1
   }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_133 [2.5.1.133] +bacteriochlorophyllide_a +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +hplus
+    geranylgeranyl_bacteriochlorophyllide_a
+  }
+
   branch from ppi side left {
     ppi
-    <-> . +linoleate +atp +coa +amp
-    linoleoyl_coa
+    <-> ec_2_7_7_90 [2.7.7.90] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +ctp
+    cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate
   }
 }

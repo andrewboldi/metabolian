@@ -37,7 +37,7 @@ export type ArrowType =
   | "complex-formation" | "isozyme" | "pathway-membership" | "crosstalk" | "microbiome-host";
 
 export interface Xref {
-  chebi?: string; kegg?: string; pubchem?: string; hmdb?: string; metacyc?: string;
+  chebi?: string; metanetx?: string; kegg?: string; pubchem?: string; hmdb?: string; metacyc?: string;
   inchikey?: string; uniprot?: string; pdb?: string[]; alphafold?: string; rhea?: string;
   reactome?: string; brenda?: string; ensembl?: string; entrez?: string; go?: string; ec?: string[];
   [k: string]: unknown;

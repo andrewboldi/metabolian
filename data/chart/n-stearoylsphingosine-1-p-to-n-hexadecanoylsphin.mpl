@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin "N-stearoylsphingosine-1-p… to N-hexadecanoylsphingosine…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     n_stearoylsphingosine_1_phosphocholine
@@ -20,14 +20,26 @@ pathway n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin "N-stearoylsphingosine-
 
   branch from n_octadecanoylsphingosine side left {
     n_octadecanoylsphingosine
-    <-> . +d_glucosyl_n_octadecanoylsphingosine +cholesterol
-    cholesteryl_d_glucoside
+    <-> . +d_glucosyl_n_octadecanoylsphingosine +h2o
+    glucose
   }
 
-  branch from phosphocholine side right {
-    phosphocholine
-    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
-    1_o_octadecyl_2_acetyl_sn_glycerol
+  branch from n_octadecanoylsphingosine side right {
+    n_octadecanoylsphingosine
+    <-> . +d_galactosyl_n_octadecanoylsphingosine +h2o
+    d_galactopyranose
+  }
+
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +ethyl_octadecanoate +h2o +hplus
+    ethanol
+  }
+
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> . +12_octadecanoyloxy_octadecanoate +h2o +hplus
+    12_hydroxyoctadecanoate
   }
 
   branch from n_hexadecanoylsphingosine side left {

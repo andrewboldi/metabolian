@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-deoxyecdysone-to-3-dehydroecdysone "2-deoxyecdysone… to 3-dehydroecdysone" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     2_deoxyecdysone_22_phosphate
@@ -16,15 +16,27 @@ pathway 2-deoxyecdysone-to-3-dehydroecdysone "2-deoxyecdysone… to 3-dehydroecd
     3_dehydroecdysone
   }
 
-  branch from ecdysone side left {
+  branch from 2_deoxyecdysone side left {
+    2_deoxyecdysone
+    <-> ec_1_14_15_44 [1.14.15.44] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    2_22_dideoxyecdysone
+  }
+
+  branch from ecdysone side right {
     ecdysone
     <-> . +h2o +pi
     ecdysone_22_phosphate
   }
 
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +24r_24_25_dihydroxycalciol +di_sulfido_diiron +o2 +hplus +h2o
+    25_hydroxy_24_oxocalciol
+  }
+
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +25_hydroxy_24_oxocalciol +di_sulfido_diiron +o2 +hplus +h2o
-    23_s_25_dihydroxy_24_oxovitamin_d3
+    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20s_24r_dihydroxyvitamin_d3
   }
 }

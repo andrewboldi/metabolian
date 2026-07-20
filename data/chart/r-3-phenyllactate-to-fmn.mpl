@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-3-phenyllactate-to-fmn "(R)-3-phenyllactate to FMN" {
-  spacing 196
+  spacing 214
 
   spine at 0,0 {
     r_3_phenyllactate
@@ -16,15 +16,21 @@ pathway r-3-phenyllactate-to-fmn "(R)-3-phenyllactate to FMN" {
     hyoscyamine_aldehyde
   }
 
-  branch from r_littorine side left {
-    r_littorine
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    2r_3r_3_hydroxylittorine
+  branch from r_3_phenyllactyl_d_glucose side left {
+    r_3_phenyllactyl_d_glucose
+    <-> ec_2_3_1_185 [2.3.1.185] +glucose +r_littorine
+    tropine
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +e_indol_3_ylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
-    1_aci_nitro_2_1h_indol_3_yl_ethane
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_147 [3.2.1.147] +z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +h2o
+    2r_2_hydroxybut_3_enylglucosinolate
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +2r_2_hydroxybut_3_enylglucosinolate
+    h2o
   }
 }

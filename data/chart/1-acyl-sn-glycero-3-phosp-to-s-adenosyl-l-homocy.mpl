@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acyl-sn-glycero-3-phosp-to-s-adenosyl-l-homocy "1-acyl-sn-glycero-3-phosp… to S-adenosyl-L-homocysteine" {
-  spacing 252
+  spacing 264
 
   spine at 0,0 {
     1_acyl_sn_glycero_3_phospho_1d_myo_inositol
@@ -16,15 +16,15 @@ pathway 1-acyl-sn-glycero-3-phosp-to-s-adenosyl-l-homocy "1-acyl-sn-glycero-3-ph
     1d_4_o_methyl_myo_inositol
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_n_acyl_serine +h2o +hplus
-    1_acyl_2_hydroxy_sn_glycero_3_phospho_n_acyl_ser
+  branch from sah side left {
+    sah
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    n3_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +n_methyl_argininium_1 +sam +hplus
-    n_n_dimethyl_l_arginine_1
+    <-> . +sam +n3_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

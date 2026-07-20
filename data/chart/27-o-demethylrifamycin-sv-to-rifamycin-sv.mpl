@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 27-o-demethylrifamycin-sv-to-rifamycin-sv "27-O-demethylrifamycin SV to rifamycin SV…" {
-  spacing 236
+  spacing 248
 
   spine at 0,0 {
     27_o_demethylrifamycin_sv
@@ -20,7 +20,13 @@ pathway 27-o-demethylrifamycin-sv-to-rifamycin-sv "27-O-demethylrifamycin SV to 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
-    3_o_l_oleandrosyl_oleandolide
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a3 +sam
+    gibberellin_a3_methyl_ester
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a20 +sam
+    gibberellin_a20_methyl_ester
   }
 }

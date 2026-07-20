@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     iridodial_lactol
@@ -18,7 +18,13 @@ pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +lipoxin_a4 +fmnh2 +o2 +h2o +hplus
-    20_hydroxylipoxin_a4
+    <-> . +dehydroepiandrosterone +fmnh2 +o2 +h2o +hplus
+    16_hydroxydehydroepiandrosterone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +dehydroepiandrosterone_sulfate +fmnh2 +o2 +h2o +hplus
+    16_hydroxydehydroepiandrosterone_3_sulfate
   }
 }

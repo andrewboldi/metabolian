@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxy-4-methylvalerate-to-o-s-isoheptanoyl-p "2-hydroxy-4-methylvalerate to O-[S-(isoheptanoyl)pantet…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     2_hydroxy_4_methylvalerate

@@ -128,6 +128,69 @@
       }
     },
     {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "p_xylene",
+      "name": "p-xylene",
+      "formula": "C8H10",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3685"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "4_methylbenzaldehyde",
+      "name": "4-methylbenzaldehyde",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM4077"
+      }
+    },
+    {
       "id": "1_acyl_2_palmitoylglycerolipid",
       "name": "1-acyl-2-palmitoylglycerolipid",
       "short": "1-acyl-2-palmitoylg…",
@@ -138,13 +201,23 @@
       }
     },
     {
-      "id": "1_acyl_2_palmitoleoylglycerolipid",
-      "name": "1-acyl-2-palmitoleoylglycerolipid",
-      "short": "1-acyl-2-palmitoleo…",
+      "id": "1_acyl_2_7z_hexadec_7_enoyl_glycerolipid",
+      "name": "1-acyl-2-[(7Z)-hexadec-7-enoyl]-glycerolipid",
+      "short": "1-acyl-2-[(7Z)-hexa…",
       "formula": "C20H34O5R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87003"
+        "chebi": "CHEBI:87000"
+      }
+    },
+    {
+      "id": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
+      "name": "1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid",
+      "short": "1-acyl-2-[(3E)-hexa…",
+      "formula": "C20H34O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87002"
       }
     }
   ],
@@ -157,10 +230,31 @@
       ]
     },
     {
-      "id": "ec_1_14_19_27",
-      "name": "sn-2 palmitoyl-lipid 9-desaturase",
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
       "ec": [
-        "1.14.19.27"
+        "1.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_90",
+      "name": "aryl-alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.90"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_42",
+      "name": "palmitoyl-[glycerolipid] 7-desaturase",
+      "ec": [
+        "1.14.19.42"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_43",
+      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
+      "ec": [
+        "1.14.19.43"
       ]
     }
   ],
@@ -310,9 +404,107 @@
     },
     {
       "id": "r4",
-      "name": "sn-2 palmitoyl-lipid 9-desaturase",
-      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(9Z)-hexadecenoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.27",
+      "name": "Reaction MNXR146191",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "p_xylene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylbenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR146191"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146191"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_methylbenzaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylbenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR95030"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95030"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "palmitoyl-[glycerolipid] 7-desaturase",
+      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(7Z)-hexadecenoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.42",
       "substrates": [
         {
           "metabolite": "1_acyl_2_palmitoylglycerolipid",
@@ -333,7 +525,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_acyl_2_palmitoleoylglycerolipid",
+          "metabolite": "1_acyl_2_7z_hexadec_7_enoyl_glycerolipid",
           "stoichiometry": 1
         },
         {
@@ -347,20 +539,77 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_19_27"
+          "enzyme": "ec_1_14_19_42"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46768"
+        "rhea": "RHEA:46756"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46768"
+            "id": "RHEA:46756"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
+      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.43",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_2_palmitoylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:46764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46764"
           }
         ]
       }

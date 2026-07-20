@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-4-4-diapophyto-to-hydrogen-donor "all-trans-4,4'-diapophyto… to hydrogen donor" {
-  spacing 184
+  spacing 202
 
   spine at 0,0 {
     all_trans_4_4_diapophytofluene
@@ -26,15 +26,15 @@ pathway all-trans-4-4-diapophyto-to-hydrogen-donor "all-trans-4,4'-diapophyto…
     15_cis_4_4_diapophytoene
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_donor +h2o
-    s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione
+  branch from 4_4_diaponeurosporene side right {
+    4_4_diaponeurosporene
+    <-> ec_1_3_8_2 [1.3.8.2] +fadh2 +h +fad
+    4_4_diapo_carotene
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_acceptor +h2o
-    s_2_4_dinitro_6_hydroxylaminotoluyl_glutathione
+  branch from 4_4_diapolycopenedial side left {
+    4_4_diapolycopenedial
+    <-> . +h2o
+    4_4_dihydroxy_4_4_diapolycopen_4_al
   }
 }

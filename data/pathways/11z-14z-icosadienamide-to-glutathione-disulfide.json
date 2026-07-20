@@ -114,50 +114,51 @@
       }
     },
     {
-      "id": "5_methoxytryptamine",
-      "name": "5-methoxytryptamine",
-      "formula": "C11H15N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:166874"
-      }
-    },
-    {
-      "id": "5_methoxyindoleacetaldehyde",
-      "name": "5-Methoxyindoleacetaldehyde",
-      "short": "5-Methoxyindoleacet…",
-      "formula": "C11H11NO2",
+      "id": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
+      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine",
+      "short": "S-(4-hydroxy-3-meth…",
+      "formula": "C8H17NO3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:166541"
+        "chebi": "CHEBI:156146"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "2_methyl_3_sulfanylbutan_1_ol",
+      "name": "2-methyl-3-sulfanylbutan-1-ol",
+      "short": "2-methyl-3-sulfanyl…",
+      "formula": "C5H12OS",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:156147"
       }
     },
     {
-      "id": "5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13",
-      "name": "(5Z,8Z,11Z,13E,15S,17Z)-15-hydroperoxy-5,8,11,13,17-eicosapentaenoate",
-      "short": "(5Z,8Z,11Z,13E,15S,…",
-      "formula": "C20H29O4",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:194369"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "15_s_hepe",
-      "name": "15(S)-HEPE",
-      "formula": "C20H29O3",
-      "charge": -1,
+      "id": "3_sulfanylpentan_1_ol_l_cysteine",
+      "name": "3-sulfanylpentan-1-ol-L-cysteine",
+      "short": "3-sulfanylpentan-1-…",
+      "formula": "C8H17NO3S",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132087"
+        "chebi": "CHEBI:156143"
+      }
+    },
+    {
+      "id": "3_mercaptopentanol",
+      "name": "3-mercaptopentanol",
+      "formula": "C5H12OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156144"
       }
     }
   ],
@@ -317,15 +318,11 @@
     },
     {
       "id": "r5",
-      "name": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
-      "equation": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
+      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine + H2O = 2-methyl-3-sulfanylbutan-1-ol + pyr...",
+      "equation": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine + H2O = 2-methyl-3-sulfanylbutan-1-ol + pyruvate + NH4(+)",
       "substrates": [
         {
-          "metabolite": "5_methoxytryptamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
           "stoichiometry": 1
         },
         {
@@ -335,11 +332,11 @@
       ],
       "products": [
         {
-          "metabolite": "5_methoxyindoleacetaldehyde",
+          "metabolite": "2_methyl_3_sulfanylbutan_1_ol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         },
         {
@@ -350,39 +347,25 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59600"
+        "rhea": "RHEA:64748"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59600"
+            "id": "RHEA:64748"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + 2 glutathione = (15S)-hydroxy...",
-      "equation": "(15S)-hydroperoxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + 2 glutathione = (15S)-hydroxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + glutathione disulfide + H2O",
+      "name": "3-sulfanylpentan-1-ol-L-cysteine + H2O = 3-sulfanyl-1-pentanol + pyruvate + NH4(+)",
+      "equation": "3-sulfanylpentan-1-ol-L-cysteine + H2O = 3-sulfanyl-1-pentanol + pyruvate + NH4(+)",
       "substrates": [
         {
-          "metabolite": "5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15_s_hepe",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gssg",
+          "metabolite": "3_sulfanylpentan_1_ol_l_cysteine",
           "stoichiometry": 1
         },
         {
@@ -390,17 +373,31 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "3_mercaptopentanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:76707"
+        "rhea": "RHEA:64752"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76707"
+            "id": "RHEA:64752"
           }
         ]
       }

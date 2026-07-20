@@ -1,0 +1,435 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-chlorobenzoate-to-maleylacetate",
+  "name": "4-chlorobenzoate to maleylacetate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 4-chlorobenzoate to maleylacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23440"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17861"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_chlorobenzoate",
+      "name": "4-chlorobenzoate",
+      "formula": "C7H4ClO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17861"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_hydroxybenzoate",
+      "name": "4-hydroxybenzoate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17879"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_4_dihydroxybenzoate",
+      "name": "3,4-dihydroxybenzoate",
+      "short": "3,4-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36241"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "benzene_1_2_4_triol",
+      "name": "benzene-1,2,4-triol",
+      "formula": "C6H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16971"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "maleylacetate",
+      "name": "maleylacetate",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16468"
+      }
+    },
+    {
+      "id": "resorcinol",
+      "name": "resorcinol",
+      "formula": "C6H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27810"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_8_1_6",
+      "name": "4-chlorobenzoate dehalogenase",
+      "ec": [
+        "3.8.1.6"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_33",
+      "name": "4-hydroxybenzoate 3-monooxygenase [NAD(P)H]",
+      "ec": [
+        "1.14.13.33"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_37",
+      "name": "hydroxyquinol 1,2-dioxygenase",
+      "ec": [
+        "1.13.11.37"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_220",
+      "name": "resorcinol 4-hydroxylase (NADH)",
+      "ec": [
+        "1.14.13.220"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-chlorobenzoate dehalogenase",
+      "equation": "4-chlorobenzoate + H2O = 4-hydroxybenzoate + chloride + H(+)",
+      "ec": "3.8.1.6",
+      "substrates": [
+        {
+          "metabolite": "4_chlorobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_8_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23440"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxybenzoate 3-monooxygenase [NAD(P)H]",
+      "equation": "4-hydroxybenzoate + NADH + O2 + H(+) = 3,4-dihydroxybenzoate + NAD(+) + H2O",
+      "ec": "1.14.13.33",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19473"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,4-dihydroxybenzoate + NADH + O2 + 2 H(+) = benzene-1,2,4-triol + CO2 + NAD(+) + H2O",
+      "equation": "3,4-dihydroxybenzoate + NADH + O2 + 2 H(+) = benzene-1,2,4-triol + CO2 + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzene_1_2_4_triol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hydroxyquinol 1,2-dioxygenase",
+      "equation": "benzene-1,2,4-triol + O2 = maleylacetate + 2 H(+)",
+      "ec": "1.13.11.37",
+      "substrates": [
+        {
+          "metabolite": "benzene_1_2_4_triol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maleylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:35595"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "resorcinol 4-hydroxylase (NADH)",
+      "equation": "resorcinol + NADH + O2 + H(+) = benzene-1,2,4-triol + NAD(+) + H2O",
+      "ec": "1.14.13.220",
+      "substrates": [
+        {
+          "metabolite": "resorcinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzene_1_2_4_triol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49684"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -102,6 +102,25 @@
       }
     },
     {
+      "id": "sphinganine_1_phosphate",
+      "name": "sphinganine 1-phosphate",
+      "short": "sphinganine 1-P",
+      "formula": "C18H39NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57939"
+      }
+    },
+    {
+      "id": "hexadecanal",
+      "name": "hexadecanal",
+      "formula": "C16H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17600"
+      }
+    },
+    {
       "id": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
       "name": "1-(Z)-alk-1-enyl-sn-glycero-3-phosphoethanolamine",
       "short": "1-(Z)-alk-1-enyl-sn…",
@@ -122,13 +141,13 @@
       }
     },
     {
-      "id": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
-      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine",
-      "short": "1-hexadecanoyl-2-(9…",
-      "formula": "C39H76NO8P",
+      "id": "1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+      "name": "1-hexadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecanoyl-2-(4…",
+      "formula": "C43H74NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73007"
+        "chebi": "CHEBI:78261"
       }
     },
     {
@@ -141,13 +160,33 @@
       }
     },
     {
-      "id": "1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine",
-      "name": "1-palmitoyl-2-oleoyl-sn-glycero-3-phosphoserine",
-      "short": "1-palmitoyl-2-oleoy…",
-      "formula": "C40H75NO10P",
+      "id": "1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+      "name": "1-hexadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoserine",
+      "short": "1-hexadecanoyl-2-(4…",
+      "formula": "C44H73NO10P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:75029"
+        "chebi": "CHEBI:78262"
+      }
+    },
+    {
+      "id": "1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoethanolamine",
+      "short": "1-octadecanoyl-2-(4…",
+      "formula": "C45H78NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78266"
+      }
+    },
+    {
+      "id": "1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoserine",
+      "short": "1-octadecanoyl-2-(4…",
+      "formula": "C46H77NO10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78265"
       }
     }
   ],
@@ -164,6 +203,13 @@
       "name": "ethanolamine kinase",
       "ec": [
         "2.7.1.82"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_27",
+      "name": "sphinganine-1-phosphate aldolase",
+      "ec": [
+        "4.1.2.27"
       ]
     }
   ],
@@ -299,6 +345,47 @@
     },
     {
       "id": "r4",
+      "name": "sphinganine-1-phosphate aldolase",
+      "equation": "sphinganine 1-phosphate = hexadecanal + phosphoethanolamine",
+      "ec": "4.1.2.27",
+      "substrates": [
+        {
+          "metabolite": "sphinganine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoethanolamine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18593"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + H2O = 1-O-(1Z-alkenyl)-sn-glycero...",
       "equation": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + H2O = 1-O-(1Z-alkenyl)-sn-glycerol + phosphoethanolamine + H(+)",
       "substrates": [
@@ -326,7 +413,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:36199"
       },
@@ -341,12 +428,12 @@
       }
     },
     {
-      "id": "r5",
-      "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-hexa...",
-      "equation": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + ethanolamine",
+      "id": "r6",
+      "name": "1-hexadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoethanolami...",
+      "equation": "1-hexadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-hexadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoserine + ethanolamine",
       "substrates": [
         {
-          "metabolite": "1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+          "metabolite": "1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
           "stoichiometry": 1
         },
         {
@@ -356,7 +443,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine",
+          "metabolite": "1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
           "stoichiometry": 1
         },
         {
@@ -365,16 +452,55 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:41484"
+        "rhea": "RHEA:41488"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41484"
+            "id": "RHEA:41488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoethanolami...",
+      "equation": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoethanolamine + L-serine = 1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphoserine + ethanolamine",
+      "substrates": [
+        {
+          "metabolite": "1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethanolaminium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:41492"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41492"
           }
         ]
       }

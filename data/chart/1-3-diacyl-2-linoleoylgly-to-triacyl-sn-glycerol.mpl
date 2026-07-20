@@ -17,22 +17,4 @@ pathway 1-3-diacyl-2-linoleoylgly-to-triacyl-sn-glycerol "1,3-diacyl-2-linoleoyl
     <-> . +acyl_coa -coa
     triacyl_sn_glycerol
   }
-
-  branch from 1_3_diglyceride side left {
-    1_3_diglyceride
-    <-> . +9_hydroxyoctadecanoate +triglyceride
-    9_acyloxy_stearate
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
-    a_2_acyl_sn_glycero_3_phospholipid
-  }
-
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +2_monoglyceride +phosphatidylcholine
-    1_2_diglyceride
-  }
 }

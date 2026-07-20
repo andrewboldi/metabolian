@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-cheilanthifoline-to-fmn "(S)-cheilanthifoline to FMN" {
-  spacing 256
+  spacing 280
 
   spine at 0,0 {
     s_cheilanthifoline
@@ -20,13 +20,25 @@ pathway s-cheilanthifoline-to-fmn "(S)-cheilanthifoline to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_186 [1.14.14.186] +tryptaminium +fmnh2 +o2 +h2o +hplus
-    serotonin
+    <-> . +s_macrocarpene +fmnh2 +o2 +h2o +hplus
+    s_macrocarpen_15_ol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +s_macrocarpen_15_ol +fmnh2 +o2 +h2o +hplus
+    4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +s_reticulinium +sam +hplus
+    s_codamine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_7 +sam +hplus
-    ubiquinol_7
+    <-> ec_2_1_1_363 [2.1.1.363] +fpp +sam +hplus
+    pre_sodorifen_diphosphate
   }
 }

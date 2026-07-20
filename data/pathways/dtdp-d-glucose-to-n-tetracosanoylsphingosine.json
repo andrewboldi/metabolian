@@ -139,51 +139,48 @@
       }
     },
     {
-      "id": "udp_d_galactose",
-      "name": "UDP-α-D-galactose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:66914"
-      }
-    },
-    {
-      "id": "d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi",
-      "name": "β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-N-acylsphingosine",
-      "short": "β-D-galactosyl-(1→4…",
-      "formula": "C31H56NO13R",
+      "id": "j_104303",
+      "name": "J-104303",
+      "formula": "C20H11N3O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17950"
+        "metanetx": "MNXM1368712"
       }
     },
     {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "1_acyl_3_o_d_galactosyl_sn_glycerol",
-      "name": "1-acyl-3-O-(β-D-galactosyl)-sn-glycerol",
-      "short": "1-acyl-3-O-(β-D-gal…",
-      "formula": "C10H17O9R",
+      "id": "j_109384",
+      "name": "J-109384",
+      "formula": "C26H21N3O9",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:228229"
+        "metanetx": "MNXM1368714"
       }
     },
     {
-      "id": "3_o_d_galactopyranosyl_sn_glycerol",
-      "name": "3-O-β-D-galactopyranosyl-sn-glycerol",
-      "short": "3-O-β-D-galactopyra…",
-      "formula": "C9H18O8",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15754"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "be_13793c",
+      "name": "BE 13793C",
+      "formula": "C20H11N3O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368713"
+      }
+    },
+    {
+      "id": "ed_110",
+      "name": "ED 110",
+      "formula": "C26H21N3O9",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368715"
       }
     }
   ],
@@ -193,13 +190,6 @@
       "name": "sphingomyelin deacylase",
       "ec": [
         "3.5.1.109"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_274",
-      "name": "glucosylceramide beta-1,4-galactosyltransferase",
-      "ec": [
-        "2.4.1.274"
       ]
     }
   ],
@@ -376,60 +366,20 @@
     },
     {
       "id": "r5",
-      "name": "glucosylceramide beta-1,4-galactosyltransferase",
-      "equation": "a beta-D-glucosyl-(1<->1')-N-acylsphing-4-enine + UDP-alpha-D-galactose = a beta-D-Gal-(1->4)-beta-D-Glc-(1<->1)-Cer(d18:1(4E)) + UDP + H(+)",
-      "ec": "2.4.1.274",
+      "name": "Reaction MNXR196566",
       "substrates": [
         {
-          "metabolite": "d_glucosyl_n_acylsphingosine",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp_d_galactose",
+          "metabolite": "j_104303",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_274"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:31495"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:31495"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "a 1-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = 3-beta-D-galactosyl-sn-glycerol + ...",
-      "equation": "a 1-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = 3-beta-D-galactosyl-sn-glycerol + a fatty acid + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_acyl_3_o_d_galactosyl_sn_glycerol",
+          "metabolite": "j_109384",
           "stoichiometry": 1
         },
         {
@@ -437,31 +387,55 @@
           "stoichiometry": 1
         }
       ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR196566"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR196567",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "be_13793c",
+          "stoichiometry": 1
+        }
+      ],
       "products": [
         {
-          "metabolite": "3_o_d_galactopyranosyl_sn_glycerol",
+          "metabolite": "ed_110",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:78099"
+        "metanetx": "MNXR196567"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78099"
+            "db": "MetaNetX",
+            "id": "MNXR196567"
           }
         ]
       }

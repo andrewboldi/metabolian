@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl]sp… to N-[(15Z)-tetracosenoyl]sp…" {
-  spacing 152
+  spacing 206
 
   spine at 0,0 {
     n_15z_tetracosenoyl_sphing_4_enine_1_phosphochol
@@ -18,33 +18,57 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
     n_15z_tetracosenoyl_sphinganine
   }
 
-  branch from phosphocholine side left {
-    phosphocholine
-    <-> . +1_lauroyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_lauroyl_sn_glycerol
+  branch from n_15z_tetracosenoylsphingosine side left {
+    n_15z_tetracosenoylsphingosine
+    <-> ec_3_5_1_23 [3.5.1.23] +15z_tetracosenoate +sphing_4_enine +h
+    h2o
   }
 
   branch from 15z_tetracosenoate side right {
+    15z_tetracosenoate
+    <-> . +1_nervonoylglycerol +h2o +hplus
+    glycerol
+  }
+
+  branch from 15z_tetracosenoate side left {
     15z_tetracosenoate
     <-> . +nervonamide +h2o
     nh3
   }
 
+  branch from sphingosine side right {
+    sphingosine
+    <-> . +sam +sah +hplus
+    n_n_dimethylsphingosine
+  }
+
   branch from sphingosine side left {
     sphingosine
-    <-> . +icosanoyl_coa +coa +hplus
-    n_icosanoylsphingosine
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    sphinga_4e_14z_dienine
   }
 
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
-    <-> . +nadph +hplus +nadp
-    2e_15z_tetracosadienoyl_coa
+    <-> . +malonyl-coa +hplus +co2 +coa
+    3_oxo_17z_hexacosenoyl_coa
+  }
+
+  branch from 15z_tetracosenoyl_coa side left {
+    15z_tetracosenoyl_coa
+    <-> . +nadh +h +coa +nad
+    15_tetracosenal
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_101 [4.2.3.101] +fpp
+    7_epi_sesquithujene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_72 [4.2.3.72] +fpp
-    gurjunene
+    <-> ec_4_2_3_100 [4.2.3.100] +fpp
+    bicyclogermacrene
   }
 }

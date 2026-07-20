@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cyclohexylsulfamate-to-6-oxohexanoate",
   "name": "cyclohexylsulfamate to 6-oxohexanoate",
-  "category": "carbohydrate-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from cyclohexylsulfamate to 6-oxohexanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -163,6 +163,26 @@
       }
     },
     {
+      "id": "z_n_sulfonatooxy_alkenimidothioate",
+      "name": "(Z)-N-(sulfonatooxy)alkenimidothioate",
+      "short": "N-(sulfonatooxy)alk…",
+      "formula": "C3H3NO4S2R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:183084"
+      }
+    },
+    {
+      "id": "alkenyl_isothiocyanate",
+      "name": "alkenyl isothiocyanate",
+      "short": "alkenyl isothiocyan…",
+      "formula": "C3H3NSR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:183102"
+      }
+    },
+    {
       "id": "z_n_sulfonatooxy_prop_2_enimidothioate",
       "name": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate",
       "short": "N-(sulfonatooxy)pro…",
@@ -200,23 +220,31 @@
       }
     },
     {
-      "id": "n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat",
-      "name": "N-(1-deoxy-β-D-fructopyranos-1-yl)-L-6-aminohexanoate",
-      "short": "N-(1-deoxy-β-D-fruc…",
-      "formula": "C12H23NO7",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:228169"
+        "chebi": "CHEBI:33384"
       }
     },
     {
-      "id": "1_deoxy_d_fructos_1_yl_amine",
-      "name": "(1-deoxy-D-fructos-1-yl)amine",
-      "short": "(1-deoxy-D-fructos-…",
-      "formula": "C6H14NO5",
-      "charge": 1,
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:228165"
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "2_hydroxycyclohexan_1_one",
+      "name": "2-hydroxycyclohexan-1-one",
+      "short": "2-hydroxycyclohexan…",
+      "formula": "C6H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17878"
       }
     }
   ],
@@ -247,6 +275,20 @@
       "name": "6-hydroxyhexanoate dehydrogenase",
       "ec": [
         "1.1.1.258"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_17",
+      "name": "L-serine ammonia-lyase",
+      "ec": [
+        "4.3.1.17"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_66",
+      "name": "2-hydroxycyclohexanone 2-monooxygenase",
+      "ec": [
+        "1.14.13.66"
       ]
     }
   ],
@@ -496,6 +538,41 @@
     },
     {
       "id": "r6",
+      "name": "a (Z)-N-(sulfonatooxy)alkenimidothioate = an alkenyl isothiocyanate + sulfate",
+      "equation": "a (Z)-N-(sulfonatooxy)alkenimidothioate = an alkenyl isothiocyanate + sulfate",
+      "substrates": [
+        {
+          "metabolite": "z_n_sulfonatooxy_alkenimidothioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alkenyl_isothiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:69268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate = allyl isothiocyanate + sulfate",
       "equation": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate = allyl isothiocyanate + sulfate",
       "substrates": [
@@ -515,7 +592,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:69272"
       },
@@ -530,7 +607,7 @@
       }
     },
     {
-      "id": "r7",
+      "id": "r8",
       "name": "L-aspartate + O2 + H2O = oxaloacetate + H2O2 + NH4(+)",
       "equation": "L-aspartate + O2 + H2O = oxaloacetate + H2O2 + NH4(+)",
       "substrates": [
@@ -562,7 +639,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:19025"
       },
@@ -577,16 +654,72 @@
       }
     },
     {
-      "id": "r8",
-      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-6-aminohexanoate + O2 + H2O = (1-deoxy-D-fructo...",
-      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-6-aminohexanoate + O2 + H2O = (1-deoxy-D-fructos-1-yl)amine + 6-oxohexanoate + H2O2",
+      "id": "r9",
+      "name": "L-serine ammonia-lyase",
+      "equation": "L-serine = pyruvate + NH4(+)",
+      "ec": "4.3.1.17",
       "substrates": [
         {
-          "metabolite": "n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat",
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:19169"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "2-hydroxycyclohexanone 2-monooxygenase",
+      "equation": "2-hydroxycyclohexan-1-one + NADPH + O2 = 6-oxohexanoate + NADP(+) + H2O",
+      "ec": "1.14.13.66",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxycyclohexan_1_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
           "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
@@ -594,31 +727,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "1_deoxy_d_fructos_1_yl_amine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "6_oxohexanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
+          "enzyme": "ec_1_14_13_66"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:77899"
+        "rhea": "RHEA:33283"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77899"
+            "id": "RHEA:33283"
           }
         ]
       }

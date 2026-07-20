@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecyl-2-butanoyl-sn-to-acetate "1-hexadecyl-2-butanoyl-sn… to acetate" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     1_hexadecyl_2_butanoyl_sn_glycero_3_phosphocholi
@@ -16,15 +16,9 @@ pathway 1-hexadecyl-2-butanoyl-sn-to-acetate "1-hexadecyl-2-butanoyl-sn… to ac
     lysophosphatidylcholine_o_16_0_0_0
   }
 
-  branch from lysophosphatidylcholine_o_16_0_0_0 side left {
-    lysophosphatidylcholine_o_16_0_0_0
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_n_acetyl +h2o
-    n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_d_muramy
+  branch from butyrate side left {
+    butyrate
+    <-> ec_2_3_1_315 [2.3.1.315] +cyclohexanecarboxylate +butyryl_coa
+    cyclohexane_1_carbonyl_coa
   }
 }

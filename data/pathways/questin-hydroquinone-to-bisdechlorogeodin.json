@@ -113,23 +113,77 @@
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
-      "charge": -1,
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:58307"
       }
     },
     {
-      "id": "n2_methylguanosine_5_monophosphate_1",
-      "name": "N2-methylguanosine 5'-monophosphate(1−)",
-      "short": "N2-methylguanosine…",
-      "formula": "C11H13N5O7P",
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74481"
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "dihydrogeodin",
+      "name": "dihydrogeodin",
+      "formula": "C17H12Cl2O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:150012"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "n5_methyl_argininium_1",
+      "name": "N5-methyl-argininium(1+)",
+      "short": "N5-methyl-argininiu…",
+      "formula": "C7H15N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:88222"
+      }
+    },
+    {
+      "id": "ribonucleotide",
+      "name": "ribonucleotide",
+      "formula": "C5H7O6PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90675"
+      }
+    },
+    {
+      "id": "2_o_methylribonucleotide_1",
+      "name": "2'-O-methylribonucleotide(1−)",
+      "short": "2'-O-methylribonucl…",
+      "formula": "C6H9O6PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90676"
       }
     }
   ],
@@ -156,10 +210,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_242",
-      "name": "16S rRNA (guanine(1516)-N(2))-methyltransferase",
+      "id": "ec_2_1_1_322",
+      "name": "type IV protein arginine methyltransferase",
       "ec": [
-        "2.1.1.242"
+        "2.1.1.322"
       ]
     }
   ],
@@ -348,12 +402,67 @@
     },
     {
       "id": "r5",
-      "name": "16S rRNA (guanine(1516)-N(2))-methyltransferase",
-      "equation": "guanosine(1516) in 16S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(1516) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.242",
+      "name": "sulochrin + 2 FADH2 + 2 chloride + 2 O2 = dihydrogeodin + 2 FAD + 4 H2O + H(+)",
+      "equation": "sulochrin + 2 FADH2 + 2 chloride + 2 O2 = dihydrogeodin + 2 FAD + 4 H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "sulochrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydrogeodin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "type IV protein arginine methyltransferase",
+      "equation": "L-arginyl-[protein] + S-adenosyl-L-methionine = N(5)-methyl-L-arginyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.322",
+      "substrates": [
+        {
+          "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
@@ -363,7 +472,7 @@
       ],
       "products": [
         {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "metabolite": "n5_methyl_argininium_1",
           "stoichiometry": 1
         },
         {
@@ -377,20 +486,63 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_242"
+          "enzyme": "ec_2_1_1_322"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:43220"
+        "rhea": "RHEA:48116"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43220"
+            "id": "RHEA:48116"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "a ribonucleotide in rRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in rRN...",
+      "equation": "a ribonucleotide in rRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ribonucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylribonucleotide_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:48628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48628"
           }
         ]
       }

@@ -1,0 +1,365 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-ureidoglycine-to-ammonium",
+  "name": "(S)-2-ureidoglycine to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (S)-2-ureidoglycine zwitterion to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33871"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59947"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_2_ureidoglycine",
+      "name": "(S)-2-ureidoglycine",
+      "formula": "C3H7N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59947"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13941"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "6_amino_2_oxohexanoic_acid",
+      "name": "6-amino-2-oxohexanoic acid",
+      "short": "6-amino-2-oxohexano…",
+      "formula": "C6H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58183"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "isoproturon_didemethyl",
+      "name": "isoproturon-didemethyl",
+      "short": "isoproturon-didemet…",
+      "formula": "C10H14N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83514"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "para_isopropylaniline",
+      "name": "para-isopropylaniline",
+      "short": "para-isopropylanili…",
+      "formula": "C9H13N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43405"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-2-ureidoglycine + H2O = urea + glyoxylate + NH4(+)",
+      "equation": "(S)-2-ureidoglycine + H2O = urea + glyoxylate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "s_2_ureidoglycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "urea + H2O = carbamate + NH4(+)",
+      "equation": "urea + H2O = carbamate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25342"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carbamate + 2 H(+) = NH4(+) + CO2",
+      "equation": "carbamate + 2 H(+) = NH4(+) + CO2",
+      "substrates": [
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15649"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15649"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-lysine + glyoxylate = 6-amino-2-oxohexanoate + glycine",
+      "equation": "L-lysine + glyoxylate = 6-amino-2-oxohexanoate + glycine",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_amino_2_oxohexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR193064",
+      "substrates": [
+        {
+          "metabolite": "isoproturon_didemethyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "para_isopropylaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR193064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193064"
+          }
+        ]
+      }
+    }
+  ]
+}

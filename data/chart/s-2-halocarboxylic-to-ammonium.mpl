@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-halocarboxylic-to-ammonium "(S)-2-halocarboxylic… to ammonium" {
-  spacing 260
+  spacing 302
 
   spine at 0,0 {
     s_2_halocarboxylic_acid_anion
@@ -18,21 +18,45 @@ pathway s-2-halocarboxylic-to-ammonium "(S)-2-halocarboxylic… to ammonium" {
     2_oxo_monocarboxylic_acid_anion
   }
 
-  branch from 2_oxo_monocarboxylic_acid_anion side left {
+  branch from halide_anion side left {
+    halide_anion
+    <-> ec_1_14_12_13 [1.14.12.13] +2_halobenzoate +nadh +o2 +hplus +co2 +nad
+    catechol
+  }
+
+  branch from 2_oxo_monocarboxylic_acid_anion side right {
     2_oxo_monocarboxylic_acid_anion
     <-> ec_1_1_1_272 [1.1.1.272] +nadp +nadph +hplus
     2r_2_hydroxy_monocarboxylic_acid_anion
   }
 
+  branch from 2_oxo_monocarboxylic_acid_anion side left {
+    2_oxo_monocarboxylic_acid_anion
+    <-> . +h2o +nh3
+    a_2_iminiocarboxylate
+  }
+
   branch from l_amino_acid side right {
     l_amino_acid
-    <-> . +acetyl_coa +coa +hplus
-    n_acetyl_l_amino_acid_anion
+    <-> . +cholate +h2o
+    n_choloyl_l_amino_acid_anion
+  }
+
+  branch from l_amino_acid side left {
+    l_amino_acid
+    <-> . +taurocholate +n_choloyl_l_amino_acid_anion
+    taurine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +ldopa
+    trans_caffeate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +ldopa
-    trans_caffeate
+    <-> ec_3_5_4_7 [3.5.4.7] +adp +h2o +hplus
+    idp
   }
 }

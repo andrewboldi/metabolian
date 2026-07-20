@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carboxynorspermidine-to-diphosphate "carboxynorspermidine to diphosphate" {
-  spacing 232
+  spacing 268
 
   spine at 0,0 {
     carboxynorspermidine
@@ -30,19 +30,31 @@ pathway carboxynorspermidine-to-diphosphate "carboxynorspermidine to diphosphate
 
   branch from 5_s_methyl_5_thioadenosine side right {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_24 [2.5.1.24] +n6_dimethylallyladenine +sam +hplus
-    discadenine
+    <-> ec_2_5_1_38 [2.5.1.38] +nocardicin_e +sam +hplus
+    isonocardicin_a
   }
 
-  branch from alanine side left {
-    alanine
-    <-> ec_3_4_13_4 [3.4.13.4] +alanyl_l_ornithine +h2o
-    ornithine
+  branch from 5_s_methyl_5_thioadenosine side left {
+    5_s_methyl_5_thioadenosine
+    <-> ec_4_4_1_14 [4.4.1.14] +sam +hplus
+    1_aminocyclopropanecarboxylic_acid
+  }
+
+  branch from r_4_phosphonatopantothenate side right {
+    r_4_phosphonatopantothenate
+    <-> . +ctp +h +r_4_phosphopantothenoyl_cytidylate
+    diphosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_141 [2.5.1.141] +ferroheme_b +fpp +h2o
+    ferroheme_o
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    stemar_13_ene
+    <-> ec_4_2_3_55 [4.2.3.55] +fpp
+    s_bisabolene
   }
 }

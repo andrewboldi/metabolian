@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer "1-tetradecanoyl-2-[(5Z,8Z… to ricinoleoyl-sn-glycero-3-…" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     1_tetradecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl
@@ -18,19 +18,49 @@ pathway 1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer "1-tetradecanoyl-2-[(5Z
 
   branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side left {
     2_arachidonoyl_sn_glycero_3_phosphocholine
-    <-> . +hydrogen_donor +o2 +hydrogen_acceptor +h2o
-    2_15r_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g
+    <-> . +o2
+    2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad
+  }
+
+  branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side right {
+    2_arachidonoyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_di_o_arachidonoyl_sn_glycero_3_phosphocholin +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +hplus
+    n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho
+  }
+
+  branch from tetradecanoate side left {
+    tetradecanoate
+    <-> ec_1_11_2_4 [1.11.2.4] +h2o2 +h2o
+    2r_2_hydroxytetradecanoate
   }
 
   branch from tetradecanoate side right {
     tetradecanoate
-    <-> . +holo-acp +atp +amp +ppi
-    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
+    <-> ec_1_11_2_4 [1.11.2.4] +h2o2 +h2o
+    2s_2_hydroxytetradecanoate
+  }
+
+  branch from choline_alfoscerate side left {
+    choline_alfoscerate
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +1_o_acyl_sn_glycero_3_phosphocholine
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+  }
+
+  branch from choline_alfoscerate side right {
+    choline_alfoscerate
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+    2_acyl_sn_glycero_3_phosphocholine
   }
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +h2o +coa +hplus
-    arachidonoyl_coa
+    <-> . +1_1z_hexadecenyl_2_arachidonoyl_sn_glycero_3_pho +h2o +hplus
+    1_1z_hexadecenyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from arachidonate side right {
+    arachidonate
+    <-> . +1_octadecanoyl_2_arachidonoyl_sn_glycero_3_phosp +h2o +hplus
+    1_octadecanoyl_sn_glycero_3_phospho_d_myo_inosit
   }
 }

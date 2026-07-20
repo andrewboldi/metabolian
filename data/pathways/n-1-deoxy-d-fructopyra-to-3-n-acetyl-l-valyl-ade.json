@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-1-deoxy-d-fructopyra-to-3-n-acetyl-l-valyl-ade",
   "name": "N-(1-deoxy-β-D-fructopyra… to 3'-(N-acetyl-L-valyl)aden…",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N-(1-deoxy-β-D-fructopyranos-1-yl)-L-valine betaine to 3'-(N-acetyl-L-valyl)adenylyl residue(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -158,6 +158,25 @@
       }
     },
     {
+      "id": "2s_3_4_hydroxyphenyl_2_e_2r_3s_4r_5r_2_3_4_5_te",
+      "name": "(2S)-3-(4-hydroxyphenyl)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]propanoate",
+      "short": "3-(4-hydroxyphenyl)…",
+      "formula": "C15H18NO8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:228152"
+      }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
       "id": "n_1_deoxy_d_fructopyranos_1_yl_l_phenylalanine_b",
       "name": "N-(1-deoxy-β-D-fructopyranos-1-yl)-L-phenylalanine betaine",
       "short": "N-(1-deoxy-β-D-fruc…",
@@ -214,22 +233,61 @@
       }
     },
     {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
+      "id": "3_amino_n_trans_3_carbamoyloxirane_2_carbonyl_l",
+      "name": "3-amino-N-(trans-3-carbamoyloxirane-2-carbonyl)-L-alanine",
+      "short": "3-amino-N-(trans-3-…",
+      "formula": "C7H11N3O5",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57907"
+        "chebi": "CHEBI:84913"
       }
     },
     {
-      "id": "ophiobolin_f",
-      "name": "ophiobolin F",
-      "formula": "C25H42O",
+      "id": "dapdiamide_e",
+      "name": "dapdiamide E",
+      "formula": "C12H20N4O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78293"
+        "chebi": "CHEBI:84912"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "selina_4_15_7_11_diene",
+      "name": "selina-4(15),7(11)-diene",
+      "short": "selina-4(15),7(11)-…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138051"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "pseudolaratriene",
+      "name": "pseudolaratriene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138050"
       }
     }
   ],
@@ -249,10 +307,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_145",
-      "name": "ophiobolin F synthase",
+      "id": "ec_4_2_3_181",
+      "name": "selina-4(15),7(11)-diene synthase",
       "ec": [
-        "4.2.3.145"
+        "4.2.3.181"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_180",
+      "name": "pseudolaratriene synthase",
+      "ec": [
+        "4.2.3.180"
       ]
     }
   ],
@@ -402,6 +467,49 @@
     },
     {
       "id": "r4",
+      "name": "(2S)-3-(4-hydroxyphenyl)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylide...",
+      "equation": "(2S)-3-(4-hydroxyphenyl)-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]propanoate + H2O + H(+) = 2-dehydro-D-glucose + L-tyrosine",
+      "substrates": [
+        {
+          "metabolite": "2s_3_4_hydroxyphenyl_2_e_2r_3s_4r_5r_2_3_4_5_te",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_d_glucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:77851"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-phenylalanine + O2 + H2O = 2-dehydro-D-glucose ...",
       "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-phenylalanine + O2 + H2O = 2-dehydro-D-glucose + L-phenylalanine + H2O2",
       "substrates": [
@@ -433,7 +541,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:77855"
       },
@@ -448,7 +556,7 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "dapdiamide synthase",
       "equation": "N(3)-fumaramoyl-(S)-2,3-diaminopropanoate + L-valine + ATP = dapdiamide A + ADP + phosphate + H(+)",
       "ec": "6.3.2.47",
@@ -490,7 +598,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:44344"
       },
@@ -505,23 +613,76 @@
       }
     },
     {
-      "id": "r6",
-      "name": "ophiobolin F synthase",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = ophiobolin F + diphosphate",
-      "ec": "4.2.3.145",
+      "id": "r7",
+      "name": "dapdiamide synthase",
+      "equation": "3-[[[(2R,3R)-3-carboxyoxiran-2-yl]carbonyl]amino]-L-alanine + L-valine + ATP = dapdiamide E + ADP + phosphate + H(+)",
+      "ec": "6.3.2.47",
       "substrates": [
         {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "metabolite": "3_amino_n_trans_3_carbamoyloxirane_2_carbonyl_l",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "valine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ophiobolin_f",
+          "metabolite": "dapdiamide_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:45080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "selina-4(15),7(11)-diene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = selina-4(15),7(11)-diene + diphosphate",
+      "ec": "4.2.3.181",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selina_4_15_7_11_diene",
           "stoichiometry": 1
         },
         {
@@ -531,20 +692,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_145"
+          "enzyme": "ec_4_2_3_181"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:41552"
+        "rhea": "RHEA:54112"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41552"
+            "id": "RHEA:54112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "pseudolaratriene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = pseudolaratriene + diphosphate",
+      "ec": "4.2.3.180",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudolaratriene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_180"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:54116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54116"
           }
         ]
       }

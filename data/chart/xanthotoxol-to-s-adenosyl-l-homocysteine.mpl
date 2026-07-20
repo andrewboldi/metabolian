@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway xanthotoxol-to-s-adenosyl-l-homocysteine "xanthotoxol to S-adenosyl-L-homocysteine" {
-  spacing 244
+  spacing 268
 
   spine at 0,0 {
     xanthotoxol
@@ -18,13 +18,25 @@ pathway xanthotoxol-to-s-adenosyl-l-homocysteine "xanthotoxol to S-adenosyl-L-ho
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> . +n6_methyl_l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysine_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_366 [2.1.1.366] +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    n6_n6_n6_trimethyl_l_lysine
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +nootkatol +fmnh2 +o2 +h2o +hplus
+    nootkatone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    9_r_hode
+    <-> ec_1_14_14_151 [1.14.14.151] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
+    2_hydroxy_5_epi_aristolochene
   }
 }

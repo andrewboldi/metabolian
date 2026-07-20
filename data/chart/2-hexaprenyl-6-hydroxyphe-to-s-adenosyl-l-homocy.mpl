@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxyphe… to S-adenosyl-L-homocysteine" {
-  spacing 256
+  spacing 298
 
   spine at 0,0 {
     2_hexaprenyl_6_hydroxyphenol
@@ -16,9 +16,45 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
     all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
   }
 
+  branch from 2_hexaprenyl_6_methoxyphenol side left {
+    2_hexaprenyl_6_methoxyphenol
+    <-> . +o2 +h2o
+    2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_35 [2.1.1.35] +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
+  }
+
   branch from sah side left {
     sah
-    <-> . +malonyl-coa +sam
-    malonyl_coa_methyl_ester
+    <-> ec_2_1_1_166 [2.1.1.166] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
+  }
+
+  branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side right {
+    all_trans_6_methoxy_2_hexaprenylhydroquinone
+    <-> ec_1_6_5_2 [1.6.5.2] +2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon +h +nadph
+    nadp
+  }
+
+  branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side left {
+    all_trans_6_methoxy_2_hexaprenylhydroquinone
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon +h
+    nad
+  }
+
+  branch from all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu side right {
+    all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
+    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
+    2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be
+  }
+
+  branch from all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu side left {
+    all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
+    <-> ec_1_6_5_2 [1.6.5.2] +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +h +nad
+    nadh
   }
 }

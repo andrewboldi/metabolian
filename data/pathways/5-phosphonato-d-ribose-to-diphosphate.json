@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-phosphonato-d-ribose-to-diphosphate",
   "name": "5-phosphonato-α-D-ribose… to diphosphate",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 5-phosphonato-α-D-ribose cyclic-1,2-phosphate(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -76,22 +76,21 @@
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37563"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "cdp_d_ribose",
-      "name": "CDP-D-ribose",
-      "formula": "C14H21N3O15P2",
+      "id": "adp_d_ribose",
+      "name": "ADP-D-ribose",
+      "formula": "C15H21N5O14P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:137525"
+        "chebi": "CHEBI:57967"
       }
     },
     {
@@ -104,22 +103,60 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "butyrolactone_ii",
+      "name": "butyrolactone II",
+      "formula": "C19H16O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:191395"
       }
     },
     {
-      "id": "sesquisabinene_a",
-      "name": "sesquisabinene A",
-      "formula": "C15H24",
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "butyrolactone_i",
+      "name": "butyrolactone I",
+      "formula": "C24H24O7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:143551"
+        "chebi": "CHEBI:191397"
+      }
+    },
+    {
+      "id": "3_indol_3_yl_pyruvate",
+      "name": "3-(indol-3-yl)pyruvate",
+      "short": "3-(indol-3-yl)pyruv…",
+      "formula": "C11H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17640"
+      }
+    },
+    {
+      "id": "didemethylasterriquinone_d",
+      "name": "didemethylasterriquinone D",
+      "short": "didemethylasterriqu…",
+      "formula": "C22H13N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192553"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
       }
     }
   ],
@@ -129,6 +166,20 @@
       "name": "phosphoribosyl 1,2-cyclic phosphate 1,2-diphosphodiesterase",
       "ec": [
         "3.1.4.57"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_96",
+      "name": "ADP-D-ribose pyrophosphorylase",
+      "ec": [
+        "2.7.7.96"
+      ]
+    },
+    {
+      "id": "ec_6_4_1_12",
+      "name": "didemethylasterriquinone D synthase",
+      "ec": [
+        "6.4.1.12"
       ]
     }
   ],
@@ -225,15 +276,16 @@
     },
     {
       "id": "r3",
-      "name": "D-ribose 5-phosphate + CTP + H(+) = CDP-D-ribose + diphosphate",
-      "equation": "D-ribose 5-phosphate + CTP + H(+) = CDP-D-ribose + diphosphate",
+      "name": "ADP-D-ribose pyrophosphorylase",
+      "equation": "D-ribose 5-phosphate + ATP + H(+) = ADP-D-ribose + diphosphate",
+      "ec": "2.7.7.96",
       "substrates": [
         {
           "metabolite": "d_ribofuranose_5_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ctp",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -243,7 +295,7 @@
       ],
       "products": [
         {
-          "metabolite": "cdp_d_ribose",
+          "metabolite": "adp_d_ribose",
           "stoichiometry": 1
         },
         {
@@ -251,34 +303,43 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_96"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:53872"
+        "rhea": "RHEA:50248"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53872"
+            "id": "RHEA:50248"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = sesquisabinene A + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = sesquisabinene A + diphosphate",
+      "name": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
+      "equation": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "butyrolactone_ii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sesquisabinene_a",
+          "metabolite": "butyrolactone_i",
           "stoichiometry": 1
         },
         {
@@ -289,14 +350,67 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:60020"
+        "rhea": "RHEA:72903"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60020"
+            "id": "RHEA:72903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "didemethylasterriquinone D synthase",
+      "equation": "2 indole-3-pyruvate + 2 ATP = didemethylasterriquinone D + 2 AMP + 2 diphosphate + H(+)",
+      "ec": "6.4.1.12",
+      "substrates": [
+        {
+          "metabolite": "3_indol_3_yl_pyruvate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "didemethylasterriquinone_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_4_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:72975"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72975"
           }
         ]
       }

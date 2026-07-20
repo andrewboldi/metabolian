@@ -1,0 +1,220 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dtdp-to-aquayamycin",
+  "name": "dTDP to Aquayamycin",
+  "category": "other",
+  "summary": "A 3-step route from dTDP to Aquayamycin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR110435"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dtdp",
+      "name": "dTDP",
+      "formula": "C10H13N2O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM152"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "urdamycin_a",
+      "name": "urdamycin A",
+      "formula": "C43H56O17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32279"
+      }
+    },
+    {
+      "id": "dtdp_d_olivose",
+      "name": "dTDP-D-olivose",
+      "formula": "C16H26N2O14P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29729"
+      }
+    },
+    {
+      "id": "urdamycin_g",
+      "name": "Urdamycin G",
+      "formula": "C37H46O14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32282"
+      }
+    },
+    {
+      "id": "dtdp_beta_l_rhodinose",
+      "name": "dTDP-beta-L-rhodinose",
+      "short": "dTDP-beta-L-rhodino…",
+      "formula": "C16H26N2O13P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32341"
+      }
+    },
+    {
+      "id": "100_2",
+      "name": "100-2",
+      "formula": "C31H36O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31049"
+      }
+    },
+    {
+      "id": "aquayamycin",
+      "name": "Aquayamycin",
+      "formula": "C25H26O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31230"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR110435",
+      "substrates": [
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "urdamycin_a",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_d_olivose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "urdamycin_g",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR110435"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR110434",
+      "substrates": [
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "urdamycin_g",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_beta_l_rhodinose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "100_2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR110434"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110434"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR110433",
+      "substrates": [
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "100_2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_beta_l_rhodinose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aquayamycin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR110433"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110433"
+          }
+        ]
+      }
+    }
+  ]
+}

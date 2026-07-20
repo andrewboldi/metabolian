@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-6-dihydrothymine-to-l-alanine",
   "name": "5,6-dihydrothymine to L-alanine",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 5,6-dihydrothymine to L-alanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -111,22 +111,42 @@
       }
     },
     {
-      "id": "iminodiacetonitrile",
-      "name": "iminodiacetonitrile",
-      "formula": "C4H5N3",
+      "id": "o_carbamoyl_l_serine",
+      "name": "O-carbamoyl-L-serine",
+      "formula": "C4H8N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:71189"
+        "chebi": "CHEBI:57594"
       }
     },
     {
-      "id": "n_cyanomethyl_glycinate",
-      "name": "N-(cyanomethyl)glycinate",
-      "short": "N-(cyanomethyl)glyc…",
-      "formula": "C4H5N2O2",
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76565"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:71192"
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "inosine_5_phosphate_1",
+      "name": "inosine 5'-phosphate(1−)",
+      "short": "inosine 5'-P(1−)",
+      "formula": "C10H10N4O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82852"
       }
     },
     {
@@ -145,6 +165,24 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "ala_thr",
+      "name": "Ala-Thr",
+      "formula": "C7H14N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74390"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57926"
       }
     }
   ],
@@ -168,6 +206,13 @@
       "name": "(R)-3-amino-2-methylpropionate--pyruvate transaminase",
       "ec": [
         "2.6.1.40"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_33",
+      "name": "tRNA(adenine(34)) deaminase",
+      "ec": [
+        "3.5.4.33"
       ]
     }
   ],
@@ -317,21 +362,69 @@
     },
     {
       "id": "r4",
-      "name": "iminodiacetonitrile + 2 H2O = N-(cyanomethyl)glycine + NH4(+)",
-      "equation": "iminodiacetonitrile + 2 H2O = N-(cyanomethyl)glycine + NH4(+)",
+      "name": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
+      "equation": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
       "substrates": [
         {
-          "metabolite": "iminodiacetonitrile",
+          "metabolite": "o_carbamoyl_l_serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_cyanomethyl_glycinate",
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:43004"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43004"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tRNA(adenine(34)) deaminase",
+      "equation": "adenosine(34) in tRNA + H2O + H(+) = inosine(34) in tRNA + NH4(+)",
+      "ec": "3.5.4.33",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "inosine_5_phosphate_1",
           "stoichiometry": 1
         },
         {
@@ -339,23 +432,28 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_33"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:34855"
+        "rhea": "RHEA:43168"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34855"
+            "id": "RHEA:43168"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "L-alanyl-L-glutamine + H2O = L-glutamine + L-alanine",
       "equation": "L-alanyl-L-glutamine + H2O = L-glutamine + L-alanine",
       "substrates": [
@@ -379,7 +477,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:37275"
       },
@@ -389,6 +487,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:37275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
+      "equation": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "ala_thr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:37299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37299"
           }
         ]
       }

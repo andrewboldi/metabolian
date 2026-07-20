@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway selenite-to-glutathionate "selenite to glutathionate" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     selenite
@@ -18,13 +18,25 @@ pathway selenite-to-glutathionate "selenite to glutathionate" {
 
   branch from gssg side left {
     gssg
-    <-> . +12_r_hpete +gsh +h2o
-    12_r_hete
+    <-> ec_1_8_5_1 [1.8.5.1] +l_dehydroascorbate +gsh
+    ascorbate
+  }
+
+  branch from gssg side right {
+    gssg
+    <-> . +5_s_hpete +gsh +h2o
+    5_s_hete
+  }
+
+  branch from gsh side left {
+    gsh
+    <-> ec_4_3_2_7 [4.3.2.7] +5_oxo_l_prolinate
+    cysgly
   }
 
   branch from gsh side right {
     gsh
-    <-> . +prostaglandin_a2
-    s_pga2_s_glutathione_conjugate
+    <-> . +13_s_hpode +gssg +h2o
+    13_s_hode
   }
 }

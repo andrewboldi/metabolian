@@ -4,63 +4,45 @@
 # edit the generator, not this file.
 
 pathway r-3-4-hydroxyphenyl-la-to-s-adenosyl-l-homocyst "(R)-3-(4-hydroxyphenyl)la… to S-adenosyl-L-homocysteine" {
-  spacing 280
+  spacing 288
 
   spine at 0,0 {
     r_3_4_hydroxyphenyl_lactate
     <-> ec_1_1_1_110 [1.1.1.110] +nad -nadh -hplus
     3_4_hydroxyphenyl_pyruvate
-    <-> ec_1_2_3_13 [1.2.3.13] +o2 -co2
-    4_hydroxyphenylacetate
-    <-> ec_1_14_13_18 [1.14.13.18] +nadph +o2 +hplus -nadp -h2o
-    homogentisate
-    <-> ec_2_5_1_115 [2.5.1.115] +phytyl_diphosphate +hplus -co2 -ppi
-    r_r_2_methyl_6_phytylhydroquinone
-    <-> ec_2_1_1_295 [2.1.1.295] +sam -sah -hplus
-    r_r_2_3_dimethyl_6_phytylhydroquinone
-    <-> ec_3_13_2_1 [3.13.2.1] +sah +h2o -adenosine
-    homocysteine
-    <-> ec_2_1_1_13 [2.1.1.13] +6s_5_methyltetrahydrofolate -methionine
-    thf
-    <-> ec_2_1_1_19 [2.1.1.19] +trimethylsulfonium -6s_5_methyltetrahydrofolate -hplus
-    dimethyl_sulfide
-    <-> ec_2_1_1_96 [2.1.1.96] +sam -sah
-    trimethylsulfonium
+    <-> ec_2_5_1_111 [2.5.1.111] +dmapp -ppi
+    3_dimethylallyl_4_hydroxyphenylpyruvate
+    <-> ec_1_13_11_83 [1.13.11.83] +o2 -co2
+    3_dimethylallyl_4_hydroxymandelate
+    <-> ec_1_13_12_23 [1.13.12.23] +o2 -co2 -h2o
+    3_dimethylallyl_4_hydroxybenzoate
+    <-> ec_6_3_1_15 [6.3.1.15] +3_amino_4_7_dihydroxycoumarin +atp -amp -ppi
+    8_desmethylnovobiocic_acid
+    <-> ec_2_1_1_284 [2.1.1.284] +sam -sah -hplus
+    novobiocic_acid
   }
 
-  branch from 3_4_hydroxyphenyl_pyruvate side left {
-    3_4_hydroxyphenyl_pyruvate
-    <-> . +tyrosine +o2 +h2o +h2o2
-    nh3
-  }
-
-  branch from 4_hydroxyphenylacetate side right {
-    4_hydroxyphenylacetate
-    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +o2 +fad +h2o +hplus
-    dopac
-  }
-
-  branch from r_r_2_methyl_6_phytylhydroquinone side left {
-    r_r_2_methyl_6_phytylhydroquinone
-    <-> ec_5_5_1_24 [5.5.1.24]
-    tocopherol
+  branch from ppi side left {
+    ppi
+    <-> . +spectinomycin +atp
+    9_o_adenylylspectinomycin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_11 [6.1.1.11] +amp_3_end_1 +serine +atp +amp +hplus
-    3_l_seryl_adenylyl_1_group
+    <-> . +streptomycin +atp
+    6_o_adenylylstreptomycin
   }
 
-  branch from r_r_2_3_dimethyl_6_phytylhydroquinone side left {
-    r_r_2_3_dimethyl_6_phytylhydroquinone
-    <-> ec_5_5_1_24 [5.5.1.24]
-    tocopherol
+  branch from sah side left {
+    sah
+    <-> . +3_hydroxy_d_kynurenine +sam +hplus
+    3_hydroxy_4_methyl_d_kynurenine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_69 [2.1.1.69] +bergaptol +sam
-    5_methoxypsoralen
+    <-> . +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
   }
 }

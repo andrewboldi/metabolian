@@ -4,19 +4,29 @@
 # edit the generator, not this file.
 
 pathway molybdopterin-adenine-to-diphosphate "molybdopterin adenine… to diphosphate" {
-  spacing 224
+  spacing 232
 
   spine at 0,0 {
     molybdopterin_adenine_dinucleotide
-    <-> ec_2_10_1_1 [2.10.1.1] +molybdate -amp -hplus
+    <-> . +molybdate +hplus -h2o
+    mo_vi_o3_molybdopterin_adenosine_dinucleotide
+    <-> .
+    mo_vi_o2_oh_molybdopterin_adenosine_dinucleotide
+    <-> . +h2o -amp -hplus
     mo_vi_o2_oh_molybdopterin_cofactor
-    <-> ec_2_7_7_76 [2.7.7.76] +ctp +hplus -ppi
-    mo_vi_molybdopterin_cytosine_dinucleotide
+    <-> ec_2_7_7_77 [2.7.7.77] +gtp +hplus -ppi
+    mo_vi_molybdopterin_guanine_dinucleotide
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_37 [4.2.3.37] +fpp
-    epi_isozizaene
+    <-> ec_2_7_7_n6 [2.7.7.n6] +l_tyrosine +gtp
+    o_guanylyl_l_tyrosine_1
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_182 [4.2.3.182] +fpp +h2o
+    2s_3r_9r_pristinol
   }
 }

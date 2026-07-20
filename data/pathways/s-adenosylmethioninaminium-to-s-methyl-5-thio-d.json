@@ -149,6 +149,71 @@
       "xrefs": {
         "chebi": "CHEBI:82771"
       }
+    },
+    {
+      "id": "sinapoyl_coa",
+      "name": "sinapoyl-CoA",
+      "formula": "C32H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57393"
+      }
+    },
+    {
+      "id": "n1_n8_bis_sinapoyl_spermidine",
+      "name": "N1,N8-bis(sinapoyl)-spermidine",
+      "short": "N1,N8-bis(sinapoyl)…",
+      "formula": "C29H40N3O8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:85006"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "n_citryl_spermidine",
+      "name": "N-citryl-spermidine",
+      "formula": "C13H25N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149586"
+      }
+    },
+    {
+      "id": "n8_n_8_citryl_bis_spermidine_3",
+      "name": "N8,N'8-citryl-bis(spermidine) (+3)",
+      "short": "N8,N'8-citryl-bis(s…",
+      "formula": "C20H45N6O5",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:149592"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
@@ -185,6 +250,13 @@
       "name": "N(4)-bis(aminopropyl)spermidine synthase",
       "ec": [
         "2.5.1.128"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_248",
+      "name": "spermidine disinapoyl transferase",
+      "ec": [
+        "2.3.1.248"
       ]
     }
   ],
@@ -420,6 +492,106 @@
           {
             "db": "Rhea",
             "id": "RHEA:44132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "spermidine disinapoyl transferase",
+      "equation": "2 (E)-sinapoyl-CoA + spermidine = N(1),N(8)-bis[(E)-sinapoyl]-spermidine + 2 CoA + 2 H(+)",
+      "ec": "2.3.1.248",
+      "substrates": [
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_n8_bis_sinapoyl_spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_248"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:45168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "N(8)-citryl-spermidine + spermidine + ATP = N(8),N'(8)-citryl-bis(spermidine) + AMP + d...",
+      "equation": "N(8)-citryl-spermidine + spermidine + ATP = N(8),N'(8)-citryl-bis(spermidine) + AMP + diphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_citryl_spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n8_n_8_citryl_bis_spermidine_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:63812"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63812"
           }
         ]
       }

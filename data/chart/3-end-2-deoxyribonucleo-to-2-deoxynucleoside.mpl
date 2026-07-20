@@ -4,21 +4,21 @@
 # edit the generator, not this file.
 
 pathway 3-end-2-deoxyribonucleo-to-2-deoxynucleoside "3'-end 2'-deoxyribonucleo… to 2'-deoxynucleoside…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     3_end_2_deoxyribonucleotidyl_deoxyribonucleotide
     <-> . +h2o -2_deoxynucleoside_5_monophosphate -hplus
     3_end_deoxyribonucleotide_1
-    <-> . +2_deoxynucleoside_5_monophosphate +gtp -gdp
-    2_deoxyribonucleoside_5_diphosphate
-    <-> . +h2o -pi -hplus
+    <-> ec_3_1_3_89 [3.1.3.89] +2_deoxynucleoside_5_monophosphate +h2o -pi
+    2_deoxyribonucleoside
+    <-> ec_2_7_1_145 [2.7.1.145] +atp -adp -hplus
     2_deoxynucleoside_5_monophosphate
   }
 
-  branch from 2_deoxyribonucleoside_5_diphosphate side left {
-    2_deoxyribonucleoside_5_diphosphate
-    <-> . +h2o +pi +hplus
+  branch from 2_deoxynucleoside_5_monophosphate side left {
+    2_deoxynucleoside_5_monophosphate
+    <-> ec_3_6_1_5 [3.6.1.5] +h2o +pi +hplus
     2_deoxyribonucleoside_5_triphosphate
   }
 }

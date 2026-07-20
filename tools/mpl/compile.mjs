@@ -91,7 +91,10 @@ export function prettyName(id) {
 
 export function tokenize(src) {
   const tokens = [];
-  const re = /\s*(#[^\n]*|"[^"]*"|<->|->|-\|\||[[\]{}(),]|[+\-!][A-Za-z0-9_.]+|[A-Za-z0-9_.:\-]+)/g;
+  // A quoted string may contain an ESCAPED quote. Without \\" in this alternative
+  // a title carrying one — chemistry writes primes as 4"-O- — terminated early
+  // and the rest of the name tokenised as syntax, failing the whole sheet.
+  const re = /\s*(#[^\n]*|"(?:[^"\\]|\\.)*"|<->|->|-\|\||[[\]{}(),]|[+\-!][A-Za-z0-9_.]+|[A-Za-z0-9_.:\-]+)/g;
   let m;
   while ((m = re.exec(src))) {
     const t = m[1];

@@ -122,50 +122,58 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "ppp5_aaca_mrna",
+      "name": "ppp5'AACA-mRNA",
+      "formula": "C40H45N17O32P6",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:156503"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58189"
       }
     },
     {
-      "id": "2s_3r_6s_9s_protoillud_7_ene",
-      "name": "(2S,3R,6S,9S)-(−)-protoillud-7-ene",
-      "short": "(2S,3R,6S,9S)-(−)-p…",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:137530"
+        "chebi": "CHEBI:15378"
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
+      "id": "g5_ppp5_aaca_mrna",
+      "name": "G5'ppp5'AACA-mRNA",
+      "formula": "C50H57N22O36P6",
+      "charge": -6,
       "xrefs": {
-        "chebi": "CHEBI:30245"
+        "chebi": "CHEBI:156484"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "13_s_hode",
-      "name": "13(S)-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
+      "id": "cyclic_a_2_5_pa_3_5_pa_3_5_p",
+      "name": "cyclic A(2'-5')pA(3'-5')pA(3'-5')p",
+      "short": "cyclic A(2'-5')pA(3…",
+      "formula": "C30H33N15O18P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:90850"
+        "chebi": "CHEBI:156512"
       }
     }
   ],
@@ -192,10 +200,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_160",
-      "name": "(2S,3R,6S,9S)-(-)-protoillud-7-ene synthase",
+      "id": "ec_2_7_7_88",
+      "name": "GDP polyribonucleotidyltransferase",
       "ec": [
-        "4.2.3.160"
+        "2.7.7.88"
       ]
     }
   ],
@@ -345,18 +353,26 @@
     },
     {
       "id": "r4",
-      "name": "(2S,3R,6S,9S)-(-)-protoillud-7-ene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (2S,3R,6S,9S)-(-)-protoillud-7-ene + diphosphate",
-      "ec": "4.2.3.160",
+      "name": "GDP polyribonucleotidyltransferase",
+      "equation": "a 5'-end triphospho-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + GDP + H(+) = a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + diphosphate",
+      "ec": "2.7.7.88",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "ppp5_aaca_mrna",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2s_3r_6s_9s_protoillud_7_ene",
+          "metabolite": "g5_ppp5_aaca_mrna",
           "stoichiometry": 1
         },
         {
@@ -366,67 +382,55 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_160"
+          "enzyme": "ec_2_7_7_88"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:53628"
+        "rhea": "RHEA:65436"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53628"
+            "id": "RHEA:65436"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
-      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
+      "name": "3 ATP = 2',3',3'-c-tri-AMP + 3 diphosphate",
+      "equation": "3 ATP = 2',3',3'-c-tri-AMP + 3 diphosphate",
       "substrates": [
         {
-          "metabolite": "linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "metabolite": "atp",
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "13_s_hode",
+          "metabolite": "cyclic_a_2_5_pa_3_5_pa_3_5_p",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "ppi",
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:75451"
+        "rhea": "RHEA:65488"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75451"
+            "id": "RHEA:65488"
           }
         ]
       }

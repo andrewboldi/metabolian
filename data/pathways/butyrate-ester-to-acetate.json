@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "butyrate-ester-to-acetate",
   "name": "butyrate ester to acetate",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from butyrate ester to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,40 +100,39 @@
       }
     },
     {
-      "id": "fatty_acid_ester",
-      "name": "fatty acid ester",
-      "formula": "CO2R2",
+      "id": "tetradecanoate_ester",
+      "name": "tetradecanoate ester",
+      "formula": "C14H27O2R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35748"
+        "chebi": "CHEBI:87691"
       }
     },
     {
-      "id": "fatty-acid",
-      "name": "Fatty acid",
-      "formula": "CO2R",
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:28868"
+        "chebi": "CHEBI:30807"
       }
     },
     {
-      "id": "n_acetyl_s_benzyl_l_cysteine",
-      "name": "N-acetyl-S-benzyl-L-cysteine",
-      "short": "N-acetyl-S-benzyl-L…",
-      "formula": "C12H14NO3S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194342"
-      }
-    },
-    {
-      "id": "s_benzyl_l_cysteine",
-      "name": "S-benzyl-L-cysteine",
-      "formula": "C10H13NO2S",
+      "id": "octadecanoate_ester",
+      "name": "octadecanoate ester",
+      "formula": "C18H35O2R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145803"
+        "chebi": "CHEBI:75925"
+      }
+    },
+    {
+      "id": "octadecanoate",
+      "name": "octadecanoate",
+      "formula": "C18H35O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:25629"
       }
     }
   ],
@@ -293,11 +292,11 @@
     },
     {
       "id": "r4",
-      "name": "a fatty acid ester + H2O = an aliphatic alcohol + a fatty acid + H(+)",
-      "equation": "a fatty acid ester + H2O = an aliphatic alcohol + a fatty acid + H(+)",
+      "name": "a tetradecanoate ester + H2O = an aliphatic alcohol + tetradecanoate + H(+)",
+      "equation": "a tetradecanoate ester + H2O = an aliphatic alcohol + tetradecanoate + H(+)",
       "substrates": [
         {
-          "metabolite": "fatty_acid_ester",
+          "metabolite": "tetradecanoate_ester",
           "stoichiometry": 1
         },
         {
@@ -311,7 +310,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "fatty-acid",
+          "metabolite": "tetradecanoate",
           "stoichiometry": 1
         },
         {
@@ -322,25 +321,25 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:59388"
+        "rhea": "RHEA:47388"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59388"
+            "id": "RHEA:47388"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N-acetyl-S-benzyl-L-cysteine + H2O = S-benzyl-L-cysteine + acetate",
-      "equation": "N-acetyl-S-benzyl-L-cysteine + H2O = S-benzyl-L-cysteine + acetate",
+      "name": "octadecanoate ester + H2O = an aliphatic alcohol + octadecanoate + H(+)",
+      "equation": "octadecanoate ester + H2O = an aliphatic alcohol + octadecanoate + H(+)",
       "substrates": [
         {
-          "metabolite": "n_acetyl_s_benzyl_l_cysteine",
+          "metabolite": "octadecanoate_ester",
           "stoichiometry": 1
         },
         {
@@ -350,25 +349,29 @@
       ],
       "products": [
         {
-          "metabolite": "s_benzyl_l_cysteine",
+          "metabolite": "aliphatic_alcohol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
+          "metabolite": "octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:86755"
+        "rhea": "RHEA:47396"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:86755"
+            "id": "RHEA:47396"
           }
         ]
       }

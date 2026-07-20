@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-9-10-labda-8-20-13-to-fmn-25759 "5β,9α,10α-labda-8(20),13-… to FMN" {
-  spacing 156
+  spacing 180
 
   spine at 0,0 {
     5_9_10_labda_8_20_13_dien_15_yl_diphosphate
@@ -18,13 +18,25 @@ pathway 5-9-10-labda-8-20-13-to-fmn-25759 "5β,9α,10α-labda-8(20),13-… to FM
 
   branch from ppi side left {
     ppi
-    <-> . +8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct +atp +coa +amp
-    opc8_coa
+    <-> . +fpp
+    cis_farnesene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    acoradiene
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +nataloe_emodin +fmnh2 +o2 +h2o +hplus
+    cladofulvin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +9_10_epome +fmnh2 +o2 +h2o +hplus
-    9_10_epoxy_18_hydroxy_12z_octadecenoate
+    <-> . +20_hete +fmnh2 +o2 +h2o +hplus
+    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
   }
 }

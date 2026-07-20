@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-formimidoyltetrahydrofo-to-hydrogen-cyanide "5-formimidoyltetrahydrofo… to hydrogen cyanide" {
-  spacing 192
+  spacing 222
 
   spine at 0,0 {
     5_formimidoyltetrahydrofolate
@@ -18,14 +18,26 @@ pathway 5-formimidoyltetrahydrofo-to-hydrogen-cyanide "5-formimidoyltetrahydrofo
 
   branch from thf side left {
     thf
-    <-> . +dump +methylene_thf +h2o
-    5_hydroxymethyluridine_2_deoxy_5_phosphate
+    <-> . +methylene_thf +dserine +h2o
+    hydroxymethyl_serine
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_1_4_1_13 [1.4.1.13] +nadp +akg +nadph +hplus
-    glutamine
+    <-> ec_2_6_1_49 [2.6.1.49] +ldopa +akg
+    3_4_dihydroxyphenylpyruvate
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_3_1_35 [2.3.1.35] +n2_acetyl_l_ornithine +ornithine
+    nag
+  }
+
+  branch from hydrogen_cyanide side right {
+    hydrogen_cyanide
+    <-> ec_1_14_17_4 [1.14.17.4] +1_aminocyclopropanecarboxylic_acid +ascorbate +o2 +l_dehydroascorbate +co2 +h2o
+    ethene
   }
 
   branch from hydrogen_cyanide side left {

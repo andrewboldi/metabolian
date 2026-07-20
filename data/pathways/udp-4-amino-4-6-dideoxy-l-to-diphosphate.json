@@ -150,22 +150,31 @@
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9β,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58622"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "stemod_13_17_ene",
-      "name": "stemod-13(17)-ene",
-      "formula": "C20H32",
+      "id": "drimenol",
+      "name": "drimenol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50068"
+        "chebi": "CHEBI:61148"
+      }
+    },
+    {
+      "id": "caryophyllene",
+      "name": "(−)-β-caryophyllene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10357"
       }
     }
   ],
@@ -199,10 +208,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_34",
-      "name": "stemod-13(17)-ene synthase",
+      "id": "ec_4_2_3_194",
+      "name": "(-)-drimenol synthase",
       "ec": [
-        "4.2.3.34"
+        "4.2.3.194"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_57",
+      "name": "(-)-beta-caryophyllene synthase",
+      "ec": [
+        "4.2.3.57"
       ]
     }
   ],
@@ -401,18 +417,22 @@
     },
     {
       "id": "r5",
-      "name": "stemod-13(17)-ene synthase",
-      "equation": "9alpha-copalyl diphosphate = stemod-13(17)-ene + diphosphate",
-      "ec": "4.2.3.34",
+      "name": "(-)-drimenol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (5S,9S,10S)-drim-7-en-11-ol + diphosphate",
+      "ec": "4.2.3.194",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "stemod_13_17_ene",
+          "metabolite": "drimenol",
           "stoichiometry": 1
         },
         {
@@ -422,20 +442,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_34"
+          "enzyme": "ec_4_2_3_194"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25556"
+        "rhea": "RHEA:28290"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25556"
+            "id": "RHEA:28290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(-)-beta-caryophyllene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-(E)-beta-caryophyllene + diphosphate",
+      "ec": "4.2.3.57",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "caryophyllene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:28294"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28294"
           }
         ]
       }

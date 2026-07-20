@@ -111,23 +111,41 @@
       }
     },
     {
-      "id": "peregrinol_diphosphate",
-      "name": "peregrinol diphosphate",
-      "short": "peregrinol PP",
-      "formula": "C20H35O8P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:138232"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "9_13_r_epoxylabd_14_ene",
-      "name": "9,13(R)-epoxylabd-14-ene",
-      "short": "9,13(R)-epoxylabd-1…",
-      "formula": "C20H34O",
+      "id": "gurjunene",
+      "name": "γ-gurjunene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138233"
+        "chebi": "CHEBI:178033"
+      }
+    },
+    {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
+    },
+    {
+      "id": "e_bisabolene",
+      "name": "(E)-γ-bisabolene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49239"
       }
     }
   ],
@@ -151,13 +169,6 @@
       "name": "alpha-pinene-oxide decyclase",
       "ec": [
         "5.5.1.10"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_189",
-      "name": "9,13-epoxylabda-14-ene synthase",
-      "ec": [
-        "4.2.3.189"
       ]
     }
   ],
@@ -299,18 +310,17 @@
     },
     {
       "id": "r4",
-      "name": "9,13-epoxylabda-14-ene synthase",
-      "equation": "peregrinol diphosphate = (13R)-9,13-epoxylabd-14-ene + diphosphate",
-      "ec": "4.2.3.189",
+      "name": "(2E,6E)-farnesyl diphosphate = gamma-gurjunene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = gamma-gurjunene + diphosphate",
       "substrates": [
         {
-          "metabolite": "peregrinol_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "9_13_r_epoxylabd_14_ene",
+          "metabolite": "gurjunene",
           "stoichiometry": 1
         },
         {
@@ -318,22 +328,52 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_189"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:54512"
+        "rhea": "RHEA:68400"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54512"
+            "id": "RHEA:68400"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2Z,6Z)-farnesyl diphosphate = (E)-gamma-bisabolene + diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = (E)-gamma-bisabolene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_bisabolene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:68468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68468"
           }
         ]
       }

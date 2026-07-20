@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-carboxymethylaminomethy-to-5-methylaminomethyl "5-carboxymethylaminomethy… to 5-methylaminomethyl-2-sel…" {
-  spacing 280
+  spacing 328
 
   spine at 0,0 {
     5_carboxymethylaminomethyl_2_thiouridine_5_phosp
@@ -22,25 +22,49 @@ pathway 5-carboxymethylaminomethy-to-5-methylaminomethyl "5-carboxymethylaminome
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> . +n_octanoyl_2s_hydroxyglycinate
-    octanamide
+    <-> ec_2_6_1_63 [2.6.1.63] +3_hydroxy_l_kynurenine +glycine +h2o
+    xanthurenate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> . +3_hydroxy_l_kynurenine +glycine
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +uridine_5_monophosphate_1 +o2 +hydrogen_acceptor +h2o
+    5_hydroxyuridine_5_phosphate_1
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +s_3_2_1_1_dimethylallyl_indol_3_yl_methyl_6_7_8 +hydrogen_acceptor +hplus
-    1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy
+    <-> . +2_3_bis_o_phytanyl_sn_glycerol_1_phospholipid_an +hydrogen_acceptor
+    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phospholi
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_207 [2.1.1.207] +5_carboxymethylaminomethyluridine_5_monophosphat +sam +hplus
-    5_carboxymethylaminomethyl_2_o_methyluridine_5_m
+    <-> . +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +5_hete +atp +coa +amp
+    5_hydroxy_6e_8z_11z_14z_icosatetraenoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_138 [4.2.3.138] +fpp +h2o
-    epi_bisabolol
+    <-> . +12_hete +atp +coa +amp
+    12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa
   }
 }

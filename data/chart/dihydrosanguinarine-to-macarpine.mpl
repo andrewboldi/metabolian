@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
-  spacing 272
+  spacing 302
 
   spine at 0,0 {
     dihydrosanguinarine
@@ -22,19 +22,31 @@ pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
 
   branch from fmn side left {
     fmn
-    <-> . +24r_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24r_7_24_dihydroxycholesterol
+    <-> ec_1_14_14_176 [1.14.14.176] +taxa_4_11_diene +fmnh2 +o2 +h2o +hplus
+    taxa_4_20_11_dien_5_ol
   }
 
-  branch from dihydrochelirubine side right {
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_136 [1.14.14.136] +10_deoxysarpagine +fmnh2 +o2 +h2o +hplus
+    sarpagine
+  }
+
+  branch from dihydrochelirubine side left {
     dihydrochelirubine
     <-> ec_1_5_3_12 [1.5.3.12] +o2 +hplus +h2o2
     chelirubine
   }
 
+  branch from sah side right {
+    sah
+    <-> . +methylarsonous_acid +sam +hplus
+    dimethylarsinate
+  }
+
   branch from sah side left {
     sah
-    <-> ec_2_1_1_153 [2.1.1.153] +vitexin_2_o_l_rhamnoside +sam +hplus
-    7_o_methylvitexin_2_o_l_rhamnoside
+    <-> ec_2_1_1_139 [2.1.1.139] +3_demethylstaurosporinium +sam +hplus
+    staurosporinium
   }
 }

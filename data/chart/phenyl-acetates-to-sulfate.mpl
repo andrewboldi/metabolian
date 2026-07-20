@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     phenyl_acetates
@@ -18,19 +18,37 @@ pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
 
   branch from acetate side left {
     acetate
-    <-> . +1_o_acetyl_adp_d_ribose +h2o +hplus
-    adp_d_ribose
+    <-> . +n_acetylsphingosine +h2o
+    sphingosine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +dihydroprecondylocarpine_acetate +hplus
+    catharanthine
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_10 [2.8.2.10] +renilla_luciferin +3_phosphonato_5_adenylyl_sulfate +hplus
+    renilla_luciferyl_sulfate
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_32 [2.8.2.32] +5_scymnol +3_phosphonato_5_adenylyl_sulfate +hplus
-    5_scymnol_sulfate
+    <-> ec_2_8_2_11 [2.8.2.11] +n_acyl_d_galactosylsphingosine +3_phosphonato_5_adenylyl_sulfate +hplus
+    d_galactosylceramide_sulfate
   }
 
   branch from sulfate side left {
     sulfate
-    <-> . +z_n_sulfonatooxy_alkenimidothioate
-    alkenyl_isothiocyanate
+    <-> ec_4_8_1_6 [4.8.1.6] +z_n_sulfonatooxy_alkenimidothioate
+    epithionitrile
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_4_8_1_8 [4.8.1.8] +z_n_sulfonatooxy_prop_2_enimidothioate
+    2_thiiran_2_yl_acetonitrile
   }
 }

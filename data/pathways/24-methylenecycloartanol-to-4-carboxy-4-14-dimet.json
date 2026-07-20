@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "24-methylenecycloartanol-to-4-carboxy-4-14-dimet",
+  "name": "24-methylenecycloartanol to 4α-carboxy-4β,14α-dimethy…",
+  "category": "other",
+  "summary": "A 3-step route from 24-methylenecycloartanol to 4α-carboxy-4β,14α-dimethyl-9β,19-cyclo-5α-ergost-24(241)-en-3β-ol(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58836"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:1307"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "24_methylenecycloartanol",
+      "name": "24-methylenecycloartanol",
+      "short": "24-methylenecycloar…",
+      "formula": "C31H52O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1307"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "24_methylene_9_9_19_cyclolanostane_3_28_diol",
+      "name": "24-methylene-9β-9,19-cyclolanostane-3β,28-diol",
+      "short": "24-methylene-9β-9,1…",
+      "formula": "C31H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142917"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxy_24_methylene_9_9_19_cyclolanostan_28_a",
+      "name": "3β-hydroxy-24-methylene-9β-9,19-cyclolanostan-28-al",
+      "short": "3β-hydroxy-24-methy…",
+      "formula": "C31H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142918"
+      }
+    },
+    {
+      "id": "4_carboxy_4_14_dimethyl_9_19_cyclo_5_ergost_24_2",
+      "name": "4α-carboxy-4β,14α-dimethyl-9β,19-cyclo-5α-ergost-24(241)-en-3β-ol",
+      "short": "4α-carboxy-4β,14α-d…",
+      "formula": "C31H49O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142916"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "24-methylenecycloartanol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-hydroxymethy...",
+      "equation": "24-methylenecycloartanol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-hydroxymethyl,4beta,14alpha-dimethyl-9beta,19-cyclo-5alpha-ergost-24(24(1))-en-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "24_methylenecycloartanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24_methylene_9_9_19_cyclolanostane_3_28_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4alpha-hydroxymethyl,4beta,14alpha-dimethyl-9beta,19-cyclo-5alpha-ergost-24(24(1))-en-3...",
+      "equation": "4alpha-hydroxymethyl,4beta,14alpha-dimethyl-9beta,19-cyclo-5alpha-ergost-24(24(1))-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-formyl,4beta,14alpha-dimethyl-9beta,19-cyclo-5alpha-ergost-24(24(1))-en-3beta-ol + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "24_methylene_9_9_19_cyclolanostane_3_28_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_24_methylene_9_9_19_cyclolanostan_28_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4alpha-formyl,4beta,14alpha-dimethyl-9beta,19-cyclo-5alpha-ergost-24(24(1))-en-3beta-ol...",
+      "equation": "4alpha-formyl,4beta,14alpha-dimethyl-9beta,19-cyclo-5alpha-ergost-24(24(1))-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + H(+) = 4alpha-carboxy-4beta,14alpha-dimethyl-9beta,19-cyclo-5alpha-ergost-24(24(1))-en-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_24_methylene_9_9_19_cyclolanostan_28_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxy_4_14_dimethyl_9_19_cyclo_5_ergost_24_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58864"
+          }
+        ]
+      }
+    }
+  ]
+}

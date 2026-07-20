@@ -78,22 +78,23 @@
       }
     },
     {
-      "id": "1_o_palmitylglycerol",
-      "name": "1-O-palmitylglycerol",
-      "formula": "C19H40O3",
+      "id": "1_o_palmityl_2_acetyl_sn_glycerol",
+      "name": "1-O-palmityl-2-acetyl-sn-glycerol",
+      "short": "1-O-palmityl-2-acet…",
+      "formula": "C21H42O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76061"
+        "chebi": "CHEBI:75936"
       }
     },
     {
-      "id": "1_o_palmityl_3_oleoylglycerol",
-      "name": "1-O-palmityl-3-oleoylglycerol",
-      "short": "1-O-palmityl-3-oleo…",
-      "formula": "C37H72O4",
+      "id": "1_palmityl_2_acetyl_3_oleoyl_sn_glycerol",
+      "name": "1-palmityl-2-acetyl-3-oleoyl-sn-glycerol",
+      "short": "1-palmityl-2-acetyl…",
+      "formula": "C39H74O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76062"
+        "chebi": "CHEBI:76055"
       }
     },
     {
@@ -107,22 +108,32 @@
       }
     },
     {
-      "id": "xanthogalenol",
-      "name": "xanthogalenol",
-      "formula": "C21H21O5",
-      "charge": -1,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:134308"
+        "chebi": "CHEBI:29969"
       }
     },
     {
-      "id": "4_o_methylxanthohumol",
-      "name": "4'-O-methylxanthohumol",
-      "short": "4'-O-methylxanthohu…",
-      "formula": "C22H23O5",
-      "charge": -1,
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:134309"
+        "chebi": "CHEBI:61976"
+      }
+    },
+    {
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61961"
       }
     },
     {
@@ -146,10 +157,17 @@
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_338",
-      "name": "desmethylxanthohumol 6'-O-methyltransferase",
+      "id": "ec_2_1_1_371",
+      "name": "[histone H3]-lysine(27) N-dimethyltransferase",
       "ec": [
-        "2.1.1.338"
+        "2.1.1.371"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_372",
+      "name": "[histone H4]-lysine(20) N-trimethyltransferase",
+      "ec": [
+        "2.1.1.372"
       ]
     }
   ],
@@ -242,11 +260,11 @@
     },
     {
       "id": "r3",
-      "name": "1-O-hexadecylglycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine = 1-O-hexa...",
-      "equation": "1-O-hexadecylglycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine = 1-O-hexadecyl-3-(9Z)-octadecenoylglycerol + (9Z-octadecenoyl)-sn-glycero-3-phosphocholine",
+      "name": "1-O-hexadecyl-2-acetyl-sn-glycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholi...",
+      "equation": "1-O-hexadecyl-2-acetyl-sn-glycerol + 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine = 1-O-hexadecyl-2-acetyl-3-(9Z)-octadecenoyl-sn-glycerol + (9Z-octadecenoyl)-sn-glycero-3-phosphocholine",
       "substrates": [
         {
-          "metabolite": "1_o_palmitylglycerol",
+          "metabolite": "1_o_palmityl_2_acetyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -256,7 +274,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_o_palmityl_3_oleoylglycerol",
+          "metabolite": "1_palmityl_2_acetyl_3_oleoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -267,74 +285,123 @@
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:38711"
+        "rhea": "RHEA:38707"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38711"
+            "id": "RHEA:38707"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "desmethylxanthohumol 6'-O-methyltransferase",
-      "equation": "xanthogalenol + S-adenosyl-L-methionine = 4'-O-methylxanthohumol + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.338",
+      "name": "[histone H3]-lysine(27) N-dimethyltransferase",
+      "equation": "L-lysyl(27)-[histone H3] + 2 S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(27)-[histone H3] + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.371",
       "substrates": [
         {
-          "metabolite": "xanthogalenol",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "4_o_methylxanthohumol",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_338"
+          "enzyme": "ec_2_1_1_371"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:51700"
+        "rhea": "RHEA:64452"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51700"
+            "id": "RHEA:64452"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "1-O-hexadecylglycerol + (9Z)-octadecenoyl-CoA = 1-O-hexadecyl-3-(9Z)-octadecenoylglycer...",
-      "equation": "1-O-hexadecylglycerol + (9Z)-octadecenoyl-CoA = 1-O-hexadecyl-3-(9Z)-octadecenoylglycerol + CoA",
+      "name": "[histone H4]-lysine(20) N-trimethyltransferase",
+      "equation": "L-lysyl(20)-[histone H4] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(20)-[histone H4] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.372",
       "substrates": [
         {
-          "metabolite": "1_o_palmitylglycerol",
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_372"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "1-O-hexadecyl-2-acetyl-sn-glycerol + (9Z)-octadecenoyl-CoA = 1-O-hexadecyl-2-acetyl-3-(...",
+      "equation": "1-O-hexadecyl-2-acetyl-sn-glycerol + (9Z)-octadecenoyl-CoA = 1-O-hexadecyl-2-acetyl-3-(9Z)-octadecenoyl-sn-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_o_palmityl_2_acetyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -344,7 +411,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_o_palmityl_3_oleoylglycerol",
+          "metabolite": "1_palmityl_2_acetyl_3_oleoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -353,16 +420,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:77575"
+        "rhea": "RHEA:41019"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77575"
+            "id": "RHEA:41019"
           }
         ]
       }

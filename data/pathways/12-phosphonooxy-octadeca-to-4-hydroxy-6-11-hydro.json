@@ -140,22 +140,58 @@
       }
     },
     {
-      "id": "12_9z_octadecenoyloxy_octadecanoate",
-      "name": "12-[(9Z)-octadecenoyloxy]octadecanoate",
-      "short": "12-[(9Z)-octadeceno…",
-      "formula": "C36H67O4",
-      "charge": -1,
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:136302"
+        "chebi": "CHEBI:57618"
       }
     },
     {
-      "id": "oleate",
-      "name": "oleate",
-      "formula": "C18H33O2",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "12_18_dihydroxyoctadecanoate",
+      "name": "12,18-dihydroxyoctadecanoate",
+      "short": "12,18-dihydroxyocta…",
+      "formula": "C18H35O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:30823"
+        "chebi": "CHEBI:91294"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "12_pahsa",
+      "name": "12-PAHSA",
+      "formula": "C34H65O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83677"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
       }
     },
     {
@@ -179,21 +215,37 @@
       }
     },
     {
-      "id": "patchouli_alcohol",
-      "name": "patchouli alcohol",
-      "formula": "C15H26O",
+      "id": "cadinene",
+      "name": "(+)-γ-cadinene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:7940"
+        "chebi": "CHEBI:63205"
+      }
+    },
+    {
+      "id": "guaiene",
+      "name": "δ-guaiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63447"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_70",
-      "name": "patchoulol synthase",
+      "id": "ec_4_2_3_92",
+      "name": "(+)-gamma-cadinene synthase",
       "ec": [
-        "4.2.3.70"
+        "4.2.3.92"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_93",
+      "name": "delta-guaiene synthase",
+      "ec": [
+        "4.2.3.93"
       ]
     }
   ],
@@ -333,11 +385,62 @@
     },
     {
       "id": "r4",
-      "name": "12-(9Z-octadecenoyloxy)-octadecanoate + H2O = 12-hydroxyoctadecanoate + (9Z)-octadeceno...",
-      "equation": "12-(9Z-octadecenoyloxy)-octadecanoate + H2O = 12-hydroxyoctadecanoate + (9Z)-octadecenoate + H(+)",
+      "name": "12-hydroxyoctadecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 12,18-dihydroxy...",
+      "equation": "12-hydroxyoctadecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 12,18-dihydroxyoctadecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "12_9z_octadecenoyloxy_octadecanoate",
+          "metabolite": "12_hydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_18_dihydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "12-hexadecanoyloxy-octadecanoate + H2O = 12-hydroxyoctadecanoate + hexadecanoate + H(+)",
+      "equation": "12-hexadecanoyloxy-octadecanoate + H2O = 12-hydroxyoctadecanoate + hexadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "12_pahsa",
           "stoichiometry": 1
         },
         {
@@ -351,7 +454,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "oleate",
+          "metabolite": "palmitate",
           "stoichiometry": 1
         },
         {
@@ -360,22 +463,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:52060"
+        "rhea": "RHEA:52056"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52060"
+            "id": "RHEA:52056"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "12-hydroxyoctadecanoyl-CoA + 3 malonyl-CoA + 3 H(+) = 4-hydroxy-6-(13-hydroxy-2-oxonona...",
       "equation": "12-hydroxyoctadecanoyl-CoA + 3 malonyl-CoA + 3 H(+) = 4-hydroxy-6-(13-hydroxy-2-oxononadecyl)pyran-2-one + 3 CO2 + 4 CoA",
       "substrates": [
@@ -407,7 +510,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:45916"
       },
@@ -422,23 +525,19 @@
       }
     },
     {
-      "id": "r6",
-      "name": "patchoulol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = patchoulol + diphosphate",
-      "ec": "4.2.3.70",
+      "id": "r7",
+      "name": "(+)-gamma-cadinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-gamma-cadinene + diphosphate",
+      "ec": "4.2.3.92",
       "substrates": [
         {
           "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "patchouli_alcohol",
+          "metabolite": "cadinene",
           "stoichiometry": 1
         },
         {
@@ -448,20 +547,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_70"
+          "enzyme": "ec_4_2_3_92"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:29503"
+        "rhea": "RHEA:31827"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29503"
+            "id": "RHEA:31827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "delta-guaiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = delta-guaiene + diphosphate",
+      "ec": "4.2.3.93",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guaiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:31831"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31831"
           }
         ]
       }

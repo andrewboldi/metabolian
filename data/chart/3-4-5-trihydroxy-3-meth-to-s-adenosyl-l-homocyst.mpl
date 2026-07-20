@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-5-trihydroxy-3-meth-to-s-adenosyl-l-homocyst "3',4',5-trihydroxy-3-meth… to S-adenosyl-L-homocysteine" {
-  spacing 240
+  spacing 258
 
   spine at 0,0 {
     3_4_5_trihydroxy_3_methoxyflavon_7_olate
@@ -24,7 +24,13 @@ pathway 3-4-5-trihydroxy-3-meth-to-s-adenosyl-l-homocyst "3',4',5-trihydroxy-3-m
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    n6_n6_n6_trimethyl_l_lysine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_367 [2.1.1.367] +l_lysinium +sam +hplus
+    n6_methyl_l_lysinium
   }
 }

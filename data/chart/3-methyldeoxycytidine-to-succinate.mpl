@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methyldeoxycytidine-to-succinate "3-methyldeoxycytidine… to succinate" {
-  spacing 204
+  spacing 252
 
   spine at 0,0 {
     3_methyldeoxycytidine_5_monophosphate_zwitterion
@@ -20,27 +20,51 @@ pathway 3-methyldeoxycytidine-to-succinate "3-methyldeoxycytidine… to succinat
     5_carboxy_dcmp_2
   }
 
+  branch from 2_deoxycytidine_5_monophosphate_1 side left {
+    2_deoxycytidine_5_monophosphate_1
+    <-> . +3_n4_etheno_2_deoxycytidine_5_monophosphate_1 +akg +o2 +h2o +succinate +co2
+    glyoxal
+  }
+
+  branch from 2_deoxycytidine_5_monophosphate_1 side right {
+    2_deoxycytidine_5_monophosphate_1
+    <-> . +akg +o2 +h2o +glyoxal +succinate +co2
+    3_n4_etheno_2_deoxycytidine_5_monophosphate_1
+  }
+
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_69 [1.14.11.69] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +metoxuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_chloro_4_methoxylphenyl_1_methylurea
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +monuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_4_chlorophenyl_1_methylurea
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +n6_methyl_l_lysinium +akg +o2 +formaldehyde +co2
+    l_lysinium
   }
 
   branch from succinate side right {
     succinate
-    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +formaldehyde +co2
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +akg +o2 +l_lysinium +formaldehyde +co2
+    n6_methyl_l_lysinium
   }
 
-  branch from 5_methyl_dcmp_1 side left {
-    5_methyl_dcmp_1
-    <-> . +ascorbate +o2 +glyoxylate +co2
-    8s_9s_5_glyceryldeoxycytidine_5_monophosphate_1
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_225 [2.1.1.225] +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_226 [2.1.1.226] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

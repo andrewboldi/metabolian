@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl-sn… to 1-stearoyl-2-oleoyl-sn-gl…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     1_stearoyl_2_myristoyl_sn_glycero_3_phosphocholi
@@ -23,13 +23,25 @@ pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl
   branch from tetradecanoate side left {
     tetradecanoate
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    9_hydroxymyristate
+    13_hydroxytetradecanoate
+  }
+
+  branch from tetradecanoate side right {
+    tetradecanoate
+    <-> . +1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc +h2o +hplus
+    2_linoleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 1_stearoyl_sn_glycero_3_phosphate side left {
+    1_stearoyl_sn_glycero_3_phosphate
+    <-> . +h2o +pi
+    1_stearoyl_sn_glycerol
   }
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side right {
     1_stearoyl_sn_glycero_3_phosphate
-    <-> . +h2o +pi
-    1_stearoyl_sn_glycerol
+    <-> . +linoleoyl_coa +coa
+    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate
   }
 
   branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphate side left {

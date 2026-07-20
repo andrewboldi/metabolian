@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-monolysocardiolipin-to-amp-3-end-1 "1-monolysocardiolipin to AMP 3'-end(1−)" {
-  spacing 204
+  spacing 176
 
   spine at 0,0 {
     1_monolysocardiolipin
@@ -12,23 +12,29 @@ pathway 1-monolysocardiolipin-to-amp-3-end-1 "1-monolysocardiolipin to AMP 3'-en
     cardiolipin
     <-> . +h2o -1_2_diacyl_sn_glycerol_3_phosphate -hplus
     1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> ec_2_3_2_11 [2.3.2.11] +3_l_alanyl_adenylyl_zwitterionic_group -amp_3_end_1
-    1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s
+    <-> ec_2_3_2_3 [2.3.2.3] +3_l_lysyl_adenylyl_1_group -amp_3_end_1
+    1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_lysyl_sn
   }
 
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
-  }
-
-  branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side right {
+  branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side left {
     1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
     <-> . +acyl_coa +coa
     1_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 
+  branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side right {
+    1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
+    <-> ec_2_5_1_145 [2.5.1.145] +l_cysteine +sn_glycerol_1_phosphate +hplus
+    s_1_2_diacyl_sn_glyceryl_l_cysteine
+  }
+
   branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
+    alanine
+  }
+
+  branch from amp_3_end_1 side right {
     amp_3_end_1
     <-> . +3_l_seryl_adenylyl_1_group +h2o
     serine

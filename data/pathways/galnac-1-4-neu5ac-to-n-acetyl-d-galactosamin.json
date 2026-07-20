@@ -1,0 +1,184 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "galnac-1-4-neu5ac-to-n-acetyl-d-galactosamin",
+  "name": "β-GalNAc-(1→4)-[α-Neu5Ac-… to N-acetyl-β-D-galactosamin…",
+  "category": "other",
+  "summary": "A 3-step route from β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer(2−) to N-acetyl-β-D-galactosaminyl-(1→4)-(α-N-acetyl-9-O-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3))-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide(d18:1(4E))(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79711"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78542"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_4_glc_1",
+      "name": "β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer",
+      "short": "β-GalNAc-(1→4)-[α-N…",
+      "formula": "C61H101N4O34R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78542"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_7_o_acety",
+      "name": "N-acetyl-β-D-galactosaminyl-(1→4)-[α-N-acetyl-7-O-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3)]-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide(d18:1(4E))",
+      "short": "N-acetyl-β-D-galact…",
+      "formula": "C63H103N4O35R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:230524"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_8_o_acety",
+      "name": "N-acetyl-β-D-galactosaminyl-(1→4)-[α-N-acetyl-8-O-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3)]-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide(d18:1(4E))",
+      "short": "N-acetyl-β-D-galact…",
+      "formula": "C63H103N4O35R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:230525"
+      }
+    },
+    {
+      "id": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_9_o_acety",
+      "name": "N-acetyl-β-D-galactosaminyl-(1→4)-(α-N-acetyl-9-O-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3))-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide(d18:1(4E))",
+      "short": "N-acetyl-β-D-galact…",
+      "formula": "C63H103N4O35R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:230468"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a ganglioside GD2 (d18:1(4E)) + acetyl-CoA = a ganglioside Ac-O-7-GD2(d18:1(4E)) + CoA",
+      "equation": "a ganglioside GD2 (d18:1(4E)) + acetyl-CoA = a ganglioside Ac-O-7-GD2(d18:1(4E)) + CoA",
+      "substrates": [
+        {
+          "metabolite": "galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_4_glc_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_7_o_acety",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79711"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79711"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a ganglioside Ac-O-7-GD2(d18:1(4E)) = a ganglioside Ac-O-8-GD2(d18:1(4E))",
+      "equation": "a ganglioside Ac-O-7-GD2(d18:1(4E)) = a ganglioside Ac-O-8-GD2(d18:1(4E))",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_7_o_acety",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_8_o_acety",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a ganglioside Ac-O-8-GD2(d18:1(4E)) = a ganglioside Ac-O-9-GD2(d18:1(4E))",
+      "equation": "a ganglioside Ac-O-8-GD2(d18:1(4E)) = a ganglioside Ac-O-9-GD2(d18:1(4E))",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_8_o_acety",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_4_n_acetyl_9_o_acety",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79719"
+          }
+        ]
+      }
+    }
+  ]
+}

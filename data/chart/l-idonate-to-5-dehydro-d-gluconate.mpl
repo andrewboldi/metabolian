@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-idonate-to-5-dehydro-d-gluconate "L-idonate to 5-dehydro-D-gluconate" {
-  spacing 212
+  spacing 224
 
   spine at 0,0 {
     l_idonate
@@ -18,7 +18,13 @@ pathway l-idonate-to-5-dehydro-d-gluconate "L-idonate to 5-dehydro-D-gluconate" 
 
   branch from 5_dehydro_d_gluconate side left {
     5_dehydro_d_gluconate
-    <-> ec_1_1_1_69 [1.1.1.69] +nadp +nadph +hplus
+    <-> ec_1_1_1_69 [1.1.1.69] +nad +nadh +hplus
     d_gluconate
+  }
+
+  branch from 2_5_didehydro_d_gluconate side right {
+    2_5_didehydro_d_gluconate
+    <-> ec_1_1_1_346 [1.1.1.346] +nadp +nadph +hplus
+    2_dehydro_l_idonate
   }
 }

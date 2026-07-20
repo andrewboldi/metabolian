@@ -125,78 +125,41 @@
       }
     },
     {
-      "id": "squalene",
-      "name": "Squalene",
-      "formula": "C30H50",
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15440"
+        "chebi": "CHEBI:58315"
       }
     },
     {
-      "id": "3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t",
-      "name": "3,22-dimethyl-1,2,23,24-tetradehydro-2,3,22,23-tetrahydrosqualene",
-      "short": "3,22-dimethyl-1,2,2…",
-      "formula": "C32H54",
+      "id": "3_methyl_l_tyrosine",
+      "name": "3-methyl-L-tyrosine",
+      "formula": "C10H13NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:70861"
+        "chebi": "CHEBI:78239"
       }
     },
     {
-      "id": "l_isoleucine",
-      "name": "L-isoleucine",
-      "formula": "C6H11NO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:30009"
-      }
-    },
-    {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17499"
-      }
-    },
-    {
-      "id": "methylcyclopropylglycine",
-      "name": "methylcyclopropylglycine",
-      "short": "methylcyclopropylgl…",
-      "formula": "C6H9NO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:229546"
-      }
-    },
-    {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "3_l_methionyl_adenylyl_zwitterionic_group",
-      "name": "3'-(L-methionyl)adenylyl zwitterionic group",
-      "short": "3'-(L-methionyl)ade…",
-      "formula": "C15H22N6O7PS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78530"
-      }
-    },
-    {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78442"
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "5_methyluridine_5_monophosphate_1",
+      "name": "5-methyluridine 5'-monophosphate(1−)",
+      "short": "5-methyluridine…",
+      "formula": "C10H12N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74447"
       }
     }
   ],
@@ -209,10 +172,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_262",
-      "name": "squalene methyltransferase",
+      "id": "ec_2_1_1_304",
+      "name": "L-tyrosine C(3)-methyltransferase",
       "ec": [
-        "2.1.1.262"
+        "2.1.1.304"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_189",
+      "name": "23S rRNA (uracil(747)-C(5))-methyltransferase",
+      "ec": [
+        "2.1.1.189"
       ]
     }
   ],
@@ -405,147 +375,98 @@
     },
     {
       "id": "r5",
-      "name": "squalene methyltransferase",
-      "equation": "squalene + 2 S-adenosyl-L-methionine = 3,22-dimethyl-1,2,23,24-tetradehydro-2,3,22,23-tetrahydrosqualene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
-      "ec": "2.1.1.262",
+      "name": "L-tyrosine C(3)-methyltransferase",
+      "equation": "L-tyrosine + S-adenosyl-L-methionine = 3-methyl-L-tyrosine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.304",
       "substrates": [
         {
-          "metabolite": "squalene",
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t",
+          "metabolite": "3_methyl_l_tyrosine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_262"
+          "enzyme": "ec_2_1_1_304"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:34643"
+        "rhea": "RHEA:41428"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34643"
+            "id": "RHEA:41428"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-isoleucyl-[protein] + AH2 + 2 S-adenosyl-L-methionine = methylcyclopropylglycine-[pro...",
-      "equation": "L-isoleucyl-[protein] + AH2 + 2 S-adenosyl-L-methionine = methylcyclopropylglycine-[protein] + 2 5'-deoxyadenosine + 2 L-methionine + A + 2 H(+)",
+      "name": "23S rRNA (uracil(747)-C(5))-methyltransferase",
+      "equation": "uridine(747) in 23S rRNA + S-adenosyl-L-methionine = 5-methyluridine(747) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.189",
       "substrates": [
         {
-          "metabolite": "l_isoleucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "uridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "methylcyclopropylglycine",
+          "metabolite": "5_methyluridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "5_deoxyadenosine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "methionine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "sah",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_189"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:78759"
+        "rhea": "RHEA:42628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78759"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "L-methionyl-tRNA(Leu) + H2O = tRNA(Leu) + L-methionine + H(+)",
-      "equation": "L-methionyl-tRNA(Leu) + H2O = tRNA(Leu) + L-methionine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_l_methionyl_adenylyl_zwitterionic_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "methionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:77535"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77535"
+            "id": "RHEA:42628"
           }
         ]
       }

@@ -4,31 +4,65 @@
 # edit the generator, not this file.
 
 pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     trioctanoin
     <-> . +h2o -octanoate -hplus
-    2_3_dioctanoyl_sn_glycerol
-    <-> . +octanoate +atp +coa -amp -ppi
+    dioctanoylglycerol
+    <-> . +h2o -octanoate -hplus
+    monooctanoylglycerol
+    <-> . +h2o -glycerol -hplus
+    octanoate
+    <-> . +atp +coa -amp -ppi
     octanoyl_coa
   }
 
   branch from octanoate side left {
     octanoate
     <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_dioctoanoyl +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_2_octoanoyl_sn_g
+    3_d_galactosyl_1_6_d_galactosyl_monooctanoyl_sn
+  }
+
+  branch from octanoate side right {
+    octanoate
+    <-> . +1_2_dioctanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    3_d_galactosyl_monooctanoyl_sn_glycerol
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> ec_2_4_1_359 [2.4.1.359] +2_o_d_glucopyranosyl_glycerol +pi
+    g1p
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +1_linolenoylglycerol +h2o +hplus
+    linolenate
+  }
+
+  branch from octanoyl_coa side left {
+    octanoyl_coa
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +coa
+    1_z_alk_1_enyl_2_octanoyl_sn_glycero_3_phosphoet
   }
 
   branch from octanoyl_coa side right {
     octanoyl_coa
-    <-> ec_2_3_1_137 [2.3.1.137] +carnitine +coa
-    o_octanoyl_l_carnitine
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +coa
+    1_acyl_2_octanoyl_sn_glycero_3_phosphoethanolami
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_48 [4.2.3.48] +fpp +h2o
-    3s_6e_nerolidol
+    <-> ec_4_2_3_116 [4.2.3.116] +gpp
+    camphene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_118 [4.2.3.118] +e_2_methylgeranyl_diphosphate +h2o
+    2_methylisoborneol
   }
 }

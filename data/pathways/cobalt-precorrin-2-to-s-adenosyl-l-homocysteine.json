@@ -120,22 +120,41 @@
       }
     },
     {
-      "id": "quercetin_7_olate",
-      "name": "quercetin-7-olate",
-      "formula": "C15H9O7",
-      "charge": -1,
+      "id": "rs_norcoclaurinium",
+      "name": "(RS)-norcoclaurinium",
+      "formula": "C16H18NO3",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57694"
+        "chebi": "CHEBI:58482"
       }
     },
     {
-      "id": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
-      "name": "3',4',5-trihydroxy-3-methoxyflavon-7-olate",
-      "short": "3',4',5-trihydroxy-…",
-      "formula": "C16H11O7",
+      "id": "rs_coclaurinium",
+      "name": "(RS)-coclaurinium",
+      "formula": "C17H20NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58481"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57928"
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "2_o_methylguanosine_5_monophosphate_1",
+      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
+      "short": "2'-O-methylguanosin…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74445"
       }
     },
     {
@@ -164,6 +183,51 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "prefumagillin",
+      "name": "prefumagillin",
+      "formula": "C28H38O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193520"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "fumagillin",
+      "name": "fumagillin",
+      "formula": "C26H33O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194019"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     },
     {
@@ -224,10 +288,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_76",
-      "name": "quercetin 3-O-methyltransferase",
+      "id": "ec_2_1_1_128",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
       "ec": [
-        "2.1.1.76"
+        "2.1.1.128"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_34",
+      "name": "tRNA (guanosine(18)-2'-O)-methyltransferase",
+      "ec": [
+        "2.1.1.34"
       ]
     },
     {
@@ -479,12 +550,12 @@
     },
     {
       "id": "r6",
-      "name": "quercetin 3-O-methyltransferase",
-      "equation": "quercetin + S-adenosyl-L-methionine = 3',4',5,7-tetrahydroxy-3-methoxyflavone + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.76",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "equation": "norcoclaurine + S-adenosyl-L-methionine = coclaurine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.128",
       "substrates": [
         {
-          "metabolite": "quercetin_7_olate",
+          "metabolite": "rs_norcoclaurinium",
           "stoichiometry": 1
         },
         {
@@ -494,7 +565,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
+          "metabolite": "rs_coclaurinium",
           "stoichiometry": 1
         },
         {
@@ -508,26 +579,75 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_76"
+          "enzyme": "ec_2_1_1_128"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:17673"
+        "rhea": "RHEA:19941"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17673"
+            "id": "RHEA:19941"
           }
         ]
       }
     },
     {
       "id": "r7",
+      "name": "tRNA (guanosine(18)-2'-O)-methyltransferase",
+      "equation": "guanosine(18) in tRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(18) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.34",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:20077"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "cobalt-factor III methyltransferase",
       "equation": "Co(II)-factor III + AH2 + S-adenosyl-L-methionine = Co-precorrin-4 + A + S-adenosyl-L-homocysteine",
       "ec": "2.1.1.272",
@@ -565,7 +685,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:36155"
       },
@@ -580,7 +700,58 @@
       }
     },
     {
-      "id": "r8",
+      "id": "r9",
+      "name": "prefumagillin + NADPH + 2 O2 = fumagillin + acetaldehyde + NADP(+) + H2O",
+      "equation": "prefumagillin + NADPH + 2 O2 = fumagillin + acetaldehyde + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "prefumagillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fumagillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:74627"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74627"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "cobalt-precorrin-6A reductase",
       "equation": "Co-precorrin-6B + NAD(+) = Co-precorrin-6A + NADH + H(+)",
       "ec": "1.3.1.106",
@@ -614,7 +785,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:15625"
       },

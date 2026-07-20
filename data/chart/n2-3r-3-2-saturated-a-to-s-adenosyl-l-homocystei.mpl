@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-3r-3-2-saturated-a-to-s-adenosyl-l-homocystei "N2-[(3R)-3-(2-saturated-a… to S-adenosyl-L-homocysteine" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine
@@ -18,7 +18,13 @@ pathway n2-3r-3-2-saturated-a-to-s-adenosyl-l-homocystei "N2-[(3R)-3-(2-saturate
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_279 [2.1.1.279] +trans_anol +sam +hplus
-    trans_anethole
+    <-> ec_2_1_1_178 [2.1.1.178] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_179 [2.1.1.179] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

@@ -105,22 +105,40 @@
       }
     },
     {
-      "id": "peregrinol_diphosphate",
-      "name": "peregrinol diphosphate",
-      "short": "peregrinol PP",
-      "formula": "C20H35O8P2",
-      "charge": -3,
+      "id": "isoechinulin_a",
+      "name": "isoechinulin A",
+      "formula": "C24H29N3O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138232"
+        "chebi": "CHEBI:193010"
       }
     },
     {
-      "id": "viteagnusin_d",
-      "name": "viteagnusin D",
-      "formula": "C20H36O2",
+      "id": "dehydroechinulin",
+      "name": "dehydroechinulin",
+      "formula": "C29H37N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145543"
+        "chebi": "CHEBI:193011"
+      }
+    },
+    {
+      "id": "neoechinulin_b_anion",
+      "name": "neoechinulin B (anion)",
+      "short": "neoechinulin B…",
+      "formula": "C19H18N3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:193005"
+      }
+    },
+    {
+      "id": "isoechinulin_b_anion",
+      "name": "isoechinulin B anion",
+      "formula": "C24H26N3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:193026"
       }
     },
     {
@@ -298,21 +316,21 @@
     },
     {
       "id": "r4",
-      "name": "peregrinol diphosphate + H2O = viteagnusin D + diphosphate",
-      "equation": "peregrinol diphosphate + H2O = viteagnusin D + diphosphate",
+      "name": "isoechinulin A + dimethylallyl diphosphate = dehydroechinulin + diphosphate",
+      "equation": "isoechinulin A + dimethylallyl diphosphate = dehydroechinulin + diphosphate",
       "substrates": [
         {
-          "metabolite": "peregrinol_diphosphate",
+          "metabolite": "isoechinulin_a",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "viteagnusin_d",
+          "metabolite": "dehydroechinulin",
           "stoichiometry": 1
         },
         {
@@ -323,20 +341,59 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:62180"
+        "rhea": "RHEA:73799"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62180"
+            "id": "RHEA:73799"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "neoechinulin B + dimethylallyl diphosphate = isoechinulin B + diphosphate",
+      "equation": "neoechinulin B + dimethylallyl diphosphate = isoechinulin B + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "neoechinulin_b_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoechinulin_b_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:73803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73803"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "bisanhydrobacterioruberin hydratase",
       "equation": "bacterioruberin = bisanhydrobacterioruberin + 2 H2O",
       "ec": "4.2.1.161",
@@ -362,7 +419,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:38375"
       },

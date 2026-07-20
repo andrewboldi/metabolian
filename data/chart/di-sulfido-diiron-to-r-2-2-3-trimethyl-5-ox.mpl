@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox "di-μ-sulfido-diiron to [(R)-2,2,3-trimethyl-5-ox…" {
-  spacing 208
+  spacing 232
 
   spine at 0,0 {
     di_sulfido_diiron
@@ -20,13 +20,25 @@ pathway di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox "di-μ-sulfido-diiron to [(R
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
-    25r_26_hydroxycholestanol
+    <-> ec_1_14_15_44 [1.14.15.44] +2_22_dideoxy_3_dehydroecdysone +di_sulfido_diiron +o2 +hplus +h2o
+    3_dehydro_2_deoxyecdysone
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_44 [1.14.15.44] +14alpha_hydroxy_5beta_cholest_7_ene_3_6_dione +di_sulfido_diiron +o2 +hplus +h2o
+    2_25_dideoxy_3_dehydroecdysone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_158 [1.14.14.158] +zeinoxanthin +fmnh2 +o2 +h2o +hplus
+    lutein
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    12_r_hete
+    <-> ec_1_14_14_160 [1.14.14.160] +s_macrocarpene +fmnh2 +o2 +h2o +hplus
+    zealexin_a1
   }
 }

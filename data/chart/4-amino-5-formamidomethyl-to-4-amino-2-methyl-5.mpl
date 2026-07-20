@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-amino-5-formamidomethyl-to-4-amino-2-methyl-5 "4-amino-5-formamidomethyl… to 4-amino-2-methyl-5-phosph…" {
-  spacing 184
+  spacing 196
 
   spine at 0,0 {
     4_amino_5_formamidomethyl_2_methylpyrimidine
@@ -18,7 +18,13 @@ pathway 4-amino-5-formamidomethyl-to-4-amino-2-methyl-5 "4-amino-5-formamidometh
 
   branch from nh3 side left {
     nh3
-    <-> . +o_carbamoyl_l_serine +hplus +co2
-    2_ammonioprop_2_enoate
+    <-> ec_3_5_4_38 [3.5.4.38] +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
+    dump
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_35 [3.5.4.35] +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
   }
 }

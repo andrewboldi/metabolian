@@ -140,33 +140,6 @@
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "presphingofungin",
-      "name": "presphingofungin",
-      "formula": "C20H37NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231805"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
       "id": "o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser",
       "name": "O-[S-(11Z)-hexadecenoylpantetheine-4'-phosphoryl]serine(1−)",
       "short": "O-[S-(11Z)-hexadece…",
@@ -194,6 +167,36 @@
       "xrefs": {
         "chebi": "CHEBI:78779"
       }
+    },
+    {
+      "id": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
+      "name": "2-O-acyl-3-O-β-D-galactosyl-sn-glycerol",
+      "short": "2-O-acyl-3-O-β-D-ga…",
+      "formula": "C10H17O9R1",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18063"
+      }
+    },
+    {
+      "id": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-(S-fatty acylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-fatty…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138651"
+      }
+    },
+    {
+      "id": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+      "name": "1,2-diacyl-3-β-D-galactosyl-sn-glycerol",
+      "short": "1,2-diacyl-3-β-D-ga…",
+      "formula": "C11H16O10R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17615"
+      }
     }
   ],
   "enzymes": [
@@ -209,6 +212,13 @@
       "name": "alanine--oxomalonate transaminase",
       "ec": [
         "2.6.1.47"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_141",
+      "name": "galactosylacylglycerol O-acyltransferase",
+      "ec": [
+        "2.3.1.141"
       ]
     }
   ],
@@ -391,49 +401,6 @@
     },
     {
       "id": "r5",
-      "name": "3-oxopresphingofungin + NADPH + 2 H(+) = presphingofungin + NADP(+)",
-      "equation": "3-oxopresphingofungin + NADPH + 2 H(+) = presphingofungin + NADP(+)",
-      "substrates": [
-        {
-          "metabolite": "3_oxopresphingofungin_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "presphingofungin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:81159"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:81159"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "(11Z)-hexadecenoyl-[ACP] + malonyl-[ACP] + H(+) = 3-oxo-(13Z)-octadecenoyl-[ACP] + holo...",
       "equation": "(11Z)-hexadecenoyl-[ACP] + malonyl-[ACP] + H(+) = 3-oxo-(13Z)-octadecenoyl-[ACP] + holo-[ACP] + CO2",
       "substrates": [
@@ -465,7 +432,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:14565"
       },
@@ -475,6 +442,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:14565"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "galactosylacylglycerol O-acyltransferase",
+      "equation": "a 2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + a fatty acyl-[ACP] = a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + holo-[ACP]",
+      "ec": "2.3.1.141",
+      "substrates": [
+        {
+          "metabolite": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_141"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:17057"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17057"
           }
         ]
       }

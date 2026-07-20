@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-deoxymugineate-to-succinyl-coa "2'-deoxymugineate to succinyl-CoA" {
-  spacing 208
+  spacing 232
 
   spine at 0,0 {
     2_deoxymugineate
@@ -12,14 +12,26 @@ pathway 2-deoxymugineate-to-succinyl-coa "2'-deoxymugineate to succinyl-CoA" {
     mugineate
     <-> ec_1_14_11_25 [1.14.11.25] +akg +o2 -succinate -co2 -hplus
     3_epi_3_hydroxymugineate
-    <-> ec_6_2_1_4 [6.2.1.4] +gtp +succinate +coa -gdp -pi
+    <-> ec_6_2_1_5 [6.2.1.5] +succinate +atp +coa -adp -pi
     succinyl_coa
   }
 
   branch from succinate side left {
     succinate
+    <-> ec_1_14_11_2 [1.14.11.2] +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
+  }
+
+  branch from succinate side right {
+    succinate
     <-> ec_1_14_11_25 [1.14.11.25] +2_deoxymugineate +akg +o2 +co2 +hplus
     3_epi_3_hydroxy_2_deoxymugineate
+  }
+
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> ec_2_3_1_37 [2.3.1.37] +glycine +hplus +co2 +coa
+    ala
   }
 
   branch from succinyl_coa side right {

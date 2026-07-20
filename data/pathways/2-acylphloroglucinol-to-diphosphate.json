@@ -76,23 +76,87 @@
       }
     },
     {
-      "id": "presqualene_pp",
-      "name": "Presqualene diphosphate",
-      "short": "Presqualene PP",
-      "formula": "C30H49O7P2",
-      "charge": -3,
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57310"
+        "chebi": "CHEBI:30245"
       }
     },
     {
-      "id": "15_cis_4_4_diapophytoene",
-      "name": "15-cis-4,4'-diapophytoene",
-      "short": "15-cis-4,4'-diapoph…",
-      "formula": "C30H48",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "2_o_3_dimethylflaviolin_7_olate",
+      "name": "2-O,3-dimethylflaviolin-7-olate",
+      "short": "2-O,3-dimethylflavi…",
+      "formula": "C12H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78589"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "7_o_geranyl_2_o_3_dimethylflaviolin",
+      "name": "7-O-geranyl-2-O,3-dimethylflaviolin",
+      "short": "7-O-geranyl-2-O,3-d…",
+      "formula": "C22H26O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62738"
+        "chebi": "CHEBI:78590"
       }
     }
   ],
@@ -109,6 +173,13 @@
       "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
       "ec": [
         "2.5.1.137"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_125",
+      "name": "7-geranyloxy-5-hydroxy-2-methoxy-3-methylnaphthalene-1,4-dione synthase",
+      "ec": [
+        "2.5.1.125"
       ]
     }
   ],
@@ -250,17 +321,29 @@
     },
     {
       "id": "r4",
-      "name": "presqualene diphosphate = 15-cis-4,4'-diapophytoene + diphosphate",
-      "equation": "presqualene diphosphate = 15-cis-4,4'-diapophytoene + diphosphate",
+      "name": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
+      "equation": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "presqualene_pp",
+          "metabolite": "linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "15_cis_4_4_diapophytoene",
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -271,14 +354,63 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31551"
+        "rhea": "RHEA:33651"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31551"
+            "id": "RHEA:33651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "7-geranyloxy-5-hydroxy-2-methoxy-3-methylnaphthalene-1,4-dione synthase",
+      "equation": "2-O,3-dimethylflaviolin + (2E)-geranyl diphosphate + H(+) = 7-O-geranyl-2-O,3-dimethylflaviolin + diphosphate",
+      "ec": "2.5.1.125",
+      "substrates": [
+        {
+          "metabolite": "2_o_3_dimethylflaviolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_o_geranyl_2_o_3_dimethylflaviolin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_125"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33839"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33839"
           }
         ]
       }

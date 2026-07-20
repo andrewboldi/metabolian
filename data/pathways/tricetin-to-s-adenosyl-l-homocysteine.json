@@ -86,23 +86,31 @@
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
-      "charge": -1,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:29969"
       }
     },
     {
-      "id": "2_o_methylguanosine_5_monophosphate_1",
-      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
-      "short": "2'-O-methylguanosin…",
-      "formula": "C11H13N5O7P",
-      "charge": -1,
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74445"
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61976"
       }
     }
   ],
@@ -239,11 +247,11 @@
     },
     {
       "id": "r4",
-      "name": "a guanosine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methylguanosine in 21S rRNA ...",
-      "equation": "a guanosine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methylguanosine in 21S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(79)-[histone H...",
+      "equation": "L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -253,7 +261,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -268,14 +276,57 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:47772"
+        "rhea": "RHEA:60332"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47772"
+            "id": "RHEA:60332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-l...",
+      "equation": "N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:60336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60336"
           }
         ]
       }

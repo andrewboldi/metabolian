@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-hpete-to-13-14-dihydrolipoxin-a4 "5(S)-HPETE to 13,14-dihydrolipoxin A4" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     5_s_hpete
@@ -22,7 +22,13 @@ pathway 5-s-hpete-to-13-14-dihydrolipoxin-a4 "5(S)-HPETE to 13,14-dihydrolipoxin
 
   branch from leukotriene_a4 side left {
     leukotriene_a4
-    <-> . +o2 +h2o
-    lipoxin_b4
+    <-> . +h2o
+    5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate
+  }
+
+  branch from 13_14_dihydrolipoxin_a4 side right {
+    13_14_dihydrolipoxin_a4
+    <-> . +h +13_14_dihydro_15_oxo_lipoxin_a4 +nadph
+    nadp
   }
 }

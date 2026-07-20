@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-415 "dTDP-β-L-mycarose to S-adenosyl-L-homocysteine" {
-  spacing 280
+  spacing 312
 
   spine at 0,0 {
     dtdp_l_mycarose
@@ -18,15 +18,27 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-415 "dTDP-β-L-mycarose to 
     erythromycin_a
   }
 
-  branch from erythromycin_d side left {
-    erythromycin_d
-    <-> ec_2_1_1_254 [2.1.1.254] +sam +sah +hplus
-    erythromycin_b
+  branch from erythromycin_c side left {
+    erythromycin_c
+    <-> . +dtdp +h +megalomicin_a
+    dtdp_l_megosamine
+  }
+
+  branch from erythromycin_c side right {
+    erythromycin_c
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_6_3_2_40 [6.3.2.40] +anthranilate +l_phenylalanine +sam +atp +amp +ppi +hplus
+    cyclopeptine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_232 [2.1.1.232] +s_naringenin +sam +hplus
-    sakuranetin
+    <-> . +precorrin_6y +sam +co2 +hplus
+    precorrin_7
   }
 }

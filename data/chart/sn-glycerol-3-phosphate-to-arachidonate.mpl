@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sn-glycerol-3-phosphate-to-arachidonate "sn-glycerol 3-phosphate to arachidonate" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     sn_glycerol_3_phosphate
@@ -18,13 +18,31 @@ pathway sn-glycerol-3-phosphate-to-arachidonate "sn-glycerol 3-phosphate to arac
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side left {
     1_stearoyl_sn_glycero_3_phosphate
-    <-> . +linoleoyl_coa +coa
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
+    1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno
+  }
+
+  branch from 1_stearoyl_sn_glycero_3_phosphate side right {
+    1_stearoyl_sn_glycero_3_phosphate
+    <-> ec_2_3_1_51 [2.3.1.51] +octadecanoyl_coa +1_2_dioctadecanoyl_sn_glycerol_3_phosphate
+    coa
+  }
+
+  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate side left {
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
+    <-> . +atp +adp +hplus
+    1_stearoyl_2_arachidonoyl_sn_glycerol
   }
 
   branch from arachidonate side right {
     arachidonate
     <-> . +o2
-    9_r_hpete
+    15_r_hpete
+  }
+
+  branch from arachidonate side left {
+    arachidonate
+    <-> . +o2
+    prostaglandin_g2
   }
 }

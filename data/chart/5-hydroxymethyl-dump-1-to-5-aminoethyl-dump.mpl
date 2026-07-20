@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-hydroxymethyl-dump-1-to-5-aminoethyl-dump "5-hydroxymethyl-dUMP(1−) to 5-aminoethyl-dUMP…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     5_hydroxymethyl_dump_1
@@ -24,15 +24,27 @@ pathway 5-hydroxymethyl-dump-1-to-5-aminoethyl-dump "5-hydroxymethyl-dUMP(1−) 
     5_o_l_seryl_dtmp_1
   }
 
-  branch from 5_n_glycyl_dtmp_1 side right {
+  branch from 5_phosphomethyl_dump_3 side right {
+    5_phosphomethyl_dump_3
+    <-> . +1_4_butanediammonium +pi
+    5_n_putrescinyl_dtmp_1
+  }
+
+  branch from 5_n_glycyl_dtmp_1 side left {
     5_n_glycyl_dtmp_1
     <-> . +hydrogen_acceptor +h2o +glyoxylate +hydrogen_donor
     5_aminomethyl_dump_zwitterion
   }
 
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +dihydropyriculariol +hydrogen_donor
+    pyriculariol
+  }
+
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +betaenone_c +hydrogen_donor
-    betaenone_b
+    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +sah +co2 +coa +h2o
+    fumigermin
   }
 }

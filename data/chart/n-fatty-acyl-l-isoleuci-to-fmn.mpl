@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-fatty-acyl-l-isoleuci-to-fmn "N-(fatty acyl)-L-isoleuci… to FMN" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     n_fatty_acyl_l_isoleucine
@@ -24,21 +24,39 @@ pathway n-fatty-acyl-l-isoleuci-to-fmn "N-(fatty acyl)-L-isoleuci… to FMN" {
     2_hydroxy_2_methylbutanenitrile
   }
 
-  branch from isoleucine side left {
-    isoleucine
-    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
-    n_amidino_l_isoleucine
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_n_acyl_serine +h2o +hplus
+    1_acyl_2_hydroxy_sn_glycero_3_phospho_n_acyl_ser
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoglycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoglycerol
+    <-> . +1_2_diglyceride +h2o +hplus
+    2_monoglyceride
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11s_12r_eet
+    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose +fmnh2 +h2o +hplus
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +5_hepe +fmnh2 +o2 +h2o +hplus
+    5_20_dihepe
+  }
+
+  branch from 2s_2_methylbutanenitrile side left {
+    2s_2_methylbutanenitrile
+    <-> . +h +o2 +nadph +2r_2_hydroxy_2_methylbutanenitrile +h2o
+    nadp
+  }
+
+  branch from 2_hydroxy_2_methylbutanenitrile side right {
+    2_hydroxy_2_methylbutanenitrile
+    <-> ec_1_11_1_13 [1.11.1.13] +udp +h +lotaustralin
+    udp_alpha_d_glucose
   }
 }

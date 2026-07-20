@@ -93,6 +93,62 @@
       "xrefs": {
         "chebi": "CHEBI:133500"
       }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "2_oxo_6_methylthiohexanoic_acid",
+      "name": "2-Oxo-6-methylthiohexanoic acid",
+      "short": "2-Oxo-6-methylthioh…",
+      "formula": "C7H12O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80965"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "3_carboxy_6_methylsulfanyl_2_oxohexanoate",
+      "name": "3-carboxy-6-(methylsulfanyl)-2-oxohexanoate",
+      "short": "3-carboxy-6-(methyl…",
+      "formula": "C8H10O5S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM164245"
+      }
     }
   ],
   "enzymes": [
@@ -108,6 +164,13 @@
       "name": "2-(omega-methylthio)alkylmalate dehydratase",
       "ec": [
         "4.2.1.170"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_85",
+      "name": "3-isopropylmalate dehydrogenase",
+      "ec": [
+        "1.1.1.85"
       ]
     }
   ],
@@ -233,6 +296,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:50660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-isopropylmalate dehydrogenase",
+      "ec": "1.1.1.85",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxo_6_methylthiohexanoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_3_methylthio_propylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR112145"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR112145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR121500",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_carboxy_6_methylsulfanyl_2_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_methylthio_propylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR121500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121500"
           }
         ]
       }

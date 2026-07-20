@@ -4,17 +4,25 @@
 # edit the generator, not this file.
 
 pathway fe-coproporphyrin-iii-to-protoporphyrin "Fe-coproporphyrin III to protoporphyrin" {
-  spacing 228
+  spacing 192
 
   spine at 0,0 {
     fe_coproporphyrin_iii
-    <-> ec_1_3_98_5 [1.3.98.5] +h2o2 +hplus -co2 -h2o
+    <-> . +h2o2 +hplus -co2 -h2o
+    harderoheme_iii
+    <-> . +h2o2 +hplus -co2 -h2o
     ferroheme_b
     <-> ec_4_98_1_1 [4.98.1.1] +hplus -fe2
     protoporphyrin9
   }
 
-  branch from ferroheme_b side left {
+  branch from harderoheme_iii side left {
+    harderoheme_iii
+    <-> . +co2 +heme +h2o +h2o2
+    h
+  }
+
+  branch from ferroheme_b side right {
     ferroheme_b
     <-> . +nadh +nad +hplus
     ferriheme_b

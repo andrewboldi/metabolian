@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylneuraminosyl-2-to-n-acetylneuraminate "α-N-acetylneuraminosyl-(2… to N-acetylneuraminate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
@@ -22,9 +22,33 @@ pathway n-acetylneuraminosyl-2-to-n-acetylneuraminate "α-N-acetylneuraminosyl-(
     n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
   }
 
+  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side right {
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +acetyl_coa +coa
+    n_acetyl_7_o_acetylneuraminosyl_2_3_d_galactosy
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
+  }
+
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
-    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
+    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
+  }
+
+  branch from n_acetylneuraminate side left {
+    n_acetylneuraminate
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +h2o
+    gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_8_neu5ac
+  }
+
+  branch from n_acetylneuraminate side right {
+    n_acetylneuraminate
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu +h2o
+    lactose
   }
 }

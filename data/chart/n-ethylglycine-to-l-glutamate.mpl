@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-ethylglycine-to-l-glutamate "N-ethylglycine to L-glutamate" {
-  spacing 176
+  spacing 200
 
   spine at 0,0 {
     n_ethylglycine
@@ -16,10 +16,10 @@ pathway n-ethylglycine-to-l-glutamate "N-ethylglycine to L-glutamate" {
     ethylaminium
   }
 
-  branch from ethylaminium side left {
-    ethylaminium
-    <-> . +hplus +co2
-    alanine
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_2_6_1_4 [2.6.1.4] +akg +glutamate
+    glycine
   }
 
   branch from glyoxylate side right {
@@ -30,7 +30,13 @@ pathway n-ethylglycine-to-l-glutamate "N-ethylglycine to L-glutamate" {
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_75 [2.6.1.75] +s_4_bromophenyl_l_cysteine +akg
-    4_bromophenylsulfanyl_pyruvate
+    <-> ec_1_4_1_14 [1.4.1.14] +nad +akg +nadh +hplus
+    glutamine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_22 [2.6.1.22] +s_3_aminoisobutyric_acid +akg
+    2_methyl_3_oxopropanoate
   }
 }

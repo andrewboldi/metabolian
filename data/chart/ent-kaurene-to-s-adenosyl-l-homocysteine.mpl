@@ -4,59 +4,43 @@
 # edit the generator, not this file.
 
 pathway ent-kaurene-to-s-adenosyl-l-homocysteine "ent-kaurene to S-adenosyl-L-homocysteine" {
-  spacing 200
+  spacing 224
 
   spine at 0,0 {
     ent_kaurene
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    ent_kaur_16_en_19_ol
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    ent_kaur_16_en_19_al
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
-    ent_kaur_16_en_19_oate
     <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
-    gibberellin_a12_aldehyde
-    <-> . +hydrogen_acceptor +h2o -hydrogen_donor -hplus
+    ent_kaur_16_en_19_oate
+    <-> ec_1_14_14_107 [1.14.14.107] +fmnh2 +o2 -fmn -h2o -hplus
     gibberellin_a12
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -co2 -h2o
+    <-> . +akg +o2 +hplus -succinate -co2 -h2o
     gibberellin_a9
+    <-> . +akg +o2 -succinate -co2
+    gibberellin_a4
     <-> ec_2_1_1_275 [2.1.1.275] +sam -sah
-    gibberellin_a9_methyl_ester
+    gibberellin_a4_methyl_ester
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    10_hete
+    <-> . +6_hydroxy_28_nortyphasterol +fmnh2 +o2 +h2o +hplus
+    28_nortyphasterol
   }
 
-  branch from ent_kaur_16_en_19_oate side right {
-    ent_kaur_16_en_19_oate
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    ent_7_hydroxykaur_16_en_19_oate
+  branch from fmn side right {
+    fmn
+    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
+    28_norcastasterone
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
-    n_2_ethyl_6_methylphenyl_2_chloroacetamide
+  branch from sah side left {
+    sah
+    <-> . +avenanthramide_c +sam +hplus
+    avenanthramide_b
   }
 
-  branch from gibberellin_a12 side right {
-    gibberellin_a12
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    gibberellin_a15_2_diacid_form
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
-    clavatol
-  }
-
-  branch from gibberellin_a9 side right {
-    gibberellin_a9
-    <-> . +o2 +hplus +co2 +h2o
-    gibberellin_a24
+  branch from sah side right {
+    sah
+    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
+    soppiline_b
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolamide to 1-hexadecanoyl-2-[(9Z)-he…" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     palmitoleoyl_ethanolamide
@@ -18,8 +18,20 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
 
   branch from palmitoleate side left {
     palmitoleate
+    <-> . +1_2_3_tripalmitoleoylglycerol +h2o +hplus
+    2_3_dipalmitoleoyl_sn_glycerol
+  }
+
+  branch from palmitoleate side right {
+    palmitoleate
     <-> ec_3_1_1_98 [3.1.1.98] +o_9z_hexadecenoyl_l_serine +h2o +hplus
     l_serine
+  }
+
+  branch from ethanolaminium side left {
+    ethanolaminium
+    <-> . +1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah +serine
+    1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah
   }
 
   branch from ethanolaminium side right {
@@ -34,9 +46,21 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
     palmitoyl_coa
   }
 
+  branch from palmitoleoyl_coa side right {
+    palmitoleoyl_coa
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine +coa
+    1_acyl_2_palmitoleoyl_sn_glycero_3_phosphocholin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_6_1_9 [3.6.1.9] +xtp +h2o +hplus
+    xmp
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_40 [4.2.3.40] +fpp
-    z_bisabolene
+    <-> ec_4_2_3_61 [4.2.3.61] +fpp
+    5_epi_aristolochene
   }
 }

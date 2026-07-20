@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-3-cis-5-octadienoyl-to-octanoyl-coa "trans-3-cis-5-octadienoyl… to octanoyl-CoA" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     trans_3_cis_5_octadienoyl_coa
@@ -16,6 +16,18 @@ pathway trans-3-cis-5-octadienoyl-to-octanoyl-coa "trans-3-cis-5-octadienoyl… 
     trans_oct_2_enoyl_coa
     <-> . +nadph +hplus -nadp
     octanoyl_coa
+  }
+
+  branch from trans_oct_2_enoyl_coa side left {
+    trans_oct_2_enoyl_coa
+    <-> . +h2o
+    3_hydroxyoctanoyl_coa
+  }
+
+  branch from octanoyl_coa side right {
+    octanoyl_coa
+    <-> ec_2_3_1_137 [2.3.1.137] +carnitine +coa
+    o_octanoyl_l_carnitine
   }
 
   branch from octanoyl_coa side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrocarveol-to-6-hydroxy-3-isopropenylhe "dihydrocarveol to 6-hydroxy-3-isopropenylhe…" {
-  spacing 236
+  spacing 242
 
   spine at 0,0 {
     dihydrocarveol

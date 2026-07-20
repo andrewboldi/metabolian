@@ -102,21 +102,43 @@
       }
     },
     {
-      "id": "lipoxin_a4",
-      "name": "lipoxin A4",
-      "formula": "C20H31O5",
-      "charge": -1,
+      "id": "dehydroepiandrosterone",
+      "name": "dehydroepiandrosterone",
+      "short": "dehydroepiandroster…",
+      "formula": "C19H28O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:67026"
+        "chebi": "CHEBI:28689"
       }
     },
     {
-      "id": "20_hydroxylipoxin_a4",
-      "name": "20-hydroxylipoxin A4",
-      "formula": "C20H31O6",
+      "id": "16_hydroxydehydroepiandrosterone",
+      "name": "16α-hydroxydehydroepiandrosterone",
+      "short": "16α-hydroxydehydroe…",
+      "formula": "C19H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27771"
+      }
+    },
+    {
+      "id": "dehydroepiandrosterone_sulfate",
+      "name": "dehydroepiandrosterone sulfate",
+      "short": "dehydroepiandroster…",
+      "formula": "C19H27O5S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90707"
+        "chebi": "CHEBI:57905"
+      }
+    },
+    {
+      "id": "16_hydroxydehydroepiandrosterone_3_sulfate",
+      "name": "16α-hydroxydehydroepiandrosterone 3-sulfate",
+      "short": "16α-hydroxydehydroe…",
+      "formula": "C19H27O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87538"
       }
     }
   ],
@@ -277,11 +299,11 @@
     },
     {
       "id": "r4",
-      "name": "lipoxin A4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin A4 + oxid...",
-      "equation": "lipoxin A4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin A4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "3beta-hydroxyandrost-5-en-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3beta,...",
+      "equation": "3beta-hydroxyandrost-5-en-17-one + reduced [NADPH--hemoprotein reductase] + O2 = 3beta,16alpha-dihydroxy-androst-5-en-17-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "lipoxin_a4",
+          "metabolite": "dehydroepiandrosterone",
           "stoichiometry": 1
         },
         {
@@ -295,7 +317,7 @@
       ],
       "products": [
         {
-          "metabolite": "20_hydroxylipoxin_a4",
+          "metabolite": "16_hydroxydehydroepiandrosterone",
           "stoichiometry": 1
         },
         {
@@ -314,14 +336,65 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:48648"
+        "rhea": "RHEA:47220"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48648"
+            "id": "RHEA:47220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dehydroepiandrosterone 3-sulfate + reduced [NADPH--hemoprotein reductase] + O2 = 16alph...",
+      "equation": "dehydroepiandrosterone 3-sulfate + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxydehydroepiandrosterone 3-sulfate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dehydroepiandrosterone_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxydehydroepiandrosterone_3_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:47224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47224"
           }
         ]
       }

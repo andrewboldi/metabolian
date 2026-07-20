@@ -100,71 +100,59 @@
       }
     },
     {
-      "id": "man_1_6_ins_1_p_cer",
-      "name": "Man-α-1→6-Ins-1-P-Cer",
-      "short": "Man-α-1→6-Ins-1-P-C…",
-      "formula": "C16H27NO16PR2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:166921"
-      }
-    },
-    {
-      "id": "d_mannosyl_1_6_1d_myo_inositol_1_phosphate",
-      "name": "α-D-mannosyl-1→6-1D-myo-inositol 1-phosphate",
-      "short": "α-D-mannosyl-1→6-1D…",
-      "formula": "C12H21O14P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:167051"
-      }
-    },
-    {
-      "id": "stearoyl_coa",
-      "name": "stearoyl-CoA",
-      "formula": "C39H66N7O17P3S",
+      "id": "very_long_chain_fatty_acyl_coa",
+      "name": "very long-chain fatty acyl-CoA",
+      "short": "very long-chain…",
+      "formula": "C22H31N7O17P3SR",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57394"
+        "chebi": "CHEBI:138261"
       }
     },
     {
-      "id": "n_stearoyl_sphingoid_base",
-      "name": "N-stearoyl-sphingoid base",
-      "short": "N-stearoyl-sphingoi…",
-      "formula": "C21H42NO3R",
+      "id": "n_very_long_chain_fatty_acyl_sphingoid_base",
+      "name": "N-(very-long-chain fatty acyl)-sphingoid base",
+      "short": "N-(very-long-chain…",
+      "formula": "C4H7NO3R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:144711"
+        "chebi": "CHEBI:144712"
       }
     },
     {
-      "id": "d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer",
-      "name": "α-D-galactosyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosylceramide",
-      "short": "α-D-galactosyl-(1→4…",
-      "formula": "C37H66NO18R",
+      "id": "ultra_long_chain_fatty_acyl_coa",
+      "name": "ultra-long-chain fatty acyl-CoA",
+      "short": "ultra-long-chain…",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:143018"
+      }
+    },
+    {
+      "id": "n_ultra_long_chain_acyl_sphingoid_base",
+      "name": "N-(ultra-long-chain-acyl)-sphingoid base",
+      "short": "N-(ultra-long-chain…",
+      "formula": "C4H7NO3R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18313"
-      }
-    },
-    {
-      "id": "d_galactosyl_d_galactosyl_d_glucosylsphingosine",
-      "name": "α-D-galactosyl-D-galactosyl-D-glucosylsphingosine",
-      "short": "α-D-galactosyl-D-ga…",
-      "formula": "C36H68NO17",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:228802"
+        "chebi": "CHEBI:144713"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_3_1_299",
-      "name": "sphingoid base N-stearoyltransferase",
+      "id": "ec_2_3_1_297",
+      "name": "very-long-chain ceramide synthase",
       "ec": [
-        "2.3.1.299"
+        "2.3.1.297"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_298",
+      "name": "ultra-long-chain ceramide synthase",
+      "ec": [
+        "2.3.1.298"
       ]
     }
   ],
@@ -296,65 +284,22 @@
     },
     {
       "id": "r4",
-      "name": "an alpha-mannosylinositol-1-phosphoceramide + H2O = a D-mannosyl-alpha-1->6-inositol-1-...",
-      "equation": "an alpha-mannosylinositol-1-phosphoceramide + H2O = a D-mannosyl-alpha-1->6-inositol-1-phosphate + an N-acyl-sphingoid base + H(+)",
+      "name": "very-long-chain ceramide synthase",
+      "equation": "a very long-chain fatty acyl-CoA + a sphingoid base = an N-(very-long-chain fatty acyl)-sphingoid base + CoA + H(+)",
+      "ec": "2.3.1.297",
       "substrates": [
         {
-          "metabolite": "man_1_6_ins_1_p_cer",
+          "metabolite": "very_long_chain_fatty_acyl_coa",
           "stoichiometry": 1
         },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_mannosyl_1_6_1d_myo_inositol_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_acylsphingoid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:66312"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66312"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "sphingoid base N-stearoyltransferase",
-      "equation": "a sphingoid base + octadecanoyl-CoA = an N-octadecanoyl-sphingoid base + CoA + H(+)",
-      "ec": "2.3.1.299",
-      "substrates": [
         {
           "metabolite": "sphingoid_base",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "stearoyl_coa",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_stearoyl_sphingoid_base",
+          "metabolite": "n_very_long_chain_fatty_acyl_sphingoid_base",
           "stoichiometry": 1
         },
         {
@@ -368,59 +313,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_299"
+          "enzyme": "ec_2_3_1_297"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:61476"
+        "rhea": "RHEA:61480"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61476"
+            "id": "RHEA:61480"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "a globoside Gb3Cer (d18:1(4E)) + H2O = a lysoGb3(d18:1(4E)) + a fatty acid",
-      "equation": "a globoside Gb3Cer (d18:1(4E)) + H2O = a lysoGb3(d18:1(4E)) + a fatty acid",
+      "id": "r5",
+      "name": "ultra-long-chain ceramide synthase",
+      "equation": "an ultra-long-chain fatty acyl-CoA + a sphingoid base = an N-(ultra-long-chain-acyl)-sphingoid base + CoA + H(+)",
+      "ec": "2.3.1.298",
       "substrates": [
         {
-          "metabolite": "d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer",
+          "metabolite": "ultra_long_chain_fatty_acyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "sphingoid_base",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_galactosyl_d_galactosyl_d_glucosylsphingosine",
+          "metabolite": "n_ultra_long_chain_acyl_sphingoid_base",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fatty-acid",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_298"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:78447"
+        "rhea": "RHEA:61492"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78447"
+            "id": "RHEA:61492"
           }
         ]
       }

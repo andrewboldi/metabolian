@@ -4,19 +4,21 @@
 # edit the generator, not this file.
 
 pathway l-arabinitol-to-l-xylulose-5-phosphate "L-arabinitol to L-xylulose 5-phosphate" {
-  spacing 176
+  spacing 206
 
   spine at 0,0 {
     l_arabinitol
-    <-> ec_1_1_1_12 [1.1.1.12] +nad -nadh -hplus
-    l_xylulose
-    <-> ec_2_7_1_53 [2.7.1.53] +atp -adp -hplus
+    <-> ec_1_1_1_13 [1.1.1.13] +nad -nadh -hplus
+    l_ribulose
+    <-> ec_2_7_1_16 [2.7.1.16] +atp -adp -hplus
+    l_ribulose_5_phosphate
+    <-> ec_5_1_3_22 [5.1.3.22]
     l_xylulose_5_phosphate
   }
 
-  branch from l_xylulose side left {
-    l_xylulose
-    <-> ec_1_1_1_10 [1.1.1.10] +nadp +nadph +hplus
-    xylitol
+  branch from l_xylulose_5_phosphate side left {
+    l_xylulose_5_phosphate
+    <-> ec_4_1_1_85 [4.1.1.85] +hplus +co2
+    3_dehydro_l_gulonate_6_phosphate
   }
 }

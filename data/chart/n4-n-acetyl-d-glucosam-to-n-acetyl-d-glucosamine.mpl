@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-glucosam… to N-acetyl-D-glucosamine…" {
-  spacing 236
+  spacing 290
 
   spine at 0,0 {
     n4_n_acetyl_d_glucosaminyl_l_asparagine
@@ -20,14 +20,26 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
 
   branch from n_acetyl_d_glucosamine side left {
     n_acetyl_d_glucosamine
-    <-> . +o2 +h2o2
-    n_acetyl_d_glucosamino_1_5_lactone
+    <-> ec_2_4_1_280 [2.4.1.280] +n_n_diacetylchitobiose +pi
+    n_acetyl_d_glucosamine_1_phosphate
+  }
+
+  branch from n_acetyl_d_glucosamine side right {
+    n_acetyl_d_glucosamine
+    <-> . +d_glucosaminyl_1_4_n_acetyl_d_glucosamine +h2o
+    2_ammonio_2_deoxy_d_glucopyranose
+  }
+
+  branch from l_asparagine side left {
+    l_asparagine
+    <-> ec_6_3_1_4 [6.3.1.4] +nh3 +atp +adp +pi +hplus
+    aspartate
   }
 
   branch from l_asparagine side right {
     l_asparagine
-    <-> ec_6_3_1_4 [6.3.1.4] +nh3 +atp +adp +pi +hplus
-    aspartate
+    <-> ec_4_2_1_65 [4.2.1.65] +h2o
+    3_cyano_l_alanine
   }
 
   branch from n_acetyl_d_glucosamine_6_phosphate side left {
@@ -36,9 +48,27 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
     cdp
   }
 
+  branch from n_acetyl_d_glucosamine_6_phosphate side right {
+    n_acetyl_d_glucosamine_6_phosphate
+    <-> . +itp +n_acetyl_d_glucosamine +hplus
+    idp
+  }
+
+  branch from glucosamine6p side left {
+    glucosamine6p
+    <-> ec_5_4_2_10 [5.4.2.10]
+    d_glucosamine_1_phosphate
+  }
+
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_14 [2.8.3.14] +5_hydroxypentanoate +acetyl_coa
-    5_hydroxypentanoyl_coa
+    <-> ec_3_7_1_1 [3.7.1.1] +oxaloacetate +h2o +hplus
+    oxalate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxytetradecanoyl_n_acetylglucos +h2o
+    udp_3_o_3r_3_hydroxytetradecanoyl_d_glucosamine
   }
 }

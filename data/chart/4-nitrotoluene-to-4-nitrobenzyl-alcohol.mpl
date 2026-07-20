@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-nitrotoluene-to-4-nitrobenzyl-alcohol "4-nitrotoluene to 4-nitrobenzyl alcohol" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     4_nitrotoluene
@@ -16,15 +16,8 @@ pathway 4-nitrotoluene-to-4-nitrobenzyl-alcohol "4-nitrotoluene to 4-nitrobenzyl
     4_nitrobenzyl_alcohol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_15_19 [1.14.15.19] +testosterone +di_sulfido_diiron +o2 +hplus +h2o
-    1_hydroxytestosterone
-  }
 
-  branch from 4_nitrobenzaldehyde side right {
-    4_nitrobenzaldehyde
-    <-> . +nad +h2o +nadh +hplus
-    4_nitrobenzoate
-  }
+
+
+
 }

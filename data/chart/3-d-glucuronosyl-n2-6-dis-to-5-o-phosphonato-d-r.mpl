@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-dis… to 5-O-phosphonato-α-D-ribof…" {
-  spacing 244
+  spacing 304
 
   spine at 0,0 {
     3_d_glucuronosyl_n2_6_disulfonato_d_glucosamine
@@ -30,20 +30,44 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-
 
   branch from d_glucopyranuronate side left {
     d_glucopyranuronate
-    <-> . +4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside +h2o +hplus
-    4z_15z_bilirubin_ix_c12_d_glucuronoside
+    <-> ec_3_1_1_19 [3.1.1.19] +h2o +hplus
+    d_glucurono_6_2_lactone
+  }
+
+  branch from d_glucopyranuronate side right {
+    d_glucopyranuronate
+    <-> . +h2o +udp +hplus
+    udp_d_glucuronate
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +hexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    hexanal
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +heptyl_sulfate +akg +o2 +succinate +co2 +hplus
-    heptanal
+    <-> ec_1_14_11_77 [1.14.11.77] +nonyl_sulfate +akg +o2 +succinate +co2 +hplus
+    nonanal
   }
 
   branch from n_acetyl_d_galactosamine_1_phosphate side left {
     n_acetyl_d_galactosamine_1_phosphate
+    <-> ec_2_7_1_157 [2.7.1.157] +atp +adp +hplus
+    n_acetyl_d_galactosamine
+  }
+
+  branch from n_acetyl_d_galactosamine_1_phosphate side right {
+    n_acetyl_d_galactosamine_1_phosphate
     <-> . +udp_n_acetyl_d_galactosamine +h2o +hplus
     ump
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> ec_2_4_1_40 [2.4.1.40] +l_fucosyl_1_2_d_galactoside +udp +hplus
+    n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
   }
 
   branch from udp_n_acetyl_d_galactosamine side right {
@@ -54,7 +78,13 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_45 [2.7.7.45] +gtp +hplus
-    p1_p4_bis_5_guanosyl_tetraphosphate
+    <-> ec_2_7_7_47 [2.7.7.47] +streptomycin +atp
+    3_adenylylstreptomycin
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_19 [6.1.1.19] +amp_3_end_1 +arginine +atp +amp
+    3_l_arginyl_adenylyl_1_group
   }
 }

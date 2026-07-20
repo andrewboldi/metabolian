@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-11z-3-hydroxyoctadec-to-1-oleoyl-2-11z-octad "(3R,11Z)-3-hydroxyoctadec… to 1-oleoyl-2-(11Z)-octadece…" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     3r_11z_3_hydroxyoctadecenoyl_coa
@@ -22,9 +22,21 @@ pathway 3r-11z-3-hydroxyoctadec-to-1-oleoyl-2-11z-octad "(3R,11Z)-3-hydroxyoctad
     3s_11z_3_hydroxyoctadecenoyl_coa
   }
 
+  branch from 2e_11z_octadecadienoyl_coa side right {
+    2e_11z_octadecadienoyl_coa
+    <-> ec_4_2_1_17 [4.2.1.17] +3s_11z_3_hydroxyoctadecenoyl_coa
+    h2o
+  }
+
+  branch from 11z_octadecenoyl_coa side left {
+    11z_octadecenoyl_coa
+    <-> . +cholesterol +coa
+    11z_octadecenoyl_cholesterol
+  }
+
   branch from 11z_octadecenoyl_coa side right {
     11z_octadecenoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    13z_3_oxoicosenoyl_coa
+    <-> . +h2o +coa +hplus
+    cis_vaccenate
   }
 }

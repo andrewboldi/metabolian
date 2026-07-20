@@ -3,7 +3,7 @@
   "id": "17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste",
   "name": "17-O-acetylnorajmaline to S-adenosyl-L-homocysteine",
   "category": "amino-acid-metabolism",
-  "summary": "A 2-step route from 17-O-acetylnorajmaline(1+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 3-step route from 17-O-acetylnorajmaline(1+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -94,6 +94,15 @@
       }
     },
     {
+      "id": "4_methylajmaline",
+      "name": "4-methylajmaline",
+      "formula": "C21H29N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:230509"
+      }
+    },
+    {
       "id": "4_methylnorajmaline",
       "name": "4-methylnorajmaline",
       "formula": "C20H27N2O2",
@@ -103,41 +112,41 @@
       }
     },
     {
-      "id": "4_o_d_glucosyl_trans_ferulate",
-      "name": "4-O-β-D-glucosyl-trans-ferulate",
-      "short": "4-O-β-D-glucosyl-tr…",
-      "formula": "C16H19O9",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:141767"
-      }
-    },
-    {
-      "id": "glucovanillin",
-      "name": "Glucovanillin",
-      "formula": "C14H18O8",
+      "id": "6_methoxy_2_octaprenyl_1_4_benzoquinone",
+      "name": "6-methoxy-2-octaprenyl-1,4-benzoquinone",
+      "short": "6-methoxy-2-octapre…",
+      "formula": "C47H70O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:179508"
+        "chebi": "CHEBI:28423"
       }
     },
     {
-      "id": "apigenin_7_olate",
-      "name": "apigenin-7-olate",
-      "formula": "C15H9O5",
-      "charge": -1,
+      "id": "3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone",
+      "name": "3-methyl-6-methoxy-2-octaprenyl-1,4-benzoquinone",
+      "short": "3-methyl-6-methoxy-…",
+      "formula": "C48H72O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58470"
+        "chebi": "CHEBI:28636"
       }
     },
     {
-      "id": "5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o",
-      "name": "5-hydroxy-2-(4-methoxyphenyl)-4-oxo-4H-chromen-7-olate",
-      "short": "5-hydroxy-2-(4-meth…",
-      "formula": "C16H11O5",
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57284"
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "iodomethane",
+      "name": "iodomethane",
+      "formula": "CH3I",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:39282"
       }
     }
   ],
@@ -164,17 +173,17 @@
       ]
     },
     {
-      "id": "ec_4_1_2_65",
-      "name": "ferulate hydratase/lyase",
+      "id": "ec_2_1_1_163",
+      "name": "demethylmenaquinone methyltransferase",
       "ec": [
-        "4.1.2.65"
+        "2.1.1.163"
       ]
     },
     {
-      "id": "ec_2_1_1_75",
-      "name": "apigenin 4'-O-methyltransferase",
+      "id": "ec_2_1_1_165",
+      "name": "methyl halide transferase",
       "ec": [
-        "2.1.1.75"
+        "2.1.1.165"
       ]
     }
   ],
@@ -280,6 +289,55 @@
     {
       "id": "r3",
       "name": "ajmaline N-methyltransferase",
+      "equation": "ajmaline + S-adenosyl-L-methionine = 4-methylajmaline + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.393",
+      "substrates": [
+        {
+          "metabolite": "ajmalinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylajmaline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_393"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79631"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79631"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ajmaline N-methyltransferase",
       "equation": "norajmaline + S-adenosyl-L-methionine = 4-methylnorajmaline + S-adenosyl-L-homocysteine + H(+)",
       "ec": "2.1.1.393",
       "substrates": [
@@ -312,7 +370,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:79627"
       },
@@ -327,58 +385,13 @@
       }
     },
     {
-      "id": "r4",
-      "name": "ferulate hydratase/lyase",
-      "equation": "4-O-beta-D-glucosyl-trans-ferulate + H2O = 4-O-beta-D-glucosyl-vanillin + acetate",
-      "ec": "4.1.2.65",
-      "substrates": [
-        {
-          "metabolite": "4_o_d_glucosyl_trans_ferulate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucovanillin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_2_65"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:76503"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76503"
-          }
-        ]
-      }
-    },
-    {
       "id": "r5",
-      "name": "apigenin 4'-O-methyltransferase",
-      "equation": "apigenin + S-adenosyl-L-methionine = acacetin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.75",
+      "name": "demethylmenaquinone methyltransferase",
+      "equation": "6-methoxy-2-all-trans-octaprenyl-1,4-benzoquinone + S-adenosyl-L-methionine = 2-methoxy-5-methyl-6-all-trans-octaprenyl-1,4-benzoquinone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.163",
       "substrates": [
         {
-          "metabolite": "apigenin_7_olate",
+          "metabolite": "6_methoxy_2_octaprenyl_1_4_benzoquinone",
           "stoichiometry": 1
         },
         {
@@ -388,7 +401,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o",
+          "metabolite": "3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone",
           "stoichiometry": 1
         },
         {
@@ -402,20 +415,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_75"
+          "enzyme": "ec_2_1_1_163"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:20429"
+        "rhea": "RHEA:26462"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20429"
+            "id": "RHEA:26462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "methyl halide transferase",
+      "equation": "iodide + S-adenosyl-L-methionine = iodomethane + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.165",
+      "substrates": [
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "iodomethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_165"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:27357"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27357"
           }
         ]
       }

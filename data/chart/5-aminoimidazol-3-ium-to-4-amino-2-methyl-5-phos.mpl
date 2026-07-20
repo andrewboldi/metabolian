@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos "5-aminoimidazol-3-ium… to 4-amino-2-methyl-5-phosph…" {
-  spacing 196
+  spacing 214
 
   spine at 0,0 {
     5_aminoimidazol_3_ium_ribonucleoside
@@ -20,19 +20,19 @@ pathway 5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos "5-aminoimidazol-3-ium�
 
   branch from carbon_monoxide side left {
     carbon_monoxide
+    <-> . +a_tetracycline +nadph +o2 +hplus +nadp +h2o
+    1s_10as_3_conh2_1_me2n_3_3a_4_6_ho_4_2_5_dioxo
+  }
+
+  branch from carbon_monoxide side right {
+    carbon_monoxide
     <-> . +tert_butylisonitrile +h2o +hplus
     tert_butylammonium
   }
 
-  branch from 5_deoxyadenosine side right {
+  branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_2_1_1_379 [2.1.1.379] +l_argininium +hydrogen_donor +sam +methionine +hydrogen_acceptor +sah +hplus
-    5s_c_methyl_l_argininium
-  }
-
-  branch from methionine side left {
-    methionine
-    <-> . +gtp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_gtp
+    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +methionine
+    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
   }
 }

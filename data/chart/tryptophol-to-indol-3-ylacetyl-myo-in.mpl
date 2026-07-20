@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-myo-in…" {
-  spacing 252
+  spacing 282
 
   spine at 0,0 {
     tryptophol
@@ -20,16 +20,16 @@ pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-
     indol_3_ylacetyl_myo_inositol_3_l_arabinoside
   }
 
-  branch from indol_3_ylacetaldehyde side left {
-    indol_3_ylacetaldehyde
-    <-> . +tryptaminium +o2 +h2o +h2o2
-    nh3
+  branch from indole_3_acetate side left {
+    indole_3_acetate
+    <-> ec_1_14_13_168 [1.14.13.168] +nadph +o2 +hplus +co2 +nadp +h2o
+    3_indol_3_yl_pyruvate
   }
 
   branch from indole_3_acetate side right {
     indole_3_acetate
-    <-> ec_1_14_13_168 [1.14.13.168] +nadph +o2 +hplus +co2 +nadp +h2o
-    3_indol_3_yl_pyruvate
+    <-> ec_6_2_1_75 [6.2.1.75] +atp +coa +amp +ppi
+    indol_3_ylacetyl_coa
   }
 
   branch from 1d_1_o_indol_3_yl_acetyl_myo_inositol side left {
@@ -40,7 +40,13 @@ pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-
 
   branch from glucose side right {
     glucose
-    <-> . +nadp +nadph +hplus
-    d_glucitol
+    <-> ec_3_2_1_117 [3.2.1.117] +r_amygdalin +h2o
+    r_prunasin
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_1_1_1_47 [1.1.1.47] +nad +nadh +hplus
+    d_glucono_1_5_lactone
   }
 }

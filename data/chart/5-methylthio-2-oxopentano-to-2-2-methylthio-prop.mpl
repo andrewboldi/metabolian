@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-methylthio-2-oxopentano-to-2-2-methylthio-prop "5-methylthio-2-oxopentano… to 2-(2-methylthio)propylmal…" {
-  spacing 236
+  spacing 248
 
   spine at 0,0 {
     5_methylthio_2_oxopentanoate
@@ -14,5 +14,17 @@ pathway 5-methylthio-2-oxopentano-to-2-2-methylthio-prop "5-methylthio-2-oxopent
     3_3_methylthio_propylmalate
     <-> ec_4_2_1_170 [4.2.1.170] -h2o
     2_2_methylthio_propylmaleate
+  }
+
+  branch from 3_3_methylthio_propylmalate side left {
+    3_3_methylthio_propylmalate
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxo_6_methylthiohexanoic_acid +nad
+    h
+  }
+
+  branch from 3_3_methylthio_propylmalate side right {
+    3_3_methylthio_propylmalate
+    <-> . +nadh +3_carboxy_6_methylsulfanyl_2_oxohexanoate +h
+    nad
   }
 }

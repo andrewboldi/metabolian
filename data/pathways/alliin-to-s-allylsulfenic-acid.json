@@ -1,0 +1,303 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alliin-to-s-allylsulfenic-acid",
+  "name": "alliin to S-allylsulfenic acid",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from alliin zwitterion to S-allylsulfenic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:54688"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:132987"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alliin",
+      "name": "alliin",
+      "formula": "C6H11NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132987"
+      }
+    },
+    {
+      "id": "s_allylsulfenic_acid",
+      "name": "S-allylsulfenic acid",
+      "formula": "C3H6OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138314"
+      }
+    },
+    {
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76565"
+      }
+    },
+    {
+      "id": "thioacrolein",
+      "name": "thioacrolein",
+      "formula": "C3H4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59787"
+      }
+    },
+    {
+      "id": "allicin",
+      "name": "allicin",
+      "formula": "C6H10OS2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM8276"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "dserine",
+      "name": "D-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35247"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_alkyl_l_cysteine",
+      "name": "S-alkyl-L-cysteine",
+      "formula": "C3H6NO2SR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82710"
+      }
+    },
+    {
+      "id": "alkanethiol",
+      "name": "alkanethiol",
+      "formula": "HSR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47908"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_4",
+      "name": "alliin lyase",
+      "ec": [
+        "4.4.1.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alliin lyase",
+      "equation": "alliin = allylsulfenate + 2-aminoprop-2-enoate",
+      "ec": "4.4.1.4",
+      "substrates": [
+        {
+          "metabolite": "alliin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_allylsulfenic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:54688"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54688"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR122538",
+      "substrates": [
+        {
+          "metabolite": "thioacrolein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_allylsulfenic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "allicin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR122538"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122538"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR122537",
+      "substrates": [
+        {
+          "metabolite": "allicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_allylsulfenic_acid",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR122537"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122537"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-serine = 2-aminoprop-2-enoate + H2O",
+      "equation": "D-serine = 2-aminoprop-2-enoate + H2O",
+      "substrates": [
+        {
+          "metabolite": "dserine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:43008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43008"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "an S-alkyl-L-cysteine = an alkyl thiol + 2-aminoprop-2-enoate",
+      "equation": "an S-alkyl-L-cysteine = an alkyl thiol + 2-aminoprop-2-enoate",
+      "substrates": [
+        {
+          "metabolite": "s_alkyl_l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alkanethiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:43016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43016"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-erucoylglycerol-to-n-13z-docosenoyl-sphin "1-erucoylglycerol to N-[(13Z)-docosenoyl]sphin…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     1_erucoylglycerol
@@ -28,9 +28,21 @@ pathway 1-erucoylglycerol-to-n-13z-docosenoyl-sphin "1-erucoylglycerol to N-[(13
     2e_13z_docosadienoyl_coa
   }
 
+  branch from erucoyl_coa side left {
+    erucoyl_coa
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    ent_copalol
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_104 [4.2.3.104] +fpp
-    1e_4e_8e_humulene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    syn_copalol
   }
 }

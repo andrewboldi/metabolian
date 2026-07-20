@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3 "D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-…" {
-  spacing 244
+  spacing 274
 
   spine at 0,0 {
     d_ribitol_5_phosphate
@@ -30,13 +30,25 @@ pathway d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3 "D-ribitol 5-phosphate to 3-O
 
   branch from ppi side right {
     ppi
-    <-> ec_4_6_1_6 [4.6.1.6] +ctp
-    3_5_cyclic_cmp
+    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    3e_7e_dolabella_3_7_dien_18_ol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_123 [2.5.1.123] +flaviolin_2_olate +gpp
+    3_linalylflaviolin_2_olate
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_3_6_1_26 [3.6.1.26] +cdp_diacylglycerol +h2o +hplus
+    1_2_diacyl_sn_glycerol_3_phosphate
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_3_6_1_26 [3.6.1.26] +cdp_diacylglycerol +h2o +hplus
-    1_2_diacyl_sn_glycerol_3_phosphate
+    <-> ec_2_4_3_1 [2.4.3.1] +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco
   }
 }

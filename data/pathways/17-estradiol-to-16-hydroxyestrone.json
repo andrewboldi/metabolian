@@ -146,6 +146,15 @@
       }
     },
     {
+      "id": "6_hydroxyestrone",
+      "name": "6α-hydroxyestrone",
+      "formula": "C18H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87605"
+      }
+    },
+    {
       "id": "16_hydroxyestrone_16_o_d_glucuronide",
       "name": "16α-hydroxyestrone 16-O-(β-D-glucuronide)",
       "short": "16α-hydroxyestrone…",
@@ -153,6 +162,33 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:136636"
+      }
+    },
+    {
+      "id": "isethionate",
+      "name": "isethionate",
+      "formula": "C2H5O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61904"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17071"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
       }
     },
     {
@@ -392,6 +428,57 @@
     },
     {
       "id": "r5",
+      "name": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxyestrone + oxidize...",
+      "equation": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxyestrone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "estrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxyestrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:47308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "16alpha-hydroxyestrone + UDP-alpha-D-glucuronate = 16alpha-hydroxyestrone 16-O-(beta-D-...",
       "equation": "16alpha-hydroxyestrone + UDP-alpha-D-glucuronate = 16alpha-hydroxyestrone 16-O-(beta-D-glucuronate) + UDP + H(+)",
       "substrates": [
@@ -419,7 +506,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:52452"
       },
@@ -434,7 +521,62 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "2-hydroxyethane-1-sulfonate + FMNH2 + O2 = glycolaldehyde + FMN + sulfite + H2O + 2 H(+)",
+      "equation": "2-hydroxyethane-1-sulfonate + FMNH2 + O2 = glycolaldehyde + FMN + sulfite + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "isethionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:29715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "carotene epsilon-hydroxylase",
       "equation": "alpha-carotene + reduced [NADPH--hemoprotein reductase] + O2 = alpha-cryptoxanthin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "ec": "1.14.14.158",
@@ -476,7 +618,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:30399"
       },

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-4-hydroxyphenyl-acet-to-hydrogen-cyanide "(Z)-(4-hydroxyphenyl)acet… to hydrogen cyanide" {
-  spacing 172
+  spacing 196
 
   spine at 0,0 {
     z_4_hydroxyphenyl_acetaldehyde_oxime
@@ -18,19 +18,25 @@ pathway z-4-hydroxyphenyl-acet-to-hydrogen-cyanide "(Z)-(4-hydroxyphenyl)acet…
 
   branch from fmn side left {
     fmn
-    <-> . +4a_5_dihydro_ml_236c_carboxylate +fmnh2 +o2 +h2o +hplus
-    3_hydroxy_3_5_dihydro_ml_236c_carboxylate
+    <-> . +26_oxolanosterol +fmnh2 +o2 +h2o +hplus
+    3_hydroxy_lanosta_8_24_dien_26_oate
   }
 
-  branch from 4_hydroxybenzaldehyde side right {
-    4_hydroxybenzaldehyde
-    <-> . +4_hydroxybenzoate +atp +nadph +hplus +amp +nadp
-    ppi
+  branch from fmn side right {
+    fmn
+    <-> . +ganoderate_dm +fmnh2 +o2 +h2o +hplus
+    hainanate_a
   }
 
   branch from hydrogen_cyanide side left {
     hydrogen_cyanide
-    <-> . +cyclohexanecarbaldehyde
-    2s_2_cyclohexyl_2_hydroxyacetonitrile
+    <-> . +piperonal
+    2s_2_2h_1_3_benzodioxol_5_yl_2_hydroxyacetonitr
+  }
+
+  branch from hydrogen_cyanide side right {
+    hydrogen_cyanide
+    <-> . +formylthiophene
+    2r_2_hydroxy_2_thiophen_2_yl_acetonitrile
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway amino-acid-ester-to-l-argininium "α-amino acid ester to L-argininium" {
-  spacing 188
+  spacing 230
 
   spine at 0,0 {
     amino_acid_ester
@@ -18,27 +18,45 @@ pathway amino-acid-ester-to-l-argininium "α-amino acid ester to L-argininium" {
     n_terminal_amino_acid_1
   }
 
-  branch from alcohol side left {
-    alcohol
-    <-> ec_3_1_1_117 [3.1.1.117] +4_o_methyl_d_glucuronoside_ester +h2o +hplus
-    4_o_methyl_d_glucuronoside
+  branch from n_terminal_amino_acid_1 side left {
+    n_terminal_amino_acid_1
+    <-> . +acetyl_coa +coa +hplus
+    n_acetylamino_acid
   }
 
   branch from n_terminal_amino_acid_1 side right {
     n_terminal_amino_acid_1
-    <-> . +sam +sah +hplus
-    n_terminal_trimethyl_amino_acid_1
+    <-> ec_2_3_2_6 [2.3.2.6] +3_l_phenylalanyl_adenylyl_1_group +amp_3_end_1
+    n_terminal_l_phenylalanyl_l_amino_acid_1
+  }
+
+  branch from n_terminal_l_arginyl_l_amino_acid_2 side left {
+    n_terminal_l_arginyl_l_amino_acid_2
+    <-> ec_3_4_11_27 [3.4.11.27] +h2o +n_terminal_amino_acid_1
+    l_arginine
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
+    alanine
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
-    alanine
+    <-> ec_6_1_1_17 [6.1.1.17] +glutamate +atp +amp +ppi
+    3_l_glutamate_adenylyl_1_group
   }
 
   branch from arginine side right {
     arginine
     <-> ec_1_13_12_1 [1.13.12.1] +o2 +co2 +h2o
     4_guanidiniumylbutanamide
+  }
+
+  branch from arginine side left {
+    arginine
+    <-> ec_1_5_1_11 [1.5.1.11] +nad +h2o +pyruvate +nadh +hplus
+    d_octopine_dizwitterion
   }
 }

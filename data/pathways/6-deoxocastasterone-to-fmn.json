@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6-deoxocastasterone-to-fmn",
   "name": "6-deoxocastasterone to FMN",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from 6-deoxocastasterone to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -101,23 +101,108 @@
       }
     },
     {
-      "id": "n_arachidonoylserotonin",
-      "name": "N-arachidonoylserotonin",
-      "short": "N-arachidonoylserot…",
-      "formula": "C30H42N2O2",
-      "charge": 0,
+      "id": "5z_8z_11z_icosatrienoate",
+      "name": "(5Z,8Z,11Z)-icosatrienoate",
+      "short": "(5Z,8Z,11Z)-icosatr…",
+      "formula": "C20H33O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:132255"
+        "chebi": "CHEBI:78043"
       }
     },
     {
-      "id": "n_arachidonoyl_2_oxoserotonin",
-      "name": "N-arachidonoyl-2-oxoserotonin",
-      "short": "N-arachidonoyl-2-ox…",
-      "formula": "C30H42N2O3",
+      "id": "20_hetre",
+      "name": "20-HETrE",
+      "formula": "C20H33O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132026"
+      }
+    },
+    {
+      "id": "pregnenolone",
+      "name": "pregnenolone",
+      "formula": "C21H32O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132256"
+        "chebi": "CHEBI:16581"
+      }
+    },
+    {
+      "id": "17_hydroxypregnenolone",
+      "name": "17α-hydroxypregnenolone",
+      "short": "17α-hydroxypregneno…",
+      "formula": "C21H32O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28750"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bisphosphate",
+      "name": "adenosine 3',5'-bisphosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103458"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "castasterone_22_o_sulfate",
+      "name": "castasterone 22-O-sulfate",
+      "short": "castasterone…",
+      "formula": "C28H47O8S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM818379"
+      }
+    },
+    {
+      "id": "3_phosphoadenylyl_sulfate",
+      "name": "3'-phosphoadenylyl sulfate",
+      "short": "3'-phosphoadenylyl…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104555"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "castasterone_23_o_d_glucoside",
+      "name": "castasterone 23-O-α-D-glucoside",
+      "short": "castasterone…",
+      "formula": "C34H58O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133472"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
       }
     }
   ],
@@ -127,6 +212,13 @@
       "name": "brassinolide synthase",
       "ec": [
         "1.14.14.180"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_19",
+      "name": "steroid 17alpha-monooxygenase",
+      "ec": [
+        "1.14.14.19"
       ]
     }
   ],
@@ -292,11 +384,11 @@
     },
     {
       "id": "r4",
-      "name": "N-[(5Z,8Z,11Z,14Z)-eicosatetraenoyl]-serotonin + reduced [NADPH--hemoprotein reductase]...",
-      "equation": "N-[(5Z,8Z,11Z,14Z)-eicosatetraenoyl]-serotonin + reduced [NADPH--hemoprotein reductase] + O2 = 2-oxo-N-[(5Z,8Z,11Z,14Z)-eicosatetraenoyl]-serotonin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-...",
+      "equation": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "n_arachidonoylserotonin",
+          "metabolite": "5z_8z_11z_icosatrienoate",
           "stoichiometry": 1
         },
         {
@@ -310,7 +402,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_arachidonoyl_2_oxoserotonin",
+          "metabolite": "20_hetre",
           "stoichiometry": 1
         },
         {
@@ -329,14 +421,155 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50296"
+        "rhea": "RHEA:50164"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50296"
+            "id": "RHEA:50164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "steroid 17alpha-monooxygenase",
+      "equation": "pregnenolone + reduced [NADPH--hemoprotein reductase] + O2 = 17alpha-hydroxypregnenolone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.19",
+      "substrates": [
+        {
+          "metabolite": "pregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17_hydroxypregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR116558",
+      "substrates": [
+        {
+          "metabolite": "adenosine_3_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "castasterone_22_o_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_phosphoadenylyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "castasterone",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR116558"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116558"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR144167",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "castasterone_23_o_d_glucoside",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "castasterone",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR144167"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144167"
           }
         ]
       }

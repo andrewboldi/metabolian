@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "gly-asn-to-3-n-acetyl-l-asparaginy",
   "name": "Gly-Asn to 3'-(N-acetyl-L-asparaginy…",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from Gly-Asn zwitterion to 3'-(N-acetyl-L-asparaginyl)adenylyl(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,12 +138,21 @@
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
+      "id": "d_asparagine",
+      "name": "D-asparagine",
+      "formula": "C4H8N2O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:74337"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
       }
     },
     {
@@ -156,40 +165,49 @@
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "2_3_dihydroxybenzoate",
-      "name": "2,3-dihydroxybenzoate",
-      "short": "2,3-dihydroxybenzoa…",
-      "formula": "C7H5O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:36654"
-      }
-    },
-    {
-      "id": "threonine",
-      "name": "L-Threonine",
-      "formula": "C4H9NO3",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57926"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "corynebactin",
-      "name": "corynebactin",
-      "formula": "C39H42N6O18",
-      "charge": 0,
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:31432"
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "cerotate",
+      "name": "cerotate",
+      "formula": "C26H51O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:31013"
+      }
+    },
+    {
+      "id": "n_hexacosanoylglycinate",
+      "name": "N-hexacosanoylglycinate",
+      "short": "N-hexacosanoylglyci…",
+      "formula": "C28H54NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87414"
+      }
+    },
+    {
+      "id": "hexacosanoyl_coa",
+      "name": "hexacosanoyl-CoA",
+      "formula": "C47H82N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:64868"
       }
     },
     {
@@ -203,15 +221,6 @@
       }
     },
     {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
       "id": "pi",
       "name": "Orthophosphate (Pi)",
       "formula": "HO4P",
@@ -221,22 +230,31 @@
       }
     },
     {
-      "id": "geranylgeranyl_diphosphate",
-      "name": "geranylgeranyl diphosphate",
-      "short": "geranylgeranyl PP",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57533"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "elisabethatriene",
-      "name": "elisabethatriene",
-      "formula": "C20H32",
+      "id": "cubenene",
+      "name": "(+)-cubenene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:52461"
+        "chebi": "CHEBI:61685"
+      }
+    },
+    {
+      "id": "epicubenol",
+      "name": "(+)-epicubenol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61686"
       }
     }
   ],
@@ -249,17 +267,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_14",
-      "name": "asparagine--oxo-acid transaminase",
+      "id": "ec_4_2_3_63",
+      "name": "(+)-cubenene synthase",
       "ec": [
-        "2.6.1.14"
+        "4.2.3.63"
       ]
     },
     {
-      "id": "ec_4_2_3_41",
-      "name": "elisabethatriene synthase",
+      "id": "ec_4_2_3_64",
+      "name": "(+)-epicubenol synthase",
       "ec": [
-        "4.2.3.41"
+        "4.2.3.64"
       ]
     }
   ],
@@ -401,16 +419,50 @@
     },
     {
       "id": "r4",
-      "name": "asparagine--oxo-acid transaminase",
-      "equation": "L-asparagine + 2-oxoglutarate = 2-oxosuccinamate + L-glutamate",
-      "ec": "2.6.1.14",
+      "name": "L-asparagine = D-asparagine",
+      "equation": "L-asparagine = D-asparagine",
+      "substrates": [
+        {
+          "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_asparagine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-asparagine + O2 + H2O = 2-oxosuccinamate + H2O2 + NH4(+)",
+      "equation": "L-asparagine + O2 + H2O = 2-oxosuccinamate + H2O2 + NH4(+)",
       "substrates": [
         {
           "metabolite": "l_asparagine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -420,91 +472,113 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_14"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:52528"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52528"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "3 2,3-dihydroxybenzoate + 3 L-threonine + 3 glycine + 6 ATP = corynebactin + 6 AMP + 6 ...",
-      "equation": "3 2,3-dihydroxybenzoate + 3 L-threonine + 3 glycine + 6 ATP = corynebactin + 6 AMP + 6 diphosphate + 3 H2O + 3 H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_3_dihydroxybenzoate",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "threonine",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 6
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "corynebactin",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
+          "metabolite": "nh3",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33811"
+        "rhea": "RHEA:61224"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33811"
+            "id": "RHEA:61224"
           }
         ]
       }
     },
     {
       "id": "r6",
+      "name": "hexacosanoate + glycine = N-hexacosanoylglycine + H2O",
+      "equation": "hexacosanoate + glycine = N-hexacosanoylglycine + H2O",
+      "substrates": [
+        {
+          "metabolite": "cerotate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hexacosanoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:47124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "hexacosanoyl-CoA + glycine = N-hexacosanoylglycine + CoA + H(+)",
+      "equation": "hexacosanoyl-CoA + glycine = N-hexacosanoylglycine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hexacosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hexacosanoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:49772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "4-phosphooxy-L-aspartyl-tRNA(Asn) + NH4(+) = L-asparaginyl-tRNA(Asn) + phosphate + H(+)",
       "equation": "4-phosphooxy-L-aspartyl-tRNA(Asn) + NH4(+) = L-asparaginyl-tRNA(Asn) + phosphate + H(+)",
       "substrates": [
@@ -532,7 +606,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:57920"
       },
@@ -547,19 +621,19 @@
       }
     },
     {
-      "id": "r7",
-      "name": "elisabethatriene synthase",
-      "equation": "geranylgeranyl diphosphate = elisabethatriene + diphosphate",
-      "ec": "4.2.3.41",
+      "id": "r9",
+      "name": "(+)-cubenene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-cubenene + diphosphate",
+      "ec": "4.2.3.63",
       "substrates": [
         {
-          "metabolite": "geranylgeranyl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "elisabethatriene",
+          "metabolite": "cubenene",
           "stoichiometry": 1
         },
         {
@@ -569,20 +643,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_41"
+          "enzyme": "ec_4_2_3_63"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:26241"
+        "rhea": "RHEA:29475"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26241"
+            "id": "RHEA:29475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "(+)-epicubenol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-epicubenol + diphosphate",
+      "ec": "4.2.3.64",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epicubenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:29479"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29479"
           }
         ]
       }

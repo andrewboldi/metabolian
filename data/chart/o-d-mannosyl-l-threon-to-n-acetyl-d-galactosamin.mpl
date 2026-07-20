@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-d-mannosyl-l-threon-to-n-acetyl-d-galactosamin "O-(α-D-mannosyl)-L-threon… to N-acetyl-β-D-galactosamin…" {
-  spacing 280
+  spacing 304
 
   spine at 0,0 {
     o_d_mannosyl_l_threonine

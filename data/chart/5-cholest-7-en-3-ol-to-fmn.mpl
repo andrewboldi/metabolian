@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholest-7-en-3-ol-to-fmn "5α-cholest-7-en-3β-ol to FMN" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     lathosterol
@@ -24,15 +24,21 @@ pathway 5-cholest-7-en-3-ol-to-fmn "5α-cholest-7-en-3β-ol to FMN" {
     cholesterol
   }
 
-  branch from 7_dehydrodesmosterol side right {
-    7_dehydrodesmosterol
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    5_cholesta_7_24_dien_3_ol
+  branch from dehydrocholesterol_7 side right {
+    dehydrocholesterol_7
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    cholesta_5_7_dien_3_25_diol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    2_hydroxytestosterone
+    <-> . +epiandrosterone +fmnh2 +o2 +h2o +hplus
+    3_5_7_3_7_dihydroxyandrostan_17_one
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    1_hydroxy_fatty_acid_anion
   }
 }

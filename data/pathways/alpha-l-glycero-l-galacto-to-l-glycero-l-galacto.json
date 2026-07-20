@@ -1,0 +1,249 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alpha-l-glycero-l-galacto-to-l-glycero-l-galacto",
+  "name": "alpha-L-glycero-L-galacto… to L-glycero-L-galacto-octul…",
+  "category": "other",
+  "summary": "A 4-step route from alpha-L-glycero-L-galacto-octulonopyranose to L-glycero-L-galacto-octuluronate-1-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193204"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alpha_l_glycero_l_galacto_octulonopyranose",
+      "name": "alpha-L-glycero-L-galacto-octulonopyranose",
+      "short": "alpha-L-glycero-L-g…",
+      "formula": "C8H13O9",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1132367"
+      }
+    },
+    {
+      "id": "l_glycero_l_galacto_octuluronate",
+      "name": "L-glycero-L-galacto-octuluronate",
+      "short": "L-glycero-L-galacto…",
+      "formula": "C8H13O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:146210"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "l_glycero_l_galacto_octuluronate_1_phosphate",
+      "name": "L-glycero-L-galacto-octuluronate-1-phosphate",
+      "short": "L-glycero-L-galacto…",
+      "formula": "C8H12O12P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:146211"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_arabinuronate",
+      "name": "L-arabinuronate",
+      "formula": "C5H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149672"
+      }
+    },
+    {
+      "id": "dhap",
+      "name": "Dihydroxyacetone phosphate",
+      "short": "Dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57642"
+      }
+    },
+    {
+      "id": "dihydroxyacetone_phosphate",
+      "name": "dihydroxyacetone phosphate",
+      "short": "dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM77"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193204",
+      "substrates": [
+        {
+          "metabolite": "alpha_l_glycero_l_galacto_octulonopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glycero_l_galacto_octuluronate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-glycero-L-galacto-octuluronate + ATP = L-glycero-L-galacto-octuluronate-1-phosphate +...",
+      "equation": "L-glycero-L-galacto-octuluronate + ATP = L-glycero-L-galacto-octuluronate-1-phosphate + ADP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_glycero_l_galacto_octuluronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glycero_l_galacto_octuluronate_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:64040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-glycero-L-galacto-octuluronate-1-phosphate = aldehydo-L-arabinuronate + dihydroxyacet...",
+      "equation": "L-glycero-L-galacto-octuluronate-1-phosphate = aldehydo-L-arabinuronate + dihydroxyacetone phosphate",
+      "substrates": [
+        {
+          "metabolite": "l_glycero_l_galacto_octuluronate_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR193200",
+      "substrates": [
+        {
+          "metabolite": "l_arabinuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glycero_l_galacto_octuluronate_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR193200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193200"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-hydroxy-long-chain-to-long-chain-fatty-acid "(R)-2-hydroxy-long-chain-… to long-chain fatty acid…" {
-  spacing 196
+  spacing 220
 
   spine at 0,0 {
     r_2_hydroxy_long_chain_fatty_acyl_coa
@@ -24,9 +24,21 @@ pathway r-2-hydroxy-long-chain-to-long-chain-fatty-acid "(R)-2-hydroxy-long-chai
     long_chain_primary_fatty_alcohol
   }
 
+  branch from long_chain_fatty_aldehyde side right {
+    long_chain_fatty_aldehyde
+    <-> . +fmnh2 +o2 +fmn +co2 +h2o +hplus
+    long_chain_alkane
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos +h2o +hplus
+    2_9_oxononanoyl_sn_glycero_3_phosphocholine
+  }
+
   branch from palmitate side right {
     palmitate
-    <-> . +1_o_palmitoyl_2_o_5_oxovaleryl_sn_glycero_3_phos +h2o +hplus
-    2_5_oxovaleroyl_sn_glycero_3_phosphocholine
+    <-> . +n_palmitoyl_l_phenylalanine +h2o
+    l_phenylalanine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… to butyryl-CoA" {
-  spacing 264
+  spacing 312
 
   spine at 0,0 {
     2_3_dihydroxy_3_methylbutanoate
@@ -18,25 +18,49 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… t
 
   branch from kiv side left {
     kiv
-    <-> ec_1_4_1_23 [1.4.1.23] +valine +nad +h2o +nadh +hplus
-    nh3
+    <-> ec_4_2_1_9 [4.2.1.9] +h2o
+    r_2_3_dihydroxy_3_methylbutanoate
+  }
+
+  branch from kiv side right {
+    kiv
+    <-> ec_2_6_1_42 [2.6.1.42] +valine +akg
+    glutamate
+  }
+
+  branch from isobutyryl_coa side left {
+    isobutyryl_coa
+    <-> ec_1_3_8_5 [1.3.8.5] +fad +hplus +fadh2
+    methacrylyl_coa
   }
 
   branch from isobutyryl_coa side right {
     isobutyryl_coa
-    <-> ec_2_3_1_300 [2.3.1.300] +malonyl-acp +hplus +co2 +coa
-    o_s_3_oxo_4_methylpentanoylpantetheine_4_phospho
+    <-> . +carnitine +coa
+    o_isobutyryl_l_carnitine
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +o2 +hplus +di_sulfido_diiron +h2o
-    3_3_biflaviolin
+    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_23_dihydroxy_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
+    1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
+    calcitroate
+  }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> ec_2_3_1_19 [2.3.1.19] +pi +coa
+    butyryl_p
   }
 
   branch from butyryl_coa side right {
     butyryl_coa
-    <-> ec_2_3_1_19 [2.3.1.19] +pi +coa
-    butyryl_p
+    <-> ec_1_3_1_86 [1.3.1.86] +nadp +nadph +hplus
+    crotonoyl_coa
   }
 }

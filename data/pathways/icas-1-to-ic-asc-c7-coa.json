@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "icas-1-to-ic-asc-c7-coa",
   "name": "icas#1 to IC-asc-ΔC7-CoA",
-  "category": "redox-detox",
-  "summary": "A 2-step route from icas#1(1−) to IC-asc-ΔC7-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from icas#1(1−) to IC-asc-ΔC7-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:66252"
+        "id": "RHEA:66256"
       },
       {
         "db": "ChEBI",
@@ -34,6 +34,33 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ic_asc_c7_amp",
+      "name": "IC-asc-C7-AMP",
+      "formula": "C32H40N6O13P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:166982"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -64,15 +91,6 @@
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
       "id": "o2",
       "name": "Dioxygen (O2)",
       "formula": "O2",
@@ -100,39 +118,62 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate",
+      "short": "1-hexadecanoyl-2-(5…",
+      "formula": "C39H67O8P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:72864"
       }
     },
     {
-      "id": "sesquiphellandrene",
-      "name": "β-sesquiphellandrene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:64361"
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol",
+      "name": "CDP-1-palmitoyl-2-arachidonoyl-sn-glycerol",
+      "short": "CDP-1-palmitoyl-2-a…",
+      "formula": "C48H79N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85350"
+      }
+    },
+    {
+      "id": "1_2_diarachidonoyl_sn_glycero_3_phosphate",
+      "name": "1,2-diarachidonoyl-sn-glycero-3-phosphate",
+      "short": "1,2-diarachidonoyl-…",
+      "formula": "C43H67O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77126"
+      }
+    },
+    {
+      "id": "cdp_1_2_diarachidonoyl_sn_glycerol",
+      "name": "CDP-1,2-diarachidonoyl-sn-glycerol",
+      "short": "CDP-1,2-diarachidon…",
+      "formula": "C52H79N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85351"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_123",
-      "name": "beta-sesquiphellandrene synthase",
-      "ec": [
-        "4.2.3.123"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
-      "name": "IC-asc-C7 + ATP + CoA = IC-asc-C7-CoA + AMP + diphosphate",
-      "equation": "IC-asc-C7 + ATP + CoA = IC-asc-C7-CoA + AMP + diphosphate",
+      "name": "IC-asc-C7 + ATP + H(+) = IC-asc-C7-AMP + diphosphate",
+      "equation": "IC-asc-C7 + ATP + H(+) = IC-asc-C7-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "icas_1",
@@ -140,6 +181,45 @@
         },
         {
           "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ic_asc_c7_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:66256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "IC-asc-C7-AMP + CoA = IC-asc-C7-CoA + AMP + H(+)",
+      "equation": "IC-asc-C7-AMP + CoA = IC-asc-C7-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ic_asc_c7_amp",
           "stoichiometry": 1
         },
         {
@@ -157,27 +237,27 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:66252"
+        "rhea": "RHEA:66260"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66252"
+            "id": "RHEA:66260"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "IC-asc-C7-CoA + O2 = IC-asc-DeltaC7-CoA + H2O2",
       "equation": "IC-asc-C7-CoA + O2 = IC-asc-DeltaC7-CoA + H2O2",
       "substrates": [
@@ -201,7 +281,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:66232"
       },
@@ -216,19 +296,26 @@
       }
     },
     {
-      "id": "r3",
-      "name": "beta-sesquiphellandrene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-sesquiphellandrene + diphosphate",
-      "ec": "4.2.3.123",
+      "id": "r4",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) =...",
+      "equation": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sesquiphellandrene",
+          "metabolite": "cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -236,22 +323,60 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_123"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:32699"
+        "rhea": "RHEA:45652"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32699"
+            "id": "RHEA:45652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1,2-di-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate + CTP + H(+) = 1,2-di-(5...",
+      "equation": "1,2-di-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate + CTP + H(+) = 1,2-di-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "1_2_diarachidonoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_1_2_diarachidonoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:45656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45656"
           }
         ]
       }

@@ -165,12 +165,50 @@
       }
     },
     {
+      "id": "quinolin_8_ol",
+      "name": "quinolin-8-ol",
+      "formula": "C9H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48981"
+      }
+    },
+    {
+      "id": "8_hydroxyquinolin_2_1h_one",
+      "name": "8-hydroxyquinolin-2(1H)-one",
+      "short": "8-hydroxyquinolin-2…",
+      "formula": "C9H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48988"
+      }
+    },
+    {
       "id": "1_phenylethanol",
       "name": "1-phenylethanol",
       "formula": "C8H10O",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:669"
+      }
+    },
+    {
+      "id": "1s_1_phenylethanaminium",
+      "name": "(1S)-1-phenylethanaminium",
+      "short": "1-phenylethanaminium",
+      "formula": "C8H12N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141108"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
       }
     },
     {
@@ -199,6 +237,24 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
       }
     }
   ],
@@ -443,6 +499,55 @@
     },
     {
       "id": "r5",
+      "name": "quinoline 2-oxidoreductase",
+      "equation": "quinolin-8-ol + A + H2O = 8-hydroxyquinolin-2(1H)-one + AH2",
+      "ec": "1.3.99.17",
+      "substrates": [
+        {
+          "metabolite": "quinolin_8_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_hydroxyquinolin_2_1h_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:25924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "1-phenylethanol + NAD(+) = acetophenone + NADH + H(+)",
       "equation": "1-phenylethanol + NAD(+) = acetophenone + NADH + H(+)",
       "substrates": [
@@ -470,7 +575,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:64700"
       },
@@ -485,7 +590,58 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "(S)-1-phenylethylamine + NAD(+) + H2O = acetophenone + NH4(+) + NADH + H(+)",
+      "equation": "(S)-1-phenylethylamine + NAD(+) + H2O = acetophenone + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1s_1_phenylethanaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:76871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "(S)-3-amino-3-phenylpropanoate + 2-oxoglutarate = 3-oxo-3-phenylpropanoate + L-glutamate",
       "equation": "(S)-3-amino-3-phenylpropanoate + 2-oxoglutarate = 3-oxo-3-phenylpropanoate + L-glutamate",
       "substrates": [
@@ -509,7 +665,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:47320"
       },
@@ -519,6 +675,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:47320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "(S)-3-amino-3-phenylpropanoate + pyruvate = 3-oxo-3-phenylpropanoate + L-alanine",
+      "equation": "(S)-3-amino-3-phenylpropanoate + pyruvate = 3-oxo-3-phenylpropanoate + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "s_3_ammonio_3_phenylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_3_phenylpropionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:47324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47324"
           }
         ]
       }

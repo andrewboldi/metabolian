@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway medium-chain-primary-to-mycoketide-coa "medium-chain primary… to mycoketide-CoA" {
-  spacing 176
+  spacing 200
 
   spine at 0,0 {
     medium_chain_primary_fatty_alcohol
@@ -32,7 +32,13 @@ pathway medium-chain-primary-to-mycoketide-coa "medium-chain primary… to mycok
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_101 [4.2.3.101] +fpp
-    7_epi_sesquithujene
+    <-> . +hexadecanedioate +atp +coa +amp
+    hexadecanedioyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_124 [2.5.1.124] +2_o_3_dimethylflaviolin_7_olate +gpp
+    6_linalyl_2_o_3_dimethylflaviolin_7_olate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sapienate-to-3e-tetradecenoyl-coa "sapienate to (3E)-tetradecenoyl-CoA" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     sapienate
@@ -32,7 +32,13 @@ pathway sapienate-to-3e-tetradecenoyl-coa "sapienate to (3E)-tetradecenoyl-CoA" 
 
   branch from ppi side right {
     ppi
-    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +ctp +hplus
-    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> ec_3_1_7_12 [3.1.7.12] +kolavenyl_diphosphate +h2o
+    kolavelool
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct +atp +coa +amp
+    opc8_coa
   }
 }

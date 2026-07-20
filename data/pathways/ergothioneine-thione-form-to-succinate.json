@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ergothioneine-thione-form-to-succinate",
+  "name": "ergothioneine thione form to succinate",
+  "category": "other",
+  "summary": "A 4-step route from ergothioneine thione form to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:84047"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:82707"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ergothioneine_thione_form",
+      "name": "ergothioneine thione form",
+      "short": "ergothioneine…",
+      "formula": "C9H15N3O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82707"
+      }
+    },
+    {
+      "id": "e_thiourocanate_thione_form",
+      "name": "(E)-thiourocanate thione form",
+      "short": "thiourocanate…",
+      "formula": "C6H5N2O2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229689"
+      }
+    },
+    {
+      "id": "trimethylammonium",
+      "name": "trimethylammonium",
+      "formula": "C3H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58389"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_5_oxo_2_sulfanylideneimidazolidin_4_yl_propano",
+      "name": "3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propanoate",
+      "short": "3-(5-oxo-2-sulfanyl…",
+      "formula": "C6H7N2O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233560"
+      }
+    },
+    {
+      "id": "hydantoin_5_propionate",
+      "name": "hydantoin-5-propionate",
+      "short": "hydantoin-5-propion…",
+      "formula": "C6H7N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133476"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o_succinyl_l_serinate",
+      "name": "O-succinyl-L-serinate",
+      "short": "O-succinyl-L-serina…",
+      "formula": "C7H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136856"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ergothioneine (thione form) = (E)-thiourocanate (thione form) + trimethylamine",
+      "equation": "ergothioneine (thione form) = (E)-thiourocanate (thione form) + trimethylamine",
+      "substrates": [
+        {
+          "metabolite": "ergothioneine_thione_form",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_thiourocanate_thione_form",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trimethylammonium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:84047"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-thiourocanate (thione form) + H2O = 3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propa...",
+      "equation": "(E)-thiourocanate (thione form) + H2O = 3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propanoate",
+      "substrates": [
+        {
+          "metabolite": "e_thiourocanate_thione_form",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_oxo_2_sulfanylideneimidazolidin_4_yl_propano",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:85567"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85567"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propanoate + H2O = hydantoin-5-propanoate + h...",
+      "equation": "3-(5-oxo-2-sulfanylideneimidazolidin-4-yl)propanoate + H2O = hydantoin-5-propanoate + hydrogen sulfide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_5_oxo_2_sulfanylideneimidazolidin_4_yl_propano",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydantoin_5_propionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:85571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "O-succinyl-L-serine + hydrogen sulfide = L-cysteine + succinate",
+      "equation": "O-succinyl-L-serine + hydrogen sulfide = L-cysteine + succinate",
+      "substrates": [
+        {
+          "metabolite": "o_succinyl_l_serinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53816"
+          }
+        ]
+      }
+    }
+  ]
+}

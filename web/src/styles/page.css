@@ -1,47 +1,709 @@
-/* Shared styles for content pages (about, learn, glossary, pathway, protein, login). */
-.page-head { padding-block: var(--sp-8) var(--sp-6); border-bottom: 1px solid var(--line); }
-.page-head h1 { max-width: 20ch; margin-top: var(--sp-3); }
-.page-head .lead { margin-top: var(--sp-4); }
+/* ===========================================================================
+   Metabolian — content pages: about, learn, glossary, pathway, protein, login.
+   (chart.ts also imports this file; every selector below is scoped to markup
+   that does not exist on chart.html, so the sheet renderer is untouched.)
 
-.prose { max-width: 72ch; }
+   Direction: "Lightbox" — the chrome is the instrument the sheet is mounted in.
+   Three rules govern everything here:
+
+   1. HAIRLINES ARE box-shadow, NEVER border. A shadow costs no layout space, so
+      dense rows (the glossary specimen table, the pathway protocol, the protein
+      rail) can be ruled without every rule stealing a pixel from the measure or
+      shifting content when a state turns it on.
+
+   2. HUE IS CARRIED BY MARKS, NEVER BY SMALL TEXT. Category color lives in a
+      swatch, a dot, or a ring — the label beside it stays --text-dim. This is
+      deliberate: the edge/node tokens are tuned for strokes on the chart, and a
+      hue that reads at 4px of stroke does not necessarily clear 4.5:1 as 11px
+      type in both themes. Marks are always redundant with a word, so they carry
+      no information alone.
+
+   3. NEW TOKENS ARE READ DEFENSIVELY. Anything this file wants from the token
+      layer that may not have landed yet (--step--2, --lead-copy, --track-*,
+      --hairline, --elev-*, --mark, --t-*) is read as var(--x, <fallback>), so
+      the pages are correct against both the current and the retuned palette.
+
+   Motion follows the inverted contract: stillness is the default and the few
+   transitions here are opted into inside a `prefers-reduced-motion:
+   no-preference` block at the foot of the file. Nothing needs a kill-list.
+   =========================================================================== */
+
+/* --------------------------------------------------------- page furniture */
+
+.page-head {
+  padding-block: var(--sp-8) var(--sp-6);
+  box-shadow: inset 0 -1px 0 var(--line);
+}
+/* pathway.ts renders .page-head around a bare <div> rather than a .wrap, which
+   would otherwise leave that page's title flush against the viewport edge. */
+.page-head > :not(.wrap) {
+  width: min(100% - 2.5rem, var(--maxw));
+  margin-inline: auto;
+}
+.page-head h1 {
+  max-width: 18ch;
+  margin-top: var(--sp-3);
+  letter-spacing: var(--track-4, -0.032em);
+  text-wrap: balance;
+}
+.page-head .lead { margin-top: var(--sp-4); max-width: 60ch; }
+
+/* --------------------------------------------------------------- the essay */
+
+.prose { max-width: 68ch; }
 .prose > * + * { margin-top: var(--sp-4); }
-.prose h2 { font-size: var(--step-2); margin-top: var(--sp-7); }
-.prose h3 { font-size: var(--step-1); margin-top: var(--sp-5); }
-.prose p, .prose li { color: var(--text-dim); }
-.prose ul, .prose ol { padding-left: 1.2rem; display: grid; gap: 0.4rem; }
-.prose strong { color: var(--text); }
-.prose code { font-family: var(--font-mono); font-size: 0.9em; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 0.1em 0.4em; }
-.callout { border-left: 3px solid var(--accent); background: var(--panel); padding: var(--sp-4) var(--sp-5); border-radius: var(--radius); }
-.callout--warn { border-left-color: var(--edge-feedback); }
+.prose p,
+.prose li {
+  font-size: var(--step-0);
+  line-height: var(--lead-copy, 1.6);
+  color: var(--text-dim);
+}
+.prose strong { color: var(--text); font-weight: 600; }
+.prose em { color: var(--text-dim); font-style: italic; }
 
-/* glossary */
-.glossary-controls { display: flex; gap: var(--sp-3); flex-wrap: wrap; align-items: center; margin-block: var(--sp-5); position: sticky; top: 58px; background: color-mix(in oklab, var(--bg) 88%, transparent); backdrop-filter: blur(8px); padding-block: var(--sp-3); z-index: 10; }
-.glossary-controls .search { max-width: 420px; }
+/* A section starts on a rule. Numbering is deliberately NOT generated here:
+   about.html and learn.html carry a `<span class="h-num">` in the heading and
+   lay it out as a hanging column, so a generated counter would both double the
+   number and inject a third item into that grid. */
+.prose h2 {
+  margin-top: var(--sp-7);
+  padding-top: var(--sp-4);
+  box-shadow: inset 0 1px 0 var(--line);
+  font-size: var(--step-2);
+  line-height: var(--lead-snug, 1.2);
+  letter-spacing: var(--track-2, -0.02em);
+  color: var(--text);
+  text-wrap: balance;
+  scroll-margin-top: calc(58px + var(--sp-5));
+}
+.prose h3 {
+  margin-top: var(--sp-5);
+  font-size: var(--step-1);
+  line-height: var(--lead-tight, 1.25);
+  letter-spacing: var(--track-1, -0.012em);
+  color: var(--text);
+  text-wrap: balance;
+  scroll-margin-top: calc(58px + var(--sp-5));
+}
+
+/* Links: the underline is quiet until you reach for it, then it inks up and
+   the text takes the sheet's own hover color. */
+.prose a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in oklab, currentColor 45%, transparent);
+}
+.prose a:hover { text-decoration-color: currentColor; }
+/* Off-site references are marked, because on a citation-grounded atlas the
+   difference between "another page here" and "the source" is the whole point. */
+.prose a[target="_blank"]::after {
+  content: "↗";
+  display: inline-block;      /* stops the link underline running under the mark */
+  margin-left: 0.28em;
+  font-family: var(--font-mono);
+  font-size: 0.76em;
+  vertical-align: 0.12em;
+  color: var(--text-faint);
+}
+
+/* Lists: a hanging hairline instead of a bullet, so the marker belongs to the
+   same drawing vocabulary as every other rule on the page. */
+.prose ul { list-style: none; padding-left: 0; display: grid; gap: 0.45rem; }
+.prose ul > li { position: relative; padding-left: 1.6rem; }
+.prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(var(--lead-copy, 1.6) * 0.5em);
+  width: 0.7rem;
+  height: 1px;
+  background: var(--line-strong);
+}
+.prose ol { padding-left: 1.7rem; display: grid; gap: 0.45rem; }
+.prose ol > li::marker {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  color: var(--text-faint);
+}
+.prose li > ul,
+.prose li > ol { margin-top: 0.45rem; }
+
+/* Identifiers — EC numbers, accessions, formulae — are always mono. The shipped
+   Inter subset exposes no `zero` feature, so font-variant-numeric:slashed-zero
+   silently no-ops there; JetBrains Mono draws a dotted zero natively and so
+   disambiguates 0/O in an accession without any feature flag. */
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--text);
+  background: var(--panel-2);
+  box-shadow: 0 0 0 1px var(--line);
+  border-radius: var(--radius);
+  padding: 0.12em 0.38em;
+}
+.prose pre {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--panel);
+  box-shadow: var(--hairline, 0 0 0 1px var(--line));
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+  overflow-x: auto;          /* wide code scrolls itself; the page never does */
+  tab-size: 2;
+}
+.prose pre code {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Tables read as a specimen sheet: mono column heads, hairline rules, numbers
+   right-aligned on tabular figures. */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+}
+.prose caption {
+  font: 400 var(--step--2, 0.6875rem) / 1.4 var(--font-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  text-align: left;
+  padding-bottom: var(--sp-2);
+}
+.prose thead th {
+  font: 500 var(--step--2, 0.6875rem) / 1.3 var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  text-align: left;
+  padding: 0 var(--sp-4) var(--sp-2) 0;
+  box-shadow: inset 0 -1px 0 var(--line-strong);
+}
+.prose tbody th,
+.prose td {
+  padding: 0.55rem var(--sp-4) 0.55rem 0;
+  box-shadow: inset 0 1px 0 var(--line);
+  vertical-align: baseline;
+  overflow-wrap: anywhere;
+}
+.prose tbody th { text-align: left; color: var(--text); font-weight: 500; }
+.prose td { color: var(--text-dim); }
+.prose td:last-child,
+.prose th:last-child { padding-right: 0; }
+.prose td.num,
+.prose th.num {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Definition lists are the term-list role: mono keys in a fixed column, values
+   in the measure, every pair on its own ruled line. */
+.prose dl {
+  display: grid;
+  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  column-gap: var(--sp-4);
+  font-size: var(--step--1);
+}
+.prose dt {
+  grid-column: 1;
+  font: 500 var(--step--2, 0.6875rem) / 1.5 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding-block: 0.55rem;
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.prose dd {
+  grid-column: 2;
+  margin: 0;
+  color: var(--text-dim);
+  line-height: 1.5;
+  padding-block: 0.55rem;
+  box-shadow: inset 0 1px 0 var(--line);
+}
+@media (max-width: 560px) {
+  .prose dl { grid-template-columns: minmax(0, 1fr); }
+  .prose dt, .prose dd { grid-column: 1; }
+  .prose dd { padding-top: 0; box-shadow: none; }
+}
+
+/* ------------------------------------------------------------------ callout
+   A fieldset legend straddling the top rule — the instrument-panel device.
+   The label knocks the rule out with a hard-stop gradient: its top half sits
+   on the page ground, its bottom half on the panel it labels. */
+
+.prose > .callout { margin-block: var(--sp-6); }
+.callout {
+  --_callout-ink: var(--text-faint);
+  position: relative;
+  background: var(--panel-2);
+  border-radius: var(--radius);
+  box-shadow: var(--hairline, 0 0 0 1px var(--line));
+  padding: var(--sp-5);
+}
+/* The label is markup-driven — every callout on the site carries data-label —
+   with a role default for one that does not, so the two never disagree. */
+.callout::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 0;
+  left: calc(var(--sp-5) - 0.5rem);
+  transform: translateY(-50%);
+  padding-inline: 0.5rem;
+  background: linear-gradient(var(--bg) 50%, var(--panel-2) 50%);
+  font: 500 var(--step--2, 0.6875rem) / 1 var(--font-mono);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--_callout-ink);
+}
+.callout > :first-child { margin-top: 0; }
+.callout > :last-child { margin-bottom: 0; }
+.callout p { color: var(--text); }
+.callout--warn {
+  --_callout-ink: var(--mark, var(--edge-feedback));
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--mark, var(--edge-feedback)) 34%, var(--line));
+}
+.callout--warn::before { content: "Caution"; }
+
+/* -------------------------------------------------------- confidence badges
+   The schema's confidence field, made tangible. Colour rides the dot and the
+   ring; the ring also changes construction — solid for evidence you can lean
+   on, dashed for a claim still standing on one leg, hollow dot for a stated
+   hypothesis. Three redundant channels, so it survives any palette retune and
+   reads without color at all.
+   (explore.css declares its own .conf; explore never loads page.css, so these
+   two definitions can never collide.) */
+
+.conf {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45em;
+  vertical-align: baseline;
+  white-space: nowrap;
+  font: 500 var(--step--2, 0.6875rem) / 1.4 var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 0.25em 0.55em;
+  border: 1px solid color-mix(in oklab, var(--c, var(--line-strong)) 50%, transparent);
+  border-radius: var(--radius);
+}
+.conf::before {
+  content: "";
+  flex: none;
+  align-self: center;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: var(--c, var(--text-faint));
+}
+.conf[data-c="high"] { --c: var(--edge-activate); }
+.conf[data-c="medium"] { --c: var(--edge-signal); }
+.conf[data-c="low"] { --c: var(--edge-feedback); border-style: dashed; }
+.conf[data-c="hypothesis"] {
+  --c: var(--edge-inhibit);
+  border-style: dashed;
+  color: var(--text-faint);
+}
+.conf[data-c="hypothesis"]::before {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--c);
+}
+
+/* =================================================================== glossary
+   Formerly a card grid: ~300px of chrome per term, three terms visible at once
+   on the densest reference page on the site. Now a specimen table — hairline
+   rules, a fixed identity column, everything else in the measure beside it.
+   The CLS reservation and content-visibility budget from the card version are
+   deliberately kept; only the intrinsic size shrinks to a row. */
+
+.glossary-controls {
+  position: sticky;
+  top: 58px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  margin-block: var(--sp-6) 0;
+  padding-block: var(--sp-3);
+  background: color-mix(in oklab, var(--bg) 90%, transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 -1px 0 var(--line-strong);
+}
+/* Scoped to the glossary: chart.html also carries an input.search, and its HUD
+   is off-limits. */
+.glossary-controls .search {
+  flex: 1 1 20rem;
+  min-width: 0;
+  max-width: 30rem;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--font-mono);   /* you are typing an identifier */
+  font-size: var(--step-0);
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.75rem;
+}
+.glossary-controls .search::placeholder { color: var(--text-faint); }
+.glossary-controls .search::-webkit-search-cancel-button { filter: grayscale(1); }
+.glossary-controls .search:focus-visible { border-color: var(--accent); }
+
 .filter-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-.pill { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.7rem; border: 1px solid var(--line-strong); border-radius: var(--radius-pill); background: transparent; color: var(--text-dim); cursor: pointer; }
-.pill[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-/* Reserve height so async-injected cards fill reserved space instead of shifting layout (CLS). */
-.glossary-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--sp-4); margin-top: var(--sp-4); min-height: 75vh; align-content: start; }
-.term { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-4); content-visibility: auto; contain-intrinsic-size: auto 150px; }
-.term__name { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); }
-.term__kind { font-family: var(--font-mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.1em; }
-.term__kind[data-k="metabolite"] { color: var(--node-metabolite); } .term__kind[data-k="enzyme"] { color: var(--node-enzyme); }
-.term .chips { margin-top: var(--sp-3); }
-.count-note { font-family: var(--font-mono); font-size: var(--step--1); color: var(--text-faint); }
+.pill {
+  font-family: var(--font-mono);
+  font-size: var(--step--2, 0.6875rem);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0.42rem 0.8rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.pill[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
 
-/* protein */
-.viewer-shell { display: grid; grid-template-columns: 320px 1fr; gap: 0; height: calc(100vh - 58px); }
-.viewer-rail { border-right: 1px solid var(--line); background: var(--panel); padding: var(--sp-5); overflow-y: auto; display: flex; flex-direction: column; gap: var(--sp-4); }
-#viewport { position: relative; background: radial-gradient(120% 100% at 50% 0%, var(--panel-2), var(--bg) 70%); min-height: 340px; }
+.count-note {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--text-faint);
+}
+
+.glossary-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin-top: 0;
+  min-height: 75vh;            /* CLS reservation for the async fetch */
+  align-content: start;
+}
+.glossary-list > p {
+  padding-block: var(--sp-6);
+  color: var(--text-faint);
+}
+
+.term {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) 8rem minmax(0, 1.6fr);
+  column-gap: var(--sp-4);
+  align-items: baseline;
+  padding-block: 0.6rem;
+  box-shadow: inset 0 1px 0 var(--line);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 44px;
+}
+.glossary-list > .term:last-of-type {
+  box-shadow: inset 0 1px 0 var(--line), inset 0 -1px 0 var(--line);
+}
+/* glossary.ts wraps name+kind in an inline-styled flex div. Dissolving that box
+   with display:contents promotes both spans into the row's own grid, which is
+   what turns a list of cards into a table with real columns: every kind tag and
+   every chip set lands on the same axis down the whole page. The !important is
+   the only way to beat the inline style from a file this unit does not own. */
+.term > div:first-child { display: contents !important; }
+.term__name { grid-column: 1; }
+.term__kind { grid-column: 2; }
+.term > .chips { grid-column: 3; grid-row: 1; }
+.term > p {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  max-width: 78ch;
+  margin: 0.2rem 0 0 !important;   /* the inline margin-top would break the row */
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.term__name {
+  min-width: 0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--step-0);
+  line-height: 1.35;
+  color: var(--text);
+  overflow-wrap: anywhere;     /* chemical names are unbreakable otherwise */
+}
+.term__kind {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--step--2, 0.6875rem);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+}
+/* The category swatch, not the label, carries the hue — see rule 2 at the top. */
+.term__kind::before {
+  content: "";
+  align-self: center;
+  width: 0.55em;
+  height: 0.55em;
+  flex: none;
+  background: var(--c, var(--text-faint));
+}
+.term__kind[data-k="metabolite"] { --c: var(--node-metabolite); }
+.term__kind[data-k="enzyme"] { --c: var(--node-enzyme); }
+
+.term .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.45rem;
+}
+.term .chip {
+  font-size: var(--step--2, 0.6875rem);
+  padding: 0.18em 0.45em;
+  background: transparent;
+  border-color: var(--line);
+}
+
+@media (max-width: 900px) {
+  /* Two columns: identity beside its category, payload wrapped underneath. */
+  .term { grid-template-columns: minmax(0, 1fr) 8rem; row-gap: 0.3rem; }
+  .term > .chips { grid-column: 1 / -1; grid-row: 2; }
+  .term > p { grid-row: 3; }
+  .term { contain-intrinsic-size: auto 62px; }
+}
+@media (max-width: 560px) {
+  .term { grid-template-columns: minmax(0, 1fr); }
+  .term__kind { grid-column: 1; }
+  .term > .chips { grid-row: 3; }
+  .term > p { grid-row: 4; }
+  .count-note { margin-left: 0; }
+}
+
+/* =================================================================== pathway
+   The reaction list is a protocol, not a deck of cards. Floating panels are
+   flattened to ruled steps so the eye can run the sequence, and the equation —
+   which had no styling at all and rendered as body copy — becomes the readout
+   it always was. */
+
+#pathway-root > p {                 /* the "pathway not found" message */
+  width: min(100% - 2.5rem, var(--maxw));
+  margin: var(--sp-8) auto;
+}
+#pathway-root .stack > * + * { margin-top: 0; }
+#pathway-root .stack > .card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: var(--sp-4) 0;
+  box-shadow: inset 0 1px 0 var(--line);
+}
+#pathway-root .stack > .card:last-child {
+  box-shadow: inset 0 1px 0 var(--line), inset 0 -1px 0 var(--line);
+}
+#pathway-root .stack > .card strong {
+  font-size: var(--step-1);
+  font-weight: 500;
+  line-height: var(--lead-tight, 1.25);
+  letter-spacing: var(--track-1, -0.012em);
+}
+/* The step index: pathway.ts emits it as the first span of the header row, so
+   it can only be reached structurally. Fixed width + tabular figures keeps the
+   whole column of numbers on one axis. */
+#pathway-root .stack > .card > div:first-child > span:first-child {
+  flex: none;
+  min-width: 2.5ch;
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: 0.08em;
+}
+#pathway-root .stack > .card > p {
+  font-size: var(--step--1);
+  color: var(--text-faint);
+}
+
+.reaction-eq {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--text);
+  background: var(--panel);
+  box-shadow: var(--hairline, 0 0 0 1px var(--line));
+  border-radius: var(--radius);
+  padding: 0.5rem 0.7rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* =================================================================== protein
+   The rail is an instrument panel: ruled groups, mono section labels, and the
+   representation switch as one segmented control rather than four loose pills.
+   3Dmol owns the canvas and is not touched. */
+
+.viewer-shell {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 0;
+  height: calc(100vh - 58px);
+  height: calc(100dvh - 58px);
+}
+.viewer-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--panel);
+  box-shadow: inset -1px 0 0 var(--line);
+  padding: var(--sp-5);
+  overflow-y: auto;
+}
+.viewer-rail > * { padding-block: var(--sp-4); }
+.viewer-rail > :first-child { padding-top: 0; }
+.viewer-rail > * + * { box-shadow: inset 0 1px 0 var(--line); }
+/* #prot-links is empty until a structure resolves — don't rule an empty band. */
+.viewer-rail > :empty { display: none; }
+.viewer-rail .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.viewer-rail .field input { font-family: var(--font-mono); }
+
+#viewport {
+  position: relative;
+  min-height: 340px;
+  background: radial-gradient(120% 100% at 50% 0%, var(--panel-2), var(--bg) 70%);
+}
 #viewport canvas { border-radius: 0 !important; }
-.viewer-status { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: var(--text-faint); text-align: center; }
-.rep-buttons { display: flex; gap: 0.3rem; flex-wrap: wrap; }
-@media (max-width: 720px) { .viewer-shell { grid-template-columns: 1fr; height: auto; } #viewport { height: 60vh; } }
+.viewer-status {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: min(40ch, 80%);
+  text-align: center;
+  text-wrap: balance;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  color: var(--text-faint);
+}
 
-/* login */
-.auth-wrap { max-width: 420px; margin-inline: auto; padding-block: var(--sp-8); }
-.auth-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-6); }
-.field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: var(--sp-4); }
-.field label { font-size: var(--step--1); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
-.field input { background: var(--bg); border: 1px solid var(--line-strong); border-radius: var(--radius); color: var(--text); padding: 0.65rem 0.8rem; font: inherit; }
+/* Segmented control. One shared ring, 1px gaps showing the ring color through
+   as dividers — no per-button borders to double up at the seams. */
+.rep-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line-strong);
+  box-shadow: 0 0 0 1px var(--line-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.rep-buttons .btn {
+  border: 0;
+  border-radius: 0;
+  justify-content: center;
+  background: var(--panel-2);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: var(--step--2, 0.6875rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: none;            /* a control panel does not lift off the panel */
+  box-shadow: none;
+}
+.rep-buttons .btn[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* ===================================================================== login */
+
+.auth-wrap { max-width: 26rem; margin-inline: auto; padding-block: var(--sp-8); }
+.auth-card {
+  position: relative;
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--elev-2, 0 0 0 1px var(--line), 0 8px 24px -10px rgb(0 0 0 / 0.4));
+  padding: var(--sp-6);
+}
+/* Instrument chrome: the card states what it is and which build it belongs to. */
+.auth-card::after {
+  content: "AUTH · v0.1";
+  position: absolute;
+  top: var(--sp-5);
+  right: var(--sp-6);
+  font: 400 var(--step--2, 0.6875rem) / 1 var(--font-mono);
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+}
+.field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: var(--sp-4); }
+.field label {
+  font-family: var(--font-mono);
+  font-size: var(--step--2, 0.6875rem);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+}
+.field input {
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+}
+.field input::placeholder { color: var(--text-faint); }
 .field input:focus-visible { border-color: var(--accent); }
+
+/* ==================================================================== states
+   Hover is opt-in twice over: only where a pointer can actually hover, and only
+   where the user has not asked for stillness. */
+
+@media (any-hover: hover) {
+  .prose a:hover { color: var(--mark, var(--accent)); }
+  .term:hover { background: color-mix(in oklab, var(--panel) 55%, transparent); }
+  .pill:not([aria-pressed="true"]):hover {
+    color: var(--text);
+    box-shadow: inset 0 0 0 1px var(--mark, var(--accent));
+  }
+  .pill[aria-pressed="true"]:hover { filter: brightness(1.06); }
+  .rep-buttons .btn:hover {
+    background: var(--panel);
+    color: var(--text);
+    transform: none;
+    box-shadow: none;
+  }
+  .rep-buttons .btn[aria-pressed="true"]:hover { background: var(--accent); filter: brightness(1.06); }
+  .term .chip:hover { border-color: var(--mark, var(--accent)); color: var(--text); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .prose a,
+  .term,
+  .term .chip,
+  .pill,
+  .rep-buttons .btn,
+  .glossary-controls .search,
+  .field input {
+    transition: var(--t-base, 180ms) var(--ease);
+    transition-property: background-color, color, border-color, box-shadow, filter, text-decoration-color;
+  }
+}
+
+@media (max-width: 720px) {
+  .viewer-shell { grid-template-columns: minmax(0, 1fr); height: auto; }
+  .viewer-rail { box-shadow: inset 0 -1px 0 var(--line); }
+  #viewport { height: 60vh; }
+}

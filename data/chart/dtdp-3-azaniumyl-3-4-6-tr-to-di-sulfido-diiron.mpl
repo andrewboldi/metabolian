@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-tr… to di-μ-sulfido-diiron" {
-  spacing 260
+  spacing 296
 
   spine at 0,0 {
     dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose
@@ -18,25 +18,37 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_171 [2.1.1.171] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
-  branch from 10_deoxymethymycin side right {
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_261 [2.1.1.261] +4_3_methylbut_2_enyl_l_tryptophan +sam +hplus
+    4_3_methylbut_2_enyl_l_abrine
+  }
+
+  branch from 10_deoxymethymycin side left {
     10_deoxymethymycin
     <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
     neomethymycin
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> ec_2_4_1_381 [2.4.1.381] +d_mannopyranosyl_1_2_d_mannopyranosyl_1_3_d_gal +dtdp_6_deoxy_l_mannose +hplus
-    l_rha_1_2_d_man_1_2_d_man_1_3_d_gal_ditrans_oct
+  branch from 10_deoxymethymycin side right {
+    10_deoxymethymycin
+    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    novamethymycin
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_9 [1.14.15.9] +spirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    2_oxospirilloxanthin
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_21 [1.14.15.21] +zeaxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    all_trans_violaxanthin
+    <-> ec_1_14_15_10 [1.14.15.10] +di_sulfido_diiron +r_camphor +o2 +hplus +h2o
+    6_endo_hydroxycamphor
   }
 }

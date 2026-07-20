@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 19e-geissoschizine-to-perakine "(19E)-geissoschizine to perakine" {
-  spacing 188
+  spacing 206
 
   spine at 0,0 {
     19e_geissoschizine
@@ -22,11 +22,17 @@ pathway 19e-geissoschizine-to-perakine "(19E)-geissoschizine to perakine" {
 
   branch from fmn side left {
     fmn
-    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
-    5_20_dihete
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    15_hydroxyestradiol
   }
 
-  branch from perakine side right {
+  branch from fmn side right {
+    fmn
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    4_hydroxy_17_estradiol
+  }
+
+  branch from perakine side left {
     perakine
     <-> ec_1_1_1_317 [1.1.1.317] +nadp +nadph +hplus
     raucaffrinoline

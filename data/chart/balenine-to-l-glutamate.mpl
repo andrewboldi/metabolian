@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway balenine-to-l-glutamate "balenine to L-glutamate" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     balenine
@@ -20,21 +20,27 @@ pathway balenine-to-l-glutamate "balenine to L-glutamate" {
     n_methylformamide
   }
 
-  branch from alanine side left {
-    alanine
-    <-> ec_3_4_13_4 [3.4.13.4] +alanyl_l_argininium +h2o
-    arginine
+  branch from nh3 side left {
+    nh3
+    <-> . +nad +h2o +pyruvate +nadh +hplus
+    d_alanine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_3_8 [4.3.3.8] +l_mimosine +h2o +pyruvate
-    3_hydroxypyridin_4_1h_one
+    <-> . +d_aspartate +nad +h2o +nadh +hplus
+    oxaloacetate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_2_1_68 [6.2.1.68] +holo-acp +atp +amp +ppi
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
+    <-> . +atp +hplus +ppi
+    l_glutamyl_amp
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +s_2e_6e_10e_geranylgeranyl_l_glutathione +h2o
+    s_2e_6e_10e_geranylgeranyl_l_cysteinylglycine
   }
 }

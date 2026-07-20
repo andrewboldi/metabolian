@@ -146,6 +146,15 @@
       }
     },
     {
+      "id": "3_hydroxy_steroid",
+      "name": "3β-hydroxy steroid",
+      "formula": "C19H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36836"
+      }
+    },
+    {
       "id": "1_hydroxy_3_oxo_steroid",
       "name": "1-hydroxy-3-oxo steroid",
       "short": "1-hydroxy-3-oxo…",
@@ -156,21 +165,43 @@
       }
     },
     {
-      "id": "17_estradiol",
-      "name": "17β-estradiol",
-      "formula": "C18H24O2",
+      "id": "4_4_diapolycopen_4_al",
+      "name": "4,4'-diapolycopen-4-al",
+      "short": "4,4'-diapolycopen-4…",
+      "formula": "C30H38O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16469"
+        "chebi": "CHEBI:138599"
       }
     },
     {
-      "id": "estrone",
-      "name": "estrone",
-      "formula": "C18H22O2",
-      "charge": 0,
+      "id": "4_4_diapolycopen_4_oate",
+      "name": "4,4'-diapolycopen-4-oate",
+      "short": "4,4'-diapolycopen-4…",
+      "formula": "C30H37O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17263"
+        "chebi": "CHEBI:138600"
+      }
+    },
+    {
+      "id": "3_hydroxychol_5_en_24_oyl_coa",
+      "name": "3β-hydroxychol-5-en-24-oyl-CoA",
+      "short": "3β-hydroxychol-5-en…",
+      "formula": "C45H68N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86018"
+      }
+    },
+    {
+      "id": "3_hydroxychola_5_22_dien_24_oyl_coa",
+      "name": "3β-hydroxychola-5,22-dien-24-oyl-CoA",
+      "short": "3β-hydroxychola-5,2…",
+      "formula": "C45H66N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86037"
       }
     }
   ],
@@ -215,6 +246,20 @@
       "name": "3alpha-hydroxysteroid 3-dehydrogenase",
       "ec": [
         "1.1.1.357"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_270",
+      "name": "3beta-hydroxysteroid 3-dehydrogenase",
+      "ec": [
+        "1.1.1.270"
+      ]
+    },
+    {
+      "id": "ec_1_2_99_10",
+      "name": "4,4'-diapolycopenoate synthase",
+      "ec": [
+        "1.2.99.10"
       ]
     }
   ],
@@ -413,6 +458,55 @@
     },
     {
       "id": "r5",
+      "name": "3beta-hydroxysteroid 3-dehydrogenase",
+      "equation": "a 3beta-hydroxysteroid + NADP(+) = a 3-oxosteroid + NADPH + H(+)",
+      "ec": "1.1.1.270",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_270"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:34787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34787"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "a 3-oxo-Delta(1)-steroid + H2O = a 1-hydroxy-3-oxo steroid",
       "equation": "a 3-oxo-Delta(1)-steroid + H2O = a 1-hydroxy-3-oxo steroid",
       "substrates": [
@@ -432,7 +526,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:65852"
       },
@@ -447,12 +541,65 @@
       }
     },
     {
-      "id": "r6",
-      "name": "17beta-estradiol + A = estrone + AH2",
-      "equation": "17beta-estradiol + A = estrone + AH2",
+      "id": "r7",
+      "name": "4,4'-diapolycopenoate synthase",
+      "equation": "all-trans-4,4'-diapolycopen-4-al + A + H2O = all-trans-4,4'-diapolycopen-4-oate + AH2 + H(+)",
+      "ec": "1.2.99.10",
       "substrates": [
         {
-          "metabolite": "17_estradiol",
+          "metabolite": "4_4_diapolycopen_4_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_diapolycopen_4_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_99_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:44716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "3beta-hydroxy-chol-5-ene-24-oyl-CoA + A = 3beta-hydroxy-chol-5,22-dien-24-oyl-CoA + AH2",
+      "equation": "3beta-hydroxy-chol-5-ene-24-oyl-CoA + A = 3beta-hydroxy-chol-5,22-dien-24-oyl-CoA + AH2",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxychol_5_en_24_oyl_coa",
           "stoichiometry": 1
         },
         {
@@ -462,7 +609,7 @@
       ],
       "products": [
         {
-          "metabolite": "estrone",
+          "metabolite": "3_hydroxychola_5_22_dien_24_oyl_coa",
           "stoichiometry": 1
         },
         {
@@ -471,16 +618,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:42228"
+        "rhea": "RHEA:46320"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42228"
+            "id": "RHEA:46320"
           }
         ]
       }

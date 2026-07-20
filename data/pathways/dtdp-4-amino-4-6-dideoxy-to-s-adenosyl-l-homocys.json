@@ -161,22 +161,33 @@
       }
     },
     {
-      "id": "gibberellin_a1",
-      "name": "gibberellin A1",
-      "formula": "C19H23O6",
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58524"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "gibberellin_a1_methyl_ester",
-      "name": "gibberellin A1 methyl ester",
-      "short": "gibberellin A1…",
-      "formula": "C20H26O6",
+      "id": "n7_methylguanosine_5_phosphate_zwitterion",
+      "name": "N7-methylguanosine 5'-phosphate zwitterion",
+      "short": "N7-methylguanosine…",
+      "formula": "C11H14N5O7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73250"
+        "chebi": "CHEBI:74480"
+      }
+    },
+    {
+      "id": "n2_methylguanosine_5_monophosphate_1",
+      "name": "N2-methylguanosine 5'-monophosphate(1−)",
+      "short": "N2-methylguanosine…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74481"
       }
     }
   ],
@@ -193,6 +204,20 @@
       "name": "methylenetetrahydrofolate dehydrogenase (NAD(+))",
       "ec": [
         "1.5.1.15"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_170",
+      "name": "16S rRNA (guanine(527)-N(7))-methyltransferase",
+      "ec": [
+        "2.1.1.170"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_172",
+      "name": "16S rRNA (guanine(1207)-N(2))-methyltransferase",
+      "ec": [
+        "2.1.1.172"
       ]
     }
   ],
@@ -383,11 +408,12 @@
     },
     {
       "id": "r5",
-      "name": "gibberellin A1 + S-adenosyl-L-methionine = O-methyl gibberellin A1 + S-adenosyl-L-homoc...",
-      "equation": "gibberellin A1 + S-adenosyl-L-methionine = O-methyl gibberellin A1 + S-adenosyl-L-homocysteine",
+      "name": "16S rRNA (guanine(527)-N(7))-methyltransferase",
+      "equation": "guanosine(527) in 16S rRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(527) in 16S rRNA + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.170",
       "substrates": [
         {
-          "metabolite": "gibberellin_a1",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -397,7 +423,7 @@
       ],
       "products": [
         {
-          "metabolite": "gibberellin_a1_methyl_ester",
+          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
           "stoichiometry": 1
         },
         {
@@ -405,17 +431,71 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_170"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:36111"
+        "rhea": "RHEA:42732"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36111"
+            "id": "RHEA:42732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "16S rRNA (guanine(1207)-N(2))-methyltransferase",
+      "equation": "guanosine(1207) in 16S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(1207) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.172",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_172"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:42736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42736"
           }
         ]
       }

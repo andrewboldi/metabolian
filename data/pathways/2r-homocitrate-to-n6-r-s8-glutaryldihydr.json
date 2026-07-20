@@ -1,0 +1,326 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-homocitrate-to-n6-r-s8-glutaryldihydr",
+  "name": "(2R)-homocitrate to N6-[(R)-S8-glutaryldihydr…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (2R)-homocitrate(3−) to N6-[(R)-S8-glutaryldihydrolipoyl]-L-lysine(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32303"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58884"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_homocitrate",
+      "name": "(2R)-homocitrate",
+      "formula": "C7H7O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58884"
+      }
+    },
+    {
+      "id": "homoisocitrate",
+      "name": "(−)-homoisocitrate",
+      "formula": "C7H7O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15404"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_oxoadipate",
+      "name": "2-oxoadipate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57499"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "n6_r_lipoyl_l_lysine",
+      "name": "N6-[(R)-lipoyl]-L-lysine",
+      "short": "N6-[(R)-lipoyl]-L-l…",
+      "formula": "C14H24N2O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83099"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n6_r_s8_glutaryldihydrolipoyl_l_lysine_1",
+      "name": "N6-[(R)-S8-glutaryldihydrolipoyl]-L-lysine(1−)",
+      "short": "N6-[(R)-S8-glutaryl…",
+      "formula": "C19H31N2O5S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:184385"
+      }
+    },
+    {
+      "id": "but_1_ene_1_2_4_tricarboxylate",
+      "name": "but-1-ene-1,2,4-tricarboxylate",
+      "short": "but-1-ene-1,2,4-tri…",
+      "formula": "C7H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58174"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_114",
+      "name": "methanogen homoaconitase",
+      "ec": [
+        "4.2.1.114"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_87",
+      "name": "homoisocitrate dehydrogenase",
+      "ec": [
+        "1.1.1.87"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_286",
+      "name": "isocitrate--homoisocitrate dehydrogenase",
+      "ec": [
+        "1.1.1.286"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_36",
+      "name": "homoaconitate hydratase",
+      "ec": [
+        "4.2.1.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methanogen homoaconitase",
+      "equation": "(2R)-homocitrate = (2R,3S)-homoisocitrate",
+      "ec": "4.2.1.114",
+      "substrates": [
+        {
+          "metabolite": "2r_homocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "homoisocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "homoisocitrate dehydrogenase",
+      "equation": "(2R,3S)-homoisocitrate + NAD(+) = 2-oxoadipate + CO2 + NADH",
+      "ec": "1.1.1.87",
+      "substrates": [
+        {
+          "metabolite": "homoisocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(6)-[(R)-lipoyl]-L-lysyl-[protein] + 2-oxoadipate + H(+) = N(6)-[(R)-S(8)-glutaryldihy...",
+      "equation": "N(6)-[(R)-lipoyl]-L-lysyl-[protein] + 2-oxoadipate + H(+) = N(6)-[(R)-S(8)-glutaryldihydrolipoyl]-L-lysyl-[protein] + CO2",
+      "substrates": [
+        {
+          "metabolite": "n6_r_lipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_s8_glutaryldihydrolipoyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "homoaconitate hydratase",
+      "equation": "(2R,3S)-homoisocitrate = cis-homoaconitate + H2O",
+      "ec": "4.2.1.36",
+      "substrates": [
+        {
+          "metabolite": "homoisocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "but_1_ene_1_2_4_tricarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15485"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15485"
+          }
+        ]
+      }
+    }
+  ]
+}

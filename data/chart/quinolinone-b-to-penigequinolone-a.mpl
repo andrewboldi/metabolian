@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway quinolinone-b-to-penigequinolone-a "Quinolinone B to penigequinolone A" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     quinolinone_b
@@ -24,20 +24,44 @@ pathway quinolinone-b-to-penigequinolone-a "Quinolinone B to penigequinolone A" 
 
   branch from ppi side left {
     ppi
-    <-> . +gtp +atp
-    c_gmp_amp
+    <-> ec_4_2_3_162 [4.2.3.162] +fpp
+    amorphene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_163 [4.2.3.163] +fpp +h2o
+    corvol_ether_b
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +sn_3_o_phytanylglycerol_1_phosphate +hydrogen_acceptor
+    sn_3_o_geranylgeranyl_glycerol_1_phosphate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_17_99_8 [1.17.99.8] +4r_limonene +hydrogen_acceptor +h2o
-    r_perillyl_alcohol
+    <-> . +propionyl_coa +malonyl-coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
+    6_ethyl_2_4_dihydroxy_3_5_dimethylbenzaldehyde
+  }
+
+  branch from 1_e_3_hydroxy_3_7_dimethylocta_1_6_dien_1_yl_qu side left {
+    1_e_3_hydroxy_3_7_dimethylocta_1_6_dien_1_yl_qu
+    <-> . +h2o
+    4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol
+  }
+
+  branch from 1_e_5_3_3_dimethyloxiran_2_yl_3_hydroxy_3_methy side right {
+    1_e_5_3_3_dimethyloxiran_2_yl_3_hydroxy_3_methy
+    <-> .
+    yaequinolone_c
   }
 
   branch from 1_e_5_3_3_dimethyloxiran_2_yl_3_hydroxy_3_methy side left {
     1_e_5_3_3_dimethyloxiran_2_yl_3_hydroxy_3_methy
-    <-> .
-    yaequinolone_c
+    <-> . +h2o
+    1_e_3_e_5_3_3_dimethyloxiran_2_yl_3_methylhexa
   }
 
   branch from yaequinolone_d side right {

@@ -1,0 +1,280 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-3-4-hydroxyphenyl-la-to-4-hydroxyphenylglyoxy",
+  "name": "(R)-3-(4-hydroxyphenyl)la… to 4-hydroxyphenylglyoxylate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from (R)-3-(4-hydroxyphenyl)lactate to 4-hydroxyphenylglyoxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10776"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:10980"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_3_4_hydroxyphenyl_lactate",
+      "name": "(R)-3-(4-hydroxyphenyl)lactate",
+      "short": "3-(4-hydroxyphenyl)…",
+      "formula": "C9H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:10980"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_4_hydroxyphenyl_pyruvate",
+      "name": "3-(4-hydroxyphenyl)pyruvate",
+      "short": "3-(4-hydroxyphenyl)…",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36242"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_4_hydroxymandelate",
+      "name": "(S)-4-hydroxymandelate",
+      "short": "4-hydroxymandelate",
+      "formula": "C8H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17210"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "4_hydroxyphenylglyoxylate",
+      "name": "4-hydroxyphenylglyoxylate",
+      "short": "4-hydroxyphenylglyo…",
+      "formula": "C8H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58586"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_237",
+      "name": "hydroxyphenylpyruvate reductase",
+      "ec": [
+        "1.1.1.237"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_46",
+      "name": "4-hydroxymandelate synthase",
+      "ec": [
+        "1.13.11.46"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_46",
+      "name": "4-hydroxymandelate oxidase",
+      "ec": [
+        "1.1.3.46"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hydroxyphenylpyruvate reductase",
+      "equation": "(2R)-2-hydroxy-3-(4-hydroxyphenyl)propanoate + NADP(+) = 3-(4-hydroxyphenyl)pyruvate + NADPH + H(+)",
+      "ec": "1.1.1.237",
+      "substrates": [
+        {
+          "metabolite": "r_3_4_hydroxyphenyl_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_hydroxyphenyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_237"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxymandelate synthase",
+      "equation": "3-(4-hydroxyphenyl)pyruvate + O2 = (S)-4-hydroxymandelate + CO2",
+      "ec": "1.13.11.46",
+      "substrates": [
+        {
+          "metabolite": "3_4_hydroxyphenyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_4_hydroxymandelate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-hydroxymandelate oxidase",
+      "equation": "(S)-4-hydroxymandelate + O2 = 4-hydroxyphenylglyoxylate + H2O2",
+      "ec": "1.1.3.46",
+      "substrates": [
+        {
+          "metabolite": "s_4_hydroxymandelate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenylglyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41227"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41227"
+          }
+        ]
+      }
+    }
+  ]
+}

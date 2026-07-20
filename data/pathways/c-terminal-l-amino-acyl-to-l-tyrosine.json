@@ -131,31 +131,69 @@
       }
     },
     {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
+      "id": "sapropterin",
+      "name": "sapropterin",
+      "formula": "C9H15N5O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:32395"
+        "chebi": "CHEBI:59560"
       }
     },
     {
-      "id": "n_arachidonoyl_l_phenylalaninate",
-      "name": "N-arachidonoyl-L-phenylalaninate",
-      "short": "N-arachidonoyl-L-ph…",
-      "formula": "C29H40NO3",
-      "charge": -1,
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134022"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "tyraminium",
-      "name": "tyraminium",
-      "formula": "C8H12NO",
-      "charge": 1,
+      "id": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
+      "name": "4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin",
+      "short": "4a-hydroxy-L-erythr…",
+      "formula": "C9H15N5O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:327995"
+        "chebi": "CHEBI:15642"
+      }
+    },
+    {
+      "id": "ile5_angiotensin_ii_dizwitterion",
+      "name": "Ile5-angiotensin II dizwitterion",
+      "short": "Ile5-angiotensin…",
+      "formula": "C50H71N13O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58506"
+      }
+    },
+    {
+      "id": "ile5_angiotensin_ii_1_7_dizwitterion",
+      "name": "Ile5-angiotensin II (1-7) dizwitterion",
+      "short": "Ile5-angiotensin…",
+      "formula": "C41H62N12O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58922"
+      }
+    },
+    {
+      "id": "l_arogenate",
+      "name": "L-arogenate",
+      "formula": "C10H12NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58180"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     },
     {
@@ -165,6 +203,25 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "3_amino_3_4_hydroxyphenyl_propanoic_acid",
+      "name": "3-amino-3-(4-hydroxyphenyl)propanoic acid",
+      "short": "3-amino-3-(4-hydrox…",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57956"
       }
     }
   ],
@@ -191,10 +248,38 @@
       ]
     },
     {
-      "id": "ec_4_1_1_25",
-      "name": "tyrosine decarboxylase",
+      "id": "ec_1_14_16_1",
+      "name": "phenylalanine 4-monooxygenase",
       "ec": [
-        "4.1.1.25"
+        "1.14.16.1"
+      ]
+    },
+    {
+      "id": "ec_3_4_17_23",
+      "name": "angiotensin-converting enzyme 2",
+      "ec": [
+        "3.4.17.23"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_78",
+      "name": "arogenate dehydrogenase (NADP(+))",
+      "ec": [
+        "1.3.1.78"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_79",
+      "name": "arogenate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.3.1.79"
+      ]
+    },
+    {
+      "id": "ec_5_4_3_6",
+      "name": "tyrosine 2,3-aminomutase",
+      "ec": [
+        "5.4.3.6"
       ]
     }
   ],
@@ -387,21 +472,61 @@
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-phenylalanine + H2O",
+      "name": "phenylalanine 4-monooxygenase",
+      "equation": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + L-phenylalanine + O2 = (4aS,6R)-4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin + L-tyrosine",
+      "ec": "1.14.16.1",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "sapropterin",
           "stoichiometry": 1
         },
         {
           "metabolite": "l_phenylalanine",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_arachidonoyl_l_phenylalaninate",
+          "metabolite": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_16_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20273"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "angiotensin-converting enzyme 2",
+      "equation": "angiotensin II + H2O = angiotensin-(1-7) + L-phenylalanine",
+      "ec": "3.4.17.23",
+      "substrates": [
+        {
+          "metabolite": "ile5_angiotensin_ii_dizwitterion",
           "stoichiometry": 1
         },
         {
@@ -409,62 +534,118 @@
           "stoichiometry": 1
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:51312"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:51312"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "tyrosine decarboxylase",
-      "equation": "L-tyrosine + H(+) = tyramine + CO2",
-      "ec": "4.1.1.25",
-      "substrates": [
-        {
-          "metabolite": "tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "tyraminium",
+          "metabolite": "ile5_angiotensin_ii_1_7_dizwitterion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_1_25"
+          "enzyme": "ec_3_4_17_23"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:14345"
+        "rhea": "RHEA:26554"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14345"
+            "id": "RHEA:26554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "arogenate dehydrogenase (NADP(+))",
+      "equation": "L-arogenate + NADP(+) = L-tyrosine + CO2 + NADPH",
+      "ec": "1.3.1.78",
+      "substrates": [
+        {
+          "metabolite": "l_arogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:15417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "tyrosine 2,3-aminomutase",
+      "equation": "L-tyrosine = 3-amino-3-(4-hydroxyphenyl)propanoate",
+      "ec": "5.4.3.6",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_amino_3_4_hydroxyphenyl_propanoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:15781"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15781"
           }
         ]
       }

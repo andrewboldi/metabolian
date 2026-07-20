@@ -139,31 +139,40 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "3_dehydro_scyllo_inosose",
-      "name": "3-dehydro-scyllo-inosose",
-      "short": "3-dehydro-scyllo-in…",
-      "formula": "C6H8O6",
+      "id": "2d_2_3_5_4_6_pentahydroxycyclohexanone",
+      "name": "2D-2,3,5/4,6-pentahydroxycyclohexanone",
+      "short": "2D-2,3,5/4,6-pentah…",
+      "formula": "C6H10O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:137015"
+        "chebi": "CHEBI:50920"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "scyllo_inositol",
+      "name": "scyllo-inositol",
+      "formula": "C6H12O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:10642"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -180,6 +189,20 @@
       "name": "quinoprotein inositol dehydrogenase",
       "ec": [
         "1.1.5.n1"
+      ]
+    },
+    {
+      "id": "ec_5_3_99_11",
+      "name": "2-keto-myo-inositol isomerase",
+      "ec": [
+        "5.3.99.11"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_371",
+      "name": "scyllo-inositol 2-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.371"
       ]
     }
   ],
@@ -374,25 +397,63 @@
     },
     {
       "id": "r5",
-      "name": "scyllo-inosose + NAD(+) = 3-dehydro-scyllo-inosose + NADH + H(+)",
-      "equation": "scyllo-inosose + NAD(+) = 3-dehydro-scyllo-inosose + NADH + H(+)",
+      "name": "2-keto-myo-inositol isomerase",
+      "equation": "scyllo-inosose = scyllo-inosine",
+      "ec": "5.3.99.11",
       "substrates": [
         {
           "metabolite": "myo_2_inosose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_dehydro_scyllo_inosose",
+          "metabolite": "2d_2_3_5_4_6_pentahydroxycyclohexanone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:25776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "scyllo-inositol 2-dehydrogenase (NADP(+))",
+      "equation": "scyllo-inositol + NADP(+) = scyllo-inosose + NADPH + H(+)",
+      "ec": "1.1.1.371",
+      "substrates": [
+        {
+          "metabolite": "scyllo_inositol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myo_2_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -400,17 +461,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_371"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:53284"
+        "rhea": "RHEA:39063"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53284"
+            "id": "RHEA:39063"
           }
         ]
       }

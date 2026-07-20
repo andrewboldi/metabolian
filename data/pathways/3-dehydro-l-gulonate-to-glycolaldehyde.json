@@ -136,6 +136,42 @@
       "xrefs": {
         "chebi": "CHEBI:15361"
       }
+    },
+    {
+      "id": "l_dehydroascorbate",
+      "name": "L-dehydroascorbate",
+      "formula": "C6H5O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58539"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "2_3_dioxo_l_gulonate",
+      "name": "2,3-dioxo-L-gulonate",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741619"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
     }
   ],
   "enzymes": [
@@ -398,6 +434,79 @@
           {
             "db": "Rhea",
             "id": "RHEA:18545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-dehydroascorbate + H2O = 2,3-dioxo-L-gulonate",
+      "equation": "L-dehydroascorbate + H2O = 2,3-dioxo-L-gulonate",
+      "substrates": [
+        {
+          "metabolite": "l_dehydroascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_diketogulonate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:70299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "Reaction MNXR97684",
+      "substrates": [
+        {
+          "metabolite": "l_lyxonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dioxo_l_gulonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "metanetx": "MNXR97684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR97684"
           }
         ]
       }

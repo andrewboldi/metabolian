@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-5-5-di-c-methyl-l-to-novobiocin "dTDP-5,5-di-C-methyl-β-L-… to novobiocin" {
-  spacing 260
+  spacing 272
 
   spine at 0,0 {
     dtdp_5_5_di_c_methyl_l_lyxose
@@ -16,15 +16,15 @@ pathway dtdp-5-5-di-c-methyl-l-to-novobiocin "dTDP-5,5-di-C-methyl-β-L-… to n
     novobiocin
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +dctp +dtmp
-    dcdp
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_164 [2.1.1.164] +4_demethylrebeccamycin +sam +hplus
-    rebeccamycin
+    <-> . +c30_botryococcene +sam +hplus
+    3_methyl_1_2_didehydro_2_3_dihydrobotryococcene
   }
 }

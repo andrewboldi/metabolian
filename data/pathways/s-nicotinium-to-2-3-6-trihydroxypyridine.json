@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-nicotinium-to-2-3-6-trihydroxypyridine",
   "name": "(S)-nicotinium to 2,3,6-trihydroxypyridine",
-  "category": "lipid-metabolism",
+  "category": "redox-detox",
   "summary": "A 5-step route from (S)-nicotinium(1+) to 2,3,6-trihydroxypyridine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -159,22 +159,60 @@
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
+      "id": "3_3_5_triiodo_l_thyronine",
+      "name": "3,3',5-triiodo-L-thyronine",
+      "short": "3,3',5-triiodo-L-th…",
+      "formula": "C15H12I3NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:533015"
       }
     },
     {
-      "id": "25_hydroxycholesterol",
-      "name": "25-hydroxycholesterol",
-      "short": "25-hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "l_thyroxine",
+      "name": "L-thyroxine",
+      "formula": "C15H11I4NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:42977"
+        "chebi": "CHEBI:58448"
+      }
+    },
+    {
+      "id": "l_pipecolic_acid",
+      "name": "L-pipecolic acid",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61185"
+      }
+    },
+    {
+      "id": "s_1_piperideine_6_carboxylate",
+      "name": "(S)-1-piperideine-6-carboxylate",
+      "short": "1-piperideine-6-car…",
+      "formula": "C6H8NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58769"
+      }
+    },
+    {
+      "id": "r_6_hydroxynicotinium",
+      "name": "(R)-6-hydroxynicotinium",
+      "short": "6-hydroxynicotinium",
+      "formula": "C10H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58413"
       }
     },
     {
@@ -233,10 +271,24 @@
       ]
     },
     {
-      "id": "ec_1_14_99_38",
-      "name": "cholesterol 25-monooxygenase",
+      "id": "ec_1_21_99_4",
+      "name": "thyroxine 5'-deiodinase",
       "ec": [
-        "1.14.99.38"
+        "1.21.99.4"
+      ]
+    },
+    {
+      "id": "ec_1_5_99_3",
+      "name": "L-pipecolate dehydrogenase",
+      "ec": [
+        "1.5.99.3"
+      ]
+    },
+    {
+      "id": "ec_1_5_3_6",
+      "name": "(R)-6-hydroxynicotine oxidase",
+      "ec": [
+        "1.5.3.6"
       ]
     },
     {
@@ -503,26 +555,16 @@
     },
     {
       "id": "r6",
-      "name": "cholesterol 25-monooxygenase",
-      "equation": "cholesterol + AH2 + O2 = 25-hydroxycholesterol + A + H2O",
-      "ec": "1.14.99.38",
+      "name": "thyroxine 5'-deiodinase",
+      "equation": "3,3',5-triiodo-L-thyronine + iodide + A + H(+) = L-thyroxine + AH2",
+      "ec": "1.21.99.4",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "3_3_5_triiodo_l_thyronine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "25_hydroxycholesterol",
+          "metabolite": "iodide",
           "stoichiometry": 1
         },
         {
@@ -530,32 +572,140 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_thyroxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_99_38"
+          "enzyme": "ec_1_21_99_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:21104"
+        "rhea": "RHEA:19745"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21104"
+            "id": "RHEA:19745"
           }
         ]
       }
     },
     {
       "id": "r7",
+      "name": "L-pipecolate dehydrogenase",
+      "equation": "L-pipecolate + A = L-1-piperideine-6-carboxylate + AH2 + H(+)",
+      "ec": "1.5.99.3",
+      "substrates": [
+        {
+          "metabolite": "l_pipecolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_piperideine_6_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:19777"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19777"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "(R)-6-hydroxynicotine oxidase",
+      "equation": "(R)-6-hydroxynicotine + O2 + H2O = 6-hydroxypseudooxynicotine + H2O2",
+      "ec": "1.5.3.6",
+      "substrates": [
+        {
+          "metabolite": "r_6_hydroxynicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxypseudooxynicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:10012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
       "name": "4-methylaminobutanoate oxidase (methylamine-forming)",
       "equation": "4-(methylamino)butanoate + O2 + H2O = succinate semialdehyde + methylamine + H2O2",
       "ec": "1.5.3.21",
@@ -593,7 +743,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:33915"
       },

@@ -119,6 +119,60 @@
       }
     },
     {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "4_nitrotoluene",
+      "name": "4-nitrotoluene",
+      "formula": "C7H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM10227"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
       "id": "testosterone",
       "name": "testosterone",
       "formula": "C19H28O2",
@@ -135,6 +189,24 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:132358"
+      }
+    },
+    {
+      "id": "calciol",
+      "name": "calciol",
+      "formula": "C27H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28940"
+      }
+    },
+    {
+      "id": "calcidiol",
+      "name": "calcidiol",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17933"
       }
     },
     {
@@ -163,14 +235,81 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
     }
   ],
   "enzymes": [
+    {
+      "id": "ec_1_1_1_188",
+      "name": "prostaglandin-F synthase",
+      "ec": [
+        "1.1.1.188"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_213",
+      "name": "3alpha-hydroxysteroid dehydrogenase (Re-specific)",
+      "ec": [
+        "1.1.1.213"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_50",
+      "name": "3alpha-hydroxysteroid 3-dehydrogenase (Si-specific)",
+      "ec": [
+        "1.1.1.50"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_51",
+      "name": "3(or 17)beta-hydroxysteroid dehydrogenase",
+      "ec": [
+        "1.1.1.51"
+      ]
+    },
     {
       "id": "ec_1_14_15_19",
       "name": "C-19 steroid 1alpha-hydroxylase",
       "ec": [
         "1.14.15.19"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_22",
+      "name": "vitamin D 1,25-hydroxylase",
+      "ec": [
+        "1.14.15.22"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_19",
+      "name": "aminobutyraldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.19"
       ]
     }
   ],
@@ -310,6 +449,104 @@
     },
     {
       "id": "r4",
+      "name": "prostaglandin-F synthase",
+      "ec": "1.1.1.188",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_nitrobenzaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_188"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR129441"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129441"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR175700",
+      "substrates": [
+        {
+          "metabolite": "4_nitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR175700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "C-19 steroid 1alpha-hydroxylase",
       "equation": "testosterone + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 1alpha-hydroxytestosterone + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "ec": "1.14.15.19",
@@ -351,7 +588,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:50340"
       },
@@ -366,7 +603,64 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r7",
+      "name": "vitamin D 1,25-hydroxylase",
+      "equation": "calciol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = calcidiol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.22",
+      "substrates": [
+        {
+          "metabolite": "calciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:50696"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "4-nitrobenzaldehyde + NAD(+) + H2O = 4-nitrobenzoate + NADH + 2 H(+)",
       "equation": "4-nitrobenzaldehyde + NAD(+) + H2O = 4-nitrobenzoate + NADH + 2 H(+)",
       "substrates": [
@@ -398,7 +692,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:80363"
       },
@@ -408,6 +702,58 @@
           {
             "db": "Rhea",
             "id": "RHEA:80363"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "aminobutyraldehyde dehydrogenase",
+      "ec": "1.2.1.19",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_nitrobenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_nitrobenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "metanetx": "MNXR130279"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130279"
           }
         ]
       }

@@ -17,8 +17,47 @@ const GAP = 76;           // gutter between pathway regions (the poster tessella
 const TARGET_ASPECT = 1.4; // wall charts are wider than tall
 
 const files = readdirSync(CHART_DIR).filter((f) => f.endsWith(".json") && !f.startsWith("_") && f !== "index.json");
-const charts = files.map((f) => JSON.parse(readFileSync(join(CHART_DIR, f), "utf8")))
+const allCharts = files.map((f) => JSON.parse(readFileSync(join(CHART_DIR, f), "utf8")))
   .filter((c) => c && c.bounds && c.nodes?.length);
+
+/**
+ * The master wall chart has a MEASURED ceiling, and it is the browser's, not
+ * ours: ~17,000 cells paint in ~5.4s, 32,829 take ~39s. Profiling puts ~88% of
+ * that in layout and paint with no hot function left in our JS, and viewport
+ * culling cannot help at the zoom the chart is read at, because "fit" has the
+ * whole sheet in view by definition.
+ *
+ * So the master is capped by CELL COUNT rather than by sheet count, and the
+ * atlas is deliberately larger than the wall: every sheet stays compiled,
+ * selectable, searchable and linkable — only the single combined poster stops
+ * at what a browser can actually draw. Nothing is deleted to achieve this.
+ *
+ * Ordering is by information density (cells per unit area), so the sheets that
+ * earn their space on a poster are the ones that get it, with the hand-authored
+ * modules always first because they are the curated core.
+ */
+const NODE_BUDGET = Number(process.env.MASTER_NODE_BUDGET || 14000);
+const generated = new Set(
+  existsSync(join(ROOT, "data", "ingest", "sheets.json"))
+    ? JSON.parse(readFileSync(join(ROOT, "data", "ingest", "sheets.json"), "utf8")).map((x) => x.id)
+    : [],
+);
+const ranked = [...allCharts].sort((a, b) => {
+  const hand = (c) => (generated.has(c.id) ? 1 : 0);
+  if (hand(a) !== hand(b)) return hand(a) - hand(b);
+  const density = (c) => (c.nodes.length) / Math.max(1, (c.bounds.w * c.bounds.h) / 1e6);
+  return density(b) - density(a);
+});
+const charts = [];
+let budget = 0;
+for (const c of ranked) {
+  if (budget + c.nodes.length > NODE_BUDGET && charts.length) continue;
+  charts.push(c);
+  budget += c.nodes.length;
+}
+if (charts.length < allCharts.length) {
+  console.log(`Master holds ${charts.length} of ${allCharts.length} sheets (${budget} cells, budget ${NODE_BUDGET}) — the rest stay individually available.`);
+}
 
 if (!charts.length) {
   console.error("No compiled charts found — run `npm run chart:build` first.");

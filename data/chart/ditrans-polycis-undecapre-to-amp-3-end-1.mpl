@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… to AMP 3'-end(1−)" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     ditrans_polycis_undecaprenol
@@ -30,33 +30,51 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
     an_d_kdo_2_4_d_kdo_2_6_lipid_a_1_diphosphate
   }
 
-  branch from ump side right {
-    ump
-    <-> . +h2o +hplus
-    3_5_cyclic_ump
+  branch from ditrans_polycis_undecaprenyl_phosphate side right {
+    ditrans_polycis_undecaprenyl_phosphate
+    <-> . +alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_g +beta_d_glc_pp_und +h
+    alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_a
   }
 
-  branch from lipid_ii side left {
+  branch from ump side left {
+    ump
+    <-> . +udp
+    utp
+  }
+
+  branch from lipid_ii side right {
     lipid_ii
     <-> . +atp +adp
     undecaprenyldiphosphonato_n_acetyl_n_acetylgluco
   }
 
-  branch from undecaprenyldiphospho_n_acetyl_n_acetylglucosami side right {
+  branch from undecaprenyldiphospho_n_acetyl_n_acetylglucosami side left {
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
     <-> . +undecaprenyldiphosphonato_n_acetyl_n_acetylgluco +pi +hplus
     nh3
   }
 
+  branch from glutamate side right {
+    glutamate
+    <-> ec_5_4_3_9 [5.4.3.9]
+    isoglutamate
+  }
+
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_2_33 [6.3.2.33] +5_6_7_8_tetrahydromethanopterin +atp +adp +pi +hplus
-    5_6_7_8_tetrahydrosarcinapterin
+    <-> . +cob_ii_yrinate +glutamine +atp +h2o +adp +pi +hplus
+    cob_ii_yrinate_c_monoamide
   }
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> ec_2_3_2_6 [2.3.2.6] +l_argininiumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
-    l_leucyl_l_arginyl_2_group
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_tyrosyl_adenylyl_1_group +h2o
+    d_tyrosine
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_3_6_1_n2 [3.6.1.n2] +3_l_cysteinyl_adenylyl_zwitterionic_group +h2o +hplus
+    cysteine
   }
 }

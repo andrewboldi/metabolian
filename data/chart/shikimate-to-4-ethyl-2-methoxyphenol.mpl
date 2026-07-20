@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphenol" {
-  spacing 220
+  spacing 286
 
   spine at 0,0 {
     shikimate
@@ -24,35 +24,65 @@ pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphen
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_23 [1.14.14.23] +cholesterol +fmnh2 +o2 +h2o +hplus
-    hydroxycholesterol_7a
+    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +fmnh2 +o2 +h2o +hplus
+    s_perillyl_alcohol
   }
 
-  branch from shikimate side right {
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_19_66 [1.14.19.66] +r_n_methylcoclaurinium +s_n_methylcoclaurinium +fmnh2 +o2 +h2o +hplus
+    berbamuninium
+  }
+
+  branch from shikimate side left {
     shikimate
     <-> ec_1_1_1_25 [1.1.1.25] +nadp +nadph +hplus
     3_dehydroshikimate
   }
 
-  branch from trans_caffeate side left {
-    trans_caffeate
-    <-> . +atp +coa +amp +ppi
-    trans_caffeoyl_coa
+  branch from shikimate side right {
+    shikimate
+    <-> . +1_4_benzoquinones +3_dehydroshikimate
+    hydroquinones
   }
 
-  branch from trans_ferulate side right {
+  branch from trans_caffeate side left {
+    trans_caffeate
+    <-> ec_3_1_1_42 [3.1.1.42] +chlorogenate +h2o +hplus
+    quinate
+  }
+
+  branch from trans_caffeate side right {
+    trans_caffeate
+    <-> ec_1_13_11_22 [1.13.11.22] +o2 +hplus
+    3_2_carboxylatoethenyl_cis_cis_muconate
+  }
+
+  branch from trans_ferulate side left {
     trans_ferulate
     <-> . +h2o +coa +hplus
     trans_feruloyl_coa
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_26 [2.1.1.26] +2_iodophenol +sam +hplus
-    1_iodo_2_methoxybenzene
+  branch from trans_ferulate side right {
+    trans_ferulate
+    <-> . +udp_d_glucuronate +udp +hplus
+    e_4_o_d_glucuronosyl_ferulate
   }
 
-  branch from 2_methoxy_4_vinylphenol side right {
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_158 [2.1.1.158] +xanthosine +sam
+    7_methylxanthosine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_53 [2.1.1.53] +1_4_butanediammonium +sam +hplus
+    n_methylputrescinium
+  }
+
+  branch from 2_methoxy_4_vinylphenol side left {
     2_methoxy_4_vinylphenol
     <-> ec_1_13_11_94 [1.13.11.94] +o2 +formaldehyde
     vanillin

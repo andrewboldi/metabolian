@@ -102,49 +102,60 @@
       }
     },
     {
-      "id": "2_deoxycytidine",
-      "name": "2'-deoxycytidine",
-      "formula": "C9H13N3O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15698"
-      }
-    },
-    {
-      "id": "2_deoxycytosine_5_monophosphate",
-      "name": "2'-deoxycytosine 5'-monophosphate",
-      "short": "2'-deoxycytosine…",
-      "formula": "C9H12N3O7P",
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57566"
+        "chebi": "CHEBI:58043"
       }
     },
     {
-      "id": "udp_d_galactose",
-      "name": "UDP-α-D-galactose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:66914"
-      }
-    },
-    {
-      "id": "loliose",
-      "name": "loliose",
-      "formula": "C18H32O16",
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50661"
+        "chebi": "CHEBI:4167"
       }
     },
     {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
+      "id": "trehalose",
+      "name": "α,α-trehalose",
+      "formula": "C12H22O11",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58223"
+        "chebi": "CHEBI:16551"
+      }
+    },
+    {
+      "id": "6_o_d_glucopyranosyl_d_fructofuranose",
+      "name": "6-O-α-D-glucopyranosyl-D-fructofuranose",
+      "short": "6-O-α-D-glucopyrano…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18394"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
       }
     },
     {
@@ -157,22 +168,31 @@
       }
     },
     {
-      "id": "nucleoside_5_monophosphate",
-      "name": "nucleoside 5'-monophosphate",
-      "short": "nucleoside 5'-MP",
-      "formula": "C5H8O7PR",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58043"
-      }
-    },
-    {
       "id": "ppi",
       "name": "Diphosphate (PPi)",
       "formula": "HO7P2",
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58702"
       }
     }
   ],
@@ -199,17 +219,31 @@
       ]
     },
     {
-      "id": "ec_2_7_1_74",
-      "name": "deoxycytidine kinase",
+      "id": "ec_2_7_4_4",
+      "name": "nucleoside-phosphate kinase",
       "ec": [
-        "2.7.1.74"
+        "2.7.4.4"
       ]
     },
     {
-      "id": "ec_2_4_1_n2",
-      "name": "loliose synthase",
+      "id": "ec_2_4_1_245",
+      "name": "alpha,alpha-trehalose synthase",
       "ec": [
-        "2.4.1.n2"
+        "2.4.1.245"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_11",
+      "name": "isomaltulose synthase",
+      "ec": [
+        "5.4.99.11"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_7",
+      "name": "sucrose phosphorylase",
+      "ec": [
+        "2.4.1.7"
       ]
     },
     {
@@ -362,22 +396,67 @@
     },
     {
       "id": "r4",
-      "name": "deoxycytidine kinase",
-      "equation": "2'-deoxycytidine + a ribonucleoside 5'-triphosphate = dCMP + a ribonucleoside 5'-diphosphate + H(+)",
-      "ec": "2.7.1.74",
+      "name": "nucleoside-phosphate kinase",
+      "equation": "a ribonucleoside 5'-phosphate + ATP = a ribonucleoside 5'-diphosphate + ADP",
+      "ec": "2.7.4.4",
       "substrates": [
         {
-          "metabolite": "2_deoxycytidine",
+          "metabolite": "nucleoside_5_monophosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nucleoside_5_triphoshate",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alpha,alpha-trehalose synthase",
+      "equation": "an NDP-alpha-D-glucose + D-glucose = alpha,alpha-trehalose + a ribonucleoside 5'-diphosphate + H(+)",
+      "ec": "2.4.1.245",
+      "substrates": [
+        {
+          "metabolite": "ndp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalose",
           "stoichiometry": 1
         },
         {
@@ -391,75 +470,108 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_74"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:20061"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:20061"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "loliose synthase",
-      "equation": "sucrose + UDP-alpha-D-galactose = loliose + UDP + H(+)",
-      "ec": "2.4.1.n2",
-      "substrates": [
-        {
-          "metabolite": "sucrose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_galactose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "loliose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_n2"
+          "enzyme": "ec_2_4_1_245"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25670"
+        "rhea": "RHEA:47416"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25670"
+            "id": "RHEA:47416"
           }
         ]
       }
     },
     {
       "id": "r6",
+      "name": "isomaltulose synthase",
+      "equation": "sucrose = 6-O-alpha-D-glucopyranosyl-D-fructose",
+      "ec": "5.4.99.11",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_d_glucopyranosyl_d_fructofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "sucrose phosphorylase",
+      "equation": "sucrose + phosphate = D-fructose + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.7",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:24048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "nucleotide diphosphatase",
       "equation": "a ribonucleoside 5'-triphosphate + H2O = a ribonucleoside 5'-phosphate + diphosphate + H(+)",
       "ec": "3.6.1.9",
@@ -493,7 +605,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:23996"
       },
@@ -503,6 +615,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:23996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "a ribonucleoside 5'-triphosphate + pyruvate = a ribonucleoside 5'-diphosphate + phospho...",
+      "equation": "a ribonucleoside 5'-triphosphate + pyruvate = a ribonucleoside 5'-diphosphate + phosphoenolpyruvate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:56960"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56960"
           }
         ]
       }

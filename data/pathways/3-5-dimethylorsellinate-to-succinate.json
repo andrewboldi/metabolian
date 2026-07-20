@@ -214,89 +214,71 @@
       }
     },
     {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
+      "id": "barbatene",
+      "name": "(−)-β-barbatene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:32682"
+        "chebi": "CHEBI:193072"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
+      "id": "discoidol",
+      "name": "discoidol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192996"
+      }
+    },
+    {
+      "id": "e_5_hydroxyferuloyl_coa",
+      "name": "(E)-5-hydroxyferuloyl-CoA",
+      "short": "5-hydroxyferuloyl-C…",
+      "formula": "C31H40N7O20P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:156249"
       }
     },
     {
-      "id": "l_arginyl_amp",
-      "name": "L-arginyl-AMP",
-      "formula": "C16H27N9O8P",
-      "charge": 1,
+      "id": "sinapoyl_coa",
+      "name": "sinapoyl-CoA",
+      "formula": "C32H42N7O20P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:144944"
+        "chebi": "CHEBI:57393"
       }
     },
     {
-      "id": "thebaine",
-      "name": "thebaine",
-      "formula": "C19H22NO3",
-      "charge": 1,
+      "id": "g5_ppp5_aaca_mrna",
+      "name": "G5'ppp5'AACA-mRNA",
+      "formula": "C50H57N22O36P6",
+      "charge": -6,
       "xrefs": {
-        "chebi": "CHEBI:59953"
+        "chebi": "CHEBI:156484"
       }
     },
     {
-      "id": "6_o_demethylthebaine",
-      "name": "6-O-demethylthebaine",
-      "formula": "C18H19NO3",
-      "charge": 0,
+      "id": "m7g5_ppp5_m2_aaca_mrna",
+      "name": "m7G5'ppp5'm2'AACA-mRNA",
+      "short": "m7G5'ppp5'm2'AACA-m…",
+      "formula": "C52H62N22O36P6",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:194545"
-      }
-    },
-    {
-      "id": "formaldehyde",
-      "name": "formaldehyde",
-      "formula": "CH2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16842"
-      }
-    },
-    {
-      "id": "chermesin_d_methyl_ester",
-      "name": "chermesin D methyl ester",
-      "short": "chermesin D methyl…",
-      "formula": "C26H36O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:167691"
-      }
-    },
-    {
-      "id": "lanosterol",
-      "name": "Lanosterol",
-      "formula": "C30H50O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16521"
-      }
-    },
-    {
-      "id": "eburicol",
-      "name": "eburicol",
-      "formula": "C31H52O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:70315"
+        "chebi": "CHEBI:156483"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_375",
+      "name": "NNS virus cap methyltransferase",
+      "ec": [
+        "2.1.1.375"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -636,25 +618,17 @@
     },
     {
       "id": "r9",
-      "name": "L-arginine + ATP + H(+) = L-arginyl-AMP + diphosphate",
-      "equation": "L-arginine + ATP + H(+) = L-arginyl-AMP + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = (-)-beta-barbatene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-beta-barbatene + diphosphate",
       "substrates": [
         {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_arginyl_amp",
+          "metabolite": "barbatene",
           "stoichiometry": 1
         },
         {
@@ -665,80 +639,64 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:62496"
+        "rhea": "RHEA:73983"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62496"
+            "id": "RHEA:73983"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "thebaine + 2-oxoglutarate + O2 = 6-O-demethylthebaine + formaldehyde + succinate + CO2 ...",
-      "equation": "thebaine + 2-oxoglutarate + O2 = 6-O-demethylthebaine + formaldehyde + succinate + CO2 + H(+)",
+      "name": "(2E,6E)-farnesyl diphosphate + H2O = discoidol + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = discoidol + diphosphate",
       "substrates": [
         {
-          "metabolite": "thebaine",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_o_demethylthebaine",
+          "metabolite": "discoidol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "formaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:76115"
+        "rhea": "RHEA:73987"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76115"
+            "id": "RHEA:73987"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "chermesin D + S-adenosyl-L-methionine = chermesin D methyl ester + S-adenosyl-L-homocys...",
-      "equation": "chermesin D + S-adenosyl-L-methionine = chermesin D methyl ester + S-adenosyl-L-homocysteine",
+      "name": "(E)-5-hydroxyferuloyl-CoA + S-adenosyl-L-methionine = (E)-sinapoyl-CoA + S-adenosyl-L-h...",
+      "equation": "(E)-5-hydroxyferuloyl-CoA + S-adenosyl-L-methionine = (E)-sinapoyl-CoA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "chermesin_d",
+          "metabolite": "e_5_hydroxyferuloyl_coa",
           "stoichiometry": 1
         },
         {
@@ -748,46 +706,7 @@
       ],
       "products": [
         {
-          "metabolite": "chermesin_d_methyl_ester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:67056"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67056"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "lanosterol + S-adenosyl-L-methionine = eburicol + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "lanosterol + S-adenosyl-L-methionine = eburicol + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "lanosterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "eburicol",
+          "metabolite": "sinapoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -800,16 +719,65 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:52652"
+        "rhea": "RHEA:64860"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52652"
+            "id": "RHEA:64860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "NNS virus cap methyltransferase",
+      "equation": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.375",
+      "substrates": [
+        {
+          "metabolite": "g5_ppp5_aaca_mrna",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "m7g5_ppp5_m2_aaca_mrna",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_375"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:65376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65376"
           }
         ]
       }

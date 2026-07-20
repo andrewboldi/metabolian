@@ -107,6 +107,44 @@
       }
     },
     {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "n_2_3_dihydroxybenzoyl_l_serine",
+      "name": "N-(2,3-dihydroxybenzoyl)-L-serine",
+      "short": "N-(2,3-dihydroxyben…",
+      "formula": "C10H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM729151"
+      }
+    },
+    {
+      "id": "iron_iii_diglucosyl_2_3_dihydroxybenzoylserine_2",
+      "name": "iron(III)-[diglucosyl-(2,3-dihydroxybenzoylserine)2] complex",
+      "short": "iron(III)-[diglucos…",
+      "formula": "C32H35FeN2O21",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM819164"
+      }
+    },
+    {
       "id": "ferrienterobactin",
       "name": "ferrienterobactin",
       "formula": "C30H21FeN3O15",
@@ -337,6 +375,54 @@
     },
     {
       "id": "r5",
+      "name": "iron(III) salmochelin esterase",
+      "ec": "3.1.1.109",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron_iii_diglucosyl_2_3_dihydroxybenzoylserine_2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR192827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "iron(III) enterobactin esterase",
       "equation": "Fe(III)-enterobactin + 3 H2O + H(+) = Fe(III)-[N-(2,3-dihydroxybenzoyl)-L-serine] + 2 N-(2,3-dihydroxybenzoyl)-L-serine",
       "ec": "3.1.1.108",
@@ -370,7 +456,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:30111"
       },

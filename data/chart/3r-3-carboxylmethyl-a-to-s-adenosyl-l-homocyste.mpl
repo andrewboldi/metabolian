@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-s-adenosyl-l-homocyste "(3R)-3-[(carboxylmethyl)a… to S-adenosyl-L-homocysteine" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_decanoate
@@ -18,25 +18,49 @@ pathway 3r-3-carboxylmethyl-a-to-s-adenosyl-l-homocyste "(3R)-3-[(carboxylmethyl
 
   branch from glycine side left {
     glycine
-    <-> . +palmitoyl_coa +coa +hplus
-    n_hexadecanoylglycinate
+    <-> . +myristoyl_coa +coa +hplus
+    n_myristoylglycinate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +lauroyl_coa +coa +hplus
+    n_dodecanoylglycinate
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +l_seryl_amp +amp
+    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +icosanoyl_amp +amp +hplus
-    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
+    <-> ec_6_2_1_73 [6.2.1.73] +l_tryptophan +atp +amp +ppi
+    o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +ilicicolinate_b +hydrogen_donor +atp +amp +ppi
-    ilicicolin_b
+    <-> . +tyrosine +holo-acp +malonyl-coa +acetyl_coa +hydrogen_donor +sam +atp +hplus +amp +sah +co2 +ppi +coa +h2o
+    o_s_n_4e_6e_10s_12z_14e_6_10_dimethyl_3_oxohexad
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +malonyl-coa +hydrogen_donor +hplus +co2 +coa +h2o
+    6_hydroxymellein
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_214 [2.1.1.214] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_260 [2.1.1.260] +sam +n1_methylpseudouridine_5_monophosphate_1 +hplus
+    pseudouridine_5_phosphate_1
   }
 }

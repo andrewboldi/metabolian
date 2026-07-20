@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-9-10-labda-8-20-13-to-succinate "5β,9α,10α-labda-8(20),13-… to succinate" {
-  spacing 164
+  spacing 200
 
   spine at 0,0 {
     5_9_10_labda_8_20_13_dien_15_yl_diphosphate
@@ -22,39 +22,39 @@ pathway 5-9-10-labda-8-20-13-to-succinate "5β,9α,10α-labda-8(20),13-… to su
     gibberellin_a25
   }
 
-  branch from ent_kaurene side left {
-    ent_kaurene
-    <-> . +di_sulfido_diiron +o2 +hplus +ent_kaur_16_en_19_oate +h2o
-    di_sulfido_diiron
+  branch from ppi side left {
+    ppi
+    <-> . +o6_methyl_dgtp +h2o +hplus
+    o6_methyl_dgmp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_176 [4.2.3.176] +all_trans_pentaprenyl_diphosphate +h2o
-    sesterfisherol
+    <-> . +n6_methyl_datp +h2o +hplus
+    n6_methyl_damp
   }
 
-  branch from ent_kaur_16_en_19_oate side left {
-    ent_kaur_16_en_19_oate
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    ent_kaur_16_en_19_al
+  branch from fmn side left {
+    fmn
+    <-> . +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
+    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
-    cholesta_5_7_dien_3_24s_diol
+    <-> . +tetrahydroalstonine +fmnh2 +o2 +h2o +hplus
+    dihydroalstonine
   }
 
-  branch from ent_7_hydroxykaur_16_en_19_oate side left {
-    ent_7_hydroxykaur_16_en_19_oate
-    <-> . +o2 +hplus +gibberellin_a12_aldehyde +di_sulfido_diiron +h2o
-    di_sulfido_diiron
+  branch from gibberellin_a25 side left {
+    gibberellin_a25
+    <-> . +gibberellin_a46 +co2 +succinate +o2
+    2_oxoglutarate
   }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
-    2_phenylsuccinyl_coa
+  branch from gibberellin_a25 side right {
+    gibberellin_a25
+    <-> . +ga46 +co2 +succinate +2_oxoglutarate
+    o2
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-glutamate" {
-  spacing 160
+  spacing 196
 
   spine at 0,0 {
     l_histidinol_phosphate
@@ -18,19 +18,37 @@ pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-gluta
 
   branch from l_histidine side left {
     l_histidine
-    <-> . +sam +sah +hplus
-    n_methyl_l_histidine
+    <-> . +ala_his +h2o
+    alanine
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> ec_2_1_1_44 [2.1.1.44] +sam +sah +hplus
+    n_n_n_trimethyl_l_histidine
+  }
+
+  branch from 3_imidazol_5_yl_pyruvate side left {
+    3_imidazol_5_yl_pyruvate
+    <-> ec_1_1_1_111 [1.1.1.111] +nad +nadh +hplus
+    s_3_imidazol_5_yl_lactate
   }
 
   branch from 3_imidazol_5_yl_pyruvate side right {
     3_imidazol_5_yl_pyruvate
-    <-> ec_1_1_1_111 [1.1.1.111] +nad +nadh +hplus
-    s_3_imidazol_5_yl_lactate
+    <-> . +l_histidine +o2 +h2o +h2o2
+    nh3
   }
 
   branch from glutamate side left {
     glutamate
     <-> ec_2_7_2_11 [2.7.2.11] +atp +adp
     l_glutamyl_phosphate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_5 [2.6.1.5] +tyrosine +akg
+    3_4_hydroxyphenyl_pyruvate
   }
 }

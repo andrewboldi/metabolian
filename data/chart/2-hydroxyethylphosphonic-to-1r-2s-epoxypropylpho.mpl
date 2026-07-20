@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho "2-hydroxyethylphosphonic… to (1R,2S)-epoxypropylphosph…" {
-  spacing 276
+  spacing 324
 
   spine at 0,0 {
     2_hydroxyethylphosphonic_acid
@@ -20,37 +20,49 @@ pathway 2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho "2-hydroxyethylphosphon
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_116 [4.2.3.116] +gpp
-    camphene
+    <-> . +15_hydroxypentadecanoate +atp +coa +amp
+    15_hydroxypentadecanoyl_coa
   }
 
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> . +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +methylcobalamin +sam +cob_iii_alamin +methionine
-    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
+  branch from ppi side right {
+    ppi
+    <-> . +dec_9_enoate +atp +coa +amp
+    9_decenoyl_coa
   }
 
-  branch from methionine side left {
-    methionine
-    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
-    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_67 [1.14.99.67] +n_dichloroacetyl_p_aminophenylserinol +hydrogen_donor +o2 +h2o
+    chloramphenicol
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +ajmalicine +fmnh2 +o2 +hydrogen_donor +fmn +h2o +hplus
-    serpentine
+    <-> ec_1_14_99_68 [1.14.99.68] +4_aminobenzoate +hydrogen_donor +o2 +h2o
+    4_nitrobenzoate
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_172 [2.1.1.172] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_206 [2.1.1.206] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_207 [2.1.1.207] +sam +2_o_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga +cmp_n_acetyl_neuraminate +hplus
+    neuac_2_3_d_gal_1_3_neuac_2_6_d_galnac_1_3_d_ga
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
+    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
+    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-hydroxymethylglutar-to-dimethylmaleate "(S)-2-hydroxymethylglutar… to dimethylmaleate" {
-  spacing 188
+  spacing 194
 
   spine at 0,0 {
     s_2_hydroxymethylglutarate

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-2-o-phosphonato-3-su-to-3-dehydroquinate "(2R)-2-O-phosphonato-3-suâ€¦ to 3-dehydroquinate" {
-  spacing 212
+  spacing 248
 
   spine at 0,0 {
     2r_2_o_phosphonato_3_sulfonatolactate
@@ -18,13 +18,37 @@ pathway 2r-2-o-phosphonato-3-su-to-3-dehydroquinate "(2R)-2-O-phosphonato-3-suâ€
 
   branch from phosphonatoenolpyruvate side left {
     phosphonatoenolpyruvate
-    <-> ec_4_1_1_49 [4.1.1.49] +atp +adp +co2
+    <-> ec_4_1_1_31 [4.1.1.31] +pi +hco3
     oxaloacetate
+  }
+
+  branch from phosphonatoenolpyruvate side right {
+    phosphonatoenolpyruvate
+    <-> ec_2_7_7_105 [2.7.7.105] +gtp +hplus +ppi
+    enolpyruvoyl_2_diphospho_5_guanosine
+  }
+
+  branch from sulfite side left {
+    sulfite
+    <-> . +l_cysteate +hplus
+    2_ammonioprop_2_enoate
   }
 
   branch from sulfite side right {
     sulfite
     <-> . +nad +h2o +nadh +hplus
     h2s
+  }
+
+  branch from 3_dehydroquinate side left {
+    3_dehydroquinate
+    <-> ec_1_1_1_24 [1.1.1.24] +nad +nadh +hplus
+    quinate
+  }
+
+  branch from 3_dehydroquinate side right {
+    3_dehydroquinate
+    <-> .
+    3_7_dideoxy_d_threo_hepto_2_6_diuolosonate
   }
 }

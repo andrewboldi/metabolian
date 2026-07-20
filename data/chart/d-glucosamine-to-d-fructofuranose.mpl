@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucosamine-to-d-fructofuranose "α-D-glucosamine… to β-D-fructofuranose…" {
-  spacing 280
+  spacing 304
 
   spine at 0,0 {
     d_glucosamine_6_phosphate
@@ -18,13 +18,25 @@ pathway d-glucosamine-to-d-fructofuranose "α-D-glucosamine… to β-D-fructofur
 
   branch from d_fructofuranose_6_phosphate side left {
     d_fructofuranose_6_phosphate
-    <-> ec_1_1_1_140 [1.1.1.140] +nad +nadh +hplus
-    d_glucitol_6_phosphate
+    <-> ec_3_1_3_46 [3.1.3.46] +h2o +pi
+    f26bp
+  }
+
+  branch from d_fructofuranose_6_phosphate side right {
+    d_fructofuranose_6_phosphate
+    <-> ec_1_1_1_17 [1.1.1.17] +nad +nadh +hplus
+    d_mannitol_1_phosphate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_15 [3.5.4.15] +guanosine +h2o +hplus
+    xanthosine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_15 [3.5.4.15] +guanosine +h2o +hplus
-    xanthosine
+    <-> ec_3_5_4_17 [3.5.4.17] +atp +h2o +hplus
+    itp
   }
 }

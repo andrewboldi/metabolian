@@ -140,22 +140,95 @@
       }
     },
     {
-      "id": "blasticidin_s",
-      "name": "blasticidin S",
-      "formula": "C17H27N8O5",
-      "charge": 1,
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57289"
+        "chebi": "CHEBI:17544"
       }
     },
     {
-      "id": "deaminohydroxyblasticidin_s",
-      "name": "deaminohydroxyblasticidin S",
-      "short": "deaminohydroxyblast…",
-      "formula": "C17H26N7O6",
-      "charge": 1,
+      "id": "carbamoyl_p",
+      "name": "Carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57697"
+        "chebi": "CHEBI:58228"
+      }
+    },
+    {
+      "id": "phosphoramidate",
+      "name": "phosphoramidate",
+      "formula": "H2NO3P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29920"
+      }
+    },
+    {
+      "id": "d_hexose",
+      "name": "D-hexose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4194"
+      }
+    },
+    {
+      "id": "d_hexose_1_phosphate",
+      "name": "α-D-hexose 1-phosphate",
+      "short": "α-D-hexose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57734"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+      "name": "C-terminal-γ-L-glutamyl-L-2-aminoadipate semialdehyde(2−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H15N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78501"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -189,10 +262,24 @@
       ]
     },
     {
-      "id": "ec_3_5_4_23",
-      "name": "blasticidin-S deaminase",
+      "id": "ec_2_7_2_2",
+      "name": "carbamate kinase",
       "ec": [
-        "3.5.4.23"
+        "2.7.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_62",
+      "name": "phosphoramidate--hexose phosphotransferase",
+      "ec": [
+        "2.7.1.62"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_103",
+      "name": "[amino-group carrier protein]-6-phospho-L-2-aminoadipate reductase",
+      "ec": [
+        "1.2.1.103"
       ]
     }
   ],
@@ -391,12 +478,30 @@
     },
     {
       "id": "r5",
-      "name": "blasticidin-S deaminase",
-      "equation": "blasticidin S + H2O + H(+) = deaminohydroxyblasticidin S + NH4(+)",
-      "ec": "3.5.4.23",
+      "name": "carbamate kinase",
+      "equation": "hydrogencarbonate + NH4(+) + ATP = carbamoyl phosphate + ADP + H2O + H(+)",
+      "ec": "2.7.2.2",
       "substrates": [
         {
-          "metabolite": "blasticidin_s",
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbamoyl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -408,9 +513,48 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:10152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "phosphoramidate--hexose phosphotransferase",
+      "equation": "phosphoramidate + a D-hexose + H(+) = alpha-D-hexose 1-phosphate + NH4(+)",
+      "ec": "2.7.1.62",
+      "substrates": [
+        {
+          "metabolite": "phosphoramidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_hexose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
       "products": [
         {
-          "metabolite": "deaminohydroxyblasticidin_s",
+          "metabolite": "d_hexose_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -420,20 +564,117 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_23"
+          "enzyme": "ec_2_7_1_62"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:10148"
+        "rhea": "RHEA:10972"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10148"
+            "id": "RHEA:10972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "[amino-group carrier protein]-L-2-aminoadipate 6-kinase",
+      "ec": "2.7.2.17",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_3_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR113180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR113180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "[amino-group carrier protein]-6-phospho-L-2-aminoadipate reductase",
+      "equation": "[amino-group carrier protein]-C-terminal-N-(1-carboxy-5-oxopentan-1-yl)-L-glutamine + phosphate + NADP(+) = [amino-group carrier protein]-C-terminal-N-(1-carboxy-5-phosphooxy-5-oxopentan-1-yl)-L-glutamine + NADPH + H(+)",
+      "ec": "1.2.1.103",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:41948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41948"
           }
         ]
       }

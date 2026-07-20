@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-allose-to-l-lysinium "aldehydo-D-allose to L-lysinium" {
-  spacing 180
+  spacing 198
 
   spine at 0,0 {
     aldehydo_d_allose
@@ -16,9 +16,21 @@ pathway aldehydo-d-allose-to-l-lysinium "aldehydo-D-allose to L-lysinium" {
     3_deoxyglucosone
   }
 
+  branch from n6_d_psicosyl_l_lysinium side left {
+    n6_d_psicosyl_l_lysinium
+    <-> . +h +n6_3_o_phospho_d_psicosyl_l_lysinium +adp
+    atp
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_1_1_59 [2.1.1.59] +sam +sah +hplus
+    n6_methyl_l_lysinium
+  }
+
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_1_1_60 [2.1.1.60] +sam +sah +hplus
-    n6_methyl_l_lysinium
+    <-> ec_1_4_3_13 [1.4.3.13] +o2 +h2o +h2o2 +nh3
+    l_allysine
   }
 }

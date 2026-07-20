@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 10-deacetyl-2-debenzoylba-to-paclitaxel "10-deacetyl-2-debenzoylba… to paclitaxel" {
-  spacing 272
+  spacing 290
 
   spine at 0,0 {
     10_deacetyl_2_debenzoylbaccatin_iii
@@ -27,6 +27,12 @@ pathway 10-deacetyl-2-debenzoylba-to-paclitaxel "10-deacetyl-2-debenzoylba… to
   }
 
   branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
+    indolin_2_one
+  }
+
+  branch from fmn side left {
     fmn
     <-> ec_1_14_14_157 [1.14.14.157] +indolin_2_one +fmnh2 +o2 +h2o +hplus
     3_hydroxyindolin_2_one

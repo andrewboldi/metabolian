@@ -119,31 +119,42 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
+      "id": "2_methylhexadecanoate",
+      "name": "2-methylhexadecanoate",
+      "short": "2-methylhexadecanoa…",
+      "formula": "C17H33O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:84175"
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "2_methylhexadecanoyl_coa",
+      "name": "2-methylhexadecanoyl-CoA",
+      "short": "2-methylhexadecanoy…",
+      "formula": "C38H64N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:84182"
       }
     },
     {
-      "id": "s_terpineol",
-      "name": "(S)-(−)-α-terpineol",
-      "formula": "C10H18O",
-      "charge": 0,
+      "id": "3_methylundecanoate",
+      "name": "3-methylundecanoate",
+      "formula": "C12H23O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:128"
+        "chebi": "CHEBI:84184"
+      }
+    },
+    {
+      "id": "3_methylundecanoyl_coa",
+      "name": "3-methylundecanoyl-CoA",
+      "short": "3-methylundecanoyl-…",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:84183"
       }
     },
     {
@@ -182,6 +193,33 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16236"
+      }
+    },
+    {
+      "id": "ethyl_benzoate",
+      "name": "ethyl benzoate",
+      "formula": "C9H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156074"
+      }
     }
   ],
   "enzymes": [
@@ -204,13 +242,6 @@
       "name": "anthranilate N-benzoyltransferase",
       "ec": [
         "2.3.1.144"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_111",
-      "name": "(-)-alpha-terpineol synthase",
-      "ec": [
-        "4.2.3.111"
       ]
     },
     {
@@ -367,22 +398,29 @@
     },
     {
       "id": "r4",
-      "name": "(-)-alpha-terpineol synthase",
-      "equation": "(2E)-geranyl diphosphate + H2O = (S)-alpha-terpineol + diphosphate",
-      "ec": "4.2.3.111",
+      "name": "2-methylhexadecanoate + ATP + CoA = 2-methylhexadecanoyl-CoA + AMP + diphosphate",
+      "equation": "2-methylhexadecanoate + ATP + CoA = 2-methylhexadecanoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "2_methylhexadecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "s_terpineol",
+          "metabolite": "2_methylhexadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -390,28 +428,70 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_111"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:32551"
+        "rhea": "RHEA:44192"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32551"
+            "id": "RHEA:44192"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "3-methylundecanoate + ATP + CoA = 3-methylundecanoyl-CoA + AMP + diphosphate",
+      "equation": "3-methylundecanoate + ATP + CoA = 3-methylundecanoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "3_methylundecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylundecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:44196"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44196"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "benzoyl-CoA 2,3-epoxidase",
       "equation": "benzoyl-CoA + NADPH + O2 + H(+) = 2,3-epoxy-2,3-dihydrobenzoyl-CoA + NADP(+) + H2O",
       "ec": "1.14.13.208",
@@ -453,7 +533,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:48312"
       },
@@ -463,6 +543,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:48312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "ethanol + benzoyl-CoA = ethyl benzoate + CoA",
+      "equation": "ethanol + benzoyl-CoA = ethyl benzoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethyl_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:64680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64680"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclohexanecarboxylate-to-3-oxopimeloyl-coa "cyclohexanecarboxylate to 3-oxopimeloyl-CoA" {
-  spacing 280
+  spacing 306
 
   spine at 0,0 {
     cyclohexanecarboxylate
@@ -24,9 +24,9 @@ pathway cyclohexanecarboxylate-to-3-oxopimeloyl-coa "cyclohexanecarboxylate to 3
     3_oxopimeloyl_coa
   }
 
-  branch from succinate side left {
-    succinate
-    <-> ec_1_14_11_76 [1.14.11.76] +glutamate +akg +o2 +co2
-    3r_3_hydroxy_l_glutamate
+  branch from 6_oxocyclohex_1_ene_1_carbonyl_coa side left {
+    6_oxocyclohex_1_ene_1_carbonyl_coa
+    <-> . +h2o
+    2_hydroxy_6_oxocyclohexane_1_carbonyl_coa
   }
 }

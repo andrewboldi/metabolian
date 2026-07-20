@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-alkyl-2-acetylglycerol-to-monoacylglycerol",
   "name": "1-alkyl-2-acetylglycerol to monoacylglycerol",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from 1-alkyl-2-acetylglycerol to monoacylglycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -160,23 +160,51 @@
       }
     },
     {
-      "id": "1_linoleoyl_sn_glycero_3_phosphocholine",
-      "name": "1-linoleoyl-sn-glycero-3-phosphocholine",
-      "short": "1-linoleoyl-sn-glyc…",
-      "formula": "C26H50NO7P",
+      "id": "3_acyl_sn_glycerol",
+      "name": "3-acyl-sn-glycerol",
+      "formula": "C4H7O4R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28733"
+        "chebi": "CHEBI:64760"
       }
     },
     {
-      "id": "1_linoleoyl_sn_glycerol",
-      "name": "1-linoleoyl-sn-glycerol",
-      "short": "1-linoleoyl-sn-glyc…",
-      "formula": "C21H38O4",
+      "id": "o_phosphocholine_l_serine",
+      "name": "O-phosphocholine-L-serine",
+      "short": "O-phosphocholine-L-…",
+      "formula": "C8H17N2O5P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75561"
+        "chebi": "CHEBI:138595"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho",
+      "name": "2-O-acetyl-1-O-octadecyl-sn-glycero-3-phosphocholine",
+      "short": "2-O-acetyl-1-O-octa…",
+      "formula": "C28H58NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52450"
+      }
+    },
+    {
+      "id": "1_o_octadecyl_2_acetyl_sn_glycerol",
+      "name": "1-O-octadecyl-2-acetyl-sn-glycerol",
+      "short": "1-O-octadecyl-2-ace…",
+      "formula": "C23H46O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:147296"
       }
     }
   ],
@@ -440,11 +468,50 @@
     },
     {
       "id": "r7",
-      "name": "1-(9Z,12Z)-octadecadienoyl-sn-glycero-3-phosphocholine + H2O = 1-(9Z,12Z-octadecadienoy...",
-      "equation": "1-(9Z,12Z)-octadecadienoyl-sn-glycero-3-phosphocholine + H2O = 1-(9Z,12Z-octadecadienoyl)-sn-glycerol + phosphocholine + H(+)",
+      "name": "a 3-acyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero...",
+      "equation": "a 3-acyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a monoacyl-sn-glycero-3-phosphocholine + a 1,3-diacyl-sn-glycerol",
       "substrates": [
         {
-          "metabolite": "1_linoleoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "3_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_3_diacyl_sn_glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:44468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "[Rab1 protein]-O-phosphocholine-L-serine + H2O = [Rab1 protein]-L-serine + phosphocholi...",
+      "equation": "[Rab1 protein]-O-phosphocholine-L-serine + H2O = [Rab1 protein]-L-serine + phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "o_phosphocholine_l_serine",
           "stoichiometry": 1
         },
         {
@@ -454,7 +521,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_linoleoyl_sn_glycerol",
+          "metabolite": "l_serine",
           "stoichiometry": 1
         },
         {
@@ -467,16 +534,59 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:41115"
+        "rhea": "RHEA:56084"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41115"
+            "id": "RHEA:56084"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "1-O-octadecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-octadecyl-2-acetyl-sn-gl...",
+      "equation": "1-O-octadecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-octadecyl-2-acetyl-sn-glycerol + phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_octadecyl_2_acetyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:63384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63384"
           }
         ]
       }

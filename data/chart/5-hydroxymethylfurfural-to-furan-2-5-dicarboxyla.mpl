@@ -4,19 +4,47 @@
 # edit the generator, not this file.
 
 pathway 5-hydroxymethylfurfural-to-furan-2-5-dicarboxyla "5-hydroxymethylfurfural to furan-2,5-dicarboxylate" {
-  spacing 152
+  spacing 226
 
   spine at 0,0 {
     5_hydroxymethylfurfural
-    <-> . +o2 -h2o2
-    2_5_diformylfuran
-    <-> . +h2o
-    2_dihydroxymethyl_5_formylfuran
-    <-> . +o2 -h2o2 -hplus
-    5_formyl_2_furoate
-    <-> . +h2o
+    <-> ec_1_1_3_47 [1.1.3.47] +o2 +h2o -h2o2 -hplus
+    furan_2_5_dicarboxylate
+    <-> . +h +h2o2 -5_formyl_2_furoate -h2o
+    o2
+    <-> . +5_formyl_2_furoate +h2o
     5_dihydroxymethyl_2_furoate
     <-> . +o2 -h2o2 -hplus
     furan_2_5_dicarboxylate
+  }
+
+  branch from furan_2_5_dicarboxylate side left {
+    furan_2_5_dicarboxylate
+    <-> . +2_furoate +h
+    co2
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +13_cis_retinal +h +nadph +nadp +h2o
+    4_oh_13_cis_retinal
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +11_cis_retinal +h +nadph +nadp +h2o
+    4_oh_9_cis_retinal
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_27 [3.6.3.27] +h +adp +phosphate +phosphate
+    atp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +9e_tetradecenoic_acid +2_acyl_sn_glycero_3_phosphoglycerol_n_c14_1
+    phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1
   }
 }

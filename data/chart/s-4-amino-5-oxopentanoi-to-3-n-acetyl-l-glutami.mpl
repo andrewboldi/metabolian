@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami "(S)-4-amino-5-oxopentanoi… to 3'-(N-acetyl-L-glutaminyl…" {
-  spacing 256
+  spacing 286
 
   spine at 0,0 {
     s_4_amino_5_oxopentanoic_acid
@@ -22,15 +22,27 @@ pathway s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami "(S)-4-amino-5-oxopentan
     ppi
   }
 
-  branch from 3_l_glutaminyl_adenylyl_zwitterionic_group side right {
-    3_l_glutaminyl_adenylyl_zwitterionic_group
-    <-> . +nh3 +pi +hplus
+  branch from 3_l_glutamate_adenylyl_1_group side right {
+    3_l_glutamate_adenylyl_1_group
+    <-> . +atp +adp
     3_5_phosphooxy_l_glutamate_adenylyl_2_group
+  }
+
+  branch from 3_l_glutaminyl_adenylyl_zwitterionic_group side left {
+    3_l_glutaminyl_adenylyl_zwitterionic_group
+    <-> . +3_5_phosphooxy_l_glutamate_adenylyl_2_group +pi +hplus
+    nh3
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_6_3_2_2 [6.3.2.2] +cysteine +atp +adp +pi +hplus
+    glu_cys
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_5_4_99_1 [5.4.99.1]
-    threo_3_methyl_l_aspartate
+    <-> ec_2_6_1_75 [2.6.1.75] +s_4_bromophenyl_l_cysteine +akg
+    4_bromophenylsulfanyl_pyruvate
   }
 }

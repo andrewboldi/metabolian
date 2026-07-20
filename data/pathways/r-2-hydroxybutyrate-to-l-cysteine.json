@@ -1,0 +1,250 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-2-hydroxybutyrate-to-l-cysteine",
+  "name": "(R)-2-hydroxybutyrate to L-cysteine",
+  "category": "other",
+  "summary": "A 3-step route from (R)-2-hydroxybutyrate to L-cysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82483"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232384"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_2_hydroxybutyrate",
+      "name": "(R)-2-hydroxybutyrate",
+      "short": "2-hydroxybutyrate",
+      "formula": "C4H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232384"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "mercaptopyruvate",
+      "name": "3-Mercaptopyruvate",
+      "formula": "C3H3O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57678"
+      }
+    },
+    {
+      "id": "l_aminobutyrate",
+      "name": "L-α-aminobutyrate",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74359"
+      }
+    },
+    {
+      "id": "l_kynurenine",
+      "name": "L-kynurenine",
+      "formula": "C10H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57959"
+      }
+    },
+    {
+      "id": "kynurenate",
+      "name": "kynurenate",
+      "formula": "C10H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58454"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2R)-hydroxybutanoate + FAD + H(+) = 2-oxobutanoate + FADH2",
+      "equation": "(2R)-hydroxybutanoate + FAD + H(+) = 2-oxobutanoate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxybutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82483"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82483"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxobutanoate + L-cysteine = 2-oxo-3-sulfanylpropanoate + (2S)-2-aminobutanoate",
+      "equation": "2-oxobutanoate + L-cysteine = 2-oxo-3-sulfanylpropanoate + (2S)-2-aminobutanoate",
+      "substrates": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mercaptopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_aminobutyrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:66108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-oxo-3-sulfanylpropanoate + L-kynurenine = kynurenate + L-cysteine + H2O",
+      "equation": "2-oxo-3-sulfanylpropanoate + L-kynurenine = kynurenate + L-cysteine + H2O",
+      "substrates": [
+        {
+          "metabolite": "mercaptopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_kynurenine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kynurenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69104"
+          }
+        ]
+      }
+    }
+  ]
+}

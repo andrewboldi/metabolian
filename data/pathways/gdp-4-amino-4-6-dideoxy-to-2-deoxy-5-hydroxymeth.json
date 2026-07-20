@@ -1,9 +1,9 @@
 {
   "$schema": "../../schema/pathway.schema.json",
   "id": "gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth",
-  "name": "GDP-4-amino-4,6-dideoxy-α… to 2'-deoxy-5-(hydroxymethyl…",
+  "name": "GDP-4-amino-4,6-dideoxy-α… to 2'-deoxy-5-hydroxymethyl-…",
   "category": "amino-acid-metabolism",
-  "summary": "A 5-step route from GDP-4-amino-4,6-dideoxy-α-D-mannose(1−) to 2'-deoxy-5-(hydroxymethyl)cytidine 5'-diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 6-step route from GDP-4-amino-4,6-dideoxy-α-D-mannose(1−) to 2'-deoxy-5-hydroxymethyl-CTP, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -181,13 +181,50 @@
       }
     },
     {
-      "id": "20s_23_dihydroxyvitamin_d3",
-      "name": "(20S,23)-dihydroxyvitamin D3",
-      "short": "(20S,23)-dihydroxyv…",
-      "formula": "C27H44O3",
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "2_deoxy_5_hydroxymethyl_ctp",
+      "name": "2'-deoxy-5-hydroxymethyl-CTP",
+      "short": "2'-deoxy-5-hydroxym…",
+      "formula": "C10H18N3O14P3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:91306"
+        "chebi": "CHEBI:836"
+      }
+    },
+    {
+      "id": "25_hydroxy_24_oxocalciol",
+      "name": "25-hydroxy-24-oxocalciol",
+      "short": "25-hydroxy-24-oxoca…",
+      "formula": "C27H42O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47805"
       }
     },
     {
@@ -200,13 +237,32 @@
       }
     },
     {
-      "id": "20s_23_24_trihydroxyvitamin_d3",
-      "name": "(20S,23,24)-trihydroxyvitamin D3",
-      "short": "(20S,23,24)-trihydr…",
-      "formula": "C27H44O4",
+      "id": "23_s_25_dihydroxy_24_oxovitamin_d3",
+      "name": "23(S),25-dihydroxy-24-oxovitamin D3",
+      "short": "23(S),25-dihydroxy-…",
+      "formula": "C27H42O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:91307"
+        "chebi": "CHEBI:90980"
+      }
+    },
+    {
+      "id": "cryptoxanthin",
+      "name": "β-cryptoxanthin",
+      "formula": "C40H56O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10362"
+      }
+    },
+    {
+      "id": "3s_5r_6s_cryptoxanthin_5_6_epoxide",
+      "name": "(3S,5R,6S)-β-cryptoxanthin 5,6-epoxide",
+      "short": "(3S,5R,6S)-β-crypto…",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:91143"
       }
     },
     {
@@ -226,6 +282,42 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "decanoate",
+      "name": "decanoate",
+      "formula": "C10H19O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1043"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "dodecanoate",
+      "name": "dodecanoate",
+      "formula": "C12H23O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM402"
       }
     }
   ],
@@ -256,6 +348,13 @@
       "name": "deoxycytidylate 5-hydroxymethyltransferase",
       "ec": [
         "2.1.2.8"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_6",
+      "name": "nucleoside-diphosphate kinase",
+      "ec": [
+        "2.7.4.6"
       ]
     }
   ],
@@ -493,11 +592,59 @@
     },
     {
       "id": "r6",
-      "name": "20S,23-dihydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,23,24-tri...",
-      "equation": "20S,23-dihydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,23,24-trihydroxycholecalciferol + 2 oxidized [adrenodoxin] + H2O",
+      "name": "nucleoside-diphosphate kinase",
+      "ec": "2.7.4.6",
       "substrates": [
         {
-          "metabolite": "20s_23_dihydroxyvitamin_d3",
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxy_5_hydroxymethyl_cytidine_5_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxy_5_hydroxymethyl_ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR106405"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR106405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "25-hydroxy-24-oxocalciol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 23S,25-dihydroxy-24-...",
+      "equation": "25-hydroxy-24-oxocalciol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 23S,25-dihydroxy-24-oxocholecalciferol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "25_hydroxy_24_oxocalciol",
           "stoichiometry": 1
         },
         {
@@ -515,7 +662,7 @@
       ],
       "products": [
         {
-          "metabolite": "20s_23_24_trihydroxyvitamin_d3",
+          "metabolite": "23_s_25_dihydroxy_24_oxovitamin_d3",
           "stoichiometry": 1
         },
         {
@@ -528,22 +675,73 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:49392"
+        "rhea": "RHEA:49268"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49392"
+            "id": "RHEA:49268"
           }
         ]
       }
     },
     {
-      "id": "r7",
+      "id": "r8",
+      "name": "beta-cryptoxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R,6S)-5,6-epoxi-...",
+      "equation": "beta-cryptoxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R,6S)-5,6-epoxi-beta-cryptoxanthin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "cryptoxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_5r_6s_cryptoxanthin_5_6_epoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:49316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
       "name": "5-hydroxymethyl-dCMP + H2O + H(+) = 5-hydroxymethyl-dUMP + NH4(+)",
       "equation": "5-hydroxymethyl-dCMP + H2O + H(+) = 5-hydroxymethyl-dUMP + NH4(+)",
       "substrates": [
@@ -571,7 +769,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:77175"
       },
@@ -581,6 +779,106 @@
           {
             "db": "Rhea",
             "id": "RHEA:77175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "Reaction MNXR105498",
+      "substrates": [
+        {
+          "metabolite": "decanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "decanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "metanetx": "MNXR105498"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105498"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "Reaction MNXR105499",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "metanetx": "MNXR105499"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105499"
           }
         ]
       }

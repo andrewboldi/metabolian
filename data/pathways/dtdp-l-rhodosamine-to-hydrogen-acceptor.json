@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor",
   "name": "dTDP-β-L-rhodosamine to hydrogen acceptor",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from dTDP-β-L-rhodosamine(1−) to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,41 +138,41 @@
       }
     },
     {
-      "id": "voacangine",
-      "name": "(−)-voacangine",
-      "formula": "C22H29N2O3",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:146230"
-      }
-    },
-    {
-      "id": "de_ester_voacangine",
-      "name": "de-ester-(−)-voacangine",
-      "short": "de-ester-(−)-voacan…",
-      "formula": "C21H26N2O3",
+      "id": "7_chloro_l_tryptophan",
+      "name": "7-chloro-L-tryptophan",
+      "short": "7-chloro-L-tryptoph…",
+      "formula": "C11H11ClN2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:146275"
+        "chebi": "CHEBI:58713"
       }
     },
     {
-      "id": "3_substituted_propionyl_coa",
-      "name": "3-substituted propionyl-CoA",
-      "short": "3-substituted…",
-      "formula": "C24H35N7O17P3SR",
-      "charge": -4,
+      "id": "monodechloroaminopyrrolnitrin",
+      "name": "monodechloroaminopyrrolnitrin",
+      "short": "monodechloroaminopy…",
+      "formula": "C10H9ClN2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:65111"
+        "chebi": "CHEBI:85785"
       }
     },
     {
-      "id": "2_3_dehydroacyl_coa",
-      "name": "2,3-dehydroacyl-CoA",
-      "formula": "C24H33N7O17P3SR",
-      "charge": -4,
+      "id": "8_s_15_s_dihpete",
+      "name": "8(S),15(S)-DiHPETE",
+      "formula": "C20H31O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60015"
+        "chebi": "CHEBI:133899"
+      }
+    },
+    {
+      "id": "8_s_15_s_dihete",
+      "name": "8(S),15(S)-DiHETE",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133903"
       }
     }
   ],
@@ -340,82 +340,94 @@
     },
     {
       "id": "r4",
-      "name": "(-)-voacangine + H2O = de-ester-(-)-voacangine + methanol + H(+)",
-      "equation": "(-)-voacangine + H2O = de-ester-(-)-voacangine + methanol + H(+)",
+      "name": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
+      "equation": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
       "substrates": [
         {
-          "metabolite": "voacangine",
+          "metabolite": "7_chloro_l_tryptophan",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "de_ester_voacangine",
+          "metabolite": "monodechloroaminopyrrolnitrin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "methanol",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "co2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:85879"
+        "rhea": "RHEA:50952"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:85879"
+            "id": "RHEA:50952"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "a 2,3-saturated acyl-CoA + A = a 2,3-dehydroacyl-CoA + AH2",
-      "equation": "a 2,3-saturated acyl-CoA + A = a 2,3-dehydroacyl-CoA + AH2",
+      "name": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(...",
+      "equation": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 A + 2 H2O",
       "substrates": [
         {
-          "metabolite": "3_substituted_propionyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_3_dehydroacyl_coa",
+          "metabolite": "8_s_15_s_dihpete",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_s_15_s_dihete",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:48608"
+        "rhea": "RHEA:51120"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48608"
+            "id": "RHEA:51120"
           }
         ]
       }

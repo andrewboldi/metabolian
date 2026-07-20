@@ -1,6 +1,27 @@
-/* Metabolian design tokens — "Assay" system.
-   Theme-aware. Edge color tokens mirror schema/arrows.json so the legend, the
-   graph renderer, and the docs all speak the same visual language. */
+/* Metabolian design tokens — "Lightbox" system.
+   ---------------------------------------------------------------------------
+   THE IDEA: the chrome is the instrument the sheet is mounted in. The dark
+   field is a darkroom; the white chart is the transparency on the stage glass.
+   So every chrome colour is derived from ink that is actually printed on the
+   sheet: the accent IS the sheet's enzyme blue (#254991, chart.css:32) and
+   every hover IS the sheet's own hover ink (#d43900, chart.css:33,40). The
+   neutral axis is WARM because paper is warm — that is the whole trick.
+
+   HOW THE VALUES WERE MADE (do not eyeball edits to this file):
+   Two hand-authored seeds per theme (--bg, --fg). Every neutral is one OKLab
+   mix ladder between them at a fixed percentage — the SAME ladder in both
+   themes with the seeds inverted, so "--panel" always means "raised surface"
+   while the physical lightness relationship flips. Accents/nodes pin OKLCH
+   lightness and vary hue + chroma only, so nothing in a legend shouts over its
+   peers. Every value below was computed and every pairing WCAG-verified
+   against the surface it actually lands on; measured ratios are in comments.
+   Re-verify with an OKLab/contrast tool if you change a seed.
+
+   THEME BLOCKS ARE DUPLICATED ON PURPOSE: the light palette appears twice —
+   once under [data-theme="light"] and once under the prefers-color-scheme
+   media query for visitors who have not toggled. CSS has no way to share a
+   declaration block across a media-query boundary. KEEP THE TWO IN SYNC.
+   ------------------------------------------------------------------------- */
 
 /* Self-hosted type. This is a correctness requirement, not a polish item: the
    chart's layout is MEASURED against text — build-chart.mjs reserves label
@@ -9,7 +30,17 @@
    Inter got wider fallback glyphs than the reservation assumed and collisions
    the placer believed it had avoided. Measured: 3 overprints on a machine with
    Inter installed vs 6 on one without, same build, same browser.
-   Latin subsets, OFL-licensed, ~150KB total for every weight actually used. */
+   Latin subsets, OFL-licensed, ~150KB total for every weight actually used.
+
+   DO NOT DELETE inter-latin-700: chart.css:36 (.reg-glyph text) and
+   chart.css:156 (.eff-glyph) set Inter at font-weight 700. Dropping the face
+   forces a SYNTHESISED bold on the regulation glyphs — wider than the real
+   cut — which is exactly the measured-text hazard described above, inside a
+   protected file. The Space Grotesk faces below are retained but no longer
+   referenced by any token (--font-display now points at Inter); an unmatched
+   @font-face is never downloaded, so they cost nothing on the wire. Removing
+   them is a separate change that must first reconcile these declarations with
+   the duplicate @fontsource imports in lib/layout.ts:6-8. */
 @font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap;
   src: url("/metabolian/fonts/inter-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap;
@@ -26,27 +57,150 @@
   src: url("/metabolian/fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
 
 :root {
-  /* type */
-  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  /* ===================================================================
+     TYPE
+     --font-display was Space Grotesk — a design-studio geometric that read
+     "agency", not "instrument". Repointed to Inter (the token is kept so all
+     existing call sites keep working) so that the chrome and the sheet use
+     LITERALLY the same two faces: chart.css sets .met-name/.enz-name in Inter
+     and .met-formula/.enz-ec in JetBrains Mono. One voice, two registers —
+     Inter for anything a human asserts, JetBrains Mono for anything a machine
+     emitted. Only three weights exist: 400 / 500 / 600.
+     =================================================================== */
+  --font-display: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, monospace;
 
-  --step--1: clamp(0.78rem, 0.74rem + 0.2vw, 0.86rem);
-  --step-0: clamp(0.94rem, 0.9rem + 0.2vw, 1rem);
-  --step-1: clamp(1.13rem, 1.05rem + 0.4vw, 1.33rem);
-  --step-2: clamp(1.5rem, 1.35rem + 0.8vw, 2rem);
-  --step-3: clamp(2rem, 1.7rem + 1.6vw, 3.2rem);
-  --step-4: clamp(2.6rem, 2rem + 3vw, 5rem);
-  --step-5: clamp(3.2rem, 2.2rem + 5vw, 7rem);
+  /* Scale. Tracking is paired to each step so it cannot be forgotten, and is
+     expressed in em so the percentage survives the clamp() fluidity. Held at
+     -4.5% at the top rather than the -6% a tighter grotesque would take:
+     Inter's larger x-height goes muddy below that.
+     SAFE TO RETUNE — verified that no chart geometry depends on these. All
+     measured chart text is hardcoded px (chart.css:21,22,32,34,143) and
+     tools/build-chart.mjs reads no custom properties at all. */
+  --step--2: 0.6875rem;                                       --track--2: 0.02em;   /* 11px, mono only */
+  --step--1: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);     --track--1: 0.01em;
+  --step-0:  clamp(0.9375rem, 0.91rem + 0.12vw, 1rem);        --track-0: -0.005em;
+  --step-1:  clamp(1.125rem, 1.06rem + 0.3vw, 1.3125rem);     --track-1: -0.014em;
+  --step-2:  clamp(1.5rem, 1.35rem + 0.75vw, 2rem);           --track-2: -0.022em;
+  --step-3:  clamp(2rem, 1.7rem + 1.5vw, 3rem);               --track-3: -0.03em;
+  --step-4:  clamp(2.75rem, 2.1rem + 3.2vw, 4.75rem);         --track-4: -0.038em;
+  --step-5:  clamp(3.5rem, 2.4rem + 5.4vw, 7rem);             --track-5: -0.045em;
 
-  /* spacing / shape */
+  /* Leading is a ROLE, not a size: the same pixel size wants different leading
+     in a paragraph than in a metadata chip. Steps 4-5 are set solid. */
+  --lead-solid: 1;      /* steps 4-5 — display, set solid */
+  --lead-tight: 1.1;    /* step 3 */
+  --lead-snug: 1.2;     /* step 2 */
+  --lead-label: 1.3;    /* single-line UI text: chips, badges, nav */
+  --lead-copy: 1.6;     /* running prose */
+
+  /* ===================================================================
+     SPACING / SHAPE
+     The 0.25 -> 8rem rhythm is unchanged: it is already a coherent ~1.5x
+     ladder and is referenced ~100 times across every page, so re-basing it
+     would silently shift layouts that other work depends on for no design
+     gain. Radii DO move: 4px/10px -> 2px/3px. Drafting instruments have
+     corners; the 10px card radius was the most template-looking shape here.
+     =================================================================== */
   --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
   --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 5rem; --sp-9: 8rem;
-  --radius: 4px; --radius-lg: 10px; --radius-pill: 999px;
+  --radius: 2px; --radius-lg: 3px; --radius-pill: 999px;
   --maxw: 1200px;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 
-  /* semantic edge palette (functional — encodes the arrow taxonomy) */
+  /* ===================================================================
+     MOTION
+     --ease is unchanged: chart.css:111 (protected) transitions the inspector
+     drawer with it. Never write `transition: all` — enumerate, and only
+     compositor-friendly properties.
+     =================================================================== */
+  --t-fast: 120ms;    /* hover, press */
+  --t-base: 180ms;    /* state change, nav, filter pills */
+  --t-slow: 320ms;    /* drawer, inspector, mobile nav */
+  --t-scrub: 640ms;   /* damping tail on scroll-driven motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ===================================================================
+     THE SHEET — theme-invariant. Declared ONCE and never overridden per
+     theme, because paper does not change colour when you turn the room light
+     off. These are the Michal/Roche inks read verbatim out of chart.css so
+     that any page can draw a correct sheet fragment (hero SVG, learn diagram,
+     pathway subgraph, login backdrop) without duplicating hexes or touching
+     the protected chart stylesheet. A plate built from these will always
+     match the real chart.
+     =================================================================== */
+  --paper: #ffffff;           /* chart.css:130,141,151 */
+  --paper-ink: #231f20;       /* chart.css:14,21,38 — flux lines, metabolite names */
+  --paper-blue: #254991;      /* chart.css:32 — enzyme names. Source of --accent. */
+  --paper-red: #ef2d47;       /* chart.css:17,35 — cofactor arcs */
+  --paper-orange: #f14c1c;    /* chart.css:18,125 — regulation, region titles */
+  --paper-green: #13a950;     /* chart.css:19 — activation */
+  --paper-mark: #d43900;      /* chart.css:33,40 — hover ink. Source of --mark. */
+  --paper-grid: #8a8574;      /* chart.css:122 — graticule labels */
+
+  /* A white rectangle reads as a div; these two hard offsets plus a long cast
+     make it read as physical stock with the next sheet down behind it. Use
+     --elev-paper anywhere the site shows a sheet. */
+  --paper-edge: #d9d7d0;
+  --paper-deep: #b9b6ad;
+  --elev-paper: 0 1px 0 var(--paper-edge), 0 2px 0 var(--paper-deep),
+                0 18px 40px -18px rgb(0 0 0 / 0.75);
+
+  /* ===================================================================
+     SURFACE DEVICES
+     A 3px halftone dot screen — the reproduction technique that actually
+     printed the original chart — over a 64px graticule of hairlines. At ~3.5%
+     effective opacity it reads as coated-paper texture and doubles as banding
+     suppression on the large dark fields, at zero bytes and zero GPU.
+
+     THE DOT SCREEN BELONGS ON `body` ONLY. Never put it on .chart-shell or any
+     chart descendant: a 3px screen behind the sheet's own hairlines is a
+     moiré generator. The opaque white #chart-canvas covers it anyway, which
+     is the correct physical relationship — paper on a light table hides the
+     glass. Keep --rule at <=5% so the graticule cannot shimmer at 125%/150%
+     browser zoom.
+     =================================================================== */
+  --screen-pitch: 3px;
+  --screen: radial-gradient(circle at 50% 50%,
+            color-mix(in oklab, var(--fg) 22%, transparent) 0.5px, transparent 0.6px);
+  --rule-pitch: 64px;
+  --rule: color-mix(in oklab, var(--fg) 5%, transparent);
+
+  /* Hairlines as box-shadow, never border — they cost no layout space, so
+     dense grids stay on the grid. */
+  --hairline: 0 0 0 1px color-mix(in oklab, var(--fg) 14%, transparent);
+  --elev-1: var(--hairline), 0 1px 2px rgb(0 0 0 / 0.1);
+  --elev-2: var(--hairline), 0 8px 24px -10px rgb(0 0 0 / 0.4);
+
+  /* Confidence as elevation. The schema's confidence field becomes something
+     you feel before you read it: high sits proud of the page, hypothesis lies
+     flat. Pair with a solid rule for high/medium and a dashed one below. */
+  --depth-1: 0 1px 1px rgb(0 0 0 / 0.14);
+  --depth-2: 0 2px 4px -1px rgb(0 0 0 / 0.2);
+  --depth-3: 0 6px 14px -4px rgb(0 0 0 / 0.3);
+
+  /* Double-ring focus. The inner ring is the PAGE background, which guarantees
+     a visible gap on any underlying colour — necessary because a focusable
+     element here may sit on any of 16 edge hues, on white paper, or on dark
+     chrome. Pair with the forced-colors escape at the foot of this file. */
+  --ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+
+  /* ===================================================================
+     SEMANTIC EDGE PALETTE — mirrors schema/arrows.json. DO NOT EDIT HERE.
+     One authoritative definition per relationship type, consumed by both the
+     validator legend and the graph renderer. A new relationship type goes
+     into schema/arrows.json AND the schema enum first.
+
+     KNOWN ISSUE, deliberately left alone (out of scope for this file):
+     these 16 span OKLCH L 0.633 (--edge-org) to 0.909 (--edge-redox), so
+     redox reads about twice as loud as catalysis even though arrows.json
+     calls them peers, and --edge-activate / --edge-feedforward are the same
+     hex byte-for-byte despite being two distinct arrow types. They are also
+     all tuned for a dark field: on the light theme's white --panel they
+     measure roughly 1.8-2.9:1. Fixing that means re-pinning L per theme in
+     step with arrows.json, which is a separately reviewed change.
+     =================================================================== */
   --edge-mass: #8aa0b6;
   --edge-cofactor: #2fb6a8;
   --edge-spontaneous: #9aa7b4;
@@ -64,60 +218,147 @@
   --edge-crosstalk: #ff4d8d;
   --edge-microbiome: #52d273;
 
-  /* node palette */
-  --node-metabolite: #5ad1c4;
-  --node-enzyme: #6aa4ff;
-  --node-reaction: #f4a93b;
-  --node-gene: #b57bff;
-  --node-complex: #ff7fb0;
-  --node-pathway: #9aa7b4;
+  /* ===================================================================
+     CPK / Jmol ATOM COLOURS — protein page only.
+     Inherited from the Corey-Pauling-Koltun convention rather than invented,
+     and these are the exact values 3Dmol.js paints, so a hand-built legend in
+     the viewer rail cannot drift from the structure beside it. Chemists
+     already know this palette; that is the point of using it.
+     =================================================================== */
+  --atom-c: #909090;
+  --atom-h: #ffffff;
+  --atom-n: #3050f8;
+  --atom-o: #ff0d0d;
+  --atom-s: #ffff30;
+  --atom-p: #ff8000;
+  --atom-fe: #e06633;
 }
 
-/* ---------- dark (default: microscopy field) ---------- */
+/* ---------- dark (default: the darkroom) ----------
+   Seeds: --fg is a WARM off-white sampled toward paper (was a cool blue-white
+   #e6edf3); --bg is near-black. Ladder rungs are OKLab mixes at 5/9/12/26/
+   62/74/100%. Contrast vs --bg in comments. */
 :root, :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0b0f14;
-  --bg-grid: rgba(0, 224, 198, 0.045);
-  --panel: #121821;
-  --panel-2: #182231;
-  --line: rgba(150, 180, 210, 0.14);
-  --line-strong: rgba(150, 180, 210, 0.28);
-  --text: #e6edf3;
-  --text-dim: #9fb0c0;
-  --text-faint: #8394a6;
-  --accent: #00e0c6;
-  --accent-ink: #05221f;
-  --accent-2: #ff4d8d;
-  --glow: 0 0 0.5rem rgba(0, 224, 198, 0.55);
-  --shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.7);
+  --fg: #e8e6e1;
+  --bg: #0a0d12;
+  --panel: #12151a;         /*  5%  1.06 */
+  --panel-2: #1a1c21;       /*  9%  1.14 */
+  --line: #1f2226;          /* 12%  1.22 */
+  --line-strong: #3a3d40;   /* 26%  1.78 */
+  --text-faint: #8a8a8a;    /* 62%  5.64 AA — also 5.30 on --panel (chart.css:106) */
+  --text-dim: #a6a6a5;      /* 74%  7.99 AA */
+  --text: #e8e6e1;          /* 100% 15.60 */
+
+  /* The sheet's enzyme blue, lifted to OKLCH L 0.68 at the same hue (262.4°).
+     6.73 on --bg, 6.32 on --panel, 5.89 on --panel-2. --accent-ink is the page
+     ground: 6.73 against the accent as a button fill. */
+  --accent: #7198df;
+  --accent-ink: #0a0d12;
+
+  /* The sheet's hover ink (#d43900, hue 35.7°) lifted to L 0.70. Hover /
+     :active / aria-current ONLY — never a large fill. 6.86 on --bg. */
+  --mark: #ec785a;
+  --accent-2: var(--mark);  /* retired hot pink — kept as an alias for callers */
+
+  /* Neon sign -> wet ink. MUST stay a 3-length shadow with no spread: this is
+     consumed by drop-shadow() at base.css:83 and text-shadow at home.css:7,
+     neither of which accepts a spread radius. */
+  --glow: 0 0 0.25rem rgb(113 152 223 / 0.32);
+  --shadow: 0 10px 40px -12px rgb(0 0 0 / 0.7);
+  --bg-grid: rgb(232 230 225 / 0.05);
+
+  /* Node palette — OKLCH L pinned to 0.74, hue and chroma varying, so the
+     greys recede via low chroma rather than low lightness and nothing in a
+     legend outshouts its peers. --node-enzyme carries the sheet's own blue
+     hue (262.4°).
+     PROTECTED CONSUMER: chart.ts:147,170,197 render inspector text with
+     inline color:var(--node-enzyme) / var(--node-metabolite) on a --panel
+     ground, and that file cannot be edited to compensate. Verified here:
+     7.89 and 8.31 on --panel. Any future retune of L must re-check these two
+     against --panel and --panel-2 FIRST. */
+  --node-metabolite: #45c1b4;   /* 8.31 on --panel */
+  --node-enzyme: #7eaafd;       /* 7.89 on --panel */
+  --node-reaction: #d69f58;     /* 7.81 */
+  --node-gene: #bb94f4;         /* 7.54 */
+  --node-complex: #ec86ab;      /* 7.46 */
+  --node-pathway: #9dadbc;      /* 7.96 */
 }
 
-/* ---------- light (cool cellular plate) ---------- */
+/* ---------- light (the sheet on the stage glass) ----------
+   Same ladder, seeds inverted. --bg is warm paper stock, not a cool grey, so
+   the neutral axis matches the chart. Note --panel is a touch DARKER than
+   --bg here: "panel" means raised surface in both themes, but in a light room
+   an instrument panel laid over paper reads as a slightly grey plate — which
+   is also what keeps the chart inspector legible over the white sheet.
+   KEEP IN SYNC with the prefers-color-scheme block below. */
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f4f7f6;
-  --bg-grid: rgba(6, 90, 80, 0.05);
-  --panel: #ffffff;
-  --panel-2: #eef3f2;
-  --line: rgba(10, 40, 50, 0.12);
-  --line-strong: rgba(10, 40, 50, 0.24);
-  --text: #0c1116;
-  --text-dim: #47575f;
-  --text-faint: #5f6b73;
-  --accent: #009e8c;
-  --accent-ink: #e2fff9;
-  --accent-2: #d63a76;
-  --glow: 0 0 0.5rem rgba(0, 158, 140, 0.3);
-  --shadow: 0 12px 34px -16px rgba(10, 40, 50, 0.35);
+  --fg: #16191e;
+  --bg: #f5f3ee;
+  --panel: #e8e7e2;         /*  5%  1.12 */
+  --panel-2: #deddd9;       /*  9%  1.23 */
+  --line: #d7d5d2;          /* 12%  1.32 */
+  --line-strong: #b4b4b2;   /* 26%  1.87 */
+  --text-faint: #616365;    /* 62%  5.44 AA */
+  --text-dim: #484a4d;      /* 74%  8.02 AA */
+  --text: #16191e;          /* 100% 15.89 */
+
+  /* The sheet's enzyme blue, byte-for-byte (chart.css:32). 7.76 on --bg,
+     6.95 on --panel, 8.60 against white --accent-ink as a button fill. */
+  --accent: #254991;
+  --accent-ink: #ffffff;
+  --mark: #9d2800;          /* sheet hover ink at L 0.46 — 6.92 on --bg */
+  --accent-2: var(--mark);
+  --glow: 0 0 0.25rem rgb(37 73 145 / 0.28);
+  --shadow: 0 12px 34px -16px rgb(22 25 30 / 0.35);
+  --bg-grid: rgb(22 25 30 / 0.05);
+
+  /* L pinned to 0.48. Verified against --panel, --panel-2, --bg AND #fff —
+     the last because chart.css:116 (.mol-preview) hardcodes a white ground.
+     This block fixes a live WCAG failure: the previous light values were
+     inherited from the dark theme and measured 1.85:1 (--node-metabolite) and
+     2.51:1 (--node-enzyme) as inline text on chart.ts's white --panel. */
+  --node-metabolite: #006d64;   /* 5.03 on --panel, 6.23 on #fff */
+  --node-enzyme: #335aa6;       /* 5.38 on --panel, 6.66 on #fff */
+  --node-reaction: #805200;     /* 5.43 */
+  --node-gene: #6d469e;         /* 5.62 */
+  --node-complex: #94385e;      /* 5.68 */
+  --node-pathway: #515f6d;      /* 5.29 */
 }
 
+/* Visitors who have not toggled. Mirror of the block above — KEEP IN SYNC. */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     color-scheme: light;
-    --bg: #f4f7f6; --bg-grid: rgba(6, 90, 80, 0.05); --panel: #ffffff; --panel-2: #eef3f2;
-    --line: rgba(10, 40, 50, 0.12); --line-strong: rgba(10, 40, 50, 0.24);
-    --text: #0c1116; --text-dim: #47575f; --text-faint: #5f6b73;
-    --accent: #009e8c; --accent-ink: #e2fff9; --accent-2: #d63a76;
-    --glow: 0 0 0.5rem rgba(0, 158, 140, 0.3); --shadow: 0 12px 34px -16px rgba(10, 40, 50, 0.35);
+    --fg: #16191e;
+    --bg: #f5f3ee;
+    --panel: #e8e7e2;
+    --panel-2: #deddd9;
+    --line: #d7d5d2;
+    --line-strong: #b4b4b2;
+    --text-faint: #616365;
+    --text-dim: #484a4d;
+    --text: #16191e;
+    --accent: #254991;
+    --accent-ink: #ffffff;
+    --mark: #9d2800;
+    --accent-2: var(--mark);
+    --glow: 0 0 0.25rem rgb(37 73 145 / 0.28);
+    --shadow: 0 12px 34px -16px rgb(22 25 30 / 0.35);
+    --bg-grid: rgb(22 25 30 / 0.05);
+    --node-metabolite: #006d64;
+    --node-enzyme: #335aa6;
+    --node-reaction: #805200;
+    --node-gene: #6d469e;
+    --node-complex: #94385e;
+    --node-pathway: #515f6d;
   }
+}
+
+/* Windows High Contrast / forced-colors throws away author colours, including
+   the --ring construction above. Restore a focus indicator from the system
+   palette so keyboard navigation survives. */
+@media (forced-colors: active) {
+  :focus-visible { outline: 2px solid CanvasText; outline-offset: 2px; }
 }

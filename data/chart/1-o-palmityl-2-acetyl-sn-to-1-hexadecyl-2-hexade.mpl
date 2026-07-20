@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade "1-O-palmityl-2-acetyl-sn-… to 1-hexadecyl-2-hexadecanoy…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     1_o_palmityl_2_acetyl_sn_glycerol
@@ -18,7 +18,13 @@ pathway 1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade "1-O-palmityl-2-acetyl-
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga +cmp_n_acetyl_neuraminate +hplus
-    neuac_2_3_d_gal_1_3_neuac_2_6_d_galnac_1_3_d_ga
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
+    neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga
   }
 }

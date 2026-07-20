@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lipid-a-4-e-coli-to-lysophosphatidylcholine "lipid A(4−) (E. coli) to lysophosphatidylcholine…" {
-  spacing 244
+  spacing 322
 
   spine at 0,0 {
     lipid_a_4_e_coli
@@ -26,14 +26,26 @@ pathway lipid-a-4-e-coli-to-lysophosphatidylcholine "lipid A(4−) (E. coli) to 
 
   branch from dag side left {
     dag
+    <-> . +1_acyl_sn_glycerol +coa
+    acyl_coa
+  }
+
+  branch from dag side right {
+    dag
+    <-> . +n_acylphytosphingosine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    n_acylphytosphingosine_1_phosphoethanolamine
+  }
+
+  branch from 1_acyl_sn_glycerol side left {
+    1_acyl_sn_glycerol
     <-> . +acyl_coa +coa
-    2_monoglyceride
+    1_3_diacyl_sn_glycerol
   }
 
   branch from 1_acyl_sn_glycerol side right {
     1_acyl_sn_glycerol
-    <-> . +dag +coa
-    acyl_coa
+    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
+    1_3_diglyceride
   }
 
   branch from sterol side left {
@@ -42,21 +54,51 @@ pathway lipid-a-4-e-coli-to-lysophosphatidylcholine "lipid A(4−) (E. coli) to 
     sterol_3_d_glucoside
   }
 
+  branch from sterol side right {
+    sterol
+    <-> ec_2_3_1_26 [2.3.1.26] +long_chain_fatty_acyl_coa +coa
+    long_chain_3_hydroxysterol_ester
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +2_monolysocardiolipin +h2o +hplus
+    2_2_dilysocardiolipin
+  }
+
   branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_111 [3.1.1.111] +3_sn_phosphatidyl_l_serine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoserine
+    <-> . +phosphatidylcholine +h2o +hplus
+    acyl_sn_glycero_3_phosphocholine
   }
 
   branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
     1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +choline_alfoscerate +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine +hplus
+    n_acylphosphatidylethanolamine
+  }
+
+  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
+    1_o_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
     1_acyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from choline_alfoscerate side left {
+    choline_alfoscerate
+    <-> . +2_15r_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g +h2o +hplus
+    15_r_hete
   }
 
   branch from choline_alfoscerate side right {
     choline_alfoscerate
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
+    <-> . +2_15s_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g +h2o +hplus
+    15_s_hete
+  }
+
+  branch from lysophosphatidylcholine_16_0 side left {
+    lysophosphatidylcholine_16_0
+    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    palmitate
   }
 }

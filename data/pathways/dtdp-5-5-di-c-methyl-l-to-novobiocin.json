@@ -123,49 +123,32 @@
       }
     },
     {
-      "id": "dctp",
-      "name": "dCTP",
-      "formula": "C9H12N3O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61481"
-      }
-    },
-    {
-      "id": "dtmp",
-      "name": "dTMP",
-      "formula": "C10H13N2O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:63528"
-      }
-    },
-    {
-      "id": "dcdp",
-      "name": "dCDP",
-      "formula": "C9H12N3O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58593"
-      }
-    },
-    {
-      "id": "4_demethylrebeccamycin",
-      "name": "4'-demethylrebeccamycin",
-      "short": "4'-demethylrebeccam…",
-      "formula": "C26H19Cl2N3O7",
+      "id": "c30_botryococcene",
+      "name": "C30 botryococcene",
+      "formula": "C30H50",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:595389"
+        "chebi": "CHEBI:70786"
       }
     },
     {
-      "id": "rebeccamycin",
-      "name": "rebeccamycin",
-      "formula": "C27H21Cl2N3O7",
+      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
+      "short": "3,20-dimethyl-1,2,2…",
+      "formula": "C32H54",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:135511"
+        "chebi": "CHEBI:70865"
+      }
+    },
+    {
+      "id": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
+      "name": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene",
+      "short": "3-methyl-1,2-didehy…",
+      "formula": "C31H52",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70863"
       }
     }
   ],
@@ -192,10 +175,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_164",
-      "name": "demethylrebeccamycin-D-glucose O-methyltransferase",
+      "id": "ec_2_1_1_263",
+      "name": "botryococcene C-methyltransferase",
       "ec": [
-        "2.1.1.164"
+        "2.1.1.263"
       ]
     }
   ],
@@ -345,51 +328,60 @@
     },
     {
       "id": "r4",
-      "name": "dCTP + dTMP = dCDP + dTDP",
-      "equation": "dCTP + dTMP = dCDP + dTDP",
+      "name": "botryococcene C-methyltransferase",
+      "equation": "C30 botryococcene + 2 S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.263",
       "substrates": [
         {
-          "metabolite": "dctp",
+          "metabolite": "c30_botryococcene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dtmp",
-          "stoichiometry": 1
+          "metabolite": "sam",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "dcdp",
+          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dtdp",
-          "stoichiometry": 1
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_263"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:82691"
+        "rhea": "RHEA:34655"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82691"
+            "id": "RHEA:34655"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "demethylrebeccamycin-D-glucose O-methyltransferase",
-      "equation": "4'-demethylrebeccamycin + S-adenosyl-L-methionine = rebeccamycin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.164",
+      "name": "C30 botryococcene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrobotryoc...",
+      "equation": "C30 botryococcene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "4_demethylrebeccamycin",
+          "metabolite": "c30_botryococcene",
           "stoichiometry": 1
         },
         {
@@ -399,7 +391,7 @@
       ],
       "products": [
         {
-          "metabolite": "rebeccamycin",
+          "metabolite": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
           "stoichiometry": 1
         },
         {
@@ -411,22 +403,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_164"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27353"
+        "rhea": "RHEA:34659"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27353"
+            "id": "RHEA:34659"
           }
         ]
       }

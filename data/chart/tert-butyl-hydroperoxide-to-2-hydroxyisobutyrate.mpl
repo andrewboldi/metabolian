@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tert-butyl-hydroperoxide-to-2-hydroxyisobutyrate "tert-butyl hydroperoxide to 2-hydroxyisobutyrate" {
-  spacing 224
+  spacing 242
 
   spine at 0,0 {
     tert_butyl_hydroperoxide
@@ -18,9 +18,21 @@ pathway tert-butyl-hydroperoxide-to-2-hydroxyisobutyrate "tert-butyl hydroperoxi
     2_hydroxyisobutyrate
   }
 
-  branch from gssg side left {
-    gssg
-    <-> . +4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah +gsh +h2o
-    17s_hdha
+  branch from 2_methylpropane_1_2_diol side left {
+    2_methylpropane_1_2_diol
+    <-> ec_3_3_2_10 [3.3.2.10] +h2o
+    2_2_dimethyloxirane
+  }
+
+  branch from 2_hydroxyisobutyrate side right {
+    2_hydroxyisobutyrate
+    <-> . +diphosphate +2_hydroxyisobutanoyl_coa +amp +coa
+    atp
+  }
+
+  branch from 2_hydroxyisobutyrate side left {
+    2_hydroxyisobutyrate
+    <-> ec_3_5_5_1 [3.5.5.1] +2_hydroxy_2_methylpropanenitrile +h2o
+    nh4
   }
 }

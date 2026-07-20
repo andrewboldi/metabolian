@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-violaxanthin-to-fmnh2 "9-cis-violaxanthin to FMNH2" {
-  spacing 196
+  spacing 244
 
   spine at 0,0 {
     9_cis_violaxanthin
@@ -16,25 +16,55 @@ pathway 9-cis-violaxanthin-to-fmnh2 "9-cis-violaxanthin to FMNH2" {
     abscisate
     <-> ec_1_14_14_137 [1.14.14.137] +fmnh2 +o2 -fmn -h2o -hplus
     8_hydroxyabscisate
-    <-> ec_1_3_8_17 [1.3.8.17] +f420_0 +fmn +hplus -fmnh2
-    dehydro_coenzyme_f420_0
+    <-> ec_1_2_8_1 [1.2.8.1] +fmn +pyruvate +coa +hplus -acetyl_coa -co2
+    fmnh2
   }
 
   branch from 2_cis_4_trans_xanthoxin side left {
     2_cis_4_trans_xanthoxin
-    <-> ec_1_13_11_51 [1.13.11.51] +9_cis_neoxanthin +o2
-    3s_5r_6r_3_5_dihydroxy_6_7_didehydro_5_6_dihydr
+    <-> ec_1_13_11_51 [1.13.11.51] +9_cis_epoxycarotenoid +o2
+    12_apo_carotenal
   }
 
-  branch from fmn side right {
+  branch from 2_cis_4_trans_xanthoxin side right {
+    2_cis_4_trans_xanthoxin
+    <-> ec_1_13_11_51 [1.13.11.51] +3s_5r_6s_5_6_epoxy_3_hydroxy_5_6_dihydro_12_apo +o2
+    9_cis_violaxanthin
+  }
+
+  branch from abscisate side left {
+    abscisate
+    <-> ec_2_4_1_263 [2.4.1.263] +udp_d_glucose +udp
+    abscisic_acid_d_glucopyranosyl_ester
+  }
+
+  branch from abscisate side right {
+    abscisate
+    <-> ec_3_2_1_175 [3.2.1.175] +abscisic_acid_d_glucopyranosyl_ester +h2o +hplus
+    d_glucose
+  }
+
+  branch from fmn side left {
     fmn
     <-> ec_1_14_19_63 [1.14.19.63] +pratensein +fmnh2 +o2 +h2o +hplus
     5_hydroxypseudobaptigenin
   }
 
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_38 [1.14.14.38] +valine +fmnh2 +o2 +co2 +h2o +hplus
+    e_2_methylpropanal_oxime
+  }
+
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_38 [1.14.14.38] +valine +o2 +fmn +co2 +h2o +hplus
-    e_2_methylpropanal_oxime
+    <-> . +premnaspirodiene +o2 +fmn +h2o +hplus
+    solavetivol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +solavetivol +o2 +fmn +h2o +hplus
+    solavetivone
   }
 }

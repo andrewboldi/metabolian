@@ -162,23 +162,81 @@
       }
     },
     {
-      "id": "n2_methylguanosine_5_monophosphate_1",
-      "name": "N2-methylguanosine 5'-monophosphate(1−)",
-      "short": "N2-methylguanosine…",
-      "formula": "C11H13N5O7P",
+      "id": "pseudouridine_5_phosphate_1",
+      "name": "pseudouridine 5'-phosphate(1−)",
+      "short": "pseudouridine…",
+      "formula": "C9H10N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74481"
+        "chebi": "CHEBI:65314"
       }
     },
     {
-      "id": "n2_n2_dimethylguanosine_5_monophosphate_1",
-      "name": "N2,N2-dimethylguanosine 5'-monophosphate(1−)",
-      "short": "N2,N2-dimethylguano…",
-      "formula": "C12H15N5O7P",
+      "id": "n1_methylpseudouridine_5_monophosphate_1",
+      "name": "N1-methylpseudouridine 5'-monophosphate(1−)",
+      "short": "N1-methylpseudourid…",
+      "formula": "C10H12N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74513"
+        "chebi": "CHEBI:74890"
+      }
+    },
+    {
+      "id": "n_acyl_4e_8e_sphinga_4_8_dienine",
+      "name": "N-acyl-(4E,8E)-sphinga-4,8-dienine",
+      "short": "N-acyl-(4E,8E)-sphi…",
+      "formula": "C19H34NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85953"
+      }
+    },
+    {
+      "id": "n_acyl_4e_8e_9_methylsphinga_4_8_dienine",
+      "name": "N-acyl-(4E,8E)-9-methylsphinga-4,8-dienine",
+      "short": "N-acyl-(4E,8E)-9-me…",
+      "formula": "C20H36NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87033"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "elloramycin_a",
+      "name": "elloramycin A",
+      "formula": "C32H36O15",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364864"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
       }
     }
   ],
@@ -216,6 +274,20 @@
       "name": "8-demethyl-8-(2,3-dimethoxy-alpha-L-rhamnosyl)-tetracenomycin-C 4'-O-",
       "ec": [
         "2.1.1.307"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_260",
+      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
+      "ec": [
+        "2.1.1.260"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_317",
+      "name": "sphingolipid C(9)-methyltransferase",
+      "ec": [
+        "2.1.1.317"
       ]
     }
   ],
@@ -475,11 +547,12 @@
     },
     {
       "id": "r6",
-      "name": "N(2)-methylguanosine(10) in tRNA + S-adenosyl-L-methionine = N(2)-dimethylguanosine(10)...",
-      "equation": "N(2)-methylguanosine(10) in tRNA + S-adenosyl-L-methionine = N(2)-dimethylguanosine(10) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
+      "equation": "pseudouridine(914) in M. jannaschii 16S rRNA + S-adenosyl-L-methionine = N(1)-methylpseudouridine(914) in M. jannaschii 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.260",
       "substrates": [
         {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "metabolite": "pseudouridine_5_phosphate_1",
           "stoichiometry": 1
         },
         {
@@ -489,7 +562,7 @@
       ],
       "products": [
         {
-          "metabolite": "n2_n2_dimethylguanosine_5_monophosphate_1",
+          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -501,17 +574,113 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_260"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:43132"
+        "rhea": "RHEA:46716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43132"
+            "id": "RHEA:46716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "sphingolipid C(9)-methyltransferase",
+      "equation": "a (4E,8E)-4-sphinga-4,8-dienine ceramide + S-adenosyl-L-methionine = a 9-methyl-(4E,8E)-sphinga-4,8-dienine ceramide + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.317",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_4e_8e_sphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_4e_8e_9_methylsphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_317"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:46804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "Reaction MNXR196409",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "elloramycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "8_demethyl_8_2_3_4_o_trimethyl_l_rhamnosyl_tetra",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "metanetx": "MNXR196409"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196409"
           }
         ]
       }

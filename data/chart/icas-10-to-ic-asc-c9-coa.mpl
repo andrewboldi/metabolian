@@ -4,11 +4,13 @@
 # edit the generator, not this file.
 
 pathway icas-10-to-ic-asc-c9-coa "icas#10 to IC-asc-ΔC9-CoA" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     icas_10
-    <-> . +atp +coa -amp -ppi
+    <-> . +atp +hplus -ppi
+    ic_asc_c9_amp
+    <-> . +coa -amp -hplus
     ic_asc_c9_coa
     <-> . +o2 -h2o2
     ic_asc_c9_coa
@@ -16,7 +18,13 @@ pathway icas-10-to-ic-asc-c9-coa "icas#10 to IC-asc-ΔC9-CoA" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_106 [4.2.3.106] +gpp
-    e_ocimene
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_decaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
+    2_demethylmenaquinol_10
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +atp +coa +amp
+    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
   }
 }

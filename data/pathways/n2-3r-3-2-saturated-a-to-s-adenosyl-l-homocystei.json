@@ -88,30 +88,59 @@
       }
     },
     {
-      "id": "trans_anol",
-      "name": "trans-anol",
-      "formula": "C9H10O",
-      "charge": 0,
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:73343"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "trans_anethole",
-      "name": "trans-anethole",
-      "formula": "C10H12O",
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "n7_methylguanosine_5_phosphate_zwitterion",
+      "name": "N7-methylguanosine 5'-phosphate zwitterion",
+      "short": "N7-methylguanosine…",
+      "formula": "C11H14N5O7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35616"
+        "chebi": "CHEBI:74480"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_279",
-      "name": "trans-anol O-methyltransferase",
+      "id": "ec_2_1_1_178",
+      "name": "16S rRNA (cytosine(1407)-C(5))-methyltransferase",
       "ec": [
-        "2.1.1.279"
+        "2.1.1.178"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_179",
+      "name": "16S rRNA (guanine(1405)-N(7))-methyltransferase",
+      "ec": [
+        "2.1.1.179"
       ]
     }
   ],
@@ -247,12 +276,12 @@
     },
     {
       "id": "r4",
-      "name": "trans-anol O-methyltransferase",
-      "equation": "(E)-anol + S-adenosyl-L-methionine = (E)-anethole + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.279",
+      "name": "16S rRNA (cytosine(1407)-C(5))-methyltransferase",
+      "equation": "cytidine(1407) in 16S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1407) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.178",
       "substrates": [
         {
-          "metabolite": "trans_anol",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -262,7 +291,7 @@
       ],
       "products": [
         {
-          "metabolite": "trans_anethole",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -276,20 +305,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_279"
+          "enzyme": "ec_2_1_1_178"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:36247"
+        "rhea": "RHEA:42756"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36247"
+            "id": "RHEA:42756"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "16S rRNA (guanine(1405)-N(7))-methyltransferase",
+      "equation": "guanosine(1405) in 16S rRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(1405) in 16S rRNA + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.179",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_179"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42772"
           }
         ]
       }

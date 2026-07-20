@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     n_n_dimethylformamide
@@ -20,25 +20,55 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
 
   branch from formate side left {
     formate
-    <-> ec_1_14_15_36 [1.14.15.36] +14_methyl_steroid +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +19_oxo_5_dihydrotestosterone +fmnh2 +o2 +fmn +h2o +hplus
+    17_hydroxy_5_estr_1_10_en_3_one
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_1_14_14_154 [1.14.14.154] +14_methyl_steroid +fmnh2 +o2 +fmn +h2o +hplus
     14_steroid
+  }
+
+  branch from methyl_co side left {
+    methyl_co
+    <-> ec_2_1_1_382 [2.1.1.382] +syringate +cobalt +hplus
+    3_o_methylgallate
   }
 
   branch from methylamine side right {
     methylamine
-    <-> ec_3_5_1_137 [3.5.1.137] +n_methyl_carbamate_ester +h2o +hplus +co2
-    alcohol
+    <-> ec_4_2_1_88 [4.2.1.88] +d_synephrine
+    4_hydroxyphenyl_acetaldehyde
   }
 
-  branch from cobalt side left {
+  branch from methylamine side left {
+    methylamine
+    <-> . +carbaryl +h2o +hplus +co2
+    1_naphthol
+  }
+
+  branch from cobalt side right {
     cobalt
     <-> ec_1_16_99_1 [1.16.99.1] +cobalt +hydrogen_donor +atp +h2o +adp +pi +hplus
     hydrogen_acceptor
   }
 
+  branch from cobalt side left {
+    cobalt
+    <-> ec_1_16_99_1 [1.16.99.1] +hydrogen_donor +atp +h2o +hydrogen_acceptor +adp +pi +hplus
+    cobalt
+  }
+
   branch from nh3 side right {
     nh3
-    <-> ec_1_7_1_10 [1.7.1.10] +nad +h2o +nadh +hplus
-    hydroxylamine
+    <-> ec_4_3_1_24 [4.3.1.24] +l_phenylalanine
+    trans_cinnamate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_20 [1.4.1.20] +l_phenylalanine +nad +h2o +nadh +hplus
+    keto_phenylpyruvate
   }
 }

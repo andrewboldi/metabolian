@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-carvone "geranyl diphosphate to (+)-carvone" {
-  spacing 188
+  spacing 224
 
   spine at 0,0 {
     gpp
@@ -22,15 +22,33 @@ pathway geranyl-diphosphate-to-carvone "geranyl diphosphate to (+)-carvone" {
     limonene_1_2_epoxide
   }
 
+  branch from 4r_limonene side right {
+    4r_limonene
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    trans_isopiperitenol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_107 [2.7.7.107] +2_aminoethyl_phosphonic_acid +ctp
+    cmp_2_aminoethyl_phosphonate
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_138 [2.5.1.138] +umbelliferone +gpp
-    8_geranylumbelliferone
+    <-> . +spermidine +citrate +atp +amp +hplus
+    n_citryl_spermidine
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +gsh +fmnh2 +o2 +h2o +hplus
-    z_1_glutathione_s_yl_2_phenylacetohydroximate
+    <-> ec_1_14_14_73 [1.14.14.73] +albendazole +fmnh2 +o2 +h2o +hplus
+    albendazole_s_oxide
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_73 [1.14.14.73] +fenbendazole +fmnh2 +o2 +h2o +hplus
+    oxfendazole
   }
 }

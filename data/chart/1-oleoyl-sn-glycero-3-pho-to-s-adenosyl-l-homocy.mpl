@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-pho… to S-adenosyl-L-homocysteine" {
-  spacing 256
+  spacing 310
 
   spine at 0,0 {
     1_oleoyl_sn_glycero_3_phospho_d_myo_inositol
@@ -26,8 +26,20 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-
 
   branch from oleate side right {
     oleate
-    <-> . +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc +h2o +hplus
-    sn_glycero_3_phospho_1_sn_glycerol
+    <-> . +dioleoylglycerol +h2o +hplus
+    monooleoylglycerol
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +n_oleoyl_l_glutaminate +h2o
+    glutamine
+  }
+
+  branch from 1d_myo_inositol_1_phosphate side right {
+    1d_myo_inositol_1_phosphate
+    <-> . +h2o +pi
+    1d_myo_inositol_1_3_biphosphate
   }
 
   branch from 1d_myo_inositol_1_phosphate side left {
@@ -36,9 +48,27 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-
     2_monoglyceride
   }
 
+  branch from glycerol side right {
+    glycerol
+    <-> . +15_deoxy_12_14_prostaglandin_j2_2_glyceryl_ester +h2o +hplus
+    15_deoxy_12_14_prostaglandin_j2
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_1_phosphate
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
-    dtdp_d_ravidosamine
+    <-> . +lathosterone +sam +hplus
+    4_methyllathosterone
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +gibberellin_a1 +sam
+    gibberellin_a1_methyl_ester
   }
 }

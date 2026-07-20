@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lipid-iia-to-1-2-diacyl-sn-glycero-3-p "lipid IIA to 1,2-diacyl-sn-glycero-3-p…" {
-  spacing 244
+  spacing 334
 
   spine at 0,0 {
     lipid_iia
@@ -26,37 +26,91 @@ pathway lipid-iia-to-1-2-diacyl-sn-glycero-3-p "lipid IIA to 1,2-diacyl-sn-glyce
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
     2_acyl_sn_glycero_3_phosphocholine
-    <-> ec_2_3_1_251 [2.3.1.251] +lipid_iva +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine
-    lipid_ivb
+    <-> ec_2_3_1_251 [2.3.1.251] +a_lipid_iva +phosphatidylcholine
+    a_lipid_ivb
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphate side right {
+  branch from 2_acyl_sn_glycero_3_phosphocholine side right {
+    2_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
+    1_3_diacyl_sn_glycerol
+  }
+
+  branch from 2_acyl_sn_glycero_3_phosphate side left {
     2_acyl_sn_glycero_3_phosphate
     <-> . +2_acyl_sn_glycero_3_phosphoserine +h2o +hplus
     serine
   }
 
-  branch from choline side left {
-    choline
-    <-> . +1_o_acyl_sn_glycero_3_phosphocholine
-    1_acyl_sn_glycero_2_3_cyclic_phosphate
+  branch from 1_acyl_sn_glycerol_3_phosphate side right {
+    1_acyl_sn_glycerol_3_phosphate
+    <-> . +oleoyl_coa +coa
+    1_acyl_2_oleoyl_sn_glycero_3_phosphate
   }
 
-  branch from 1_acyl_sn_glycerol_3_phosphate side right {
+  branch from 1_acyl_sn_glycerol_3_phosphate side left {
     1_acyl_sn_glycerol_3_phosphate
     <-> . +linoleoyl_coa +coa
     1_acyl_2_linoleoyl_sn_glycero_3_phosphate
   }
 
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate +h2o +hplus
-    2_16_1_lysophosphatidate
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_acyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from 1_acyl_sn_glycerol side right {
     1_acyl_sn_glycerol
-    <-> . +acyl_coa +coa
-    1_3_diacyl_sn_glycerol
+    <-> . +phosphatidylcholine +2_acyl_sn_glycero_3_phosphocholine
+    1_3_diglyceride
+  }
+
+  branch from 1_acyl_sn_glycerol side left {
+    1_acyl_sn_glycerol
+    <-> . +r_s_glycero_3_phospho_3_acyl_1_glycerol +glycerol
+    2_2_lysobisphosphatidate
+  }
+
+  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
+    1_o_acyl_sn_glycero_3_phosphocholine
+    <-> . +palmitoyl_coa +coa
+    1_acyl_2_hexadecanoyl_sn_glycero_3_phosphocholin
+  }
+
+  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
+    1_o_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    choline_alfoscerate
+  }
+
+  branch from dag side right {
+    dag
+    <-> . +n_hexadecanoylsphinganine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    n_hexadecanoylsphinganine_1_phosphoethanolamine
+  }
+
+  branch from dag side left {
+    dag
+    <-> . +dihydroceramide +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    n_acylsphinganine_1_phosphoethanolamine
+  }
+
+  branch from phosphatidylcholine side right {
+    phosphatidylcholine
+    <-> . +n_acylphytosphingosine +dag
+    n_acylphytosphingosine_1_phosphocholine
+  }
+
+  branch from phosphatidylcholine side left {
+    phosphatidylcholine
+    <-> . +1_3_o_alkylglycerol +acyl_sn_glycero_3_phosphocholine
+    1_alkyl_3_acylglycerol
   }
 }

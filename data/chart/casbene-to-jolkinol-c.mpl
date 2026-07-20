@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway casbene-to-jolkinol-c "(−)-casbene to jolkinol C" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     casbene
@@ -21,6 +21,18 @@ pathway casbene-to-jolkinol-c "(−)-casbene to jolkinol C" {
   branch from fmn side left {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11r_12s_eet
+    14r_15s_eet
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11s_12r_eet
+  }
+
+  branch from 4_8_dihydroxycasbene side left {
+    4_8_dihydroxycasbene
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    4_hydroxycasbene
   }
 }

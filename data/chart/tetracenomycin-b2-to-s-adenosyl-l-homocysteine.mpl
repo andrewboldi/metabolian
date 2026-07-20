@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tetracenomycin-b2-to-s-adenosyl-l-homocysteine "tetracenomycin B2 to S-adenosyl-L-homocysteine" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     tetracenomycin_b2
@@ -22,7 +22,19 @@ pathway tetracenomycin-b2-to-s-adenosyl-l-homocysteine "tetracenomycin B2 to S-a
 
   branch from sah side left {
     sah
-    <-> . +n2_methylguanosine_5_monophosphate_1 +sam +hplus
-    n2_n2_dimethylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_317 [2.1.1.317] +n_acyl_4e_8e_sphinga_4_8_dienine +sam +hplus
+    n_acyl_4e_8e_9_methylsphinga_4_8_dienine
+  }
+
+  branch from 8_demethyl_8_2_3_4_o_trimethyl_l_rhamnosyl_tetra side left {
+    8_demethyl_8_2_3_4_o_trimethyl_l_rhamnosyl_tetra
+    <-> . +s_adenosyl_l_homocysteine +elloramycin_a +h
+    s_adenosyl_l_methionine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat "oligoglycosyl-(1→4)-β-D-g… to cytidine 5'-monophosphate" {
-  spacing 212
+  spacing 248
 
   spine at 0,0 {
     oligoglycosyl_1_4_d_glucosyl_1_1_ceramide
@@ -12,9 +12,9 @@ pathway oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat "oligoglycosyl-(1→4)-
     oligoglycosyl_1_4_d_glucose
     <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +n_acylsphingoid -cytidine_5_monophosphate -hplus
     ceramide_phosphoethanolamine
-    <-> . +inosine +cytidine_5_monophosphate -imp
-    cytidine
-    <-> ec_2_7_1_48 [2.7.1.48] +atp -adp -hplus
+    <-> . +gtp +cytidine_5_monophosphate -gdp
+    cdp
+    <-> ec_3_6_1_6 [3.6.1.6] +h2o -pi -hplus
     cytidine_5_monophosphate
   }
 
@@ -24,15 +24,33 @@ pathway oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat "oligoglycosyl-(1→4)-
     mannose_1d_myo_inositol_1_phosphate
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> ec_2_7_8_39 [2.7.8.39] +cdp_2_3_bis_o_phytanyl_sn_glycerol +1d_myo_inositol_3_phosphate +hplus
-    1_archaetidyl_1d_myo_inositol_3_phosphate
+  branch from n_acylsphingoid side right {
+    n_acylsphingoid
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +h2o
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
   }
 
-  branch from imp side left {
-    imp
-    <-> ec_3_5_4_10 [3.5.4.10] +h2o
-    faicar
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +n_acylsphingosine +hplus
+    n_acylsphingosine_1_phosphoethanolamine
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_99_15 [2.4.99.15] +kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    kdo_3_lipid_iva
+  }
+
+  branch from cdp side left {
+    cdp
+    <-> . +h2o +pi +hplus
+    ctp
+  }
+
+  branch from cdp side right {
+    cdp
+    <-> . +phytyl_phosphate +ctp
+    phytyl_diphosphate
   }
 }

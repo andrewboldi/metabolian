@@ -1,0 +1,231 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-methylheptan-4-one-to-2s-2-hydroxy-4-phenylbu",
+  "name": "3-Methylheptan-4-one to (2S)-2-hydroxy-4-phenylbu…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3-Methylheptan-4-one to (2S)-2-hydroxy-4-phenylbutanenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR172156"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195862"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_methylheptan_4_one",
+      "name": "3-Methylheptan-4-one",
+      "formula": "C8H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195862"
+      }
+    },
+    {
+      "id": "4_hydroxylamino_n_n_dimethylaniline",
+      "name": "4-(hydroxylamino)-N,N-dimethylaniline",
+      "short": "4-(hydroxylamino)-N…",
+      "formula": "C8H12N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59991"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_4_nitrosoaniline",
+      "name": "N,N-dimethyl-4-nitrosoaniline",
+      "short": "N,N-dimethyl-4-nitr…",
+      "formula": "C8H10N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59990"
+      }
+    },
+    {
+      "id": "3_methylheptan_4_ol",
+      "name": "3-Methylheptan-4-ol",
+      "formula": "C8H18O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819681"
+      }
+    },
+    {
+      "id": "3_phenyl_1_propanol",
+      "name": "3-Phenyl-1-propanol",
+      "formula": "C9H12O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88817"
+      }
+    },
+    {
+      "id": "3_phenylpropanal",
+      "name": "3-phenylpropanal",
+      "formula": "C9H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:39940"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    },
+    {
+      "id": "2s_2_hydroxy_4_phenylbutanenitrile",
+      "name": "(2S)-2-hydroxy-4-phenylbutanenitrile",
+      "short": "2-hydroxy-4-phenylb…",
+      "formula": "C10H11NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197324"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_99_36",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": [
+        "1.1.99.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "3_methylheptan_4_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_methylheptan_4_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR172156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "3_phenyl_1_propanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_phenylpropanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-phenylpropanal + hydrogen cyanide = (2S)-2-hydroxy-4-phenylbutanenitrile",
+      "equation": "3-phenylpropanal + hydrogen cyanide = (2S)-2-hydroxy-4-phenylbutanenitrile",
+      "substrates": [
+        {
+          "metabolite": "3_phenylpropanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxy_4_phenylbutanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77503"
+          }
+        ]
+      }
+    }
+  ]
+}

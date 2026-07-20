@@ -127,21 +127,12 @@
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:57305"
       }
     },
     {
@@ -164,23 +155,59 @@
       }
     },
     {
-      "id": "s_4_bromophenyl_l_cysteine",
-      "name": "S-(4-bromophenyl)-L-cysteine",
-      "short": "S-(4-bromophenyl)-L…",
-      "formula": "C9H10BrNO2S",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58257"
+        "chebi": "CHEBI:16526"
       }
     },
     {
-      "id": "4_bromophenylsulfanyl_pyruvate",
-      "name": "(4-bromophenylsulfanyl)pyruvate",
-      "short": "(4-bromophenylsulfa…",
-      "formula": "C9H6BrO3S",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17468"
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "s_3_aminoisobutyric_acid",
+      "name": "(S)-3-aminoisobutyric acid",
+      "short": "3-aminoisobutyric…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58655"
+      }
+    },
+    {
+      "id": "2_methyl_3_oxopropanoate",
+      "name": "2-methyl-3-oxopropanoate",
+      "short": "2-methyl-3-oxopropa…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57700"
       }
     }
   ],
@@ -207,6 +234,13 @@
       ]
     },
     {
+      "id": "ec_2_6_1_4",
+      "name": "glycine transaminase",
+      "ec": [
+        "2.6.1.4"
+      ]
+    },
+    {
       "id": "ec_2_2_1_5",
       "name": "2-hydroxy-3-oxoadipate synthase",
       "ec": [
@@ -214,10 +248,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_75",
-      "name": "cysteine-conjugate transaminase",
+      "id": "ec_1_4_1_14",
+      "name": "glutamate synthase (NADH)",
       "ec": [
-        "2.6.1.75"
+        "1.4.1.14"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_22",
+      "name": "(S)-3-amino-2-methylpropionate transaminase",
+      "ec": [
+        "2.6.1.22"
       ]
     }
   ],
@@ -379,39 +420,45 @@
     },
     {
       "id": "r4",
-      "name": "L-alanine + H(+) = ethylamine + CO2",
-      "equation": "L-alanine + H(+) = ethylamine + CO2",
+      "name": "glycine transaminase",
+      "equation": "glycine + 2-oxoglutarate = glyoxylate + L-glutamate",
+      "ec": "2.6.1.4",
       "substrates": [
         {
-          "metabolite": "alanine",
+          "metabolite": "glycine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ethylaminium",
+          "metabolite": "glyoxylate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "glutamate",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:81707"
+        "rhea": "RHEA:14089"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:81707"
+            "id": "RHEA:14089"
           }
         ]
       }
@@ -467,12 +514,65 @@
     },
     {
       "id": "r6",
-      "name": "cysteine-conjugate transaminase",
-      "equation": "S-(4-bromophenyl)-L-cysteine + 2-oxoglutarate = 3-((4-bromophenyl)sulfanyl)-2-oxopropanoate + L-glutamate",
-      "ec": "2.6.1.75",
+      "name": "glutamate synthase (NADH)",
+      "equation": "2 L-glutamate + NAD(+) = L-glutamine + 2-oxoglutarate + NADH + H(+)",
+      "ec": "1.4.1.14",
       "substrates": [
         {
-          "metabolite": "s_4_bromophenyl_l_cysteine",
+          "metabolite": "glutamate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:13753"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(S)-3-amino-2-methylpropionate transaminase",
+      "equation": "(S)-3-amino-2-methylpropanoate + 2-oxoglutarate = 2-methyl-3-oxopropanoate + L-glutamate",
+      "ec": "2.6.1.22",
+      "substrates": [
+        {
+          "metabolite": "s_3_aminoisobutyric_acid",
           "stoichiometry": 1
         },
         {
@@ -482,7 +582,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_bromophenylsulfanyl_pyruvate",
+          "metabolite": "2_methyl_3_oxopropanoate",
           "stoichiometry": 1
         },
         {
@@ -492,20 +592,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_75"
+          "enzyme": "ec_2_6_1_22"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:13485"
+        "rhea": "RHEA:13993"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13485"
+            "id": "RHEA:13993"
           }
         ]
       }

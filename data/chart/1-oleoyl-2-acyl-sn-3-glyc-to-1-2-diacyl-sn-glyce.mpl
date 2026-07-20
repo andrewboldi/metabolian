@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce "1-oleoyl-2-acyl-sn-3-glyc… to 1,2-diacyl-sn-glycero-3-p…" {
-  spacing 244
+  spacing 292
 
   spine at 0,0 {
     1_oleoyl_2_acyl_sn_3_glycerol
@@ -16,16 +16,16 @@ pathway 1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce "1-oleoyl-2-acyl-sn-3-g
     phosphatidylcholine
   }
 
-  branch from 1_oleoyl_2_acyl_sn_glycero_3_phosphocholine side left {
-    1_oleoyl_2_acyl_sn_glycero_3_phosphocholine
-    <-> . +h2o +fatty-acid +hplus
-    1_o_oleoyl_sn_glycero_3_phosphocholine
+  branch from n_acylsphingosine side left {
+    n_acylsphingosine
+    <-> ec_1_14_19_18 [1.14.19.18] +fe2 +o2 +hplus +iron +h2o
+    n_acyl_4e_8e_sphinga_4_8_dienine
   }
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
-    1_o_acyl_n_acylsphingosine
+    <-> ec_1_14_19_17 [1.14.19.17] +fe2 +o2 +hplus +iron +h2o
+    dihydroceramide
   }
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
@@ -34,13 +34,31 @@ pathway 1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce "1-oleoyl-2-acyl-sn-3-g
     1_o_acyl_n_acetylsphingosine
   }
 
+  branch from 2_acyl_sn_glycero_3_phosphocholine side right {
+    2_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine +hplus
+    n_acylphosphatidylethanolamine
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit
+  }
+
   branch from oleate side right {
     oleate
-    <-> . +h2o +1_o_oleoyl_sn_glycero_3_phosphocholine +hplus
-    1_2_dioleoyl_sn_glycero_3_phosphocholine
+    <-> . +n_oleoylphytosphingosine +h2o
+    phytosphingosine
   }
 
   branch from phosphatidylcholine side left {
+    phosphatidylcholine
+    <-> . +cholesterol +1_o_acyl_sn_glycero_3_phosphocholine
+    cholesteryl_ester
+  }
+
+  branch from phosphatidylcholine side right {
     phosphatidylcholine
     <-> . +1_acyl_sn_glycerol +1_o_acyl_sn_glycero_3_phosphocholine
     1_3_diacyl_sn_glycerol

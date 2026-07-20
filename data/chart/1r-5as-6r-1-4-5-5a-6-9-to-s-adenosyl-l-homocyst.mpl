@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,9-… to S-adenosyl-L-homocysteine" {
-  spacing 216
+  spacing 246
 
   spine at 0,0 {
     1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d
@@ -26,21 +26,33 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,
     1_6_dimethoxyphenazine
   }
 
-  branch from 1_6_dihydroxyphenazine side left {
-    1_6_dihydroxyphenazine
-    <-> . +nadph +o2 +nadp +h2o
-    1_6_dihydroxyphenazine_n5_oxide
+  branch from 1r_10as_1_4_10_10a_tetrahydrophenazine_1_6_dica side left {
+    1r_10as_1_4_10_10a_tetrahydrophenazine_1_6_dica
+    <-> . +1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar +o2 +h2o2
+    h
   }
 
-  branch from 1_hydroxy_6_methoxyphenazine side right {
+  branch from 5_10_dihydrophenazine_1_6_dicarboxylate side right {
+    5_10_dihydrophenazine_1_6_dicarboxylate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from 1_hydroxy_6_methoxyphenazine side left {
     1_hydroxy_6_methoxyphenazine
     <-> . +nadph +o2 +nadp +h2o
     1_hydroxy_6_methoxyphenazine_n10_oxide
   }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_314 [2.1.1.314] +2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter +sam +hplus
+    diphthine_methyl_ester
+  }
+
   branch from sah side left {
     sah
-    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> ec_2_1_1_33 [2.1.1.33] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

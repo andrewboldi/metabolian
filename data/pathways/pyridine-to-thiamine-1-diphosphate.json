@@ -190,23 +190,69 @@
       }
     },
     {
-      "id": "2_3_dihydroxybenzoate",
-      "name": "2,3-dihydroxybenzoate",
-      "short": "2,3-dihydroxybenzoa…",
-      "formula": "C7H5O4",
+      "id": "4_hydroxybutyrate",
+      "name": "4-hydroxybutyrate",
+      "formula": "C4H7O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36654"
+        "chebi": "CHEBI:16724"
       }
     },
     {
-      "id": "2_3_dihydroxybenzoyl_5_adenylate",
-      "name": "2,3-dihydroxybenzoyl 5'-adenylate",
-      "short": "2,3-dihydroxybenzoy…",
-      "formula": "C17H17N5O10P",
-      "charge": -1,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57417"
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "4_hydroxybutyryl_coa",
+      "name": "4-hydroxybutyryl-CoA",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58574"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "3_6_9_trihydroxypterocarpan",
+      "name": "3,6,9-trihydroxypterocarpan",
+      "short": "3,6,9-trihydroxypte…",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15649"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero",
+      "name": "(6aS,11aS)-4-dimethylallyl-3,6a,9-trihydroxypterocarpan",
+      "short": "(6aS,11aS)-4-dimeth…",
+      "formula": "C20H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50036"
       }
     },
     {
@@ -217,6 +263,25 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:71393"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP (uridine 5'-monophosphate)",
+      "short": "UMP (uridine 5'-MP)",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57865"
       }
     }
   ],
@@ -268,6 +333,20 @@
       "name": "aminopyrimidine aminohydrolase",
       "ec": [
         "3.5.99.2"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_40",
+      "name": "4-hydroxybutyrate--CoA ligase (AMP-forming)",
+      "ec": [
+        "6.2.1.40"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_36",
+      "name": "trihydroxypterocarpan dimethylallyltransferase",
+      "ec": [
+        "2.5.1.36"
       ]
     }
   ],
@@ -658,11 +737,12 @@
     },
     {
       "id": "r9",
-      "name": "2,3-dihydroxybenzoate + ATP + H(+) = 2,3-dihydroxybenzoyl-5'-AMP + diphosphate",
-      "equation": "2,3-dihydroxybenzoate + ATP + H(+) = 2,3-dihydroxybenzoyl-5'-AMP + diphosphate",
+      "name": "4-hydroxybutyrate--CoA ligase (AMP-forming)",
+      "equation": "4-hydroxybutanoate + ATP + CoA = 4-hydroxybutanoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.40",
       "substrates": [
         {
-          "metabolite": "2_3_dihydroxybenzoate",
+          "metabolite": "4_hydroxybutyrate",
           "stoichiometry": 1
         },
         {
@@ -670,13 +750,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_3_dihydroxybenzoyl_5_adenylate",
+          "metabolite": "4_hydroxybutyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -684,23 +768,73 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_40"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:20229"
+        "rhea": "RHEA:23128"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20229"
+            "id": "RHEA:23128"
           }
         ]
       }
     },
     {
       "id": "r10",
+      "name": "trihydroxypterocarpan dimethylallyltransferase",
+      "equation": "(6aS,11aS)-3,6a,9-trihydroxypterocarpan + dimethylallyl diphosphate = (6aS,11aS)-4-dimethylallyl-3,6a,9-trihydroxypterocarpan + diphosphate",
+      "ec": "2.5.1.36",
+      "substrates": [
+        {
+          "metabolite": "3_6_9_trihydroxypterocarpan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:23184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
       "name": "thiamine diphosphate + ADP + H(+) = adenosine thiamine triphosphate + phosphate",
       "equation": "thiamine diphosphate + ADP + H(+) = adenosine thiamine triphosphate + phosphate",
       "substrates": [
@@ -728,7 +862,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:35243"
       },
@@ -738,6 +872,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:35243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "thiamine + UTP = thiamine diphosphate + UMP + H(+)",
+      "equation": "thiamine + UTP = thiamine diphosphate + UMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "thiamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiamine_1_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:79423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79423"
           }
         ]
       }

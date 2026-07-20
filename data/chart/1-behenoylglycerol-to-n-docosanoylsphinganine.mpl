@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-docosanoylsphinganine" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     1_behenoylglycerol
@@ -22,15 +22,33 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-d
     o_s_docosanoylpantetheine_4_phosphoryl_l_serine
   }
 
-  branch from docosanoyl_coa side right {
+  branch from behenate side right {
+    behenate
+    <-> . +atp +hplus +ppi
+    docosanoyl_amp
+  }
+
+  branch from docosanoyl_coa side left {
     docosanoyl_coa
     <-> . +fad +hplus +fadh2
     trans_2_docosenoyl_coa
   }
 
+  branch from docosanoyl_coa side right {
+    docosanoyl_coa
+    <-> . +ketosphinganine +coa +hplus
+    n_docosanoyl_3_ketodihydrosphingosine
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_93 [4.2.3.93] +fpp
-    guaiene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    manool
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    13_epi_manool
   }
 }

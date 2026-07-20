@@ -94,31 +94,65 @@
       }
     },
     {
-      "id": "n_carbamoylputrescinium",
-      "name": "N-carbamoylputrescinium",
-      "short": "N-carbamoylputresci…",
-      "formula": "C5H14N3O",
-      "charge": 1,
+      "id": "l_homoserine",
+      "name": "L-homoserine",
+      "formula": "C4H9NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58318"
+        "chebi": "CHEBI:57476"
       }
     },
     {
-      "id": "1_4_butanediammonium",
-      "name": "1,4-butanediammonium",
-      "formula": "C4H14N2",
-      "charge": 2,
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:326268"
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "l_cystine",
+      "name": "L-cystine",
+      "formula": "C6H12N2O4S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35491"
+      }
+    },
+    {
+      "id": "3_disulfanyl_l_alanine",
+      "name": "3-disulfanyl-L-alanine",
+      "short": "3-disulfanyl-L-alan…",
+      "formula": "C3H7NO2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58591"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_3_5_1_53",
-      "name": "N-carbamoylputrescine amidase",
+      "id": "ec_4_4_1_1",
+      "name": "cystathionine gamma-lyase",
       "ec": [
-        "3.5.1.53"
+        "4.4.1.1"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_35",
+      "name": "L-cystine beta-lyase",
+      "ec": [
+        "4.4.1.35"
       ]
     }
   ],
@@ -242,53 +276,90 @@
     },
     {
       "id": "r4",
-      "name": "N-carbamoylputrescine amidase",
-      "equation": "N-carbamoylputrescine + H2O + 2 H(+) = putrescine + NH4(+) + CO2",
-      "ec": "3.5.1.53",
+      "name": "cystathionine gamma-lyase",
+      "equation": "L-homoserine = 2-oxobutanoate + NH4(+)",
+      "ec": "4.4.1.1",
       "substrates": [
         {
-          "metabolite": "n_carbamoylputrescinium",
+          "metabolite": "l_homoserine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "1_4_butanediammonium",
+          "metabolite": "oxobut",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_53"
+          "enzyme": "ec_4_4_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:22284"
+        "rhea": "RHEA:24923"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22284"
+            "id": "RHEA:24923"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-cystine beta-lyase",
+      "equation": "L-cystine + H2O = S-sulfanyl-L-cysteine + pyruvate + NH4(+)",
+      "ec": "4.4.1.35",
+      "substrates": [
+        {
+          "metabolite": "l_cystine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24927"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha "β-D-galactosyl-(1→3)-N-ac… to cytidine 5'-monophosphate" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
@@ -20,19 +20,37 @@ pathway d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha "β-D-galactosyl-(1→3)
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_10 [2.4.3.10] +neup5ac_2_3_d_galp_1_3_d_glcpnac_1_3_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
-    neup5ac_2_3_d_galp_1_3_neup5ac_2_6_d_glcpnac_1
+    <-> ec_2_4_3_7 [2.4.3.7] +n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +1_2_di_palmitoleoyl_2_sn_glycerol +cdp_ethanolamine +hplus
+    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphoethan
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_1_1_1_120 [1.1.1.120] +nadp +nadph +hplus
+    d_galactono_1_5_lactone
   }
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> . +galactosylceramide +h2o
-    n_acylsphingoid
+    <-> ec_1_1_1_48 [1.1.1.48] +nad +nadh +hplus
+    d_galactono_1_4_lactone
   }
 
   branch from n_acetylneuraminate side left {
     n_acetylneuraminate
     <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
     d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
+  }
+
+  branch from n_acetylneuraminate side right {
+    n_acetylneuraminate
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +h2o
+    d_galactosyl_1_4_d_glucosyl_1_1_ceramide
   }
 }

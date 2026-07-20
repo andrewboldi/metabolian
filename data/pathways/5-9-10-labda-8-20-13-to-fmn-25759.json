@@ -112,68 +112,78 @@
       }
     },
     {
-      "id": "8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct",
-      "name": "8-[(1S,2S)-3-oxo-2-{(Z)-pent-2-en-1-yl}cyclopentyl]octanoate",
-      "short": "8-[(1S,2S)-3-oxo-2-…",
-      "formula": "C18H29O3",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cis_farnesene",
+      "name": "cis-β-farnesene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:39242"
+      }
+    },
+    {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
+    },
+    {
+      "id": "acoradiene",
+      "name": "α-acoradiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:172926"
+      }
+    },
+    {
+      "id": "nataloe_emodin",
+      "name": "nataloe-emodin",
+      "formula": "C15H9O5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:191855"
+        "chebi": "CHEBI:152055"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "opc8_coa",
-      "name": "OPC8-CoA",
-      "formula": "C39H60N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:138396"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
+      "id": "cladofulvin",
+      "name": "cladofulvin",
+      "formula": "C30H16O10",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:152057"
       }
     },
     {
-      "id": "9_10_epome",
-      "name": "9(10)-EpOME",
-      "formula": "C18H31O3",
+      "id": "20_hete",
+      "name": "20-HETE",
+      "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:84023"
+        "chebi": "CHEBI:76624"
       }
     },
     {
-      "id": "9_10_epoxy_18_hydroxy_12z_octadecenoate",
-      "name": "9,10-epoxy-18-hydroxy-(12Z)-octadecenoate",
-      "short": "9,10-epoxy-18-hydro…",
-      "formula": "C18H31O4",
+      "id": "8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate",
+      "name": "8,9-epoxy-20-hydroxy-(5Z,11Z,14Z)-icosatrienoate",
+      "short": "8,9-epoxy-20-hydrox…",
+      "formula": "C20H31O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:137467"
+        "chebi": "CHEBI:137474"
       }
     }
   ],
@@ -332,29 +342,17 @@
     },
     {
       "id": "r4",
-      "name": "(1S,2S)-OPC-8 + ATP + CoA = OPC8-CoA + AMP + diphosphate",
-      "equation": "(1S,2S)-OPC-8 + ATP + CoA = OPC8-CoA + AMP + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = (Z)-beta-farnesene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-beta-farnesene + diphosphate",
       "substrates": [
         {
-          "metabolite": "8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "opc8_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "cis_farnesene",
           "stoichiometry": 1
         },
         {
@@ -365,25 +363,111 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:54888"
+        "rhea": "RHEA:68508"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54888"
+            "id": "RHEA:68508"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "9,10-epoxy-(12Z)-octadecenoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydro...",
-      "equation": "9,10-epoxy-(12Z)-octadecenoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-9,10-epoxy-(12Z)-octadecenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(2Z,6Z)-farnesyl diphosphate = alpha-acoradiene + diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = alpha-acoradiene + diphosphate",
       "substrates": [
         {
-          "metabolite": "9_10_epome",
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acoradiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:68512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2 nataloe emodin + reduced [NADPH--hemoprotein reductase] + O2 = cladofulvin + oxidized...",
+      "equation": "2 nataloe emodin + reduced [NADPH--hemoprotein reductase] + O2 = cladofulvin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "nataloe_emodin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cladofulvin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:64288"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "20-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] +...",
+      "equation": "20-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-8,9-epoxy-(5Z,11Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "20_hete",
           "stoichiometry": 1
         },
         {
@@ -397,7 +481,7 @@
       ],
       "products": [
         {
-          "metabolite": "9_10_epoxy_18_hydroxy_12z_octadecenoate",
+          "metabolite": "8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate",
           "stoichiometry": 1
         },
         {
@@ -414,16 +498,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:53564"
+        "rhea": "RHEA:64980"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53564"
+            "id": "RHEA:64980"
           }
         ]
       }

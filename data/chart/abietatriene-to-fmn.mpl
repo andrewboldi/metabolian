@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway abietatriene-to-fmn "abietatriene to FMN" {
-  spacing 160
+  spacing 196
 
   spine at 0,0 {
     abietatriene
@@ -22,13 +22,31 @@ pathway abietatriene-to-fmn "abietatriene to FMN" {
     salviol
   }
 
+  branch from ferruginol side right {
+    ferruginol
+    <-> ec_1_14_14_65 [1.14.14.65] +fmnh2 +o2 +fmn +h2o +hplus
+    sugiol
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +3_17_dihydroxy_9_10_secoandrosta_1_3_5_10_triene +fmnh2 +o2 +h2o +hplus
+    3_4_17_trihydroxy_9_10_secoandrosta_1_3_5_10_tri
+  }
+
   branch from fmn side right {
     fmn
-    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_25_dihydroxycholesterol
+    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    4_7_dihydroxycholesterol
   }
 
   branch from 11_hydroxyferruginol side left {
+    11_hydroxyferruginol
+    <-> ec_1_14_14_65 [1.14.14.65] +fmnh2 +o2 +fmn +h2o +hplus
+    11_hydroxysugiol
+  }
+
+  branch from 11_hydroxyferruginol side right {
     11_hydroxyferruginol
     <-> ec_1_14_14_67 [1.14.14.67] +fmnh2 +o2 +fmn +h2o +hplus
     11_20_dihydroxyferruginol

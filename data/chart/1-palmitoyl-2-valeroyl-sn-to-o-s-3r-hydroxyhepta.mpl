@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta "1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy…" {
-  spacing 152
+  spacing 194
 
   spine at 0,0 {
     1_palmitoyl_2_valeroyl_sn_glycero_3_phosphocholi
@@ -26,10 +26,34 @@ pathway 1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta "1-palmitoyl-2-valeroyl
     1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +lauroyl_coa +coa
+    1_palmitoyl_2_lauroyl_sn_glycero_3_phosphocholin
+  }
+
+  branch from pentanal side left {
+    pentanal
+    <-> . +pentan_1_aminium +nadp +h2o +nadph +hplus
+    nh3
+  }
+
+  branch from pentanal side right {
+    pentanal
+    <-> . +hydrogen_cyanide
+    2s_2_hydroxyhexanenitrile
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_84 [4.2.3.84] +fpp +h2o
+    10_epi_eudesmol
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_91 [2.5.1.91] +ipp +fpp
-    all_trans_decaprenyl_diphosphate
+    <-> ec_4_2_3_85 [4.2.3.85] +fpp +h2o
+    eudesmol
   }
 
   branch from pentanoyl_coa side left {

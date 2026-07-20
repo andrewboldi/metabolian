@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-diol to (24E)-3α,7α,12α-trihydrox…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     diol_cdca
@@ -32,13 +32,25 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_17 [1.14.14.17] +squalene +fmnh2 +o2 +h2o +hplus
-    epoxysqualene
+    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
+    glyceollin_iii
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_144 [1.14.14.144] +abieta_7_13_diene +fmnh2 +o2 +h2o +hplus
+    abietol
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_4 [1.14.15.4] +steroid +di_sulfido_diiron +o2 +hplus +h2o
+    11_hydroxy_steroid
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_3_7_5 [1.3.7.5] +2r_3z_phycocyanobilin +di_sulfido_diiron +hplus
+    <-> ec_1_3_7_4 [1.3.7.4] +3z_phytochromobilin +di_sulfido_diiron +hplus
     biliverdin
   }
 
@@ -48,15 +60,39 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
     25r_3_7_dihydroxy_5_cholestan_26_oate
   }
 
+  branch from thca_coa_25r side left {
+    thca_coa_25r
+    <-> .
+    25s_3_7_12_trihydroxy_5_cholestan_26_oyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_10 [4.2.3.10] +gpp +h2o
+    endo_fenchol
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_24 [4.2.3.24] +fpp
-    amorpha_4_11_diene
+    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
+    3_l_lysyl_adenylyl_1_group
   }
 
   branch from thca_24oh_coa side right {
     thca_24oh_coa
     <-> . +nad +nadh +hplus
     thca_24oxo_coa
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
+    tetrachloroethene
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_1_99_27 [1.1.99.27] +r_pantolactone +hydrogen_acceptor
+    2_dehydropantolactone
   }
 }

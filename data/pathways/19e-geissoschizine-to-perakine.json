@@ -155,21 +155,31 @@
       }
     },
     {
-      "id": "5_hete",
-      "name": "5-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:65341"
+        "chebi": "CHEBI:16469"
       }
     },
     {
-      "id": "5_20_dihete",
-      "name": "5,20-DiHETE",
-      "formula": "C20H31O4",
-      "charge": -1,
+      "id": "15_hydroxyestradiol",
+      "name": "15α-hydroxyestradiol",
+      "formula": "C18H24O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90715"
+        "chebi": "CHEBI:87593"
+      }
+    },
+    {
+      "id": "4_hydroxy_17_estradiol",
+      "name": "4-hydroxy-17β-estradiol",
+      "short": "4-hydroxy-17β-estra…",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62845"
       }
     },
     {
@@ -479,11 +489,11 @@
     },
     {
       "id": "r6",
-      "name": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + ...",
-      "equation": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 5,20-dihydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxy-17beta...",
+      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxy-17beta-estradiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "5_hete",
+          "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
@@ -497,7 +507,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_20_dihete",
+          "metabolite": "15_hydroxyestradiol",
           "stoichiometry": 1
         },
         {
@@ -516,20 +526,71 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:48656"
+        "rhea": "RHEA:47276"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48656"
+            "id": "RHEA:47276"
           }
         ]
       }
     },
     {
       "id": "r7",
+      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 4-hydroxy-17beta-estra...",
+      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 4-hydroxy-17beta-estradiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:47280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "perakine reductase",
       "equation": "raucaffrinoline + NADP(+) = perakine + NADPH + H(+)",
       "ec": "1.1.1.317",
@@ -563,7 +624,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:31675"
       },

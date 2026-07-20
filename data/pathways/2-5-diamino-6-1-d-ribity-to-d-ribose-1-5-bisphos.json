@@ -141,22 +141,40 @@
       }
     },
     {
-      "id": "2_deoxycytosine_5_monophosphate",
-      "name": "2'-deoxycytosine 5'-monophosphate",
-      "short": "2'-deoxycytosine…",
-      "formula": "C9H12N3O7P",
-      "charge": -2,
+      "id": "r_nipecotamide",
+      "name": "(R)-nipecotamide",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57566"
+        "chebi": "CHEBI:60118"
       }
     },
     {
-      "id": "dump",
-      "name": "dUMP",
-      "formula": "C9H11N2O8P",
+      "id": "r_nipecotic_acid",
+      "name": "(R)-nipecotic acid",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60120"
+      }
+    },
+    {
+      "id": "3r_3_hydroxy_d_aspartate",
+      "name": "(3R)-3-hydroxy-D-aspartate",
+      "short": "3-hydroxy-D-asparta…",
+      "formula": "C4H6NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60898"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:246422"
+        "chebi": "CHEBI:16452"
       }
     }
   ],
@@ -176,10 +194,17 @@
       ]
     },
     {
-      "id": "ec_3_5_4_12",
-      "name": "dCMP deaminase",
+      "id": "ec_3_5_1_100",
+      "name": "(R)-amidase",
       "ec": [
-        "3.5.4.12"
+        "3.5.1.100"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_27",
+      "name": "threo-3-hydroxy-D-aspartate ammonia-lyase",
+      "ec": [
+        "4.3.1.27"
       ]
     }
   ],
@@ -366,26 +391,22 @@
     },
     {
       "id": "r5",
-      "name": "dCMP deaminase",
-      "equation": "dCMP + H2O + H(+) = dUMP + NH4(+)",
-      "ec": "3.5.4.12",
+      "name": "(R)-amidase",
+      "equation": "(3R)-piperidine-3-carboxamide + H2O = (3R)-piperidine-3-carboxylate + NH4(+)",
+      "ec": "3.5.1.100",
       "substrates": [
         {
-          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "metabolite": "r_nipecotamide",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dump",
+          "metabolite": "r_nipecotic_acid",
           "stoichiometry": 1
         },
         {
@@ -395,20 +416,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_12"
+          "enzyme": "ec_3_5_1_100"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:22924"
+        "rhea": "RHEA:27574"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22924"
+            "id": "RHEA:27574"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "threo-3-hydroxy-D-aspartate ammonia-lyase",
+      "equation": "(3R)-3-hydroxy-D-aspartate = oxaloacetate + NH4(+)",
+      "ec": "4.3.1.27",
+      "substrates": [
+        {
+          "metabolite": "3r_3_hydroxy_d_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:27942"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27942"
           }
         ]
       }

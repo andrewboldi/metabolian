@@ -137,33 +137,60 @@
       }
     },
     {
-      "id": "2r_3r_3_hydroxylittorine",
-      "name": "(2R,3R)-3-hydroxylittorine",
-      "short": "(2R,3R)-3-hydroxyli…",
-      "formula": "C17H24NO4",
+      "id": "tropine",
+      "name": "tropine",
+      "formula": "C8H16NO",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:234344"
+        "metanetx": "MNXM733338"
       }
     },
     {
-      "id": "e_indol_3_ylacetaldehyde_oxime",
-      "name": "(E)-indol-3-ylacetaldehyde oxime",
-      "short": "indol-3-ylacetaldeh…",
-      "formula": "C10H10N2O",
-      "charge": 0,
+      "id": "z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+      "name": "(Z,3S)-2-(3-hydroxybutenyl)-thiohydroximate-O-sulfate",
+      "short": "(Z,3S)-2-(3-hydroxy…",
+      "formula": "C5H8NO5S2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17545"
+        "metanetx": "MNXM1368612"
       }
     },
     {
-      "id": "1_aci_nitro_2_1h_indol_3_yl_ethane",
-      "name": "1-aci-nitro-2-(1H-indol-3-yl)ethane",
-      "short": "1-aci-nitro-2-(1H-i…",
-      "formula": "C10H10N2O2",
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2r_2_hydroxybut_3_enylglucosinolate",
+      "name": "(2R)-2-Hydroxybut-3-enylglucosinolate",
+      "short": "2-Hydroxybut-3-enyl…",
+      "formula": "C11H19NO10S2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:136445"
+        "chebi": "CHEBI:190717"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+      "name": "(E,3S)-2-(3-hydroxybutenyl)-thiohydroximate-O-sulfate",
+      "short": "(E,3S)-2-(3-hydroxy…",
+      "formula": "C5H7NO5S2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368613"
       }
     }
   ],
@@ -187,6 +214,20 @@
       "name": "littorine mutase",
       "ec": [
         "1.14.14.195"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_185",
+      "name": "tropine acyltransferase",
+      "ec": [
+        "2.3.1.185"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_147",
+      "name": "thioglucosidase",
+      "ec": [
+        "3.2.1.147"
       ]
     }
   ],
@@ -340,102 +381,134 @@
     },
     {
       "id": "r4",
-      "name": "(R)-littorine + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-3-hydroxylittorin...",
-      "equation": "(R)-littorine + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-3-hydroxylittorine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "tropine acyltransferase",
+      "ec": "2.3.1.185",
       "substrates": [
         {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "r_littorine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2r_3r_3_hydroxylittorine",
+          "metabolite": "r_3_phenyllactyl_d_glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
+          "metabolite": "tropine",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_2_3_1_185"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:85419"
+        "metanetx": "MNXR198005"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85419"
+            "db": "MetaNetX",
+            "id": "MNXR198005"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(E)-(indol-3-yl)acetaldehyde oxime + reduced [NADPH--hemoprotein reductase] + O2 = 1-ac...",
-      "equation": "(E)-(indol-3-yl)acetaldehyde oxime + reduced [NADPH--hemoprotein reductase] + O2 = 1-aci-nitro-2-(1H-indol-3-yl)ethane + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "thioglucosidase",
+      "ec": "3.2.1.147",
       "substrates": [
         {
-          "metabolite": "e_indol_3_ylacetaldehyde_oxime",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
+          "metabolite": "z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_aci_nitro_2_1h_indol_3_yl_ethane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
+          "metabolite": "2r_2_hydroxybut_3_enylglucosinolate",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_3_2_1_147"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:52184"
+        "metanetx": "MNXR197037"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:52184"
+            "db": "MetaNetX",
+            "id": "MNXR197037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR197038",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_2_hydroxybut_3_enylglucosinolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR197038"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197038"
           }
         ]
       }

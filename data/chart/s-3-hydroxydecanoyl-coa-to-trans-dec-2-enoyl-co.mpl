@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxydecanoyl-coa-to-trans-dec-2-enoyl-co "(S)-3-hydroxydecanoyl-CoA to trans-dec-2-enoyl-CoA" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     s_3_hydroxydecanoyl_coa
@@ -18,13 +18,25 @@ pathway s-3-hydroxydecanoyl-coa-to-trans-dec-2-enoyl-co "(S)-3-hydroxydecanoyl-C
 
   branch from trans_dec_2_enoyl_coa side left {
     trans_dec_2_enoyl_coa
+    <-> . +h2o
+    r_3_hydroxydecanoyl_coa
+  }
+
+  branch from trans_dec_2_enoyl_coa side right {
+    trans_dec_2_enoyl_coa
     <-> . +nadp +nadph +hplus
     2e_4z_deca_2_4_dienoyl_coa
   }
 
-  branch from decanoyl_coa side right {
+  branch from decanoyl_coa side left {
     decanoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
     1_palmitoyl_2_decanoyl_sn_glycero_3_phosphocholi
+  }
+
+  branch from decanoyl_coa side right {
+    decanoyl_coa
+    <-> . +h2o +coa +hplus
+    decanoate
   }
 }

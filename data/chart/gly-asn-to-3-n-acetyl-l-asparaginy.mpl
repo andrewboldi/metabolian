@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gly-asn-to-3-n-acetyl-l-asparaginy "Gly-Asn to 3'-(N-acetyl-L-asparaginy…" {
-  spacing 156
+  spacing 198
 
   spine at 0,0 {
     gly_asn
@@ -18,14 +18,26 @@ pathway gly-asn-to-3-n-acetyl-l-asparaginy "Gly-Asn to 3'-(N-acetyl-L-asparaginy
 
   branch from l_asparagine side left {
     l_asparagine
-    <-> ec_2_6_1_14 [2.6.1.14] +akg +glutamate
+    <-> .
+    d_asparagine
+  }
+
+  branch from l_asparagine side right {
+    l_asparagine
+    <-> . +o2 +h2o +h2o2 +nh3
     2_oxosuccinamate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +cerotate +h2o
+    n_hexacosanoylglycinate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +2_3_dihydroxybenzoate +threonine +atp +amp +ppi +h2o +hplus
-    corynebactin
+    <-> . +n_hexacosanoylglycinate +coa +hplus
+    hexacosanoyl_coa
   }
 
   branch from 3_l_asparaginyl_adenylyl_1_group side left {
@@ -36,7 +48,13 @@ pathway gly-asn-to-3-n-acetyl-l-asparaginy "Gly-Asn to 3'-(N-acetyl-L-asparaginy
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_41 [4.2.3.41] +geranylgeranyl_diphosphate
-    elisabethatriene
+    <-> ec_4_2_3_63 [4.2.3.63] +fpp
+    cubenene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_64 [4.2.3.64] +fpp +h2o
+    epicubenol
   }
 }

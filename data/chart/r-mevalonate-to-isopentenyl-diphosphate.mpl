@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-mevalonate-to-isopentenyl-diphosphate "(R)-mevalonate to isopentenyl diphosphate" {
-  spacing 196
+  spacing 214
 
   spine at 0,0 {
     mevalonate
@@ -18,13 +18,19 @@ pathway r-mevalonate-to-isopentenyl-diphosphate "(R)-mevalonate to isopentenyl d
 
   branch from mevalonate_5p side left {
     mevalonate_5p
-    <-> ec_4_1_1_99 [4.1.1.99] +atp +adp +co2 +pi
-    isopentenyl_phosphate
+    <-> ec_4_2_1_182 [4.2.1.182] +h2o
+    2e_3_methylpent_2_enoate_5_phosphate
   }
 
   branch from ipp side right {
     ipp
     <-> ec_2_5_1_1 [2.5.1.1] +dmapp +ppi
     gpp
+  }
+
+  branch from ipp side left {
+    ipp
+    <-> ec_5_3_3_2 [5.3.3.2]
+    dmapp
   }
 }

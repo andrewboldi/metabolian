@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate",
   "name": "trans-cyclohexane-1,2-diol to 6-oxohexanoate",
-  "category": "energy-metabolism",
+  "category": "carbohydrate-metabolism",
   "summary": "A 3-step route from trans-cyclohexane-1,2-diol to 6-oxohexanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -121,12 +121,51 @@
       }
     },
     {
-      "id": "6_hydroxyhexanoate",
-      "name": "6-hydroxyhexanoate",
-      "formula": "C6H11O3",
-      "charge": -1,
+      "id": "2_aminocyclohexan_1_ol",
+      "name": "2-aminocyclohexan-1-ol",
+      "short": "2-aminocyclohexan-1…",
+      "formula": "C6H14NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32383"
+        "chebi": "CHEBI:195500"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat",
+      "name": "N-(1-deoxy-β-D-fructopyranos-1-yl)-L-6-aminohexanoate",
+      "short": "N-(1-deoxy-β-D-fruc…",
+      "formula": "C12H23NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:228169"
+      }
+    },
+    {
+      "id": "1_deoxy_d_fructos_1_yl_amine",
+      "name": "(1-deoxy-D-fructos-1-yl)amine",
+      "short": "(1-deoxy-D-fructos-…",
+      "formula": "C6H14NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:228165"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     }
   ],
@@ -277,25 +316,33 @@
     },
     {
       "id": "r4",
-      "name": "6-hydroxyhexanoate + NADP(+) = 6-oxohexanoate + NADPH + H(+)",
-      "equation": "6-hydroxyhexanoate + NADP(+) = 6-oxohexanoate + NADPH + H(+)",
+      "name": "2-aminocyclohexanol + NAD(+) + H2O = 2-hydroxycyclohexan-1-one + NH4(+) + NADH + H(+)",
+      "equation": "2-aminocyclohexanol + NAD(+) + H2O = 2-hydroxycyclohexan-1-one + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "6_hydroxyhexanoate",
+          "metabolite": "2_aminocyclohexan_1_ol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_oxohexanoate",
+          "metabolite": "2_hydroxycyclohexan_1_one",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -306,14 +353,61 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31267"
+        "rhea": "RHEA:77019"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31267"
+            "id": "RHEA:77019"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-6-aminohexanoate + O2 + H2O = (1-deoxy-D-fructo...",
+      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-6-aminohexanoate + O2 + H2O = (1-deoxy-D-fructos-1-yl)amine + 6-oxohexanoate + H2O2",
+      "substrates": [
+        {
+          "metabolite": "n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_deoxy_d_fructos_1_yl_amine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:77899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77899"
           }
         ]
       }

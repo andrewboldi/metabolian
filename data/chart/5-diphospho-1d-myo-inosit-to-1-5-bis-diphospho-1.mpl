@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-diphospho-1d-myo-inosit-to-1-5-bis-diphospho-1 "5-diphospho-1D-myo-inosit… to 1,5-bis(diphospho)-1D-myo…" {
-  spacing 244
+  spacing 268
 
   spine at 0,0 {
     5_diphospho_1d_myo_inositol_1_3_4_6_tetrakisphos
@@ -28,15 +28,21 @@ pathway 5-diphospho-1d-myo-inosit-to-1-5-bis-diphospho-1 "5-diphospho-1D-myo-ino
     1d_myo_inositol_1_4_5_6_tetrakisphosphate
   }
 
-  branch from myo_inositol_hexakisphosphate side right {
-    myo_inositol_hexakisphosphate
-    <-> ec_3_1_3_26 [3.1.3.26] +h2o +pi
-    1d_myo_inositol_1_2_3_5_6_pentakisphosphate
+  branch from myo_inositol_1_3_4_5_6_pentakisphosphate side right {
+    myo_inositol_1_3_4_5_6_pentakisphosphate
+    <-> ec_2_7_1_151 [2.7.1.151] +atp +adp +hplus
+    1d_myo_inositol_1_4_5_trisphosphate
   }
 
-  branch from 5_diphospho_1d_myo_inositol_pentakisphosphate side left {
-    5_diphospho_1d_myo_inositol_pentakisphosphate
-    <-> . +o_phospho_l_serine_2 +myo_inositol_hexakisphosphate
-    o_diphosphonato_l_serine_3
+  branch from myo_inositol_hexakisphosphate side left {
+    myo_inositol_hexakisphosphate
+    <-> ec_3_1_3_72 [3.1.3.72] +h2o +pi
+    1l_myo_inositol_1_2_3_4_6_pentakisphosphate
+  }
+
+  branch from myo_inositol_hexakisphosphate side right {
+    myo_inositol_hexakisphosphate
+    <-> ec_3_1_3_8 [3.1.3.8] +h2o +pi
+    1d_myo_inositol_1_2_4_5_6_pentakisphosphate
   }
 }

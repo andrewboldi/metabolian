@@ -1,0 +1,365 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-to-catechin",
+  "name": "UDP to (−)-catechin",
+  "category": "other",
+  "summary": "A 3-step route from UDP to (−)-catechin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198246"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_sophoroside",
+      "name": "Cyanidin 3-O-sophoroside",
+      "short": "Cyanidin 3-O-sophor…",
+      "formula": "C27H30O16",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368922"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_glucoside",
+      "name": "Cyanidin 3-O-glucoside",
+      "short": "Cyanidin 3-O-glucos…",
+      "formula": "C21H20O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371016"
+      }
+    },
+    {
+      "id": "idb_1027",
+      "name": "IdB 1027",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1372543"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "catechin",
+      "name": "(−)-catechin",
+      "formula": "C15H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33992"
+      }
+    },
+    {
+      "id": "22_oxodocosanoate",
+      "name": "22-oxodocosanoate",
+      "formula": "C22H41O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76298"
+      }
+    },
+    {
+      "id": "22_hydroxydocosanoate",
+      "name": "22-hydroxydocosanoate",
+      "short": "22-hydroxydocosanoa…",
+      "formula": "C22H43O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76304"
+      }
+    },
+    {
+      "id": "docosanedioate",
+      "name": "docosanedioate",
+      "formula": "C22H40O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:76299"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_115",
+      "name": "anthocyanidin 3-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.115"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR198246",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanidin_3_o_sophoroside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanidin_3_o_glucoside",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198246"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198246"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "anthocyanidin 3-O-glucosyltransferase",
+      "ec": "2.4.1.115",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanidin_3_o_glucoside",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "idb_1027",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198230"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198230"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR197654",
+      "substrates": [
+        {
+          "metabolite": "idb_1027",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "catechin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197654"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR176288",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "22_oxodocosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "22_hydroxydocosanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR176288"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR176289",
+      "substrates": [
+        {
+          "metabolite": "docosanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "22_oxodocosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR176289"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176289"
+          }
+        ]
+      }
+    }
+  ]
+}

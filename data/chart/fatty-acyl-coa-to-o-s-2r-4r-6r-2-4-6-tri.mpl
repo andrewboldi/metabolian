@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri "fatty acyl-CoA to O-(S-[2R,4R,6R]-2,4,6-tri…" {
-  spacing 272
+  spacing 296
 
   spine at 0,0 {
     fatty_acyl_coa
@@ -20,19 +20,25 @@ pathway fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri "fatty acyl-CoA to O-(S-[2R,4R,
 
   branch from long_chain_primary_fatty_alcohol side left {
     long_chain_primary_fatty_alcohol
-    <-> ec_1_2_1_84 [1.2.1.84] +nadph +hplus +nadp +coa
-    long_chain_fatty_acyl_coa
+    <-> . +nadp +nadph +hplus
+    long_chain_fatty_aldehyde
   }
 
-  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side right {
-    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
-    <-> . +holo-acp +amp +hplus
-    long_chain_fatty_acyl_amp
+  branch from long_chain_primary_fatty_alcohol side right {
+    long_chain_primary_fatty_alcohol
+    <-> ec_1_2_1_108 [1.2.1.108] +nadh +hplus +nad +coa
+    long_chain_fatty_acyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_201 [4.2.3.201] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    hydropyrene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    astellatene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +all_trans_pentaprenyl_diphosphate +h2o
+    preaspterpenacid_acid_i
   }
 }

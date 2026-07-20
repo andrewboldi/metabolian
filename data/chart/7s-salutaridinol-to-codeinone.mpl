@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7s-salutaridinol-to-codeinone "(7S)-salutaridinol to codeinone" {
-  spacing 204
+  spacing 264
 
   spine at 0,0 {
     7s_salutaridinol
@@ -24,10 +24,22 @@ pathway 7s-salutaridinol-to-codeinone "(7S)-salutaridinol to codeinone" {
     oripavine
   }
 
+  branch from thebaine side right {
+    thebaine
+    <-> . +akg +o2 +formaldehyde +succinate +co2 +hplus
+    6_o_demethylthebaine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_muramate +h2o
+    n_acetyl_d_glucosaminyl_1_4_d_muramate_zwitterio
+  }
+
   branch from acetate side right {
     acetate
-    <-> . +n_acetyltryptamine +h2o
-    tryptaminium
+    <-> . +n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_n_acetyl +h2o
+    n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_d_muramy
   }
 
   branch from neopinone side left {
@@ -38,14 +50,26 @@ pathway 7s-salutaridinol-to-codeinone "(7S)-salutaridinol to codeinone" {
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +3_6_dichloro_2_methoxybenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_6_dichlorosalicylate
+    <-> ec_1_14_11_67 [1.14.11.67] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
+    l_lysinium
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
+    n6_n6_dimethyl_l_lysine_1
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_79 [1.14.11.79] +l_histidine +akg +o2 +co2
+    3s_3_hydroxy_l_histidine
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    4r_4_hydroxy_l_lysine
+    <-> . +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
   }
 
   branch from codeinone side right {

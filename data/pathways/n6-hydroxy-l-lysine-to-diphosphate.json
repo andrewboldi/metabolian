@@ -120,22 +120,48 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "8_oxo_gtp",
+      "name": "8-oxo-GTP",
+      "formula": "C10H12N5O15P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:143553"
       }
     },
     {
-      "id": "guaia_4_6_diene",
-      "name": "guaia-4,6-diene",
-      "formula": "C15H24",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138049"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "8_oxo_gmp",
+      "name": "8-oxo-GMP",
+      "formula": "C10H12N5O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:145694"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57667"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine",
+      "name": "2'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17256"
       }
     }
   ],
@@ -159,13 +185,6 @@
       "name": "aerobactin synthase",
       "ec": [
         "6.3.2.39"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_179",
-      "name": "guaia-4,6-diene synthase",
-      "ec": [
-        "4.2.3.179"
       ]
     }
   ],
@@ -331,18 +350,64 @@
     },
     {
       "id": "r4",
-      "name": "guaia-4,6-diene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = guaia-4,6-diene + diphosphate",
-      "ec": "4.2.3.179",
+      "name": "8-oxo-GTP + H2O = 8-oxo-GMP + diphosphate + H(+)",
+      "equation": "8-oxo-GTP + H2O = 8-oxo-GMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "8_oxo_gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "guaia_4_6_diene",
+          "metabolite": "8_oxo_gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:67616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dADP + H2O = 2'-deoxyadenosine + diphosphate",
+      "equation": "dADP + H2O = 2'-deoxyadenosine + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine",
           "stoichiometry": 1
         },
         {
@@ -350,22 +415,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_179"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54108"
+        "rhea": "RHEA:67652"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54108"
+            "id": "RHEA:67652"
           }
         ]
       }

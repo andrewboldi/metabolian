@@ -1,0 +1,427 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ditp-to-hypoxanthine",
+  "name": "dITP to hypoxanthine",
+  "category": "other",
+  "summary": "A 3-step route from dITP(4−) to hypoxanthine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28342"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61382"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ditp",
+      "name": "dITP",
+      "formula": "C10H11N4O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61382"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxyinosine_5_phosphate",
+      "name": "2'-deoxyinosine 5'-phosphate",
+      "short": "2'-deoxyinosine 5'-P",
+      "formula": "C10H11N4O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61194"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_deoxyinosine",
+      "name": "2'-deoxyinosine",
+      "formula": "C10H12N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28997"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57259"
+      }
+    },
+    {
+      "id": "hypoxanthine",
+      "name": "Hypoxanthine",
+      "formula": "C5H4N4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17368"
+      }
+    },
+    {
+      "id": "2_deoxyinosine_5_diphosphate",
+      "name": "2'-deoxyinosine 5'-diphosphate",
+      "short": "2'-deoxyinosine…",
+      "formula": "C10H11N4O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62286"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "elemene",
+      "name": "(−)-β-elemene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62855"
+      }
+    },
+    {
+      "id": "germacrene_d",
+      "name": "germacrene D",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49045"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_66",
+      "name": "XTP/dITP diphosphatase",
+      "ec": [
+        "3.6.1.66"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_64",
+      "name": "inosine diphosphate phosphatase",
+      "ec": [
+        "3.6.1.64"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nucleotide diphosphatase",
+      "equation": "dITP + H2O = dIMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "ditp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28342"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dIMP + H2O = 2'-deoxyinosine + phosphate",
+      "equation": "dIMP + H2O = 2'-deoxyinosine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "2'-deoxyinosine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + hypoxanthine",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyinosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hypoxanthine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27750"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27750"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "inosine diphosphate phosphatase",
+      "equation": "dIDP + H2O = dIMP + phosphate + H(+)",
+      "ec": "3.6.1.64",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyinosine_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:35211"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2E,6E)-farnesyl diphosphate = (1S,2S,4R)-beta-elemene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (1S,2S,4R)-beta-elemene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "elemene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:68712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(2E,6E)-farnesyl diphosphate = germacrene D + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = germacrene D + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germacrene_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:68716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68716"
+          }
+        ]
+      }
+    }
+  ]
+}

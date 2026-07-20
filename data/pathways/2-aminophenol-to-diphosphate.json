@@ -128,32 +128,32 @@
       }
     },
     {
-      "id": "6_1s_5s_4_oxo_5_2z_pent_2_en_1_yl_cyclopent_2_en",
-      "name": "6-{(1S,5S)-4-oxo-5-[(2Z)-pent-2-en-1-yl]cyclopent-2-en-1-yl}hexanoate",
-      "short": "6-{(1S,5S)-4-oxo-5-…",
-      "formula": "C16H23O3",
-      "charge": -1,
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:138432"
+        "chebi": "CHEBI:60374"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "acoradiene",
+      "name": "β-acoradiene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:172925"
       }
     },
     {
-      "id": "9s_13s_1a_1b_dinor_12_oxo_10_15_phytodienoyl_co",
-      "name": "(9S,13S)-1a,1b-dinor-12-oxo-10,15-phytodienoyl-CoA",
-      "short": "(9S,13S)-1a,1b-dino…",
-      "formula": "C37H54N7O18P3S",
-      "charge": -4,
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:138433"
+        "chebi": "CHEBI:175763"
       }
     }
   ],
@@ -304,29 +304,17 @@
     },
     {
       "id": "r4",
-      "name": "dinor-OPDA + ATP + CoA = dinor-OPDA-CoA + AMP + diphosphate",
-      "equation": "dinor-OPDA + ATP + CoA = dinor-OPDA-CoA + AMP + diphosphate",
+      "name": "(2Z,6Z)-farnesyl diphosphate = beta-acoradiene + diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = beta-acoradiene + diphosphate",
       "substrates": [
         {
-          "metabolite": "6_1s_5s_4_oxo_5_2z_pent_2_en_1_yl_cyclopent_2_en",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "9s_13s_1a_1b_dinor_12_oxo_10_15_phytodienoyl_co",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "acoradiene",
           "stoichiometry": 1
         },
         {
@@ -337,14 +325,49 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:54960"
+        "rhea": "RHEA:68516"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54960"
+            "id": "RHEA:68516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2E,6E)-farnesyl diphosphate = beta-acoradiene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-acoradiene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acoradiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:68520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68520"
           }
         ]
       }

@@ -1,0 +1,280 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2s-2-acetamido-4-aminob-to-2s-4s-4-hydroxy-2-3",
+  "name": "(2S)-2-acetamido-4-aminob… to (2S,4S)-4-hydroxy-2,3,4,5…",
+  "category": "other",
+  "summary": "A 3-step route from (2S)-2-acetamido-4-aminobutanoic acid zwitterion to (2S,4S)-4-hydroxy-2,3,4,5-tetrahydrodipicolinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40951"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77587"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2s_2_acetamido_4_aminobutanoic_acid",
+      "name": "(2S)-2-acetamido-4-aminobutanoic acid",
+      "short": "2-acetamido-4-amino…",
+      "formula": "C6H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77587"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_2_4_diazaniumylbutyrate",
+      "name": "L-2,4-diazaniumylbutyrate",
+      "short": "L-2,4-diazaniumylbu…",
+      "formula": "C4H11N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58761"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "l_aspartic_acid_4_semialdehyde",
+      "name": "L-aspartic acid 4-semialdehyde",
+      "short": "L-aspartic acid…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:537519"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "2s_4s_4_hydroxy_2_3_4_5_tetrahydrodipicolinate",
+      "name": "(2S,4S)-4-hydroxy-2,3,4,5-tetrahydrodipicolinate",
+      "short": "(2S,4S)-4-hydroxy-2…",
+      "formula": "C7H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:67139"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_125",
+      "name": "N(2)-acetyl-L-2,4-diaminobutanoate deacetylase",
+      "ec": [
+        "3.5.1.125"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_76",
+      "name": "diaminobutyrate--2-oxoglutarate transaminase",
+      "ec": [
+        "2.6.1.76"
+      ]
+    },
+    {
+      "id": "ec_4_3_3_7",
+      "name": "4-hydroxy-tetrahydrodipicolinate synthase",
+      "ec": [
+        "4.3.3.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N(2)-acetyl-L-2,4-diaminobutanoate deacetylase",
+      "equation": "(2S)-2-acetamido-4-aminobutanoate + H2O = L-2,4-diaminobutanoate + acetate",
+      "ec": "3.5.1.125",
+      "substrates": [
+        {
+          "metabolite": "2s_2_acetamido_4_aminobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_2_4_diazaniumylbutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_125"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "diaminobutyrate--2-oxoglutarate transaminase",
+      "equation": "L-2,4-diaminobutanoate + 2-oxoglutarate = L-aspartate 4-semialdehyde + L-glutamate",
+      "ec": "2.6.1.76",
+      "substrates": [
+        {
+          "metabolite": "l_2_4_diazaniumylbutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_aspartic_acid_4_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-hydroxy-tetrahydrodipicolinate synthase",
+      "equation": "L-aspartate 4-semialdehyde + pyruvate = (2S,4S)-4-hydroxy-2,3,4,5-tetrahydrodipicolinate + H2O + H(+)",
+      "ec": "4.3.3.7",
+      "substrates": [
+        {
+          "metabolite": "l_aspartic_acid_4_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_4s_4_hydroxy_2_3_4_5_tetrahydrodipicolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34171"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34171"
+          }
+        ]
+      }
+    }
+  ]
+}

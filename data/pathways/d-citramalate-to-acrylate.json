@@ -1,0 +1,463 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-citramalate-to-acrylate",
+  "name": "D-citramalate to acrylate",
+  "category": "other",
+  "summary": "A 7-step route from D-citramalate(2−) to acrylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22332"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30934"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_citramalate",
+      "name": "D-citramalate",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30934"
+      }
+    },
+    {
+      "id": "citraconate",
+      "name": "citraconate",
+      "formula": "C5H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30719"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_erythro_3_methylmalate",
+      "name": "D-erythro-3-methylmalate",
+      "short": "D-erythro-3-methylm…",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58511"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_methyl_3_oxosuccinate",
+      "name": "2-methyl-3-oxosuccinate",
+      "short": "2-methyl-3-oxosucci…",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58851"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "propanal",
+      "name": "propanal",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17153"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "acrolein",
+      "name": "acrolein",
+      "formula": "C3H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15368"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "acrylate",
+      "name": "acrylate",
+      "formula": "C3H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:37080"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_35",
+      "name": "(R)-2-methylmalate dehydratase",
+      "ec": [
+        "4.2.1.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-2-methylmalate dehydratase",
+      "equation": "(3R)-citramalate = 2-methylmaleate + H2O",
+      "ec": "4.2.1.35",
+      "substrates": [
+        {
+          "metabolite": "d_citramalate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "citraconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-2-methylmalate dehydratase",
+      "equation": "2-methylmaleate + H2O = (2R,3S)-3-methylmalate",
+      "ec": "4.2.1.35",
+      "substrates": [
+        {
+          "metabolite": "citraconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_erythro_3_methylmalate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:42424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2R,3S)-3-methylmalate + NAD(+) = 3-carboxy-2-oxobutanoate + NADH + H(+)",
+      "equation": "(2R,3S)-3-methylmalate + NAD(+) = 3-carboxy-2-oxobutanoate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_erythro_3_methylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methyl_3_oxosuccinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25763"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25763"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-carboxy-2-oxobutanoate + H(+) = 2-oxobutanoate + CO2",
+      "equation": "3-carboxy-2-oxobutanoate + H(+) = 2-oxobutanoate + CO2",
+      "substrates": [
+        {
+          "metabolite": "2_methyl_3_oxosuccinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-oxobutanoate + H(+) = propanal + CO2",
+      "equation": "2-oxobutanoate + H(+) = propanal + CO2",
+      "substrates": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55072"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55072"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "propanal + NADP(+) = acrolein + NADPH + H(+)",
+      "equation": "propanal + NADP(+) = acrolein + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "propanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acrolein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:64716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "acrolein + NAD(+) + H2O = acrylate + NADH + 2 H(+)",
+      "equation": "acrolein + NAD(+) + H2O = acrylate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "acrolein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acrylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:69084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69084"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-o-s-3r-3-isocyanoyl-f "(3R)-3-[(carboxylmethyl)a… to O-[S-((3R)-3-isocyanoyl-f…" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_fatty_acid
@@ -20,13 +20,25 @@ pathway 3r-3-carboxylmethyl-a-to-o-s-3r-3-isocyanoyl-f "(3R)-3-[(carboxylmethyl)
 
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
+    <-> . +2_deoxyadenosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    2_chloro_deoxyadenosine_5_monophosphate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +2_deoxyguanosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    2_chloro_deoxyguanosine_5_monophosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_174 [4.2.3.174] +fpp +h2o
+    2e_6e_hedycaryol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    manool
+    <-> ec_4_2_3_187 [4.2.3.187] +fpp +h2o
+    2z_6e_hedycaryol
   }
 }

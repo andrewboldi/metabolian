@@ -128,6 +128,33 @@
       }
     },
     {
+      "id": "decanal",
+      "name": "decanal",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31457"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
       "id": "n6_capryl_l_lysine",
       "name": "N6-capryl-L-lysine",
       "formula": "C16H30N2O2",
@@ -174,13 +201,23 @@
       }
     },
     {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
+      "id": "1_o_palmityl_2_acetyl_sn_glycerol",
+      "name": "1-O-palmityl-2-acetyl-sn-glycerol",
+      "short": "1-O-palmityl-2-acet…",
+      "formula": "C21H42O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:128769"
+        "chebi": "CHEBI:75936"
+      }
+    },
+    {
+      "id": "1_hexadecyl_2_acetyl_3_decanoyl_sn_glycerol",
+      "name": "1-hexadecyl-2-acetyl-3-decanoyl-sn-glycerol",
+      "short": "1-hexadecyl-2-acety…",
+      "formula": "C31H60O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77679"
       }
     },
     {
@@ -194,13 +231,21 @@
       }
     },
     {
-      "id": "all_trans_hexaprenyl_diphosphate",
-      "name": "all-trans-hexaprenyl diphosphate",
-      "short": "all-trans-hexapreny…",
-      "formula": "C30H49O7P2",
-      "charge": -3,
+      "id": "thujopsene",
+      "name": "(+)-thujopsene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58179"
+        "chebi": "CHEBI:61737"
+      }
+    },
+    {
+      "id": "chamigrene",
+      "name": "(+)-β-chamigrene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61746"
       }
     },
     {
@@ -212,32 +257,21 @@
       "xrefs": {
         "chebi": "CHEBI:74276"
       }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_5_1_83",
-      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
+      "id": "ec_4_2_3_79",
+      "name": "thujopsene synthase",
       "ec": [
-        "2.5.1.83"
+        "4.2.3.79"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_78",
+      "name": "beta-chamigrene synthase",
+      "ec": [
+        "4.2.3.78"
       ]
     }
   ],
@@ -373,6 +407,53 @@
     },
     {
       "id": "r4",
+      "name": "decanal + NAD(+) + H2O = decanoate + NADH + 2 H(+)",
+      "equation": "decanal + NAD(+) + H2O = decanoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "decanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "decanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "N(6)-decanoyl-L-lysyl-[protein] + H2O = decanoate + L-lysyl-[protein]",
       "equation": "N(6)-decanoyl-L-lysyl-[protein] + H2O = decanoate + L-lysyl-[protein]",
       "substrates": [
@@ -396,7 +477,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:85167"
       },
@@ -411,7 +492,7 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "decanoyl-CoA + O2 = (2E)-decenoyl-CoA + H2O2",
       "equation": "decanoyl-CoA + O2 = (2E)-decenoyl-CoA + H2O2",
       "substrates": [
@@ -435,7 +516,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:40179"
       },
@@ -450,15 +531,50 @@
       }
     },
     {
-      "id": "r6",
-      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
-      "equation": "3 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-hexaprenyl diphosphate + 3 diphosphate",
-      "ec": "2.5.1.83",
+      "id": "r7",
+      "name": "1-O-hexadecyl-2-acetyl-sn-glycerol + decanoyl-CoA = 1-O-hexadecyl-2-acetyl-3-decanoyl-s...",
+      "equation": "1-O-hexadecyl-2-acetyl-sn-glycerol + decanoyl-CoA = 1-O-hexadecyl-2-acetyl-3-decanoyl-sn-glycerol + CoA",
       "substrates": [
         {
-          "metabolite": "ipp",
-          "stoichiometry": 3
+          "metabolite": "1_o_palmityl_2_acetyl_sn_glycerol",
+          "stoichiometry": 1
         },
+        {
+          "metabolite": "decanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hexadecyl_2_acetyl_3_decanoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:41031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "thujopsene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-thujopsene + diphosphate",
+      "ec": "4.2.3.79",
+      "substrates": [
         {
           "metabolite": "fpp",
           "stoichiometry": 1
@@ -466,36 +582,77 @@
       ],
       "products": [
         {
-          "metabolite": "all_trans_hexaprenyl_diphosphate",
+          "metabolite": "thujopsene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_83"
+          "enzyme": "ec_4_2_3_79"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:27559"
+        "rhea": "RHEA:30375"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27559"
+            "id": "RHEA:30375"
           }
         ]
       }
     },
     {
-      "id": "r7",
+      "id": "r9",
+      "name": "beta-chamigrene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-chamigrene + diphosphate",
+      "ec": "4.2.3.78",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chamigrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:30379"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30379"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
       "name": "(3R)-3-hydroxydodecanoyl-CoA + NAD(+) = 3-oxododecanoyl-CoA + NADH + H(+)",
       "equation": "(3R)-3-hydroxydodecanoyl-CoA + NAD(+) = 3-oxododecanoyl-CoA + NADH + H(+)",
       "substrates": [
@@ -523,7 +680,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:78671"
       },

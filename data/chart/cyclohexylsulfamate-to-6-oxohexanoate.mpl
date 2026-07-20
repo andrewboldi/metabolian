@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclohexylsulfamate-to-6-oxohexanoate "cyclohexylsulfamate to 6-oxohexanoate" {
-  spacing 192
+  spacing 222
 
   spine at 0,0 {
     cyclohexylsulfamate
@@ -22,19 +22,31 @@ pathway cyclohexylsulfamate-to-6-oxohexanoate "cyclohexylsulfamate to 6-oxohexan
 
   branch from sulfate side left {
     sulfate
+    <-> . +z_n_sulfonatooxy_alkenimidothioate
+    alkenyl_isothiocyanate
+  }
+
+  branch from sulfate side right {
+    sulfate
     <-> . +z_n_sulfonatooxy_prop_2_enimidothioate
     allyl_isothiocyanate
   }
 
-  branch from nh3 side right {
+  branch from nh3 side left {
     nh3
     <-> . +aspartate +o2 +h2o +h2o2
     oxaloacetate
   }
 
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_17 [4.3.1.17] +pyruvate
+    serine
+  }
+
   branch from 6_oxohexanoate side left {
     6_oxohexanoate
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat +o2 +h2o +h2o2
-    1_deoxy_d_fructos_1_yl_amine
+    <-> ec_1_14_13_66 [1.14.13.66] +nadph +o2 +nadp +h2o
+    2_hydroxycyclohexan_1_one
   }
 }

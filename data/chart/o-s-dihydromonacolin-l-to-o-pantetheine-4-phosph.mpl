@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin L… to O-(pantetheine-4'-phospho…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
@@ -22,14 +22,26 @@ pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_seryl_amp +amp
-    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
+    <-> . +medium_chain_fatty_acyl_amp +amp +hplus
+    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa +h2o
+    o_s_3_6_8_9_tetrahydroxy_1_oxo_3_2_oxopropyl_1_2
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_74 [1.14.14.74] +albendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyalbendazole
   }
 
   branch from fmn side right {
     fmn
-    <-> . +e_phenylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
-    1_aci_nitro_2_phenyl_ethane
+    <-> ec_1_14_14_75 [1.14.14.75] +fenbendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyfenbendazole
   }
 
   branch from mevinolinate side left {

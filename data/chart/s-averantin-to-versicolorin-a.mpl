@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
-  spacing 216
+  spacing 252
 
   spine at 0,0 {
     s_averantin
@@ -28,8 +28,20 @@ pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_78 [1.14.14.78] +phylloquinone +fmnh2 +o2 +h2o +hplus
-    hydroxyphylloquinone
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    17_r_18_s_eetetr
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    17_s_18_r_eetetr
+  }
+
+  branch from s_5_oxoaverantin side left {
+    s_5_oxoaverantin
+    <-> ec_1_1_1_352 [1.1.1.352] +nad +nadh +hplus
+    1_s_5_r_5_hydroxyaverantin
   }
 
   branch from hydroxyversicolorone side right {
@@ -38,9 +50,15 @@ pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
     2s_versicolorone
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +7_acetyl_epi_neemfruitin_b +hydrogen_donor +h2o +hydrogen_acceptor +hplus
-    1s_3br_4r_5ar_9ar_9br_11as_1_4r_5_2s_3_3_dimeth
+  branch from 2s_3s_versiconal_hemiacetal_acetate side left {
+    2s_3s_versiconal_hemiacetal_acetate
+    <-> ec_1_1_1_353 [1.1.1.353] +nadp +nadph +hplus
+    3s_versiconol_acetate
+  }
+
+  branch from 2s_3s_versiconal_hemiacetal side right {
+    2s_3s_versiconal_hemiacetal
+    <-> ec_1_1_1_353 [1.1.1.353] +nadp +nadph +hplus
+    s_versiconol
   }
 }

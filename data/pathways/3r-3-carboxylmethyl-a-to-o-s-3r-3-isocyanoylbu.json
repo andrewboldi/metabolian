@@ -160,51 +160,113 @@
       }
     },
     {
-      "id": "31_hydroxy_l_isoleucine",
-      "name": "31-hydroxy-L-isoleucine",
-      "short": "31-hydroxy-L-isoleu…",
-      "formula": "C6H13NO3",
-      "charge": 0,
+      "id": "2_deoxyinosine_5_phosphate",
+      "name": "2'-deoxyinosine 5'-phosphate",
+      "short": "2'-deoxyinosine 5'-P",
+      "formula": "C10H11N4O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:149627"
+        "chebi": "CHEBI:61194"
       }
     },
     {
-      "id": "4s_31_4_dihydroxy_l_isoleucine",
-      "name": "(4S)-31,4-dihydroxy-L-isoleucine",
-      "short": "31,4-dihydroxy-L-is…",
-      "formula": "C6H13NO4",
-      "charge": 0,
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:149628"
+        "chebi": "CHEBI:17996"
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9α,10β-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "2_chloro_deoxyinosine_5_monophosphate",
+      "name": "2'-chloro-deoxyinosine 5'-monophosphate",
+      "short": "2'-chloro-deoxyinos…",
+      "formula": "C10H10ClN4O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231723"
+      }
+    },
+    {
+      "id": "4_5_9_5_20_epoxytax_11_ene_4_9_diol",
+      "name": "4α,5β,9α-5,20-epoxytax-11-ene-4,9-diol",
+      "short": "4α,5β,9α-5,20-epoxy…",
+      "formula": "C20H32O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229708"
+      }
+    },
+    {
+      "id": "4_hydroxy_5_5_20_epoxytax_11_en_9_one",
+      "name": "4α-hydroxy-5β-5,20-epoxytax-11-en-9-one",
+      "short": "4α-hydroxy-5β-5,20-…",
+      "formula": "C20H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232081"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58635"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "13_epi_manool",
-      "name": "13-epi-manool",
-      "formula": "C20H34O",
+      "id": "10_epi_cubebol",
+      "name": "(−)-10-epi-cubebol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76944"
+        "chebi": "CHEBI:138045"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "thujene",
+      "name": "β-thujene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138047"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_11_75",
-      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
+      "id": "ec_1_14_20_16",
+      "name": "4alpha,5beta-5,20-epoxytax-11-ene-4,9-diol 9-dehydrogenase",
       "ec": [
-        "1.14.11.75"
+        "1.14.20.16"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_175",
+      "name": "10-epi-cubebol synthase",
+      "ec": [
+        "4.2.3.175"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_177",
+      "name": "beta-thujene synthase",
+      "ec": [
+        "4.2.3.177"
       ]
     }
   ],
@@ -395,12 +457,71 @@
     },
     {
       "id": "r5",
-      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
-      "equation": "3(1)-hydroxy-L-isoleucine + 2-oxoglutarate + O2 = (4S)-3(1),4-dihydroxy-L-isoleucine + succinate + CO2",
-      "ec": "1.14.11.75",
+      "name": "dIMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dIMP + succinate + CO2 + H2O",
+      "equation": "dIMP + chloride + 2-oxoglutarate + O2 + H(+) = 2'-Cl-dIMP + succinate + CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "31_hydroxy_l_isoleucine",
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_chloro_deoxyinosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81839"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81839"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4alpha,5beta-5,20-epoxytax-11-ene-4,9-diol 9-dehydrogenase",
+      "equation": "4alpha,5beta-5,20-epoxytax-11-ene-4,9-diol + 2-oxoglutarate + O2 = 4alpha-hydroxy-5beta-5,20-epoxytax-11-en-9-one + succinate + CO2 + H2O",
+      "ec": "1.14.20.16",
+      "substrates": [
+        {
+          "metabolite": "4_5_9_5_20_epoxytax_11_ene_4_9_diol",
           "stoichiometry": 1
         },
         {
@@ -414,7 +535,7 @@
       ],
       "products": [
         {
-          "metabolite": "4s_31_4_dihydroxy_l_isoleucine",
+          "metabolite": "4_hydroxy_5_5_20_epoxytax_11_en_9_one",
           "stoichiometry": 1
         },
         {
@@ -424,35 +545,40 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_75"
+          "enzyme": "ec_1_14_20_16"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:63876"
+        "rhea": "RHEA:82111"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63876"
+            "id": "RHEA:82111"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(+)-copalyl diphosphate + H2O = 13-epi-manool + diphosphate",
-      "equation": "(+)-copalyl diphosphate + H2O = 13-epi-manool + diphosphate",
+      "id": "r7",
+      "name": "10-epi-cubebol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-cubebol + diphosphate",
+      "ec": "4.2.3.175",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
@@ -462,7 +588,7 @@
       ],
       "products": [
         {
-          "metabolite": "13_epi_manool",
+          "metabolite": "10_epi_cubebol",
           "stoichiometry": 1
         },
         {
@@ -470,17 +596,63 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_175"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:40015"
+        "rhea": "RHEA:54064"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40015"
+            "id": "RHEA:54064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "beta-thujene synthase",
+      "equation": "(2E)-geranyl diphosphate = beta-thujene + diphosphate",
+      "ec": "4.2.3.177",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thujene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_177"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:54072"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54072"
           }
         ]
       }

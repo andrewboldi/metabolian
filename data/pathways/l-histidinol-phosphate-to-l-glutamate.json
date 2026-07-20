@@ -120,6 +120,24 @@
       }
     },
     {
+      "id": "ala_his",
+      "name": "Ala-His",
+      "formula": "C9H14N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74388"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
       "id": "sam",
       "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
       "short": "S-Adenosyl-L-methio…",
@@ -130,13 +148,13 @@
       }
     },
     {
-      "id": "n_methyl_l_histidine",
-      "name": "Nα-methyl-L-histidine",
-      "short": "Nα-methyl-L-histidi…",
-      "formula": "C7H11N3O2",
+      "id": "n_n_n_trimethyl_l_histidine",
+      "name": "Nα,Nα,Nα-trimethyl-L-histidine",
+      "short": "Nα,Nα,Nα-trimethyl-…",
+      "formula": "C9H15N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75895"
+        "chebi": "CHEBI:15781"
       }
     },
     {
@@ -157,6 +175,33 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:57752"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
       }
     },
     {
@@ -186,6 +231,25 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "3_4_hydroxyphenyl_pyruvate",
+      "name": "3-(4-hydroxyphenyl)pyruvate",
+      "short": "3-(4-hydroxyphenyl)…",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36242"
+      }
     }
   ],
   "enzymes": [
@@ -211,6 +275,13 @@
       ]
     },
     {
+      "id": "ec_2_1_1_44",
+      "name": "L-histidine N(alpha)-methyltransferase",
+      "ec": [
+        "2.1.1.44"
+      ]
+    },
+    {
       "id": "ec_1_1_1_111",
       "name": "3-(imidazol-5-yl)lactate dehydrogenase",
       "ec": [
@@ -222,6 +293,20 @@
       "name": "glutamate 5-kinase",
       "ec": [
         "2.7.2.11"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_5",
+      "name": "tyrosine transaminase",
+      "ec": [
+        "2.6.1.5"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_57",
+      "name": "aromatic-amino-acid transaminase",
+      "ec": [
+        "2.6.1.57"
       ]
     }
   ],
@@ -371,8 +456,48 @@
     },
     {
       "id": "r4",
-      "name": "L-histidine + S-adenosyl-L-methionine = N(alpha)-methyl-L-histidine + S-adenosyl-L-homo...",
-      "equation": "L-histidine + S-adenosyl-L-methionine = N(alpha)-methyl-L-histidine + S-adenosyl-L-homocysteine + H(+)",
+      "name": "L-alanyl-L-histidine + H2O = L-histidine + L-alanine",
+      "equation": "L-alanyl-L-histidine + H2O = L-histidine + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "ala_his",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37283"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-histidine N(alpha)-methyltransferase",
+      "equation": "L-histidine + 3 S-adenosyl-L-methionine = hercynine + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.44",
       "substrates": [
         {
           "metabolite": "l_histidine",
@@ -380,40 +505,45 @@
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "n_methyl_l_histidine",
+          "metabolite": "n_n_n_trimethyl_l_histidine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_44"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:38475"
+        "rhea": "RHEA:38471"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38475"
+            "id": "RHEA:38471"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "3-(imidazol-5-yl)lactate dehydrogenase",
       "equation": "(S)-3-(imidazol-5-yl)lactate + NAD(+) = 3-(imidazol-5-yl)pyruvate + NADH + H(+)",
       "ec": "1.1.1.111",
@@ -447,7 +577,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:12036"
       },
@@ -462,7 +592,54 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r7",
+      "name": "L-histidine + O2 + H2O = 3-(imidazol-5-yl)pyruvate + H2O2 + NH4(+)",
+      "equation": "L-histidine + O2 + H2O = 3-(imidazol-5-yl)pyruvate + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_imidazol_5_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:61228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61228"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "glutamate 5-kinase",
       "equation": "L-glutamate + ATP = L-glutamyl 5-phosphate + ADP",
       "ec": "2.7.2.11",
@@ -492,7 +669,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:14877"
       },
@@ -502,6 +679,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:14877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "tyrosine transaminase",
+      "equation": "L-tyrosine + 2-oxoglutarate = 3-(4-hydroxyphenyl)pyruvate + L-glutamate",
+      "ec": "2.6.1.5",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_hydroxyphenyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:15093"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15093"
           }
         ]
       }

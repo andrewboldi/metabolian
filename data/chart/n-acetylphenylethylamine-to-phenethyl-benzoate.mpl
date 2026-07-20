@@ -17,16 +17,4 @@ pathway n-acetylphenylethylamine-to-phenethyl-benzoate "N-acetylphenylethylamine
     <-> . +benzoyl_coa -coa
     phenethyl_benzoate
   }
-
-  branch from phenylacetaldehyde side left {
-    phenylacetaldehyde
-    <-> . +hydrogen_cyanide
-    2s_2_hydroxy_3_phenylpropanenitrile
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +3_5_dimethylcyclohexan_1_aminium +nadp +h2o +nadph +hplus
-    3_5_dimethylcyclohexanone
-  }
 }

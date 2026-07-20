@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "mycophenolyl-coa-to-d-glucopyranuronate",
   "name": "mycophenolyl-CoA to D-glucopyranuronate",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from mycophenolyl-CoA(4−) to D-glucopyranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -98,6 +98,46 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:58720"
+      }
+    },
+    {
+      "id": "mycophenolate_7_o_d_glucuronide",
+      "name": "mycophenolate 7-O-β-D-glucuronide",
+      "short": "mycophenolate…",
+      "formula": "C23H26O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149486"
+      }
+    },
+    {
+      "id": "6_o_desmethylmycophenolate",
+      "name": "6-O-desmethylmycophenolate",
+      "short": "6-O-desmethylmycoph…",
+      "formula": "C16H17O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231832"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
       }
     }
   ],
@@ -238,6 +278,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:34179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolate 7-O-beta-D-glucuronide + UDP + ...",
+      "equation": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolate 7-O-beta-D-glucuronide + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolate_7_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "6-O-desmethylmycophenolate + S-adenosyl-L-methionine = mycophenolate + S-adenosyl-L-hom...",
+      "equation": "6-O-desmethylmycophenolate + S-adenosyl-L-methionine = mycophenolate + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_o_desmethylmycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81843"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81843"
           }
         ]
       }

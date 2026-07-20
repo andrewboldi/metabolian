@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-2-1r-1-carboxyla-to-butyryl-coa "(2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA" {
-  spacing 152
+  spacing 206
 
   spine at 0,0 {
     2s_2_1r_1_carboxylatoethyl_azaniumyl_pentanoate
@@ -20,25 +20,55 @@ pathway 2s-2-1r-1-carboxyla-to-butyryl-coa "(2S)-2-{[(1R)-1-carboxyla… to buty
 
   branch from l_2_aminopentanoic_acid side left {
     l_2_aminopentanoic_acid
+    <-> . +2_oxopentanoate +l_kynurenine
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from l_2_aminopentanoic_acid side right {
+    l_2_aminopentanoic_acid
     <-> . +2_oxopentanoate +n_n_dimethyl_l_argininium
     5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_5_6 [3.5.5.6] +3_5_dibromo_4_oxidobenzonitrile +h2o
-    3_5_dibromo_4_oxidobenzoate
+  branch from 2_oxopentanoate side left {
+    2_oxopentanoate
+    <-> . +fad +hplus +fadh2
+    2r_hydroxypentanoate
   }
 
-  branch from butanal side left {
+  branch from nh3 side right {
+    nh3
+    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
+    n_terminal_5_oxo_l_proline
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_12 [1.4.1.12] +2r_4s_2_4_diazaniumylpentanoate +nad +h2o +nadh +hplus
+    r_2_amino_4_oxopentanoic_acid
+  }
+
+  branch from butanal side right {
     butanal
     <-> . +nadp +nadph +hplus
     butan_1_ol
   }
 
+  branch from butanal side left {
+    butanal
+    <-> . +butyrate +atp +nadph +hplus +amp +nadp
+    ppi
+  }
+
   branch from butyryl_coa side right {
     butyryl_coa
-    <-> ec_1_3_1_86 [1.3.1.86] +nadp +nadph +hplus
+    <-> . +fad +hplus +fadh2
     crotonoyl_coa
+  }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> . +acetyl_coa +coa
+    3_oxohexanoyl_coa
   }
 }

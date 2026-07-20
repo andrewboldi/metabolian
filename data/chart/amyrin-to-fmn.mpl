@@ -4,11 +4,13 @@
 # edit the generator, not this file.
 
 pathway amyrin-to-fmn "β-amyrin to FMN" {
-  spacing 180
+  spacing 210
 
   spine at 0,0 {
     amyrin
-    <-> ec_1_14_14_152 [1.14.14.152] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    11_hydroxy_amyrin
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
     11_oxo_amyrin
     <-> ec_1_14_14_115 [1.14.14.115] +fmnh2 +o2 -fmn -h2o -hplus
     glycyrrhetinate
@@ -16,11 +18,29 @@ pathway amyrin-to-fmn "β-amyrin to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +thromboxane_a2 +fmnh2 +o2 +h2o +hplus
-    18_hydroxythromboxane_a2
+    <-> ec_1_14_14_19 [1.14.14.19] +c21_steroid +fmnh2 +o2 +h2o +hplus
+    17_hydroxy_c21_steroid
   }
 
-  branch from glycyrrhetinate side right {
+  branch from fmn side right {
+    fmn
+    <-> . +lathosterone +fmnh2 +o2 +h2o +hplus
+    25s_7_dafachronate
+  }
+
+  branch from 11_oxo_amyrin side left {
+    11_oxo_amyrin
+    <-> ec_1_14_13_173 [1.14.13.173] +h +o2 +nadph +30_hydroxy_11_oxo_amyrin +h2o
+    nadp
+  }
+
+  branch from 11_oxo_amyrin side right {
+    11_oxo_amyrin
+    <-> . +glycyrrhetinate +nadp +h2o +o2 +nadph
+    h
+  }
+
+  branch from glycyrrhetinate side left {
     glycyrrhetinate
     <-> ec_3_2_1_128 [3.2.1.128] +glycyrrhizinate +h2o
     2_d_glucopyranosyluronate_d_glucuronate

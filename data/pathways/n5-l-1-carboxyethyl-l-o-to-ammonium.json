@@ -147,13 +147,39 @@
       }
     },
     {
-      "id": "n5_hydroxyamino_imino_methyl_l_ornithinium",
-      "name": "N5-[(hydroxyamino)(imino)methyl]-L-ornithinium",
-      "short": "N5-[(hydroxyamino)(…",
-      "formula": "C6H15N4O3",
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:60107"
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "l_homoarginine",
+      "name": "L-homoarginine",
+      "formula": "C7H17N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143006"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     },
     {
@@ -166,12 +192,67 @@
       }
     },
     {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:33384"
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "1h_indole",
+      "name": "1H-indole",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16881"
+      }
+    },
+    {
+      "id": "3r_3_hydroxy_l_aspartate",
+      "name": "(3R)-3-hydroxy-L-aspartate",
+      "short": "3-hydroxy-L-asparta…",
+      "formula": "C4H6NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58196"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
       }
     }
   ],
@@ -212,10 +293,31 @@
       ]
     },
     {
-      "id": "ec_4_3_1_17",
-      "name": "L-serine ammonia-lyase",
+      "id": "ec_2_1_4_3",
+      "name": "L-arginine:L-lysine amidinotransferase",
       "ec": [
-        "4.3.1.17"
+        "2.1.4.3"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_47",
+      "name": "nitric-oxide synthase (flavodoxin)",
+      "ec": [
+        "1.14.14.47"
+      ]
+    },
+    {
+      "id": "ec_4_1_99_1",
+      "name": "tryptophanase",
+      "ec": [
+        "4.1.99.1"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_20",
+      "name": "erythro-3-hydroxy-L-aspartate ammonia-lyase",
+      "ec": [
+        "4.3.1.20"
       ]
     }
   ],
@@ -434,20 +536,69 @@
     },
     {
       "id": "r5",
-      "name": "2 N(omega)-hydroxy-L-arginine + NADPH + 2 O2 = 2 L-citrulline + 2 nitric oxide + NADP(+...",
-      "equation": "2 N(omega)-hydroxy-L-arginine + NADPH + 2 O2 = 2 L-citrulline + 2 nitric oxide + NADP(+) + 2 H2O + H(+)",
+      "name": "L-arginine:L-lysine amidinotransferase",
+      "equation": "L-lysine + L-arginine = L-homoarginine + L-ornithine",
+      "ec": "2.1.4.3",
       "substrates": [
         {
-          "metabolite": "n5_hydroxyamino_imino_methyl_l_ornithinium",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homoarginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_4_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:59240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2 L-arginine + 3 NADH + 4 O2 + H(+) = 2 L-citrulline + 2 nitric oxide + 3 NAD(+) + 4 H2O",
+      "equation": "2 L-arginine + 3 NADH + 4 O2 + H(+) = 2 L-citrulline + 2 nitric oxide + 3 NAD(+) + 4 H2O",
+      "substrates": [
+        {
+          "metabolite": "arginine",
           "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
@@ -460,45 +611,110 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
+          "metabolite": "nad",
+          "stoichiometry": 3
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:24664"
+        "rhea": "RHEA:33943"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24664"
+            "id": "RHEA:33943"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "L-serine ammonia-lyase",
-      "equation": "L-serine = pyruvate + NH4(+)",
-      "ec": "4.3.1.17",
+      "id": "r7",
+      "name": "nitric-oxide synthase (flavodoxin)",
+      "equation": "3 reduced [flavodoxin] + 2 L-arginine + 4 O2 = 3 oxidized [flavodoxin] + 2 L-citrulline + 2 nitric oxide + 4 H2O + 5 H(+)",
+      "ec": "1.14.14.47",
       "substrates": [
         {
-          "metabolite": "serine",
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "citrulline",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "no",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:52324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "tryptophanase",
+      "equation": "L-tryptophan + H2O = indole + pyruvate + NH4(+)",
+      "ec": "4.1.99.1",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "pyruvate",
           "stoichiometry": 1
@@ -510,20 +726,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_17"
+          "enzyme": "ec_4_1_99_1"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:19169"
+        "rhea": "RHEA:19553"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19169"
+            "id": "RHEA:19553"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "erythro-3-hydroxy-L-aspartate ammonia-lyase",
+      "equation": "(3R)-3-hydroxy-L-aspartate = oxaloacetate + NH4(+)",
+      "ec": "4.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "3r_3_hydroxy_l_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:19757"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19757"
           }
         ]
       }

@@ -3,21 +3,37 @@
   "id": "2-oxepin-2-3h-ylideneace-to-3-oxo-5-6-dehydrosub",
   "name": "2-oxepin-2(3H)-ylideneace… to 3-oxo-5,6-dehydrosuberyl-…",
   "category": "energy-metabolism",
-  "summary": "A 2-step route from 2-oxepin-2(3H)-ylideneacetyl-CoA(4−) to 3-oxo-5,6-dehydrosuberyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 4-step route from 2-oxepin-2(3H)-ylideneacetyl-CoA to 3-oxo-5,6-dehydrosuberyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
-        "db": "Rhea",
-        "id": "RHEA:31755"
-      },
-      {
-        "db": "ChEBI",
-        "id": "CHEBI:63252"
+        "db": "MetaNetX",
+        "id": "MNXR198057"
       }
     ]
   },
   "metabolites": [
+    {
+      "id": "2_oxepin_2_3h_ylideneacetyl_coa",
+      "name": "2-oxepin-2(3H)-ylideneacetyl-CoA",
+      "short": "2-oxepin-2(3H)-ylid…",
+      "formula": "C29H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1371493"
+      }
+    },
+    {
+      "id": "2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa",
+      "name": "2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA",
+      "short": "2-(1,2-epoxy-1,2-di…",
+      "formula": "C29H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:63458"
+      }
+    },
     {
       "id": "2_oxepin_2_3h_ylideneacetyl_coa",
       "name": "2-oxepin-2(3H)-ylideneacetyl-CoA",
@@ -85,6 +101,24 @@
       }
     },
     {
+      "id": "phenylacetyl_coa",
+      "name": "phenylacetyl-CoA",
+      "formula": "C29H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57390"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
       "id": "2_3_didehydroadipoyl_coa",
       "name": "2,3-didehydroadipoyl-CoA",
       "short": "2,3-didehydroadipoy…",
@@ -115,6 +149,13 @@
   ],
   "enzymes": [
     {
+      "id": "ec_5_3_3_18",
+      "name": "2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA isomerase",
+      "ec": [
+        "5.3.3.18"
+      ]
+    },
+    {
       "id": "ec_3_3_2_12",
       "name": "oxepin-CoA hydrolase",
       "ec": [
@@ -129,6 +170,13 @@
       ]
     },
     {
+      "id": "ec_1_14_13_149",
+      "name": "phenylacetyl-CoA 1,2-epoxidase",
+      "ec": [
+        "1.14.13.149"
+      ]
+    },
+    {
       "id": "ec_2_3_1_223",
       "name": "3-oxo-5,6-didehydrosuberyl-CoA thiolase",
       "ec": [
@@ -139,6 +187,79 @@
   "reactions": [
     {
       "id": "r1",
+      "name": "2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA isomerase",
+      "ec": "5.3.3.18",
+      "substrates": [
+        {
+          "metabolite": "2_oxepin_2_3h_ylideneacetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198057"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA isomerase",
+      "equation": "2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA = 2-oxepin-2(3H)-ylideneacetyl-CoA",
+      "ec": "5.3.3.18",
+      "substrates": [
+        {
+          "metabolite": "2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxepin_2_3h_ylideneacetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31843"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31843"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
       "name": "oxepin-CoA hydrolase",
       "equation": "2-oxepin-2(3H)-ylideneacetyl-CoA + H2O = 3-oxo-5,6-dehydrosuberyl-CoA semialdehyde",
       "ec": "3.3.2.12",
@@ -164,7 +285,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:31755"
       },
@@ -179,7 +300,7 @@
       }
     },
     {
-      "id": "r2",
+      "id": "r4",
       "name": "3-oxo-5,6-dehydrosuberyl-CoA semialdehyde dehydrogenase",
       "equation": "3-oxo-5,6-dehydrosuberyl-CoA semialdehyde + NADP(+) + H2O = 3-oxo-5,6-didehydrosuberyl-CoA + NADPH + 2 H(+)",
       "ec": "1.2.1.91",
@@ -217,7 +338,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:31747"
       },
@@ -232,7 +353,64 @@
       }
     },
     {
-      "id": "r3",
+      "id": "r5",
+      "name": "phenylacetyl-CoA 1,2-epoxidase",
+      "equation": "phenylacetyl-CoA + NADPH + O2 + H(+) = 2-(1,2-epoxy-1,2-dihydrophenyl)acetyl-CoA + NADP(+) + H2O",
+      "ec": "1.14.13.149",
+      "substrates": [
+        {
+          "metabolite": "phenylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_149"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32171"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "3-oxo-5,6-didehydrosuberyl-CoA thiolase",
       "equation": "2,3-didehydroadipoyl-CoA + acetyl-CoA = 3-oxo-5,6-didehydrosuberyl-CoA + CoA",
       "ec": "2.3.1.223",
@@ -262,7 +440,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:34799"
       },

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-pimara-7-15-diene-to-fmn "9β-pimara-7,15-diene to FMN" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     9_pimara_7_15_diene
@@ -18,7 +18,13 @@ pathway 9-pimara-7-15-diene-to-fmn "9β-pimara-7,15-diene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +fmnh2 +o2 +h2o +hplus
-    maniladiol
+    <-> . +stellata_2_6_19_triene +fmnh2 +o2 +h2o +hplus
+    stellatate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +miltiradiene +fmnh2 +o2 +h2o +hplus
+    11_oxomiltiradiene
   }
 }

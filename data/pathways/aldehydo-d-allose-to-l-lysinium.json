@@ -111,6 +111,33 @@
       }
     },
     {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
       "id": "sam",
       "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
       "short": "S-Adenosyl-L-methio…",
@@ -138,6 +165,42 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "l_allysine",
+      "name": "L-allysine",
+      "formula": "C6H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131803"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
     }
   ],
   "enzymes": [
@@ -149,10 +212,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_60",
-      "name": "calmodulin-lysine N-methyltransferase",
+      "id": "ec_2_1_1_59",
+      "name": "[cytochrome c]-lysine N-methyltransferase",
       "ec": [
-        "2.1.1.60"
+        "2.1.1.59"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_13",
+      "name": "protein-lysine 6-oxidase",
+      "ec": [
+        "1.4.3.13"
       ]
     }
   ],
@@ -290,9 +360,51 @@
     },
     {
       "id": "r4",
-      "name": "calmodulin-lysine N-methyltransferase",
-      "equation": "[calmodulin]-L-lysine + S-adenosyl-L-methionine = [calmodulin]-N(6)-methyl-L-lysine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.60",
+      "name": "Reaction MNXR117282",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n6_3_o_phospho_d_psicosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_d_psicosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR117282"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117282"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[cytochrome c]-lysine N-methyltransferase",
+      "equation": "L-lysyl-[cytochrome c] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[cytochrome c] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.59",
       "substrates": [
         {
           "metabolite": "l_lysinium",
@@ -319,20 +431,73 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_60"
+          "enzyme": "ec_2_1_1_59"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:21556"
+        "rhea": "RHEA:24312"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21556"
+            "id": "RHEA:24312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "protein-lysine 6-oxidase",
+      "equation": "L-lysyl-[protein] + O2 + H2O = (S)-2-amino-6-oxohexanoyl-[protein] + H2O2 + NH4(+)",
+      "ec": "1.4.3.13",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_allysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24544"
           }
         ]
       }

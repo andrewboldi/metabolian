@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glycero-d-manno-hepto-to-diphosphate "D-glycero-β-D-manno-hepto… to diphosphate" {
-  spacing 280
+  spacing 326
 
   spine at 0,0 {
     d_glycero_d_manno_heptose_7_phosphate
@@ -24,7 +24,13 @@ pathway d-glycero-d-manno-hepto-to-diphosphate "D-glycero-β-D-manno-hepto… to
 
   branch from ppi side right {
     ppi
-    <-> . +all_trans_pentaprenyl_diphosphate +ipp
-    tetra_trans_hexa_cis_undecaprenyl_diphosphate
+    <-> . +fpp
+    z_bisabolene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    cedr_8_ene
   }
 }

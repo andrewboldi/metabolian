@@ -4,19 +4,27 @@
 # edit the generator, not this file.
 
 pathway n1-acetylsperminium-to-l-alanine "N1-acetylsperminium to L-alanine" {
-  spacing 252
+  spacing 264
 
   spine at 0,0 {
     n1_acetylsperminium
+    <-> . +h2o -acetate
+    spermine
     <-> ec_1_5_3_14 [1.5.3.14] +o2 +h2o -trimethylenediaminium -h2o2
-    n_3_acetamidopropyl_4_ammoniobutanal
+    n_3_ammoniopropyl_4_ammoniobutanal
     <-> . +trimethylenediaminium +pyruvate -alanine
     3_ammoniopropanal
   }
 
   branch from alanine side left {
     alanine
-    <-> . +l_tryptophan +atp +adp +pi +hplus
-    cyclo_l_tryptophyl_l_alanyl
+    <-> . +n_n_dimethyl_l_argininium +pyruvate
+    5_3_3_dimethylguanidino_2_oxopentanoate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +2s_2_ammonio_5_iminio_methylamino_methyl_amino +pyruvate
+    5_3_methylguanidino_2_oxopentanoate
   }
 }

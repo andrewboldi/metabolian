@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nonan-1-ol-to-trans-2-nonenoyl-coa "nonan-1-ol to trans-2-nonenoyl-CoA" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     nonan_1_ol
@@ -20,9 +20,27 @@ pathway nonan-1-ol-to-trans-2-nonenoyl-coa "nonan-1-ol to trans-2-nonenoyl-CoA" 
     trans_2_nonenoyl_coa
   }
 
+  branch from nonanal side left {
+    nonanal
+    <-> . +hydrogen_cyanide
+    2s_2_hydroxydecanenitrile
+  }
+
+  branch from nonanal side right {
+    nonanal
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +nad
+    nonan_1_ol
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_100 [4.2.3.100] +fpp
-    bicyclogermacrene
+    <-> ec_2_5_1_122 [2.5.1.122] +tyrosine +dmapp
+    4_o_dimethylallyl_l_tyrosine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_86 [2.7.7.86] +gtp +atp
+    2_3_cgamp
   }
 }

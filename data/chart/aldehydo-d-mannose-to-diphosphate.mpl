@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-mannose-to-diphosphate "aldehydo-D-mannose… to diphosphate" {
-  spacing 280
+  spacing 316
 
   spine at 0,0 {
     aldehydo_d_mannose_6_phosphate
@@ -18,7 +18,13 @@ pathway aldehydo-d-mannose-to-diphosphate "aldehydo-D-mannose… to diphosphate"
 
   branch from ppi side left {
     ppi
-    <-> . +ipp +fpp
-    2_cis_6_trans_10_trans_geranylgeranyl_diphosphat
+    <-> . +fpp
+    aristolene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    1_10_aristolene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro "12-(phosphonooxy)octadeca… to 4-hydroxy-6-(11-hydroxyhe…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     12_phosphonooxy_octadecanoate
@@ -18,19 +18,31 @@ pathway 12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro "12-(phosphonooxy)octad
 
   branch from 12_hydroxyoctadecanoate side left {
     12_hydroxyoctadecanoate
-    <-> . +12_9z_octadecenoyloxy_octadecanoate +h2o +hplus
-    oleate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    12_18_dihydroxyoctadecanoate
   }
 
-  branch from 12_hydroxyoctadecanoyl_coa side right {
+  branch from 12_hydroxyoctadecanoate side right {
+    12_hydroxyoctadecanoate
+    <-> . +12_pahsa +h2o +hplus
+    palmitate
+  }
+
+  branch from 12_hydroxyoctadecanoyl_coa side left {
     12_hydroxyoctadecanoyl_coa
     <-> . +malonyl-coa +hplus +co2 +coa
     4_hydroxy_6_13_hydroxy_2_oxononadecyl_pyran_2_on
   }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_92 [4.2.3.92] +fpp
+    cadinene
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_70 [4.2.3.70] +fpp +h2o
-    patchouli_alcohol
+    <-> ec_4_2_3_93 [4.2.3.93] +fpp
+    guaiene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-adenosi… to S-adenosyl-L-homocysteine" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     5_end_triphospho_adenosine_4
@@ -26,19 +26,31 @@ pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-aden
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_95 [4.2.3.95] +fpp
-    cuprenene
+    <-> ec_4_2_3_149 [4.2.3.149] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    r_nephthenol
   }
 
-  branch from 5_end_n7_methyl_5_triphospho_guanosine_adenosine side left {
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_150 [4.2.3.150] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    r_cembrene_a
+  }
+
+  branch from 5_end_n7_methyl_5_triphospho_guanosine_adenosine side right {
     5_end_n7_methyl_5_triphospho_guanosine_adenosine
     <-> . +h2o +7_methylguanosine_5_diphosphate +hplus
     5_end_phospho_adenosine_2
   }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_166 [2.1.1.166] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_202 [2.1.1.202] +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

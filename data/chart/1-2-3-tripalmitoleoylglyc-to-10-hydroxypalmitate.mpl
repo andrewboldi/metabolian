@@ -4,19 +4,33 @@
 # edit the generator, not this file.
 
 pathway 1-2-3-tripalmitoleoylglyc-to-10-hydroxypalmitate "1,2,3-tripalmitoleoylglyc… to 10-hydroxypalmitate" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     1_2_3_tripalmitoleoylglycerol
-    <-> . +h2o -palmitoleate -hplus
+    <-> . +9_hydroxyoctadecanoate -9_9z_hexadecenoyloxy_octadecanoate
     2_3_dipalmitoleoyl_sn_glycerol
-    <-> . +palmitoleate +h2o
+    <-> . +9_9z_hexadecenoyloxy_octadecanoate +h2o -9_hydroxyoctadecanoate -hplus
+    palmitoleate
+    <-> . +h2o
     10_hydroxypalmitate
   }
 
   branch from palmitoleate side left {
     palmitoleate
-    <-> . +12_9z_hexadecenoyloxy_octadecanoate +h2o +hplus
-    12_hydroxyoctadecanoate
+    <-> . +13_9z_hexadecenoyloxy_octadecanoate +h2o +hplus
+    13_hydroxyoctadecanoate
+  }
+
+  branch from palmitoleate side right {
+    palmitoleate
+    <-> . +5_9z_hexadecenoyloxy_octadecanoate +h2o +hplus
+    5_hydroxyoctadecanoate
+  }
+
+  branch from 9_hydroxyoctadecanoate side left {
+    9_hydroxyoctadecanoate
+    <-> . +1_2_dioleoyl_sn_glycerol +1_oleoyl_sn_glycerol
+    9_9z_octadecenoyloxy_octadecanoate
   }
 }

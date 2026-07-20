@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-3-cyclic-cmp-to-cytidine-5-monophosphate",
   "name": "2',3'-cyclic CMP to cytidine 5'-monophosphate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 2',3'-cyclic CMP(1−) to cytidine 5'-monophosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -102,13 +102,59 @@
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:37563"
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "cdp_choline",
+      "name": "CDP-choline",
+      "formula": "C14H25N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58779"
+      }
+    },
+    {
+      "id": "o_phosphocholine_l_serine",
+      "name": "O-phosphocholine-L-serine",
+      "short": "O-phosphocholine-L-…",
+      "formula": "C8H17N2O5P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138595"
+      }
+    },
+    {
+      "id": "monosialyl_gb5",
+      "name": "Monosialyl-Gb5",
+      "formula": "C47H76N3O36R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140623"
+      }
+    },
+    {
+      "id": "cmp_n_acetyl_neuraminate",
+      "name": "CMP-N-acetyl-β-neuraminate",
+      "short": "CMP-N-acetyl-β-neur…",
+      "formula": "C20H29N4O16P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57812"
+      }
+    },
+    {
+      "id": "disialosyl_gb5",
+      "name": "disialosyl Gb5",
+      "formula": "C58H92N4O44R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:140624"
       }
     }
   ],
@@ -271,43 +317,86 @@
     },
     {
       "id": "r4",
-      "name": "CTP + 2 H2O = CMP + 2 phosphate + 2 H(+)",
-      "equation": "CTP + 2 H2O = CMP + 2 phosphate + 2 H(+)",
+      "name": "[Rab1 protein]-L-serine + CDP-choline = [Rab1 protein]-O-phosphocholine-L-serine + CMP ...",
+      "equation": "[Rab1 protein]-L-serine + CDP-choline = [Rab1 protein]-O-phosphocholine-L-serine + CMP + H(+)",
       "substrates": [
         {
-          "metabolite": "ctp",
+          "metabolite": "l_serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "cdp_choline",
+          "stoichiometry": 1
         }
       ],
       "products": [
+        {
+          "metabolite": "o_phosphocholine_l_serine",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "cytidine_5_monophosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:64908"
+        "rhea": "RHEA:56080"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64908"
+            "id": "RHEA:56080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "a globoside MSGG + CMP-N-acetyl-beta-neuraminate = a globoside DSGG + CMP + H(+)",
+      "equation": "a globoside MSGG + CMP-N-acetyl-beta-neuraminate = a globoside DSGG + CMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "monosialyl_gb5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "disialosyl_gb5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56088"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56088"
           }
         ]
       }

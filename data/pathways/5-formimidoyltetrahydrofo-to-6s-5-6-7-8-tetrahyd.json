@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd",
   "name": "5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo…",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 5-step route from 5-formimidoyltetrahydrofolate(2−) to (6S)-5,6,7,8-tetrahydrofolate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -168,12 +168,12 @@
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
+      "id": "histaminium",
+      "name": "histaminium",
+      "formula": "C5H10N3",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:58432"
       }
     },
     {
@@ -186,12 +186,13 @@
       }
     },
     {
-      "id": "l_allysine",
-      "name": "L-allysine",
-      "formula": "C6H11NO3",
+      "id": "imidazole_4_acetaldehyde",
+      "name": "imidazole-4-acetaldehyde",
+      "short": "imidazole-4-acetald…",
+      "formula": "C5H6N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58321"
+        "chebi": "CHEBI:27398"
       }
     },
     {
@@ -204,22 +205,23 @@
       }
     },
     {
-      "id": "dserine",
-      "name": "D-Serine",
-      "formula": "C3H7NO3",
+      "id": "ldopa",
+      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
+      "short": "3,4-Dihydroxy-L-phe…",
+      "formula": "C9H11NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35247"
+        "chebi": "CHEBI:57504"
       }
     },
     {
-      "id": "hydroxymethyl_serine",
-      "name": "α-(hydroxymethyl)serine",
-      "short": "α-(hydroxymethyl)se…",
-      "formula": "C4H9NO4",
-      "charge": 0,
+      "id": "3_4_dihydroxyphenylpyruvate",
+      "name": "3,4-dihydroxyphenylpyruvate",
+      "short": "3,4-dihydroxyphenyl…",
+      "formula": "C9H7O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:231831"
+        "chebi": "CHEBI:29055"
       }
     },
     {
@@ -258,6 +260,43 @@
       "charge": 2,
       "xrefs": {
         "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "intermediate_i",
+      "name": "intermediate I",
+      "formula": "C21H23N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142668"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "16r_deshydroxymethyl_stemmadenine",
+      "name": "(16R)-deshydroxymethyl-stemmadenine",
+      "short": "deshydroxymethyl-st…",
+      "formula": "C20H25N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142670"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     }
   ],
@@ -298,10 +337,17 @@
       ]
     },
     {
-      "id": "ec_1_4_3_20",
-      "name": "L-lysine 6-oxidase",
+      "id": "ec_1_4_3_22",
+      "name": "diamine oxidase",
       "ec": [
-        "1.4.3.20"
+        "1.4.3.22"
+      ]
+    },
+    {
+      "id": "ec_1_13_12_15",
+      "name": "3,4-dihydroxyphenylalanine oxidative deaminase",
+      "ec": [
+        "1.13.12.15"
       ]
     }
   ],
@@ -592,12 +638,12 @@
     },
     {
       "id": "r7",
-      "name": "L-lysine 6-oxidase",
-      "equation": "L-lysine + O2 + H2O = (S)-2-amino-6-oxohexanoate + H2O2 + NH4(+)",
-      "ec": "1.4.3.20",
+      "name": "diamine oxidase",
+      "equation": "histamine + O2 + H2O = imidazole-4-acetaldehyde + H2O2 + NH4(+)",
+      "ec": "1.4.3.22",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "histaminium",
           "stoichiometry": 1
         },
         {
@@ -611,7 +657,7 @@
       ],
       "products": [
         {
-          "metabolite": "l_allysine",
+          "metabolite": "imidazole_4_acetaldehyde",
           "stoichiometry": 1
         },
         {
@@ -625,63 +671,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_3_20"
+          "enzyme": "ec_1_4_3_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:22548"
+        "rhea": "RHEA:25625"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22548"
+            "id": "RHEA:25625"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "(6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + D-serine + H2O = alpha-(hydroxymethyl)se...",
-      "equation": "(6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + D-serine + H2O = alpha-(hydroxymethyl)serine + (6S)-5,6,7,8-tetrahydrofolate",
+      "name": "3,4-dihydroxyphenylalanine oxidative deaminase",
+      "equation": "2 L-dopa + O2 = 2 3-(3,4-dihydroxyphenyl)pyruvate + 2 NH4(+)",
+      "ec": "1.13.12.15",
       "substrates": [
         {
-          "metabolite": "methylene_thf",
-          "stoichiometry": 1
+          "metabolite": "ldopa",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "dserine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "hydroxymethyl_serine",
-          "stoichiometry": 1
+          "metabolite": "3_4_dihydroxyphenylpyruvate",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "thf",
-          "stoichiometry": 1
+          "metabolite": "nh3",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_15"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:81343"
+        "rhea": "RHEA:25880"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:81343"
+            "id": "RHEA:25880"
           }
         ]
       }
@@ -737,6 +785,53 @@
           {
             "db": "Rhea",
             "id": "RHEA:56760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "3,17-didehydrostemmadenine + NADPH + H2O = (16R)-deshydroxymethyl-stemmadenine + format...",
+      "equation": "3,17-didehydrostemmadenine + NADPH + H2O = (16R)-deshydroxymethyl-stemmadenine + formate + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "intermediate_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16r_deshydroxymethyl_stemmadenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:58528"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58528"
           }
         ]
       }

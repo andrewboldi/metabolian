@@ -6,40 +6,160 @@
   <title>Protein structure — Metabolian</title>
   <meta name="description" content="View enzyme 3D structures from AlphaFold and the PDB. Rotate the fold that runs the reaction." />
   <meta name="color-scheme" content="dark light" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%2300e0c6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300e0c6'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 27.7 9v14L16 30 4.3 23V9z' fill='none' stroke='%236D98EB' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%236D98EB'/%3E%3C/svg%3E" />
+  <style>
+    /* Protein — markup-side pieces only.
+       page.css owns .viewer-shell, .viewer-rail (its direct children are the
+       ruled groups), .rep-buttons (the segmented control), #viewport and
+       .viewer-status. Everything below is new to this page and has no home in
+       the shared sheets. */
+
+    /* #prot-links stays empty until a structure resolves. page.css intends to
+       collapse it (`.viewer-rail > :empty`) but the very next rule,
+       `.viewer-rail .chips { display: flex }`, has equal specificity and wins
+       on order — so the empty band renders with its own hairline. Restated at
+       higher specificity here; drop this once the two rules are reordered. */
+    .viewer-rail > .chips:empty { display: none; }
+
+    /* base.css sizes h1 at --step-4, which is a headline, not a rail label. */
+    #prot-name { font-size: var(--step-2); letter-spacing: var(--track-2, -0.022em); margin-top: 0.45rem; }
+    .rail-title {
+      font-family: var(--font-mono); font-weight: 500; font-size: var(--step--2, 0.6875rem);
+      line-height: var(--lead-label, 1.3); text-transform: uppercase; letter-spacing: 0.16em;
+      color: var(--text-faint); margin-bottom: var(--sp-3);
+    }
+    .rail-note {
+      color: var(--text-faint); font-size: var(--step--1);
+      line-height: var(--lead-copy, 1.55); margin-top: var(--sp-3);
+    }
+    .rail-foot { margin-top: auto; }
+
+    /* ------------------------------------------------------------ color key
+       Measured, not invented. 3Dmol resolves `color:'spectrum'` differently per
+       representation — verified in node_modules/3dmol/build/3Dmol.js:
+         · cartoon (:38410) → sinebow gradient over residue number, constructed
+           reversed, so N-term → C-term runs olive → green → blue → violet →
+           red. The stops below are that function evaluated at eight points.
+         · stick/sphere (:43668) → `spectrum` is explicitly ignored, so atoms
+           keep their element colors (RasMol defaults, :37206).
+       If protein.ts changes its style map this key must move with it. A legend
+       that lies is worse than no legend. */
+    .ramp {
+      height: 8px; border-radius: var(--radius-pill);
+      background: linear-gradient(90deg,
+        #bfbf00 0%, #6ff51a 12.5%, #25fb5f 25%, #01cdb0 37.5%, #117fee 50%,
+        #4f32fe 62.5%, #a004da 75%, #e50a90 87.5%, #ff4040 100%);
+      box-shadow: var(--hairline);
+    }
+    .ramp-ends {
+      display: flex; justify-content: space-between; margin-top: 0.4rem;
+      font-family: var(--font-mono); font-size: var(--step--2, 0.6875rem);
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-faint);
+    }
+    .elems {
+      list-style: none; padding: 0; margin: var(--sp-4) 0 0;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.45rem var(--sp-3);
+    }
+    .elems li {
+      display: flex; align-items: center; gap: 0.45rem;
+      font-family: var(--font-mono); font-size: var(--step--1); color: var(--text-dim);
+    }
+    .elems .sw {
+      width: 9px; height: 9px; flex: none; border-radius: 50%;
+      background: var(--_e); box-shadow: var(--hairline);
+    }
+
+    #load-form .btn { width: 100%; justify-content: center; }
+
+    /* Provenance readout */
+    .rail-spec { margin: 0 0 var(--sp-4); font-family: var(--font-mono); font-size: var(--step--2, 0.6875rem); }
+    .rail-spec > div {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: var(--sp-3); padding-block: 0.45rem;
+    }
+    .rail-spec > div + div { box-shadow: inset 0 1px 0 var(--line); }
+    .rail-spec dt { letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-faint); }
+    .rail-spec dd { margin: 0; color: var(--text-dim); }
+
+    /* The stage. 3Dmol's canvas is transparent (backgroundAlpha: 0), so the
+       viewport's own background is what sits behind the fold. This radial
+       gradient is the one place on the site where an 8-bit ramp on near-black
+       will band, so the 3px dot screen rides over it and dithers it — free, and
+       it keeps page.css's gradient underneath exactly as authored. */
+    #viewport {
+      background-image: var(--screen), radial-gradient(120% 100% at 50% 0%, var(--panel-2), var(--bg) 70%);
+      background-size: var(--screen-pitch, 3px) var(--screen-pitch, 3px), auto;
+    }
+  </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <div id="app-header"></div>
-  <main class="viewer-shell">
+  <main class="viewer-shell" id="main">
+    <!-- Each direct child of .viewer-rail is a ruled group; page.css supplies
+         the padding and the hairline between them, and collapses empty ones. -->
     <aside class="viewer-rail">
       <div>
         <p class="eyebrow">Structure</p>
-        <h1 id="prot-name" style="font-size:var(--step-2);margin-top:.4rem">Protein viewer</h1>
+        <h1 id="prot-name">Protein viewer</h1>
       </div>
+
       <div class="chips" id="prot-links"></div>
-      <div>
-        <h3 style="font-family:var(--font-mono);font-size:var(--step--1);text-transform:uppercase;letter-spacing:.12em;color:var(--text-faint)">Representation</h3>
-        <div class="rep-buttons" style="margin-top:.5rem">
-          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="cartoon" aria-pressed="true">Cartoon</button>
-          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="stick" aria-pressed="false">Sticks</button>
-          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="sphere" aria-pressed="false">Spheres</button>
-          <button class="btn btn--ghost" style="padding:.4rem .7rem" data-rep="surface" aria-pressed="false">Surface</button>
+
+      <section>
+        <h2 class="rail-title">Representation</h2>
+        <div class="rep-buttons" role="group" aria-label="Representation">
+          <button class="btn" type="button" data-rep="cartoon" aria-pressed="true">Cartoon</button>
+          <button class="btn" type="button" data-rep="stick" aria-pressed="false">Sticks</button>
+          <button class="btn" type="button" data-rep="sphere" aria-pressed="false">Spheres</button>
+          <button class="btn" type="button" data-rep="surface" aria-pressed="false">Surface</button>
         </div>
-      </div>
-      <form id="load-form">
-        <div class="field">
-          <label for="acc-input">Load any structure</label>
-          <input id="acc-input" placeholder="UniProt (P04406) or PDB (1HKB)" />
-        </div>
-        <button class="btn" type="submit" style="width:100%">Load structure</button>
-      </form>
-      <p class="muted" style="font-size:var(--step--1)">Models stream from the AlphaFold Protein Structure Database and the RCSB PDB. Predicted models are colored by confidence spectrum.</p>
-      <p><a href="explore.html">← Back to the chart</a></p>
+      </section>
+
+      <section>
+        <h2 class="rail-title">Color key</h2>
+        <div class="ramp" role="img" aria-label="Color ramp running from the N-terminus to the C-terminus"></div>
+        <div class="ramp-ends"><span>N-term</span><span>C-term</span></div>
+        <p class="rail-note">Cartoon and surface run a sinebow ramp along the residue number, so you can read chain direction straight off the fold.</p>
+        <ul class="elems">
+          <li><span class="sw" style="--_e:#c8c8c8" aria-hidden="true"></span>C</li>
+          <li><span class="sw" style="--_e:#8f8fff" aria-hidden="true"></span>N</li>
+          <li><span class="sw" style="--_e:#f00000" aria-hidden="true"></span>O</li>
+          <li><span class="sw" style="--_e:#ffc832" aria-hidden="true"></span>S</li>
+          <li><span class="sw" style="--_e:#ffa500" aria-hidden="true"></span>P</li>
+          <li><span class="sw" style="--_e:#ffffff" aria-hidden="true"></span>H</li>
+        </ul>
+        <p class="rail-note">Sticks and spheres color by element instead.</p>
+      </section>
+
+      <section>
+        <h2 class="rail-title">Load structure</h2>
+        <form id="load-form">
+          <div class="field">
+            <label for="acc-input">Accession</label>
+            <input id="acc-input" placeholder="P04406 or 1HKB" autocomplete="off" autocapitalize="characters" spellcheck="false" />
+          </div>
+          <button class="btn" type="submit">Load structure</button>
+        </form>
+        <p class="rail-note">A UniProt accession resolves to the current AlphaFold predicted model; a four-character ID resolves to an experimental PDB entry.</p>
+      </section>
+
+      <section class="rail-foot">
+        <h2 class="rail-title">Provenance</h2>
+        <dl class="rail-spec">
+          <div><dt>Predicted</dt><dd><a href="https://alphafold.ebi.ac.uk" target="_blank" rel="noopener">AlphaFold DB</a></dd></div>
+          <div><dt>Experimental</dt><dd><a href="https://www.rcsb.org" target="_blank" rel="noopener">RCSB PDB</a></dd></div>
+          <div><dt>Renderer</dt><dd>3Dmol.js</dd></div>
+        </dl>
+        <p><a href="explore.html">← Back to the chart</a></p>
+      </section>
     </aside>
-    <section id="viewport">
+
+    <section id="viewport" aria-label="Structure viewport">
       <p class="viewer-status" id="viewer-status">Loading…</p>
     </section>
   </main>
+  <div id="app-footer"></div>
   <script type="module" src="/src/pages/protein.ts"></script>
 </body>
 </html>

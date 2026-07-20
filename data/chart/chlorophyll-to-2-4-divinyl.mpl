@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     chlorophyll
@@ -30,22 +30,58 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
     fatty_acid_phytyl_ester
   }
 
+  branch from phytol side right {
+    phytol
+    <-> . +myristoyl_coa +coa
+    myristate_phytyl_ester
+  }
+
+  branch from phytyl_phosphate side left {
+    phytyl_phosphate
+    <-> . +atp +phytyl_diphosphate
+    adp
+  }
+
+  branch from phytyl_phosphate side right {
+    phytyl_phosphate
+    <-> . +datp +phytyl_diphosphate
+    dadp
+  }
+
+  branch from cdp side left {
+    cdp
+    <-> ec_2_7_1_216 [2.7.1.216] +2_trans_6_trans_farnesol +ctp +hplus
+    2e_6e_farnesyl_monophosphate
+  }
+
   branch from cdp side right {
     cdp
-    <-> . +1_2_dioleoyl_sn_glycerol +ctp +hplus
-    1_2_dioleoyl_sn_glycero_3_phosphate
+    <-> ec_2_7_4_32 [2.7.4.32] +2e_6e_farnesyl_monophosphate +ctp
+    fpp
   }
 
   branch from phytyl_diphosphate side left {
     phytyl_diphosphate
-    <-> ec_2_5_1_148 [2.5.1.148] +nadph +hplus +ppi +nadp
-    14e_18e_lycopadiene
+    <-> ec_2_5_1_62 [2.5.1.62] +chlorophyll_b +diphosphate
+    chlorophyllide_b
+  }
+
+  branch from phytyl_diphosphate side right {
+    phytyl_diphosphate
+    <-> . +2_phytyl_1_4_dihydroxynaphthalene +diphosphate +co2 +1_4_dihydroxy_2_naphthoate
+    h
+  }
+
+  branch from nucleoside_5_diphosphate side left {
+    nucleoside_5_diphosphate
+    <-> ec_3_6_1_6 [3.6.1.6] +h2o +pi +hplus
+    nucleoside_5_monophosphate
   }
 
   branch from nucleoside_5_diphosphate side right {
     nucleoside_5_diphosphate
-    <-> ec_2_7_4_4 [2.7.4.4] +atp +adp
-    nucleoside_5_monophosphate
+    <-> . +ribonucleoside_5_diphosphate_d_glucose +g6p +hplus
+    trehalose_6_phosphate
   }
 
   branch from chlorophyll_a side left {
@@ -54,9 +90,51 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
     pheophytin_a
   }
 
+  branch from chlorophyll_a side right {
+    chlorophyll_a
+    <-> ec_1_17_7_2 [1.17.7.2] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
+    71_hydroxychlorophyll_a
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_37 [6.2.1.37] +3_hydroxybenzoate +atp +coa +amp
+    3_hydroxybenzoyl_coa
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_22 [4.2.3.22] +fpp +h2o
-    1e_4s_5e_7r_germacra_1_10_5_dien_11_ol
+    <-> ec_3_6_1_67 [3.6.1.67] +7_8_dihydroneopterin_3_triphosphate +h2o +hplus
+    7_8_dihydroneopterin_3_phosphate
+  }
+
+  branch from chlorophyllide_a side left {
+    chlorophyllide_a
+    <-> ec_1_14_13_122 [1.14.13.122] +nadph +o2 +hplus +nadp +h2o
+    chlorophyllide_b
+  }
+
+  branch from chlorophyllide_a side right {
+    chlorophyllide_a
+    <-> ec_1_17_7_2 [1.17.7.2] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
+    71_hydroxychlorophyllide_a
+  }
+
+  branch from protochlorophyllide side left {
+    protochlorophyllide
+    <-> ec_1_3_7_13 [1.3.7.13] +di_sulfido_diiron +2_4_divinyl_protochlorophyllide_a +hplus
+    di_sulfido_diiron
+  }
+
+  branch from protochlorophyllide side right {
+    protochlorophyllide
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    protochlorophyllide_b
+  }
+
+  branch from 2_4_divinyl_protochlorophyllide_a side left {
+    2_4_divinyl_protochlorophyllide_a
+    <-> ec_1_14_13_81 [1.14.13.81] +nadph +o2 +hplus +nadp +h2o
+    magnesium_protoporphyrin_13_monomethyl_ester
   }
 }

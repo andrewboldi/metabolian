@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-2-7-anhydro-ne-to-n-acetyl-d-mannosamin "N-acetyl-2,7-anhydro-α-ne… to N-acetyl-D-mannosamine…" {
-  spacing 180
+  spacing 192
 
   spine at 0,0 {
     n_acetyl_2_7_anhydro_neuraminate
@@ -20,7 +20,13 @@ pathway n-acetyl-2-7-anhydro-ne-to-n-acetyl-d-mannosamin "N-acetyl-2,7-anhydro-�
     n_acetyl_d_mannosamine_6_phosphate
   }
 
-  branch from aldehydo_n_acetyl_d_mannosamine side left {
+  branch from n_acetyl_neuraminate side left {
+    n_acetyl_neuraminate
+    <-> . +h2o
+    2_deoxy_2_3_dehydro_n_acetylneuraminate
+  }
+
+  branch from aldehydo_n_acetyl_d_mannosamine side right {
     aldehydo_n_acetyl_d_mannosamine
     <-> ec_3_2_1_183 [3.2.1.183] +h2o +udp +hplus
     udpglcnac

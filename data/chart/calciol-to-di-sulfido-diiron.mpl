@@ -15,16 +15,4 @@ pathway calciol-to-di-sulfido-diiron "calciol to di-μ-sulfido-diiron" {
     <-> ec_1_14_15_18 [1.14.15.18] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     calcitetrol
   }
-
-  branch from calcidiol side left {
-    calcidiol
-    <-> . +udp_d_glucuronate +udp +hplus
-    calcidiol_3_o_d_glucuronate
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    19_hydroxy_11_deoxycorticosterone
-  }
 }

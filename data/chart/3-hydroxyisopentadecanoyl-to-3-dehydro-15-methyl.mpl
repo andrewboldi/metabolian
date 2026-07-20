@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxyisopentadecanoyl-to-3-dehydro-15-methyl "3-hydroxyisopentadecanoyl… to 3-dehydro-15-methylhexade…" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     3_hydroxyisopentadecanoyl_coa
@@ -22,7 +22,13 @@ pathway 3-hydroxyisopentadecanoyl-to-3-dehydro-15-methyl "3-hydroxyisopentadecan
     3_oxoisoheptadecanoyl_coa
   }
 
-  branch from 3_dehydro_15_methylhexadecasphinganine side right {
+  branch from isopentadecanoyl_coa side right {
+    isopentadecanoyl_coa
+    <-> . +l_cysteate +hplus +co2 +coa
+    2_amino_3_oxo_15_methylhexadecane_1_sulfonate
+  }
+
+  branch from 3_dehydro_15_methylhexadecasphinganine side left {
     3_dehydro_15_methylhexadecasphinganine
     <-> . +nadp +nadph +hplus
     15_methylhexadecasphinganine

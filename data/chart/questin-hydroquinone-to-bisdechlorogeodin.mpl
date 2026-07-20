@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway questin-hydroquinone-to-bisdechlorogeodin "questin hydroquinone to (−)-bisdechlorogeodin" {
-  spacing 260
+  spacing 284
 
   spine at 0,0 {
     questin_hydroquinone
@@ -22,9 +22,21 @@ pathway questin-hydroquinone-to-bisdechlorogeodin "questin hydroquinone to (−)
     bisdechlorogeodin
   }
 
+  branch from sulochrin side right {
+    sulochrin
+    <-> . +fadh2 +chloride +o2 +fad +h2o +hplus
+    dihydrogeodin
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_322 [2.1.1.322] +l_argininium +sam +hplus
+    n5_methyl_argininium_1
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_242 [2.1.1.242] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
   }
 }

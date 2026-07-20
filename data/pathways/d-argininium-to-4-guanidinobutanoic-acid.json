@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-argininium-to-4-guanidinobutanoic-acid",
   "name": "D-argininium to 4-guanidinobutanoic acid",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from D-argininium(1+) to 4-guanidinobutanoic acid zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -128,42 +128,6 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32682"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "ornithine",
-      "name": "L-Ornithine",
-      "formula": "C5H13N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:46911"
-      }
     }
   ],
   "enzymes": [
@@ -186,20 +150,6 @@
       "name": "gamma-guanidinobutyraldehyde dehydrogenase",
       "ec": [
         "1.2.1.54"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_125",
-      "name": "L-arginine:2-oxoglutarate transaminase",
-      "ec": [
-        "2.6.1.125"
-      ]
-    },
-    {
-      "id": "ec_3_5_3_27",
-      "name": "arginine dihydrolase",
-      "ec": [
-        "3.5.3.27"
       ]
     }
   ],
@@ -351,104 +301,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:14381"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "L-arginine:2-oxoglutarate transaminase",
-      "equation": "L-arginine + 2-oxoglutarate = 5-guanidino-2-oxopentanoate + L-glutamate",
-      "ec": "2.6.1.125",
-      "substrates": [
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_guanidino_2_oxopentanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_125"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:78819"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78819"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "arginine dihydrolase",
-      "equation": "L-arginine + 2 H2O + 2 H(+) = L-ornithine + 2 NH4(+) + CO2",
-      "ec": "3.5.3.27",
-      "substrates": [
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ornithine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_3_27"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:78779"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78779"
           }
         ]
       }

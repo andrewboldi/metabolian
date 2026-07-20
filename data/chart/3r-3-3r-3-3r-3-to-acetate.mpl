@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-3r-3-3r-3-to-acetate "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate" {
-  spacing 188
+  spacing 278
 
   spine at 0,0 {
     3r_3_3r_3_3r_3_3r_3_3r_3_hydroxybutanoyl_oxy_bu
@@ -18,13 +18,41 @@ pathway 3r-3-3r-3-3r-3-to-acetate "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate" {
     bhb
     <-> ec_1_1_1_30 [1.1.1.30] +nad -nadh -hplus
     acetoacetate
-    <-> . +acetyl_coa -acetate
-    acetoacetyl_coa
+    <-> ec_4_1_1_4 [4.1.1.4] +hplus -co2
+    acetone
+    <-> ec_1_14_13_226 [1.14.13.226] +nadph +o2 +hplus -nadp -h2o
+    methyl_acetate
+    <-> ec_3_1_1_114 [3.1.1.114] +h2o -acetate -hplus
+    methanol
   }
 
   branch from bhb side left {
     bhb
     <-> . +h2o +coa +hplus
     r_3_hydroxybutanoyl_coa
+  }
+
+  branch from bhb side right {
+    bhb
+    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +h2o
+    hai_1
+  }
+
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +3_hydroxypropanoate
+    3_hydroxypropanoyl_coa
+  }
+
+  branch from acetoacetate side right {
+    acetoacetate
+    <-> ec_2_6_1_19 [2.6.1.19] +2_oxoglutarate +h +2_methylaspartate +l_glutamate
+    co2
+  }
+
+  branch from acetone side left {
+    acetone
+    <-> . +iron +fe2 +hplus
+    propan_2_ol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-terminal-l-seryl-l-prol-to-s-adenosyl-l-homocy "N-terminal L-seryl-L-prol… to S-adenosyl-L-homocysteine" {
-  spacing 224
+  spacing 236
 
   spine at 0,0 {
     n_terminal_l_seryl_l_prolyl_l_lysyl_2
@@ -18,7 +18,13 @@ pathway n-terminal-l-seryl-l-prol-to-s-adenosyl-l-homocy "N-terminal L-seryl-L-p
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a34 +sam
-    gibberellin_a34_methyl_ester
+    <-> ec_2_1_1_176 [2.1.1.176] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_177 [2.1.1.177] +pseudouridine_5_phosphate_1 +sam +hplus
+    n3_methylpseudouridine_5_monophosphate_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy "N-terminal glycyl-L-lysyl… to S-adenosyl-L-homocysteine" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     n_terminal_glycyl_l_lysyl_l_glutamate_1
@@ -18,7 +18,13 @@ pathway n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy "N-terminal glycyl-L-ly
 
   branch from sah side left {
     sah
-    <-> . +n_methyl_l_histidine +sam +hplus
-    n_n_dimethyl_l_histidine
+    <-> ec_2_1_1_190 [2.1.1.190] +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_191 [2.1.1.191] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 }

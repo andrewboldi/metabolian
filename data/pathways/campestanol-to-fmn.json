@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "campestanol-to-fmn",
   "name": "campestanol to FMN",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from campestanol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,32 +100,95 @@
       }
     },
     {
-      "id": "5_22s_24r_22_hydroxyergostan_3_one",
-      "name": "(5α,22S,24R)-22-hydroxyergostan-3-one",
-      "short": "(5α,22S,24R)-22-hyd…",
-      "formula": "C28H48O2",
-      "charge": 0,
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:59411"
+        "metanetx": "MNXM5"
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "metanetx": "WATER"
       }
     },
     {
-      "id": "hydroxycholesterol_27",
-      "name": "27-Hydroxycholesterol",
-      "short": "27-Hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "campestanol",
+      "name": "campestanol",
+      "formula": "C28H50O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17703"
+        "metanetx": "MNXM1371753"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "5z_8z_11z_icosatrienoate",
+      "name": "(5Z,8Z,11Z)-icosatrienoate",
+      "short": "(5Z,8Z,11Z)-icosatr…",
+      "formula": "C20H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78043"
+      }
+    },
+    {
+      "id": "19_hetre",
+      "name": "19-HETrE",
+      "formula": "C20H33O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132024"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "21_hdohe",
+      "name": "21-HDoHE",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132025"
       }
     },
     {
@@ -137,6 +200,15 @@
       "xrefs": {
         "chebi": "CHEBI:20710"
       }
+    },
+    {
+      "id": "teasterone",
+      "name": "teasterone",
+      "formula": "C28H48O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26863"
+      }
     }
   ],
   "enzymes": [
@@ -145,6 +217,13 @@
       "name": "3beta,22alpha-dihydroxysteroid 3-dehydrogenase",
       "ec": [
         "1.14.19.79"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_179",
+      "name": "brassinosteroid 6-oxygenase",
+      "ec": [
+        "1.14.14.179"
       ]
     }
   ],
@@ -304,62 +383,61 @@
     },
     {
       "id": "r4",
-      "name": "6-deoxycathasterone + reduced [NADPH--hemoprotein reductase] + O2 = (22S,24R)-22-hydrox...",
-      "equation": "6-deoxycathasterone + reduced [NADPH--hemoprotein reductase] + O2 = (22S,24R)-22-hydroxy-5alpha-ergostan-3-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "name": "Reaction MNXR197992",
       "substrates": [
         {
           "metabolite": "6_deoxycathasterone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_22s_24r_22_hydroxyergostan_3_one",
+          "metabolite": "campestanol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "o2",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "nadph",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:69975"
+        "metanetx": "MNXR197992"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69975"
+            "db": "MetaNetX",
+            "id": "MNXR197992"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxi...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-...",
+      "equation": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "5z_8z_11z_icosatrienoate",
           "stoichiometry": 1
         },
         {
@@ -373,7 +451,7 @@
       ],
       "products": [
         {
-          "metabolite": "hydroxycholesterol_27",
+          "metabolite": "19_hetre",
           "stoichiometry": 1
         },
         {
@@ -392,20 +470,71 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50264"
+        "rhea": "RHEA:50076"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50264"
+            "id": "RHEA:50076"
           }
         ]
       }
     },
     {
       "id": "r6",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 21-hydroxy-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "21_hdohe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:50088"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "3beta,22alpha-dihydroxysteroid 3-dehydrogenase",
       "equation": "6-deoxoteasterone + reduced [NADPH--hemoprotein reductase] + O2 = 3-dehydro-6-deoxoteasterone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
       "ec": "1.14.19.79",
@@ -447,7 +576,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:69983"
       },
@@ -457,6 +586,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:69983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "brassinosteroid 6-oxygenase",
+      "equation": "6-deoxoteasterone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = teasterone + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.179",
+      "substrates": [
+        {
+          "metabolite": "6_deoxoteasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "teasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_179"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:70043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70043"
           }
         ]
       }

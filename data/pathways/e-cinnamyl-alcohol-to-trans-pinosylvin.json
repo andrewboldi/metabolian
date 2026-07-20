@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "e-cinnamyl-alcohol-to-trans-pinosylvin",
   "name": "(E)-cinnamyl alcohol to trans-pinosylvin",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (E)-cinnamyl alcohol to trans-pinosylvin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -169,6 +169,64 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "ecgoninium_methyl_ester",
+      "name": "ecgoninium methyl ester",
+      "short": "ecgoninium methyl…",
+      "formula": "C10H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59908"
+      }
+    },
+    {
+      "id": "cinnamoylcocaine",
+      "name": "cinnamoylcocaine",
+      "formula": "C19H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:231952"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "pinosylvin_methyl_ether",
+      "name": "Pinosylvin methyl ether",
+      "short": "Pinosylvin methyl…",
+      "formula": "C15H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:8227"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
       }
     }
   ],
@@ -400,8 +458,8 @@
     },
     {
       "id": "r5",
-      "name": "(E)-cinnamate + ATP + CoA = (E)-cinnamoyl-CoA + AMP + diphosphate",
-      "equation": "(E)-cinnamate + ATP + CoA = (E)-cinnamoyl-CoA + AMP + diphosphate",
+      "name": "(E)-cinnamate + ATP + NADPH + H(+) = (E)-cinnamaldehyde + AMP + diphosphate + NADP(+)",
+      "equation": "(E)-cinnamate + ATP + NADPH + H(+) = (E)-cinnamaldehyde + AMP + diphosphate + NADP(+)",
       "substrates": [
         {
           "metabolite": "trans_cinnamate",
@@ -412,13 +470,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_cinnamoyl_coa",
+          "metabolite": "e_cinnamaldehyde",
           "stoichiometry": 1
         },
         {
@@ -428,19 +490,104 @@
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:64788"
+        "rhea": "RHEA:68872"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64788"
+            "id": "RHEA:68872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "ecgonine methyl ester + (E)-cinnamoyl-CoA = cinnamoylcocaine + CoA",
+      "equation": "ecgonine methyl ester + (E)-cinnamoyl-CoA = cinnamoylcocaine + CoA",
+      "substrates": [
+        {
+          "metabolite": "ecgoninium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_cinnamoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cinnamoylcocaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:81563"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR144048",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pinosylvin_methyl_ether",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_pinosylvin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR144048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144048"
           }
         ]
       }

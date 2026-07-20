@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "short-chain-fatty-aldehyde-to-short-chain-fatty",
   "name": "short-chain fatty aldehyde to short-chain fatty acid…",
-  "category": "lipid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from short-chain fatty aldehyde to short-chain fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -140,22 +140,51 @@
       }
     },
     {
-      "id": "copal_8_ol_diphosphate",
-      "name": "copal-8-ol diphosphate",
-      "short": "copal-8-ol PP",
-      "formula": "C20H35O8P2",
-      "charge": -3,
+      "id": "phosphonoformate",
+      "name": "phosphonoformate",
+      "formula": "CHO5P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:64283"
+        "chebi": "CHEBI:91254"
       }
     },
     {
-      "id": "sclareol",
-      "name": "sclareol",
-      "formula": "C20H36O2",
-      "charge": 0,
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:9053"
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cmp_5_phosphonoformate",
+      "name": "CMP-5'-phosphonoformate",
+      "short": "CMP-5'-phosphonofor…",
+      "formula": "C10H12N3O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:91255"
+      }
+    },
+    {
+      "id": "8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat",
+      "name": "(8S)-3',8-cyclo-7,8-dihydroguanosine 5'-triphosphate",
+      "short": "3',8-cyclo-7,8-dihy…",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:131766"
+      }
+    },
+    {
+      "id": "precursor_z",
+      "name": "precursor Z",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59648"
       }
     }
   ],
@@ -168,10 +197,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_141",
-      "name": "sclareol synthase",
+      "id": "ec_2_7_7_93",
+      "name": "phosphonoformate cytidylyltransferase",
       "ec": [
-        "4.2.3.141"
+        "2.7.7.93"
+      ]
+    },
+    {
+      "id": "ec_4_6_1_17",
+      "name": "cyclic pyranopterin monophosphate synthase",
+      "ec": [
+        "4.6.1.17"
       ]
     }
   ],
@@ -360,22 +396,22 @@
     },
     {
       "id": "r5",
-      "name": "sclareol synthase",
-      "equation": "8-hydroxycopalyl diphosphate + H2O = sclareol + diphosphate",
-      "ec": "4.2.3.141",
+      "name": "phosphonoformate cytidylyltransferase",
+      "equation": "phosphonoformate + CTP = CMP-5'-phosphonoformate + diphosphate",
+      "ec": "2.7.7.93",
       "substrates": [
         {
-          "metabolite": "copal_8_ol_diphosphate",
+          "metabolite": "phosphonoformate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "ctp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sclareol",
+          "metabolite": "cmp_5_phosphonoformate",
           "stoichiometry": 1
         },
         {
@@ -385,20 +421,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_141"
+          "enzyme": "ec_2_7_7_93"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:34459"
+        "rhea": "RHEA:49428"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34459"
+            "id": "RHEA:49428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "cyclic pyranopterin monophosphate synthase",
+      "equation": "(8S)-3',8-cyclo-7,8-dihydroguanosine 5'-triphosphate = cyclic pyranopterin phosphate + diphosphate",
+      "ec": "4.6.1.17",
+      "substrates": [
+        {
+          "metabolite": "8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precursor_z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_6_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:49580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49580"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-5-dimethylorsellinate-to-succinate "3,5-dimethylorsellinate to succinate" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     3_5_dimethylorsellinate
@@ -28,25 +28,25 @@ pathway 3-5-dimethylorsellinate-to-succinate "3,5-dimethylorsellinate to succina
 
   branch from ppi side left {
     ppi
-    <-> . +arginine +atp +hplus
-    l_arginyl_amp
+    <-> . +fpp
+    barbatene
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +thebaine +akg +o2 +formaldehyde +co2 +hplus
-    6_o_demethylthebaine
+  branch from ppi side right {
+    ppi
+    <-> . +fpp +h2o
+    discoidol
   }
 
-  branch from chermesin_d side left {
-    chermesin_d
-    <-> . +sam +sah
-    chermesin_d_methyl_ester
+  branch from sah side left {
+    sah
+    <-> . +e_5_hydroxyferuloyl_coa +sam +hplus
+    sinapoyl_coa
   }
 
   branch from sah side right {
     sah
-    <-> . +lanosterol +sam +hplus
-    eburicol
+    <-> ec_2_1_1_375 [2.1.1.375] +g5_ppp5_aaca_mrna +sam +hplus
+    m7g5_ppp5_m2_aaca_mrna
   }
 }

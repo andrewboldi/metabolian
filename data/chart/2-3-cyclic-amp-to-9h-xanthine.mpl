@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-cyclic-amp-to-9h-xanthine "2',3'-cyclic AMP to 9H-xanthine" {
-  spacing 240
+  spacing 252
 
   spine at 0,0 {
     2_3_cyclic_amp
@@ -20,21 +20,15 @@ pathway 2-3-cyclic-amp-to-9h-xanthine "2',3'-cyclic AMP to 9H-xanthine" {
     xanthine
   }
 
-  branch from adenosine side left {
-    adenosine
-    <-> . +dgtp +amp +hplus
-    dgdp
-  }
-
-  branch from adenine side right {
-    adenine
-    <-> . +n6_hydroxyadenine +hydrogen_donor +h2o
-    hydrogen_acceptor
-  }
-
   branch from nh3 side left {
     nh3
-    <-> . +ctp +h2o +hplus
-    utp
+    <-> . +l_alaninamide +h2o
+    alanine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_3 [1.4.3.3] +d_lysinium +o2 +h2o +h2o2
+    6_amino_2_oxohexanoic_acid
   }
 }

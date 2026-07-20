@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydroxymalonate-to-decarboxy-3-dehydropresph "hydroxymalonate to decarboxy 3-dehydropresph…" {
-  spacing 196
+  spacing 208
 
   spine at 0,0 {
     hydroxymalonate
@@ -18,15 +18,15 @@ pathway hydroxymalonate-to-decarboxy-3-dehydropresph "hydroxymalonate to decarbo
     decarboxy_3_dehydropresphingofungin
   }
 
-  branch from 3_oxopresphingofungin_anion side left {
-    3_oxopresphingofungin_anion
-    <-> . +nadph +hplus +nadp
-    presphingofungin
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser +malonyl-acp +hplus +co2
+    o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser +malonyl-acp +hplus +co2
-    o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory
+    <-> ec_2_3_1_141 [2.3.1.141] +2_o_acyl_3_o_d_galactosyl_sn_glycerol +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
+    1_2_diacyl_3_d_galactosyl_sn_glycerol
   }
 }

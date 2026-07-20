@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribosyl)… to 3-(imidazol-4-yl)-2-oxopr…" {
-  spacing 220
+  spacing 256
 
   spine at 0,0 {
     1_5_phospho_d_ribosyl_atp
@@ -28,19 +28,31 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    germacrene_a
+    <-> . +gpp
+    pinene
   }
 
-  branch from 5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam side left {
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_pentaprenyl_diphosphate
+  }
+
+  branch from 5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam side right {
     5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam
     <-> . +d_erythro_1_imidazol_4_yl_glycerol_3_phosphate +aicar +h2o +hplus
     nh3
   }
 
-  branch from glutamate side right {
+  branch from glutamate side left {
     glutamate
     <-> ec_2_6_1_9 [2.6.1.9] +akg +3_imidazol_4_yl_2_oxopropyl_phosphate
     l_histidinol_phosphate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_82 [2.6.1.82] +1_4_butanediammonium +akg
+    4_ammoniobutanal
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol to O-(pantetheine-4'-phospho…" {
-  spacing 152
+  spacing 200
 
   spine at 0,0 {
     1_monodecanoylglycerol
@@ -16,33 +16,51 @@ pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol
     decanoate
   }
 
-  branch from decanoate side left {
-    decanoate
-    <-> . +h2o +coa +hplus
-    decanoyl_coa
+  branch from glycerol side left {
+    glycerol
+    <-> . +1_arachidonoylglycerol +h2o +hplus
+    arachidonate
   }
 
   branch from glycerol side right {
     glycerol
-    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
-    sn_glycerol_3_phosphate
+    <-> . +prostaglandin_d2_1_glyceryl_ester +h2o +hplus
+    prostaglandin_d2
   }
 
   branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side left {
     o_s_decanoylpantetheine_4_phosphoryl_serine_1
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    o_s_dec_9_enoylpantetheine_4_phosphoryl_serine_1
+    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +h +coa +o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
+    co2
+  }
+
+  branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side right {
+    o_s_decanoylpantetheine_4_phosphoryl_serine_1
+    <-> ec_1_3_1_9 [1.3.1.9] +nadh +h +o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1
+    nad
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    tuberculosinol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_63 [4.2.3.63] +fpp
-    cubenene
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    13r_edaxadiene
   }
 
   branch from holo-acp side left {
     holo-acp
     <-> . +l_serine +coa +hplus
     adenosine_3_5_bismonophosphate
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +2_3_dihydroxybenzoyl_5_adenylate +amp +hplus
+    o_s_2_3_dihydroxybenzoylpantetheine_4_phosphoryl
   }
 }

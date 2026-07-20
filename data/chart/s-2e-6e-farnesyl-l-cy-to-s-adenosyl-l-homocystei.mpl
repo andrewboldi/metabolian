@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei "S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine" {
-  spacing 180
+  spacing 252
 
   spine at 0,0 {
     s_2e_6e_farnesyl_l_cysteine
@@ -30,25 +30,67 @@ pathway s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei "S-[(2E,6E)-farnesyl]-L
 
   branch from cysteine side right {
     cysteine
-    <-> ec_1_13_11_20 [1.13.11.20] +o2 +hplus
-    3_sulfino_l_alanine
+    <-> . +s_malyl_d_glucosaminide +h2o
+    bacillithiol
+  }
+
+  branch from cysteine side left {
+    cysteine
+    <-> ec_1_14_99_52 [1.14.99.52] +l_histidine +o2 +h2o
+    s_5_histidyl_cysteine_sulfoxide_dizwitterion
+  }
+
+  branch from 2e_6e_farnesoate side right {
+    2e_6e_farnesoate
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +11r_dihydroartemisinic_aldehyde +h2o
+    nadp
+  }
+
+  branch from 2e_6e_farnesoate side left {
+    2e_6e_farnesoate
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +11r_dihydroartemisinic_aldehyde +h2o
+    nad
+  }
+
+  branch from methyl_farnesoate side right {
+    methyl_farnesoate
+    <-> . +h +o2 +nadph +nadp +h2o
+    juvenile_hormone_iii
   }
 
   branch from sah side left {
     sah
-    <-> . +s_norreticuline +sam +hplus
-    s_norcodamine
+    <-> ec_2_1_1_240 [2.1.1.240] +trans_resveratrol +sam +hplus
+    pterostilbene
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +sam +pterostilbene +hplus
+    3_methoxy_4_5_dihydroxy_trans_stilbene
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +11_oxo_amyrin +fmnh2 +o2 +h2o +hplus
+    30_hydroxy_11_oxo_amyrin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_r_18_s_eetetr
+    <-> . +30_hydroxy_11_oxo_amyrin +fmnh2 +o2 +h2o +hplus
+    glycyrrhetaldehyde
   }
 
   branch from methanol side left {
     methanol
-    <-> ec_3_1_1_122 [3.1.1.122] +carbendazim +h2o +co2
-    2_aminobenzimidazole
+    <-> ec_3_1_1_123 [3.1.1.123] +17_dehydropreakuammicine +h2o +co2
+    norfluorocurarine
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> . +methyl_nicotinate +h2o +hplus
+    nicotinate
   }
 }

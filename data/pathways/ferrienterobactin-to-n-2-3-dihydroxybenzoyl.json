@@ -84,9 +84,118 @@
       "xrefs": {
         "chebi": "CHEBI:143010"
       }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "n_2_3_dihydroxybenzoyl_l_serine",
+      "name": "N-(2,3-dihydroxybenzoyl)-L-serine",
+      "short": "N-(2,3-dihydroxyben…",
+      "formula": "C10H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM729151"
+      }
+    },
+    {
+      "id": "iron_iii_2_3_dihydroxybenzoylserine_2_complex",
+      "name": "iron(III)-[(2,3-dihydroxybenzoylserine)2] complex",
+      "short": "iron(III)-[(2,3-dih…",
+      "formula": "C20H15FeN2O11",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM819174"
+      }
+    },
+    {
+      "id": "enterobactin",
+      "name": "enterobactin",
+      "formula": "C30H26N3O15",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77805"
+      }
+    },
+    {
+      "id": "fe_iii_di_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_d",
+      "name": "Fe(III)-{di[N-(2,3-dihydroxybenzoyl)-L-seryl]-N-(C-5-[deoxy-β-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serinate}",
+      "short": "Fe(III)-{di[N-(2,3-…",
+      "formula": "C36H32FeN3O21",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:143774"
+      }
+    },
+    {
+      "id": "fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox",
+      "name": "Fe(III)-{N-(2,3-dihydroxybenzoyl)-L-seryl-N-(C-5-[deoxy-β-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serinate}",
+      "short": "Fe(III)-{N-(2,3-dih…",
+      "formula": "C26H25FeN2O16",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:143775"
+      }
+    },
+    {
+      "id": "fe",
+      "name": "Fe",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM1370983"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_109",
+      "name": "iron(III) salmochelin esterase",
+      "ec": [
+        "3.1.1.109"
+      ]
+    },
+    {
+      "id": "ec_1_16_1_9",
+      "name": "ferric-chelate reductase (NADPH)",
+      "ec": [
+        "1.16.1.9"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -209,6 +318,230 @@
           {
             "db": "Rhea",
             "id": "RHEA:59264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR164553",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe_iii_n_2_3_dihydroxybenzoyl_l_serine_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron_iii_2_3_dihydroxybenzoylserine_2_complex",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR164553"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164553"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "enterobactin + 3 H2O = 3 N-(2,3-dihydroxybenzoyl)-L-serine + 2 H(+)",
+      "equation": "enterobactin + 3 H2O = 3 N-(2,3-dihydroxybenzoyl)-L-serine + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serinate",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28018"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "iron(III) salmochelin esterase",
+      "equation": "Fe(III)-{di[N-(2,3-dihydroxybenzoyl)-L-seryl]-N-(C-5-[deoxy-beta-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine} + H2O + H(+) = Fe(III)-{N-(2,3-dihydroxybenzoyl)-L-seryl-N-(C-5-[deoxy-beta-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine} + N-(2,3-dihydroxybenzoyl)-L-serine",
+      "ec": "3.1.1.109",
+      "substrates": [
+        {
+          "metabolite": "fe_iii_di_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:60404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR164554",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron_iii_2_3_dihydroxybenzoylserine_2_complex",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe_iii_n_2_3_dihydroxybenzoyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR164554"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "ferric-chelate reductase (NADPH)",
+      "ec": "1.16.1.9",
+      "substrates": [
+        {
+          "metabolite": "fe",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serine",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "fe_iii_n_2_3_dihydroxybenzoyl_l_serine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_16_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "metanetx": "MNXR165253"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165253"
           }
         ]
       }

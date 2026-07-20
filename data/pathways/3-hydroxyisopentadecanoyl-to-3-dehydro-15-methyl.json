@@ -140,6 +140,25 @@
       }
     },
     {
+      "id": "l_cysteate",
+      "name": "L-cysteate",
+      "formula": "C3H6NO5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58090"
+      }
+    },
+    {
+      "id": "2_amino_3_oxo_15_methylhexadecane_1_sulfonate",
+      "name": "2-amino-3-oxo-15-methylhexadecane-1-sulfonate",
+      "short": "2-amino-3-oxo-15-me…",
+      "formula": "C17H35NO4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231947"
+      }
+    },
+    {
       "id": "15_methylhexadecasphinganine",
       "name": "15-methylhexadecasphinganine",
       "short": "15-methylhexadecasp…",
@@ -326,6 +345,53 @@
     },
     {
       "id": "r5",
+      "name": "isopentadecanoyl-CoA + L-cysteate + H(+) = 3-oxocapnine + CO2 + CoA",
+      "equation": "isopentadecanoyl-CoA + L-cysteate + H(+) = 3-oxocapnine + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "isopentadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_amino_3_oxo_15_methylhexadecane_1_sulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "15-methylhexadecasphinganine + NADP(+) = 3-dehydro-15-methylhexadecasphinganine + NADPH...",
       "equation": "15-methylhexadecasphinganine + NADP(+) = 3-dehydro-15-methylhexadecasphinganine + NADPH + H(+)",
       "substrates": [
@@ -353,7 +419,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:34599"
       },

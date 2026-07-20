@@ -1,0 +1,334 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucitol-6-phosphate-to-5-dehydro-d-fructose",
+  "name": "D-glucitol 6-phosphate to 5-dehydro-D-fructose",
+  "category": "redox-detox",
+  "summary": "A 3-step route from D-glucitol 6-phosphate(2−) to 5-dehydro-D-fructose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24580"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60084"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucitol_6_phosphate",
+      "name": "D-glucitol 6-phosphate",
+      "short": "D-glucitol 6-P",
+      "formula": "C6H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60084"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucitol",
+      "name": "D-glucitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17924"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "keto_l_sorbose",
+      "name": "keto-L-sorbose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13172"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_dehydro_d_fructose",
+      "name": "5-dehydro-D-fructose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17011"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "d_sorbopyranose",
+      "name": "D-sorbopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48674"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_50",
+      "name": "sorbitol-6-phosphatase",
+      "ec": [
+        "3.1.3.50"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_21",
+      "name": "D-sorbitol dehydrogenase (acceptor)",
+      "ec": [
+        "1.1.99.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_11",
+      "name": "L-sorbose oxidase",
+      "ec": [
+        "1.1.3.11"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_40",
+      "name": "D-mannitol oxidase",
+      "ec": [
+        "1.1.3.40"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sorbitol-6-phosphatase",
+      "equation": "D-sorbitol 6-phosphate + H2O = D-sorbitol + phosphate",
+      "ec": "3.1.3.50",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-sorbitol dehydrogenase (acceptor)",
+      "equation": "D-sorbitol + A = keto-L-sorbose + AH2",
+      "ec": "1.1.99.21",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21320"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-sorbose oxidase",
+      "equation": "keto-L-sorbose + O2 = 5-dehydro-D-fructose + H2O2",
+      "ec": "1.1.3.11",
+      "substrates": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17853"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17853"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-mannitol oxidase",
+      "equation": "D-sorbitol + O2 = D-sorbopyranose + H2O2",
+      "ec": "1.1.3.40",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_sorbopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59772"
+          }
+        ]
+      }
+    }
+  ]
+}

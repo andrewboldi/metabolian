@@ -9,7 +9,7 @@
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:82483"
+        "id": "RHEA:83043"
       },
       {
         "db": "ChEBI",
@@ -29,21 +29,12 @@
       }
     },
     {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57692"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
+        "chebi": "CHEBI:58349"
       }
     },
     {
@@ -56,12 +47,21 @@
       }
     },
     {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58307"
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -193,25 +193,6 @@
       }
     },
     {
-      "id": "l_kynurenine",
-      "name": "L-kynurenine",
-      "formula": "C10H12N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57959"
-      }
-    },
-    {
-      "id": "4_2_aminophenyl_2_4_dioxobutanoate",
-      "name": "4-(2-aminophenyl)-2,4-dioxobutanoate",
-      "short": "4-(2-aminophenyl)-2…",
-      "formula": "C10H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58147"
-      }
-    },
-    {
       "id": "5z_3_3_4_dihydroxyphenyl_5_3_4_dihydroxyphenyl",
       "name": "(5Z)-3-(3,4-dihydroxyphenyl)-5-[(3,4-dihydroxyphenyl)methylidene]-5-oxo-2,5-dihydrofuran-3-olate",
       "short": "3-(3,4-dihydroxyphe…",
@@ -222,59 +203,13 @@
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "2_4_dihydroxy_6_methylbenzaldehyde",
-      "name": "2,4-dihydroxy-6-methylbenzaldehyde",
-      "short": "2,4-dihydroxy-6-met…",
-      "formula": "C8H8O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:155863"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "25s_cholestenoate",
-      "name": "(25S)-cholestenoate",
-      "formula": "C27H43O3",
+      "id": "2z_2_3_4_dioxocyclohexa_1_5_dien_1_yl_methylide",
+      "name": "(2Z)-2-[(3,4-dioxocyclohexa-1,5-dien-1-yl)methylidene]-4-(4-hydroxyphenyl)-5-oxo-2,5-dihydrofuran-3-olate",
+      "short": "2-[(3,4-dioxocycloh…",
+      "formula": "C17H9O6",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:71567"
-      }
-    },
-    {
-      "id": "25s_3_hydroxy_5_cholesten_26_oyl_coa",
-      "name": "(25S)-3β-hydroxy-5-cholesten-26-oyl-CoA",
-      "short": "3β-hydroxy-5-choles…",
-      "formula": "C48H74N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:83783"
+        "chebi": "CHEBI:193115"
       }
     }
   ],
@@ -290,19 +225,15 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "(2R)-hydroxybutanoate + FAD + H(+) = 2-oxobutanoate + FADH2",
-      "equation": "(2R)-hydroxybutanoate + FAD + H(+) = 2-oxobutanoate + FADH2",
+      "name": "(2R)-hydroxybutanoate + NADP(+) = 2-oxobutanoate + NADPH + H(+)",
+      "equation": "(2R)-hydroxybutanoate + NADP(+) = 2-oxobutanoate + NADPH + H(+)",
       "substrates": [
         {
           "metabolite": "r_2_hydroxybutyrate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
@@ -312,21 +243,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "fadh2",
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "rhea": "RHEA:82483"
+        "rhea": "RHEA:83043"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82483"
+            "id": "RHEA:83043"
           }
         ]
       }
@@ -484,45 +419,6 @@
     },
     {
       "id": "r5",
-      "name": "3-(4-hydroxyphenyl)pyruvate + L-kynurenine = 4-(2-aminophenyl)-2,4-dioxobutanoate + L-t...",
-      "equation": "3-(4-hydroxyphenyl)pyruvate + L-kynurenine = 4-(2-aminophenyl)-2,4-dioxobutanoate + L-tyrosine",
-      "substrates": [
-        {
-          "metabolite": "3_4_hydroxyphenyl_pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_kynurenine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_2_aminophenyl_2_4_dioxobutanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "tyrosine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:66104"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66104"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "aspulvinone E + O2 = (5Z)-3-(3,4-dihydroxyphenyl)-5-[(3,4-dihydroxyphenyl)methylidene]-...",
       "equation": "aspulvinone E + O2 = (5Z)-3-(3,4-dihydroxyphenyl)-5-[(3,4-dihydroxyphenyl)methylidene]-5-oxo-2,5-dihydrofuran-3-olate",
       "substrates": [
@@ -542,7 +438,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:74195"
       },
@@ -557,43 +453,23 @@
       }
     },
     {
-      "id": "r7",
-      "name": "3 malonyl-CoA + acetyl-CoA + AH2 + 3 H(+) = orsellinaldehyde + A + 3 CO2 + 4 CoA + H2O",
-      "equation": "3 malonyl-CoA + acetyl-CoA + AH2 + 3 H(+) = orsellinaldehyde + A + 3 CO2 + 4 CoA + H2O",
+      "id": "r6",
+      "name": "aspulvinone E + O2 = (2Z)-2-[(3,4-dioxocyclohexa-1,5-dien-1-yl)methylidene]-4-(4-hydrox...",
+      "equation": "aspulvinone E + O2 = (2Z)-2-[(3,4-dioxocyclohexa-1,5-dien-1-yl)methylidene]-4-(4-hydroxyphenyl)-5-oxo-2,5-dihydrofuran-3-olate + H2O",
       "substrates": [
         {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "acetyl_coa",
+          "metabolite": "aspulvinone_e",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "o2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "2_4_dihydroxy_6_methylbenzaldehyde",
+          "metabolite": "2z_2_3_4_dioxocyclohexa_1_5_dien_1_yl_methylide",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 4
         },
         {
           "metabolite": "h2o",
@@ -601,63 +477,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:64520"
+        "rhea": "RHEA:74199"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64520"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "(25S)-3beta-hydroxy-5-cholestenoate + ATP + CoA = (25S)-3beta-hydroxy-5-cholestenoyl-Co...",
-      "equation": "(25S)-3beta-hydroxy-5-cholestenoate + ATP + CoA = (25S)-3beta-hydroxy-5-cholestenoyl-CoA + AMP + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "25s_cholestenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "25s_3_hydroxy_5_cholesten_26_oyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:43880"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:43880"
+            "id": "RHEA:74199"
           }
         ]
       }

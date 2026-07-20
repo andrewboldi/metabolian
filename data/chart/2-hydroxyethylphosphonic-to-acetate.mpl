@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxyethylphosphonic-to-acetate "2-hydroxyethylphosphonic… to acetate" {
-  spacing 216
+  spacing 222
 
   spine at 0,0 {
     2_hydroxyethylphosphonic_acid
@@ -18,13 +18,7 @@ pathway 2-hydroxyethylphosphonic-to-acetate "2-hydroxyethylphosphonic… to acet
 
   branch from phosphonoacetaldehyde side left {
     phosphonoacetaldehyde
-    <-> ec_4_3_1_33 [4.3.1.33] +1r_2_amino_1_hydroxyethyl_phosphonate
+    <-> ec_1_5_3_27 [1.5.3.27] +2_aminoethyl_phosphonic_acid +o2 +h2o +h2o2
     nh3
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +3_hydroxy_3_4_hydroxyphenyl_propanoate
-    4_hydroxybenzaldehyde
   }
 }

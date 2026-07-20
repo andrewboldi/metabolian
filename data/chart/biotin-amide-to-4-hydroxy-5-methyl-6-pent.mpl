@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-methyl-6-pent…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     biotin_amide
@@ -22,20 +22,44 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-m
 
   branch from biotinate side left {
     biotinate
-    <-> . +atp +hplus +ppi
-    biotinyl_5_amp
+    <-> ec_6_2_1_11 [6.2.1.11] +atp +coa +amp +ppi
+    biotinyl_coa
+  }
+
+  branch from biotinate side right {
+    biotinate
+    <-> . +nadph +hplus +nadp +h2o
+    biotinate_sulfoxide
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_10 [1.4.1.10] +glycine +nad +h2o +nadh +hplus
+    glyoxylate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_13 [4.3.1.13] +h2o +hplus +pyruvate +co2
-    o_carbamoyl_l_serine
+    <-> ec_1_4_3_5 [1.4.3.5] +o2 +h2o +plp +h2o2
+    pyridoxamine_5_phosphate
+  }
+
+  branch from biotinyl_l_lysine side left {
+    biotinyl_l_lysine
+    <-> . +l_lysinium +amp +hplus
+    biotinyl_5_amp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_24 [4.2.3.24] +fpp
+    amorpha_4_11_diene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_6_1_1 [4.6.1.1] +atp
-    camp
+    <-> ec_6_1_1_23 [6.1.1.23] +amp_3_end_1 +aspartate +atp +amp
+    3_l_aspartate_adenylyl_1_group
   }
 
   branch from acetyl-acp side right {
@@ -44,7 +68,13 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-m
     holo-acp
   }
 
-  branch from methylmalonyl_coa side left {
+  branch from acetyl-acp side left {
+    acetyl-acp
+    <-> . +l_serine +acetyl_coa +hplus
+    adenosine_3_5_bismonophosphate
+  }
+
+  branch from methylmalonyl_coa side right {
     methylmalonyl_coa
     <-> . +stearoyl_coa +malonyl-coa +hplus +co2 +coa
     4_hydroxy_5_methyl_6_heptadecylpyran_2_one

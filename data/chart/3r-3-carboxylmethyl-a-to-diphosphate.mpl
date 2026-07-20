@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-diphosphate "(3R)-3-[(carboxylmethyl)a… to diphosphate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_fatty_acid
@@ -18,19 +18,37 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate "(3R)-3-[(carboxylmethyl)a… to di
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_70 [1.14.11.70] +deoxycylindrospermopsin +akg +o2 +co2
-    7_epi_cylindrospermopsin
+    <-> . +trihazone_a +akg +o2 +hplus +co2 +h2o
+    trihazone_d
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +s_reticulinium +akg +o2 +formaldehyde +co2
+    s_6_o_demethylreticuline
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_168 [4.2.3.168] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    3e_7e_dolathalia_3_7_11_triene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    z_biformene
+    <-> ec_4_2_3_169 [4.2.3.169] +fpp +h2o
+    7_epi_eudesmol
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p +h2o +hplus
-    4a_5_dihydro_ml_236c_carboxylate
+    <-> . +l_cysteinyl_amp +amp +hplus
+    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_6_2_1_69 [6.2.1.69] +atp +o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin +amp +ppi
+    cysteine
   }
 }

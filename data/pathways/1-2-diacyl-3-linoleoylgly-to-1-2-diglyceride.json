@@ -119,54 +119,6 @@
       "xrefs": {
         "chebi": "CHEBI:17855"
       }
-    },
-    {
-      "id": "all_trans_retinol",
-      "name": "all-trans-retinol",
-      "formula": "C20H30O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17336"
-      }
-    },
-    {
-      "id": "all_trans_retinyl_ester",
-      "name": "all-trans-retinyl ester",
-      "short": "all-trans-retinyl…",
-      "formula": "C21H29O2R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:63410"
-      }
-    },
-    {
-      "id": "1_3_diglyceride",
-      "name": "1,3-diglyceride",
-      "formula": "C5H6O5R2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:47777"
-      }
-    },
-    {
-      "id": "1_2_diacyl_sn_glycero_3_phospholipid",
-      "name": "1,2-diacyl-sn-glycero-3-phospholipid",
-      "short": "1,2-diacyl-sn-glyce…",
-      "formula": "C5H5O8PR3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136912"
-      }
-    },
-    {
-      "id": "1_acyl_sn_glycero_3_phospholipid",
-      "name": "1-acyl-sn-glycero-3-phospholipid",
-      "short": "1-acyl-sn-glycero-3…",
-      "formula": "C4H6O7PR2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:169977"
-      }
     }
   ],
   "enzymes": [],
@@ -294,125 +246,39 @@
     },
     {
       "id": "r4",
-      "name": "a triacylglycerol + all-trans-retinol = an all-trans-retinyl ester + a 1,2-diacylglycerol",
-      "equation": "a triacylglycerol + all-trans-retinol = an all-trans-retinyl ester + a 1,2-diacylglycerol",
+      "name": "a 1,2-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "equation": "a 1,2-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
       "substrates": [
         {
-          "metabolite": "triglyceride",
+          "metabolite": "1_2_diglyceride",
           "stoichiometry": 1
         },
         {
-          "metabolite": "all_trans_retinol",
+          "metabolite": "acyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_retinyl_ester",
+          "metabolite": "triglyceride",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_2_diglyceride",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:78063"
+        "rhea": "RHEA:78183"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78063"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "a 1,3-diacylglycerol + H2O = a 1-acylglycerol + a fatty acid + H(+)",
-      "equation": "a 1,3-diacylglycerol + H2O = a 1-acylglycerol + a fatty acid + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_3_diglyceride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_monoglyceride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:78019"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78019"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "a glycerophospholipid + H2O = a 1-acyl-sn-glycero-3-phospholipid + a fatty acid + H(+)",
-      "equation": "a glycerophospholipid + H2O = a 1-acyl-sn-glycero-3-phospholipid + a fatty acid + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_2_diacyl_sn_glycero_3_phospholipid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_acyl_sn_glycero_3_phospholipid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:67420"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67420"
+            "id": "RHEA:78183"
           }
         ]
       }

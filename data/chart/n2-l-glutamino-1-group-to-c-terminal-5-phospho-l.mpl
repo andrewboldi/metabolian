@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-l-glutamino-1-group-to-c-terminal-5-phospho-l "N2-L-glutamino(1−) group to C-terminal-γ-(5-phospho-L…" {
-  spacing 264
+  spacing 288
 
   spine at 0,0 {
     n2_l_glutamino_1_group
@@ -18,7 +18,25 @@ pathway n2-l-glutamino-1-group-to-c-terminal-5-phospho-l "N2-L-glutamino(1−) g
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nad +h2o +nadh +hplus
-    5_guanidino_2_oxopentanoic_acid
+    <-> ec_3_5_4_34 [3.5.4.34] +adenosine_5_monophosphate_1 +h2o +hplus
+    inosine_5_phosphate_1
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +hplus
+    dichlorochromopyrrolate
+  }
+
+  branch from c_terminal_l_glutamyl_l_glutamyl_3_group side left {
+    c_terminal_l_glutamyl_l_glutamyl_3_group
+    <-> ec_2_7_2_19 [2.7.2.19] +atp +c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro
+    adp
+  }
+
+  branch from c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro side right {
+    c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro
+    <-> ec_1_2_1_106 [1.2.1.106] +pi +nadp +nadph +hplus
+    c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl
   }
 }

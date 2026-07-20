@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glc-1-4-d-glc-1-d-to-4-6-me-cooh-c-d-man-1 "β-D-Glc-(1→4)-α-D-Glc-1-d… to 4,6-Me(COOH)C-β-D-Man-(1→…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     d_glc_1_4_d_glc_1_diphospho_ditrans_polycis_und

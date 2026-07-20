@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "3-hydroxyphenylacetyl-CoA to S-adenosyl-L-homocysteine" {
-  spacing 272
+  spacing 302
 
   spine at 0,0 {
     3_hydroxyphenylacetyl_coa
@@ -18,15 +18,33 @@ pathway 3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "3-hydroxyphenylacetyl-
     plastoquinol_9
   }
 
+  branch from 2_methyl_6_all_trans_nonaprenyl_1_4_benzoquinone side left {
+    2_methyl_6_all_trans_nonaprenyl_1_4_benzoquinone
+    <-> . +s_adenosyl_l_homocysteine +h +2_all_trans_nonaprenyl_benzene_1_4_diol
+    s_adenosyl_l_methionine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +8_9_eet +atp +coa +amp
+    8_9_epoxy_5z_11z_14z_icosatrienoyl_coa
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_139 [4.2.3.139] +fpp
-    valerena_4_7_11_diene
+    <-> . +11_12_eet +atp +coa +amp
+    11_12_epoxy_5z_8z_14z_icosatrienoyl_coa
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
+    <-> ec_2_1_1_311 [2.1.1.311] +cytidine_5_monophosphate_1 +sam +hplus
     5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_312 [2.1.1.312] +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
   }
 }

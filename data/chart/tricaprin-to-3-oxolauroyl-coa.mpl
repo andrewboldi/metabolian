@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tricaprin-to-3-oxolauroyl-coa "tricaprin to 3-oxolauroyl-CoA" {
-  spacing 152
+  spacing 194
 
   spine at 0,0 {
     tricaprin
@@ -18,23 +18,41 @@ pathway tricaprin-to-3-oxolauroyl-coa "tricaprin to 3-oxolauroyl-CoA" {
 
   branch from decanoate side left {
     decanoate
+    <-> . +nad +h2o +nadh +hplus
+    decanal
+  }
+
+  branch from decanoate side right {
+    decanoate
     <-> . +n6_capryl_l_lysine +h2o
     l_lysinium
   }
 
-  branch from decanoyl_coa side right {
+  branch from decanoyl_coa side left {
     decanoyl_coa
     <-> . +o2 +h2o2
     trans_dec_2_enoyl_coa
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_83 [2.5.1.83] +ipp +fpp
-    all_trans_hexaprenyl_diphosphate
+  branch from decanoyl_coa side right {
+    decanoyl_coa
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
+    1_hexadecyl_2_acetyl_3_decanoyl_sn_glycerol
   }
 
-  branch from 3_oxolauroyl_coa side right {
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_79 [4.2.3.79] +fpp
+    thujopsene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_78 [4.2.3.78] +fpp
+    chamigrene
+  }
+
+  branch from 3_oxolauroyl_coa side left {
     3_oxolauroyl_coa
     <-> . +nad +nadh +hplus
     r_3_hydroxylauroyl_coa

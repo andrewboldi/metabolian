@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-nitroanthranilate-to-fumarate "5-nitroanthranilate to fumarate" {
-  spacing 264
+  spacing 300
 
   spine at 0,0 {
     5_nitroanthranilate
@@ -20,15 +20,39 @@ pathway 5-nitroanthranilate-to-fumarate "5-nitroanthranilate to fumarate" {
     fumarate
   }
 
+  branch from 5_nitrosalicylate side left {
+    5_nitrosalicylate
+    <-> . +4_nitro_6_oxohepta_2_4_dienedioate +h
+    o2
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +1_4_butanediammonium +o2 +h2o2
+    1_pyrrolinium
+  }
+
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_13 [1.4.3.13] +l_lysinium +o2 +h2o +h2o2
-    l_allysine
+    <-> ec_4_3_1_28 [4.3.1.28] +l_lysinium
+    l_pipecolic_acid
+  }
+
+  branch from 2_oxo_3_5_oxofuran_2_ylidene_propanoate side right {
+    2_oxo_3_5_oxofuran_2_ylidene_propanoate
+    <-> . +nitrite
+    4_nitro_6_oxohepta_2_4_dienedioate
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> . +1_chloro_3_nitrobenzene +nadh +o2 +nad
+    3_chlorocatechol
   }
 
   branch from nitrite side right {
     nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +3_4_dinitrotoluene +nadh +o2 +nad
-    5_methyl_3_nitrocatechol
+    <-> . +nadh +o2 +3_chlorocatechol +nad
+    1_chloro_2_nitrobenzene
   }
 }

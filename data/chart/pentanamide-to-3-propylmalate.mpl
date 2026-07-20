@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pentanamide-to-3-propylmalate "pentanamide to 3-propylmalate" {
-  spacing 156
+  spacing 204
 
   spine at 0,0 {
     pentanamide
@@ -22,10 +22,22 @@ pathway pentanamide-to-3-propylmalate "pentanamide to 3-propylmalate" {
     aliphatic_alcohol
   }
 
-  branch from nh3 side right {
+  branch from valerate side right {
+    valerate
+    <-> . +nad +h2o +nadh +hplus
+    pentanal
+  }
+
+  branch from nh3 side left {
     nh3
     <-> ec_3_5_4_37 [3.5.4.37] +adenosine_5_monophosphate_1 +h2o +hplus
     inosine_5_phosphate_1
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_23 [3.5.4.23] +blasticidin_s +h2o +hplus
+    deaminohydroxyblasticidin_s
   }
 
   branch from pentanoyl_coa side left {
@@ -34,9 +46,21 @@ pathway pentanamide-to-3-propylmalate "pentanamide to 3-propylmalate" {
     2e_pentenoyl_coa
   }
 
-  branch from ppi side right {
+  branch from pentanoyl_coa side right {
+    pentanoyl_coa
+    <-> . +l_serine +coa
+    o_pentanoyl_l_serine
+  }
+
+  branch from ppi side left {
     ppi
     <-> ec_6_1_1_1 [6.1.1.1] +amp_3_end_1 +tyrosine +atp +amp +hplus
     3_l_tyrosyl_adenylyl_1_group
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_21 [4.2.3.21] +fpp
+    premnaspirodiene
   }
 }

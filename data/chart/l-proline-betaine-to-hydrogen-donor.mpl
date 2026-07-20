@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor" {
-  spacing 164
+  spacing 230
 
   spine at 0,0 {
     l_proline_betaine
@@ -18,16 +18,40 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
     1_pyrroline_2_carboxylic_acid
   }
 
+  branch from n_methylproline side left {
+    n_methylproline
+    <-> ec_2_1_1_388 [2.1.1.388] +cobalt +l_proline_betaine +hplus
+    methyl_co
+  }
+
+  branch from n_methylproline side right {
+    n_methylproline
+    <-> . +l_proline +formaldehyde +h2o2 +h2o
+    o2
+  }
+
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_53 [1.14.11.53] +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    <-> . +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
     adenosine_5_monophosphate_1
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +succinate +co2
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyladen
+  }
+
+  branch from l_proline side left {
+    l_proline
+    <-> . +l_tryptophan +atp +amp +ppi +hplus
+    brevianamide_f
   }
 
   branch from l_proline side right {
     l_proline
-    <-> . +l_tryptophan +atp +amp +ppi +hplus
-    brevianamide_f
+    <-> ec_1_14_11_57 [1.14.11.57] +akg +o2 +succinate +co2
+    trans_4_hydroxy_l_proline
   }
 
   branch from d_proline side left {
@@ -42,9 +66,21 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
     trans_3_hydroxy_l_proline
   }
 
+  branch from 1_pyrroline_2_carboxylic_acid side left {
+    1_pyrroline_2_carboxylic_acid
+    <-> ec_4_2_1_171 [4.2.1.171] +h2o
+    cis_3_hydroxy_l_proline
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_39 [1.14.99.39] +nh3 +o2 +hydrogen_acceptor +h2o +hplus
+    hydroxylamine
+  }
+
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +15_cis_phytoene +hydrogen_acceptor
-    all_trans_phytofluene
+    <-> ec_1_3_99_28 [1.3.99.28] +15_cis_phytoene +hydrogen_acceptor
+    neurosporene
   }
 }

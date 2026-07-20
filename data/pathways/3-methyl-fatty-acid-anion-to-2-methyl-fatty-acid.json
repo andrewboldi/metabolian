@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid",
   "name": "3-methyl fatty acid anion to 2-methyl fatty acid anion",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from 3-methyl fatty acid anion to 2-methyl fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -196,32 +196,50 @@
       }
     },
     {
-      "id": "drimenol",
-      "name": "drimenol",
-      "formula": "C15H26O",
+      "id": "santalene",
+      "name": "(−)-β-santalene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61148"
+        "chebi": "CHEBI:10440"
       }
     },
     {
-      "id": "butyryl_coa",
-      "name": "Butyryl-CoA (butanoyl-CoA)",
-      "short": "Butyryl-CoA…",
-      "formula": "C25H38N7O17P3S",
-      "charge": -4,
+      "id": "santalene",
+      "name": "(+)-α-santalene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57371"
+        "chebi": "CHEBI:61677"
       }
     },
     {
-      "id": "2_hydroxybutanoyl_coa",
-      "name": "2-hydroxybutanoyl-CoA",
-      "short": "2-hydroxybutanoyl-C…",
-      "formula": "C25H38N7O18P3S",
-      "charge": -4,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:138628"
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "3s_3_hydroxy_l_lysine_1",
+      "name": "(3S)-3-hydroxy-L-lysine(1+)",
+      "short": "3-hydroxy-L-lysine(…",
+      "formula": "C6H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141492"
+      }
+    },
+    {
+      "id": "4_hydroxy_l_lysine_1",
+      "name": "4-hydroxy-L-lysine(1+)",
+      "short": "4-hydroxy-L-lysine(…",
+      "formula": "C6H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141495"
       }
     },
     {
@@ -243,10 +261,24 @@
       ]
     },
     {
-      "id": "ec_4_2_3_194",
-      "name": "(-)-drimenol synthase",
+      "id": "ec_4_2_3_83",
+      "name": "beta-santalene synthase",
       "ec": [
-        "4.2.3.194"
+        "4.2.3.83"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_82",
+      "name": "alpha-santalene synthase",
+      "ec": [
+        "4.2.3.82"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_63",
+      "name": "peptidyl-lysine (3S)-dioxygenase",
+      "ec": [
+        "1.14.11.63"
       ]
     },
     {
@@ -442,22 +474,18 @@
     },
     {
       "id": "r5",
-      "name": "(-)-drimenol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (5S,9S,10S)-drim-7-en-11-ol + diphosphate",
-      "ec": "4.2.3.194",
+      "name": "beta-santalene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-beta-santalene + diphosphate",
+      "ec": "4.2.3.83",
       "substrates": [
         {
           "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "drimenol",
+          "metabolite": "santalene",
           "stoichiometry": 1
         },
         {
@@ -467,31 +495,73 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_194"
+          "enzyme": "ec_4_2_3_83"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:28290"
+        "rhea": "RHEA:31431"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28290"
+            "id": "RHEA:31431"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "butanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxybutanoyl-CoA + succinate + CO2",
-      "equation": "butanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxybutanoyl-CoA + succinate + CO2",
+      "name": "alpha-santalene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-alpha-santalene + diphosphate",
+      "ec": "4.2.3.82",
       "substrates": [
         {
-          "metabolite": "butyryl_coa",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "santalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_82"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:31435"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "peptidyl-lysine (3S)-dioxygenase",
+      "equation": "L-lysyl-[protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-lysyl-[protein] + succinate + CO2",
+      "ec": "1.14.11.63",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -505,7 +575,59 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxybutanoyl_coa",
+          "metabolite": "3s_3_hydroxy_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:57152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "L-lysyl-[protein] + 2-oxoglutarate + O2 = 4-hydroxy-L-lysyl-[protein] + succinate + CO2",
+      "equation": "L-lysyl-[protein] + 2-oxoglutarate + O2 = 4-hydroxy-L-lysyl-[protein] + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_l_lysine_1",
           "stoichiometry": 1
         },
         {
@@ -518,22 +640,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:55176"
+        "rhea": "RHEA:57156"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55176"
+            "id": "RHEA:57156"
           }
         ]
       }
     },
     {
-      "id": "r7",
+      "id": "r9",
       "name": "oxalyl-CoA decarboxylase",
       "equation": "oxalyl-CoA + H(+) = formyl-CoA + CO2",
       "ec": "4.1.1.8",
@@ -563,7 +685,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:19333"
       },

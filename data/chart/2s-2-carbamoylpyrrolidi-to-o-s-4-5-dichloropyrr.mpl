@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-2-carbamoylpyrrolidi-to-o-s-4-5-dichloropyrr "(2S)-2-carbamoylpyrrolidi… to O-[S-(4,5-dichloropyrrole…" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     2s_2_carbamoylpyrrolidin_1_ium
@@ -24,27 +24,51 @@ pathway 2s-2-carbamoylpyrrolidi-to-o-s-4-5-dichloropyrr "(2S)-2-carbamoylpyrroli
     1_pyrroline_2_carboxylic_acid
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_2_3_2_14 [2.3.2.14] +d_alanine +glutamine
-    l_glutamyl_d_alaninate
+  branch from l_proline side right {
+    l_proline
+    <-> . +atp +ppi
+    3_l_prolyl_amp
   }
 
-  branch from o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit side left {
-    o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit
-    <-> . +aculene_c +holo-acp
-    aculene_a
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_4 [3.5.4.4] +2_deoxyadenosine +h2o +hplus
+    2_deoxyinosine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +tyraminium +o2 +h2o +h2o2
+    4_hydroxyphenyl_acetaldehyde
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_48 [4.2.3.48] +fpp +h2o
+    3s_6e_nerolidol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_52 [4.2.3.52] +gpp
-    phellandrene
+    <-> ec_4_2_3_49 [4.2.3.49] +fpp +h2o
+    3r_6e_nerolidol
   }
 
   branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side left {
     o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl
+    <-> . +fadh2 +chloride +o2 +fad +h2o
+    o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho
+  }
+
+  branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side right {
+    o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl
     <-> ec_1_14_19_57 [1.14.19.57] +bromide +fadh2 +o2 +fad +h2o
     o_s_3_4_5_tribromopyrrole_2_carbonyl_pantetheine
+  }
+
+  branch from o_s_4_5_dichloropyrrole_2_carbonyl_pantetheine_4 side left {
+    o_s_4_5_dichloropyrrole_2_carbonyl_pantetheine_4
+    <-> . +fadh2 +h +o2 +chloride +o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho +h2o
+    fad
   }
 }

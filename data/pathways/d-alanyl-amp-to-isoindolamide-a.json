@@ -232,23 +232,53 @@
       }
     },
     {
-      "id": "o_s_3_2_4_dioxopentyl_2_3_6_8_9_pentahydroxy_1_o",
-      "name": "O-(S-3-(2,4-dioxopentyl)-2,3,6,8,9-pentahydroxy-1-oxo-1,2,3,4-tetrahydroanthracene-2-carboxylpantetheine-4'-phosphoryl)-L-serine(2−)",
-      "short": "O-(S-3-(2,4-dioxope…",
-      "formula": "C34H41N3O17PS",
+      "id": "2e_2_fatty_enoyladenylate",
+      "name": "(2E)-2-fatty-enoyladenylate",
+      "short": "2-fatty-enoyladenyl…",
+      "formula": "C13H14N5O8PR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:149688"
+        "chebi": "CHEBI:194106"
       }
     },
     {
-      "id": "3_acetyl_4a_6_7_9_12a_pentahydroxy_4_5_dioxo_1_4",
-      "name": "3-acetyl-4a,6,7,9,12a-pentahydroxy-4,5-dioxo-1,4,4a,5,12,12a-hexahydrotetracen-2-olate",
-      "short": "3-acetyl-4a,6,7,9,1…",
-      "formula": "C20H15O9",
+      "id": "o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-[S-(2E)-2-enoylpantetheine-4'-phosphoryl]-L-serine(1−)",
+      "short": "O-[S-(2E)-2-enoylpa…",
+      "formula": "C17H26N3O9PSR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:146218"
+        "chebi": "CHEBI:78784"
+      }
+    },
+    {
+      "id": "n2_3r_3_hydroxyacyl_glycinate",
+      "name": "N2-[(3R)-3-hydroxyacyl]-glycinate",
+      "short": "N2-[(3R)-3-hydroxya…",
+      "formula": "C5H7NO4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231742"
+      }
+    },
+    {
+      "id": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-(S-fatty acylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-fatty…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138651"
+      }
+    },
+    {
+      "id": "n2_3r_3_acyloxy_acyl_glycinate",
+      "name": "N2-[(3R)-3-(acyloxy)acyl]-glycinate",
+      "short": "N2-[(3R)-3-(acyloxy…",
+      "formula": "C6H6NO5R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231744"
       }
     }
   ],
@@ -499,21 +529,25 @@
     },
     {
       "id": "r6",
-      "name": "3-(2,4-dioxopentyl)-2,3,6,8,9-pentahydroxy-1-oxo-1,2,3,4-tetrahydroanthracene-2-carboxy...",
-      "equation": "3-(2,4-dioxopentyl)-2,3,6,8,9-pentahydroxy-1-oxo-1,2,3,4-tetrahydroanthracene-2-carboxyl-[ACP] = 2-acetyl-3,4a,8,10,11,12a-hexahydroxy-1,4,4a,5,12,12a-hexahydrotetracene-1,12-dione + holo-[ACP] + H(+)",
+      "name": "a (2E)-2-fatty-enoyl-AMP + holo-[ACP] = a (2E)-enoyl-[ACP] + AMP + H(+)",
+      "equation": "a (2E)-2-fatty-enoyl-AMP + holo-[ACP] = a (2E)-enoyl-[ACP] + AMP + H(+)",
       "substrates": [
         {
-          "metabolite": "o_s_3_2_4_dioxopentyl_2_3_6_8_9_pentahydroxy_1_o",
+          "metabolite": "2e_2_fatty_enoyladenylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_acetyl_4a_6_7_9_12a_pentahydroxy_4_5_dioxo_1_4",
+          "metabolite": "o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "holo-acp",
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -524,14 +558,53 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:64096"
+        "rhea": "RHEA:74919"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64096"
+            "id": "RHEA:74919"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "a lyso-glycine lipid + a fatty acyl-[ACP] = a glycine lipid + holo-[ACP]",
+      "equation": "a lyso-glycine lipid + a fatty acyl-[ACP] = a glycine lipid + holo-[ACP]",
+      "substrates": [
+        {
+          "metabolite": "n2_3r_3_hydroxyacyl_glycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_3r_3_acyloxy_acyl_glycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:80951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80951"
           }
         ]
       }

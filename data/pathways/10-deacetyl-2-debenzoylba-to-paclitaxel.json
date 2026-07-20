@@ -168,6 +168,15 @@
       }
     },
     {
+      "id": "1h_indole",
+      "name": "1H-indole",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16881"
+      }
+    },
+    {
       "id": "indolin_2_one",
       "name": "indolin-2-one",
       "formula": "C8H7NO",
@@ -228,6 +237,13 @@
       "name": "taxoid 1beta-hydroxylase",
       "ec": [
         "1.14.14.192"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_153",
+      "name": "indole-2-monooxygenase",
+      "ec": [
+        "1.14.14.153"
       ]
     },
     {
@@ -539,6 +555,63 @@
     },
     {
       "id": "r7",
+      "name": "indole-2-monooxygenase",
+      "equation": "indole + reduced [NADPH--hemoprotein reductase] + O2 = indolin-2-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.153",
+      "substrates": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indolin_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:31899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "indolin-2-one monooxygenase",
       "equation": "indolin-2-one + reduced [NADPH--hemoprotein reductase] + O2 = 3-hydroxyindolin-2-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "ec": "1.14.14.157",
@@ -580,7 +653,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:31919"
       },

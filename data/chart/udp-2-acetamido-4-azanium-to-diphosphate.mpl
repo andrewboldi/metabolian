@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-2-acetamido-4-azanium-to-diphosphate "UDP-2-acetamido-4-azanium… to diphosphate" {
-  spacing 280
+  spacing 306
 
   spine at 0,0 {
     udp_2_acetamido_4_azaniumyl_2_4_6_trideoxy_d_glu
@@ -18,15 +18,21 @@ pathway udp-2-acetamido-4-azanium-to-diphosphate "UDP-2-acetamido-4-azanium… t
     cmp_n_n_diacetyllegionaminate
   }
 
-  branch from 2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose side left {
-    2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose
-    <-> ec_3_2_1_184 [3.2.1.184] +h2o +gdp +hplus
-    gdp_n_n_diacetylbacillosamine
+  branch from udp_n_n_diacetylbacillosamine side left {
+    udp_n_n_diacetylbacillosamine
+    <-> ec_2_3_1_203 [2.3.1.203] +acetyl_coa +udp_2_acetamido_4_amino_2_4_6_trideoxyglucose +coa
+    h
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_36 [4.2.3.36] +terpentedienyl_diphosphate
-    terpentetriene
+    <-> ec_4_2_3_59 [4.2.3.59] +fpp
+    e_bisabolene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_60 [4.2.3.60] +fpp
+    germacrene_c
   }
 }

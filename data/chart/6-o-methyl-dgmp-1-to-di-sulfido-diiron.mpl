@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-o-methyl-dgmp-1-to-di-sulfido-diiron "6-O-methyl dGMP(1−) to di-μ-sulfido-diiron" {
-  spacing 280
+  spacing 328
 
   spine at 0,0 {
     6_o_methyl_dgmp_1
@@ -24,15 +24,45 @@ pathway 6-o-methyl-dgmp-1-to-di-sulfido-diiron "6-O-methyl dGMP(1−) to di-μ-s
     sah
   }
 
-  branch from lactate side right {
+  branch from s_methyl_l_cysteine side right {
+    s_methyl_l_cysteine
+    <-> ec_2_1_1_n11 [2.1.1.n11] +deoxyribonucleoside_5_methylphosphate +l_cysteine +hplus
+    deoxyribonucleotide_1
+  }
+
+  branch from 2_deoxyguanosine_5_monophosphate_1 side left {
+    2_deoxyguanosine_5_monophosphate_1
+    <-> . +1_n2_etheno_2_deoxyguanosine_5_monophosphate_1 +akg +o2 +h2o +succinate +co2
+    glyoxal
+  }
+
+  branch from 2_deoxyguanosine_5_monophosphate_1 side right {
+    2_deoxyguanosine_5_monophosphate_1
+    <-> . +nad +nicotinamide +hplus
+    n2_adp_d_ribosyl_dgmp_3
+  }
+
+  branch from lactate side left {
     lactate
     <-> ec_3_5_1_124 [3.5.1.124] +h2o +l_cysteine +hplus
     s_1_hydroxy_2_oxopropyl_l_cysteine
+  }
+
+  branch from lactate side right {
+    lactate
+    <-> . +h2o +dgtp +hplus
+    n2_1_hydroxy_2_oxopropyl_dgtp
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
     <-> ec_1_12_1_4 [1.12.1.4] +nad +di_sulfido_diiron +nadh +hplus
     h2
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +carotene +di_sulfido_diiron +o2 +hplus +h2o
+    cryptoxanthin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydrazine-to-nitrate "hydrazine to nitrate" {
-  spacing 280
+  spacing 292
 
   spine at 0,0 {
     hydrazine
@@ -16,11 +16,5 @@ pathway hydrazine-to-nitrate "hydrazine to nitrate" {
     no
     <-> ec_1_14_12_17 [1.14.12.17] +nadh +o2 -nad -hplus
     nitrate
-  }
-
-  branch from no side left {
-    no
-    <-> ec_1_7_2_9 [1.7.2.9] +iron +fe2 +hplus
-    hydroxylamine
   }
 }

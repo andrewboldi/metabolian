@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tricetin-to-s-adenosyl-l-homocysteine "tricetin to S-adenosyl-L-homocysteine" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     tricetin
@@ -18,7 +18,13 @@ pathway tricetin-to-s-adenosyl-l-homocysteine "tricetin to S-adenosyl-L-homocyst
 
   branch from sah side left {
     sah
-    <-> . +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> . +l_lysinium +sam +hplus
+    n6_methyl_l_lysinium
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +n6_methyl_l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysine_1
   }
 }

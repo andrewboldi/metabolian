@@ -38,6 +38,10 @@ export const CURRENCY = new Set([
 export function cleanName(raw) {
   return String(raw || "")
     .replace(/<[^>]+>/g, "")
+    // ChEBI writes the prime in a locant as an ASCII quote: 4"-O-acyl. Left as
+    // one it terminates the quoted title in a .mpl file and the sheet fails to
+    // parse — and the double prime is the correct character for it anyway.
+    .replace(/"/g, "\u2033")
     .replace(/&(amp|lt|gt|quot|#39);/g, (m) => ({ "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'" }[m] || m))
     .replace(/\s+/g, " ")
     .trim();

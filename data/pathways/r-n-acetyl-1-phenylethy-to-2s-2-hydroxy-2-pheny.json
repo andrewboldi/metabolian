@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny",
   "name": "(R)-N-acetyl-1-phenylethy… to (2S)-2-hydroxy-2-phenylpr…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from (R)-N-acetyl-1-phenylethylamine to (2S)-2-hydroxy-2-phenylpropanenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -121,43 +121,53 @@
       }
     },
     {
-      "id": "l_glutamine",
-      "name": "L-glutamine",
-      "formula": "C5H8N2O2",
+      "id": "4_hydroxyestrone",
+      "name": "4-hydroxyestrone",
+      "formula": "C18H22O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30011"
+        "chebi": "CHEBI:87602"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "n6_glutamyl_lysine",
-      "name": "N6-(γ-glutamyl)lysine",
-      "short": "N6-(γ-glutamyl)lysi…",
-      "formula": "C11H17N3O3",
-      "charge": 0,
+      "id": "pyridinestrone_3_carboxylate",
+      "name": "pyridinestrone-3-carboxylate",
+      "short": "pyridinestrone-3-ca…",
+      "formula": "C18H20NO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138370"
+        "chebi": "CHEBI:137549"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13941"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_3_2_13",
-      "name": "protein-glutamine gamma-glutamyltransferase",
-      "ec": [
-        "2.3.2.13"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -286,22 +296,58 @@
     },
     {
       "id": "r4",
-      "name": "protein-glutamine gamma-glutamyltransferase",
-      "equation": "L-glutaminyl-[protein] + L-lysyl-[protein] = [protein]-L-lysyl-N(6)-5-L-glutamyl-[protein] + NH4(+)",
-      "ec": "2.3.2.13",
+      "name": "4-hydroxyestrone + NH4(+) + O2 = pyridinestrone carboxylate + 2 H2O + 2 H(+)",
+      "equation": "4-hydroxyestrone + NH4(+) + O2 = pyridinestrone carboxylate + 2 H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "l_glutamine",
+          "metabolite": "4_hydroxyestrone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_glutamyl_lysine",
+          "metabolite": "pyridinestrone_3_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:57684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
+      "equation": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hco3",
           "stoichiometry": 1
         },
         {
@@ -309,22 +355,31 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_3_2_13"
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54816"
+        "rhea": "RHEA:57716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54816"
+            "id": "RHEA:57716"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-demethylwyosine-to-s-adenosyl-l-homocysteine "4-demethylwyosine… to S-adenosyl-L-homocysteine" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     4_demethylwyosine_5_monophosphate_1
@@ -20,13 +20,25 @@ pathway 4-demethylwyosine-to-s-adenosyl-l-homocysteine "4-demethylwyosine… to 
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_157 [2.5.1.157] +n1_methylpseudouridine_5_monophosphate_1 +sam +hplus
+    <-> . +n1_methylpseudouridine_5_monophosphate_1 +sam +hplus
     n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> . +sam +hplus
+    s_azetidine_2_carboxylate
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

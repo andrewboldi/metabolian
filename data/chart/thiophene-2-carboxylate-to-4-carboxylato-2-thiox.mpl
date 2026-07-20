@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway thiophene-2-carboxylate-to-4-carboxylato-2-thiox "thiophene-2-carboxylate to 4-carboxylato-2-thioxobut…" {
-  spacing 216
+  spacing 240
 
   spine at 0,0 {
     thiophene_2_carboxylate
@@ -18,13 +18,25 @@ pathway thiophene-2-carboxylate-to-4-carboxylato-2-thiox "thiophene-2-carboxylat
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    all_trans_pentaprenyl_diphosphate
+    <-> ec_6_2_1_48 [6.2.1.48] +carnitine +atp +coa +amp
+    r_carnitinyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +serine +atp
+    l_seryl_amp
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_2_8_1_14 [2.8.1.14] +5_taurinomethyluridine_5_phosphate_1 +3_disulfanyl_l_alanine +hydrogen_donor +atp +l_cysteine +amp +ppi +hplus
+    5_taurinomethyl_2_thiouridine_5_phosphate_1
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_2_8_1_9 [2.8.1.9] +mo_vi_o2_oh_molybdopterin_cofactor +cysteine +hydrogen_donor +alanine +h2o
-    mo_vi_o_s_oh_molybdopterin_cofactor
+    <-> . +5_s_hete +hydrogen_donor +o2 +h2o
+    5_s_11_r_dihete
   }
 }

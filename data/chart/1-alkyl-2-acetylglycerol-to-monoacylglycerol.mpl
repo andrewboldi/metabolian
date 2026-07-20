@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-alkyl-2-acetylglycerol-to-monoacylglycerol "1-alkyl-2-acetylglycerol to monoacylglycerol" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     1_alkyl_2_acetylglycerol
@@ -30,9 +30,21 @@ pathway 1-alkyl-2-acetylglycerol-to-monoacylglycerol "1-alkyl-2-acetylglycerol t
     1_3_diacyl_sn_glycerol
   }
 
+  branch from acyl_sn_glycero_3_phosphocholine side left {
+    acyl_sn_glycero_3_phosphocholine
+    <-> . +phosphatidylcholine +1_3_diacyl_sn_glycerol
+    3_acyl_sn_glycerol
+  }
+
+  branch from phosphocholine side right {
+    phosphocholine
+    <-> . +o_phosphocholine_l_serine +h2o +hplus
+    l_serine
+  }
+
   branch from phosphocholine side left {
     phosphocholine
-    <-> . +1_linoleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_linoleoyl_sn_glycerol
+    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
+    1_o_octadecyl_2_acetyl_sn_glycerol
   }
 }

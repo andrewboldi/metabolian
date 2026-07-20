@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… to diphosphate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     3_hydroxy_9_10_secoandrosta_1_3_5_10_triene_9_17
@@ -20,19 +20,49 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    19_hepe
+    <-> . +22_oxodocosanoate +fmnh2 +o2 +h2o +hplus
+    docosanedioate
   }
 
-  branch from 2z_4z_2_hydroxyhexa_2_4_dienoate side right {
+  branch from fmn side right {
+    fmn
+    <-> . +22_hydroxydocosanoate +fmnh2 +o2 +h2o +hplus
+    22_oxodocosanoate
+  }
+
+  branch from 9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate side left {
+    9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate
+    <-> ec_3_7_1_17 [3.7.1.17] +2_hydroxyhexa_2_4_dienoate +h +h2o
+    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
+  }
+
+  branch from 9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate side right {
+    9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate
+    <-> ec_3_7_1_17 [3.7.1.17] +cis_2_oxohex_4_enoic_acid +h2o
+    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
+  }
+
+  branch from 2z_4z_2_hydroxyhexa_2_4_dienoate side left {
     2z_4z_2_hydroxyhexa_2_4_dienoate
     <-> ec_4_2_1_132 [4.2.1.132] +h2o
     4_hydroxy_2_oxohexanoate
   }
 
+  branch from 9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oyl side right {
+    9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oyl
+    <-> ec_1_1_1_145 [1.1.1.145] +3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy +nadp +nadph
+    h
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    abieta_8_14_12_diene
+    <-> ec_2_5_1_90 [2.5.1.90] +ipp +fpp
+    all_trans_octaprenyl_diphosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_91 [2.5.1.91] +ipp +fpp
+    all_trans_decaprenyl_diphosphate
   }
 }

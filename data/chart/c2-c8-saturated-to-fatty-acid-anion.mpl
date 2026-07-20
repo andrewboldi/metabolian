@@ -4,25 +4,41 @@
 # edit the generator, not this file.
 
 pathway c2-c8-saturated-to-fatty-acid-anion "C2-C8-saturated… to fatty acid anion" {
-  spacing 224
+  spacing 176
 
   spine at 0,0 {
     c2_c8_saturated_long_chain_fatty_acyl_pantethein
-    <-> ec_1_14_14_46 [1.14.14.46] +fmnh2 +o2 -fatty_aldehyde -fmn -h2o -hplus
-    o_s_pimeloylpantetheine_4_phosphoryl_serine_2
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    7s_7_hydroxy_c2_c8_saturated_long_chain_fatty_a
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    7r_8r_7_8_dihydroxy_c2_c8_saturated_long_chain
+    <-> . +fmnh2 +o2 -fatty_aldehyde -fmn -h2o -hplus
+    o_s_7_oxoheptanoyl_pantetheine_4_phosphoryl_seri
     <-> . +fatty_aldehyde +nadp +h2o -nadph -hplus
     fatty-acid
   }
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    4_hydroxy_17_estradiol
+    <-> . +hydroxycholesterol_7a +fmnh2 +o2 +h2o +hplus
+    24s_7_24_dihydroxycholesterol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24s_25_dihydroxycholesterol
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_2_mono_long_chai
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +2_monolysocardiolipin +h2o +hplus
-    2_2_dilysocardiolipin
+    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
+    3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero
   }
 }

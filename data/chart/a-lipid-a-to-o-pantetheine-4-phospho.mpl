@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway a-lipid-a-to-o-pantetheine-4-phospho "a lipid A to O-(pantetheine-4'-phospho…" {
-  spacing 280
+  spacing 324
 
   spine at 0,0 {
     a_lipid_a
@@ -16,21 +16,27 @@ pathway a-lipid-a-to-o-pantetheine-4-phospho "a lipid A to O-(pantetheine-4'-pho
     1_2_diacyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphocholine side left {
-    2_acyl_sn_glycero_3_phosphocholine
-    <-> . +3_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diacyl_sn_glycerol
+  branch from 2_acyl_sn_glycero_3_phosphoethanolamine side left {
+    2_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +stearoyl_coa +coa
+    1_stearoyl_2_acyl_sn_glycero_3_phosphoethanolami
   }
 
-  branch from phosphatidylcholine side right {
-    phosphatidylcholine
-    <-> . +1_2_diglyceride +1_o_acyl_sn_glycero_3_phosphocholine
-    triglyceride
+  branch from 2_acyl_sn_glycero_3_phosphoethanolamine side right {
+    2_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +palmitoyl_coa +coa
+    1_palmitoyl_2_acyl_sn_glycero_3_phosphoethanolam
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +4_amino_l_phenylalanine +atp +amp +ppi
+    o_s_4_amino_l_phenylalanylpantetheine_4_phosphor
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_6_2_1_71 [6.2.1.71] +2_3_dihydroxybenzoate +atp +amp +ppi
+    o_s_2_3_dihydroxybenzoylpantetheine_4_phosphoryl
   }
 }

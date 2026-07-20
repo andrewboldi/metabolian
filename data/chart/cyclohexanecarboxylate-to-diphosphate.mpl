@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclohexanecarboxylate-to-diphosphate "cyclohexanecarboxylate to diphosphate" {
-  spacing 268
+  spacing 298
 
   spine at 0,0 {
     cyclohexanecarboxylate
@@ -24,25 +24,31 @@ pathway cyclohexanecarboxylate-to-diphosphate "cyclohexanecarboxylate to diphosp
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
+    <-> ec_1_14_19_53 [1.14.19.53] +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
+    all_trans_3_4_didehydroretinol
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
     <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
     all_trans_4_hydroxyretinol
   }
 
-  branch from 4_oxocyclohexanecarboxylate side right {
+  branch from 4_oxocyclohexanecarboxylate side left {
     4_oxocyclohexanecarboxylate
     <-> ec_1_1_1_438 [1.1.1.438] +nad +nadh +hplus
     cis_4_hydroxycyclohexane_1_carboxylate
   }
 
-  branch from 4_hydroxybenzoate side left {
-    4_hydroxybenzoate
-    <-> ec_1_14_19_55 [1.14.19.55] +bromide +nadph +o2 +hplus +co2 +nadp +h2o
-    2_4_dibromophenol
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_66 [2.7.7.66] +l_serine +2_5_triphosphoribosyl_3_dephospho_coa
-    o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3
+    <-> ec_4_2_3_183 [4.2.3.183] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    nezukol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_184 [4.2.3.184] +fpp +h2o
+    5_hydroxy_gurjunene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-adenosyl-L-homocysteine" {
-  spacing 220
+  spacing 244
 
   spine at 0,0 {
     dtdp_l_mycarose
@@ -18,13 +18,25 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-ad
 
   branch from dtdp side left {
     dtdp
+    <-> ec_3_6_1_39 [3.6.1.39] +h2o +pi +hplus
+    dttp
+  }
+
+  branch from dtdp side right {
+    dtdp
     <-> ec_2_4_1_322 [2.4.1.322] +dtdp_l_vancosamine +devancoaminyl_vancomycin +hplus
     vancomycin
   }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_87 [2.1.1.87] +pyridine +sam
+    n_methylpyridinium
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_144 [2.1.1.144] +trans_aconitate +sam
-    2e_3_methoxycarbonyl_pent_2_enedioate
+    <-> ec_2_1_1_197 [2.1.1.197] +malonyl-acp +sam
+    o_s_methoxycarbonylacetyl_pantetheine_4_phosphor
   }
 }

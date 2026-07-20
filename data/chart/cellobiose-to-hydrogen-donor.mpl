@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cellobiose-to-hydrogen-donor "cellobiose to hydrogen donor" {
-  spacing 204
+  spacing 228
 
   spine at 0,0 {
     cellobiose
@@ -22,19 +22,25 @@ pathway cellobiose-to-hydrogen-donor "cellobiose to hydrogen donor" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_3_99_30 [1.3.99.30] +15_cis_phytoene +hydrogen_acceptor
-    all_trans_3_4_didehydrolycopene
+    <-> ec_1_3_99_25 [1.3.99.25] +dihydrocarvone +hydrogen_acceptor
+    carvone
   }
 
-  branch from d_gluconate side right {
-    d_gluconate
-    <-> ec_1_1_1_69 [1.1.1.69] +nad +nadh +hplus
-    5_dehydro_d_gluconate
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_25 [1.3.99.25] +isodihydrocarvone +hydrogen_acceptor
+    carvone
   }
 
   branch from g1p side left {
     g1p
-    <-> . +h2o +gmp +hplus
-    gdp_d_glucose
+    <-> . +maltotetraose +pi
+    maltotriose
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> . +adp +hplus +pi
+    adp_d_glucoside
   }
 }

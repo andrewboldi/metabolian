@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal-… to β-D-galactosyl-(1→3)-[N-a…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     d_galnac_1_3_d_gal_1_3_l_fuc_1_2_d_gal_1_4_d_gl
@@ -20,19 +20,31 @@ pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_serine +h2o
-    l_serine
+    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_threonine +h2o
+    l_threonine
   }
 
   branch from l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco side right {
     l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco
-    <-> . +udp_d_galactose +udp +hplus
-    d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_glcnac
+    <-> ec_2_4_1_69 [2.4.1.69] +gdp_l_fucose +gdp +hplus
+    d_galactosyl_1_3_n_acetyl_d_glucosaminide
   }
 
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminide side left {
-    d_galactosyl_1_3_n_acetyl_d_galactosaminide
-    <-> . +gdp_l_fucose +gdp +hplus
-    l_fuc_1_2_d_gal_1_3_d_galnac
+  branch from l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco side left {
+    l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco
+    <-> . +udp_n_acetyl_d_galactosamine +udp +hplus
+    d_galnac_1_3_l_fuc_1_2_d_gal_1_3_d_glcnac
+  }
+
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_2_4_1_389 [2.4.1.389] +d_glcp_1_3_d_galp +pi
+    g1p
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_5_1_3_3 [5.1.3.3]
+    alpha_d_galactose
   }
 }

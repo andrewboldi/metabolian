@@ -8,7 +8,9 @@ pathway n-1-deoxy-d-fructopyra-to-dapdiamide-c "N-(1-deoxy-β-D-fructopyra… to
 
   spine at 0,0 {
     n_1_deoxy_d_fructopyranos_1_yl_l_leucine_betaine
-    <-> . +o2 +h2o -leucine -h2o2
+    <-> . +o2 -h2o2 -hplus
+    2s_4_methyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox
+    <-> . +h2o +hplus -leucine
     2_dehydro_d_glucopyranose
     <-> ec_6_3_2_47 [6.3.2.47] +n3_fumaramoyl_s_2_3_diaminopropanoic_acid +leucine +atp -adp -pi -hplus
     dapdiamide_c

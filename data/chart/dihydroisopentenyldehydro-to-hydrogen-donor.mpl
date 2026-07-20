@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroisopentenyldehydro-to-hydrogen-donor "dihydroisopentenyldehydroâ€¦ to hydrogen donor" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     dihydroisopentenyldehydrorhodopin
@@ -18,11 +18,17 @@ pathway dihydroisopentenyldehydro-to-hydrogen-donor "dihydroisopentenyldehydroâ€
 
   branch from ppi side left {
     ppi
-    <-> . +peregrinol_diphosphate +h2o
-    viteagnusin_d
+    <-> . +isoechinulin_a +dmapp
+    dehydroechinulin
   }
 
-  branch from bisanhydrobacterioruberin side right {
+  branch from ppi side right {
+    ppi
+    <-> . +neoechinulin_b_anion +dmapp
+    isoechinulin_b_anion
+  }
+
+  branch from bisanhydrobacterioruberin side left {
     bisanhydrobacterioruberin
     <-> ec_4_2_1_161 [4.2.1.161] +h2o
     bacterioruberin

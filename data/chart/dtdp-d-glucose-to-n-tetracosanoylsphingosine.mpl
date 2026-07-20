@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-d-glucose-to-n-tetracosanoylsphingosine "dTDP-α-D-glucose to N-tetracosanoylsphingosine" {
-  spacing 156
+  spacing 168
 
   spine at 0,0 {
     dtdp_d_glucose
@@ -18,15 +18,15 @@ pathway dtdp-d-glucose-to-n-tetracosanoylsphingosine "dTDP-α-D-glucose to N-tet
     n_tetracosanoylsphingosine
   }
 
-  branch from d_glucosyl_n_acylsphingosine side left {
-    d_glucosyl_n_acylsphingosine
-    <-> ec_2_4_1_274 [2.4.1.274] +udp_d_galactose +udp +hplus
-    d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
+  branch from glucose side left {
+    glucose
+    <-> . +j_104303 +h2o
+    j_109384
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_acyl_3_o_d_galactosyl_sn_glycerol +h2o +hplus
-    3_o_d_galactopyranosyl_sn_glycerol
+  branch from glucose side right {
+    glucose
+    <-> . +be_13793c +h2o
+    ed_110
   }
 }

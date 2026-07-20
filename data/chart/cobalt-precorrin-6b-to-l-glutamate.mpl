@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cobalt-precorrin-6b-to-l-glutamate "cobalt-precorrin-6B to L-glutamate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     cobalt_precorrin_6b
@@ -20,13 +20,25 @@ pathway cobalt-precorrin-6b-to-l-glutamate "cobalt-precorrin-6B to L-glutamate" 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_163 [2.1.1.163] +6_methoxy_2_octaprenyl_1_4_benzoquinone +sam +hplus
-    3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone
+    <-> . +squalene +sam +hplus
+    3_methyl_1_2_didehydro_2_3_dihydrosqualene
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +3_methyl_1_2_didehydro_2_3_dihydrosqualene +sam +hplus
+    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_110 [2.6.1.110] +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +akg
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
-    dtdp_3_dehydro_4_6_dideoxy_d_glucose
+    <-> ec_4_2_1_168 [4.2.1.168] +gdp_4_dehydro_6_deoxy_d_mannose +akg +nh3
+    gdp_4_dehydro_3_6_dideoxy_d_mannose
   }
 }

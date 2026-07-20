@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-dodecano-to-acetate "1-octadecanoyl-2-dodecano… to acetate" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     1_octadecanoyl_2_dodecanoyl_sn_glycero_3_phospho
@@ -14,5 +14,17 @@ pathway 1-octadecanoyl-2-dodecano-to-acetate "1-octadecanoyl-2-dodecano… to ac
     1_stearoyl_2_acetyl_sn_glycero_3_phosphocholine
     <-> . +h2o -acetate -hplus
     1_stearoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from dodecanoate side left {
+    dodecanoate
+    <-> . +2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl +h2o +hplus
+    1_d_galactosyl_monododecanoyl_sn_glycerol
+  }
+
+  branch from dodecanoate side right {
+    dodecanoate
+    <-> . +1_2_didodecanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    3_d_galactosyl_monododecanoyl_sn_glycerol
   }
 }

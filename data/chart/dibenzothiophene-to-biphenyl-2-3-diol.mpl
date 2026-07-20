@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dibenzothiophene-to-biphenyl-2-3-diol "dibenzothiophene to biphenyl-2,3-diol" {
-  spacing 232
+  spacing 244
 
   spine at 0,0 {
     dibenzothiophene
@@ -20,7 +20,13 @@ pathway dibenzothiophene-to-biphenyl-2-3-diol "dibenzothiophene to biphenyl-2,3-
 
   branch from fmn side left {
     fmn
-    <-> . +22r_22_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    7_22r_dihydroxycholesterol
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    22r_22_hydroxycholesterol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    24r_24_hydroxycholesterol
   }
 }

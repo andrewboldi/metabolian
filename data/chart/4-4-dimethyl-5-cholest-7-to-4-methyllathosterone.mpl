@@ -4,14 +4,30 @@
 # edit the generator, not this file.
 
 pathway 4-4-dimethyl-5-cholest-7-to-4-methyllathosterone "4,4-dimethyl-5α-cholest-7… to 4α-methyllathosterone" {
-  spacing 196
+  spacing 170
 
   spine at 0,0 {
     4_4_dimethyl_5_cholest_7_en_3_ol
-    <-> ec_1_14_18_9 [1.14.18.9] +fe2 +o2 +hplus -iron -h2o
+    <-> . +fe2 +o2 +hplus -iron -h2o
+    4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
+    <-> . +fe2 +o2 +hplus -iron -h2o
+    3_hydroxy_4_methyl_5_cholest_7_ene_4_carbaldehyd
+    <-> . +fe2 +o2 +hplus -iron -h2o
     3_hydroxy_4_methyl_5_cholest_7_ene_4_carboxylate
     <-> . +nad -co2 -nadh
     4_methyllathosterone
+  }
+
+  branch from 4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol side left {
+    4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
+    <-> ec_1_14_13_72 [1.14.13.72] +nadp +h2o +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +nadph
+    h
+  }
+
+  branch from 4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol side right {
+    4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
+    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene +h2o
+    nadp
   }
 
   branch from 4_methyllathosterone side left {

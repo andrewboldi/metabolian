@@ -129,23 +129,41 @@
       }
     },
     {
-      "id": "n_4_carboxy_4_oxobutanoyl_l_ethylglycylglycine",
-      "name": "N-(4-carboxy-4-oxobutanoyl)-L-ethylglycylglycine",
-      "short": "N-(4-carboxy-4-oxob…",
-      "formula": "C11H14N2O7",
+      "id": "2_hydroxyglutarate",
+      "name": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:144697"
+        "chebi": "CHEBI:11596"
       }
     },
     {
-      "id": "n_2s_2_ammoniobutanoyl_glycinate",
-      "name": "N-[(2S)-2-ammoniobutanoyl]glycinate",
-      "short": "N-[(2S)-2-ammoniobu…",
-      "formula": "C6H12N2O3",
-      "charge": 0,
+      "id": "pyridoxamine_5_phosphate",
+      "name": "pyridoxamine 5'-phosphate",
+      "short": "pyridoxamine 5'-P",
+      "formula": "C8H12N2O5P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:144699"
+        "chebi": "CHEBI:58451"
+      }
+    },
+    {
+      "id": "plp",
+      "name": "Pyridoxal 5'-phosphate (PLP)",
+      "short": "Pyridoxal 5'-P (PLP)",
+      "formula": "C8H8NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:597326"
+      }
+    },
+    {
+      "id": "d_glutamate",
+      "name": "D-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29986"
       }
     }
   ],
@@ -197,6 +215,13 @@
       "name": "2,5-dioxovalerate dehydrogenase",
       "ec": [
         "1.2.1.26"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_54",
+      "name": "pyridoxamine-phosphate transaminase",
+      "ec": [
+        "2.6.1.54"
       ]
     }
   ],
@@ -432,21 +457,55 @@
     },
     {
       "id": "r6",
-      "name": "N-(4-carboxy-4-oxobutanoyl)-L-ethylglycylglycine + H2O = N-(2-aminobutanoyl)glycine + 2...",
-      "equation": "N-(4-carboxy-4-oxobutanoyl)-L-ethylglycylglycine + H2O = N-(2-aminobutanoyl)glycine + 2-oxoglutarate",
+      "name": "2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
+      "equation": "2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "n_4_carboxy_4_oxobutanoyl_l_ethylglycylglycine",
+          "metabolite": "2_hydroxyglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_2s_2_ammoniobutanoyl_glycinate",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:13449"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13449"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "pyridoxamine-phosphate transaminase",
+      "equation": "pyridoxamine 5'-phosphate + 2-oxoglutarate = pyridoxal 5'-phosphate + D-glutamate",
+      "ec": "2.6.1.54",
+      "substrates": [
+        {
+          "metabolite": "pyridoxamine_5_phosphate",
           "stoichiometry": 1
         },
         {
@@ -454,17 +513,32 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "plp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_54"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:17125"
+        "rhea": "RHEA:15877"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17125"
+            "id": "RHEA:15877"
           }
         ]
       }

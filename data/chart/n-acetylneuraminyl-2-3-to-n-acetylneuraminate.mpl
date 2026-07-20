@@ -21,22 +21,4 @@ pathway n-acetylneuraminyl-2-3-to-n-acetylneuraminate "Î±-N-acetylneuraminyl-(2â
     <-> . +h2o -n_acetylneuraminate
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
   }
-
-  branch from n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d side left {
-    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
-    <-> . +acetyl_coa +coa
-    n_acetyl_7_o_acetylneuraminosyl_2_8_n_acetylneu
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
-  }
-
-  branch from n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_8_n side left {
-    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_8_n
-    <-> . +acetyl_coa +coa
-    n_acetyl_7_o_acetylneuraminosyl_2_8_n_acetylneur
-  }
 }

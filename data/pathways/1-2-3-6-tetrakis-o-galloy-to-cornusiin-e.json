@@ -103,22 +103,85 @@
       }
     },
     {
-      "id": "campesterol_3_d_glucoside",
-      "name": "campesterol 3-β-D-glucoside",
-      "short": "campesterol…",
-      "formula": "C34H58O6",
+      "id": "r_prunasin",
+      "name": "(R)-prunasin",
+      "formula": "C14H17NO6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145072"
+        "chebi": "CHEBI:17396"
       }
     },
     {
-      "id": "campesterol",
-      "name": "campesterol",
-      "formula": "C28H48O",
+      "id": "mandelonitrile",
+      "name": "mandelonitrile",
+      "formula": "C8H7NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28623"
+        "chebi": "CHEBI:16910"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "cornusiin_e",
+      "name": "cornusiin E",
+      "formula": "C82H58O52",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM16844"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
       }
     }
   ],
@@ -128,6 +191,27 @@
       "name": "beta-glucogallin--tetrakisgalloylglucose O-galloyltransferase",
       "ec": [
         "2.3.1.143"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_118",
+      "name": "prunasin beta-glucosidase",
+      "ec": [
+        "3.2.1.118"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_2",
+      "name": "glucokinase",
+      "ec": [
+        "2.7.1.2"
       ]
     }
   ],
@@ -265,11 +349,12 @@
     },
     {
       "id": "r4",
-      "name": "campesteryl 3-beta-D-glucoside + H2O = campesterol + D-glucose",
-      "equation": "campesteryl 3-beta-D-glucoside + H2O = campesterol + D-glucose",
+      "name": "prunasin beta-glucosidase",
+      "equation": "(R)-prunasin + H2O = mandelonitrile + D-glucose",
+      "ec": "3.2.1.118",
       "substrates": [
         {
-          "metabolite": "campesterol_3_d_glucoside",
+          "metabolite": "r_prunasin",
           "stoichiometry": 1
         },
         {
@@ -279,7 +364,7 @@
       ],
       "products": [
         {
-          "metabolite": "campesterol",
+          "metabolite": "mandelonitrile",
           "stoichiometry": 1
         },
         {
@@ -287,17 +372,113 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_118"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:62024"
+        "rhea": "RHEA:16489"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62024"
+            "id": "RHEA:16489"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hexokinase",
+      "equation": "D-glucose + ATP = D-glucose 6-phosphate + ADP + H(+)",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17825"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17825"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR122448",
+      "substrates": [
+        {
+          "metabolite": "cornusiin_e",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "tellimagrandin_ii",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR122448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122448"
           }
         ]
       }

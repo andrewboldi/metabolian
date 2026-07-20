@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-arachidonoyl-to-prostaglandin-d2 "1-stearoyl-2-arachidonoyl… to prostaglandin D2…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     1_stearoyl_2_arachidonoyl_sn_glycerol
@@ -22,11 +22,5 @@ pathway 1-stearoyl-2-arachidonoyl-to-prostaglandin-d2 "1-stearoyl-2-arachidonoyl
     prostaglandin_h2_2_glyceryl_ester
     <-> .
     prostaglandin_e2_2_glyceryl_ester
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +andilesin_b +hydrogen_donor
-    andilesin_c
   }
 }

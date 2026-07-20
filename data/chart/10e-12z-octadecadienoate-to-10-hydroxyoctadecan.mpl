@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 10e-12z-octadecadienoate-to-10-hydroxyoctadecan "(10E,12Z)-octadecadienoate to 10-hydroxyoctadecanoate" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     10e_12z_octadecadienoate

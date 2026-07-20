@@ -92,12 +92,12 @@
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37565"
+        "chebi": "CHEBI:30616"
       }
     },
     {
@@ -119,12 +119,12 @@
       }
     },
     {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:456216"
       }
     },
     {
@@ -137,6 +137,25 @@
       }
     },
     {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50342"
+      }
+    },
+    {
+      "id": "trans_4_hydroxy_l_proline",
+      "name": "trans-4-hydroxy-L-proline",
+      "short": "trans-4-hydroxy-L-p…",
+      "formula": "C5H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61965"
+      }
+    },
+    {
       "id": "3_epi_3_hydroxy_2_deoxymugineate",
       "name": "3-epi-3-hydroxy-2'-deoxymugineate",
       "short": "3-epi-3-hydroxy-2'-…",
@@ -144,6 +163,24 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:58684"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "ala",
+      "name": "5-Aminolevulinate",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:356416"
       }
     },
     {
@@ -182,10 +219,24 @@
       ]
     },
     {
-      "id": "ec_6_2_1_4",
-      "name": "succinate--CoA ligase (GDP-forming)",
+      "id": "ec_6_2_1_5",
+      "name": "succinate--CoA ligase (ADP-forming)",
       "ec": [
-        "6.2.1.4"
+        "6.2.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_2",
+      "name": "procollagen-proline 4-dioxygenase",
+      "ec": [
+        "1.14.11.2"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_37",
+      "name": "5-aminolevulinate synthase",
+      "ec": [
+        "2.3.1.37"
       ]
     },
     {
@@ -309,16 +360,16 @@
     },
     {
       "id": "r3",
-      "name": "succinate--CoA ligase (GDP-forming)",
-      "equation": "GTP + succinate + CoA = succinyl-CoA + GDP + phosphate",
-      "ec": "6.2.1.4",
+      "name": "succinate--CoA ligase (ADP-forming)",
+      "equation": "succinate + ATP + CoA = succinyl-CoA + ADP + phosphate",
+      "ec": "6.2.1.5",
       "substrates": [
         {
-          "metabolite": "gtp",
+          "metabolite": "succinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinate",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -332,7 +383,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "gdp",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -342,26 +393,79 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_4"
+          "enzyme": "ec_6_2_1_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:22120"
+        "rhea": "RHEA:17661"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22120"
+            "id": "RHEA:17661"
           }
         ]
       }
     },
     {
       "id": "r4",
+      "name": "procollagen-proline 4-dioxygenase",
+      "equation": "L-prolyl-[collagen] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[collagen] + succinate + CO2",
+      "ec": "1.14.11.2",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18945"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18945"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "mugineic-acid 3-dioxygenase",
       "equation": "2'-deoxymugineate + 2-oxoglutarate + O2 = 3-epihydroxy-2'-deoxymugineate + succinate + CO2 + H(+)",
       "ec": "1.14.11.25",
@@ -403,7 +507,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:20065"
       },
@@ -418,7 +522,60 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
+      "name": "5-aminolevulinate synthase",
+      "equation": "succinyl-CoA + glycine + H(+) = 5-aminolevulinate + CO2 + CoA",
+      "ec": "2.3.1.37",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ala",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:12921"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12921"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "arginine N-succinyltransferase",
       "equation": "succinyl-CoA + L-arginine = N(2)-succinyl-L-arginine + CoA + H(+)",
       "ec": "2.3.1.109",
@@ -452,7 +609,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:15185"
       },

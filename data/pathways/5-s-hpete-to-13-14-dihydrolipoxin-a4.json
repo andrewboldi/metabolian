@@ -120,12 +120,50 @@
       }
     },
     {
-      "id": "lipoxin_b4",
-      "name": "lipoxin B4",
+      "id": "5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate",
+      "name": "(5S,6R)-dihydroxy-(7E,9E,11Z,14Z)-icosatetraenoate",
+      "short": "(5S,6R)-dihydroxy-(…",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137542"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "13_14_dihydro_15_oxo_lipoxin_a4",
+      "name": "13,14-dihydro-15-oxo-lipoxin A4",
+      "short": "13,14-dihydro-15-ox…",
       "formula": "C20H31O5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:67031"
+        "metanetx": "MNXM734282"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
       }
     }
   ],
@@ -336,39 +374,77 @@
     },
     {
       "id": "r6",
-      "name": "2 leukotriene A4 + O2 + 2 H2O = 2 lipoxin B4",
-      "equation": "2 leukotriene A4 + O2 + 2 H2O = 2 lipoxin B4",
+      "name": "leukotriene A4 + H2O = (5S,6R)-dihydroxy-(7E,9E,11Z,14Z)-eicosatetraenoate",
+      "equation": "leukotriene A4 + H2O = (5S,6R)-dihydroxy-(7E,9E,11Z,14Z)-eicosatetraenoate",
       "substrates": [
         {
           "metabolite": "leukotriene_a4",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "lipoxin_b4",
-          "stoichiometry": 2
+          "metabolite": "5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:48588"
+        "rhea": "RHEA:80591"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48588"
+            "id": "RHEA:80591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR205249",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_14_dihydro_15_oxo_lipoxin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_14_dihydrolipoxin_a4",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR205249"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205249"
           }
         ]
       }

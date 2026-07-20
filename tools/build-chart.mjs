@@ -443,13 +443,22 @@ const resolver = (chartId) => {
 
 // `node tools/build-chart.mjs <id>` compiles a single chart (used by authors so
 // parallel work never clobbers a shared output directory).
-const only = process.argv[2] || null;
+const only = (process.argv[2] && !process.argv[2].startsWith("--")) ? process.argv[2] : null;
 if (!only) rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 
 const charts = [];
+// Sharding. Compiling a chart is independent of every other chart, so at
+// thousands of sheets the single-threaded loop is pure wall-clock waste: 7,086
+// charts took ~90 minutes in one process. `--shard i/n` lets a wrapper fan the
+// work across cores; build-master then runs once over the finished artifacts.
+const shardArg = process.argv.find((a) => a.startsWith("--shard="));
+const [shardIdx, shardCount] = shardArg
+  ? shardArg.slice(8).split("/").map(Number)
+  : [0, 1];
 const mplFiles = readdirSync(MPL_DIR).filter((f) => f.endsWith(".mpl")).sort()
-  .filter((f) => !only || f === `${only}.mpl`);
+  .filter((f) => !only || f === `${only}.mpl`)
+  .filter((_, i) => shardCount <= 1 || i % shardCount === shardIdx);
 if (only && !mplFiles.length) { console.error(`No such chart: data/chart/${only}.mpl`); process.exit(1); }
 let textWarnings = 0;
 for (const f of mplFiles) {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecyl-2-glutaryl-sn-to-arachidonate "1-hexadecyl-2-glutaryl-sn… to arachidonate" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     1_hexadecyl_2_glutaryl_sn_glycero_3_phosphocholi
@@ -16,9 +16,21 @@ pathway 1-hexadecyl-2-glutaryl-sn-to-arachidonate "1-hexadecyl-2-glutaryl-sn… 
     lysophosphatidylcholine_o_16_0_0_0
   }
 
+  branch from 1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph side left {
+    1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph
+    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cdp_choline +hplus
+    cytidine_5_monophosphate
+  }
+
+  branch from arachidonate side right {
+    arachidonate
+    <-> . +o2
+    8_s_hpete
+  }
+
   branch from arachidonate side left {
     arachidonate
-    <-> ec_1_13_11_33 [1.13.11.33] +o2
-    15_s_hpete
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 }

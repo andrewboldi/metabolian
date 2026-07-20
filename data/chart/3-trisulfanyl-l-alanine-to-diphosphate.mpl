@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to diphosphate" {
-  spacing 228
+  spacing 264
 
   spine at 0,0 {
     3_trisulfanyl_l_alanine
@@ -12,8 +12,8 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     s_sulfosulfanyl_l_cysteine_1
     <-> ec_3_1_6_20 [3.1.6.20] +h2o -sulfate -hplus
     3_disulfanyl_l_alanine
-    <-> ec_2_8_1_13 [2.8.1.13] +uridine_5_monophosphate_1 +hydrogen_donor +atp -l_cysteine -hydrogen_acceptor -amp -ppi -hplus
-    2_thiouridine_5_phosphate_1
+    <-> ec_2_8_1_4 [2.8.1.4] +uridine_5_monophosphate_1 +di_sulfido_diiron +atp +hplus -4_thiouridine_5_phosphate_1 -di_sulfido_diiron -amp -ppi
+    l_cysteine
   }
 
   branch from l_cysteine side left {
@@ -22,15 +22,33 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     3e_phycocyanobilin
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    13_r_hode
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycoerythrobilin_l_cysteine_2
+    3e_phycoerythrobilin
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +progesterone +di_sulfido_diiron +o2 +hplus +h2o
+    11_hydroxyprogesterone
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +androst_4_ene_3_17_dione +di_sulfido_diiron +o2 +hplus +h2o
+    11_hydroxyandrost_4_ene_3_17_dione
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_163 [4.2.3.163] +fpp +h2o
-    corvol_ether_b
+    <-> . +2_methylvalerate +atp +coa +amp
+    2_methylpentanoyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2s_4s_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
+    5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2
   }
 }

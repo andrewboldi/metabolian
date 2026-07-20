@@ -182,25 +182,6 @@
       }
     },
     {
-      "id": "n_7_carboxy_7_demethylgeranyl_l_glutamate",
-      "name": "N-(7'-carboxy-7'-demethylgeranyl)-L-glutamate",
-      "short": "N-(7'-carboxy-7'-de…",
-      "formula": "C15H21NO6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:172366"
-      }
-    },
-    {
-      "id": "isodomoate_a",
-      "name": "isodomoate A",
-      "formula": "C15H19NO6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:172367"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -211,13 +192,21 @@
       }
     },
     {
-      "id": "3s_asterisca_2_9_6_diene",
-      "name": "(3S)-(+)-asterisca-2(9),6-diene",
-      "short": "(+)-asterisca-2(9),…",
+      "id": "african_3_ene",
+      "name": "african-3-ene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:137531"
+        "chebi": "CHEBI:167380"
+      }
+    },
+    {
+      "id": "african_1_ene",
+      "name": "african-1-ene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167381"
       }
     }
   ],
@@ -234,13 +223,6 @@
       "name": "2-hydroxyacyl-CoA lyase",
       "ec": [
         "4.1.2.63"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_161",
-      "name": "(3S)-(+)-asterisca-2(9),6-diene synthase",
-      "ec": [
-        "4.2.3.161"
       ]
     }
   ],
@@ -478,60 +460,8 @@
     },
     {
       "id": "r6",
-      "name": "N-(7'-carboxy-7'-demethylgeranyl)-L-glutamate + 2-oxoglutarate + O2 = isodomoate A + su...",
-      "equation": "N-(7'-carboxy-7'-demethylgeranyl)-L-glutamate + 2-oxoglutarate + O2 = isodomoate A + succinate + CO2 + H2O",
-      "substrates": [
-        {
-          "metabolite": "n_7_carboxy_7_demethylgeranyl_l_glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isodomoate_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:68172"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68172"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(3S)-(+)-asterisca-2(9),6-diene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (3S)-(+)-asterisca-2(9),6-diene + diphosphate",
-      "ec": "4.2.3.161",
+      "name": "(2E,6E)-farnesyl diphosphate = african-3-ene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = african-3-ene + diphosphate",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -540,7 +470,7 @@
       ],
       "products": [
         {
-          "metabolite": "3s_asterisca_2_9_6_diene",
+          "metabolite": "african_3_ene",
           "stoichiometry": 1
         },
         {
@@ -548,22 +478,52 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_161"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:53632"
+        "rhea": "RHEA:66648"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53632"
+            "id": "RHEA:66648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(2E,6E)-farnesyl diphosphate = african-1-ene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = african-1-ene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "african_1_ene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:66652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66652"
           }
         ]
       }

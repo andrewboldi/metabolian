@@ -15,10 +15,4 @@ pathway spheroidene-to-spheroiden-2-one "spheroidene to spheroiden-2-one" {
     <-> . -h2o
     spheroiden_2_one
   }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +5_7_dibromo_indole_3_carbonitrile +2_3_5_tribromoindole +di_sulfido_diiron +o2 +hplus +h2o
-    aetokthonotoxin
-  }
 }

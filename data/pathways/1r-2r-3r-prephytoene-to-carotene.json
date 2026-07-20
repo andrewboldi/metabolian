@@ -1,0 +1,355 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1r-2r-3r-prephytoene-to-carotene",
+  "name": "(1R,2R,3R)-prephytoene… to γ-carotene",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (1R,2R,3R)-prephytoene diphosphate(3−) to γ-carotene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34479"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58011"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1r_2r_3r_prephytoene_diphosphate",
+      "name": "(1R,2R,3R)-prephytoene diphosphate",
+      "short": "(1R,2R,3R)-prephyto…",
+      "formula": "C40H65O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58011"
+      }
+    },
+    {
+      "id": "15_cis_phytoene",
+      "name": "15-cis-phytoene",
+      "formula": "C40H64",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27787"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "lycopene",
+      "name": "lycopene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15948"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "carotene",
+      "name": "γ-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27740"
+      }
+    },
+    {
+      "id": "streptomycin",
+      "name": "streptomycin",
+      "formula": "C21H42N7O12",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:58007"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "6_o_guanylylstreptomycin",
+      "name": "6-O-guanylylstreptomycin",
+      "short": "6-O-guanylylstrepto…",
+      "formula": "C31H53N12O19P",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:184374"
+      }
+    },
+    {
+      "id": "streptidine",
+      "name": "streptidine",
+      "formula": "C8H20N6O4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:184376"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "6_o_adenylylstreptidine",
+      "name": "6-O-adenylylstreptidine",
+      "short": "6-O-adenylylstrepti…",
+      "formula": "C18H31N11O10P",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:184375"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_99_31",
+      "name": "phytoene desaturase (lycopene-forming)",
+      "ec": [
+        "1.3.99.31"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_19",
+      "name": "lycopene beta-cyclase",
+      "ec": [
+        "5.5.1.19"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(1R,2R,3R)-prephytoene diphosphate = 15-cis-phytoene + diphosphate",
+      "equation": "(1R,2R,3R)-prephytoene diphosphate = 15-cis-phytoene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "1r_2r_3r_prephytoene_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34479"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34479"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phytoene desaturase (lycopene-forming)",
+      "equation": "15-cis-phytoene + 4 A = all-trans-lycopene + 4 AH2",
+      "ec": "1.3.99.31",
+      "substrates": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15585"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15585"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lycopene beta-cyclase",
+      "equation": "all-trans-lycopene = gamma-carotene",
+      "ec": "5.5.1.19",
+      "substrates": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "streptomycin + GTP = 6-O-guanylylstreptomycin + diphosphate",
+      "equation": "streptomycin + GTP = 6-O-guanylylstreptomycin + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "streptomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_guanylylstreptomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "streptidine + ATP = 6-O-adenylylstreptidine + diphosphate",
+      "equation": "streptidine + ATP = 6-O-adenylylstreptidine + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "streptidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_adenylylstreptidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:69544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69544"
+          }
+        ]
+      }
+    }
+  ]
+}

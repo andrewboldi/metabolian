@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
-  spacing 240
+  spacing 312
 
   spine at 0,0 {
     l_fucoside
@@ -28,8 +28,20 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from l_fucopyranose side left {
     l_fucopyranose
-    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac +h2o
-    d_galactosyl_1_3_n_acetyl_d_galactosaminide
+    <-> .
+    aldehydo_l_fucose
+  }
+
+  branch from l_fucopyranose side right {
+    l_fucopyranose
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from alcohol side left {
+    alcohol
+    <-> ec_3_1_4_46 [3.1.4.46] +sn_glycerophosphodiester +h2o +hplus
+    sn_glycerol_3_phosphate
   }
 
   branch from alcohol side right {
@@ -40,25 +52,49 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from l_fucono_1_5_lactone side left {
     l_fucono_1_5_lactone
-    <-> ec_1_1_1_435 [1.1.1.435] +nadp +nadph +hplus
-    l_fucose
-  }
-
-  branch from l_fuconate side right {
-    l_fuconate
-    <-> ec_3_1_1_120 [3.1.1.120] +h2o +hplus
-    l_fucono_1_4_lactone
-  }
-
-  branch from 2_dehydro_3_deoxy_l_fuconate side left {
-    2_dehydro_3_deoxy_l_fuconate
-    <-> ec_4_1_2_64 [4.1.2.64] +pyruvate
-    s_lactaldehyde
+    <-> . +h2o +d_fuconate
+    h
   }
 
   branch from 2_4_didehydro_3_deoxy_l_rhamnonate side right {
     2_4_didehydro_3_deoxy_l_rhamnonate
     <-> ec_1_1_1_401 [1.1.1.401] +nad +nadh +hplus
     2_dehydro_3_deoxy_l_rhamnonate
+  }
+
+  branch from lactate side left {
+    lactate
+    <-> . +l_phenylalanine +h2o
+    n_s_lactoyl_l_phenylalaninate
+  }
+
+  branch from lactate side right {
+    lactate
+    <-> . +atp +hplus +ppi
+    s_lactoyl_amp
+  }
+
+  branch from malate side left {
+    malate
+    <-> ec_2_3_3_9 [2.3.3.9] +acetyl_coa +h2o +coa +hplus
+    glyoxylate
+  }
+
+  branch from malate side right {
+    malate
+    <-> ec_6_2_1_9 [6.2.1.9] +atp +coa +adp +pi
+    3s_3_carboxy_3_hydroxypropanoyl_coa
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> ec_5_3_2_2 [5.3.2.2]
+    enol_oxaloacetate
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_2_3_3_2 [2.3.3.2] +lauroyl_coa +h2o +coa +hplus
+    2s_3s_2_hydroxytridecane_1_2_3_tricarboxylate
   }
 }

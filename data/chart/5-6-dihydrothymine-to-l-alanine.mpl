@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-6-dihydrothymine-to-l-alanine "5,6-dihydrothymine to L-alanine" {
-  spacing 276
+  spacing 300
 
   spine at 0,0 {
     5_6_dihydrothymine
@@ -18,13 +18,25 @@ pathway 5-6-dihydrothymine-to-l-alanine "5,6-dihydrothymine to L-alanine" {
 
   branch from nh3 side left {
     nh3
-    <-> . +iminodiacetonitrile +h2o
-    n_cyanomethyl_glycinate
+    <-> . +o_carbamoyl_l_serine +hplus +co2
+    2_ammonioprop_2_enoate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_33 [3.5.4.33] +adenosine_5_monophosphate_1 +h2o +hplus
+    inosine_5_phosphate_1
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +ala_gln +h2o
+    glutamine
   }
 
   branch from alanine side right {
     alanine
-    <-> . +ala_gln +h2o
-    glutamine
+    <-> . +ala_thr +h2o
+    threonine
   }
 }

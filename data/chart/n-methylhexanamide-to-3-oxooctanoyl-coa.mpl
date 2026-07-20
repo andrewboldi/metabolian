@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxooctanoyl-CoA" {
-  spacing 152
+  spacing 212
 
   spine at 0,0 {
     n_methylhexanamide
@@ -22,10 +22,22 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
     2_3_dihexanoyl_sn_glycerol
   }
 
-  branch from methylamine side right {
+  branch from hexanoate side right {
+    hexanoate
+    <-> . +hexanoate_ester +h2o +hplus
+    aliphatic_alcohol
+  }
+
+  branch from methylamine side left {
     methylamine
     <-> ec_3_5_1_137 [3.5.1.137] +carbofuran +h2o +hplus +co2
     2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol
+  }
+
+  branch from methylamine side right {
+    methylamine
+    <-> ec_1_4_2_3 [1.4.2.3] +pseudooxynicotinium +iron +h2o +fe2 +hplus
+    4_oxo_4_pyridin_3_yl_butanal
   }
 
   branch from hexanoyl_coa side left {
@@ -34,15 +46,33 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
     3_5_7_trioxododecanoyl_coa
   }
 
+  branch from hexanoyl_coa side right {
+    hexanoyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
+    1_palmitoyl_2_hexanoyl_sn_glycero_3_phosphocholi
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_71 [4.2.3.71] +fpp
+    1e_4e_germacrene_b
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_3_6_1_9 [3.6.1.9] +dctp +h2o +hplus
-    2_deoxycytosine_5_monophosphate
+    <-> . +fpp
+    guaia_6_9_diene
   }
 
   branch from 3_oxooctanoyl_coa side left {
     3_oxooctanoyl_coa
     <-> . +nad +nadh +hplus
     s_3_hydroxyoctanoyl_coa
+  }
+
+  branch from 3_oxooctanoyl_coa side right {
+    3_oxooctanoyl_coa
+    <-> . +nadp +nadph +hplus
+    r_3_hydroxyoctanoyl_coa
   }
 }

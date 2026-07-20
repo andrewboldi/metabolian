@@ -4,13 +4,39 @@
 # edit the generator, not this file.
 
 pathway maltose-6-phosphate-to-d-glucopyranose "α-maltose 6'-phosphate to D-glucopyranose" {
-  spacing 192
+  spacing 228
 
   spine at 0,0 {
     maltose_6_phosphate
     <-> ec_3_1_3_90 [3.1.3.90] +h2o -pi
     maltose
-    <-> ec_2_4_1_8 [2.4.1.8] +pi -glucose
+    <-> ec_5_4_99_16 [5.4.99.16]
+    trehalose
+    <-> ec_2_4_1_64 [2.4.1.64] +pi -glucose
     d_glucose_1_phosphate
+  }
+
+  branch from maltose side left {
+    maltose
+    <-> ec_1_1_3_5 [1.1.3.5] +o2 +h2o2
+    d_maltobiono_1_5_lactone
+  }
+
+  branch from trehalose side right {
+    trehalose
+    <-> ec_2_3_1_279 [2.3.1.279] +long_chain_fatty_acyl_coa +coa
+    2_o_long_chain_fatty_acyl_trehalose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    alpha_alpha_trehalose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +cellobiosan +h2o
+    levoglucosan
   }
 }

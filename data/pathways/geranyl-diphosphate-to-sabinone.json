@@ -1,0 +1,401 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranyl-diphosphate-to-sabinone",
+  "name": "geranyl diphosphate to (+)-sabinone",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from geranyl diphosphate(3−) to (+)-sabinone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32547"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "sabinene",
+      "name": "(+)-sabinene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50029"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cis_sabinol",
+      "name": "(+)-cis-sabinol",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15387"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "sabinone",
+      "name": "(+)-sabinone",
+      "formula": "C10H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15403"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "z_bisabolene",
+      "name": "(Z)-α-bisabolene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49241"
+      }
+    },
+    {
+      "id": "cadinene",
+      "name": "γ-cadinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:180496"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_110",
+      "name": "(+)-sabinene synthase",
+      "ec": [
+        "4.2.3.110"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_153",
+      "name": "(+)-sabinene 3-hydroxylase",
+      "ec": [
+        "1.14.13.153"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_228",
+      "name": "(+)-sabinol dehydrogenase",
+      "ec": [
+        "1.1.1.228"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-sabinene synthase",
+      "equation": "(2E)-geranyl diphosphate = (1R,5R)-sabinene + diphosphate",
+      "ec": "4.2.3.110",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sabinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_110"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(+)-sabinene 3-hydroxylase",
+      "equation": "(1R,5R)-sabinene + NADPH + O2 + H(+) = (1S,3R,5S)-sabinol + NADP(+) + H2O",
+      "ec": "1.14.13.153",
+      "substrates": [
+        {
+          "metabolite": "sabinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_sabinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32499"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32499"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(+)-sabinol dehydrogenase",
+      "equation": "(1S,3R,5S)-sabinol + NAD(+) = (1S,5S)-sabinone + NADH + H(+)",
+      "ec": "1.1.1.228",
+      "substrates": [
+        {
+          "metabolite": "cis_sabinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sabinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_228"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18329"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(2Z,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
+      "equation": "(2Z,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_bisabolene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:68844"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68844"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2Z,6E)-farnesyl diphosphate = gamma-cadinene + diphosphate",
+      "equation": "(2Z,6E)-farnesyl diphosphate = gamma-cadinene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:68848"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68848"
+          }
+        ]
+      }
+    }
+  ]
+}

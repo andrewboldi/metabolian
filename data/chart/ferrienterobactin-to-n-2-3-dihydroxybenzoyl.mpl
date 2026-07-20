@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ferrienterobactin-to-n-2-3-dihydroxybenzoyl "ferrienterobactin to N-(2,3-dihydroxybenzoyl)-…" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     ferrienterobactin
@@ -14,5 +14,35 @@ pathway ferrienterobactin-to-n-2-3-dihydroxybenzoyl "ferrienterobactin to N-(2,3
     fe_iii_n_2_3_dihydroxybenzoyl_l_serine_2
     <-> . +h2o +hplus -n_2_3_dihydroxybenzoyl_l_serinate
     fe_iii_n_2_3_dihydroxybenzoyl_l_serine
+  }
+
+  branch from fe_iii_n_2_3_dihydroxybenzoyl_l_serine_3 side left {
+    fe_iii_n_2_3_dihydroxybenzoyl_l_serine_3
+    <-> . +h +h2o +iron_iii_2_3_dihydroxybenzoylserine_2_complex
+    n_2_3_dihydroxybenzoyl_l_serine
+  }
+
+  branch from n_2_3_dihydroxybenzoyl_l_serinate side right {
+    n_2_3_dihydroxybenzoyl_l_serinate
+    <-> . +h2o +hplus
+    enterobactin
+  }
+
+  branch from n_2_3_dihydroxybenzoyl_l_serinate side left {
+    n_2_3_dihydroxybenzoyl_l_serinate
+    <-> ec_3_1_1_109 [3.1.1.109] +fe_iii_di_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_d +h2o +hplus
+    fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox
+  }
+
+  branch from fe_iii_n_2_3_dihydroxybenzoyl_l_serine side right {
+    fe_iii_n_2_3_dihydroxybenzoyl_l_serine
+    <-> . +iron_iii_2_3_dihydroxybenzoylserine_2_complex +h2o +n_2_3_dihydroxybenzoyl_l_serine
+    h
+  }
+
+  branch from fe_iii_n_2_3_dihydroxybenzoyl_l_serine side left {
+    fe_iii_n_2_3_dihydroxybenzoyl_l_serine
+    <-> ec_1_16_1_9 [1.16.1.9] +fe +nadp +n_2_3_dihydroxybenzoyl_l_serine +h
+    nadph
   }
 }

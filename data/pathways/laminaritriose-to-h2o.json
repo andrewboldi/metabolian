@@ -1,0 +1,405 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "laminaritriose-to-h2o",
+  "name": "laminaritriose to H2O",
+  "category": "other",
+  "summary": "A 4-step route from laminaritriose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR131148"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:55514"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "laminaritriose",
+      "name": "laminaritriose",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:55514"
+      }
+    },
+    {
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364060"
+      }
+    },
+    {
+      "id": "laminaritetraose",
+      "name": "Laminaritetraose",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM168200"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_d_glcp_1_5",
+      "name": "[3)-β-D-Glcp-(1→]5",
+      "formula": "C30H52O26",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136431"
+      }
+    },
+    {
+      "id": "laminarihexaose",
+      "name": "laminarihexaose",
+      "formula": "C36H62O31",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142494"
+      }
+    },
+    {
+      "id": "laminariheptaose",
+      "name": "Laminariheptaose",
+      "formula": "C42H72O36",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819715"
+      }
+    },
+    {
+      "id": "beta_d_glucosyl_1_3_d_glucose",
+      "name": "beta-D-glucosyl-(1->3)-D-glucose",
+      "short": "beta-D-glucosyl-(1-…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732730"
+      }
+    },
+    {
+      "id": "octan_1_ol",
+      "name": "octan-1-ol",
+      "formula": "C8H18O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2410"
+      }
+    },
+    {
+      "id": "octyl_beta_d_glucose",
+      "name": "octyl beta-D-glucose",
+      "formula": "C14H28O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM65383"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_58",
+      "name": "glucan 1,3-beta-glucosidase",
+      "ec": [
+        "3.2.1.58"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_74",
+      "name": "glucan 1,4-beta-glucosidase",
+      "ec": [
+        "3.2.1.74"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_21",
+      "name": "beta-glucosidase",
+      "ec": [
+        "3.2.1.21"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_25",
+      "name": "beta-mannosidase",
+      "ec": [
+        "3.2.1.25"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucan 1,3-beta-glucosidase",
+      "ec": "3.2.1.58",
+      "substrates": [
+        {
+          "metabolite": "laminaritriose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "laminaritetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR131148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucan 1,3-beta-glucosidase",
+      "ec": "3.2.1.58",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "laminaritetraose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_d_glcp_1_5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172429"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172429"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucan 1,3-beta-glucosidase",
+      "ec": "3.2.1.58",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_d_glcp_1_5",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "laminarihexaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR172430"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172430"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glucan 1,3-beta-glucosidase",
+      "ec": "3.2.1.58",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "laminarihexaose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "laminariheptaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR172431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-glucosidase",
+      "ec": "3.2.1.21",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_glucosyl_1_3_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR130822"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130822"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "beta-glucosidase",
+      "ec": "3.2.1.21",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octan_1_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octyl_beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR130824"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130824"
+          }
+        ]
+      }
+    }
+  ]
+}

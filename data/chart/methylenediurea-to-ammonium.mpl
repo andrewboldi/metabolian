@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methylenediurea-to-ammonium "methylenediurea to ammonium" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     methylenediurea
@@ -18,7 +18,13 @@ pathway methylenediurea-to-ammonium "methylenediurea to ammonium" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_53 [3.5.1.53] +n_carbamoylputrescinium +h2o +hplus +co2
-    1_4_butanediammonium
+    <-> ec_4_4_1_1 [4.4.1.1] +l_homoserine
+    oxobut
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_4_1_35 [4.4.1.35] +l_cystine +h2o +pyruvate
+    3_disulfanyl_l_alanine
   }
 }

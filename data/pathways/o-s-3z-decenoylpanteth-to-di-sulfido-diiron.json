@@ -1,0 +1,279 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-s-3z-decenoylpanteth-to-di-sulfido-diiron",
+  "name": "O-[S-(3Z)-decenoylpanteth… to di-μ-sulfido-diiron",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from O-[S-(3Z)-decenoylpantetheine-4'-phosphoryl]serine(1−) residue to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR115627"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78798"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_s_3z_decenoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-(3Z)-decenoylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(3Z)-decenoylp…",
+      "formula": "C24H41N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78798"
+      }
+    },
+    {
+      "id": "o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-(2E)-decenoylpantetheine-4-phosphoryl]serine(1−)",
+      "short": "O-[S-(2E)-decenoylp…",
+      "formula": "C24H41N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78467"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o_s_decanoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-(S-decanoylpantetheine-4-phosphoryl)serine(1−)",
+      "short": "O-(S-decanoylpantet…",
+      "formula": "C24H43N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78468"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "o_s_dec_9_ynoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-(S-dec-9-ynoylpantetheine-4-phosphoryl)serine(1−)",
+      "short": "O-(S-dec-9-ynoylpan…",
+      "formula": "C24H39N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:155843"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_3_14",
+      "name": "trans-2-decenoyl-[acyl-carrier-protein] isomerase",
+      "ec": [
+        "5.3.3.14"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_78",
+      "name": "decanoyl-[acyl-carrier protein] acetylenase",
+      "ec": [
+        "1.14.19.78"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "trans-2-decenoyl-[acyl-carrier-protein] isomerase",
+      "ec": "5.3.3.14",
+      "substrates": [
+        {
+          "metabolite": "o_s_3z_decenoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR115627"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR115627"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-decenoyl-[ACP] + NADH + H(+) = decanoyl-[ACP] + NAD(+)",
+      "equation": "(2E)-decenoyl-[ACP] + NADH + H(+) = decanoyl-[ACP] + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_decanoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "decanoyl-[acyl-carrier protein] acetylenase",
+      "equation": "decanoyl-[ACP] + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = dec-9-ynoyl-[ACP] + 4 oxidized [2Fe-2S]-[ferredoxin] + 4 H2O",
+      "ec": "1.14.19.78",
+      "substrates": [
+        {
+          "metabolite": "o_s_decanoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_dec_9_ynoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65808"
+          }
+        ]
+      }
+    }
+  ]
+}

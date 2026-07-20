@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2r-2-o-phosphonato-3-su-to-3-dehydroquinate",
   "name": "(2R)-2-O-phosphonato-3-su… to 3-dehydroquinate",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from (2R)-2-O-phosphonato-3-sulfonatolactate(4−) to 3-dehydroquinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -113,30 +113,59 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:37565"
       }
     },
     {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
+      "id": "enolpyruvoyl_2_diphospho_5_guanosine",
+      "name": "enolpyruvoyl-2-diphospho-5'-guanosine",
+      "short": "enolpyruvoyl-2-diph…",
+      "formula": "C13H14N5O13P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:456216"
+        "chebi": "CHEBI:143701"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "l_cysteate",
+      "name": "L-cysteate",
+      "formula": "C3H6NO5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58090"
+      }
+    },
+    {
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:76565"
       }
     },
     {
@@ -166,6 +195,25 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "quinate",
+      "name": "(−)-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29751"
+      }
+    },
+    {
+      "id": "3_7_dideoxy_d_threo_hepto_2_6_diuolosonate",
+      "name": "3,7-dideoxy-D-threo-hepto-2,6-diuolosonate",
+      "short": "3,7-dideoxy-D-threo…",
+      "formula": "C7H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58868"
+      }
     }
   ],
   "enzymes": [
@@ -191,10 +239,31 @@
       ]
     },
     {
-      "id": "ec_4_1_1_49",
-      "name": "phosphoenolpyruvate carboxykinase (ATP)",
+      "id": "ec_4_1_1_31",
+      "name": "phosphoenolpyruvate carboxylase",
       "ec": [
-        "4.1.1.49"
+        "4.1.1.31"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_105",
+      "name": "phosphoenolpyruvate guanylyltransferase",
+      "ec": [
+        "2.7.7.105"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_24",
+      "name": "quinate/shikimate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.24"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_282",
+      "name": "quinate/shikimate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.282"
       ]
     }
   ],
@@ -336,16 +405,16 @@
     },
     {
       "id": "r4",
-      "name": "phosphoenolpyruvate carboxykinase (ATP)",
-      "equation": "oxaloacetate + ATP = phosphoenolpyruvate + ADP + CO2",
-      "ec": "4.1.1.49",
+      "name": "phosphoenolpyruvate carboxylase",
+      "equation": "oxaloacetate + phosphate = phosphoenolpyruvate + hydrogencarbonate",
+      "ec": "4.1.1.31",
       "substrates": [
         {
           "metabolite": "oxaloacetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "pi",
           "stoichiometry": 1
         }
       ],
@@ -355,36 +424,120 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
+          "metabolite": "hco3",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_1_49"
+          "enzyme": "ec_4_1_1_31"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:18617"
+        "rhea": "RHEA:28370"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18617"
+            "id": "RHEA:28370"
           }
         ]
       }
     },
     {
       "id": "r5",
+      "name": "phosphoenolpyruvate guanylyltransferase",
+      "equation": "phosphoenolpyruvate + GTP + H(+) = enolpyruvoyl-2-diphospho-5'-guanosine + diphosphate",
+      "ec": "2.7.7.105",
+      "substrates": [
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "enolpyruvoyl_2_diphospho_5_guanosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_105"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-cysteate = 2-aminoprop-2-enoate + sulfite + H(+)",
+      "equation": "L-cysteate = 2-aminoprop-2-enoate + sulfite + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_cysteate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:43028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43028"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
       "equation": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
       "substrates": [
@@ -416,7 +569,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:55316"
       },
@@ -426,6 +579,86 @@
           {
             "db": "Rhea",
             "id": "RHEA:55316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "quinate/shikimate dehydrogenase (NAD(+))",
+      "equation": "L-quinate + NAD(+) = 3-dehydroquinate + NADH + H(+)",
+      "ec": "1.1.1.24",
+      "substrates": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydroquinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:22364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "3,7-dideoxy-D-threo-hepto-2,6-diuolosonate = 3-dehydroquinate",
+      "equation": "3,7-dideoxy-D-threo-hepto-2,6-diuolosonate = 3-dehydroquinate",
+      "substrates": [
+        {
+          "metabolite": "3_7_dideoxy_d_threo_hepto_2_6_diuolosonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydroquinate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:26014"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26014"
           }
         ]
       }

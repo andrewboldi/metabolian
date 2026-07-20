@@ -120,41 +120,70 @@
       }
     },
     {
-      "id": "pseudouridine_5_phosphate_1",
-      "name": "pseudouridine 5'-phosphate(1−)",
-      "short": "pseudouridine…",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:65314"
+        "chebi": "CHEBI:61929"
       }
     },
     {
-      "id": "n1_methylpseudouridine_5_monophosphate_1",
-      "name": "N1-methylpseudouridine 5'-monophosphate(1−)",
-      "short": "N1-methylpseudourid…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74890"
+        "chebi": "CHEBI:61976"
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:30245"
+        "chebi": "CHEBI:61961"
       }
     },
     {
-      "id": "9_r_hode",
-      "name": "9(R)-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
+      "id": "nootkatol",
+      "name": "α-nootkatol",
+      "formula": "C15H24O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77895"
+        "chebi": "CHEBI:142043"
+      }
+    },
+    {
+      "id": "nootkatone",
+      "name": "(+)-nootkatone",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81377"
+      }
+    },
+    {
+      "id": "5_epi_aristolochene",
+      "name": "(+)-5-epi-aristolochene",
+      "short": "(+)-5-epi-aristoloc…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23925"
+      }
+    },
+    {
+      "id": "2_hydroxy_5_epi_aristolochene",
+      "name": "2β-hydroxy-5-epi-aristolochene",
+      "short": "2β-hydroxy-5-epi-ar…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142082"
       }
     }
   ],
@@ -174,10 +203,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_260",
-      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
+      "id": "ec_2_1_1_366",
+      "name": "[histone H3]-N(6),N(6)-dimethyl-lysine(9) N-methyltransferase",
       "ec": [
-        "2.1.1.260"
+        "2.1.1.366"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_151",
+      "name": "premnaspirodiene oxygenase",
+      "ec": [
+        "1.14.14.151"
       ]
     }
   ],
@@ -329,12 +365,11 @@
     },
     {
       "id": "r4",
-      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
-      "equation": "pseudouridine(914) in M. jannaschii 16S rRNA + S-adenosyl-L-methionine = N(1)-methylpseudouridine(914) in M. jannaschii 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.260",
+      "name": "N(6)-methyl-L-lysyl(9)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-ly...",
+      "equation": "N(6)-methyl-L-lysyl(9)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(9)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "pseudouridine_5_phosphate_1",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -344,7 +379,51 @@
       ],
       "products": [
         {
-          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:60284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[histone H3]-N(6),N(6)-dimethyl-lysine(9) N-methyltransferase",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(9)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(9)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.366",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
           "stoichiometry": 1
         },
         {
@@ -358,31 +437,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_260"
+          "enzyme": "ec_2_1_1_366"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46716"
+        "rhea": "RHEA:60288"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46716"
+            "id": "RHEA:60288"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = (9R)-hydroxy-...",
-      "equation": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = (9R)-hydroxy-(10E,12Z)-octadecadienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "id": "r6",
+      "name": "alpha-nootkatol + reduced [NADPH--hemoprotein reductase] + O2 = (+)-nootkatone + oxidiz...",
+      "equation": "alpha-nootkatol + reduced [NADPH--hemoprotein reductase] + O2 = (+)-nootkatone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "nootkatol",
           "stoichiometry": 1
         },
         {
@@ -396,7 +475,59 @@
       ],
       "products": [
         {
-          "metabolite": "9_r_hode",
+          "metabolite": "nootkatone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:57668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "premnaspirodiene oxygenase",
+      "equation": "(+)-5-epi-aristolochene + reduced [NADPH--hemoprotein reductase] + O2 = 2beta-hydroxy-5-epi-aristolochene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.151",
+      "substrates": [
+        {
+          "metabolite": "5_epi_aristolochene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_5_epi_aristolochene",
           "stoichiometry": 1
         },
         {
@@ -412,17 +543,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_151"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:52504"
+        "rhea": "RHEA:57672"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52504"
+            "id": "RHEA:57672"
           }
         ]
       }

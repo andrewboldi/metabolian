@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenylpropionate" {
-  spacing 196
+  spacing 232
 
   spine at 0,0 {
     ethylbenzene
@@ -22,15 +22,33 @@ pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenyl
     7_hydroxyquinolin_2_1h_one
   }
 
-  branch from acetophenone side right {
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_8_ol +hydrogen_acceptor +h2o
+    8_hydroxyquinolin_2_1h_one
+  }
+
+  branch from acetophenone side left {
     acetophenone
     <-> . +nad +nadh +hplus
     1_phenylethanol
+  }
+
+  branch from acetophenone side right {
+    acetophenone
+    <-> . +1s_1_phenylethanaminium +nad +h2o +nadh +hplus
+    nh3
   }
 
   branch from 3_oxo_3_phenylpropionate side left {
     3_oxo_3_phenylpropionate
     <-> . +s_3_ammonio_3_phenylpropanoate +akg
     glutamate
+  }
+
+  branch from 3_oxo_3_phenylpropionate side right {
+    3_oxo_3_phenylpropionate
+    <-> . +s_3_ammonio_3_phenylpropanoate +pyruvate
+    alanine
   }
 }

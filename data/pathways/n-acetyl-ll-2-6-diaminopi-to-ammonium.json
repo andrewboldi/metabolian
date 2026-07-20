@@ -113,21 +113,68 @@
       }
     },
     {
-      "id": "n_acetyl_l_aspartate",
-      "name": "N-acetyl-L-aspartate",
-      "formula": "C6H7NO5",
-      "charge": -2,
+      "id": "1r_1_hydroxyethyl_phosphonate",
+      "name": "(1R)-(1-hydroxyethyl)phosphonate",
+      "short": "(1-hydroxyethyl)pho…",
+      "formula": "C2H6O4P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16953"
+        "chebi": "CHEBI:194177"
       }
     },
     {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "4_o_d_glucosyl_trans_ferulate",
+      "name": "4-O-β-D-glucosyl-trans-ferulate",
+      "short": "4-O-β-D-glucosyl-tr…",
+      "formula": "C16H19O9",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29991"
+        "chebi": "CHEBI:141767"
+      }
+    },
+    {
+      "id": "glucovanillin",
+      "name": "Glucovanillin",
+      "formula": "C14H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:179508"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
       }
     },
     {
@@ -141,21 +188,40 @@
       }
     },
     {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58095"
+        "chebi": "CHEBI:57926"
       }
     },
     {
-      "id": "trans_cinnamate",
-      "name": "trans-cinnamate",
-      "formula": "C9H7O2",
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15669"
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "n_carbamoylputrescinium",
+      "name": "N-carbamoylputrescinium",
+      "short": "N-carbamoylputresci…",
+      "formula": "C5H14N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58318"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
       }
     }
   ],
@@ -182,17 +248,31 @@
       ]
     },
     {
-      "id": "ec_4_3_1_24",
-      "name": "phenylalanine ammonia-lyase",
+      "id": "ec_4_1_2_65",
+      "name": "ferulate hydratase/lyase",
       "ec": [
-        "4.3.1.24"
+        "4.1.2.65"
       ]
     },
     {
-      "id": "ec_4_3_1_25",
-      "name": "phenylalanine/tyrosine ammonia-lyase",
+      "id": "ec_4_1_1_20",
+      "name": "diaminopimelate decarboxylase",
       "ec": [
-        "4.3.1.25"
+        "4.1.1.20"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_19",
+      "name": "threonine ammonia-lyase",
+      "ec": [
+        "4.3.1.19"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_53",
+      "name": "N-carbamoylputrescine amidase",
+      "ec": [
+        "3.5.1.53"
       ]
     }
   ],
@@ -338,11 +418,55 @@
     },
     {
       "id": "r4",
-      "name": "N-acetyl-L-aspartate + H2O = L-aspartate + acetate",
-      "equation": "N-acetyl-L-aspartate + H2O = L-aspartate + acetate",
+      "name": "(1R)-(1-hydroxyethyl)phosphonate + O2 = acetate + phosphate + 2 H(+)",
+      "equation": "(1R)-(1-hydroxyethyl)phosphonate + O2 = acetate + phosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "n_acetyl_l_aspartate",
+          "metabolite": "1r_1_hydroxyethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:75123"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ferulate hydratase/lyase",
+      "equation": "4-O-beta-D-glucosyl-trans-ferulate + H2O = 4-O-beta-D-glucosyl-vanillin + acetate",
+      "ec": "4.1.2.65",
+      "substrates": [
+        {
+          "metabolite": "4_o_d_glucosyl_trans_ferulate",
           "stoichiometry": 1
         },
         {
@@ -352,7 +476,7 @@
       ],
       "products": [
         {
-          "metabolite": "aspartate",
+          "metabolite": "glucovanillin",
           "stoichiometry": 1
         },
         {
@@ -360,23 +484,73 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_65"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59408"
+        "rhea": "RHEA:76503"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59408"
+            "id": "RHEA:76503"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
+      "name": "diaminopimelate decarboxylase",
+      "equation": "meso-2,6-diaminopimelate + H(+) = L-lysine + CO2",
+      "ec": "4.1.1.20",
+      "substrates": [
+        {
+          "metabolite": "meso_2_6_diaminopimelic_acid_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:15101"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "meso-2,6-diaminopimelate + NADP(+) = (S)-2,3,4,5-tetrahydrodipicolinate + NH4(+) + NADP...",
       "equation": "meso-2,6-diaminopimelate + NADP(+) = (S)-2,3,4,5-tetrahydrodipicolinate + NH4(+) + NADPH + 2 H(+)",
       "substrates": [
@@ -408,7 +582,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:32255"
       },
@@ -423,19 +597,19 @@
       }
     },
     {
-      "id": "r6",
-      "name": "phenylalanine ammonia-lyase",
-      "equation": "L-phenylalanine = (E)-cinnamate + NH4(+)",
-      "ec": "4.3.1.24",
+      "id": "r8",
+      "name": "threonine ammonia-lyase",
+      "equation": "L-threonine = 2-oxobutanoate + NH4(+)",
+      "ec": "4.3.1.19",
       "substrates": [
         {
-          "metabolite": "l_phenylalanine",
+          "metabolite": "threonine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trans_cinnamate",
+          "metabolite": "oxobut",
           "stoichiometry": 1
         },
         {
@@ -445,20 +619,73 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_24"
+          "enzyme": "ec_4_3_1_19"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:21384"
+        "rhea": "RHEA:22108"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21384"
+            "id": "RHEA:22108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "N-carbamoylputrescine amidase",
+      "equation": "N-carbamoylputrescine + H2O + 2 H(+) = putrescine + NH4(+) + CO2",
+      "ec": "3.5.1.53",
+      "substrates": [
+        {
+          "metabolite": "n_carbamoylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:22284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22284"
           }
         ]
       }

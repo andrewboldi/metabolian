@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-orsellinate-depsidate-to-2-3-5-trihydroxytolue "o-orsellinate depsidate to 2,3,5-trihydroxytoluene" {
-  spacing 180
+  spacing 192
 
   spine at 0,0 {
     o_orsellinate_depsidate

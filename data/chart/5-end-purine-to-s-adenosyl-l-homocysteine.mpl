@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosyl-L-homocysteine" {
-  spacing 152
+  spacing 340
 
   spine at 0,0 {
     5_end_purine_ribonucleotide_5_triphosphate_4
@@ -16,12 +16,32 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
     5_n7_methyl_5_triphosphoguanosine_purine_ribonuc
     <-> . +sam -sah -hplus
     5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur
+    <-> ec_3_13_2_1 [3.13.2.1] +sah +h2o -adenosine
+    homocysteine
+    <-> ec_2_1_1_13 [2.1.1.13] +6s_5_methyltetrahydrofolate -methionine
+    thf
+    <-> ec_2_1_1_19 [2.1.1.19] +trimethylsulfonium -6s_5_methyltetrahydrofolate -hplus
+    dimethyl_sulfide
+    <-> ec_2_1_1_96 [2.1.1.96] +sam -sah
+    trimethylsulfonium
+  }
+
+  branch from 5_end_purine_ribonucleoside_5_diphosphate_3 side left {
+    5_end_purine_ribonucleoside_5_diphosphate_3
+    <-> . +5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_p +h2o +hplus
+    n2_n2_n7_trimethylguanosine_5_phosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_6_1_2 [4.6.1.2] +gtp
+    3_5_cyclic_gmp
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_7 [6.1.1.7] +amp_3_end_1 +alanine +atp +amp
-    3_l_alanyl_adenylyl_zwitterionic_group
+    <-> ec_2_7_7_59 [2.7.7.59] +l_tyrosine +utp
+    uridylyl_l_tyrosine_1
   }
 
   branch from 5_n7_methyl_5_triphosphoguanosine_purine_ribonuc side right {
@@ -32,7 +52,79 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_28 [2.1.1.28] +phenylethanolaminium +sam +hplus
-    n_methylphenylethanolaminium
+    <-> ec_2_1_1_67 [2.1.1.67] +mercaptopurine +sam +hplus
+    6_methylthiopurine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_77 [2.1.1.77] +l_isoaspartate +sam
+    l_isoaspartate_methyl_ester
+  }
+
+  branch from homocysteine side left {
+    homocysteine
+    <-> . +c_terminal_n_glycylaminoethanethioate_1 +o_phosphonato_l_homoserine +h2o +pi
+    c_terminal_gly_gly_1
+  }
+
+  branch from homocysteine side right {
+    homocysteine
+    <-> . +atp +amp +ppi
+    l_homocysteine_thiolactone
+  }
+
+  branch from adenosine side left {
+    adenosine
+    <-> . +dgtp +amp +hplus
+    dgdp
+  }
+
+  branch from adenosine side right {
+    adenosine
+    <-> . +3_terminal_pupa_2
+    ump_2_3_cyclic_phosphate_2
+  }
+
+  branch from thf side left {
+    thf
+    <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +methylene_thf +nadh +hplus +nad
+    5_methyluridine_5_monophosphate_1
+  }
+
+  branch from thf side right {
+    thf
+    <-> . +dump +methylene_thf +h2o
+    5_hydroxymethyluridine_2_deoxy_5_phosphate
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_4_1_99_19 [4.1.99.19] +tyrosine +sam +nadph +p_cresol +5_deoxyadenosine +nadp
+    dehydroglycine
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_2_5_1_94 [2.5.1.94] +chloride +sam
+    5_chloro_5_deoxyadenosine
+  }
+
+  branch from dimethyl_sulfide side left {
+    dimethyl_sulfide
+    <-> . +hydrogen_donor +methanethiol +hydrogen_acceptor
+    methane
+  }
+
+  branch from 6s_5_methyltetrahydrofolate side right {
+    6s_5_methyltetrahydrofolate
+    <-> ec_1_5_1_20 [1.5.1.20] +nadp +nadph +hplus
+    methylene_thf
+  }
+
+  branch from 6s_5_methyltetrahydrofolate side left {
+    6s_5_methyltetrahydrofolate
+    <-> ec_2_1_1_389 [2.1.1.389] +methyl_co +thf +hplus
+    cobalt
   }
 }

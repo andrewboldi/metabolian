@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chlorobenzene-to-2-chloro-cis-cis-muconate "chlorobenzene to 2-chloro-cis,cis-muconate" {
-  spacing 220
+  spacing 232
 
   spine at 0,0 {
     chlorobenzene
@@ -20,5 +20,11 @@ pathway chlorobenzene-to-2-chloro-cis-cis-muconate "chlorobenzene to 2-chloro-ci
     3_chlorocatechol
     <-> . +nadh +o2 +hplus +nad +h2o
     2_chlorophenol
+  }
+
+  branch from 3_chlorocatechol side right {
+    3_chlorocatechol
+    <-> . +nadh +o2 +hplus +co2 +nad +h2o
+    3_chlorosalicylate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 15-methylhexadecasphing-4-to-choline-phosphate "15-methylhexadecasphing-4… to choline phosphate" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     15_methylhexadecasphing_4_enine
@@ -18,13 +18,7 @@ pathway 15-methylhexadecasphing-4-to-choline-phosphate "15-methylhexadecasphing-
 
   branch from n_acyl_15_methylhexadecasphing_4_enine side left {
     n_acyl_15_methylhexadecasphing_4_enine
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    n_acyl_15_methylhexadecasphinganine
-  }
-
-  branch from phosphocholine side right {
-    phosphocholine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_2_dioleoyl_sn_glycerol
+    <-> . +atp +adp +hplus
+    n_acyl_15_methylhexadecasphing_4_enine_1_phospha
   }
 }

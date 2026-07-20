@@ -113,31 +113,42 @@
       }
     },
     {
-      "id": "o_carbamoyl_l_serine",
-      "name": "O-carbamoyl-L-serine",
-      "formula": "C4H8N2O4",
-      "charge": 0,
+      "id": "2_deoxycytidine_5_monophosphate_1",
+      "name": "2'-deoxycytidine 5'-monophosphate(1−)",
+      "short": "2'-deoxycytidine…",
+      "formula": "C9H11N3O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57594"
+        "chebi": "CHEBI:85452"
       }
     },
     {
-      "id": "2_ammonioprop_2_enoate",
-      "name": "2-ammonioprop-2-enoate",
-      "short": "2-ammonioprop-2-eno…",
-      "formula": "C3H5NO2",
-      "charge": 0,
+      "id": "dump",
+      "name": "dUMP",
+      "formula": "C9H10N2O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76565"
+        "chebi": "CHEBI:133902"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
       }
     }
   ],
@@ -154,6 +165,20 @@
       "name": "hydroxymethylpyrimidine kinase",
       "ec": [
         "2.7.1.49"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_38",
+      "name": "single-stranded DNA cytosine deaminase",
+      "ec": [
+        "3.5.4.38"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_35",
+      "name": "tRNA(cytosine(8)) deaminase",
+      "ec": [
+        "3.5.4.35"
       ]
     }
   ],
@@ -293,11 +318,16 @@
     },
     {
       "id": "r4",
-      "name": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
-      "equation": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
+      "name": "single-stranded DNA cytosine deaminase",
+      "equation": "a 2'-deoxycytidine in single-stranded DNA + H2O + H(+) = a 2'-deoxyuridine in single-stranded DNA + NH4(+)",
+      "ec": "3.5.4.38",
       "substrates": [
         {
-          "metabolite": "o_carbamoyl_l_serine",
+          "metabolite": "2_deoxycytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -307,29 +337,79 @@
       ],
       "products": [
         {
-          "metabolite": "2_ammonioprop_2_enoate",
+          "metabolite": "dump",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
+          "enzyme": "ec_3_5_4_38"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:43004"
+        "rhea": "RHEA:50948"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43004"
+            "id": "RHEA:50948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tRNA(cytosine(8)) deaminase",
+      "equation": "cytidine(8) in tRNA + H2O + H(+) = uridine(8) in tRNA + NH4(+)",
+      "ec": "3.5.4.35",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50964"
           }
         ]
       }

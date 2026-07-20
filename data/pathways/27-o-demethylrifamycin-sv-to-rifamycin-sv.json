@@ -143,23 +143,41 @@
       }
     },
     {
-      "id": "3_o_l_olivosyl_oleandolide",
-      "name": "3-O-(α-L-olivosyl)oleandolide",
-      "short": "3-O-(α-L-olivosyl)o…",
-      "formula": "C26H44O10",
-      "charge": 0,
+      "id": "gibberellin_a3",
+      "name": "gibberellin A3",
+      "formula": "C19H21O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29614"
+        "chebi": "CHEBI:58590"
       }
     },
     {
-      "id": "3_o_l_oleandrosyl_oleandolide",
-      "name": "3-O-(α-L-oleandrosyl)oleandolide",
-      "short": "3-O-(α-L-oleandrosy…",
-      "formula": "C27H46O10",
+      "id": "gibberellin_a3_methyl_ester",
+      "name": "gibberellin A3 methyl ester",
+      "short": "gibberellin A3…",
+      "formula": "C20H24O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29613"
+        "chebi": "CHEBI:73253"
+      }
+    },
+    {
+      "id": "gibberellin_a20",
+      "name": "gibberellin A20",
+      "formula": "C19H23O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58526"
+      }
+    },
+    {
+      "id": "gibberellin_a20_methyl_ester",
+      "name": "gibberellin A20 methyl ester",
+      "short": "gibberellin A20…",
+      "formula": "C20H26O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73257"
       }
     }
   ],
@@ -172,10 +190,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_239",
-      "name": "L-olivosyl-oleandolide 3-O-methyltransferase",
+      "id": "ec_2_1_1_275",
+      "name": "gibberellin A9 O-methyltransferase",
       "ec": [
-        "2.1.1.239"
+        "2.1.1.275"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_276",
+      "name": "gibberellin A4 carboxyl methyltransferase",
+      "ec": [
+        "2.1.1.276"
       ]
     }
   ],
@@ -352,12 +377,12 @@
     },
     {
       "id": "r5",
-      "name": "L-olivosyl-oleandolide 3-O-methyltransferase",
-      "equation": "L-olivosyl-oleandolide + S-adenosyl-L-methionine = L-oleandrosyl-oleandolide + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.239",
+      "name": "gibberellin A9 O-methyltransferase",
+      "equation": "gibberellin A3 + S-adenosyl-L-methionine = O-methyl gibberellin A3 + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.275",
       "substrates": [
         {
-          "metabolite": "3_o_l_olivosyl_oleandolide",
+          "metabolite": "gibberellin_a3",
           "stoichiometry": 1
         },
         {
@@ -367,34 +392,75 @@
       ],
       "products": [
         {
-          "metabolite": "3_o_l_oleandrosyl_oleandolide",
+          "metabolite": "gibberellin_a3_methyl_ester",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_239"
+          "enzyme": "ec_2_1_1_275"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31623"
+        "rhea": "RHEA:36115"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31623"
+            "id": "RHEA:36115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "gibberellin A9 O-methyltransferase",
+      "equation": "gibberellin A20 + S-adenosyl-L-methionine = gibberellin A20 methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.275",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a20",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a20_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_275"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:36123"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36123"
           }
         ]
       }

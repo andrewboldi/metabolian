@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound to adenosine 3',5'-bismonoph…" {
-  spacing 224
+  spacing 296
 
   spine at 0,0 {
     organohalogen_compound
@@ -28,31 +28,67 @@ pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_57 [2.6.1.57] +aromatic_l_amino_acid +akg
-    aromatic_2_oxo_monocarboxylic_acid_anion
+    <-> ec_2_6_1_65 [2.6.1.65] +6_acetamido_3_aminohexanoic_acid +akg
+    6_acetamido_3_oxohexanoate
   }
 
-  branch from s_substituted_l_cysteine side left {
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_3 [2.6.1.3] +cysteine +akg
+    mercaptopyruvate
+  }
+
+  branch from s_substituted_l_cysteine side right {
     s_substituted_l_cysteine
     <-> . +thiol
     2_ammonioprop_2_enoate
   }
 
+  branch from glycine side left {
+    glycine
+    <-> . +l_kynurenine +glyoxylate
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
   branch from glycine side right {
     glycine
-    <-> ec_2_6_1_35 [2.6.1.35] +oxaloacetate +aspartate
-    glyoxylate
+    <-> ec_2_3_1_29 [2.3.1.29] +acetyl_coa +coa
+    amino_oxobutanoate
   }
 
   branch from thiol side left {
+    thiol
+    <-> ec_2_1_1_9 [2.1.1.9] +sam +sah +hplus
+    methyl_sulfide
+  }
+
+  branch from thiol side right {
     thiol
     <-> ec_1_8_3_7 [1.8.3.7] +l_cysteine +o2 +l_3_oxoalanine +h2s +h2o +hplus
     organic_disulfide
   }
 
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
+    2_formylglutarate
+  }
+
   branch from nh3 side right {
     nh3
-    <-> ec_6_3_4_16 [6.3.4.16] +hco3 +atp +adp +pi +hplus
-    carbamoyl_p
+    <-> ec_3_5_1_84 [3.5.1.84] +biuret +h2o
+    urea_1_carboxylate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_32 [2.8.2.32] +5_scymnol +3_phosphonato_5_adenylyl_sulfate +hplus
+    5_scymnol_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_20 [2.8.2.20] +l_tyrosine +3_phosphonato_5_adenylyl_sulfate +hplus
+    l_tyrosine_o_sulfate_1
   }
 }

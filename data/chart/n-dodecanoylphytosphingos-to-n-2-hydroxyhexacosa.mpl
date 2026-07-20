@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphingos… to N-(2-hydroxyhexacosanyl)-…" {
-  spacing 152
+  spacing 188
 
   spine at 0,0 {
     n_dodecanoylphytosphingosine
@@ -18,19 +18,37 @@ pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphin
 
   branch from phytosphingosine side left {
     phytosphingosine
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    sphinganine
+    <-> . +h2o +pi
+    phytosphingosine_1_phosphate
+  }
+
+  branch from phytosphingosine side right {
+    phytosphingosine
+    <-> . +n_2_hydroxyhexacosanyl_4r_phytosphingosine +coa +hplus
+    2_hydroxyhexacosanoyl_coa
+  }
+
+  branch from dodecanoate side left {
+    dodecanoate
+    <-> . +h2o +coa +hplus
+    lauroyl_coa
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    8_hydroxylaurate
+    <-> . +trilaurin +h2o +hplus
+    2_3_didodecanoyl_sn_glycerol
   }
 
   branch from n_2_hydroxyhexacosanyl_4r_phytosphingosine side left {
     n_2_hydroxyhexacosanyl_4r_phytosphingosine
     <-> . +iron +h2o +fe2 +o2 +hplus
     n_2_3_dihydroxyhexacosanoyl_4r_hydroxysphinganin
+  }
+
+  branch from n_2_hydroxyhexacosanyl_4r_phytosphingosine side right {
+    n_2_hydroxyhexacosanyl_4r_phytosphingosine
+    <-> . +h +n_hexacosanoyl_4r_hydroxysphinganine +o2 +nadph +h2o
+    nadp
   }
 }

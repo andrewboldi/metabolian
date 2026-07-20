@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L-γ-glutamyl phosphate" {
-  spacing 220
+  spacing 280
 
   spine at 0,0 {
     s_2_halocarboxylic_acid_anion
@@ -18,16 +18,40 @@ pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L
     l_glutamyl_phosphate
   }
 
+  branch from halide_anion side left {
+    halide_anion
+    <-> ec_3_8_1_3 [3.8.1.3] +haloacetate +h2o +hplus
+    glycolate
+  }
+
+  branch from halide_anion side right {
+    halide_anion
+    <-> ec_3_8_1_9 [3.8.1.9] +r_2_halocarboxylic_acid_anion +h2o +hplus
+    2s_2_hydroxy_monocarboxylic_acid_anion
+  }
+
   branch from 2_oxo_monocarboxylic_acid_anion side left {
     2_oxo_monocarboxylic_acid_anion
     <-> ec_1_2_1_23 [1.2.1.23] +nad +h2o +nadh +hplus
     2_oxo_aldehyde
   }
 
+  branch from 2_oxo_monocarboxylic_acid_anion side right {
+    2_oxo_monocarboxylic_acid_anion
+    <-> . +o2 +h2o2
+    2_hydroxy_carboxylate
+  }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> ec_1_10_5_1 [1.10.5.1] +1_d_ribofuranosyl_1_4_dihydronicotinamide +1_4_benzoquinones +hplus
+    n_ribosylnicotinamide
+  }
+
   branch from hydroquinones side right {
     hydroquinones
-    <-> ec_1_1_5_3 [1.1.5.3] +1_4_benzoquinones +sn_glycerol_3_phosphate
-    dhap
+    <-> ec_1_1_5_8 [1.1.5.8] +quinate +1_4_benzoquinones
+    3_dehydroquinate
   }
 
   branch from l_glutamic_5_semialdehyde side left {
@@ -36,9 +60,21 @@ pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L
     glutamate
   }
 
+  branch from l_glutamic_5_semialdehyde side right {
+    l_glutamic_5_semialdehyde
+    <-> . +2_acetamido_5_oxopentanoate +h2o
+    acetate
+  }
+
+  branch from l_amino_acid side left {
+    l_amino_acid
+    <-> ec_4_3_2_9 [4.3.2.9] +l_glutamyl_l_amino_acid
+    5_oxo_l_prolinate
+  }
+
   branch from l_amino_acid side right {
     l_amino_acid
-    <-> . +glycocholate +glycine
-    n_choloyl_l_amino_acid_anion
+    <-> ec_3_4_13_19 [3.4.13.19] +h2o
+    l_aminoacyl_l_amino_acid
   }
 }

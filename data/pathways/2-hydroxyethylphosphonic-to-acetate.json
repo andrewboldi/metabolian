@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-hydroxyethylphosphonic-to-acetate",
   "name": "2-hydroxyethylphosphonic… to acetate",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from 2-hydroxyethylphosphonic acid(1−) to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -103,13 +103,31 @@
       }
     },
     {
-      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
-      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
-      "short": "(2-amino-1-hydroxye…",
-      "formula": "C2H8NO4P",
+      "id": "2_aminoethyl_phosphonic_acid",
+      "name": "(2-aminoethyl)phosphonic acid",
+      "short": "(2-aminoethyl)phosp…",
+      "formula": "C2H8NO3P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:141612"
+        "chebi": "CHEBI:57418"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     },
     {
@@ -119,26 +137,6 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:28938"
-      }
-    },
-    {
-      "id": "3_hydroxy_3_4_hydroxyphenyl_propanoate",
-      "name": "3-hydroxy-3-(4-hydroxyphenyl)propanoate",
-      "short": "3-hydroxy-3-(4-hydr…",
-      "formula": "C9H9O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:229975"
-      }
-    },
-    {
-      "id": "4_hydroxybenzaldehyde",
-      "name": "4-hydroxybenzaldehyde",
-      "short": "4-hydroxybenzaldehy…",
-      "formula": "C7H6O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17597"
       }
     }
   ],
@@ -158,10 +156,10 @@
       ]
     },
     {
-      "id": "ec_4_3_1_33",
-      "name": "(R)-1-hydroxy-2-aminoethylphosphonate ammonia-lyase",
+      "id": "ec_1_5_3_27",
+      "name": "2-(methylaminoethyl)phosphonate oxidase",
       "ec": [
-        "4.3.1.33"
+        "1.5.3.27"
       ]
     }
   ],
@@ -313,12 +311,20 @@
     },
     {
       "id": "r4",
-      "name": "(R)-1-hydroxy-2-aminoethylphosphonate ammonia-lyase",
-      "equation": "(1R)-(2-amino-1-hydroxyethyl)phosphonate = phosphonoacetaldehyde + NH4(+)",
-      "ec": "4.3.1.33",
+      "name": "2-(methylaminoethyl)phosphonate oxidase",
+      "equation": "(2-aminoethyl)phosphonate + O2 + H2O = phosphonoacetaldehyde + H2O2 + NH4(+)",
+      "ec": "1.5.3.27",
       "substrates": [
         {
-          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "metabolite": "2_aminoethyl_phosphonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
@@ -328,61 +334,30 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "nh3",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_33"
+          "enzyme": "ec_1_5_3_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:72879"
+        "rhea": "RHEA:81235"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72879"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "3-hydroxy-3-(4-hydroxyphenyl)propanoate = 4-hydroxybenzaldehyde + acetate",
-      "equation": "3-hydroxy-3-(4-hydroxyphenyl)propanoate = 4-hydroxybenzaldehyde + acetate",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxy_3_4_hydroxyphenyl_propanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_hydroxybenzaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:79455"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:79455"
+            "id": "RHEA:81235"
           }
         ]
       }

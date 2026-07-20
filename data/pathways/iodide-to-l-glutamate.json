@@ -139,39 +139,31 @@
       }
     },
     {
-      "id": "f420_0",
-      "name": "F420-0",
-      "formula": "C19H19N3O12P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:59907"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37565"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "coenzyme_f420_1",
-      "name": "coenzyme F420-1",
-      "formula": "C24H25N4O15P",
-      "charge": -4,
+      "id": "l_glutamic_5_semialdehyde",
+      "name": "L-glutamic 5-semialdehyde",
+      "short": "L-glutamic…",
+      "formula": "C5H9NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:59920"
+        "chebi": "CHEBI:58066"
       }
     },
     {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:456216"
       }
     },
     {
@@ -181,6 +173,24 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "neamine",
+      "name": "neamine",
+      "formula": "C12H30N4O6",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:65076"
+      }
+    },
+    {
+      "id": "6_oxoparomamine",
+      "name": "6'-oxoparomamine",
+      "formula": "C12H26N3O7",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:65016"
       }
     }
   ],
@@ -193,10 +203,10 @@
       ]
     },
     {
-      "id": "ec_6_3_2_31",
-      "name": "coenzyme F420-0:L-glutamate ligase",
+      "id": "ec_2_6_1_93",
+      "name": "neamine transaminase",
       "ec": [
-        "6.3.2.31"
+        "2.6.1.93"
       ]
     }
   ],
@@ -381,34 +391,19 @@
     },
     {
       "id": "r5",
-      "name": "coenzyme F420-0:L-glutamate ligase",
-      "equation": "oxidized coenzyme F420-0 + GTP + L-glutamate = oxidized coenzyme F420-1 + GDP + phosphate + H(+)",
-      "ec": "6.3.2.31",
+      "name": "L-glutamate + ATP + NADPH + H(+) = L-glutamate 5-semialdehyde + ADP + phosphate + NADP(+)",
+      "equation": "L-glutamate + ATP + NADPH + H(+) = L-glutamate 5-semialdehyde + ADP + phosphate + NADP(+)",
       "substrates": [
-        {
-          "metabolite": "f420_0",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "glutamate",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
+        },
         {
-          "metabolite": "coenzyme_f420_1",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -416,22 +411,80 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_6_3_2_31"
+          "metabolite": "l_glutamic_5_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:30555"
+        "rhea": "RHEA:33207"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30555"
+            "id": "RHEA:33207"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "neamine transaminase",
+      "equation": "neamine + 2-oxoglutarate = 6'-oxoparomamine + L-glutamate",
+      "ec": "2.6.1.93",
+      "substrates": [
+        {
+          "metabolite": "neamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_oxoparomamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34039"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34039"
           }
         ]
       }

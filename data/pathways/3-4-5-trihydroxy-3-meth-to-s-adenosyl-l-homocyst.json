@@ -97,23 +97,41 @@
       }
     },
     {
-      "id": "pseudouridine_5_phosphate_1",
-      "name": "pseudouridine 5'-phosphate(1−)",
-      "short": "pseudouridine…",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:65314"
+        "chebi": "CHEBI:61976"
       }
     },
     {
-      "id": "n1_methylpseudouridine_5_monophosphate_1",
-      "name": "N1-methylpseudouridine 5'-monophosphate(1−)",
-      "short": "N1-methylpseudourid…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74890"
+        "chebi": "CHEBI:61961"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
       }
     }
   ],
@@ -133,10 +151,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_260",
-      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
+      "id": "ec_2_1_1_367",
+      "name": "[histone H3]-lysine(9) N-methyltransferase",
       "ec": [
-        "2.1.1.260"
+        "2.1.1.367"
       ]
     }
   ],
@@ -327,12 +345,11 @@
     },
     {
       "id": "r5",
-      "name": "rRNA small subunit pseudouridine methyltransferase Nep1",
-      "equation": "a pseudouridine in rRNA + S-adenosyl-L-methionine = an N(1)-methylpseudouridine in rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.260",
+      "name": "N(6),N(6)-dimethyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-t...",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "pseudouridine_5_phosphate_1",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
@@ -342,7 +359,51 @@
       ],
       "products": [
         {
-          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:60272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "[histone H3]-lysine(9) N-methyltransferase",
+      "equation": "L-lysyl(9)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(9)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.367",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -356,20 +417,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_260"
+          "enzyme": "ec_2_1_1_367"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46696"
+        "rhea": "RHEA:60280"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46696"
+            "id": "RHEA:60280"
           }
         ]
       }

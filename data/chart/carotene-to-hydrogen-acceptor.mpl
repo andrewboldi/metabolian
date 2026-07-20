@@ -4,11 +4,15 @@
 # edit the generator, not this file.
 
 pathway carotene-to-hydrogen-acceptor "β-carotene to hydrogen acceptor" {
-  spacing 160
+  spacing 152
 
   spine at 0,0 {
     carotene
-    <-> ec_1_14_99_63 [1.14.99.63] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    4_hydroxy_all_trans_carotene
+    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    4_4_dihydroxy_all_trans_carotene
+    <-> . -h2o
     echinenone
     <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     4_hydroxyechinenone

@@ -4,35 +4,35 @@
 # edit the generator, not this file.
 
 pathway dihydroprecondylocarpine-to-fmn "dihydroprecondylocarpine… to FMN" {
-  spacing 200
+  spacing 174
 
   spine at 0,0 {
     dihydroprecondylocarpine_acetate
+    <-> .
+    dihydroprecondylocarpine_acetate_enamine_form
     <-> . -acetate -hplus
+    dehydrosecodine
+    <-> ec_5_5_1_38 [5.5.1.38]
     tabersoninium
-    <-> ec_1_14_14_103 [1.14.14.103] +fmnh2 +o2 -fmn -h2o -hplus
-    16_hydroxytabersoninium
-    <-> ec_2_1_1_94 [2.1.1.94] +sam -sah -hplus
-    16_methoxytabersoninium
     <-> ec_1_14_14_50 [1.14.14.50] +fmnh2 +o2 -fmn -h2o -hplus
-    3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
+    3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni
   }
 
-  branch from tabersoninium side left {
-    tabersoninium
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    r_19_hydroxytabersonine
+  branch from dehydrosecodine side left {
+    dehydrosecodine
+    <-> ec_5_5_1_37 [5.5.1.37]
+    catharanthine
   }
 
   branch from fmn side right {
     fmn
-    <-> . +prostaglandin_h2 +fmnh2 +o2 +h2o +hplus
-    19_hydroxyprostaglandin_h2
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    14_15_eet
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_291 [2.1.1.291] +r_reticulinium +sam +hplus
-    r_laudanine
+  branch from fmn side left {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11_12_eet
   }
 }

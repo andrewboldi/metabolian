@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-trans-deca-2-4-dien-to-trans-trans-deca-2 "trans,trans-deca-2,4-dien… to trans,trans-deca-2,4-dien…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     trans_trans_deca_2_4_dienoyl_coa
@@ -20,11 +20,5 @@ pathway trans-trans-deca-2-4-dien-to-trans-trans-deca-2 "trans,trans-deca-2,4-di
     trans_dec_3_enoyl_coa
     <-> . +nadph +hplus +nadp
     2e_4z_deca_2_4_dienoyl_coa
-  }
-
-  branch from trans_dec_2_enoyl_coa side right {
-    trans_dec_2_enoyl_coa
-    <-> .
-    cis_dec_3_enoyl_coa
   }
 }

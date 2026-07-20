@@ -186,6 +186,25 @@
       }
     },
     {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "5_n_putrescinyl_dtmp_1",
+      "name": "5-Nα-putrescinyl-dTMP(1+)",
+      "short": "5-Nα-putrescinyl-dT…",
+      "formula": "C14H24N4O7P",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:190920"
+      }
+    },
+    {
       "id": "h2o",
       "name": "Water",
       "formula": "H2O",
@@ -214,21 +233,67 @@
       }
     },
     {
-      "id": "betaenone_c",
-      "name": "betaenone C",
-      "formula": "C21H34O5",
+      "id": "dihydropyriculariol",
+      "name": "dihydropyriculariol",
+      "formula": "C14H18O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145053"
+        "chebi": "CHEBI:142637"
       }
     },
     {
-      "id": "betaenone_b",
-      "name": "betaenone B",
-      "formula": "C21H36O5",
+      "id": "pyriculariol",
+      "name": "pyriculariol",
+      "formula": "C14H16O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145054"
+        "chebi": "CHEBI:142636"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "fumigermin",
+      "name": "fumigermin",
+      "formula": "C11H14O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:147341"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -451,6 +516,45 @@
     },
     {
       "id": "r6",
+      "name": "5-phosphomethyl-dUMP in DNA + putrescine = 5-N(alpha)-putrescinyl-dTMP in DNA + phosphate",
+      "equation": "5-phosphomethyl-dUMP in DNA + putrescine = 5-N(alpha)-putrescinyl-dTMP in DNA + phosphate",
+      "substrates": [
+        {
+          "metabolite": "5_phosphomethyl_dump_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_n_putrescinyl_dtmp_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:71575"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:71575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "5-N(alpha)-glycyl-dTMP in DNA + A + H2O = 5-aminomethyl-dUMP in DNA + glyoxylate + AH2",
       "equation": "5-N(alpha)-glycyl-dTMP in DNA + A + H2O = 5-aminomethyl-dUMP in DNA + glyoxylate + AH2",
       "substrates": [
@@ -482,7 +586,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:71559"
       },
@@ -497,22 +601,12 @@
       }
     },
     {
-      "id": "r7",
-      "name": "betaenone C + AH2 = betaenone B + A",
-      "equation": "betaenone C + AH2 = betaenone B + A",
+      "id": "r8",
+      "name": "dihydropyriculariol + A = pyriculariol + AH2",
+      "equation": "dihydropyriculariol + A = pyriculariol + AH2",
       "substrates": [
         {
-          "metabolite": "betaenone_c",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "betaenone_b",
+          "metabolite": "dihydropyriculariol",
           "stoichiometry": 1
         },
         {
@@ -520,17 +614,90 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "pyriculariol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:61900"
+        "rhea": "RHEA:63976"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61900"
+            "id": "RHEA:63976"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "3 malonyl-CoA + acetyl-CoA + AH2 + 3 S-adenosyl-L-methionine = fumigermin + A + 3 S-ade...",
+      "equation": "3 malonyl-CoA + acetyl-CoA + AH2 + 3 S-adenosyl-L-methionine = fumigermin + A + 3 S-adenosyl-L-homocysteine + 3 CO2 + 4 CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fumigermin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:64012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64012"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxocholan-24-oyl-coa-to-3-oxo-chol-4-ene-22r-h "3-oxocholan-24-oyl-CoA to 3-oxo-chol-4-ene-(22R)-hy…" {
-  spacing 224
+  spacing 230
 
   spine at 0,0 {
     3_oxocholan_24_oyl_coa
@@ -20,17 +20,5 @@ pathway 3-oxocholan-24-oyl-coa-to-3-oxo-chol-4-ene-22r-h "3-oxocholan-24-oyl-CoA
     3_oxochol_4_en_24_oyl_coa
     <-> ec_1_3_1_114 [1.3.1.114] +nad +nadh +hplus
     3_oxochol_4_6_dien_24_oyl_coa
-  }
-
-  branch from 22e_3_oxochola_4_22_dien_24_oyl_coa side right {
-    22e_3_oxochola_4_22_dien_24_oyl_coa
-    <-> . +h2o
-    3_oxo_chol_4_ene_22s_hydroxy_24_oyl_coa
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_triaceta +o2 +hydrogen_acceptor +h2o
-    s_2_trans_6_trans_10_trans_epoxygeranylgeranyl
   }
 }

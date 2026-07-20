@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sphingomyelin-to-n-acylsphingoid "sphingomyelin to N-acylsphingoid" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     sphingomyelin
@@ -16,21 +16,15 @@ pathway sphingomyelin-to-n-acylsphingoid "sphingomyelin to N-acylsphingoid" {
     n_acylsphingoid
   }
 
-  branch from n_acylsphingoid side left {
-    n_acylsphingoid
-    <-> . +man_1_6_ins_1_p_cer +h2o +hplus
-    d_mannosyl_1_6_1d_myo_inositol_1_phosphate
+  branch from sphingoid_base side left {
+    sphingoid_base
+    <-> ec_2_3_1_297 [2.3.1.297] +very_long_chain_fatty_acyl_coa +coa +hplus
+    n_very_long_chain_fatty_acyl_sphingoid_base
   }
 
   branch from sphingoid_base side right {
     sphingoid_base
-    <-> ec_2_3_1_299 [2.3.1.299] +stearoyl_coa +coa +hplus
-    n_stearoyl_sphingoid_base
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer +h2o
-    d_galactosyl_d_galactosyl_d_glucosylsphingosine
+    <-> ec_2_3_1_298 [2.3.1.298] +ultra_long_chain_fatty_acyl_coa +coa +hplus
+    n_ultra_long_chain_acyl_sphingoid_base
   }
 }

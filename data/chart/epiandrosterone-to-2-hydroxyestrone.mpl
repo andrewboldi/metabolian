@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway epiandrosterone-to-2-hydroxyestrone "epiandrosterone to 2-hydroxyestrone…" {
-  spacing 252
+  spacing 324
 
   spine at 0,0 {
     epiandrosterone
@@ -20,33 +20,75 @@ pathway epiandrosterone-to-2-hydroxyestrone "epiandrosterone to 2-hydroxyestrone
     2_hydroxyestrone_3_o_d_glucuronide
   }
 
+  branch from 5_androstane_3_17_dione side left {
+    5_androstane_3_17_dione
+    <-> ec_1_1_1_209 [1.1.1.209] +nad +nadh +hplus
+    androsterone
+  }
+
+  branch from 5_androstane_3_17_dione side right {
+    5_androstane_3_17_dione
+    <-> . +nadp +nadph +hplus
+    17_hydroxy_5_androstan_3_one
+  }
+
   branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
-    <-> ec_1_3_99_4 [1.3.99.4] +hydrogen_acceptor +hydrogen_donor
-    androsta_1_4_diene_3_17_dione
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    16_hydroxyandrost_4_ene_3_17_dione
+  }
+
+  branch from androst_4_ene_3_17_dione side right {
+    androst_4_ene_3_17_dione
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    15_hydroxyandrost_4_ene_3_17_dione
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +malonyl-coa +acetyl_coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
+    dehydroprobetaenone_i
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +5_s_hete +o2 +hydrogen_acceptor +h2o
-    5_s_15_r_dihete
+    <-> . +1_4_benzoquinones +hydrogen_acceptor
+    hydroquinones
   }
 
   branch from estrone side left {
     estrone
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    15_hydroxyestrone
+  }
+
+  branch from estrone side right {
+    estrone
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
     6_hydroxyestrone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_78 [1.14.14.78] +menaquinone_4 +fmnh2 +o2 +h2o +hplus
+    hydroxymenaquinone_4
   }
 
   branch from fmn side right {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    4_hydroxycholesterol
+    <-> . +all_trans_retinal +fmnh2 +o2 +h2o +hplus
+    all_trans_retinoate
   }
 
   branch from 2_hydroxyestrone side left {
     2_hydroxyestrone
     <-> . +sam +sah +hplus
     2_hydroxy_3_o_methyl_estrone
+  }
+
+  branch from 2_hydroxyestrone side right {
+    2_hydroxyestrone
+    <-> ec_1_14_14_1 [1.14.14.1] +nadh +h +estrone +o2 +h2o
+    nad
   }
 }

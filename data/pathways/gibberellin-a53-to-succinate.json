@@ -118,22 +118,40 @@
       }
     },
     {
-      "id": "l_argininium",
-      "name": "L-argininium",
-      "formula": "C6H13N4O",
-      "charge": 1,
+      "id": "3_hydroxybutane_1_2_3_tricarboxylate",
+      "name": "3-hydroxybutane-1,2,3-tricarboxylate",
+      "short": "3-hydroxybutane-1,2…",
+      "formula": "C7H7O7",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:29965"
+        "chebi": "CHEBI:141790"
       }
     },
     {
-      "id": "3r_3_hydroxy_l_argininium",
-      "name": "(3R)-3-hydroxy-L-argininium",
-      "short": "3-hydroxy-L-arginin…",
-      "formula": "C6H13N4O2",
-      "charge": 1,
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78294"
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "scopoletin",
+      "name": "scopoletin",
+      "formula": "C10H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17488"
+      }
+    },
+    {
+      "id": "fraxetin",
+      "name": "fraxetin",
+      "formula": "C10H8O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:5169"
       }
     }
   ],
@@ -153,10 +171,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_73",
-      "name": "[protein]-arginine 3-hydroxylase",
+      "id": "ec_1_14_11_60",
+      "name": "scopoletin 8-hydroxylase",
       "ec": [
-        "1.14.11.73"
+        "1.14.11.60"
       ]
     }
   ],
@@ -371,12 +389,47 @@
     },
     {
       "id": "r5",
-      "name": "[protein]-arginine 3-hydroxylase",
-      "equation": "L-arginyl-[protein] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[protein] + succinate + CO2",
-      "ec": "1.14.11.73",
+      "name": "3-hydroxybutane-1,2,3-tricarboxylate = pyruvate + succinate",
+      "equation": "3-hydroxybutane-1,2,3-tricarboxylate = pyruvate + succinate",
       "substrates": [
         {
-          "metabolite": "l_argininium",
+          "metabolite": "3_hydroxybutane_1_2_3_tricarboxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:57504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57504"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "scopoletin 8-hydroxylase",
+      "equation": "scopoletin + 2-oxoglutarate + O2 = fraxetin + succinate + CO2",
+      "ec": "1.14.11.60",
+      "substrates": [
+        {
+          "metabolite": "scopoletin",
           "stoichiometry": 1
         },
         {
@@ -390,7 +443,7 @@
       ],
       "products": [
         {
-          "metabolite": "3r_3_hydroxy_l_argininium",
+          "metabolite": "fraxetin",
           "stoichiometry": 1
         },
         {
@@ -404,20 +457,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_73"
+          "enzyme": "ec_1_14_11_60"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:56744"
+        "rhea": "RHEA:57848"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56744"
+            "id": "RHEA:57848"
           }
         ]
       }

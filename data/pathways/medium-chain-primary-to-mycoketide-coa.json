@@ -215,22 +215,51 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "hexadecanedioate",
+      "name": "hexadecanedioate",
+      "formula": "C16H28O4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:76276"
       }
     },
     {
-      "id": "7_epi_sesquithujene",
-      "name": "7-epi-sesquithujene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "hexadecanedioyl_coa",
+      "name": "hexadecanedioyl-CoA",
+      "formula": "C37H59N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:63710"
+        "chebi": "CHEBI:77085"
+      }
+    },
+    {
+      "id": "2_o_3_dimethylflaviolin_7_olate",
+      "name": "2-O,3-dimethylflaviolin-7-olate",
+      "short": "2-O,3-dimethylflavi…",
+      "formula": "C12H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78589"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "6_linalyl_2_o_3_dimethylflaviolin_7_olate",
+      "name": "6-linalyl-2-O,3-dimethylflaviolin-7-olate",
+      "short": "6-linalyl-2-O,3-dim…",
+      "formula": "C22H25O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78588"
       }
     }
   ],
@@ -250,10 +279,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_101",
-      "name": "7-epi-sesquithujene synthase",
+      "id": "ec_2_5_1_124",
+      "name": "6-linalyl-2-O,3-dimethylflaviolin synthase",
       "ec": [
-        "4.2.3.101"
+        "2.5.1.124"
       ]
     }
   ],
@@ -554,18 +583,69 @@
     },
     {
       "id": "r7",
-      "name": "7-epi-sesquithujene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = 7-epi-sesquithujene + diphosphate",
-      "ec": "4.2.3.101",
+      "name": "hexadecanedioate + ATP + CoA = hexadecanedioyl-CoA + AMP + diphosphate",
+      "equation": "hexadecanedioate + ATP + CoA = hexadecanedioyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "hexadecanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "7_epi_sesquithujene",
+          "metabolite": "hexadecanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:40295"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "6-linalyl-2-O,3-dimethylflaviolin synthase",
+      "equation": "2-O,3-dimethylflaviolin + (2E)-geranyl diphosphate = 6-linalyl-2-O,3-dimethylflaviolin + diphosphate",
+      "ec": "2.5.1.124",
+      "substrates": [
+        {
+          "metabolite": "2_o_3_dimethylflaviolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_linalyl_2_o_3_dimethylflaviolin_7_olate",
           "stoichiometry": 1
         },
         {
@@ -575,20 +655,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_101"
+          "enzyme": "ec_2_5_1_124"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:31995"
+        "rhea": "RHEA:41007"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31995"
+            "id": "RHEA:41007"
           }
         ]
       }

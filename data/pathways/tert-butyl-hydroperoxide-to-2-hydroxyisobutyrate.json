@@ -150,22 +150,86 @@
       }
     },
     {
-      "id": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah",
-      "name": "(4Z,7Z,10Z,13Z,15E,17S,19Z)-17-hydroperoxydocosahexaenoate",
-      "short": "(4Z,7Z,10Z,13Z,15E,…",
-      "formula": "C22H31O4",
-      "charge": -1,
+      "id": "2_2_dimethyloxirane",
+      "name": "2,2-Dimethyloxirane",
+      "formula": "C4H8O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133795"
+        "chebi": "CHEBI:193943"
       }
     },
     {
-      "id": "17s_hdha",
-      "name": "(17S)-HDHA",
-      "formula": "C22H31O3",
-      "charge": -1,
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:195403"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "2_hydroxyisobutanoyl_coa",
+      "name": "2-hydroxyisobutanoyl-CoA",
+      "short": "2-hydroxyisobutanoy…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:131780"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "2_hydroxy_2_methylpropanenitrile",
+      "name": "2-hydroxy-2-methylpropanenitrile",
+      "short": "2-hydroxy-2-methylp…",
+      "formula": "C4H7NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2066"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
       }
     }
   ],
@@ -189,6 +253,20 @@
       "name": "2-hydroxy-2-methylpropanal dehydrogenase",
       "ec": [
         "1.2.1.98"
+      ]
+    },
+    {
+      "id": "ec_3_3_2_10",
+      "name": "soluble epoxide hydrolase",
+      "ec": [
+        "3.3.2.10"
+      ]
+    },
+    {
+      "id": "ec_3_5_5_1",
+      "name": "nitrilase",
+      "ec": [
+        "3.5.5.1"
       ]
     }
   ],
@@ -397,25 +475,11 @@
     },
     {
       "id": "r5",
-      "name": "(17S)-hydroperoxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + 2 glutathione = (17S)-hydr...",
-      "equation": "(17S)-hydroperoxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + 2 glutathione = (17S)-hydroxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + glutathione disulfide + H2O",
+      "name": "soluble epoxide hydrolase",
+      "ec": "3.3.2.10",
       "substrates": [
         {
-          "metabolite": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "17s_hdha",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gssg",
+          "metabolite": "2_2_dimethyloxirane",
           "stoichiometry": 1
         },
         {
@@ -423,17 +487,118 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "2_methylpropane_1_2_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_10"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:76715"
+        "metanetx": "MNXR121021"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76715"
+            "db": "MetaNetX",
+            "id": "MNXR121021"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR121031",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_hydroxyisobutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR121031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "nitrilase",
+      "ec": "3.5.5.1",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_2_methylpropanenitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_5_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR121032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121032"
           }
         ]
       }

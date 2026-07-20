@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway neocasomorphin-to-fmn "neocasomorphin to FMN" {
-  spacing 220
+  spacing 250
 
   spine at 0,0 {
     neocasomorphin
@@ -16,21 +16,33 @@ pathway neocasomorphin-to-fmn "neocasomorphin to FMN" {
     2_hydroxy_2_methylbutanenitrile
   }
 
-  branch from isoleucine side left {
-    isoleucine
-    <-> . +glyoxylate +glycine
-    kmv
+  branch from 1e_2s_2_methylbutanal_oxime side left {
+    1e_2s_2_methylbutanal_oxime
+    <-> ec_1_14_13_117 [1.14.13.117] +co2 +nadp +h2o +l_isoleucine +o2 +nadph
+    h
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14r_15s_eet
+    <-> ec_1_14_14_28 [1.14.14.28] +long_chain_alkane +fmnh2 +o2 +h2o +hplus
+    long_chain_fatty_alcohol
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +1_4_cineole +fmnh2 +o2 +h2o +hplus
+    2_exo_hydroxy_1_4_cineole
+  }
+
+  branch from 2_hydroxy_2_methylbutanenitrile side right {
+    2_hydroxy_2_methylbutanenitrile
+    <-> . +nadph +o2 +hplus +nadp +h2o
+    2_methylbutanenitrile
   }
 
   branch from 2_hydroxy_2_methylbutanenitrile side left {
     2_hydroxy_2_methylbutanenitrile
-    <-> . +nadph +o2 +hplus +nadp +h2o
-    2_methylbutanenitrile
+    <-> . +hydrogen_cyanide
+    butan_2_one
   }
 }

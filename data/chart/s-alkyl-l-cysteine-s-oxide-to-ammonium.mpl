@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-alkyl-l-cysteine-s-oxide-to-ammonium "S-alkyl-L-cysteine S-oxide to ammonium" {
-  spacing 240
+  spacing 264
 
   spine at 0,0 {
     s_alkyl_l_cysteine_s_oxide
@@ -22,9 +22,21 @@ pathway s-alkyl-l-cysteine-s-oxide-to-ammonium "S-alkyl-L-cysteine S-oxide to am
     serine
   }
 
+  branch from 2_ammonioprop_2_enoate side right {
+    2_ammonioprop_2_enoate
+    <-> . +l_tryptophan
+    1h_indole
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus +pyruvate
+    3_amino_l_alanine
+  }
+
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +h2o
-    aspartate
+    <-> ec_3_5_5_6 [3.5.5.6] +3_5_dibromo_4_oxidobenzonitrile +h2o
+    3_5_dibromo_4_oxidobenzoate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-3-p… to S-adenosyl-L-homocysteine" {
-  spacing 236
+  spacing 284
 
   spine at 0,0 {
     1_2_diacyl_sn_glycero_3_phospholipid
@@ -22,10 +22,22 @@ pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-
     2_3_diacyl_sn_glycerol
   }
 
-  branch from dag side right {
+  branch from triacyl_sn_glycerol side right {
+    triacyl_sn_glycerol
+    <-> . +1_3_diacyl_sn_glycerol +1_acyl_sn_glycerol
+    glycerol
+  }
+
+  branch from dag side left {
     dag
     <-> ec_3_1_4_3 [3.1.4.3] +phosphatidylcholine +h2o +hplus
     phosphocholine
+  }
+
+  branch from dag side right {
+    dag
+    <-> ec_2_4_1_184 [2.4.1.184] +1_2_diacyl_3_d_galactosyl_sn_glycerol
+    3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl
   }
 
   branch from fatty-acid side left {
@@ -34,9 +46,21 @@ pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-
     fatty_acyl_coa
   }
 
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> ec_3_1_1_28 [3.1.1.28] +o_acyl_l_carnitine +h2o +hplus
+    carnitine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_27 [2.1.1.27] +tyraminium +sam +hplus
-    n_methyltyraminium
+    <-> ec_2_1_1_88 [2.1.1.88] +gossypetin +sam +hplus
+    3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept "N-hexanoyldihydroceramide to (2S,3E)-2-hydroxyhept-3-e…" {
-  spacing 152
+  spacing 206
 
   spine at 0,0 {
     n_hexanoyldihydroceramide
@@ -20,8 +20,8 @@ pathway n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept "N-hexanoyldihydroceram
 
   branch from hexanoate side left {
     hexanoate
-    <-> . +h2o +coa +hplus
-    hexanoyl_coa
+    <-> . +n6_hexanoyl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from sphinganine side right {
@@ -30,15 +30,45 @@ pathway n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept "N-hexanoyldihydroceram
     sphinganine_1_phosphate
   }
 
+  branch from sphinganine side left {
+    sphinganine
+    <-> ec_1_1_1_102 [1.1.1.102] +nadp +nadph +hplus
+    ketosphinganine
+  }
+
+  branch from hexanal side right {
+    hexanal
+    <-> . +nadp +nadph +hplus
+    hexan_1_ol
+  }
+
+  branch from hexanal side left {
+    hexanal
+    <-> . +hexan_1_aminium +nad +h2o +nadh +hplus
+    nh3
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_69 [4.2.3.69] +fpp
+    barbatene
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_47 [4.2.3.47] +fpp
-    trans_farnesene
+    <-> ec_4_2_3_70 [4.2.3.70] +fpp +h2o
+    patchouli_alcohol
   }
 
   branch from 2e_hexenal side right {
     2e_hexenal
     <-> . +nadp +nadph +hplus
     e_hex_2_en_1_ol
+  }
+
+  branch from 2s_3e_2_hydroxyhept_3_enenitrile side left {
+    2s_3e_2_hydroxyhept_3_enenitrile
+    <-> ec_4_1_2_47 [4.1.2.47] +2_hexenal +h
+    cyanide
   }
 }

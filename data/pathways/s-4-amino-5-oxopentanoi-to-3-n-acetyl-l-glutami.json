@@ -204,13 +204,51 @@
       }
     },
     {
-      "id": "threo_3_methyl_l_aspartate",
-      "name": "threo-3-methyl-L-aspartate",
-      "short": "threo-3-methyl-L-as…",
-      "formula": "C5H8NO4",
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "glu_cys",
+      "name": "γ-L-Glutamyl-L-cysteine",
+      "short": "γ-L-Glutamyl-L-cyst…",
+      "formula": "C8H13N2O5S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58724"
+        "chebi": "CHEBI:58173"
+      }
+    },
+    {
+      "id": "s_4_bromophenyl_l_cysteine",
+      "name": "S-(4-bromophenyl)-L-cysteine",
+      "short": "S-(4-bromophenyl)-L…",
+      "formula": "C9H10BrNO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58257"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "4_bromophenylsulfanyl_pyruvate",
+      "name": "(4-bromophenylsulfanyl)pyruvate",
+      "short": "(4-bromophenylsulfa…",
+      "formula": "C9H6BrO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17468"
       }
     }
   ],
@@ -237,10 +275,17 @@
       ]
     },
     {
-      "id": "ec_5_4_99_1",
-      "name": "methylaspartate mutase",
+      "id": "ec_6_3_2_2",
+      "name": "glutamate--cysteine ligase",
       "ec": [
-        "5.4.99.1"
+        "6.3.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_75",
+      "name": "cysteine-conjugate transaminase",
+      "ec": [
+        "2.6.1.75"
       ]
     }
   ],
@@ -461,6 +506,45 @@
     },
     {
       "id": "r5",
+      "name": "L-glutamyl-tRNA(Gln) + ATP = 5-phosphooxy-L-glutamyl-tRNA(Gln) + ADP",
+      "equation": "L-glutamyl-tRNA(Gln) + ATP = 5-phosphooxy-L-glutamyl-tRNA(Gln) + ADP",
+      "substrates": [
+        {
+          "metabolite": "3_l_glutamate_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_phosphooxy_l_glutamate_adenylyl_2_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:57908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
       "name": "5-phosphooxy-L-glutamyl-tRNA(Gln) + NH4(+) = L-glutaminyl-tRNA(Gln) + phosphate + H(+)",
       "equation": "5-phosphooxy-L-glutamyl-tRNA(Gln) + NH4(+) = L-glutaminyl-tRNA(Gln) + phosphate + H(+)",
       "substrates": [
@@ -488,7 +572,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:57912"
       },
@@ -503,17 +587,82 @@
       }
     },
     {
-      "id": "r6",
-      "name": "methylaspartate mutase",
-      "equation": "(2S,3S)-3-methyl-L-aspartate = L-glutamate",
-      "ec": "5.4.99.1",
+      "id": "r7",
+      "name": "glutamate--cysteine ligase",
+      "equation": "L-cysteine + L-glutamate + ATP = gamma-L-glutamyl-L-cysteine + ADP + phosphate + H(+)",
+      "ec": "6.3.2.2",
       "substrates": [
         {
-          "metabolite": "threo_3_methyl_l_aspartate",
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
+        {
+          "metabolite": "glu_cys",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:13285"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13285"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "cysteine-conjugate transaminase",
+      "equation": "S-(4-bromophenyl)-L-cysteine + 2-oxoglutarate = 3-((4-bromophenyl)sulfanyl)-2-oxopropanoate + L-glutamate",
+      "ec": "2.6.1.75",
+      "substrates": [
+        {
+          "metabolite": "s_4_bromophenyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_bromophenylsulfanyl_pyruvate",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "glutamate",
           "stoichiometry": 1
@@ -521,20 +670,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_5_4_99_1"
+          "enzyme": "ec_2_6_1_75"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:12857"
+        "rhea": "RHEA:13485"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12857"
+            "id": "RHEA:13485"
           }
         ]
       }

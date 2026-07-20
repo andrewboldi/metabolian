@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy "cis-3,4-leucopelargonidin to S-adenosyl-L-homocysteine" {
-  spacing 196
+  spacing 268
 
   spine at 0,0 {
     cis_3_4_leucopelargonidin
@@ -22,39 +22,14 @@ pathway cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy "cis-3,4-leucopelargoni
     7_3_5_o_trimethylmyricetin_3_olate
   }
 
-  branch from dihydrokaempferol side left {
-    dihydrokaempferol
-    <-> . +akg +o2 +succinate +co2
-    s_naringenin
-  }
 
-  branch from dihydromyricetin side right {
-    dihydromyricetin
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    taxifolin
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_84 [1.14.14.84] +linalool +fmnh2 +o2 +h2o +hplus
-    6e_8_oxolinalool
-  }
 
-  branch from myricetin side right {
-    myricetin
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    kaempferol_oxoanion
-  }
 
-  branch from succinate side left {
-    succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
-  }
 
-  branch from laricitrin side right {
-    laricitrin
-    <-> . +sam +sah +hplus
-    3_3_o_dimethylmyricetin_7_olate
-  }
+
+
+
+
+
 }

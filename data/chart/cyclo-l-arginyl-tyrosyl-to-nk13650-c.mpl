@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclo-l-arginyl-tyrosyl-to-nk13650-c "cyclo(L-arginyl-tyrosyl)(… to NK13650 C" {
-  spacing 152
+  spacing 206
 
   spine at 0,0 {
     cyclo_l_arginyl_tyrosyl_1
@@ -24,14 +24,26 @@ pathway cyclo-l-arginyl-tyrosyl-to-nk13650-c "cyclo(L-arginyl-tyrosyl)(… to NK
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14_15_eet
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_10z_13z_16z_19_20_epoxydocosatetraenoate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_10z_13z_19z_16_17_epoxydocosatetraenoate
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +1_hydroxy_5_androstan_3_17_dione +hydrogen_donor
+    5_androstan_1_3_17_trione
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +uridine_5_monophosphate_1 +hydrogen_donor +o2 +h2o
-    5_hydroxyuridine_5_phosphate_1
+    <-> ec_1_17_99_10 [1.17.99.10] +cholest_4_6_dien_3_one +h2o +hydrogen_donor
+    25_hydroxycholest_4_6_dien_3_one
   }
 
   branch from nk13650_b side left {
@@ -42,13 +54,25 @@ pathway cyclo-l-arginyl-tyrosyl-to-nk13650-c "cyclo(L-arginyl-tyrosyl)(… to NK
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_149 [4.2.3.149] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    r_nephthenol
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_hexaprenyl_diphosphate
+    hexaprene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_heptaprenyl_diphosphate
+    heptaprene
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_220 [2.1.1.220] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 }

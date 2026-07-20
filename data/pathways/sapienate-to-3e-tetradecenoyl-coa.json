@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sapienate-to-3e-tetradecenoyl-coa",
   "name": "sapienate to (3E)-tetradecenoyl-CoA",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 7-step route from sapienate to (3E)-tetradecenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -251,37 +251,53 @@
       }
     },
     {
-      "id": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
-      "name": "1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycero-3-phosphate",
-      "short": "1-stearoyl-2-(4Z,7Z…",
-      "formula": "C43H71O8P",
-      "charge": -2,
+      "id": "kolavenyl_diphosphate",
+      "name": "(+)-kolavenyl diphosphate",
+      "short": "(+)-kolavenyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:77130"
+        "chebi": "CHEBI:138311"
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
+      "id": "kolavelool",
+      "name": "(+)-kolavelool",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138313"
+      }
+    },
+    {
+      "id": "8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct",
+      "name": "8-[(1S,2S)-3-oxo-2-{(Z)-pent-2-en-1-yl}cyclopentyl]octanoate",
+      "short": "8-[(1S,2S)-3-oxo-2-…",
+      "formula": "C18H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:191855"
+      }
+    },
+    {
+      "id": "opc8_coa",
+      "name": "OPC8-CoA",
+      "formula": "C39H60N7O18P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37563"
-      }
-    },
-    {
-      "id": "cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
-      "name": "CDP-1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycerol",
-      "short": "CDP-1-stearoyl-2-(4…",
-      "formula": "C52H83N3O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85354"
+        "chebi": "CHEBI:138396"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_3_1_7_12",
+      "name": "(+)-kolavelool synthase",
+      "ec": [
+        "3.1.7.12"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -629,25 +645,74 @@
     },
     {
       "id": "r9",
-      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphate + CTP +...",
-      "equation": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
+      "name": "(+)-kolavelool synthase",
+      "equation": "(+)-kolavenyl diphosphate + H2O = (+)-kolavelool + diphosphate",
+      "ec": "3.1.7.12",
       "substrates": [
         {
-          "metabolite": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
+          "metabolite": "kolavenyl_diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
+          "metabolite": "kolavelool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_7_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:54672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "(1S,2S)-OPC-8 + ATP + CoA = OPC8-CoA + AMP + diphosphate",
+      "equation": "(1S,2S)-OPC-8 + ATP + CoA = OPC8-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "opc8_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -656,16 +721,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:45668"
+        "rhea": "RHEA:54888"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45668"
+            "id": "RHEA:54888"
           }
         ]
       }

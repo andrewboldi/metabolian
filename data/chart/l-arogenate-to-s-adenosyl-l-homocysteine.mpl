@@ -4,63 +4,99 @@
 # edit the generator, not this file.
 
 pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-homocysteine" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     l_arogenate
-    <-> ec_2_6_1_78 [2.6.1.78] +oxaloacetate -aspartate
+    <-> ec_2_6_1_79 [2.6.1.79] +akg -glutamate
     1s_4s_prephenate
-    <-> ec_1_3_1_12 [1.3.1.12] +nad -co2 -nadh
+    <-> ec_1_3_1_13 [1.3.1.13] +nadp -co2 -nadph
     3_4_hydroxyphenyl_pyruvate
-    <-> ec_4_1_1_80 [4.1.1.80] +hplus -co2
-    4_hydroxyphenyl_acetaldehyde
-    <-> ec_3_5_99_14 [3.5.99.14] +dopamine -h2o
-    s_norcoclaurinium
-    <-> ec_2_1_1_128 [2.1.1.128] +sam -sah -hplus
-    s_coclaurinium
-    <-> ec_2_1_1_140 [2.1.1.140] +sam -sah -hplus
-    s_n_methylcoclaurinium
-    <-> ec_1_14_14_102 [1.14.14.102] +fmnh2 +o2 -fmn -h2o -hplus
-    s_3_hydroxy_n_methylcoclaurinium
-    <-> ec_2_1_1_116 [2.1.1.116] +sam -sah -hplus
-    s_reticulinium
-    <-> ec_2_1_1_291 [2.1.1.291] +sam -sah -hplus
-    s_laudanine
+    <-> ec_1_2_3_13 [1.2.3.13] +o2 -co2
+    4_hydroxyphenylacetate
+    <-> ec_1_14_13_18 [1.14.13.18] +nadph +o2 +hplus -nadp -h2o
+    homogentisate
+    <-> ec_2_5_1_115 [2.5.1.115] +phytyl_diphosphate +hplus -co2 -ppi
+    r_r_2_methyl_6_phytylhydroquinone
+    <-> ec_2_1_1_295 [2.1.1.295] +sam -sah -hplus
+    r_r_2_3_dimethyl_6_phytylhydroquinone
   }
 
   branch from 1s_4s_prephenate side left {
     1s_4s_prephenate
-    <-> ec_4_1_1_100 [4.1.1.100] +hplus +co2
-    4r_3_4_dihydro_4_hydroxyphenylpyruvate
+    <-> . +2_octaprenylphenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
+    3_all_trans_octaprenyl_benzene_1_2_diol
   }
 
-  branch from aspartate side right {
-    aspartate
-    <-> ec_4_1_1_11 [4.1.1.11] +hplus +co2
-    alanine
+  branch from 1s_4s_prephenate side right {
+    1s_4s_prephenate
+    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
+    6_methoxy_2_octaprenylhydroquinone
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_3_1_1 [2.3.1.1] +acetyl_coa +coa +hplus
+    nag
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_5 [2.6.1.5] +l_phenylalanine +akg
+    keto_phenylpyruvate
   }
 
   branch from 3_4_hydroxyphenyl_pyruvate side left {
     3_4_hydroxyphenyl_pyruvate
-    <-> . +atp +h2o +amp +ppi +hplus
-    2s_2_4_hydoxybenzyl_3_4_hydroxyphenyl_2_furonol
+    <-> ec_6_4_1_10 [6.4.1.10] +atp +amp +ppi +hplus
+    atromentin
   }
 
-  branch from 4_hydroxyphenyl_acetaldehyde side right {
-    4_hydroxyphenyl_acetaldehyde
-    <-> . +tyraminium +o2 +h2o +h2o2
-    nh3
+  branch from 3_4_hydroxyphenyl_pyruvate side right {
+    3_4_hydroxyphenyl_pyruvate
+    <-> . +l_kynurenine +tyrosine +h2o
+    kynurenate
+  }
+
+  branch from 4_hydroxyphenylacetate side left {
+    4_hydroxyphenylacetate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    dopac
+  }
+
+  branch from r_r_2_methyl_6_phytylhydroquinone side right {
+    r_r_2_methyl_6_phytylhydroquinone
+    <-> ec_5_5_1_24 [5.5.1.24]
+    tocopherol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_37 [4.2.3.37] +fpp
+    epi_isozizaene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_40 [4.2.3.40] +fpp
+    z_bisabolene
+  }
+
+  branch from r_r_2_3_dimethyl_6_phytylhydroquinone side left {
+    r_r_2_3_dimethyl_6_phytylhydroquinone
+    <-> ec_5_5_1_24 [5.5.1.24]
+    tocopherol
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_62 [2.1.1.62] +5_n7_methyl_5_triphosphoguanosine_2_o_methyladen +sam +hplus
+    5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_84 [2.1.1.84] +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone +sam
-    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_36 [1.14.14.36] +tyrosine +fmnh2 +o2 +co2 +h2o +hplus
-    e_4_hydroxyphenyl_acetaldehyde_oxime
+    <-> ec_2_1_1_49 [2.1.1.49] +primary_ammonium_ion +sam +hplus
+    methylated_primary_amine
   }
 }

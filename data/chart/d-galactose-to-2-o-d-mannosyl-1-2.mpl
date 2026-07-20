@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α…" {
-  spacing 268
+  spacing 328
 
   spine at 0,0 {
     d_galactose
@@ -24,14 +24,26 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
 
   branch from d_galactose_1_phosphate side left {
     d_galactose_1_phosphate
-    <-> . +udp_d_glucose +h2o +hplus
-    ump
+    <-> ec_2_4_1_247 [2.4.1.247] +d_galactosyl_1_4_l_rhamnose +pi
+    l_rhamnopyranose
+  }
+
+  branch from d_galactose_1_phosphate side right {
+    d_galactose_1_phosphate
+    <-> ec_3_1_3_94 [3.1.3.94] +h2o +pi
+    d_galactopyranose
+  }
+
+  branch from g1p side left {
+    g1p
+    <-> ec_2_4_1_20 [2.4.1.20] +cellobiose +pi
+    glucose
   }
 
   branch from g1p side right {
     g1p
-    <-> ec_2_4_1_7 [2.4.1.7] +sucrose +pi
-    d_fructofuranose
+    <-> ec_2_7_7_9 [2.7.7.9] +hplus +udp_d_glucose +ppi
+    utp
   }
 
   branch from udp_d_galactose side left {
@@ -40,15 +52,33 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
     1_d_galactosyl_2_2_hydroxyacyl_sphingosine
   }
 
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> ec_2_4_1_134 [2.4.1.134] +o3_d_galactosyl_1_4_d_xylosyl_l_serine +udp +hplus
+    o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_13 [4.2.3.13] +fpp
+    cadinene
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_14 [6.1.1.14] +amp_3_end_1 +glycine +atp +amp
-    3_glycyladenylyl_zwitterionic_group
+    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
+    sabinene_hydrate
   }
 
   branch from 2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate side left {
     2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
     <-> ec_2_4_1_266 [2.4.1.266] +pg3 +adp +hplus
     adp_d_glucoside
+  }
+
+  branch from 2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate side right {
+    2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate
+    <-> . +gdp_d_mannose +gdp +hplus
+    2_o_d_glucopyranosyl_d_glycerate
   }
 }

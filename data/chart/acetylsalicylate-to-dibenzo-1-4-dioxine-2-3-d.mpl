@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d "acetylsalicylate to dibenzo[1,4]dioxine-2,3-d…" {
-  spacing 180
+  spacing 216
 
   spine at 0,0 {
     acetylsalicylate
@@ -18,8 +18,20 @@ pathway acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d "acetylsalicylate to diben
 
   branch from salicylate side left {
     salicylate
-    <-> . +nadh +o2 +hplus +nad +h2o
-    2_3_dihydroxybenzoate
+    <-> ec_6_2_1_65 [6.2.1.65] +atp +coa +amp +ppi
+    2_hydroxybenzoyl_coa
+  }
+
+  branch from salicylate side right {
+    salicylate
+    <-> . +udp_d_glucose +udp +hplus
+    2_d_glucopyranosyloxy_benzoate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylajmalinium +h2o +hplus
+    ajmalinium
   }
 
   branch from acetate side right {
@@ -29,6 +41,12 @@ pathway acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d "acetylsalicylate to diben
   }
 
   branch from catechol side left {
+    catechol
+    <-> ec_4_1_1_46 [4.1.1.46] +hplus +co2
+    2_3_dihydroxybenzoate
+  }
+
+  branch from catechol side right {
     catechol
     <-> ec_1_14_12_13 [1.14.12.13] +nadh +o2 +hplus +chloride +co2 +nad
     2_chlorobenzoate

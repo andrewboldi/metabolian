@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd "5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo…" {
-  spacing 232
+  spacing 262
 
   spine at 0,0 {
     5_formimidoyltetrahydrofolate
@@ -28,19 +28,25 @@ pathway 5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd "5-formimidoyltetrahydr
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_3_20 [1.4.3.20] +l_lysinium +o2 +h2o +h2o2
-    l_allysine
+    <-> ec_1_4_3_22 [1.4.3.22] +histaminium +o2 +h2o +h2o2
+    imidazole_4_acetaldehyde
   }
 
-  branch from thf side left {
-    thf
-    <-> . +methylene_thf +dserine +h2o
-    hydroxymethyl_serine
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_13_12_15 [1.13.12.15] +ldopa +o2
+    3_4_dihydroxyphenylpyruvate
   }
 
   branch from formate side right {
     formate
     <-> . +24_25_dihydrolanosterol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
     4_4_dimethyl_8_14_cholestadien_3_ol
+  }
+
+  branch from formate side left {
+    formate
+    <-> . +intermediate_i +nadph +h2o +nadp
+    16r_deshydroxymethyl_stemmadenine
   }
 }

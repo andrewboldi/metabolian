@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-1-deoxy-d-fructopyra-to-dapdiamide-c",
   "name": "N-(1-deoxy-β-D-fructopyra… to dapdiamide C",
-  "category": "redox-detox",
-  "summary": "A 2-step route from N-(1-deoxy-β-D-fructopyranos-1-yl)-L-leucine betaine to dapdiamide C zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N-(1-deoxy-β-D-fructopyranos-1-yl)-L-leucine betaine to dapdiamide C zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:77867"
+        "id": "RHEA:77871"
       },
       {
         "db": "ChEBI",
@@ -38,6 +38,34 @@
       }
     },
     {
+      "id": "2s_4_methyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox",
+      "name": "(2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanoate",
+      "short": "4-methyl-2-[(E)-{[(…",
+      "formula": "C12H20NO7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:228156"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
       "id": "h2o",
       "name": "Water",
       "formula": "H2O",
@@ -63,15 +91,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:57427"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
       }
     },
     {
@@ -119,15 +138,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
     }
   ],
   "enzymes": [
@@ -142,8 +152,8 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 + H2O = 2-dehydro-D-glucose + L-le...",
-      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 + H2O = 2-dehydro-D-glucose + L-leucine + H2O2",
+      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 = (2S)-4-methyl-2-[(E)-{[(2R,3S,4R...",
+      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-leucine + O2 = (2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanoate + H2O2 + H(+)",
       "substrates": [
         {
           "metabolite": "n_1_deoxy_d_fructopyranos_1_yl_l_leucine_betaine",
@@ -152,9 +162,52 @@
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_4_methyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pe...",
+      "equation": "(2S)-4-methyl-2-[(E)-{[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methylidene}amino]pentanoate + H2O + H(+) = 2-dehydro-D-glucose + L-leucine",
+      "substrates": [
+        {
+          "metabolite": "2s_4_methyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox",
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
@@ -166,29 +219,25 @@
         {
           "metabolite": "leucine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:77867"
+        "rhea": "RHEA:77875"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77867"
+            "id": "RHEA:77875"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "dapdiamide synthase",
       "equation": "N(3)-fumaramoyl-(S)-2,3-diaminopropanoate + L-leucine + ATP = dapdiamide C + ADP + phosphate + H(+)",
       "ec": "6.3.2.47",
@@ -230,7 +279,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:44352"
       },

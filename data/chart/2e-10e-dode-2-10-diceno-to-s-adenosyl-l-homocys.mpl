@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-10e-dode-2-10-diceno-to-s-adenosyl-l-homocys "(2E,10E)-dode-2,10-diceno… to S-adenosyl-L-homocysteine" {
-  spacing 152
+  spacing 182
 
   spine at 0,0 {
     2e_10e_dode_2_10_dicenoyl_coa
@@ -18,15 +18,33 @@ pathway 2e-10e-dode-2-10-diceno-to-s-adenosyl-l-homocys "(2E,10E)-dode-2,10-dice
     phomoidride_b
   }
 
+  branch from 4_deca_1_8_diyl_2_5_dioxo_2_5_dihydro_3_furanyl side left {
+    4_deca_1_8_diyl_2_5_dioxo_2_5_dihydro_3_furanyl
+    <-> . +hplus +h2o
+    4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino +akg +o2 +co2
+    4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy
+  }
+
   branch from succinate side left {
     succinate
-    <-> . +berkeleyone_b +akg +o2 +co2 +h2o
-    berkeleydione
+    <-> . +okaramine_a +akg +o2 +co2
+    okaramine_e
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_216 [2.1.1.216] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_n2_dimethylguanosine_5_monophosphate_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +5_hydroxy_3_methyl_l_tyrosine +sam +hplus
+    3_hydroxy_o_5_dimethyl_l_tyrosine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-cyclic-cmp-to-d-ribofuranose "2',3'-cyclic CMP to D-ribofuranose" {
-  spacing 240
+  spacing 252
 
   spine at 0,0 {
     2_3_cyclic_cmp
@@ -20,5 +20,11 @@ pathway 2-3-cyclic-cmp-to-d-ribofuranose "2',3'-cyclic CMP to D-ribofuranose" {
     d_ribofuranose
     <-> . +nadh +hplus +nad
     d_ribono_1_4_lactone
+  }
+
+  branch from d_ribofuranose side right {
+    d_ribofuranose
+    <-> . +nadp +nadph +hplus
+    ribitol
   }
 }

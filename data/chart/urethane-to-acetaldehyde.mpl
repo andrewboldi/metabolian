@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway urethane-to-acetaldehyde "urethane to acetaldehyde" {
-  spacing 228
+  spacing 264
 
   spine at 0,0 {
     urethane
@@ -20,13 +20,37 @@ pathway urethane-to-acetaldehyde "urethane to acetaldehyde" {
 
   branch from ethanol side left {
     ethanol
-    <-> . +butyryl_coa +coa
-    ethyl_butyrate
+    <-> . +ethyl_oleate +h2o +hplus
+    oleate
+  }
+
+  branch from ethanol side right {
+    ethanol
+    <-> . +ethyl_palmitoleate +h2o +hplus
+    palmitoleate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_5_2 [3.5.5.2] +ricinine +h2o
+    4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_26 [3.5.4.26] +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o +hplus
-    5_amino_6_5_phospho_d_ribosylamino_uracil
+    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
+    3_5_cyclic_imp
+  }
+
+  branch from acetoin side left {
+    acetoin
+    <-> . +nad +h2o +nh3 +nadh +hplus
+    3_aminobutan_2_ol
+  }
+
+  branch from acetoin side right {
+    acetoin
+    <-> . +2_phenylethanaminium +h2o
+    3_phenethylamino_butan_2_one
   }
 }

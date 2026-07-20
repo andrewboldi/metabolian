@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine to 3'-(L-selenocysteinyl)ade…" {
-  spacing 216
+  spacing 276
 
   spine at 0,0 {
     l_selenocystathionine
@@ -20,31 +20,61 @@ pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine 
 
   branch from oxobut side left {
     oxobut
-    <-> ec_2_6_1_44 [2.6.1.44] +alanine +pyruvate
-    l_aminobutyrate
+    <-> . +nad +nadh +hplus
+    s_2_hydroxybutyrate
+  }
+
+  branch from oxobut side right {
+    oxobut
+    <-> . +nadp +nadph +hplus
+    2_hydroxybutyrate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +pyrazinecarboxamide +h2o
+    pyrazine_2_carboxylate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_101 [3.5.1.101] +s_piperazin_4_ium_2_carboxamide +h2o
-    s_piperazine_2_carboxylic_acid
+    <-> ec_1_4_3_21 [1.4.3.21] +3_nitrotyramine +o2 +h2o +h2o2
+    4_hydroxy_3_nitrophenylacetaldehyde
   }
 
   branch from alanine side left {
     alanine
-    <-> ec_2_6_1_113 [2.6.1.113] +1_4_butanediammonium +pyruvate
-    4_ammoniobutanal
+    <-> . +plp +pyruvate
+    pyridoxamine_5_phosphate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +mmsa +pyruvate
+    s_3_aminoisobutyric_acid
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +palmitoleoyl_coa +hydrogen_donor +o2 +h2o
+    9z_12z_hexadecadienoyl_coa
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +dserine +h2o +hydrogen_donor +nh3
-    3_hydroxypyruvate
+    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +hydrogen_donor +o2 +h2o
+    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
   }
 
   branch from selenophosphate side left {
     selenophosphate
     <-> ec_2_9_1_2 [2.9.1.2] +h2o +3_l_selenocysteinyl_adenylyl_1_group +pi
     3_o_phosphonato_l_seryl_adenylyl_2_group
+  }
+
+  branch from selenophosphate side right {
+    selenophosphate
+    <-> ec_2_9_1_3 [2.9.1.3] +5_methylaminomethyl_2_thiouridine_5_monophosphat +gpp +h2o +hplus +thiogeraniol +pi +ppi
+    5_methylaminomethyl_2_selenouridine_5_monophosph
   }
 }

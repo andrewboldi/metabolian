@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7r-7-5-carboxy-5-oxope-to-cephalosporin-c "(7R)-7-(5-carboxy-5-oxope… to cephalosporin C" {
-  spacing 228
+  spacing 252
 
   spine at 0,0 {
     7r_7_5_carboxy_5_oxopentanamido_cephalosporanat
@@ -18,13 +18,25 @@ pathway 7r-7-5-carboxy-5-oxope-to-cephalosporin-c "(7R)-7-(5-carboxy-5-oxope… 
 
   branch from akg side left {
     akg
-    <-> ec_2_6_1_49 [2.6.1.49] +ldopa +glutamate
-    3_4_dihydroxyphenylpyruvate
+    <-> ec_1_5_1_7 [1.5.1.7] +l_saccharopinate +nad +h2o +nadh +hplus
+    l_lysinium
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_2_3_3_14 [2.3.3.14] +acetyl_coa +h2o +coa +hplus
+    2r_homocitrate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin +h2o +hplus
+    1_tetradecyl_sn_glycero_3_phosphocholine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin +h2o +hplus
-    1_tetradecyl_sn_glycero_3_phosphocholine
+    <-> . +1_dodecyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_dodecyl_sn_glycero_3_phosphocholine
   }
 }

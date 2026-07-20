@@ -169,32 +169,41 @@
       }
     },
     {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
+      "id": "guanosine_3_diphosphate_5_triphosphate_hexaanion",
+      "name": "guanosine 3'-diphosphate 5'-triphosphate hexaanion",
+      "short": "guanosine 3'-PP…",
+      "formula": "C10H12N5O20P5",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:142410"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
       "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:162247"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "curcumene",
-      "name": "(−)-β-curcumene",
+      "id": "muurolene",
+      "name": "α-muurolene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62760"
-      }
-    },
-    {
-      "id": "o_s_4_hydroxybenzoyl_pantetheine_4_phosphoryl_se",
-      "name": "O-[S-(4-hydroxybenzoyl)pantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(4-hydroxybenz…",
-      "formula": "C21H29N3O10PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:138321"
+        "chebi": "CHEBI:64797"
       }
     }
   ],
@@ -207,10 +216,17 @@
       ]
     },
     {
-      "id": "ec_2_3_1_261",
-      "name": "(4-hydroxyphenyl)alkanoate synthase",
+      "id": "ec_3_1_7_2",
+      "name": "guanosine-3',5'-bis(diphosphate) 3'-diphosphatase",
       "ec": [
-        "2.3.1.261"
+        "3.1.7.2"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_125",
+      "name": "alpha-muurolene synthase",
+      "ec": [
+        "4.2.3.125"
       ]
     }
   ],
@@ -372,17 +388,67 @@
     },
     {
       "id": "r4",
-      "name": "(2Z,6E)-farnesyl diphosphate = (-)-beta-curcumene + diphosphate",
-      "equation": "(2Z,6E)-farnesyl diphosphate = (-)-beta-curcumene + diphosphate",
+      "name": "guanosine-3',5'-bis(diphosphate) 3'-diphosphatase",
+      "equation": "guanosine 3'-diphosphate 5'-triphosphate + H2O = GTP + diphosphate + H(+)",
+      "ec": "3.1.7.2",
       "substrates": [
         {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "metabolite": "guanosine_3_diphosphate_5_triphosphate_hexaanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "curcumene",
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_7_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:33055"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alpha-muurolene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = alpha-muurolene + diphosphate",
+      "ec": "4.2.3.125",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "muurolene",
           "stoichiometry": 1
         },
         {
@@ -390,82 +456,22 @@
           "stoichiometry": 1
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:31419"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:31419"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(4-hydroxyphenyl)alkanoate synthase",
-      "equation": "4-hydroxyphenyl-[4-hydroxyphenylalkanoate synthase] + 9 malonyl-CoA + 18 NADPH + 27 H(+) = 19-(4-hydroxyphenyl)nonadecanoyl-[4-hydroxyphenylalkanoate synthase] + 9 CO2 + 18 NADP(+) + 9 CoA + 9 H2O",
-      "ec": "2.3.1.261",
-      "substrates": [
-        {
-          "metabolite": "o_s_4_hydroxybenzoyl_pantetheine_4_phosphoryl_se",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 9
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 18
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 27
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_s_19_4_hydroxyphenyl_nonadecanoyl_pantetheine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 9
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 18
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 9
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 9
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_261"
+          "enzyme": "ec_4_2_3_125"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50468"
+        "rhea": "RHEA:33103"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50468"
+            "id": "RHEA:33103"
           }
         ]
       }

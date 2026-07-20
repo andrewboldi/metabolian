@@ -143,22 +143,69 @@
       }
     },
     {
-      "id": "3_glycyladenylyl_zwitterionic_group",
-      "name": "3'-glycyladenylyl zwitterionic group",
-      "short": "3'-glycyladenylyl…",
-      "formula": "C12H16N6O7P",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78522"
+        "chebi": "CHEBI:33384"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78533"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "3_l_tyrosyl_adenylyl_1_group",
+      "name": "3'-(L-tyrosyl)adenylyl(1−) group",
+      "short": "3'-(L-tyrosyl)adeny…",
+      "formula": "C19H21N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78536"
+      }
+    },
+    {
+      "id": "cyclo_l_tyrosyl_l_tyrosyl",
+      "name": "cyclo(L-tyrosyl-L-tyrosyl)",
+      "short": "cyclo(L-tyrosyl-L-t…",
+      "formula": "C18H18N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:65063"
       }
     }
   ],
@@ -178,10 +225,17 @@
       ]
     },
     {
-      "id": "ec_3_1_1_96",
-      "name": "D-aminoacyl-tRNA deacylase",
+      "id": "ec_6_1_1_11",
+      "name": "serine--tRNA ligase",
       "ec": [
-        "3.1.1.96"
+        "6.1.1.11"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_21",
+      "name": "cyclo(L-tyrosyl-L-tyrosyl) synthase",
+      "ec": [
+        "2.3.2.21"
       ]
     }
   ],
@@ -364,26 +418,34 @@
     },
     {
       "id": "r5",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "equation": "glycyl-tRNA(Ala) + H2O = tRNA(Ala) + glycine + H(+)",
-      "ec": "3.1.1.96",
+      "name": "serine--tRNA ligase",
+      "equation": "tRNA(Sec) + L-serine + ATP = L-seryl-tRNA(Sec) + AMP + diphosphate + H(+)",
+      "ec": "6.1.1.11",
       "substrates": [
-        {
-          "metabolite": "3_glycyladenylyl_zwitterionic_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_seryl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
           "stoichiometry": 1
         },
         {
@@ -393,20 +455,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_1_96"
+          "enzyme": "ec_6_1_1_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:53744"
+        "rhea": "RHEA:42580"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53744"
+            "id": "RHEA:42580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "cyclo(L-tyrosyl-L-tyrosyl) synthase",
+      "equation": "2 L-tyrosyl-tRNA(Tyr) = cyclo(L-tyrosyl-L-tyrosyl) + 2 tRNA(Tyr)",
+      "ec": "2.3.2.21",
+      "substrates": [
+        {
+          "metabolite": "3_l_tyrosyl_adenylyl_1_group",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclo_l_tyrosyl_l_tyrosyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:46448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46448"
           }
         ]
       }

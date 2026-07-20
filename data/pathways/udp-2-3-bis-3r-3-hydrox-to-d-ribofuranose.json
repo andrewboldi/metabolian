@@ -1,0 +1,244 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-2-3-bis-3r-3-hydrox-to-d-ribofuranose",
+  "name": "UDP-2,3-bis[(3R)-3-hydrox… to D-ribofuranose",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from UDP-2,3-bis[(3R)-3-hydroxytetradecanoyl]-α-D-glucosamine(2−) to D-ribofuranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25213"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78847"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp_2_3_bis_3r_3_hydroxytetradecanoyl_d_glucosam",
+      "name": "UDP-2,3-bis[(3R)-3-hydroxytetradecanoyl]-α-D-glucosamine",
+      "short": "UDP-2,3-bis[(3R)-3-…",
+      "formula": "C43H75N3O20P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78847"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "lipid_x",
+      "name": "lipid X",
+      "formula": "C34H64NO12P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57957"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP (uridine 5'-monophosphate)",
+      "short": "UMP (uridine 5'-MP)",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57865"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_ribofuranose_5_phosphate",
+      "name": "D-ribofuranose 5-phosphate",
+      "short": "D-ribofuranose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78346"
+      }
+    },
+    {
+      "id": "uracil",
+      "name": "uracil",
+      "formula": "C4H4N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17568"
+      }
+    },
+    {
+      "id": "d_ribofuranose",
+      "name": "D-ribofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47013"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_54",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": [
+        "3.6.1.54"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "equation": "UDP-2-N,3-O-bis[(3R)-3-hydroxytetradecanoyl]-alpha-D-glucosamine + H2O = 2-N,3-O-bis[(3R)-3-hydroxytetradecanoyl]-alpha-D-glucosaminyl 1-phosphate + UMP + 2 H(+)",
+      "ec": "3.6.1.54",
+      "substrates": [
+        {
+          "metabolite": "udp_2_3_bis_3r_3_hydroxytetradecanoyl_d_glucosam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lipid_x",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25213"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "UMP + H2O = D-ribose 5-phosphate + uracil",
+      "equation": "UMP + H2O = D-ribose 5-phosphate + uracil",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-ribose 5-phosphate + H2O = D-ribose + phosphate",
+      "equation": "D-ribose 5-phosphate + H2O = D-ribose + phosphate",
+      "substrates": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:29471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29471"
+          }
+        ]
+      }
+    }
+  ]
+}

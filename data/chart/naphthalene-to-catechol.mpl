@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway naphthalene-to-catechol "naphthalene to catechol" {
-  spacing 280
+  spacing 322
 
   spine at 0,0 {
     naphthalene
@@ -32,21 +32,39 @@ pathway naphthalene-to-catechol "naphthalene to catechol" {
     1_hydroxy_2_naphthoate
   }
 
-  branch from salicylaldehyde side right {
+  branch from naphthalene_1_2_diol side right {
+    naphthalene_1_2_diol
+    <-> . +nadp +nadph +hplus
+    1r_2r_1_2_dihydronaphthalene_1_2_diol
+  }
+
+  branch from salicylaldehyde side left {
     salicylaldehyde
     <-> . +salicylate +atp +nadph +hplus +amp +nadp
     ppi
   }
 
+  branch from salicylate side right {
+    salicylate
+    <-> . +udp_d_glucose +udp
+    d_glucosyl_salicylate
+  }
+
   branch from salicylate side left {
     salicylate
-    <-> ec_6_2_1_61 [6.2.1.61] +holo-acp +atp +amp +ppi
-    o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s
+    <-> ec_2_1_1_382 [2.1.1.382] +o_methylsalicylate +cobalt +hplus
+    methyl_co
   }
 
   branch from phenol side right {
     phenol
-    <-> . +tyrosine
-    2_ammonioprop_2_enoate
+    <-> . +nadh +o2 +hplus +nad +h2o
+    quinol
+  }
+
+  branch from phenol side left {
+    phenol
+    <-> ec_2_7_1_238 [2.7.1.238] +atp +h2o +amp +pi +hplus
+    phenyl_phosphate
   }
 }

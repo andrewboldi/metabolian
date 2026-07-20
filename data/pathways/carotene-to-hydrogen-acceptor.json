@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "carotene-to-hydrogen-acceptor",
   "name": "β-carotene to hydrogen acceptor",
-  "category": "energy-metabolism",
-  "summary": "A 2-step route from β-carotene to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "other",
+  "summary": "A 4-step route from β-carotene to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:55660"
+        "id": "RHEA:56724"
       },
       {
         "db": "ChEBI",
@@ -46,12 +46,13 @@
       }
     },
     {
-      "id": "echinenone",
-      "name": "echinenone",
-      "formula": "C40H54O",
+      "id": "4_hydroxy_all_trans_carotene",
+      "name": "4-hydroxy-all-trans-β-carotene",
+      "short": "4-hydroxy-all-trans…",
+      "formula": "C40H56O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4746"
+        "chebi": "CHEBI:140677"
       }
     },
     {
@@ -73,6 +74,25 @@
       }
     },
     {
+      "id": "4_4_dihydroxy_all_trans_carotene",
+      "name": "4,4-dihydroxy-all-trans-β-carotene",
+      "short": "4,4-dihydroxy-all-t…",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140678"
+      }
+    },
+    {
+      "id": "echinenone",
+      "name": "echinenone",
+      "formula": "C40H54O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4746"
+      }
+    },
+    {
       "id": "4_hydroxyechinenone",
       "name": "4'-hydroxyechinenone",
       "formula": "C40H54O2",
@@ -82,21 +102,12 @@
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_99_63",
-      "name": "beta-carotene 4-ketolase",
-      "ec": [
-        "1.14.99.63"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
-      "name": "beta-carotene 4-ketolase",
-      "equation": "all-trans-beta-carotene + 2 AH2 + 2 O2 = echinenone + 2 A + 3 H2O",
-      "ec": "1.14.99.63",
+      "name": "all-trans-beta-carotene + AH2 + O2 = 4-hydroxy-all-trans-beta-carotene + A + H2O",
+      "equation": "all-trans-beta-carotene + AH2 + O2 = 4-hydroxy-all-trans-beta-carotene + A + H2O",
       "substrates": [
         {
           "metabolite": "carotene",
@@ -104,11 +115,97 @@
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_all_trans_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxy-all-trans-beta-carotene + AH2 + O2 = 4,4-dihydroxy-all-trans-beta-carotene + ...",
+      "equation": "4-hydroxy-all-trans-beta-carotene + AH2 + O2 = 4,4-dihydroxy-all-trans-beta-carotene + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_all_trans_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_dihydroxy_all_trans_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56728"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4,4-dihydroxy-all-trans-beta-carotene = echinenone + H2O",
+      "equation": "4,4-dihydroxy-all-trans-beta-carotene = echinenone + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_4_dihydroxy_all_trans_carotene",
+          "stoichiometry": 1
         }
       ],
       "products": [
@@ -117,36 +214,27 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_99_63"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:55660"
+        "rhea": "RHEA:56732"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55660"
+            "id": "RHEA:56732"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r4",
       "name": "echinenone + AH2 + O2 = 4'-hydroxyechinenone + A + H2O",
       "equation": "echinenone + AH2 + O2 = 4'-hydroxyechinenone + A + H2O",
       "substrates": [
@@ -178,7 +266,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:26164"
       },

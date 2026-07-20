@@ -102,6 +102,33 @@
       }
     },
     {
+      "id": "dttp",
+      "name": "dTTP",
+      "formula": "C10H13N2O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37568"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
       "id": "dtdp_l_vancosamine",
       "name": "dTDP-β-L-vancosamine",
       "formula": "C17H28N3O13P2",
@@ -130,22 +157,40 @@
       }
     },
     {
-      "id": "trans_aconitate",
-      "name": "trans-aconitate",
-      "formula": "C6H3O6",
-      "charge": -3,
+      "id": "pyridine",
+      "name": "pyridine",
+      "formula": "C5H5N",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15708"
+        "chebi": "CHEBI:16227"
       }
     },
     {
-      "id": "2e_3_methoxycarbonyl_pent_2_enedioate",
-      "name": "(2E)-3-(methoxycarbonyl)pent-2-enedioate",
-      "short": "3-(methoxycarbonyl)…",
-      "formula": "C7H6O6",
+      "id": "n_methylpyridinium",
+      "name": "N-methylpyridinium",
+      "formula": "C6H8N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15761"
+      }
+    },
+    {
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57470"
+        "chebi": "CHEBI:78449"
+      }
+    },
+    {
+      "id": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
+      "name": "O-[S-(methoxycarbonylacetyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(methoxycarbon…",
+      "formula": "C18H29N3O11PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78845"
       }
     }
   ],
@@ -172,6 +217,13 @@
       ]
     },
     {
+      "id": "ec_3_6_1_39",
+      "name": "thymidine-triphosphatase",
+      "ec": [
+        "3.6.1.39"
+      ]
+    },
+    {
       "id": "ec_2_4_1_322",
       "name": "devancosaminyl-vancomycin vancosaminetransferase",
       "ec": [
@@ -179,10 +231,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_144",
-      "name": "trans-aconitate 2-methyltransferase",
+      "id": "ec_2_1_1_87",
+      "name": "pyridine N-methyltransferase",
       "ec": [
-        "2.1.1.144"
+        "2.1.1.87"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_197",
+      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
+      "ec": [
+        "2.1.1.197"
       ]
     }
   ],
@@ -336,6 +395,55 @@
     },
     {
       "id": "r4",
+      "name": "thymidine-triphosphatase",
+      "equation": "dTTP + H2O = dTDP + phosphate + H(+)",
+      "ec": "3.6.1.39",
+      "substrates": [
+        {
+          "metabolite": "dttp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19013"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "devancosaminyl-vancomycin vancosaminetransferase",
       "equation": "dTDP-beta-L-vancosamine + devancoaminyl-vancomycin = vancomycin + dTDP + H(+)",
       "ec": "2.4.1.322",
@@ -369,7 +477,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:39891"
       },
@@ -384,13 +492,13 @@
       }
     },
     {
-      "id": "r5",
-      "name": "trans-aconitate 2-methyltransferase",
-      "equation": "trans-aconitate + S-adenosyl-L-methionine = (E)-3-(methoxycarbonyl)pent-2-enedioate + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.144",
+      "id": "r6",
+      "name": "pyridine N-methyltransferase",
+      "equation": "pyridine + S-adenosyl-L-methionine = N-methylpyridinium + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.87",
       "substrates": [
         {
-          "metabolite": "trans_aconitate",
+          "metabolite": "pyridine",
           "stoichiometry": 1
         },
         {
@@ -400,7 +508,7 @@
       ],
       "products": [
         {
-          "metabolite": "2e_3_methoxycarbonyl_pent_2_enedioate",
+          "metabolite": "n_methylpyridinium",
           "stoichiometry": 1
         },
         {
@@ -410,20 +518,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_144"
+          "enzyme": "ec_2_1_1_87"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:14969"
+        "rhea": "RHEA:16893"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14969"
+            "id": "RHEA:16893"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
+      "equation": "malonyl-[ACP] + S-adenosyl-L-methionine = malonyl-[ACP] methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.197",
+      "substrates": [
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_197"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:17105"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17105"
           }
         ]
       }

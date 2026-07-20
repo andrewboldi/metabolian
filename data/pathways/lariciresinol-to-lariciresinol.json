@@ -1,0 +1,455 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "lariciresinol-to-lariciresinol",
+  "name": "(+)-lariciresinol to (+)-lariciresinol",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (+)-lariciresinol to (+)-lariciresinol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34419"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:67246"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "lariciresinol",
+      "name": "(+)-lariciresinol",
+      "formula": "C20H24O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67246"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "pinoresinol",
+      "name": "(+)-pinoresinol",
+      "formula": "C20H22O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:40"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "lariciresinol",
+      "name": "(−)-lariciresinol",
+      "formula": "C20H24O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67244"
+      }
+    },
+    {
+      "id": "secoisolariciresinol",
+      "name": "(−)-secoisolariciresinol",
+      "short": "(−)-secoisolaricire…",
+      "formula": "C20H26O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65004"
+      }
+    },
+    {
+      "id": "s_citronellal",
+      "name": "(S)-(−)-citronellal",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:368"
+      }
+    },
+    {
+      "id": "isomenthol",
+      "name": "(+)-isomenthol",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM9354"
+      }
+    },
+    {
+      "id": "neoisomenthol",
+      "name": "neoisomenthol",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18451"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_23_1_1",
+      "name": "(+)-pinoresinol reductase",
+      "ec": [
+        "1.23.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_23_1_2",
+      "name": "(+)-lariciresinol reductase",
+      "ec": [
+        "1.23.1.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-pinoresinol reductase",
+      "equation": "(+)-lariciresinol + NADP(+) = (+)-pinoresinol + NADPH + H(+)",
+      "ec": "1.23.1.1",
+      "substrates": [
+        {
+          "metabolite": "lariciresinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pinoresinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_23_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34419"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34419"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(+)-pinoresinol reductase",
+      "ec": "1.23.1.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pinoresinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lariciresinol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_23_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR176428"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(+)-lariciresinol reductase",
+      "ec": "1.23.1.2",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lariciresinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "secoisolariciresinol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_23_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR183319"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183319"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(+)-lariciresinol reductase",
+      "equation": "(-)-secoisolariciresinol + NADP(+) = (+)-lariciresinol + NADPH + H(+)",
+      "ec": "1.23.1.2",
+      "substrates": [
+        {
+          "metabolite": "secoisolariciresinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lariciresinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_23_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_citronellal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isomenthol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR181395"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "neoisomenthol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_citronellal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR181401"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181401"
+          }
+        ]
+      }
+    }
+  ]
+}

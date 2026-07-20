@@ -85,12 +85,13 @@
       }
     },
     {
-      "id": "8_oxo_dgtp",
-      "name": "8-oxo-dGTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:77896"
+        "chebi": "CHEBI:57533"
       }
     },
     {
@@ -103,12 +104,31 @@
       }
     },
     {
-      "id": "8_oxo_dgmp",
-      "name": "8-oxo-dGMP",
-      "formula": "C10H12N5O8P",
-      "charge": -2,
+      "id": "s_nephthenol",
+      "name": "(S)-nephthenol",
+      "formula": "C20H34O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63224"
+        "chebi": "CHEBI:193073"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "elemene",
+      "name": "δ-elemene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132830"
       }
     }
   ],
@@ -125,13 +145,6 @@
       "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
       "ec": [
         "2.5.1.137"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_55",
-      "name": "8-oxo-dGTP diphosphatase",
-      "ec": [
-        "3.6.1.55"
       ]
     }
   ],
@@ -277,12 +290,11 @@
     },
     {
       "id": "r4",
-      "name": "8-oxo-dGTP diphosphatase",
-      "equation": "8-oxo-dGTP + H2O = 8-oxo-dGMP + diphosphate + H(+)",
-      "ec": "3.6.1.55",
+      "name": "geranylgeranyl diphosphate + H2O = (S)-(+)-nephthenol + diphosphate",
+      "equation": "geranylgeranyl diphosphate + H2O = (S)-(+)-nephthenol + diphosphate",
       "substrates": [
         {
-          "metabolite": "8_oxo_dgtp",
+          "metabolite": "geranylgeranyl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -292,34 +304,60 @@
       ],
       "products": [
         {
-          "metabolite": "8_oxo_dgmp",
+          "metabolite": "s_nephthenol",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_1_55"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31575"
+        "rhea": "RHEA:73995"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31575"
+            "id": "RHEA:73995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2E,6E)-farnesyl diphosphate = (1R,2R)-delta-elemene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (1R,2R)-delta-elemene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "elemene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74143"
           }
         ]
       }

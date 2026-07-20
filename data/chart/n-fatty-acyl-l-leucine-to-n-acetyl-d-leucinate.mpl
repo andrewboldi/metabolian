@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate "N-(fatty acyl)-L-leucine to N-acetyl-D-leucinate" {
-  spacing 172
+  spacing 184
 
   spine at 0,0 {
     n_fatty_acyl_l_leucine
@@ -16,15 +16,15 @@ pathway n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate "N-(fatty acyl)-L-leucine
     n_acetyl_d_leucinate
   }
 
-  branch from leucine side left {
-    leucine
-    <-> . +l_leucyl_o_isoindolinone_d_homoserine +h2o
-    o_isoindolinone_d_homoserine
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    monoacyl_3_o_d_galactosyl_sn_glycerol
+    <-> . +1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano +h2o +hplus
+    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
   }
 }
