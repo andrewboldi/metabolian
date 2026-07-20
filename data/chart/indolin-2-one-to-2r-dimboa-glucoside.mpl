@@ -25,4 +25,22 @@ pathway indolin-2-one-to-2r-dimboa-glucoside "indolin-2-one to (2R)-DIMBOA gluco
     <-> ec_2_4_1_202 [2.4.1.202] +udp_d_glucose -udp -hplus
     2r_dimboa_glucoside
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
+    s_nandinine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_79 [1.14.11.79] +l_histidine +akg +o2 +co2
+    3s_3_hydroxy_l_histidine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
+    dtdp_d_ravidosamine
+  }
 }

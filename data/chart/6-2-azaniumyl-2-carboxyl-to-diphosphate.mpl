@@ -27,4 +27,28 @@ pathway 6-2-azaniumyl-2-carboxyl-to-diphosphate "6-(2-azaniumyl-2-carboxyl… to
     <-> ec_6_3_2_1 [6.3.2.1] +r_pantoate +atp -amp -ppi -hplus
     r_pantothenate
   }
+
+  branch from myo_2_inosose side left {
+    myo_2_inosose
+    <-> ec_1_1_1_371 [1.1.1.371] +nadp +nadph +hplus
+    scyllo_inositol
+  }
+
+  branch from 3_oxopropanoate side right {
+    3_oxopropanoate
+    <-> ec_1_1_1_59 [1.1.1.59] +nad +nadh +hplus
+    3_hydroxypropionate
+  }
+
+  branch from dhap side left {
+    dhap
+    <-> ec_1_1_3_21 [1.1.3.21] +o2 +h2o2
+    sn_glycerol_3_phosphate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_3_5_3_17 [3.5.3.17] +3_guanidinopropanoic_acid +h2o
+    urea
+  }
 }

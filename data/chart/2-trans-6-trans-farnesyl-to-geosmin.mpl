@@ -15,4 +15,10 @@ pathway 2-trans-6-trans-farnesyl-to-geosmin "2-trans,6-trans-farnesyl… to (−
     <-> ec_4_1_99_16 [4.1.99.16] +h2o
     geosmin
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_82 [4.2.3.82] +fpp
+    santalene
+  }
 }

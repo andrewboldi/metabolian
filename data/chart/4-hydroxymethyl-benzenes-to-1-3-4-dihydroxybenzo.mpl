@@ -17,4 +17,10 @@ pathway 4-hydroxymethyl-benzenes-to-1-3-4-dihydroxybenzo "4-(hydroxymethyl)benze
     <-> ec_2_4_1_136 [2.4.1.136] +udp_d_glucose -udp
     1_3_4_dihydroxybenzoyl_d_glucopyranose
   }
+
+  branch from sulfite side left {
+    sulfite
+    <-> ec_3_13_1_4 [3.13.1.4] +3_sulfinopropionyl_coa +h2o +hplus
+    propionyl_coa
+  }
 }

@@ -15,4 +15,10 @@ pathway isochorismate-to-2-carboxylato-cis-cis-muc "isochorismate to 2-carboxyla
     <-> ec_1_13_11_28 [1.13.11.28] +o2 -hplus
     2_carboxylato_cis_cis_muconate
   }
+
+  branch from 2_3_dihydroxybenzoate side left {
+    2_3_dihydroxybenzoate
+    <-> ec_1_13_11_14 [1.13.11.14] +o2 +hplus
+    2_hydroxy_3_3_oxoprop_1_enyl_but_2_enedioate
+  }
 }

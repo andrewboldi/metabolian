@@ -17,4 +17,10 @@ pathway n-man-1-3-man-1-to-n4-d-glcnac-1-2-d "N-{α-Man-(1→3)-[α-Man-(1→…
     <-> ec_2_4_1_144 [2.4.1.144] +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_d_glcnac
   }
+
+  branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side left {
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    <-> ec_2_4_1_214 [2.4.1.214] +gdp_l_fucose +gdp +hplus
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+  }
 }

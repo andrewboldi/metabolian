@@ -15,4 +15,16 @@ pathway 1-phosphonato-d-glucuro-to-udp-l-arabinopyranose "1-phosphonato-α-D-glu
     <-> ec_4_1_1_67 [4.1.1.67] +hplus -co2
     udp_l_arabinopyranose
   }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> ec_2_4_1_17 [2.4.1.17] +glucuronate_acceptor +udp +hplus
+    d_glucuronoside
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
+    ditrans_polycis_tridecaprenyl_diphosphate
+  }
 }

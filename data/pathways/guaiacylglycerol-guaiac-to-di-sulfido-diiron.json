@@ -181,6 +181,98 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "veratrylglycerol_guaiacyl_ether",
+      "name": "veratrylglycerol β-guaiacyl ether",
+      "short": "veratrylglycerol…",
+      "formula": "C18H22O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86963"
+      }
+    },
+    {
+      "id": "veratraldehyde",
+      "name": "veratraldehyde",
+      "formula": "C9H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17098"
+      }
+    },
+    {
+      "id": "trans_ferulate",
+      "name": "trans-ferulate",
+      "formula": "C10H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29749"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "phenol",
+      "name": "phenol",
+      "formula": "C6H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15882"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "quercetin_7_olate",
+      "name": "quercetin-7-olate",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57694"
+      }
+    },
+    {
+      "id": "2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate",
+      "name": "2-(3,4-dihydroxybenzoyloxy)-4,6-dihydroxybenzoate",
+      "short": "2-(3,4-dihydroxyben…",
+      "formula": "C14H9O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57628"
+      }
     }
   ],
   "enzymes": [
@@ -217,6 +309,34 @@
       "name": "anaerobic carbon-monoxide dehydrogenase",
       "ec": [
         "1.2.7.4"
+      ]
+    },
+    {
+      "id": "ec_1_11_1_14",
+      "name": "lignin peroxidase",
+      "ec": [
+        "1.11.1.14"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_65",
+      "name": "ferulate hydratase/lyase",
+      "ec": [
+        "4.1.2.65"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_244",
+      "name": "phenol 2-monooxygenase (NADH)",
+      "ec": [
+        "1.14.13.244"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_24",
+      "name": "quercetin 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.24"
       ]
     }
   ],
@@ -474,6 +594,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:21040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "lignin peroxidase",
+      "equation": "1-(3,4-dimethoxyphenyl)-2-(2-methoxyphenoxy)propane-1,3-diol + H2O2 = 3,4-dimethoxybenzaldehyde + guaiacol + glycolaldehyde + H2O",
+      "ec": "1.11.1.14",
+      "substrates": [
+        {
+          "metabolite": "veratrylglycerol_guaiacyl_ether",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "veratraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guaiacol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:48004"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48004"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "ferulate hydratase/lyase",
+      "equation": "(E)-ferulate + H2O = vanillin + acetate",
+      "ec": "4.1.2.65",
+      "substrates": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vanillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:76491"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "phenol 2-monooxygenase (NADH)",
+      "equation": "phenol + NADH + O2 + H(+) = catechol + NAD(+) + H2O",
+      "ec": "1.14.13.244",
+      "substrates": [
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_244"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:57952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "quercetin 2,3-dioxygenase",
+      "equation": "quercetin + O2 = 2-(3,4-dihydroxybenzoyloxy)-4,6-dihydroxybenzoate + CO",
+      "ec": "1.13.11.24",
+      "substrates": [
+        {
+          "metabolite": "quercetin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbon_monoxide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:15381"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15381"
           }
         ]
       }

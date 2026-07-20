@@ -15,4 +15,10 @@ pathway dimethyl-sulfide-to-sulfur-atom "dimethyl sulfide to sulfur atom" {
     <-> ec_1_8_2_3 [1.8.2.3] +h2s +iron -fe2 -hplus
     sulfur_atom
   }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_15_38 [1.14.15.38] +3_3_4_substituted_phenyl_1_1_dimethylurea +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    a_1_methyl_3_phenylurea
+  }
 }

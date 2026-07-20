@@ -15,4 +15,16 @@ pathway sphinganine-to-trans-hexadec-2-enal "sphinganine to trans-hexadec-2-enal
     <-> ec_1_3_1_27 [1.3.1.27] +nadp -nadph -hplus
     hexadecenal
   }
+
+  branch from hexadecanal side left {
+    hexadecanal
+    <-> ec_1_2_1_n2 [1.2.1.n2] +nadp +coa +nadph +hplus
+    palmitoyl_coa
+  }
+
+  branch from phosphoethanolamine side right {
+    phosphoethanolamine
+    <-> ec_3_1_4_62 [3.1.4.62] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    dag
+  }
 }

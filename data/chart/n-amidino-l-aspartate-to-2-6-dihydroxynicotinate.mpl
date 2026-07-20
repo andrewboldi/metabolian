@@ -25,4 +25,28 @@ pathway n-amidino-l-aspartate-to-2-6-dihydroxynicotinate "N-amidino-L-aspartate 
     <-> ec_1_17_3_3 [1.17.3.3] +o2 +h2o -h2o2
     2_6_dihydroxynicotinate
   }
+
+  branch from urea side left {
+    urea
+    <-> ec_3_5_3_11 [3.5.3.11] +agmatinium +h2o
+    1_4_butanediammonium
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +atp +amp +ppi
+    3_l_aspartate_adenylyl_1_group
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_3_8 [1.4.3.8] +ethanolaminium +o2 +h2o +h2o2
+    glycolaldehyde
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    3e_7e_dolabella_3_7_dien_18_ol
+  }
 }

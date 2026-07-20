@@ -15,4 +15,10 @@ pathway d-galacturonate-to-5-dehydro-4-deoxy-d-gluca "β-D-galacturonate to 5-de
     <-> ec_5_5_1_27 [5.5.1.27] -hplus
     5_dehydro_4_deoxy_d_glucarate
   }
+
+  branch from 5_dehydro_4_deoxy_d_glucarate side left {
+    5_dehydro_4_deoxy_d_glucarate
+    <-> ec_4_2_1_156 [4.2.1.156] +h2o
+    l_altrarate
+  }
 }

@@ -109,6 +109,91 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_hydroxy_3_oxopropanoate",
+      "name": "2-hydroxy-3-oxopropanoate",
+      "short": "2-hydroxy-3-oxoprop…",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57978"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "limonin",
+      "name": "limonin",
+      "formula": "C26H30O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16226"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "limonin_17_d_glucoside",
+      "name": "limonin 17-β-D-glucoside",
+      "short": "limonin 17-β-D-gluc…",
+      "formula": "C32H41O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57626"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cis_muurola_3_5_diene",
+      "name": "cis-muurola-3,5-diene",
+      "short": "cis-muurola-3,5-die…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61687"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +216,27 @@
       "name": "UTP--glucose-1-phosphate uridylyltransferase",
       "ec": [
         "2.7.7.9"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_60",
+      "name": "2-hydroxy-3-oxopropionate reductase",
+      "ec": [
+        "1.1.1.60"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_210",
+      "name": "limonoid glucosyltransferase",
+      "ec": [
+        "2.4.1.210"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_67",
+      "name": "cis-muuroladiene synthase",
+      "ec": [
+        "4.2.3.67"
       ]
     }
   ],
@@ -274,6 +380,149 @@
           {
             "db": "Rhea",
             "id": "RHEA:19889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-hydroxy-3-oxopropionate reductase",
+      "equation": "(R)-glycerate + NAD(+) = 2-hydroxy-3-oxopropanoate + NADH + H(+)",
+      "ec": "1.1.1.60",
+      "substrates": [
+        {
+          "metabolite": "d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18845"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "limonoid glucosyltransferase",
+      "equation": "limonin + UDP-alpha-D-glucose + H2O = limonin 17-beta-D-glucoside + UDP + 2 H(+)",
+      "ec": "2.4.1.210",
+      "substrates": [
+        {
+          "metabolite": "limonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "limonin_17_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_210"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:11256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "cis-muuroladiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = cis-muurola-3,5-diene + diphosphate",
+      "ec": "4.2.3.67",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_muurola_3_5_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:29487"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29487"
           }
         ]
       }

@@ -15,4 +15,16 @@ pathway carnosine-to-l-glutamyl-l-cysteinyl "carnosine to L-γ-glutamyl-L-cystei
     <-> ec_6_3_2_23 [6.3.2.23] +glu_cys +alanine +atp -adp -pi -hplus
     l_glutamyl_l_cysteinyl_alaninate
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_328 [2.1.1.328] +n_demethylindolmycin +sam +hplus
+    indolmycin
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_1_5_1_26 [1.5.1.26] +nad +h2o +pyruvate +nadh +hplus
+    r_alanopine
+  }
 }

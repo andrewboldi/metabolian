@@ -17,4 +17,10 @@ pathway n-acetyl-d-muramoyl-l-ala-to-d-alanine "N-acetyl-D-muramoyl-L-ala… to 
     <-> ec_3_4_13_22 [3.4.13.22] +h2o
     d_alanine
   }
+
+  branch from d_alanine side left {
+    d_alanine
+    <-> ec_6_3_2_35 [6.3.2.35] +dserine +atp +adp +pi +hplus
+    d_alanyl_d_serine
+  }
 }

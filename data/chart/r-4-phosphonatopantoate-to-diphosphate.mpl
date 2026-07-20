@@ -21,4 +21,16 @@ pathway r-4-phosphonatopantoate-to-diphosphate "(R)-4-phosphonatopantoate to dip
     <-> ec_2_7_7_61 [2.7.7.61] +l_serine -ppi
     o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_42 [6.2.1.42] +25s_4_dafachronate +atp +coa +amp
+    25s_3_oxocholest_4_en_26_oyl_coa
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_1 [2.7.8.1] +1_z_alk_1_enyl_2_acyl_sn_glycerol +cdp_ethanolamine +hplus
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
+  }
 }

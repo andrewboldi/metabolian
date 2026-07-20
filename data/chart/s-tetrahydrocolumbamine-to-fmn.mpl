@@ -15,4 +15,22 @@ pathway s-tetrahydrocolumbamine-to-fmn "(S)-tetrahydrocolumbamine to FMN" {
     <-> ec_1_14_14_97 [1.14.14.97] +fmnh2 +o2 -fmn -h2o -hplus
     allocryptopine
   }
+
+  branch from s_canadine side left {
+    s_canadine
+    <-> ec_1_3_3_8 [1.3.3.8] +o2 +hplus +h2o2
+    berberine
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24s_7_24_dihydroxycholesterol
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_164 [2.1.1.164] +4_demethylrebeccamycin +sam +hplus
+    rebeccamycin
+  }
 }

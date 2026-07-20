@@ -157,6 +157,90 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi",
+      "name": "β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-N-acylsphingosine",
+      "short": "β-D-galactosyl-(1→4…",
+      "formula": "C31H56NO13R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17950"
+      }
+    },
+    {
+      "id": "n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu",
+      "name": "α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-N-acylsphingosine",
+      "short": "α-N-acetylneuramino…",
+      "formula": "C42H72N2O21R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60065"
+      }
+    },
+    {
+      "id": "cytidine",
+      "name": "cytidine",
+      "formula": "C9H13N3O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17562"
+      }
+    },
+    {
+      "id": "r1p",
+      "name": "alpha-D-Ribose 1-phosphate",
+      "short": "alpha-D-Ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57720"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "adenine",
+      "name": "Adenine",
+      "formula": "C5H5N5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16708"
+      }
+    },
+    {
+      "id": "5_6_dihydrouracil",
+      "name": "5,6-dihydrouracil",
+      "formula": "C4H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15901"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -200,6 +284,34 @@
       "name": "pseudouridine kinase",
       "ec": [
         "2.7.1.83"
+      ]
+    },
+    {
+      "id": "ec_2_4_3_9",
+      "name": "lactosylceramide alpha-2,3-sialyltransferase",
+      "ec": [
+        "2.4.3.9"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_2",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.2"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_4",
+      "name": "AMP nucleosidase",
+      "ec": [
+        "3.2.2.4"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_1",
+      "name": "dihydrouracil dehydrogenase (NAD(+))",
+      "ec": [
+        "1.3.1.1"
       ]
     }
   ],
@@ -482,6 +594,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:22448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "lactosylceramide alpha-2,3-sialyltransferase",
+      "equation": "a beta-D-Gal-(1->4)-beta-D-Glc-(1<->1)-Cer(d18:1(4E)) + CMP-N-acetyl-beta-neuraminate = a ganglioside GM3 (d18:1(4E)) + CMP + H(+)",
+      "ec": "2.4.3.9",
+      "substrates": [
+        {
+          "metabolite": "d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:18417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "equation": "cytidine + phosphate = cytosine + alpha-D-ribose 1-phosphate",
+      "ec": "2.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "cytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:52540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "AMP nucleosidase",
+      "equation": "AMP + H2O = D-ribose 5-phosphate + adenine",
+      "ec": "3.2.2.4",
+      "substrates": [
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:20129"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "dihydrouracil dehydrogenase (NAD(+))",
+      "equation": "5,6-dihydrouracil + NAD(+) = uracil + NADH + H(+)",
+      "ec": "1.3.1.1",
+      "substrates": [
+        {
+          "metabolite": "5_6_dihydrouracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:20189"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20189"
           }
         ]
       }

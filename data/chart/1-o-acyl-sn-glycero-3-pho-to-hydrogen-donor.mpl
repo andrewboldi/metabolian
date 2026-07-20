@@ -15,4 +15,16 @@ pathway 1-o-acyl-sn-glycero-3-pho-to-hydrogen-donor "1-O-acyl-sn-glycero-3-phoâ€
     <-> ec_1_1_99_22 [1.1.99.22] +glycerol +hydrogen_acceptor -hydrogen_donor
     dihydroxyacetone
   }
+
+  branch from glycerol side left {
+    glycerol
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_3_phosphate
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_1_99_41 [1.1.99.41] +3r_3_hydroxy_2_3_dihydrotabersoninium +hydrogen_acceptor
+    3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni
+  }
 }

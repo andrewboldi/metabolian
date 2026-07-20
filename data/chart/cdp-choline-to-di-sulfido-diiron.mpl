@@ -17,4 +17,16 @@ pathway cdp-choline-to-di-sulfido-diiron "CDP-choline to di-μ-sulfido-diiron" {
     <-> ec_1_14_15_7 [1.14.15.7] +choline +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     betaine_aldehyde_hydrate
   }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_22 [2.7.8.22] +1_z_alk_1_enyl_2_acyl_sn_glycerol +cdp_choline +hplus
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_35 [1.14.19.35] +7z_10z_hexadecadienoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    7z_10z_13z_hexadecatrienoyl_containing_glycerol
+  }
 }

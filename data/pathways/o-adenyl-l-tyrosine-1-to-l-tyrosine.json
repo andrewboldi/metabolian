@@ -91,6 +91,36 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "l_tyrosine_o_sulfate_1",
+      "name": "L-tyrosine-O-sulfate(1−)",
+      "short": "L-tyrosine-O-sulfat…",
+      "formula": "C9H8NO5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65286"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +178,13 @@
       "name": "protein-tyrosine-phosphatase",
       "ec": [
         "3.1.3.48"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_20",
+      "name": "protein-tyrosine sulfotransferase",
+      "ec": [
+        "2.8.2.20"
       ]
     }
   ],
@@ -287,6 +324,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:10684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protein-tyrosine sulfotransferase",
+      "equation": "L-tyrosyl-[protein] + 3'-phosphoadenylyl sulfate = O-sulfo-L-tyrosine-[protein] + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.20",
+      "substrates": [
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tyrosine_o_sulfate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16801"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16801"
           }
         ]
       }

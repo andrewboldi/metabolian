@@ -15,4 +15,16 @@ pathway n2-4-aminobutanoyl-l-or-to-n-caffeoylputresciniu "N2-(4-aminobutanoyl)-L
     <-> ec_2_3_1_138 [2.3.1.138] +trans_caffeoyl_coa -coa -hplus
     n_caffeoylputrescinium
   }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_2_3_1_109 [2.3.1.109] +succinyl_coa +coa +hplus
+    n2_succinyl_l_ornithinate
+  }
+
+  branch from 1_4_butanediammonium side right {
+    1_4_butanediammonium
+    <-> ec_1_5_1_43 [1.5.1.43] +carboxyspermidine +nadp +h2o +nadph +hplus
+    l_aspartic_acid_4_semialdehyde
+  }
 }

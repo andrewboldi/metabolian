@@ -102,6 +102,24 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "acetamide",
+      "name": "acetamide",
+      "formula": "C2H5NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27856"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +149,13 @@
       "name": "cysteine-S-conjugate N-acetyltransferase",
       "ec": [
         "2.3.1.80"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_4",
+      "name": "amidase",
+      "ec": [
+        "3.5.1.4"
       ]
     }
   ],
@@ -270,6 +295,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:19213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "amidase",
+      "equation": "acetamide + H2O = acetate + NH4(+)",
+      "ec": "3.5.1.4",
+      "substrates": [
+        {
+          "metabolite": "acetamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:45048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45048"
           }
         ]
       }

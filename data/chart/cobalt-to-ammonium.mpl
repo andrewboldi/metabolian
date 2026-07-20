@@ -23,4 +23,28 @@ pathway cobalt-to-ammonium "cobalt to ammonium" {
     <-> ec_4_3_1_18 [4.3.1.18] -pyruvate
     nh3
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_64 [1.14.99.64] +zeaxanthin +hydrogen_donor +o2 +h2o
+    adonixanthin
+  }
+
+  branch from serine side right {
+    serine
+    <-> ec_2_3_1_30 [2.3.1.30] +acetyl_coa +coa
+    o_acetyl_l_serine
+  }
+
+  branch from dserine side left {
+    dserine
+    <-> ec_3_1_3_3 [3.1.3.3] +h2o +pi
+    o_phosphonatooxy_d_serine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus +pyruvate
+    3_amino_d_alanine
+  }
 }

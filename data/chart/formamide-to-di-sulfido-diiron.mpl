@@ -15,4 +15,22 @@ pathway formamide-to-di-sulfido-diiron "formamide to di-μ-sulfido-diiron" {
     <-> ec_1_12_7_2 [1.12.7.2] +di_sulfido_diiron -hplus
     di_sulfido_diiron
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_33 [3.5.4.33] +adenosine_5_monophosphate_1 +h2o +hplus
+    inosine_5_phosphate_1
+  }
+
+  branch from h2 side right {
+    h2
+    <-> ec_1_12_98_3 [1.12.98.3] +methanophenazine
+    dihydromethanophenazine
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_19_23 [1.14.19.23] +oleoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    linoleoyl_containing_glycerolipid
+  }
 }

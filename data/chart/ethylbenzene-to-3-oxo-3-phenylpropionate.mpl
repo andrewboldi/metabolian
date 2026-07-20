@@ -15,4 +15,10 @@ pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenyl
     <-> ec_6_4_1_8 [6.4.1.8] +hco3 +atp +h2o -adp -pi -hplus
     3_oxo_3_phenylpropionate
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_21_99_4 [1.21.99.4] +3_3_5_triiodo_l_thyronine +iodide +hydrogen_acceptor +hplus
+    l_thyroxine
+  }
 }

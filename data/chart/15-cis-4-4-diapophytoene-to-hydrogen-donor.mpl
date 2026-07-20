@@ -15,4 +15,16 @@ pathway 15-cis-4-4-diapophytoene-to-hydrogen-donor "15-cis-4,4'-diapophytoene to
     <-> ec_1_2_99_10 [1.2.99.10] +hydrogen_acceptor +h2o -hydrogen_donor -hplus
     4_4_diapolycopenedioate
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_2_99_10 [1.2.99.10] +4_4_diapolycopen_4_al +h2o +hydrogen_donor +hplus
+    4_4_diapolycopen_4_oate
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_19_14 [1.14.19.14] +linoleoyl_containing_glycerolipid +o2 +hydrogen_acceptor +h2o
+    8e_10e_12z_octadecatrienoyl_containing_glycerol
+  }
 }

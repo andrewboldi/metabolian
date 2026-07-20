@@ -196,6 +196,81 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "ubiquinone_8",
+      "name": "ubiquinone-8",
+      "formula": "C49H74O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61683"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57597"
+      }
+    },
+    {
+      "id": "ubiquinol_8",
+      "name": "ubiquinol-8",
+      "formula": "C49H76O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61682"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n6_r_s8_acetyldihydrolipoyl_l_lysine",
+      "name": "N6-[(R)-S8-acetyldihydrolipoyl]-L-lysine",
+      "short": "N6-[(R)-S8-acetyldi…",
+      "formula": "C16H28N2O3S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83111"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1",
+      "name": "N6-[(R)-S8-ammoniomethyldihydrolipoyl]-L-lysine(1+)",
+      "short": "N6-[(R)-S8-ammoniom…",
+      "formula": "C15H30N3O2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:83143"
+      }
     }
   ],
   "enzymes": [
@@ -246,6 +321,27 @@
       "name": "oxoglutarate dehydrogenase (succinyl-transferring)",
       "ec": [
         "1.2.4.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_3",
+      "name": "glycerol-3-phosphate dehydrogenase",
+      "ec": [
+        "1.1.5.3"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_12",
+      "name": "dihydrolipoyllysine-residue acetyltransferase",
+      "ec": [
+        "2.3.1.12"
+      ]
+    },
+    {
+      "id": "ec_1_4_4_2",
+      "name": "glycine dehydrogenase (aminomethyl-transferring)",
+      "ec": [
+        "1.4.4.2"
       ]
     }
   ],
@@ -577,6 +673,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:12188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "glycerol-3-phosphate dehydrogenase",
+      "equation": "ubiquinone-8 + sn-glycerol 3-phosphate = ubiquinol-8 + dihydroxyacetone phosphate",
+      "ec": "1.1.5.3",
+      "substrates": [
+        {
+          "metabolite": "ubiquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:28751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "dihydrolipoyllysine-residue acetyltransferase",
+      "equation": "N(6)-[(R)-dihydrolipoyl]-L-lysyl-[protein] + acetyl-CoA = N(6)-[(R)-S(8)-acetyldihydrolipoyl]-L-lysyl-[protein] + CoA",
+      "ec": "2.3.1.12",
+      "substrates": [
+        {
+          "metabolite": "n6_r_dihydrolipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_s8_acetyldihydrolipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:17017"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17017"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "glycine dehydrogenase (aminomethyl-transferring)",
+      "equation": "N(6)-[(R)-lipoyl]-L-lysyl-[glycine-cleavage complex H protein] + glycine + H(+) = N(6)-[(R)-S(8)-aminomethyldihydrolipoyl]-L-lysyl-[glycine-cleavage complex H protein] + CO2",
+      "ec": "1.4.4.2",
+      "substrates": [
+        {
+          "metabolite": "n6_r_lipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_4_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:24304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24304"
           }
         ]
       }

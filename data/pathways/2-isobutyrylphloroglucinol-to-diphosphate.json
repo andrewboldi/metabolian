@@ -83,6 +83,26 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
+    },
+    {
+      "id": "endo_bergamotene",
+      "name": "(−)-endo-α-bergamotene",
+      "short": "(−)-endo-α-bergamot…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61679"
+      }
     }
   ],
   "enzymes": [
@@ -98,6 +118,13 @@
       "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
       "ec": [
         "2.5.1.137"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_54",
+      "name": "(-)-endo-alpha-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate",
+      "ec": [
+        "4.2.3.54"
       ]
     }
   ],
@@ -237,6 +264,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:51796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(-)-endo-alpha-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = (1S,5S,6S)-alpha-bergamotene + diphosphate",
+      "ec": "4.2.3.54",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "endo_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30471"
           }
         ]
       }

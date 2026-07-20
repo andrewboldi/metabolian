@@ -101,6 +101,26 @@
       "xrefs": {
         "chebi": "CHEBI:4167"
       }
+    },
+    {
+      "id": "6_o_methyl_n_deacetylipecoside",
+      "name": "6-O-methyl-N-deacetylipecoside",
+      "short": "6-O-methyl-N-deacet…",
+      "formula": "C26H36NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:229558"
+      }
+    },
+    {
+      "id": "6_o_methyl_n_deacetylipecoside_aglycone",
+      "name": "6-O-methyl-N-deacetylipecoside aglycone",
+      "short": "6-O-methyl-N-deacet…",
+      "formula": "C20H26NO6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:229559"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +143,13 @@
       "name": "protein-glucosylgalactosylhydroxylysine glucosidase",
       "ec": [
         "3.2.1.107"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_220",
+      "name": "ipecoside beta-D-glucosidase",
+      "ec": [
+        "3.2.1.220"
       ]
     }
   ],
@@ -266,6 +293,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:11068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ipecoside beta-D-glucosidase",
+      "equation": "6-O-methyldeacetylipecoside + H2O = 6-O-methyldeacetylipecoside aglycone + D-glucose",
+      "ec": "3.2.1.220",
+      "substrates": [
+        {
+          "metabolite": "6_o_methyl_n_deacetylipecoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_methyl_n_deacetylipecoside_aglycone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78883"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78883"
           }
         ]
       }

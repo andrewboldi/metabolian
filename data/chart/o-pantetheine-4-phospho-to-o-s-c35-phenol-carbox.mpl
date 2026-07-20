@@ -15,4 +15,22 @@ pathway o-pantetheine-4-phospho-to-o-s-c35-phenol-carbox "O-(pantetheine-4'-phos
     <-> ec_2_3_1_292 [2.3.1.292] +s_methylmalonyl_coa +malonyl-coa +nadph +hplus -co2 -nadp -coa -h2o
     o_s_c35_phenol_carboxyphthiodiolenoneylpantethei
   }
+
+  branch from o_s_4_hydroxybenzoyl_pantetheine_4_phosphoryl_se side left {
+    o_s_4_hydroxybenzoyl_pantetheine_4_phosphoryl_se
+    <-> ec_2_3_1_261 [2.3.1.261] +malonyl-coa +nadph +hplus +co2 +nadp +coa +h2o
+    o_s_19_4_hydroxyphenyl_nonadecanoyl_pantetheine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_98 [4.2.3.98] +fpp +h2o
+    muurolol
+  }
+
+  branch from o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine side left {
+    o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine
+    <-> ec_6_2_1_51 [6.2.1.51] +holo-acp +atp +amp +ppi
+    17_4_hydroxyphenyl_heptadecanoate
+  }
 }

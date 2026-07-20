@@ -21,4 +21,10 @@ pathway d-apiofuranose-to-d-erythrulose-4-phosphate "D-apiofuranose to D-erythru
     <-> ec_5_3_1_33 [5.3.1.33]
     d_erythrulose_4_phosphate
   }
+
+  branch from 3_oxoisoapionate side left {
+    3_oxoisoapionate
+    <-> ec_2_7_1_231 [2.7.1.231] +atp +adp +hplus
+    3_oxoisoapionate_4_phosphate
+  }
 }

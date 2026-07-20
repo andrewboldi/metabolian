@@ -15,4 +15,10 @@ pathway aliphatic-alcohol-to-diphosphate "aliphatic alcohol to diphosphate" {
     <-> ec_6_3_1_22 [6.3.1.22] +cytidine_5_monophosphate_1 +acetate +atp -amp -ppi
     n4_acetylcytidine_5_monophosphate_1
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_89 [2.5.1.89] +geranylgeranyl_diphosphate +ipp
+    tri_trans_poly_cis_undecaprenyl_diphosphate
+  }
 }

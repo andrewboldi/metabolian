@@ -126,6 +126,64 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "limonene_1_2_epoxide",
+      "name": "limonene 1,2-epoxide",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16431"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_farnesol",
+      "name": "(2-trans,6-trans)-farnesol",
+      "short": "(2-trans,6-trans)-f…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16619"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-22-hydroxydocosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77015"
+      }
+    },
+    {
+      "id": "cis_carveol",
+      "name": "(+)-cis-carveol",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +206,34 @@
       "name": "(+)-trans-carveol dehydrogenase",
       "ec": [
         "1.1.1.275"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_107",
+      "name": "limonene 1,2-monooxygenase",
+      "ec": [
+        "1.14.13.107"
+      ]
+    },
+    {
+      "id": "ec_3_1_7_6",
+      "name": "farnesyl diphosphatase",
+      "ec": [
+        "3.1.7.6"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_79",
+      "name": "docosahexaenoic acid omega-hydroxylase",
+      "ec": [
+        "1.14.14.79"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_n4",
+      "name": "(-)-trans-carveol dehydrogenase",
+      "ec": [
+        "1.1.1.n4"
       ]
     }
   ],
@@ -295,6 +381,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:14825"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "limonene 1,2-monooxygenase",
+      "equation": "(4R)-limonene + NADH + O2 + H(+) = limonene 1,2-epoxide + NAD(+) + H2O",
+      "ec": "1.14.13.107",
+      "substrates": [
+        {
+          "metabolite": "4r_limonene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "limonene_1_2_epoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_107"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26093"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26093"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "farnesyl diphosphatase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (2E,6E)-farnesol + diphosphate",
+      "ec": "3.1.7.6",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_trans_6_trans_farnesol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_7_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27526"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "docosahexaenoic acid omega-hydroxylase",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 22-hydroxy-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.79",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:40155"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40155"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(-)-trans-carveol dehydrogenase",
+      "equation": "(1S,5S)-carveol + NAD(+) = (S)-carvone + NADH + H(+)",
+      "ec": "1.1.1.n4",
+      "substrates": [
+        {
+          "metabolite": "cis_carveol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carvone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_n4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:25848"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25848"
           }
         ]
       }

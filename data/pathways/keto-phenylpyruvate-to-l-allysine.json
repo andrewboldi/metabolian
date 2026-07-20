@@ -145,6 +145,45 @@
       "xrefs": {
         "chebi": "CHEBI:58321"
       }
+    },
+    {
+      "id": "2_phenylethanaminium",
+      "name": "2-phenylethanaminium",
+      "formula": "C8H12N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:225237"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "3s_3_methyl_2_oxo_3_phenylpropanoate",
+      "name": "(3S)-3-methyl-2-oxo-3-phenylpropanoate",
+      "short": "3-methyl-2-oxo-3-ph…",
+      "formula": "C10H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74119"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
     }
   ],
   "enzymes": [
@@ -174,6 +213,20 @@
       "name": "lysine--8-amino-7-oxononanoate transaminase",
       "ec": [
         "2.6.1.105"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_53",
+      "name": "phenylalanine decarboxylase",
+      "ec": [
+        "4.1.1.53"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_281",
+      "name": "phenylpyruvate C(3)-methyltransferase",
+      "ec": [
+        "2.1.1.281"
       ]
     }
   ],
@@ -362,6 +415,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:26329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phenylalanine decarboxylase",
+      "equation": "L-phenylalanine + H(+) = 2-phenylethylamine + CO2",
+      "ec": "4.1.1.53",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phenylethanaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:19717"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19717"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "phenylpyruvate C(3)-methyltransferase",
+      "equation": "3-phenylpyruvate + S-adenosyl-L-methionine = (3S)-2-oxo-3-phenylbutanoate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.281",
+      "substrates": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_methyl_2_oxo_3_phenylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_281"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:36623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36623"
           }
         ]
       }

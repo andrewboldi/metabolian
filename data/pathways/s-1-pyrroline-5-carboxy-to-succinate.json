@@ -156,6 +156,44 @@
       "xrefs": {
         "chebi": "CHEBI:30031"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "7_epi_sesquithujene",
+      "name": "7-epi-sesquithujene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63710"
+      }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "3r_3_hydroxy_l_argininium",
+      "name": "(3R)-3-hydroxy-L-argininium",
+      "short": "3-hydroxy-L-arginin…",
+      "formula": "C6H13N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:78294"
+      }
     }
   ],
   "enzymes": [
@@ -178,6 +216,20 @@
       "name": "(5R)-carbapenem-3-carboxylate synthase",
       "ec": [
         "1.14.20.3"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_101",
+      "name": "7-epi-sesquithujene synthase",
+      "ec": [
+        "4.2.3.101"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_73",
+      "name": "[protein]-arginine 3-hydroxylase",
+      "ec": [
+        "1.14.11.73"
       ]
     }
   ],
@@ -345,6 +397,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:36611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "7-epi-sesquithujene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = 7-epi-sesquithujene + diphosphate",
+      "ec": "4.2.3.101",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_epi_sesquithujene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_101"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31995"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[protein]-arginine 3-hydroxylase",
+      "equation": "L-arginyl-[protein] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[protein] + succinate + CO2",
+      "ec": "1.14.11.73",
+      "substrates": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_3_hydroxy_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56744"
           }
         ]
       }

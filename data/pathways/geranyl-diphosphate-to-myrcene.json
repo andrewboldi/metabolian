@@ -72,6 +72,61 @@
       "xrefs": {
         "chebi": "CHEBI:17221"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "geranial",
+      "name": "geranial",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16980"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "patchouli_alcohol",
+      "name": "patchouli alcohol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:7940"
+      }
     }
   ],
   "enzymes": [
@@ -94,6 +149,20 @@
       "name": "linalool dehydratase",
       "ec": [
         "4.2.1.127"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_347",
+      "name": "geraniol dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.347"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_70",
+      "name": "patchoulol synthase",
+      "ec": [
+        "4.2.3.70"
       ]
     }
   ],
@@ -217,6 +286,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:30711"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "geraniol dehydrogenase (NAD(+))",
+      "equation": "(2E)-geraniol + NAD(+) = (2E)-geranial + NADH + H(+)",
+      "ec": "1.1.1.347",
+      "substrates": [
+        {
+          "metabolite": "geraniol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geranial",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_347"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34347"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "patchoulol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = patchoulol + diphosphate",
+      "ec": "4.2.3.70",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "patchouli_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:29503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29503"
           }
         ]
       }

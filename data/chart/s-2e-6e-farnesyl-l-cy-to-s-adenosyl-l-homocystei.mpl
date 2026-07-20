@@ -21,4 +21,28 @@ pathway s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei "S-[(2E,6E)-farnesyl]-L
     <-> ec_2_1_1_325 [2.1.1.325] +sam -sah
     juvenile_hormone_iii
   }
+
+  branch from 2_trans_6_trans_farnesal side left {
+    2_trans_6_trans_farnesal
+    <-> ec_1_1_1_216 [1.1.1.216] +nadp +nadph +hplus
+    2_trans_6_trans_farnesol
+  }
+
+  branch from cysteine side right {
+    cysteine
+    <-> ec_1_8_1_6 [1.8.1.6] +nad +nadh +hplus
+    l_cystine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_9 +sam +hplus
+    ubiquinol_9
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_149 [1.14.14.149] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
+    capsidiol
+  }
 }

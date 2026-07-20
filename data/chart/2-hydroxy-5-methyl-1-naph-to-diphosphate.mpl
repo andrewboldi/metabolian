@@ -15,4 +15,22 @@ pathway 2-hydroxy-5-methyl-1-naph-to-diphosphate "2-hydroxy-5-methyl-1-naph… t
     <-> ec_6_2_1_43 [6.2.1.43] +atp +coa -amp -ppi
     2_hydroxy_7_methoxy_5_methyl_1_naphthoyl_coa
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_19_26 [1.14.19.26] +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +di_sulfido_diiron +o2 +hplus +h2o
+    o_s_6z_hexadecenoylpantetheine_4_phosphoryl_seri
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_238 [2.1.1.238] +mycinamicin_vi +sam +hplus
+    mycinamicin_iii
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_86 [4.2.3.86] +fpp
+    7_epi_selinene
+  }
 }

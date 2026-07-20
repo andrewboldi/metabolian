@@ -74,6 +74,25 @@
       "xrefs": {
         "chebi": "CHEBI:134348"
       }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9β,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58622"
+      }
+    },
+    {
+      "id": "stemar_13_ene",
+      "name": "stemar-13-ene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50069"
+      }
     }
   ],
   "enzymes": [
@@ -89,6 +108,13 @@
       "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
       "ec": [
         "2.5.1.137"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_33",
+      "name": "stemar-13-ene synthase",
+      "ec": [
+        "4.2.3.33"
       ]
     }
   ],
@@ -224,6 +250,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:51760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "stemar-13-ene synthase",
+      "equation": "9alpha-copalyl diphosphate = stemar-13-ene + diphosphate",
+      "ec": "4.2.3.33",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stemar_13_ene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25552"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25552"
           }
         ]
       }

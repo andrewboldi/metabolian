@@ -117,6 +117,24 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "albendazole",
+      "name": "albendazole",
+      "formula": "C12H15N3O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16664"
+      }
+    },
+    {
+      "id": "hydroxyalbendazole",
+      "name": "hydroxyalbendazole",
+      "formula": "C12H15N3O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140182"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +157,13 @@
       "name": "(R)-mandelonitrile oxidase",
       "ec": [
         "1.1.3.49"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_74",
+      "name": "albendazole monooxygenase (hydroxylating)",
+      "ec": [
+        "1.14.14.74"
       ]
     }
   ],
@@ -302,6 +327,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:50360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "albendazole monooxygenase (hydroxylating)",
+      "equation": "albendazole + reduced [NADPH--hemoprotein reductase] + O2 = hydroxyalbendazole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.74",
+      "substrates": [
+        {
+          "metabolite": "albendazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyalbendazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56288"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56288"
           }
         ]
       }

@@ -99,6 +99,25 @@
       "xrefs": {
         "chebi": "CHEBI:57680"
       }
+    },
+    {
+      "id": "d_glucarate",
+      "name": "D-glucarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30612"
+      }
+    },
+    {
+      "id": "2_o_sinapoyl_d_glucarate",
+      "name": "2-O-sinapoyl-D-glucarate",
+      "short": "2-O-sinapoyl-D-gluc…",
+      "formula": "C17H18O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58793"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +140,13 @@
       "name": "tartronate O-hydroxycinnamoyltransferase",
       "ec": [
         "2.3.1.106"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_131",
+      "name": "glucarate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.131"
       ]
     }
   ],
@@ -268,6 +294,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:10952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glucarate O-hydroxycinnamoyltransferase",
+      "equation": "D-glucarate + (E)-sinapoyl-CoA = 2-O-[(E)-sinapoyl]-D-glucarate + CoA",
+      "ec": "2.3.1.131",
+      "substrates": [
+        {
+          "metabolite": "d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_sinapoyl_d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_131"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:23308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23308"
           }
         ]
       }

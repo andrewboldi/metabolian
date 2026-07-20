@@ -15,4 +15,10 @@ pathway 3-epi-6-deoxocathasterone-to-fmn "3-epi-6-deoxocathasterone to FMN" {
     <-> ec_1_14_14_180 [1.14.14.180] +fmnh2 +o2 -fmn -h2o -hplus
     7_oxatyphasterol
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_148 [1.14.14.148] +s_columbianetin +fmnh2 +o2 +acetone +h2o +hplus
+    angelicin
+  }
 }

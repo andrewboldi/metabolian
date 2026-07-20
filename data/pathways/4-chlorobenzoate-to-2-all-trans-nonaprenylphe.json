@@ -110,6 +110,72 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "all_trans_heptaprenyl_diphosphate",
+      "name": "all-trans-heptaprenyl diphosphate",
+      "short": "all-trans-heptapren…",
+      "formula": "C35H57O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58206"
+      }
+    },
+    {
+      "id": "4_hydroxy_3_all_trans_heptaprenylbenzoate",
+      "name": "4-hydroxy-3-all-trans-heptaprenylbenzoate",
+      "short": "4-hydroxy-3-all-tra…",
+      "formula": "C42H61O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84496"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_l_glutamate_adenylyl_1_group",
+      "name": "3'-(L-glutamate)adenylyl(1−) group",
+      "short": "3'-(L-glutamate)ade…",
+      "formula": "C15H19N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78520"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +198,13 @@
       "name": "4-hydroxy-3-polyprenylbenzoate decarboxylase",
       "ec": [
         "4.1.1.98"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_17",
+      "name": "glutamate--tRNA ligase",
+      "ec": [
+        "6.1.1.17"
       ]
     }
   ],
@@ -271,6 +344,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:44576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4-hydroxybenzoate polyprenyltransferase",
+      "equation": "all-trans-heptaprenyl diphosphate + 4-hydroxybenzoate = 4-hydroxy-3-(all-trans-heptaprenyl)benzoate + diphosphate",
+      "ec": "2.5.1.39",
+      "substrates": [
+        {
+          "metabolite": "all_trans_heptaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_3_all_trans_heptaprenylbenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glutamate--tRNA ligase",
+      "equation": "tRNA(Glu) + L-glutamate + ATP = L-glutamyl-tRNA(Glu) + AMP + diphosphate",
+      "ec": "6.1.1.17",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_glutamate_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:23540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23540"
           }
         ]
       }

@@ -101,6 +101,15 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "d_serine",
+      "name": "D-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29998"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +132,13 @@
       "name": "glucosamine N-acetyltransferase",
       "ec": [
         "2.3.1.3"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_16",
+      "name": "protein-serine epimerase",
+      "ec": [
+        "5.1.1.16"
       ]
     }
   ],
@@ -262,6 +278,43 @@
           {
             "db": "Rhea",
             "id": "RHEA:21332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protein-serine epimerase",
+      "equation": "L-seryl-[protein] = D-seryl-[protein]",
+      "ec": "5.1.1.16",
+      "substrates": [
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:10660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10660"
           }
         ]
       }

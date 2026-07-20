@@ -121,6 +121,52 @@
       "xrefs": {
         "chebi": "CHEBI:24646"
       }
+    },
+    {
+      "id": "d_glucose",
+      "name": "α-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17925"
+      }
+    },
+    {
+      "id": "3_keto_trehalose",
+      "name": "3-keto-α,α-trehalose",
+      "formula": "C12H20O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:55511"
+      }
+    },
+    {
+      "id": "3_dehydro_d_glucose",
+      "name": "3-dehydro-D-glucose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:55402"
+      }
+    },
+    {
+      "id": "dlactate",
+      "name": "(R)-Lactate (D-lactate)",
+      "short": "Lactate (D-lactate)",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16004"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
     }
   ],
   "enzymes": [
@@ -150,6 +196,27 @@
       "name": "glucose 1-dehydrogenase (FAD, quinone)",
       "ec": [
         "1.1.5.9"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_10",
+      "name": "oligo-1,6-glucosidase",
+      "ec": [
+        "3.2.1.10"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_218",
+      "name": "alpha-3'-ketoglucosidase",
+      "ec": [
+        "3.2.1.218"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_12",
+      "name": "D-lactate dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.12"
       ]
     }
   ],
@@ -363,6 +430,141 @@
           {
             "db": "Rhea",
             "id": "RHEA:47372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "oligo-1,6-glucosidase",
+      "equation": "isomaltose + H2O = alpha-D-glucose + D-glucose",
+      "ec": "3.2.1.10",
+      "substrates": [
+        {
+          "metabolite": "isomaltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:68864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68864"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "alpha-3'-ketoglucosidase",
+      "equation": "3-dehydro-alpha,alpha-trehalose + H2O = 3-dehydro-D-glucose + D-glucose",
+      "ec": "3.2.1.218",
+      "substrates": [
+        {
+          "metabolite": "3_keto_trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydro_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_218"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:78719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78719"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "D-lactate dehydrogenase (quinone)",
+      "equation": "(R)-lactate + a quinone = a quinol + pyruvate",
+      "ec": "1.1.5.12",
+      "substrates": [
+        {
+          "metabolite": "dlactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:51468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51468"
           }
         ]
       }

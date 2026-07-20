@@ -15,4 +15,16 @@ pathway ndp-d-glucose-to-nucleoside-5-diphosphate "NDP-α-D-glucose to nucleosid
     <-> ec_2_7_4_10 [2.7.4.10] +amp -adp
     nucleoside_5_diphosphate
   }
+
+  branch from nucleoside_5_diphosphate side left {
+    nucleoside_5_diphosphate
+    <-> ec_2_7_4_4 [2.7.4.4] +atp +adp
+    nucleoside_5_monophosphate
+  }
+
+  branch from sucrose side right {
+    sucrose
+    <-> ec_5_4_99_11 [5.4.99.11]
+    6_o_d_glucopyranosyl_d_fructofuranose
+  }
 }

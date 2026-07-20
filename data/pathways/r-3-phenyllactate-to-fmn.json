@@ -135,6 +135,43 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "ipecoside",
+      "name": "ipecoside",
+      "formula": "C27H35NO12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:5952"
+      }
+    },
+    {
+      "id": "ipecoside_aglycone",
+      "name": "ipecoside aglycone",
+      "formula": "C21H25NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195262"
+      }
+    },
+    {
+      "id": "s_averantin",
+      "name": "(S)-averantin",
+      "formula": "C20H19O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77899"
+      }
+    },
+    {
+      "id": "1_s_5_r_5_hydroxyaverantin",
+      "name": "(1'S,5'R)-5'-hydroxyaverantin",
+      "short": "(1'S,5'R)-5'-hydrox…",
+      "formula": "C20H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71536"
+      }
     }
   ],
   "enzymes": [
@@ -157,6 +194,20 @@
       "name": "littorine mutase",
       "ec": [
         "1.14.14.195"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_220",
+      "name": "ipecoside beta-D-glucosidase",
+      "ec": [
+        "3.2.1.220"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_116",
+      "name": "averantin hydroxylase",
+      "ec": [
+        "1.14.14.116"
       ]
     }
   ],
@@ -304,6 +355,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:85415"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ipecoside beta-D-glucosidase",
+      "equation": "ipecoside + H2O = ipecoside aglycone + D-glucose",
+      "ec": "3.2.1.220",
+      "substrates": [
+        {
+          "metabolite": "ipecoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ipecoside_aglycone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78743"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "averantin hydroxylase",
+      "equation": "(1'S)-averantin + reduced [NADPH--hemoprotein reductase] + O2 = (1'S,5'R)-5'-hydroxyaverantin + oxidized [NADPH--hemoprotein reductase] + H2O",
+      "ec": "1.14.14.116",
+      "substrates": [
+        {
+          "metabolite": "s_averantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_s_5_r_5_hydroxyaverantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35575"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35575"
           }
         ]
       }

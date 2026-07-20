@@ -19,4 +19,28 @@ pathway ditrans-polycis-undecapre-to-cytidine-5-monophos "ditrans,polycis-undeca
     <-> ec_2_7_8_45 [2.7.8.45] +2r_cdp_glycerol -cytidine_5_monophosphate -hplus
     4_o_di_2r_1_glycerylphosphonato_n_acetyl_d_manno
   }
+
+  branch from ditrans_polycis_undecaprenyl_phosphate side left {
+    ditrans_polycis_undecaprenyl_phosphate
+    <-> ec_2_7_8_40 [2.7.8.40] +udp_n_acetyl_d_galactosamine +ump
+    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
+  }
+
+  branch from n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly side right {
+    n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly
+    <-> ec_2_4_1_188 [2.4.1.188] +udp_d_glucose +udp +hplus
+    d_glucosyl_1_4_n_acetyl_d_glucosaminyl_undecapr
+  }
+
+  branch from ump side left {
+    ump
+    <-> ec_3_6_1_8 [3.6.1.8] +utp +h2o +hplus
+    ppi
+  }
+
+  branch from 4_o_2r_1_glycerylphosphonato_n_acetyl_d_mannosam side right {
+    4_o_2r_1_glycerylphosphonato_n_acetyl_d_mannosam
+    <-> ec_2_7_8_46 [2.7.8.46] +cdp_ribitol +cytidine_5_monophosphate +hplus
+    4_o_1_d_ribitylphosphonato_2r_1_glycerylphosphon
+  }
 }

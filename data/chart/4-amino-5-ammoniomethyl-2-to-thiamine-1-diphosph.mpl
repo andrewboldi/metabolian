@@ -21,4 +21,22 @@ pathway 4-amino-5-ammoniomethyl-2-to-thiamine-1-diphosph "4-amino-5-ammoniomethy
     <-> ec_2_7_6_2 [2.7.6.2] +atp -amp -hplus
     thiamine_1_diphosphate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_3_22 [1.4.3.22] +histaminium +o2 +h2o +h2o2
+    imidazole_4_acetaldehyde
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_38 [4.2.3.38] +fpp
+    e_r_bisabolene
+  }
+
+  branch from thiamine side left {
+    thiamine
+    <-> ec_1_1_3_23 [1.1.3.23] +o2 +h2o +h2o2 +hplus
+    thiaminium_carboxylate_betaine
+  }
 }

@@ -15,4 +15,16 @@ pathway myo-inositol-phosphate-to-2d-2-3-5-4-6-pentahydr "myo-inositol phosphate
     <-> ec_5_3_99_11 [5.3.99.11]
     2d_2_3_5_4_6_pentahydroxycyclohexanone
   }
+
+  branch from myo_inositol side left {
+    myo_inositol
+    <-> ec_1_13_99_1 [1.13.99.1] +o2 +h2o +hplus
+    d_glucopyranuronate
+  }
+
+  branch from 2d_2_3_5_4_6_pentahydroxycyclohexanone side right {
+    2d_2_3_5_4_6_pentahydroxycyclohexanone
+    <-> ec_1_1_1_369 [1.1.1.369] +nad +nadh +hplus
+    1d_chiro_inositol
+  }
 }

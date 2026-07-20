@@ -17,4 +17,16 @@ pathway 3r-4r-7-2-4-trihydrox-to-fmn "(3R,4R)-7,2',4'-trihydrox… to FMN" {
     <-> ec_1_14_14_135 [1.14.14.135] +fmnh2 +o2 -fmn -h2o -hplus
     glyceollin_ii
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_42 [1.14.14.42] +l_pentahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_8_methylsulfanyl_octanal_oxime
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_pentaprenyl_diphosphate
+  }
 }

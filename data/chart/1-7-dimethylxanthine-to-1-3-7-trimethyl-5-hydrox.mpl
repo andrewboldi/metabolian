@@ -15,4 +15,10 @@ pathway 1-7-dimethylxanthine-to-1-3-7-trimethyl-5-hydrox "1,7-dimethylxanthine t
     <-> ec_1_14_13_212 [1.14.13.212] +1_3_7_trimethyluric_acid +nadh +o2 +hplus -nad -h2o
     1_3_7_trimethyl_5_hydroxyisouric_acid
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_153 [2.1.1.153] +vitexin_2_o_l_rhamnoside +sam +hplus
+    7_o_methylvitexin_2_o_l_rhamnoside
+  }
 }

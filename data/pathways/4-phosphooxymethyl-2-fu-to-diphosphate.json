@@ -111,6 +111,25 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "selinene",
+      "name": "(+)-δ-selinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49279"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +152,13 @@
       "name": "(4-{4-[2-(gamma-L-glutamylamino)ethyl]phenoxymethyl}furan-2-",
       "ec": [
         "2.5.1.131"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_76",
+      "name": "(+)-delta-selinene synthase",
+      "ec": [
+        "4.2.3.76"
       ]
     }
   ],
@@ -268,6 +294,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:47840"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(+)-delta-selinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-delta-selinene + diphosphate",
+      "ec": "4.2.3.76",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30423"
           }
         ]
       }

@@ -108,6 +108,81 @@
       "xrefs": {
         "chebi": "CHEBI:35680"
       }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "all_trans_hexaprenyl_diphosphate",
+      "name": "all-trans-hexaprenyl diphosphate",
+      "short": "all-trans-hexapreny…",
+      "formula": "C30H49O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58179"
+      }
+    },
+    {
+      "id": "oleate",
+      "name": "oleate",
+      "formula": "C18H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30823"
+      }
+    },
+    {
+      "id": "18_hydroxyoleate",
+      "name": "18-hydroxyoleate",
+      "formula": "C18H33O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78424"
+      }
+    },
+    {
+      "id": "abietal",
+      "name": "abietal",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29509"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +205,27 @@
       "name": "abieta-7,13-dien-18-ol hydroxylase",
       "ec": [
         "1.14.14.145"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_83",
+      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
+      "ec": [
+        "2.5.1.83"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_80",
+      "name": "long-chain fatty acid omega-monooxygenase",
+      "ec": [
+        "1.14.14.80"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_74",
+      "name": "abieta-7,13-dien-18-al dehydrogenase",
+      "ec": [
+        "1.2.1.74"
       ]
     }
   ],
@@ -285,6 +381,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:26221"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
+      "equation": "3 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-hexaprenyl diphosphate + 3 diphosphate",
+      "ec": "2.5.1.83",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_hexaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "long-chain fatty acid omega-monooxygenase",
+      "equation": "(9Z)-octadecenoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-(9Z)-octadecenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.80",
+      "substrates": [
+        {
+          "metabolite": "oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "18_hydroxyoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41728"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "abieta-7,13-dien-18-al dehydrogenase",
+      "equation": "abieta-7,13-dien-18-al + NAD(+) + H2O = abieta-7,13-dien-18-oate + NADH + 2 H(+)",
+      "ec": "1.2.1.74",
+      "substrates": [
+        {
+          "metabolite": "abietal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "abietate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:26225"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26225"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-ribosylnicotinate-to-n-d-glucosyl-nicotinate",
   "name": "D-ribosylnicotinate to N-(β-D-glucosyl)nicotinate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from D-ribosylnicotinate to N-(β-D-glucosyl)nicotinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,6 +119,35 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_methylnicotinate",
+      "name": "N-methylnicotinate",
+      "formula": "C7H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18123"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +170,13 @@
       "name": "nicotinate glucosyltransferase",
       "ec": [
         "2.4.1.196"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_7",
+      "name": "nicotinate N-methyltransferase",
+      "ec": [
+        "2.1.1.7"
       ]
     }
   ],
@@ -284,6 +320,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:19437"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nicotinate N-methyltransferase",
+      "equation": "nicotinate + S-adenosyl-L-methionine = N-methylnicotinate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.7",
+      "substrates": [
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylnicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20241"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20241"
           }
         ]
       }

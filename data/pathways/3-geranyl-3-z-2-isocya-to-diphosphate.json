@@ -136,6 +136,55 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "ambiguine_h",
+      "name": "ambiguine H",
+      "formula": "C26H33N2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:229756"
+      }
+    },
+    {
+      "id": "2r_3s_4s_leucoanthocyanidin",
+      "name": "(2R,3S,4S)-leucoanthocyanidin",
+      "short": "(2R,3S,4S)-leucoant…",
+      "formula": "C15H5O3R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138176"
+      }
+    },
+    {
+      "id": "4_unsubstituted_3_hydroxyanthocyanidin_betaine",
+      "name": "4-unsubstituted 3-hydroxyanthocyanidin betaine",
+      "short": "4-unsubstituted…",
+      "formula": "C15HO2R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138177"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "exo_bergamotene",
+      "name": "(−)-exo-α-bergamotene",
+      "short": "(−)-exo-α-bergamote…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62756"
+      }
     }
   ],
   "enzymes": [
@@ -158,6 +207,20 @@
       "name": "hapalindole G dimethylallyltransferase",
       "ec": [
         "2.5.1.159"
+      ]
+    },
+    {
+      "id": "ec_1_14_20_4",
+      "name": "anthocyanidin synthase",
+      "ec": [
+        "1.14.20.4"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_81",
+      "name": "exo-alpha-bergamotene synthase",
+      "ec": [
+        "4.2.3.81"
       ]
     }
   ],
@@ -305,6 +368,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:79227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hapalindole G dimethylallyltransferase",
+      "equation": "hapalindole U + dimethylallyl diphosphate + H(+) = ambiguine H + diphosphate",
+      "ec": "2.5.1.159",
+      "substrates": [
+        {
+          "metabolite": "hapalindole_u",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ambiguine_h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:79231"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "anthocyanidin synthase",
+      "equation": "a (2R,3S,4S)-leucoanthocyanidin + 2-oxoglutarate + O2 = a 4-H-anthocyanidin with a 3-hydroxy group + succinate + CO2 + 2 H2O",
+      "ec": "1.14.20.4",
+      "substrates": [
+        {
+          "metabolite": "2r_3s_4s_leucoanthocyanidin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_unsubstituted_3_hydroxyanthocyanidin_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_20_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:54432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "exo-alpha-bergamotene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (1S,5S,6R)-alpha-bergamotene + diphosphate",
+      "ec": "4.2.3.81",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "exo_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:31427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31427"
           }
         ]
       }

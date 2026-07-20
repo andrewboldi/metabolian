@@ -19,4 +19,22 @@ pathway rhodopin-to-hydrogen-donor "rhodopin to hydrogen donor" {
     <-> ec_1_3_99_37 [1.3.99.37] +hydrogen_acceptor -hydrogen_donor
     bisanhydrobacterioruberin
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_67 [4.2.3.67] +fpp
+    cis_muurola_4_14_5_diene
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_19_15 [1.14.19.15] +11z_hexadec_11_enoyl_coa +o2 +hydrogen_acceptor +h2o
+    10e_12z_hexadecadienoyl_coa
+  }
+
+  branch from bisanhydrobacterioruberin side left {
+    bisanhydrobacterioruberin
+    <-> ec_4_2_1_161 [4.2.1.161] +h2o
+    bacterioruberin
+  }
 }

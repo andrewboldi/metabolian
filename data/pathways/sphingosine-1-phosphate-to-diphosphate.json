@@ -114,6 +114,45 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "3_o_l_olivosyl_oleandolide",
+      "name": "3-O-(α-L-olivosyl)oleandolide",
+      "short": "3-O-(α-L-olivosyl)o…",
+      "formula": "C26H44O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29614"
+      }
+    },
+    {
+      "id": "3_o_l_oleandrosyl_oleandolide",
+      "name": "3-O-(α-L-oleandrosyl)oleandolide",
+      "short": "3-O-(α-L-oleandrosy…",
+      "formula": "C27H46O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29613"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "gurjunene",
+      "name": "(−)-α-gurjunene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61699"
+      }
     }
   ],
   "enzymes": [
@@ -136,6 +175,20 @@
       "name": "N-methylphosphoethanolamine cytidylyltransferase",
       "ec": [
         "2.7.7.57"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_239",
+      "name": "L-olivosyl-oleandolide 3-O-methyltransferase",
+      "ec": [
+        "2.1.1.239"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_72",
+      "name": "alpha-gurjunene synthase",
+      "ec": [
+        "4.2.3.72"
       ]
     }
   ],
@@ -275,6 +328,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:10576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-olivosyl-oleandolide 3-O-methyltransferase",
+      "equation": "L-olivosyl-oleandolide + S-adenosyl-L-methionine = L-oleandrosyl-oleandolide + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.239",
+      "substrates": [
+        {
+          "metabolite": "3_o_l_olivosyl_oleandolide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_l_oleandrosyl_oleandolide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_239"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alpha-gurjunene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-gurjunene + diphosphate",
+      "ec": "4.2.3.72",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gurjunene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:29507"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29507"
           }
         ]
       }

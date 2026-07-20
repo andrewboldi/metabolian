@@ -146,6 +146,52 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "6_hydroxymellein",
+      "name": "6-hydroxymellein",
+      "formula": "C10H10O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16368"
+      }
+    },
+    {
+      "id": "6_methoxymellein",
+      "name": "6-methoxymellein",
+      "formula": "C11H12O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16252"
+      }
+    },
+    {
+      "id": "s_1_pyrroline_5_carboxylate",
+      "name": "(S)-1-pyrroline-5-carboxylate",
+      "short": "1-pyrroline-5-carbo…",
+      "formula": "C5H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17388"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -168,6 +214,20 @@
       "name": "hydrogenobyrinic acid a,c-diamide synthase (glutamine-hydrolyzing)",
       "ec": [
         "6.3.5.9"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_108",
+      "name": "6-hydroxymellein O-methyltransferase",
+      "ec": [
+        "2.1.1.108"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_88",
+      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.88"
       ]
     }
   ],
@@ -327,6 +387,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:12544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "6-hydroxymellein O-methyltransferase",
+      "equation": "6-hydroxymellein + S-adenosyl-L-methionine = 6-methoxymellein + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.108",
+      "substrates": [
+        {
+          "metabolite": "6_hydroxymellein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_methoxymellein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_108"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15201"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
+      "equation": "(S)-1-pyrroline-5-carboxylate + NAD(+) + 2 H2O = L-glutamate + NADH + H(+)",
+      "ec": "1.2.1.88",
+      "substrates": [
+        {
+          "metabolite": "s_1_pyrroline_5_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:16417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16417"
           }
         ]
       }

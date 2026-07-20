@@ -19,4 +19,28 @@ pathway 1-sn-glycero-3-o-phospho-to-1-phosphatidyl-1d-my "1-(sn-glycero-3-O-phos
     <-> ec_3_1_3_64 [3.1.3.64] +h2o -pi
     1_phosphatidyl_1d_myo_inositol
   }
+
+  branch from glycerol side left {
+    glycerol
+    <-> ec_3_1_4_46 [3.1.4.46] +sn_glycero_3_phosphoglycerol +h2o +hplus
+    sn_glycerol_3_phosphate
+  }
+
+  branch from myo_inositol side right {
+    myo_inositol
+    <-> ec_2_4_1_67 [2.4.1.67] +d_galactosyl_1_3_1d_myo_inositol +raffinose
+    stachyose
+  }
+
+  branch from 1_phosphatidyl_1d_myo_inositol side left {
+    1_phosphatidyl_1d_myo_inositol
+    <-> ec_4_6_1_13 [4.6.1.13] +dag
+    1d_myo_inositol_1_2_cyclic_phosphate
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_10 [2.7.8.10] +cdp_choline +sphingosine +hplus
+    sphingosine_1_phosphocholine
+  }
 }

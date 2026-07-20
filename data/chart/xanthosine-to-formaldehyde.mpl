@@ -15,4 +15,16 @@ pathway xanthosine-to-formaldehyde "xanthosine to formaldehyde" {
     <-> ec_1_14_13_128 [1.14.13.128] +nadph +o2 +hplus -formaldehyde -nadp -h2o
     xanthine
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_69 [2.1.1.69] +5_hydroxyxanthotoxin +sam
+    isopimpinellin
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_11_53 [1.14.11.53] +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
+  }
 }

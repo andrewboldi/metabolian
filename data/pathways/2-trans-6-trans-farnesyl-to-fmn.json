@@ -109,6 +109,45 @@
       "xrefs": {
         "chebi": "CHEBI:3900"
       }
+    },
+    {
+      "id": "santalene",
+      "name": "(−)-β-santalene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10440"
+      }
+    },
+    {
+      "id": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+      "name": "8β-hydroxygermacra-1(10),4,11(13)-trien-12-oate",
+      "short": "8β-hydroxygermacra-…",
+      "formula": "C15H21O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142464"
+      }
+    },
+    {
+      "id": "3_5_unsubstituted_flavanone",
+      "name": "3',5'-unsubstituted flavanone",
+      "short": "3',5'-unsubstituted…",
+      "formula": "C15H2O2R10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138897"
+      }
+    },
+    {
+      "id": "3_5_dihydroxyflavanone",
+      "name": "3',5'-dihydroxyflavanone",
+      "short": "3',5'-dihydroxyflav…",
+      "formula": "C15H2O4R10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48025"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +170,27 @@
       "name": "costunolide synthase",
       "ec": [
         "1.14.14.150"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_83",
+      "name": "beta-santalene synthase",
+      "ec": [
+        "4.2.3.83"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_168",
+      "name": "germacreene A acid 8beta-hydroxylase",
+      "ec": [
+        "1.14.14.168"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_81",
+      "name": "flavonoid 3',5'-hydroxylase",
+      "ec": [
+        "1.14.14.81"
       ]
     }
   ],
@@ -282,6 +342,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:28230"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-santalene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-beta-santalene + diphosphate",
+      "ec": "4.2.3.83",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "santalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "germacreene A acid 8beta-hydroxylase",
+      "equation": "germacra-1(10),4,11(13)-trien-12-oate + reduced [NADPH--hemoprotein reductase] + O2 = 8beta-hydroxygermacra-1(10),4,11(13)-trien-12-oate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.168",
+      "substrates": [
+        {
+          "metabolite": "germacra_1_10_4_11_13_trien_12_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_168"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:57964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "flavonoid 3',5'-hydroxylase",
+      "equation": "a 3',5'-unsubstituted flavanone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = a 3',5'-dihydroxyflavanone + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "ec": "1.14.14.81",
+      "substrates": [
+        {
+          "metabolite": "3_5_unsubstituted_flavanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dihydroxyflavanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:55448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55448"
           }
         ]
       }

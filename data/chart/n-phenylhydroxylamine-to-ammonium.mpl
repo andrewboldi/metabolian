@@ -17,4 +17,28 @@ pathway n-phenylhydroxylamine-to-ammonium "N-phenylhydroxylamine to ammonium" {
     <-> ec_3_5_99_5 [3.5.99.5] +h2o -nh3
     3e_2_oxohex_3_enedioate
   }
+
+  branch from 2_aminophenol side left {
+    2_aminophenol
+    <-> ec_1_10_3_4 [1.10.3.4] +o2 +h2o
+    2_aminophenoxazin_3_one
+  }
+
+  branch from 2_aminomuconic_6_semialdehyde side right {
+    2_aminomuconic_6_semialdehyde
+    <-> ec_4_1_1_45 [4.1.1.45] +hplus +co2
+    cis_cis_2_ammonio_3_3_oxoprop_1_enyl_but_2_enedi
+  }
+
+  branch from 2z_4e_2_ammoniomuconate side left {
+    2z_4e_2_ammoniomuconate
+    <-> ec_3_5_99_11 [3.5.99.11] +h2o +nh3
+    2z_4e_2_hydroxymuconate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_13_99_3 [1.13.99.3] +l_tryptophan +o2 +hplus +co2
+    3_indoleglycolaldehyde
+  }
 }

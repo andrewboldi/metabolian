@@ -27,4 +27,22 @@ pathway 6s-5-formyltetrahydrofo-to-5-amino-1-5-phosphon "(6S)-5-formyltetrahydro
     <-> ec_4_1_1_21 [4.1.1.21] +hplus -co2
     air
   }
+
+  branch from formate side left {
+    formate
+    <-> ec_1_10_3_15 [1.10.3.15] +3_amino_4_hydroxybenzaldehyde +n_acetyl_l_cysteinate +o2 +h2o +hplus
+    grixazone_a
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_26 [2.6.1.26] +3_3_5_triiodo_l_thyronine +akg
+    3_5_3_triiodothyropyruvate
+  }
+
+  branch from air side left {
+    air
+    <-> ec_4_1_99_23 [4.1.99.23] +hydrogen_donor +sam +5_deoxyadenosine +formate +methionine +hydrogen_acceptor +nh3 +pi +hplus
+    5_hydroxybenzimidazole
+  }
 }

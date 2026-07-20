@@ -17,4 +17,28 @@ pathway pyrithiamine-to-nitrite "pyrithiamine to nitrite" {
     <-> ec_1_7_5_1 [1.7.5.1] +hydroquinones -nitrite -h2o
     1_4_benzoquinones
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_15 [1.4.1.15] +l_lysinium +nad +nadh +hplus
+    1_piperideine_2_carboxylic_acid
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_7_3_5 [1.7.3.5] +3_aci_nitropropanoate +o2 +h2o +h2o2 +hplus
+    3_oxopropanoate
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_3_7_5 [1.3.7.5] +2r_3z_phycocyanobilin +di_sulfido_diiron +hplus
+    biliverdin
+  }
+
+  branch from 1_4_benzoquinones side right {
+    1_4_benzoquinones
+    <-> ec_1_6_5_5 [1.6.5.5] +nadph +hplus +nadp
+    1_4_benzosemiquinones
+  }
 }

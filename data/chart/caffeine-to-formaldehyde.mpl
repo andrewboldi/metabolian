@@ -15,4 +15,10 @@ pathway caffeine-to-formaldehyde "caffeine to formaldehyde" {
     <-> ec_1_14_13_128 [1.14.13.128] +nadh +o2 +hplus -formaldehyde -nad -h2o
     xanthine
   }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_11_68 [1.14.11.68] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
+  }
 }

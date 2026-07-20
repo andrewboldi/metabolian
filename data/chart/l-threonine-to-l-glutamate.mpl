@@ -17,4 +17,28 @@ pathway l-threonine-to-l-glutamate "L-threonine to L-glutamate" {
     <-> ec_2_6_1_57 [2.6.1.57] +methionine +akg -glutamate
     4_methylthio_2_oxobutanoate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_73 [4.2.3.73] +fpp
+    valencene
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_2_8_1_14 [2.8.1.14] +5_taurinomethyluridine_5_phosphate_1 +3_disulfanyl_l_alanine +hydrogen_donor +atp +l_cysteine +amp +ppi +hplus
+    5_taurinomethyl_2_thiouridine_5_phosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_237 [2.1.1.237] +mycinamicin_iii +sam +hplus
+    mycinamicin_iv
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_6_3_2_33 [6.3.2.33] +5_6_7_8_tetrahydromethanopterin +atp +adp +pi +hplus
+    5_6_7_8_tetrahydrosarcinapterin
+  }
 }

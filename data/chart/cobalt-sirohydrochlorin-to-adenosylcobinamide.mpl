@@ -21,4 +21,28 @@ pathway cobalt-sirohydrochlorin-to-adenosylcobinamide "cobalt-sirohydrochlorin t
     <-> ec_2_7_1_156 [2.7.1.156] +atp -adp -hplus
     adenosylcobinamide_phosphate
   }
+
+  branch from sirohydrochlorin side left {
+    sirohydrochlorin
+    <-> ec_1_3_1_76 [1.3.1.76] +nad +nadh +hplus
+    precorrin_2
+  }
+
+  branch from cobalt side right {
+    cobalt
+    <-> ec_4_99_1_3 [4.99.1.3] +hplus +precorrin_2
+    cobalt_precorrin_2
+  }
+
+  branch from triphosphate side left {
+    triphosphate
+    <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate +hplus
+    r_dyspropterin
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_7_2_11 [2.7.2.11] +atp +adp
+    l_glutamyl_phosphate
+  }
 }

@@ -23,4 +23,28 @@ pathway creatinine-to-5-10-methylenetetrahydrom "creatinine to 5,10-methylenetet
     <-> ec_4_2_1_147 [4.2.1.147] +5_6_7_8_tetrahydromethanopterin -h2o
     5_10_methylenetetrahydromethanopterin
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_2_1 [1.4.2.1] +iron +h2o +fe2 +glyoxylate +hplus
+    glycine
+  }
+
+  branch from sarcosine side right {
+    sarcosine
+    <-> ec_2_1_1_20 [2.1.1.20] +glycine +sam +hplus
+    sah
+  }
+
+  branch from methylamine side left {
+    methylamine
+    <-> ec_3_5_1_36 [3.5.1.36] +n_methyl_2_oxoglutaramate +h2o
+    akg
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_3_5_1_116 [3.5.1.116] +h2o +hplus +nh3 +co2
+    ureidoglycolate
+  }
 }

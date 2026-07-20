@@ -21,4 +21,16 @@ pathway 17-o-acetylnorajmaline-to-cortalcerone "17-O-acetylnorajmaline to cortal
     <-> ec_4_2_1_110 [4.2.1.110] -h2o
     cortalcerone
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_42 [3.2.1.42] +h2o +gdp +hplus
+    gdp_d_glucose
+  }
+
+  branch from 2_dehydro_d_glucopyranose side right {
+    2_dehydro_d_glucopyranose
+    <-> ec_1_5_3_25 [1.5.3.25] +n_1_deoxy_d_fructopyranos_1_yl_amine +o2 +h2o +h2o2
+    primary_aliphatic_ammonium_ion
+  }
 }

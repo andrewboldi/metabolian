@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-argininium-to-aminobutyric-acid",
   "name": "D-argininium to γ-aminobutyric acid",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from D-argininium(1+) to γ-aminobutyric acid zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -147,6 +147,91 @@
       "xrefs": {
         "chebi": "CHEBI:59888"
       }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "3r_5_guanidino_3_methyl_2_oxopentanoic_acid",
+      "name": "(3R)-5-guanidino-3-methyl-2-oxopentanoic acid",
+      "short": "5-guanidino-3-methy…",
+      "formula": "C7H13N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229580"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60344"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "mycobilin_a",
+      "name": "mycobilin a",
+      "formula": "C34H32N4O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136507"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "2_deoxycytidine_5_monophosphate_1",
+      "name": "2'-deoxycytidine 5'-monophosphate(1−)",
+      "short": "2'-deoxycytidine…",
+      "formula": "C9H11N3O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85452"
+      }
+    },
+    {
+      "id": "dump",
+      "name": "dUMP",
+      "formula": "C9H10N2O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133902"
+      }
     }
   ],
   "enzymes": [
@@ -183,6 +268,27 @@
       "name": "guanidinopropionase",
       "ec": [
         "3.5.3.17"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_243",
+      "name": "5-guanidino-2-oxopentanoate (3R)-methyltransferase",
+      "ec": [
+        "2.1.1.243"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_57",
+      "name": "heme oxygenase (mycobilin-producing)",
+      "ec": [
+        "1.14.99.57"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_38",
+      "name": "single-stranded DNA cytosine deaminase",
+      "ec": [
+        "3.5.4.38"
       ]
     }
   ],
@@ -379,6 +485,165 @@
           {
             "db": "Rhea",
             "id": "RHEA:19501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "5-guanidino-2-oxopentanoate (3R)-methyltransferase",
+      "equation": "5-guanidino-2-oxopentanoate + S-adenosyl-L-methionine = (3R)-5-guanidino-3-methyl-2-oxopentanoate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.243",
+      "substrates": [
+        {
+          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_5_guanidino_3_methyl_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_243"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32663"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "heme oxygenase (mycobilin-producing)",
+      "equation": "heme b + 3 AH2 + 3 O2 + 2 H(+) = mycobilin a + Fe(2+) + 3 A + 3 H2O",
+      "ec": "1.14.99.57",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycobilin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:52232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "single-stranded DNA cytosine deaminase",
+      "equation": "a 2'-deoxycytidine in single-stranded DNA + H2O + H(+) = a 2'-deoxyuridine in single-stranded DNA + NH4(+)",
+      "ec": "3.5.4.38",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:50948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50948"
           }
         ]
       }

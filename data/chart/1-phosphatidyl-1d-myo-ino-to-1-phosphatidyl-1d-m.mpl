@@ -21,4 +21,10 @@ pathway 1-phosphatidyl-1d-myo-ino-to-1-phosphatidyl-1d-m "1-phosphatidyl-1D-myo-
     <-> ec_2_7_1_153 [2.7.1.153] +atp -adp -hplus
     1_phosphatidyl_1d_myo_inositol_3_4_5_trisphospha
   }
+
+  branch from 1_phosphatidyl_1d_myo_inositol_3_4_bisphosphate side left {
+    1_phosphatidyl_1d_myo_inositol_3_4_bisphosphate
+    <-> ec_2_7_1_154 [2.7.1.154] +atp +adp +hplus
+    1_phosphatidyl_1d_myo_inositol_4_phosphate
+  }
 }

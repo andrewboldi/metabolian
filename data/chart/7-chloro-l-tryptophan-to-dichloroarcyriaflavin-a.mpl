@@ -15,4 +15,10 @@ pathway 7-chloro-l-tryptophan-to-dichloroarcyriaflavin-a "7-chloro-L-tryptophan 
     <-> ec_1_13_12_17 [1.13.12.17] +nadh +o2 +hplus -co2 -nad -h2o
     dichloroarcyriaflavin_a
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_7_2_7 [1.7.2.7] +hydrazine +iron +h2o +fe2 +hplus
+    no
+  }
 }

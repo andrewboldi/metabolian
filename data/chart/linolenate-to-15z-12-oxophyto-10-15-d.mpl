@@ -15,4 +15,16 @@ pathway linolenate-to-15z-12-oxophyto-10-15-d "α-linolenate to (15Z)-12-oxophyt
     <-> ec_5_3_99_6 [5.3.99.6]
     15z_12_oxophyto_10_15_dienoate
   }
+
+  branch from 9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t side left {
+    9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t
+    <-> ec_4_2_1_183 [4.2.1.183] +h2o
+    etherolenate
+  }
+
+  branch from 15z_12_oxophyto_10_15_dienoate side right {
+    15z_12_oxophyto_10_15_dienoate
+    <-> ec_1_3_1_42 [1.3.1.42] +nadp +nadph +hplus
+    8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct
+  }
 }

@@ -177,6 +177,72 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
+    },
+    {
+      "id": "histaminium",
+      "name": "histaminium",
+      "formula": "C5H10N3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58432"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "imidazole_4_acetaldehyde",
+      "name": "imidazole-4-acetaldehyde",
+      "short": "imidazole-4-acetald…",
+      "formula": "C5H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27398"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "e_r_bisabolene",
+      "name": "(E,R)-α-bisabolene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49243"
+      }
+    },
+    {
+      "id": "thiaminium_carboxylate_betaine",
+      "name": "thiaminium carboxylate betaine",
+      "short": "thiaminium…",
+      "formula": "C12H14N4O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58438"
+      }
     }
   ],
   "enzymes": [
@@ -220,6 +286,27 @@
       "name": "thiamine diphosphokinase",
       "ec": [
         "2.7.6.2"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_22",
+      "name": "diamine oxidase",
+      "ec": [
+        "1.4.3.22"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_38",
+      "name": "alpha-bisabolene synthase",
+      "ec": [
+        "4.2.3.38"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_23",
+      "name": "thiamine oxidase",
+      "ec": [
+        "1.1.3.23"
       ]
     }
   ],
@@ -506,6 +593,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:11576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "diamine oxidase",
+      "equation": "histamine + O2 + H2O = imidazole-4-acetaldehyde + H2O2 + NH4(+)",
+      "ec": "1.4.3.22",
+      "substrates": [
+        {
+          "metabolite": "histaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "imidazole_4_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:25625"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "alpha-bisabolene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (E,R)-alpha-bisabolene + diphosphate",
+      "ec": "4.2.3.38",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_r_bisabolene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:25436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "thiamine oxidase",
+      "equation": "thiamine + 2 O2 + H2O = thiamine acetate + 2 H2O2 + H(+)",
+      "ec": "1.1.3.23",
+      "substrates": [
+        {
+          "metabolite": "thiamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiaminium_carboxylate_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:21280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21280"
           }
         ]
       }

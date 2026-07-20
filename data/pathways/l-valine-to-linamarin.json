@@ -127,6 +127,25 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "geranylhydroquinone",
+      "name": "geranylhydroquinone",
+      "formula": "C16H22O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24233"
+      }
+    },
+    {
+      "id": "3_hydroxy_geranylhydroquinone",
+      "name": "3''-hydroxy-geranylhydroquinone",
+      "short": "3''-hydroxy-geranyl…",
+      "formula": "C16H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61158"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +168,13 @@
       "name": "linamarin synthase",
       "ec": [
         "2.4.1.63"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_174",
+      "name": "geranylhydroquinone 3''-hydroxylase",
+      "ec": [
+        "1.14.14.174"
       ]
     }
   ],
@@ -316,6 +342,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:20009"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "geranylhydroquinone 3''-hydroxylase",
+      "equation": "(2E)-geranylhydroquinone + reduced [NADPH--hemoprotein reductase] + O2 = (2Z)-3''-hydroxygeranylhydroquinone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.174",
+      "substrates": [
+        {
+          "metabolite": "geranylhydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_geranylhydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_174"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28146"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28146"
           }
         ]
       }

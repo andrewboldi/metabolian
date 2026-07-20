@@ -234,6 +234,91 @@
       "xrefs": {
         "chebi": "CHEBI:84359"
       }
+    },
+    {
+      "id": "5_formimidoyltetrahydrofolate",
+      "name": "5-formimidoyltetrahydrofolate",
+      "short": "5-formimidoyltetrah…",
+      "formula": "C20H22N8O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57456"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "methylene_thf",
+      "name": "5,10-Methylenetetrahydrofolate",
+      "short": "5,10-Methylenetetra…",
+      "formula": "C20H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15636"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "5_methyluridine_5_monophosphate_1",
+      "name": "5-methyluridine 5'-monophosphate(1−)",
+      "short": "5-methyluridine…",
+      "formula": "C10H12N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74447"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "dimethyl_sulfoxide",
+      "name": "dimethyl sulfoxide",
+      "formula": "C2H6OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28262"
+      }
     }
   ],
   "enzymes": [
@@ -298,6 +383,41 @@
       "name": "(4S)-4-hydroxy-5-phosphooxypentane-2,3-dione isomerase",
       "ec": [
         "5.3.1.32"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_4",
+      "name": "formimidoyltetrahydrofolate cyclodeaminase",
+      "ec": [
+        "4.3.1.4"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_74",
+      "name": "methylenetetrahydrofolate--tRNA-(uracil(54)-C(5))-methyltransferase",
+      "ec": [
+        "2.1.1.74"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_245",
+      "name": "assimilatory dimethylsulfide S-monooxygenase",
+      "ec": [
+        "1.14.13.245"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_20",
+      "name": "methylenetetrahydrofolate reductase [NAD(P)H]",
+      "ec": [
+        "1.5.1.20"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_54",
+      "name": "methylenetetrahydrofolate reductase (NADH)",
+      "ec": [
+        "1.5.1.54"
       ]
     }
   ],
@@ -715,6 +835,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:44360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "formimidoyltetrahydrofolate cyclodeaminase",
+      "equation": "5-formimidoyltetrahydrofolate + 2 H(+) = (6R)-5,10-methenyltetrahydrofolate + NH4(+)",
+      "ec": "4.3.1.4",
+      "substrates": [
+        {
+          "metabolite": "5_formimidoyltetrahydrofolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methenyl_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:22736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "methylenetetrahydrofolate--tRNA-(uracil(54)-C(5))-methyltransferase",
+      "equation": "uridine(54) in tRNA + (6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NADH + H(+) = 5-methyluridine(54) in tRNA + (6S)-5,6,7,8-tetrahydrofolate + NAD(+)",
+      "ec": "2.1.1.74",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methyluridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:16873"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16873"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "assimilatory dimethylsulfide S-monooxygenase",
+      "equation": "dimethyl sulfide + NADH + O2 + H(+) = dimethyl sulfoxide + NAD(+) + H2O",
+      "ec": "1.14.13.245",
+      "substrates": [
+        {
+          "metabolite": "dimethyl_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethyl_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_245"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:57960"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "methylenetetrahydrofolate reductase [NAD(P)H]",
+      "equation": "(6S)-5-methyl-5,6,7,8-tetrahydrofolate + NAD(+) = (6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NADH + H(+)",
+      "ec": "1.5.1.20",
+      "substrates": [
+        {
+          "metabolite": "6s_5_methyltetrahydrofolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:19821"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19821"
           }
         ]
       }

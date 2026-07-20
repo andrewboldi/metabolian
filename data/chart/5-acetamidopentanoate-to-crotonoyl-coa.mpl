@@ -19,4 +19,28 @@ pathway 5-acetamidopentanoate-to-crotonoyl-coa "5-acetamidopentanoate to crotono
     <-> ec_1_3_8_6 [1.3.8.6] +fad +hplus -fadh2 -co2
     crotonoyl_coa
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_98 [3.5.1.98] +n6_acetyl_l_lysine +h2o
+    l_lysinium
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_1_5_1_9 [1.5.1.9] +l_saccharopinate +nad +h2o +nadh +hplus
+    l_allysine
+  }
+
+  branch from glutaryl_coa side left {
+    glutaryl_coa
+    <-> ec_1_3_99_32 [1.3.99.32] +hydrogen_acceptor +hydrogen_donor
+    trans_4_carboxybut_2_enoyl_coa
+  }
+
+  branch from crotonoyl_coa side right {
+    crotonoyl_coa
+    <-> ec_5_3_3_3 [5.3.3.3]
+    vinylacetyl_coa
+  }
 }

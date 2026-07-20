@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "carboxynorspermidine-to-3-ammoniopropanal",
   "name": "carboxynorspermidine to 3-ammoniopropanal",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from carboxynorspermidine(2+) to 3-ammoniopropanal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,6 +119,35 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "caldopentamine",
+      "name": "caldopentamine",
+      "formula": "C12H35N5",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:82769"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "s_s_s_nicotianamine_trizwitterion",
+      "name": "(S,S,S)-nicotianamine trizwitterion",
+      "short": "(S,S,S)-nicotianami…",
+      "formula": "C12H21N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58249"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +170,20 @@
       "name": "spermine oxidase",
       "ec": [
         "1.5.3.16"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_127",
+      "name": "caldopentamine synthase",
+      "ec": [
+        "2.5.1.127"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_43",
+      "name": "nicotianamine synthase",
+      "ec": [
+        "2.5.1.43"
       ]
     }
   ],
@@ -288,6 +331,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:25816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "caldopentamine synthase",
+      "equation": "norspermine + S-adenosyl 3-(methylsulfanyl)propylamine = caldopentamine + S-methyl-5'-thioadenosine + 2 H(+)",
+      "ec": "2.5.1.127",
+      "substrates": [
+        {
+          "metabolite": "3_3_3_tetraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_adenosylmethioninaminium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "caldopentamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_127"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:42868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "nicotianamine synthase",
+      "equation": "3 S-adenosyl-L-methionine = nicotianamine + 3 S-methyl-5'-thioadenosine + 3 H(+)",
+      "ec": "2.5.1.43",
+      "substrates": [
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_s_nicotianamine_trizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:16481"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16481"
           }
         ]
       }

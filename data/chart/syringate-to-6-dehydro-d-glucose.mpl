@@ -19,4 +19,16 @@ pathway syringate-to-6-dehydro-d-glucose "syringate to 6-dehydro-D-glucose" {
     <-> ec_1_1_1_432 [1.1.1.432] +glucose +nadp -nadph -hplus
     6_dehydro_d_glucose
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_218 [3.2.1.218] +3_dehydromaltose +h2o
+    3_dehydro_d_glucose
+  }
+
+  branch from 6_dehydro_d_glucose side right {
+    6_dehydro_d_glucose
+    <-> ec_1_14_14_181 [1.14.14.181] +6_sulfo_d_quinovose +fmnh2 +o2 +sulfite +h2o +hplus
+    fmn
+  }
 }

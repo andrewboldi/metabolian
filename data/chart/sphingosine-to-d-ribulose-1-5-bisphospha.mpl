@@ -25,4 +25,28 @@ pathway sphingosine-to-d-ribulose-1-5-bisphospha "sphingosine to D-ribulose 1,5-
     <-> ec_2_7_1_19 [2.7.1.19] +atp -adp -hplus
     d_ribulose_1_5_bisphosphate
   }
+
+  branch from n_acylsphingosine side left {
+    n_acylsphingosine
+    <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +cytidine_5_monophosphate +hplus
+    n_acylsphingosine_1_phosphoethanolamine
+  }
+
+  branch from d_glucosyl_n_acylsphingosine side right {
+    d_glucosyl_n_acylsphingosine
+    <-> ec_3_5_1_109 [3.5.1.109] +h2o +fatty-acid
+    d_glucosylsphingosine
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_4_2_99_22 [4.2.99.22] +6_tuliposide_a
+    methylene_butyrolactone
+  }
+
+  branch from 6pgc side right {
+    6pgc
+    <-> ec_1_1_1_43 [1.1.1.43] +nadp +nadph +hplus
+    6_phospho_2_dehydro_d_gluconate
+  }
 }

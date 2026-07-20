@@ -15,4 +15,28 @@ pathway 2-trans-6-trans-10-trans-to-fmn "2-trans,6-trans,10-trans-… to FMN" {
     <-> ec_1_14_14_112 [1.14.14.112] +fmnh2 +o2 -fmn -h2o -hplus
     11_hydroxy_ent_cassa_12_15_diene
   }
+
+  branch from 5_9_10_labda_8_20_13_dien_15_yl_diphosphate side left {
+    5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_185 [4.2.3.185] +ppi
+    ent_atiserene
+  }
+
+  branch from ent_cassa_12_15_diene side right {
+    ent_cassa_12_15_diene
+    <-> ec_1_14_14_69 [1.14.14.69] +fmnh2 +o2 +fmn +h2o +hplus
+    ent_3_hydroxycassa_12_15_dien_2_one
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_90 [4.2.3.90] +fpp
+    5_epi_selinene
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_72 [1.14.14.72] +drimenol +fmnh2 +o2 +h2o +hplus
+    drimendiol
+  }
 }

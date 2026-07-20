@@ -15,4 +15,28 @@ pathway 2s-2-carbamoylpyrrolidi-to-hydrogen-donor "(2S)-2-carbamoylpyrrolidi… 
     <-> ec_1_5_99_13 [1.5.99.13] +hydrogen_acceptor -hydrogen_donor
     1_pyrroline_2_carboxylic_acid
   }
+
+  branch from l_proline side left {
+    l_proline
+    <-> ec_1_5_1_2 [1.5.1.2] +nad +nadh +hplus
+    s_1_pyrroline_5_carboxylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_4_1_1 [4.4.1.1] +l_homoserine
+    oxobut
+  }
+
+  branch from 1_pyrroline_2_carboxylic_acid side left {
+    1_pyrroline_2_carboxylic_acid
+    <-> ec_4_2_1_77 [4.2.1.77] +h2o
+    trans_3_hydroxy_l_proline
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_1_99_32 [1.1.99.32] +l_sorbopyranose +hydrogen_acceptor
+    l_xylo_hexos_2_ulose
+  }
 }

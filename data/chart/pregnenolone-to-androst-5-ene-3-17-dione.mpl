@@ -15,4 +15,10 @@ pathway pregnenolone-to-androst-5-ene-3-17-dione "pregnenolone to androst-5-ene-
     <-> ec_1_1_1_145 [1.1.1.145] +nad -nadh -hplus
     androst_5_ene_3_17_dione
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_19_51 [1.14.19.51] +s_reticulinium +fmnh2 +o2 +h2o +hplus
+    s_corytuberine
+  }
 }

@@ -101,6 +101,35 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "adp_d_ribose_1_phosphate",
+      "name": "ADP-α-D-ribose 1''-phosphate",
+      "short": "ADP-α-D-ribose 1''-P",
+      "formula": "C15H20N5O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58753"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "thujopsene",
+      "name": "(+)-thujopsene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61737"
+      }
     }
   ],
   "enzymes": [
@@ -116,6 +145,20 @@
       "name": "ADP-D-ribose pyrophosphorylase",
       "ec": [
         "2.7.7.96"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_84",
+      "name": "ADP-ribose 1''-phosphate phosphatase",
+      "ec": [
+        "3.1.3.84"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_79",
+      "name": "thujopsene synthase",
+      "ec": [
+        "4.2.3.79"
       ]
     }
   ],
@@ -255,6 +298,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:50248"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ADP-ribose 1''-phosphate phosphatase",
+      "equation": "ADP-alpha-D-ribose 1''-phosphate + H2O = ADP-D-ribose + phosphate",
+      "ec": "3.1.3.84",
+      "substrates": [
+        {
+          "metabolite": "adp_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25029"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25029"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "thujopsene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-thujopsene + diphosphate",
+      "ec": "4.2.3.79",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thujopsene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30375"
           }
         ]
       }

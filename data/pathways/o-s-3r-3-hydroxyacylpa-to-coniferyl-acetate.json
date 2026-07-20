@@ -121,6 +121,53 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78449"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "n_n_diacetylchitobiose",
+      "name": "N,N'-diacetylchitobiose",
+      "short": "N,N'-diacetylchitob…",
+      "formula": "C16H28N2O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28681"
+      }
+    },
+    {
+      "id": "d_glucosaminyl_1_4_n_acetyl_d_glucosamine",
+      "name": "β-D-glucosaminyl-(1→4)-N-acetyl-D-glucosamine",
+      "short": "β-D-glucosaminyl-(1…",
+      "formula": "C14H27N2O10",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:145478"
+      }
     }
   ],
   "enzymes": [
@@ -143,6 +190,20 @@
       "name": "isoeugenol synthase",
       "ec": [
         "1.1.1.319"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_39",
+      "name": "[acyl-carrier-protein] S-malonyltransferase",
+      "ec": [
+        "2.3.1.39"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_136",
+      "name": "N,N'-diacetylchitobiose non-reducing end deacetylase",
+      "ec": [
+        "3.5.1.136"
       ]
     }
   ],
@@ -282,6 +343,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:24694"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "[acyl-carrier-protein] S-malonyltransferase",
+      "equation": "holo-[ACP] + malonyl-CoA = malonyl-[ACP] + CoA",
+      "ec": "2.3.1.39",
+      "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:41792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N,N'-diacetylchitobiose non-reducing end deacetylase",
+      "equation": "N,N'-diacetylchitobiose + H2O = beta-D-glucosaminyl-(1->4)-N-acetyl-D-glucosamine + acetate",
+      "ec": "3.5.1.136",
+      "substrates": [
+        {
+          "metabolite": "n_n_diacetylchitobiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosaminyl_1_4_n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_136"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62168"
           }
         ]
       }

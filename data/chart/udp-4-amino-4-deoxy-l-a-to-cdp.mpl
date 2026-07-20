@@ -25,4 +25,28 @@ pathway udp-4-amino-4-deoxy-l-a-to-cdp "UDP-4-amino-4-deoxy-β-L-a… to CDP" {
     <-> ec_2_4_1_60 [2.4.1.60] +cdp_d_abequose -cdp -hplus
     d_abequose_1_3_d_mannopyranosyl_1_4_l_rhamnopyr
   }
+
+  branch from 4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc side left {
+    4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc
+    <-> ec_2_4_2_43 [2.4.2.43] +kdo_2_lipid_a_6_e_coli +ditrans_polycis_undecaprenyl_phosphate
+    l_ara4n_2_kdo_2_lipid_a
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_1_17_5_3 [1.17.5.3] +1_4_benzoquinones +hplus +co2
+    hydroquinones
+  }
+
+  branch from ditrans_polycis_undecaprenyl_phosphate side left {
+    ditrans_polycis_undecaprenyl_phosphate
+    <-> ec_2_7_8_31 [2.7.8.31] +udp_d_glucose +ump
+    d_glucosyl_ditrans_polycis_undecaprenyl_diphosp
+  }
+
+  branch from ump side right {
+    ump
+    <-> ec_2_7_8_32 [2.7.8.32] +d_manp_1_3_d_manp +udp_d_xylose +hplus
+    3_o_6_o_d_xylosylphospho_d_mannopyranosyl_d_mann
+  }
 }

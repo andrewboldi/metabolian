@@ -23,4 +23,28 @@ pathway d-manp-1-4-d-glcpnac-to-n-acetyl-d-galactosamin "β-D-Manp-(1→4)-D-Glc
     <-> ec_2_3_1_276 [2.3.1.276] +acetyl_coa -coa -hplus
     n_acetyl_d_galactosamine_1_phosphate
   }
+
+  branch from d_mannose_1_phosphate side left {
+    d_mannose_1_phosphate
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp_d_glucose +gdp_d_mannose
+    g1p
+  }
+
+  branch from n_acetyl_d_glucosamine side right {
+    n_acetyl_d_glucosamine
+    <-> ec_2_7_1_162 [2.7.1.162] +atp +adp +hplus
+    n_acetyl_d_glucosamine_1_phosphate
+  }
+
+  branch from d_mannopyranose_6_phosphate side left {
+    d_mannopyranose_6_phosphate
+    <-> ec_2_7_1_191 [2.7.1.191] +d_mannopyranose +n_phosphonato_l_histidine
+    l_histidine
+  }
+
+  branch from glucosamine6p side right {
+    glucosamine6p
+    <-> ec_2_7_1_147 [2.7.1.147] +adp +amp +hplus
+    2_ammonio_2_deoxy_d_glucopyranose
+  }
 }

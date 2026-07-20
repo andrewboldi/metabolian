@@ -127,6 +127,36 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57533"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "tri_trans_poly_cis_undecaprenyl_diphosphate",
+      "name": "tri-trans,poly-cis-undecaprenyl diphosphate",
+      "short": "tri-trans,poly-cis-…",
+      "formula": "C55H89O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60388"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +179,13 @@
       "name": "tRNAmet cytidine acetate ligase",
       "ec": [
         "6.3.1.22"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_89",
+      "name": "tritrans,polycis-undecaprenyl-diphosphate synthase [geranylgeranyl-",
+      "ec": [
+        "2.5.1.89"
       ]
     }
   ],
@@ -296,6 +333,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:58144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tritrans,polycis-undecaprenyl-diphosphate synthase [geranylgeranyl-",
+      "equation": "geranylgeranyl diphosphate + 7 isopentenyl diphosphate = tri-trans,hepta-cis-undecaprenyl diphosphate + 7 diphosphate",
+      "ec": "2.5.1.89",
+      "substrates": [
+        {
+          "metabolite": "geranylgeranyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 7
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tri_trans_poly_cis_undecaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 7
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27622"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27622"
           }
         ]
       }

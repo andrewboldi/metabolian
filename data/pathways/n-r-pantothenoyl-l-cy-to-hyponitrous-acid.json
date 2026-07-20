@@ -172,6 +172,80 @@
       "xrefs": {
         "chebi": "CHEBI:14428"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "s_acetylcysteaminium",
+      "name": "S-acetylcysteaminium",
+      "formula": "C4H10NOS",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58295"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "r_4_phosphonatopantothenate",
+      "name": "(R)-4'-phosphonatopantothenate",
+      "short": "4'-phosphonatopanto…",
+      "formula": "C9H15NO8P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:10986"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:507393"
+      }
+    },
+    {
+      "id": "2_2_iminodipropanoate",
+      "name": "2,2'-iminodipropanoate",
+      "short": "2,2'-iminodipropano…",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58934"
+      }
     }
   ],
   "enzymes": [
@@ -222,6 +296,34 @@
       "name": "hyponitrite reductase",
       "ec": [
         "1.7.1.5"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_11",
+      "name": "thioethanolamine S-acetyltransferase",
+      "ec": [
+        "2.3.1.11"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_33",
+      "name": "pantothenate kinase",
+      "ec": [
+        "2.7.1.33"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_8",
+      "name": "flavin-containing monooxygenase",
+      "ec": [
+        "1.14.13.8"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_17",
+      "name": "alanopine dehydrogenase",
+      "ec": [
+        "1.5.1.17"
       ]
     }
   ],
@@ -561,6 +663,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:19337"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "thioethanolamine S-acetyltransferase",
+      "equation": "cysteamine + acetyl-CoA = S-acetylcysteamine + CoA",
+      "ec": "2.3.1.11",
+      "substrates": [
+        {
+          "metabolite": "cysteaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acetylcysteaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:23280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "pantothenate kinase",
+      "equation": "(R)-pantothenate + ATP = (R)-4'-phosphopantothenate + ADP + H(+)",
+      "ec": "2.7.1.33",
+      "substrates": [
+        {
+          "metabolite": "r_pantothenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_4_phosphonatopantothenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:16373"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16373"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "flavin-containing monooxygenase",
+      "equation": "hypotaurine + NADH + O2 + H(+) = taurine + NAD(+) + H2O",
+      "ec": "1.14.13.8",
+      "substrates": [
+        {
+          "metabolite": "hypotaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:74111"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74111"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "alanopine dehydrogenase",
+      "equation": "2,2'-iminodipropanoate + NAD(+) + H2O = L-alanine + pyruvate + NADH + H(+)",
+      "ec": "1.5.1.17",
+      "substrates": [
+        {
+          "metabolite": "2_2_iminodipropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:17589"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17589"
           }
         ]
       }

@@ -120,6 +120,44 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "ginsenoside_rb2",
+      "name": "ginsenoside Rb2",
+      "formula": "C53H90O22",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77152"
+      }
+    },
+    {
+      "id": "ginsenoside_c_y",
+      "name": "ginsenoside C-Y",
+      "formula": "C41H70O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77157"
+      }
+    },
+    {
+      "id": "n_n_diacetylchitobiose",
+      "name": "N,N'-diacetylchitobiose",
+      "short": "N,N'-diacetylchitob…",
+      "formula": "C16H28N2O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28681"
+      }
+    },
+    {
+      "id": "diacetylchitobiose_6_phosphate",
+      "name": "diacetylchitobiose-6'-phosphate",
+      "short": "diacetylchitobiose-…",
+      "formula": "C16H27N2O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64883"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +187,20 @@
       "name": "alpha,alpha-phosphotrehalase",
       "ec": [
         "3.2.1.93"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_191",
+      "name": "ginsenosidase type III",
+      "ec": [
+        "3.2.1.191"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_196",
+      "name": "protein-N(pi)-phosphohistidine--N,N'-diacetylchitobiose",
+      "ec": [
+        "2.7.1.196"
       ]
     }
   ],
@@ -333,6 +385,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:23008"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ginsenosidase type III",
+      "equation": "(20S)-ginsenoside Rb2 + 2 H2O = (20S)-ginsenoside C-Y + 2 D-glucose",
+      "ec": "3.2.1.191",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rb2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_c_y",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:40739"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40739"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "protein-N(pi)-phosphohistidine--N,N'-diacetylchitobiose",
+      "equation": "N,N'-diacetylchitobiose(out) + N(pros)-phospho-L-histidyl-[protein] = diacetylchitobiose-6'-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.196",
+      "substrates": [
+        {
+          "metabolite": "n_n_diacetylchitobiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diacetylchitobiose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_196"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:33423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33423"
           }
         ]
       }

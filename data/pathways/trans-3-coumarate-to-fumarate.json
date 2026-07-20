@@ -110,6 +110,35 @@
       "xrefs": {
         "chebi": "CHEBI:29806"
       }
+    },
+    {
+      "id": "e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr",
+      "name": "(E)-3-[(5S,6R)-5,6-dihydroxycyclohexa-1,3-dienyl]acrylate",
+      "short": "3-[(5S,6R)-5,6-dihy…",
+      "formula": "C9H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61451"
+      }
+    },
+    {
+      "id": "2z_4e_2_hydroxy_6_oxohepta_2_4_dienoate",
+      "name": "(2Z,4E)-2-hydroxy-6-oxohepta-2,4-dienoate",
+      "short": "(2Z,4E)-2-hydroxy-6…",
+      "formula": "C7H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144490"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +161,20 @@
       "name": "2-hydroxy-6-oxonona-2,4-dienedioate hydrolase",
       "ec": [
         "3.7.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_87",
+      "name": "3-(cis-5,6-dihydroxycyclohexa-1,3-dien-1-yl)propanoate dehydrogenase",
+      "ec": [
+        "1.3.1.87"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_25",
+      "name": "2-hydroxy-6-oxohepta-2,4-dienoate hydrolase",
+      "ec": [
+        "3.7.1.25"
       ]
     }
   ],
@@ -283,6 +326,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:34191"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-(cis-5,6-dihydroxycyclohexa-1,3-dien-1-yl)propanoate dehydrogenase",
+      "equation": "(2E)-3-(cis-5,6-dihydroxycyclohexa-1,3-dien-1-yl)prop-2-enoate + NAD(+) = (2E)-3-(2,3-dihydroxyphenyl)prop-2-enoate + NADH + H(+)",
+      "ec": "1.3.1.87",
+      "substrates": [
+        {
+          "metabolite": "e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxy_trans_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25066"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-hydroxy-6-oxohepta-2,4-dienoate hydrolase",
+      "equation": "(2Z,4E)-2-hydroxy-6-oxohepta-2,4-dienoate + H2O = (2Z)-2-hydroxypenta-2,4-dienoate + acetate + H(+)",
+      "ec": "3.7.1.25",
+      "substrates": [
+        {
+          "metabolite": "2z_4e_2_hydroxy_6_oxohepta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:59220"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59220"
           }
         ]
       }

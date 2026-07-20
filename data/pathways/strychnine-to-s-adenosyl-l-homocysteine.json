@@ -127,6 +127,54 @@
       "xrefs": {
         "chebi": "CHEBI:231757"
       }
+    },
+    {
+      "id": "l_hexahomomethionine",
+      "name": "L-hexahomomethionine",
+      "formula": "C11H23NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134636"
+      }
+    },
+    {
+      "id": "e_9_methylsulfanyl_nonanal_oxime",
+      "name": "(E)-9-(methylsulfanyl)nonanal oxime",
+      "short": "9-(methylsulfanyl)n…",
+      "formula": "C10H21NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134685"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "n2_methylguanosine_5_monophosphate_1",
+      "name": "N2-methylguanosine 5'-monophosphate(1−)",
+      "short": "N2-methylguanosine…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74481"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +197,20 @@
       "name": "beta-colubrine 11-hydroxylase",
       "ec": [
         "1.14.14.190"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_42",
+      "name": "homomethionine N-monooxygenase",
+      "ec": [
+        "1.14.14.42"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_171",
+      "name": "16S rRNA (guanine(966)-N(2))-methyltransferase",
+      "ec": [
+        "2.1.1.171"
       ]
     }
   ],
@@ -361,6 +423,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:80943"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "homomethionine N-monooxygenase",
+      "equation": "L-hexahomomethionine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-9-(methylsulfanyl)nonanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.42",
+      "substrates": [
+        {
+          "metabolite": "l_hexahomomethionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_9_methylsulfanyl_nonanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33295"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "16S rRNA (guanine(966)-N(2))-methyltransferase",
+      "equation": "guanosine(966) in 16S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(966) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.171",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_171"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23548"
           }
         ]
       }

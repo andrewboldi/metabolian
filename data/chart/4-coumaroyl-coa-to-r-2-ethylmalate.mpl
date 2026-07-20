@@ -23,4 +23,28 @@ pathway 4-coumaroyl-coa-to-r-2-ethylmalate "4-coumaroyl-CoA to (R)-2-ethylmalate
     <-> ec_2_3_3_6 [2.3.3.6] +acetyl_coa +h2o -coa -hplus
     r_2_ethylmalate
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_121 [2.1.1.121] +6_o_methylnorlaudanosolinium +sam +hplus
+    nororientalinium
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_2_1_104 [4.2.1.104] +hco3 +hplus +co2
+    cyanate
+  }
+
+  branch from homocysteine side left {
+    homocysteine
+    <-> ec_2_5_1_134 [2.5.1.134] +o_acetyl_l_serine +cystathionine +hplus
+    acetate
+  }
+
+  branch from inosine side right {
+    inosine
+    <-> ec_3_2_2_2 [3.2.2.2] +h2o +d_ribofuranose
+    hypoxanthine
+  }
 }

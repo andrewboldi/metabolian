@@ -100,6 +100,65 @@
       "xrefs": {
         "chebi": "CHEBI:57967"
       }
+    },
+    {
+      "id": "n_adp_d_ribosyl_l_argininium_1",
+      "name": "Nω-(ADP-D-ribosyl)-L-argininium(1−)",
+      "short": "Nω-(ADP-D-ribosyl)-…",
+      "formula": "C21H32N9O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142554"
+      }
+    },
+    {
+      "id": "2_phospho_nucleotide_5_phosphate_3",
+      "name": "2'-phospho-nucleotide 5'-phosphate(3−)",
+      "short": "2'-phospho-nucleoti…",
+      "formula": "C5H6O9P2R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:85027"
+      }
+    },
+    {
+      "id": "nucleotide_5_phosphate_1",
+      "name": "nucleotide 5'-phosphate(1−)",
+      "short": "nucleotide 5'-P(1−)",
+      "formula": "C5H7O6PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82883"
+      }
+    },
+    {
+      "id": "adp_d_ribose_1_2_cyclic_phosphate",
+      "name": "ADP-α-D-ribose 1'',2''-cyclic phosphate",
+      "short": "ADP-α-D-ribose…",
+      "formula": "C15H19N5O16P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:76596"
+      }
+    },
+    {
+      "id": "n_adp_d_ribosyl_l_arginine",
+      "name": "Nω-(ADP-D-ribosyl)-L-arginine",
+      "short": "Nω-(ADP-D-ribosyl)-…",
+      "formula": "C21H34N9O15P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60267"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
     }
   ],
   "enzymes": [
@@ -122,6 +181,27 @@
       "name": "ADP-ribosyl-[dinitrogen reductase] hydrolase",
       "ec": [
         "3.2.2.24"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_31",
+      "name": "NAD(+)--protein-arginine ADP-ribosyltransferase",
+      "ec": [
+        "2.4.2.31"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_160",
+      "name": "2'-phosphotransferase",
+      "ec": [
+        "2.7.1.160"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_19",
+      "name": "[protein ADP-ribosylarginine] hydrolase",
+      "ec": [
+        "3.2.2.19"
       ]
     }
   ],
@@ -265,6 +345,149 @@
           {
             "db": "Rhea",
             "id": "RHEA:14493"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "NAD(+)--protein-arginine ADP-ribosyltransferase",
+      "equation": "L-arginyl-[protein] + NAD(+) = N(omega)-(ADP-D-ribosyl)-L-arginyl-[protein] + nicotinamide + H(+)",
+      "ec": "2.4.2.31",
+      "substrates": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_adp_d_ribosyl_l_argininium_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19149"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2'-phosphotransferase",
+      "equation": "2'-phospho-[ligated tRNA] + NAD(+) = mature tRNA + ADP-alpha-D-ribose 1'',2''-cyclic phosphate + nicotinamide",
+      "ec": "2.7.1.160",
+      "substrates": [
+        {
+          "metabolite": "2_phospho_nucleotide_5_phosphate_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleotide_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp_d_ribose_1_2_cyclic_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_160"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:23324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "[protein ADP-ribosylarginine] hydrolase",
+      "equation": "N(omega)-(ADP-D-ribosyl)-L-arginine + H2O = ADP-D-ribose + L-arginine",
+      "ec": "3.2.2.19",
+      "substrates": [
+        {
+          "metabolite": "n_adp_d_ribosyl_l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20784"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20784"
           }
         ]
       }

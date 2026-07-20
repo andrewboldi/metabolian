@@ -15,4 +15,16 @@ pathway l-gulono-1-4-lactone-to-l-ascorbate "L-gulono-1,4-lactone to L-ascorbate
     <-> ec_1_8_5_1 [1.8.5.1] +gsh -ascorbate
     gssg
   }
+
+  branch from ascorbate side left {
+    ascorbate
+    <-> ec_1_6_5_4 [1.6.5.4] +nadh +hplus +nad
+    mdha
+  }
+
+  branch from l_dehydroascorbate side right {
+    l_dehydroascorbate
+    <-> ec_1_3_2_3 [1.3.2.3] +iron +fe2 +hplus
+    l_galactono_1_4_lactone
+  }
 }

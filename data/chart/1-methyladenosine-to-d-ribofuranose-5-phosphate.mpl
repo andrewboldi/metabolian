@@ -17,4 +17,22 @@ pathway 1-methyladenosine-to-d-ribofuranose-5-phosphate "1-methyladenosine to D-
     <-> ec_3_6_1_13 [3.6.1.13] +h2o -amp -hplus
     d_ribofuranose_5_phosphate
   }
+
+  branch from d_ribofuranose side left {
+    d_ribofuranose
+    <-> ec_3_2_2_7 [3.2.2.7] +adenosine +h2o
+    adenine
+  }
+
+  branch from d_ribofuranose_5_phosphate side right {
+    d_ribofuranose_5_phosphate
+    <-> ec_3_2_2_12 [3.2.2.12] +imp +h2o
+    hypoxanthine
+  }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> ec_3_2_2_19 [3.2.2.19] +n_adp_d_ribosyl_l_argininium_1 +h2o
+    l_argininium
+  }
 }

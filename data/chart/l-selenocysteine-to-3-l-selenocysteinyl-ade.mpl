@@ -15,4 +15,16 @@ pathway l-selenocysteine-to-3-l-selenocysteinyl-ade "L-selenocysteine to 3'-(L-s
     <-> ec_2_9_1_1 [2.9.1.1] +3_l_seryl_adenylyl_1_group +hplus -pi
     3_l_selenocysteinyl_adenylyl_1_group
   }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_46 [2.6.1.46] +l_2_4_diazaniumylbutyrate +pyruvate
+    l_aspartic_acid_4_semialdehyde
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_17_99_4 [1.17.99.4] +thymine +h2o +hydrogen_donor +hplus
+    5_methylbarbituride
+  }
 }

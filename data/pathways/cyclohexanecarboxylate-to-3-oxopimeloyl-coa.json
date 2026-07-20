@@ -168,6 +168,45 @@
       "xrefs": {
         "chebi": "CHEBI:57350"
       }
+    },
+    {
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57371"
+      }
+    },
+    {
+      "id": "butyrate",
+      "name": "Butyrate",
+      "formula": "C4H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17968"
+      }
+    },
+    {
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15589"
+      }
+    },
+    {
+      "id": "3s_3_carboxy_3_hydroxypropanoyl_coa",
+      "name": "(3S)-3-carboxy-3-hydroxypropanoyl-CoA",
+      "short": "3-carboxy-3-hydroxy…",
+      "formula": "C25H35N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57317"
+      }
     }
   ],
   "enzymes": [
@@ -218,6 +257,13 @@
       "name": "3-hydroxypimeloyl-CoA dehydrogenase",
       "ec": [
         "1.1.1.259"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_22",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "ec": [
+        "2.8.3.22"
       ]
     }
   ],
@@ -545,6 +591,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:11168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "succinyl-CoA:cyclohexane-1-carboxylate CoA transferase",
+      "equation": "cyclohexane-1-carboxylate + butanoyl-CoA = cyclohexane-1-carbonyl-CoA + butanoate",
+      "ec": "2.3.1.315",
+      "substrates": [
+        {
+          "metabolite": "cyclohexanecarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclohexane_1_carbonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butyrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_315"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:79179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "equation": "succinyl-CoA + (S)-malate = (S)-malyl-CoA + succinate",
+      "ec": "2.8.3.22",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_carboxy_3_hydroxypropanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:38255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38255"
           }
         ]
       }

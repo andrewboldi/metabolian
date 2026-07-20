@@ -103,6 +103,45 @@
       "xrefs": {
         "chebi": "CHEBI:139593"
       }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "7_3_methylbut_2_enyl_l_tryptophan",
+      "name": "7-(3-methylbut-2-enyl)-L-tryptophan",
+      "short": "7-(3-methylbut-2-en…",
+      "formula": "C16H20N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62497"
+      }
+    },
+    {
+      "id": "4_hydroxyisoflavones",
+      "name": "4'-hydroxyisoflavones",
+      "short": "4'-hydroxyisoflavon…",
+      "formula": "C15HO3R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63328"
+      }
+    },
+    {
+      "id": "4_methoxyisoflavones",
+      "name": "4'-methoxyisoflavones",
+      "short": "4'-methoxyisoflavon…",
+      "formula": "C16H3O3R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133959"
+      }
     }
   ],
   "enzymes": [
@@ -125,6 +164,20 @@
       "name": "xanthohumol 4-O-methyltransferase",
       "ec": [
         "2.1.1.339"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_80",
+      "name": "7-dimethylallyltryptophan synthase",
+      "ec": [
+        "2.5.1.80"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_46",
+      "name": "isoflavone 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.46"
       ]
     }
   ],
@@ -268,6 +321,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:51704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "7-dimethylallyltryptophan synthase",
+      "equation": "dimethylallyl diphosphate + L-tryptophan = 7-(3-methylbut-2-enyl)-L-tryptophan + diphosphate",
+      "ec": "2.5.1.80",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_3_methylbut_2_enyl_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30563"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "isoflavone 4'-O-methyltransferase",
+      "equation": "a 4'-hydroxyisoflavone + S-adenosyl-L-methionine = a 4'-methoxyisoflavone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.46",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyisoflavones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methoxyisoflavones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31739"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31739"
           }
         ]
       }

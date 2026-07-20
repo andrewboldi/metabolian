@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-3-methyl-2-oxovalerate-to-1-alkyl-2-acetyl-sn",
   "name": "(S)-3-methyl-2-oxovalerate to 1-alkyl-2-acetyl-sn-glyce…",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 9-step route from (S)-3-methyl-2-oxovalerate to 1-alkyl-2-acetyl-sn-glycerol 3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -272,6 +272,116 @@
       "xrefs": {
         "chebi": "CHEBI:58191"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "isobutyryl_coa",
+      "name": "Isobutyryl-CoA",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57338"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1e_2s_2_methylbutanal_oxime",
+      "name": "(1E,2S)-2-methylbutanal oxime",
+      "short": "(1E,2S)-2-methylbut…",
+      "formula": "C5H11NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134628"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "l_proline_betaine",
+      "name": "L-proline betaine",
+      "formula": "C7H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35280"
+      }
+    },
+    {
+      "id": "n_methylproline",
+      "name": "N-methylproline",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133743"
+      }
+    },
+    {
+      "id": "1s_2r_1_c_indol_3_yl_glycerol_3_phosphate",
+      "name": "(1S,2R)-1-C-(indol-3-yl)glycerol 3-phosphate",
+      "short": "(1S,2R)-1-C-(indol-…",
+      "formula": "C11H12NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58866"
+      }
+    },
+    {
+      "id": "1h_indole",
+      "name": "1H-indole",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16881"
+      }
     }
   ],
   "enzymes": [
@@ -336,6 +446,34 @@
       "name": "alkylglycerophosphate 2-O-acetyltransferase",
       "ec": [
         "2.3.1.105"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_25",
+      "name": "branched-chain alpha-keto acid dehydrogenase system",
+      "ec": [
+        "1.2.1.25"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_39",
+      "name": "isoleucine N-monooxygenase",
+      "ec": [
+        "1.14.14.39"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_247",
+      "name": "stachydrine N-demethylase",
+      "ec": [
+        "1.14.13.247"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_8",
+      "name": "indole-3-glycerol-phosphate lyase",
+      "ec": [
+        "4.1.2.8"
       ]
     }
   ],
@@ -753,6 +891,222 @@
           {
             "db": "Rhea",
             "id": "RHEA:18557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "branched-chain alpha-keto acid dehydrogenase system",
+      "equation": "3-methyl-2-oxobutanoate + NAD(+) + CoA = 2-methylpropanoyl-CoA + CO2 + NADH",
+      "ec": "1.2.1.25",
+      "substrates": [
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isobutyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:13997"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "isoleucine N-monooxygenase",
+      "equation": "L-isoleucine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (1E,2S)-2-methylbutanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.39",
+      "substrates": [
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1e_2s_2_methylbutanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:28602"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "stachydrine N-demethylase",
+      "equation": "L-proline betaine + NADPH + O2 + H(+) = N-methyl-L-proline + formaldehyde + NADP(+) + H2O",
+      "ec": "1.14.13.247",
+      "substrates": [
+        {
+          "metabolite": "l_proline_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylproline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_247"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:19357"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19357"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "indole-3-glycerol-phosphate lyase",
+      "equation": "(1S,2R)-1-C-(indol-3-yl)glycerol 3-phosphate = indole + D-glyceraldehyde 3-phosphate",
+      "ec": "4.1.2.8",
+      "substrates": [
+        {
+          "metabolite": "1s_2r_1_c_indol_3_yl_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:14081"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14081"
           }
         ]
       }

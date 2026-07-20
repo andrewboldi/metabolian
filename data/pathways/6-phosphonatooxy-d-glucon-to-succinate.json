@@ -165,6 +165,45 @@
       "xrefs": {
         "chebi": "CHEBI:30031"
       }
+    },
+    {
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61961"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
+      "name": "N2-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine",
+      "short": "N2-[(3R)-3-(2-satur…",
+      "formula": "C10H16N2O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138473"
+      }
+    },
+    {
+      "id": "n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine",
+      "name": "N2-[(3R)-3-(2-hydroxyacyloxy)acyl]-L-ornithine",
+      "short": "N2-[(3R)-3-(2-hydro…",
+      "formula": "C10H16N2O6R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139171"
+      }
     }
   ],
   "enzymes": [
@@ -194,6 +233,20 @@
       "name": "3-[(E)-2-isocyanoethenyl]-1H-indole synthase",
       "ec": [
         "1.14.20.12"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_67",
+      "name": "[histone H3]-trimethyl-L-lysine(4) demethylase",
+      "ec": [
+        "1.14.11.67"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_58",
+      "name": "ornithine lipid ester-linked acyl 2-hydroxylase",
+      "ec": [
+        "1.14.11.58"
       ]
     }
   ],
@@ -365,6 +418,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:56704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "[histone H3]-trimethyl-L-lysine(4) demethylase",
+      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(4)-[histone H3] + 3 2-oxoglutarate + 3 O2 = L-lysyl(4)-[histone H3] + 3 formaldehyde + 3 succinate + 3 CO2",
+      "ec": "1.14.11.67",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:60208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ornithine lipid ester-linked acyl 2-hydroxylase",
+      "equation": "an N(2)-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine lipid + 2-oxoglutarate + O2 = a 2-hydroxyornithine lipid + succinate + CO2",
+      "ec": "1.14.11.58",
+      "substrates": [
+        {
+          "metabolite": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55756"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55756"
           }
         ]
       }

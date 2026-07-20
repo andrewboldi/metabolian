@@ -15,4 +15,10 @@ pathway 2-dehydro-3-deoxy-d-gluco-to-3-hydroxypyruvate "2-dehydro-3-deoxy-D-gluc
     <-> ec_1_1_1_81 [1.1.1.81] +nadp -nadph -hplus
     3_hydroxypyruvate
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_14_99_67 [1.14.99.67] +n_dichloroacetyl_p_aminophenylserinol +o2 +hydrogen_acceptor +h2o
+    chloramphenicol
+  }
 }

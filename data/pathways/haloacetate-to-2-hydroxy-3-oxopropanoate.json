@@ -108,6 +108,81 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "r_2_halocarboxylic_acid_anion",
+      "name": "(R)-2-halocarboxylic acid anion",
+      "short": "2-halocarboxylic…",
+      "formula": "C2HO2RX",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137406"
+      }
+    },
+    {
+      "id": "2s_2_hydroxy_monocarboxylic_acid_anion",
+      "name": "(2S)-2-hydroxy monocarboxylic acid anion",
+      "short": "2-hydroxy…",
+      "formula": "C2H2O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58123"
+      }
+    },
+    {
+      "id": "chloroacetate",
+      "name": "chloroacetate",
+      "formula": "C2H2ClO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:23123"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15562"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_d_glucarate",
+      "name": "2-dehydro-3-deoxy-D-glucarate",
+      "short": "2-dehydro-3-deoxy-D…",
+      "formula": "C6H6O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58098"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +205,34 @@
       "name": "tartronate-semialdehyde synthase",
       "ec": [
         "4.1.1.47"
+      ]
+    },
+    {
+      "id": "ec_3_8_1_9",
+      "name": "(R)-2-haloacid dehalogenase",
+      "ec": [
+        "3.8.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_8_1_10",
+      "name": "2-haloacid dehalogenase (configuration-inverting)",
+      "ec": [
+        "3.8.1.10"
+      ]
+    },
+    {
+      "id": "ec_4_1_3_1",
+      "name": "isocitrate lyase",
+      "ec": [
+        "4.1.3.1"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_20",
+      "name": "2-dehydro-3-deoxyglucarate aldolase",
+      "ec": [
+        "4.1.2.20"
       ]
     }
   ],
@@ -273,6 +376,186 @@
           {
             "db": "Rhea",
             "id": "RHEA:10136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(R)-2-haloacid dehalogenase",
+      "equation": "an (R)-2-haloacid + H2O = a (2S)-2-hydroxycarboxylate + a halide anion + H(+)",
+      "ec": "3.8.1.9",
+      "substrates": [
+        {
+          "metabolite": "r_2_halocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxy_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "halide_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_8_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "haloacetate dehalogenase",
+      "equation": "chloroacetate + H2O = glycolate + chloride + H(+)",
+      "ec": "3.8.1.3",
+      "substrates": [
+        {
+          "metabolite": "chloroacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_8_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:25189"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25189"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "isocitrate lyase",
+      "equation": "D-threo-isocitrate = glyoxylate + succinate",
+      "ec": "4.1.3.1",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:13245"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "2-dehydro-3-deoxyglucarate aldolase",
+      "equation": "2-dehydro-3-deoxy-D-glucarate = 2-hydroxy-3-oxopropanoate + pyruvate",
+      "ec": "4.1.2.20",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_glucarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:10268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10268"
           }
         ]
       }

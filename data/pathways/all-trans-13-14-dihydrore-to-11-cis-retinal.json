@@ -145,6 +145,70 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "all_trans_retinal",
+      "name": "all-trans-retinal",
+      "formula": "C20H28O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17898"
+      }
+    },
+    {
+      "id": "trichloroethene",
+      "name": "trichloroethene",
+      "formula": "C2HCl3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16602"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "tetrachloroethene",
+      "name": "tetrachloroethene",
+      "formula": "C2Cl4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17300"
+      }
+    },
+    {
+      "id": "13_cis_retinol",
+      "name": "13-cis-retinol",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:45479"
+      }
+    },
+    {
+      "id": "11_cis_retinyl_palmitate",
+      "name": "11-cis-retinyl palmitate",
+      "short": "11-cis-retinyl…",
+      "formula": "C36H60O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16254"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
     }
   ],
   "enzymes": [
@@ -174,6 +238,34 @@
       "name": "11-cis-retinol dehydrogenase",
       "ec": [
         "1.1.1.315"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_105",
+      "name": "all-trans-retinol dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.105"
+      ]
+    },
+    {
+      "id": "ec_1_21_99_5",
+      "name": "tetrachloroethene reductive dehalogenase",
+      "ec": [
+        "1.21.99.5"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_90",
+      "name": "all-trans-retinyl ester 13-cis isomerohydrolase",
+      "ec": [
+        "3.1.1.90"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_63",
+      "name": "11-cis-retinyl-palmitate hydrolase",
+      "ec": [
+        "3.1.1.63"
       ]
     }
   ],
@@ -362,6 +454,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:42060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "all-trans-retinol dehydrogenase (NAD(+))",
+      "equation": "all-trans-retinol + NAD(+) = all-trans-retinal + NADH + H(+)",
+      "ec": "1.1.1.105",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_105"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "tetrachloroethene reductive dehalogenase",
+      "equation": "trichloroethene + chloride + A + H(+) = tetrachloroethene + AH2",
+      "ec": "1.21.99.5",
+      "substrates": [
+        {
+          "metabolite": "trichloroethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetrachloroethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_99_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "all-trans-retinyl ester 13-cis isomerohydrolase",
+      "equation": "an all-trans-retinyl ester + H2O = 13-cis-retinol + a fatty acid + H(+)",
+      "ec": "3.1.1.90",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_cis_retinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:31779"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31779"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "11-cis-retinyl-palmitate hydrolase",
+      "equation": "11-cis-retinyl hexadecanoate + H2O = 11-cis-retinol + hexadecanoate + H(+)",
+      "ec": "3.1.1.63",
+      "substrates": [
+        {
+          "metabolite": "11_cis_retinyl_palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_cis_retinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:19697"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19697"
           }
         ]
       }

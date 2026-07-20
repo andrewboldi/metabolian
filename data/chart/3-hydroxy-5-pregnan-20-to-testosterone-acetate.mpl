@@ -15,4 +15,10 @@ pathway 3-hydroxy-5-pregnan-20-to-testosterone-acetate "3β-hydroxy-5α-pregnan-
     <-> ec_1_14_13_54 [1.14.13.54] +nadph +o2 +hplus -nadp -h2o
     testosterone_acetate
   }
+
+  branch from progesterone side left {
+    progesterone
+    <-> ec_1_14_14_16 [1.14.14.16] +fmnh2 +o2 +fmn +h2o +hplus
+    11_deoxycorticosterone
+  }
 }

@@ -15,4 +15,22 @@ pathway adp-d-glucoside-to-diphosphate "ADP α-D-glucoside to diphosphate" {
     <-> ec_2_7_7_9 [2.7.7.9] +g1p +utp +hplus -ppi
     udp_d_glucose
   }
+
+  branch from d_glycerate side left {
+    d_glycerate
+    <-> ec_1_1_1_60 [1.1.1.60] +nad +nadh +hplus
+    2_hydroxy_3_oxopropanoate
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_210 [2.4.1.210] +limonin +h2o +udp +hplus
+    limonin_17_d_glucoside
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_67 [4.2.3.67] +fpp
+    cis_muurola_3_5_diene
+  }
 }

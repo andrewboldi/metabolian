@@ -17,4 +17,22 @@ pathway cob-ii-inamide-to-cobamamide "cob(II)inamide to cobamamide" {
     <-> ec_2_7_8_26 [2.7.8.26] +ribazole -gmp -hplus
     cobamamide
   }
+
+  branch from triphosphate side left {
+    triphosphate
+    <-> ec_3_1_5_1 [3.1.5.1] +dgtp +h2o +hplus
+    2_deoxyguanosine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_14 [6.1.1.14] +amp_3_end_1 +glycine +atp +amp
+    3_glycyladenylyl_zwitterionic_group
+  }
+
+  branch from cobamamide side left {
+    cobamamide
+    <-> ec_2_5_1_154 [2.5.1.154] +fadh2 +atp +h2o +fad +pi +ppi +hplus
+    cob_ii_alamin
+  }
 }

@@ -19,4 +19,22 @@ pathway d-glucitol-6-phosphate-to-d-mannopyranose "D-glucitol 6-phosphate to D-m
     <-> ec_1_1_1_224 [1.1.1.224] +nadp -nadph -hplus
     d_mannopyranose_6_phosphate
   }
+
+  branch from d_glucitol_6_phosphate side left {
+    d_glucitol_6_phosphate
+    <-> ec_1_1_1_200 [1.1.1.200] +nadp +nadph +hplus
+    aldehydo_d_glucose_6_phosphate
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> ec_2_7_1_203 [2.7.1.203] +2_amino_2_deoxy_d_gluconic_acid +n_phosphonato_l_histidine
+    d_glucosaminic_acid_6_phosphate
+  }
+
+  branch from n_phosphonato_l_histidine side left {
+    n_phosphonato_l_histidine
+    <-> ec_2_7_1_204 [2.7.1.204] +d_galactopyranose +l_histidine
+    d_galactopyranose_6_phosphate
+  }
 }

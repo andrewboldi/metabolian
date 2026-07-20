@@ -15,4 +15,10 @@ pathway mycothiol-s-conjugate-to-s-substituted "mycothiol S-conjugate to S-subst
     <-> ec_2_3_1_80 [2.3.1.80] +acetyl_coa -coa -hplus
     s_substituted_n_acetyl_l_cysteinate
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_4 [3.5.1.4] +acetamide +h2o
+    nh3
+  }
 }

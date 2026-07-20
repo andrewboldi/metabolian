@@ -144,6 +144,43 @@
       "xrefs": {
         "chebi": "CHEBI:32379"
       }
+    },
+    {
+      "id": "benzoin",
+      "name": "benzoin",
+      "formula": "C14H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17682"
+      }
+    },
+    {
+      "id": "2_chlorobenzoate",
+      "name": "2-chlorobenzoate",
+      "formula": "C7H4ClO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28303"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "s_5_oxo_2_5_dihydro_2_furylacetate",
+      "name": "(S)-5-oxo-2,5-dihydro-2-furylacetate",
+      "short": "5-oxo-2,5-dihydro-2…",
+      "formula": "C6H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58736"
+      }
     }
   ],
   "enzymes": [
@@ -187,6 +224,27 @@
       "name": "catechol 1,2-dioxygenase",
       "ec": [
         "1.13.11.1"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_38",
+      "name": "benzoin aldolase",
+      "ec": [
+        "4.1.2.38"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_13",
+      "name": "2-halobenzoate 1,2-dioxygenase",
+      "ec": [
+        "1.14.12.13"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_1",
+      "name": "muconate cycloisomerase",
+      "ec": [
+        "5.5.1.1"
       ]
     }
   ],
@@ -481,6 +539,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:23852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "benzoin aldolase",
+      "equation": "benzoin = 2 benzaldehyde",
+      "ec": "4.1.2.38",
+      "substrates": [
+        {
+          "metabolite": "benzoin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:21460"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "2-halobenzoate 1,2-dioxygenase",
+      "equation": "2-chlorobenzoate + NADH + O2 + H(+) = catechol + chloride + CO2 + NAD(+)",
+      "ec": "1.14.12.13",
+      "substrates": [
+        {
+          "metabolite": "2_chlorobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:21652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "muconate cycloisomerase",
+      "equation": "(S)-muconolactone = cis,cis-muconate + H(+)",
+      "ec": "5.5.1.1",
+      "substrates": [
+        {
+          "metabolite": "s_5_oxo_2_5_dihydro_2_furylacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_cis_muconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:30031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30031"
           }
         ]
       }

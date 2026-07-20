@@ -15,4 +15,16 @@ pathway l-galactonate-to-keto-d-fructuronate "L-galactonate to keto-D-fructurona
     <-> ec_5_1_2_7 [5.1.2.7]
     keto_d_fructuronate
   }
+
+  branch from d_tagaturonate side left {
+    d_tagaturonate
+    <-> ec_1_1_1_58 [1.1.1.58] +nad +nadh +hplus
+    d_altronate
+  }
+
+  branch from keto_d_fructuronate side right {
+    keto_d_fructuronate
+    <-> ec_1_1_1_57 [1.1.1.57] +nad +nadh +hplus
+    d_mannonate
+  }
 }

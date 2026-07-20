@@ -171,6 +171,117 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "2_deoxyuridine",
+      "name": "2'-deoxyuridine",
+      "formula": "C9H12N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16450"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribono_1_4_lactone",
+      "name": "2-deoxy-D-ribono-1,4-lactone",
+      "short": "2-deoxy-D-ribono-1,…",
+      "formula": "C5H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17281"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "pregna_4_9_11_diene_3_20_dione",
+      "name": "pregna-4,9(11)-diene-3,20-dione",
+      "short": "pregna-4,9(11)-dien…",
+      "formula": "C21H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16744"
+      }
+    },
+    {
+      "id": "9_11_epoxypregn_4_ene_3_20_dione",
+      "name": "9,11α-epoxypregn-4-ene-3,20-dione",
+      "short": "9,11α-epoxypregn-4-…",
+      "formula": "C21H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17206"
+      }
+    },
+    {
+      "id": "3_oxopropanoate",
+      "name": "3-oxopropanoate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33190"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "guanidinoacetic_acid",
+      "name": "guanidinoacetic acid",
+      "formula": "C3H7N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57742"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
     }
   ],
   "enzymes": [
@@ -214,6 +325,34 @@
       "name": "beta-ketoacyl-[acyl-carrier-protein] synthase III",
       "ec": [
         "2.3.1.180"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_10",
+      "name": "pyrimidine-deoxynucleoside 1'-dioxygenase",
+      "ec": [
+        "1.14.11.10"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_24",
+      "name": "steroid 9alpha-monooxygenase",
+      "ec": [
+        "1.14.99.24"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_15",
+      "name": "malonate-semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.15"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_2",
+      "name": "guanidinoacetase",
+      "ec": [
+        "3.5.3.2"
       ]
     }
   ],
@@ -500,6 +639,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:12080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "pyrimidine-deoxynucleoside 1'-dioxygenase",
+      "equation": "2'-deoxyuridine + 2-oxoglutarate + O2 = 2-deoxy-D-ribono-1,4-lactone + uracil + succinate + CO2",
+      "ec": "1.14.11.10",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyuridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:23316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "steroid 9alpha-monooxygenase",
+      "equation": "pregna-4,9(11)-diene-3,20-dione + AH2 + O2 = 9,11alpha-epoxypregn-4-ene-3,20-dione + A + H2O",
+      "ec": "1.14.99.24",
+      "substrates": [
+        {
+          "metabolite": "pregna_4_9_11_diene_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_11_epoxypregn_4_ene_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:19557"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "malonate-semialdehyde dehydrogenase",
+      "equation": "3-oxopropanoate + NADP(+) + H2O = malonate + NADPH + 2 H(+)",
+      "ec": "1.2.1.15",
+      "substrates": [
+        {
+          "metabolite": "3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:20041"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "guanidinoacetase",
+      "equation": "guanidinoacetate + H2O = urea + glycine",
+      "ec": "3.5.3.2",
+      "substrates": [
+        {
+          "metabolite": "guanidinoacetic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:23268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23268"
           }
         ]
       }

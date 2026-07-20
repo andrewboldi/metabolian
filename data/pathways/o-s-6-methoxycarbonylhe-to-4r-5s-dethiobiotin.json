@@ -168,6 +168,128 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "c2_c8_saturated_long_chain_fatty_acyl_pantethein",
+      "name": "C2-C8-saturated long-chain fatty acyl pantetheine-4-phosphorylserine(1−)",
+      "short": "C2-C8-saturated…",
+      "formula": "C22H38N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136878"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "fatty_aldehyde",
+      "name": "fatty aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35746"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "diphthine_methyl_ester",
+      "name": "diphthine methyl ester",
+      "short": "diphthine methyl…",
+      "formula": "C14H23N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:79005"
+      }
+    },
+    {
+      "id": "diphthine_betaine",
+      "name": "diphthine betaine",
+      "formula": "C13H20N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82696"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "7r_8s_8_ammonio_7_carboxylatoamino_nonanoate",
+      "name": "(7R,8S)-8-ammonio-7-(carboxylatoamino)nonanoate",
+      "short": "(7R,8S)-8-ammonio-7…",
+      "formula": "C10H19N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149470"
+      }
+    },
+    {
+      "id": "l_allysine",
+      "name": "L-allysine",
+      "formula": "C6H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131803"
+      }
+    },
+    {
+      "id": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+      "name": "dodecanoyl-pantetheine-4-phosphorylserine(1−)",
+      "short": "dodecanoyl-pantethe…",
+      "formula": "C26H47N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65264"
+      }
+    },
+    {
+      "id": "kdo_2_lipid_iva",
+      "name": "(KDO)2-lipid IVA",
+      "formula": "C84H148N2O37P2",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:60365"
+      }
+    },
+    {
+      "id": "kdo_2_lauroyl_lipid_iva",
+      "name": "(KDO)2-(lauroyl)-lipid IVA",
+      "short": "(KDO)2-(lauroyl)-li…",
+      "formula": "C96H170N2O38P2",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:61524"
+      }
     }
   ],
   "enzymes": [
@@ -197,6 +319,34 @@
       "name": "dethiobiotin synthase",
       "ec": [
         "6.3.3.3"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_46",
+      "name": "pimeloyl-[acyl-carrier protein] synthase",
+      "ec": [
+        "1.14.14.46"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_97",
+      "name": "methylated diphthine methylhydrolase",
+      "ec": [
+        "3.1.1.97"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_121",
+      "name": "8-amino-7-oxononanoate carboxylating dehydrogenase",
+      "ec": [
+        "2.6.1.121"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_241",
+      "name": "Kdo2-lipid IVA acyltransferase",
+      "ec": [
+        "2.3.1.241"
       ]
     }
   ],
@@ -401,6 +551,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:15805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "pimeloyl-[acyl-carrier protein] synthase",
+      "equation": "a C2-C8-saturated long-chain fatty acyl-[ACP] + 2 reduced [flavodoxin] + 3 O2 = 6-carboxyhexanoyl-[ACP] + a fatty aldehyde + 2 oxidized [flavodoxin] + 3 H2O + 3 H(+)",
+      "ec": "1.14.14.46",
+      "substrates": [
+        {
+          "metabolite": "c2_c8_saturated_long_chain_fatty_acyl_pantethein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_pimeloylpantetheine_4_phosphoryl_serine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:52852"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "methylated diphthine methylhydrolase",
+      "equation": "diphthine methyl ester-[translation elongation factor 2] + H2O = diphthine-[translation elongation factor 2] + methanol + H(+)",
+      "ec": "3.1.1.97",
+      "substrates": [
+        {
+          "metabolite": "diphthine_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphthine_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_97"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:42656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "8-amino-7-oxononanoate carboxylating dehydrogenase",
+      "equation": "(8S)-8-amino-7-oxononanoate + L-lysyl-[protein] + CO2 = (7R,8S)-8-amino-7-(carboxyamino)nonanoate + (S)-2-amino-6-oxohexanoyl-[protein] + 2 H(+)",
+      "ec": "2.6.1.121",
+      "substrates": [
+        {
+          "metabolite": "8s_8_amino_7_oxononanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7r_8s_8_ammonio_7_carboxylatoamino_nonanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_allysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_121"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:63660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "Kdo2-lipid IVA acyltransferase",
+      "equation": "dodecanoyl-[ACP] + alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid IVA (E. coli) = alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-(dodecanoyl)-lipid IVA (E. coli) + holo-[ACP]",
+      "ec": "2.3.1.241",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "kdo_2_lipid_iva",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kdo_2_lauroyl_lipid_iva",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_241"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:28442"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28442"
           }
         ]
       }

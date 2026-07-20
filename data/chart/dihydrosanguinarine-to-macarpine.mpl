@@ -19,4 +19,22 @@ pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
     <-> ec_1_5_3_12 [1.5.3.12] +o2 +hplus -h2o2
     macarpine
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_58 [1.14.14.58] +geranyllinalool +fmnh2 +o2 +buten_2_one +h2o +hplus
+    4_8_12_trimethyltrideca_1_3_7_11_tetraene
+  }
+
+  branch from dihydrochelirubine side right {
+    dihydrochelirubine
+    <-> ec_1_5_3_12 [1.5.3.12] +o2 +hplus +h2o2
+    chelirubine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_69 [2.1.1.69] +bergaptol +sam
+    5_methoxypsoralen
+  }
 }

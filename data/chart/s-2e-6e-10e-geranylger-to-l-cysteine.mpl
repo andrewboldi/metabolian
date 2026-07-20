@@ -15,4 +15,22 @@ pathway s-2e-6e-10e-geranylger-to-l-cysteine "S-[(2E,6E,10E)-geranylger… to L-
     <-> ec_3_6_1_n3 [3.6.1.n3] +h2o -cysteine -hplus
     amp_3_end_1
   }
+
+  branch from cysteine side left {
+    cysteine
+    <-> ec_1_14_99_52 [1.14.99.52] +l_histidine +o2 +h2o
+    s_5_histidyl_cysteine_sulfoxide_dizwitterion
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_41 [4.2.3.41] +geranylgeranyl_diphosphate
+    elisabethatriene
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_2_3_2_18 [2.3.2.18] +undecaprenyldiphospho_n_acetyl_n_acetylglucosami +3_glycyladenylyl_zwitterionic_group +hplus
+    undecaprenyldiphospho_n_acetyl_n_acetylglucosami
+  }
 }

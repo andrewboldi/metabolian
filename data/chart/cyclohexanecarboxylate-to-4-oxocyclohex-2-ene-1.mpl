@@ -15,4 +15,16 @@ pathway cyclohexanecarboxylate-to-4-oxocyclohex-2-ene-1 "cyclohexanecarboxylate 
     <-> ec_1_17_3_5 [1.17.3.5] +o2 -h2o2
     4_oxocyclohex_2_ene_1_carboxylate
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
+    pikromycin
+  }
+
+  branch from 4_oxocyclohexanecarboxylate side right {
+    4_oxocyclohexanecarboxylate
+    <-> ec_1_1_1_438 [1.1.1.438] +nad +nadh +hplus
+    cis_4_hydroxycyclohexane_1_carboxylate
+  }
 }

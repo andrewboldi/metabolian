@@ -120,6 +120,35 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "s_2_4_chloro_2_methylphenoxy_propanoate",
+      "name": "(S)-2-(4-chloro-2-methylphenoxy)propanoate",
+      "short": "2-(4-chloro-2-methy…",
+      "formula": "C10H10ClO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75285"
+      }
+    },
+    {
+      "id": "4_chloro_2_methylphenol",
+      "name": "4-chloro-2-methylphenol",
+      "short": "4-chloro-2-methylph…",
+      "formula": "C7H7ClO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1800"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
     }
   ],
   "enzymes": [
@@ -135,6 +164,13 @@
       "name": "cyclopenase",
       "ec": [
         "4.1.99.27"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_43",
+      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "ec": [
+        "1.14.11.43"
       ]
     }
   ],
@@ -290,6 +326,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:74463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "equation": "(S)-2-(4-chloro-2-methylphenoxy)propanoate + 2-oxoglutarate + O2 = 2-methyl-4-chlorophenol + pyruvate + succinate + CO2",
+      "ec": "1.14.11.43",
+      "substrates": [
+        {
+          "metabolite": "s_2_4_chloro_2_methylphenoxy_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_chloro_2_methylphenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37831"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37831"
           }
         ]
       }

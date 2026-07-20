@@ -126,6 +126,90 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "4_methylumbelliferyl_acetate",
+      "name": "4-methylumbelliferyl acetate",
+      "short": "4-methylumbellifery…",
+      "formula": "C12H10O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17763"
+      }
+    },
+    {
+      "id": "4_methylumbelliferone",
+      "name": "4-methylumbelliferone",
+      "short": "4-methylumbellifero…",
+      "formula": "C10H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17224"
+      }
+    },
+    {
+      "id": "aromatic_primary_alcohol",
+      "name": "aromatic primary alcohol",
+      "short": "aromatic primary…",
+      "formula": "CH3OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33857"
+      }
+    },
+    {
+      "id": "arsenite",
+      "name": "arsenite",
+      "formula": "H2AsO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29242"
+      }
+    },
+    {
+      "id": "arsenate",
+      "name": "arsenate",
+      "formula": "HAsO4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:48597"
+      }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "catechol",
+      "name": "catechol",
+      "formula": "C6H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18135"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +232,34 @@
       "name": "aryl-aldehyde dehydrogenase",
       "ec": [
         "1.2.1.29"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_56",
+      "name": "methylumbelliferyl-acetate deacetylase",
+      "ec": [
+        "3.1.1.56"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_90",
+      "name": "aryl-alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.90"
+      ]
+    },
+    {
+      "id": "ec_1_20_9_1",
+      "name": "arsenate reductase (azurin)",
+      "ec": [
+        "1.20.9.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_1",
+      "name": "anthranilate 1,2-dioxygenase (deaminating, decarboxylating)",
+      "ec": [
+        "1.14.12.1"
       ]
     }
   ],
@@ -303,6 +415,218 @@
           {
             "db": "Rhea",
             "id": "RHEA:11804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "methylumbelliferyl-acetate deacetylase",
+      "equation": "4-methylumbelliferyl acetate + H2O = 4-methylumbelliferone + acetate + H(+)",
+      "ec": "3.1.1.56",
+      "substrates": [
+        {
+          "metabolite": "4_methylumbelliferyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylumbelliferone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:12208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "aryl-alcohol dehydrogenase",
+      "equation": "an aromatic primary alcohol + NAD(+) = an aromatic aldehyde + NADH + H(+)",
+      "ec": "1.1.1.90",
+      "substrates": [
+        {
+          "metabolite": "aromatic_primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arenecarbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "arsenate reductase (azurin)",
+      "equation": "2 oxidized [azurin] + arsenite + H2O = 2 reduced [azurin] + arsenate + 3 H(+)",
+      "ec": "1.20.9.1",
+      "substrates": [
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "arsenite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "arsenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_20_9_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:18701"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "anthranilate 1,2-dioxygenase (deaminating, decarboxylating)",
+      "equation": "anthranilate + NADH + O2 + 3 H(+) = catechol + NH4(+) + CO2 + NAD(+)",
+      "ec": "1.14.12.1",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:11076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11076"
           }
         ]
       }

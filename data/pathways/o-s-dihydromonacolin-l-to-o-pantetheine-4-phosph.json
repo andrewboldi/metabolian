@@ -131,6 +131,53 @@
       "xrefs": {
         "chebi": "CHEBI:79038"
       }
+    },
+    {
+      "id": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-(S-fatty acylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-fatty…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138651"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "acyl_monophosphate",
+      "name": "acyl monophosphate",
+      "formula": "CO5PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59918"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
+    },
+    {
+      "id": "16_hydroxyhexadecanoate",
+      "name": "16-hydroxyhexadecanoate",
+      "short": "16-hydroxyhexadecan…",
+      "formula": "C16H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:55329"
+      }
     }
   ],
   "enzymes": [
@@ -160,6 +207,20 @@
       "name": "monacolin J acid methylbutanoate transferase",
       "ec": [
         "2.3.1.238"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_274",
+      "name": "phosphate acyltransferase",
+      "ec": [
+        "2.3.1.274"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_80",
+      "name": "long-chain fatty acid omega-monooxygenase",
+      "ec": [
+        "1.14.14.80"
       ]
     }
   ],
@@ -368,6 +429,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:43064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phosphate acyltransferase",
+      "equation": "a fatty acyl-[ACP] + phosphate = an acyl phosphate + holo-[ACP]",
+      "ec": "2.3.1.274",
+      "substrates": [
+        {
+          "metabolite": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acyl_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_274"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42292"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "long-chain fatty acid omega-monooxygenase",
+      "equation": "hexadecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 16-hydroxyhexadecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.80",
+      "substrates": [
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxyhexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:40199"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40199"
           }
         ]
       }

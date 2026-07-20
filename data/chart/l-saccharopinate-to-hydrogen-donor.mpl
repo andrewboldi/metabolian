@@ -19,4 +19,28 @@ pathway l-saccharopinate-to-hydrogen-donor "L-saccharopinate to hydrogen donor" 
     <-> ec_1_1_99_39 [1.1.99.39] +hydrogen_acceptor -hydrogen_donor
     akg
   }
+
+  branch from l_allysine side left {
+    l_allysine
+    <-> ec_2_6_1_71 [2.6.1.71] +l_lysinium +pyruvate
+    alanine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_59 [2.6.1.59] +dtdp_4_amino_4_6_dideoxy_d_galactose +akg
+    dtdp_4_dehydro_6_deoxy_d_glucose
+  }
+
+  branch from 2_oxoadipate side left {
+    2_oxoadipate
+    <-> ec_1_1_1_172 [1.1.1.172] +nad +nadh +hplus
+    2_hydroxyadipate
+  }
+
+  branch from r_2_hydroxyglutarate side right {
+    r_2_hydroxyglutarate
+    <-> ec_1_1_99_24 [1.1.99.24] +s_3_hydroxybutyrate +akg
+    acetoacetate
+  }
 }

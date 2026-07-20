@@ -17,4 +17,28 @@ pathway 6-demethylsterigmatocystin-to-methyl-anthranilat "6-demethylsterigmatocy
     <-> ec_2_3_1_232 [2.3.1.232] +anthraniloyl_coa +methanol -coa
     methyl_anthranilate
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_67 [2.1.1.67] +mercaptopurine +sam +hplus
+    6_methylthiopurine
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_59 [3.1.1.59] +juvenile_hormone_ii +h2o +hplus
+    2e_6e_10r_11s_10_11_epoxy_3_7_11_trimethyltride
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_96 [1.14.14.96] +trans_5_o_4_coumaroyl_d_quinate +fmnh2 +o2 +h2o +hplus
+    trans_5_o_caffeoyl_d_quinate
+  }
+
+  branch from methyl_anthranilate side right {
+    methyl_anthranilate
+    <-> ec_2_1_1_277 [2.1.1.277] +sam +sah
+    anthranilate
+  }
 }

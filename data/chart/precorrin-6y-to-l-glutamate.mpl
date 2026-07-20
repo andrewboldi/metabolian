@@ -15,4 +15,16 @@ pathway precorrin-6y-to-l-glutamate "precorrin-6Y to L-glutamate" {
     <-> ec_6_3_5_9 [6.3.5.9] +glutamine +atp +h2o -glutamate -adp -pi -hplus
     hydrogenobyrinic_acid_a_c_diamide
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
+    6_methoxymellein
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_1_2_1_88 [1.2.1.88] +nad +h2o +nadh +hplus
+    s_1_pyrroline_5_carboxylate
+  }
 }

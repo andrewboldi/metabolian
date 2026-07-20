@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-iminiumylmethyl-l-aspar-to-enol-oxaloacetate",
   "name": "N-iminiumylmethyl-L-aspar… to enol-oxaloacetate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from N-iminiumylmethyl-L-aspartate to enol-oxaloacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,6 +117,89 @@
       "xrefs": {
         "chebi": "CHEBI:17479"
       }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "l_citrulline",
+      "name": "L-citrulline",
+      "formula": "C6H11N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83397"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "β-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57966"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "n_formyl_l_methioninate",
+      "name": "N-formyl-L-methioninate",
+      "short": "N-formyl-L-methioni…",
+      "formula": "C6H10NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57809"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15589"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
     }
   ],
   "enzymes": [
@@ -146,6 +229,34 @@
       "name": "oxaloacetate tautomerase",
       "ec": [
         "5.3.2.2"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_15",
+      "name": "protein-arginine deiminase",
+      "ec": [
+        "3.5.3.15"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_11",
+      "name": "aspartate 1-decarboxylase",
+      "ec": [
+        "4.1.1.11"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_31",
+      "name": "formylmethionine deformylase",
+      "ec": [
+        "3.5.1.31"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_4",
+      "name": "malate dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.4"
       ]
     }
   ],
@@ -330,6 +441,186 @@
           {
             "db": "Rhea",
             "id": "RHEA:16021"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "protein-arginine deiminase",
+      "equation": "L-arginyl-[protein] + H2O = L-citrullyl-[protein] + NH4(+)",
+      "ec": "3.5.3.15",
+      "substrates": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_citrulline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:18089"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18089"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "aspartate 1-decarboxylase",
+      "equation": "L-aspartate + H(+) = beta-alanine + CO2",
+      "ec": "4.1.1.11",
+      "substrates": [
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:19497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "formylmethionine deformylase",
+      "equation": "N(alpha)-formyl-L-methionine + H2O = formate + L-methionine",
+      "ec": "3.5.1.31",
+      "substrates": [
+        {
+          "metabolite": "n_formyl_l_methioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:17781"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "malate dehydrogenase (quinone)",
+      "equation": "(S)-malate + a quinone = a quinol + oxaloacetate",
+      "ec": "1.1.5.4",
+      "substrates": [
+        {
+          "metabolite": "malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:46012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46012"
           }
         ]
       }

@@ -130,6 +130,63 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
+    },
+    {
+      "id": "guanosine",
+      "name": "Guanosine",
+      "formula": "C10H13N5O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16750"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "r1p",
+      "name": "alpha-D-Ribose 1-phosphate",
+      "short": "alpha-D-Ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57720"
+      }
+    },
+    {
+      "id": "s_4_bromophenyl_l_cysteine",
+      "name": "S-(4-bromophenyl)-L-cysteine",
+      "short": "S-(4-bromophenyl)-L…",
+      "formula": "C9H10BrNO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58257"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "4_bromophenylsulfanyl_pyruvate",
+      "name": "(4-bromophenylsulfanyl)pyruvate",
+      "short": "(4-bromophenylsulfa…",
+      "formula": "C9H6BrO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17468"
+      }
     }
   ],
   "enzymes": [
@@ -152,6 +209,27 @@
       "name": "archaeosine synthase",
       "ec": [
         "2.6.1.97"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_15",
+      "name": "guanosine phosphorylase",
+      "ec": [
+        "2.4.2.15"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_75",
+      "name": "cysteine-conjugate transaminase",
+      "ec": [
+        "2.6.1.75"
       ]
     }
   ],
@@ -295,6 +373,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:54084"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "guanosine + phosphate = alpha-D-ribose 1-phosphate + guanine",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "guanosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13233"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13233"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cysteine-conjugate transaminase",
+      "equation": "S-(4-bromophenyl)-L-cysteine + 2-oxoglutarate = 3-((4-bromophenyl)sulfanyl)-2-oxopropanoate + L-glutamate",
+      "ec": "2.6.1.75",
+      "substrates": [
+        {
+          "metabolite": "s_4_bromophenyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_bromophenylsulfanyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:13485"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13485"
           }
         ]
       }

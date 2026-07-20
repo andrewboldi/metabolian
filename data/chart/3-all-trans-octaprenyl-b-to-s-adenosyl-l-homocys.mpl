@@ -15,4 +15,16 @@ pathway 3-all-trans-octaprenyl-b-to-s-adenosyl-l-homocys "3-(all-trans-octapreny
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     5_methoxy_2_methyl_3_octaprenylhydroquinone
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_232 [2.1.1.232] +s_naringenin +sam +hplus
+    sakuranetin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    linolenoyl_containing_glycerolipid
+  }
 }

@@ -15,4 +15,16 @@ pathway l-erythro-3-methylmalyl-c-to-methylmalonate "L-erythro-3-methylmalyl-Câ€
     <-> ec_3_1_2_17 [3.1.2.17] +h2o -coa -hplus
     methylmalonate
   }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_2_6_1_63 [2.6.1.63] +3_hydroxy_l_kynurenine +glycine +h2o
+    xanthurenate
+  }
+
+  branch from s_methylmalonyl_coa side right {
+    s_methylmalonyl_coa
+    <-> ec_5_1_99_1 [5.1.99.1]
+    r_methylmalonyl_coa
+  }
 }

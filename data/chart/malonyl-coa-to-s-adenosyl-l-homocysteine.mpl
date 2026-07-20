@@ -15,4 +15,10 @@ pathway malonyl-coa-to-s-adenosyl-l-homocysteine "malonyl-CoA to S-adenosyl-L-ho
     <-> ec_2_1_1_302 [2.1.1.302] +sam -sah -hplus
     3_methoxy_5_methyl_1_naphthoate
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a4 +sam
+    gibberellin_a4_methyl_ester
+  }
 }

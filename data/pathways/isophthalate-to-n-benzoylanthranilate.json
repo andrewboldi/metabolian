@@ -117,6 +117,44 @@
       "xrefs": {
         "chebi": "CHEBI:17331"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "z_bisabolene",
+      "name": "(Z)-γ-bisabolene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49238"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "2_4_6_trihydroxybenzophenone",
+      "name": "2,4,6-trihydroxybenzophenone",
+      "short": "2,4,6-trihydroxyben…",
+      "formula": "C13H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77765"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +177,20 @@
       "name": "anthranilate N-benzoyltransferase",
       "ec": [
         "2.3.1.144"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_40",
+      "name": "(Z)-gamma-bisabolene synthase",
+      "ec": [
+        "4.2.3.40"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_220",
+      "name": "2,4,6-trihydroxybenzophenone synthase",
+      "ec": [
+        "2.3.1.220"
       ]
     }
   ],
@@ -282,6 +334,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:21600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(Z)-gamma-bisabolene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
+      "ec": "4.2.3.40",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_bisabolene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26081"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2,4,6-trihydroxybenzophenone synthase",
+      "equation": "benzoyl-CoA + 3 malonyl-CoA + 2 H(+) = 2,4,6-trihydroxybenzophenone + 3 CO2 + 4 CoA",
+      "ec": "2.3.1.220",
+      "substrates": [
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_6_trihydroxybenzophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35143"
           }
         ]
       }

@@ -17,4 +17,28 @@ pathway glutamyl-aminobutyral-to-succinyl-coa "γ-glutamyl-γ-aminobutyral… to
     <-> ec_1_2_1_76 [1.2.1.76] +nadp +coa -nadph -hplus
     succinyl_coa
   }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_80 [2.6.1.80] +s_s_s_nicotianamine_trizwitterion +akg
+    3_deamino_3_oxonicotianaminium
+  }
+
+  branch from 4_oxobutanoate side right {
+    4_oxobutanoate
+    <-> ec_4_1_2_52 [4.1.2.52] +pyruvate
+    4_hydroxy_2_oxoheptanedioate
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_115 [2.6.1.115] +2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae +pyruvate
+    2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_2_3_1_174 [2.3.1.174] +acetyl_coa +coa
+    3_oxoadipyl_coa
+  }
 }

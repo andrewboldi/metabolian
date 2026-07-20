@@ -128,6 +128,43 @@
       "xrefs": {
         "chebi": "CHEBI:17104"
       }
+    },
+    {
+      "id": "menaquinone_4",
+      "name": "menaquinone-4",
+      "formula": "C31H40O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78277"
+      }
+    },
+    {
+      "id": "hydroxymenaquinone_4",
+      "name": "ω-hydroxymenaquinone-4",
+      "short": "ω-hydroxymenaquinon…",
+      "formula": "C31H40O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78278"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
     }
   ],
   "enzymes": [
@@ -157,6 +194,20 @@
       "name": "protopine 6-monooxygenase",
       "ec": [
         "1.14.14.98"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_78",
+      "name": "phylloquinone omega-hydroxylase",
+      "ec": [
+        "1.14.14.78"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_59",
+      "name": "[cytochrome c]-lysine N-methyltransferase",
+      "ec": [
+        "2.1.1.59"
       ]
     }
   ],
@@ -373,6 +424,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:22644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phylloquinone omega-hydroxylase",
+      "equation": "menaquinone-4 + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxymenaquinone-4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.78",
+      "substrates": [
+        {
+          "metabolite": "menaquinone_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxymenaquinone_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41520"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "[cytochrome c]-lysine N-methyltransferase",
+      "equation": "L-lysyl-[cytochrome c] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[cytochrome c] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.59",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24312"
           }
         ]
       }

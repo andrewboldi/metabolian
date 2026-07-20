@@ -15,4 +15,10 @@ pathway 3-vinylbacteriochlorophyl-to-s-adenosyl-l-homocy "3-vinylbacteriochlorop
     <-> ec_2_1_1_332 [2.1.1.332] +sam -sah -hplus
     12_ethyl_8_isobutyl_3_vinylbacteriochlorophyllid
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_235 [2.1.1.235] +dtdp_3_azaniumyl_3_6_dideoxy_d_glucose +sam +hplus
+    dtdp_d_mycaminose
+  }
 }

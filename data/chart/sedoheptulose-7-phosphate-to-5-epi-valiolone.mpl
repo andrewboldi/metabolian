@@ -15,4 +15,10 @@ pathway sedoheptulose-7-phosphate-to-5-epi-valiolone "sedoheptulose 7-phosphate 
     <-> ec_5_1_3_35 [5.1.3.35]
     5_epi_valiolone_7_phosphate
   }
+
+  branch from 2_epi_5_epi_valiolone side left {
+    2_epi_5_epi_valiolone
+    <-> ec_5_1_3_33 [5.1.3.33]
+    5_epi_valiolone
+  }
 }

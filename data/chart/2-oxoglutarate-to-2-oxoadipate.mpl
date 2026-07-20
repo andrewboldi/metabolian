@@ -15,4 +15,10 @@ pathway 2-oxoglutarate-to-2-oxoadipate "2-oxoglutarate to 2-oxoadipate" {
     <-> ec_1_1_1_87 [1.1.1.87] +nad -co2 -nadh
     2_oxoadipate
   }
+
+  branch from homoisocitrate side left {
+    homoisocitrate
+    <-> ec_4_2_1_36 [4.2.1.36] +h2o
+    but_1_ene_1_2_4_tricarboxylate
+  }
 }

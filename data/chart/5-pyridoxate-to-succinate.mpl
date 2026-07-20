@@ -15,4 +15,22 @@ pathway 5-pyridoxate-to-succinate "5-pyridoxate to succinate" {
     <-> ec_2_8_3_18 [2.8.3.18] +succinyl_coa +acetate -acetyl_coa
     succinate
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_4_1_2_66 [4.1.2.66] +trans_4_coumarate +h2o
+    4_hydroxybenzaldehyde
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_23 [1.4.1.23] +valine +nad +h2o +nadh +hplus
+    kiv
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_2_8_3_22 [2.8.3.22] +l_citramalate +succinyl_coa
+    3s_citramalyl_coa
+  }
 }

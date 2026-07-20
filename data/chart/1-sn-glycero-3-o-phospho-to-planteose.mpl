@@ -19,4 +19,22 @@ pathway 1-sn-glycero-3-o-phospho-to-planteose "1-(sn-glycero-3-O-phospho… to p
     <-> ec_2_4_1_167 [2.4.1.167] +sucrose +udp_d_galactose -udp -hplus
     planteose
   }
+
+  branch from myo_inositol side left {
+    myo_inositol
+    <-> ec_2_1_1_129 [2.1.1.129] +sam +sah +hplus
+    1d_4_o_methyl_myo_inositol
+  }
+
+  branch from sn_glycerol_3_phosphate side right {
+    sn_glycerol_3_phosphate
+    <-> ec_2_3_1_15 [2.3.1.15] +acyl_coa +coa
+    1_acyl_sn_glycerol_3_phosphate
+  }
+
+  branch from sucrose side left {
+    sucrose
+    <-> ec_2_4_1_7 [2.4.1.7] +pi +g1p
+    d_fructofuranose
+  }
 }

@@ -177,6 +177,90 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "r_carnitinyl_coa",
+      "name": "(R)-carnitinyl-CoA",
+      "formula": "C28H46N8O18P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60932"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "11z_14z_17z_icosatrienoyl_coa",
+      "name": "(11Z,14Z,17Z)-icosatrienoyl-CoA",
+      "short": "(11Z,14Z,17Z)-icosa…",
+      "formula": "C41H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74328"
+      }
+    },
+    {
+      "id": "5z_11z_14z_17z_icosatetraenoyl_coa",
+      "name": "(5Z,11Z,14Z,17Z)-icosatetraenoyl-CoA",
+      "short": "(5Z,11Z,14Z,17Z)-ic…",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:78664"
+      }
+    },
+    {
+      "id": "3_demethylubiquinol_8",
+      "name": "3-demethylubiquinol-8",
+      "short": "3-demethylubiquinol…",
+      "formula": "C48H74O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61705"
+      }
+    },
+    {
+      "id": "ubiquinol_8",
+      "name": "ubiquinol-8",
+      "formula": "C49H76O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61682"
+      }
     }
   ],
   "enzymes": [
@@ -199,6 +283,27 @@
       "name": "tRNA 2-(methylsulfanyl)-N(6)-isopentenyladenosine(37) hydroxylase",
       "ec": [
         "1.14.99.69"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_48",
+      "name": "carnitine--CoA ligase",
+      "ec": [
+        "6.2.1.48"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_37",
+      "name": "acyl-CoA 5-desaturase",
+      "ec": [
+        "1.14.19.37"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_64",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "ec": [
+        "2.1.1.64"
       ]
     }
   ],
@@ -370,6 +475,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:65812"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "carnitine--CoA ligase",
+      "equation": "(R)-carnitine + ATP + CoA = (R)-carnitinyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.48",
+      "substrates": [
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_carnitinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28514"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28514"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "acyl-CoA 5-desaturase",
+      "equation": "(11Z,14Z,17Z)-eicosatrienoyl-CoA + AH2 + O2 = (5Z,11Z,14Z,17Z)-eicosatetraenoyl-CoA + A + 2 H2O",
+      "ec": "1.14.19.37",
+      "substrates": [
+        {
+          "metabolite": "11z_14z_17z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_11z_14z_17z_icosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "equation": "3-demethylubiquinol-8 + S-adenosyl-L-methionine = ubiquinol-8 + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.64",
+      "substrates": [
+        {
+          "metabolite": "3_demethylubiquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:28679"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28679"
           }
         ]
       }

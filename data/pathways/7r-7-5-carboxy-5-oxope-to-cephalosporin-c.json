@@ -109,6 +109,62 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "l_saccharopinate",
+      "name": "L-saccharopinate",
+      "formula": "C11H19N2O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57951"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene",
+      "name": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene",
+      "short": "5-(3,4-diacetoxybut…",
+      "formula": "C16H14O4S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16013"
+      }
+    },
+    {
+      "id": "5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene",
+      "name": "5-(3-hydroxy-4-acetoxybut-1-ynyl)-2,2'-bithiophene",
+      "short": "5-(3-hydroxy-4-acet…",
+      "formula": "C14H12O3S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17229"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +187,20 @@
       "name": "deacetylcephalosporin-C acetyltransferase",
       "ec": [
         "2.3.1.175"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_7",
+      "name": "saccharopine dehydrogenase (NAD(+), L-lysine-forming)",
+      "ec": [
+        "1.5.1.7"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_66",
+      "name": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene deacetylase",
+      "ec": [
+        "3.1.1.66"
       ]
     }
   ],
@@ -270,6 +340,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:23860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "saccharopine dehydrogenase (NAD(+), L-lysine-forming)",
+      "equation": "L-saccharopine + NAD(+) + H2O = L-lysine + 2-oxoglutarate + NADH + H(+)",
+      "ec": "1.5.1.7",
+      "substrates": [
+        {
+          "metabolite": "l_saccharopinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:12440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12440"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene deacetylase",
+      "equation": "5-(3,4-diacetoxybut-1-ynyl)-2,2'-bithiophene + H2O = 5-(3-hydroxy-4-acetoxybut-1-ynyl)-2,2'-bithiophene + acetate + H(+)",
+      "ec": "3.1.1.66",
+      "substrates": [
+        {
+          "metabolite": "5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:16313"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16313"
           }
         ]
       }

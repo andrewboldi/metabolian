@@ -122,6 +122,45 @@
       "xrefs": {
         "chebi": "CHEBI:61473"
       }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "2_o_methylguanosine_5_monophosphate_1",
+      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
+      "short": "2'-O-methylguanosin…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74445"
+      }
+    },
+    {
+      "id": "2_oxospirilloxanthin",
+      "name": "2-oxospirilloxanthin",
+      "formula": "C42H58O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64792"
+      }
+    },
+    {
+      "id": "2_2_dioxospirilloxanthin",
+      "name": "2,2'-dioxospirilloxanthin",
+      "short": "2,2'-dioxospirillox…",
+      "formula": "C42H56O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64793"
+      }
     }
   ],
   "enzymes": [
@@ -144,6 +183,20 @@
       "name": "2-methoxy-6-polyprenyl-1,4-benzoquinol methylase",
       "ec": [
         "2.1.1.201"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_34",
+      "name": "tRNA (guanosine(18)-2'-O)-methyltransferase",
+      "ec": [
+        "2.1.1.34"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_9",
+      "name": "spheroidene monooxygenase",
+      "ec": [
+        "1.14.15.9"
       ]
     }
   ],
@@ -299,6 +352,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:44752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tRNA (guanosine(18)-2'-O)-methyltransferase",
+      "equation": "guanosine(18) in tRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(18) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.34",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20077"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "spheroidene monooxygenase",
+      "equation": "2-oxospirilloxanthin + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = 2,2'-dioxospirilloxanthin + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.9",
+      "substrates": [
+        {
+          "metabolite": "2_oxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_2_dioxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33035"
           }
         ]
       }

@@ -15,4 +15,22 @@ pathway 5-aminoimidazol-3-ium-to-adenine "5-aminoimidazol-3-ium… to adenine" {
     <-> ec_3_2_2_9 [3.2.2.9] +5_deoxyadenosine +h2o -adenine
     5_deoxy_d_ribofuranose
   }
+
+  branch from carbon_monoxide side left {
+    carbon_monoxide
+    <-> ec_1_13_11_48 [1.13.11.48] +3_hydroxy_2_methylquinolin_4_1h_one +o2 +hplus
+    n_acetylanthranilate
+  }
+
+  branch from 5_deoxyadenosine side right {
+    5_deoxyadenosine
+    <-> ec_1_21_98_4 [1.21.98.4] +exxxy_peptide +sam +methionine +hplus
+    e_y_cross_linked_exxxy_peptide_residues
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_2_3_1_311 [2.3.1.311] +uridine_5_monophosphate_1 +acetyl_coa +sam +h2o +5_deoxyadenosine +coa +hplus
+    5_carboxymethyl_uridine_5_monophosphate_2
+  }
 }

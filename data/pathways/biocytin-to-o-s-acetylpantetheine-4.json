@@ -135,6 +135,44 @@
       "xrefs": {
         "chebi": "CHEBI:78446"
       }
+    },
+    {
+      "id": "glutamyl_lysine_dizwitterion",
+      "name": "ε-(γ-glutamyl)lysine dizwitterion",
+      "short": "ε-(γ-glutamyl)lysin…",
+      "formula": "C11H21N3O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133752"
+      }
+    },
+    {
+      "id": "5_oxo_l_prolinate",
+      "name": "5-oxo-L-prolinate",
+      "formula": "C5H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58402"
+      }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58635"
+      }
+    },
+    {
+      "id": "phyllocladan_16_ol",
+      "name": "phyllocladan-16α-ol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53643"
+      }
     }
   ],
   "enzymes": [
@@ -157,6 +195,20 @@
       "name": "malonyl-S-ACP:biotin-protein carboxyltransferase",
       "ec": [
         "2.1.3.10"
+      ]
+    },
+    {
+      "id": "ec_4_3_2_8",
+      "name": "gamma-glutamylamine cyclotransferase",
+      "ec": [
+        "4.3.2.8"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_45",
+      "name": "phyllocladan-16alpha-ol synthase",
+      "ec": [
+        "4.2.3.45"
       ]
     }
   ],
@@ -304,6 +356,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:23028"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "gamma-glutamylamine cyclotransferase",
+      "equation": "epsilon-(gamma-L-glutamyl)-L-lysine = 5-oxo-L-proline + L-lysine",
+      "ec": "4.3.2.8",
+      "substrates": [
+        {
+          "metabolite": "glutamyl_lysine_dizwitterion",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_oxo_l_prolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16961"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phyllocladan-16alpha-ol synthase",
+      "equation": "(+)-copalyl diphosphate + H2O = phyllocladan-16alpha-ol + diphosphate",
+      "ec": "4.2.3.45",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phyllocladan_16_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26430"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26430"
           }
         ]
       }

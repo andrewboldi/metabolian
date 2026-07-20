@@ -17,4 +17,28 @@ pathway 3-l-aspartate-adenylyl-to-l-glutamate "3'-(L-aspartate)adenylyl(… to L
     <-> ec_2_6_1_2 [2.6.1.2] +akg -pyruvate
     glutamate
   }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_2_3_2_22 [2.3.2.22] +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    cyclo_l_leucyl_l_leucyl
+  }
+
+  branch from ergosterol side right {
+    ergosterol
+    <-> ec_1_3_1_71 [1.3.1.71] +nadp +nadph +hplus
+    ergosta_5_7_22_24_28_tetraen_3_ol
+  }
+
+  branch from aspartate side left {
+    aspartate
+    <-> ec_1_14_13_248 [1.14.13.248] +nadph +o2 +hplus +nadp +h2o
+    2_nitrobutanedioate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
+    dtdp_3_dehydro_4_6_dideoxy_d_glucose
+  }
 }

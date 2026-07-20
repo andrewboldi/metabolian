@@ -111,6 +111,34 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "maltose",
+      "name": "maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17306"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "d_glucose_1_phosphate",
+      "name": "β-D-glucose 1-phosphate",
+      "short": "β-D-glucose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57684"
+      }
     }
   ],
   "enzymes": [
@@ -147,6 +175,13 @@
       "name": "glucarolactone O-hydroxycinnamoyltransferase",
       "ec": [
         "2.3.1.132"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_8",
+      "name": "maltose phosphorylase",
+      "ec": [
+        "2.4.1.8"
       ]
     }
   ],
@@ -282,6 +317,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:14261"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "maltose phosphorylase",
+      "equation": "D-maltose + phosphate = beta-D-glucose 1-phosphate + D-glucose",
+      "ec": "2.4.1.8",
+      "substrates": [
+        {
+          "metabolite": "maltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21116"
           }
         ]
       }

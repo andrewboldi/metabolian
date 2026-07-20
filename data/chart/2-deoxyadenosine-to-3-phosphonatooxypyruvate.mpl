@@ -19,4 +19,28 @@ pathway 2-deoxyadenosine-to-3-phosphonatooxypyruvate "2'-deoxyadenosine to 3-pho
     <-> ec_1_1_1_95 [1.1.1.95] +nad -nadh -hplus
     php
   }
+
+  branch from 2_deoxy_d_ribose_1_phosphate side left {
+    2_deoxy_d_ribose_1_phosphate
+    <-> ec_2_4_2_2 [2.4.2.2] +thymidine +pi
+    thymine
+  }
+
+  branch from 2_deoxy_d_ribofuranose_5_phosphate side right {
+    2_deoxy_d_ribofuranose_5_phosphate
+    <-> ec_2_7_1_229 [2.7.1.229] +atp +adp +hplus
+    2_deoxy_d_ribofuranose
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> ec_2_3_1_190 [2.3.1.190] +nad +coa +acetyl_coa +nadh +hplus
+    acetoin
+  }
+
+  branch from pg3 side right {
+    pg3
+    <-> ec_2_7_1_31 [2.7.1.31] +atp +adp +hplus
+    d_glycerate
+  }
 }

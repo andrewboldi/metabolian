@@ -109,6 +109,71 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
+    },
+    {
+      "id": "spermidine",
+      "name": "spermidine",
+      "formula": "C7H22N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57834"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_ammoniobutanal",
+      "name": "4-ammoniobutanal",
+      "formula": "C4H10NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58264"
+      }
+    },
+    {
+      "id": "3_5_diiodo_l_tyrosinate",
+      "name": "3,5-diiodo-L-tyrosinate",
+      "short": "3,5-diiodo-L-tyrosi…",
+      "formula": "C9H8I2NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57506"
+      }
+    },
+    {
+      "id": "3_5_diiodo_4_oxidophenyl_pyruvate",
+      "name": "(3,5-diiodo-4-oxidophenyl)pyruvate",
+      "short": "(3,5-diiodo-4-oxido…",
+      "formula": "C9H4I2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58023"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +196,20 @@
       "name": "putrescine--2-oxoglutarate transaminase",
       "ec": [
         "2.6.1.82"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_57",
+      "name": "diamine N-acetyltransferase",
+      "ec": [
+        "2.3.1.57"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_24",
+      "name": "diiodotyrosine transaminase",
+      "ec": [
+        "2.6.1.24"
       ]
     }
   ],
@@ -286,6 +365,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:12268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "diamine N-acetyltransferase",
+      "equation": "spermidine + acetyl-CoA = N(1)-acetylspermidine + CoA + H(+)",
+      "ec": "2.3.1.57",
+      "substrates": [
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_acetylspermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28150"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "putrescine--2-oxoglutarate transaminase",
+      "equation": "putrescine + 2-oxoglutarate = 4-aminobutanal + L-glutamate",
+      "ec": "2.6.1.82",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_82"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:23816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "diiodotyrosine transaminase",
+      "equation": "3,5-diiodo-L-tyrosine + 2-oxoglutarate = 3-(3,5-diiodo-4-hydroxyphenyl)pyruvate + L-glutamate",
+      "ec": "2.6.1.24",
+      "substrates": [
+        {
+          "metabolite": "3_5_diiodo_l_tyrosinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_diiodo_4_oxidophenyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:19781"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19781"
           }
         ]
       }

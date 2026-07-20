@@ -138,6 +138,43 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "n_methylanthranilate",
+      "name": "N-methylanthranilate",
+      "formula": "C8H8NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36557"
+      }
+    },
+    {
+      "id": "s_atropinium",
+      "name": "(S)-atropinium",
+      "formula": "C17H24NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58164"
+      }
+    },
+    {
+      "id": "6s_6_hydroxyhyoscyaminium",
+      "name": "(6S)-6-hydroxyhyoscyaminium",
+      "short": "6-hydroxyhyoscyamin…",
+      "formula": "C17H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57459"
+      }
     }
   ],
   "enzymes": [
@@ -160,6 +197,20 @@
       "name": "deacetylvindoline O-acetyltransferase",
       "ec": [
         "2.3.1.107"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_111",
+      "name": "anthranilate N-methyltransferase",
+      "ec": [
+        "2.1.1.111"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_11",
+      "name": "hyoscyamine (6S)-dioxygenase",
+      "ec": [
+        "1.14.11.11"
       ]
     }
   ],
@@ -307,6 +358,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:24496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "anthranilate N-methyltransferase",
+      "equation": "anthranilate + S-adenosyl-L-methionine = N-methylanthranilate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.111",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_111"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:12180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hyoscyamine (6S)-dioxygenase",
+      "equation": "L-hyoscyamine + 2-oxoglutarate + O2 = (6S)-6-hydroxyhyoscyamine + succinate + CO2",
+      "ec": "1.14.11.11",
+      "substrates": [
+        {
+          "metabolite": "s_atropinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6s_6_hydroxyhyoscyaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12629"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12629"
           }
         ]
       }

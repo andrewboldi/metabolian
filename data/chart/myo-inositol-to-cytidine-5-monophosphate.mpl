@@ -15,4 +15,16 @@ pathway myo-inositol-to-cytidine-5-monophosphate "myo-inositol to cytidine 5'-mo
     <-> ec_2_7_8_34 [2.7.8.34] +1d_myo_inositol_3_phosphate -cytidine_5_monophosphate -hplus
     bis_1l_myo_inositol_3_1_phosphate_1_phosphate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_128 [4.2.3.128] +fpp
+    cubebene
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_99_15 [2.4.99.15] +kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    kdo_3_lipid_iva
+  }
 }

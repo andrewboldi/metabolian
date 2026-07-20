@@ -15,4 +15,16 @@ pathway 3s-5s-carbapenam-3-carb-to-s-adenosyl-l-homocys "(3S,5S)-carbapenam-3-ca
     <-> ec_2_1_1_394 [2.1.1.394] +hydrogen_donor +sam -5_deoxyadenosine -methionine -hydrogen_acceptor -sah -hplus
     2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +h2o
+    mycobilin_b
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_163 [2.1.1.163] +2_demethylmenaquinol_7 +sam +hplus
+    menaquinol_7
+  }
 }

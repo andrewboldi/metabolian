@@ -17,4 +17,28 @@ pathway l-cysteine-to-succinate "L-cysteine to succinate" {
     <-> ec_2_5_1_48 [2.5.1.48] +o_succinyl_l_homoserinate +cysteine -succinate -hplus
     cystathionine
   }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_6_2_2_1 [6.2.2.1] +glycine +atp +adp +pi
+    thioglycine
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> ec_6_1_1_11 [6.1.1.11] +serine +atp +amp +ppi +hplus
+    3_l_seryl_adenylyl_1_group
+  }
+
+  branch from cysteine side left {
+    cysteine
+    <-> ec_2_5_1_160 [2.5.1.160] +cystathionine +pi
+    o_phosphonato_l_homoserine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_30 [1.14.11.30] +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
+  }
 }

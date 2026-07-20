@@ -123,6 +123,25 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "udp_2_3_bis_3r_3_hydroxytetradecanoyl_d_glucosam",
+      "name": "UDP-2,3-bis[(3R)-3-hydroxytetradecanoyl]-α-D-glucosamine",
+      "short": "UDP-2,3-bis[(3R)-3-…",
+      "formula": "C43H75N3O20P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78847"
+      }
+    },
+    {
+      "id": "lipid_x",
+      "name": "lipid X",
+      "formula": "C34H64NO12P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57957"
+      }
     }
   ],
   "enzymes": [
@@ -145,6 +164,13 @@
       "name": "N-acetyllactosamine synthase",
       "ec": [
         "2.4.1.90"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_54",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": [
+        "3.6.1.54"
       ]
     }
   ],
@@ -292,6 +318,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "equation": "UDP-2-N,3-O-bis[(3R)-3-hydroxytetradecanoyl]-alpha-D-glucosamine + H2O = 2-N,3-O-bis[(3R)-3-hydroxytetradecanoyl]-alpha-D-glucosaminyl 1-phosphate + UMP + 2 H(+)",
+      "ec": "3.6.1.54",
+      "substrates": [
+        {
+          "metabolite": "udp_2_3_bis_3r_3_hydroxytetradecanoyl_d_glucosam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lipid_x",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25213"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25213"
           }
         ]
       }

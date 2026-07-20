@@ -19,4 +19,28 @@ pathway l-cys-ian-to-3-cyano-l-alanine "L-Cys(IAN) to 3-cyano-L-alanine" {
     <-> ec_4_2_1_65 [4.2.1.65] -h2o
     3_cyano_l_alanine
   }
+
+  branch from hydrogen_cyanide side left {
+    hydrogen_cyanide
+    <-> ec_4_1_2_46 [4.1.2.46] +2r_2_hydroxy_2_methylbutanenitrile
+    butan_2_one
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_133 [1.14.14.133] +1_8_cineole +fmnh2 +o2 +h2o +hplus
+    2_endo_hydroxy_1_8_cineole
+  }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_1_8_1_18 [1.8.1.18] +nad +nadh
+    sulfur_atom
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_1_4_1_29 [1.4.1.29] +nad +nadh +hplus
+    iminoaspartate
+  }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sedoheptulose-to-diphosphate",
   "name": "sedoheptulose to diphosphate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from sedoheptulose to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -149,6 +149,42 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "biotinate",
+      "name": "biotinate",
+      "formula": "C10H15N2O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57586"
+      }
+    },
+    {
+      "id": "biotinyl_l_lysine",
+      "name": "biotinyl-L-lysine",
+      "formula": "C16H26N4O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83144"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
     }
   ],
   "enzymes": [
@@ -185,6 +221,13 @@
       "name": "D-glycero-alpha-D-manno-heptose 1-phosphate guanylyltransferase",
       "ec": [
         "2.7.7.71"
+      ]
+    },
+    {
+      "id": "ec_6_3_4_9",
+      "name": "biotin--[methylmalonyl-CoA-carboxytransferase] ligase",
+      "ec": [
+        "6.3.4.9"
       ]
     }
   ],
@@ -418,6 +461,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:27461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "biotin--[methylmalonyl-CoA-carboxytransferase] ligase",
+      "equation": "apo-[methylmalonyl-CoA:pyruvate carboxytransferase] + biotin + ATP = holo-[methylmalonyl-CoA:pyruvate carboxytransferase] + AMP + diphosphate + H(+)",
+      "ec": "6.3.4.9",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "biotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biotinyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_4_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23668"
           }
         ]
       }

@@ -126,6 +126,61 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "styrene",
+      "name": "styrene",
+      "formula": "C8H8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27452"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "two_alkyl_ammonium_ion",
+      "name": "two-alkyl ammonium ion",
+      "short": "two-alkyl ammonium…",
+      "formula": "CH4NR2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:193112"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "ketone",
+      "name": "ketone",
+      "formula": "COR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17087"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -155,6 +210,20 @@
       "name": "2-coumarate O-beta-glucosyltransferase",
       "ec": [
         "2.4.1.114"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_102",
+      "name": "phenacrylate decarboxylase",
+      "ec": [
+        "4.1.1.102"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_28",
+      "name": "secondary-alkyl amine dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.4.1.28"
       ]
     }
   ],
@@ -302,6 +371,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:10236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phenacrylate decarboxylase",
+      "equation": "(E)-cinnamate + H(+) = styrene + CO2",
+      "ec": "4.1.1.102",
+      "substrates": [
+        {
+          "metabolite": "trans_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "styrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46920"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "secondary-alkyl amine dehydrogenase [NAD(P)(+)]",
+      "equation": "a secondary alkyl amine + NAD(+) + H2O = a ketone + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.28",
+      "substrates": [
+        {
+          "metabolite": "two_alkyl_ammonium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ketone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74175"
           }
         ]
       }

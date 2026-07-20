@@ -15,4 +15,22 @@ pathway 1-5-dihydroriboflavin-to-hydrogen-donor "1,5-dihydroriboflavin to hydrog
     <-> ec_2_6_1_114 [2.6.1.114] +glutamate +hydrogen_acceptor +o2 +h2o -akg -hydrogen_donor -co2 -hplus
     8_amino_8_demethylriboflavin_5_phosphate
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_5_1_39 [1.5.1.39] +nad +nadh +hplus
+    fmnh2
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_2_7_3 [1.2.7.3] +di_sulfido_diiron +coa +di_sulfido_diiron +co2 +hplus
+    succinyl_coa
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_1_99_27 [1.1.99.27] +r_pantolactone +hydrogen_acceptor
+    2_dehydropantolactone
+  }
 }

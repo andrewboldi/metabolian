@@ -145,6 +145,33 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "2_4_dibromophenol",
+      "name": "2,4-dibromophenol",
+      "formula": "C6H4Br2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34238"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
     }
   ],
   "enzymes": [
@@ -167,6 +194,13 @@
       "name": "4-hydroxybenzoate brominase (decarboxylating)",
       "ec": [
         "1.14.19.55"
+      ]
+    },
+    {
+      "id": "ec_1_17_1_11",
+      "name": "formate dehydrogenase (NAD(+), ferredoxin)",
+      "ec": [
+        "1.17.1.11"
       ]
     }
   ],
@@ -338,6 +372,128 @@
           {
             "db": "Rhea",
             "id": "RHEA:56368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4-hydroxybenzoate brominase (decarboxylating)",
+      "equation": "2 bromide + 4-hydroxybenzoate + 2 NADPH + 2 O2 + 5 H(+) = 2,4-dibromophenol + CO2 + 2 NADP(+) + 4 H2O",
+      "ec": "1.14.19.55",
+      "substrates": [
+        {
+          "metabolite": "bromide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_dibromophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "formate dehydrogenase (NAD(+), ferredoxin)",
+      "equation": "2 formate + 2 oxidized [2Fe-2S]-[ferredoxin] + NAD(+) = 2 reduced [2Fe-2S]-[ferredoxin] + 2 CO2 + NADH + H(+)",
+      "ec": "1.17.1.11",
+      "substrates": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46952"
           }
         ]
       }

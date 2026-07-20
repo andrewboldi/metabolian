@@ -93,6 +93,34 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "2_3_didehydroadipoyl_coa",
+      "name": "2,3-didehydroadipoyl-CoA",
+      "short": "2,3-didehydroadipoy…",
+      "formula": "C27H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:71044"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -115,6 +143,13 @@
       "name": "3-oxo-5,6-dehydrosuberyl-CoA semialdehyde dehydrogenase",
       "ec": [
         "1.2.1.91"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_223",
+      "name": "3-oxo-5,6-didehydrosuberyl-CoA thiolase",
+      "ec": [
+        "2.3.1.223"
       ]
     }
   ],
@@ -246,6 +281,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:31747"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-oxo-5,6-didehydrosuberyl-CoA thiolase",
+      "equation": "2,3-didehydroadipoyl-CoA + acetyl-CoA = 3-oxo-5,6-didehydrosuberyl-CoA + CoA",
+      "ec": "2.3.1.223",
+      "substrates": [
+        {
+          "metabolite": "2_3_didehydroadipoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_5_6_dehydrosuberyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_223"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34799"
           }
         ]
       }

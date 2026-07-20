@@ -15,4 +15,10 @@ pathway protodeoxyviolaceinate-to-violacein "protodeoxyviolaceinate to violacein
     <-> ec_1_14_13_224 [1.14.13.224] +o2 +hplus -co2 -h2o
     violacein
   }
+
+  branch from protoviolaceinate side left {
+    protoviolaceinate
+    <-> ec_1_14_13_217 [1.14.13.217] +o2 +hplus +co2 +h2o
+    proviolacein
+  }
 }

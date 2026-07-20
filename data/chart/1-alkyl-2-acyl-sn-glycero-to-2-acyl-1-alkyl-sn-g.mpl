@@ -17,4 +17,16 @@ pathway 1-alkyl-2-acyl-sn-glycero-to-2-acyl-1-alkyl-sn-g "1-alkyl-2-acyl-sn-glyc
     <-> ec_2_3_1_63 [2.3.1.63] +acyl_coa -coa
     2_acyl_1_alkyl_sn_glycero_3_phosphocholine
   }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_7_1_48 [2.7.1.48] +atp +adp +hplus
+    cytidine
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> ec_3_1_1_116 [3.1.1.116] +dag +h2o +hplus
+    2_monoglyceride
+  }
 }

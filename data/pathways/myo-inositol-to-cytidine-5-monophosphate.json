@@ -111,6 +111,53 @@
       "xrefs": {
         "chebi": "CHEBI:60377"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cubebene",
+      "name": "β-cubebene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10363"
+      }
+    },
+    {
+      "id": "kdo_2_lipid_iva",
+      "name": "(KDO)2-lipid IVA",
+      "formula": "C84H148N2O37P2",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:60365"
+      }
+    },
+    {
+      "id": "cmp_3_deoxy_d_manno_octulosonate",
+      "name": "CMP-3-deoxy-β-D-manno-octulosonate",
+      "short": "CMP-3-deoxy-β-D-man…",
+      "formula": "C17H24N3O15P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85987"
+      }
+    },
+    {
+      "id": "kdo_3_lipid_iva",
+      "name": "(KDO)3-lipid IVA",
+      "formula": "C92H159N2O44P2",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:60367"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +180,20 @@
       "name": "CDP-L-myo-inositol myo-inositolphosphotransferase",
       "ec": [
         "2.7.8.34"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_128",
+      "name": "beta-cubebene synthase",
+      "ec": [
+        "4.2.3.128"
+      ]
+    },
+    {
+      "id": "ec_2_4_99_15",
+      "name": "(Kdo)3-lipid IVA (2-4) 3-deoxy-D-manno-octulosonic acid transferase",
+      "ec": [
+        "2.4.99.15"
       ]
     }
   ],
@@ -280,6 +341,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:31327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-cubebene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-cubebene + diphosphate",
+      "ec": "4.2.3.128",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cubebene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32019"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(Kdo)3-lipid IVA (2-4) 3-deoxy-D-manno-octulosonic acid transferase",
+      "equation": "alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid IVA (E. coli) + CMP-3-deoxy-beta-D-manno-octulosonate = alpha-Kdo-(2->4)-alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid IVA + CMP + H(+)",
+      "ec": "2.4.99.15",
+      "substrates": [
+        {
+          "metabolite": "kdo_2_lipid_iva",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_3_deoxy_d_manno_octulosonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kdo_3_lipid_iva",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_99_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46484"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46484"
           }
         ]
       }

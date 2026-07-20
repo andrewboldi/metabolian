@@ -155,6 +155,45 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "eudesmol",
+      "name": "β-eudesmol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10417"
+      }
+    },
+    {
+      "id": "4_o_methylnorbelladine",
+      "name": "4'-O-methylnorbelladine",
+      "short": "4'-O-methylnorbella…",
+      "formula": "C16H20NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:133993"
+      }
+    },
+    {
+      "id": "4as_10br_noroxomaritidine",
+      "name": "(4aS,10bR)-noroxomaritidine",
+      "short": "(4aS,10bR)-noroxoma…",
+      "formula": "C16H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:133995"
+      }
     }
   ],
   "enzymes": [
@@ -184,6 +223,20 @@
       "name": "6-oxocineole dehydrogenase",
       "ec": [
         "1.14.13.51"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_68",
+      "name": "beta-eudesmol synthase",
+      "ec": [
+        "4.2.3.68"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_50",
+      "name": "noroxomaritidine synthase",
+      "ec": [
+        "1.14.19.50"
       ]
     }
   ],
@@ -392,6 +445,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:24324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-eudesmol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = beta-eudesmol + diphosphate",
+      "ec": "4.2.3.68",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "eudesmol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:29495"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "noroxomaritidine synthase",
+      "equation": "4'-O-methylnorbelladine + reduced [NADPH--hemoprotein reductase] + O2 = (10bR,4aS)-noroxomaritidine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.50",
+      "substrates": [
+        {
+          "metabolite": "4_o_methylnorbelladine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4as_10br_noroxomaritidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:51260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51260"
           }
         ]
       }

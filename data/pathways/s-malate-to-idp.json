@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-malate-to-idp",
   "name": "(S)-malate to IDP",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 4-step route from (S)-malate(2−) to IDP(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -136,6 +136,34 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58069"
+      }
     }
   ],
   "enzymes": [
@@ -172,6 +200,13 @@
       "name": "inosine/xanthosine triphosphatase",
       "ec": [
         "3.6.1.73"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_40",
+      "name": "pyruvate kinase",
+      "ec": [
+        "2.7.1.40"
       ]
     }
   ],
@@ -364,6 +399,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:28330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "pyruvate kinase",
+      "equation": "CTP + pyruvate = CDP + phosphoenolpyruvate + H(+)",
+      "ec": "2.7.1.40",
+      "substrates": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56952"
           }
         ]
       }

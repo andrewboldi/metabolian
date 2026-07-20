@@ -144,6 +144,53 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "n_malonylanthranilate",
+      "name": "N-malonylanthranilate",
+      "short": "N-malonylanthranila…",
+      "formula": "C10H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16872"
+      }
+    },
+    {
+      "id": "2_aminobenzoylacetyl_coa",
+      "name": "2-aminobenzoylacetyl-CoA",
+      "short": "2-aminobenzoylacety…",
+      "formula": "C30H39N8O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:131447"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "d_phenylalanine",
+      "name": "D-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57981"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +213,27 @@
       "name": "anthraniloyl-CoA monooxygenase",
       "ec": [
         "1.14.13.40"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_113",
+      "name": "anthranilate N-malonyltransferase",
+      "ec": [
+        "2.3.1.113"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_262",
+      "name": "anthraniloyl-CoA anthraniloyltransferase",
+      "ec": [
+        "2.3.1.262"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_11",
+      "name": "phenylalanine racemase (ATP-hydrolyzing)",
+      "ec": [
+        "5.1.1.11"
       ]
     }
   ],
@@ -325,6 +393,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:15993"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "anthranilate N-malonyltransferase",
+      "equation": "anthranilate + malonyl-CoA = N-malonylanthranilate + CoA",
+      "ec": "2.3.1.113",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_malonylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_113"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17557"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "anthraniloyl-CoA anthraniloyltransferase",
+      "equation": "anthraniloyl-CoA + malonyl-CoA + H(+) = (2-aminobenzoyl)acetyl-CoA + CO2 + CoA",
+      "ec": "2.3.1.262",
+      "substrates": [
+        {
+          "metabolite": "anthraniloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminobenzoylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_262"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "phenylalanine racemase (ATP-hydrolyzing)",
+      "equation": "L-phenylalanine + ATP + H2O = D-phenylalanine + AMP + diphosphate + H(+)",
+      "ec": "5.1.1.11",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20201"
           }
         ]
       }

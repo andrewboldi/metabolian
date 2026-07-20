@@ -27,4 +27,28 @@ pathway r-3-4-hydroxyphenyl-la-to-r-3-hydroxy-3-methyl "(R)-3-(4-hydroxyphenyl)l
     <-> ec_5_4_99_3 [5.4.99.3]
     r_3_hydroxy_3_methyl_2_oxopentanoate
   }
+
+  branch from 4_hydroxyphenylacetate side left {
+    4_hydroxyphenylacetate
+    <-> ec_4_1_1_83 [4.1.1.83] +hplus +co2
+    p_cresol
+  }
+
+  branch from r_r_2_methyl_6_phytylhydroquinone side right {
+    r_r_2_methyl_6_phytylhydroquinone
+    <-> ec_5_5_1_24 [5.5.1.24]
+    tocopherol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_6 [4.2.3.6] +fpp
+    trichodiene
+  }
+
+  branch from r_r_2_3_dimethyl_6_phytylhydroquinone side right {
+    r_r_2_3_dimethyl_6_phytylhydroquinone
+    <-> ec_5_5_1_24 [5.5.1.24]
+    tocopherol
+  }
 }

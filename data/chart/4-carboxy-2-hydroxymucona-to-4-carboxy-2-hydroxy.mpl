@@ -15,4 +15,10 @@ pathway 4-carboxy-2-hydroxymucona-to-4-carboxy-2-hydroxy "4-carboxy-2-hydroxymuc
     <-> ec_5_3_2_8 [5.3.2.8]
     4_carboxy_2_hydroxy_cis_cis_muconate
   }
+
+  branch from 4_carboxy_2_hydroxy_cis_cis_muconate side left {
+    4_carboxy_2_hydroxy_cis_cis_muconate
+    <-> ec_4_2_1_83 [4.2.1.83] +h2o
+    2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
+  }
 }

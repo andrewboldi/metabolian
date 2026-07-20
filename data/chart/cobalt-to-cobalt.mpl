@@ -15,4 +15,10 @@ pathway cobalt-to-cobalt "cobalt to cobalt" {
     <-> ec_2_1_1_384 [2.1.1.384] +5_6_7_8_tetrahydromethanopterin -cobalt -hplus
     5_methyl_5_6_7_8_tetrahydromethanopterin
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_63 [1.14.99.63] +echinenone +hydrogen_donor +o2 +h2o
+    canthaxanthin
+  }
 }

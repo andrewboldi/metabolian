@@ -165,6 +165,25 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58635"
+      }
+    },
+    {
+      "id": "isopimara_7_15_diene",
+      "name": "isopimara-7,15-diene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52280"
+      }
     }
   ],
   "enzymes": [
@@ -201,6 +220,13 @@
       "name": "coenzyme gamma-F420-2:alpha-L-glutamate ligase",
       "ec": [
         "6.3.2.32"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_44",
+      "name": "isopimara-7,15-diene synthase",
+      "ec": [
+        "4.2.3.44"
       ]
     }
   ],
@@ -470,6 +496,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:42332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "isopimara-7,15-diene synthase",
+      "equation": "(+)-copalyl diphosphate = isopimara-7,15-diene + diphosphate",
+      "ec": "4.2.3.44",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isopimara_7_15_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:26128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26128"
           }
         ]
       }

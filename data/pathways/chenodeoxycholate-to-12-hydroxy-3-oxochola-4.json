@@ -174,6 +174,44 @@
       "xrefs": {
         "chebi": "CHEBI:132978"
       }
+    },
+    {
+      "id": "9_pimara_7_15_diene",
+      "name": "9β-pimara-7,15-diene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50067"
+      }
+    },
+    {
+      "id": "9_pimara_7_15_diene_3_ol",
+      "name": "9β-pimara-7,15-diene-3β-ol",
+      "short": "9β-pimara-7,15-dien…",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138966"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "viridiflorene",
+      "name": "viridiflorene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63444"
+      }
     }
   ],
   "enzymes": [
@@ -210,6 +248,20 @@
       "name": "bile-acid 7alpha-dehydratase",
       "ec": [
         "4.2.1.106"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_68",
+      "name": "syn-pimaradiene 3-monooxygenase",
+      "ec": [
+        "1.14.14.68"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_88",
+      "name": "viridiflorene synthase",
+      "ec": [
+        "4.2.3.88"
       ]
     }
   ],
@@ -459,6 +511,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:10436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "syn-pimaradiene 3-monooxygenase",
+      "equation": "9beta-pimara-7,15-diene + reduced [NADPH--hemoprotein reductase] + O2 = 9beta-pimara-7,15-diene-3beta-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.68",
+      "substrates": [
+        {
+          "metabolite": "9_pimara_7_15_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_pimara_7_15_diene_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:55472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "viridiflorene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = viridiflorene + diphosphate",
+      "ec": "4.2.3.88",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "viridiflorene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:31811"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31811"
           }
         ]
       }

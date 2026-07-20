@@ -15,4 +15,16 @@ pathway d-mannitol-to-5-dehydro-d-fructose "D-mannitol to 5-dehydro-D-fructose" 
     <-> ec_1_1_1_124 [1.1.1.124] +nadp -nadph -hplus
     5_dehydro_d_fructose
   }
+
+  branch from d_fructofuranose side left {
+    d_fructofuranose
+    <-> ec_2_4_1_13 [2.4.1.13] +udp_d_glucose +udp +hplus
+    sucrose
+  }
+
+  branch from 5_dehydro_d_fructose side right {
+    5_dehydro_d_fructose
+    <-> ec_1_1_3_11 [1.1.3.11] +o2 +h2o2
+    keto_l_sorbose
+  }
 }

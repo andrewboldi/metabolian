@@ -21,4 +21,28 @@ pathway s-s-dimethyl-propiothet-to-3-methylthiopropylami "S,S-dimethyl-β-propio
     <-> ec_4_1_1_57 [4.1.1.57] +hplus -co2
     3_methylthiopropylaminium
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
+  }
+
+  branch from methanethiol side right {
+    methanethiol
+    <-> ec_1_8_1_21 [1.8.1.21] +nad +nadh +hplus
+    dimethyl_disulfide
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> ec_4_1_2_50 [4.1.2.50] +7_8_dihydroneopterin_3_triphosphate +h2o +triphosphate +hplus
+    5_6_7_8_tetrahydropterin_6_carboxylate
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_4_1_99_22 [4.1.99.22] +gtp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
+    8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+  }
 }

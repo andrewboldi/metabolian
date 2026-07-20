@@ -128,6 +128,25 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "zingiberene",
+      "name": "zingiberene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10115"
+      }
     }
   ],
   "enzymes": [
@@ -150,6 +169,13 @@
       "name": "2-polyprenylphenol 6-hydroxylase",
       "ec": [
         "1.14.13.240"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_65",
+      "name": "zingiberene synthase",
+      "ec": [
+        "4.2.3.65"
       ]
     }
   ],
@@ -297,6 +323,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:27790"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "zingiberene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = alpha-zingiberene + diphosphate",
+      "ec": "4.2.3.65",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "zingiberene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28643"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28643"
           }
         ]
       }

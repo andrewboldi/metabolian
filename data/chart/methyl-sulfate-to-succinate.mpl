@@ -27,4 +27,28 @@ pathway methyl-sulfate-to-succinate "methyl sulfate to succinate" {
     <-> ec_1_14_11_21 [1.14.11.21] +akg +o2 -succinate -co2
     amidinoproclavaminic_acid
   }
+
+  branch from methanol side left {
+    methanol
+    <-> ec_1_14_14_117 [1.14.14.117] +8_o_methyldihydrosterigmatocystin +fmnh2 +o2 +fmn +co2 +h2o +hplus
+    aflatoxin_b2
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_3_1_6_2 [3.1.6.2] +dehydroepiandrosterone_sulfate +h2o +hplus
+    dehydroepiandrosterone
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_11_32 [1.14.11.32] +codeine +akg +o2 +succinate +co2
+    morphine
+  }
+
+  branch from d_fructofuranose_6_phosphate side right {
+    d_fructofuranose_6_phosphate
+    <-> ec_1_1_1_140 [1.1.1.140] +nad +nadh +hplus
+    d_glucitol_6_phosphate
+  }
 }

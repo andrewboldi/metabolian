@@ -23,4 +23,22 @@ pathway d-manp-1-4-d-glcp-to-l-histidine "β-D-Manp-(1→4)-D-Glcp to L-histidin
     <-> ec_3_9_1_3 [3.9.1.3] +h2o -pi
     l_histidine
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_195 [3.2.1.195] +ginsenoside_rb1 +h2o
+    ginsenoside_rd
+  }
+
+  branch from gdp_d_mannose side right {
+    gdp_d_mannose
+    <-> ec_2_4_1_346 [2.4.1.346] +2_o_d_mannopyranosyl_1_phosphatidyl_1d_myo_inosi +gdp +hplus
+    2_6_o_bis_d_mannopyranosyl_1_phosphatidyl_1d_myo
+  }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> ec_2_7_1_192 [2.7.1.192] +n_acetyl_muramate +n_phosphonato_l_histidine
+    n_acetyl_muramate_6_phosphate
+  }
 }

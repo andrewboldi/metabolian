@@ -17,4 +17,16 @@ pathway coenzyme-b-to-methyl-com "coenzyme B to methyl-CoM" {
     <-> ec_2_1_1_246 [2.1.1.246] +coenzyme_m -methyl_com -hplus
     5_hydroxybenzimidazolylcob_i_amide
   }
+
+  branch from com_s_s_cob side left {
+    com_s_s_cob
+    <-> ec_1_8_7_3 [1.8.7.3] +coenzyme_b +coenzyme_m +di_sulfido_diiron +hplus
+    di_sulfido_diiron
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a +h2o +hplus +co2
+    pyropheophorbide_a_anion
+  }
 }

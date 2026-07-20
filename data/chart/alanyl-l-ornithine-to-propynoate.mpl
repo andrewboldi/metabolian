@@ -15,4 +15,28 @@ pathway alanyl-l-ornithine-to-propynoate "β-alanyl-L-ornithine to propynoate" {
     <-> ec_4_2_1_27 [4.2.1.27] -h2o
     propynoate
   }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_3_4_13_4 [3.4.13.4] +alanyl_l_argininium +h2o
+    arginine
+  }
+
+  branch from ornithine side right {
+    ornithine
+    <-> ec_2_1_4_4 [2.1.4.4] +cysteine +arginine
+    n_amidino_l_cysteine
+  }
+
+  branch from 3_oxopropanoate side left {
+    3_oxopropanoate
+    <-> ec_1_2_1_15 [1.2.1.15] +nad +h2o +nadh +hplus
+    malonate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_5_4_3_9 [5.4.3.9]
+    isoglutamate
+  }
 }

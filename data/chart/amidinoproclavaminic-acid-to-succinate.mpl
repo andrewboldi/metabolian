@@ -15,4 +15,10 @@ pathway amidinoproclavaminic-acid-to-succinate "amidinoproclavaminic acid to suc
     <-> ec_1_14_11_21 [1.14.11.21] +akg +o2 -succinate -co2 -h2o
     clavaminic_acid
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_47 [1.14.11.47] +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
+  }
 }

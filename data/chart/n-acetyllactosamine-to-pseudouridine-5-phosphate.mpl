@@ -21,4 +21,28 @@ pathway n-acetyllactosamine-to-pseudouridine-5-phosphate "N-acetyllactosamine to
     <-> ec_2_7_1_83 [2.7.1.83] +atp -adp -hplus
     pseudouridine_5_phosphate
   }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_9 [2.4.3.9] +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
+  }
+
+  branch from cytosine side right {
+    cytosine
+    <-> ec_2_4_2_2 [2.4.2.2] +cytidine +pi
+    r1p
+  }
+
+  branch from d_ribofuranose_5_phosphate side left {
+    d_ribofuranose_5_phosphate
+    <-> ec_3_2_2_4 [3.2.2.4] +amp +h2o
+    adenine
+  }
+
+  branch from uracil side right {
+    uracil
+    <-> ec_1_3_1_1 [1.3.1.1] +nad +nadh +hplus
+    5_6_dihydrouracil
+  }
 }

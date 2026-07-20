@@ -17,4 +17,22 @@ pathway 3r-3-hydroxy-d-aspartate-to-coniferyl-acetate "(3R)-3-hydroxy-D-aspartat
     <-> ec_1_1_1_318 [1.1.1.318] +eugenol +acetate +nadp -nadph
     coniferyl_acetate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_4_1_35 [4.4.1.35] +l_cystine +h2o +pyruvate
+    3_disulfanyl_l_alanine
+  }
+
+  branch from citrate side right {
+    citrate
+    <-> ec_6_3_1_17 [6.3.1.17] +glutamate +atp +adp +pi +hplus
+    citrylglutamate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_94 [3.1.1.94] +3s_versiconol_acetate +h2o +hplus
+    s_versiconol
+  }
 }

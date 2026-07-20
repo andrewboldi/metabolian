@@ -17,4 +17,28 @@ pathway 1-4-5-6-tetrahydro-6-oxon-to-nitrate "1,4,5,6-tetrahydro-6-oxon… to ni
     <-> ec_1_14_12_17 [1.14.12.17] +nadph +o2 -nadp -hplus
     nitrate
   }
+
+  branch from 2_formylglutarate side left {
+    2_formylglutarate
+    <-> ec_1_1_1_291 [1.1.1.291] +nad +nadh +hplus
+    s_2_hydroxymethylglutarate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_14_13_35 [1.14.13.35] +anthranilate +nadph +o2 +hplus +nadp
+    2_3_dihydroxybenzoate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_14_99_11 [1.14.99.11] +17_estradiol +o2 +hydrogen_acceptor +h2o
+    6_hydroxy_17_estradiol
+  }
+
+  branch from no side right {
+    no
+    <-> ec_1_7_1_14 [1.7.1.14] +nadp +h2o +nadph +hplus
+    dinitrogen_oxide
+  }
 }

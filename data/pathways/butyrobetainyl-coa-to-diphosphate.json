@@ -119,6 +119,25 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cubenene",
+      "name": "(+)-cubenene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61685"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +160,13 @@
       "name": "carnitine--CoA ligase",
       "ec": [
         "6.2.1.48"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_63",
+      "name": "(+)-cubenene synthase",
+      "ec": [
+        "4.2.3.63"
       ]
     }
   ],
@@ -325,6 +351,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:30079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(+)-cubenene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-cubenene + diphosphate",
+      "ec": "4.2.3.63",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cubenene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:29475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29475"
           }
         ]
       }

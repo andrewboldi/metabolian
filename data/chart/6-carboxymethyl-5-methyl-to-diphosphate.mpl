@@ -15,4 +15,16 @@ pathway 6-carboxymethyl-5-methyl-to-diphosphate "6-carboxymethyl-5-methyl-… to
     <-> ec_2_7_7_110 [2.7.7.110] +atp +hplus -ppi
     guanylylpyridinol_adenylate
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_1 [2.1.1.1] +nicotinamide +sam
+    1_methylnicotinamide
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_46 [4.2.3.46] +fpp
+    e_e_farnesene
+  }
 }

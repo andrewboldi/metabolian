@@ -116,6 +116,16 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "but_1_ene_1_2_4_tricarboxylate",
+      "name": "but-1-ene-1,2,4-tricarboxylate",
+      "short": "but-1-ene-1,2,4-tri…",
+      "formula": "C7H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58174"
+      }
     }
   ],
   "enzymes": [
@@ -145,6 +155,13 @@
       "name": "isocitrate--homoisocitrate dehydrogenase",
       "ec": [
         "1.1.1.286"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_36",
+      "name": "homoaconitate hydratase",
+      "ec": [
+        "4.2.1.36"
       ]
     }
   ],
@@ -284,6 +301,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:11900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "homoaconitate hydratase",
+      "equation": "(2R,3S)-homoisocitrate = cis-homoaconitate + H2O",
+      "ec": "4.2.1.36",
+      "substrates": [
+        {
+          "metabolite": "homoisocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "but_1_ene_1_2_4_tricarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15485"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15485"
           }
         ]
       }

@@ -19,4 +19,22 @@ pathway orotidine-5-phosphate-to-5-o-phosphonato-d-ribof "orotidine 5'-phosphate
     <-> ec_2_4_2_19 [2.4.2.19] +nicotinate_d_ribonucleotide +co2 +ppi -prpp -hplus
     quinolinate
   }
+
+  branch from ump side left {
+    ump
+    <-> ec_2_7_8_18 [2.7.8.18] +udpglcnac +udp_d_galactose +hplus
+    udp_n_acetyl_6_d_galactose_1_phosphonato_d_gluco
+  }
+
+  branch from uracil side right {
+    uracil
+    <-> ec_1_3_1_2 [1.3.1.2] +nadp +nadph +hplus
+    5_6_dihydrouracil
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_67 [2.5.1.67] +dmapp
+    r_r_chrysanthemyl_diphosphate
+  }
 }

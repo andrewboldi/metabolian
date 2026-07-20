@@ -120,6 +120,55 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin",
+      "name": "O-[S-(L-cysteinyl)pantetheine-4'-phosphoryl]-L-serine residue",
+      "short": "O-[S-(L-cysteinyl)p…",
+      "formula": "C17H31N4O9PS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144926"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
+    },
+    {
+      "id": "endo_bergamotene",
+      "name": "(+)-endo-β-bergamotene",
+      "short": "(+)-endo-β-bergamot…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61678"
+      }
     }
   ],
   "enzymes": [
@@ -142,6 +191,20 @@
       "name": "molybdopterin-synthase adenylyltransferase",
       "ec": [
         "2.7.7.80"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_69",
+      "name": "L-cysteine--[L-cysteinyl-carrier protein] ligase",
+      "ec": [
+        "6.2.1.69"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_53",
+      "name": "(+)-endo-beta-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate",
+      "ec": [
+        "4.2.3.53"
       ]
     }
   ],
@@ -289,6 +352,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:43616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-cysteine--[L-cysteinyl-carrier protein] ligase",
+      "equation": "holo-[peptidyl-carrier protein] + L-cysteine + ATP = L-cysteinyl-[peptidyl-carrier protein] + AMP + diphosphate",
+      "ec": "6.2.1.69",
+      "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(+)-endo-beta-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = (+)-endo-beta-bergamotene + diphosphate",
+      "ec": "4.2.3.53",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "endo_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30467"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30467"
           }
         ]
       }

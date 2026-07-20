@@ -15,4 +15,16 @@ pathway phenylacetate-to-3-methylcatechol "phenylacetate to 3-methylcatechol" {
     <-> ec_1_3_1_19 [1.3.1.19] +nad -nadh -hplus
     3_methylcatechol
   }
+
+  branch from toluene side left {
+    toluene
+    <-> ec_1_14_13_243 [1.14.13.243] +nadh +o2 +hplus +nad +h2o
+    o_cresol
+  }
+
+  branch from 3_methylcatechol side right {
+    3_methylcatechol
+    <-> ec_1_3_1_68 [1.3.1.68] +nad +co2 +nadh
+    1_6_dihydroxy_2_methylcyclohexa_2_4_diene_1_carb
+  }
 }

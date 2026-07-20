@@ -25,4 +25,28 @@ pathway levoglucosan-to-6-oxoparomamine "levoglucosan to 6'-oxoparomamine" {
     <-> ec_1_1_3_43 [1.1.3.43] +o2 -h2o2
     6_oxoparomamine
   }
+
+  branch from 2_deoxystreptamine side left {
+    2_deoxystreptamine
+    <-> ec_2_4_1_284 [2.4.1.284] +udp_d_glucose +udp +hplus
+    2_deamino_2_hydroxyparomamine
+  }
+
+  branch from paromamine side right {
+    paromamine
+    <-> ec_2_4_1_301 [2.4.1.301] +udp_d_kanosamine +udp +hplus
+    kanamycin_c
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_112 [3.1.1.112] +isoamyl_acetate +h2o +hplus
+    isoamylol
+  }
+
+  branch from 6_oxoparomamine side right {
+    6_oxoparomamine
+    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
+    glutamate
+  }
 }

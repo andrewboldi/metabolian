@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
   "name": "N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact…",
-  "category": "other",
+  "category": "redox-detox",
   "summary": "A 3-step route from N-feruloylglycinate to 2-(E)-O-feruloyl-D-galactarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,6 +117,97 @@
       "xrefs": {
         "chebi": "CHEBI:58901"
       }
+    },
+    {
+      "id": "coniferyl_aldehyde",
+      "name": "coniferyl aldehyde",
+      "formula": "C10H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16547"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "quinate",
+      "name": "(−)-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29751"
+      }
+    },
+    {
+      "id": "4_o_feruloyl_d_quinate",
+      "name": "4-O-feruloyl-D-quinate",
+      "short": "4-O-feruloyl-D-quin…",
+      "formula": "C17H19O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60078"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +230,27 @@
       "name": "galactarate O-hydroxycinnamoyltransferase",
       "ec": [
         "2.3.1.130"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_68",
+      "name": "coniferyl-aldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.68"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_19",
+      "name": "glycine oxidase",
+      "ec": [
+        "1.4.3.19"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_99",
+      "name": "quinate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.99"
       ]
     }
   ],
@@ -282,6 +394,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:12997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "coniferyl-aldehyde dehydrogenase",
+      "equation": "(E)-coniferaldehyde + NAD(+) + H2O = (E)-ferulate + NADH + 2 H(+)",
+      "ec": "1.2.1.68",
+      "substrates": [
+        {
+          "metabolite": "coniferyl_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:23968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glycine oxidase",
+      "equation": "glycine + O2 + H2O = glyoxylate + H2O2 + NH4(+)",
+      "ec": "1.4.3.19",
+      "substrates": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:11532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "quinate O-hydroxycinnamoyltransferase",
+      "equation": "L-quinate + (E)-feruloyl-CoA = 4-O-feruloyl-D-quinate + CoA",
+      "ec": "2.3.1.99",
+      "substrates": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_feruloyl_d_quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:15021"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15021"
           }
         ]
       }

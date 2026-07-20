@@ -214,6 +214,92 @@
       "xrefs": {
         "chebi": "CHEBI:22191"
       }
+    },
+    {
+      "id": "nucleoside_5_triphoshate",
+      "name": "nucleoside 5'-triphoshate",
+      "short": "nucleoside…",
+      "formula": "C5H8O13P3R",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61557"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "premnaspirodiene",
+      "name": "premnaspirodiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46971"
+      }
+    },
+    {
+      "id": "2_deoxyuridine",
+      "name": "2'-deoxyuridine",
+      "formula": "C9H12N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16450"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57259"
+      }
+    },
+    {
+      "id": "5_4_acetoxybut_1_ynyl_2_2_bithiophene",
+      "name": "5-(4-acetoxybut-1-ynyl)-2,2'-bithiophene",
+      "short": "5-(4-acetoxybut-1-y…",
+      "formula": "C14H12O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17181"
+      }
+    },
+    {
+      "id": "5_4_hydroxybut_1_ynyl_2_2_bithiophene",
+      "name": "5-(4-hydroxybut-1-ynyl)-2,2'-bithiophene",
+      "short": "5-(4-hydroxybut-1-y…",
+      "formula": "C12H10OS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16887"
+      }
     }
   ],
   "enzymes": [
@@ -278,6 +364,34 @@
       "name": "acetate kinase",
       "ec": [
         "2.7.2.1"
+      ]
+    },
+    {
+      "id": "ec_1_1_98_6",
+      "name": "ribonucleoside-triphosphate reductase (formate)",
+      "ec": [
+        "1.1.98.6"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_21",
+      "name": "vetispiradiene synthase",
+      "ec": [
+        "4.2.3.21"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_2",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.2"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_54",
+      "name": "acetoxybutynylbithiophene deacetylase",
+      "ec": [
+        "3.1.1.54"
       ]
     }
   ],
@@ -695,6 +809,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:11352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "ribonucleoside-triphosphate reductase (formate)",
+      "equation": "a ribonucleoside 5'-triphosphate + formate + H(+) = a 2'-deoxyribonucleoside 5'-triphosphate + CO2 + H2O",
+      "ec": "1.1.98.6",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyribonucleoside_5_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_98_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:51476"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "vetispiradiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-vetispiradiene + diphosphate",
+      "ec": "4.2.3.21",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "premnaspirodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:10340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "equation": "2'-deoxyuridine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + uracil",
+      "ec": "2.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyuridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:22824"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "acetoxybutynylbithiophene deacetylase",
+      "equation": "5-(4-acetoxybut-1-ynyl)-2,2'-bithiophene + H2O = 5-(4-hydroxy-but-1-ynyl)-2,2'-bithiophene + acetate + H(+)",
+      "ec": "3.1.1.54",
+      "substrates": [
+        {
+          "metabolite": "5_4_acetoxybut_1_ynyl_2_2_bithiophene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_4_hydroxybut_1_ynyl_2_2_bithiophene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:11548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11548"
           }
         ]
       }

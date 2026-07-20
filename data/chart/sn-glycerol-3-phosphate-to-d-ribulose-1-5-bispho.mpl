@@ -15,4 +15,10 @@ pathway sn-glycerol-3-phosphate-to-d-ribulose-1-5-bispho "sn-glycerol 3-phosphat
     <-> ec_4_1_1_39 [4.1.1.39] +hplus -co2 -h2o
     d_ribulose_1_5_bisphosphate
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_3_1_108 [1.3.1.108] +dihydrocaffeoyl_coa +nad +di_sulfido_diiron +nadh
+    trans_caffeoyl_coa
+  }
 }

@@ -15,4 +15,10 @@ pathway baicalein-to-1-phosphonato-d-glucuro "baicalein to 1-phosphonato-α-D-gl
     <-> ec_2_7_1_43 [2.7.1.43] +d_glucopyranuronate +atp -adp -hplus
     1_phosphonato_d_glucuronate
   }
+
+  branch from d_glucopyranuronate side left {
+    d_glucopyranuronate
+    <-> ec_3_2_1_167 [3.2.1.167] +oroxylin_a_7_o_d_glucuronate +h2o +hplus
+    oroxylin_a
+  }
 }

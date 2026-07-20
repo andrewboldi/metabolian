@@ -17,4 +17,16 @@ pathway 3s-versiconol-acetate-to-versicolorin-a "(3S)-versiconol acetate to vers
     <-> ec_1_14_19_n5 [1.14.19.n5] +nadph +o2 +hplus -nadp -h2o
     versicolorin_a
   }
+
+  branch from 2s_3s_versiconal_hemiacetal side left {
+    2s_3s_versiconal_hemiacetal
+    <-> ec_1_1_1_353 [1.1.1.353] +nadp +nadph +hplus
+    s_versiconol
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_5_1_119 [2.5.1.119] +isoxazolin_5_one +o_acetyl_l_serine +hplus
+    3_5_oxoisoxazolin_4_yl_l_alanine
+  }
 }

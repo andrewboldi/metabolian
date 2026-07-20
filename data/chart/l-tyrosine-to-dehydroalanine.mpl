@@ -15,4 +15,16 @@ pathway l-tyrosine-to-dehydroalanine "L-tyrosine to dehydroalanine" {
     <-> ec_1_11_1_8 [1.11.1.8] +h2o2 -dehydroalanine -h2o
     l_thyroxine
   }
+
+  branch from 3_iodo_l_tyrosine side left {
+    3_iodo_l_tyrosine
+    <-> ec_1_11_1_8 [1.11.1.8] +3_5_diiodo_l_tyrosine +h2o2 +dehydroalanine +h2o
+    3_3_5_triiodo_l_thyronine
+  }
+
+  branch from dehydroalanine side right {
+    dehydroalanine
+    <-> ec_2_4_2_60 [2.4.2.60] +l_cysteine +glycine +nad +nicotinamide +h2o +hplus
+    adp_5_ethyl_4_methylthiazole_2_carboxylate
+  }
 }

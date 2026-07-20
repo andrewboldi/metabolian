@@ -15,4 +15,22 @@ pathway d-galactosyl-1-3-n-ac-to-ctp "β-D-galactosyl-(1→3)-N-ac… to CTP" {
     <-> ec_2_7_4_6 [2.7.4.6] +atp -adp
     ctp
   }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_3_6_1_26 [3.6.1.26] +cdp_diacylglycerol +h2o +hplus
+    1_2_diacyl_sn_glycerol_3_phosphate
+  }
+
+  branch from cdp side right {
+    cdp
+    <-> ec_2_7_1_161 [2.7.1.161] +riboflavin +ctp +hplus
+    fmn
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> ec_2_7_7_40 [2.7.7.40] +d_ribitol_5_phosphate +hplus +ppi
+    cdp_ribitol
+  }
 }

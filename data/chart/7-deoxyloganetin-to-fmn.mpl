@@ -15,4 +15,10 @@ pathway 7-deoxyloganetin-to-fmn "7-deoxyloganetin to FMN" {
     <-> ec_1_14_19_62 [1.14.19.62] +fmnh2 +o2 -fmn -h2o -hplus
     secologanin
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_83 [1.14.14.83] +geraniol +fmnh2 +o2 +h2o +hplus
+    6e_8_hydroxygeraniol
+  }
 }

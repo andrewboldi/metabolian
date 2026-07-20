@@ -15,4 +15,16 @@ pathway trans-3-coumarate-to-fumarate "trans-3-coumarate to fumarate" {
     <-> ec_3_7_1_14 [3.7.1.14] +h2o -fumarate -hplus
     2z_2_hydroxypenta_2_4_dienoate
   }
+
+  branch from 2_3_dihydroxy_trans_cinnamate side left {
+    2_3_dihydroxy_trans_cinnamate
+    <-> ec_1_3_1_87 [1.3.1.87] +nad +nadh +hplus
+    e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr
+  }
+
+  branch from 2z_2_hydroxypenta_2_4_dienoate side right {
+    2z_2_hydroxypenta_2_4_dienoate
+    <-> ec_3_7_1_25 [3.7.1.25] +2z_4e_2_hydroxy_6_oxohepta_2_4_dienoate +h2o +hplus
+    acetate
+  }
 }

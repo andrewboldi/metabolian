@@ -15,4 +15,28 @@ pathway s-hydroxymethyl-glutathi-to-glutathionate "S-(hydroxymethyl)glutathi… 
     <-> ec_1_21_4_5 [1.21.4.5] +2_6_dichloro_4_hydroxyphenolate +chloride +hplus -gsh
     2_3_6_trichloro_4_hydroxyphenolate
   }
+
+  branch from gsh side left {
+    gsh
+    <-> ec_4_3_2_7 [4.3.2.7] +5_oxo_l_prolinate
+    cysgly
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadh +o2 +hplus +nad +h2o
+    3_methyl_7h_xanthine
+  }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_1_8_1_18 [1.8.1.18] +nadp +nadph
+    sulfur_atom
+  }
+
+  branch from sulfite side right {
+    sulfite
+    <-> ec_3_1_1_92 [3.1.1.92] +5_oxo_2_sulfonato_2_5_dihydrofuran_2_yl_acetate +h2o +hplus
+    maleylacetate
+  }
 }

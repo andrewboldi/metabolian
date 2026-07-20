@@ -15,4 +15,10 @@ pathway n6-hydroxy-l-lysine-to-diphosphate "N6-hydroxy-L-lysine to diphosphate" 
     <-> ec_6_3_2_39 [6.3.2.39] +n6_acetyl_n6_hydroxy_l_lysine +atp -amp -ppi -hplus
     aerobactinate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_141 [2.5.1.141] +ferroheme_b +fpp +h2o
+    ferroheme_o
+  }
 }

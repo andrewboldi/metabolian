@@ -15,4 +15,10 @@ pathway d-ribosylnicotinate-to-n-d-glucosyl-nicotinate "D-ribosylnicotinate to N
     <-> ec_2_4_1_196 [2.4.1.196] +nicotinate +udp_d_glucose -udp
     n_d_glucosyl_nicotinate
   }
+
+  branch from nicotinate side left {
+    nicotinate
+    <-> ec_2_1_1_7 [2.1.1.7] +sam +sah
+    n_methylnicotinate
+  }
 }

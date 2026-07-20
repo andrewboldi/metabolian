@@ -17,4 +17,28 @@ pathway n-7-isojasmonyl-l-i-to-o-pantetheine-4-phospho "N-[(+)-7-isojasmonyl]-L-
     <-> ec_2_3_2_38 [2.3.2.38] +o_s_3r_3_methyl_l_phenylalanylpantetheine_4_phos -holo-acp
     sb_203208
   }
+
+  branch from isoleucine side left {
+    isoleucine
+    <-> ec_1_14_11_45 [1.14.11.45] +akg +o2 +succinate +co2
+    4s_4_hydroxy_l_isoleucine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_36 [4.2.3.36] +terpentedienyl_diphosphate
+    terpentetriene
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_tyrosyl_adenylyl_1_group +h2o
+    d_tyrosine
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_3_1_2_21 [3.1.2.21] +dodecanoyl_pantetheine_4_phosphorylserine_1 +h2o +hplus
+    dodecanoate
+  }
 }

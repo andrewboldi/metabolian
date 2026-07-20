@@ -15,4 +15,10 @@ pathway 6-d-glucosaminyl-1-ph-to-3-d-galactosyl-1-6 "6-(Î±-D-glucosaminyl)-1-phâ
     <-> ec_2_4_1_241 [2.4.1.241] +udp_d_galactose -udp -hplus
     3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl
   }
+
+  branch from 1_2_diacyl_3_d_galactosyl_sn_glycerol side left {
+    1_2_diacyl_3_d_galactosyl_sn_glycerol
+    <-> ec_5_1_3_34 [5.1.3.34]
+    3_d_glucosyl_1_2_diacyl_sn_glycerol
+  }
 }

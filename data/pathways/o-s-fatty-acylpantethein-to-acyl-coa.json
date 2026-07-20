@@ -149,6 +149,73 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "n_acyl_l_homoserinate",
+      "name": "N-acyl-L-homoserinate",
+      "short": "N-acyl-L-homoserina…",
+      "formula": "C5H7NO4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58921"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
+      "name": "3-(3-amino-3-carboxypropyl)uridine 5'-phosphate(1−)",
+      "short": "3-(3-amino-3-carbox…",
+      "formula": "C13H17N3O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82930"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "n_acyl_l_aspartate",
+      "name": "N-acyl-L-aspartate",
+      "formula": "C5H4NO5R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58497"
+      }
+    },
+    {
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29991"
+      }
     }
   ],
   "enzymes": [
@@ -171,6 +238,34 @@
       "name": "acid--CoA ligase (GDP-forming)",
       "ec": [
         "6.2.1.10"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_81",
+      "name": "quorum-quenching N-acyl-homoserine lactonase",
+      "ec": [
+        "3.1.1.81"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_25",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "ec": [
+        "2.5.1.25"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_7",
+      "name": "holo-[acyl-carrier-protein] synthase",
+      "ec": [
+        "2.7.8.7"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_15",
+      "name": "aspartoacylase",
+      "ec": [
+        "3.5.1.15"
       ]
     }
   ],
@@ -322,6 +417,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:10968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "quorum-quenching N-acyl-homoserine lactonase",
+      "equation": "an N-acyl-L-homoserine lactone + H2O = an N-acyl-L-homoserine + H(+)",
+      "ec": "3.1.1.81",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_l_homoserine_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_l_homoserinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "equation": "uridine(47) in tRNA(Phe) + S-adenosyl-L-methionine = 3-[(3S)-3-amino-3-carboxypropyl]uridine(47) in tRNA(Phe) + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.25",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "holo-[acyl-carrier-protein] synthase",
+      "equation": "apo-[ACP] + CoA = holo-[ACP] + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.7.8.7",
+      "substrates": [
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:12068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "aspartoacylase",
+      "equation": "an N-acyl-L-aspartate + H2O = a carboxylate + L-aspartate",
+      "ec": "3.5.1.15",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:10872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10872"
           }
         ]
       }

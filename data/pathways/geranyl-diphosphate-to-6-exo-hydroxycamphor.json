@@ -137,6 +137,36 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "all_trans_heptaprenyl_diphosphate",
+      "name": "all-trans-heptaprenyl diphosphate",
+      "short": "all-trans-heptapren…",
+      "formula": "C35H57O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58206"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +196,13 @@
       "name": "(+)-camphor 6-exo-hydroxylase",
       "ec": [
         "1.14.13.161"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_30",
+      "name": "heptaprenyl diphosphate synthase",
+      "ec": [
+        "2.5.1.30"
       ]
     }
   ],
@@ -354,6 +391,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:33043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "heptaprenyl diphosphate synthase",
+      "equation": "4 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-heptaprenyl diphosphate + 4 diphosphate",
+      "ec": "2.5.1.30",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_heptaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27794"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27794"
           }
         ]
       }

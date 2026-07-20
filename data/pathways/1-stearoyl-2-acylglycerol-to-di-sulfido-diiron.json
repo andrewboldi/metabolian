@@ -112,6 +112,34 @@
       "xrefs": {
         "chebi": "CHEBI:87024"
       }
+    },
+    {
+      "id": "pentalenene",
+      "name": "pentalenene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17251"
+      }
+    },
+    {
+      "id": "pentalen_13_al",
+      "name": "pentalen-13-al",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63244"
+      }
+    },
+    {
+      "id": "1_linolenoyl_2_acylglycerolipid",
+      "name": "1-α-linolenoyl 2-acylglycerolipid",
+      "short": "1-α-linolenoyl…",
+      "formula": "C22H34O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87023"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +169,13 @@
       "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
       "ec": [
         "1.14.19.36"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_32",
+      "name": "pentalenene oxygenase",
+      "ec": [
+        "1.14.15.32"
       ]
     }
   ],
@@ -369,6 +404,120 @@
           {
             "db": "Rhea",
             "id": "RHEA:46788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "pentalenene oxygenase",
+      "equation": "pentalenene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = pentalen-13-al + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.32",
+      "substrates": [
+        {
+          "metabolite": "pentalenene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentalen_13_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31699"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "equation": "a 1-[(9Z,12Z)-octadecdienoyl]-2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(9Z,12Z,15Z)-octadectrienoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.36",
+      "substrates": [
+        {
+          "metabolite": "1_linoleoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_linolenoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:46784"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46784"
           }
         ]
       }

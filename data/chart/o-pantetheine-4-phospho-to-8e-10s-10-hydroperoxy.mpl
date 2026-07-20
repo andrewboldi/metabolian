@@ -17,4 +17,28 @@ pathway o-pantetheine-4-phospho-to-8e-10s-10-hydroperoxy "O-(pantetheine-4'-phos
     <-> ec_1_13_11_77 [1.13.11.77] +o2
     8e_10s_10_hydroperoxy_8_octadecenoate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_103 [4.2.3.103] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_isokaurene
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_6 [1.14.15.6] +di_sulfido_diiron +cholesterol +o2 +hplus +pregnenolone +h2o
+    4_methylpentanal
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> ec_4_2_1_53 [4.2.1.53] +h2o
+    r_10_hydroxyoctadecanoate
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_38 [2.3.1.38] +acetyl_coa +coa
+    acetyl-acp
+  }
 }

@@ -15,4 +15,16 @@ pathway isopentenyl-diphosphate-to-2-all-trans-decapreny "isopentenyl diphosphat
     <-> ec_4_1_1_98 [4.1.1.98] +hplus -co2
     2_all_trans_decaprenylphenol
   }
+
+  branch from all_trans_decaprenyl_diphosphate side left {
+    all_trans_decaprenyl_diphosphate
+    <-> ec_2_5_1_74 [2.5.1.74] +1_4_dihydroxy_2_naphthoate +hplus +co2 +ppi
+    2_demethylmenaquinol_10
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_3_6_1_56 [3.6.1.56] +2_hydroxy_datp +h2o +hplus
+    2_hydroxy_damp
+  }
 }

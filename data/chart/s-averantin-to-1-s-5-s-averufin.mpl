@@ -15,4 +15,16 @@ pathway s-averantin-to-1-s-5-s-averufin "(S)-averantin to (1'S,5'S)-averufin" {
     <-> ec_4_2_1_142 [4.2.1.142] +hplus -h2o
     1_s_5_s_averufin
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_111 [1.14.14.111] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
+    9_pimara_7_15_dien_19_oate
+  }
+
+  branch from s_5_oxoaverantin side right {
+    s_5_oxoaverantin
+    <-> ec_1_1_1_352 [1.1.1.352] +nad +nadh +hplus
+    1_s_5_r_5_hydroxyaverantin
+  }
 }

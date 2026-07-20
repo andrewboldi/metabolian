@@ -15,4 +15,10 @@ pathway r-4-dehydropantoate-to-n6-r-s8-isobutyryldihy "(R)-4-dehydropantoate to 
     <-> ec_1_2_4_4 [1.2.4.4] +n6_r_lipoyl_l_lysine +hplus -co2
     n6_r_s8_isobutyryldihydrolipoyl_l_lysine
   }
+
+  branch from kiv side left {
+    kiv
+    <-> ec_4_2_1_9 [4.2.1.9] +h2o
+    r_2_3_dihydroxy_3_methylbutanoate
+  }
 }

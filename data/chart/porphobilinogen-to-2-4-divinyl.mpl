@@ -25,4 +25,28 @@ pathway porphobilinogen-to-2-4-divinyl "porphobilinogen to 2,4-divinyl…" {
     <-> ec_1_14_13_81 [1.14.13.81] +nadph +o2 +hplus -nadp -h2o
     2_4_divinyl_protochlorophyllide_a
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
+    2_4_dihydroxypteridine
+  }
+
+  branch from uroporphyrinogen3 side right {
+    uroporphyrinogen3
+    <-> ec_2_1_1_107 [2.1.1.107] +sam +sah +hplus
+    precorrin_2
+  }
+
+  branch from coproporphyrinogen3 side left {
+    coproporphyrinogen3
+    <-> ec_1_3_3_15 [1.3.3.15] +o2 +h2o2
+    coproporphyrin_iii
+  }
+
+  branch from protoporphyrinogen9 side right {
+    protoporphyrinogen9
+    <-> ec_1_3_5_3 [1.3.5.3] +1_4_benzoquinones +protoporphyrin9
+    hydroquinones
+  }
 }

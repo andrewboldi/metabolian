@@ -17,4 +17,16 @@ pathway 2-hydroxy-6-2-oxidopheny-to-maleate "2-hydroxy-6-(2-oxidopheny… to mal
     <-> ec_3_7_1_23 [3.7.1.23] +h2o -pyruvate -hplus
     maleate
   }
+
+  branch from salicylate side left {
+    salicylate
+    <-> ec_6_2_1_61 [6.2.1.61] +holo-acp +atp +amp +ppi
+    o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s
+  }
+
+  branch from maleate side right {
+    maleate
+    <-> ec_4_2_1_31 [4.2.1.31] +h2o
+    r_malate
+  }
 }

@@ -15,4 +15,10 @@ pathway hexadecan-1-ol-to-o-palmitoyl-l-carnitine "hexadecan-1-ol to O-palmitoyl
     <-> ec_2_3_1_21 [2.3.1.21] +carnitine -coa
     palmitoylcarnitine
   }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> ec_2_3_1_139 [2.3.1.139] +ecdysone +coa
+    ecdysone_palmitate
+  }
 }

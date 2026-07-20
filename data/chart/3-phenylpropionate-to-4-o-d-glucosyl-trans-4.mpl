@@ -15,4 +15,16 @@ pathway 3-phenylpropionate-to-4-o-d-glucosyl-trans-4 "3-phenylpropionate to 4-O-
     <-> ec_2_4_1_126 [2.4.1.126] +udp_d_glucose -udp -hplus
     4_o_d_glucosyl_trans_4_coumarate
   }
+
+  branch from trans_cinnamate side left {
+    trans_cinnamate
+    <-> ec_1_14_12_19 [1.14.12.19] +nadh +o2 +hplus +nad
+    e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +fmnh2 +o2 +h2o +hplus
+    maniladiol
+  }
 }

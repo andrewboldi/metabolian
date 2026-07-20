@@ -167,6 +167,53 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "sterol",
+      "name": "sterol",
+      "formula": "C19H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15889"
+      }
+    },
+    {
+      "id": "long_chain_3_hydroxysterol_ester",
+      "name": "long-chain 3-hydroxysterol ester",
+      "short": "long-chain…",
+      "formula": "C20H30O2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232093"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "3_l_phenylalanyl_adenylyl_1_group",
+      "name": "3'-(L-phenylalanyl)adenylyl(1−) group",
+      "short": "3'-(L-phenylalanyl)…",
+      "formula": "C19H21N6O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78531"
+      }
     }
   ],
   "enzymes": [
@@ -189,6 +236,20 @@
       "name": "mycolipanoate synthase",
       "ec": [
         "2.3.1.252"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_26",
+      "name": "sterol O-acyltransferase",
+      "ec": [
+        "2.3.1.26"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_20",
+      "name": "phenylalanine--tRNA ligase",
+      "ec": [
+        "6.1.1.20"
       ]
     }
   ],
@@ -356,6 +417,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:50344"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sterol O-acyltransferase",
+      "equation": "a sterol + a long-chain fatty acyl-CoA = a long-chain 3-hydroxysterol ester + CoA",
+      "ec": "2.3.1.26",
+      "substrates": [
+        {
+          "metabolite": "sterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "long_chain_fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "long_chain_3_hydroxysterol_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phenylalanine--tRNA ligase",
+      "equation": "tRNA(Phe) + L-phenylalanine + ATP = L-phenylalanyl-tRNA(Phe) + AMP + diphosphate + H(+)",
+      "ec": "6.1.1.20",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_phenylalanyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:19413"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19413"
           }
         ]
       }

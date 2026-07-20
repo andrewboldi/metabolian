@@ -126,6 +126,55 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "ditrans_polycis_tetradecaprenyl_diphosphate",
+      "name": "ditrans,polycis-tetradecaprenyl diphosphate",
+      "short": "ditrans,polycis-tet…",
+      "formula": "C70H113O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60387"
+      }
+    },
+    {
+      "id": "2e_6e_farnesoate",
+      "name": "(2E,6E)-farnesoate",
+      "formula": "C15H23O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83276"
+      }
+    },
+    {
+      "id": "juvenile_hormone_iii_carboxylate",
+      "name": "juvenile hormone III carboxylate",
+      "short": "juvenile hormone…",
+      "formula": "C15H23O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83274"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +197,20 @@
       "name": "ipsdienol dehydrogenase",
       "ec": [
         "1.1.1.386"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_88",
+      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "ec": [
+        "2.5.1.88"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_128",
+      "name": "farnesoate epoxidase",
+      "ec": [
+        "1.14.14.128"
       ]
     }
   ],
@@ -295,6 +358,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:45116"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "equation": "(2Z,6E)-farnesyl diphosphate + 11 isopentenyl diphosphate = di-trans,undeca-cis-tetradecaprenyl diphosphate + 11 diphosphate",
+      "ec": "2.5.1.88",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 11
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ditrans_polycis_tetradecaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 11
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27618"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27618"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "farnesoate epoxidase",
+      "equation": "(2E,6E)-farnesoate + reduced [NADPH--hemoprotein reductase] + O2 = juvenile hormone III carboxylate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.128",
+      "substrates": [
+        {
+          "metabolite": "2e_6e_farnesoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "juvenile_hormone_iii_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:43724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43724"
           }
         ]
       }

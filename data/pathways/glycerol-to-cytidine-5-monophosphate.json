@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "glycerol-to-cytidine-5-monophosphate",
   "name": "glycerol to cytidine 5'-monophosphate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from glycerol to cytidine 5'-monophosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -110,6 +110,82 @@
       "xrefs": {
         "chebi": "CHEBI:60377"
       }
+    },
+    {
+      "id": "acyl_monophosphate",
+      "name": "acyl monophosphate",
+      "formula": "CO5PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59918"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycerol_3_phosphate",
+      "name": "1-acyl-sn-glycerol 3-phosphate",
+      "short": "1-acyl-sn-glycerol…",
+      "formula": "C4H6O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57970"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cadinene",
+      "name": "(−)-δ-cadinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63703"
+      }
+    },
+    {
+      "id": "cdp_2_3_bis_o_phytanyl_sn_glycerol",
+      "name": "CDP-2,3-bis-O-(phytanyl)-sn-glycerol",
+      "short": "CDP-2,3-bis-O-(phyt…",
+      "formula": "C52H99N3O13P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:74004"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine",
+      "name": "2,3-bis-O-phytanyl-sn-glycero-3-phospho-L-serine",
+      "short": "2,3-bis-O-phytanyl-…",
+      "formula": "C46H93NO8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74853"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +208,27 @@
       "name": "CDP-glycerol diphosphatase",
       "ec": [
         "3.6.1.16"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_275",
+      "name": "acyl phosphate:glycerol-3-phosphate acyltransferase",
+      "ec": [
+        "2.3.1.275"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_97",
+      "name": "(-)-delta-cadinene synthase",
+      "ec": [
+        "4.2.3.97"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_38",
+      "name": "archaetidylserine synthase",
+      "ec": [
+        "2.7.8.38"
       ]
     }
   ],
@@ -279,6 +376,141 @@
           {
             "db": "Rhea",
             "id": "RHEA:21692"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acyl phosphate:glycerol-3-phosphate acyltransferase",
+      "equation": "an acyl phosphate + sn-glycerol 3-phosphate = a 1-acyl-sn-glycero-3-phosphate + phosphate",
+      "ec": "2.3.1.275",
+      "substrates": [
+        {
+          "metabolite": "acyl_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_275"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34075"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(-)-delta-cadinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-delta-cadinene + diphosphate",
+      "ec": "4.2.3.97",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_97"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32015"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "archaetidylserine synthase",
+      "equation": "CDP-2,3-bis-O-(phytanyl)-sn-glycerol + L-serine = 2,3-bis-O-phytanyl-sn-glycero-3-phospho-L-serine + CMP + H(+)",
+      "ec": "2.7.8.38",
+      "substrates": [
+        {
+          "metabolite": "cdp_2_3_bis_o_phytanyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:37367"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37367"
           }
         ]
       }

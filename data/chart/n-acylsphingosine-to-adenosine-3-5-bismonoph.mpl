@@ -15,4 +15,16 @@ pathway n-acylsphingosine-to-adenosine-3-5-bismonoph "N-acylsphingosine to adeno
     <-> ec_2_8_2_13 [2.8.2.13] +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     psychosine_sulfate
   }
+
+  branch from sphingosine side left {
+    sphingosine
+    <-> ec_2_7_1_91 [2.7.1.91] +atp +adp +hplus
+    s1p
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_32 [2.8.2.32] +5_scymnol +3_phosphonato_5_adenylyl_sulfate +hplus
+    5_scymnol_sulfate
+  }
 }

@@ -15,4 +15,16 @@ pathway 2r-3s-2-3-dimethylmalate-to-3-oxopristanoyl-coa "(2R,3S)-2,3-dimethylmal
     <-> ec_2_3_1_176 [2.3.1.176] +4_8_12_trimethyltridecanoyl_coa -coa
     3_oxopristanoyl_coa
   }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> ec_2_1_3_1 [2.1.3.1] +s_methylmalonyl_coa +pyruvate
+    oxaloacetate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_9_1 [2.7.9.1] +pyruvate +pi +atp +amp +hplus
+    phosphonatoenolpyruvate
+  }
 }

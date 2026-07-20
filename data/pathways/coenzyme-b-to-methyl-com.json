@@ -136,6 +136,52 @@
       "xrefs": {
         "chebi": "CHEBI:58319"
       }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "pheophorbide_a",
+      "name": "pheophorbide a",
+      "formula": "C35H34N4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58687"
+      }
+    },
+    {
+      "id": "pyropheophorbide_a_anion",
+      "name": "pyropheophorbide a anion",
+      "short": "pyropheophorbide a…",
+      "formula": "C33H33N4O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58742"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -165,6 +211,20 @@
       "name": "[methyl-Co(III) methanol-specific corrinoid protein]:coenzyme M",
       "ec": [
         "2.1.1.246"
+      ]
+    },
+    {
+      "id": "ec_1_8_7_3",
+      "name": "ferredoxin:CoB-CoM heterodisulfide reductase",
+      "ec": [
+        "1.8.7.3"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_82",
+      "name": "pheophorbidase",
+      "ec": [
+        "3.1.1.82"
       ]
     }
   ],
@@ -365,6 +425,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:45208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ferredoxin:CoB-CoM heterodisulfide reductase",
+      "equation": "coenzyme B + coenzyme M + 2 oxidized [2Fe-2S]-[ferredoxin] = coenzyme M-coenzyme B heterodisulfide + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.8.7.3",
+      "substrates": [
+        {
+          "metabolite": "coenzyme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coenzyme_m",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "com_s_s_cob",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_7_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "pheophorbidase",
+      "equation": "pheophorbide a + H2O + H(+) = pyropheophorbide a + methanol + CO2",
+      "ec": "3.1.1.82",
+      "substrates": [
+        {
+          "metabolite": "pheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyropheophorbide_a_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_82"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:32483"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32483"
           }
         ]
       }

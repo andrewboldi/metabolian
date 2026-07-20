@@ -15,4 +15,22 @@ pathway pyridoxine-5-phosphate-to-5-pyridoxolactone "pyridoxine 5'-phosphate to 
     <-> ec_1_1_1_416 [1.1.1.416] +nad -nadh -hplus
     5_pyridoxolactone
   }
+
+  branch from pyridoxine side left {
+    pyridoxine
+    <-> ec_1_1_1_65 [1.1.1.65] +nadp +nadph +hplus
+    pyridoxal
+  }
+
+  branch from isopyridoxal side right {
+    isopyridoxal
+    <-> ec_1_2_1_102 [1.2.1.102] +nad +h2o +nadh +hplus
+    5_pyridoxate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_40 [1.3.99.40] +carotenoid_end_derivative +hydrogen_acceptor
+    carotenoid_end_group
+  }
 }

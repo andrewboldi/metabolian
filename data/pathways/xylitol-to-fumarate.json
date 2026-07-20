@@ -190,6 +190,71 @@
       "xrefs": {
         "chebi": "CHEBI:29806"
       }
+    },
+    {
+      "id": "notoginsenoside_r1",
+      "name": "notoginsenoside R1",
+      "formula": "C47H80O18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77149"
+      }
+    },
+    {
+      "id": "ginsenoside_rg1",
+      "name": "ginsenoside Rg1",
+      "formula": "C42H72O14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67987"
+      }
+    },
+    {
+      "id": "d_xylono_1_4_lactone",
+      "name": "D-xylono-1,4-lactone",
+      "formula": "C5H8O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16392"
+      }
+    },
+    {
+      "id": "5_hydroxy_2_4_dioxopentanoate",
+      "name": "5-hydroxy-2,4-dioxopentanoate",
+      "short": "5-hydroxy-2,4-dioxo…",
+      "formula": "C5H5O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86001"
+      }
+    },
+    {
+      "id": "7_8_dihydroneopterin",
+      "name": "7,8-dihydroneopterin",
+      "formula": "C9H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17001"
+      }
+    },
+    {
+      "id": "7_8_dihydroxanthopterin",
+      "name": "7,8-dihydroxanthopterin",
+      "short": "7,8-dihydroxanthopt…",
+      "formula": "C6H7N5O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85130"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
     }
   ],
   "enzymes": [
@@ -261,6 +326,34 @@
       "name": "fumarate hydratase",
       "ec": [
         "4.2.1.2"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_194",
+      "name": "ginsenosidase type IV",
+      "ec": [
+        "3.2.1.194"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_68",
+      "name": "xylono-1,4-lactonase",
+      "ec": [
+        "3.1.1.68"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_434",
+      "name": "2-dehydro-3-deoxy-L-fuconate 4-dehydrogenase",
+      "ec": [
+        "1.1.1.434"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_81",
+      "name": "7,8-dihydroneopterin oxygenase",
+      "ec": [
+        "1.13.11.81"
       ]
     }
   ],
@@ -674,6 +767,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:12460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "ginsenosidase type IV",
+      "equation": "(20S)-ginsenoside R1 + H2O = (20S)-ginsenoside Rg1 + D-xylose",
+      "ec": "3.2.1.194",
+      "substrates": [
+        {
+          "metabolite": "notoginsenoside_r1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_rg1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_xylopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_194"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:40767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "xylono-1,4-lactonase",
+      "equation": "D-xylono-1,4-lactone + H2O = D-xylonate + H(+)",
+      "ec": "3.1.1.68",
+      "substrates": [
+        {
+          "metabolite": "d_xylono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:18341"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18341"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "2-dehydro-3-deoxy-L-fuconate 4-dehydrogenase",
+      "equation": "2-dehydro-3-deoxy-D-arabinonate + NAD(+) = 5-hydroxy-2,4-dioxopentanoate + NADH + H(+)",
+      "ec": "1.1.1.434",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_arabinonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxy_2_4_dioxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_434"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:75195"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75195"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "7,8-dihydroneopterin oxygenase",
+      "equation": "7,8-dihydroneopterin + O2 = 7,8-dihydroxanthopterin + glycolaldehyde + formate + H(+)",
+      "ec": "1.13.11.81",
+      "substrates": [
+        {
+          "metabolite": "7_8_dihydroneopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydroxanthopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:45332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45332"
           }
         ]
       }

@@ -109,6 +109,33 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "trans_feruloyl_coa",
+      "name": "trans-feruloyl-CoA",
+      "formula": "C31H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87305"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +158,13 @@
       "name": "capsaicin synthase",
       "ec": [
         "2.3.2.35"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_61",
+      "name": "feruloyl-CoA hydratase/lyase",
+      "ec": [
+        "4.1.2.61"
       ]
     }
   ],
@@ -266,6 +300,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:63832"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "feruloyl-CoA hydratase/lyase",
+      "equation": "(E)-feruloyl-CoA + H2O = vanillin + acetyl-CoA",
+      "ec": "4.1.2.61",
+      "substrates": [
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vanillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62412"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62412"
           }
         ]
       }

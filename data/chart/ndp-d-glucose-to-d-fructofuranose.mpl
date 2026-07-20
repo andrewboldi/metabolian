@@ -15,4 +15,16 @@ pathway ndp-d-glucose-to-d-fructofuranose "NDP-α-D-glucose to α-D-fructofurano
     <-> ec_5_3_1_5 [5.3.1.5]
     d_fructofuranose
   }
+
+  branch from d_glucose side left {
+    d_glucose
+    <-> ec_3_2_1_48 [3.2.1.48] +h2o +glucose
+    maltose
+  }
+
+  branch from d_glucose side right {
+    d_glucose
+    <-> ec_2_3_1_213 [2.3.1.213] +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside +1_o_4_coumaroyl_d_glucose +hplus
+    cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o
+  }
 }

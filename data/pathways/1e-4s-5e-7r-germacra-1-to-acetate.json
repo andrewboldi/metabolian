@@ -117,6 +117,25 @@
       "xrefs": {
         "chebi": "CHEBI:30089"
       }
+    },
+    {
+      "id": "juvenile_hormone_i",
+      "name": "juvenile hormone I",
+      "formula": "C18H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83641"
+      }
+    },
+    {
+      "id": "juvenile_hormone_i_carboxylate",
+      "name": "juvenile hormone I carboxylate",
+      "short": "juvenile hormone I…",
+      "formula": "C17H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87109"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +158,13 @@
       "name": "methyl acetate hydrolase",
       "ec": [
         "3.1.1.114"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_59",
+      "name": "juvenile-hormone esterase",
+      "ec": [
+        "3.1.1.59"
       ]
     }
   ],
@@ -290,6 +316,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:60440"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "juvenile-hormone esterase",
+      "equation": "juvenile hormone I + H2O = juvenile hormone I carboxylate + methanol + H(+)",
+      "ec": "3.1.1.59",
+      "substrates": [
+        {
+          "metabolite": "juvenile_hormone_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "juvenile_hormone_i_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46916"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46916"
           }
         ]
       }

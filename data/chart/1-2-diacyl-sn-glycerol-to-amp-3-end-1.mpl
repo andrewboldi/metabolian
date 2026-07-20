@@ -19,4 +19,28 @@ pathway 1-2-diacyl-sn-glycerol-to-amp-3-end-1 "1,2-diacyl-sn-glycerol… to AMP 
     <-> ec_2_3_2_3 [2.3.2.3] +3_l_lysyl_adenylyl_1_group -amp_3_end_1
     1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_lysyl_sn
   }
+
+  branch from 1_2_diacyl_sn_glycerol_3_phosphate side left {
+    1_2_diacyl_sn_glycerol_3_phosphate
+    <-> ec_2_3_1_51 [2.3.1.51] +acyl_coa +coa
+    1_acyl_sn_glycerol_3_phosphate
+  }
+
+  branch from cdp_diacylglycerol side right {
+    cdp_diacylglycerol
+    <-> ec_2_7_8_41 [2.7.8.41] +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +cytidine_5_monophosphate +hplus
+    cardiolipin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
+    3_l_threonyl_adenylyl_1_group
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_1 [2.4.3.1] +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco
+  }
 }

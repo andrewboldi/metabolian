@@ -19,4 +19,28 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
     <-> ec_4_2_1_19 [4.2.1.19] -h2o
     3_imidazol_4_yl_2_oxopropyl_phosphate
   }
+
+  branch from 1_5_phosphonato_d_ribosyl_5_amp side left {
+    1_5_phosphonato_d_ribosyl_5_amp
+    <-> ec_3_6_1_53 [3.6.1.53] +h2o +hplus
+    cyclic_adp_d_ribose
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_2_1_40 [6.2.1.40] +4_hydroxybutyrate +atp +coa +amp
+    4_hydroxybutyryl_coa
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_11 [2.6.1.11] +n2_acetyl_l_ornithine +akg
+    2_acetamido_5_oxopentanoate
+  }
+
+  branch from 3_imidazol_4_yl_2_oxopropyl_phosphate side right {
+    3_imidazol_4_yl_2_oxopropyl_phosphate
+    <-> ec_2_6_1_9 [2.6.1.9] +akg +glutamate
+    l_histidinol_phosphate
+  }
 }

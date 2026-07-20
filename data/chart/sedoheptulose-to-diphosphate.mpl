@@ -19,4 +19,10 @@ pathway sedoheptulose-to-diphosphate "sedoheptulose to diphosphate" {
     <-> ec_2_7_7_71 [2.7.7.71] +gtp +hplus -ppi
     gdp_d_glycero_d_manno_heptose
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_3_4_9 [6.3.4.9] +l_lysinium +biotinate +atp +amp +hplus
+    biotinyl_l_lysine
+  }
 }

@@ -17,4 +17,28 @@ pathway dehydrosecodine-to-fmn "dehydrosecodine to FMN" {
     <-> ec_1_14_14_50 [1.14.14.50] +fmnh2 +o2 -fmn -h2o -hplus
     3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
   }
+
+  branch from tabersoninium side left {
+    tabersoninium
+    <-> ec_1_14_14_50 [1.14.14.50] +fmnh2 +o2 +fmn +h2o +hplus
+    3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_115 [1.14.14.115] +11_oxo_amyrin +fmnh2 +o2 +h2o +hplus
+    glycyrrhetinate
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_117 [2.1.1.117] +s_scoulerine +sam +hplus
+    s_tetrahydrocolumbamine
+  }
+
+  branch from 3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd side right {
+    3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
+    <-> ec_1_1_99_41 [1.1.99.41] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +hydrogen_acceptor
+    hydrogen_donor
+  }
 }

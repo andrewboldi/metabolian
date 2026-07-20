@@ -15,4 +15,16 @@ pathway o-phosphonato-l-homoserine-to-r-salsolinol "O-phosphonato-L-homoserine t
     <-> ec_3_5_99_12 [3.5.99.12] +dopamine +acetaldehyde -h2o
     r_salsolinol
   }
+
+  branch from threonine side left {
+    threonine
+    <-> ec_1_1_1_103 [1.1.1.103] +nad +nadh +hplus
+    amino_oxobutanoate
+  }
+
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> ec_1_7_3_1 [1.7.3.1] +nitroethane +o2 +h2o +h2o2 +hplus
+    nitrite
+  }
 }

@@ -117,6 +117,80 @@
       "xrefs": {
         "chebi": "CHEBI:30089"
       }
+    },
+    {
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32544"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nicotinate_adenine_dinucleotide_phosphate",
+      "name": "nicotinate-adenine dinucleotide phosphate",
+      "short": "nicotinate-adenine…",
+      "formula": "C21H23N6O18P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:75967"
+      }
+    },
+    {
+      "id": "r_lipoate",
+      "name": "(R)-lipoate",
+      "formula": "C8H13O2S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83088"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n6_r_lipoyl_l_lysine",
+      "name": "N6-[(R)-lipoyl]-L-lysine",
+      "short": "N6-[(R)-lipoyl]-L-l…",
+      "formula": "C14H24N2O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83099"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +213,20 @@
       "name": "O-acetyl-ADP-ribose deacetylase",
       "ec": [
         "3.1.1.106"
+      ]
+    },
+    {
+      "id": "ec_2_4_99_20",
+      "name": "2'-phospho-ADP-ribosyl cyclase/2'-phospho-cyclic-ADP-ribose transferase",
+      "ec": [
+        "2.4.99.20"
+      ]
+    },
+    {
+      "id": "ec_6_3_1_20",
+      "name": "lipoate--protein ligase",
+      "ec": [
+        "6.3.1.20"
       ]
     }
   ],
@@ -290,6 +378,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:57060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2'-phospho-ADP-ribosyl cyclase/2'-phospho-cyclic-ADP-ribose transferase",
+      "equation": "nicotinate + NADP(+) = NAADP(+) + nicotinamide",
+      "ec": "2.4.99.20",
+      "substrates": [
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_99_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:38599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lipoate--protein ligase",
+      "equation": "L-lysyl-[lipoyl-carrier protein] + (R)-lipoate + ATP = N(6)-[(R)-lipoyl]-L-lysyl-[lipoyl-carrier protein] + AMP + diphosphate + H(+)",
+      "ec": "6.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lipoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_lipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49288"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49288"
           }
         ]
       }

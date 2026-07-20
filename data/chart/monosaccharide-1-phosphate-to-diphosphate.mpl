@@ -19,4 +19,22 @@ pathway monosaccharide-1-phosphate-to-diphosphate "monosaccharide 1-phosphate to
     <-> ec_6_3_1_5 [6.3.1.5] +nh3 +atp -amp -nad -hplus
     ppi
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_172 [4.2.3.172] +fpp +h2o
+    10_epi_juneol
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> ec_3_2_2_5 [3.2.2.5] +nad +h2o +hplus
+    adp_d_ribose
+  }
+
+  branch from deamido_nad side left {
+    deamido_nad
+    <-> ec_6_3_5_1 [6.3.5.1] +glutamine +atp +h2o +amp +ppi +nad +hplus
+    glutamate
+  }
 }

@@ -17,4 +17,28 @@ pathway 1-z-alk-1-enyl-sn-glyce-to-3-hydroxy-2-4-dioxope "1-(Z)-alk-1-enyl-sn-gl
     <-> ec_2_3_1_245 [2.3.1.245] +acetyl_coa -coa
     3_hydroxy_2_4_dioxopentyl_phosphate
   }
+
+  branch from ch2_containing_aldehyde side left {
+    ch2_containing_aldehyde
+    <-> ec_3_3_2_2 [3.3.2.2] +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +h2o
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+  }
+
+  branch from sn_glycerol_3_phosphate side right {
+    sn_glycerol_3_phosphate
+    <-> ec_2_4_1_96 [2.4.1.96] +udp_d_galactose +udp +hplus
+    1_d_galactosyl_sn_glycerol_3_phosphate
+  }
+
+  branch from choline side left {
+    choline
+    <-> ec_2_8_2_6 [2.8.2.6] +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    choline_sulfate
+  }
+
+  branch from dhap side right {
+    dhap
+    <-> ec_1_1_1_409 [1.1.1.409] +nad +co2 +nadh
+    4_o_phosphonato_d_erythronate
+  }
 }

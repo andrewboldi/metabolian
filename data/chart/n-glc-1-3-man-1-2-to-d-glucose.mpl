@@ -17,4 +17,10 @@ pathway n-glc-1-3-man-1-2-to-d-glucose "N-{α-Glc-(1→3)-α-Man-(1→2… to β
     <-> ec_5_1_3_44 [5.1.3.44] +d_mannose
     d_glucose
   }
+
+  branch from n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d side left {
+    n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d
+    <-> ec_3_2_1_210 [3.2.1.210] +h2o +d_mannose
+    n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_3_d_man
+  }
 }

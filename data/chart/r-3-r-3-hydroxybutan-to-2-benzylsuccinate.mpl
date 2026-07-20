@@ -25,4 +25,28 @@ pathway r-3-r-3-hydroxybutan-to-2-benzylsuccinate "(R)-3-[(R)-3-hydroxybutan… 
     <-> ec_4_1_99_11 [4.1.99.11] +toluene
     2_benzylsuccinate
   }
+
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_4_1_1_4 [4.1.1.4] +hplus +co2
+    acetone
+  }
+
+  branch from acetoacetyl_coa side right {
+    acetoacetyl_coa
+    <-> ec_1_1_1_157 [1.1.1.157] +nadp +nadph +hplus
+    hydroxybutyryl_coa
+  }
+
+  branch from butyrate side left {
+    butyrate
+    <-> ec_1_3_1_31 [1.3.1.31] +nad +nadh +hplus
+    crotonate
+  }
+
+  branch from hmg_coa side right {
+    hmg_coa
+    <-> ec_1_1_1_88 [1.1.1.88] +nad +coa +nadh +hplus
+    mevalonate
+  }
 }

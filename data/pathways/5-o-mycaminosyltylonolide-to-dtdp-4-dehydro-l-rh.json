@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-o-mycaminosyltylonolide-to-dtdp-4-dehydro-l-rh",
   "name": "5-O-mycaminosyltylonolide to dTDP-4-dehydro-β-L-rhamno…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from 5-O-mycaminosyltylonolide(1+) to dTDP-4-dehydro-β-L-rhamnose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -148,6 +148,101 @@
       "xrefs": {
         "chebi": "CHEBI:62830"
       }
+    },
+    {
+      "id": "tylactone",
+      "name": "tylactone",
+      "formula": "C23H38O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29700"
+      }
+    },
+    {
+      "id": "dtdp_d_mycaminose",
+      "name": "dTDP-α-D-mycaminose",
+      "formula": "C18H30N3O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:63268"
+      }
+    },
+    {
+      "id": "5_o_d_mycaminosyltylactone",
+      "name": "5-O-β-D-mycaminosyltylactone",
+      "short": "5-O-β-D-mycaminosyl…",
+      "formula": "C31H54NO8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76802"
+      }
+    },
+    {
+      "id": "dtmp",
+      "name": "dTMP",
+      "formula": "C10H13N2O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63528"
+      }
+    },
+    {
+      "id": "sn_3_o_geranylgeranyl_glycerol_1_phosphate",
+      "name": "sn-3-O-(geranylgeranyl)glycerol 1-phosphate",
+      "short": "sn-3-O-(geranylgera…",
+      "formula": "C23H39O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57677"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate",
+      "name": "2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phosphate",
+      "short": "2,3-bis-O-(geranylg…",
+      "formula": "C43H71O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58837"
+      }
+    },
+    {
+      "id": "dtdp_4_amino_4_6_dideoxy_d_glucose",
+      "name": "dTDP-4-amino-4,6-dideoxy-D-glucose",
+      "short": "dTDP-4-amino-4,6-di…",
+      "formula": "C16H26N3O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57582"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
     }
   ],
   "enzymes": [
@@ -184,6 +279,34 @@
       "name": "dTDP-4-dehydrorhamnose 3,5-epimerase",
       "ec": [
         "5.1.3.13"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_316",
+      "name": "tylactone mycaminosyltransferase",
+      "ec": [
+        "2.4.1.316"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_42",
+      "name": "geranylgeranylglycerol-phosphate geranylgeranyltransferase",
+      "ec": [
+        "2.5.1.42"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_33",
+      "name": "dTDP-4-amino-4,6-dideoxy-D-glucose transaminase",
+      "ec": [
+        "2.6.1.33"
       ]
     }
   ],
@@ -405,6 +528,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:16969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "tylactone mycaminosyltransferase",
+      "equation": "tylactone + dTDP-alpha-D-mycaminose = 5-O-beta-D-mycaminosyltylactone + dTDP + H(+)",
+      "ec": "2.4.1.316",
+      "substrates": [
+        {
+          "metabolite": "tylactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp_d_mycaminose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_o_d_mycaminosyltylactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_316"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "nucleotide diphosphatase",
+      "equation": "dTTP + H2O = dTMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "dttp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:28534"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28534"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "geranylgeranylglycerol-phosphate geranylgeranyltransferase",
+      "equation": "sn-3-O-(geranylgeranyl)glycerol 1-phosphate + (2E,6E,10E)-geranylgeranyl diphosphate = 2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phosphate + diphosphate",
+      "ec": "2.5.1.42",
+      "substrates": [
+        {
+          "metabolite": "sn_3_o_geranylgeranyl_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:18109"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "dTDP-4-amino-4,6-dideoxy-D-glucose transaminase",
+      "equation": "dTDP-4-amino-4,6-dideoxy-D-glucose + 2-oxoglutarate = dTDP-4-dehydro-6-deoxy-alpha-D-glucose + L-glutamate",
+      "ec": "2.6.1.33",
+      "substrates": [
+        {
+          "metabolite": "dtdp_4_amino_4_6_dideoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_4_dehydro_6_deoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:19085"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19085"
           }
         ]
       }

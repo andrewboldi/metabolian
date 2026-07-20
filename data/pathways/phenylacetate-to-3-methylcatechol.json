@@ -99,6 +99,34 @@
       "xrefs": {
         "chebi": "CHEBI:18404"
       }
+    },
+    {
+      "id": "o_cresol",
+      "name": "o-cresol",
+      "formula": "C7H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28054"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_6_dihydroxy_2_methylcyclohexa_2_4_diene_1_carb",
+      "name": "1,6-dihydroxy-2-methylcyclohexa-2,4-diene-1-carboxylate",
+      "short": "1,6-dihydroxy-2-met…",
+      "formula": "C8H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57640"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +149,20 @@
       "name": "cis-1,2-dihydrobenzene-1,2-diol dehydrogenase",
       "ec": [
         "1.3.1.19"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_243",
+      "name": "toluene 2-monooxygenase",
+      "ec": [
+        "1.14.13.243"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_68",
+      "name": "1,2-dihydroxy-6-methylcyclohexa-3,5-dienecarboxylate dehydrogenase",
+      "ec": [
+        "1.3.1.68"
       ]
     }
   ],
@@ -268,6 +310,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:25193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "toluene 2-monooxygenase",
+      "equation": "toluene + NADH + O2 + H(+) = 2-hydroxytoluene + NAD(+) + H2O",
+      "ec": "1.14.13.243",
+      "substrates": [
+        {
+          "metabolite": "toluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_cresol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_243"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20349"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1,2-dihydroxy-6-methylcyclohexa-3,5-dienecarboxylate dehydrogenase",
+      "equation": "1,6-dihydroxy-2-methylcyclohexa-2,4-dienecarboxylate + NAD(+) = 3-methylcatechol + CO2 + NADH",
+      "ec": "1.3.1.68",
+      "substrates": [
+        {
+          "metabolite": "1_6_dihydroxy_2_methylcyclohexa_2_4_diene_1_carb",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15657"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15657"
           }
         ]
       }

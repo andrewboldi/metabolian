@@ -144,6 +144,44 @@
       "xrefs": {
         "chebi": "CHEBI:29033"
       }
+    },
+    {
+      "id": "3_3_4_substituted_phenyl_1_1_dimethylurea",
+      "name": "3-(3,4-substituted-phenyl)-1,1-dimethylurea",
+      "short": "3-(3,4-substituted-…",
+      "formula": "C9H10N2OR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157693"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "a_1_methyl_3_phenylurea",
+      "name": "a 1-methyl-3-phenylurea",
+      "short": "a 1-methyl-3-phenyl…",
+      "formula": "C8H8N2OR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157694"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +204,13 @@
       "name": "sulfide-cytochrome-c reductase (flavocytochrome c)",
       "ec": [
         "1.8.2.3"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_38",
+      "name": "N,N-dimethyl phenylurea N-demethylase",
+      "ec": [
+        "1.14.15.38"
       ]
     }
   ],
@@ -325,6 +370,67 @@
           {
             "db": "Rhea",
             "id": "RHEA:30223"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N,N-dimethyl phenylurea N-demethylase",
+      "equation": "a 1,1-dimethyl-3-phenylurea + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-methyl-3-phenylurea + formaldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.38",
+      "substrates": [
+        {
+          "metabolite": "3_3_4_substituted_phenyl_1_1_dimethylurea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "a_1_methyl_3_phenylurea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65768"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65768"
           }
         ]
       }

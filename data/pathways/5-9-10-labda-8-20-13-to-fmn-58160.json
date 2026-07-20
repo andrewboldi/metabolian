@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-9-10-labda-8-20-13-to-fmn-58160",
   "name": "5β,9α,10α-labda-8(20),13-… to FMN",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from 5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -109,6 +109,64 @@
       "xrefs": {
         "chebi": "CHEBI:141820"
       }
+    },
+    {
+      "id": "mo_vi_o2_oh_molybdopterin_cofactor",
+      "name": "Mo(VI)O2(OH)-molybdopterin cofactor",
+      "short": "Mo(VI)O2(OH)-molybd…",
+      "formula": "C10H10MoN5O9PS2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71302"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "mo_vi_molybdopterin_cytosine_dinucleotide",
+      "name": "Mo(VI)-molybdopterin cytosine dinucleotide",
+      "short": "Mo(VI)-molybdopteri…",
+      "formula": "C19H22MoN8O16P2S2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71308"
+      }
+    },
+    {
+      "id": "3s_6e_nerolidol",
+      "name": "(3S,6E)-nerolidol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59958"
+      }
+    },
+    {
+      "id": "e_4_8_dimethyl_1_3_7_nonatriene",
+      "name": "(E)-4,8-dimethyl-1,3,7-nonatriene",
+      "short": "4,8-dimethyl-1,3,7-…",
+      "formula": "C11H18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60158"
+      }
+    },
+    {
+      "id": "buten_2_one",
+      "name": "buten-2-one",
+      "formula": "C4H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48058"
+      }
     }
   ],
   "enzymes": [
@@ -124,6 +182,20 @@
       "name": "dolabradiene monooxygenase",
       "ec": [
         "1.14.14.159"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_76",
+      "name": "molybdenum cofactor cytidylyltransferase",
+      "ec": [
+        "2.7.7.76"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_59",
+      "name": "dimethylnonatriene synthase",
+      "ec": [
+        "1.14.14.59"
       ]
     }
   ],
@@ -279,6 +351,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:57520"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "molybdenum cofactor cytidylyltransferase",
+      "equation": "Mo-molybdopterin + CTP + H(+) = Mo-molybdopterin cytosine dinucleotide + diphosphate",
+      "ec": "2.7.7.76",
+      "substrates": [
+        {
+          "metabolite": "mo_vi_o2_oh_molybdopterin_cofactor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mo_vi_molybdopterin_cytosine_dinucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dimethylnonatriene synthase",
+      "equation": "(3S,6E)-nerolidol + reduced [NADPH--hemoprotein reductase] + O2 = (3E)-4,8-dimethylnona-1,3,7-triene + but-3-en-2-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.59",
+      "substrates": [
+        {
+          "metabolite": "3s_6e_nerolidol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_4_8_dimethyl_1_3_7_nonatriene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "buten_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55424"
           }
         ]
       }

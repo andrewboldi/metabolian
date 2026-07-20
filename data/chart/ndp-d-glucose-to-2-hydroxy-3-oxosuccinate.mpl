@@ -17,4 +17,28 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate "NDP-α-D-glucose to 2-hydroxy
     <-> ec_1_1_1_92 [1.1.1.92] +co2 +nadp -nadph -hplus
     2_hydroxy_3_oxosuccinate
   }
+
+  branch from 2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate side left {
+    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
+    <-> ec_2_4_1_266 [2.4.1.266] +pg3 +udp +hplus
+    udp_d_glucose
+  }
+
+  branch from d_glycerate side right {
+    d_glycerate
+    <-> ec_4_1_1_73 [4.1.1.73] +hplus +co2
+    l_tartrate
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein +h2o
+    oleuropein_aglycone
+  }
+
+  branch from 2_hydroxy_3_oxosuccinate side right {
+    2_hydroxy_3_oxosuccinate
+    <-> ec_1_1_1_93 [1.1.1.93] +nad +nadh +hplus
+    meso_tartrate
+  }
 }

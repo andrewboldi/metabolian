@@ -27,4 +27,28 @@ pathway s-s-dimethyl-propiothet-to-s-adenosyl-l-homocyst "S,S-dimethyl-β-propio
     <-> ec_2_1_1_254 [2.1.1.254] +sam -sah -hplus
     erythromycin_a
   }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> ec_1_3_1_95 [1.3.1.95] +nad +nadh +hplus
+    acryloyl_coa
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_51 [3.5.1.51] +4_acetamidobutanoyl_coa +h2o
+    4_aminobutanoyl_coa
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_2_7_12 [1.2.7.12] +n_formylmethanofuran +h2o +di_sulfido_diiron +co2 +hplus
+    methanofuranate
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> ec_2_4_2_27 [2.4.2.27] +dtdp_l_dihydrostreptose +streptidine_6_phosphate +hplus
+    o_1_4_l_dihydrostreptosylstreptidine_6_phosphate
+  }
 }

@@ -122,6 +122,26 @@
       "xrefs": {
         "chebi": "CHEBI:58414"
       }
+    },
+    {
+      "id": "1d_myo_inositol_1_4_bisphosphate",
+      "name": "1D-myo-inositol 1,4-bisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58282"
+      }
+    },
+    {
+      "id": "myo_inositol_1_3_4_6_tetrakisphosphate",
+      "name": "myo-inositol 1,3,4,6-tetrakisphosphate",
+      "short": "myo-inositol…",
+      "formula": "C6H8O18P4",
+      "charge": -8,
+      "xrefs": {
+        "chebi": "CHEBI:57660"
+      }
     }
   ],
   "enzymes": [
@@ -440,6 +460,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:13253"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "inositol-polyphosphate 5-phosphatase",
+      "equation": "1D-myo-inositol 1,4,5-trisphosphate + H2O = 1D-myo-inositol 1,4-bisphosphate + phosphate",
+      "ec": "3.1.3.56",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_4_5_trisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_1_4_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:19797"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19797"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "inositol-1,3,4-trisphosphate 5/6-kinase",
+      "equation": "1D-myo-inositol 1,3,4-trisphosphate + ATP = 1D-myo-inositol 1,3,4,6-tetrakisphosphate + ADP + H(+)",
+      "ec": "2.7.1.159",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_3_4_trisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myo_inositol_1_3_4_6_tetrakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:20940"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20940"
           }
         ]
       }

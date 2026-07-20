@@ -15,4 +15,10 @@ pathway l-valine-to-linamarin "L-valine to linamarin" {
     <-> ec_2_4_1_63 [2.4.1.63] +udp_d_glucose -udp -hplus
     linamarin
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_174 [1.14.14.174] +geranylhydroquinone +fmnh2 +o2 +h2o +hplus
+    3_hydroxy_geranylhydroquinone
+  }
 }

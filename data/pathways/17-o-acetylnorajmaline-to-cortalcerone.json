@@ -155,6 +155,44 @@
       "xrefs": {
         "chebi": "CHEBI:194327"
       }
+    },
+    {
+      "id": "gdp_d_glucose",
+      "name": "GDP-α-D-glucose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62230"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "n_1_deoxy_d_fructopyranos_1_yl_amine",
+      "name": "N-(1-deoxy-β-D-fructopyranos-1-yl)amine",
+      "short": "N-(1-deoxy-β-D-fruc…",
+      "formula": "C7H15NO5R",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:228143"
+      }
+    },
+    {
+      "id": "primary_aliphatic_ammonium_ion",
+      "name": "primary aliphatic ammonium ion",
+      "short": "primary aliphatic…",
+      "formula": "CH5NR",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58001"
+      }
     }
   ],
   "enzymes": [
@@ -198,6 +236,20 @@
       "name": "aldos-2-ulose dehydratase",
       "ec": [
         "4.2.1.110"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_42",
+      "name": "GDP-glucosidase",
+      "ec": [
+        "3.2.1.42"
+      ]
+    },
+    {
+      "id": "ec_1_5_3_25",
+      "name": "fructosyl amine oxidase (glucosone-forming)",
+      "ec": [
+        "1.5.3.25"
       ]
     }
   ],
@@ -476,6 +528,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:75407"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "GDP-glucosidase",
+      "equation": "GDP-alpha-D-glucose + H2O = D-glucose + GDP + H(+)",
+      "ec": "3.2.1.42",
+      "substrates": [
+        {
+          "metabolite": "gdp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:15049"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15049"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "fructosyl amine oxidase (glucosone-forming)",
+      "equation": "an N-(1-deoxy-beta-D-fructopyranos-1-yl)amine + O2 + H2O = an aliphatic amine + 2-dehydro-D-glucose + H2O2",
+      "ec": "1.5.3.25",
+      "substrates": [
+        {
+          "metabolite": "n_1_deoxy_d_fructopyranos_1_yl_amine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "primary_aliphatic_ammonium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_dehydro_d_glucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_3_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:77787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77787"
           }
         ]
       }

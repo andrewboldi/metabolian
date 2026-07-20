@@ -25,4 +25,28 @@ pathway 5-formimidoyltetrahydrofo-to-l-glutamate "5-formimidoyltetrahydrofo… t
     <-> ec_2_6_1_3 [2.6.1.3] +akg -glutamate
     mercaptopyruvate
   }
+
+  branch from n_formimidoyl_l_glutamate side left {
+    n_formimidoyl_l_glutamate
+    <-> ec_3_5_3_13 [3.5.3.13] +h2o +nh3
+    n_formyl_l_glutamate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_6_3_5_6 [6.3.5.6] +3_l_aspartate_adenylyl_1_group +glutamine +atp +h2o +adp +pi +hplus
+    3_l_asparaginyl_adenylyl_1_group
+  }
+
+  branch from hydrogen_cyanide side left {
+    hydrogen_cyanide
+    <-> ec_1_4_99_5 [1.4.99.5] +glycine +hydrogen_acceptor +co2
+    hydrogen_donor
+  }
+
+  branch from thiocyanate side right {
+    thiocyanate
+    <-> ec_2_1_1_n4 [2.1.1.n4] +sam +sah
+    methyl_thiocyanate
+  }
 }

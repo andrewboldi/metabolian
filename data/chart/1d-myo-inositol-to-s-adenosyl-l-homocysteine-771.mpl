@@ -21,4 +21,16 @@ pathway 1d-myo-inositol-to-s-adenosyl-l-homocysteine-771 "1D-myo-inositol… to 
     <-> ec_2_1_1_39 [2.1.1.39] +sam -sah -hplus
     1d_3_o_methyl_myo_inositol
   }
+
+  branch from myo_inositol side left {
+    myo_inositol
+    <-> ec_3_1_3_25 [3.1.3.25] +h2o +pi
+    1d_myo_inositol_6_phosphate
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_175 [2.1.1.175] +tricetin +sam +hplus
+    3_5_di_o_methyltricetin
+  }
 }

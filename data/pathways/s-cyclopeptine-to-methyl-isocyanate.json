@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-cyclopeptine-to-methyl-isocyanate",
   "name": "(S)-cyclopeptine to methyl isocyanate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (S)-cyclopeptine to methyl isocyanate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,6 +117,26 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp",
+      "name": "7-[(3S)-3-amino-3-carboxypropyl]wyosine 5'-monophosphate(1−)",
+      "short": "7-[(3S)-3-amino-3-c…",
+      "formula": "C18H22N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73543"
+      }
+    },
+    {
+      "id": "7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo",
+      "name": "7-(2-hydroxy-3-amino-3-carboxypropyl)wyosine 5'-monophosphate(1−)",
+      "short": "7-(2-hydroxy-3-amin…",
+      "formula": "C18H22N6O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73603"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +152,13 @@
       "name": "cyclopenase",
       "ec": [
         "4.1.99.27"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_42",
+      "name": "tRNA(Phe) (7-(3-amino-3-carboxypropyl)wyosine(37)-C(2))-hydroxylase",
+      "ec": [
+        "1.14.11.42"
       ]
     }
   ],
@@ -287,6 +314,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:73415"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tRNA(Phe) (7-(3-amino-3-carboxypropyl)wyosine(37)-C(2))-hydroxylase",
+      "equation": "7-[(3S)-3-amino-3-carboxypropyl]wyosine(37) in tRNA(Phe) + 2-oxoglutarate + O2 = 7-(2-hydroxy-3-amino-3-carboxypropyl)wyosine(37) in tRNA(Phe) + succinate + CO2",
+      "ec": "1.14.11.42",
+      "substrates": [
+        {
+          "metabolite": "7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37899"
           }
         ]
       }

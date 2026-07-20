@@ -15,4 +15,10 @@ pathway 5-cholest-7-en-3-ol-to-s-adenosyl-l-homocysteine "5α-cholest-7-en-3β-o
     <-> ec_2_1_1_41 [2.1.1.41] +sam -sah -hplus
     fecosterol
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_398 [2.1.1.398] +luteolin_7_olate +sam +hplus
+    4_5_dihydroxy_3_methoxyflavon_7_olate
+  }
 }

@@ -148,6 +148,91 @@
       "xrefs": {
         "chebi": "CHEBI:16708"
       }
+    },
+    {
+      "id": "3_hydroxy_2_methylquinolin_4_1h_one",
+      "name": "3-hydroxy-2-methylquinolin-4(1H)-one",
+      "short": "3-hydroxy-2-methylq…",
+      "formula": "C10H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29216"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_acetylanthranilate",
+      "name": "N-acetylanthranilate",
+      "formula": "C9H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16803"
+      }
+    },
+    {
+      "id": "exxxy_peptide",
+      "name": "EXXXY peptide",
+      "formula": "C20H21N5O8R3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141026"
+      }
+    },
+    {
+      "id": "e_y_cross_linked_exxxy_peptide_residues",
+      "name": "E-Y cross-linked EXXXY peptide residues",
+      "short": "E-Y cross-linked…",
+      "formula": "C20H19N5O8R3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141027"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "5_carboxymethyl_uridine_5_monophosphate_2",
+      "name": "5-(carboxymethyl)uridine 5'-monophosphate(2−)",
+      "short": "5-(carboxymethyl)ur…",
+      "formula": "C11H11N2O10P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:74882"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -170,6 +255,27 @@
       "name": "adenosylhomocysteine nucleosidase",
       "ec": [
         "3.2.2.9"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_48",
+      "name": "3-hydroxy-2-methylquinolin-4-one 2,4-dioxygenase",
+      "ec": [
+        "1.13.11.48"
+      ]
+    },
+    {
+      "id": "ec_1_21_98_4",
+      "name": "PqqA peptide cyclase",
+      "ec": [
+        "1.21.98.4"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_311",
+      "name": "tRNA carboxymethyluridine synthase",
+      "ec": [
+        "2.3.1.311"
       ]
     }
   ],
@@ -325,6 +431,173 @@
           {
             "db": "Rhea",
             "id": "RHEA:29859"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-hydroxy-2-methylquinolin-4-one 2,4-dioxygenase",
+      "equation": "3-hydroxy-2-methyl-1H-quinolin-4-one + O2 = N-acetylanthranilate + CO + H(+)",
+      "ec": "1.13.11.48",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_2_methylquinolin_4_1h_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbon_monoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "PqqA peptide cyclase",
+      "equation": "[PQQ precursor protein] + S-adenosyl-L-methionine = E-Y cross-linked-[PQQ precursor protein] + 5'-deoxyadenosine + L-methionine + H(+)",
+      "ec": "1.21.98.4",
+      "substrates": [
+        {
+          "metabolite": "exxxy_peptide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_y_cross_linked_exxxy_peptide_residues",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_98_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "tRNA carboxymethyluridine synthase",
+      "equation": "uridine(34) in tRNA + acetyl-CoA + S-adenosyl-L-methionine + H2O = 5-(carboxymethyl)uridine(34) in tRNA + 5'-deoxyadenosine + L-methionine + CoA + 2 H(+)",
+      "ec": "2.3.1.311",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_carboxymethyl_uridine_5_monophosphate_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_311"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:61020"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61020"
           }
         ]
       }

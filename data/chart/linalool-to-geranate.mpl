@@ -15,4 +15,10 @@ pathway linalool-to-geranate "linalool to geranate" {
     <-> ec_1_2_1_86 [1.2.1.86] +nad +h2o -nadh -hplus
     geranate
   }
+
+  branch from geraniol side left {
+    geraniol
+    <-> ec_2_7_1_216 [2.7.1.216] +atp +adp +hplus
+    geranyl_phosphate
+  }
 }

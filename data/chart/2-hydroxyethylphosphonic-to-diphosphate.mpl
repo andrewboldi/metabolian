@@ -15,4 +15,28 @@ pathway 2-hydroxyethylphosphonic-to-diphosphate "2-hydroxyethylphosphonic… to 
     <-> ec_2_5_1_6 [2.5.1.6] +methionine +atp +h2o -pi -ppi
     sam
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_39 [4.2.3.39] +fpp +h2o
+    epi_cedrol
+  }
+
+  branch from 5_deoxyadenosine side right {
+    5_deoxyadenosine
+    <-> ec_1_21_98_5 [1.21.98.5] +2_3_di_o_phytanyl_sn_glycero_1_phospho_3_sn_glyc +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
+    macrocyclic_archaetidylglycerol
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_3_13_2_3 [3.13.2.3] +r_s_adenosyl_l_methionine +h2o +hplus
+    adenosine
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_3_99_17 [1.3.99.17] +8_methylquinoline +h2o +hydrogen_donor
+    8_methylquinolin_2_1h_one
+  }
 }

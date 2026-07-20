@@ -15,4 +15,10 @@ pathway 1-alkyl-2-acetyl-sn-glyce-to-1-alkyl-sn-glycerol "1-alkyl-2-acetyl-sn-gl
     <-> ec_2_7_1_93 [2.7.1.93] +atp -adp -hplus
     1_alkyl_sn_glycerol_3_phosphate
   }
+
+  branch from 1_alkyl_2_acetyl_sn_glycerol side left {
+    1_alkyl_2_acetyl_sn_glycerol
+    <-> ec_2_3_1_125 [2.3.1.125] +acyl_coa +coa
+    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+  }
 }

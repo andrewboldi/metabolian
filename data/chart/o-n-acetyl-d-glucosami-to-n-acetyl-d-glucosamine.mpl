@@ -15,4 +15,10 @@ pathway o-n-acetyl-d-glucosami-to-n-acetyl-d-glucosamine "O-(N-acetyl-β-D-gluco
     <-> ec_2_3_1_3 [2.3.1.3] +acetyl_coa -coa -hplus
     n_acetyl_d_glucosamine
   }
+
+  branch from l_serine side left {
+    l_serine
+    <-> ec_5_1_1_16 [5.1.1.16]
+    d_serine
+  }
 }

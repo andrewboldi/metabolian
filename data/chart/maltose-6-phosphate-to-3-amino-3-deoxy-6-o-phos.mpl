@@ -19,4 +19,10 @@ pathway maltose-6-phosphate-to-3-amino-3-deoxy-6-o-phos "α-maltose 6'-phosphate
     <-> ec_2_7_1_179 [2.7.1.179] +atp -adp -hplus
     3_amino_3_deoxy_6_o_phosphono_d_glucopyranose
   }
+
+  branch from akg side left {
+    akg
+    <-> ec_6_4_1_7 [6.4.1.7] +hco3 +atp +adp +pi +hplus
+    s_oxalatosuccinate
+  }
 }

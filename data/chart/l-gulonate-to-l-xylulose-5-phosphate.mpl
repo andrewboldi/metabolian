@@ -15,4 +15,22 @@ pathway l-gulonate-to-l-xylulose-5-phosphate "L-gulonate to L-xylulose 5-phospha
     <-> ec_2_7_1_53 [2.7.1.53] +atp -adp -hplus
     l_xylulose_5_phosphate
   }
+
+  branch from 3_dehydro_l_gulonate side left {
+    3_dehydro_l_gulonate
+    <-> ec_1_1_1_130 [1.1.1.130] +nad +nadh +hplus
+    2_3_diketogulonate
+  }
+
+  branch from l_xylulose side right {
+    l_xylulose
+    <-> ec_1_1_1_12 [1.1.1.12] +nad +nadh +hplus
+    l_arabinitol
+  }
+
+  branch from l_xylulose_5_phosphate side left {
+    l_xylulose_5_phosphate
+    <-> ec_4_1_1_85 [4.1.1.85] +hplus +co2
+    3_dehydro_l_gulonate_6_phosphate
+  }
 }

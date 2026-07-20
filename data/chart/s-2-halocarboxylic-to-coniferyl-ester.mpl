@@ -19,4 +19,28 @@ pathway s-2-halocarboxylic-to-coniferyl-ester "(S)-2-halocarboxylic… to conife
     <-> ec_1_1_1_318 [1.1.1.318] +eugenol +nadp -nadph
     coniferyl_ester
   }
+
+  branch from halide_anion side left {
+    halide_anion
+    <-> ec_1_14_12_13 [1.14.12.13] +2_halobenzoate +nadh +o2 +hplus +co2 +nad
+    catechol
+  }
+
+  branch from 2_oxo_monocarboxylic_acid_anion side right {
+    2_oxo_monocarboxylic_acid_anion
+    <-> ec_1_2_1_23 [1.2.1.23] +nad +h2o +nadh +hplus
+    2_oxo_aldehyde
+  }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> ec_1_1_5_8 [1.1.5.8] +quinate +1_4_benzoquinones
+    3_dehydroquinate
+  }
+
+  branch from aldehyde side right {
+    aldehyde
+    <-> ec_1_1_1_2 [1.1.1.2] +nadp +nadph +hplus
+    primary_alcohol
+  }
 }

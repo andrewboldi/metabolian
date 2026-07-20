@@ -19,4 +19,10 @@ pathway scyllo-inositol-to-1-guanidiniumyl-1-deoxy-s "scyllo-inositol to 1-guani
     <-> ec_3_1_3_40 [3.1.3.40] +h2o -pi
     1_guanidiniumyl_1_deoxy_scyllo_inositol
   }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_1_14_13_196 [1.14.13.196] +nadh +o2 +nad +h2o
+    n5_hydroxy_l_ornithine
+  }
 }

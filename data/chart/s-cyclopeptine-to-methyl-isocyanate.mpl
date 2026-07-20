@@ -15,4 +15,10 @@ pathway s-cyclopeptine-to-methyl-isocyanate "(S)-cyclopeptine to methyl isocyana
     <-> ec_4_1_99_27 [4.1.99.27] -methyl_isocyanate -hplus
     viridicatin
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_42 [1.14.11.42] +7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp +akg +o2 +co2
+    7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo
+  }
 }

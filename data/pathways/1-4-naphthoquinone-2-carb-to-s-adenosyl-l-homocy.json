@@ -130,6 +130,45 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "sabinene",
+      "name": "(−)-sabinene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50028"
+      }
+    },
+    {
+      "id": "2_4_6_trichlorophenolate",
+      "name": "2,4,6-trichlorophenolate",
+      "short": "2,4,6-trichlorophen…",
+      "formula": "C6H2Cl3O",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140426"
+      }
+    },
+    {
+      "id": "2_4_6_trichloroanisole",
+      "name": "2,4,6-trichloroanisole",
+      "short": "2,4,6-trichloroanis…",
+      "formula": "C7H5Cl3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:19333"
+      }
     }
   ],
   "enzymes": [
@@ -152,6 +191,20 @@
       "name": "demethylphylloquinol methyltransferase",
       "ec": [
         "2.1.1.329"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_109",
+      "name": "(-)-sabinene synthase",
+      "ec": [
+        "4.2.3.109"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_136",
+      "name": "chlorophenol O-methyltransferase",
+      "ec": [
+        "2.1.1.136"
       ]
     }
   ],
@@ -303,6 +356,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:40551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(-)-sabinene synthase",
+      "equation": "(2E)-geranyl diphosphate = (1S,5S)-sabinene + diphosphate",
+      "ec": "4.2.3.109",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sabinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25508"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25508"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "chlorophenol O-methyltransferase",
+      "equation": "2,4,6-trichlorophenol + S-adenosyl-L-methionine = 2,4,6-trichloroanisole + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.136",
+      "substrates": [
+        {
+          "metabolite": "2_4_6_trichlorophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_6_trichloroanisole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_136"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:18909"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18909"
           }
         ]
       }

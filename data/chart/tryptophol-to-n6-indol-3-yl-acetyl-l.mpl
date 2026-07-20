@@ -15,4 +15,16 @@ pathway tryptophol-to-n6-indol-3-yl-acetyl-l "tryptophol to N6-[(indol-3-yl)acet
     <-> ec_6_3_2_20 [6.3.2.20] +l_lysinium +atp -adp -pi -hplus
     n6_indol_3_yl_acetyl_l_lysine
   }
+
+  branch from indol_3_ylacetaldehyde side left {
+    indol_3_ylacetaldehyde
+    <-> ec_4_1_1_74 [4.1.1.74] +hplus +co2
+    3_indol_3_yl_pyruvate
+  }
+
+  branch from indole_3_acetate side right {
+    indole_3_acetate
+    <-> ec_4_1_1_115 [4.1.1.115] +hplus +co2
+    skatole
+  }
 }

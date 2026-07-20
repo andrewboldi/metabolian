@@ -173,6 +173,45 @@
       "xrefs": {
         "chebi": "CHEBI:33737"
       }
+    },
+    {
+      "id": "8_hydroxyfurocoumarin",
+      "name": "8-hydroxyfurocoumarin",
+      "short": "8-hydroxyfurocoumar…",
+      "formula": "C11HO4R5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52025"
+      }
+    },
+    {
+      "id": "8_methoxyfurocoumarin",
+      "name": "8-methoxyfurocoumarin",
+      "short": "8-methoxyfurocoumar…",
+      "formula": "C12H3O4R5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52028"
+      }
+    },
+    {
+      "id": "cyclo_l_leucyl_l_leucyl",
+      "name": "cyclo(L-leucyl-L-leucyl)",
+      "short": "cyclo(L-leucyl-L-le…",
+      "formula": "C12H22N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67269"
+      }
+    },
+    {
+      "id": "pulcherriminate",
+      "name": "pulcherriminate",
+      "formula": "C12H18N2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77663"
+      }
     }
   ],
   "enzymes": [
@@ -195,6 +234,20 @@
       "name": "luteothin monooxygenase",
       "ec": [
         "1.14.15.37"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_70",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "ec": [
+        "2.1.1.70"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_13",
+      "name": "pulcherriminic acid synthase",
+      "ec": [
+        "1.14.15.13"
       ]
     }
   ],
@@ -366,6 +419,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:58824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "equation": "an 8-hydroxyfurocoumarin + S-adenosyl-L-methionine = an 8-methoxyfurocoumarin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.70",
+      "substrates": [
+        {
+          "metabolite": "8_hydroxyfurocoumarin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_methoxyfurocoumarin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "pulcherriminic acid synthase",
+      "equation": "cyclo(L-leucyl-L-leucyl) + 6 reduced [2Fe-2S]-[ferredoxin] + 3 O2 + 4 H(+) = pulcherriminic acid + 6 oxidized [2Fe-2S]-[ferredoxin] + 4 H2O",
+      "ec": "1.14.15.13",
+      "substrates": [
+        {
+          "metabolite": "cyclo_l_leucyl_l_leucyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pulcherriminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35555"
           }
         ]
       }

@@ -100,6 +100,52 @@
       "xrefs": {
         "chebi": "CHEBI:77047"
       }
+    },
+    {
+      "id": "dttp",
+      "name": "dTTP",
+      "formula": "C10H13N2O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37568"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2_iodophenol",
+      "name": "2-iodophenol",
+      "formula": "C6H5IO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16706"
+      }
+    },
+    {
+      "id": "1_iodo_2_methoxybenzene",
+      "name": "1-iodo-2-methoxybenzene",
+      "short": "1-iodo-2-methoxyben…",
+      "formula": "C7H7IO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16355"
+      }
     }
   ],
   "enzymes": [
@@ -122,6 +168,20 @@
       "name": "macrocin O-methyltransferase",
       "ec": [
         "2.1.1.101"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_39",
+      "name": "thymidine-triphosphatase",
+      "ec": [
+        "3.6.1.39"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_26",
+      "name": "iodophenol O-methyltransferase",
+      "ec": [
+        "2.1.1.26"
       ]
     }
   ],
@@ -269,6 +329,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:17269"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "thymidine-triphosphatase",
+      "equation": "dTTP + H2O = dTDP + phosphate + H(+)",
+      "ec": "3.6.1.39",
+      "substrates": [
+        {
+          "metabolite": "dttp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19013"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "iodophenol O-methyltransferase",
+      "equation": "2-iodophenol + S-adenosyl-L-methionine = 1-iodo-2-methoxybenzene + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.26",
+      "substrates": [
+        {
+          "metabolite": "2_iodophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_iodo_2_methoxybenzene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:14313"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14313"
           }
         ]
       }

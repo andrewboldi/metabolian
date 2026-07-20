@@ -131,6 +131,46 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "o_s_hexanoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-(S-hexanoylpantetheine-4'-phosphoryl)serine(1−)",
+      "short": "O-(S-hexanoylpantet…",
+      "formula": "C20H35N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78459"
+      }
+    },
+    {
+      "id": "o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-5-hexenoylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-5-hexenoylpant…",
+      "formula": "C20H33N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86298"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "e_2_methylgeranyl_diphosphate",
+      "name": "(E)-2-methylgeranyl diphosphate",
+      "short": "2-methylgeranyl PP",
+      "formula": "C11H19O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:61984"
+      }
     }
   ],
   "enzymes": [
@@ -153,6 +193,20 @@
       "name": "4-hydroxy-3-methoxy-5-polyprenylbenzoate decarboxylase",
       "ec": [
         "4.1.1.130"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_40",
+      "name": "hex-5-enoyl-[acyl-carrier protein] acetylenase",
+      "ec": [
+        "1.14.19.40"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_255",
+      "name": "geranyl diphosphate 2-C-methyltransferase",
+      "ec": [
+        "2.1.1.255"
       ]
     }
   ],
@@ -304,6 +358,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:81267"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hex-5-enoyl-[acyl-carrier protein] acetylenase",
+      "equation": "hexanoyl-[ACP] + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 5-hexenoyl-[ACP] + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.40",
+      "substrates": [
+        {
+          "metabolite": "o_s_hexanoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "geranyl diphosphate 2-C-methyltransferase",
+      "equation": "(2E)-geranyl diphosphate + S-adenosyl-L-methionine = (E)-2-methylgeranyl diphosphate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.255",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_2_methylgeranyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_255"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32519"
           }
         ]
       }

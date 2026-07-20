@@ -116,6 +116,80 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "heptyl_sulfate",
+      "name": "heptyl sulfate",
+      "formula": "C7H15O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:157689"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "heptanal",
+      "name": "heptanal",
+      "formula": "C7H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34787"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "9z_12z_hexadecadienoyl_coa",
+      "name": "(9Z,12Z)-hexadecadienoyl-CoA",
+      "short": "(9Z,12Z)-hexadecadi…",
+      "formula": "C37H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76552"
+      }
+    },
+    {
+      "id": "9z_12z_hexadeca_9_12_15_trienoyl_coa",
+      "name": "(9Z,12Z)-hexadeca-9,12,15-trienoyl-CoA",
+      "short": "(9Z,12Z)-hexadeca-9…",
+      "formula": "C37H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85914"
+      }
     }
   ],
   "enzymes": [
@@ -138,6 +212,20 @@
       "name": "betaine-aldehyde dehydrogenase",
       "ec": [
         "1.2.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_77",
+      "name": "alkyl sulfatase",
+      "ec": [
+        "1.14.11.77"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_13",
+      "name": "acyl-CoA 15-desaturase",
+      "ec": [
+        "1.14.19.13"
       ]
     }
   ],
@@ -285,6 +373,120 @@
           {
             "db": "Rhea",
             "id": "RHEA:15305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alkyl sulfatase",
+      "equation": "heptyl sulfate + 2-oxoglutarate + O2 = heptanal + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
+      "substrates": [
+        {
+          "metabolite": "heptyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "heptanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "acyl-CoA 15-desaturase",
+      "equation": "(9Z,12Z)-hexadecadienoyl-CoA + AH2 + O2 = (9Z,12Z,15Z)-hexadecatrienoyl-CoA + A + 2 H2O",
+      "ec": "1.14.19.13",
+      "substrates": [
+        {
+          "metabolite": "9z_12z_hexadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_12z_hexadeca_9_12_15_trienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:37599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37599"
           }
         ]
       }

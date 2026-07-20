@@ -114,6 +114,55 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "diphthine_methyl_ester",
+      "name": "diphthine methyl ester",
+      "short": "diphthine methyl…",
+      "formula": "C14H23N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:79005"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
+      "name": "3-(3-amino-3-carboxypropyl)uridine 5'-phosphate(1−)",
+      "short": "3-(3-amino-3-carbox…",
+      "formula": "C13H17N3O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82930"
+      }
+    },
+    {
+      "id": "squalene",
+      "name": "Squalene",
+      "formula": "C30H50",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15440"
+      }
+    },
+    {
+      "id": "3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t",
+      "name": "3,22-dimethyl-1,2,23,24-tetradehydro-2,3,22,23-tetrahydrosqualene",
+      "short": "3,22-dimethyl-1,2,2…",
+      "formula": "C32H54",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70861"
+      }
     }
   ],
   "enzymes": [
@@ -136,6 +185,27 @@
       "name": "diphthine synthase",
       "ec": [
         "2.1.1.98"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_314",
+      "name": "diphthine methyl ester synthase",
+      "ec": [
+        "2.1.1.314"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_25",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "ec": [
+        "2.5.1.25"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_262",
+      "name": "squalene methyltransferase",
+      "ec": [
+        "2.1.1.262"
       ]
     }
   ],
@@ -279,6 +349,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:36415"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "diphthine methyl ester synthase",
+      "equation": "2-[(3S)-amino-3-carboxypropyl]-L-histidyl-[translation elongation factor 2] + 4 S-adenosyl-L-methionine = diphthine methyl ester-[translation elongation factor 2] + 4 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.314",
+      "substrates": [
+        {
+          "metabolite": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphthine_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_314"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:42652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "equation": "a uridine in tRNA + S-adenosyl-L-methionine = a 3-[(3S)-3-amino-3-carboxypropyl]uridine in tRNA + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.25",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "squalene methyltransferase",
+      "equation": "squalene + 2 S-adenosyl-L-methionine = 3,22-dimethyl-1,2,23,24-tetradehydro-2,3,22,23-tetrahydrosqualene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.262",
+      "substrates": [
+        {
+          "metabolite": "squalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_262"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34643"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34643"
           }
         ]
       }

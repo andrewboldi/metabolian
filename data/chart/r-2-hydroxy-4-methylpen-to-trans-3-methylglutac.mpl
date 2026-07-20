@@ -17,4 +17,22 @@ pathway r-2-hydroxy-4-methylpen-to-trans-3-methylglutac "(R)-2-hydroxy-4-methylp
     <-> ec_6_4_1_4 [6.4.1.4] +hco3 +atp -adp -pi -hplus
     methylglutaconyl_coa
   }
+
+  branch from kic side left {
+    kic
+    <-> ec_1_4_1_9 [1.4.1.9] +leucine +nad +h2o +nadh +hplus
+    nh3
+  }
+
+  branch from isovaleryl_coa side right {
+    isovaleryl_coa
+    <-> ec_2_3_1_228 [2.3.1.228] +sam +5_s_methyl_5_thioadenosine +coa +hplus
+    n_isovaleryl_l_homoserine_lactone
+  }
+
+  branch from methylglutaconyl_coa side left {
+    methylglutaconyl_coa
+    <-> ec_4_2_1_18 [4.2.1.18] +h2o
+    hmg_coa
+  }
 }

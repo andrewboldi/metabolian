@@ -15,4 +15,16 @@ pathway 2-4-4-6-tetrahydroxych-to-s-adenosyl-l-homocyste "2',4,4',6'-tetrahydrox
     <-> ec_2_1_1_339 [2.1.1.339] +sam -sah -hplus
     4_o_methylxanthohumol
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_80 [2.5.1.80] +dmapp +l_tryptophan
+    7_3_methylbut_2_enyl_l_tryptophan
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_46 [2.1.1.46] +4_hydroxyisoflavones +sam +hplus
+    4_methoxyisoflavones
+  }
 }

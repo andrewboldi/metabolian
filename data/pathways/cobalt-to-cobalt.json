@@ -147,6 +147,33 @@
       "xrefs": {
         "chebi": "CHEBI:58116"
       }
+    },
+    {
+      "id": "echinenone",
+      "name": "echinenone",
+      "formula": "C40H54O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4746"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "canthaxanthin",
+      "name": "canthaxanthin",
+      "formula": "C40H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3362"
+      }
     }
   ],
   "enzymes": [
@@ -169,6 +196,13 @@
       "name": "[methyl-Co(III) methoxylated-aromatic-compound-specific corrinoid",
       "ec": [
         "2.1.1.384"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_63",
+      "name": "beta-carotene 4-ketolase",
+      "ec": [
+        "1.14.99.63"
       ]
     }
   ],
@@ -332,6 +366,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:75867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-carotene 4-ketolase",
+      "equation": "echinenone + 2 AH2 + 2 O2 = canthaxanthin + 2 A + 3 H2O",
+      "ec": "1.14.99.63",
+      "substrates": [
+        {
+          "metabolite": "echinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "canthaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:55664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55664"
           }
         ]
       }

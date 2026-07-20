@@ -204,6 +204,61 @@
       "xrefs": {
         "chebi": "CHEBI:33738"
       }
+    },
+    {
+      "id": "isoorientin",
+      "name": "isoorientin",
+      "formula": "C21H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58333"
+      }
+    },
+    {
+      "id": "isoscoparin_7_olate",
+      "name": "isoscoparin-7-olate",
+      "formula": "C22H21O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58407"
+      }
+    },
+    {
+      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
+      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
+      "short": "(2-amino-1-hydroxye…",
+      "formula": "C2H8NO4P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141612"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "narbomycin",
+      "name": "narbomycin",
+      "formula": "C28H48NO7",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76801"
+      }
+    },
+    {
+      "id": "neopikromycin",
+      "name": "neopikromycin",
+      "formula": "C28H48NO8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:77350"
+      }
     }
   ],
   "enzymes": [
@@ -247,6 +302,27 @@
       "name": "methylenetetrahydrofolate reductase (ferredoxin)",
       "ec": [
         "1.5.7.1"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_78",
+      "name": "isoorientin 3'-O-methyltransferase",
+      "ec": [
+        "2.1.1.78"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_78",
+      "name": "2-amino-1-hydroxyethylphosphonate dioxygenase (glycine-forming)",
+      "ec": [
+        "1.13.11.78"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_33",
+      "name": "pikromycin synthase",
+      "ec": [
+        "1.14.15.33"
       ]
     }
   ],
@@ -537,6 +613,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:14229"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "isoorientin 3'-O-methyltransferase",
+      "equation": "isoorientin + S-adenosyl-L-methionine = isoscoparin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.78",
+      "substrates": [
+        {
+          "metabolite": "isoorientin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoscoparin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:24096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "2-amino-1-hydroxyethylphosphonate dioxygenase (glycine-forming)",
+      "equation": "(1R)-(2-amino-1-hydroxyethyl)phosphonate + O2 = glycine + phosphate + 2 H(+)",
+      "ec": "1.13.11.78",
+      "substrates": [
+        {
+          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:41444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "pikromycin synthase",
+      "equation": "narbomycin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = neopikromycin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.33",
+      "substrates": [
+        {
+          "metabolite": "narbomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "neopikromycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:40531"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40531"
           }
         ]
       }

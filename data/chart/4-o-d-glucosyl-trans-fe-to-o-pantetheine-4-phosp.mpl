@@ -15,4 +15,28 @@ pathway 4-o-d-glucosyl-trans-fe-to-o-pantetheine-4-phosp "4-O-β-D-glucosyl-tran
     <-> ec_2_3_3_22 [2.3.3.22] +o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1 +h2o -holo-acp -hplus
     o_s_3_carboxymethyl_3_hydroxyacylpantetheine_4_p
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_135 [3.5.1.135] +n4_acetylcytosine +h2o +hplus
+    cytosine
+  }
+
+  branch from acetyl-acp side right {
+    acetyl-acp
+    <-> ec_4_1_1_87 [4.1.1.87] +hplus +co2
+    malonyl-acp
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_43 [4.2.3.43] +geranylgeranyl_diphosphate
+    fusicocca_2_10_14_diene
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_3_1_2_14 [3.1.2.14] +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +h2o +hplus
+    palmitate
+  }
 }

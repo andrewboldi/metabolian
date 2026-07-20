@@ -279,6 +279,74 @@
       "xrefs": {
         "chebi": "CHEBI:30089"
       }
+    },
+    {
+      "id": "1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid",
+      "name": "1-acyl-2-[(Z)-9,10-enoyl]-sn-glycero-3-phospholipid",
+      "short": "1-acyl-2-[(Z)-9,10-…",
+      "formula": "C14H21O8PR3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76593"
+      }
+    },
+    {
+      "id": "1_acyl_2_9_10_methyleneacyl_sn_glycero_3_phospho",
+      "name": "1-acyl-2-(9,10-methyleneacyl)-sn-glycero-3-phospholipid",
+      "short": "1-acyl-2-(9,10-meth…",
+      "formula": "C15H23O8PR3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76594"
+      }
+    },
+    {
+      "id": "phenylethanolaminium",
+      "name": "phenylethanolaminium",
+      "formula": "C8H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57741"
+      }
+    },
+    {
+      "id": "n_methylphenylethanolaminium",
+      "name": "N-methylphenylethanolaminium",
+      "short": "N-methylphenylethan…",
+      "formula": "C9H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57946"
+      }
+    },
+    {
+      "id": "cyclotriphosphate",
+      "name": "cyclotriphosphate",
+      "formula": "O9P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57801"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "1_10_e_4e_6s_7r_germacradien_6_ol",
+      "name": "(+)-(1(10)E,4E,6S,7R)-germacradien-6-ol",
+      "short": "(+)-(1(10)E,4E,6S,7…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137564"
+      }
     }
   ],
   "enzymes": [
@@ -343,6 +411,34 @@
       "name": "2'''-acetyl-6'''-hydroxyneomycin C deacetylase",
       "ec": [
         "3.5.1.113"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_79",
+      "name": "cyclopropane-fatty-acyl-phospholipid synthase",
+      "ec": [
+        "2.1.1.79"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_28",
+      "name": "phenylethanolamine N-methyltransferase",
+      "ec": [
+        "2.1.1.28"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_2",
+      "name": "trimetaphosphatase",
+      "ec": [
+        "3.6.1.2"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_166",
+      "name": "(+)-(1(10)E,4E,6S,7R)-germacradien-6-ol synthase",
+      "ec": [
+        "4.2.3.166"
       ]
     }
   ],
@@ -780,6 +876,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:34051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "cyclopropane-fatty-acyl-phospholipid synthase",
+      "equation": "a 1-acyl-2-(9Z)-enoyl-sn-glycero-3-phospholipid + S-adenosyl-L-methionine = a 1-acyl-2-(9-cyclopronane)-acyl-sn-glycero-3-phospholipid + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.79",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_9_10_methyleneacyl_sn_glycero_3_phospho",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:11988"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11988"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "phenylethanolamine N-methyltransferase",
+      "equation": "phenylethanolamine + S-adenosyl-L-methionine = N-methylphenylethanolamine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.28",
+      "substrates": [
+        {
+          "metabolite": "phenylethanolaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylphenylethanolaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:12176"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "trimetaphosphatase",
+      "equation": "trimetaphosphate + H2O = triphosphate + 2 H(+)",
+      "ec": "3.6.1.2",
+      "substrates": [
+        {
+          "metabolite": "cyclotriphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:11088"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "(+)-(1(10)E,4E,6S,7R)-germacradien-6-ol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-(1(10)E,4E,6S,7R)-germacradien-6-ol + diphosphate",
+      "ec": "4.2.3.166",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_10_e_4e_6s_7r_germacradien_6_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_166"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:12192"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12192"
           }
         ]
       }

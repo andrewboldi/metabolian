@@ -17,4 +17,16 @@ pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin
     <-> ec_2_3_1_238 [2.3.1.238] +o_s_2_methylbutanoylpantetheine_4_phosphoryl_ser -holo-acp
     mevinolinate
   }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_2_3_1_274 [2.3.1.274] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +pi
+    acyl_monophosphate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_80 [1.14.14.80] +palmitate +fmnh2 +o2 +h2o +hplus
+    16_hydroxyhexadecanoate
+  }
 }

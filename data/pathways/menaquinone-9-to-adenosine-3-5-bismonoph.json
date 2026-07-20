@@ -139,6 +139,63 @@
       "xrefs": {
         "chebi": "CHEBI:58343"
       }
+    },
+    {
+      "id": "3_methylquinoline",
+      "name": "3-methylquinoline",
+      "formula": "C10H9N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20140"
+      }
+    },
+    {
+      "id": "3_methylquinolin_2_1h_one",
+      "name": "3-methylquinolin-2(1H)-one",
+      "short": "3-methylquinolin-2(…",
+      "formula": "C10H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20114"
+      }
+    },
+    {
+      "id": "r_camphor",
+      "name": "(R)-camphor",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15396"
+      }
+    },
+    {
+      "id": "6_endo_hydroxycamphor",
+      "name": "(+)-6-endo-hydroxycamphor",
+      "short": "(+)-6-endo-hydroxyc…",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64787"
+      }
+    },
+    {
+      "id": "taurolithocholate",
+      "name": "taurolithocholate",
+      "formula": "C26H44NO5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17179"
+      }
+    },
+    {
+      "id": "taurolithocholic_acid_sulfate",
+      "name": "taurolithocholic acid sulfate",
+      "short": "taurolithocholic…",
+      "formula": "C26H43NO8S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58301"
+      }
     }
   ],
   "enzymes": [
@@ -161,6 +218,27 @@
       "name": "omega-hydroxy-beta-dihydromenaquinone-9 sulfotransferase",
       "ec": [
         "2.8.2.40"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_17",
+      "name": "quinoline 2-oxidoreductase",
+      "ec": [
+        "1.3.99.17"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_10",
+      "name": "(+)-camphor 6-endo-hydroxylase",
+      "ec": [
+        "1.14.15.10"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_14",
+      "name": "bile-salt sulfotransferase",
+      "ec": [
+        "2.8.2.14"
       ]
     }
   ],
@@ -312,6 +390,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:58892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "quinoline 2-oxidoreductase",
+      "equation": "3-methylquinoline + A + H2O = 3-methylquinolin-2(1H)-one + AH2",
+      "ec": "1.3.99.17",
+      "substrates": [
+        {
+          "metabolite": "3_methylquinoline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylquinolin_2_1h_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(+)-camphor 6-endo-hydroxylase",
+      "equation": "2 reduced [2Fe-2S]-[putidaredoxin] + (1R,4R)-camphor + O2 + 2 H(+) = (+)-6-endo-hydroxycamphor + 2 oxidized [2Fe-2S]-[putidaredoxin] + H2O",
+      "ec": "1.14.15.10",
+      "substrates": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "r_camphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_endo_hydroxycamphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33047"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "bile-salt sulfotransferase",
+      "equation": "taurolithocholate + 3'-phosphoadenylyl sulfate = taurolithocholate 3-sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.14",
+      "substrates": [
+        {
+          "metabolite": "taurolithocholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurolithocholic_acid_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:14013"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14013"
           }
         ]
       }

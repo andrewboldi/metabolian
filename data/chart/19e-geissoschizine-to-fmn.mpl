@@ -17,4 +17,16 @@ pathway 19e-geissoschizine-to-fmn "(19E)-geissoschizine to FMN" {
     <-> ec_1_14_14_104 [1.14.14.104] +fmnh2 +o2 -fmn -h2o -hplus
     vomilenine
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_42 [1.14.14.42] +l_tetrahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_7_methylsulfanyl_heptanal_oxime
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_3_2_14 [3.3.2.14] +2_4_dinitroanisole +h2o +hplus
+    2_4_dinitrophenol
+  }
 }

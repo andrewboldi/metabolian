@@ -15,4 +15,22 @@ pathway 2-c-methyl-d-erythritol-to-cytidine-5-monophosph "2-C-methyl-D-erythrito
     <-> ec_4_6_1_12 [4.6.1.12] -cytidine_5_monophosphate
     2_c_methyl_d_erythritol_2_4_cyclic_diphosphate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_14 [6.2.1.14] +pimelate +atp +coa +amp
+    pimeloyl_coa
+  }
+
+  branch from 2_c_methyl_d_erythritol_2_4_cyclic_diphosphate side right {
+    2_c_methyl_d_erythritol_2_4_cyclic_diphosphate
+    <-> ec_1_17_7_1 [1.17.7.1] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +di_sulfido_diiron +h2o +hplus
+    di_sulfido_diiron
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_8 [2.4.3.8] +n_acetylneuraminyl_2_3_d_galactoside +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
+  }
 }

@@ -17,4 +17,28 @@ pathway s-2-hydroxyacyl-glutathi-to-tetrachloro-1-4-benz "S-(2-hydroxyacyl)gluta
     <-> ec_1_1_1_404 [1.1.1.404] +nad +hplus -nadh
     tetrachloro_1_4_benzoquinone
   }
+
+  branch from gsh side left {
+    gsh
+    <-> ec_3_4_19_13 [3.4.19.13] +h2o +glutamate
+    cysgly
+  }
+
+  branch from cysteine side right {
+    cysteine
+    <-> ec_6_3_2_51 [6.3.2.51] +r_4_phosphonatopantothenate +atp +amp +ppi +hplus
+    n_r_4_phosphonatopantothenoyl_l_cysteinate
+  }
+
+  branch from 2_3_5_6_tetrachlorobenzene_1_4_bis_olate side left {
+    2_3_5_6_tetrachlorobenzene_1_4_bis_olate
+    <-> ec_1_14_13_50 [1.14.13.50] +nadph +o2 +nadp +h2o
+    2_3_5_6_tetrachlorophenolate
+  }
+
+  branch from tetrachloro_1_4_benzoquinone side right {
+    tetrachloro_1_4_benzoquinone
+    <-> ec_1_14_13_50 [1.14.13.50] +nadph +o2 +hplus +chloride +nadp +h2o
+    pentachlorophenolate
+  }
 }

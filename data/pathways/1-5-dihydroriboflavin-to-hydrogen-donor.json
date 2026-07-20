@@ -163,6 +163,88 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "r_pantolactone",
+      "name": "(R)-pantolactone",
+      "formula": "C6H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16719"
+      }
+    },
+    {
+      "id": "2_dehydropantolactone",
+      "name": "2-dehydropantolactone",
+      "short": "2-dehydropantolacto…",
+      "formula": "C6H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18395"
+      }
     }
   ],
   "enzymes": [
@@ -192,6 +274,34 @@
       "name": "8-demethyl-8-aminoriboflavin-5'-phosphate synthase",
       "ec": [
         "2.6.1.114"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_39",
+      "name": "FMN reductase [NAD(P)H]",
+      "ec": [
+        "1.5.1.39"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_42",
+      "name": "FMN reductase (NADH)",
+      "ec": [
+        "1.5.1.42"
+      ]
+    },
+    {
+      "id": "ec_1_2_7_3",
+      "name": "2-oxoglutarate synthase",
+      "ec": [
+        "1.2.7.3"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_27",
+      "name": "(R)-pantolactone dehydrogenase (flavin)",
+      "ec": [
+        "1.1.99.27"
       ]
     }
   ],
@@ -359,6 +469,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:54992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "FMN reductase [NAD(P)H]",
+      "equation": "FMNH2 + NAD(+) = FMN + NADH + 2 H(+)",
+      "ec": "1.5.1.39",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-oxoglutarate synthase",
+      "equation": "2 oxidized [2Fe-2S]-[ferredoxin] + 2-oxoglutarate + CoA = succinyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + CO2 + H(+)",
+      "ec": "1.2.7.3",
+      "substrates": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_7_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17297"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(R)-pantolactone dehydrogenase (flavin)",
+      "equation": "(R)-pantolactone + A = 2-dehydropantolactone + AH2",
+      "ec": "1.1.99.27",
+      "substrates": [
+        {
+          "metabolite": "r_pantolactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydropantolactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21004"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21004"
           }
         ]
       }

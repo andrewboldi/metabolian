@@ -19,4 +19,22 @@ pathway d-glcp-1-6-d-glcp-to-hydroquinones "α-D-Glcp-(1→6)-α-D-Glcp-(… to 
     <-> ec_1_1_5_9 [1.1.5.9] +1_4_benzoquinones +glucose -hydroquinones
     d_glucono_1_5_lactone
   }
+
+  branch from isomaltose side left {
+    isomaltose
+    <-> ec_3_2_1_10 [3.2.1.10] +h2o +glucose
+    d_glucose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_218 [3.2.1.218] +3_keto_trehalose +h2o
+    3_dehydro_d_glucose
+  }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> ec_1_1_5_12 [1.1.5.12] +1_4_benzoquinones +pyruvate
+    dlactate
+  }
 }

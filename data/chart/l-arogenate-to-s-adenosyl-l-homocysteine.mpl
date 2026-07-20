@@ -15,4 +15,22 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
     <-> ec_2_1_1_27 [2.1.1.27] +sam -sah -hplus
     n_methyltyraminium
   }
+
+  branch from tyrosine side left {
+    tyrosine
+    <-> ec_5_4_3_6 [5.4.3.6]
+    3_amino_3_4_hydroxyphenyl_propanoic_acid
+  }
+
+  branch from tyraminium side right {
+    tyraminium
+    <-> ec_2_3_1_110 [2.3.1.110] +trans_feruloyl_coa +coa +hplus
+    n_feruloyltyramine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_147 [2.1.1.147] +palmatine +sam +nadph +nadp
+    corydaline
+  }
 }

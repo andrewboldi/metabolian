@@ -15,4 +15,22 @@ pathway taurochenodeoxycholate-to-chenodeoxycholate "taurochenodeoxycholate to c
     <-> ec_3_1_2_27 [3.1.2.27] +h2o -coa -hplus
     chenodeoxycholate
   }
+
+  branch from taurine side left {
+    taurine
+    <-> ec_3_5_3_17 [3.5.3.17] +taurocyamine +h2o
+    urea
+  }
+
+  branch from chenodeoxycholoyl_coa side right {
+    chenodeoxycholoyl_coa
+    <-> ec_1_1_1_395 [1.1.1.395] +nad +nadh +hplus
+    3_oxochenodeoxycholoyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_24 [4.2.3.24] +fpp
+    amorpha_4_11_diene
+  }
 }

@@ -15,4 +15,22 @@ pathway n-formyl-l-kynurenine-to-ammonium "N-formyl-L-kynurenine to ammonium" {
     <-> ec_1_14_12_1 [1.14.12.1] +nadph +o2 +hplus -nh3 -co2 -nadp
     catechol
   }
+
+  branch from anthranilate side left {
+    anthranilate
+    <-> ec_3_7_1_13 [3.7.1.13] +2e_4e_6_2_aminophenyl_2_hydroxy_6_oxohexa_2_4_d +h2o +hplus
+    2e_2_hydroxypenta_2_4_dienoate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_6_3_2_49 [6.3.2.49] +anticapsin +atp +adp +pi +hplus
+    bacilysin
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_3_21 [1.4.3.21] +3_nitrotyramine +o2 +h2o +h2o2
+    4_hydroxy_3_nitrophenylacetaldehyde
+  }
 }

@@ -169,6 +169,35 @@
       "xrefs": {
         "chebi": "CHEBI:87522"
       }
+    },
+    {
+      "id": "2_aminobenzenesulfonate",
+      "name": "2-aminobenzenesulfonate",
+      "short": "2-aminobenzenesulfo…",
+      "formula": "C6H6NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15942"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzenesulfonate",
+      "name": "2,3-dihydroxybenzenesulfonate",
+      "short": "2,3-dihydroxybenzen…",
+      "formula": "C6H5O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33565"
+      }
+    },
+    {
+      "id": "4_methylcatechol",
+      "name": "4-methylcatechol",
+      "formula": "C7H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17254"
+      }
     }
   ],
   "enzymes": [
@@ -219,6 +248,20 @@
       "name": "2-oxo-hept-4-ene-1,7-dioate hydratase",
       "ec": [
         "4.2.1.163"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_14",
+      "name": "2-aminobenzenesulfonate 2,3-dioxygenase",
+      "ec": [
+        "1.14.12.14"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_83",
+      "name": "4-hydroxyphenylacetate decarboxylase",
+      "ec": [
+        "4.1.1.83"
       ]
     }
   ],
@@ -538,6 +581,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:42072"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "2-aminobenzenesulfonate 2,3-dioxygenase",
+      "equation": "2-aminobenzenesulfonate + NADH + O2 + 2 H(+) = 2,3-dihydroxybenzenesulfonate + NH4(+) + NAD(+)",
+      "ec": "1.14.12.14",
+      "substrates": [
+        {
+          "metabolite": "2_aminobenzenesulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzenesulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:23468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "4-hydroxyphenylacetate decarboxylase",
+      "equation": "3,4-dihydroxyphenylacetate + H(+) = 4-methylcatechol + CO2",
+      "ec": "4.1.1.83",
+      "substrates": [
+        {
+          "metabolite": "dopac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:62556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62556"
           }
         ]
       }

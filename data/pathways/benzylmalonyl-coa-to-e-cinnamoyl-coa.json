@@ -108,6 +108,34 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "1_o_trans_cinnamoyl_d_glucopyranose",
+      "name": "1-O-trans-cinnamoyl-β-D-glucopyranose",
+      "short": "1-O-trans-cinnamoyl…",
+      "formula": "C15H18O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16279"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +158,13 @@
       "name": "(R)-3-(aryl)lactoyl-CoA dehydratase",
       "ec": [
         "4.2.1.175"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_177",
+      "name": "cinnamate beta-D-glucosyltransferase",
+      "ec": [
+        "2.4.1.177"
       ]
     }
   ],
@@ -269,6 +304,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:38355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cinnamate beta-D-glucosyltransferase",
+      "equation": "(E)-cinnamate + UDP-alpha-D-glucose = 1-O-(trans-cinnamoyl)-beta-D-glucose + UDP",
+      "ec": "2.4.1.177",
+      "substrates": [
+        {
+          "metabolite": "trans_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_trans_cinnamoyl_d_glucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_177"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13437"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13437"
           }
         ]
       }

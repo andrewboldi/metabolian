@@ -17,4 +17,10 @@ pathway n-acetyl-d-glucosaminyl-to-5-oxo-d-prolinate "N-acetyl-β-D-glucosaminyl
     <-> ec_4_2_1_48 [4.2.1.48] -h2o
     5_oxo_d_prolinate
   }
+
+  branch from d_alanine side left {
+    d_alanine
+    <-> ec_6_2_1_54 [6.2.1.54] +holo-acp +atp +amp +ppi
+    o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z
+  }
 }

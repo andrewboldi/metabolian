@@ -108,6 +108,34 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "2_3_diketogulonate",
+      "name": "2,3-diketogulonate",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57441"
+      }
+    },
+    {
+      "id": "l_arabinitol",
+      "name": "L-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18403"
+      }
+    },
+    {
+      "id": "3_dehydro_l_gulonate_6_phosphate",
+      "name": "3-dehydro-L-gulonate 6-phosphate",
+      "short": "3-dehydro-L-gulonat…",
+      "formula": "C6H8O10P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58774"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +158,27 @@
       "name": "L-xylulokinase",
       "ec": [
         "2.7.1.53"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_130",
+      "name": "3-dehydro-L-gulonate 2-dehydrogenase",
+      "ec": [
+        "1.1.1.130"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_12",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "ec": [
+        "1.1.1.12"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_85",
+      "name": "3-dehydro-L-gulonate-6-phosphate decarboxylase",
+      "ec": [
+        "4.1.1.85"
       ]
     }
   ],
@@ -273,6 +322,149 @@
           {
             "db": "Rhea",
             "id": "RHEA:18869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-dehydro-L-gulonate 2-dehydrogenase",
+      "equation": "3-dehydro-L-gulonate + NAD(+) = 2,3-dioxo-L-gulonate + NADH + H(+)",
+      "ec": "1.1.1.130",
+      "substrates": [
+        {
+          "metabolite": "3_dehydro_l_gulonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_diketogulonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_130"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "equation": "L-arabinitol + NAD(+) = L-xylulose + NADH + H(+)",
+      "ec": "1.1.1.12",
+      "substrates": [
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:16381"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-dehydro-L-gulonate-6-phosphate decarboxylase",
+      "equation": "3-dehydro-L-gulonate 6-phosphate + H(+) = L-xylulose 5-phosphate + CO2",
+      "ec": "4.1.1.85",
+      "substrates": [
+        {
+          "metabolite": "3_dehydro_l_gulonate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:14353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14353"
           }
         ]
       }

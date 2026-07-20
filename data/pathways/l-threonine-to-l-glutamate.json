@@ -222,6 +222,120 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "valencene",
+      "name": "(+)-valencene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61700"
+      }
+    },
+    {
+      "id": "5_taurinomethyluridine_5_phosphate_1",
+      "name": "5-taurinomethyluridine 5'-phosphate(1−)",
+      "short": "5-taurinomethylurid…",
+      "formula": "C12H17N3O11PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87172"
+      }
+    },
+    {
+      "id": "3_disulfanyl_l_alanine",
+      "name": "3-disulfanyl-L-alanine",
+      "short": "3-disulfanyl-L-alan…",
+      "formula": "C3H5NOS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61963"
+      }
+    },
+    {
+      "id": "5_taurinomethyl_2_thiouridine_5_phosphate_1",
+      "name": "5-taurinomethyl-2-thiouridine 5'-phosphate(1−)",
+      "short": "5-taurinomethyl-2-t…",
+      "formula": "C12H17N3O10PS2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87171"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29950"
+      }
+    },
+    {
+      "id": "mycinamicin_iii",
+      "name": "mycinamicin III",
+      "formula": "C36H60NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63308"
+      }
+    },
+    {
+      "id": "mycinamicin_iv",
+      "name": "mycinamicin IV",
+      "formula": "C37H62NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63310"
+      }
+    },
+    {
+      "id": "5_6_7_8_tetrahydromethanopterin",
+      "name": "5,6,7,8-tetrahydromethanopterin",
+      "short": "5,6,7,8-tetrahydrom…",
+      "formula": "C30H42N6O16P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58103"
+      }
+    },
+    {
+      "id": "5_6_7_8_tetrahydrosarcinapterin",
+      "name": "5,6,7,8-tetrahydrosarcinapterin",
+      "short": "5,6,7,8-tetrahydros…",
+      "formula": "C35H48N7O19P",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:59924"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
     }
   ],
   "enzymes": [
@@ -251,6 +365,34 @@
       "name": "aromatic-amino-acid transaminase",
       "ec": [
         "2.6.1.57"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_73",
+      "name": "valencene synthase",
+      "ec": [
+        "4.2.3.73"
+      ]
+    },
+    {
+      "id": "ec_2_8_1_14",
+      "name": "tRNA-5-taurinomethyluridine 2-sulfurtransferase",
+      "ec": [
+        "2.8.1.14"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_237",
+      "name": "mycinamicin III 3''-O-methyltransferase",
+      "ec": [
+        "2.1.1.237"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_33",
+      "name": "tetrahydrosarcinapterin synthase",
+      "ec": [
+        "6.3.2.33"
       ]
     }
   ],
@@ -471,6 +613,222 @@
           {
             "db": "Rhea",
             "id": "RHEA:25796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "valencene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-valencene + diphosphate",
+      "ec": "4.2.3.73",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valencene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:29511"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29511"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "tRNA-5-taurinomethyluridine 2-sulfurtransferase",
+      "equation": "5-taurinomethyluridine(34) in tRNA + S-sulfanyl-L-cysteinyl-[protein] + AH2 + ATP = 5-taurinomethyl-2-thiouridine(34) in tRNA + L-cysteinyl-[protein] + A + AMP + diphosphate + H(+)",
+      "ec": "2.8.1.14",
+      "substrates": [
+        {
+          "metabolite": "5_taurinomethyluridine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_taurinomethyl_2_thiouridine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:47040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "mycinamicin III 3''-O-methyltransferase",
+      "equation": "mycinamicin III + S-adenosyl-L-methionine = mycinamicin IV + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.237",
+      "substrates": [
+        {
+          "metabolite": "mycinamicin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycinamicin_iv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_237"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:31639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31639"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "tetrahydrosarcinapterin synthase",
+      "equation": "5,6,7,8-tetrahydromethanopterin + L-glutamate + ATP = 5,6,7,8-tetrahydrosarcinapterin + ADP + phosphate + H(+)",
+      "ec": "6.3.2.33",
+      "substrates": [
+        {
+          "metabolite": "5_6_7_8_tetrahydromethanopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_6_7_8_tetrahydrosarcinapterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:30567"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30567"
           }
         ]
       }

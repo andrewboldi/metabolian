@@ -17,4 +17,16 @@ pathway n-n-dimethylformamide-to-dimethylaminium "N,N-dimethylformamide to dimet
     <-> ec_2_1_1_250 [2.1.1.250] +cobalt +trimethylammonium +hplus -dimethylaminium
     methyl_co
   }
+
+  branch from formate side left {
+    formate
+    <-> ec_3_5_4_25 [3.5.4.25] +gtp +h2o +pi +hplus
+    2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin
+  }
+
+  branch from methylamine side right {
+    methylamine
+    <-> ec_1_5_3_21 [1.5.3.21] +4_methylamino_butyric_acid +o2 +h2o +h2o2
+    4_oxobutanoate
+  }
 }

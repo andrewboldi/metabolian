@@ -15,4 +15,16 @@ pathway 4-hydroxy-3-all-trans-non-to-2-methoxy-6-all-tra "4-hydroxy-3-all-trans-
     <-> ec_4_1_1_130 [4.1.1.130] +hplus -co2
     2_methoxy_6_all_trans_nonaprenyl_phenol
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_19_42 [1.14.19.42] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    1_acyl_2_7z_hexadec_7_enoyl_glycerolipid
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_254 [2.1.1.254] +erythromycin_d +sam +hplus
+    erythromycin_b
+  }
 }

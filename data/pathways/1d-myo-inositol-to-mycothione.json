@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1d-myo-inositol-to-mycothione",
   "name": "1D-myo-inositol… to mycothione",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from 1D-myo-inositol 2-acetamido-2-deoxy-α-D-glucopyranoside to mycothione, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -164,6 +164,53 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "o_acetyl_l_serine",
+      "name": "O-acetyl-L-serine",
+      "formula": "C5H9NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58340"
+      }
+    },
+    {
+      "id": "trioxidosulfanidosulfate",
+      "name": "trioxidosulfanidosulfate",
+      "short": "trioxidosulfanidosu…",
+      "formula": "HO3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33542"
+      }
+    },
+    {
+      "id": "s_sulfo_l_cysteinate",
+      "name": "S-sulfo-L-cysteinate",
+      "formula": "C3H6NO5S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62225"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "s_linalool",
+      "name": "(S)-linalool",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:98"
+      }
     }
   ],
   "enzymes": [
@@ -193,6 +240,20 @@
       "name": "mycothione reductase",
       "ec": [
         "1.8.1.15"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_144",
+      "name": "S-sulfo-L-cysteine synthase (O-acetyl-L-serine-dependent)",
+      "ec": [
+        "2.5.1.144"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_25",
+      "name": "S-linalool synthase",
+      "ec": [
+        "4.2.3.25"
       ]
     }
   ],
@@ -393,6 +454,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:12685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "S-sulfo-L-cysteine synthase (O-acetyl-L-serine-dependent)",
+      "equation": "O-acetyl-L-serine + thiosulfate = S-sulfo-L-cysteine + acetate + H(+)",
+      "ec": "2.5.1.144",
+      "substrates": [
+        {
+          "metabolite": "o_acetyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trioxidosulfanidosulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_sulfo_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_144"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "S-linalool synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (S)-linalool + diphosphate",
+      "ec": "4.2.3.25",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_linalool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24116"
           }
         ]
       }

@@ -19,4 +19,28 @@ pathway 3-4-dihydrocoumarin-to-succinyl-coa "3,4-dihydrocoumarin to succinyl-CoA
     <-> ec_6_2_1_4 [6.2.1.4] +gtp +succinate +coa -gdp -pi
     succinyl_coa
   }
+
+  branch from 3_2_hydroxyphenyl_propanoate side left {
+    3_2_hydroxyphenyl_propanoate
+    <-> ec_1_3_1_11 [1.3.1.11] +nad +nadh +hplus
+    trans_2_coumarate
+  }
+
+  branch from 3_2_3_dihydroxyphenyl_propanoate side right {
+    3_2_3_dihydroxyphenyl_propanoate
+    <-> ec_1_14_13_127 [1.14.13.127] +nadh +o2 +hplus +nad +h2o
+    3_3_hydroxyphenyl_propanoate
+  }
+
+  branch from 2z_2_hydroxypenta_2_4_dienoate side left {
+    2z_2_hydroxypenta_2_4_dienoate
+    <-> ec_4_2_1_80 [4.2.1.80] +h2o
+    s_4_hydroxy_2_oxopentanoate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_20_5 [1.14.20.5] +flavanones +akg +o2 +co2 +h2o
+    flavones
+  }
 }

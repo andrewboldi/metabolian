@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sphingosine-to-d-ribulose-1-5-bisphospha",
   "name": "sphingosine to D-ribulose 1,5-bisphospha…",
-  "category": "lipid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 8-step route from sphingosine(1+) to D-ribulose 1,5-bisphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -203,6 +203,83 @@
       "xrefs": {
         "chebi": "CHEBI:57870"
       }
+    },
+    {
+      "id": "cdp_ethanolamine",
+      "name": "CDP-ethanolamine",
+      "formula": "C11H19N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57876"
+      }
+    },
+    {
+      "id": "n_acylsphingosine_1_phosphoethanolamine",
+      "name": "N-acylsphingosine 1-phosphoethanolamine",
+      "short": "N-acylsphingosine…",
+      "formula": "C21H42N2O6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73203"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "d_glucosylsphingosine",
+      "name": "β-D-glucosylsphingosine",
+      "short": "β-D-glucosylsphingo…",
+      "formula": "C24H48NO7",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:83992"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "6_tuliposide_a",
+      "name": "6-tuliposide A",
+      "formula": "C11H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72781"
+      }
+    },
+    {
+      "id": "methylene_butyrolactone",
+      "name": "α-methylene γ-butyrolactone",
+      "short": "α-methylene…",
+      "formula": "C5H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:104120"
+      }
+    },
+    {
+      "id": "6_phospho_2_dehydro_d_gluconate",
+      "name": "6-phospho-2-dehydro-D-gluconate",
+      "short": "6-phospho-2-dehydro…",
+      "formula": "C6H8O10P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:20750"
+      }
     }
   ],
   "enzymes": [
@@ -281,6 +358,34 @@
       "name": "phosphoribulokinase",
       "ec": [
         "2.7.1.19"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_48",
+      "name": "ceramide phosphoethanolamine synthase",
+      "ec": [
+        "2.7.8.48"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_109",
+      "name": "sphingomyelin deacylase",
+      "ec": [
+        "3.5.1.109"
+      ]
+    },
+    {
+      "id": "ec_4_2_99_22",
+      "name": "tuliposide A-converting enzyme",
+      "ec": [
+        "4.2.99.22"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_43",
+      "name": "phosphogluconate 2-dehydrogenase",
+      "ec": [
+        "1.1.1.43"
       ]
     }
   ],
@@ -665,6 +770,190 @@
           {
             "db": "Rhea",
             "id": "RHEA:19365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "ceramide phosphoethanolamine synthase",
+      "equation": "CDP-ethanolamine + an N-acylsphing-4-enine = an N-acylsphing-4-enine 1-phosphoethanolamine + CMP + H(+)",
+      "ec": "2.7.8.48",
+      "substrates": [
+        {
+          "metabolite": "cdp_ethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylsphingosine_1_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:45892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "sphingomyelin deacylase",
+      "equation": "a beta-D-glucosyl-(1<->1')-N-acylsphing-4-enine + H2O = beta-D-glucosyl-(1<->1)-sphing-4-enine + a fatty acid",
+      "ec": "3.5.1.109",
+      "substrates": [
+        {
+          "metabolite": "d_glucosyl_n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:30915"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30915"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "tuliposide A-converting enzyme",
+      "equation": "6-tuliposide A = tulipalin A + D-glucose",
+      "ec": "4.2.99.22",
+      "substrates": [
+        {
+          "metabolite": "6_tuliposide_a",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylene_butyrolactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_99_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:36071"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "phosphogluconate 2-dehydrogenase",
+      "equation": "6-phospho-D-gluconate + NADP(+) = 6-phospho-2-dehydro-D-gluconate + NADPH + H(+)",
+      "ec": "1.1.1.43",
+      "substrates": [
+        {
+          "metabolite": "6pgc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_phospho_2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:16817"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16817"
           }
         ]
       }

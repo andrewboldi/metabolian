@@ -19,4 +19,28 @@ pathway d-glucosamine-to-succinate "α-D-glucosamine… to succinate" {
     <-> ec_1_14_11_48 [1.14.11.48] +akg +o2 -succinate -co2
     7_9_dihydro_1h_purine_2_6_8_3h_trione
   }
+
+  branch from n_acetyl_d_glucosamine_1_phosphate side left {
+    n_acetyl_d_glucosamine_1_phosphate
+    <-> ec_5_4_2_3 [5.4.2.3]
+    n_acetyl_d_glucosamine_6_phosphate
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> ec_2_4_1_138 [2.4.1.138] +d_manp_1_3_d_manp_1_2_d_manp_1_2_d_manp +udp +hplus
+    d_glcpnac_1_2_d_manp_1_3_d_manp_1_2_d_manp_1_2
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_6_1_1 [4.6.1.1] +atp
+    camp
+  }
+
+  branch from hypoxanthine side right {
+    hypoxanthine
+    <-> ec_2_4_2_1 [2.4.2.1] +inosine +pi
+    r1p
+  }
 }

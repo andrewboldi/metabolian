@@ -21,4 +21,28 @@ pathway guanosine-5-monophosphat-to-s-adenosyl-l-homocys "guanosine 5'-monophosp
     <-> ec_2_3_1_231 [2.3.1.231] +sam +co2 -sah -hplus
     wybutosine_5_monophosphate_1
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_151 [2.1.1.151] +cobalt_precorrin_2 +sam +hplus
+    cobalt_precorrin_3
+  }
+
+  branch from 5_deoxyadenosine side right {
+    5_deoxyadenosine
+    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_d +sam +h2o +methionine +hplus
+    bacteriochlorophyllide_f
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_1_3_98_6 [1.3.98.6] +fe_coproporphyrin_iii +sam +5_deoxyadenosine +co2
+    ferroheme_b
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> ec_2_5_1_24 [2.5.1.24] +n6_dimethylallyladenine +sam +hplus
+    discadenine
+  }
 }

@@ -175,6 +175,26 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
+    },
+    {
+      "id": "2_deamino_2_hydroxyneamine",
+      "name": "2'-deamino-2'-hydroxyneamine",
+      "short": "2'-deamino-2'-hydro…",
+      "formula": "C12H28N3O7",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:67213"
+      }
+    },
+    {
+      "id": "2_deamino_2_hydroxy_6_dehydroparomamine",
+      "name": "2'-deamino-2'-hydroxy-6'-dehydroparomamine",
+      "short": "2'-deamino-2'-hydro…",
+      "formula": "C12H24N2O8",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:67214"
+      }
     }
   ],
   "enzymes": [
@@ -218,6 +238,13 @@
       "name": "taurine--2-oxoglutarate transaminase",
       "ec": [
         "2.6.1.55"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_94",
+      "name": "2'-deamino-2'-hydroxyneamine transaminase",
+      "ec": [
+        "2.6.1.94"
       ]
     }
   ],
@@ -463,6 +490,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:16353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2'-deamino-2'-hydroxyneamine transaminase",
+      "equation": "2'-deamino-2'-hydroxyneamine + 2-oxoglutarate = 2'-deamino-2'-hydroxy-6'-dehydroparomamine + L-glutamate",
+      "ec": "2.6.1.94",
+      "substrates": [
+        {
+          "metabolite": "2_deamino_2_hydroxyneamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deamino_2_hydroxy_6_dehydroparomamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34299"
           }
         ]
       }

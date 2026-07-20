@@ -17,4 +17,28 @@ pathway all-trans-13-14-dihydrore-to-11-cis-retinal "all-trans-13,14-dihydroreâ€
     <-> ec_1_1_1_315 [1.1.1.315] +nad -nadh -hplus
     11_cis_retinal
   }
+
+  branch from all_trans_retinol side left {
+    all_trans_retinol
+    <-> ec_1_1_1_105 [1.1.1.105] +nad +nadh +hplus
+    all_trans_retinal
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
+    tetrachloroethene
+  }
+
+  branch from all_trans_retinyl_ester side left {
+    all_trans_retinyl_ester
+    <-> ec_3_1_1_90 [3.1.1.90] +h2o +fatty-acid +hplus
+    13_cis_retinol
+  }
+
+  branch from 11_cis_retinol side right {
+    11_cis_retinol
+    <-> ec_3_1_1_63 [3.1.1.63] +11_cis_retinyl_palmitate +h2o +hplus
+    palmitate
+  }
 }

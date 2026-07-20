@@ -131,6 +131,44 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "10_deoxymethymycin",
+      "name": "10-deoxymethymycin",
+      "formula": "C25H44NO6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63307"
+      }
+    },
+    {
+      "id": "novamethymycin",
+      "name": "novamethymycin",
+      "formula": "C25H44NO8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:77354"
+      }
+    },
+    {
+      "id": "6_methoxy_2_octaprenyl_1_4_benzoquinone",
+      "name": "6-methoxy-2-octaprenyl-1,4-benzoquinone",
+      "short": "6-methoxy-2-octapre…",
+      "formula": "C47H70O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28423"
+      }
+    },
+    {
+      "id": "3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone",
+      "name": "3-methyl-6-methoxy-2-octaprenyl-1,4-benzoquinone",
+      "short": "3-methyl-6-methoxy-…",
+      "formula": "C48H72O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28636"
+      }
     }
   ],
   "enzymes": [
@@ -153,6 +191,20 @@
       "name": "4-hydroxy-3-methoxy-5-polyprenylbenzoate decarboxylase",
       "ec": [
         "4.1.1.130"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_33",
+      "name": "pikromycin synthase",
+      "ec": [
+        "1.14.15.33"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_163",
+      "name": "demethylmenaquinone methyltransferase",
+      "ec": [
+        "2.1.1.163"
       ]
     }
   ],
@@ -304,6 +356,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:44768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pikromycin synthase",
+      "equation": "10-deoxymethymycin + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = novamethymycin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.15.33",
+      "substrates": [
+        {
+          "metabolite": "10_deoxymethymycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "novamethymycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:40547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "demethylmenaquinone methyltransferase",
+      "equation": "6-methoxy-2-all-trans-octaprenyl-1,4-benzoquinone + S-adenosyl-L-methionine = 2-methoxy-5-methyl-6-all-trans-octaprenyl-1,4-benzoquinone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.163",
+      "substrates": [
+        {
+          "metabolite": "6_methoxy_2_octaprenyl_1_4_benzoquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_163"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26462"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26462"
           }
         ]
       }

@@ -23,4 +23,16 @@ pathway 4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh "4-chlorophenylacetonit
     <-> ec_4_2_1_163 [4.2.1.163] +h2o
     s_4_hydroxy_2_oxoheptanedioate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_14_12_14 [1.14.12.14] +2_aminobenzenesulfonate +nadh +o2 +hplus +nad
+    2_3_dihydroxybenzenesulfonate
+  }
+
+  branch from dopac side right {
+    dopac
+    <-> ec_4_1_1_83 [4.1.1.83] +hplus +co2
+    4_methylcatechol
+  }
 }

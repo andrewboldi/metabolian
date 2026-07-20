@@ -15,4 +15,10 @@ pathway dihydrocarveol-to-6-hydroxy-3-isopropenylhe "dihydrocarveol to 6-hydroxy
     <-> ec_3_1_1_83 [3.1.1.83] +h2o -hplus
     6_hydroxy_3_isopropenylheptanoate
   }
+
+  branch from dihydrocarvone side left {
+    dihydrocarvone
+    <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 +hplus +nadp +h2o
+    6_isopropenyl_3_methyloxepan_2_one
+  }
 }

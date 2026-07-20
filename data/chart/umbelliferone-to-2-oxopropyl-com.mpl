@@ -19,4 +19,22 @@ pathway umbelliferone-to-2-oxopropyl-com "umbelliferone to 2-oxopropyl-CoM" {
     <-> ec_1_8_1_5 [1.8.1.5] +coenzyme_m +nadp -co2 -nadph
     2_oxopropyl_com
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    9_pimara_7_15_diene
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_42 [1.14.14.42] +l_trihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_6_methylsulfanyl_hexanal_oxime
+  }
+
+  branch from 2_oxopropyl_com side left {
+    2_oxopropyl_com
+    <-> ec_1_1_1_268 [1.1.1.268] +nad +nadh +hplus
+    r_2_hydroxypropyl_com
+  }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n5-l-1-carboxyethyl-l-o-to-ammonium",
   "name": "N5-(L-1-carboxyethyl)-L-o… to ammonium",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N5-(L-1-carboxyethyl)-L-ornithine dizwitterion to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -126,6 +126,87 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "l_homoarginine",
+      "name": "L-homoarginine",
+      "formula": "C7H17N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143006"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "no",
+      "name": "Nitric oxide (NO)",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16480"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +229,27 @@
       "name": "citrullinase",
       "ec": [
         "3.5.1.20"
+      ]
+    },
+    {
+      "id": "ec_2_1_4_3",
+      "name": "L-arginine:L-lysine amidinotransferase",
+      "ec": [
+        "2.1.4.3"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_47",
+      "name": "nitric-oxide synthase (flavodoxin)",
+      "ec": [
+        "1.14.14.47"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_19",
+      "name": "threonine ammonia-lyase",
+      "ec": [
+        "4.3.1.19"
       ]
     }
   ],
@@ -307,6 +409,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:11940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-arginine:L-lysine amidinotransferase",
+      "equation": "L-lysine + L-arginine = L-homoarginine + L-ornithine",
+      "ec": "2.1.4.3",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homoarginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_4_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "nitric-oxide synthase (flavodoxin)",
+      "equation": "3 reduced [flavodoxin] + 2 L-arginine + 4 O2 = 3 oxidized [flavodoxin] + 2 L-citrulline + 2 nitric oxide + 4 H2O + 5 H(+)",
+      "ec": "1.14.14.47",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "citrulline",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "no",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:52324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "threonine ammonia-lyase",
+      "equation": "L-threonine = 2-oxobutanoate + NH4(+)",
+      "ec": "4.3.1.19",
+      "substrates": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:22108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22108"
           }
         ]
       }

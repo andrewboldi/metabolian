@@ -117,6 +117,35 @@
       "xrefs": {
         "chebi": "CHEBI:71537"
       }
+    },
+    {
+      "id": "9_pimara_7_15_diene",
+      "name": "9β-pimara-7,15-diene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50067"
+      }
+    },
+    {
+      "id": "9_pimara_7_15_dien_19_oate",
+      "name": "9β-pimara-7,15-dien-19-oate",
+      "short": "9β-pimara-7,15-dien…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:63659"
+      }
+    },
+    {
+      "id": "1_s_5_r_5_hydroxyaverantin",
+      "name": "(1'S,5'R)-5'-hydroxyaverantin",
+      "short": "(1'S,5'R)-5'-hydrox…",
+      "formula": "C20H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71536"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +168,13 @@
       "name": "5'-oxoaverantin cyclase",
       "ec": [
         "4.2.1.142"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_111",
+      "name": "9beta-pimara-7,15-diene oxidase",
+      "ec": [
+        "1.14.14.111"
       ]
     }
   ],
@@ -290,6 +326,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:35671"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "9beta-pimara-7,15-diene oxidase",
+      "equation": "9beta-pimara-7,15-diene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = 9beta-pimara-7,15-dien-19-oate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.111",
+      "substrates": [
+        {
+          "metabolite": "9_pimara_7_15_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_pimara_7_15_dien_19_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_111"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "5'-hydroxyaverantin dehydrogenase",
+      "equation": "(1'S,5'R)-5'-hydroxyaverantin + NAD(+) = (S)-5'-oxoaverantin + NADH + 2 H(+)",
+      "ec": "1.1.1.352",
+      "substrates": [
+        {
+          "metabolite": "1_s_5_r_5_hydroxyaverantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_5_oxoaverantin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_352"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35479"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35479"
           }
         ]
       }

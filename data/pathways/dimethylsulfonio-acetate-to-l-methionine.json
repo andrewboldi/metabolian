@@ -93,6 +93,43 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "5_chloro_5_deoxyadenosine",
+      "name": "5'-chloro-5'-deoxyadenosine",
+      "short": "5'-chloro-5'-deoxya…",
+      "formula": "C10H12ClN5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47133"
+      }
+    },
+    {
+      "id": "precorrin_2",
+      "name": "precorrin-2",
+      "formula": "C42H41N4O16",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:58827"
+      }
+    },
+    {
+      "id": "precorrin_3a",
+      "name": "precorrin-3A",
+      "formula": "C43H43N4O16",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:58561"
+      }
     }
   ],
   "enzymes": [
@@ -115,6 +152,20 @@
       "name": "homocysteine S-methyltransferase",
       "ec": [
         "2.1.1.10"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_94",
+      "name": "adenosyl-chloride synthase",
+      "ec": [
+        "2.5.1.94"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_130",
+      "name": "precorrin-2 C(20)-methyltransferase",
+      "ec": [
+        "2.1.1.130"
       ]
     }
   ],
@@ -254,6 +305,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:26337"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "adenosyl-chloride synthase",
+      "equation": "chloride + S-adenosyl-L-methionine = 5'-chloro-5'-deoxyadenosine + L-methionine",
+      "ec": "2.5.1.94",
+      "substrates": [
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_chloro_5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28110"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28110"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "precorrin-2 C(20)-methyltransferase",
+      "equation": "precorrin-2 + S-adenosyl-L-methionine = precorrin-3A + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.130",
+      "substrates": [
+        {
+          "metabolite": "precorrin_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precorrin_3a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_130"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:16841"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16841"
           }
         ]
       }

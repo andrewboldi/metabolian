@@ -27,4 +27,28 @@ pathway 4-coumaroyl-coa-to-1-4-benzoquinones "4-coumaroyl-CoA to 1,4-benzoquinon
     <-> ec_1_14_18_3 [1.14.18.3] +methane +o2 -1_4_benzoquinones -h2o
     methanol
   }
+
+  branch from 5_s_methyl_5_thioadenosine side left {
+    5_s_methyl_5_thioadenosine
+    <-> ec_2_5_1_38 [2.5.1.38] +nocardicin_e +sam +hplus
+    isonocardicin_a
+  }
+
+  branch from s_methyl_5_thio_d_ribulose_1_phosphate side right {
+    s_methyl_5_thio_d_ribulose_1_phosphate
+    <-> ec_5_3_3_23 [5.3.3.23]
+    1_methylthio_d_xylulose_5_phosphate
+  }
+
+  branch from carbon_monoxide side left {
+    carbon_monoxide
+    <-> ec_1_13_11_47 [1.13.11.47] +3_hydroxyquinolin_4_1h_one +o2 +hplus
+    n_formylanthranilate
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_1_14_19_80 [1.14.19.80] +19e_geissoschizine +fmnh2 +o2 +fmn +h2o +hplus
+    akuammicine
+  }
 }

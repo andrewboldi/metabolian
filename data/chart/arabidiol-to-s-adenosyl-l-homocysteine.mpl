@@ -15,4 +15,16 @@ pathway arabidiol-to-s-adenosyl-l-homocysteine "arabidiol to S-adenosyl-L-homocy
     <-> ec_2_1_1_142 [2.1.1.142] +sam -sah -hplus
     cyclolaudenol
   }
+
+  branch from epoxysqualene side left {
+    epoxysqualene
+    <-> ec_5_4_99_35 [5.4.99.35]
+    taraxerol
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_197 [2.1.1.197] +malonyl-acp +sam
+    o_s_methoxycarbonylacetyl_pantetheine_4_phosphor
+  }
 }

@@ -15,4 +15,10 @@ pathway s-malate-to-glycine "(S)-malate to glycine" {
     <-> ec_2_6_1_63 [2.6.1.63] +l_kynurenine -glycine -h2o
     kynurenate
   }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_butanoic_acid +holo-acp +hplus +h2o
+    butenoyl-acp
+  }
 }

@@ -15,4 +15,28 @@ pathway n-acetylputrescinium-to-ammonium "N-acetylputrescinium to ammonium" {
     <-> ec_1_4_3_27 [1.4.3.27] +o2 +h2o -h2o2 -nh3
     1_formylpyrrolizidine
   }
+
+  branch from 1_4_butanediammonium side left {
+    1_4_butanediammonium
+    <-> ec_2_1_3_6 [2.1.3.6] +carbamoyl_p +pi +hplus
+    n_carbamoylputrescinium
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_4_1_1_88 [4.1.1.88] +hplus +co2
+    malonate
+  }
+
+  branch from trimethylenediaminium side left {
+    trimethylenediaminium
+    <-> ec_1_5_3_14 [1.5.3.14] +spermidine +o2 +h2o +h2o2
+    4_ammoniobutanal
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_13 [1.4.3.13] +l_lysinium +o2 +h2o +h2o2
+    l_allysine
+  }
 }

@@ -139,6 +139,45 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "dihydrosterigmatocystin",
+      "name": "dihydrosterigmatocystin",
+      "short": "dihydrosterigmatocy…",
+      "formula": "C18H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72677"
+      }
+    },
+    {
+      "id": "8_o_methyldihydrosterigmatocystin",
+      "name": "8-O-methyldihydrosterigmatocystin",
+      "short": "8-O-methyldihydrost…",
+      "formula": "C19H16O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72678"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "bicyclogermacrene",
+      "name": "bicyclogermacrene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63709"
+      }
     }
   ],
   "enzymes": [
@@ -161,6 +200,20 @@
       "name": "3-hydroxy-4-methylanthranilate adenylyltransferase",
       "ec": [
         "2.7.7.97"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_110",
+      "name": "sterigmatocystin 8-O-methyltransferase",
+      "ec": [
+        "2.1.1.110"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_100",
+      "name": "bicyclogermacrene synthase",
+      "ec": [
+        "4.2.3.100"
       ]
     }
   ],
@@ -316,6 +369,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:24980"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sterigmatocystin 8-O-methyltransferase",
+      "equation": "dihydrosterigmatocystin + S-adenosyl-L-methionine = 8-O-methyldihydrosterigmatocystin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.110",
+      "substrates": [
+        {
+          "metabolite": "dihydrosterigmatocystin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_o_methyldihydrosterigmatocystin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_110"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:35767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "bicyclogermacrene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = bicyclogermacrene + diphosphate",
+      "ec": "4.2.3.100",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bicyclogermacrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31999"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31999"
           }
         ]
       }

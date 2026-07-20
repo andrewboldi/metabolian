@@ -25,4 +25,28 @@ pathway l-threonine-to-sl659 "L-threonine to SL659" {
     <-> ec_2_3_1_288 [2.3.1.288] +palmitoyl_coa -coa
     sl659
   }
+
+  branch from l_threonine side left {
+    l_threonine
+    <-> ec_2_7_11_30 [2.7.11.30] +atp +adp +hplus
+    o_phosphonato_l_threonine_2
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> ec_2_7_1_208 [2.7.1.208] +maltose +n_phosphonato_l_histidine
+    maltose_6_phosphate
+  }
+
+  branch from trehalose_2_sulfate side left {
+    trehalose_2_sulfate
+    <-> ec_2_3_1_288 [2.3.1.288] +stearoyl_coa +coa
+    2_o_sulfo_2_o_stearoyl_trehalose
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_7 [2.8.2.7] +udp_n_acetyl_d_galactosamine_4_sulfate +3_phosphonato_5_adenylyl_sulfate +hplus
+    udp_n_acetyl_d_galactosamine_4_6_bissulfate
+  }
 }

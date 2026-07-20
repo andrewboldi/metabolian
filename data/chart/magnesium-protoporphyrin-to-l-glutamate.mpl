@@ -17,4 +17,22 @@ pathway magnesium-protoporphyrin-to-l-glutamate "magnesium protoporphyrin… to 
     <-> ec_1_2_1_88 [1.2.1.88] +nad +h2o -nadh -hplus
     glutamate
   }
+
+  branch from 2_4_divinyl_protochlorophyllide_a side left {
+    2_4_divinyl_protochlorophyllide_a
+    <-> ec_1_3_7_13 [1.3.7.13] +protochlorophyllide +di_sulfido_diiron +hplus
+    di_sulfido_diiron
+  }
+
+  branch from ornithine side right {
+    ornithine
+    <-> ec_3_5_3_27 [3.5.3.27] +arginine +h2o +hplus +co2
+    nh3
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_34 [2.6.1.34] +udp_2_acetamido_4_azaniumyl_2_4_6_trideoxy_d_glu +akg
+    udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose
+  }
 }

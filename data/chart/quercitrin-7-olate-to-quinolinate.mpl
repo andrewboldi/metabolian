@@ -19,4 +19,22 @@ pathway quercitrin-7-olate-to-quinolinate "quercitrin-7-olate to quinolinate" {
     <-> ec_2_5_1_72 [2.5.1.72] +iminoaspartate +dhap -pi -h2o -hplus
     quinolinate
   }
+
+  branch from l_rhamnopyranose side left {
+    l_rhamnopyranose
+    <-> ec_3_2_1_172 [3.2.1.172] +2_o_4_deoxy_l_threo_hex_4_enopyranuronosyl_l_rha +h2o
+    5_dehydro_4_deoxy_d_glucuronate
+  }
+
+  branch from quercetin_7_olate side right {
+    quercetin_7_olate
+    <-> ec_2_8_2_25 [2.8.2.25] +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    quercetin_3_sulfate
+  }
+
+  branch from dhap side left {
+    dhap
+    <-> ec_1_1_1_408 [1.1.1.408] +nad +co2 +nadh
+    4_o_phosphonato_d_threonate
+  }
 }

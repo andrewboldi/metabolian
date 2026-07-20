@@ -103,6 +103,44 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "sesquithujene",
+      "name": "sesquithujene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63711"
+      }
+    },
+    {
+      "id": "6a_hydroxymaackiain",
+      "name": "(+)-6a-hydroxymaackiain",
+      "short": "(+)-6a-hydroxymaack…",
+      "formula": "C16H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43129"
+      }
+    },
+    {
+      "id": "pisatin",
+      "name": "(+)-pisatin",
+      "formula": "C17H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67347"
+      }
     }
   ],
   "enzymes": [
@@ -125,6 +163,20 @@
       "name": "(+)-O-methylkolavelool synthase",
       "ec": [
         "2.1.1.347"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_102",
+      "name": "sesquithujene synthase",
+      "ec": [
+        "4.2.3.102"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_270",
+      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
+      "ec": [
+        "2.1.1.270"
       ]
     }
   ],
@@ -256,6 +308,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:55968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sesquithujene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = sesquithujene + diphosphate",
+      "ec": "4.2.3.102",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sesquithujene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31991"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
+      "equation": "(+)-6a-hydroxymaackiain + S-adenosyl-L-methionine = (+)-pisatin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.270",
+      "substrates": [
+        {
+          "metabolite": "6a_hydroxymaackiain",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pisatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_270"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35471"
           }
         ]
       }

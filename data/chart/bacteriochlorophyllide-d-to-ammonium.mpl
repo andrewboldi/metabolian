@@ -15,4 +15,28 @@ pathway bacteriochlorophyllide-d-to-ammonium "bacteriochlorophyllide d to ammoni
     <-> ec_3_5_4_41 [3.5.4.41] +5_deoxyadenosine +h2o +hplus -nh3
     5_deoxyinosine
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_8 [2.1.1.8] +histaminium +sam +hplus
+    n_methylhistaminium
+  }
+
+  branch from 5_deoxyadenosine side right {
+    5_deoxyadenosine
+    <-> ec_1_8_98_7 [1.8.98.7] +l_cysteine +sam +h2o +h2s +methionine +hplus
+    l_3_oxoalanine
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_2_1_1_379 [2.1.1.379] +l_argininium +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
+    5s_c_methyl_l_argininium
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_100 [3.5.1.100] +alaninium_amide +h2o
+    alanine
+  }
 }

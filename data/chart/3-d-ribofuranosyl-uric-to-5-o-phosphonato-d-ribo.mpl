@@ -17,4 +17,22 @@ pathway 3-d-ribofuranosyl-uric-to-5-o-phosphonato-d-ribo "3-(β-D-ribofuranosyl)
     <-> ec_2_7_4_23 [2.7.4.23] +atp -adp
     prpp
   }
+
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> ec_3_5_4_32 [3.5.4.32] +7_8_dihydro_8_oxoguanine +h2o +hplus
+    nh3
+  }
+
+  branch from d_ribofuranose_5_phosphate side right {
+    d_ribofuranose_5_phosphate
+    <-> ec_3_2_2_n1 [3.2.2.n1] +9_ribosyl_trans_zeatin_5_phosphate +h2o
+    trans_zeatin
+  }
+
+  branch from d_ribose_1_5_bisphosphate side left {
+    d_ribose_1_5_bisphosphate
+    <-> ec_2_4_2_57 [2.4.2.57] +amp +pi
+    adenine
+  }
 }

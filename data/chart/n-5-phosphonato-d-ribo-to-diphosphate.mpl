@@ -27,4 +27,28 @@ pathway n-5-phosphonato-d-ribo-to-diphosphate "N-(5-phosphonato-β-D-ribo… to 
     <-> ec_2_7_7_75 [2.7.7.75] +atp +hplus -ppi
     molybdopterin_adenine_dinucleotide
   }
+
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> ec_2_1_1_106 [2.1.1.106] +sam +sah +hplus
+    2_methyl_l_tryptophan
+  }
+
+  branch from r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e side right {
+    r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e
+    <-> ec_5_3_99_10 [5.3.99.10]
+    2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
+    prenol
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_2_1_1_63 [2.1.1.63] +6_o_methyl_dgmp_1 +2_deoxyguanosine_5_monophosphate_1
+    s_methyl_l_cysteine
+  }
 }

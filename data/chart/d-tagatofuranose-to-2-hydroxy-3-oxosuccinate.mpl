@@ -21,4 +21,28 @@ pathway d-tagatofuranose-to-2-hydroxy-3-oxosuccinate "D-tagatofuranose… to 2-h
     <-> ec_1_1_1_92 [1.1.1.92] +co2 +nad -nadh -hplus
     2_hydroxy_3_oxosuccinate
   }
+
+  branch from d_tagatofuranose_1_6_bisphosphate side left {
+    d_tagatofuranose_1_6_bisphosphate
+    <-> ec_2_7_1_234 [2.7.1.234] +atp +adp +hplus
+    d_tagatopyranose_1_phosphate
+  }
+
+  branch from g3p side right {
+    g3p
+    <-> ec_4_2_3_153 [4.2.3.153] +pi +h2o
+    4_phosphooxymethyl_2_furancarboxaldehyde
+  }
+
+  branch from dhap side left {
+    dhap
+    <-> ec_1_1_1_261 [1.1.1.261] +nadp +nadph +hplus
+    sn_glycerol_1_phosphate
+  }
+
+  branch from pg3 side right {
+    pg3
+    <-> ec_2_4_1_266 [2.4.1.266] +adp_d_glucoside +adp +hplus
+    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
+  }
 }

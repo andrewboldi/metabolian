@@ -17,4 +17,10 @@ pathway crocetin-to-crocin-1 "crocetin to crocin-1" {
     <-> ec_2_4_1_330 [2.4.1.330] +udp_d_glucose -udp -hplus
     crocin_1
   }
+
+  branch from d_glucosyl_crocetin side left {
+    d_glucosyl_crocetin
+    <-> ec_2_4_1_330 [2.4.1.330] +udp_d_glucose +udp +hplus
+    d_gentiobiosyl_crocetin
+  }
 }

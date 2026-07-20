@@ -17,4 +17,28 @@ pathway dammarenediol-ii-to-n2-formyl-n1-5-phospho "dammarenediol-II to N2-formy
     <-> ec_6_3_1_21 [6.3.1.21] +n1_5_phospho_d_ribosyl_glycinamide +formate +atp -adp -pi -hplus
     n2_formyl_n1_5_phospho_d_ribosyl_glycinamide
   }
+
+  branch from epoxysqualene side left {
+    epoxysqualene
+    <-> ec_5_4_99_31 [5.4.99.31]
+    thalianol
+  }
+
+  branch from ffmas side right {
+    ffmas
+    <-> ec_1_3_1_70 [1.3.1.70] +nadp +nadph +hplus
+    tmas
+  }
+
+  branch from formate side left {
+    formate
+    <-> ec_1_8_98_6 [1.8.98.6] +coenzyme_b +coenzyme_m +di_sulfido_diiron +co2 +di_sulfido_diiron
+    com_s_s_cob
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_19_63 [1.14.19.63] +pratensein +fmnh2 +o2 +h2o +hplus
+    5_hydroxypseudobaptigenin
+  }
 }

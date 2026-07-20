@@ -27,4 +27,28 @@ pathway s-3-methyl-2-oxovalerate-to-1-alkyl-2-acetyl-sn "(S)-3-methyl-2-oxovaler
     <-> ec_2_3_1_105 [2.3.1.105] +acetyl_coa -coa
     1_alkyl_2_acetyl_sn_glycerol_3_phosphate
   }
+
+  branch from kiv side left {
+    kiv
+    <-> ec_1_2_1_25 [1.2.1.25] +nad +coa +co2 +nadh
+    isobutyryl_coa
+  }
+
+  branch from isoleucine side right {
+    isoleucine
+    <-> ec_1_14_14_39 [1.14.14.39] +fmnh2 +o2 +fmn +co2 +h2o +hplus
+    1e_2s_2_methylbutanal_oxime
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_13_247 [1.14.13.247] +l_proline_betaine +nadph +o2 +hplus +nadp +h2o
+    n_methylproline
+  }
+
+  branch from g3p side right {
+    g3p
+    <-> ec_4_1_2_8 [4.1.2.8] +1s_2r_1_c_indol_3_yl_glycerol_3_phosphate
+    1h_indole
+  }
 }

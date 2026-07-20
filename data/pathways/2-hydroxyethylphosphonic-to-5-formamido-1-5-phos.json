@@ -109,6 +109,51 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "14_methyl_steroid",
+      "name": "14α-methyl steroid",
+      "formula": "C20H33R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138029"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "14_steroid",
+      "name": "Δ14 steroid",
+      "formula": "C19H29R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138031"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +176,13 @@
       "name": "formate--phosphoribosylaminoimidazolecarboxamide ligase",
       "ec": [
         "6.3.4.23"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_36",
+      "name": "sterol 14alpha-demethylase (ferredoxin)",
+      "ec": [
+        "1.14.15.36"
       ]
     }
   ],
@@ -282,6 +334,67 @@
           {
             "db": "Rhea",
             "id": "RHEA:24836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sterol 14alpha-demethylase (ferredoxin)",
+      "equation": "a 14alpha-methyl steroid + 6 reduced [2Fe-2S]-[ferredoxin] + 3 O2 + 5 H(+) = a Delta(14) steroid + formate + 6 oxidized [2Fe-2S]-[ferredoxin] + 4 H2O",
+      "ec": "1.14.15.36",
+      "substrates": [
+        {
+          "metabolite": "14_methyl_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "14_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56752"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56752"
           }
         ]
       }

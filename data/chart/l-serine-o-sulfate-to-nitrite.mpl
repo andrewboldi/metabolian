@@ -17,4 +17,28 @@ pathway l-serine-o-sulfate-to-nitrite "L-serine O-sulfate to nitrite" {
     <-> ec_1_7_2_1 [1.7.2.1] +iron +h2o -fe2 -hplus
     nitrite
   }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_3_12_1_1 [3.12.1.1] +trithionate +h2o +hplus
+    trioxidosulfanidosulfate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_5_1_2 [4.5.1.2] +h2o +chloride +pyruvate +hplus
+    3_chloro_d_alanine
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> ec_3_5_99_9 [3.5.99.9] +2_nitroimidazole +h2o +hplus
+    1_3_dihydro_2h_imidazol_2_one
+  }
+
+  branch from no side right {
+    no
+    <-> ec_1_14_13_39 [1.14.13.39] +arginine +nadph +o2 +hplus +nadp +h2o
+    citrulline
+  }
 }

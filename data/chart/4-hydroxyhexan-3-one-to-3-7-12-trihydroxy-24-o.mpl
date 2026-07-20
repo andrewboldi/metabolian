@@ -15,4 +15,16 @@ pathway 4-hydroxyhexan-3-one-to-3-7-12-trihydroxy-24-o "4-hydroxyhexan-3-one to 
     <-> ec_2_3_1_176 [2.3.1.176] +choloyl_coa -coa
     thca_24oxo_coa
   }
+
+  branch from propanal side left {
+    propanal
+    <-> ec_4_2_1_28 [4.2.1.28] +h2o
+    propane_1_2_diol
+  }
+
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> ec_2_3_1_222 [2.3.1.222] +pi +coa
+    propanoyl_phosphate
+  }
 }

@@ -17,4 +17,16 @@ pathway butane-to-butanoyl-phosphate "butane to butanoyl phosphate" {
     <-> ec_2_3_1_19 [2.3.1.19] +pi -coa
     butyryl_p
   }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> ec_1_3_1_86 [1.3.1.86] +nadp +nadph +hplus
+    crotonoyl_coa
+  }
+
+  branch from butyryl_p side right {
+    butyryl_p
+    <-> ec_2_7_2_7 [2.7.2.7] +atp +adp
+    butyrate
+  }
 }

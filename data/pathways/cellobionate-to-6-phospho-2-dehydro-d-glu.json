@@ -119,6 +119,98 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "6pgc",
+      "name": "6-Phospho-D-gluconate",
+      "short": "6-Phospho-D-glucona…",
+      "formula": "C6H10O10P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58759"
+      }
+    },
+    {
+      "id": "cellobiose",
+      "name": "cellobiose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17057"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2_5_didehydro_d_gluconate",
+      "name": "2,5-didehydro-D-gluconate",
+      "short": "2,5-didehydro-D-glu…",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11449"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "progesterone",
+      "name": "progesterone",
+      "formula": "C21H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17026"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "testosterone_acetate",
+      "name": "testosterone acetate",
+      "formula": "C21H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16524"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +233,34 @@
       "name": "dehydrogluconokinase",
       "ec": [
         "2.7.1.13"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_12",
+      "name": "gluconokinase",
+      "ec": [
+        "2.7.1.12"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_20",
+      "name": "cellobiose phosphorylase",
+      "ec": [
+        "2.4.1.20"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_274",
+      "name": "2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming)",
+      "ec": [
+        "1.1.1.274"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_4",
+      "name": "progesterone monooxygenase",
+      "ec": [
+        "1.14.99.4"
       ]
     }
   ],
@@ -280,6 +400,202 @@
           {
             "db": "Rhea",
             "id": "RHEA:10788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "gluconokinase",
+      "equation": "D-gluconate + ATP = 6-phospho-D-gluconate + ADP + H(+)",
+      "ec": "2.7.1.12",
+      "substrates": [
+        {
+          "metabolite": "d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6pgc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19433"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cellobiose phosphorylase",
+      "equation": "D-cellobiose + phosphate = alpha-D-glucose 1-phosphate + D-glucose",
+      "ec": "2.4.1.20",
+      "substrates": [
+        {
+          "metabolite": "cellobiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:19493"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19493"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming)",
+      "equation": "2-dehydro-D-gluconate + NADP(+) = 2,5-didehydro-D-gluconate + NADPH + H(+)",
+      "ec": "1.1.1.274",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_didehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_274"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "progesterone monooxygenase",
+      "equation": "progesterone + AH2 + O2 = testosterone acetate + A + H2O",
+      "ec": "1.14.99.4",
+      "substrates": [
+        {
+          "metabolite": "progesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "testosterone_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:11984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11984"
           }
         ]
       }

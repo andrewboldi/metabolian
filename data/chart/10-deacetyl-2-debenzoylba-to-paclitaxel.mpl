@@ -19,4 +19,16 @@ pathway 10-deacetyl-2-debenzoylba-to-paclitaxel "10-deacetyl-2-debenzoylba… to
     <-> ec_2_3_1_321 [2.3.1.321] +benzoyl_coa -coa -hplus
     paclitaxel
   }
+
+  branch from 10_deacetylbaccatin_iii side left {
+    10_deacetylbaccatin_iii
+    <-> ec_1_14_14_192 [1.14.14.192] +fmnh2 +o2 +fmn +h2o +hplus
+    10_deacetyl_1_deoxybaccatin_iii
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_25 [1.14.14.25] +cholesterol +fmnh2 +o2 +h2o +hplus
+    24s_24_hydroxycholesterol
+  }
 }

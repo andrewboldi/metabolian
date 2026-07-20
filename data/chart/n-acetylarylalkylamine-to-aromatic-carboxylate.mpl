@@ -15,4 +15,28 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
     <-> ec_1_2_1_29 [1.2.1.29] +nad +h2o -nadh -hplus
     aromatic_carboxylate
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_56 [3.1.1.56] +4_methylumbelliferyl_acetate +h2o +hplus
+    4_methylumbelliferone
+  }
+
+  branch from arenecarbaldehyde side right {
+    arenecarbaldehyde
+    <-> ec_1_1_1_90 [1.1.1.90] +nad +nadh +hplus
+    aromatic_primary_alcohol
+  }
+
+  branch from copper side left {
+    copper
+    <-> ec_1_20_9_1 [1.20.9.1] +copper +arsenite +h2o +hplus
+    arsenate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_14_12_1 [1.14.12.1] +anthranilate +nadh +o2 +hplus +co2 +nad
+    catechol
+  }
 }

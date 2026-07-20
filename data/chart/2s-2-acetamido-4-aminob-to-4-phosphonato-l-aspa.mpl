@@ -15,4 +15,16 @@ pathway 2s-2-acetamido-4-aminob-to-4-phosphonato-l-aspa "(2S)-2-acetamido-4-amin
     <-> ec_1_2_1_11 [1.2.1.11] +pi +nadp -nadph -hplus
     4_phosphonato_l_aspartic_acid
   }
+
+  branch from l_aspartic_acid_4_semialdehyde side left {
+    l_aspartic_acid_4_semialdehyde
+    <-> ec_1_1_1_3 [1.1.1.3] +nad +nadh +hplus
+    l_homoserine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_3_4_19_14 [3.4.19.14] +leukotriene_c4 +h2o
+    leukotriene_d4
+  }
 }

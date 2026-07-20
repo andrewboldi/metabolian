@@ -15,4 +15,10 @@ pathway 4-phosphooxymethyl-2-fu-to-diphosphate "4-(phosphooxymethyl)-2-fu… to 
     <-> ec_2_5_1_131 [2.5.1.131] +glutamyltyramine -ppi
     4_4_2_l_glutamylamino_ethyl_phenoxymethyl_furan
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_76 [4.2.3.76] +fpp
+    selinene
+  }
 }

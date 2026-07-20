@@ -15,4 +15,22 @@ pathway methanesulfinate-to-sulfate "methanesulfinate to sulfate" {
     <-> ec_1_8_3_1 [1.8.3.1] +o2 +h2o -h2o2
     sulfate
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +gsh +fmnh2 +o2 +h2o +hplus
+    z_1_glutathione_s_yl_2_phenylacetohydroximate
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_11_65 [1.14.11.65] +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    l_lysinium
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +n_octyl_sulfate +akg +o2 +succinate +co2 +hplus
+    octanal
+  }
 }

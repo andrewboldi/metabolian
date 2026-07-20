@@ -15,4 +15,10 @@ pathway l-argininium-to-n-acetyl-l-glutamyl "L-argininium to N-acetyl-L-γ-gluta
     <-> ec_1_2_1_38 [1.2.1.38] +pi +nadp -nadph -hplus
     n_acetyl_l_glutamyl_phosphate
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_fischerindole_u +chloride +akg +o2 +hplus +co2 +h2o
+    12_epi_fischerindole_g
+  }
 }

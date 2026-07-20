@@ -145,6 +145,44 @@
       "xrefs": {
         "chebi": "CHEBI:36484"
       }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "3_l_glutaminyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-glutaminyl)adenylyl zwitterionic group",
+      "short": "3'-(L-glutaminyl)ad…",
+      "formula": "C15H21N7O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78521"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "hop_22_29_ene",
+      "name": "hop-22(29)-ene",
+      "formula": "C30H50",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4648"
+      }
     }
   ],
   "enzymes": [
@@ -174,6 +212,27 @@
       "name": "squalene--hopanol cyclase",
       "ec": [
         "4.2.1.129"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_18",
+      "name": "glutamine--tRNA ligase",
+      "ec": [
+        "6.1.1.18"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_103",
+      "name": "presqualene diphosphate synthase",
+      "ec": [
+        "2.5.1.103"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_17",
+      "name": "squalene--hopene cyclase",
+      "ec": [
+        "5.4.99.17"
       ]
     }
   ],
@@ -374,6 +433,137 @@
           {
             "db": "Rhea",
             "id": "RHEA:16561"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glutamine--tRNA ligase",
+      "equation": "tRNA(Gln) + L-glutamine + ATP = L-glutaminyl-tRNA(Gln) + AMP + diphosphate",
+      "ec": "6.1.1.18",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_glutaminyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20121"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "presqualene diphosphate synthase",
+      "equation": "2 (2E,6E)-farnesyl diphosphate = presqualene diphosphate + diphosphate",
+      "ec": "2.5.1.103",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "presqualene_pp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:22672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "squalene--hopene cyclase",
+      "equation": "squalene = hop-22(29)-ene",
+      "ec": "5.4.99.17",
+      "substrates": [
+        {
+          "metabolite": "squalene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hop_22_29_ene",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:17637"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17637"
           }
         ]
       }

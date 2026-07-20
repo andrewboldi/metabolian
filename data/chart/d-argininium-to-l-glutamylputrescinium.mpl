@@ -15,4 +15,10 @@ pathway d-argininium-to-l-glutamylputrescinium "D-argininium to γ-L-glutamylput
     <-> ec_6_3_1_11 [6.3.1.11] +glutamate +atp -adp -pi -hplus
     l_glutamylputrescinium
   }
+
+  branch from 1_4_butanediammonium side left {
+    1_4_butanediammonium
+    <-> ec_1_14_13_252 [1.14.13.252] +nadph +o2 +nadp +h2o
+    n_hydroxyputrescine
+  }
 }

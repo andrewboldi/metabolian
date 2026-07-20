@@ -15,4 +15,10 @@ pathway agmatinium-to-ammonium "agmatinium to ammonium" {
     <-> ec_1_4_3_10 [1.4.3.10] +o2 +h2o -h2o2 -nh3
     4_ammoniobutanal
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_18 [1.4.1.18] +l_lysinium +nadp +nadph +hplus
+    s_1_piperideine_6_carboxylate
+  }
 }

@@ -19,4 +19,28 @@ pathway 2r-4-2-ammonio-1-hydro-to-s-adenosyl-l-homocyst "(2R)-4-(2-ammonio-1-hyd
     <-> ec_2_1_1_295 [2.1.1.295] +sam -sah -hplus
     plastoquinol_9
   }
+
+  branch from 4_hydroxyphenyl_acetaldehyde side left {
+    4_hydroxyphenyl_acetaldehyde
+    <-> ec_4_1_1_108 [4.1.1.108] +o2 +h2o +hplus +h2o2 +nh3 +co2
+    tyrosine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_18_6_1 [1.18.6.1] +dinitrogen +di_sulfido_diiron +atp +h2o +di_sulfido_diiron +adp +pi +hplus
+    h2
+  }
+
+  branch from 4_hydroxyphenylacetate side left {
+    4_hydroxyphenylacetate
+    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +o2 +fad +h2o +hplus
+    dopac
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_2_1_11 [6.2.1.11] +biotinate +atp +coa +amp
+    biotinyl_coa
+  }
 }

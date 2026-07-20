@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-adenosylmethioninaminium-to-s-methyl-5-thio-d",
   "name": "S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribos…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribose 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,6 +120,53 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "l_homoserine_lactone",
+      "name": "L-homoserine lactone",
+      "formula": "C4H8NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58633"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "deoxyhypusine_2",
+      "name": "deoxyhypusine(2+)",
+      "formula": "C10H23N3O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:82657"
+      }
+    },
+    {
+      "id": "trimethylenediaminium",
+      "name": "trimethylenediaminium",
+      "short": "trimethylenediamini…",
+      "formula": "C3H12N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:57484"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +196,20 @@
       "name": "S-methyl-5-thioribose kinase",
       "ec": [
         "2.7.1.100"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_42",
+      "name": "S-adenosyl-L-methionine lyase",
+      "ec": [
+        "4.4.1.42"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_46",
+      "name": "deoxyhypusine synthase",
+      "ec": [
+        "2.5.1.46"
       ]
     }
   ],
@@ -292,6 +353,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:22312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "S-adenosyl-L-methionine lyase",
+      "equation": "S-adenosyl-L-methionine = L-homoserine lactone + S-methyl-5'-thioadenosine",
+      "ec": "4.4.1.42",
+      "substrates": [
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homoserine_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "deoxyhypusine synthase",
+      "equation": "[eIF5A protein]-L-lysine + spermidine = [eIF5A protein]-deoxyhypusine + propane-1,3-diamine",
+      "ec": "2.5.1.46",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deoxyhypusine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trimethylenediaminium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33299"
           }
         ]
       }

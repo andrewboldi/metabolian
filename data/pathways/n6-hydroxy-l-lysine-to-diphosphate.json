@@ -118,6 +118,43 @@
       "xrefs": {
         "chebi": "CHEBI:58396"
       }
+    },
+    {
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60344"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ferroheme_o",
+      "name": "ferroheme o",
+      "formula": "C49H56FeN4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60530"
+      }
     }
   ],
   "enzymes": [
@@ -140,6 +177,13 @@
       "name": "aerobactin synthase",
       "ec": [
         "6.3.2.39"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_141",
+      "name": "heme o synthase",
+      "ec": [
+        "2.5.1.141"
       ]
     }
   ],
@@ -299,6 +343,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:32167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "heme o synthase",
+      "equation": "heme b + (2E,6E)-farnesyl diphosphate + H2O = Fe(II)-heme o + diphosphate",
+      "ec": "2.5.1.141",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferroheme_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_141"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28070"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28070"
           }
         ]
       }

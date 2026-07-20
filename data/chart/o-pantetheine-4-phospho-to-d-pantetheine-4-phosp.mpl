@@ -15,4 +15,10 @@ pathway o-pantetheine-4-phospho-to-d-pantetheine-4-phosp "O-(pantetheine-4'-phos
     <-> ec_2_7_1_34 [2.7.1.34] +atp -adp -hplus
     d_pantetheine_4_phosphate
   }
+
+  branch from l_serine side left {
+    l_serine
+    <-> ec_3_1_3_43 [3.1.3.43] +h2o +pi
+    o_phospho_l_serine_2
+  }
 }

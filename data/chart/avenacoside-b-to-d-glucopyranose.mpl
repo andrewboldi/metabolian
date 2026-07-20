@@ -17,4 +17,16 @@ pathway avenacoside-b-to-d-glucopyranose "avenacoside B to D-glucopyranose" {
     <-> ec_3_2_1_93 [3.2.1.93] +h2o -glucose
     g6p
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_191 [3.2.1.191] +ginsenoside_rb2 +h2o
+    ginsenoside_c_y
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> ec_2_7_1_196 [2.7.1.196] +n_n_diacetylchitobiose +n_phosphonato_l_histidine
+    diacetylchitobiose_6_phosphate
+  }
 }

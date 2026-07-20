@@ -15,4 +15,16 @@ pathway 5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd "5-formimidoyltetrahydr
     <-> ec_2_1_2_7 [2.1.2.7] +d_alanine +h2o -thf
     2_methylserine
   }
+
+  branch from methylene_thf side left {
+    methylene_thf
+    <-> ec_1_5_1_5 [1.5.1.5] +nadp +nadph
+    methenyl_thf
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_22 [4.3.1.22] +ldopa +nadh +hplus +nad
+    3_3_4_dihydroxyphenyl_propanoate
+  }
 }

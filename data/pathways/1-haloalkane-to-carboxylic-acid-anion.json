@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-haloalkane-to-carboxylic-acid-anion",
   "name": "1-haloalkane to carboxylic acid anion",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 1-haloalkane to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -99,6 +99,88 @@
       "xrefs": {
         "chebi": "CHEBI:29067"
       }
+    },
+    {
+      "id": "copper",
+      "name": "copper",
+      "formula": "Cu",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29036"
+      }
+    },
+    {
+      "id": "copper",
+      "name": "copper",
+      "formula": "Cu",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:49552"
+      }
+    },
+    {
+      "id": "alkanesulfonate_oxoanion",
+      "name": "alkanesulfonate oxoanion",
+      "short": "alkanesulfonate…",
+      "formula": "CH2O3SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134249"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    },
+    {
+      "id": "n6_acyl_l_lysine",
+      "name": "N6-acyl-L-lysine",
+      "formula": "C7H13N2O3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57691"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
     }
   ],
   "enzymes": [
@@ -135,6 +217,27 @@
       "name": "aldehyde dehydrogenase [NAD(P)(+)]",
       "ec": [
         "1.2.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_1_9_1",
+      "name": "alcohol dehydrogenase (azurin)",
+      "ec": [
+        "1.1.9.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_5",
+      "name": "alkanesulfonate monooxygenase",
+      "ec": [
+        "1.14.14.5"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_17",
+      "name": "acyl-lysine deacylase",
+      "ec": [
+        "3.5.1.17"
       ]
     }
   ],
@@ -286,6 +389,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:16185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alcohol dehydrogenase (azurin)",
+      "equation": "2 oxidized [azurin] + a primary alcohol = 2 reduced [azurin] + an aldehyde + 2 H(+)",
+      "ec": "1.1.9.1",
+      "substrates": [
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_9_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:51148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alkanesulfonate monooxygenase",
+      "equation": "an alkanesulfonate + FMNH2 + O2 = an aldehyde + FMN + sulfite + H2O + 2 H(+)",
+      "ec": "1.14.14.5",
+      "substrates": [
+        {
+          "metabolite": "alkanesulfonate_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:23064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "acyl-lysine deacylase",
+      "equation": "an N(6)-acyl-L-lysine + H2O = a carboxylate + L-lysine",
+      "ec": "3.5.1.17",
+      "substrates": [
+        {
+          "metabolite": "n6_acyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24548"
           }
         ]
       }

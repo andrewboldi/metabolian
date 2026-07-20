@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-carnitine-to-ammonium",
   "name": "(S)-carnitine to ammonium",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 8-step route from (S)-carnitine to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -244,6 +244,87 @@
       "xrefs": {
         "chebi": "CHEBI:58902"
       }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "acetoacetyl_coa",
+      "name": "Acetoacetyl-CoA",
+      "formula": "C25H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57286"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "o_methylsalicylate",
+      "name": "O-methylsalicylate",
+      "formula": "C8H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59128"
+      }
+    },
+    {
+      "id": "salicylate",
+      "name": "salicylate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30762"
+      }
+    },
+    {
+      "id": "l_proline_betaine",
+      "name": "L-proline betaine",
+      "formula": "C7H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35280"
+      }
+    },
+    {
+      "id": "n_methylproline",
+      "name": "N-methylproline",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133743"
+      }
+    },
+    {
+      "id": "l_sepiapterin",
+      "name": "L-sepiapterin",
+      "formula": "C9H11N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194527"
+      }
+    },
+    {
+      "id": "s_xanthopterin_b2",
+      "name": "(S)-xanthopterin-B2",
+      "formula": "C9H10N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233231"
+      }
     }
   ],
   "enzymes": [
@@ -301,6 +382,34 @@
       "name": "aspartyltransferase",
       "ec": [
         "2.3.2.7"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_5",
+      "name": "3-oxoacid CoA-transferase",
+      "ec": [
+        "2.8.3.5"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_382",
+      "name": "methoxylated aromatic compound--corrinoid protein Co-methyltransferase",
+      "ec": [
+        "2.1.1.382"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_388",
+      "name": "proline betaine--corrinoid protein Co-methyltransferase",
+      "ec": [
+        "2.1.1.388"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_24",
+      "name": "sepiapterin deaminase",
+      "ec": [
+        "3.5.4.24"
       ]
     }
   ],
@@ -697,6 +806,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:11252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "3-oxoacid CoA-transferase",
+      "equation": "acetoacetate + succinyl-CoA = acetoacetyl-CoA + succinate",
+      "ec": "2.8.3.5",
+      "substrates": [
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:25480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "methoxylated aromatic compound--corrinoid protein Co-methyltransferase",
+      "equation": "2-methoxybenzoate + Co(I)-[methoxylated-aromatic-compound-specific corrinoid protein] + H(+) = methyl-Co(III)-[methoxylated-aromatic-compound-specific corrinoid protein] + salicylate",
+      "ec": "2.1.1.382",
+      "substrates": [
+        {
+          "metabolite": "o_methylsalicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cobalt",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_co",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "salicylate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_382"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:72619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "proline betaine--corrinoid protein Co-methyltransferase",
+      "equation": "Co(I)-[quaternary-amine-specific corrinoid protein] + L-proline betaine + H(+) = methyl-Co(III)-[quaternary-amine-specific corrinoid protein] + N-methyl-L-proline",
+      "ec": "2.1.1.388",
+      "substrates": [
+        {
+          "metabolite": "cobalt",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_proline_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_co",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_methylproline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_388"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:75879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "sepiapterin deaminase",
+      "equation": "L-sepiapterin + H2O + H(+) = (S)-xanthopterin-B2 + NH4(+)",
+      "ec": "3.5.4.24",
+      "substrates": [
+        {
+          "metabolite": "l_sepiapterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_xanthopterin_b2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:14025"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14025"
           }
         ]
       }

@@ -165,6 +165,71 @@
       "xrefs": {
         "chebi": "CHEBI:58017"
       }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "4_nitrophenolate",
+      "name": "4-nitrophenolate",
+      "formula": "C6H4NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57917"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "quinone",
+      "name": "Quinone (menaquinone pool)",
+      "short": "Quinone (menaquinon…",
+      "formula": "C6H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16509"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "p1_p4_bis_5_guanosyl_tetraphosphate",
+      "name": "P1,P4-bis(5'-guanosyl) tetraphosphate",
+      "short": "P1,P4-bis(5'-guanos…",
+      "formula": "C20H24N10O21P4",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57553"
+      }
     }
   ],
   "enzymes": [
@@ -194,6 +259,27 @@
       "name": "ATP phosphoribosyltransferase",
       "ec": [
         "2.4.2.17"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_17",
+      "name": "L-serine ammonia-lyase",
+      "ec": [
+        "4.3.1.17"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_167",
+      "name": "4-nitrophenol 4-monooxygenase",
+      "ec": [
+        "1.14.13.167"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_45",
+      "name": "guanosine-triphosphate guanylyltransferase",
+      "ec": [
+        "2.7.7.45"
       ]
     }
   ],
@@ -402,6 +488,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:18473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-serine ammonia-lyase",
+      "equation": "L-serine = pyruvate + NH4(+)",
+      "ec": "4.3.1.17",
+      "substrates": [
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:19169"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4-nitrophenol 4-monooxygenase",
+      "equation": "4-nitrophenol + NADPH + O2 + H(+) = 1,4-benzoquinone + nitrite + NADP(+) + H2O",
+      "ec": "1.14.13.167",
+      "substrates": [
+        {
+          "metabolite": "4_nitrophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_167"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34327"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "guanosine-triphosphate guanylyltransferase",
+      "equation": "2 GTP + H(+) = P(1),P(4)-bis(5'-guanosyl) tetraphosphate + diphosphate",
+      "ec": "2.7.7.45",
+      "substrates": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p1_p4_bis_5_guanosyl_tetraphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:18153"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18153"
           }
         ]
       }

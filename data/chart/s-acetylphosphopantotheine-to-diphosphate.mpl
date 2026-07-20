@@ -15,4 +15,28 @@ pathway s-acetylphosphopantotheine-to-diphosphate "S-acetylphosphopantotheine to
     <-> ec_6_2_1_1 [6.2.1.1] +acetate +atp +coa -acetyl_coa -amp
     ppi
   }
+
+  branch from d_pantetheine_4_phosphate side left {
+    d_pantetheine_4_phosphate
+    <-> ec_3_6_1_77 [3.6.1.77] +coa +h2o +hplus
+    adenosine_3_5_bismonophosphate
+  }
+
+  branch from o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3 side right {
+    o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3
+    <-> ec_2_7_7_66 [2.7.7.66] +2_5_triphosphoribosyl_3_dephospho_coa +ppi
+    l_serine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_2_8_3_12 [2.8.3.12] +e_glutaconate +acetyl_coa
+    trans_4_carboxybut_2_enoyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_10 [4.2.3.10] +gpp +h2o
+    endo_fenchol
+  }
 }

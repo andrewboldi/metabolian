@@ -100,6 +100,26 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
+    },
+    {
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58043"
+      }
+    },
+    {
+      "id": "6_o_d_glucopyranosyl_d_fructofuranose",
+      "name": "6-O-α-D-glucopyranosyl-D-fructofuranose",
+      "short": "6-O-α-D-glucopyrano…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18394"
+      }
     }
   ],
   "enzymes": [
@@ -122,6 +142,20 @@
       "name": "nucleoside-triphosphate--adenylate kinase",
       "ec": [
         "2.7.4.10"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_4",
+      "name": "nucleoside-phosphate kinase",
+      "ec": [
+        "2.7.4.4"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_11",
+      "name": "isomaltulose synthase",
+      "ec": [
+        "5.4.99.11"
       ]
     }
   ],
@@ -261,6 +295,88 @@
           {
             "db": "Rhea",
             "id": "RHEA:13749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nucleoside-phosphate kinase",
+      "equation": "a ribonucleoside 5'-phosphate + ATP = a ribonucleoside 5'-diphosphate + ADP",
+      "ec": "2.7.4.4",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "isomaltulose synthase",
+      "equation": "sucrose = 6-O-alpha-D-glucopyranosyl-D-fructose",
+      "ec": "5.4.99.11",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_d_glucopyranosyl_d_fructofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24032"
           }
         ]
       }

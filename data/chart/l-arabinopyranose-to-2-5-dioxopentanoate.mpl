@@ -17,4 +17,10 @@ pathway l-arabinopyranose-to-2-5-dioxopentanoate "α-L-arabinopyranose to 2,5-di
     <-> ec_4_2_1_43 [4.2.1.43] -h2o
     2_5_dioxopentanoate
   }
+
+  branch from 2_dehydro_3_deoxy_l_arabinonate side left {
+    2_dehydro_3_deoxy_l_arabinonate
+    <-> ec_4_2_1_176 [4.2.1.176] +h2o
+    l_lyxonate
+  }
 }

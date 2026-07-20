@@ -15,4 +15,22 @@ pathway 3-o-d-glucosyl-d-gluc-to-d-fructofuranuronate "3-O-β-D-glucosyl-β-D-gl
     <-> ec_5_3_1_12 [5.3.1.12]
     d_fructofuranuronate
   }
+
+  branch from g1p side left {
+    g1p
+    <-> ec_2_4_1_389 [2.4.1.389] +d_glcp_1_3_d_galp +pi
+    d_galactopyranose
+  }
+
+  branch from d_glucopyranuronate side right {
+    d_glucopyranuronate
+    <-> ec_3_2_1_167 [3.2.1.167] +wogonin_7_o_d_glucuronate +h2o +hplus
+    wogonin
+  }
+
+  branch from alcohol side left {
+    alcohol
+    <-> ec_3_2_1_149 [3.2.1.149] +6_o_d_xylopyranosyl_d_glucopyranoside +h2o
+    d_xylp_1_6_d_glcp
+  }
 }

@@ -15,4 +15,16 @@ pathway d-glucosamine-to-d-fructofuranose "α-D-glucosamine… to β-D-fructofur
     <-> ec_3_1_3_11 [3.1.3.11] +h2o -pi
     d_fructofuranose_6_phosphate
   }
+
+  branch from d_fructofuranose_6_phosphate side left {
+    d_fructofuranose_6_phosphate
+    <-> ec_3_1_3_46 [3.1.3.46] +h2o +pi
+    f26bp
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_30 [3.5.1.30] +5_ammoniopentanamide +h2o
+    5_aminopentanoic_acid
+  }
 }

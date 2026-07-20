@@ -122,6 +122,44 @@
       "xrefs": {
         "chebi": "CHEBI:60656"
       }
+    },
+    {
+      "id": "s_naringenin",
+      "name": "(S)-naringenin",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17846"
+      }
+    },
+    {
+      "id": "sakuranetin",
+      "name": "sakuranetin",
+      "formula": "C16H14O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28927"
+      }
+    },
+    {
+      "id": "linoleoyl_containing_glycerolipid",
+      "name": "linoleoyl-containing glycerolipid",
+      "short": "linoleoyl-containin…",
+      "formula": "C18H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88351"
+      }
+    },
+    {
+      "id": "linolenoyl_containing_glycerolipid",
+      "name": "α-linolenoyl-containing glycerolipid",
+      "short": "α-linolenoyl-contai…",
+      "formula": "C18H29OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90078"
+      }
     }
   ],
   "enzymes": [
@@ -144,6 +182,20 @@
       "name": "2-methoxy-6-polyprenyl-1,4-benzoquinol methylase",
       "ec": [
         "2.1.1.201"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_232",
+      "name": "naringenin 7-O-methyltransferase",
+      "ec": [
+        "2.1.1.232"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_35",
+      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "ec": [
+        "1.14.19.35"
       ]
     }
   ],
@@ -299,6 +351,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:27774"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "naringenin 7-O-methyltransferase",
+      "equation": "(2S)-naringenin + S-adenosyl-L-methionine = (2S)-sakuranetin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.232",
+      "substrates": [
+        {
+          "metabolite": "s_naringenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sakuranetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_232"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (9Z,12Z,15Z)-octadecatrienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.35",
+      "substrates": [
+        {
+          "metabolite": "linoleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "linolenoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46408"
           }
         ]
       }

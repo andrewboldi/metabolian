@@ -15,4 +15,22 @@ pathway adenosine-5-monophosphat-to-hydrogen-acceptor "adenosine 5'-monophosphat
     <-> ec_1_14_99_69 [1.14.99.69] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     n6_2e_4_hydroxy_3_methylbut_2_en_1_yl_2_methylsu
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_48 [6.2.1.48] +carnitine +atp +coa +amp
+    r_carnitinyl_coa
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_17z_icosatrienoyl_coa +hydrogen_donor +o2 +h2o
+    5z_11z_14z_17z_icosatetraenoyl_coa
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_8 +sam +hplus
+    ubiquinol_8
+  }
 }

@@ -15,4 +15,28 @@ pathway 1-acyl-sn-glycero-3-phosp-to-glycerone-phosphate "1-acyl-sn-glycero-3-ph
     <-> ec_1_1_1_94 [1.1.1.94] +nadp -nadph -hplus
     dhap
   }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> ec_3_1_2_20 [3.1.2.20] +h2o +coa +hplus
+    fatty_acyl_coa
+  }
+
+  branch from sn_glycerol_3_phosphate side right {
+    sn_glycerol_3_phosphate
+    <-> ec_2_3_1_198 [2.3.1.198] +acyl_coa +coa
+    2_acyl_sn_glycero_3_phosphate
+  }
+
+  branch from serine side left {
+    serine
+    <-> ec_2_3_1_50 [2.3.1.50] +palmitoyl_coa +hplus +co2 +coa
+    ketosphinganine
+  }
+
+  branch from dhap side right {
+    dhap
+    <-> ec_4_1_2_62 [4.1.2.62] +5_deoxy_d_ribulose_1_phosphate
+    acetaldehyde
+  }
 }

@@ -17,4 +17,16 @@ pathway 15-cis-phytoene-to-diphosphate "15-cis-phytoene to diphosphate" {
     <-> ec_2_5_1_149 [2.5.1.149] +dmapp +hydrogen_acceptor +h2o -hydrogen_donor -ppi
     flavuxanthin
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_acceptor
+    7_8_dihydromethanopterin
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_66 [4.2.3.66] +fpp
+    selinene
+  }
 }

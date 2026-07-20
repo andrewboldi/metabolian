@@ -141,6 +141,71 @@
       "xrefs": {
         "chebi": "CHEBI:58115"
       }
+    },
+    {
+      "id": "3_r_glyceryl_diphospho_5_guanosine",
+      "name": "3-[(R)-glyceryl]-diphospho-5'-guanosine",
+      "short": "3-[(R)-glyceryl]-di…",
+      "formula": "C13H16N5O14P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:147306"
+      }
+    },
+    {
+      "id": "3pg_factor420_0",
+      "name": "3PG-factor420-0",
+      "formula": "C19H19N3O13P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:147312"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_guanidino_2_oxopentanoic_acid",
+      "name": "5-guanidino-2-oxopentanoic acid",
+      "short": "5-guanidino-2-oxope…",
+      "formula": "C6H11N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58489"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
     }
   ],
   "enzymes": [
@@ -163,6 +228,13 @@
       "name": "2-phospho-L-lactate transferase",
       "ec": [
         "2.7.8.28"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_25",
+      "name": "L-arginine oxidase",
+      "ec": [
+        "1.4.3.25"
       ]
     }
   ],
@@ -330,6 +402,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:27510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-phospho-L-lactate transferase",
+      "equation": "3-[(R)-glyceryl]-diphospho-5'-guanosine + 7,8-didemethyl-8-hydroxy-5-deazariboflavin = oxidized 3PG-factor420-0 + GMP + H(+)",
+      "ec": "2.7.8.28",
+      "substrates": [
+        {
+          "metabolite": "3_r_glyceryl_diphospho_5_guanosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_8_didemethyl_8_hydroxy_5_deazariboflavin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3pg_factor420_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-arginine oxidase",
+      "equation": "L-arginine + O2 + H2O = 5-guanidino-2-oxopentanoate + H2O2 + NH4(+)",
+      "ec": "1.4.3.25",
+      "substrates": [
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:51404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51404"
           }
         ]
       }

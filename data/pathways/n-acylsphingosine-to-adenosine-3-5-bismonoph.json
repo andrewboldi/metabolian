@@ -118,6 +118,52 @@
       "xrefs": {
         "chebi": "CHEBI:58343"
       }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "s1p",
+      "name": "Sphingosine 1-phosphate",
+      "short": "Sphingosine 1-P",
+      "formula": "C18H37NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60119"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "5_scymnol",
+      "name": "5β-scymnol",
+      "formula": "C27H48O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50106"
+      }
+    },
+    {
+      "id": "5_scymnol_sulfate",
+      "name": "5β-scymnol sulfate",
+      "formula": "C27H47O9S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58808"
+      }
     }
   ],
   "enzymes": [
@@ -140,6 +186,20 @@
       "name": "psychosine sulfotransferase",
       "ec": [
         "2.8.2.13"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_91",
+      "name": "sphingosine kinase",
+      "ec": [
+        "2.7.1.91"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_32",
+      "name": "scymnol sulfotransferase",
+      "ec": [
+        "2.8.2.32"
       ]
     }
   ],
@@ -283,6 +343,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:14137"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sphingosine kinase",
+      "equation": "sphing-4-enine + ATP = sphing-4-enine 1-phosphate + ADP + H(+)",
+      "ec": "2.7.1.91",
+      "substrates": [
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:35847"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35847"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "scymnol sulfotransferase",
+      "equation": "5beta-scymnol + 3'-phosphoadenylyl sulfate = 5beta-scymnol sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.32",
+      "substrates": [
+        {
+          "metabolite": "5_scymnol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_scymnol_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15477"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15477"
           }
         ]
       }

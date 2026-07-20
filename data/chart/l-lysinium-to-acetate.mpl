@@ -15,4 +15,16 @@ pathway l-lysinium-to-acetate "L-lysinium to acetate" {
     <-> ec_3_1_1_106 [3.1.1.106] +h2o -acetate -hplus
     adp_d_ribose
   }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> ec_2_4_99_20 [2.4.99.20] +nicotinate +nadp
+    nicotinate_adenine_dinucleotide_phosphate
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_6_3_1_20 [6.3.1.20] +r_lipoate +atp +amp +ppi +hplus
+    n6_r_lipoyl_l_lysine
+  }
 }

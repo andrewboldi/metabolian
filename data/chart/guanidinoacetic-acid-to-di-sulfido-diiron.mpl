@@ -21,4 +21,22 @@ pathway guanidinoacetic-acid-to-di-sulfido-diiron "guanidinoacetic acid to di-μ
     <-> ec_1_5_7_1 [1.5.7.1] +di_sulfido_diiron -di_sulfido_diiron -hplus
     methylene_thf
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_78 [2.1.1.78] +isoorientin +sam +hplus
+    isoscoparin_7_olate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_1_13_11_78 [1.13.11.78] +o2 +pi +hplus
+    1r_2_amino_1_hydroxyethyl_phosphonate
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +o2 +hplus +di_sulfido_diiron +h2o
+    neopikromycin
+  }
 }

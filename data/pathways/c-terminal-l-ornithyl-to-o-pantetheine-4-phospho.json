@@ -113,6 +113,52 @@
       "xrefs": {
         "chebi": "CHEBI:140663"
       }
+    },
+    {
+      "id": "l_canavanine",
+      "name": "L-canavanine",
+      "formula": "C5H13N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:78902"
+      }
+    },
+    {
+      "id": "l_canaline",
+      "name": "L-canaline",
+      "formula": "C4H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145769"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "o_s_tetradecanoylpantetheine_4_phosphoryl_serine",
+      "name": "O-(S-tetradecanoylpantetheine-4'-phosphoryl)serine(1−)",
+      "short": "O-(S-tetradecanoylp…",
+      "formula": "C28H51N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78477"
+      }
+    },
+    {
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30807"
+      }
     }
   ],
   "enzymes": [
@@ -135,6 +181,20 @@
       "name": "lyso-ornithine lipid O-acyltransferase",
       "ec": [
         "2.3.1.270"
+      ]
+    },
+    {
+      "id": "ec_2_1_4_3",
+      "name": "L-arginine:L-lysine amidinotransferase",
+      "ec": [
+        "2.1.4.3"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_14",
+      "name": "oleoyl-[acyl-carrier-protein] hydrolase",
+      "ec": [
+        "3.1.2.14"
       ]
     }
   ],
@@ -274,6 +334,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:55760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-arginine:L-lysine amidinotransferase",
+      "equation": "L-canavanine + L-ornithine = L-canaline + L-arginine + H(+)",
+      "ec": "2.1.4.3",
+      "substrates": [
+        {
+          "metabolite": "l_canavanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_canaline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_4_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "oleoyl-[acyl-carrier-protein] hydrolase",
+      "equation": "tetradecanoyl-[ACP] + H2O = tetradecanoate + holo-[ACP] + H(+)",
+      "ec": "3.1.2.14",
+      "substrates": [
+        {
+          "metabolite": "o_s_tetradecanoylpantetheine_4_phosphoryl_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30123"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30123"
           }
         ]
       }

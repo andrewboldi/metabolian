@@ -21,4 +21,28 @@ pathway methyl-group-to-malonyl-coa "methyl group to malonyl-CoA" {
     <-> ec_2_1_3_15 [2.1.3.15] +acetyl_coa -malonyl-coa
     biotinyl_l_lysine
   }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_13_179 [1.14.13.179] +theobromine +nadph +o2 +hplus +nadp +h2o
+    7_methylxanthine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_20_5 [1.14.20.5] +s_naringenin +akg +o2 +co2 +h2o +hplus
+    apigenin_7_olate
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_99 [2.6.1.99] +l_tryptophan +pyruvate
+    3_indol_3_yl_pyruvate
+  }
+
+  branch from 5_deoxyadenosine side right {
+    5_deoxyadenosine
+    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
+    2_methyladenosine_5_monophosphate_1
+  }
 }

@@ -137,6 +137,83 @@
       "xrefs": {
         "chebi": "CHEBI:57292"
       }
+    },
+    {
+      "id": "s_s_s_nicotianamine_trizwitterion",
+      "name": "(S,S,S)-nicotianamine trizwitterion",
+      "short": "(S,S,S)-nicotianami…",
+      "formula": "C12H21N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58249"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "3_deamino_3_oxonicotianaminium",
+      "name": "3''-deamino-3''-oxonicotianaminium",
+      "short": "3''-deamino-3''-oxo…",
+      "formula": "C12H17N2O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58685"
+      }
+    },
+    {
+      "id": "4_hydroxy_2_oxoheptanedioate",
+      "name": "4-hydroxy-2-oxoheptanedioate",
+      "short": "4-hydroxy-2-oxohept…",
+      "formula": "C7H8O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:73036"
+      }
+    },
+    {
+      "id": "2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae",
+      "name": "(2E,5S,6E,8E,10E)-1-ammoniododeca-2,6,8,10-tetraen-5-ol",
+      "short": "(2E,5S,6E,8E,10E)-1…",
+      "formula": "C12H20NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142545"
+      }
+    },
+    {
+      "id": "2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae",
+      "name": "(2E,5S,6E,8E,10E)-5-hydroxydodeca-2,6,8,10-tetraenal",
+      "short": "(2E,5S,6E,8E,10E)-5…",
+      "formula": "C12H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141054"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "3_oxoadipyl_coa",
+      "name": "3-oxoadipyl-CoA",
+      "formula": "C27H37N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57348"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +243,34 @@
       "name": "succinate-semialdehyde dehydrogenase (acetylating)",
       "ec": [
         "1.2.1.76"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_80",
+      "name": "nicotianamine aminotransferase",
+      "ec": [
+        "2.6.1.80"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_52",
+      "name": "4-hydroxy-2-oxoheptanedioate aldolase",
+      "ec": [
+        "4.1.2.52"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_115",
+      "name": "5-hydroxydodecatetraenal 1-aminotransferase",
+      "ec": [
+        "2.6.1.115"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_174",
+      "name": "3-oxoadipyl-CoA thiolase",
+      "ec": [
+        "2.3.1.174"
       ]
     }
   ],
@@ -362,6 +467,182 @@
           {
             "db": "Rhea",
             "id": "RHEA:26450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "nicotianamine aminotransferase",
+      "equation": "nicotianamine + 2-oxoglutarate = 3''-deamino-3''-oxonicotianamine + L-glutamate",
+      "ec": "2.6.1.80",
+      "substrates": [
+        {
+          "metabolite": "s_s_s_nicotianamine_trizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_deamino_3_oxonicotianaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4-hydroxy-2-oxoheptanedioate aldolase",
+      "equation": "4-hydroxy-2-oxoheptanedioate = succinate semialdehyde + pyruvate",
+      "ec": "4.1.2.52",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_2_oxoheptanedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_52"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "5-hydroxydodecatetraenal 1-aminotransferase",
+      "equation": "(2E,5S,6E,8E,10E)-1-aminododeca-2,6,8,10-tetraen-5-ol + pyruvate = (2E,5S,6E,8E,10E)-5-hydroxydodeca-2,6,8,10-tetraenal + L-alanine",
+      "ec": "2.6.1.115",
+      "substrates": [
+        {
+          "metabolite": "2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:24024"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24024"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "3-oxoadipyl-CoA thiolase",
+      "equation": "succinyl-CoA + acetyl-CoA = 3-oxoadipyl-CoA + CoA",
+      "ec": "2.3.1.174",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxoadipyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_174"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:19481"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19481"
           }
         ]
       }

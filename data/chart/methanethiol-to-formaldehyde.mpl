@@ -17,4 +17,22 @@ pathway methanethiol-to-formaldehyde "methanethiol to formaldehyde" {
     <-> ec_1_14_14_35 [1.14.14.35] +fmnh2 +o2 -fmn -formaldehyde -h2o -hplus
     methanesulfinate
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_6_3_2_40 [6.3.2.40] +anthranilate +l_phenylalanine +sam +atp +amp +ppi +hplus
+    cyclopeptine
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_67 [1.14.14.67] +11_hydroxyferruginol +fmnh2 +o2 +h2o +hplus
+    11_20_dihydroxyferruginol
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_11_69 [1.14.11.69] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
+  }
 }

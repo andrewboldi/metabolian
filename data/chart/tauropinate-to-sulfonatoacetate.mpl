@@ -15,4 +15,22 @@ pathway tauropinate-to-sulfonatoacetate "tauropinate to sulfonatoacetate" {
     <-> ec_1_2_1_73 [1.2.1.73] +nad +h2o -nadh -hplus
     sulfonatoacetate
   }
+
+  branch from taurine side left {
+    taurine
+    <-> ec_1_4_99_2 [1.4.99.2] +hydrogen_acceptor +h2o +sulfonatoacetaldehyde +nh3
+    hydrogen_donor
+  }
+
+  branch from sulfonatoacetaldehyde side right {
+    sulfonatoacetaldehyde
+    <-> ec_1_1_1_313 [1.1.1.313] +nadp +nadph +hplus
+    isethionate
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_84 [2.6.1.84] +arginine +pyruvate
+    5_guanidino_2_oxopentanoic_acid
+  }
 }

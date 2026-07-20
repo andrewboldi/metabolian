@@ -15,4 +15,16 @@ pathway uridine-5-monophosphate-to-diphosphate "uridine 5'-monophosphate(… to 
     <-> ec_2_7_7_100 [2.7.7.100] +atp +hplus -ppi
     c_terminal_gly_gly_amp_1_group
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_87 [4.2.3.87] +fpp
+    guaiene
+  }
 }

@@ -15,4 +15,22 @@ pathway dcdp-to-ammonium "dCDP to ammonium" {
     <-> ec_3_5_4_12 [3.5.4.12] +h2o +hplus -nh3
     dump
   }
+
+  branch from 2_deoxycytosine_5_monophosphate side left {
+    2_deoxycytosine_5_monophosphate
+    <-> ec_2_7_1_74 [2.7.1.74] +atp +adp +hplus
+    2_deoxycytidine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_62 [4.2.3.62] +2_cis_6_trans_farnesyl_diphosphate
+    cadinene
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_121 [3.5.1.121] +l_asparaginyl_group +h2o +hplus
+    l_aspartyl_zwitterionic_group
+  }
 }

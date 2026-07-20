@@ -27,4 +27,28 @@ pathway pyridoxaminium-to-succinate "pyridoxaminium to succinate" {
     <-> ec_1_2_1_16 [1.2.1.16] +nadp +h2o -nadph -hplus
     succinate
   }
+
+  branch from pyridoxal side left {
+    pyridoxal
+    <-> ec_1_1_3_12 [1.1.3.12] +o2 +h2o2
+    pyridoxine
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_2_6_1_56 [2.6.1.56] +1d_3_ammmonio_1_guanidiniumyl_1_3_dideoxy_scyllo +pyruvate
+    1d_1_guanidiniumyl_1_deoxy_3_dehydro_scyllo_inos
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_5 [1.3.99.5] +3_oxo_5_steroid +hydrogen_acceptor
+    3_oxo_4_steroid
+  }
+
+  branch from 4_oxobutanoate side right {
+    4_oxobutanoate
+    <-> ec_1_1_1_61 [1.1.1.61] +nad +nadh +hplus
+    4_hydroxybutyrate
+  }
 }

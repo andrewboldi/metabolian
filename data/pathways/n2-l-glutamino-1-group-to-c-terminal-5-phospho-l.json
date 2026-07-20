@@ -119,6 +119,54 @@
       "xrefs": {
         "chebi": "CHEBI:136717"
       }
+    },
+    {
+      "id": "r_piperazin_4_ium_2_carboxamide",
+      "name": "(R)-piperazin-4-ium-2-carboxamide",
+      "short": "piperazin-4-ium-2-c…",
+      "formula": "C5H12N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58916"
+      }
+    },
+    {
+      "id": "r_piperazine_2_carboxylic_acid",
+      "name": "(R)-piperazine-2-carboxylic acid",
+      "short": "piperazine-2-carbox…",
+      "formula": "C5H10N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58917"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl",
+      "name": "C-terminal-γ-(L-glutamyl 5-semialdehyde)-L-glutamyl(2−) group",
+      "short": "C-terminal-γ-(L-glu…",
+      "formula": "C10H13N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136761"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +189,20 @@
       "name": "[amino-group carrier protein]-L-glutamate 6-kinase",
       "ec": [
         "2.7.2.19"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_100",
+      "name": "(R)-amidase",
+      "ec": [
+        "3.5.1.100"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_106",
+      "name": "[amino-group carrier protein]-5-phospho-L-glutamate reductase",
+      "ec": [
+        "1.2.1.106"
       ]
     }
   ],
@@ -288,6 +350,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:52632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(R)-amidase",
+      "equation": "(R)-piperazine-2-carboxamide + H2O = (R)-piperazine-2-carboxylate + NH4(+)",
+      "ec": "3.5.1.100",
+      "substrates": [
+        {
+          "metabolite": "r_piperazin_4_ium_2_carboxamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_piperazine_2_carboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26542"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26542"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[amino-group carrier protein]-5-phospho-L-glutamate reductase",
+      "equation": "[amino-group carrier protein]-C-terminal-gamma-(L-glutamyl-5-semialdehyde)-L-glutamate + phosphate + NADP(+) = [amino-group carrier protein]-C-terminal-gamma-(5-phospho-L-glutamyl)-L-glutamate + NADPH + H(+)",
+      "ec": "1.2.1.106",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_106"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:52668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52668"
           }
         ]
       }

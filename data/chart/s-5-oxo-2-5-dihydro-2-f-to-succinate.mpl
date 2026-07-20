@@ -15,4 +15,22 @@ pathway s-5-oxo-2-5-dihydro-2-f-to-succinate "(S)-5-oxo-2,5-dihydro-2-f… to su
     <-> ec_2_8_3_6 [2.8.3.6] +succinyl_coa -succinate
     3_oxoadipyl_coa
   }
+
+  branch from 5_oxo_4_5_dihydro_2_furylacetate side left {
+    5_oxo_4_5_dihydro_2_furylacetate
+    <-> ec_4_1_1_44 [4.1.1.44] +hplus +co2
+    r_2_carboxylatomethyl_5_oxo_2_5_dihydro_2_furoa
+  }
+
+  branch from 3_oxoadipate side right {
+    3_oxoadipate
+    <-> ec_1_3_1_32 [1.3.1.32] +nad +nadh +hplus
+    maleylacetate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_12 [1.14.11.12] +gibberellin_a44_2_diacid_form +akg +o2 +co2 +h2o
+    gibberellin_a19
+  }
 }

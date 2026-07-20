@@ -17,4 +17,10 @@ pathway 4-2-hydroxyethoxy-carbo-to-diphosphate "4-[(2-hydroxyethoxy)carbo… to 
     <-> ec_6_2_1_62 [6.2.1.62] +holo-acp +atp -amp -ppi
     o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    abieta_8_14_12_diene
+  }
 }

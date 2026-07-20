@@ -108,6 +108,62 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "glyphosate",
+      "name": "glyphosate",
+      "formula": "C3H7NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133673"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "aminomethyl_phosphonate",
+      "name": "(aminomethyl)phosphonate",
+      "short": "(aminomethyl)phosph…",
+      "formula": "CH5NO3P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133674"
+      }
+    },
+    {
+      "id": "n_benzyloxycarbonylglycinate",
+      "name": "N-benzyloxycarbonylglycinate",
+      "short": "N-benzyloxycarbonyl…",
+      "formula": "C10H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:368997"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "benzyl_alcohol",
+      "name": "benzyl alcohol",
+      "formula": "C7H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17987"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +186,20 @@
       "name": "oxalyl-CoA decarboxylase",
       "ec": [
         "4.1.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_5_3_23",
+      "name": "glyphosate oxidoreductase",
+      "ec": [
+        "1.5.3.23"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_58",
+      "name": "N-benzyloxycarbonylglycine hydrolase",
+      "ec": [
+        "3.5.1.58"
       ]
     }
   ],
@@ -269,6 +339,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:19333"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glyphosate oxidoreductase",
+      "equation": "2 glyphosate + O2 = 2 aminomethylphosphonate + 2 glyoxylate + 2 H(+)",
+      "ec": "1.5.3.23",
+      "substrates": [
+        {
+          "metabolite": "glyphosate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aminomethyl_phosphonate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_3_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-benzyloxycarbonylglycine hydrolase",
+      "equation": "N-benzyloxycarbonylglycine + H2O + H(+) = benzyl alcohol + glycine + CO2",
+      "ec": "3.5.1.58",
+      "substrates": [
+        {
+          "metabolite": "n_benzyloxycarbonylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20900"
           }
         ]
       }

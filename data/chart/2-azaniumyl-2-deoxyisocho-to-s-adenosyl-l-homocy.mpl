@@ -19,4 +19,28 @@ pathway 2-azaniumyl-2-deoxyisocho-to-s-adenosyl-l-homocy "2-azaniumyl-2-deoxyiso
     <-> ec_2_1_1_47 [2.1.1.47] +sam -sah -hplus
     r_3_indol_3_yl_2_oxobutyrate
   }
+
+  branch from chorismate side left {
+    chorismate
+    <-> ec_4_1_3_27 [4.1.3.27] +glutamine +pyruvate +glutamate +hplus
+    anthranilate
+  }
+
+  branch from glutamine side right {
+    glutamine
+    <-> ec_2_3_1_68 [2.3.1.68] +acyl_coa +coa +hplus
+    n2_acyl_l_glutaminate
+  }
+
+  branch from keto_phenylpyruvate side left {
+    keto_phenylpyruvate
+    <-> ec_5_3_2_1 [5.3.2.1]
+    enol_phenylpyruvate
+  }
+
+  branch from 3_indol_3_yl_pyruvate side right {
+    3_indol_3_yl_pyruvate
+    <-> ec_1_1_1_110 [1.1.1.110] +nad +nadh +hplus
+    3_indol_3_yl_lactate
+  }
 }

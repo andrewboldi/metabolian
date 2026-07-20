@@ -15,4 +15,16 @@ pathway o-s-3r-3-hydroxyacylpa-to-coniferyl-acetate "O-[S-(3R)-3-hydroxyacylpaâ€
     <-> ec_1_1_1_319 [1.1.1.319] +trans_isoeugenol +acetate +nadp -nadph
     coniferyl_acetate
   }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_2_3_1_39 [2.3.1.39] +malonyl-coa +coa
+    malonyl-acp
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_136 [3.5.1.136] +n_n_diacetylchitobiose +h2o
+    d_glucosaminyl_1_4_n_acetyl_d_glucosamine
+  }
 }

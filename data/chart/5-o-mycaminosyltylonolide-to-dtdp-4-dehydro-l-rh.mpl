@@ -19,4 +19,28 @@ pathway 5-o-mycaminosyltylonolide-to-dtdp-4-dehydro-l-rh "5-O-mycaminosyltylonol
     <-> ec_5_1_3_13 [5.1.3.13]
     dtdp_4_dehydro_l_rhamnose
   }
+
+  branch from dtdp side left {
+    dtdp
+    <-> ec_2_4_1_316 [2.4.1.316] +tylactone +dtdp_d_mycaminose +hplus
+    5_o_d_mycaminosyltylactone
+  }
+
+  branch from dttp side right {
+    dttp
+    <-> ec_3_6_1_9 [3.6.1.9] +h2o +ppi +hplus
+    dtmp
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_42 [2.5.1.42] +sn_3_o_geranylgeranyl_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
+  }
+
+  branch from dtdp_4_dehydro_6_deoxy_d_glucose side right {
+    dtdp_4_dehydro_6_deoxy_d_glucose
+    <-> ec_2_6_1_33 [2.6.1.33] +dtdp_4_amino_4_6_dideoxy_d_glucose +akg
+    glutamate
+  }
 }

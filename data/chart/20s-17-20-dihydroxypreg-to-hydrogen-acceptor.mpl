@@ -15,4 +15,22 @@ pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor "(20S)-17,20-dihydroxypregâ
     <-> ec_1_14_99_12 [1.14.99.12] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     testololactone
   }
+
+  branch from 17_hydroxyprogesterone side left {
+    17_hydroxyprogesterone
+    <-> ec_1_14_14_16 [1.14.14.16] +fmnh2 +o2 +fmn +h2o +hplus
+    11_deoxycortisol
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_5_1_50 [2.5.1.50] +zeatin +o_acetyl_l_serine +hplus
+    l_lupinic_acid
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_3_99_19 [1.3.99.19] +quinoline_4_carboxylate +h2o +hydrogen_donor
+    2_oxo_1_2_dihydroquinoline_4_carboxylate
+  }
 }

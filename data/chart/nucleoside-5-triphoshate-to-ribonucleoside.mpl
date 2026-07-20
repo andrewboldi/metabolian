@@ -15,4 +15,16 @@ pathway nucleoside-5-triphoshate-to-ribonucleoside "nucleoside 5'-triphoshate to
     <-> ec_3_1_3_5 [3.1.3.5] +h2o -pi
     ribonucleoside
   }
+
+  branch from nucleoside_5_monophosphate side left {
+    nucleoside_5_monophosphate
+    <-> ec_3_1_3_97 [3.1.3.97] +h2o +pi
+    nucleoside_3_5_bisphosphate
+  }
+
+  branch from ribonucleoside side right {
+    ribonucleoside
+    <-> ec_3_1_3_6 [3.1.3.6] +h2o +pi
+    ribonucleoside_3_monophosphate
+  }
 }

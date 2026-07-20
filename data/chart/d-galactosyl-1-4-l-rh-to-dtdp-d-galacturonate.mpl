@@ -15,4 +15,16 @@ pathway d-galactosyl-1-4-l-rh-to-dtdp-d-galacturonate "β-D-galactosyl-(1→4)-L
     <-> ec_1_1_1_186 [1.1.1.186] +nadp +h2o -nadph -hplus
     dtdp_d_galacturonate
   }
+
+  branch from l_rhamnopyranose side left {
+    l_rhamnopyranose
+    <-> ec_3_2_1_190 [3.2.1.190] +dioscin +h2o
+    diosgenin_3_o_d_glucoside
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_3_4_11 [6.3.4.11] +l_lysinium +biotinate +atp +amp +hplus
+    biotinyl_l_lysine
+  }
 }

@@ -216,6 +216,92 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "o_phosphonato_l_threonine_2",
+      "name": "O-phosphonato-L-threonine(2−)",
+      "short": "O-phosphonato-L-thr…",
+      "formula": "C4H6NO5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61977"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "maltose",
+      "name": "maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17306"
+      }
+    },
+    {
+      "id": "maltose_6_phosphate",
+      "name": "α-maltose 6'-phosphate",
+      "short": "α-maltose 6'-P",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57478"
+      }
+    },
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "2_o_sulfo_2_o_stearoyl_trehalose",
+      "name": "2-O-sulfo-2'-O-stearoyl-α,α-trehalose",
+      "short": "2-O-sulfo-2'-O-stea…",
+      "formula": "C30H55O15S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142478"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_d_galactosamine_4_sulfate",
+      "name": "UDP-N-acetyl-α-D-galactosamine 4-sulfate",
+      "short": "UDP-N-acetyl-α-D-ga…",
+      "formula": "C17H24N3O20P2S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:132114"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_d_galactosamine_4_6_bissulfate",
+      "name": "UDP-N-acetyl-α-D-galactosamine 4,6-bissulfate",
+      "short": "UDP-N-acetyl-α-D-ga…",
+      "formula": "C17H23N3O23P2S2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:132115"
+      }
     }
   ],
   "enzymes": [
@@ -273,6 +359,27 @@
       "name": "2-O-sulfo trehalose long-chain-acyltransferase",
       "ec": [
         "2.3.1.288"
+      ]
+    },
+    {
+      "id": "ec_2_7_11_30",
+      "name": "receptor protein serine/threonine kinase",
+      "ec": [
+        "2.7.11.30"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_208",
+      "name": "protein-N(pi)-phosphohistidine--maltose phosphotransferase",
+      "ec": [
+        "2.7.1.208"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_7",
+      "name": "UDP-N-acetylgalactosamine-4-sulfate sulfotransferase",
+      "ec": [
+        "2.8.2.7"
       ]
     }
   ],
@@ -641,6 +748,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:44060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "receptor protein serine/threonine kinase",
+      "equation": "L-threonyl-[receptor-protein] + ATP = O-phospho-L-threonyl-[receptor-protein] + ADP + H(+)",
+      "ec": "2.7.11.30",
+      "substrates": [
+        {
+          "metabolite": "l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_phosphonato_l_threonine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_11_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:44880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "protein-N(pi)-phosphohistidine--maltose phosphotransferase",
+      "equation": "D-maltose(out) + N(pros)-phospho-L-histidyl-[protein] = alpha-maltose 6'-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.208",
+      "substrates": [
+        {
+          "metabolite": "maltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maltose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_208"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:49300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "2-O-sulfo trehalose long-chain-acyltransferase",
+      "equation": "2-O-sulfo-alpha,alpha-trehalose + octadecanoyl-CoA = 2-O-sulfo-2'-O-octadecanoyl-alpha,alpha-trehalose + CoA",
+      "ec": "2.3.1.288",
+      "substrates": [
+        {
+          "metabolite": "trehalose_2_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_sulfo_2_o_stearoyl_trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_288"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:58048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "UDP-N-acetylgalactosamine-4-sulfate sulfotransferase",
+      "equation": "UDP-N-acetyl-alpha-D-galactosamine 4-sulfate + 3'-phosphoadenylyl sulfate = UDP-N-acetyl-alpha-D-galactosamine 4,6-bissulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.7",
+      "substrates": [
+        {
+          "metabolite": "udp_n_acetyl_d_galactosamine_4_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_d_galactosamine_4_6_bissulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:14337"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14337"
           }
         ]
       }

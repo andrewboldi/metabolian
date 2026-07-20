@@ -15,4 +15,10 @@ pathway 4-aminobenzoate-to-l-glutamate "4-aminobenzoate to L-glutamate" {
     <-> ec_3_5_1_123 [3.5.1.123] +h2o -glutamate -hplus
     aniline
   }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
+    ctp
+  }
 }

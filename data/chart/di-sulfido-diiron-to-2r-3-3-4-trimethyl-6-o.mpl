@@ -21,4 +21,22 @@ pathway di-sulfido-diiron-to-2r-3-3-4-trimethyl-6-o "di-μ-sulfido-diiron to [(2
     <-> ec_1_14_13_160 [1.14.13.160] +nadph +o2 +hplus -nadp -h2o
     2r_3_3_4_trimethyl_6_oxo_3_6_dihydro_1h_pyran_2
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
+    novapikromycin
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_78 [1.14.14.78] +phylloquinone +fmnh2 +o2 +h2o +hplus
+    hydroxyphylloquinone
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_49 [4.2.3.49] +fpp +h2o
+    3r_6e_nerolidol
+  }
 }

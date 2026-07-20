@@ -15,4 +15,10 @@ pathway d-fructofuranose-to-d-glucose "β-D-fructofuranose… to α-D-glucose…
     <-> ec_2_7_1_10 [2.7.1.10] +g1p +atp -adp -hplus
     d_glucose_1_6_bisphosphate
   }
+
+  branch from d_fructofuranose_6_phosphate side left {
+    d_fructofuranose_6_phosphate
+    <-> ec_5_3_1_9 [5.3.1.9]
+    d_fructofuranose_6_phosphate
+  }
 }

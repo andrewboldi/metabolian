@@ -172,6 +172,112 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "l_tyrosiniumyl_l_arginine",
+      "name": "L-tyrosiniumyl-L-arginine",
+      "short": "L-tyrosiniumyl-L-ar…",
+      "formula": "C15H24N5O4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58184"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "4_3_methylbut_2_enyl_l_tryptophan",
+      "name": "4-(3-methylbut-2-enyl)-L-tryptophan",
+      "short": "4-(3-methylbut-2-en…",
+      "formula": "C16H20N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58209"
+      }
+    },
+    {
+      "id": "l_lysiniumyl_2_group",
+      "name": "L-lysiniumyl(2+) group",
+      "short": "L-lysiniumyl(2+)…",
+      "formula": "C6H15N2O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:65249"
+      }
+    },
+    {
+      "id": "3_l_leucyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-leucyl)adenylyl zwitterionic group",
+      "short": "3'-(L-leucyl)adenyl…",
+      "formula": "C16H24N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78494"
+      }
+    },
+    {
+      "id": "l_leucyl_l_lysyl_2_group",
+      "name": "L-leucyl-L-lysyl(2+) group",
+      "short": "L-leucyl-L-lysyl(2+…",
+      "formula": "C12H26N3O2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:133043"
+      }
+    },
+    {
+      "id": "3_indol_3_yl_pyruvate",
+      "name": "3-(indol-3-yl)pyruvate",
+      "short": "3-(indol-3-yl)pyruv…",
+      "formula": "C11H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17640"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "indol_3_ylacetyl_coa",
+      "name": "indol-3-ylacetyl-CoA",
+      "formula": "C31H39N8O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57271"
+      }
     }
   ],
   "enzymes": [
@@ -208,6 +314,34 @@
       "name": "mycocyclosin synthase",
       "ec": [
         "1.14.19.70"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_24",
+      "name": "tyrosine--arginine ligase",
+      "ec": [
+        "6.3.2.24"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_34",
+      "name": "4-dimethylallyltryptophan synthase",
+      "ec": [
+        "2.5.1.34"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_6",
+      "name": "lysine/arginine leucyltransferase",
+      "ec": [
+        "2.3.2.6"
+      ]
+    },
+    {
+      "id": "ec_1_2_7_8",
+      "name": "indolepyruvate ferredoxin oxidoreductase",
+      "ec": [
+        "1.2.7.8"
       ]
     }
   ],
@@ -412,6 +546,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:35547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tyrosine--arginine ligase",
+      "equation": "L-tyrosine + L-arginine + ATP = L-tyrosyl-L-arginine + AMP + diphosphate + H(+)",
+      "ec": "6.3.2.24",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tyrosiniumyl_l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15345"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4-dimethylallyltryptophan synthase",
+      "equation": "dimethylallyl diphosphate + L-tryptophan = 4-(3-methylbut-2-enyl)-L-tryptophan + diphosphate",
+      "ec": "2.5.1.34",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_3_methylbut_2_enyl_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:14173"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "lysine/arginine leucyltransferase",
+      "equation": "N-terminal L-lysyl-[protein] + L-leucyl-tRNA(Leu) = N-terminal L-leucyl-L-lysyl-[protein] + tRNA(Leu) + H(+)",
+      "ec": "2.3.2.6",
+      "substrates": [
+        {
+          "metabolite": "l_lysiniumyl_2_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_l_leucyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_leucyl_l_lysyl_2_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:12340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "indolepyruvate ferredoxin oxidoreductase",
+      "equation": "indole-3-pyruvate + 2 oxidized [2Fe-2S]-[ferredoxin] + CoA = (indol-3-yl)acetyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + CO2 + H(+)",
+      "ec": "1.2.7.8",
+      "substrates": [
+        {
+          "metabolite": "3_indol_3_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indol_3_ylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_7_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:12645"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12645"
           }
         ]
       }

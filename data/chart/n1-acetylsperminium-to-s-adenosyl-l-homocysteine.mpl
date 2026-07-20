@@ -15,4 +15,16 @@ pathway n1-acetylsperminium-to-s-adenosyl-l-homocysteine "N1-acetylsperminium to
     <-> ec_2_1_1_53 [2.1.1.53] +1_4_butanediammonium +sam -sah -hplus
     n_methylputrescinium
   }
+
+  branch from spermidine side left {
+    spermidine
+    <-> ec_2_6_1_127 [2.6.1.127] +8s_8_amino_7_oxononanoic_acid +7r_8s_7_8_diammoniononanoate
+    n_3_ammoniopropyl_4_ammoniobutanal
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_165 [2.1.1.165] +bromide +sam
+    bromomethane
+  }
 }

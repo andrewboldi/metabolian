@@ -15,4 +15,16 @@ pathway trans-aconitate-to-succinate "trans-aconitate to succinate" {
     <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa -succinate
     itaconyl_coa
   }
+
+  branch from itaconyl_coa side left {
+    itaconyl_coa
+    <-> ec_4_2_1_56 [4.2.1.56] +h2o
+    3s_citramalyl_coa
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_25 [1.14.11.25] +2_deoxymugineate +akg +o2 +co2 +hplus
+    3_epi_3_hydroxy_2_deoxymugineate
+  }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-2-4-diazaniumylbutyrate-to-succinate",
   "name": "L-2,4-diazaniumylbutyrate to succinate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from L-2,4-diazaniumylbutyrate to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -127,6 +127,36 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "2s_2_acetamido_4_aminobutanoic_acid",
+      "name": "(2S)-2-acetamido-4-aminobutanoic acid",
+      "short": "2-acetamido-4-amino…",
+      "formula": "C6H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77587"
+      }
+    },
+    {
+      "id": "2_aminoethyl_phosphonic_acid",
+      "name": "(2-aminoethyl)phosphonic acid",
+      "short": "(2-aminoethyl)phosp…",
+      "formula": "C2H8NO3P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57418"
+      }
+    },
+    {
+      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
+      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
+      "short": "(2-amino-1-hydroxye…",
+      "formula": "C2H8NO4P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141612"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +179,20 @@
       "name": "ectoine hydroxylase",
       "ec": [
         "1.14.11.55"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_44",
+      "name": "ectoine hydrolase",
+      "ec": [
+        "3.5.4.44"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_46",
+      "name": "2-aminoethylphosphonate dioxygenase",
+      "ec": [
+        "1.14.11.46"
       ]
     }
   ],
@@ -292,6 +336,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:45740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ectoine hydrolase",
+      "equation": "L-ectoine + H2O = (2S)-2-acetamido-4-aminobutanoate",
+      "ec": "3.5.4.44",
+      "substrates": [
+        {
+          "metabolite": "ectoine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_acetamido_4_aminobutanoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52304"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-aminoethylphosphonate dioxygenase",
+      "equation": "(2-aminoethyl)phosphonate + 2-oxoglutarate + O2 = (1R)-(2-amino-1-hydroxyethyl)phosphonate + succinate + CO2",
+      "ec": "1.14.11.46",
+      "substrates": [
+        {
+          "metabolite": "2_aminoethyl_phosphonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41440"
           }
         ]
       }

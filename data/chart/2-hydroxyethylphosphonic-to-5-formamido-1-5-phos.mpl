@@ -15,4 +15,10 @@ pathway 2-hydroxyethylphosphonic-to-5-formamido-1-5-phos "2-hydroxyethylphosphon
     <-> ec_6_3_4_23 [6.3.4.23] +aicar +atp -adp -pi
     faicar
   }
+
+  branch from formate side left {
+    formate
+    <-> ec_1_14_15_36 [1.14.15.36] +14_methyl_steroid +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    14_steroid
+  }
 }

@@ -15,4 +15,16 @@ pathway 6-phosphonatooxy-d-glucon-to-succinate "6-phosphonatooxy-D-glucon… to 
     <-> ec_1_14_20_12 [1.14.20.12] +akg +o2 +hplus -succinate -co2 -h2o
     3_e_2_isocyanovinyl_indole
   }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_11_67 [1.14.11.67] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
+    l_lysinium
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_58 [1.14.11.58] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +akg +o2 +co2
+    n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine
+  }
 }

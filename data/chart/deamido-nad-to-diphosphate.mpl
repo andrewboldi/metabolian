@@ -15,4 +15,16 @@ pathway deamido-nad-to-diphosphate "deamido-NAD to diphosphate" {
     <-> ec_4_4_1_37 [4.4.1.37] +l_cysteine +pyridinium_3_carboxylate_5_thiocarboxylate_monon +atp -dehydroalanine -amp -ppi -hplus
     pyridinium_3_5_bisthiocarboxylate_mononucleotide
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_3_2_14 [6.3.2.14] +2_3_dihydroxybenzoate +serine +atp +amp +hplus
+    enterobactin
+  }
+
+  branch from pyridinium_3_5_bisthiocarboxylate_mononucleotide side right {
+    pyridinium_3_5_bisthiocarboxylate_mononucleotide
+    <-> ec_4_99_1_12 [4.99.1.12] +ni_ii_pyridinium_3_5_bisthiocarboxylate_mononucl
+    nickel
+  }
 }

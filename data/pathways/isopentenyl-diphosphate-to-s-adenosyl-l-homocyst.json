@@ -123,6 +123,44 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "5_epi_aristolochene",
+      "name": "(+)-5-epi-aristolochene",
+      "short": "(+)-5-epi-aristoloc…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23925"
+      }
+    },
+    {
+      "id": "demethylspheroidene",
+      "name": "demethylspheroidene",
+      "formula": "C40H58O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62505"
+      }
+    },
+    {
+      "id": "spheroidene",
+      "name": "spheroidene",
+      "formula": "C41H60O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35330"
+      }
     }
   ],
   "enzymes": [
@@ -145,6 +183,20 @@
       "name": "demethylmenaquinone methyltransferase",
       "ec": [
         "2.1.1.163"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_61",
+      "name": "5-epiaristolochene synthase",
+      "ec": [
+        "4.2.3.61"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_210",
+      "name": "demethylspheroidene O-methyltransferase",
+      "ec": [
+        "2.1.1.210"
       ]
     }
   ],
@@ -292,6 +344,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:44780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "5-epiaristolochene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-5-epi-aristolochene + diphosphate",
+      "ec": "4.2.3.61",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_epi_aristolochene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28635"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28635"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "demethylspheroidene O-methyltransferase",
+      "equation": "demethylspheroidene + S-adenosyl-L-methionine = spheroidene + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.210",
+      "substrates": [
+        {
+          "metabolite": "demethylspheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_210"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30903"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30903"
           }
         ]
       }

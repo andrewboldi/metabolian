@@ -15,4 +15,16 @@ pathway l-cysteine-to-pentadecanal "L-cysteine to pentadecanal" {
     <-> ec_1_11_1_3 [1.11.1.3] +palmitate +h2o2 +hplus -co2 -h2o
     pentadecanal
   }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
+    3e_phycocyanobilin
+  }
+
+  branch from palmitate side right {
+    palmitate
+    <-> ec_3_1_1_64 [3.1.1.64] +all_trans_retinyl_palmitate +h2o +hplus
+    11_cis_retinol
+  }
 }

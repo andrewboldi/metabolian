@@ -261,6 +261,52 @@
       "xrefs": {
         "chebi": "CHEBI:49257"
       }
+    },
+    {
+      "id": "p_cresol",
+      "name": "p-cresol",
+      "formula": "C7H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17847"
+      }
+    },
+    {
+      "id": "tocopherol",
+      "name": "δ-tocopherol",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47772"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "trichodiene",
+      "name": "trichodiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15861"
+      }
+    },
+    {
+      "id": "tocopherol",
+      "name": "γ-tocopherol",
+      "formula": "C28H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18185"
+      }
     }
   ],
   "enzymes": [
@@ -332,6 +378,27 @@
       "name": "2-acetolactate mutase",
       "ec": [
         "5.4.99.3"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_83",
+      "name": "4-hydroxyphenylacetate decarboxylase",
+      "ec": [
+        "4.1.1.83"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_24",
+      "name": "tocopherol cyclase",
+      "ec": [
+        "5.5.1.24"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_6",
+      "name": "trichodiene synthase",
+      "ec": [
+        "4.2.3.6"
       ]
     }
   ],
@@ -769,6 +836,166 @@
           {
             "db": "Rhea",
             "id": "RHEA:25404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "4-hydroxyphenylacetate decarboxylase",
+      "equation": "4-hydroxyphenylacetate + H(+) = 4-methylphenol + CO2",
+      "ec": "4.1.1.83",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyphenylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p_cresol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:22732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "tocopherol cyclase",
+      "equation": "delta-tocopherol = 2-methyl-6-phytyl-1,4-benzene-1,4-diol",
+      "ec": "5.5.1.24",
+      "substrates": [
+        {
+          "metabolite": "tocopherol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_r_2_methyl_6_phytylhydroquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:37987"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37987"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "trichodiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = trichodiene + diphosphate",
+      "ec": "4.2.3.6",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trichodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:12052"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "tocopherol cyclase",
+      "equation": "gamma-tocopherol = 2,3-dimethyl-6-phytylbenzene-1,4-diol",
+      "ec": "5.5.1.24",
+      "substrates": [
+        {
+          "metabolite": "tocopherol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_r_2_3_dimethyl_6_phytylhydroquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:37983"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37983"
           }
         ]
       }

@@ -146,6 +146,43 @@
       "xrefs": {
         "chebi": "CHEBI:78573"
       }
+    },
+    {
+      "id": "1h_indole",
+      "name": "1H-indole",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16881"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cadinene",
+      "name": "(+)-γ-cadinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63205"
+      }
     }
   ],
   "enzymes": [
@@ -175,6 +212,20 @@
       "name": "O-phospho-L-seryl-tRNA(Sec):L-selenocysteinyl-tRNA synthase",
       "ec": [
         "2.9.1.2"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_122",
+      "name": "tryptophan synthase (indole-salvaging)",
+      "ec": [
+        "4.2.1.122"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_92",
+      "name": "(+)-gamma-cadinene synthase",
+      "ec": [
+        "4.2.3.92"
       ]
     }
   ],
@@ -371,6 +422,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:25041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tryptophan synthase (indole-salvaging)",
+      "equation": "indole + L-serine = L-tryptophan + H2O",
+      "ec": "4.2.1.122",
+      "substrates": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_122"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26434"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26434"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(+)-gamma-cadinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-gamma-cadinene + diphosphate",
+      "ec": "4.2.3.92",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:31827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31827"
           }
         ]
       }

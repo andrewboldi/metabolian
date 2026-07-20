@@ -15,4 +15,10 @@ pathway deacetylisoipecoside-to-s-adenosyl-l-homocystein "deacetylisoipecoside t
     <-> ec_2_1_1_28 [2.1.1.28] +sam -sah -hplus
     epinephrine
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_88 [2.1.1.88] +gossypetin +sam +hplus
+    3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate
+  }
 }

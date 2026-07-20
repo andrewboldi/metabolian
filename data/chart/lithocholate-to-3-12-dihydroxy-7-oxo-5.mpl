@@ -17,4 +17,16 @@ pathway lithocholate-to-3-12-dihydroxy-7-oxo-5 "lithocholate to 3α,12α-dihydro
     <-> ec_1_1_1_159 [1.1.1.159] +nad -nadh -hplus
     3_12_dihydroxy_7_oxo_5_cholanate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_50 [4.2.3.50] +2_cis_6_cis_farnesyl_diphosphate
+    santalene
+  }
+
+  branch from lithocholate side right {
+    lithocholate
+    <-> ec_1_1_1_52 [1.1.1.52] +nad +nadh +hplus
+    3_oxo_5_cholanate
+  }
 }

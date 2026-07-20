@@ -15,4 +15,16 @@ pathway dimethylsulfonio-acetate-to-l-methionine "(dimethylsulfonio)acetate to L
     <-> ec_2_1_1_10 [2.1.1.10] +homocysteine -hplus
     methionine
   }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_2_5_1_94 [2.5.1.94] +chloride +sam
+    5_chloro_5_deoxyadenosine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_130 [2.1.1.130] +precorrin_2 +sam +hplus
+    precorrin_3a
+  }
 }

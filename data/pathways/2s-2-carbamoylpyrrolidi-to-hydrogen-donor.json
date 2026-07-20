@@ -91,6 +91,89 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "s_1_pyrroline_5_carboxylate",
+      "name": "(S)-1-pyrroline-5-carboxylate",
+      "short": "1-pyrroline-5-carbo…",
+      "formula": "C5H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17388"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_homoserine",
+      "name": "L-homoserine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57476"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "trans_3_hydroxy_l_proline",
+      "name": "trans-3-hydroxy-L-proline",
+      "short": "trans-3-hydroxy-L-p…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57938"
+      }
+    },
+    {
+      "id": "l_sorbopyranose",
+      "name": "L-sorbopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48649"
+      }
+    },
+    {
+      "id": "l_xylo_hexos_2_ulose",
+      "name": "L-xylo-hexos-2-ulose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48657"
+      }
     }
   ],
   "enzymes": [
@@ -113,6 +196,34 @@
       "name": "D-proline dehydrogenase",
       "ec": [
         "1.5.99.13"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_2",
+      "name": "pyrroline-5-carboxylate reductase",
+      "ec": [
+        "1.5.1.2"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_1",
+      "name": "cystathionine gamma-lyase",
+      "ec": [
+        "4.4.1.1"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_77",
+      "name": "trans-L-3-hydroxyproline dehydratase",
+      "ec": [
+        "4.2.1.77"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_32",
+      "name": "L-sorbose 1-dehydrogenase",
+      "ec": [
+        "1.1.99.32"
       ]
     }
   ],
@@ -240,6 +351,182 @@
           {
             "db": "Rhea",
             "id": "RHEA:27306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pyrroline-5-carboxylate reductase",
+      "equation": "L-proline + NAD(+) = (S)-1-pyrroline-5-carboxylate + NADH + 2 H(+)",
+      "ec": "1.5.1.2",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_pyrroline_5_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:14105"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14105"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cystathionine gamma-lyase",
+      "equation": "L-homoserine = 2-oxobutanoate + NH4(+)",
+      "ec": "4.4.1.1",
+      "substrates": [
+        {
+          "metabolite": "l_homoserine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24923"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24923"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "trans-L-3-hydroxyproline dehydratase",
+      "equation": "trans-3-hydroxy-L-proline = 1-pyrroline-2-carboxylate + H2O",
+      "ec": "4.2.1.77",
+      "substrates": [
+        {
+          "metabolite": "trans_3_hydroxy_l_proline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_pyrroline_2_carboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:10320"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-sorbose 1-dehydrogenase",
+      "equation": "L-sorbopyranose + A = 1-dehydro-L-sorbose + AH2",
+      "ec": "1.1.99.32",
+      "substrates": [
+        {
+          "metabolite": "l_sorbopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylo_hexos_2_ulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:24878"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24878"
           }
         ]
       }

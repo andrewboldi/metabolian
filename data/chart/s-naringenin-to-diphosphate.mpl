@@ -15,4 +15,16 @@ pathway s-naringenin-to-diphosphate "(S)-naringenin to diphosphate" {
     <-> ec_2_5_1_71 [2.5.1.71] +dmapp -ppi
     sophoraflavanone_g
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
+    ditrans_polycis_dodecaprenyl_diphosphate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_126 [1.14.14.126] +amyrin +fmnh2 +o2 +h2o +hplus
+    oleanolate
+  }
 }

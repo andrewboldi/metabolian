@@ -81,6 +81,42 @@
       "xrefs": {
         "chebi": "CHEBI:59881"
       }
+    },
+    {
+      "id": "d_altronate",
+      "name": "D-altronate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17360"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "d_mannonate",
+      "name": "D-mannonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17767"
+      }
     }
   ],
   "enzymes": [
@@ -103,6 +139,20 @@
       "name": "tagaturonate epimerase",
       "ec": [
         "5.1.2.7"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_58",
+      "name": "tagaturonate reductase",
+      "ec": [
+        "1.1.1.58"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_57",
+      "name": "fructuronate reductase",
+      "ec": [
+        "1.1.1.57"
       ]
     }
   ],
@@ -226,6 +276,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:51656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tagaturonate reductase",
+      "equation": "D-altronate + NAD(+) = keto-D-tagaturonate + NADH + H(+)",
+      "ec": "1.1.1.58",
+      "substrates": [
+        {
+          "metabolite": "d_altronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_tagaturonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17813"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17813"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "fructuronate reductase",
+      "equation": "D-mannonate + NAD(+) = keto-D-fructuronate + NADH + H(+)",
+      "ec": "1.1.1.57",
+      "substrates": [
+        {
+          "metabolite": "d_mannonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_fructuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15729"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15729"
           }
         ]
       }

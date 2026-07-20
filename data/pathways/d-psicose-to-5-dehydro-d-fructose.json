@@ -125,6 +125,63 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "n_phosphonato_l_histidine",
+      "name": "Nπ-phosphonato-L-histidine",
+      "short": "Nπ-phosphonato-L-hi…",
+      "formula": "C6H6N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64837"
+      }
+    },
+    {
+      "id": "l_sorbose_1_phosphate",
+      "name": "L-sorbose 1-phosphate",
+      "short": "L-sorbose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137409"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "quinolin_7_ol",
+      "name": "quinolin-7-ol",
+      "formula": "C9H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48980"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "7_hydroxyquinolin_2_1h_one",
+      "name": "7-hydroxyquinolin-2(1H)-one",
+      "short": "7-hydroxyquinolin-2…",
+      "formula": "C9H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48987"
+      }
     }
   ],
   "enzymes": [
@@ -161,6 +218,20 @@
       "name": "sorbose 5-dehydrogenase (NADP(+))",
       "ec": [
         "1.1.1.123"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_206",
+      "name": "protein-N(pi)-phosphohistidine--L-sorbose phosphotransferase",
+      "ec": [
+        "2.7.1.206"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_17",
+      "name": "quinoline 2-oxidoreductase",
+      "ec": [
+        "1.3.99.17"
       ]
     }
   ],
@@ -341,6 +412,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:15001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "protein-N(pi)-phosphohistidine--L-sorbose phosphotransferase",
+      "equation": "keto-L-sorbose(out) + N(pros)-phospho-L-histidyl-[protein] = L-sorbose 1-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.206",
+      "substrates": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_sorbose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_206"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49296"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "quinoline 2-oxidoreductase",
+      "equation": "quinolin-7-ol + A + H2O = 7-hydroxyquinolin-2(1H)-one + AH2",
+      "ec": "1.3.99.17",
+      "substrates": [
+        {
+          "metabolite": "quinolin_7_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_hydroxyquinolin_2_1h_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25920"
           }
         ]
       }

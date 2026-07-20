@@ -15,4 +15,22 @@ pathway 2s-3-1h-indol-3-yl-2-to-hapalindole-h "(2S)-3-(1H-indol-3-yl)-2-… to h
     <-> ec_5_5_1_31 [5.5.1.31]
     hapalindole_h
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_n4 [1.14.11.n4] +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
+  }
+
+  branch from 3_geranyl_3_z_2_isocyanovinyl_3h_indole side right {
+    3_geranyl_3_z_2_isocyanovinyl_3h_indole
+    <-> ec_5_5_1_32 [5.5.1.32]
+    12_epi_hapalindole_u
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_84 [4.2.3.84] +fpp +h2o
+    10_epi_eudesmol
+  }
 }

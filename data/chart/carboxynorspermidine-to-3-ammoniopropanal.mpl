@@ -15,4 +15,16 @@ pathway carboxynorspermidine-to-3-ammoniopropanal "carboxynorspermidine to 3-amm
     <-> ec_1_5_3_16 [1.5.3.16] +o2 +h2o -3_ammoniopropanal -h2o2
     bis_3_azaniumylpropyl_azanium
   }
+
+  branch from 3_3_3_tetraminium side left {
+    3_3_3_tetraminium
+    <-> ec_2_5_1_127 [2.5.1.127] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    caldopentamine
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> ec_2_5_1_43 [2.5.1.43] +sam +hplus
+    s_s_s_nicotianamine_trizwitterion
+  }
 }

@@ -159,6 +159,43 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "pyridine",
+      "name": "pyridine",
+      "formula": "C5H5N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16227"
+      }
+    },
+    {
+      "id": "n_methylpyridinium",
+      "name": "N-methylpyridinium",
+      "formula": "C6H8N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15761"
+      }
     }
   ],
   "enzymes": [
@@ -195,6 +232,20 @@
       "name": "sialate 8-O-methyltransferase",
       "ec": [
         "2.1.1.402"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_183",
+      "name": "UDP-N-acetylglucosamine 2-epimerase (hydrolyzing)",
+      "ec": [
+        "3.2.1.183"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_87",
+      "name": "pyridine N-methyltransferase",
+      "ec": [
+        "2.1.1.87"
       ]
     }
   ],
@@ -428,6 +479,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:85499"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "UDP-N-acetylglucosamine 2-epimerase (hydrolyzing)",
+      "equation": "UDP-N-acetyl-alpha-D-glucosamine + H2O = aldehydo-N-acetyl-D-mannosamine + UDP + H(+)",
+      "ec": "3.2.1.183",
+      "substrates": [
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_n_acetyl_d_mannosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_183"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:30683"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30683"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "pyridine N-methyltransferase",
+      "equation": "pyridine + S-adenosyl-L-methionine = N-methylpyridinium + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.87",
+      "substrates": [
+        {
+          "metabolite": "pyridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylpyridinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:16893"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16893"
           }
         ]
       }

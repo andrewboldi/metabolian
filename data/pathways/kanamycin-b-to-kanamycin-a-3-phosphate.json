@@ -144,6 +144,82 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "3s_3_hydroxy_l_histidine",
+      "name": "(3S)-3-hydroxy-L-histidine",
+      "short": "3-hydroxy-L-histidi…",
+      "formula": "C6H7N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138021"
+      }
+    },
+    {
+      "id": "l_glutaminiumyl_group",
+      "name": "L-glutaminiumyl group",
+      "short": "L-glutaminiumyl…",
+      "formula": "C5H10N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:64722"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_glutamyl_zwitterionic_group",
+      "name": "L-α-glutamyl zwitterionic group",
+      "short": "L-α-glutamyl…",
+      "formula": "C5H8NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64721"
+      }
+    },
+    {
+      "id": "2_deamino_2_hydroxyneamine",
+      "name": "2'-deamino-2'-hydroxyneamine",
+      "short": "2'-deamino-2'-hydro…",
+      "formula": "C12H28N3O7",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:67213"
+      }
+    },
+    {
+      "id": "udp_d_kanosamine",
+      "name": "UDP-α-D-kanosamine",
+      "formula": "C15H24N3O16P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71964"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +242,27 @@
       "name": "kanamycin kinase",
       "ec": [
         "2.7.1.95"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_n4",
+      "name": "ankyrin-repeat-histidine dioxagenase",
+      "ec": [
+        "1.14.11.n4"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_122",
+      "name": "protein N-terminal glutamine amidohydrolase",
+      "ec": [
+        "3.5.1.122"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_301",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "ec": [
+        "2.4.1.301"
       ]
     }
   ],
@@ -321,6 +418,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:24256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ankyrin-repeat-histidine dioxagenase",
+      "equation": "L-histidyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-histidyl-[ankyrin-repeat domain protein] + succinate + CO2",
+      "ec": "1.14.11.n4",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_hydroxy_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_n4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54264"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "protein N-terminal glutamine amidohydrolase",
+      "equation": "N-terminal L-glutaminyl-[protein] + H2O = N-terminal L-glutamyl-[protein] + NH4(+)",
+      "ec": "3.5.1.122",
+      "substrates": [
+        {
+          "metabolite": "l_glutaminiumyl_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_122"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "equation": "2'-deamino-2'-hydroxyneamine + UDP-alpha-D-kanosamine = kanamycin A + UDP + H(+)",
+      "ec": "2.4.1.301",
+      "substrates": [
+        {
+          "metabolite": "2_deamino_2_hydroxyneamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_kanosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kanamycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_301"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:35795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35795"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-glucitol-6-phosphate-to-d-mannopyranose",
   "name": "D-glucitol 6-phosphate to D-mannopyranose…",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from D-glucitol 6-phosphate(2−) to D-mannopyranose 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -147,6 +147,55 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "aldehydo_d_glucose_6_phosphate",
+      "name": "aldehydo-D-glucose 6-phosphate",
+      "short": "aldehydo-D-glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57584"
+      }
+    },
+    {
+      "id": "2_amino_2_deoxy_d_gluconic_acid",
+      "name": "2-amino-2-deoxy-D-gluconic acid",
+      "short": "2-amino-2-deoxy-D-g…",
+      "formula": "C6H13NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58269"
+      }
+    },
+    {
+      "id": "d_glucosaminic_acid_6_phosphate",
+      "name": "D-glucosaminic acid 6-phosphate",
+      "short": "D-glucosaminic…",
+      "formula": "C6H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75705"
+      }
+    },
+    {
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4139"
+      }
+    },
+    {
+      "id": "d_galactopyranose_6_phosphate",
+      "name": "D-galactopyranose 6-phosphate",
+      "short": "D-galactopyranose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:91004"
+      }
     }
   ],
   "enzymes": [
@@ -183,6 +232,27 @@
       "name": "mannose-6-phosphate 6-reductase",
       "ec": [
         "1.1.1.224"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_200",
+      "name": "aldose-6-phosphate reductase (NADPH)",
+      "ec": [
+        "1.1.1.200"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_203",
+      "name": "protein-N(pi)-phosphohistidine--D-glucosaminate phosphotransferase",
+      "ec": [
+        "2.7.1.203"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_204",
+      "name": "protein-N(pi)-phosphohistidine--D-galactose phosphotransferase",
+      "ec": [
+        "2.7.1.204"
       ]
     }
   ],
@@ -416,6 +486,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:14925"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "aldose-6-phosphate reductase (NADPH)",
+      "equation": "D-sorbitol 6-phosphate + NADP(+) = aldehydo-D-glucose 6-phosphate + NADPH + H(+)",
+      "ec": "1.1.1.200",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_glucose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_200"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20037"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "protein-N(pi)-phosphohistidine--D-glucosaminate phosphotransferase",
+      "equation": "2-amino-2-deoxy-D-gluconate(out) + N(pros)-phospho-L-histidyl-[protein] = 2-amino-2-deoxy-D-gluconate 6-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.203",
+      "substrates": [
+        {
+          "metabolite": "2_amino_2_deoxy_d_gluconic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosaminic_acid_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_203"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:49256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "protein-N(pi)-phosphohistidine--D-galactose phosphotransferase",
+      "equation": "N(pros)-phospho-L-histidyl-[protein] + D-galactose(out) = D-galactose 6-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.204",
+      "substrates": [
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactopyranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_204"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:49260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49260"
           }
         ]
       }

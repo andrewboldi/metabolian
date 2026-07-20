@@ -17,4 +17,16 @@ pathway iridodial-lactol-to-s-adenosyl-l-homocysteine "(+)-iridodial lactol to S
     <-> ec_2_1_1_50 [2.1.1.50] +sam -sah
     loganin
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_114 [1.14.14.114] +amorpha_4_11_diene +fmnh2 +o2 +h2o +hplus
+    artemisinate
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_143 [2.1.1.143] +24_methylidenelophenol +sam +hplus
+    z_24_ethylidenelophenol
+  }
 }

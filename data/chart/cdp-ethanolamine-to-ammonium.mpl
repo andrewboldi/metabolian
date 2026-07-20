@@ -15,4 +15,22 @@ pathway cdp-ethanolamine-to-ammonium "CDP-ethanolamine to ammonium" {
     <-> ec_4_2_3_2 [4.2.3.2] +h2o -nh3 -pi
     acetaldehyde
   }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_3_6_1_53 [3.6.1.53] +cdp_choline +h2o +hplus
+    phosphocholine
+  }
+
+  branch from serine side right {
+    serine
+    <-> ec_4_2_1_50 [4.2.1.50] +1h_pyrazole +h2o
+    3_pyrazol_1_yl_l_alanine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nad +h2o +nadh +hplus
+    5_guanidino_2_oxopentanoic_acid
+  }
 }

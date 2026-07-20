@@ -17,4 +17,16 @@ pathway strychnine-to-s-adenosyl-l-homocysteine "strychnine to S-adenosyl-L-homo
     <-> ec_2_1_1_397 [2.1.1.397] +sam -sah -hplus
     brucine
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_42 [1.14.14.42] +l_hexahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_9_methylsulfanyl_nonanal_oxime
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_171 [2.1.1.171] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
+  }
 }

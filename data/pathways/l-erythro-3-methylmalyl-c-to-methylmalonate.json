@@ -127,6 +127,44 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "3_hydroxy_l_kynurenine",
+      "name": "3-hydroxy-L-kynurenine",
+      "short": "3-hydroxy-L-kynuren…",
+      "formula": "C10H12N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58125"
+      }
+    },
+    {
+      "id": "xanthurenate",
+      "name": "xanthurenate",
+      "formula": "C10H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71201"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "r_methylmalonyl_coa",
+      "name": "(R)-Methylmalonyl-CoA",
+      "short": "Methylmalonyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57326"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +187,20 @@
       "name": "(S)-methylmalonyl-CoA hydrolase",
       "ec": [
         "3.1.2.17"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_63",
+      "name": "kynurenine--glyoxylate transaminase",
+      "ec": [
+        "2.6.1.63"
+      ]
+    },
+    {
+      "id": "ec_5_1_99_1",
+      "name": "methylmalonyl-CoA epimerase",
+      "ec": [
+        "5.1.99.1"
       ]
     }
   ],
@@ -296,6 +348,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:17345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "kynurenine--glyoxylate transaminase",
+      "equation": "3-hydroxy-L-kynurenine + glyoxylate = xanthurenate + glycine + H2O",
+      "ec": "2.6.1.63",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_l_kynurenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthurenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "methylmalonyl-CoA epimerase",
+      "equation": "(R)-methylmalonyl-CoA = (S)-methylmalonyl-CoA",
+      "ec": "5.1.99.1",
+      "substrates": [
+        {
+          "metabolite": "r_methylmalonyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_methylmalonyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_99_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20553"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20553"
           }
         ]
       }

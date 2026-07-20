@@ -15,4 +15,22 @@ pathway trehalose-6-mycolate-to-d-glucose "α,α'-trehalose 6-mycolate to β-D-g
     <-> ec_5_1_3_3 [5.1.3.3]
     d_glucose
   }
+
+  branch from d_glucose side left {
+    d_glucose
+    <-> ec_3_1_3_9 [3.1.3.9] +h2o +pi
+    d_glucose_6_phosphate
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> ec_2_4_1_359 [2.4.1.359] +2_o_d_glucopyranosyl_glycerol +pi
+    glycerol
+  }
+
+  branch from d_glucose side left {
+    d_glucose
+    <-> ec_3_2_1_175 [3.2.1.175] +abscisic_acid_d_glucopyranosyl_ester +h2o +hplus
+    abscisate
+  }
 }

@@ -17,4 +17,22 @@ pathway n-acetyl-d-mannosamine-to-carboxylic-acid-anion "N-acetyl-D-mannosamine 
     <-> ec_2_8_3_8 [2.8.3.8] +acyl_coa +acetate -acetyl_coa
     carboxylic_acid_anion
   }
+
+  branch from n_acetylneuraminate side left {
+    n_acetylneuraminate
+    <-> ec_3_1_1_53 [3.1.1.53] +h2o +acetate +hplus
+    n_acetyl_9_o_acetylneuraminate
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylajmalinium +h2o +hplus
+    ajmalinium
+  }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_109 [3.5.1.109] +sphingomyelin +h2o
+    sphingosine_1_phosphocholine
+  }
 }

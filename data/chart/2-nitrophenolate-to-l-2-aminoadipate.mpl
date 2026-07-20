@@ -15,4 +15,22 @@ pathway 2-nitrophenolate-to-l-2-aminoadipate "2-nitrophenolate to L-2-aminoadipa
     <-> ec_1_2_1_95 [1.2.1.95] +l_allysine +amp +ppi +nadp -atp -nadph -hplus
     l_2_aminoadipate
   }
+
+  branch from catechol side left {
+    catechol
+    <-> ec_1_14_14_20 [1.14.14.20] +fadh2 +o2 +fad +h2o +hplus
+    phenol
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_14_12_24 [1.14.12.24] +2_4_dinitrotoluene +nadh +o2 +nad
+    4_methyl_5_nitrocatechol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_47 [2.7.7.47] +streptomycin +atp
+    3_adenylylstreptomycin
+  }
 }

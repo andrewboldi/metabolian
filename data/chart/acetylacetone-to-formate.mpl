@@ -27,4 +27,28 @@ pathway acetylacetone-to-formate "acetylacetone to formate" {
     <-> ec_3_7_1_9 [3.7.1.9] +h2o -formate -hplus
     2_oxopent_4_enoate
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_4_1_3_22 [4.1.3.22] +pyruvate
+    l_citramalate
+  }
+
+  branch from g3p side right {
+    g3p
+    <-> ec_2_2_1_14 [2.2.1.14] +6_deoxy_6_sulfo_d_fructofuranose +l_3_sulfolactaldehyde
+    d_fructofuranose_6_phosphate
+  }
+
+  branch from 3_dehydroquinate side left {
+    3_dehydroquinate
+    <-> ec_1_1_1_282 [1.1.1.282] +nadp +nadph +hplus
+    quinate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_73 [3.5.1.73] +r_carnitinamide +h2o
+    carnitine
+  }
 }

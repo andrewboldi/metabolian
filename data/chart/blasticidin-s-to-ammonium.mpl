@@ -15,4 +15,10 @@ pathway blasticidin-s-to-ammonium "blasticidin S to ammonium" {
     <-> ec_2_7_1_62 [2.7.1.62] +d_hexose +hplus -nh3
     d_hexose_1_phosphate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_77 [3.5.1.77] +n_carbamoyl_d_amino_acid_anion +h2o +hplus +co2
+    d_amino_acid
+  }
 }

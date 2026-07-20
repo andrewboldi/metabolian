@@ -27,4 +27,28 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine-22880 "L-arogenate to S-adenosy
     <-> ec_2_1_1_285 [2.1.1.285] +sam -sah -hplus
     descarbamoylnovobiocin
   }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_6 [2.6.1.6] +leucine +akg
+    kic
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_36 [2.5.1.36] +3_6_9_trihydroxypterocarpan +dmapp
+    6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_113 [2.1.1.113] +2_deoxycytidine_5_monophosphate_1 +sam +hplus
+    n4_methyl_dcmp_1
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> ec_2_4_1_311 [2.4.1.311] +dtdp_l_4_epi_vancosamine +devancoaminyl_vancomycin +hplus
+    chloroorienticin_b
+  }
 }

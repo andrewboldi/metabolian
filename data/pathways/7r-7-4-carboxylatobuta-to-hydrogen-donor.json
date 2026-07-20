@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "7r-7-4-carboxylatobuta-to-hydrogen-donor",
   "name": "(7R)-7-(4-carboxylatobuta… to hydrogen donor",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (7R)-7-(4-carboxylatobutanamido)cephalosporanate to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,6 +119,109 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "3_hydroxy_16_methoxy_2_3_dihydrotabersoninium",
+      "name": "3-hydroxy-16-methoxy-2,3-dihydrotabersoninium",
+      "short": "3-hydroxy-16-methox…",
+      "formula": "C22H29N2O4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58485"
+      }
+    },
+    {
+      "id": "11_o_demethyl_17_o_deacetylvindolinium",
+      "name": "11-O-demethyl-17-O-deacetylvindolinium",
+      "short": "11-O-demethyl-17-O-…",
+      "formula": "C22H29N2O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57657"
+      }
+    },
+    {
+      "id": "l_saccharopinate",
+      "name": "L-saccharopinate",
+      "formula": "C11H19N2O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57951"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o_s_4_amino_l_phenylalanylpantetheine_4_phosphor",
+      "name": "O-(S-4-amino-L-phenylalanylpantetheine-4'-phosphoryl)serine",
+      "short": "O-(S-4-amino-L-phen…",
+      "formula": "C23H36N5O9PS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142855"
+      }
+    },
+    {
+      "id": "o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos",
+      "name": "O-(S-(2R)-2-(4-aminophenyl)-L-serylpantetheine-4'-phosphoryl)serine",
+      "short": "O-(S-(2R)-2-(4-amin…",
+      "formula": "C23H36N5O10PS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142857"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +244,34 @@
       "name": "L-2-hydroxyglutarate dehydrogenase",
       "ec": [
         "1.1.99.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_13",
+      "name": "(S)-2-hydroxyglutarate dehydrogenase",
+      "ec": [
+        "1.1.5.13"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_20",
+      "name": "deacetoxyvindoline 4-hydroxylase",
+      "ec": [
+        "1.14.11.20"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_8",
+      "name": "saccharopine dehydrogenase (NADP(+), L-lysine-forming)",
+      "ec": [
+        "1.5.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_65",
+      "name": "4-amino-L-phenylalanyl-[CmlP-peptidyl-carrier-protein] 3-hydroxylase",
+      "ec": [
+        "1.14.99.65"
       ]
     }
   ],
@@ -284,6 +415,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:21252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(S)-2-hydroxyglutarate dehydrogenase",
+      "equation": "(S)-2-hydroxyglutarate + a quinone = a quinol + 2-oxoglutarate",
+      "ec": "1.1.5.13",
+      "substrates": [
+        {
+          "metabolite": "s_2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:58664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "deacetoxyvindoline 4-hydroxylase",
+      "equation": "(3R)-3-hydroxy-16-methoxy-2,3-dihydrotabersonine + 2-oxoglutarate + O2 = 4-O-deacetyl-16-O-demethylvindoline + succinate + CO2",
+      "ec": "1.14.11.20",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_16_methoxy_2_3_dihydrotabersoninium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_o_demethyl_17_o_deacetylvindolinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "saccharopine dehydrogenase (NADP(+), L-lysine-forming)",
+      "equation": "L-saccharopine + NADP(+) + H2O = L-lysine + 2-oxoglutarate + NADPH + H(+)",
+      "ec": "1.5.1.8",
+      "substrates": [
+        {
+          "metabolite": "l_saccharopinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:19373"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19373"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "4-amino-L-phenylalanyl-[CmlP-peptidyl-carrier-protein] 3-hydroxylase",
+      "equation": "4-amino-L-phenylalanyl-[peptidyl-carrier protein] + AH2 + O2 = (2R)-2-(4-aminophenyl)-L-seryl-[peptidyl-carrier protein] + A + H2O",
+      "ec": "1.14.99.65",
+      "substrates": [
+        {
+          "metabolite": "o_s_4_amino_l_phenylalanylpantetheine_4_phosphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:22684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22684"
           }
         ]
       }

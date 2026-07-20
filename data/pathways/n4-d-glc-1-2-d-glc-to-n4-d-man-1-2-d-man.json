@@ -85,6 +85,25 @@
       "xrefs": {
         "chebi": "CHEBI:60627"
       }
+    },
+    {
+      "id": "d_glcp_1_2_d_glcp",
+      "name": "α-D-Glcp-(1→2)-D-Glcp",
+      "short": "α-D-Glcp-(1→2)-D-Gl…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142460"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
     }
   ],
   "enzymes": [
@@ -107,6 +126,13 @@
       "name": "glycoprotein endo-alpha-1,2-mannosidase",
       "ec": [
         "3.2.1.130"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_216",
+      "name": "kojibiose hydrolase",
+      "ec": [
+        "3.2.1.216"
       ]
     }
   ],
@@ -242,6 +268,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:54824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "kojibiose hydrolase",
+      "equation": "kojibiose + H2O = beta-D-glucose + D-glucose",
+      "ec": "3.2.1.216",
+      "substrates": [
+        {
+          "metabolite": "d_glcp_1_2_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_216"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69611"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69611"
           }
         ]
       }

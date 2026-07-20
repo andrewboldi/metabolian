@@ -15,4 +15,10 @@ pathway 2-acylphloroglucinol-to-diphosphate "2-acylphloroglucinol to diphosphate
     <-> ec_2_5_1_137 [2.5.1.137] +dmapp -ppi
     bitter_acid
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    stemar_13_ene
+  }
 }

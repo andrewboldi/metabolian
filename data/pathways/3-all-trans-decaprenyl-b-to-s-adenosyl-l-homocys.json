@@ -122,6 +122,53 @@
       "xrefs": {
         "chebi": "CHEBI:64181"
       }
+    },
+    {
+      "id": "5_hydroxyfurocoumarin",
+      "name": "5-hydroxyfurocoumarin",
+      "short": "5-hydroxyfurocoumar…",
+      "formula": "C11HO4R5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52058"
+      }
+    },
+    {
+      "id": "5_methoxyfurocoumarin",
+      "name": "5-methoxyfurocoumarin",
+      "short": "5-methoxyfurocoumar…",
+      "formula": "C12H3O4R5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52061"
+      }
+    },
+    {
+      "id": "h2",
+      "name": "Dihydrogen (H2)",
+      "formula": "H2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18276"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -144,6 +191,20 @@
       "name": "2-methoxy-6-polyprenyl-1,4-benzoquinol methylase",
       "ec": [
         "2.1.1.201"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_69",
+      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
+      "ec": [
+        "2.1.1.69"
+      ]
+    },
+    {
+      "id": "ec_1_12_1_4",
+      "name": "hydrogenase (NAD(+), ferredoxin)",
+      "ec": [
+        "1.12.1.4"
       ]
     }
   ],
@@ -299,6 +360,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:44764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
+      "equation": "a 5-hydroxyfurocoumarin + S-adenosyl-L-methionine = a 5-methoxyfurocoumarin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.69",
+      "substrates": [
+        {
+          "metabolite": "5_hydroxyfurocoumarin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methoxyfurocoumarin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18861"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18861"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hydrogenase (NAD(+), ferredoxin)",
+      "equation": "2 H2 + 2 oxidized [2Fe-2S]-[ferredoxin] + NAD(+) = 2 reduced [2Fe-2S]-[ferredoxin] + NADH + 3 H(+)",
+      "ec": "1.12.1.4",
+      "substrates": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_12_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30279"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30279"
           }
         ]
       }

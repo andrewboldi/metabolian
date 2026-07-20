@@ -93,6 +93,16 @@
       "xrefs": {
         "chebi": "CHEBI:58142"
       }
+    },
+    {
+      "id": "2_hydroxy_4_oxobutane_1_2_4_tricarboxylate",
+      "name": "2-hydroxy-4-oxobutane-1,2,4-tricarboxylate",
+      "short": "2-hydroxy-4-oxobuta…",
+      "formula": "C7H5O8",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58075"
+      }
     }
   ],
   "enzymes": [
@@ -115,6 +125,13 @@
       "name": "4-oxalomesaconate tautomerase",
       "ec": [
         "5.3.2.8"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_83",
+      "name": "4-oxalmesaconate hydratase",
+      "ec": [
+        "4.2.1.83"
       ]
     }
   ],
@@ -246,6 +263,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:28931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4-oxalmesaconate hydratase",
+      "equation": "2-hydroxy-4-oxobutane-1,2,4-tricarboxylate = 4-carboxy-2-hydroxy-cis,cis-muconate + H2O",
+      "ec": "4.2.1.83",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_4_oxobutane_1_2_4_tricarboxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxy_2_hydroxy_cis_cis_muconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17401"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17401"
           }
         ]
       }

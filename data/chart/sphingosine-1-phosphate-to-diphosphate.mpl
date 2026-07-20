@@ -15,4 +15,16 @@ pathway sphingosine-1-phosphate-to-diphosphate "sphingosine 1-phosphate to dipho
     <-> ec_2_7_7_57 [2.7.7.57] +ctp +hplus -ppi
     cdp_n_methylethanolamine
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
+    3_o_l_oleandrosyl_oleandolide
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_72 [4.2.3.72] +fpp
+    gurjunene
+  }
 }

@@ -19,4 +19,28 @@ pathway phytanate-to-n3-carboxylatoformyl-l "phytanate to N3-(carboxylatoformyl)
     <-> ec_2_3_1_58 [2.3.1.58] +3_amino_l_alanine -coa
     n3_carboxylatoformyl_l_2_3_diaminopropionate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_59 [2.5.1.59] +geranylgeranyl_diphosphate +l_cysteine
+    s_geranylgeranyl_l_cysteine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_2_8_3_2 [2.8.3.2] +oxalate +oxalyl_coa
+    succinyl_coa
+  }
+
+  branch from formyl_coa side left {
+    formyl_coa
+    <-> ec_4_1_2_63 [4.1.2.63] +2_hydroxy_3_methylhexadecanoyl_coa
+    2_methylpentadecanal
+  }
+
+  branch from oxalyl_coa side right {
+    oxalyl_coa
+    <-> ec_2_8_3_19 [2.8.3.19] +oxalate +acetyl_coa
+    acetate
+  }
 }

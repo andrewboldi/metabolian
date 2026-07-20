@@ -19,4 +19,28 @@ pathway d-arabinitol-to-n6-acetyl-l-lysine "D-arabinitol to N6-acetyl-L-lysine" 
     <-> ec_2_3_1_32 [2.3.1.32] +l_lysinium -pi -hplus
     n6_acetyl_l_lysine
   }
+
+  branch from d_ribulose side left {
+    d_ribulose
+    <-> ec_5_3_1_3 [5.3.1.3]
+    d_arabinopyranose
+  }
+
+  branch from ru5p side right {
+    ru5p
+    <-> ec_1_1_1_137 [1.1.1.137] +nadp +nadph +hplus
+    d_ribitol_5_phosphate
+  }
+
+  branch from x5p side left {
+    x5p
+    <-> ec_5_1_3_4 [5.1.3.4]
+    l_ribulose_5_phosphate
+  }
+
+  branch from g3p side right {
+    g3p
+    <-> ec_4_3_3_6 [4.3.3.6] +r5p +glutamine +plp +pi +h2o +hplus
+    glutamate
+  }
 }

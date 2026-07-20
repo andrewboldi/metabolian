@@ -15,4 +15,28 @@ pathway 2-iminobutanoic-acid-to-acryloyl-coa "2-iminobutanoic acid to acryloyl-C
     <-> ec_1_3_1_84 [1.3.1.84] +nadp -nadph -hplus
     acryloyl_coa
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_45 [3.5.4.45] +ammeline +h2o +hplus
+    ammelide
+  }
+
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
+    s_methylmalonyl_coa
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
+    calcitroate
+  }
+
+  branch from acryloyl_coa side right {
+    acryloyl_coa
+    <-> ec_4_2_1_116 [4.2.1.116] +h2o
+    3_hydroxypropanoyl_coa
+  }
 }

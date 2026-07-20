@@ -92,6 +92,63 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "glucuronate_acceptor",
+      "name": "glucuronate acceptor",
+      "formula": "HR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132368"
+      }
+    },
+    {
+      "id": "d_glucuronoside",
+      "name": "β-D-glucuronoside",
+      "formula": "C6H8O6R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132367"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "ditrans_polycis_tridecaprenyl_diphosphate",
+      "name": "ditrans,polycis-tridecaprenyl diphosphate",
+      "short": "ditrans,polycis-tri…",
+      "formula": "C65H105O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60385"
+      }
     }
   ],
   "enzymes": [
@@ -114,6 +171,20 @@
       "name": "UDP-galacturonate decarboxylase",
       "ec": [
         "4.1.1.67"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_17",
+      "name": "glucuronosyltransferase",
+      "ec": [
+        "2.4.1.17"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_88",
+      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "ec": [
+        "2.5.1.88"
       ]
     }
   ],
@@ -245,6 +316,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:19725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glucuronosyltransferase",
+      "equation": "glucuronate acceptor + UDP-alpha-D-glucuronate = acceptor beta-D-glucuronoside + UDP + H(+)",
+      "ec": "2.4.1.17",
+      "substrates": [
+        {
+          "metabolite": "glucuronate_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "equation": "(2Z,6E)-farnesyl diphosphate + 10 isopentenyl diphosphate = di-trans,deca-cis-tridecaprenyl diphosphate + 10 diphosphate",
+      "ec": "2.5.1.88",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 10
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ditrans_polycis_tridecaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 10
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27614"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27614"
           }
         ]
       }

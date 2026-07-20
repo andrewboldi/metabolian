@@ -19,4 +19,16 @@ pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
     <-> ec_1_14_11_52 [1.14.11.52] +akg +o2 -succinate -co2 -hplus
     validamycin_b
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_2 [6.1.1.2] +amp_3_end_1 +l_tryptophan +atp +amp +hplus
+    3_l_tryptophyl_adenylyl_1_group
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_56 [1.14.11.56] +l_proline +akg +o2 +co2
+    cis_4_hydroxy_l_proline
+  }
 }

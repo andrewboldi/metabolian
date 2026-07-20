@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-sulfino-l-alanine-to-hydrogen-donor",
   "name": "3-sulfino-L-alanine to hydrogen donor",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from 3-sulfino-L-alanine(1−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -170,6 +170,62 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "r_malate",
+      "name": "(R)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15588"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "3r_3_carboxy_3_hydroxypropanoyl_coa",
+      "name": "(3R)-3-carboxy-3-hydroxypropanoyl-CoA",
+      "short": "3-carboxy-3-hydroxy…",
+      "formula": "C25H35N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:77427"
+      }
+    },
+    {
+      "id": "larreatricin",
+      "name": "(+)-larreatricin",
+      "formula": "C18H20O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67153"
+      }
+    },
+    {
+      "id": "3_hydroxylarreatricin",
+      "name": "(+)-3'-hydroxylarreatricin",
+      "short": "(+)-3'-hydroxylarre…",
+      "formula": "C18H20O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67154"
+      }
     }
   ],
   "enzymes": [
@@ -199,6 +255,27 @@
       "name": "adenylyl-sulfate reductase",
       "ec": [
         "1.8.99.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_276",
+      "name": "serine 3-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.276"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_20",
+      "name": "succinyl-CoA--D-citramalate CoA-transferase",
+      "ec": [
+        "2.8.3.20"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_47",
+      "name": "(+)-larreatricin hydroxylase",
+      "ec": [
+        "1.14.99.47"
       ]
     }
   ],
@@ -415,6 +492,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:24240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "serine 3-dehydrogenase (NADP(+))",
+      "equation": "L-serine + NADP(+) = aminoacetaldehyde + CO2 + NADPH",
+      "ec": "1.1.1.276",
+      "substrates": [
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ammonioacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_276"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:43620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "succinyl-CoA--D-citramalate CoA-transferase",
+      "equation": "(R)-malate + succinyl-CoA = (R)-malyl-CoA + succinate",
+      "ec": "2.8.3.20",
+      "substrates": [
+        {
+          "metabolite": "r_malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_3_carboxy_3_hydroxypropanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:40655"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40655"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(+)-larreatricin hydroxylase",
+      "equation": "(+)-larreatricin + AH2 + O2 = (+)-3'-hydroxylarreatricin + A + H2O",
+      "ec": "1.14.99.47",
+      "substrates": [
+        {
+          "metabolite": "larreatricin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxylarreatricin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:34259"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34259"
           }
         ]
       }

@@ -193,6 +193,72 @@
       "xrefs": {
         "chebi": "CHEBI:133499"
       }
+    },
+    {
+      "id": "fluoroacetyl_coa",
+      "name": "fluoroacetyl-CoA",
+      "formula": "C23H33FN7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61623"
+      }
+    },
+    {
+      "id": "diisopropyl_fluorophosphate",
+      "name": "diisopropyl fluorophosphate",
+      "short": "diisopropyl…",
+      "formula": "C6H14FO3P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17941"
+      }
+    },
+    {
+      "id": "diisopropyl_phosphate",
+      "name": "diisopropyl phosphate",
+      "short": "diisopropyl P",
+      "formula": "C6H14O4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57896"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "l_3_oxoalanine",
+      "name": "L-3-oxoalanine",
+      "formula": "C3H3NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85621"
+      }
+    },
+    {
+      "id": "5_deoxyadenosine",
+      "name": "5'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17319"
+      }
+    },
+    {
+      "id": "2r_2_hydroxy_4_methylsulfanyl_butanoate",
+      "name": "(2R)-2-hydroxy-4-(methylsulfanyl)butanoate",
+      "short": "2-hydroxy-4-(methyl…",
+      "formula": "C5H9O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:155852"
+      }
     }
   ],
   "enzymes": [
@@ -243,6 +309,34 @@
       "name": "2-(omega-methylthio)alkylmalate dehydratase",
       "ec": [
         "4.2.1.170"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_29",
+      "name": "fluoroacetyl-CoA thioesterase",
+      "ec": [
+        "3.1.2.29"
+      ]
+    },
+    {
+      "id": "ec_3_8_2_2",
+      "name": "diisopropyl-fluorophosphatase",
+      "ec": [
+        "3.8.2.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_98_7",
+      "name": "serine-type anaerobic sulfatase-maturating enzyme",
+      "ec": [
+        "1.1.98.7"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_428",
+      "name": "4-methylthio 2-oxobutanoate reductase (NADH)",
+      "ec": [
+        "1.1.1.428"
       ]
     }
   ],
@@ -566,6 +660,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:50648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "fluoroacetyl-CoA thioesterase",
+      "equation": "fluoroacetyl-CoA + H2O = fluoroacetate + CoA + H(+)",
+      "ec": "3.1.2.29",
+      "substrates": [
+        {
+          "metabolite": "fluoroacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fluoroacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:28542"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28542"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "diisopropyl-fluorophosphatase",
+      "equation": "diisopropyl fluorophosphate + H2O = diisopropyl phosphate + fluoride + 2 H(+)",
+      "ec": "3.8.2.2",
+      "substrates": [
+        {
+          "metabolite": "diisopropyl_fluorophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diisopropyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fluoride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_8_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:24100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "serine-type anaerobic sulfatase-maturating enzyme",
+      "equation": "L-seryl-[sulfatase] + S-adenosyl-L-methionine = 3-oxo-L-alanyl-[sulfatase] + 5'-deoxyadenosine + L-methionine + H(+)",
+      "ec": "1.1.98.7",
+      "substrates": [
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_3_oxoalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_98_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:17609"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17609"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "4-methylthio 2-oxobutanoate reductase (NADH)",
+      "equation": "(2R)-2-hydroxy-4-(methylsulfanyl)butanoate + NAD(+) = 4-methylsulfanyl-2-oxobutanoate + NADH + H(+)",
+      "ec": "1.1.1.428",
+      "substrates": [
+        {
+          "metabolite": "2r_2_hydroxy_4_methylsulfanyl_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylthio_2_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_428"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:70327"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70327"
           }
         ]
       }

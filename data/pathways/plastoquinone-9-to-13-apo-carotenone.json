@@ -165,6 +165,89 @@
       "xrefs": {
         "chebi": "CHEBI:53175"
       }
+    },
+    {
+      "id": "butan_1_ol",
+      "name": "butan-1-ol",
+      "formula": "C4H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28885"
+      }
+    },
+    {
+      "id": "butanal",
+      "name": "butanal",
+      "formula": "C4H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15743"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "zeaxanthin",
+      "name": "zeaxanthin",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27547"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "8_apo_caroten_8_al",
+      "name": "8'-apo-β,ψ-caroten-8'-al",
+      "short": "8'-apo-β,ψ-caroten-…",
+      "formula": "C30H40O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53154"
+      }
+    },
+    {
+      "id": "2_6_dimethyldeca_2_4_6_8_tetraenedial",
+      "name": "2,6-dimethyldeca-2,4,6,8-tetraenedial",
+      "short": "2,6-dimethyldeca-2,…",
+      "formula": "C12H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73152"
+      }
     }
   ],
   "enzymes": [
@@ -215,6 +298,27 @@
       "name": "all-trans-10'-apo-beta-carotenal 13,14-cleaving dioxygenase",
       "ec": [
         "1.13.11.70"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_11",
+      "name": "1-butanol dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.11"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_24",
+      "name": "beta-carotene 3-hydroxylase",
+      "ec": [
+        "1.14.15.24"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_82",
+      "name": "8'-apo-carotenoid 13,14-cleaving dioxygenase",
+      "ec": [
+        "1.13.11.82"
       ]
     }
   ],
@@ -543,6 +647,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:26401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "1-butanol dehydrogenase (quinone)",
+      "equation": "butan-1-ol + a quinone = butanal + a quinol",
+      "ec": "1.1.5.11",
+      "substrates": [
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:49808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "beta-carotene 3-hydroxylase",
+      "equation": "all-trans-beta-carotene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = all-trans-zeaxanthin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.15.24",
+      "substrates": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "zeaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:30331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "8'-apo-carotenoid 13,14-cleaving dioxygenase",
+      "equation": "all-trans-8'-apo-beta-carotenal + O2 = 2,6-dimethyldeca-2,4,6,8-tetraenedial + 13-apo-beta-carotenone",
+      "ec": "1.13.11.82",
+      "substrates": [
+        {
+          "metabolite": "8_apo_caroten_8_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_6_dimethyldeca_2_4_6_8_tetraenedial",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_apo_carotenone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_82"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:36043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36043"
           }
         ]
       }

@@ -15,4 +15,28 @@ pathway l-lysinium-to-succinate "L-lysinium to succinate" {
     <-> ec_1_14_11_27 [1.14.11.27] +akg +o2 -formaldehyde -succinate -co2
     l_lysinium
   }
+
+  branch from n6_methyl_l_lysinium side left {
+    n6_methyl_l_lysinium
+    <-> ec_1_14_11_66 [1.14.11.66] +akg +o2 +formaldehyde +succinate +co2
+    n6_n6_n6_trimethyl_l_lysine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_261 [2.1.1.261] +4_3_methylbut_2_enyl_l_tryptophan +sam +hplus
+    4_3_methylbut_2_enyl_l_abrine
+  }
+
+  branch from n6_n6_dimethyl_l_lysine_1 side left {
+    n6_n6_dimethyl_l_lysine_1
+    <-> ec_1_14_99_66 [1.14.99.66] +hydrogen_acceptor +h2o +l_lysinium +formaldehyde
+    hydrogen_donor
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
+    n6_acetyl_l_lysine
+  }
 }

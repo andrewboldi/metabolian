@@ -136,6 +136,53 @@
       "xrefs": {
         "chebi": "CHEBI:78573"
       }
+    },
+    {
+      "id": "l_2_4_diazaniumylbutyrate",
+      "name": "L-2,4-diazaniumylbutyrate",
+      "short": "L-2,4-diazaniumylbu…",
+      "formula": "C4H11N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58761"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "l_aspartic_acid_4_semialdehyde",
+      "name": "L-aspartic acid 4-semialdehyde",
+      "short": "L-aspartic acid…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:537519"
+      }
+    },
+    {
+      "id": "thymine",
+      "name": "thymine",
+      "formula": "C5H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17821"
+      }
+    },
+    {
+      "id": "5_methylbarbituride",
+      "name": "5-methylbarbituride",
+      "formula": "C5H5N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58571"
+      }
     }
   ],
   "enzymes": [
@@ -158,6 +205,20 @@
       "name": "L-seryl-tRNA(Sec) selenium transferase",
       "ec": [
         "2.9.1.1"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_46",
+      "name": "diaminobutyrate--pyruvate transaminase",
+      "ec": [
+        "2.6.1.46"
+      ]
+    },
+    {
+      "id": "ec_1_17_99_4",
+      "name": "uracil/thymine dehydrogenase",
+      "ec": [
+        "1.17.99.4"
       ]
     }
   ],
@@ -317,6 +378,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:22728"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "diaminobutyrate--pyruvate transaminase",
+      "equation": "L-2,4-diaminobutanoate + pyruvate = L-aspartate 4-semialdehyde + L-alanine",
+      "ec": "2.6.1.46",
+      "substrates": [
+        {
+          "metabolite": "l_2_4_diazaniumylbutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_aspartic_acid_4_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:12380"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12380"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "uracil/thymine dehydrogenase",
+      "equation": "thymine + A + H2O = 5-methylbarbiturate + AH2 + H(+)",
+      "ec": "1.17.99.4",
+      "substrates": [
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylbarbituride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:13469"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13469"
           }
         ]
       }

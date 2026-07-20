@@ -17,4 +17,22 @@ pathway 1-z-alk-1-enyl-sn-glyce-to-acetylene "1-(Z)-alk-1-enyl-sn-glyce… to ac
     <-> ec_4_2_1_112 [4.2.1.112] -h2o
     acetylene
   }
+
+  branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano side left {
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
+    <-> ec_1_14_19_77 [1.14.19.77] +fe2 +o2 +hplus +iron +h2o
+    1_saturated_alkyl_2_acyl_sn_glycero_3_phosphoeth
+  }
+
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> ec_4_1_2_33 [4.1.2.33] +3_24r_24_r_fucosterol_epoxide
+    desmosterol
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_3_11 [1.4.3.11] +glutamate +o2 +h2o +h2o2
+    akg
+  }
 }

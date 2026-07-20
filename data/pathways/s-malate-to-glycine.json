@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-malate-to-glycine",
   "name": "(S)-malate to glycine",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (S)-malate(2−) to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -127,6 +127,44 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "3r_3_carboxylmethyl_amino_butanoic_acid",
+      "name": "(3R)-3-[(carboxylmethyl)amino]butanoic acid",
+      "short": "3-[(carboxylmethyl)…",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:193081"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "butenoyl-acp",
+      "name": "(2E)-Butenoyl-[ACP]",
+      "formula": "C18H29N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78453"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +187,13 @@
       "name": "kynurenine--glyoxylate transaminase",
       "ec": [
         "2.6.1.63"
+      ]
+    },
+    {
+      "id": "ec_4_3_2_11",
+      "name": "(3R)-3-[(carboxylmethyl)amino]fatty acid synthase",
+      "ec": [
+        "4.3.2.11"
       ]
     }
   ],
@@ -292,6 +337,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:65896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(3R)-3-[(carboxylmethyl)amino]fatty acid synthase",
+      "equation": "(3R)-3-[(carboxymethyl)amino]butanoate + holo-[ACP] + H(+) = (2E)-butenoyl-[ACP] + glycine + H2O",
+      "ec": "4.3.2.11",
+      "substrates": [
+        {
+          "metabolite": "3r_3_carboxylmethyl_amino_butanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butenoyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74927"
           }
         ]
       }

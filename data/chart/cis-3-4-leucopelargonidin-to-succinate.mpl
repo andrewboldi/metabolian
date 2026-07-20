@@ -15,4 +15,28 @@ pathway cis-3-4-leucopelargonidin-to-succinate "cis-3,4-leucopelargonidin to suc
     <-> ec_1_3_98_1 [1.3.98.1] +dihydroorotate -succinate
     orotate
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_3_1_2_3 [3.1.2.3] +h2o +coa +hplus
+    succinyl_coa
+  }
+
+  branch from fumarate side right {
+    fumarate
+    <-> ec_4_3_1_1 [4.3.1.1] +aspartate
+    nh3
+  }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> ec_1_1_5_3 [1.1.5.3] +1_4_benzoquinones +sn_glycerol_3_phosphate
+    dhap
+  }
+
+  branch from orotate side right {
+    orotate
+    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +ubiquinone_8
+    ubiquinol_8
+  }
 }

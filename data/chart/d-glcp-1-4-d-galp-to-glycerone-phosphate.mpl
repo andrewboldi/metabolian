@@ -23,4 +23,16 @@ pathway d-glcp-1-4-d-galp-to-glycerone-phosphate "β-D-Glcp-(1→4)-D-Galp to gl
     <-> ec_5_3_1_1 [5.3.1.1]
     dhap
   }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_1_1_1_21 [1.1.1.21] +nadp +nadph +hplus
+    galactitol
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp_l_galactose +gdp_d_glucose
+    l_galactose_1_phosphate
+  }
 }

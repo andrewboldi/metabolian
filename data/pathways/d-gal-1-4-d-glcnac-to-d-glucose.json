@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-gal-1-4-d-glcnac-to-d-glucose",
   "name": "β-D-Gal-(1→4)-β-D-GlcNAc-… to β-D-glucose",
-  "category": "other",
+  "category": "carbohydrate-metabolism",
   "summary": "A 3-step route from β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-D-Glc to β-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -101,6 +101,43 @@
       "xrefs": {
         "chebi": "CHEBI:15903"
       }
+    },
+    {
+      "id": "sucrose",
+      "name": "sucrose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17992"
+      }
+    },
+    {
+      "id": "sucrose_6g_phosphate",
+      "name": "sucrose 6G-phosphate",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:91002"
+      }
+    },
+    {
+      "id": "6_phospho_d_galactoside",
+      "name": "6-phospho-β-D-galactoside",
+      "short": "6-phospho-β-D-galac…",
+      "formula": "C6H10O9PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58534"
+      }
+    },
+    {
+      "id": "alcohol",
+      "name": "alcohol",
+      "formula": "HOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30879"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +160,13 @@
       "name": "6-phospho-beta-galactosidase",
       "ec": [
         "3.2.1.85"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_211",
+      "name": "protein-N(pi)-phosphohistidine--sucrose phosphotransferase",
+      "ec": [
+        "2.7.1.211"
       ]
     }
   ],
@@ -258,6 +302,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:42404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protein-N(pi)-phosphohistidine--sucrose phosphotransferase",
+      "equation": "N(pros)-phospho-L-histidyl-[protein](out) + sucrose = sucrose 6(G)-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.211",
+      "substrates": [
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sucrose_6g_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_211"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "6-phospho-beta-galactosidase",
+      "equation": "a 6-phospho-beta-D-galactoside + H2O = D-galactose 6-phosphate + an alcohol",
+      "ec": "3.2.1.85",
+      "substrates": [
+        {
+          "metabolite": "6_phospho_d_galactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactopyranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alcohol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24568"
           }
         ]
       }

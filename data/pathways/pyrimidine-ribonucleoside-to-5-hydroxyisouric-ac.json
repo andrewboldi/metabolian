@@ -222,6 +222,90 @@
       "xrefs": {
         "chebi": "CHEBI:18072"
       }
+    },
+    {
+      "id": "a_pyrimidine_ribonucleoside",
+      "name": "a pyrimidine ribonucleoside",
+      "short": "a pyrimidine…",
+      "formula": "C9H9N2O4R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141014"
+      }
+    },
+    {
+      "id": "d_ribofuranose",
+      "name": "D-ribofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47013"
+      }
+    },
+    {
+      "id": "nmn",
+      "name": "NMN−",
+      "formula": "C11H14N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:14649"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "3_5_cyclic_cmp",
+      "name": "3',5'-cyclic CMP",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58003"
+      }
+    },
+    {
+      "id": "adenosine",
+      "name": "Adenosine",
+      "formula": "C10H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16335"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "r1p",
+      "name": "alpha-D-Ribose 1-phosphate",
+      "short": "alpha-D-Ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57720"
+      }
     }
   ],
   "enzymes": [
@@ -279,6 +363,34 @@
       "name": "FAD-dependent urate hydroxylase",
       "ec": [
         "1.14.13.113"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_8",
+      "name": "ribosylpyrimidine nucleosidase",
+      "ec": [
+        "3.2.2.8"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_14",
+      "name": "NMN nucleosidase",
+      "ec": [
+        "3.2.2.14"
+      ]
+    },
+    {
+      "id": "ec_4_6_1_6",
+      "name": "cytidylate cyclase",
+      "ec": [
+        "4.6.1.6"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
       ]
     }
   ],
@@ -679,6 +791,186 @@
           {
             "db": "Rhea",
             "id": "RHEA:27329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "ribosylpyrimidine nucleosidase",
+      "equation": "a pyrimidine ribonucleoside + H2O = a pyrimidine nucleobase + D-ribose",
+      "ec": "3.2.2.8",
+      "substrates": [
+        {
+          "metabolite": "a_pyrimidine_ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyrimidine_nucleobase",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_ribofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:56816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "NMN nucleosidase",
+      "equation": "beta-nicotinamide D-ribonucleotide + H2O = D-ribose 5-phosphate + nicotinamide + H(+)",
+      "ec": "3.2.2.14",
+      "substrates": [
+        {
+          "metabolite": "nmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:23140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23140"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "cytidylate cyclase",
+      "equation": "CTP = 3',5'-cyclic CMP + diphosphate",
+      "ec": "4.6.1.6",
+      "substrates": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_cyclic_cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_6_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:14737"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "adenosine + phosphate = alpha-D-ribose 1-phosphate + adenine",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "adenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:27642"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27642"
           }
         ]
       }

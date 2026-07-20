@@ -86,6 +86,25 @@
       "xrefs": {
         "chebi": "CHEBI:90967"
       }
+    },
+    {
+      "id": "dtdp_3_azaniumyl_3_6_dideoxy_d_glucose",
+      "name": "dTDP-3-azaniumyl-3,6-dideoxy-α-D-glucose",
+      "short": "dTDP-3-azaniumyl-3,…",
+      "formula": "C16H26N3O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:63265"
+      }
+    },
+    {
+      "id": "dtdp_d_mycaminose",
+      "name": "dTDP-α-D-mycaminose",
+      "formula": "C18H30N3O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:63268"
+      }
     }
   ],
   "enzymes": [
@@ -101,6 +120,13 @@
       "name": "bacteriochlorophyllide d C-8(2)-methyltransferase",
       "ec": [
         "2.1.1.332"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_235",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-glucopyranose N,N-dimethyltransferase",
+      "ec": [
+        "2.1.1.235"
       ]
     }
   ],
@@ -248,6 +274,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:49176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-glucopyranose N,N-dimethyltransferase",
+      "equation": "dTDP-3-amino-3,6-dideoxy-alpha-D-glucose + 2 S-adenosyl-L-methionine = dTDP-alpha-D-mycaminose + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.235",
+      "substrates": [
+        {
+          "metabolite": "dtdp_3_azaniumyl_3_6_dideoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_d_mycaminose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_235"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31671"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31671"
           }
         ]
       }

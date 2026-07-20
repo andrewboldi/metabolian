@@ -17,4 +17,28 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
     <-> ec_2_3_1_4 [2.3.1.4] +acetyl_coa -coa -hplus
     n_acetyl_d_glucosamine_6_phosphate
   }
+
+  branch from n_acetyl_d_glucosamine side left {
+    n_acetyl_d_glucosamine
+    <-> ec_2_4_1_280 [2.4.1.280] +n_n_diacetylchitobiose +pi
+    n_acetyl_d_glucosamine_1_phosphate
+  }
+
+  branch from l_asparagine side right {
+    l_asparagine
+    <-> ec_1_14_11_39 [1.14.11.39] +akg +o2 +succinate +co2
+    3s_3_hydroxy_l_asparagine
+  }
+
+  branch from glucosamine6p side left {
+    glucosamine6p
+    <-> ec_5_4_2_10 [5.4.2.10]
+    d_glucosamine_1_phosphate
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_5_1_51 [2.5.1.51] +1h_pyrazole +o_acetyl_l_serine +hplus
+    3_pyrazol_1_yl_l_alanine
+  }
 }

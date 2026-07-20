@@ -15,4 +15,22 @@ pathway d-cysteine-to-udp-6-sulfoquinovose "D-cysteine to UDP-6-sulfoquinovose" 
     <-> ec_3_13_1_1 [3.13.1.1] +udp_d_glucose +hplus -h2o
     udp_6_sulfoquinovose
   }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_4_4_1_1 [4.4.1.1] +h2o +pyruvate +nh3 +hplus
+    cysteine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_4 [3.5.1.4] +n_acylammonia +h2o
+    monocarboxylic_acid_anion
+  }
+
+  branch from sulfite side left {
+    sulfite
+    <-> ec_4_4_1_19 [4.4.1.19] +2r_2_o_phosphonato_3_sulfonatolactate +hplus
+    phosphonatoenolpyruvate
+  }
 }

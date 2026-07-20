@@ -146,6 +146,43 @@
       "xrefs": {
         "chebi": "CHEBI:58632"
       }
+    },
+    {
+      "id": "71_hydroxychlorophyllide_a",
+      "name": "71-hydroxychlorophyllide a",
+      "short": "71-hydroxychlorophy…",
+      "formula": "C35H32MgN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83357"
+      }
+    },
+    {
+      "id": "epi_isozizaene",
+      "name": "(+)-epi-isozizaene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51458"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "albaflavenone",
+      "name": "albaflavenone",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51460"
+      }
     }
   ],
   "enzymes": [
@@ -175,6 +212,20 @@
       "name": "3,8-divinyl protochlorophyllide a 8-vinyl-reductase (NADPH)",
       "ec": [
         "1.3.1.75"
+      ]
+    },
+    {
+      "id": "ec_1_17_7_2",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "ec": [
+        "1.17.7.2"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_39",
+      "name": "epi-isozizaene 5-monooxygenase",
+      "ec": [
+        "1.14.15.39"
       ]
     }
   ],
@@ -379,6 +430,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:48884"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "equation": "chlorophyllide a + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = 7(1)-hydroxychlorophyllide a + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.17.7.2",
+      "substrates": [
+        {
+          "metabolite": "chlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "71_hydroxychlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_7_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "epi-isozizaene 5-monooxygenase",
+      "equation": "(+)-epi-isozizaene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = albaflavenone + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.39",
+      "substrates": [
+        {
+          "metabolite": "epi_isozizaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "albaflavenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:32439"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32439"
           }
         ]
       }

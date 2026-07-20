@@ -15,4 +15,16 @@ pathway 6-o-d-glucopyranosyl-d-to-d-glucopyranose "6-O-α-D-glucopyranosyl-D-…
     <-> ec_2_4_1_99 [2.4.1.99] -glucose
     1_kestose
   }
+
+  branch from d_fructofuranose side left {
+    d_fructofuranose
+    <-> ec_1_1_2_2 [1.1.2.2] +iron +fe2 +hplus
+    d_mannitol
+  }
+
+  branch from sucrose side right {
+    sucrose
+    <-> ec_5_4_99_11 [5.4.99.11]
+    trehalulose
+  }
 }

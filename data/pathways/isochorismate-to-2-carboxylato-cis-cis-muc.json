@@ -110,6 +110,16 @@
       "xrefs": {
         "chebi": "CHEBI:58114"
       }
+    },
+    {
+      "id": "2_hydroxy_3_3_oxoprop_1_enyl_but_2_enedioate",
+      "name": "2-hydroxy-3-(3-oxoprop-1-enyl)but-2-enedioate",
+      "short": "2-hydroxy-3-(3-oxop…",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58346"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +142,13 @@
       "name": "2,3-dihydroxybenzoate 2,3-dioxygenase",
       "ec": [
         "1.13.11.28"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_14",
+      "name": "2,3-dihydroxybenzoate 3,4-dioxygenase",
+      "ec": [
+        "1.13.11.14"
       ]
     }
   ],
@@ -271,6 +288,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:15369"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2,3-dihydroxybenzoate 3,4-dioxygenase",
+      "equation": "2,3-dihydroxybenzoate + O2 = 2-hydroxy-3-(3-oxoprop-1-enyl)but-2-enedioate + H(+)",
+      "ec": "1.13.11.14",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_3_oxoprop_1_enyl_but_2_enedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18477"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18477"
           }
         ]
       }

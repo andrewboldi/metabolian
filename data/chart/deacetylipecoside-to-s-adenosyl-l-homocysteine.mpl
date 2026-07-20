@@ -23,4 +23,28 @@ pathway deacetylipecoside-to-s-adenosyl-l-homocysteine "deacetylipecoside to S-a
     <-> ec_2_1_1_291 [2.1.1.291] +sam -sah -hplus
     s_laudanine
   }
+
+  branch from dopamine side left {
+    dopamine
+    <-> ec_4_1_1_28 [4.1.1.28] +hplus +co2
+    ldopa
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_115 [2.1.1.115] +1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium +sam +hplus
+    1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini
+  }
+
+  branch from s_n_methylcoclaurinium side left {
+    s_n_methylcoclaurinium
+    <-> ec_1_14_19_66 [1.14.19.66] +r_n_methylcoclaurinium +fmnh2 +o2 +fmn +h2o +hplus
+    berbamuninium
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_82 [1.14.14.82] +3_unsubstituted_flavone +fmnh2 +o2 +h2o +hplus
+    3_hydroxyflavonoid
+  }
 }

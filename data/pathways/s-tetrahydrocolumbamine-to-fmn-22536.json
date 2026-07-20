@@ -120,6 +120,44 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "iodomethane",
+      "name": "iodomethane",
+      "formula": "CH3I",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:39282"
+      }
+    },
+    {
+      "id": "2_methylpropanaminium",
+      "name": "2-methylpropanaminium",
+      "short": "2-methylpropanamini…",
+      "formula": "C4H12N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57601"
+      }
+    },
+    {
+      "id": "n_hydroxy_2_methylpropanamine",
+      "name": "N-hydroxy-2-methylpropanamine",
+      "short": "N-hydroxy-2-methylp…",
+      "formula": "C4H11NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131928"
+      }
     }
   ],
   "enzymes": [
@@ -142,6 +180,20 @@
       "name": "methyltetrahydroprotoberberine 14-monooxygenase",
       "ec": [
         "1.14.14.97"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_165",
+      "name": "methyl halide transferase",
+      "ec": [
+        "2.1.1.165"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_30",
+      "name": "isobutylamine N-monooxygenase",
+      "ec": [
+        "1.14.14.30"
       ]
     }
   ],
@@ -293,6 +345,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:76043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "methyl halide transferase",
+      "equation": "iodide + S-adenosyl-L-methionine = iodomethane + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.165",
+      "substrates": [
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "iodomethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_165"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27357"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27357"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "isobutylamine N-monooxygenase",
+      "equation": "2-methylpropan-1-amine + FMNH2 + O2 = N-(2-methylpropyl)hydroxylamine + FMN + H2O + 2 H(+)",
+      "ec": "1.14.14.30",
+      "substrates": [
+        {
+          "metabolite": "2_methylpropanaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxy_2_methylpropanamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49804"
           }
         ]
       }

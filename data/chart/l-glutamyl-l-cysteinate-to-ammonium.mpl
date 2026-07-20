@@ -15,4 +15,28 @@ pathway l-glutamyl-l-cysteinate-to-ammonium "L-γ-glutamyl-L-cysteinate to ammon
     <-> ec_4_4_1_36 [4.4.1.36] +hydrogen_donor +hplus -pyruvate -hydrogen_acceptor -nh3
     ergothioneine
   }
+
+  branch from hercynylcysteine_sulfoxide side left {
+    hercynylcysteine_sulfoxide
+    <-> ec_1_21_3_10 [1.21.3.10] +n_n_n_trimethyl_l_histidine +o2 +h2o
+    cysteine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_90 [2.6.1.90] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +akg
+    dtdp_3_dehydro_6_deoxy_d_galactose
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +hydrogen_donor +o2 +hplus +carbon_monoxide +fe2 +h2o
+    biliverdin
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_21_98_2 [1.21.98.2] +2_iminio_3_indol_3_yl_propanoate +h2o2 +h2o +hplus
+    chromopyrrolate
+  }
 }

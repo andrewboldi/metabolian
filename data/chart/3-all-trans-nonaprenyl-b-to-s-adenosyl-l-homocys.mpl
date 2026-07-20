@@ -15,4 +15,16 @@ pathway 3-all-trans-nonaprenyl-b-to-s-adenosyl-l-homocys "3-(all-trans-nonapreny
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     2_methoxy_3_methyl_6_all_trans_nonaprenylhydroqu
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_84 [2.1.1.84] +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone +sam
+    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +di_sulfido_diiron +o2 +hplus +h2o
+    3_8_biflaviolin_2_7_2_triolate
+  }
 }

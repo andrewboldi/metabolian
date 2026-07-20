@@ -15,4 +15,28 @@ pathway l-glutamine-to-methanol "L-glutamine to methanol" {
     <-> ec_3_1_1_61 [3.1.1.61] +h2o -methanol -hplus
     l_glutamate
   }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> ec_6_3_2_62 [6.3.2.62] +glutamate +atp +adp +pi +hplus
+    l_glutamyl_l_glutamate_2
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_7 [1.4.1.7] +serine +nad +h2o +nadh +hplus
+    3_hydroxypyruvate
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_144 [2.1.1.144] +trans_aconitate +sam
+    2e_3_methoxycarbonyl_pent_2_enedioate
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_95 [3.1.1.95] +aclacinomycin_t +h2o
+    15_demethylaclacinomycin_t
+  }
 }

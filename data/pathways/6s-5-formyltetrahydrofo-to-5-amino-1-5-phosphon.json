@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6s-5-formyltetrahydrofo-to-5-amino-1-5-phosphon",
   "name": "(6S)-5-formyltetrahydrofo… to 5-amino-1-(5-phosphonato-…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 9-step route from (6S)-5-formyltetrahydrofolate(2−) to 5-amino-1-(5-phosphonato-β-D-ribosyl)imidazol-3-ium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -205,6 +205,138 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "3_amino_4_hydroxybenzaldehyde",
+      "name": "3-amino-4-hydroxybenzaldehyde",
+      "short": "3-amino-4-hydroxybe…",
+      "formula": "C7H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78237"
+      }
+    },
+    {
+      "id": "n_acetyl_l_cysteinate",
+      "name": "N-acetyl-L-cysteinate",
+      "short": "N-acetyl-L-cysteina…",
+      "formula": "C5H8NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78236"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "grixazone_a",
+      "name": "grixazone A",
+      "formula": "C18H14N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73482"
+      }
+    },
+    {
+      "id": "3_3_5_triiodo_l_thyronine",
+      "name": "3,3',5-triiodo-L-thyronine",
+      "short": "3,3',5-triiodo-L-th…",
+      "formula": "C15H12I3NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:533015"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "3_5_3_triiodothyropyruvate",
+      "name": "3,5,3'-triiodothyropyruvate",
+      "short": "3,5,3'-triiodothyro…",
+      "formula": "C15H8I3O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58403"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "5_hydroxybenzimidazole",
+      "name": "5-hydroxybenzimidazole",
+      "short": "5-hydroxybenzimidaz…",
+      "formula": "C7H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137404"
+      }
+    },
+    {
+      "id": "5_deoxyadenosine",
+      "name": "5'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17319"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
     }
   ],
   "enzymes": [
@@ -269,6 +401,27 @@
       "name": "phosphoribosylaminoimidazole carboxylase",
       "ec": [
         "4.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_10_3_15",
+      "name": "grixazone synthase",
+      "ec": [
+        "1.10.3.15"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_26",
+      "name": "thyroid-hormone transaminase",
+      "ec": [
+        "2.6.1.26"
+      ]
+    },
+    {
+      "id": "ec_4_1_99_23",
+      "name": "5-hydroxybenzimidazole synthase",
+      "ec": [
+        "4.1.99.23"
       ]
     }
   ],
@@ -726,6 +879,181 @@
           {
             "db": "Rhea",
             "id": "RHEA:10792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "grixazone synthase",
+      "equation": "2 3-amino-4-hydroxybenzaldehyde + N-acetyl-L-cysteine + 2 O2 = grixazone A + formate + 3 H2O + H(+)",
+      "ec": "1.10.3.15",
+      "substrates": [
+        {
+          "metabolite": "3_amino_4_hydroxybenzaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "n_acetyl_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "grixazone_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_10_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:41424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "thyroid-hormone transaminase",
+      "equation": "3,3',5-triiodo-L-thyronine + 2-oxoglutarate = 3,5,3'-triiodothyropyruvate + L-glutamate",
+      "ec": "2.6.1.26",
+      "substrates": [
+        {
+          "metabolite": "3_3_5_triiodo_l_thyronine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_3_triiodothyropyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:19133"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "5-hydroxybenzimidazole synthase",
+      "equation": "5-amino-1-(5-phospho-beta-D-ribosyl)imidazole + AH2 + S-adenosyl-L-methionine = 5-hydroxybenzimidazole + 5'-deoxyadenosine + formate + L-methionine + A + NH4(+) + phosphate + 2 H(+)",
+      "ec": "4.1.99.23",
+      "substrates": [
+        {
+          "metabolite": "air",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxybenzimidazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:53504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53504"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "erythro-5-hydroxy-l-lysin-to-succinate",
   "name": "erythro-5-hydroxy-L-lysin… to succinate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 8-step route from erythro-5-hydroxy-L-lysinium(1+) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -256,6 +256,71 @@
       "xrefs": {
         "chebi": "CHEBI:58366"
       }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "aristolochene",
+      "name": "(+)-aristolochene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43445"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50342"
+      }
+    },
+    {
+      "id": "trans_3_hydroxy_l_proline",
+      "name": "trans-3-hydroxy-L-proline",
+      "short": "trans-3-hydroxy-L-p…",
+      "formula": "C5H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85428"
+      }
     }
   ],
   "enzymes": [
@@ -313,6 +378,34 @@
       "name": "deacetoxycephalosporin-C hydroxylase",
       "ec": [
         "1.14.11.26"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_36",
+      "name": "L-lysine 6-transaminase",
+      "ec": [
+        "2.6.1.36"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_20",
+      "name": "L-lysine 6-oxidase",
+      "ec": [
+        "1.4.3.20"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_9",
+      "name": "aristolochene synthase",
+      "ec": [
+        "4.2.3.9"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_7",
+      "name": "procollagen-proline 3-dioxygenase",
+      "ec": [
+        "1.14.11.7"
       ]
     }
   ],
@@ -721,6 +814,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:16805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "L-lysine 6-transaminase",
+      "equation": "L-lysine + 2-oxoglutarate = (S)-2-amino-6-oxohexanoate + L-glutamate",
+      "ec": "2.6.1.36",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_allysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:21200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "L-lysine 6-oxidase",
+      "equation": "L-lysine + O2 + H2O = (S)-2-amino-6-oxohexanoate + H2O2 + NH4(+)",
+      "ec": "1.4.3.20",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_allysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:22548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22548"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "aristolochene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-aristolochene + diphosphate",
+      "ec": "4.2.3.9",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aristolochene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:19825"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19825"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "procollagen-proline 3-dioxygenase",
+      "equation": "L-prolyl-[collagen] + 2-oxoglutarate + O2 = trans-3-hydroxy-L-prolyl-[collagen] + succinate + CO2",
+      "ec": "1.14.11.7",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_3_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:22872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22872"
           }
         ]
       }

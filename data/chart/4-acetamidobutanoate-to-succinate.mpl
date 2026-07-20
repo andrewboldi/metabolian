@@ -15,4 +15,28 @@ pathway 4-acetamidobutanoate-to-succinate "4-acetamidobutanoate to succinate" {
     <-> ec_1_2_1_16 [1.2.1.16] +nad +h2o -nadh -hplus
     succinate
   }
+
+  branch from gaba side left {
+    gaba
+    <-> ec_3_4_13_4 [3.4.13.4] +n2_4_aminobutanoyl_l_argininium +h2o
+    arginine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_11 [2.8.3.11] +citramalate +acetyl_coa
+    3s_citramalyl_coa
+  }
+
+  branch from 4_oxobutanoate side left {
+    4_oxobutanoate
+    <-> ec_1_1_99_24 [1.1.99.24] +4_hydroxybutyrate +akg
+    r_2_hydroxyglutarate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_3_1_35 [2.3.1.35] +n2_acetyl_l_ornithine +ornithine
+    nag
+  }
 }

@@ -21,4 +21,22 @@ pathway pyridine-to-thiamine-1-diphosphate "pyridine to thiamine(1+) diphosphate
     <-> ec_3_6_1_28 [3.6.1.28] +h2o -pi -hplus
     thiamine_1_diphosphate
   }
+
+  branch from 5_2_hydroxyethyl_4_methylthiazole side left {
+    5_2_hydroxyethyl_4_methylthiazole
+    <-> ec_3_5_99_2 [3.5.99.2] +thiamine +h2o +hplus
+    4_amino_5_hydroxymethyl_2_methylpyrimidine
+  }
+
+  branch from thiamine_1_monophosphate side right {
+    thiamine_1_monophosphate
+    <-> ec_2_5_1_3 [2.5.1.3] +4_amino_2_methyl_5_diphosphonatooxymethylpyrimid +hplus +co2 +ppi
+    2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
+    sabinene_hydrate
+  }
 }

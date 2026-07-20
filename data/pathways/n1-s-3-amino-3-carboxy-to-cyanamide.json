@@ -91,6 +91,44 @@
       "xrefs": {
         "chebi": "CHEBI:16698"
       }
+    },
+    {
+      "id": "s_adenosylmethioninaminium",
+      "name": "S-adenosylmethioninaminium",
+      "short": "S-adenosylmethionin…",
+      "formula": "C14H24N6O3S",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:57443"
+      }
+    },
+    {
+      "id": "agmatinium",
+      "name": "agmatinium",
+      "formula": "C5H16N4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58145"
+      }
+    },
+    {
+      "id": "5_s_methyl_5_thioadenosine",
+      "name": "5'-S-methyl-5'-thioadenosine",
+      "short": "5'-S-methyl-5'-thio…",
+      "formula": "C11H15N5O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17509"
+      }
+    },
+    {
+      "id": "thermosperminium",
+      "name": "thermosperminium",
+      "formula": "C10H30N4",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:59903"
+      }
     }
   ],
   "enzymes": [
@@ -113,6 +151,20 @@
       "name": "cyanamide hydratase",
       "ec": [
         "4.2.1.69"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_104",
+      "name": "N(1)-aminopropylagmatine synthase",
+      "ec": [
+        "2.5.1.104"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_79",
+      "name": "thermospermine synthase",
+      "ec": [
+        "2.5.1.79"
       ]
     }
   ],
@@ -244,6 +296,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:23056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N(1)-aminopropylagmatine synthase",
+      "equation": "S-adenosyl 3-(methylsulfanyl)propylamine + agmatine = N(1)-(3-aminopropyl)agmatine + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.104",
+      "substrates": [
+        {
+          "metabolite": "s_adenosylmethioninaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_aminopropylagmatine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_104"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:36487"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "thermospermine synthase",
+      "equation": "S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = thermospermine + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.79",
+      "substrates": [
+        {
+          "metabolite": "s_adenosylmethioninaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thermosperminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30515"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30515"
           }
         ]
       }

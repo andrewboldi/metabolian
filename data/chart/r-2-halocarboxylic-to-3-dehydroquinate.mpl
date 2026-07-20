@@ -25,4 +25,28 @@ pathway r-2-halocarboxylic-to-3-dehydroquinate "(R)-2-halocarboxylic… to 3-deh
     <-> ec_4_2_3_4 [4.2.3.4] -pi
     3_dehydroquinate
   }
+
+  branch from 2_oxo_monocarboxylic_acid_anion side left {
+    2_oxo_monocarboxylic_acid_anion
+    <-> ec_1_1_1_375 [1.1.1.375] +nadp +nadph +hplus
+    2s_2_hydroxy_monocarboxylic_acid_anion
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_1_99_26 [1.1.99.26] +3_hydroxycyclohexanone +hydrogen_acceptor
+    cyclohexane_1_3_dione
+  }
+
+  branch from l_amino_acid side left {
+    l_amino_acid
+    <-> ec_3_5_1_127 [3.5.1.127] +n_jasmonyl_l_amino_acid_anion +h2o
+    jasmonic_acid_anion
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_3_6 [3.5.3.6] +arginine +h2o
+    citrulline
+  }
 }

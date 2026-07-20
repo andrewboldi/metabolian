@@ -15,4 +15,22 @@ pathway acetylcholine-to-fatty-acid-anion "acetylcholine to fatty acid anion" {
     <-> ec_3_1_1_32 [3.1.1.32] +h2o -fatty-acid -hplus
     2_acyl_sn_glycero_3_phosphocholine
   }
+
+  branch from phosphatidylcholine side left {
+    phosphatidylcholine
+    <-> ec_2_3_1_251 [2.3.1.251] +a_lipid_iia +2_acyl_sn_glycero_3_phosphocholine
+    a_lipid_iib
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_7_1_48 [2.7.1.48] +gtp +gdp +hplus
+    cytidine
+  }
+
+  branch from 2_acyl_sn_glycero_3_phosphocholine side left {
+    2_acyl_sn_glycero_3_phosphocholine
+    <-> ec_2_3_1_251 [2.3.1.251] +lipid_iia +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine
+    lipid_iib
+  }
 }

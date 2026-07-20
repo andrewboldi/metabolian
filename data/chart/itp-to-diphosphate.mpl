@@ -15,4 +15,22 @@ pathway itp-to-diphosphate "ITP to diphosphate" {
     <-> ec_6_3_5_2 [6.3.5.2] +glutamine +atp +h2o -gmp -amp -ppi -hplus
     glutamate
   }
+
+  branch from imp side left {
+    imp
+    <-> ec_3_1_3_99 [3.1.3.99] +h2o +pi
+    inosine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    13r_edaxadiene
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_102 [2.6.1.102] +gdp_4_amino_4_6_dideoxy_d_mannose +akg
+    gdp_4_dehydro_6_deoxy_d_mannose
+  }
 }

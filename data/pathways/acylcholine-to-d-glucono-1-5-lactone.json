@@ -165,6 +165,99 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17478"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "acetylcholine",
+      "name": "acetylcholine",
+      "formula": "C7H16NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15355"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+      "name": "cyanidin 3-O-[6-O-(4-O-β-D-glucosyl-p-coumaroyl)-2-O-(β-D-xylosyl)-β-D-glucosyl]-5-O-(6-O-malonyl-β-D-glucoside)",
+      "short": "cyanidin 3-O-[6-O-(…",
+      "formula": "C50H55O30",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:72650"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+      "name": "cyanidin 3-O-[6-O-(4-O-β-D-glucosyl-p-coumaroyl)-2-O-(2-O-sinapoyl-β-D-xylosyl)-β-D-glucosyl]-5-O-(6-O-malonyl-β-D-glucoside)",
+      "short": "cyanidin 3-O-[6-O-(…",
+      "formula": "C61H65O34",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:72649"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_d_glucoside",
+      "name": "cyanidin 3-O-β-D-glucoside",
+      "short": "cyanidin 3-O-β-D-gl…",
+      "formula": "C21H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77857"
+      }
+    },
+    {
+      "id": "cyanin_betaine",
+      "name": "cyanin betaine",
+      "formula": "C27H30O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71511"
+      }
     }
   ],
   "enzymes": [
@@ -229,6 +322,41 @@
       "name": "glucose/galactose 1-dehydrogenase",
       "ec": [
         "1.1.1.360"
+      ]
+    },
+    {
+      "id": "ec_1_2_99_6",
+      "name": "carboxylate reductase",
+      "ec": [
+        "1.2.99.6"
+      ]
+    },
+    {
+      "id": "ec_1_2_99_7",
+      "name": "aldehyde dehydrogenase (FAD-independent)",
+      "ec": [
+        "1.2.99.7"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_6",
+      "name": "choline O-acetyltransferase",
+      "ec": [
+        "2.3.1.6"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_n12",
+      "name": "sinapoyl-beta-D-glucose:anthocyanin sinapoyltransferase",
+      "ec": [
+        "2.3.1.n12"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_299",
+      "name": "cyanidin 3-O-glucoside 5-O-glucosyltransferase (acyl-glucose)",
+      "ec": [
+        "2.4.1.299"
       ]
     }
   ],
@@ -511,6 +639,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:14405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "carboxylate reductase",
+      "equation": "an aldehyde + A + H2O = a carboxylate + AH2 + H(+)",
+      "ec": "1.2.99.6",
+      "substrates": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_99_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:56856"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "choline O-acetyltransferase",
+      "equation": "choline + acetyl-CoA = acetylcholine + CoA",
+      "ec": "2.3.1.6",
+      "substrates": [
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetylcholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:18821"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "sinapoyl-beta-D-glucose:anthocyanin sinapoyltransferase",
+      "equation": "anthocyanin A8 + 1-O-(trans-sinapoyl)-beta-D-glucose = anthocyanin A11 + D-glucose",
+      "ec": "2.3.1.n12",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_sinapoyl_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_n12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:35579"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "cyanidin 3-O-glucoside 5-O-glucosyltransferase (acyl-glucose)",
+      "equation": "cyanidin 3-O-beta-D-glucoside + 1-O-(trans-sinapoyl)-beta-D-glucose = cyanidin 3,5-di-O-beta-D-glucoside + (E)-sinapate",
+      "ec": "2.4.1.299",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_sinapoyl_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanin_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_sinapate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_299"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:35427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35427"
           }
         ]
       }

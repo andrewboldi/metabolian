@@ -15,4 +15,28 @@ pathway s-sulfanylglutathionate-to-ammonium "S-sulfanylglutathionate to ammonium
     <-> ec_4_4_1_25 [4.4.1.25] +h2o -pyruvate -nh3 -hplus
     sulfite
   }
+
+  branch from sulfite side left {
+    sulfite
+    <-> ec_4_4_1_41 [4.4.1.41] +2s_3_sulfopropanediol +hplus
+    hydroxyacetone
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> ec_1_8_3_3 [1.8.3.3] +o2 +h2o2
+    gssg
+  }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_2_4_2_59 [2.4.2.59] +glycine +nad +nicotinamide +h2o +hplus
+    adp_5_ethyl_4_methylthiazole_2_carboxylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_28 [4.3.1.28] +l_lysinium
+    l_pipecolic_acid
+  }
 }

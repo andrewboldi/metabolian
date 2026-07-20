@@ -110,6 +110,44 @@
       "xrefs": {
         "chebi": "CHEBI:78259"
       }
+    },
+    {
+      "id": "ditp",
+      "name": "dITP",
+      "formula": "C10H11N4O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61382"
+      }
+    },
+    {
+      "id": "2_deoxyinosine_5_phosphate",
+      "name": "2'-deoxyinosine 5'-phosphate",
+      "short": "2'-deoxyinosine 5'-P",
+      "formula": "C10H11N4O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61194"
+      }
+    },
+    {
+      "id": "triacontanoate",
+      "name": "triacontanoate",
+      "formula": "C30H59O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:31004"
+      }
+    },
+    {
+      "id": "hydroxytriacontanoate",
+      "name": "ω-hydroxytriacontanoate",
+      "short": "ω-hydroxytriacontan…",
+      "formula": "C30H59O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76044"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +170,27 @@
       "name": "oryzalexin E synthase",
       "ec": [
         "1.14.14.122"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_66",
+      "name": "XTP/dITP diphosphatase",
+      "ec": [
+        "3.6.1.66"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_177",
+      "name": "ultra-long-chain fatty acid omega-hydroxylase",
+      "ec": [
+        "1.14.14.177"
       ]
     }
   ],
@@ -287,6 +346,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:41468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nucleotide diphosphatase",
+      "equation": "dITP + H2O = dIMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "ditp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28342"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ultra-long-chain fatty acid omega-hydroxylase",
+      "equation": "triacontanoate + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxy-triacontanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.177",
+      "substrates": [
+        {
+          "metabolite": "triacontanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxytriacontanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_177"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50336"
           }
         ]
       }

@@ -81,6 +81,25 @@
       "xrefs": {
         "chebi": "CHEBI:16583"
       }
+    },
+    {
+      "id": "2s_2_hydroxy_2_methyl_3_oxobutanoate",
+      "name": "(2S)-2-hydroxy-2-methyl-3-oxobutanoate",
+      "short": "2-hydroxy-2-methyl-…",
+      "formula": "C5H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58476"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -103,6 +122,13 @@
       "name": "diacetyl reductase [(R)-acetoin forming]",
       "ec": [
         "1.1.1.303"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_5",
+      "name": "acetolactate decarboxylase",
+      "ec": [
+        "4.1.1.5"
       ]
     }
   ],
@@ -238,6 +264,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:22900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acetolactate decarboxylase",
+      "equation": "(2S)-2-acetolactate + H(+) = (R)-acetoin + CO2",
+      "ec": "4.1.1.5",
+      "substrates": [
+        {
+          "metabolite": "2s_2_hydroxy_2_methyl_3_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21580"
           }
         ]
       }

@@ -15,4 +15,16 @@ pathway 5-dihydrotestosterone-to-hydrogen-donor "5β-dihydrotestosterone to hydr
     <-> ec_1_3_99_4 [1.3.99.4] +hydrogen_acceptor -hydrogen_donor
     androsta_1_4_diene_3_17_dione
   }
+
+  branch from testosterone side left {
+    testosterone
+    <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    1_hydroxytestosterone
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_8_ol +hydrogen_acceptor +h2o
+    8_hydroxyquinolin_2_1h_one
+  }
 }

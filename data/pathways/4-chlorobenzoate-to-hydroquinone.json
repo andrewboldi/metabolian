@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "4-chlorobenzoate-to-hydroquinone",
   "name": "4-chlorobenzoate to hydroquinone…",
-  "category": "energy-metabolism",
+  "category": "cofactor-vitamin-metabolism",
   "summary": "A 5-step route from 4-chlorobenzoate to hydroquinone O-β-D-glucopyranoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -189,6 +189,94 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2_4_dichlorobenzoyl_coa",
+      "name": "2,4-dichlorobenzoyl-CoA",
+      "short": "2,4-dichlorobenzoyl…",
+      "formula": "C28H34Cl2N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57329"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "sn_glycerol_1_phosphate",
+      "name": "sn-glycerol 1-phosphate",
+      "short": "sn-glycerol 1-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57685"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "sn_3_o_geranylgeranyl_glycerol_1_phosphate",
+      "name": "sn-3-O-(geranylgeranyl)glycerol 1-phosphate",
+      "short": "sn-3-O-(geranylgera…",
+      "formula": "C23H39O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57677"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "3_geranyl_4_hydroxybenzoate",
+      "name": "3-geranyl-4-hydroxybenzoate",
+      "short": "3-geranyl-4-hydroxy…",
+      "formula": "C17H21O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60878"
+      }
+    },
+    {
+      "id": "quinone",
+      "name": "Quinone (menaquinone pool)",
+      "short": "Quinone (menaquinon…",
+      "formula": "C6H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16509"
+      }
     }
   ],
   "enzymes": [
@@ -225,6 +313,34 @@
       "name": "hydroquinone glucosyltransferase",
       "ec": [
         "2.4.1.218"
+      ]
+    },
+    {
+      "id": "ec_1_21_1_2",
+      "name": "2,4-dichlorobenzoyl-CoA reductase",
+      "ec": [
+        "1.21.1.2"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_41",
+      "name": "phosphoglycerol geranylgeranyltransferase",
+      "ec": [
+        "2.5.1.41"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_93",
+      "name": "4-hydroxybenzoate geranyltransferase",
+      "ec": [
+        "2.5.1.93"
+      ]
+    },
+    {
+      "id": "ec_1_6_5_6",
+      "name": "p-benzoquinone reductase (NADPH)",
+      "ec": [
+        "1.6.5.6"
       ]
     }
   ],
@@ -486,6 +602,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:12560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2,4-dichlorobenzoyl-CoA reductase",
+      "equation": "4-chlorobenzoyl-CoA + chloride + NADP(+) = 2,4-dichlorobenzoyl-CoA + NADPH",
+      "ec": "1.21.1.2",
+      "substrates": [
+        {
+          "metabolite": "4_chlorobenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_dichlorobenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "phosphoglycerol geranylgeranyltransferase",
+      "equation": "sn-glycerol 1-phosphate + (2E,6E,10E)-geranylgeranyl diphosphate = sn-3-O-(geranylgeranyl)glycerol 1-phosphate + diphosphate",
+      "ec": "2.5.1.41",
+      "substrates": [
+        {
+          "metabolite": "sn_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sn_3_o_geranylgeranyl_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:23404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "4-hydroxybenzoate geranyltransferase",
+      "equation": "4-hydroxybenzoate + (2E)-geranyl diphosphate = 3-geranyl-4-hydroxybenzoate + diphosphate",
+      "ec": "2.5.1.93",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_geranyl_4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:27854"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27854"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "p-benzoquinone reductase (NADPH)",
+      "equation": "1,4-benzoquinone + NADPH + H(+) = hydroquinone + NADP(+)",
+      "ec": "1.6.5.6",
+      "substrates": [
+        {
+          "metabolite": "quinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_6_5_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:23488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23488"
           }
         ]
       }

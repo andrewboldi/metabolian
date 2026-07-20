@@ -17,4 +17,10 @@ pathway n8-acetylspermidinium-to-trypanothione-disulfide "N8-acetylspermidinium 
     <-> ec_1_8_1_12 [1.8.1.12] +nadp -nadph -hplus
     trypanothione_disulfide
   }
+
+  branch from spermidine side left {
+    spermidine
+    <-> ec_2_3_1_249 [2.3.1.249] +trans_4_coumaroyl_coa +coa +hplus
+    n1_n8_bis_coumaroyl_spermidine
+  }
 }

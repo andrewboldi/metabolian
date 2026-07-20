@@ -158,6 +158,35 @@
       "xrefs": {
         "chebi": "CHEBI:58358"
       }
+    },
+    {
+      "id": "n_alkylphthalic_monoamide",
+      "name": "N-alkylphthalic monoamide",
+      "short": "N-alkylphthalic…",
+      "formula": "C8H5NO3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65295"
+      }
+    },
+    {
+      "id": "primary_ammonium_ion",
+      "name": "primary ammonium ion",
+      "formula": "H3NR",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65296"
+      }
+    },
+    {
+      "id": "3_4_dihydroxyphthalate",
+      "name": "3,4-dihydroxyphthalate",
+      "short": "3,4-dihydroxyphthal…",
+      "formula": "C8H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58137"
+      }
     }
   ],
   "enzymes": [
@@ -208,6 +237,20 @@
       "name": "protocatechuate 4,5-dioxygenase",
       "ec": [
         "1.13.11.8"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_79",
+      "name": "phthalyl amidase",
+      "ec": [
+        "3.5.1.79"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_69",
+      "name": "3,4-dihydroxyphthalate decarboxylase",
+      "ec": [
+        "4.1.1.69"
       ]
     }
   ],
@@ -543,6 +586,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:24044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "phthalyl amidase",
+      "equation": "a phtalamide + H2O = phthalate + a primary amine",
+      "ec": "3.5.1.79",
+      "substrates": [
+        {
+          "metabolite": "n_alkylphthalic_monoamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phthalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "primary_ammonium_ion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:18297"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "3,4-dihydroxyphthalate decarboxylase",
+      "equation": "3,4-dihydroxyphthalate + H(+) = 3,4-dihydroxybenzoate + CO2",
+      "ec": "4.1.1.69",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxyphthalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:18601"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18601"
           }
         ]
       }

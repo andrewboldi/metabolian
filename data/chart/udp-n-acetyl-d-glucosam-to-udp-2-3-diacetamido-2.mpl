@@ -19,4 +19,16 @@ pathway udp-n-acetyl-d-glucosam-to-udp-2-3-diacetamido-2 "UDP-N-acetyl-α-D-gluc
     <-> ec_5_1_3_23 [5.1.3.23]
     udp_2_3_diacetamido_2_3_dideoxy_d_mannuronate
   }
+
+  branch from udp_2_acetamido_2_deoxy_d_glucuronate side left {
+    udp_2_acetamido_2_deoxy_d_glucuronate
+    <-> ec_4_1_1_128 [4.1.1.128] +hplus +co2
+    udp_n_acetyl_d_xylosamine
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_5_1_19 [1.5.1.19] +d_nopalinate +nadp +h2o +nadph +hplus
+    arginine
+  }
 }

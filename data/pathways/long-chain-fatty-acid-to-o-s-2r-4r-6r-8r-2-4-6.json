@@ -167,6 +167,91 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "long_chain_fatty_aldehyde",
+      "name": "long-chain fatty aldehyde",
+      "short": "long-chain fatty…",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17176"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_4_nitrosoaniline",
+      "name": "N,N-dimethyl-4-nitrosoaniline",
+      "short": "N,N-dimethyl-4-nitr…",
+      "formula": "C8H10N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59990"
+      }
+    },
+    {
+      "id": "4_hydroxylamino_n_n_dimethylaniline",
+      "name": "4-(hydroxylamino)-N,N-dimethylaniline",
+      "short": "4-(hydroxylamino)-N…",
+      "formula": "C8H12N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59991"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "3_l_glutamate_adenylyl_1_group",
+      "name": "3'-(L-glutamate)adenylyl(1−) group",
+      "short": "3'-(L-glutamate)ade…",
+      "formula": "C15H19N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78520"
+      }
     }
   ],
   "enzymes": [
@@ -189,6 +274,27 @@
       "name": "mycocerosate synthase",
       "ec": [
         "2.3.1.111"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_48",
+      "name": "long-chain-aldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.48"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_36",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": [
+        "1.1.99.36"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_24",
+      "name": "glutamate--tRNA(Gln) ligase",
+      "ec": [
+        "6.1.1.24"
       ]
     }
   ],
@@ -356,6 +462,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:10588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "long-chain-aldehyde dehydrogenase",
+      "equation": "a long-chain fatty aldehyde + NAD(+) + H2O = a long-chain fatty acid + NADH + 2 H(+)",
+      "ec": "1.2.1.48",
+      "substrates": [
+        {
+          "metabolite": "long_chain_fatty_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "long_chain_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:10652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "equation": "N,N-dimethyl-4-nitrosoaniline + ethanol = 4-(hydroxylamino)-N,N-dimethylaniline + acetaldehyde",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27538"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27538"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "glutamate--tRNA(Gln) ligase",
+      "equation": "tRNA(Glx) + L-glutamate + ATP = L-glutamyl-tRNA(Glx) + AMP + diphosphate",
+      "ec": "6.1.1.24",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_glutamate_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:18397"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18397"
           }
         ]
       }

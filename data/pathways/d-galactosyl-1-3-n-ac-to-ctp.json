@@ -103,6 +103,80 @@
       "xrefs": {
         "chebi": "CHEBI:37563"
       }
+    },
+    {
+      "id": "cdp_diacylglycerol",
+      "name": "CDP-diacylglycerol",
+      "formula": "C14H17N3O15P2R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58332"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycerol_3_phosphate",
+      "name": "1,2-diacyl-sn-glycerol 3-phosphate",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C5H5O8PR2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58608"
+      }
+    },
+    {
+      "id": "riboflavin",
+      "name": "riboflavin",
+      "formula": "C17H19N4O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57986"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "d_ribitol_5_phosphate",
+      "name": "D-ribitol 5-phosphate",
+      "short": "D-ribitol 5-P",
+      "formula": "C5H11O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57695"
+      }
+    },
+    {
+      "id": "cdp_ribitol",
+      "name": "CDP-ribitol",
+      "formula": "C14H23N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57608"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +206,27 @@
       "name": "nucleoside-diphosphate kinase",
       "ec": [
         "2.7.4.6"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_26",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": [
+        "3.6.1.26"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_161",
+      "name": "CTP-dependent riboflavin kinase",
+      "ec": [
+        "2.7.1.161"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_40",
+      "name": "D-ribitol-5-phosphate cytidylyltransferase",
+      "ec": [
+        "2.7.7.40"
       ]
     }
   ],
@@ -271,6 +366,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:25237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "equation": "a CDP-1,2-diacyl-sn-glycerol + H2O = a 1,2-diacyl-sn-glycero-3-phosphate + CMP + 2 H(+)",
+      "ec": "3.6.1.26",
+      "substrates": [
+        {
+          "metabolite": "cdp_diacylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15221"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15221"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "CTP-dependent riboflavin kinase",
+      "equation": "riboflavin + CTP = CDP + FMN + H(+)",
+      "ec": "2.7.1.161",
+      "substrates": [
+        {
+          "metabolite": "riboflavin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_161"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:25021"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25021"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "D-ribitol-5-phosphate cytidylyltransferase",
+      "equation": "D-ribitol 5-phosphate + CTP + H(+) = CDP-L-ribitol + diphosphate",
+      "ec": "2.7.7.40",
+      "substrates": [
+        {
+          "metabolite": "d_ribitol_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_ribitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:12456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12456"
           }
         ]
       }

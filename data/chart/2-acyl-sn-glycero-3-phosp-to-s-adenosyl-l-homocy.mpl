@@ -27,4 +27,28 @@ pathway 2-acyl-sn-glycero-3-phosp-to-s-adenosyl-l-homocy "2-acyl-sn-glycero-3-ph
     <-> ec_2_1_1_161 [2.1.1.161] +sam -sah -hplus
     betaine
   }
+
+  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side left {
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_2_7_8_42 [2.7.8.42] +kdo_2_lipid_iva +dag
+    7_o_2_aminoethyl_phosphoryl_kdo_2_4_kdo_2_6_lipi
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_141 [2.3.1.141] +2_o_acyl_3_o_d_galactosyl_sn_glycerol +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
+    1_2_diacyl_3_d_galactosyl_sn_glycerol
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_139 [2.1.1.139] +3_demethylstaurosporinium +sam +hplus
+    staurosporinium
+  }
+
+  branch from phosphatidylcholine side right {
+    phosphatidylcholine
+    <-> ec_2_3_1_251 [2.3.1.251] +a_lipid_a +2_acyl_sn_glycero_3_phosphocholine
+    an_acyl_lipid_a
+  }
 }

@@ -27,4 +27,28 @@ pathway atrazine-to-trans-octacis-decaprenylp "atrazine to trans,octacis-decapre
     <-> ec_3_1_3_111 [3.1.3.111] +h2o -pi
     trans_octacis_decaprenylphospho_d_ribofuranose
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_18 [1.4.1.18] +l_lysinium +nad +nadh +hplus
+    s_1_piperideine_6_carboxylate
+  }
+
+  branch from pra side right {
+    pra
+    <-> ec_6_3_4_13 [6.3.4.13] +glycine +atp +adp +pi +hplus
+    n1_5_phospho_d_ribosyl_glycinamide
+  }
+
+  branch from glutamine side left {
+    glutamine
+    <-> ec_2_6_1_15 [2.6.1.15] +pyruvate +alanine
+    2_oxoglutaramate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_27 [4.2.3.27] +dmapp
+    isoprene
+  }
 }

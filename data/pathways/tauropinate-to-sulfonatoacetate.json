@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "tauropinate-to-sulfonatoacetate",
   "name": "tauropinate to sulfonatoacetate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from tauropinate(1−) to sulfonatoacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -108,6 +108,79 @@
       "xrefs": {
         "chebi": "CHEBI:58824"
       }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "isethionate",
+      "name": "isethionate",
+      "formula": "C2H5O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61904"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "5_guanidino_2_oxopentanoic_acid",
+      "name": "5-guanidino-2-oxopentanoic acid",
+      "short": "5-guanidino-2-oxope…",
+      "formula": "C6H11N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58489"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +203,27 @@
       "name": "sulfoacetaldehyde dehydrogenase",
       "ec": [
         "1.2.1.73"
+      ]
+    },
+    {
+      "id": "ec_1_4_99_2",
+      "name": "taurine dehydrogenase",
+      "ec": [
+        "1.4.99.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_313",
+      "name": "sulfoacetaldehyde reductase (NADPH)",
+      "ec": [
+        "1.1.1.313"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_84",
+      "name": "arginine--pyruvate transaminase",
+      "ec": [
+        "2.6.1.84"
       ]
     }
   ],
@@ -285,6 +379,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:25637"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "taurine dehydrogenase",
+      "equation": "taurine + A + H2O = sulfoacetaldehyde + AH2 + NH4(+)",
+      "ec": "1.4.99.2",
+      "substrates": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_99_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18709"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sulfoacetaldehyde reductase (NADPH)",
+      "equation": "2-hydroxyethane-1-sulfonate + NADP(+) = sulfoacetaldehyde + NADPH + H(+)",
+      "ec": "1.1.1.313",
+      "substrates": [
+        {
+          "metabolite": "isethionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_313"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:29591"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "arginine--pyruvate transaminase",
+      "equation": "L-arginine + pyruvate = 5-guanidino-2-oxopentanoate + L-alanine",
+      "ec": "2.6.1.84",
+      "substrates": [
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:13833"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13833"
           }
         ]
       }

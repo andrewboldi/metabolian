@@ -15,4 +15,16 @@ pathway isopentenyl-diphosphate-to-2-hexaprenylphenol "isopentenyl diphosphate t
     <-> ec_4_1_1_98 [4.1.1.98] +hplus -co2
     2_hexaprenylphenol
   }
+
+  branch from all_trans_hexaprenyl_diphosphate side left {
+    all_trans_hexaprenyl_diphosphate
+    <-> ec_4_2_3_188 [4.2.3.188] +ppi
+    hexaprene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_227 [4.2.3.227] +2_cis_6_trans_farnesyl_diphosphate
+    cedr_8_ene
+  }
 }

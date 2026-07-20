@@ -19,4 +19,28 @@ pathway 5-methyltetrahydropteroyl-to-n6-r-s8-succinyldih "5-methyltetrahydropter
     <-> ec_2_3_1_61 [2.3.1.61] +succinyl_coa -coa
     n6_r_s8_succinyldihydrolipoyl_l_lysine_1
   }
+
+  branch from tetrahydropteroyltri_l_glutamate side left {
+    tetrahydropteroyltri_l_glutamate
+    <-> ec_2_1_1_14 [2.1.1.14] +l_selenohomocysteine +5_methyltetrahydropteroyltri_l_glutamate
+    l_selenomethionine
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_4_1_99_19 [4.1.99.19] +tyrosine +sam +nadph +p_cresol +5_deoxyadenosine +nadp
+    dehydroglycine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
+    3_l_lysyl_adenylyl_1_group
+  }
+
+  branch from n6_r_dihydrolipoyl_l_lysine side right {
+    n6_r_dihydrolipoyl_l_lysine
+    <-> ec_1_11_1_28 [1.11.1.28] +peroxol +alcohol +h2o
+    n6_r_lipoyl_l_lysine
+  }
 }

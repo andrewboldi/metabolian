@@ -19,4 +19,28 @@ pathway paraoxon-to-maleylacetate "paraoxon to maleylacetate" {
     <-> ec_1_13_11_37 [1.13.11.37] +o2 -hplus
     maleylacetate
   }
+
+  branch from 2_hydroxy_4_nitrophenolate side left {
+    2_hydroxy_4_nitrophenolate
+    <-> ec_1_14_12_23 [1.14.12.23] +nadh +o2 +nitrite +nad +hplus
+    1_4_dinitrobenzene
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_14_12_23 [1.14.12.23] +nitrobenzene +nadh +o2 +nad
+    catechol
+  }
+
+  branch from benzene_1_2_4_triol side left {
+    benzene_1_2_4_triol
+    <-> ec_1_14_13_219 [1.14.13.219] +nadph +o2 +hplus +nadp +h2o
+    resorcinol
+  }
+
+  branch from maleylacetate side right {
+    maleylacetate
+    <-> ec_1_3_1_32 [1.3.1.32] +nadp +nadph +hplus
+    3_oxoadipate
+  }
 }

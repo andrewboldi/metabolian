@@ -17,4 +17,28 @@ pathway 2-6-dioxo-6-phenylhexa-3-to-s-adenosyl-l-homocys "2,6-dioxo-6-phenylhexa
     <-> ec_2_1_1_25 [2.1.1.25] +sam -sah -hplus
     anisole
   }
+
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> ec_1_14_13_2 [1.14.13.2] +nadph +o2 +hplus +nadp +h2o
+    3_4_dihydroxybenzoate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_55 [1.14.14.55] +quinine +fmnh2 +o2 +h2o +hplus
+    3_hydroxyquininium
+  }
+
+  branch from phenol side left {
+    phenol
+    <-> ec_4_1_99_2 [4.1.99.2] +tyrosine +h2o +pyruvate
+    nh3
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_72 [2.1.1.72] +2_deoxyadenosine_5_monophosphate_1 +sam +hplus
+    n6_methyl_2_deoxyadenosine_5_monophosphate_1
+  }
 }

@@ -15,4 +15,16 @@ pathway 7-ammoniomethyl-7-deazagu-to-l-glutamate "7-ammoniomethyl-7-deazagu… t
     <-> ec_2_6_1_97 [2.6.1.97] +glutamine +h2o -glutamate
     archaeosine_5_phosphate_zwitterionic
   }
+
+  branch from guanine side left {
+    guanine
+    <-> ec_2_4_2_1 [2.4.2.1] +guanosine +pi
+    r1p
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_75 [2.6.1.75] +s_4_bromophenyl_l_cysteine +akg
+    4_bromophenylsulfanyl_pyruvate
+  }
 }

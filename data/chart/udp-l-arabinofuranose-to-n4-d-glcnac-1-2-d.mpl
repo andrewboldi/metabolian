@@ -15,4 +15,10 @@ pathway udp-l-arabinofuranose-to-n4-d-glcnac-1-2-d "UDP-β-L-arabinofuranose to 
     <-> ec_2_4_2_38 [2.4.2.38] +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 -udp -hplus
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
   }
+
+  branch from udp_d_xylose side left {
+    udp_d_xylose
+    <-> ec_2_4_2_40 [2.4.2.40] +zeatin +udp +hplus
+    o_d_xylosylzeatin
+  }
 }

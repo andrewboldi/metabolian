@@ -19,4 +19,28 @@ pathway l-canavanine-to-glycine "L-canavanine to glycine" {
     <-> ec_2_6_1_73 [2.6.1.73] +glyoxylate -glycine
     4_methylthio_2_oxobutanoate
   }
+
+  branch from l_homoserine side left {
+    l_homoserine
+    <-> ec_2_7_1_39 [2.7.1.39] +atp +adp +hplus
+    o_phosphonato_l_homoserine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_135 [3.5.1.135] +n4_acetylcytidine +h2o +hplus
+    cytidine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_38 [2.1.1.38] +o_demethylpuromycin +sam +hplus
+    puromycin
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_2_3_1_192 [2.3.1.192] +phenylacetyl_coa +coa +hplus
+    phenylacetylglycine
+  }
 }

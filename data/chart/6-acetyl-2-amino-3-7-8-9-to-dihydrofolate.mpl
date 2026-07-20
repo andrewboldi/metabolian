@@ -17,4 +17,28 @@ pathway 6-acetyl-2-amino-3-7-8-9-to-dihydrofolate "6-acetyl-2-amino-3,7,8,9-… 
     <-> ec_1_5_1_3 [1.5.1.3] +nadp -nadph -hplus
     dhf
   }
+
+  branch from r_dyspropterin side left {
+    r_dyspropterin
+    <-> ec_1_1_1_220 [1.1.1.220] +nadp +nadph +hplus
+    6r_6_lactoyl_5_6_7_8_tetrahydropterin
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> ec_6_3_2_3 [6.3.2.3] +glycine +atp +adp +pi +hplus
+    glu_cys
+  }
+
+  branch from gssg side left {
+    gssg
+    <-> ec_1_20_4_2 [1.20.4.2] +methylarsonate +gsh +hplus +h2o
+    methylarsonous_acid
+  }
+
+  branch from thf side right {
+    thf
+    <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +methylene_thf +nadph +hplus +nadp
+    5_methyluridine_5_monophosphate_1
+  }
 }

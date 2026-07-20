@@ -17,4 +17,28 @@ pathway kdo-2-lauroyl-lipid-iva-to-1-2-diacyl-sn-glycer "(KDO)2-(lauroyl)-lipid 
     <-> ec_3_1_3_4 [3.1.3.4] +h2o -pi
     dag
   }
+
+  branch from kdo_2_lipid_a_6_e_coli side left {
+    kdo_2_lipid_a_6_e_coli
+    <-> ec_2_7_4_29 [2.7.4.29] +ditrans_polycis_undecaprenyl_diphosphate +ditrans_polycis_undecaprenyl_phosphate
+    kdo_2_lipid_a_1_diphosphate_7_e_coli
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_41 [2.3.1.41] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +malonyl-acp +hplus +co2
+    o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1
+  }
+
+  branch from dag side left {
+    dag
+    <-> ec_2_4_1_184 [2.4.1.184] +1_2_diacyl_3_d_galactosyl_sn_glycerol
+    3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl
+  }
+
+  branch from 1_2_diacyl_sn_glycerol_3_phosphate side right {
+    1_2_diacyl_sn_glycerol_3_phosphate
+    <-> ec_2_3_1_n4 [2.3.1.n4] +1_acyl_sn_glycerol_3_phosphate +holo-acp
+    o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
+  }
 }

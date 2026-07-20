@@ -108,6 +108,43 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "s_1_piperideine_6_carboxylate",
+      "name": "(S)-1-piperideine-6-carboxylate",
+      "short": "1-piperideine-6-car…",
+      "formula": "C6H8NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58769"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +167,13 @@
       "name": "putrescine oxidase",
       "ec": [
         "1.4.3.10"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_18",
+      "name": "lysine 6-dehydrogenase",
+      "ec": [
+        "1.4.1.18"
       ]
     }
   ],
@@ -281,6 +325,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:18273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "lysine 6-dehydrogenase",
+      "equation": "L-lysine + NADP(+) = L-1-piperideine-6-carboxylate + NH4(+) + NADPH + 2 H(+)",
+      "ec": "1.4.1.18",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_piperideine_6_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64792"
           }
         ]
       }

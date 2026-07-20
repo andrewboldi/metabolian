@@ -164,6 +164,78 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "3_dehydromaltose",
+      "name": "3'-dehydromaltose",
+      "formula": "C12H20O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229548"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_dehydro_d_glucose",
+      "name": "3-dehydro-D-glucose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:55402"
+      }
+    },
+    {
+      "id": "6_sulfo_d_quinovose",
+      "name": "6-sulfo-D-quinovose",
+      "formula": "C6H11O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77132"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
     }
   ],
   "enzymes": [
@@ -200,6 +272,20 @@
       "name": "6-dehydroglucose reductase",
       "ec": [
         "1.1.1.432"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_218",
+      "name": "alpha-3'-ketoglucosidase",
+      "ec": [
+        "3.2.1.218"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_181",
+      "name": "sulfoquinovose monooxygenase",
+      "ec": [
+        "1.14.14.181"
       ]
     }
   ],
@@ -429,6 +515,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:70779"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "alpha-3'-ketoglucosidase",
+      "equation": "3'-dehydromaltose + H2O = 3-dehydro-D-glucose + D-glucose",
+      "ec": "3.2.1.218",
+      "substrates": [
+        {
+          "metabolite": "3_dehydromaltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydro_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_218"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:78723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "sulfoquinovose monooxygenase",
+      "equation": "6-sulfo-D-quinovose + FMNH2 + O2 = 6-dehydro-D-glucose + FMN + sulfite + H2O + 2 H(+)",
+      "ec": "1.14.14.181",
+      "substrates": [
+        {
+          "metabolite": "6_sulfo_d_quinovose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_dehydro_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_181"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:70775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70775"
           }
         ]
       }

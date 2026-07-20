@@ -17,4 +17,28 @@ pathway urethane-to-diphosphate "urethane to diphosphate" {
     <-> ec_6_2_1_22 [6.2.1.22] +o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3 +atp -amp -ppi
     s_acetyl_o_2_5_phosphoribosyl_3_dephospho_coa_l
   }
+
+  branch from ethanol side left {
+    ethanol
+    <-> ec_1_1_99_36 [1.1.99.36] +hydrogen_acceptor +acetaldehyde
+    hydrogen_donor
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
+    n_terminal_5_oxo_l_proline
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> ec_4_1_2_48 [4.1.2.48] +l_allothreonine
+    glycine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_14 [2.8.3.14] +5_hydroxypentanoate +acetyl_coa
+    5_hydroxypentanoyl_coa
+  }
 }

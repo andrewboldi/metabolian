@@ -15,4 +15,10 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-man-1-2-d-man "N4-(α-D-Glc-(1→2)-α-D-Glc�
     <-> ec_3_2_1_130 [3.2.1.130] +h2o -n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man
     d_glucosyl_1_3_d_mannopyranose
   }
+
+  branch from d_glucose side left {
+    d_glucose
+    <-> ec_3_2_1_216 [3.2.1.216] +d_glcp_1_2_d_glcp +h2o
+    glucose
+  }
 }

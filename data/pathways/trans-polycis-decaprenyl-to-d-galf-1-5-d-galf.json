@@ -134,6 +134,33 @@
       "xrefs": {
         "chebi": "CHEBI:67212"
       }
+    },
+    {
+      "id": "dtdp_l_rhodosamine",
+      "name": "dTDP-β-L-rhodosamine",
+      "formula": "C18H30N3O13P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78301"
+      }
+    },
+    {
+      "id": "aklavinone",
+      "name": "aklavinone",
+      "formula": "C22H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31181"
+      }
+    },
+    {
+      "id": "aclacinomycin_t",
+      "name": "aclacinomycin T",
+      "formula": "C30H35NO10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77979"
+      }
     }
   ],
   "enzymes": [
@@ -163,6 +190,13 @@
       "name": "galactofuranosylgalactofuranosylrhamnosyl-N-acetylglucosaminyl-diphospho-",
       "ec": [
         "2.4.1.288"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_326",
+      "name": "aklavinone 7-L-rhodosaminyltransferase",
+      "ec": [
+        "2.4.1.326"
       ]
     }
   ],
@@ -355,6 +389,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:34391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "aklavinone 7-L-rhodosaminyltransferase",
+      "equation": "dTDP-beta-L-rhodosamine + aklavinone = aclacinomycin T + dTDP + 2 H(+)",
+      "ec": "2.4.1.326",
+      "substrates": [
+        {
+          "metabolite": "dtdp_l_rhodosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aklavinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aclacinomycin_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_326"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41564"
           }
         ]
       }

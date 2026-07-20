@@ -15,4 +15,10 @@ pathway 1-acyl-sn-glycero-3-phosp-to-fatty-acyl-monophos "1-acyl-sn-glycero-3-ph
     <-> ec_2_7_2_18 [2.7.2.18] +fatty-acid +atp -adp
     fatty_acyl_monophosphate
   }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> ec_3_1_1_52 [3.1.1.52] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
+    1_acyl_sn_glycero_3_phospho_1d_myo_inositol
+  }
 }

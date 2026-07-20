@@ -17,4 +17,16 @@ pathway 3-1-hydroxyethyl-bacteri-to-2-4-divinyl "3-(1-hydroxyethyl)bacteri… to
     <-> ec_1_3_1_75 [1.3.1.75] +nadp -nadph -hplus
     2_4_divinyl_protochlorophyllide_a
   }
+
+  branch from chlorophyllide_a side left {
+    chlorophyllide_a
+    <-> ec_1_17_7_2 [1.17.7.2] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
+    71_hydroxychlorophyllide_a
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +o2 +hplus +di_sulfido_diiron +h2o
+    albaflavenone
+  }
 }

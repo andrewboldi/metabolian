@@ -15,4 +15,16 @@ pathway n2-l-glutamino-1-group-to-c-terminal-5-phospho-l "N2-L-glutamino(1−) g
     <-> ec_2_7_2_19 [2.7.2.19] +atp -adp
     c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_100 [3.5.1.100] +r_piperazin_4_ium_2_carboxamide +h2o
+    r_piperazine_2_carboxylic_acid
+  }
+
+  branch from c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro side right {
+    c_terminal_5_phospho_l_glutamyl_l_glutamyl_4_gro
+    <-> ec_1_2_1_106 [1.2.1.106] +pi +nadp +nadph +hplus
+    c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl
+  }
 }

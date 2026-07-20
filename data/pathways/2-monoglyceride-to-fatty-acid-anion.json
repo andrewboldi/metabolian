@@ -118,6 +118,36 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin",
+      "name": "N-(ω-hydroxy-ultra-long chain fatty acyl)sphingosine",
+      "short": "N-(ω-hydroxy-ultra-…",
+      "formula": "C20H39NO4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157663"
+      }
+    },
+    {
+      "id": "linoleoyl_containing_1_2_3_triacyl_sn_glycerol",
+      "name": "linoleoyl containing 1,2,3-triacyl-sn-glycerol",
+      "short": "linoleoyl…",
+      "formula": "C23H36O6R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144774"
+      }
+    },
+    {
+      "id": "n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin",
+      "name": "N-(ω-linoleoyloxy-ultra-long chain fatty acyl)sphingosine",
+      "short": "N-(ω-linoleoyloxy-u…",
+      "formula": "C38H69NO5R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157662"
+      }
     }
   ],
   "enzymes": [
@@ -154,6 +184,13 @@
       "name": "hormone-sensitive lipase",
       "ec": [
         "3.1.1.79"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_296",
+      "name": "omega-hydroxyceramide transacylase",
+      "ec": [
+        "2.3.1.296"
       ]
     }
   ],
@@ -293,6 +330,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:12044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "omega-hydroxyceramide transacylase",
+      "equation": "an N-(omega-hydroxy-ultra-long chain fatty acyl)-sphing-4-enine + a (9Z,12Z)-octadecadienoyl-containing triacyl-sn-glycerol = an N-(omega-(9Z,12Z-octadecadienoyloxy)-ultra-long chain fatty acyl)-sphing-4-enine + a diacylglycerol",
+      "ec": "2.3.1.296",
+      "substrates": [
+        {
+          "metabolite": "n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "linoleoyl_containing_1_2_3_triacyl_sn_glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_296"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65692"
           }
         ]
       }

@@ -17,4 +17,16 @@ pathway d-glucosyl-n-acylsphing-to-d-galacto-hexodialdo "β-D-glucosyl-N-acylsph
     <-> ec_1_1_3_9 [1.1.3.9] +d_galactopyranose +o2 -h2o2
     d_galacto_hexodialdose
   }
+
+  branch from d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer side left {
+    d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer
+    <-> ec_2_4_1_79 [2.4.1.79] +udp_n_acetyl_d_galactosamine +udp +hplus
+    n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
+  }
+
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_1_1_1_359 [1.1.1.359] +nad +nadh +hplus
+    d_galactono_1_5_lactone
+  }
 }

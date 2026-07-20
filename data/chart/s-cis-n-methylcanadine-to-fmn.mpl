@@ -17,4 +17,10 @@ pathway s-cis-n-methylcanadine-to-fmn "(S)-cis-N-methylcanadine to FMN" {
     <-> ec_1_14_14_167 [1.14.14.167] +fmnh2 +o2 -fmn -h2o -hplus
     13s_14r_1_8_dihydroxy_13_o_acetyl_n_methylcanad
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_49 [1.14.14.49] +n_12_hydroxyjasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
+    n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion
+  }
 }

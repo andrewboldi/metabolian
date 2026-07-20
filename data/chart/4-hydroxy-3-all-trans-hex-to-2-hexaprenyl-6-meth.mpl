@@ -15,4 +15,16 @@ pathway 4-hydroxy-3-all-trans-hex-to-2-hexaprenyl-6-meth "4-hydroxy-3-all-trans-
     <-> ec_4_1_1_130 [4.1.1.130] +hplus -co2
     2_hexaprenyl_6_methoxyphenol
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_33 [1.14.15.33] +10_deoxymethymycin +di_sulfido_diiron +o2 +hplus +h2o
+    novamethymycin
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_163 [2.1.1.163] +6_methoxy_2_octaprenyl_1_4_benzoquinone +sam +hplus
+    3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone
+  }
 }

@@ -131,6 +131,70 @@
       "xrefs": {
         "chebi": "CHEBI:230522"
       }
+    },
+    {
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60344"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "mycobilin_b",
+      "name": "mycobilin b",
+      "formula": "C34H32N4O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136508"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_7",
+      "name": "2-demethylmenaquinol-7",
+      "short": "2-demethylmenaquino…",
+      "formula": "C45H64O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64806"
+      }
+    },
+    {
+      "id": "menaquinol_7",
+      "name": "menaquinol-7",
+      "formula": "C46H66O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64834"
+      }
     }
   ],
   "enzymes": [
@@ -146,6 +210,20 @@
       "name": "2-(S-pantetheinyl)-carbapenam-3-carboxylate methyltransferase",
       "ec": [
         "2.1.1.394"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_57",
+      "name": "heme oxygenase (mycobilin-producing)",
+      "ec": [
+        "1.14.99.57"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_163",
+      "name": "demethylmenaquinone methyltransferase",
+      "ec": [
+        "2.1.1.163"
       ]
     }
   ],
@@ -333,6 +411,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:79663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "heme oxygenase (mycobilin-producing)",
+      "equation": "heme b + 3 AH2 + 3 O2 + 2 H(+) = mycobilin b + Fe(2+) + 3 A + 3 H2O",
+      "ec": "1.14.99.57",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycobilin_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "demethylmenaquinone methyltransferase",
+      "equation": "2-demethylmenaquinol-7 + S-adenosyl-L-methionine = menaquinol-7 + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.163",
+      "substrates": [
+        {
+          "metabolite": "2_demethylmenaquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_163"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33255"
           }
         ]
       }

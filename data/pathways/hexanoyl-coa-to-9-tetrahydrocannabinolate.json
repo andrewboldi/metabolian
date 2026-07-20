@@ -137,6 +137,43 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "cannabidiolate",
+      "name": "cannabidiolate",
+      "formula": "C22H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:67136"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "1e_4e_germacrene_b",
+      "name": "(1E,4E)-germacrene B",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:5337"
+      }
+    },
+    {
+      "id": "cannabinerolate",
+      "name": "cannabinerolate",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66961"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +203,20 @@
       "name": "tetrahydrocannabinolic acid synthase",
       "ec": [
         "1.21.3.7"
+      ]
+    },
+    {
+      "id": "ec_1_21_3_8",
+      "name": "cannabidiolic acid synthase",
+      "ec": [
+        "1.21.3.8"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_71",
+      "name": "(E,E)-germacrene B synthase",
+      "ec": [
+        "4.2.3.71"
       ]
     }
   ],
@@ -354,6 +405,137 @@
           {
             "db": "Rhea",
             "id": "RHEA:34135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cannabidiolic acid synthase",
+      "equation": "cannabigerolate + O2 = cannabidiolate + H2O2",
+      "ec": "1.21.3.8",
+      "substrates": [
+        {
+          "metabolite": "cannabigerolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cannabidiolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:34411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(E,E)-germacrene B synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (1E,4E)-germacrene B + diphosphate",
+      "ec": "4.2.3.71",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1e_4e_germacrene_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "tetrahydrocannabinolic acid synthase",
+      "equation": "cannabinerolate + O2 = Delta(9)-tetrahydrocannabinolate + H2O2",
+      "ec": "1.21.3.7",
+      "substrates": [
+        {
+          "metabolite": "cannabinerolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_tetrahydrocannabinolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:34143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34143"
           }
         ]
       }

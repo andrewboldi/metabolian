@@ -129,6 +129,34 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "narbomycin",
+      "name": "narbomycin",
+      "formula": "C28H48NO7",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76801"
+      }
+    },
+    {
+      "id": "pikromycin",
+      "name": "pikromycin",
+      "formula": "C28H48NO8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76800"
+      }
+    },
+    {
+      "id": "cis_4_hydroxycyclohexane_1_carboxylate",
+      "name": "cis-4-hydroxycyclohexane-1-carboxylate",
+      "short": "cis-4-hydroxycycloh…",
+      "formula": "C7H11O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229701"
+      }
     }
   ],
   "enzymes": [
@@ -151,6 +179,20 @@
       "name": "4-oxocyclohexanecarboxylate 2-dehydrogenase",
       "ec": [
         "1.17.3.5"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_33",
+      "name": "pikromycin synthase",
+      "ec": [
+        "1.14.15.33"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_438",
+      "name": "cis-4-hydroxycyclohexanecarboxylate dehydrogenase",
+      "ec": [
+        "1.1.1.438"
       ]
     }
   ],
@@ -302,6 +344,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:79151"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pikromycin synthase",
+      "equation": "narbomycin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pikromycin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.33",
+      "substrates": [
+        {
+          "metabolite": "narbomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pikromycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:39887"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39887"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cis-4-hydroxycyclohexanecarboxylate dehydrogenase",
+      "equation": "cis-4-hydroxycyclohexane-1-carboxylate + NAD(+) = 4-oxocyclohexane-1-carboxylate + NADH + H(+)",
+      "ec": "1.1.1.438",
+      "substrates": [
+        {
+          "metabolite": "cis_4_hydroxycyclohexane_1_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxocyclohexanecarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_438"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:79147"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79147"
           }
         ]
       }

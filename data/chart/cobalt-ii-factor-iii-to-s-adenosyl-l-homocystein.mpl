@@ -17,4 +17,28 @@ pathway cobalt-ii-factor-iii-to-s-adenosyl-l-homocystein "cobalt(II)-factor III 
     <-> ec_2_1_1_195 [2.1.1.195] +sam -sah
     cobalt_precorrin_6a
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_6_ol +h2o +hydrogen_donor
+    6_hydroxyquinolin_2_1h_one
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_150 [2.1.1.150] +7_hydroxyisoflavones +sam +hplus
+    7_methoxyisoflavones
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> ec_4_3_99_4 [4.3.99.4] +choline
+    trimethylammonium
+  }
+
+  branch from cobalt_precorrin_6a side right {
+    cobalt_precorrin_6a
+    <-> ec_1_3_1_106 [1.3.1.106] +nad +nadh +hplus
+    cobalt_precorrin_6b
+  }
 }

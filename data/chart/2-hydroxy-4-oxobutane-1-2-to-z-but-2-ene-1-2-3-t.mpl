@@ -15,4 +15,16 @@ pathway 2-hydroxy-4-oxobutane-1-2-to-z-but-2-ene-1-2-3-t "2-hydroxy-4-oxobutane-
     <-> ec_4_2_1_79 [4.2.1.79] -h2o
     z_but_2_ene_1_2_3_tricarboxylate
   }
+
+  branch from 2s_3s_2_methylcitrate side left {
+    2s_3s_2_methylcitrate
+    <-> ec_4_2_1_117 [4.2.1.117] +h2o
+    2e_but_2_ene_1_2_3_tricarboxylate
+  }
+
+  branch from z_but_2_ene_1_2_3_tricarboxylate side right {
+    z_but_2_ene_1_2_3_tricarboxylate
+    <-> ec_4_2_1_99 [4.2.1.99] +h2o
+    2s_3r_3_hydroxybutane_1_2_3_tricarboxylate
+  }
 }

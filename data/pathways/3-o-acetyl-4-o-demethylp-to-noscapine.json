@@ -121,6 +121,56 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
+      "name": "N2-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine",
+      "short": "N2-[(3R)-3-(2-satur…",
+      "formula": "C10H16N2O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138473"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith",
+      "name": "N5,N5,N5-trimethyl-N2-[(3R)-3-(acyloxy)acyl]-L-ornithine betaine",
+      "short": "N5,N5,N5-trimethyl-…",
+      "formula": "C13H22N2O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138481"
+      }
+    },
+    {
+      "id": "2_4_diacetylphloroglucinol",
+      "name": "2,4-diacetylphloroglucinol",
+      "short": "2,4-diacetylphlorog…",
+      "formula": "C10H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140662"
+      }
+    },
+    {
+      "id": "2_4_6_trihydroxyacetophenone",
+      "name": "2',4',6'-trihydroxyacetophenone",
+      "short": "2',4',6'-trihydroxy…",
+      "formula": "C8H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64344"
+      }
     }
   ],
   "enzymes": [
@@ -143,6 +193,20 @@
       "name": "noscapine synthase",
       "ec": [
         "1.1.1.415"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_344",
+      "name": "ornithine lipid N-methyltransferase",
+      "ec": [
+        "2.1.1.344"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_24",
+      "name": "2,4-diacetylphloroglucinol hydrolase",
+      "ec": [
+        "3.7.1.24"
       ]
     }
   ],
@@ -290,6 +354,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:57404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ornithine lipid N-methyltransferase",
+      "equation": "an N(2)-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine lipid + 3 S-adenosyl-L-methionine = an N,N,N-trimethylornithine lipid + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.344",
+      "substrates": [
+        {
+          "metabolite": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_344"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20461"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2,4-diacetylphloroglucinol hydrolase",
+      "equation": "2,4-diacetylphloroglucinol + H2O = 2-acetylphloroglucinol + acetate",
+      "ec": "3.7.1.24",
+      "substrates": [
+        {
+          "metabolite": "2_4_diacetylphloroglucinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_6_trihydroxyacetophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:59184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59184"
           }
         ]
       }

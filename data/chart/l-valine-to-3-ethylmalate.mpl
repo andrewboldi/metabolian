@@ -17,4 +17,28 @@ pathway l-valine-to-3-ethylmalate "L-valine to 3-ethylmalate" {
     <-> ec_2_3_3_7 [2.3.3.7] +glyoxylate +h2o -coa -hplus
     3_ethylmalate
   }
+
+  branch from kiv side left {
+    kiv
+    <-> ec_2_3_3_13 [2.3.3.13] +acetyl_coa +h2o +coa +hplus
+    2s_2_isopropylmalate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_11 [3.5.4.11] +2_aminopteridin_4_ol +h2o +hplus
+    lumazine
+  }
+
+  branch from isobutyryl_coa side left {
+    isobutyryl_coa
+    <-> ec_2_3_1_168 [2.3.1.168] +n6_r_dihydrolipoyl_l_lysine +coa
+    n6_r_s8_isobutyryldihydrolipoyl_l_lysine
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_5 [1.14.15.5] +corticosterone +o2 +hplus +di_sulfido_diiron +h2o
+    18_hydroxycorticosterone
+  }
 }

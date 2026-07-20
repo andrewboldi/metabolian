@@ -15,4 +15,10 @@ pathway d-glycero-d-manno-hepto-to-diphosphate "D-glycero-β-D-manno-hepto… to
     <-> ec_2_7_7_70 [2.7.7.70] +atp +hplus -ppi
     adp_d_glycero_d_manno_heptose
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_6_1_9 [3.6.1.9] +xtp +h2o +hplus
+    xmp
+  }
 }

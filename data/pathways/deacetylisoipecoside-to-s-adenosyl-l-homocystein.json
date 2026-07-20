@@ -131,6 +131,25 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "gossypetin",
+      "name": "gossypetin",
+      "formula": "C15H9O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77862"
+      }
+    },
+    {
+      "id": "3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate",
+      "name": "3',4',5,7-pentahydroxy-8-methoxyflavon-3-olate",
+      "short": "3',4',5,7-pentahydr…",
+      "formula": "C16H11O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58544"
+      }
     }
   ],
   "enzymes": [
@@ -153,6 +172,13 @@
       "name": "phenylethanolamine N-methyltransferase",
       "ec": [
         "2.1.1.28"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_88",
+      "name": "8-hydroxyquercetin 8-O-methyltransferase",
+      "ec": [
+        "2.1.1.88"
       ]
     }
   ],
@@ -300,6 +326,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:25269"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "8-hydroxyquercetin 8-O-methyltransferase",
+      "equation": "3,3',4',5,7,8-hexahydroxyflavone + S-adenosyl-L-methionine = 3,3',4',5,7-pentahydroxy-8-methoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.88",
+      "substrates": [
+        {
+          "metabolite": "gossypetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16593"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16593"
           }
         ]
       }

@@ -15,4 +15,22 @@ pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
     <-> ec_3_1_6_1 [3.1.6.1] +h2o -sulfate -hplus
     phenols
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_2_5_1_118 [2.5.1.118] +isoxazolin_5_one +o_acetyl_l_serine +hplus
+    3_5_oxoisoxazolin_2_yl_l_alanine
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_18 [2.8.2.18] +cortisol +3_phosphonato_5_adenylyl_sulfate +hplus
+    cortisol_21_sulfate
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +2_ethylhexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    2_ethylhexanal
+  }
 }

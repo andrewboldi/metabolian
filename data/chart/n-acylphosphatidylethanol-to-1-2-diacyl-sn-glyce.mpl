@@ -15,4 +15,10 @@ pathway n-acylphosphatidylethanol-to-1-2-diacyl-sn-glyce "N-acylphosphatidyletha
     <-> ec_2_3_1_52 [2.3.1.52] +acyl_coa -coa
     1_2_diacyl_sn_glycerol_3_phosphate
   }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> ec_3_1_1_28 [3.1.1.28] +o_acyl_l_carnitine +h2o +hplus
+    carnitine
+  }
 }

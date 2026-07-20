@@ -15,4 +15,28 @@ pathway formononetin-to-glycerol-1-phosphate "formononetin to glycerol 1-phospha
     <-> ec_2_7_1_79 [2.7.1.79] +glycerol -pi -hplus
     glycerol_1_phosphate
   }
+
+  branch from 2_hydroxyformononetin side left {
+    2_hydroxyformononetin
+    <-> ec_1_3_1_45 [1.3.1.45] +nadp +nadph +hplus
+    vestitone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_1 [1.14.14.1] +r_h +fmnh2 +o2 +h2o +hplus
+    alcohol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_15 [6.1.1.15] +amp_3_end_1 +l_proline +atp +amp
+    3_l_prolyl_adenylyl_zwitterionic_group
+  }
+
+  branch from glycerol_1_phosphate side right {
+    glycerol_1_phosphate
+    <-> ec_3_1_4_42 [3.1.4.42] +h2o +hplus
+    glycerol_1_2_cyclic_phosphate
+  }
 }

@@ -19,4 +19,22 @@ pathway deoxycholate-to-3-7-dihydroxy-12-oxo-5 "deoxycholate to 3α,7α-dihydrox
     <-> ec_1_1_1_176 [1.1.1.176] +nadp -nadph -hplus
     3_7_dihydroxy_12_oxo_5_cholanate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_77 [4.2.3.77] +fpp
+    germacrene_d
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_fatty_acid +holo-acp +hplus +h2o
+    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
+  }
+
+  branch from 3_7_dihydroxy_12_oxo_5_cholanate side left {
+    3_7_dihydroxy_12_oxo_5_cholanate
+    <-> ec_1_1_1_238 [1.1.1.238] +nadp +nadph +hplus
+    3_7_12_trihydroxy_5_cholanate
+  }
 }

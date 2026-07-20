@@ -23,4 +23,28 @@ pathway n-r-pantothenoyl-l-cy-to-hyponitrous-acid "N-[(R)-pantothenoyl]-L-cy… 
     <-> ec_1_7_1_5 [1.7.1.5] +nad -nadh -hplus
     hyponitrous_acid
   }
+
+  branch from cysteaminium side left {
+    cysteaminium
+    <-> ec_2_3_1_11 [2.3.1.11] +acetyl_coa +coa
+    s_acetylcysteaminium
+  }
+
+  branch from r_pantothenate side right {
+    r_pantothenate
+    <-> ec_2_7_1_33 [2.7.1.33] +atp +adp +hplus
+    r_4_phosphonatopantothenate
+  }
+
+  branch from hypotaurine side left {
+    hypotaurine
+    <-> ec_1_14_13_8 [1.14.13.8] +nadh +o2 +hplus +nad +h2o
+    taurine
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_1_5_1_17 [1.5.1.17] +nad +h2o +pyruvate +nadh +hplus
+    2_2_iminodipropanoate
+  }
 }

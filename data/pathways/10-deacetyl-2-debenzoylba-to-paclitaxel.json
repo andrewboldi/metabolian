@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "10-deacetyl-2-debenzoylba-to-paclitaxel",
   "name": "10-deacetyl-2-debenzoylba… to paclitaxel",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 5-step route from 10-deacetyl-2-debenzoylbaccatin III to paclitaxel, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -156,6 +156,35 @@
       "xrefs": {
         "chebi": "CHEBI:45863"
       }
+    },
+    {
+      "id": "10_deacetyl_1_deoxybaccatin_iii",
+      "name": "10-deacetyl-1-deoxybaccatin III",
+      "short": "10-deacetyl-1-deoxy…",
+      "formula": "C29H36O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234005"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "24s_24_hydroxycholesterol",
+      "name": "(24S)-24-hydroxycholesterol",
+      "short": "24-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34310"
+      }
     }
   ],
   "enzymes": [
@@ -192,6 +221,20 @@
       "name": "3'-N-debenzoyltaxol N-benzoyltransferase",
       "ec": [
         "2.3.1.321"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_192",
+      "name": "taxoid 1beta-hydroxylase",
+      "ec": [
+        "1.14.14.192"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_25",
+      "name": "cholesterol 24-hydroxylase",
+      "ec": [
+        "1.14.14.25"
       ]
     }
   ],
@@ -433,6 +476,120 @@
           {
             "db": "Rhea",
             "id": "RHEA:33687"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "taxoid 1beta-hydroxylase",
+      "equation": "10-deacetyl-1-deoxybaccatin III + reduced [NADPH--hemoprotein reductase] + O2 = 10-deacetylbaccatin III + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.192",
+      "substrates": [
+        {
+          "metabolite": "10_deacetyl_1_deoxybaccatin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10_deacetylbaccatin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_192"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:62280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "cholesterol 24-hydroxylase",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.25",
+      "substrates": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24s_24_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:22716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22716"
           }
         ]
       }

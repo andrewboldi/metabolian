@@ -15,4 +15,10 @@ pathway l-serine-to-ammonium "L-serine to ammonium" {
     <-> ec_2_3_2_14 [2.3.2.14] +glutamine -nh3
     l_glutamyl_d_alaninate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_33 [4.3.1.33] +1r_2_amino_1_hydroxyethyl_phosphonate
+    phosphonoacetaldehyde
+  }
 }

@@ -90,6 +90,26 @@
       "xrefs": {
         "chebi": "CHEBI:28938"
       }
+    },
+    {
+      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
+      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
+      "short": "(2-amino-1-hydroxye…",
+      "formula": "C2H8NO4P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141612"
+      }
+    },
+    {
+      "id": "phosphonoacetaldehyde",
+      "name": "phosphonoacetaldehyde",
+      "short": "phosphonoacetaldehy…",
+      "formula": "C2H4O4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58383"
+      }
     }
   ],
   "enzymes": [
@@ -112,6 +132,13 @@
       "name": "D-alanine gamma-glutamyltransferase",
       "ec": [
         "2.3.2.14"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_33",
+      "name": "(R)-1-hydroxy-2-aminoethylphosphonate ammonia-lyase",
+      "ec": [
+        "4.3.1.33"
       ]
     }
   ],
@@ -239,6 +266,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:23556"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(R)-1-hydroxy-2-aminoethylphosphonate ammonia-lyase",
+      "equation": "(1R)-(2-amino-1-hydroxyethyl)phosphonate = phosphonoacetaldehyde + NH4(+)",
+      "ec": "4.3.1.33",
+      "substrates": [
+        {
+          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphonoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:72879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72879"
           }
         ]
       }

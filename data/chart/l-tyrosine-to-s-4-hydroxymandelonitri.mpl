@@ -15,4 +15,10 @@ pathway l-tyrosine-to-s-4-hydroxymandelonitri "L-tyrosine to (S)-4-hydroxymandel
     <-> ec_2_4_1_85 [2.4.1.85] +udp_d_glucose -udp -hplus
     s_4_hydroxymandelonitrile_d_glucoside
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_73 [1.14.14.73] +fenbendazole +fmnh2 +o2 +h2o +hplus
+    oxfendazole
+  }
 }

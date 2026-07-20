@@ -147,6 +147,110 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+      "name": "(6R)-6-lactoyl-5,6,7,8-tetrahydropterin",
+      "short": "6-lactoyl-5,6,7,8-t…",
+      "formula": "C9H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136565"
+      }
+    },
+    {
+      "id": "glu_cys",
+      "name": "γ-L-Glutamyl-L-cysteine",
+      "short": "γ-L-Glutamyl-L-cyst…",
+      "formula": "C8H13N2O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58173"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "methylarsonate",
+      "name": "methylarsonate",
+      "formula": "CH4AsO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33409"
+      }
+    },
+    {
+      "id": "methylarsonous_acid",
+      "name": "methylarsonous acid",
+      "formula": "CH5AsO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17826"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "methylene_thf",
+      "name": "5,10-Methylenetetrahydrofolate",
+      "short": "5,10-Methylenetetra…",
+      "formula": "C20H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15636"
+      }
+    },
+    {
+      "id": "5_methyluridine_5_monophosphate_1",
+      "name": "5-methyluridine 5'-monophosphate(1−)",
+      "short": "5-methyluridine…",
+      "formula": "C10H12N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74447"
+      }
     }
   ],
   "enzymes": [
@@ -176,6 +280,34 @@
       "name": "dihydrofolate reductase",
       "ec": [
         "1.5.1.3"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_220",
+      "name": "6-pyruvoyltetrahydropterin 2'-reductase",
+      "ec": [
+        "1.1.1.220"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_3",
+      "name": "glutathione synthase",
+      "ec": [
+        "6.3.2.3"
+      ]
+    },
+    {
+      "id": "ec_1_20_4_2",
+      "name": "methylarsonate reductase",
+      "ec": [
+        "1.20.4.2"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_74",
+      "name": "methylenetetrahydrofolate--tRNA-(uracil(54)-C(5))-methyltransferase",
+      "ec": [
+        "2.1.1.74"
       ]
     }
   ],
@@ -364,6 +496,222 @@
           {
             "db": "Rhea",
             "id": "RHEA:15009"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "6-pyruvoyltetrahydropterin 2'-reductase",
+      "equation": "6-lactoyl-5,6,7,8-tetrahydropterin + NADP(+) = 6-pyruvoyl-5,6,7,8-tetrahydropterin + NADPH + H(+)",
+      "ec": "1.1.1.220",
+      "substrates": [
+        {
+          "metabolite": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_dyspropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:11772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "glutathione synthase",
+      "equation": "gamma-L-glutamyl-L-cysteine + glycine + ATP = glutathione + ADP + phosphate + H(+)",
+      "ec": "6.3.2.3",
+      "substrates": [
+        {
+          "metabolite": "glu_cys",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:13557"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "methylarsonate reductase",
+      "equation": "methylarsonate + 2 glutathione + H(+) = methylarsonous acid + glutathione disulfide + H2O",
+      "ec": "1.20.4.2",
+      "substrates": [
+        {
+          "metabolite": "methylarsonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylarsonous_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_20_4_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:15969"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "methylenetetrahydrofolate--tRNA-(uracil(54)-C(5))-methyltransferase",
+      "equation": "uridine(54) in tRNA + (6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NADPH + H(+) = 5-methyluridine(54) in tRNA + (6S)-5,6,7,8-tetrahydrofolate + NADP(+)",
+      "ec": "2.1.1.74",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methyluridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:62372"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62372"
           }
         ]
       }

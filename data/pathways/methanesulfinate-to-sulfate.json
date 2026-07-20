@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "methanesulfinate-to-sulfate",
   "name": "methanesulfinate to sulfate",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from methanesulfinate to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -134,6 +134,100 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "e_phenylacetaldehyde_oxime",
+      "name": "(E)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47793"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "z_1_glutathione_s_yl_2_phenylacetohydroximate",
+      "name": "(Z)-1-(glutathione-S-yl)-2-phenylacetohydroximate",
+      "short": "1-(glutathione-S-yl…",
+      "formula": "C18H23N4O7S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136447"
+      }
+    },
+    {
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61976"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "n_octyl_sulfate",
+      "name": "n-octyl sulfate",
+      "formula": "C8H17O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83021"
+      }
+    },
+    {
+      "id": "octanal",
+      "name": "octanal",
+      "formula": "C8H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17935"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +250,27 @@
       "name": "sulfite oxidase",
       "ec": [
         "1.8.3.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_45",
+      "name": "aromatic aldoxime N-monooxygenase",
+      "ec": [
+        "1.14.14.45"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_65",
+      "name": "[histone H3]-dimethyl-L-lysine(9) demethylase",
+      "ec": [
+        "1.14.11.65"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_77",
+      "name": "alkyl sulfatase",
+      "ec": [
+        "1.14.11.77"
       ]
     }
   ],
@@ -319,6 +434,185 @@
           {
             "db": "Rhea",
             "id": "RHEA:24600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aromatic aldoxime N-monooxygenase",
+      "equation": "(E)-phenylacetaldehyde oxime + glutathione + reduced [NADPH--hemoprotein reductase] + O2 = (Z)-1-(glutathione-S-yl)-2-phenylacetohydroximate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.45",
+      "substrates": [
+        {
+          "metabolite": "e_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_1_glutathione_s_yl_2_phenylacetohydroximate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52192"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[histone H3]-dimethyl-L-lysine(9) demethylase",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(9)-[histone H3] + 2 2-oxoglutarate + 2 O2 = L-lysyl(9)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
+      "ec": "1.14.11.65",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:60188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "alkyl sulfatase",
+      "equation": "octyl sulfate + 2-oxoglutarate + O2 = octanal + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
+      "substrates": [
+        {
+          "metabolite": "n_octyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:65736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65736"
           }
         ]
       }

@@ -15,4 +15,16 @@ pathway isophthalate-to-n-benzoylanthranilate "isophthalate to N-benzoylanthrani
     <-> ec_2_3_1_144 [2.3.1.144] +anthranilate -coa
     n_benzoylanthranilate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_40 [4.2.3.40] +fpp
+    z_bisabolene
+  }
+
+  branch from benzoyl_coa side right {
+    benzoyl_coa
+    <-> ec_2_3_1_220 [2.3.1.220] +malonyl-coa +hplus +co2 +coa
+    2_4_6_trihydroxybenzophenone
+  }
 }

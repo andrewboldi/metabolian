@@ -116,6 +116,25 @@
       "xrefs": {
         "chebi": "CHEBI:18002"
       }
+    },
+    {
+      "id": "geraniol",
+      "name": "geraniol",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17447"
+      }
+    },
+    {
+      "id": "6e_8_hydroxygeraniol",
+      "name": "(6E)-8-hydroxygeraniol",
+      "short": "8-hydroxygeraniol",
+      "formula": "C10H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64235"
+      }
     }
   ],
   "enzymes": [
@@ -138,6 +157,13 @@
       "name": "secologanin synthase",
       "ec": [
         "1.14.19.62"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_83",
+      "name": "geraniol 8-hydroxylase",
+      "ec": [
+        "1.14.14.83"
       ]
     }
   ],
@@ -301,6 +327,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:20585"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "geraniol 8-hydroxylase",
+      "equation": "(2E)-geraniol + reduced [NADPH--hemoprotein reductase] + O2 = (6E)-8-hydroxygeraniol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.83",
+      "substrates": [
+        {
+          "metabolite": "geraniol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6e_8_hydroxygeraniol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32495"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32495"
           }
         ]
       }

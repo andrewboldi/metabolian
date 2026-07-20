@@ -15,4 +15,16 @@ pathway chorismate-to-3-4-aminophenyl-pyruvate "chorismate to 3-(4-aminophenyl)p
     <-> ec_1_3_1_121 [1.3.1.121] +nad -co2 -nadh -hplus
     3_4_aminophenyl_pyruvate
   }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_103 [2.6.1.103] +s_3_5_dihydroxyphenylglycine +akg
+    3_5_dihydroxyphenylglyoxylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_2_3_2_13 [2.3.2.13] +l_glutamine +l_lysinium
+    n6_glutamyl_lysine
+  }
 }

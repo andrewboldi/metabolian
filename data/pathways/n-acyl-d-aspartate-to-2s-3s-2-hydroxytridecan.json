@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acyl-d-aspartate-to-2s-3s-2-hydroxytridecan",
   "name": "N-acyl-D-aspartate to (2S,3S)-2-hydroxytridecan…",
-  "category": "lipid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from N-acyl-D-aspartate(2−) to (2S,3S)-2-hydroxytridecane-1,2,3-tricarboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -127,6 +127,64 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "3_d_aspartyl_adenylyl_1_group",
+      "name": "3'-(D-aspartyl)adenylyl(1−) group",
+      "short": "3'-(D-aspartyl)aden…",
+      "formula": "C14H17N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188449"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "penicillinate_anion",
+      "name": "penicillinate anion",
+      "formula": "C9H10N2O4SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:51356"
+      }
+    },
+    {
+      "id": "6_aminopenicillanic_acid",
+      "name": "6-aminopenicillanic acid",
+      "short": "6-aminopenicillanic…",
+      "formula": "C8H12N2O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57869"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +214,27 @@
       "name": "decylcitrate synthase",
       "ec": [
         "2.3.3.2"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_96",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "ec": [
+        "3.1.1.96"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_11",
+      "name": "penicillin amidase",
+      "ec": [
+        "3.5.1.11"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_36",
+      "name": "mRNA(cytosine(6666)) deaminase",
+      "ec": [
+        "3.5.4.36"
       ]
     }
   ],
@@ -307,6 +386,149 @@
           {
             "db": "Rhea",
             "id": "RHEA:16605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "equation": "D-aspartyl-tRNA(Asp) + H2O = tRNA(Asp) + D-aspartate + H(+)",
+      "ec": "3.1.1.96",
+      "substrates": [
+        {
+          "metabolite": "3_d_aspartyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "penicillin amidase",
+      "equation": "a penicillin + H2O = 6-aminopenicillanate + a carboxylate",
+      "ec": "3.5.1.11",
+      "substrates": [
+        {
+          "metabolite": "penicillinate_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_aminopenicillanic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:18693"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "mRNA(cytosine(6666)) deaminase",
+      "equation": "cytidine(6666) in apoB mRNA + H2O + H(+) = uridine(6666) in apoB mRNA + NH4(+)",
+      "ec": "3.5.4.36",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21772"
           }
         ]
       }

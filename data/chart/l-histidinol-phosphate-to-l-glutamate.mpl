@@ -15,4 +15,22 @@ pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-gluta
     <-> ec_2_6_1_38 [2.6.1.38] +akg -glutamate
     3_imidazol_5_yl_pyruvate
   }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> ec_4_3_1_3 [4.3.1.3] +nh3
+    trans_urocanate
+  }
+
+  branch from 3_imidazol_5_yl_pyruvate side right {
+    3_imidazol_5_yl_pyruvate
+    <-> ec_1_1_1_111 [1.1.1.111] +nad +nadh +hplus
+    s_3_imidazol_5_yl_lactate
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_27 [2.6.1.27] +l_tryptophan +akg
+    3_indol_3_yl_pyruvate
+  }
 }

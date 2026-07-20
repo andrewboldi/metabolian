@@ -130,6 +130,52 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "cytidine",
+      "name": "cytidine",
+      "formula": "C9H13N3O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17562"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "2_monoglyceride",
+      "name": "2-monoglyceride",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17389"
+      }
     }
   ],
   "enzymes": [
@@ -159,6 +205,27 @@
       "name": "1-alkylglycerophosphocholine O-acyltransferase",
       "ec": [
         "2.3.1.63"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_48",
+      "name": "uridine/cytidine kinase",
+      "ec": [
+        "2.7.1.48"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_213",
+      "name": "cytidine kinase",
+      "ec": [
+        "2.7.1.213"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_116",
+      "name": "sn-1-specific diacylglycerol lipase",
+      "ec": [
+        "3.1.1.116"
       ]
     }
   ],
@@ -347,6 +414,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:23992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "uridine/cytidine kinase",
+      "equation": "cytidine + ATP = CMP + ADP + H(+)",
+      "ec": "2.7.1.48",
+      "substrates": [
+        {
+          "metabolite": "cytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24674"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "sn-1-specific diacylglycerol lipase",
+      "equation": "a 1,2-diacyl-sn-glycerol + H2O = a 2-acylglycerol + a fatty acid + H(+)",
+      "ec": "3.1.1.116",
+      "substrates": [
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_monoglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:33275"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33275"
           }
         ]
       }

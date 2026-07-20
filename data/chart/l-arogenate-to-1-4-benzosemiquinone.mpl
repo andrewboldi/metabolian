@@ -23,4 +23,28 @@ pathway l-arogenate-to-1-4-benzosemiquinone "L-arogenate to 1,4-benzosemiquinone
     <-> ec_1_10_3_2 [1.10.3.2] +o2 -h2o
     1_4_benzosemiquinone
   }
+
+  branch from 1s_4s_prephenate side left {
+    1s_4s_prephenate
+    <-> ec_4_1_1_100 [4.1.1.100] +hplus +co2
+    4r_3_4_dihydro_4_hydroxyphenylpyruvate
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_1_4_3_16 [1.4.3.16] +o2 +h2o2
+    iminoaspartate
+  }
+
+  branch from s_4_hydroxymandelate side left {
+    s_4_hydroxymandelate
+    <-> ec_1_14_16_6 [1.14.16.6] +s_mandelate +sapropterin +o2 +h2o
+    bh2
+  }
+
+  branch from 4_hydroxybenzaldehyde side right {
+    4_hydroxybenzaldehyde
+    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
+    trans_4_coumaroyl_coa
+  }
 }

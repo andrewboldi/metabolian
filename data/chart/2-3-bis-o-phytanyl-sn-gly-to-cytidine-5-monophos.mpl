@@ -15,4 +15,16 @@ pathway 2-3-bis-o-phytanyl-sn-gly-to-cytidine-5-monophos "2,3-bis-O-phytanyl-sn-
     <-> ec_2_7_8_38 [2.7.8.38] +serine -cytidine_5_monophosphate -hplus
     2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_4 [2.4.3.4] +d_galactosyl_1_3_n_acetyl_d_galactosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety
+  }
 }

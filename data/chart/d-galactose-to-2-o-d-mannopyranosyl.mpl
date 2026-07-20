@@ -19,4 +19,28 @@ pathway d-galactose-to-2-o-d-mannopyranosyl "α-D-galactose to 2-O-[α-D-mannopy
     <-> ec_2_4_1_270 [2.4.1.270] +gdp_d_mannose -gdp -hplus
     2_o_d_mannopyranosyl_1_2_d_glucopyranosyl_3_o_ph
   }
+
+  branch from d_galactose_1_phosphate side left {
+    d_galactose_1_phosphate
+    <-> ec_3_1_3_94 [3.1.3.94] +h2o +pi
+    d_galactopyranose
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> ec_3_1_3_10 [3.1.3.10] +h2o +pi
+    glucose
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> ec_2_4_1_47 [2.4.1.47] +2_2_hydroxyacyl_sphingosine +udp +hplus
+    1_d_galactosyl_2_2_hydroxyacyl_sphingosine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_8 [4.2.3.8] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    casbene
+  }
 }

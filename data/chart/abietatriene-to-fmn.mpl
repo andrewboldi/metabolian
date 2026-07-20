@@ -15,4 +15,22 @@ pathway abietatriene-to-fmn "abietatriene to FMN" {
     <-> ec_1_14_14_61 [1.14.14.61] +fmnh2 +o2 -fmn -h2o -hplus
     carnosate
   }
+
+  branch from ferruginol side left {
+    ferruginol
+    <-> ec_1_14_14_62 [1.14.14.62] +fmnh2 +o2 +fmn +h2o +hplus
+    salviol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_84 [1.14.14.84] +linalool +fmnh2 +o2 +h2o +hplus
+    6e_8_oxolinalool
+  }
+
+  branch from 11_hydroxyferruginol side left {
+    11_hydroxyferruginol
+    <-> ec_1_14_14_65 [1.14.14.65] +fmnh2 +o2 +fmn +h2o +hplus
+    11_hydroxysugiol
+  }
 }

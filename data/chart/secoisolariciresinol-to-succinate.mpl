@@ -21,4 +21,22 @@ pathway secoisolariciresinol-to-succinate "(−)-secoisolariciresinol to succina
     <-> ec_1_14_20_8 [1.14.20.8] +akg +o2 -succinate -co2 -h2o
     deoxypodophyllotoxin
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_152 [1.14.14.152] +amyrin +fmnh2 +o2 +h2o +hplus
+    11_oxo_amyrin
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_16 [2.1.1.16] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
+    1_acyl_2_10_methylenealkanoyl_sn_3_glycerophosph
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_40 [1.14.11.40] +l_enduracididine +akg +o2 +co2
+    3s_3_hydroxy_l_enduracididine
+  }
 }

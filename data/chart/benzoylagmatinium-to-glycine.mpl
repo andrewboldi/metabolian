@@ -17,4 +17,28 @@ pathway benzoylagmatinium-to-glycine "benzoylagmatinium to glycine" {
     <-> ec_3_5_1_32 [3.5.1.32] +h2o -glycine
     benzoate
   }
+
+  branch from benzoate side left {
+    benzoate
+    <-> ec_3_1_1_84 [3.1.1.84] +cocaine +h2o +hplus
+    ecgoninium_methyl_ester
+  }
+
+  branch from agmatinium side right {
+    agmatinium
+    <-> ec_2_3_1_64 [2.3.1.64] +4_coumaroyl_coa +coa +hplus
+    p_coumaroylagmatine
+  }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> ec_2_3_1_196 [2.3.1.196] +benzyl_alcohol +coa
+    benzyl_benzoate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_123 [2.5.1.123] +flaviolin_2_olate +gpp
+    3_linalylflaviolin_2_olate
+  }
 }

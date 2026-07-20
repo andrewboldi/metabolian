@@ -17,4 +17,22 @@ pathway 3-sulfino-l-alanine-to-hydrogen-donor "3-sulfino-L-alanine to hydrogen d
     <-> ec_1_8_99_2 [1.8.99.2] +sulfite +hydrogen_acceptor +amp +hplus -hydrogen_donor
     5_adenylyl_sulfate
   }
+
+  branch from ammonioacetaldehyde side left {
+    ammonioacetaldehyde
+    <-> ec_1_1_1_276 [1.1.1.276] +nadp +co2 +nadph
+    serine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_2_8_3_20 [2.8.3.20] +r_malate +succinyl_coa
+    3r_3_carboxy_3_hydroxypropanoyl_coa
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_14_99_47 [1.14.99.47] +larreatricin +o2 +hydrogen_acceptor +h2o
+    3_hydroxylarreatricin
+  }
 }

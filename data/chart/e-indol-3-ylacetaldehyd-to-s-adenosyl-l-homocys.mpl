@@ -15,4 +15,22 @@ pathway e-indol-3-ylacetaldehyd-to-s-adenosyl-l-homocys "(E)-indol-3-ylacetaldeh
     <-> ec_2_1_1_278 [2.1.1.278] +sam -sah
     methyl_indol_3_yl_acetate
   }
+
+  branch from indole_3_acetate side left {
+    indole_3_acetate
+    <-> ec_6_2_1_75 [6.2.1.75] +atp +coa +amp +ppi
+    indol_3_ylacetyl_coa
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nadp +h2o +nadph +hplus
+    5_guanidino_2_oxopentanoic_acid
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
+    chloromethane
+  }
 }

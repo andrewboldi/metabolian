@@ -23,4 +23,16 @@ pathway 1-hydroxy-2-naphthoate-to-4-carboxy-2-hydroxy-ci "1-hydroxy-2-naphthoate
     <-> ec_1_13_11_8 [1.13.11.8] +o2 -hplus
     4_carboxy_2_hydroxy_cis_cis_muconate_6_semialdeh
   }
+
+  branch from phthalate side left {
+    phthalate
+    <-> ec_3_5_1_79 [3.5.1.79] +n_alkylphthalic_monoamide +h2o
+    primary_ammonium_ion
+  }
+
+  branch from 3_4_dihydroxybenzoate side right {
+    3_4_dihydroxybenzoate
+    <-> ec_4_1_1_69 [4.1.1.69] +hplus +co2
+    3_4_dihydroxyphthalate
+  }
 }

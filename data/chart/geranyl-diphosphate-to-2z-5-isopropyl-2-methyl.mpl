@@ -15,4 +15,10 @@ pathway geranyl-diphosphate-to-2z-5-isopropyl-2-methyl "geranyl diphosphate to (
     <-> ec_5_5_1_10 [5.5.1.10]
     2z_5_isopropyl_2_methylhexa_2_5_dienal
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_60 [4.2.3.60] +fpp
+    germacrene_c
+  }
 }

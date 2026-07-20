@@ -15,4 +15,10 @@ pathway cobalt-to-methyl-com "cobalt to methyl-CoM" {
     <-> ec_2_1_1_377 [2.1.1.377] +coenzyme_m -methyl_com -hplus
     cobalt
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_63 [1.14.99.63] +carotene +hydrogen_donor +o2 +h2o
+    echinenone
+  }
 }

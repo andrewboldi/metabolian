@@ -21,4 +21,10 @@ pathway ginsenoside-rd-to-ginsenoside-rd "ginsenoside Rd to ginsenoside Rd" {
     <-> ec_2_4_1_365 [2.4.1.365] +udp_d_glucose -udp -hplus
     ginsenoside_rd
   }
+
+  branch from ginsenoside_f2 side left {
+    ginsenoside_f2
+    <-> ec_2_4_1_363 [2.4.1.363] +udp_d_glucose +udp +hplus
+    20s_ginsenoside_rh2
+  }
 }

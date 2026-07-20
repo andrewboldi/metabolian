@@ -19,4 +19,28 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
     <-> ec_4_2_1_107 [4.2.1.107] -h2o
     24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_90 [1.14.14.90] +2_unsubstituted_isoflavones +fmnh2 +o2 +h2o +hplus
+    2_hydroxyisoflavones
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_4 [1.14.15.4] +steroid +di_sulfido_diiron +o2 +hplus +h2o
+    11_hydroxy_steroid
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_7 [4.2.3.7] +fpp
+    pentalenene
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_23 [1.14.99.23] +3_hydroxybenzoate +o2 +hydrogen_acceptor +h2o
+    2_3_dihydroxybenzoate
+  }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n2-l-glutamino-1-group-to-c-terminal-l-glutamyl",
   "name": "N2-L-glutamino(1−) group to C-terminal-γ-L-glutamyl-L…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N2-L-glutamino(1−) group to C-terminal-γ-L-glutamyl-L-2-aminoadipate 6-phosphate(4−) group, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,6 +119,72 @@
       "xrefs": {
         "chebi": "CHEBI:78499"
       }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_lysine_1_group",
+      "name": "C-terminal-γ-L-glutamyl-L-lysine(1−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H19N3O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78526"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "4_hydroxy_1_pyrroline_2_carboxylate",
+      "name": "4-hydroxy-1-pyrroline-2-carboxylate",
+      "short": "4-hydroxy-1-pyrroli…",
+      "formula": "C5H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57745"
+      }
+    },
+    {
+      "id": "2_5_dioxopentanoate",
+      "name": "2,5-dioxopentanoate",
+      "formula": "C5H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58136"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+      "name": "C-terminal-γ-L-glutamyl-L-2-aminoadipate semialdehyde(2−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H15N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78501"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +207,27 @@
       "name": "[amino-group carrier protein]-L-2-aminoadipate 6-kinase",
       "ec": [
         "2.7.2.17"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_130",
+      "name": "[amino group carrier protein]-lysine hydrolase",
+      "ec": [
+        "3.5.1.130"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_22",
+      "name": "1-pyrroline-4-hydroxy-2-carboxylate deaminase",
+      "ec": [
+        "3.5.4.22"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_103",
+      "name": "[amino-group carrier protein]-6-phospho-L-2-aminoadipate reductase",
+      "ec": [
+        "1.2.1.103"
       ]
     }
   ],
@@ -288,6 +375,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:41944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "[amino group carrier protein]-lysine hydrolase",
+      "equation": "[amino-group carrier protein]-C-terminal-gamma-(L-lysyl)-L-glutamate + H2O = [amino-group carrier protein]-C-terminal-L-glutamate + L-lysine",
+      "ec": "3.5.1.130",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_lysine_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamo_2_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_130"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:48684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1-pyrroline-4-hydroxy-2-carboxylate deaminase",
+      "equation": "4-hydroxy-1-pyrroline-2-carboxylate + H2O + H(+) = 2,5-dioxopentanoate + NH4(+)",
+      "ec": "3.5.4.22",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_1_pyrroline_2_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_dioxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:10560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "[amino-group carrier protein]-6-phospho-L-2-aminoadipate reductase",
+      "equation": "[amino-group carrier protein]-C-terminal-N-(1-carboxy-5-oxopentan-1-yl)-L-glutamine + phosphate + NADP(+) = [amino-group carrier protein]-C-terminal-N-(1-carboxy-5-phosphooxy-5-oxopentan-1-yl)-L-glutamine + NADPH + H(+)",
+      "ec": "1.2.1.103",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:41948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41948"
           }
         ]
       }

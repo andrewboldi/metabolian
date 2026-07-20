@@ -15,4 +15,10 @@ pathway d-glucose-1-phosphate-to-d-fructofuranose "Î±-D-glucose 1-phosphate to Î
     <-> ec_2_7_1_146 [2.7.1.146] +adp -amp -hplus
     f16bp
   }
+
+  branch from d_glucose_6_phosphate side left {
+    d_glucose_6_phosphate
+    <-> ec_5_1_3_15 [5.1.3.15]
+    d_glucose_6_phosphate
+  }
 }

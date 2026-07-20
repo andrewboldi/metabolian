@@ -15,4 +15,22 @@ pathway 5-9-10-labda-8-20-13-to-fmn "5α,9α,10β-labda-8(20),13-… to FMN" {
     <-> ec_1_14_14_145 [1.14.14.145] +fmnh2 +o2 -fmn -h2o -hplus
     abietate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_83 [2.5.1.83] +ipp +fpp
+    all_trans_hexaprenyl_diphosphate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_80 [1.14.14.80] +oleate +fmnh2 +o2 +h2o +hplus
+    18_hydroxyoleate
+  }
+
+  branch from abietate side left {
+    abietate
+    <-> ec_1_2_1_74 [1.2.1.74] +nad +h2o +nadh +hplus
+    abietal
+  }
 }

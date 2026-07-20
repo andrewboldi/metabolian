@@ -21,4 +21,28 @@ pathway n-methylhexanamide-to-4-d-glucosyloxy-benzoa "N-methylhexanamide to 4-(Î
     <-> ec_2_4_1_194 [2.4.1.194] +udp_d_glucose -udp -hplus
     4_d_glucosyloxy_benzoate
   }
+
+  branch from methylamine side left {
+    methylamine
+    <-> ec_3_5_1_137 [3.5.1.137] +n_methyl_carbamate_ester +h2o +hplus +co2
+    alcohol
+  }
+
+  branch from copper side right {
+    copper
+    <-> ec_1_17_9_2 [1.17.9.2] +pinoresinol +copper +h2o +hplus
+    6_hydroxypinoresinol
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadph +o2 +hplus +nadp +h2o
+    3_methyl_7h_xanthine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_5_2 [3.5.5.2] +ricinine +h2o
+    4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c
+  }
 }

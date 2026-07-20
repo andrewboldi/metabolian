@@ -119,6 +119,26 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "11z_14z_icosadienoyl_coa",
+      "name": "(11Z,14Z)-icosadienoyl-CoA",
+      "short": "(11Z,14Z)-icosadien…",
+      "formula": "C41H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76410"
+      }
+    },
+    {
+      "id": "5z_11z_14z_icosatrienoyl_coa",
+      "name": "(5Z,11Z,14Z)-icosatrienoyl-CoA",
+      "short": "(5Z,11Z,14Z)-icosat…",
+      "formula": "C41H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:78663"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +161,13 @@
       "name": "formate dehydrogenase (acceptor)",
       "ec": [
         "1.17.98.4"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_37",
+      "name": "acyl-CoA 5-desaturase",
+      "ec": [
+        "1.14.19.37"
       ]
     }
   ],
@@ -284,6 +311,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:27290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acyl-CoA 5-desaturase",
+      "equation": "(11Z,14Z)-eicosadienoyl-CoA + AH2 + O2 = (5Z,11Z,14Z)-eicosatrienoyl-CoA + A + 2 H2O",
+      "ec": "1.14.19.37",
+      "substrates": [
+        {
+          "metabolite": "11z_14z_icosadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_11z_14z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:42160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42160"
           }
         ]
       }

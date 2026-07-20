@@ -120,6 +120,63 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "3_oxo_monocarboxylic_acid_anion",
+      "name": "3-oxo monocarboxylic acid anion",
+      "short": "3-oxo monocarboxyli…",
+      "formula": "C3H2O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35973"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "3_oxoacyl_coa",
+      "name": "3-oxoacyl-CoA",
+      "formula": "C24H33N7O18P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:90726"
+      }
+    },
+    {
+      "id": "l_2_succinylamino_6_oxoheptanedioate",
+      "name": "L-2-succinylamino-6-oxoheptanedioate",
+      "short": "L-2-succinylamino-6…",
+      "formula": "C11H12NO8",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15685"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -142,6 +199,27 @@
       "name": "tetrahydrodipicolinate N-acetyltransferase",
       "ec": [
         "2.3.1.89"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_5",
+      "name": "3-oxoacid CoA-transferase",
+      "ec": [
+        "2.8.3.5"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_117",
+      "name": "2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-succinyltransferase",
+      "ec": [
+        "2.3.1.117"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_15",
+      "name": "glutamate decarboxylase",
+      "ec": [
+        "4.1.1.15"
       ]
     }
   ],
@@ -289,6 +367,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:13085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-oxoacid CoA-transferase",
+      "equation": "a 3-oxo acid + succinyl-CoA = a 3-oxoacyl-CoA + succinate",
+      "ec": "2.8.3.5",
+      "substrates": [
+        {
+          "metabolite": "3_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxoacyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-succinyltransferase",
+      "equation": "(S)-2,3,4,5-tetrahydrodipicolinate + succinyl-CoA + H2O = (S)-2-succinylamino-6-oxoheptanedioate + CoA",
+      "ec": "2.3.1.117",
+      "substrates": [
+        {
+          "metabolite": "s_2_3_4_5_tetrahydrodipicolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_2_succinylamino_6_oxoheptanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_117"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17325"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "glutamate decarboxylase",
+      "equation": "L-glutamate + H(+) = 4-aminobutanoate + CO2",
+      "ec": "4.1.1.15",
+      "substrates": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:17785"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17785"
           }
         ]
       }

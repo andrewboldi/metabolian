@@ -108,6 +108,42 @@
       "xrefs": {
         "chebi": "CHEBI:4167"
       }
+    },
+    {
+      "id": "d_mannitol",
+      "name": "D-mannitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16899"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "trehalulose",
+      "name": "trehalulose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:79284"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +166,20 @@
       "name": "sucrose:sucrose fructosyltransferase",
       "ec": [
         "2.4.1.99"
+      ]
+    },
+    {
+      "id": "ec_1_1_2_2",
+      "name": "mannitol dehydrogenase (cytochrome)",
+      "ec": [
+        "1.1.2.2"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_11",
+      "name": "isomaltulose synthase",
+      "ec": [
+        "5.4.99.11"
       ]
     }
   ],
@@ -265,6 +315,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:23312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "mannitol dehydrogenase (cytochrome)",
+      "equation": "D-mannitol + 2 Fe(III)-[cytochrome c] = D-fructose + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "1.1.2.2",
+      "substrates": [
+        {
+          "metabolite": "d_mannitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17597"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "isomaltulose synthase",
+      "equation": "sucrose = trehalulose",
+      "ec": "5.4.99.11",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32951"
           }
         ]
       }

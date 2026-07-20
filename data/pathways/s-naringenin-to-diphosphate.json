@@ -117,6 +117,54 @@
       "xrefs": {
         "chebi": "CHEBI:50209"
       }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "ditrans_polycis_dodecaprenyl_diphosphate",
+      "name": "ditrans,polycis-dodecaprenyl diphosphate",
+      "short": "ditrans,polycis-dod…",
+      "formula": "C60H97O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60386"
+      }
+    },
+    {
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10352"
+      }
+    },
+    {
+      "id": "oleanolate",
+      "name": "oleanolate",
+      "formula": "C30H47O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82828"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +187,20 @@
       "name": "leachianone-G 2''-dimethylallyltransferase",
       "ec": [
         "2.5.1.71"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_88",
+      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "ec": [
+        "2.5.1.88"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_126",
+      "name": "beta-amyrin 28-monooxygenase",
+      "ec": [
+        "1.14.14.126"
       ]
     }
   ],
@@ -286,6 +348,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:10852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "equation": "(2Z,6E)-farnesyl diphosphate + 9 isopentenyl diphosphate = di-trans,nona-cis-dodecaprenyl diphosphate + 9 diphosphate",
+      "ec": "2.5.1.88",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 9
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ditrans_polycis_dodecaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 9
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27602"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-amyrin 28-monooxygenase",
+      "equation": "beta-amyrin + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = oleanolate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.126",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oleanolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:43068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43068"
           }
         ]
       }

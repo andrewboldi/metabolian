@@ -15,4 +15,10 @@ pathway benzylmalonyl-coa-to-e-cinnamoyl-coa "benzylmalonyl-CoA to (E)-cinnamoyl
     <-> ec_4_2_1_175 [4.2.1.175] -h2o
     e_cinnamoyl_coa
   }
+
+  branch from trans_cinnamate side left {
+    trans_cinnamate
+    <-> ec_2_4_1_177 [2.4.1.177] +udp_d_glucose +udp
+    1_o_trans_cinnamoyl_d_glucopyranose
+  }
 }

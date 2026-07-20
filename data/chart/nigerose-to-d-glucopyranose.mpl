@@ -15,4 +15,16 @@ pathway nigerose-to-d-glucopyranose "nigerose to D-glucopyranose" {
     <-> ec_3_1_3_9 [3.1.3.9] +h2o -pi
     glucose
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_186 [3.2.1.186] +protodioscin +h2o
+    26_desglucoprotodioscin
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_1_phosphate
+  }
 }

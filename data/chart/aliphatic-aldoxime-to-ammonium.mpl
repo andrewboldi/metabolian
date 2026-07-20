@@ -17,4 +17,22 @@ pathway aliphatic-aldoxime-to-ammonium "aliphatic aldoxime to ammonium" {
     <-> ec_3_5_1_67 [3.5.1.67] +h2o -nh3
     4_methylene_l_glutamate
   }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_2_7_1_61 [2.7.1.61] +d_hexose +acyl_monophosphate +hplus
+    d_hexose_phosphate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_6 [4.3.1.6] +alanyl_coa
+    acryloyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_6_1_2 [4.6.1.2] +gtp
+    3_5_cyclic_gmp
+  }
 }

@@ -15,4 +15,16 @@ pathway 2-acetamido-2-deoxy-3-o-to-sulfate-11444 "2-acetamido-2-deoxy-3-O-(… t
     <-> ec_2_7_7_51 [2.7.7.51] +nh3 -sulfate -hplus
     adenosine_5_phosphoramidate
   }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_3_1_6_3 [3.1.6.3] +d_glucopyranose_6_sulfate +h2o +hplus
+    glucose
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_59 [2.7.7.59] +l_tyrosine +utp
+    uridylyl_l_tyrosine_1
+  }
 }

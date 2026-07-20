@@ -15,4 +15,10 @@ pathway lipid-a-4-e-coli-to-triacyl-sn-glycerol "lipid A(4−) (E. coli) to tria
     <-> ec_2_3_1_20 [2.3.1.20] +acyl_coa +dag -coa
     triacyl_sn_glycerol
   }
+
+  branch from dag side left {
+    dag
+    <-> ec_3_1_4_11 [3.1.4.11] +1_phosphatidyl_1d_myo_inositol_4_5_bisphosphate +h2o +hplus
+    1d_myo_inositol_1_4_5_trisphosphate
+  }
 }

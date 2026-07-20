@@ -139,6 +139,60 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "n_demethylindolmycin",
+      "name": "N-demethylindolmycin",
+      "formula": "C13H14N3O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:91178"
+      }
+    },
+    {
+      "id": "indolmycin",
+      "name": "indolmycin",
+      "formula": "C14H16N3O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:91179"
+      }
+    },
+    {
+      "id": "r_alanopine",
+      "name": "(R)-β-alanopine",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58825"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -168,6 +222,20 @@
       "name": "homoglutathione synthase",
       "ec": [
         "6.3.2.23"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_328",
+      "name": "N-demethylindolmycin N-methyltransferase",
+      "ec": [
+        "2.1.1.328"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_26",
+      "name": "beta-alanopine dehydrogenase",
+      "ec": [
+        "1.5.1.26"
       ]
     }
   ],
@@ -319,6 +387,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:17993"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-demethylindolmycin N-methyltransferase",
+      "equation": "N-demethylindolmycin + S-adenosyl-L-methionine = indolmycin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.328",
+      "substrates": [
+        {
+          "metabolite": "n_demethylindolmycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indolmycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_328"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24726"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24726"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-alanopine dehydrogenase",
+      "equation": "(R)-beta-alanopine + NAD(+) + H2O = beta-alanine + pyruvate + NADH + H(+)",
+      "ec": "1.5.1.26",
+      "substrates": [
+        {
+          "metabolite": "r_alanopine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21684"
           }
         ]
       }

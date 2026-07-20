@@ -19,4 +19,22 @@ pathway aldehydo-d-galactose-to-sulfoacetyl-coa "aldehydo-D-galactose… to sulf
     <-> ec_1_2_1_81 [1.2.1.81] +nadp +coa -nadph -hplus
     sulfoacetyl_coa
   }
+
+  branch from keto_d_tagatose_6_phosphate side left {
+    keto_d_tagatose_6_phosphate
+    <-> ec_2_7_1_101 [2.7.1.101] +atp +adp +hplus
+    keto_d_tagatose
+  }
+
+  branch from e4p side right {
+    e4p
+    <-> ec_1_13_11_79 [1.13.11.79] +fmnh2 +o2 +5_6_dimethylbenzimidazole +hplus
+    dialurate
+  }
+
+  branch from sulfonatoacetaldehyde side left {
+    sulfonatoacetaldehyde
+    <-> ec_1_1_1_433 [1.1.1.433] +nad +nadh +hplus
+    isethionate
+  }
 }

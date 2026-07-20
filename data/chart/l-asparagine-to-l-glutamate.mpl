@@ -17,4 +17,22 @@ pathway l-asparagine-to-l-glutamate "L-asparagine to L-glutamate" {
     <-> ec_3_4_17_21 [3.4.17.21] +h2o -glutamate
     n_acetyl_l_aspartate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_18 [1.4.1.18] +l_thialysinium +nad +nadh +hplus
+    4s_5_6_dihydro_4h_1_3_thiazine_4_carboxylate
+  }
+
+  branch from n_acetyl_l_aspartate side right {
+    n_acetyl_l_aspartate
+    <-> ec_6_3_2_42 [6.3.2.42] +glutamate +atp +adp +pi +hplus
+    ac_asp_glu_glu
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_107 [2.6.1.107] +2s_3s_methylphenylalanine +akg
+    3s_3_methyl_2_oxo_3_phenylpropanoate
+  }
 }

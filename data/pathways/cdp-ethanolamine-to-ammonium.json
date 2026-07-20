@@ -110,6 +110,80 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "cdp_choline",
+      "name": "CDP-choline",
+      "formula": "C14H25N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58779"
+      }
+    },
+    {
+      "id": "phosphocholine",
+      "name": "Phosphocholine",
+      "formula": "C5H13NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:295975"
+      }
+    },
+    {
+      "id": "1h_pyrazole",
+      "name": "1H-pyrazole",
+      "formula": "C3H4N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17241"
+      }
+    },
+    {
+      "id": "3_pyrazol_1_yl_l_alanine",
+      "name": "3-(pyrazol-1-yl)-L-alanine",
+      "short": "3-(pyrazol-1-yl)-L-…",
+      "formula": "C6H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57747"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "5_guanidino_2_oxopentanoic_acid",
+      "name": "5-guanidino-2-oxopentanoic acid",
+      "short": "5-guanidino-2-oxope…",
+      "formula": "C6H11N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58489"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +206,27 @@
       "name": "ethanolamine-phosphate phospho-lyase",
       "ec": [
         "4.2.3.2"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_53",
+      "name": "Mn(2+)-dependent ADP-ribose/CDP-alcohol diphosphatase",
+      "ec": [
+        "3.6.1.53"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_50",
+      "name": "pyrazolylalanine synthase",
+      "ec": [
+        "4.2.1.50"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_25",
+      "name": "L-arginine dehydrogenase",
+      "ec": [
+        "1.4.1.25"
       ]
     }
   ],
@@ -279,6 +374,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:17889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Mn(2+)-dependent ADP-ribose/CDP-alcohol diphosphatase",
+      "equation": "CDP-choline + H2O = phosphocholine + CMP + 2 H(+)",
+      "ec": "3.6.1.53",
+      "substrates": [
+        {
+          "metabolite": "cdp_choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32487"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "pyrazolylalanine synthase",
+      "equation": "pyrazole + L-serine = 3-(pyrazol-1-yl)-L-alanine + H2O",
+      "ec": "4.2.1.50",
+      "substrates": [
+        {
+          "metabolite": "1h_pyrazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_pyrazol_1_yl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-arginine dehydrogenase",
+      "equation": "L-arginine + NAD(+) + H2O = 5-guanidino-2-oxopentanoate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.25",
+      "substrates": [
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:47632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47632"
           }
         ]
       }

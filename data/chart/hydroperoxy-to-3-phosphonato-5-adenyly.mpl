@@ -15,4 +15,22 @@ pathway hydroperoxy-to-3-phosphonato-5-adenyly "hydroperoxy… to 3'-phosphonato
     <-> ec_2_7_1_25 [2.7.1.25] +atp -adp -hplus
     3_phosphonato_5_adenylyl_sulfate
   }
+
+  branch from gssg side left {
+    gssg
+    <-> ec_1_11_1_27 [1.11.1.27] +peroxol +gsh +h2o
+    alcohol
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> ec_3_1_2_7 [3.1.2.7] +s_acylglutathionate +h2o +hplus
+    carboxylic_acid_anion
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> ec_2_8_2_19 [2.8.2.19] +d_glucosyl_1_6_d_glucosyl_1_6_d_glucosyl_1_3_1 +adenosine_3_5_bismonophosphate +hplus
+    6_o_sulfonato_d_glc_1_6_d_glc_1_6_d_glc_1_3_1_o
+  }
 }

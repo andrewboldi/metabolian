@@ -23,4 +23,22 @@ pathway d-threitol-to-sulfonatoacetaldehyde "D-threitol to sulfonatoacetaldehyde
     <-> ec_4_1_1_79 [4.1.1.79] +hplus -co2
     sulfonatoacetaldehyde
   }
+
+  branch from l_3_sulfolactaldehyde side left {
+    l_3_sulfolactaldehyde
+    <-> ec_1_1_1_373 [1.1.1.373] +nad +nadh +hplus
+    2s_3_sulfopropanediol
+  }
+
+  branch from s7p side right {
+    s7p
+    <-> ec_4_2_3_155 [4.2.3.155] +pi
+    2_epi_valiolone
+  }
+
+  branch from 3_sulfonatopyruvate side left {
+    3_sulfonatopyruvate
+    <-> ec_1_1_1_337 [1.1.1.337] +nad +nadh +hplus
+    r_3_sulfolactate
+  }
 }

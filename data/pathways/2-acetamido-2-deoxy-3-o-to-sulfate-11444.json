@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-acetamido-2-deoxy-3-o-to-sulfate-11444",
   "name": "2-acetamido-2-deoxy-3-O-(… to sulfate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 2-acetamido-2-deoxy-3-O-(4-deoxy-α-L-threo-hex-4-enopyranosyluronate)-4-O-sulfonato-D-galactopyranose(2−) to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -110,6 +110,53 @@
       "xrefs": {
         "chebi": "CHEBI:57890"
       }
+    },
+    {
+      "id": "d_glucopyranose_6_sulfate",
+      "name": "D-glucopyranose 6-sulfate",
+      "short": "D-glucopyranose…",
+      "formula": "C6H11O9S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145427"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46858"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "uridylyl_l_tyrosine_1",
+      "name": "uridylyl-L-tyrosine(1−)",
+      "short": "uridylyl-L-tyrosine…",
+      "formula": "C18H19N3O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90602"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +179,20 @@
       "name": "adenylylsulfate--ammonia adenylyltransferase",
       "ec": [
         "2.7.7.51"
+      ]
+    },
+    {
+      "id": "ec_3_1_6_3",
+      "name": "glycosulfatase",
+      "ec": [
+        "3.1.6.3"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_59",
+      "name": "[protein-PII] uridylyltransferase",
+      "ec": [
+        "2.7.7.59"
       ]
     }
   ],
@@ -279,6 +340,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:19197"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glycosulfatase",
+      "equation": "D-glucose 6-sulfate + H2O = sulfate + D-glucose + H(+)",
+      "ec": "3.1.6.3",
+      "substrates": [
+        {
+          "metabolite": "d_glucopyranose_6_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_6_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19145"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[protein-PII] uridylyltransferase",
+      "equation": "[protein-PII]-L-tyrosine + UTP = [protein-PII]-uridylyl-L-tyrosine + diphosphate",
+      "ec": "2.7.7.59",
+      "substrates": [
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridylyl_l_tyrosine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:13673"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13673"
           }
         ]
       }

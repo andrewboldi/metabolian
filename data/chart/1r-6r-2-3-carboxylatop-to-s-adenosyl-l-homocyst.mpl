@@ -21,4 +21,22 @@ pathway 1r-6r-2-3-carboxylatop-to-s-adenosyl-l-homocyst "(1R,6R)-2-(3-carboxylat
     <-> ec_2_1_1_163 [2.1.1.163] +sam -sah -hplus
     menaquinol_8
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_47 [4.2.3.47] +fpp
+    trans_farnesene
+  }
+
+  branch from 1_4_dihydroxy_2_naphthoate side right {
+    1_4_dihydroxy_2_naphthoate
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_heptaprenyl_diphosphate +hplus +co2 +ppi
+    2_demethylmenaquinol_7
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_95 [2.1.1.95] +tocopherol +sam +hplus
+    r_r_r_tocopherol
+  }
 }

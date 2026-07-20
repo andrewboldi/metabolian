@@ -17,4 +17,22 @@ pathway l-tryptophanamide-to-nitrite "L-tryptophanamide to nitrite" {
     <-> ec_1_9_6_1 [1.9.6.1] +fe2 +hplus -iron -h2o
     nitrite
   }
+
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> ec_1_4_1_19 [1.4.1.19] +nad +h2o +nh3 +nadh +hplus
+    3_indol_3_yl_pyruvate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_3 [1.4.1.3] +glutamate +nadp +h2o +nadph +hplus
+    akg
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> ec_1_7_3_1 [1.7.3.1] +primary_nitroalkane +o2 +h2o +h2o2 +hplus
+    aldehyde
+  }
 }

@@ -15,4 +15,28 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron "N-acyl-D-α-amino acid… to d
     <-> ec_1_2_7_11 [1.2.7.11] +di_sulfido_diiron +coa -di_sulfido_diiron -co2 -hplus
     acyl_coa
   }
+
+  branch from d_amino_acid side left {
+    d_amino_acid
+    <-> ec_1_4_5_1 [1.4.5.1] +1_4_benzoquinones +h2o +2_oxo_monocarboxylic_acid_anion +nh3
+    hydroquinones
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_7_1_5 [3.7.1.5] +h2o +pyruvate +hplus
+    3_acylpyruvate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_26 [3.5.4.26] +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o +hplus
+    5_amino_6_5_phospho_d_ribosylamino_uracil
+  }
+
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> ec_2_3_1_25 [2.3.1.25] +1_z_alk_1_enyl_sn_glycero_3_phosphocholine +coa
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin
+  }
 }

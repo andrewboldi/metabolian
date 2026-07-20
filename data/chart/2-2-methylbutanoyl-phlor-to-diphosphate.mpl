@@ -15,4 +15,10 @@ pathway 2-2-methylbutanoyl-phlor-to-diphosphate "2-(2-methylbutanoyl)phlor… to
     <-> ec_2_5_1_137 [2.5.1.137] +dmapp -ppi -hplus
     adlupulone
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    stemod_13_17_ene
+  }
 }

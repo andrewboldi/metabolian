@@ -25,4 +25,28 @@ pathway s-carnitine-to-ammonium "(S)-carnitine to ammonium" {
     <-> ec_2_3_2_7 [2.3.2.7] +hydroxylamine +hplus -nh3
     l_aspartylhydroxamic_acid
   }
+
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_2_8_3_5 [2.8.3.5] +succinyl_coa +succinate
+    acetoacetyl_coa
+  }
+
+  branch from methyl_co side right {
+    methyl_co
+    <-> ec_2_1_1_382 [2.1.1.382] +o_methylsalicylate +cobalt +hplus
+    salicylate
+  }
+
+  branch from cobalt side left {
+    cobalt
+    <-> ec_2_1_1_388 [2.1.1.388] +l_proline_betaine +hplus +methyl_co
+    n_methylproline
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_24 [3.5.4.24] +l_sepiapterin +h2o +hplus
+    s_xanthopterin_b2
+  }
 }

@@ -15,4 +15,16 @@ pathway pentanamide-to-l-homocitrulline "pentanamide to L-homocitrulline" {
     <-> ec_2_1_3_8 [2.1.3.8] +l_lysinium -pi -hplus
     l_homocitrulline
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_37 [3.5.4.37] +adenosine_5_monophosphate_1 +h2o +hplus
+    inosine_5_phosphate_1
+  }
+
+  branch from carbamoyl_p side right {
+    carbamoyl_p
+    <-> ec_6_3_5_5 [6.3.5.5] +hco3 +glutamine +atp +h2o +adp +pi +hplus
+    glutamate
+  }
 }

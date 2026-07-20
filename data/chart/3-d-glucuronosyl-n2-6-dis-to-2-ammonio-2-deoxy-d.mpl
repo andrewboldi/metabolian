@@ -17,4 +17,16 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-2-ammonio-2-deoxy-d "3-D-glucuronosyl-N2,6-
     <-> ec_2_7_1_1 [2.7.1.1] +atp -adp -hplus
     glucosamine6p
   }
+
+  branch from d_glucopyranuronate side left {
+    d_glucopyranuronate
+    <-> ec_3_1_1_19 [3.1.1.19] +h2o +hplus
+    d_glucurono_6_2_lactone
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_3_1_6_8 [3.1.6.8] +d_galactosylceramide_sulfate +h2o +hplus
+    n_acyl_d_galactosylsphingosine
+  }
 }

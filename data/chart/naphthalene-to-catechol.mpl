@@ -25,4 +25,28 @@ pathway naphthalene-to-catechol "naphthalene to catechol" {
     <-> ec_1_14_13_7 [1.14.13.7] +nadph +o2 +hplus -nadp -h2o
     catechol
   }
+
+  branch from naphthalene_1_2_diol side left {
+    naphthalene_1_2_diol
+    <-> ec_1_14_13_135 [1.14.13.135] +nadh +o2 +hplus +co2 +nad +h2o
+    1_hydroxy_2_naphthoate
+  }
+
+  branch from salicylate side right {
+    salicylate
+    <-> ec_2_1_1_274 [2.1.1.274] +sam +sah
+    methyl_salicylate
+  }
+
+  branch from phenol side left {
+    phenol
+    <-> ec_2_7_1_238 [2.7.1.238] +atp +h2o +amp +pi +hplus
+    phenyl_phosphate
+  }
+
+  branch from catechol side right {
+    catechol
+    <-> ec_1_3_1_20 [1.3.1.20] +nadp +nadph +hplus
+    1s_2s_cyclohexa_3_5_diene_1_2_diol
+  }
 }

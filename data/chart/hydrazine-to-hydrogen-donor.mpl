@@ -15,4 +15,28 @@ pathway hydrazine-to-hydrogen-donor "hydrazine to hydrogen donor" {
     <-> ec_1_12_99_6 [1.12.99.6] +h2 +hydrogen_acceptor
     hydrogen_donor
   }
+
+  branch from dinitrogen side left {
+    dinitrogen
+    <-> ec_1_18_6_2 [1.18.6.2] +di_sulfido_diiron +atp +h2o +h2 +nh3 +adp +pi +hplus
+    di_sulfido_diiron
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_146 [1.14.14.146] +e_e_e_geranylgeraniol +fmnh2 +o2 +h2o +hplus
+    plaunotol
+  }
+
+  branch from h2 side left {
+    h2
+    <-> ec_1_12_98_2 [1.12.98.2] +5_10_methanylylidene_tetrahydromethanopterin +hplus
+    5_10_methylenetetrahydromethanopterin
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_4 [3.5.4.4] +adenosine +h2o +hplus
+    inosine
+  }
 }

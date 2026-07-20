@@ -17,4 +17,16 @@ pathway 1d-myo-inositol-to-mycothione "1D-myo-inositol… to mycothione" {
     <-> ec_1_8_1_15 [1.8.1.15] +nadp -nadph -hplus
     mycothione
   }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_2_5_1_144 [2.5.1.144] +o_acetyl_l_serine +trioxidosulfanidosulfate +hplus
+    s_sulfo_l_cysteinate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_25 [4.2.3.25] +gpp +h2o
+    s_linalool
+  }
 }

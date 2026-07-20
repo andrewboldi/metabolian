@@ -17,4 +17,22 @@ pathway alanyl-l-lysinium-to-2-dehydropantoate "β-alanyl-L-lysinium to 2-dehydr
     <-> ec_1_1_1_169 [1.1.1.169] +nadp -nadph -hplus
     2_dehydropantoate
   }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_6_3_2_11 [6.3.2.11] +arginine +atp +adp +pi +hplus
+    alanyl_l_argininium
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_1_5_1_16 [1.5.1.16] +nadp +h2o +pyruvate +nadph +hplus
+    d_lysopine_dizwitterion
+  }
+
+  branch from r_pantoate side left {
+    r_pantoate
+    <-> ec_1_1_1_106 [1.1.1.106] +nad +nadh +hplus
+    r_4_dehydropantoate
+  }
 }

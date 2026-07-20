@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "valienol-1-phosphate-to-succinate",
   "name": "valienol 1-phosphate to succinate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from valienol 1-phosphate(2−) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -190,6 +190,71 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_l_tryptophyl_adenylyl_1_group",
+      "name": "3'-(L-tryptophyl)adenylyl(1−) group",
+      "short": "3'-(L-tryptophyl)ad…",
+      "formula": "C21H22N7O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78535"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60039"
+      }
+    },
+    {
+      "id": "cis_4_hydroxy_l_proline",
+      "name": "cis-4-hydroxy-L-proline",
+      "short": "cis-4-hydroxy-L-pro…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63727"
+      }
     }
   ],
   "enzymes": [
@@ -226,6 +291,20 @@
       "name": "validamycin A dioxygenase",
       "ec": [
         "1.14.11.52"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_2",
+      "name": "tryptophan--tRNA ligase",
+      "ec": [
+        "6.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_56",
+      "name": "L-proline cis-4-hydroxylase",
+      "ec": [
+        "1.14.11.56"
       ]
     }
   ],
@@ -475,6 +554,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:48752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "tryptophan--tRNA ligase",
+      "equation": "tRNA(Trp) + L-tryptophan + ATP = L-tryptophyl-tRNA(Trp) + AMP + diphosphate + H(+)",
+      "ec": "6.1.1.2",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_tryptophyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-proline cis-4-hydroxylase",
+      "equation": "L-proline + 2-oxoglutarate + O2 = cis-4-hydroxy-L-proline + succinate + CO2",
+      "ec": "1.14.11.56",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_4_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:32127"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32127"
           }
         ]
       }

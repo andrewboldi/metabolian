@@ -19,4 +19,22 @@ pathway 6-d-glucose-1-phospho-to-ammonium "6-(α-D-glucose-1-phospho)… to ammo
     <-> ec_3_5_1_110 [3.5.1.110] +h2o +hplus -nh3 -co2
     z_3_aminoacrylate
   }
+
+  branch from g1p side left {
+    g1p
+    <-> ec_2_4_1_392 [2.4.1.392] +3_o_d_glucosyl_d_glucuronate +pi
+    aldehydo_d_glucuronate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_130 [1.14.14.130] +dodecanoate +fmnh2 +o2 +h2o +hplus
+    7_hydroxylaurate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_40 [3.5.4.40] +aminodeoxyfutalosinate +h2o +hplus
+    futalosinate
+  }
 }

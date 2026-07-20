@@ -19,4 +19,22 @@ pathway 7-8-dihydroneopterin-to-10-formyldihydrofolate "7,8-dihydroneopterin to 
     <-> ec_6_3_4_17 [6.3.4.17] +formate +atp -adp -pi
     10_formyldihydrofolate
   }
+
+  branch from 2_amino_6_hydroxymethyl_7_8_dihydropteridin_4_on side left {
+    2_amino_6_hydroxymethyl_7_8_dihydropteridin_4_on
+    <-> ec_4_1_2_60 [4.1.2.60] +7_8_dihydroneopterin_3_triphosphate
+    glycolaldehyde_triphosphate
+  }
+
+  branch from glycolaldehyde side right {
+    glycolaldehyde
+    <-> ec_4_1_2_18 [4.1.2.18] +pyruvate
+    2_dehydro_3_deoxy_l_arabinonate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_4 [6.1.1.4] +amp_3_end_1 +leucine +atp +amp
+    3_l_leucyl_adenylyl_zwitterionic_group
+  }
 }

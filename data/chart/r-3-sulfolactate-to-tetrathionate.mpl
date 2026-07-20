@@ -15,4 +15,16 @@ pathway r-3-sulfolactate-to-tetrathionate "(R)-3-sulfolactate to tetrathionate" 
     <-> ec_1_8_5_2 [1.8.5.2] +6_decylubiquinone -tetrathionate
     6_decylubiquinol
   }
+
+  branch from trioxidosulfanidosulfate side left {
+    trioxidosulfanidosulfate
+    <-> ec_2_8_5_2 [2.8.5.2] +3_disulfanyl_l_alanine +iron +fe2 +hplus
+    s_2_sulfodisulfanyl_l_cysteine_1
+  }
+
+  branch from hydroquinones side right {
+    hydroquinones
+    <-> ec_1_97_1_14 [1.97.1.14] +selenite +1_4_benzoquinones +h2o
+    selenate
+  }
 }

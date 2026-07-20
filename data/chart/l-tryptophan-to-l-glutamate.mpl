@@ -15,4 +15,16 @@ pathway l-tryptophan-to-l-glutamate "L-tryptophan to L-glutamate" {
     <-> ec_3_4_19_16 [3.4.19.16] +h2o -glutamate
     s_e_n_hydroxy_2_indol_3_yl_ethanimidoyl_l_cystei
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_73 [1.14.14.73] +albendazole +fmnh2 +o2 +h2o +hplus
+    albendazole_s_oxide
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_118 [2.6.1.118] +c_terminal_l_glutamyl_l_lysine_1_group +akg
+    c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh
+  }
 }

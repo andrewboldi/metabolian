@@ -25,4 +25,28 @@ pathway erythro-5-hydroxy-l-lysin-to-succinate "erythro-5-hydroxy-L-lysin… to 
     <-> ec_1_14_11_26 [1.14.11.26] +akg +o2 -succinate -co2
     deacetylcephalosporin_c
   }
+
+  branch from l_allysine side left {
+    l_allysine
+    <-> ec_2_6_1_36 [2.6.1.36] +l_lysinium +akg
+    glutamate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_20 [1.4.3.20] +o2 +h2o +l_allysine +h2o2
+    l_lysinium
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_9 [4.2.3.9] +fpp
+    aristolochene
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_7 [1.14.11.7] +l_proline +akg +o2 +co2
+    trans_3_hydroxy_l_proline
+  }
 }

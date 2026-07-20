@@ -15,4 +15,22 @@ pathway n2-l-glutamino-1-group-to-c-terminal-l-glutamyl "N2-L-glutamino(1−) gr
     <-> ec_2_7_2_17 [2.7.2.17] +atp -adp
     c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha
   }
+
+  branch from l_glutamo_2_group side left {
+    l_glutamo_2_group
+    <-> ec_3_5_1_130 [3.5.1.130] +c_terminal_l_glutamyl_l_lysine_1_group +h2o
+    l_lysinium
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_22 [3.5.4.22] +4_hydroxy_1_pyrroline_2_carboxylate +h2o +hplus
+    2_5_dioxopentanoate
+  }
+
+  branch from c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha side left {
+    c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha
+    <-> ec_1_2_1_103 [1.2.1.103] +pi +nadp +nadph +hplus
+    c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh
+  }
 }

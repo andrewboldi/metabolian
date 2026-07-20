@@ -15,4 +15,10 @@ pathway 2-isobutyrylphloroglucinol-to-diphosphate "2-isobutyrylphloroglucinol to
     <-> ec_2_5_1_137 [2.5.1.137] +dmapp -ppi -hplus
     colupulone
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_54 [4.2.3.54] +2_cis_6_cis_farnesyl_diphosphate
+    endo_bergamotene
+  }
 }

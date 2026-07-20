@@ -17,4 +17,22 @@ pathway hexanoyl-coa-to-9-tetrahydrocannabinolate "hexanoyl-CoA to Δ9-tetrahydr
     <-> ec_1_21_3_7 [1.21.3.7] +o2 -h2o2
     9_tetrahydrocannabinolate
   }
+
+  branch from cannabigerolate side left {
+    cannabigerolate
+    <-> ec_1_21_3_8 [1.21.3.8] +o2 +h2o2
+    cannabidiolate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_71 [4.2.3.71] +fpp
+    1e_4e_germacrene_b
+  }
+
+  branch from 9_tetrahydrocannabinolate side left {
+    9_tetrahydrocannabinolate
+    <-> ec_1_21_3_7 [1.21.3.7] +o2 +h2o2
+    cannabinerolate
+  }
 }

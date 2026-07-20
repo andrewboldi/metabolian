@@ -15,4 +15,16 @@ pathway 5-9-10-labda-8-20-13-to-fmn-58160 "5β,9α,10α-labda-8(20),13-… to FM
     <-> ec_1_14_14_159 [1.14.14.159] +fmnh2 +o2 -fmn -h2o -hplus
     3_hydroxy_15_16_epoxydolabrene
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_76 [2.7.7.76] +mo_vi_o2_oh_molybdopterin_cofactor +ctp +hplus
+    mo_vi_molybdopterin_cytosine_dinucleotide
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_59 [1.14.14.59] +3s_6e_nerolidol +fmnh2 +o2 +buten_2_one +h2o +hplus
+    e_4_8_dimethyl_1_3_7_nonatriene
+  }
 }

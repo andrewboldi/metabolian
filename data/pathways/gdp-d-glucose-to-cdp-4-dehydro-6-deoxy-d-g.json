@@ -110,6 +110,25 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "epicubenol",
+      "name": "(+)-epicubenol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61686"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +158,13 @@
       "name": "CDP-glucose 4,6-dehydratase",
       "ec": [
         "4.2.1.45"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_64",
+      "name": "(+)-epicubenol synthase",
+      "ec": [
+        "4.2.3.64"
       ]
     }
   ],
@@ -278,6 +304,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:17153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(+)-epicubenol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-epicubenol + diphosphate",
+      "ec": "4.2.3.64",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epicubenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:29479"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29479"
           }
         ]
       }

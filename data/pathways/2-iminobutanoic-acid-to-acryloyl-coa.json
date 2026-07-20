@@ -135,6 +135,72 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "ammeline",
+      "name": "ammeline",
+      "formula": "C3H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28646"
+      }
+    },
+    {
+      "id": "ammelide",
+      "name": "ammelide",
+      "formula": "C3H4N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28134"
+      }
+    },
+    {
+      "id": "s_methylmalonyl_coa",
+      "name": "(S)-Methylmalonyl-CoA",
+      "short": "Methylmalonyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57327"
+      }
+    },
+    {
+      "id": "1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol",
+      "name": "(1S)-1-hydroxy-23-oxo-24,25,26,27-tetranorcalciol",
+      "short": "1-hydroxy-23-oxo-24…",
+      "formula": "C23H34O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47820"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "calcitroate",
+      "name": "calcitroate",
+      "formula": "C23H33O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58715"
+      }
+    },
+    {
+      "id": "3_hydroxypropanoyl_coa",
+      "name": "3-hydroxypropanoyl-CoA",
+      "short": "3-hydroxypropanoyl-…",
+      "formula": "C24H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58528"
+      }
     }
   ],
   "enzymes": [
@@ -157,6 +223,34 @@
       "name": "acrylyl-CoA reductase (NADPH)",
       "ec": [
         "1.3.1.84"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_45",
+      "name": "melamine deaminase",
+      "ec": [
+        "3.5.4.45"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_94",
+      "name": "ethylmalonyl-CoA decarboxylase",
+      "ec": [
+        "4.1.1.94"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_16",
+      "name": "vitamin D3 24-hydroxylase",
+      "ec": [
+        "1.14.15.16"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_116",
+      "name": "3-hydroxypropionyl-CoA dehydratase",
+      "ec": [
+        "4.2.1.116"
       ]
     }
   ],
@@ -308,6 +402,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:26454"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "melamine deaminase",
+      "equation": "ammeline + H2O + H(+) = ammelide + NH4(+)",
+      "ec": "3.5.4.45",
+      "substrates": [
+        {
+          "metabolite": "ammeline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ammelide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26201"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ethylmalonyl-CoA decarboxylase",
+      "equation": "(S)-methylmalonyl-CoA + H(+) = propanoyl-CoA + CO2",
+      "ec": "4.1.1.94",
+      "substrates": [
+        {
+          "metabolite": "s_methylmalonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "vitamin D3 24-hydroxylase",
+      "equation": "(1S)-1-hydroxy-23-oxo-24,25,26,27-tetranorcalciol + 2 reduced [adrenodoxin] + O2 + H(+) = calcitroate + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.16",
+      "substrates": [
+        {
+          "metabolite": "1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcitroate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24988"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24988"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "3-hydroxypropionyl-CoA dehydratase",
+      "equation": "3-hydroxypropanoyl-CoA = acryloyl-CoA + H2O",
+      "ec": "4.2.1.116",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxypropanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acryloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:26518"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26518"
           }
         ]
       }

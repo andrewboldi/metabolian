@@ -15,4 +15,16 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-ad
     <-> ec_2_1_1_101 [2.1.1.101] +sam -sah -hplus
     tylosin
   }
+
+  branch from dtdp side left {
+    dtdp
+    <-> ec_3_6_1_39 [3.6.1.39] +h2o +pi +hplus
+    dttp
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_26 [2.1.1.26] +2_iodophenol +sam +hplus
+    1_iodo_2_methoxybenzene
+  }
 }

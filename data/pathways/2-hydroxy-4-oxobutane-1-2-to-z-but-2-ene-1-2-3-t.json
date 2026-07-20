@@ -101,6 +101,26 @@
       "xrefs": {
         "chebi": "CHEBI:57872"
       }
+    },
+    {
+      "id": "2e_but_2_ene_1_2_3_tricarboxylate",
+      "name": "(2E)-but-2-ene-1,2,3-tricarboxylate",
+      "short": "but-2-ene-1,2,3-tri…",
+      "formula": "C7H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58915"
+      }
+    },
+    {
+      "id": "2s_3r_3_hydroxybutane_1_2_3_tricarboxylate",
+      "name": "(2S,3R)-3-hydroxybutane-1,2,3-tricarboxylate",
+      "short": "(2S,3R)-3-hydroxybu…",
+      "formula": "C7H7O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57429"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +143,20 @@
       "name": "2-methylcitrate dehydratase",
       "ec": [
         "4.2.1.79"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_117",
+      "name": "2-methylcitrate dehydratase (2-methyl-trans-aconitate forming)",
+      "ec": [
+        "4.2.1.117"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_99",
+      "name": "2-methylisocitrate dehydratase",
+      "ec": [
+        "4.2.1.99"
       ]
     }
   ],
@@ -258,6 +292,88 @@
           {
             "db": "Rhea",
             "id": "RHEA:17725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-methylcitrate dehydratase (2-methyl-trans-aconitate forming)",
+      "equation": "(2S,3S)-2-methylcitrate = 2-methyl-trans-aconitate + H2O",
+      "ec": "4.2.1.117",
+      "substrates": [
+        {
+          "metabolite": "2s_3s_2_methylcitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_but_2_ene_1_2_3_tricarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_117"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26522"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26522"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-methylisocitrate dehydratase",
+      "equation": "(2S,3R)-3-hydroxybutane-1,2,3-tricarboxylate = 2-methyl-cis-aconitate + H2O",
+      "ec": "4.2.1.99",
+      "substrates": [
+        {
+          "metabolite": "2s_3r_3_hydroxybutane_1_2_3_tricarboxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_but_2_ene_1_2_3_tricarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17941"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17941"
           }
         ]
       }

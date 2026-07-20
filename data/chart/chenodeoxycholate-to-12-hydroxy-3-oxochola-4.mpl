@@ -19,4 +19,16 @@ pathway chenodeoxycholate-to-12-hydroxy-3-oxochola-4 "chenodeoxycholate to 12α-
     <-> ec_4_2_1_106 [4.2.1.106] -h2o
     12_hydroxy_3_oxochola_4_6_dien_24_oyl_coa
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_68 [1.14.14.68] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
+    9_pimara_7_15_diene_3_ol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_88 [4.2.3.88] +fpp
+    viridiflorene
+  }
 }

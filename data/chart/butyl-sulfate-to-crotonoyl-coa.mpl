@@ -15,4 +15,28 @@ pathway butyl-sulfate-to-crotonoyl-coa "butyl sulfate to crotonoyl-CoA" {
     <-> ec_1_3_8_1 [1.3.8.1] +fad +hplus -fadh2
     crotonoyl_coa
   }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +primary_linear_alkyl_sulfate_ester +akg +o2 +succinate +co2 +hplus
+    aldehyde
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_43 [1.14.11.43] +s_dichlorprop +akg +o2 +pyruvate +co2
+    2_4_dichlorophenol
+  }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
+    s_ethylmalonyl_coa
+  }
+
+  branch from crotonoyl_coa side right {
+    crotonoyl_coa
+    <-> ec_4_2_1_55 [4.2.1.55] +h2o
+    r_3_hydroxybutanoyl_coa
+  }
 }

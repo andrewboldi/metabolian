@@ -23,4 +23,22 @@ pathway d-apiitol-to-n6-r-s8-succinyldihydr "D-apiitol to N6-[(R)-S8-succinyldih
     <-> ec_1_2_4_2 [1.2.4.2] +akg +hplus -co2
     n6_r_s8_succinyldihydrolipoyl_l_lysine_1
   }
+
+  branch from dhap side left {
+    dhap
+    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinone_8 +sn_glycerol_3_phosphate
+    ubiquinol_8
+  }
+
+  branch from n6_r_dihydrolipoyl_l_lysine side right {
+    n6_r_dihydrolipoyl_l_lysine
+    <-> ec_2_3_1_12 [2.3.1.12] +acetyl_coa +coa
+    n6_r_s8_acetyldihydrolipoyl_l_lysine
+  }
+
+  branch from n6_r_lipoyl_l_lysine side left {
+    n6_r_lipoyl_l_lysine
+    <-> ec_1_4_4_2 [1.4.4.2] +glycine +hplus +co2
+    n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1
+  }
 }

@@ -130,6 +130,65 @@
       "xrefs": {
         "chebi": "CHEBI:52127"
       }
+    },
+    {
+      "id": "l_pentahomomethionine",
+      "name": "L-pentahomomethionine",
+      "short": "L-pentahomomethioni…",
+      "formula": "C10H21NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134635"
+      }
+    },
+    {
+      "id": "e_8_methylsulfanyl_octanal_oxime",
+      "name": "(E)-8-(methylsulfanyl)octanal oxime",
+      "short": "8-(methylsulfanyl)o…",
+      "formula": "C9H19NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134684"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57907"
+      }
     }
   ],
   "enzymes": [
@@ -159,6 +218,20 @@
       "name": "glyceollin synthase",
       "ec": [
         "1.14.14.135"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_42",
+      "name": "homomethionine N-monooxygenase",
+      "ec": [
+        "1.14.14.42"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_81",
+      "name": "geranylfarnesyl diphosphate synthase",
+      "ec": [
+        "2.5.1.81"
       ]
     }
   ],
@@ -359,6 +432,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:26047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "homomethionine N-monooxygenase",
+      "equation": "L-pentahomomethionine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-8-(methylsulfanyl)octanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.42",
+      "substrates": [
+        {
+          "metabolite": "l_pentahomomethionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_8_methylsulfanyl_octanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33291"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "geranylfarnesyl diphosphate synthase",
+      "equation": "isopentenyl diphosphate + (2E,6E,10E)-geranylgeranyl diphosphate = (2E,6E,10E,14E)-geranylfarnesyl diphosphate + diphosphate",
+      "ec": "2.5.1.81",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25694"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25694"
           }
         ]
       }

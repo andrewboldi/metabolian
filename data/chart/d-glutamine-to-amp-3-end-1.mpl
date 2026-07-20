@@ -27,4 +27,28 @@ pathway d-glutamine-to-amp-3-end-1 "D-glutamine to AMP 3'-end(1−)" {
     <-> ec_2_3_2_17 [2.3.2.17] +3_glycyladenylyl_zwitterionic_group -amp_3_end_1 -hplus
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
   }
+
+  branch from d_glutamate side left {
+    d_glutamate
+    <-> ec_2_3_2_1 [2.3.2.1] +d_glutamine +nh3
+    d_glutamyl_d_glutamate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_12 [1.4.1.12] +2r_4s_2_4_diazaniumylpentanoate +nad +h2o +nadh +hplus
+    r_2_amino_4_oxopentanoic_acid
+  }
+
+  branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate side left {
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate
+    <-> ec_6_3_2_37 [6.3.2.37] +d_lysinium +atp +adp +pi +hplus
+    n6_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_d
+  }
+
+  branch from ump side right {
+    ump
+    <-> ec_2_7_1_48 [2.7.1.48] +gtp +gdp +hplus
+    uridine
+  }
 }

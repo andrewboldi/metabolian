@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dctp-to-dtdp",
   "name": "dCTP to dTDP",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from dCTP(4−) to dTDP(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -144,6 +144,63 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "2_iminiopropionate",
+      "name": "2-iminiopropionate",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:44400"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "all_trans_octaprenyl_diphosphate",
+      "name": "all-trans-octaprenyl diphosphate",
+      "short": "all-trans-octapreny…",
+      "formula": "C40H65O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57711"
+      }
+    },
+    {
+      "id": "thymidine",
+      "name": "thymidine",
+      "formula": "C10H14N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17748"
+      }
     }
   ],
   "enzymes": [
@@ -173,6 +230,34 @@
       "name": "T2-induced deoxynucleotide kinase",
       "ec": [
         "2.7.4.12"
+      ]
+    },
+    {
+      "id": "ec_3_5_99_10",
+      "name": "2-iminobutanoate/2-iminopropanoate deaminase",
+      "ec": [
+        "3.5.99.10"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_90",
+      "name": "all-trans-octaprenyl-diphosphate synthase",
+      "ec": [
+        "2.5.1.90"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_21",
+      "name": "thymidine kinase",
+      "ec": [
+        "2.7.1.21"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_145",
+      "name": "deoxynucleoside kinase",
+      "ec": [
+        "2.7.1.145"
       ]
     }
   ],
@@ -324,6 +409,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:13517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-iminobutanoate/2-iminopropanoate deaminase",
+      "equation": "2-iminopropanoate + H2O = pyruvate + NH4(+)",
+      "ec": "3.5.99.10",
+      "substrates": [
+        {
+          "metabolite": "2_iminiopropionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_99_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:40671"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40671"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "all-trans-octaprenyl-diphosphate synthase",
+      "equation": "5 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-octaprenyl diphosphate + 5 diphosphate",
+      "ec": "2.5.1.90",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_octaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 5
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27798"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27798"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "thymidine kinase",
+      "equation": "thymidine + ATP = dTMP + ADP + H(+)",
+      "ec": "2.7.1.21",
+      "substrates": [
+        {
+          "metabolite": "thymidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:19129"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19129"
           }
         ]
       }

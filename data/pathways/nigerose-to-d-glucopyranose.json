@@ -92,6 +92,35 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "protodioscin",
+      "name": "protodioscin",
+      "formula": "C51H84O22",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:8588"
+      }
+    },
+    {
+      "id": "26_desglucoprotodioscin",
+      "name": "26-desglucoprotodioscin",
+      "short": "26-desglucoprotodio…",
+      "formula": "C45H74O17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74026"
+      }
+    },
+    {
+      "id": "sn_glycerol_1_phosphate",
+      "name": "sn-glycerol 1-phosphate",
+      "short": "sn-glycerol 1-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57685"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +150,20 @@
       "name": "sugar-terminal-phosphatase",
       "ec": [
         "3.1.3.58"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_186",
+      "name": "protodioscin 26-O-beta-D-glucosidase",
+      "ec": [
+        "3.2.1.186"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_21",
+      "name": "glycerol-1-phosphatase",
+      "ec": [
+        "3.1.3.21"
       ]
     }
   ],
@@ -256,6 +299,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:16689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protodioscin 26-O-beta-D-glucosidase",
+      "equation": "protodioscin + H2O = 26-deglucoprotodioscin + D-glucose",
+      "ec": "3.2.1.186",
+      "substrates": [
+        {
+          "metabolite": "protodioscin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "26_desglucoprotodioscin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_186"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37895"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37895"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glycerol-1-phosphatase",
+      "equation": "sn-glycerol 1-phosphate + H2O = glycerol + phosphate",
+      "ec": "3.1.3.21",
+      "substrates": [
+        {
+          "metabolite": "sn_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46084"
           }
         ]
       }

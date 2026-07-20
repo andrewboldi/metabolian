@@ -146,6 +146,82 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "3_acylpyruvate",
+      "name": "3-acylpyruvate",
+      "formula": "C4H2O4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57278"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin",
+      "name": "2,5-diamino-4-hydroxy-6-(5-phosphonatoribosylamino)pyrimidine",
+      "short": "2,5-diamino-4-hydro…",
+      "formula": "C9H14N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58614"
+      }
+    },
+    {
+      "id": "5_amino_6_5_phospho_d_ribosylamino_uracil",
+      "name": "5-amino-6-(5-phospho-D-ribosylamino)uracil",
+      "short": "5-amino-6-(5-phosph…",
+      "formula": "C9H13N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58453"
+      }
+    },
+    {
+      "id": "1_z_alk_1_enyl_sn_glycero_3_phosphocholine",
+      "name": "1-(Z)-alk-1-enyl-sn-glycero-3-phosphocholine",
+      "short": "1-(Z)-alk-1-enyl-sn…",
+      "formula": "C10H21NO6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77287"
+      }
+    },
+    {
+      "id": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin",
+      "name": "1-(Z)-alk-1-enyl-2-acyl-sn-glycero-3-phosphocholine",
+      "short": "1-(Z)-alk-1-enyl-2-…",
+      "formula": "C11H20NO7PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77286"
+      }
     }
   ],
   "enzymes": [
@@ -168,6 +244,34 @@
       "name": "2-oxoacid oxidoreductase (ferredoxin)",
       "ec": [
         "1.2.7.11"
+      ]
+    },
+    {
+      "id": "ec_1_4_5_1",
+      "name": "D-amino acid dehydrogenase (quinone)",
+      "ec": [
+        "1.4.5.1"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_5",
+      "name": "acylpyruvate hydrolase",
+      "ec": [
+        "3.7.1.5"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_26",
+      "name": "diaminohydroxyphosphoribosylaminopyrimidine deaminase",
+      "ec": [
+        "3.5.4.26"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_25",
+      "name": "plasmalogen synthase",
+      "ec": [
+        "2.3.1.25"
       ]
     }
   ],
@@ -323,6 +427,202 @@
           {
             "db": "Rhea",
             "id": "RHEA:42316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-amino acid dehydrogenase (quinone)",
+      "equation": "a D-alpha-amino acid + a quinone + H2O = a 2-oxocarboxylate + a quinol + NH4(+)",
+      "ec": "1.4.5.1",
+      "substrates": [
+        {
+          "metabolite": "d_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_5_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:45996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "acylpyruvate hydrolase",
+      "equation": "a 3-acylpyruvate + H2O = a carboxylate + pyruvate + H(+)",
+      "ec": "3.7.1.5",
+      "substrates": [
+        {
+          "metabolite": "3_acylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:19009"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19009"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "diaminohydroxyphosphoribosylaminopyrimidine deaminase",
+      "equation": "2,5-diamino-6-hydroxy-4-(5-phosphoribosylamino)-pyrimidine + H2O + H(+) = 5-amino-6-(5-phospho-D-ribosylamino)uracil + NH4(+)",
+      "ec": "3.5.4.26",
+      "substrates": [
+        {
+          "metabolite": "2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_amino_6_5_phospho_d_ribosylamino_uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "plasmalogen synthase",
+      "equation": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphocholine + an acyl-CoA = a 1-O-(1Z-alkenyl)-2-acyl-sn-glycero-3-phosphocholine + CoA",
+      "ec": "2.3.1.25",
+      "substrates": [
+        {
+          "metabolite": "1_z_alk_1_enyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:10344"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10344"
           }
         ]
       }

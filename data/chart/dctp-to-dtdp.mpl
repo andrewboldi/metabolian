@@ -15,4 +15,22 @@ pathway dctp-to-dtdp "dCTP to dTDP" {
     <-> ec_2_7_4_9 [2.7.4.9] +atp -adp
     dtdp
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_99_10 [3.5.99.10] +h2o +pyruvate
+    2_iminiopropionate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_90 [2.5.1.90] +ipp +fpp
+    all_trans_octaprenyl_diphosphate
+  }
+
+  branch from dtmp side left {
+    dtmp
+    <-> ec_2_7_1_21 [2.7.1.21] +atp +adp +hplus
+    thymidine
+  }
 }

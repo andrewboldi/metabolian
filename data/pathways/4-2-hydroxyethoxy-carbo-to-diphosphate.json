@@ -166,6 +166,26 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58635"
+      }
+    },
+    {
+      "id": "abieta_8_14_12_diene",
+      "name": "abieta-8(14),12-diene",
+      "short": "abieta-8(14),12-die…",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29616"
+      }
     }
   ],
   "enzymes": [
@@ -195,6 +215,13 @@
       "name": "3,4-dihydroxybenzoate--[aryl-carrier protein] ligase",
       "ec": [
         "6.2.1.62"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_32",
+      "name": "levopimaradiene synthase",
+      "ec": [
+        "4.2.3.32"
       ]
     }
   ],
@@ -399,6 +426,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:62460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "levopimaradiene synthase",
+      "equation": "(+)-copalyl diphosphate = abieta-8(14),12-diene + diphosphate",
+      "ec": "4.2.3.32",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "abieta_8_14_12_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:25548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25548"
           }
         ]
       }

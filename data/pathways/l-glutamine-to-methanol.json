@@ -100,6 +100,126 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "l_glutamyl_l_glutamate_2",
+      "name": "γ-L-glutamyl-L-glutamate(2−)",
+      "short": "γ-L-glutamyl-L-glut…",
+      "formula": "C10H12N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:143622"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17180"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "trans_aconitate",
+      "name": "trans-aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15708"
+      }
+    },
+    {
+      "id": "2e_3_methoxycarbonyl_pent_2_enedioate",
+      "name": "(2E)-3-(methoxycarbonyl)pent-2-enedioate",
+      "short": "3-(methoxycarbonyl)…",
+      "formula": "C7H6O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57470"
+      }
+    },
+    {
+      "id": "aclacinomycin_t",
+      "name": "aclacinomycin T",
+      "formula": "C30H35NO10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77979"
+      }
+    },
+    {
+      "id": "15_demethylaclacinomycin_t",
+      "name": "15-demethylaclacinomycin T",
+      "short": "15-demethylaclacino…",
+      "formula": "C29H33NO10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74354"
+      }
     }
   ],
   "enzymes": [
@@ -122,6 +242,34 @@
       "name": "protein-glutamate methylesterase",
       "ec": [
         "3.1.1.61"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_62",
+      "name": "beta-tubulin-glutamate ligase",
+      "ec": [
+        "6.3.2.62"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_7",
+      "name": "serine 2-dehydrogenase",
+      "ec": [
+        "1.4.1.7"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_144",
+      "name": "trans-aconitate 2-methyltransferase",
+      "ec": [
+        "2.1.1.144"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_95",
+      "name": "aclacinomycin methylesterase",
+      "ec": [
+        "3.1.1.95"
       ]
     }
   ],
@@ -261,6 +409,210 @@
           {
             "db": "Rhea",
             "id": "RHEA:23236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-tubulin-glutamate ligase",
+      "equation": "L-glutamyl-[beta-tubulin] + L-glutamate + ATP = gamma-L-glutamyl-L-glutamyl-[beta-tubulin] + ADP + phosphate + H(+)",
+      "ec": "6.3.2.62",
+      "substrates": [
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamyl_l_glutamate_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69196"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69196"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "serine 2-dehydrogenase",
+      "equation": "L-serine + NAD(+) + H2O = 3-hydroxypyruvate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.7",
+      "substrates": [
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20884"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20884"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "trans-aconitate 2-methyltransferase",
+      "equation": "trans-aconitate + S-adenosyl-L-methionine = (E)-3-(methoxycarbonyl)pent-2-enedioate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.144",
+      "substrates": [
+        {
+          "metabolite": "trans_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_3_methoxycarbonyl_pent_2_enedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_144"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:14969"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "aclacinomycin methylesterase",
+      "equation": "aclacinomycin T + H2O = 15-demethylaclacinomycin T + methanol",
+      "ec": "3.1.1.95",
+      "substrates": [
+        {
+          "metabolite": "aclacinomycin_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_demethylaclacinomycin_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_95"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:37891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37891"
           }
         ]
       }

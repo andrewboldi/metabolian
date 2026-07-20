@@ -293,6 +293,83 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "acryloyl_coa",
+      "name": "Acryloyl-CoA (propenoyl-CoA)",
+      "short": "Acryloyl-CoA…",
+      "formula": "C24H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57367"
+      }
+    },
+    {
+      "id": "4_acetamidobutanoyl_coa",
+      "name": "4-acetamidobutanoyl-CoA",
+      "short": "4-acetamidobutanoyl…",
+      "formula": "C27H41N8O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58583"
+      }
+    },
+    {
+      "id": "4_aminobutanoyl_coa",
+      "name": "4-aminobutanoyl-CoA",
+      "formula": "C25H40N8O17P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57352"
+      }
+    },
+    {
+      "id": "n_formylmethanofuran",
+      "name": "N-formylmethanofuran",
+      "formula": "C35H39N4O16",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57727"
+      }
+    },
+    {
+      "id": "methanofuranate",
+      "name": "methanofuranate",
+      "formula": "C34H40N4O15",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58151"
+      }
+    },
+    {
+      "id": "dtdp_l_dihydrostreptose",
+      "name": "dTDP-L-dihydrostreptose",
+      "short": "dTDP-L-dihydrostrep…",
+      "formula": "C16H24N2O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57631"
+      }
+    },
+    {
+      "id": "streptidine_6_phosphate",
+      "name": "streptidine 6-phosphate",
+      "short": "streptidine 6-P",
+      "formula": "C8H19N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60106"
+      }
+    },
+    {
+      "id": "o_1_4_l_dihydrostreptosylstreptidine_6_phosphate",
+      "name": "O-(1→4)-α-L-dihydrostreptosylstreptidine 6-phosphate",
+      "short": "O-(1→4)-α-L-dihydro…",
+      "formula": "C14H29N6O11P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58082"
+      }
     }
   ],
   "enzymes": [
@@ -357,6 +434,34 @@
       "name": "erythromycin 3''-O-methyltransferase",
       "ec": [
         "2.1.1.254"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_95",
+      "name": "acryloyl-CoA reductase (NADH)",
+      "ec": [
+        "1.3.1.95"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_51",
+      "name": "4-acetamidobutyryl-CoA deacetylase",
+      "ec": [
+        "3.5.1.51"
+      ]
+    },
+    {
+      "id": "ec_1_2_7_12",
+      "name": "formylmethanofuran dehydrogenase",
+      "ec": [
+        "1.2.7.12"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_27",
+      "name": "dTDP-dihydrostreptose--streptidine-6-phosphate",
+      "ec": [
+        "2.4.2.27"
       ]
     }
   ],
@@ -822,6 +927,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:32647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "acryloyl-CoA reductase (NADH)",
+      "equation": "propanoyl-CoA + NAD(+) = acryloyl-CoA + NADH + H(+)",
+      "ec": "1.3.1.95",
+      "substrates": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acryloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_95"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:34471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "4-acetamidobutyryl-CoA deacetylase",
+      "equation": "4-acetamidobutanoyl-CoA + H2O = 4-aminobutanoyl-CoA + acetate",
+      "ec": "3.5.1.51",
+      "substrates": [
+        {
+          "metabolite": "4_acetamidobutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_aminobutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:22928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "formylmethanofuran dehydrogenase",
+      "equation": "N-formylmethanofuran + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = methanofuran + 2 reduced [2Fe-2S]-[ferredoxin] + CO2 + H(+)",
+      "ec": "1.2.7.12",
+      "substrates": [
+        {
+          "metabolite": "n_formylmethanofuran",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methanofuranate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_7_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:19841"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19841"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "dTDP-dihydrostreptose--streptidine-6-phosphate",
+      "equation": "dTDP-L-dihydrostreptose + streptidine 6-phosphate = O-(1->4)-alpha-L-dihydrostreptosyl-streptidine 6-phosphate + dTDP + H(+)",
+      "ec": "2.4.2.27",
+      "substrates": [
+        {
+          "metabolite": "dtdp_l_dihydrostreptose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "streptidine_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_1_4_l_dihydrostreptosylstreptidine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:24392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24392"
           }
         ]
       }

@@ -157,6 +157,24 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "s_oxalatosuccinate",
+      "name": "(S)-oxalatosuccinate",
+      "formula": "C6H3O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:153066"
+      }
     }
   ],
   "enzymes": [
@@ -193,6 +211,13 @@
       "name": "kanosamine kinase",
       "ec": [
         "2.7.1.179"
+      ]
+    },
+    {
+      "id": "ec_6_4_1_7",
+      "name": "2-oxoglutarate carboxylase",
+      "ec": [
+        "6.4.1.7"
       ]
     }
   ],
@@ -426,6 +451,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:35751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2-oxoglutarate carboxylase",
+      "equation": "hydrogencarbonate + 2-oxoglutarate + ATP = (S)-oxalosuccinate + ADP + phosphate + H(+)",
+      "ec": "6.4.1.7",
+      "substrates": [
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_oxalatosuccinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_4_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20425"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20425"
           }
         ]
       }

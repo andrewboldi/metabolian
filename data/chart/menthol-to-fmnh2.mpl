@@ -17,4 +17,22 @@ pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
     <-> ec_1_3_8_16 [1.3.8.16] +2_azaniumyl_2_deoxyisochorismate +fmn -fmnh2
     3_1_carboxylatovinyloxy_anthranilate
   }
+
+  branch from pulegone side left {
+    pulegone
+    <-> ec_1_3_1_81 [1.3.1.81] +nadp +nadph +hplus
+    isomenthone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_19_67 [1.14.19.67] +r_reticulinium +fmnh2 +o2 +h2o +hplus
+    salutaridinium
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_57 [1.14.14.57] +taurochenodeoxycholate +o2 +fmn +h2o +hplus
+    taurohyocholate
+  }
 }

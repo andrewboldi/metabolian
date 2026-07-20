@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-acetamido-2-deoxy-3-o-to-sulfate",
   "name": "2-acetamido-2-deoxy-3-O-(… to sulfate",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from 2-acetamido-2-deoxy-3-O-(4-deoxy-α-L-threo-hex-4-enopyranosyluronate)-6-O-sulfonato-D-galactopyranose(2−) to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,6 +100,26 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
     }
   ],
   "enzymes": [
@@ -122,6 +142,20 @@
       "name": "adenylylsulfatase",
       "ec": [
         "3.6.2.1"
+      ]
+    },
+    {
+      "id": "ec_3_6_2_2",
+      "name": "phosphoadenylylsulfatase",
+      "ec": [
+        "3.6.2.2"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_7",
+      "name": "3'(2'),5'-bisphosphate nucleotidase",
+      "ec": [
+        "3.1.3.7"
       ]
     }
   ],
@@ -269,6 +303,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:17041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phosphoadenylylsulfatase",
+      "equation": "3'-phosphoadenylyl sulfate + H2O = sulfate + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "ec": "3.6.2.2",
+      "substrates": [
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:11232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "3'(2'),5'-bisphosphate nucleotidase",
+      "equation": "3'-phosphoadenylyl sulfate + H2O = adenosine 5'-phosphosulfate + phosphate",
+      "ec": "3.1.3.7",
+      "substrates": [
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_adenylyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:77639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77639"
           }
         ]
       }

@@ -15,4 +15,22 @@ pathway n5-l-1-carboxyethyl-l-o-to-ammonium "N5-(L-1-carboxyethyl)-L-o… to amm
     <-> ec_3_5_1_20 [3.5.1.20] +h2o +hplus -nh3 -co2
     ornithine
   }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_2_1_4_3 [2.1.4.3] +l_lysinium +arginine
+    l_homoarginine
+  }
+
+  branch from citrulline side right {
+    citrulline
+    <-> ec_1_14_14_47 [1.14.14.47] +fmnh2 +arginine +o2 +no +h2o +hplus
+    fmn
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_19 [4.3.1.19] +threonine
+    oxobut
+  }
 }

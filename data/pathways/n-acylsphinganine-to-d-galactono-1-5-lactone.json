@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acylsphinganine-to-d-galactono-1-5-lactone",
   "name": "N-acylsphinganine to D-galactono-1,5-lactone",
-  "category": "lipid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 4-step route from N-acylsphinganine to D-galactono-1,5-lactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -145,6 +145,73 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "n_acyl_4e_8e_sphinga_4_8_dienine",
+      "name": "N-acyl-(4E,8E)-sphinga-4,8-dienine",
+      "short": "N-acyl-(4E,8E)-sphi…",
+      "formula": "C19H34NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85953"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "d_galactosylceramide_sulfate",
+      "name": "β-D-galactosylceramide sulfate",
+      "short": "β-D-galactosylceram…",
+      "formula": "C25H45NO11SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75956"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "galactitol",
+      "name": "galactitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16813"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -188,6 +255,27 @@
       "name": "glucose/galactose 1-dehydrogenase",
       "ec": [
         "1.1.1.360"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_18",
+      "name": "sphingolipid 8-(E)-desaturase",
+      "ec": [
+        "1.14.19.18"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_11",
+      "name": "galactosylceramide sulfotransferase",
+      "ec": [
+        "2.8.2.11"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
       ]
     }
   ],
@@ -388,6 +476,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:18625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sphingolipid 8-(E)-desaturase",
+      "equation": "an N-acylsphing-4-enine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = a (4E,8E)-4-sphinga-4,8-dienine ceramide + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.18",
+      "substrates": [
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_4e_8e_sphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "galactosylceramide sulfotransferase",
+      "equation": "a beta-D-galactosyl-(1<->1')-N-acylsphing-4-enine + 3'-phosphoadenylyl sulfate = an N-acyl-1-beta-D-(3-O-sulfo)-galactosyl-sphing-4-enine + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.11",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_d_galactosylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactosylceramide_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20613"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20613"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "aldose reductase",
+      "equation": "galactitol + NAD(+) = D-galactose + NADH + H(+)",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:37963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37963"
           }
         ]
       }

@@ -17,4 +17,22 @@ pathway sucrose-6f-phosphate-to-d-fructofuranose "sucrose 6F-phosphate to D-fruc
     <-> ec_2_7_1_1 [2.7.1.1] +d_fructofuranose +atp -adp -hplus
     d_fructofuranose_6_phosphate
   }
+
+  branch from sucrose side left {
+    sucrose
+    <-> ec_2_4_1_n2 [2.4.1.n2] +udp_d_galactose +udp +hplus
+    loliose
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_33 [1.3.99.33] +dihydrourocanate +hydrogen_acceptor
+    urocanate
+  }
+
+  branch from d_fructofuranose side left {
+    d_fructofuranose
+    <-> ec_1_1_1_138 [1.1.1.138] +nadp +nadph +hplus
+    d_mannitol
+  }
 }

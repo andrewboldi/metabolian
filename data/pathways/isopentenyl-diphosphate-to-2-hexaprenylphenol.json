@@ -102,6 +102,34 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "hexaprene",
+      "name": "β-hexaprene",
+      "formula": "C30H48",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138227"
+      }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "cedr_8_ene",
+      "name": "cedr-8-ene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10216"
+      }
     }
   ],
   "enzymes": [
@@ -124,6 +152,20 @@
       "name": "4-hydroxy-3-polyprenylbenzoate decarboxylase",
       "ec": [
         "4.1.1.98"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_188",
+      "name": "beta-geranylfarnesene synthase",
+      "ec": [
+        "4.2.3.188"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_227",
+      "name": "(-)-alpha-cedrene synthase",
+      "ec": [
+        "4.2.3.227"
       ]
     }
   ],
@@ -259,6 +301,88 @@
           {
             "db": "Rhea",
             "id": "RHEA:44568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-geranylfarnesene synthase",
+      "equation": "all-trans-hexaprenyl diphosphate = beta-hexaprene + diphosphate",
+      "ec": "4.2.3.188",
+      "substrates": [
+        {
+          "metabolite": "all_trans_hexaprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexaprene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_188"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54504"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(-)-alpha-cedrene synthase",
+      "equation": "(2Z,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
+      "ec": "4.2.3.227",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cedr_8_ene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_227"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31423"
           }
         ]
       }

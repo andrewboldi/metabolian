@@ -15,4 +15,16 @@ pathway n1-s-3-amino-3-carboxy-to-cyanamide "N1-[(S)-3-amino-3-carboxy… to cya
     <-> ec_4_2_1_69 [4.2.1.69] -h2o
     cyanamide
   }
+
+  branch from n1_aminopropylagmatine side left {
+    n1_aminopropylagmatine
+    <-> ec_2_5_1_104 [2.5.1.104] +s_adenosylmethioninaminium +agmatinium +hplus
+    5_s_methyl_5_thioadenosine
+  }
+
+  branch from spermidine side right {
+    spermidine
+    <-> ec_2_5_1_79 [2.5.1.79] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    thermosperminium
+  }
 }

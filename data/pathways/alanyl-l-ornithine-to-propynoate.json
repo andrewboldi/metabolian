@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "alanyl-l-ornithine-to-propynoate",
   "name": "β-alanyl-L-ornithine to propynoate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from β-alanyl-L-ornithine(1+) to propynoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -89,6 +89,88 @@
       "xrefs": {
         "chebi": "CHEBI:15364"
       }
+    },
+    {
+      "id": "alanyl_l_argininium",
+      "name": "β-alanyl-L-argininium",
+      "short": "β-alanyl-L-arginini…",
+      "formula": "C9H20N5O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143157"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "n_amidino_l_cysteine",
+      "name": "N-amidino-L-cysteine",
+      "formula": "C4H9N3O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232115"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "malonate",
+      "name": "malonate",
+      "formula": "C3H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15792"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "isoglutamate",
+      "name": "isoglutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66948"
+      }
     }
   ],
   "enzymes": [
@@ -111,6 +193,27 @@
       "name": "acetylenecarboxylate hydratase",
       "ec": [
         "4.2.1.27"
+      ]
+    },
+    {
+      "id": "ec_2_1_4_4",
+      "name": "valine amidinotransferase",
+      "ec": [
+        "2.1.4.4"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_15",
+      "name": "malonate-semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.15"
+      ]
+    },
+    {
+      "id": "ec_5_4_3_9",
+      "name": "glutamate 2,3-aminomutase",
+      "ec": [
+        "5.4.3.9"
       ]
     }
   ],
@@ -242,6 +345,186 @@
           {
             "db": "Rhea",
             "id": "RHEA:17957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Xaa-Arg dipeptidase",
+      "equation": "beta-alanyl-L-arginine + H2O = beta-alanine + L-arginine",
+      "ec": "3.4.13.4",
+      "substrates": [
+        {
+          "metabolite": "alanyl_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_13_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "valine amidinotransferase",
+      "equation": "L-cysteine + L-arginine = N-amidino-L-cysteine + L-ornithine",
+      "ec": "2.1.4.4",
+      "substrates": [
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_amidino_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:82219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "malonate-semialdehyde dehydrogenase",
+      "equation": "3-oxopropanoate + NAD(+) + H2O = malonate + NADH + 2 H(+)",
+      "ec": "1.2.1.15",
+      "substrates": [
+        {
+          "metabolite": "3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20045"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "glutamate 2,3-aminomutase",
+      "equation": "L-glutamate = 3-aminopentanedioate",
+      "ec": "5.4.3.9",
+      "substrates": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoglutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:34239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34239"
           }
         ]
       }

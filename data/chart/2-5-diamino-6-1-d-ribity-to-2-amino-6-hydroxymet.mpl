@@ -15,4 +15,10 @@ pathway 2-5-diamino-6-1-d-ribity-to-2-amino-6-hydroxymet "2,5-diamino-6-(1-D-rib
     <-> ec_4_1_2_59 [4.1.2.59] -2_amino_6_hydroxymethyl_7_8_dihydropteridin_4_on
     glycolaldehyde_phosphate
   }
+
+  branch from 7_8_dihydroneopterin_3_phosphate side left {
+    7_8_dihydroneopterin_3_phosphate
+    <-> ec_3_6_1_67 [3.6.1.67] +7_8_dihydroneopterin_3_triphosphate +h2o +hplus
+    ppi
+  }
 }

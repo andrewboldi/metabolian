@@ -113,6 +113,53 @@
       "xrefs": {
         "chebi": "CHEBI:173113"
       }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "5_end_ribonucleotide_2",
+      "name": "5'-end ribonucleotide(2−)",
+      "short": "5'-end ribonucleoti…",
+      "formula": "C5H7O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:138282"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "caryophyllene",
+      "name": "(+)-β-caryophyllene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63190"
+      }
     }
   ],
   "enzymes": [
@@ -135,6 +182,20 @@
       "name": "RNA 2',3'-cyclic 3'-phosphodiesterase",
       "ec": [
         "3.1.4.58"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_78",
+      "name": "polynucleotide 5'-hydroxyl-kinase",
+      "ec": [
+        "2.7.1.78"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_89",
+      "name": "(+)-beta-caryophyllene synthase",
+      "ec": [
+        "4.2.3.89"
       ]
     }
   ],
@@ -278,6 +339,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:11828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "polynucleotide 5'-hydroxyl-kinase",
+      "equation": "a 5'-end dephospho-ribonucleoside-RNA + ATP = a 5'-end 5'-phospho-ribonucleoside-RNA + ADP + H(+)",
+      "ec": "2.7.1.78",
+      "substrates": [
+        {
+          "metabolite": "5_end_ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_ribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(+)-beta-caryophyllene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-(E)-beta-caryophyllene + diphosphate",
+      "ec": "4.2.3.89",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "caryophyllene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31815"
           }
         ]
       }

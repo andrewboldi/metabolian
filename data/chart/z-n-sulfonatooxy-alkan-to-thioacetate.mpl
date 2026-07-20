@@ -15,4 +15,28 @@ pathway z-n-sulfonatooxy-alkan-to-thioacetate "(Z)-N-(sulfonatooxy)alkan… to t
     <-> ec_2_3_1_10 [2.3.1.10] +acetyl_coa -coa
     thioacetate
   }
+
+  branch from sulfur_atom side left {
+    sulfur_atom
+    <-> ec_1_8_2_7 [1.8.2.7] +thiocyanate +iron +h2o +fe2 +hplus
+    cyanate
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_3_1_6_20 [3.1.6.20] +s_2_sulfodisulfanyl_l_cysteine_1 +h2o +hplus
+    3_trisulfanyl_l_alanine
+  }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_3_13_1_5 [3.13.1.5] +h2o +co2 +hplus
+    carbon_disulfide
+  }
+
+  branch from sulfite side right {
+    sulfite
+    <-> ec_4_4_1_38 [4.4.1.38] +isethionate +hplus
+    acetaldehyde
+  }
 }

@@ -120,6 +120,26 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "1_phosphatidyl_1d_myo_inositol",
+      "name": "1-phosphatidyl-1D-myo-inositol",
+      "short": "1-phosphatidyl-1D-m…",
+      "formula": "C11H16O13PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57880"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycero_3_phospho_1d_myo_inositol",
+      "name": "1-acyl-sn-glycero-3-phospho-1D-myo-inositol",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C10H17O12PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64771"
+      }
     }
   ],
   "enzymes": [
@@ -142,6 +162,13 @@
       "name": "fatty acid kinase",
       "ec": [
         "2.7.2.18"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_52",
+      "name": "phosphatidylinositol deacylase",
+      "ec": [
+        "3.1.1.52"
       ]
     }
   ],
@@ -281,6 +308,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:60168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phosphatidylinositol deacylase",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) + H2O = a 1-acyl-sn-glycero-3-phospho-(1D-myo-inositol) + a fatty acid + H(+)",
+      "ec": "3.1.1.52",
+      "substrates": [
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycero_3_phospho_1d_myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_52"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18001"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18001"
           }
         ]
       }

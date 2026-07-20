@@ -180,6 +180,81 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "s_2_hydroxymethylglutarate",
+      "name": "(S)-2-hydroxymethylglutarate",
+      "short": "2-hydroxymethylglut…",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:180543"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16469"
+      }
+    },
+    {
+      "id": "6_hydroxy_17_estradiol",
+      "name": "6β-hydroxy-17β-estradiol",
+      "short": "6β-hydroxy-17β-estr…",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16784"
+      }
+    },
+    {
+      "id": "dinitrogen_oxide",
+      "name": "dinitrogen oxide",
+      "formula": "N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17045"
+      }
     }
   ],
   "enzymes": [
@@ -209,6 +284,34 @@
       "name": "nitric oxide dioxygenase",
       "ec": [
         "1.14.12.17"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_291",
+      "name": "2-hydroxymethylglutarate dehydrogenase",
+      "ec": [
+        "1.1.1.291"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_35",
+      "name": "anthranilate 3-monooxygenase (deaminating)",
+      "ec": [
+        "1.14.13.35"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_11",
+      "name": "estradiol 6beta-monooxygenase",
+      "ec": [
+        "1.14.99.11"
+      ]
+    },
+    {
+      "id": "ec_1_7_1_14",
+      "name": "nitric oxide reductase [NAD(P)(+), nitrous oxide-forming]",
+      "ec": [
+        "1.7.1.14"
       ]
     }
   ],
@@ -421,6 +524,218 @@
           {
             "db": "Rhea",
             "id": "RHEA:19465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-hydroxymethylglutarate dehydrogenase",
+      "equation": "(S)-2-hydroxymethylglutarate + NAD(+) = 2-formylglutarate + NADH + H(+)",
+      "ec": "1.1.1.291",
+      "substrates": [
+        {
+          "metabolite": "s_2_hydroxymethylglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_formylglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_291"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15505"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "anthranilate 3-monooxygenase (deaminating)",
+      "equation": "anthranilate + NADPH + O2 + 2 H(+) = 2,3-dihydroxybenzoate + NH4(+) + NADP(+)",
+      "ec": "1.14.13.35",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "estradiol 6beta-monooxygenase",
+      "equation": "17beta-estradiol + AH2 + O2 = 6beta-hydroxyestradiol-17beta + A + H2O",
+      "ec": "1.14.99.11",
+      "substrates": [
+        {
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:19137"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19137"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "nitric oxide reductase [NAD(P)(+), nitrous oxide-forming]",
+      "equation": "nitrous oxide + NADP(+) + H2O = 2 nitric oxide + NADPH + H(+)",
+      "ec": "1.7.1.14",
+      "substrates": [
+        {
+          "metabolite": "dinitrogen_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:29611"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29611"
           }
         ]
       }

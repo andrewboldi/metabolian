@@ -245,6 +245,88 @@
       "xrefs": {
         "chebi": "CHEBI:91007"
       }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "malonate",
+      "name": "malonate",
+      "formula": "C3H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15792"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16947"
+      }
+    },
+    {
+      "id": "n5_s_citryl_d_ornithine",
+      "name": "N5-[(S)-citryl]-D-ornithine",
+      "short": "N5-[(S)-citryl]-D-o…",
+      "formula": "C11H16N2O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142972"
+      }
+    },
+    {
+      "id": "d_alanine",
+      "name": "D-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57416"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -302,6 +384,34 @@
       "name": "carboxylate reductase (NADP(+))",
       "ec": [
         "1.2.1.30"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_1",
+      "name": "arginase",
+      "ec": [
+        "3.5.3.1"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_3",
+      "name": "malonate CoA-transferase",
+      "ec": [
+        "2.8.3.3"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_58",
+      "name": "D-ornithine--citrate ligase",
+      "ec": [
+        "6.3.2.58"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_263",
+      "name": "2-amino-4-oxopentanoate thiolase",
+      "ec": [
+        "2.3.1.263"
       ]
     }
   ],
@@ -706,6 +816,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:19229"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "arginase",
+      "equation": "L-arginine + H2O = urea + L-ornithine",
+      "ec": "3.5.3.1",
+      "substrates": [
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:20569"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "malonate CoA-transferase",
+      "equation": "malonate + acetyl-CoA = acetate + malonyl-CoA",
+      "ec": "2.8.3.3",
+      "substrates": [
+        {
+          "metabolite": "malonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:18817"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "D-ornithine--citrate ligase",
+      "equation": "D-ornithine + citrate + ATP = N(5)-[(S)-citryl]-D-ornithine + AMP + diphosphate + H(+)",
+      "ec": "6.3.2.58",
+      "substrates": [
+        {
+          "metabolite": "d_ornithinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n5_s_citryl_d_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:59136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "2-amino-4-oxopentanoate thiolase",
+      "equation": "D-alanine + acetyl-CoA = (2R)-2-amino-4-oxopentanoate + CoA",
+      "ec": "2.3.1.263",
+      "substrates": [
+        {
+          "metabolite": "d_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_2_amino_4_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_263"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:51436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51436"
           }
         ]
       }

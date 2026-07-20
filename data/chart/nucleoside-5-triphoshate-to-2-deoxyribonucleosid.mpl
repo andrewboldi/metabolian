@@ -15,4 +15,16 @@ pathway nucleoside-5-triphoshate-to-2-deoxyribonucleosid "nucleoside 5'-triphosh
     <-> ec_3_1_3_89 [3.1.3.89] +2_deoxynucleoside_5_monophosphate +h2o -pi
     2_deoxyribonucleoside
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_59 [4.2.3.59] +fpp
+    e_bisabolene
+  }
+
+  branch from 2_deoxynucleoside_5_monophosphate side right {
+    2_deoxynucleoside_5_monophosphate
+    <-> ec_3_6_1_5 [3.6.1.5] +h2o +pi +hplus
+    2_deoxyribonucleoside_5_triphosphate
+  }
 }

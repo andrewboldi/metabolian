@@ -15,4 +15,10 @@ pathway all-trans-octaprenyl-to-3-all-trans-octaprenyl-b "all-trans-octaprenylâ€
     <-> ec_1_14_13_240 [1.14.13.240] +nadph +o2 +hplus -nadp -h2o
     3_all_trans_octaprenyl_benzene_1_2_diol
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_65 [4.2.3.65] +fpp
+    zingiberene
+  }
 }

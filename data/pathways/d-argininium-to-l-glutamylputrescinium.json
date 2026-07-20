@@ -126,6 +126,42 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_hydroxyputrescine",
+      "name": "N-hydroxyputrescine",
+      "formula": "C4H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:180909"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +184,13 @@
       "name": "glutamate--putrescine ligase",
       "ec": [
         "6.3.1.11"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_252",
+      "name": "putrescine N-hydroxylase",
+      "ec": [
+        "1.14.13.252"
       ]
     }
   ],
@@ -295,6 +338,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:13633"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "putrescine N-hydroxylase",
+      "equation": "putrescine + NADPH + O2 = N-hydroxyputrescine + NADP(+) + H2O",
+      "ec": "1.14.13.252",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxyputrescine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_252"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78815"
           }
         ]
       }

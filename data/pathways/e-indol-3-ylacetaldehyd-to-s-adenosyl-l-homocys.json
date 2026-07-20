@@ -94,6 +94,115 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "indol_3_ylacetyl_coa",
+      "name": "indol-3-ylacetyl-CoA",
+      "formula": "C31H39N8O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57271"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "5_guanidino_2_oxopentanoic_acid",
+      "name": "5-guanidino-2-oxopentanoic acid",
+      "short": "5-guanidino-2-oxope…",
+      "formula": "C6H11N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58489"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "chloromethane",
+      "name": "chloromethane",
+      "formula": "CH3Cl",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36014"
+      }
     }
   ],
   "enzymes": [
@@ -116,6 +225,27 @@
       "name": "indole-3-acetate O-methyltransferase",
       "ec": [
         "2.1.1.278"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_75",
+      "name": "indoleacetate--CoA ligase",
+      "ec": [
+        "6.2.1.75"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_25",
+      "name": "L-arginine dehydrogenase",
+      "ec": [
+        "1.4.1.25"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_165",
+      "name": "methyl halide transferase",
+      "ec": [
+        "2.1.1.165"
       ]
     }
   ],
@@ -247,6 +377,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:36131"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "indoleacetate--CoA ligase",
+      "equation": "(indol-3-yl)acetate + ATP + CoA = (indol-3-yl)acetyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.75",
+      "substrates": [
+        {
+          "metabolite": "indole_3_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indol_3_ylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-arginine dehydrogenase",
+      "equation": "L-arginine + NADP(+) + H2O = 5-guanidino-2-oxopentanoate + NH4(+) + NADPH + H(+)",
+      "ec": "1.4.1.25",
+      "substrates": [
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:47636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "methyl halide transferase",
+      "equation": "chloride + S-adenosyl-L-methionine = chloromethane + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.165",
+      "substrates": [
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chloromethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_165"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:27361"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27361"
           }
         ]
       }

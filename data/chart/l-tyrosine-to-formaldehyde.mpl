@@ -15,4 +15,10 @@ pathway l-tyrosine-to-formaldehyde "L-tyrosine to formaldehyde" {
     <-> ec_1_13_11_94 [1.13.11.94] +o2 -formaldehyde
     4_hydroxybenzaldehyde
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nadp +h2o +nadph +hplus
+    ketone
+  }
 }

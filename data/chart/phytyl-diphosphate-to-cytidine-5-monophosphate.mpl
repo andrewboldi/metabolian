@@ -17,4 +17,28 @@ pathway phytyl-diphosphate-to-cytidine-5-monophosphate "phytyl diphosphate to cy
     <-> ec_3_6_1_6 [3.6.1.6] +cdp +h2o -pi -hplus
     cytidine_5_monophosphate
   }
+
+  branch from chlorophyll_a side left {
+    chlorophyll_a
+    <-> ec_4_99_1_10 [4.99.1.10] +hplus +magnesium
+    pheophytin_a
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_2_1_31 [6.2.1.31] +2_furoate +atp +coa +amp
+    2_furoyl_coa
+  }
+
+  branch from phytol side left {
+    phytol
+    <-> ec_3_1_1_14 [3.1.1.14] +chlorophyll +h2o +hplus
+    chlorophyllide
+  }
+
+  branch from chlorophyllide_a side right {
+    chlorophyllide_a
+    <-> ec_1_14_13_122 [1.14.13.122] +nadph +o2 +hplus +nadp +h2o
+    chlorophyllide_b
+  }
 }

@@ -15,4 +15,10 @@ pathway s-4-methoxycyclopeptine-to-methyl-isocyanate "(S)-4'-methoxycyclopeptine
     <-> ec_4_1_99_27 [4.1.99.27] -methyl_isocyanate -hplus
     4_methoxyviridicatin
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_43 [1.14.11.43] +s_2_4_chloro_2_methylphenoxy_propanoate +akg +o2 +pyruvate +co2
+    4_chloro_2_methylphenol
+  }
 }

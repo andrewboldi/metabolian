@@ -155,6 +155,44 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "12_epi_fischerindole_u",
+      "name": "12-epi-fischerindole U",
+      "short": "12-epi-fischerindol…",
+      "formula": "C21H24N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140442"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "12_epi_fischerindole_g",
+      "name": "12-epi-fischerindole G",
+      "short": "12-epi-fischerindol…",
+      "formula": "C21H23ClN2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141002"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
@@ -177,6 +215,13 @@
       "name": "N-acetyl-gamma-glutamyl-phosphate reductase",
       "ec": [
         "1.2.1.38"
+      ]
+    },
+    {
+      "id": "ec_1_14_20_14",
+      "name": "hapalindole-type alkaloid chlorinase",
+      "ec": [
+        "1.14.20.14"
       ]
     }
   ],
@@ -336,6 +381,71 @@
           {
             "db": "Rhea",
             "id": "RHEA:21588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hapalindole-type alkaloid chlorinase",
+      "equation": "12-epi-fischerindole U + chloride + 2-oxoglutarate + O2 + H(+) = 12-epi-fischerindole G + succinate + CO2 + H2O",
+      "ec": "1.14.20.14",
+      "substrates": [
+        {
+          "metabolite": "12_epi_fischerindole_u",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_epi_fischerindole_g",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_20_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56764"
           }
         ]
       }

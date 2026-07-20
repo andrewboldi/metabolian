@@ -15,4 +15,22 @@ pathway 3-end-3-n-acyl-l-ami-to-l-arginyl-l-amino-acid "3'-end 3'-(N-acyl-L-α-a
     <-> ec_6_3_2_48 [6.3.2.48] +arginine +atp -adp -pi -hplus
     l_arginyl_l_amino_acid
   }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_6_1_1_27 [6.1.1.27] +pser +atp +amp +ppi
+    3_o_phosphonato_l_seryl_adenylyl_2_group
+  }
+
+  branch from l_amino_acid side right {
+    l_amino_acid
+    <-> ec_3_4_13_9 [3.4.13.9] +xaa_l_proline +h2o
+    l_proline
+  }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_133 [3.5.1.133] +n2_acyl_l_glutaminate +h2o
+    glutamine
+  }
 }

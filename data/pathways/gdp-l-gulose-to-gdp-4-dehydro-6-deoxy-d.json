@@ -83,6 +83,72 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos",
+      "name": "α-D-mannosyl-(1→3)-N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol",
+      "short": "α-D-mannosyl-(1→3)-…",
+      "formula": "C69H113NO17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137168"
+      }
+    },
+    {
+      "id": "d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n",
+      "name": "α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol",
+      "short": "α-D-mannosyl-(1→3)-…",
+      "formula": "C81H133NO27P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137169"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gdp_6_deoxy_d_talose",
+      "name": "GDP-6-deoxy-α-D-talose",
+      "short": "GDP-6-deoxy-α-D-tal…",
+      "formula": "C16H23N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57638"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -105,6 +171,27 @@
       "name": "GDP-mannose 4,6-dehydratase",
       "ec": [
         "4.2.1.47"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_349",
+      "name": "mannosyl-N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-",
+      "ec": [
+        "2.4.1.349"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_135",
+      "name": "GDP-6-deoxy-D-talose 4-dehydrogenase",
+      "ec": [
+        "1.1.1.135"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_187",
+      "name": "GDP-4-dehydro-D-rhamnose reductase",
+      "ec": [
+        "1.1.1.187"
       ]
     }
   ],
@@ -228,6 +315,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:23820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "mannosyl-N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-",
+      "equation": "alpha-D-mannosyl-(1->3)-N-acetyl-alpha-D-glucosaminyl-di-trans,octa-cis-undecaprenyl diphosphate + 2 GDP-alpha-D-mannose = alpha-D-mannosyl-(1->3)-alpha-D-mannosyl-(1->3)-alpha-D-mannosyl-(1->3)-N-acetyl-alpha-D-glucosaminyl-di-trans,octa-cis-undecaprenyl diphosphate + 2 GDP + 2 H(+)",
+      "ec": "2.4.1.349",
+      "substrates": [
+        {
+          "metabolite": "d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_349"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53320"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "GDP-6-deoxy-D-talose 4-dehydrogenase",
+      "equation": "GDP-6-deoxy-alpha-D-talose + NAD(+) = GDP-4-dehydro-alpha-D-rhamnose + NADH + H(+)",
+      "ec": "1.1.1.135",
+      "substrates": [
+        {
+          "metabolite": "gdp_6_deoxy_d_talose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_4_dehydro_6_deoxy_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_135"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:10728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10728"
           }
         ]
       }

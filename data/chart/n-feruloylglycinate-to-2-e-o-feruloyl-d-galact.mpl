@@ -15,4 +15,22 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
     <-> ec_2_3_1_130 [2.3.1.130] +galactarate -coa
     2_e_o_feruloyl_d_galactarate
   }
+
+  branch from trans_ferulate side left {
+    trans_ferulate
+    <-> ec_1_2_1_68 [1.2.1.68] +nad +h2o +nadh +hplus
+    coniferyl_aldehyde
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_1_4_3_19 [1.4.3.19] +o2 +h2o +h2o2 +nh3
+    glyoxylate
+  }
+
+  branch from trans_feruloyl_coa side left {
+    trans_feruloyl_coa
+    <-> ec_2_3_1_99 [2.3.1.99] +quinate +coa
+    4_o_feruloyl_d_quinate
+  }
 }

@@ -17,4 +17,16 @@ pathway 5-6-dihydrothymine-to-aminomalonate "5,6-dihydrothymine to aminomalonate
     <-> ec_2_6_1_47 [2.6.1.47] +oxomalonate +alanine -pyruvate
     aminomalonate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_45 [3.5.4.45] +melamine +h2o
+    ammeline
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_2_8_1_9 [2.8.1.9] +mo_vi_o2_oh_molybdopterin_cofactor +cysteine +hydrogen_donor +hydrogen_acceptor +h2o
+    mo_vi_o_s_oh_molybdopterin_cofactor
+  }
 }

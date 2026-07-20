@@ -15,4 +15,10 @@ pathway angiotensin-i-dizwitterion-to-2-phenylacetamide "angiotensin I dizwitter
     <-> ec_1_13_12_9 [1.13.12.9] +l_phenylalanine +o2 -co2 -h2o
     2_phenylacetamide
   }
+
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> ec_2_3_1_53 [2.3.1.53] +acetyl_coa +coa +hplus
+    n_acetyl_l_phenylalaninate
+  }
 }

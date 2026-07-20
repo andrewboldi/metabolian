@@ -15,4 +15,16 @@ pathway udp-4-amino-4-6-dideoxy-l-to-udp-n-acetyl-l-fuco "UDP-4-amino-4,6-dideox
     <-> ec_5_1_3_28 [5.1.3.28]
     udp_n_acetyl_l_fucosamine
   }
+
+  branch from udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos side left {
+    udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos
+    <-> ec_4_2_1_115 [4.2.1.115] +h2o
+    udpglcnac
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_67 [2.6.1.67] +l_2_aminohexanoic_acid +akg
+    2_oxohexanoate
+  }
 }

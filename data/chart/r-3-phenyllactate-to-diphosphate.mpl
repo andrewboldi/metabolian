@@ -17,4 +17,28 @@ pathway r-3-phenyllactate-to-diphosphate "(R)-3-phenyllactate to diphosphate" {
     <-> ec_6_2_1_8 [6.2.1.8] +atp +coa -amp -ppi
     oxalyl_coa
   }
+
+  branch from keto_phenylpyruvate side left {
+    keto_phenylpyruvate
+    <-> ec_2_6_1_5 [2.6.1.5] +l_phenylalanine +akg
+    glutamate
+  }
+
+  branch from l_phenylalanine side right {
+    l_phenylalanine
+    <-> ec_4_2_1_91 [4.2.1.91] +hplus +co2 +h2o
+    l_arogenate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_113 [3.1.1.113] +ethyl_acetate +h2o +hplus
+    ethanol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_52 [4.2.3.52] +gpp
+    phellandrene
+  }
 }

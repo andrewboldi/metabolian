@@ -144,6 +144,44 @@
       "xrefs": {
         "chebi": "CHEBI:16408"
       }
+    },
+    {
+      "id": "l_tetrahomomethionine",
+      "name": "L-tetrahomomethionine",
+      "short": "L-tetrahomomethioni…",
+      "formula": "C9H19NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134634"
+      }
+    },
+    {
+      "id": "e_7_methylsulfanyl_heptanal_oxime",
+      "name": "(E)-7-(methylsulfanyl)heptanal oxime",
+      "short": "7-(methylsulfanyl)h…",
+      "formula": "C8H17NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134683"
+      }
+    },
+    {
+      "id": "2_4_dinitroanisole",
+      "name": "2,4-dinitroanisole",
+      "formula": "C7H6N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84559"
+      }
+    },
+    {
+      "id": "2_4_dinitrophenol",
+      "name": "2,4-dinitrophenol",
+      "formula": "C6H3N2O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84561"
+      }
     }
   ],
   "enzymes": [
@@ -173,6 +211,20 @@
       "name": "vinorine hydroxylase",
       "ec": [
         "1.14.14.104"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_42",
+      "name": "homomethionine N-monooxygenase",
+      "ec": [
+        "1.14.14.42"
+      ]
+    },
+    {
+      "id": "ec_3_3_2_14",
+      "name": "2,4-dinitroanisole O-demethylase",
+      "ec": [
+        "3.3.2.14"
       ]
     }
   ],
@@ -381,6 +433,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:17257"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "homomethionine N-monooxygenase",
+      "equation": "L-tetrahomomethionine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-7-(methylsulfanyl)heptanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.42",
+      "substrates": [
+        {
+          "metabolite": "l_tetrahomomethionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_7_methylsulfanyl_heptanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2,4-dinitroanisole O-demethylase",
+      "equation": "2,4-dinitroanisole + H2O = 2,4-dinitrophenol + methanol + H(+)",
+      "ec": "3.3.2.14",
+      "substrates": [
+        {
+          "metabolite": "2_4_dinitroanisole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_dinitrophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:44636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44636"
           }
         ]
       }

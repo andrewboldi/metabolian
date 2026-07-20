@@ -15,4 +15,28 @@ pathway primary-methyl-ammonium-to-1-4-benzoquinones "primary methyl ammonium…
     <-> ec_7_1_1_8 [7.1.1.8] +iron -fe2 -hplus
     1_4_benzoquinones
   }
+
+  branch from aldehyde side left {
+    aldehyde
+    <-> ec_1_1_3_13 [1.1.3.13] +o2 +h2o2
+    primary_alcohol
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_1_99_1 [4.1.99.1] +l_tryptophan +h2o +pyruvate
+    1h_indole
+  }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +1_4_benzoquinones
+    orotate
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_6_1_20 [3.6.1.20] +h2o +amp +hplus
+    5_acylphosphoadenosine
+  }
 }

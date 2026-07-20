@@ -17,4 +17,28 @@ pathway n-methyl-l-amino-acid-to-l-glutamyl-phosphate "N-methyl-L-α-amino acid 
     <-> ec_1_2_1_41 [1.2.1.41] +pi +nadp -nadph -hplus
     l_glutamyl_phosphate
   }
+
+  branch from l_amino_acid side left {
+    l_amino_acid
+    <-> ec_4_3_2_9 [4.3.2.9] +l_glutamyl_l_amino_acid
+    5_oxo_l_prolinate
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_5_3_4 [1.5.3.4] +n6_methyl_l_lysinium +o2 +h2o +h2o2
+    l_lysinium
+  }
+
+  branch from 2_oxo_monocarboxylic_acid_anion side left {
+    2_oxo_monocarboxylic_acid_anion
+    <-> ec_1_1_1_337 [1.1.1.337] +nad +nadh +hplus
+    2s_2_hydroxy_monocarboxylic_acid_anion
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_19 [1.4.1.19] +l_tryptophan +nadp +h2o +nadph +hplus
+    3_indol_3_yl_pyruvate
+  }
 }

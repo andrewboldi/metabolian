@@ -100,6 +100,15 @@
       "xrefs": {
         "chebi": "CHEBI:58136"
       }
+    },
+    {
+      "id": "l_lyxonate",
+      "name": "L-lyxonate",
+      "formula": "C5H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145753"
+      }
     }
   ],
   "enzymes": [
@@ -143,6 +152,13 @@
       "name": "2-dehydro-3-deoxy-L-arabinonate dehydratase",
       "ec": [
         "4.2.1.43"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_176",
+      "name": "L-lyxonate dehydratase",
+      "ec": [
+        "4.2.1.176"
       ]
     }
   ],
@@ -319,6 +335,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:17201"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-lyxonate dehydratase",
+      "equation": "L-lyxonate = 2-dehydro-3-deoxy-L-arabinonate + H2O",
+      "ec": "4.2.1.176",
+      "substrates": [
+        {
+          "metabolite": "l_lyxonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_l_arabinonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_176"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62436"
           }
         ]
       }

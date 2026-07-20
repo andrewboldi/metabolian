@@ -128,6 +128,74 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57595"
+      }
+    },
+    {
+      "id": "s_5_histidyl_cysteine_sulfoxide_dizwitterion",
+      "name": "S-(5-histidyl)cysteine sulfoxide dizwitterion",
+      "short": "S-(5-histidyl)cyste…",
+      "formula": "C9H14N4O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82728"
+      }
+    },
+    {
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57533"
+      }
+    },
+    {
+      "id": "elisabethatriene",
+      "name": "elisabethatriene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52461"
+      }
+    },
+    {
+      "id": "undecaprenyldiphospho_n_acetyl_n_acetylglucosami",
+      "name": "undecaprenyldiphospho-N-acetyl-(N-acetylglucosaminyl)muramoyl-L-alanyl-D-isoglutaminyl-(glycyl)3-L-lysyl-D-alanyl-D-alanine",
+      "short": "undecaprenyldiphosp…",
+      "formula": "C100H164N12O28P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62235"
+      }
+    },
+    {
+      "id": "3_glycyladenylyl_zwitterionic_group",
+      "name": "3'-glycyladenylyl zwitterionic group",
+      "short": "3'-glycyladenylyl…",
+      "formula": "C12H16N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78522"
+      }
+    },
+    {
+      "id": "undecaprenyldiphospho_n_acetyl_n_acetylglucosami",
+      "name": "undecaprenyldiphospho-N-acetyl-(N-acetylglucosaminyl)muramoyl-L-alanyl-D-isoglutaminyl-(glycyl)5-L-lysyl-D-alanyl-D-alanine",
+      "short": "undecaprenyldiphosp…",
+      "formula": "C104H170N14O30P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62236"
+      }
     }
   ],
   "enzymes": [
@@ -150,6 +218,27 @@
       "name": "L-cysteinyl-tRNA(Cys) hydrolase",
       "ec": [
         "3.6.1.n3"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_52",
+      "name": "L-cysteinyl-L-histidinylsulfoxide synthase",
+      "ec": [
+        "1.14.99.52"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_41",
+      "name": "elisabethatriene synthase",
+      "ec": [
+        "4.2.3.41"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_18",
+      "name": "N-acetylmuramoyl-L-alanyl-D-glutamyl-L-lysyl-(N(6)-triglycine)-D-alanyl-",
+      "ec": [
+        "2.3.2.18"
       ]
     }
   ],
@@ -305,6 +394,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:25334"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-cysteinyl-L-histidinylsulfoxide synthase",
+      "equation": "L-histidine + L-cysteine + O2 = L-alanin-3-yl L-histidin-5-yl sulfoxide + H2O",
+      "ec": "1.14.99.52",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_5_histidyl_cysteine_sulfoxide_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_52"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:42676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "elisabethatriene synthase",
+      "equation": "geranylgeranyl diphosphate = elisabethatriene + diphosphate",
+      "ec": "4.2.3.41",
+      "substrates": [
+        {
+          "metabolite": "geranylgeranyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "elisabethatriene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26241"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26241"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "N-acetylmuramoyl-L-alanyl-D-glutamyl-L-lysyl-(N(6)-triglycine)-D-alanyl-",
+      "equation": "MurNAc-L-Ala-D-isoglutaminyl-L-Lys-(N(6)-tri-Gly)-D-Ala-D-Ala-diphospho-di-trans,octa-cis-undecaprenyl-GlcNAc + 2 glycyl-tRNA(Gly) = MurNAc-L-Ala-D-isoglutaminyl-L-Lys-(N(6)-penta-Gly)-D-Ala-D-Ala-diphospho-di-trans,octa-cis-undecaprenyl-GlcNAc + 2 tRNA(Gly) + 2 H(+)",
+      "ec": "2.3.2.18",
+      "substrates": [
+        {
+          "metabolite": "undecaprenyldiphospho_n_acetyl_n_acetylglucosami",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_glycyladenylyl_zwitterionic_group",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "undecaprenyldiphospho_n_acetyl_n_acetylglucosami",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:30443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30443"
           }
         ]
       }

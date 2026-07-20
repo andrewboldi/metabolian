@@ -129,6 +129,53 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
+    },
+    {
+      "id": "albendazole",
+      "name": "albendazole",
+      "formula": "C12H15N3O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16664"
+      }
+    },
+    {
+      "id": "albendazole_s_oxide",
+      "name": "albendazole S-oxide",
+      "formula": "C12H15N3O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16959"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_lysine_1_group",
+      "name": "C-terminal-γ-L-glutamyl-L-lysine(1−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H19N3O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78526"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+      "name": "C-terminal-γ-L-glutamyl-L-2-aminoadipate semialdehyde(2−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H15N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78501"
+      }
     }
   ],
   "enzymes": [
@@ -151,6 +198,20 @@
       "name": "glucosinolate gamma-glutamyl hydrolase",
       "ec": [
         "3.4.19.16"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_73",
+      "name": "albendazole monooxygenase (sufoxide-forming)",
+      "ec": [
+        "1.14.14.73"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_118",
+      "name": "[amino group carrier protein]-gamma-(L-lysyl)-L-glutamate",
+      "ec": [
+        "2.6.1.118"
       ]
     }
   ],
@@ -318,6 +379,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:52764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "albendazole monooxygenase (sufoxide-forming)",
+      "equation": "albendazole + reduced [NADPH--hemoprotein reductase] + O2 = albendazole S-oxide + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.73",
+      "substrates": [
+        {
+          "metabolite": "albendazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "albendazole_s_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:55924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[amino group carrier protein]-gamma-(L-lysyl)-L-glutamate",
+      "equation": "[amino-group carrier protein]-C-terminal-gamma-(L-lysyl)-L-glutamate + 2-oxoglutarate = [amino-group carrier protein]-C-terminal-N-(1-carboxy-5-oxopentan-1-yl)-L-glutamine + L-glutamate",
+      "ec": "2.6.1.118",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_lysine_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_118"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41952"
           }
         ]
       }

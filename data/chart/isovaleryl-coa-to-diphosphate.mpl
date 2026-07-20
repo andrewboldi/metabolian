@@ -17,4 +17,10 @@ pathway isovaleryl-coa-to-diphosphate "isovaleryl-CoA to diphosphate" {
     <-> ec_2_5_1_137 [2.5.1.137] +dmapp -ppi -hplus
     lupulone
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_57 [4.2.3.57] +fpp
+    caryophyllene
+  }
 }

@@ -15,4 +15,16 @@ pathway taxa-4-20-11-dien-5-ol-to-10-14-dihydroxytaxa-4 "taxa-4(20),11-dien-5α-
     <-> ec_1_14_13_146 [1.14.13.146] +nadph +o2 +hplus -nadp -h2o
     10_14_dihydroxytaxa_4_20_11_dien_5_yl_acetate
   }
+
+  branch from taxa_4_20_11_dien_5_yl_acetate side left {
+    taxa_4_20_11_dien_5_yl_acetate
+    <-> ec_1_14_14_191 [1.14.14.191] +fmnh2 +o2 +fmn +h2o +hplus
+    5_20_epoxytaxa_11_en_4_yl_acetate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_80 [1.14.14.80] +octadecanoate +fmnh2 +o2 +h2o +hplus
+    18_hydroxyoctadecanoate
+  }
 }

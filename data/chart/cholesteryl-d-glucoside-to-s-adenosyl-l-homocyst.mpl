@@ -17,4 +17,28 @@ pathway cholesteryl-d-glucoside-to-s-adenosyl-l-homocyst "cholesteryl β-D-gluco
     <-> ec_2_1_1_15 [2.1.1.15] +fatty-acid +sam -sah
     fatty_acid_methyl_ester
   }
+
+  branch from cholesterol side left {
+    cholesterol
+    <-> ec_1_14_99_38 [1.14.99.38] +hydrogen_donor +o2 +hydrogen_acceptor +h2o
+    25_hydroxycholesterol
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_4_1_230 [2.4.1.230] +d_glcp_1_2_d_glcp +pi
+    d_glucose_1_phosphate
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> ec_3_1_1_77 [3.1.1.77] +3_acyloxy_acyl_group +h2o +hplus
+    3_hydroxyacyl_derivative_of_bacterial_toxin
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_77 [2.1.1.77] +l_isoaspartate +sam
+    l_isoaspartate_methyl_ester
+  }
 }

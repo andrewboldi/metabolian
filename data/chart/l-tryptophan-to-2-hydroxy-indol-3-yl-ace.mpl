@@ -15,4 +15,16 @@ pathway l-tryptophan-to-2-hydroxy-indol-3-yl-ace "L-tryptophan to 2-hydroxy-(ind
     <-> ec_1_14_13_235 [1.14.13.235] +nadh +o2 +hplus -nad -h2o
     2_hydroxy_indol_3_yl_acetate
   }
+
+  branch from indole_3_acetate side left {
+    indole_3_acetate
+    <-> ec_2_8_3_28 [2.8.3.28] +succinyl_coa +succinate
+    indol_3_ylacetyl_coa
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_1_1_109 [4.1.1.109] +l_phenylalanine +o2 +h2o +hplus +h2o2 +co2
+    phenylacetaldehyde
+  }
 }

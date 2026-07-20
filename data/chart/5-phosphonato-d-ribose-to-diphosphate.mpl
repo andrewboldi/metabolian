@@ -15,4 +15,16 @@ pathway 5-phosphonato-d-ribose-to-diphosphate "5-phosphonato-α-D-ribose… to d
     <-> ec_2_7_7_96 [2.7.7.96] +atp +hplus -ppi
     adp_d_ribose
   }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> ec_3_1_3_84 [3.1.3.84] +h2o +pi
+    adp_d_ribose_1_phosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_79 [4.2.3.79] +fpp
+    thujopsene
+  }
 }

@@ -99,6 +99,45 @@
       "xrefs": {
         "chebi": "CHEBI:37720"
       }
+    },
+    {
+      "id": "maltose",
+      "name": "maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17306"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine",
+      "short": "cyanidin 3-O-(6-O-g…",
+      "formula": "C32H38O20",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77771"
+      }
+    },
+    {
+      "id": "1_o_4_coumaroyl_d_glucose",
+      "name": "1-O-(4-coumaroyl)-β-D-glucose",
+      "short": "1-O-(4-coumaroyl)-β…",
+      "formula": "C15H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71498"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o",
+      "name": "cyanidin 3-O-{6-O-[6-O-(4-coumaroyl)-β-D-glucosyl]-2-O-β-D-xylosyl-β-D-galactoside}",
+      "short": "cyanidin 3-O-{6-O-[…",
+      "formula": "C41H43O22",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77931"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +160,20 @@
       "name": "xylose isomerase",
       "ec": [
         "5.3.1.5"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_48",
+      "name": "sucrose alpha-glucosidase",
+      "ec": [
+        "3.2.1.48"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_213",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
+      "ec": [
+        "2.3.1.213"
       ]
     }
   ],
@@ -252,6 +305,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:28546"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sucrose alpha-glucosidase",
+      "equation": "D-maltose + H2O = alpha-D-glucose + D-glucose",
+      "ec": "3.2.1.48",
+      "substrates": [
+        {
+          "metabolite": "maltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:68796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
+      "equation": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine + 1-O-[(E)-4-coumaroyl]-beta-D-glucose = cyanidin 3-O-[6-O-(6-O-4-hydroxycinnamoyl-beta-D-glucosyl)-2-O-beta-D-xylosyl-beta-D-galactoside] + beta-D-glucose + H(+)",
+      "ec": "2.3.1.213",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_4_coumaroyl_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_213"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35399"
           }
         ]
       }

@@ -15,4 +15,22 @@ pathway 2-trans-6-trans-farnesyl-to-fmn "2-trans,6-trans-farnesyl… to FMN" {
     <-> ec_1_14_14_150 [1.14.14.150] +fmnh2 +o2 -fmn -h2o
     costunolide
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_83 [4.2.3.83] +fpp
+    santalene
+  }
+
+  branch from germacra_1_10_4_11_13_trien_12_oate side right {
+    germacra_1_10_4_11_13_trien_12_oate
+    <-> ec_1_14_14_168 [1.14.14.168] +fmnh2 +o2 +fmn +h2o +hplus
+    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_81 [1.14.14.81] +3_5_unsubstituted_flavanone +fmnh2 +o2 +h2o +hplus
+    3_5_dihydroxyflavanone
+  }
 }

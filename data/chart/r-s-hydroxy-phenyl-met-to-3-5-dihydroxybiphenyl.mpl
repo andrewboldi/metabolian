@@ -15,4 +15,16 @@ pathway r-s-hydroxy-phenyl-met-to-3-5-dihydroxybiphenyl "(R,S)-[hydroxy(phenyl)m
     <-> ec_2_3_1_177 [2.3.1.177] +malonyl-coa +hplus -co2 -coa
     3_5_dihydroxybiphenyl
   }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> ec_2_3_1_334 [2.3.1.334] +ecgoninium_methyl_ester +coa
+    cocaine
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_2_3_1_46 [2.3.1.46] +l_homoserine +coa
+    o_succinyl_l_homoserinate
+  }
 }

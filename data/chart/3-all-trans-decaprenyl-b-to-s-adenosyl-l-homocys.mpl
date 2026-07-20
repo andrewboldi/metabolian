@@ -15,4 +15,16 @@ pathway 3-all-trans-decaprenyl-b-to-s-adenosyl-l-homocys "3-(all-trans-decapreny
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     2_decaprenyl_6_methoxy_3_methylhydroquinone
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_69 [2.1.1.69] +5_hydroxyfurocoumarin +sam +hplus
+    5_methoxyfurocoumarin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_12_1_4 [1.12.1.4] +nad +di_sulfido_diiron +nadh +hplus
+    h2
+  }
 }

@@ -19,4 +19,28 @@ pathway 5-aminomethyl-2-thiouridi-to-4-hydroxyphenyl-ace "5-aminomethyl-2-thiour
     <-> ec_4_1_1_80 [4.1.1.80] +hplus -co2
     4_hydroxyphenyl_acetaldehyde
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_118 [2.1.1.118] +columbamine +sam +hplus
+    palmatine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_19 [6.1.1.19] +amp_3_end_1 +arginine +atp +amp
+    3_l_arginyl_adenylyl_1_group
+  }
+
+  branch from tyrosine side left {
+    tyrosine
+    <-> ec_6_3_2_25 [6.3.2.25] +c_terminal_amino_acyl_l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
+    c_terminal_amino_acyl_l_glutamyl_l_glutamyl_l_ty
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_6_3_5_7 [6.3.5.7] +3_l_glutamate_adenylyl_1_group +glutamine +atp +h2o +adp +pi +hplus
+    3_l_glutaminyl_adenylyl_zwitterionic_group
+  }
 }

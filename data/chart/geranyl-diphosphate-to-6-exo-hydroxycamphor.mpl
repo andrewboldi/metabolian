@@ -17,4 +17,10 @@ pathway geranyl-diphosphate-to-6-exo-hydroxycamphor "geranyl diphosphate to (+)-
     <-> ec_1_14_13_161 [1.14.13.161] +nadph +o2 +hplus -nadp -h2o
     6_exo_hydroxycamphor
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_30 [2.5.1.30] +ipp +fpp
+    all_trans_heptaprenyl_diphosphate
+  }
 }

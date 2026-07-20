@@ -17,4 +17,22 @@ pathway methylenediurea-to-5-o-phosphonato-d-ribof "methylenediurea to 5-O-phosp
     <-> ec_2_4_2_17 [2.4.2.17] +1_5_phospho_d_ribosyl_atp +ppi -atp
     prpp
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_17 [4.3.1.17] +pyruvate
+    serine
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_14_13_167 [1.14.13.167] +4_nitrophenolate +nadph +o2 +hplus +nadp +h2o
+    quinone
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_45 [2.7.7.45] +gtp +hplus
+    p1_p4_bis_5_guanosyl_tetraphosphate
+  }
 }

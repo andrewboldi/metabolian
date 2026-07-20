@@ -19,4 +19,28 @@ pathway n4-n-acetyl-d-glucosam-to-fumarate "N4-(β-N-acetyl-D-glucosam… to fum
     <-> ec_1_3_2_4 [1.3.2.4] +iron +succinate -fe2 -hplus
     fumarate
   }
+
+  branch from aspartate side left {
+    aspartate
+    <-> ec_5_1_1_13 [5.1.1.13]
+    d_aspartate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_35 [2.5.1.35] +aspulvinone_e +dmapp
+    aspulvinone_h
+  }
+
+  branch from arginine side left {
+    arginine
+    <-> ec_1_13_12_1 [1.13.12.1] +o2 +co2 +h2o
+    4_guanidiniumylbutanamide
+  }
+
+  branch from com_s_s_cob side right {
+    com_s_s_cob
+    <-> ec_1_8_98_1 [1.8.98.1] +methanophenazine +coenzyme_b +coenzyme_m
+    dihydromethanophenazine
+  }
 }

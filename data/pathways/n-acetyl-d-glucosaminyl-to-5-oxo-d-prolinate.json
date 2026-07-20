@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acetyl-d-glucosaminyl-to-5-oxo-d-prolinate",
   "name": "N-acetyl-β-D-glucosaminyl… to 5-oxo-D-prolinate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from N-acetyl-β-D-glucosaminyl-N-acetyl-D-muramoyl-L-alanyl-γ-D-glutamyl-meso-2,6-diaminoheptanedioyl-D-alanyl-D-alanine(2−) to 5-oxo-D-prolinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -101,6 +101,53 @@
       "xrefs": {
         "chebi": "CHEBI:57948"
       }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z",
+      "name": "O-[S-(D-alanyl)pantetheine-4'-phosphoryl]-L-serine zwitterionic",
+      "short": "O-[S-(D-alanyl)pant…",
+      "formula": "C17H31N4O9PS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138620"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +177,13 @@
       "name": "D-glutamate cyclase",
       "ec": [
         "4.2.1.48"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_54",
+      "name": "D-alanine--[D-alanyl-carrier protein] ligase",
+      "ec": [
+        "6.2.1.54"
       ]
     }
   ],
@@ -306,6 +360,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:22360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "D-alanine--[D-alanyl-carrier protein] ligase",
+      "equation": "holo-[D-alanyl-carrier protein] + D-alanine + ATP = D-alanyl-[D-alanyl-carrier protein] + AMP + diphosphate",
+      "ec": "6.2.1.54",
+      "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55132"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55132"
           }
         ]
       }

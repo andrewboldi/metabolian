@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-alkyl-2-acetyl-sn-glyce-to-1-alkyl-sn-glycerol",
   "name": "1-alkyl-2-acetyl-sn-glyce… to 1-alkyl-sn-glycerol…",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 1-alkyl-2-acetyl-sn-glycerol 3-phosphate(2−) to 1-alkyl-sn-glycerol 3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -111,6 +111,34 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "1_alkyl_2_acetyl_3_acyl_sn_glycerol",
+      "name": "1-alkyl-2-acetyl-3-acyl-sn-glycerol",
+      "short": "1-alkyl-2-acetyl-3-…",
+      "formula": "C6H8O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17473"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +161,13 @@
       "name": "alkylglycerol kinase",
       "ec": [
         "2.7.1.93"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_125",
+      "name": "1-alkyl-2-acetylglycerol O-acyltransferase",
+      "ec": [
+        "2.3.1.125"
       ]
     }
   ],
@@ -276,6 +311,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:16937"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "1-alkyl-2-acetylglycerol O-acyltransferase",
+      "equation": "a 1-O-alkyl-2-acetyl-sn-glycerol + an acyl-CoA = a 1-O-alkyl-2-acetyl-3-acyl-sn-glycerol + CoA",
+      "ec": "2.3.1.125",
+      "substrates": [
+        {
+          "metabolite": "1_alkyl_2_acetyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_2_acetyl_3_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_125"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21996"
           }
         ]
       }

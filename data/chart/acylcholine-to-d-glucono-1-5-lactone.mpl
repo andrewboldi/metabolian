@@ -21,4 +21,28 @@ pathway acylcholine-to-d-glucono-1-5-lactone "acylcholine to D-glucono-1,5-lacto
     <-> ec_1_1_1_47 [1.1.1.47] +glucose +nadp -nadph -hplus
     d_glucono_1_5_lactone
   }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_1_2_99_6 [1.2.99.6] +aldehyde +hydrogen_acceptor +h2o +hplus
+    hydrogen_donor
+  }
+
+  branch from choline side right {
+    choline
+    <-> ec_2_3_1_6 [2.3.1.6] +acetyl_coa +coa
+    acetylcholine
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_2_3_1_n12 [2.3.1.n12] +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +1_o_sinapoyl_d_glucose
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
+  }
+
+  branch from trans_sinapate side right {
+    trans_sinapate
+    <-> ec_2_4_1_299 [2.4.1.299] +cyanidin_3_o_d_glucoside +1_o_sinapoyl_d_glucose
+    cyanin_betaine
+  }
 }

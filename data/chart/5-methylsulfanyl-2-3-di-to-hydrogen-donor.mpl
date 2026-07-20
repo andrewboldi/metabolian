@@ -15,4 +15,10 @@ pathway 5-methylsulfanyl-2-3-di-to-hydrogen-donor "5-(methylsulfanyl)-2,3-di… 
     <-> ec_1_17_98_4 [1.17.98.4] +formate +hydrogen_acceptor +hplus -co2
     hydrogen_donor
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_icosadienoyl_coa +o2 +hydrogen_acceptor +h2o
+    5z_11z_14z_icosatrienoyl_coa
+  }
 }

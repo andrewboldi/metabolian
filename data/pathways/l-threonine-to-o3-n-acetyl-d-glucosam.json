@@ -94,6 +94,25 @@
       "xrefs": {
         "chebi": "CHEBI:139580"
       }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acetyl_d_galactosamine",
+      "name": "N-acetyl-D-galactosamine",
+      "short": "N-acetyl-D-galactos…",
+      "formula": "C8H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28037"
+      }
     }
   ],
   "enzymes": [
@@ -116,6 +135,13 @@
       "name": "acetylgalactosaminyl-O-glycosyl-glycoprotein beta-1,6-N-",
       "ec": [
         "2.4.1.148"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_217",
+      "name": "exo-acting protein-alpha-N-acetylgalactosaminidase",
+      "ec": [
+        "3.2.1.217"
       ]
     }
   ],
@@ -263,6 +289,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:56192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "exo-acting protein-alpha-N-acetylgalactosaminidase",
+      "equation": "a 3-O-[N-acetyl-alpha-D-galactosaminyl]-L-threonyl-[protein] + H2O = N-acetyl-D-galactosamine + L-threonyl-[protein]",
+      "ec": "3.2.1.217",
+      "substrates": [
+        {
+          "metabolite": "o_n_acetyl_d_galactosaminyl_l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_galactosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_threonine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_217"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:70559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70559"
           }
         ]
       }

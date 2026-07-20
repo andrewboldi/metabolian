@@ -109,6 +109,25 @@
       "xrefs": {
         "chebi": "CHEBI:57300"
       }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "3r_3_hydroxy_l_argininium",
+      "name": "(3R)-3-hydroxy-L-argininium",
+      "short": "3-hydroxy-L-arginin…",
+      "formula": "C6H13N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:78294"
+      }
     }
   ],
   "enzymes": [
@@ -124,6 +143,13 @@
       "name": "clavaminate synthase",
       "ec": [
         "1.14.11.21"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_47",
+      "name": "[50S ribosomal protein L16]-arginine 3-hydroxylase",
+      "ec": [
+        "1.14.11.47"
       ]
     }
   ],
@@ -283,6 +309,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:19785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "[50S ribosomal protein L16]-arginine 3-hydroxylase",
+      "equation": "L-arginyl-[ribosomal protein uL16] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[ribosomal protein uL16] + succinate + CO2",
+      "ec": "1.14.11.47",
+      "substrates": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_3_hydroxy_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:41556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41556"
           }
         ]
       }

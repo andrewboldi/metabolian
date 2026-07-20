@@ -15,4 +15,16 @@ pathway 2-trans-6-trans-farnesyl-to-fmn-28266 "2-trans,6-trans-farnesyl… to FM
     <-> ec_1_14_14_160 [1.14.14.160] +fmnh2 +o2 -fmn -h2o -hplus
     zealexin_a1
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    tuberculosinol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_65 [1.14.14.65] +ferruginol +fmnh2 +o2 +h2o +hplus
+    sugiol
+  }
 }

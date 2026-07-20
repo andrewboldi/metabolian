@@ -19,4 +19,10 @@ pathway d-galactosyl-to-cdp "α-D-galactosyl… to CDP" {
     <-> ec_2_4_1_382 [2.4.1.382] +cdp_d_abequose -cdp -hplus
     d_abe_1_3_l_rha2oac_1_2_d_man_1_2_d_man_1_3_d_g
   }
+
+  branch from cdp side left {
+    cdp
+    <-> ec_2_7_1_216 [2.7.1.216] +2_trans_6_trans_farnesol +ctp +hplus
+    2e_6e_farnesyl_monophosphate
+  }
 }

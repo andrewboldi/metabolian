@@ -15,4 +15,16 @@ pathway cob-ii-inamide-to-ammonioacetone "cob(II)inamide to ammonioacetone" {
     <-> ec_1_1_1_75 [1.1.1.75] +nad -nadh -hplus
     ammonioacetone
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_1_7_5 [3.1.7.5] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    e_e_e_geranylgeraniol
+  }
+
+  branch from ammonioacetone side right {
+    ammonioacetone
+    <-> ec_1_1_1_381 [1.1.1.381] +nadp +co2 +nadph
+    l_allothreonine
+  }
 }

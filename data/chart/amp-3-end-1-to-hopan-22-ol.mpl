@@ -17,4 +17,22 @@ pathway amp-3-end-1-to-hopan-22-ol "AMP 3'-end(1−) to hopan-22-ol" {
     <-> ec_4_2_1_129 [4.2.1.129] +h2o
     hopan_22_ol
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
+    3_l_glutaminyl_adenylyl_zwitterionic_group
+  }
+
+  branch from presqualene_pp side right {
+    presqualene_pp
+    <-> ec_2_5_1_103 [2.5.1.103] +ppi
+    fpp
+  }
+
+  branch from squalene side left {
+    squalene
+    <-> ec_5_4_99_17 [5.4.99.17]
+    hop_22_29_ene
+  }
 }

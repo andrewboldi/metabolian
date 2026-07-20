@@ -15,4 +15,28 @@ pathway glutathionylspermidinium-to-spermidine "glutathionylspermidinium to sper
     <-> ec_1_5_3_13 [1.5.3.13] +o2 +h2o -spermidine -h2o2
     3_ammoniopropanal
   }
+
+  branch from spermidine side left {
+    spermidine
+    <-> ec_2_3_1_248 [2.3.1.248] +sinapoyl_coa +coa +hplus
+    n1_n8_bis_sinapoyl_spermidine
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> ec_4_4_1_34 [4.4.1.34] +s_1_hydroxy_2_methylbut_3_en_2_yl_glutathione
+    3r_3_4_epoxy_3_methylbut_1_ene
+  }
+
+  branch from spermine side left {
+    spermine
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
+    n1_acetylsperminium
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> ec_2_5_1_152 [2.5.1.152] +d_histidine +sam +hplus
+    n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt
+  }
 }

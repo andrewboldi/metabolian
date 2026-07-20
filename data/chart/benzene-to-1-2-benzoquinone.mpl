@@ -15,4 +15,10 @@ pathway benzene-to-1-2-benzoquinone "benzene to 1,2-benzoquinone" {
     <-> ec_1_10_3_1 [1.10.3.1] +o2 -h2o
     1_2_benzoquinone
   }
+
+  branch from catechol side left {
+    catechol
+    <-> ec_4_1_1_46 [4.1.1.46] +hplus +co2
+    2_3_dihydroxybenzoate
+  }
 }

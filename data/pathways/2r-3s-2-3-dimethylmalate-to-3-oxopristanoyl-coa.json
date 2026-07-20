@@ -109,6 +109,53 @@
       "xrefs": {
         "chebi": "CHEBI:57291"
       }
+    },
+    {
+      "id": "s_methylmalonyl_coa",
+      "name": "(S)-Methylmalonyl-CoA",
+      "short": "Methylmalonyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57327"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58702"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +178,20 @@
       "name": "propanoyl-CoA C-acyltransferase",
       "ec": [
         "2.3.1.176"
+      ]
+    },
+    {
+      "id": "ec_2_1_3_1",
+      "name": "methylmalonyl-CoA carboxytransferase",
+      "ec": [
+        "2.1.3.1"
+      ]
+    },
+    {
+      "id": "ec_2_7_9_1",
+      "name": "pyruvate, phosphate dikinase",
+      "ec": [
+        "2.7.9.1"
       ]
     }
   ],
@@ -270,6 +331,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:10408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "methylmalonyl-CoA carboxytransferase",
+      "equation": "(S)-methylmalonyl-CoA + pyruvate = propanoyl-CoA + oxaloacetate",
+      "ec": "2.1.3.1",
+      "substrates": [
+        {
+          "metabolite": "s_methylmalonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "pyruvate, phosphate dikinase",
+      "equation": "pyruvate + phosphate + ATP = phosphoenolpyruvate + AMP + diphosphate + H(+)",
+      "ec": "2.7.9.1",
+      "substrates": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_9_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:10756"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10756"
           }
         ]
       }

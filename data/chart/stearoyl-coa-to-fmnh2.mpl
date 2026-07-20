@@ -17,4 +17,28 @@ pathway stearoyl-coa-to-fmnh2 "stearoyl-CoA to FMNH2" {
     <-> ec_1_3_8_17 [1.3.8.17] +f420_0 +fmn +hplus -fmnh2
     dehydro_coenzyme_f420_0
   }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> ec_1_14_14_129 [1.14.14.129] +fmnh2 +o2 +fmn +h2o +hplus
+    18_hydroxyoleoyl_coa
+  }
+
+  branch from linoleoyl_coa side right {
+    linoleoyl_coa
+    <-> ec_1_14_19_3 [1.14.19.3] +fe2 +o2 +hplus +iron +h2o
+    linolenoyl_coa
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
+    glyceollin
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +o2 +fmn +h2o +hplus
+    s_perillyl_alcohol
+  }
 }

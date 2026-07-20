@@ -19,4 +19,16 @@ pathway tetracenomycin-b2-to-s-adenosyl-l-homocysteine "tetracenomycin B2 to S-a
     <-> ec_2_1_1_307 [2.1.1.307] +sam -sah -hplus
     8_demethyl_8_2_3_4_o_trimethyl_l_rhamnosyl_tetra
   }
+
+  branch from dtdp side left {
+    dtdp
+    <-> ec_2_4_1_327 [2.4.1.327] +dtdp_2_deoxy_l_fucose +aclacinomycin_t +hplus
+    aclacinomycin_s
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_62 [2.1.1.62] +5_n7_methyl_5_triphosphoguanosine_2_o_methyladen +sam +hplus
+    5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o
+  }
 }

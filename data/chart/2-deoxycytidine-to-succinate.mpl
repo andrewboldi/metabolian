@@ -17,4 +17,16 @@ pathway 2-deoxycytidine-to-succinate "2'-deoxycytidine… to succinate" {
     <-> ec_1_14_11_80 [1.14.11.80] +akg +o2 -succinate -co2 -hplus
     5_carboxy_dcmp_2
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_141 [2.1.1.141] +jasmonate +sam
+    methyl_jasmonate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_4_1_3_30 [4.1.3.30] +pyruvate
+    2s_3r_3_hydroxybutane_1_2_3_tricarboxylate
+  }
 }

@@ -15,4 +15,16 @@ pathway d-gal-1-4-d-glcnac-to-d-glucose "β-D-Gal-(1→4)-β-D-GlcNAc-… to β-
     <-> ec_3_2_1_85 [3.2.1.85] +h2o -d_glucose
     d_galactopyranose_6_phosphate
   }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> ec_2_7_1_211 [2.7.1.211] +n_phosphonato_l_histidine +sucrose
+    sucrose_6g_phosphate
+  }
+
+  branch from d_galactopyranose_6_phosphate side right {
+    d_galactopyranose_6_phosphate
+    <-> ec_3_2_1_85 [3.2.1.85] +6_phospho_d_galactoside +h2o
+    alcohol
+  }
 }

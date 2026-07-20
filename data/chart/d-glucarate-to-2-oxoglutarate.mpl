@@ -15,4 +15,16 @@ pathway d-glucarate-to-2-oxoglutarate "D-glucarate to 2-oxoglutarate" {
     <-> ec_1_2_1_26 [1.2.1.26] +nadp +h2o -nadph -hplus
     akg
   }
+
+  branch from 5_dehydro_4_deoxy_d_glucarate side left {
+    5_dehydro_4_deoxy_d_glucarate
+    <-> ec_4_2_1_42 [4.2.1.42] +h2o
+    galactarate
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_2_6_1_49 [2.6.1.49] +ldopa +glutamate
+    3_4_dihydroxyphenylpyruvate
+  }
 }

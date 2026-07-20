@@ -15,4 +15,10 @@ pathway adenosine-5-diphospho-5-to-5-end-2-deoxyribonucl "adenosine-5'-diphospho
     <-> ec_2_7_1_78 [2.7.1.78] +atp -adp -hplus
     5_end_2_deoxyribonucleotide_2
   }
+
+  branch from 5_end_2_deoxyribonucleotide_2 side left {
+    5_end_2_deoxyribonucleotide_2
+    <-> ec_3_6_1_70 [3.6.1.70] +h2o +gmp +hplus
+    guanosine_5_diphospho_5_2_deoxyribonucleotide_2
+  }
 }

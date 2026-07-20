@@ -17,4 +17,10 @@ pathway purines-d-ribonucleoside-to-d-ribulose-1-phospha "purines D-ribonucleosi
     <-> ec_3_1_3_109 [3.1.3.109] +h2o -pi
     d_ribulose_1_phosphate
   }
+
+  branch from purine_nucleobase side left {
+    purine_nucleobase
+    <-> ec_3_2_2_1 [3.2.2.1] +purines_d_ribonucleoside +h2o
+    d_ribofuranose
+  }
 }

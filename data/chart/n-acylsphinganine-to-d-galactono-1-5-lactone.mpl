@@ -17,4 +17,22 @@ pathway n-acylsphinganine-to-d-galactono-1-5-lactone "N-acylsphinganine to D-gal
     <-> ec_1_1_1_120 [1.1.1.120] +nadp -nadph -hplus
     d_galactono_1_5_lactone
   }
+
+  branch from n_acylsphingosine side left {
+    n_acylsphingosine
+    <-> ec_1_14_19_18 [1.14.19.18] +fe2 +o2 +hplus +iron +h2o
+    n_acyl_4e_8e_sphinga_4_8_dienine
+  }
+
+  branch from n_acyl_d_galactosylsphingosine side right {
+    n_acyl_d_galactosylsphingosine
+    <-> ec_2_8_2_11 [2.8.2.11] +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    d_galactosylceramide_sulfate
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_1_1_1_21 [1.1.1.21] +nad +nadh +hplus
+    galactitol
+  }
 }

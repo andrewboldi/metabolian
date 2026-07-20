@@ -15,4 +15,10 @@ pathway gdp-d-glucose-to-cdp-4-dehydro-6-deoxy-d-g "GDP-α-D-glucose to CDP-4-de
     <-> ec_4_2_1_45 [4.2.1.45] -h2o
     cdp_4_dehydro_6_deoxy_d_glucose
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_64 [4.2.3.64] +fpp +h2o
+    epicubenol
+  }
 }

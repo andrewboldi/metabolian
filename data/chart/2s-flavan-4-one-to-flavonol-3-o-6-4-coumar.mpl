@@ -21,4 +21,28 @@ pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavono
     <-> ec_2_3_1_173 [2.3.1.173] +4_coumaroyl_coa -coa
     flavonol_3_o_6_4_coumaroyl_d_glucosyl_1_2_d_gluc
   }
+
+  branch from 2r_3r_dihydroflavonol side left {
+    2r_3r_dihydroflavonol
+    <-> ec_1_1_1_219 [1.1.1.219] +nadp +nadph +hplus
+    2r_3s_4s_leucoanthocyanidin
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_28 [1.14.11.28] +l_proline +akg +o2 +co2
+    cis_3_hydroxy_l_proline
+  }
+
+  branch from flavonols side left {
+    flavonols
+    <-> ec_3_2_1_62 [3.2.1.62] +flavonol_3_o_d_glucoside +h2o
+    glucose
+  }
+
+  branch from flavonol_3_o_d_glucoside side right {
+    flavonol_3_o_d_glucoside
+    <-> ec_2_3_1_116 [2.3.1.116] +malonyl-coa +coa
+    flavonol_3_o_6_o_malonyl_d_glucoside
+  }
 }

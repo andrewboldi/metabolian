@@ -19,4 +19,28 @@ pathway 10-deoxysarpagine-to-d-xylulose "10-deoxysarpagine to D-xylulose" {
     <-> ec_5_1_3_31 [5.1.3.31]
     d_xylulose
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_51 [1.14.14.51] +4s_limonene +fmnh2 +o2 +h2o +hplus
+    trans_carveol
+  }
+
+  branch from riboflavin side right {
+    riboflavin
+    <-> ec_1_5_1_41 [1.5.1.41] +nad +nadh +hplus
+    1_5_dihydroriboflavin
+  }
+
+  branch from d_ribulose side left {
+    d_ribulose
+    <-> ec_1_1_1_250 [1.1.1.250] +nad +nadh +hplus
+    d_arabinitol
+  }
+
+  branch from d_xylulose side right {
+    d_xylulose
+    <-> ec_1_1_1_9 [1.1.1.9] +nad +nadh +hplus
+    xylitol
+  }
 }

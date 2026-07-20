@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "allantoate-to-oxalurate",
   "name": "allantoate to oxalurate",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from allantoate to oxalurate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -107,6 +107,26 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "inosine_5_phosphate_1",
+      "name": "inosine 5'-phosphate(1−)",
+      "short": "inosine 5'-P(1−)",
+      "formula": "C10H10N4O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82852"
+      }
     }
   ],
   "enzymes": [
@@ -136,6 +156,13 @@
       "name": "ureidoglycolate dehydrogenase (NAD(+))",
       "ec": [
         "1.1.1.350"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_34",
+      "name": "tRNA(Ala)(adenine(37)) deaminase",
+      "ec": [
+        "3.5.4.34"
       ]
     }
   ],
@@ -283,6 +310,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:15329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tRNA(Ala)(adenine(37)) deaminase",
+      "equation": "adenosine(37) in tRNA(Ala) + H2O + H(+) = inosine(37) in tRNA(Ala) + NH4(+)",
+      "ec": "3.5.4.34",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "inosine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50968"
           }
         ]
       }

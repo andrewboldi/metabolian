@@ -230,6 +230,88 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "2_deamino_2_hydroxyparomamine",
+      "name": "2'-deamino-2'-hydroxyparomamine",
+      "short": "2'-deamino-2'-hydro…",
+      "formula": "C12H26N2O8",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:65071"
+      }
+    },
+    {
+      "id": "udp_d_kanosamine",
+      "name": "UDP-α-D-kanosamine",
+      "formula": "C15H24N3O16P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71964"
+      }
+    },
+    {
+      "id": "kanamycin_c",
+      "name": "kanamycin C",
+      "formula": "C18H40N4O11",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:72755"
+      }
+    },
+    {
+      "id": "isoamyl_acetate",
+      "name": "isoamyl acetate",
+      "formula": "C7H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31725"
+      }
+    },
+    {
+      "id": "isoamylol",
+      "name": "isoamylol",
+      "formula": "C5H12O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15837"
+      }
+    },
+    {
+      "id": "neamine",
+      "name": "neamine",
+      "formula": "C12H30N4O6",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:65076"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
     }
   ],
   "enzymes": [
@@ -287,6 +369,34 @@
       "name": "paromamine 6'-oxidase",
       "ec": [
         "1.1.3.43"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_284",
+      "name": "2-deoxystreptamine glucosyltransferase",
+      "ec": [
+        "2.4.1.284"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_301",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "ec": [
+        "2.4.1.301"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_112",
+      "name": "isoamyl acetate esterase",
+      "ec": [
+        "3.1.1.112"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_93",
+      "name": "neamine transaminase",
+      "ec": [
+        "2.6.1.93"
       ]
     }
   ],
@@ -659,6 +769,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:34035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "2-deoxystreptamine glucosyltransferase",
+      "equation": "2-deoxystreptamine + UDP-alpha-D-glucose = 2'-deamino-2'-hydroxyparomamine + UDP + H(+)",
+      "ec": "2.4.1.284",
+      "substrates": [
+        {
+          "metabolite": "2_deoxystreptamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deamino_2_hydroxyparomamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_284"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:34063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34063"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
+      "equation": "paromamine + UDP-alpha-D-kanosamine = kanamycin C + UDP + H(+)",
+      "ec": "2.4.1.301",
+      "substrates": [
+        {
+          "metabolite": "paromamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_kanosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kanamycin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_301"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:35787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35787"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "isoamyl acetate esterase",
+      "equation": "3-methylbutyl acetate + H2O = 3-methylbutan-1-ol + acetate + H(+)",
+      "ec": "3.1.1.112",
+      "substrates": [
+        {
+          "metabolite": "isoamyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoamylol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_112"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:60436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "neamine transaminase",
+      "equation": "neamine + 2-oxoglutarate = 6'-oxoparomamine + L-glutamate",
+      "ec": "2.6.1.93",
+      "substrates": [
+        {
+          "metabolite": "neamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_oxoparomamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:34039"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34039"
           }
         ]
       }

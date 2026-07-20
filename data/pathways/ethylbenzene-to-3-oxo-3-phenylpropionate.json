@@ -144,6 +144,34 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "3_3_5_triiodo_l_thyronine",
+      "name": "3,3',5-triiodo-L-thyronine",
+      "short": "3,3',5-triiodo-L-th…",
+      "formula": "C15H12I3NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:533015"
+      }
+    },
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "l_thyroxine",
+      "name": "L-thyroxine",
+      "formula": "C15H11I4NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58448"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +194,13 @@
       "name": "acetophenone carboxylase",
       "ec": [
         "6.4.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_21_99_4",
+      "name": "thyroxine 5'-deiodinase",
+      "ec": [
+        "1.21.99.4"
       ]
     }
   ],
@@ -325,6 +360,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:28647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "thyroxine 5'-deiodinase",
+      "equation": "3,3',5-triiodo-L-thyronine + iodide + A + H(+) = L-thyroxine + AH2",
+      "ec": "1.21.99.4",
+      "substrates": [
+        {
+          "metabolite": "3_3_5_triiodo_l_thyronine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_thyroxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19745"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19745"
           }
         ]
       }

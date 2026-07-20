@@ -15,4 +15,16 @@ pathway s-naringenin-to-genistein-7-o-d-glucosi "(S)-naringenin to genistein 7-O
     <-> ec_2_4_1_170 [2.4.1.170] +udp_d_glucose -udp -hplus
     genistein_7_o_d_glucoside
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_19_50 [1.14.19.50] +4_o_methylnorbelladine +fmnh2 +o2 +h2o +hplus
+    4ar_10bs_noroxomaritidine
+  }
+
+  branch from genistein side right {
+    genistein
+    <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 +fmn +h2o +hplus
+    2_hydroxygenistein
+  }
 }

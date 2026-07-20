@@ -142,6 +142,44 @@
       "xrefs": {
         "chebi": "CHEBI:90618"
       }
+    },
+    {
+      "id": "c30_botryococcene",
+      "name": "C30 botryococcene",
+      "formula": "C30H50",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70786"
+      }
+    },
+    {
+      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
+      "short": "3,20-dimethyl-1,2,2…",
+      "formula": "C32H54",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70865"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "guaiene",
+      "name": "α-guaiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63443"
+      }
     }
   ],
   "enzymes": [
@@ -164,6 +202,20 @@
       "name": "SAMP-activating enzyme",
       "ec": [
         "2.7.7.100"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_263",
+      "name": "botryococcene C-methyltransferase",
+      "ec": [
+        "2.1.1.263"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_87",
+      "name": "alpha-guaiene synthase",
+      "ec": [
+        "4.2.3.87"
       ]
     }
   ],
@@ -327,6 +379,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:56100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "botryococcene C-methyltransferase",
+      "equation": "C30 botryococcene + 2 S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.263",
+      "substrates": [
+        {
+          "metabolite": "c30_botryococcene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_263"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34655"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34655"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alpha-guaiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = alpha-guaiene + diphosphate",
+      "ec": "4.2.3.87",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guaiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31807"
           }
         ]
       }

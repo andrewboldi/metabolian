@@ -145,6 +145,34 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "3_indol_3_yl_pyruvate",
+      "name": "3-(indol-3-yl)pyruvate",
+      "short": "3-(indol-3-yl)pyruv…",
+      "formula": "C11H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17640"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "skatole",
+      "name": "skatole",
+      "formula": "C9H9N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9171"
+      }
     }
   ],
   "enzymes": [
@@ -167,6 +195,20 @@
       "name": "indoleacetate--lysine synthetase",
       "ec": [
         "6.3.2.20"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_74",
+      "name": "indolepyruvate decarboxylase",
+      "ec": [
+        "4.1.1.74"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_115",
+      "name": "indoleacetate decarboxylase",
+      "ec": [
+        "4.1.1.115"
       ]
     }
   ],
@@ -326,6 +368,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:14857"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "indolepyruvate decarboxylase",
+      "equation": "indole-3-pyruvate + H(+) = indole-3-acetaldehyde + CO2",
+      "ec": "4.1.1.74",
+      "substrates": [
+        {
+          "metabolite": "3_indol_3_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indol_3_ylacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18017"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18017"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "indoleacetate decarboxylase",
+      "equation": "(indol-3-yl)acetate + H(+) = skatole + CO2",
+      "ec": "4.1.1.115",
+      "substrates": [
+        {
+          "metabolite": "indole_3_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "skatole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:59216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59216"
           }
         ]
       }

@@ -15,4 +15,22 @@ pathway prenyl-diphosphate-to-hydrogen-donor "prenyl diphosphate to hydrogen don
     <-> ec_1_5_99_12 [1.5.99.12] +hydrogen_acceptor +h2o -adenine -hydrogen_donor
     3_methylbut_2_enal
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_85 [2.5.1.85] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_nonaprenyl_diphosphate
+  }
+
+  branch from 3_methylbut_2_enal side right {
+    3_methylbut_2_enal
+    <-> ec_1_13_11_59 [1.13.11.59] +torulene +o2
+    4_apo_carotenal
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_25 [1.3.99.25] +dihydrocarvone +hydrogen_acceptor
+    carvone
+  }
 }

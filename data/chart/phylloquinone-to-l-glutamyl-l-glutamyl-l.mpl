@@ -17,4 +17,16 @@ pathway phylloquinone-to-l-glutamyl-l-glutamyl-l "phylloquinone to L-glutamyl-γ
     <-> ec_6_3_2_61 [6.3.2.61] +glutamate +atp -adp -pi -hplus
     l_glutamyl_l_glutamyl_l_glutamate_3
   }
+
+  branch from 2_3_epoxyphylloquinone side left {
+    2_3_epoxyphylloquinone
+    <-> ec_1_17_4_5 [1.17.4.5] +3_hydroxy_2_methyl_3_phytyl_2_3_dihydro_1_4_naph +4s_5s_1_2_dithiane_4_5_diol
+    1_4_dithiothreitol
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_21_99_3 [1.21.99.3] +3_3_5_triiodo_l_thyronine +iodide +hplus +hydrogen_donor
+    l_thyroxine
+  }
 }

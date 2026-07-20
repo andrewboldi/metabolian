@@ -15,4 +15,10 @@ pathway o-adenyl-l-tyrosine-1-to-l-tyrosine "O-adenyl-L-tyrosine(1−) to L-tyro
     <-> ec_3_1_3_48 [3.1.3.48] +h2o -pi
     l_tyrosine
   }
+
+  branch from l_tyrosine side left {
+    l_tyrosine
+    <-> ec_2_8_2_20 [2.8.2.20] +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    l_tyrosine_o_sulfate_1
+  }
 }

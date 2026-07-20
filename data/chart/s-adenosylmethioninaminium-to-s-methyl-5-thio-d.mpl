@@ -15,4 +15,16 @@ pathway s-adenosylmethioninaminium-to-s-methyl-5-thio-d "S-adenosylmethioninamin
     <-> ec_2_7_1_100 [2.7.1.100] +atp -adp -hplus
     s_methyl_5_thio_d_ribose_1_phosphate
   }
+
+  branch from 5_s_methyl_5_thioadenosine side left {
+    5_s_methyl_5_thioadenosine
+    <-> ec_4_4_1_42 [4.4.1.42] +sam
+    l_homoserine_lactone
+  }
+
+  branch from spermidine side right {
+    spermidine
+    <-> ec_2_5_1_46 [2.5.1.46] +l_lysinium +trimethylenediaminium
+    deoxyhypusine_2
+  }
 }

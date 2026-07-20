@@ -118,6 +118,42 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "6_hydroxyhexanoate",
+      "name": "6-hydroxyhexanoate",
+      "formula": "C6H11O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32383"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
     }
   ],
   "enzymes": [
@@ -147,6 +183,20 @@
       "name": "6-oxohexanoate dehydrogenase",
       "ec": [
         "1.2.1.63"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_258",
+      "name": "6-hydroxyhexanoate dehydrogenase",
+      "ec": [
+        "1.1.1.258"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_13",
+      "name": "glutamate synthase (NADPH)",
+      "ec": [
+        "1.4.1.13"
       ]
     }
   ],
@@ -327,6 +377,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:13397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "6-hydroxyhexanoate dehydrogenase",
+      "equation": "6-hydroxyhexanoate + NAD(+) = 6-oxohexanoate + NADH + H(+)",
+      "ec": "1.1.1.258",
+      "substrates": [
+        {
+          "metabolite": "6_hydroxyhexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_258"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:14225"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14225"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "glutamate synthase (NADPH)",
+      "equation": "2 L-glutamate + NADP(+) = L-glutamine + 2-oxoglutarate + NADPH + H(+)",
+      "ec": "1.4.1.13",
+      "substrates": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:15501"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15501"
           }
         ]
       }

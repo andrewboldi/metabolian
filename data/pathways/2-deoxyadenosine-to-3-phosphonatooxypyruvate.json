@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-deoxyadenosine-to-3-phosphonatooxypyruvate",
   "name": "2'-deoxyadenosine to 3-phosphonatooxypyruvate",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 5-step route from 2'-deoxyadenosine to 3-phosphonatooxypyruvate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -157,6 +157,88 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "thymidine",
+      "name": "thymidine",
+      "formula": "C10H14N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17748"
+      }
+    },
+    {
+      "id": "thymine",
+      "name": "thymine",
+      "formula": "C5H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17821"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribofuranose",
+      "name": "2-deoxy-D-ribofuranose",
+      "short": "2-deoxy-D-ribofuran…",
+      "formula": "C5H10O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90761"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "acetoin",
+      "name": "acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15688"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "d_glycerate",
+      "name": "D-glycerate",
+      "formula": "C3H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16659"
+      }
     }
   ],
   "enzymes": [
@@ -200,6 +282,41 @@
       "name": "phosphoglycerate dehydrogenase",
       "ec": [
         "1.1.1.95"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_2",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_4",
+      "name": "thymidine phosphorylase",
+      "ec": [
+        "2.4.2.4"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_229",
+      "name": "deoxyribokinase",
+      "ec": [
+        "2.7.1.229"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_190",
+      "name": "acetoin dehydrogenase system",
+      "ec": [
+        "2.3.1.190"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_31",
+      "name": "glycerate 3-kinase",
+      "ec": [
+        "2.7.1.31"
       ]
     }
   ],
@@ -425,6 +542,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:12641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "equation": "thymidine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + thymine",
+      "ec": "2.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "thymidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:16037"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "deoxyribokinase",
+      "equation": "2-deoxy-D-ribose + ATP = 2-deoxy-D-ribose 5-phosphate + ADP + H(+)",
+      "ec": "2.7.1.229",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_d_ribofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_229"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:30871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "acetoin dehydrogenase system",
+      "equation": "acetoin + NAD(+) + CoA = acetaldehyde + acetyl-CoA + NADH + H(+)",
+      "ec": "2.3.1.190",
+      "substrates": [
+        {
+          "metabolite": "acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_190"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:27369"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27369"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "glycerate 3-kinase",
+      "equation": "(R)-glycerate + ATP = (2R)-3-phosphoglycerate + ADP + H(+)",
+      "ec": "2.7.1.31",
+      "substrates": [
+        {
+          "metabolite": "d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:23516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23516"
           }
         ]
       }

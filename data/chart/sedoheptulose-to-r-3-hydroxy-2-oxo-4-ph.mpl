@@ -17,4 +17,28 @@ pathway sedoheptulose-to-r-3-hydroxy-2-oxo-4-ph "sedoheptulose… to (R)-3-hydro
     <-> ec_1_1_1_290 [1.1.1.290] +nad -nadh -hplus
     r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate
   }
+
+  branch from s7p side left {
+    s7p
+    <-> ec_4_2_3_154 [4.2.3.154] +pi +h2o +hplus
+    r_demethyl_4_deoxygadusol
+  }
+
+  branch from d_fructofuranose_6_phosphate side right {
+    d_fructofuranose_6_phosphate
+    <-> ec_2_4_1_246 [2.4.1.246] +gdp_d_mannose +gdp +hplus
+    d_fructofuranosyl_d_mannopyranoside_6f_phosphat
+  }
+
+  branch from 4_o_phosphonato_d_erythronate side left {
+    4_o_phosphonato_d_erythronate
+    <-> ec_2_7_1_220 [2.7.1.220] +atp +adp +hplus
+    d_erythronate
+  }
+
+  branch from r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate side right {
+    r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate
+    <-> ec_2_6_1_52 [2.6.1.52] +4_phosphonatooxy_l_threonine +akg
+    glutamate
+  }
 }

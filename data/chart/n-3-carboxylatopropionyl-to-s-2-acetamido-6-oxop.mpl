@@ -15,4 +15,22 @@ pathway n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop "N-(3-carboxylatopropio
     <-> ec_2_3_1_89 [2.3.1.89] +acetyl_coa +h2o -coa
     s_2_acetamido_6_oxopimelate
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_2_8_3_5 [2.8.3.5] +3_oxo_monocarboxylic_acid_anion +succinyl_coa
+    3_oxoacyl_coa
+  }
+
+  branch from s_2_3_4_5_tetrahydrodipicolinate side right {
+    s_2_3_4_5_tetrahydrodipicolinate
+    <-> ec_2_3_1_117 [2.3.1.117] +succinyl_coa +h2o +coa
+    l_2_succinylamino_6_oxoheptanedioate
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_4_1_1_15 [4.1.1.15] +hplus +co2
+    gaba
+  }
 }

@@ -21,4 +21,28 @@ pathway dammarenediol-ii-to-hydrogen-donor "dammarenediol-II to hydrogen donor" 
     <-> ec_1_1_99_35 [1.1.99.35] +glucose +hydrogen_acceptor -hydrogen_donor
     d_glucono_1_5_lactone
   }
+
+  branch from 20s_protopanaxadiol side left {
+    20s_protopanaxadiol
+    <-> ec_2_4_1_364 [2.4.1.364] +udp_d_glucose +udp +hplus
+    20s_ginsenoside_rh2
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_151 [1.14.14.151] +premnaspirodiene +fmnh2 +o2 +h2o +hplus
+    solavetivone
+  }
+
+  branch from protopanaxatriol side left {
+    protopanaxatriol
+    <-> ec_2_4_1_367 [2.4.1.367] +udp_d_glucose +udp +hplus
+    20s_ginsenoside_rh1
+  }
+
+  branch from ginsenoside_rg1 side right {
+    ginsenoside_rg1
+    <-> ec_3_2_1_194 [3.2.1.194] +ginsenoside_re +h2o
+    l_rhamnopyranose
+  }
 }

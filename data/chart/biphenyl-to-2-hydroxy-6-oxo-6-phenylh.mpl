@@ -15,4 +15,10 @@ pathway biphenyl-to-2-hydroxy-6-oxo-6-phenylh "biphenyl to 2-hydroxy-6-oxo-6-phe
     <-> ec_1_13_11_39 [1.13.11.39] +o2 -hplus
     2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
   }
+
+  branch from 2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate side left {
+    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+    <-> ec_1_3_1_40 [1.3.1.40] +nadp +nadph +hplus
+    2_6_dioxo_6_phenylhexanoate
+  }
 }

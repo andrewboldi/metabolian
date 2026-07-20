@@ -15,4 +15,22 @@ pathway n-12-hydroxy-7-isoja-to-2-methylbutanal "N-[(+)-12-hydroxy-7-isoja… to
     <-> ec_4_1_1_72 [4.1.1.72] +hplus -co2
     2_methylbutanal
   }
+
+  branch from isoleucine side left {
+    isoleucine
+    <-> ec_6_3_2_47 [6.3.2.47] +n3_fumaramoyl_s_2_3_diaminopropanoic_acid +atp +adp +pi +hplus
+    dapdiamide_b
+  }
+
+  branch from kmv side right {
+    kmv
+    <-> ec_4_2_1_9 [4.2.1.9] +h2o
+    2r_3r_2_3_dihydroxy_3_methylpentanoate
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_87 [2.6.1.87] +udp_4_amino_4_deoxy_l_arabinopyranose +akg
+    udp_l_threo_pentopyranos_4_ulose
+  }
 }

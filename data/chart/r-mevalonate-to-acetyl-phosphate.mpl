@@ -21,4 +21,28 @@ pathway r-mevalonate-to-acetyl-phosphate "(R)-mevalonate to acetyl phosphate" {
     <-> ec_2_7_2_12 [2.7.2.12] +acetate +ppi -pi
     acetyl_phosphate
   }
+
+  branch from mevalonate_5p side left {
+    mevalonate_5p
+    <-> ec_4_1_1_99 [4.1.1.99] +atp +adp +co2 +pi
+    isopentenyl_phosphate
+  }
+
+  branch from ipp side right {
+    ipp
+    <-> ec_2_5_1_10 [2.5.1.10] +gpp +ppi
+    fpp
+  }
+
+  branch from neryl_diphosphate side left {
+    neryl_diphosphate
+    <-> ec_3_1_7_13 [3.1.7.13] +h2o +ppi
+    nerol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_42 [2.7.7.42] +l_tyrosine +atp
+    o_adenyl_l_tyrosine_1
+  }
 }

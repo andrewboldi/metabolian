@@ -15,4 +15,16 @@ pathway calciol-to-di-sulfido-diiron-50696 "calciol to di-μ-sulfido-diiron" {
     <-> ec_1_14_15_18 [1.14.15.18] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     calcitetrol
   }
+
+  branch from calcidiol side left {
+    calcidiol
+    <-> ec_1_14_15_22 [1.14.15.22] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    calcitriol
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_9 [1.14.15.9] +spirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    2_oxospirilloxanthin
+  }
 }

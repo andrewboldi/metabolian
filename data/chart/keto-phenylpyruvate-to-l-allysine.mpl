@@ -17,4 +17,16 @@ pathway keto-phenylpyruvate-to-l-allysine "keto-phenylpyruvate to L-allysine" {
     <-> ec_2_6_1_105 [2.6.1.105] +l_lysinium -l_allysine
     7r_8s_7_8_diammoniononanoate
   }
+
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> ec_4_1_1_53 [4.1.1.53] +hplus +co2
+    2_phenylethanaminium
+  }
+
+  branch from keto_phenylpyruvate side right {
+    keto_phenylpyruvate
+    <-> ec_2_1_1_281 [2.1.1.281] +sam +sah +hplus
+    3s_3_methyl_2_oxo_3_phenylpropanoate
+  }
 }

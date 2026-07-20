@@ -147,6 +147,24 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "4_hydroxyflavanones",
+      "name": "4'-hydroxyflavanones",
+      "formula": "C15H3O3R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140331"
+      }
+    },
+    {
+      "id": "4_methoxyflavanones",
+      "name": "4'-methoxyflavanones",
+      "formula": "C16H5O3R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140332"
+      }
     }
   ],
   "enzymes": [
@@ -169,6 +187,13 @@
       "name": "plant 3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase",
       "ec": [
         "1.1.1.418"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_231",
+      "name": "flavonoid 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.231"
       ]
     }
   ],
@@ -324,6 +349,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:59016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "flavonoid 4'-O-methyltransferase",
+      "equation": "a 4'-hydroxyflavanone + S-adenosyl-L-methionine = a 4'-methoxyflavanone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.231",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyflavanones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methoxyflavanones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_231"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31743"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31743"
           }
         ]
       }

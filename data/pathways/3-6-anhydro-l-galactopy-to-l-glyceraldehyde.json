@@ -101,6 +101,15 @@
       "xrefs": {
         "chebi": "CHEBI:15361"
       }
+    },
+    {
+      "id": "l_galactonate",
+      "name": "L-galactonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:53071"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +132,13 @@
       "name": "L-threo-3-deoxy-hexylosonate aldolase",
       "ec": [
         "4.1.2.54"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_146",
+      "name": "L-galactonate dehydratase",
+      "ec": [
+        "4.2.1.146"
       ]
     }
   ],
@@ -254,6 +270,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:38107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-galactonate dehydratase",
+      "equation": "L-galactonate = 2-dehydro-3-deoxy-L-galactonate + H2O",
+      "ec": "4.2.1.146",
+      "substrates": [
+        {
+          "metabolite": "l_galactonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_keto_3_deoxy_l_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_146"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:38103"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38103"
           }
         ]
       }

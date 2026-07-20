@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3r-3-hydroxy-l-aspartate-to-3-propylmalate",
   "name": "(3R)-3-hydroxy-L-aspartate to 3-propylmalate",
-  "category": "other",
+  "category": "redox-detox",
   "summary": "A 3-step route from (3R)-3-hydroxy-L-aspartate(1−) to 3-propylmalate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,6 +117,79 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61481"
+      }
+    },
+    {
+      "id": "dutp",
+      "name": "dUTP",
+      "formula": "C9H11N2O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61555"
+      }
+    },
+    {
+      "id": "glyoxal",
+      "name": "glyoxal",
+      "formula": "C2H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34779"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "4_phosphonato_l_aspartic_acid",
+      "name": "4-phosphonato-L-aspartic acid",
+      "short": "4-phosphonato-L-asp…",
+      "formula": "C4H6NO7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57535"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +212,27 @@
       "name": "3-propylmalate synthase",
       "ec": [
         "2.3.3.12"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_13",
+      "name": "dCTP deaminase",
+      "ec": [
+        "3.5.4.13"
+      ]
+    },
+    {
+      "id": "ec_1_2_3_15",
+      "name": "(methyl)glyoxal oxidase",
+      "ec": [
+        "1.2.3.15"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_4",
+      "name": "aspartate kinase",
+      "ec": [
+        "2.7.2.4"
       ]
     }
   ],
@@ -278,6 +372,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:14457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dCTP deaminase",
+      "equation": "dCTP + H2O + H(+) = dUTP + NH4(+)",
+      "ec": "3.5.4.13",
+      "substrates": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dutp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(methyl)glyoxal oxidase",
+      "equation": "glyoxal + O2 + H2O = glyoxylate + H2O2 + H(+)",
+      "ec": "1.2.3.15",
+      "substrates": [
+        {
+          "metabolite": "glyoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33439"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33439"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "aspartate kinase",
+      "equation": "L-aspartate + ATP = 4-phospho-L-aspartate + ADP",
+      "ec": "2.7.2.4",
+      "substrates": [
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_phosphonato_l_aspartic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23776"
           }
         ]
       }

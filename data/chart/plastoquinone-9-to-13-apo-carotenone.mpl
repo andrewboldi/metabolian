@@ -25,4 +25,22 @@ pathway plastoquinone-9-to-13-apo-carotenone "plastoquinone-9 to 13-apo-β-carot
     <-> ec_1_13_11_70 [1.13.11.70] +10_apo_carotenal +o2 -13_apo_carotenone
     4_methylocta_2_4_6_trienedial
   }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> ec_1_1_5_11 [1.1.5.11] +butan_1_ol +1_4_benzoquinones
+    butanal
+  }
+
+  branch from carotene side right {
+    carotene
+    <-> ec_1_14_15_24 [1.14.15.24] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    zeaxanthin
+  }
+
+  branch from 13_apo_carotenone side left {
+    13_apo_carotenone
+    <-> ec_1_13_11_82 [1.13.11.82] +8_apo_caroten_8_al +o2
+    2_6_dimethyldeca_2_4_6_8_tetraenedial
+  }
 }

@@ -17,4 +17,16 @@ pathway d-tartrate-to-d-erythro-isocitrate "D-tartrate to D-erythro-isocitrate" 
     <-> ec_5_1_2_6 [5.1.2.6]
     d_erythro_isocitrate
   }
+
+  branch from citrate side left {
+    citrate
+    <-> ec_6_2_1_18 [6.2.1.18] +atp +coa +adp +pi
+    3s_citryl_coa
+  }
+
+  branch from d_threo_isocitrate side right {
+    d_threo_isocitrate
+    <-> ec_1_1_1_42 [1.1.1.42] +nadp +co2 +nadph
+    akg
+  }
 }

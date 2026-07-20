@@ -19,4 +19,10 @@ pathway tetra-3-sulfido-tetrairon-to-l-glutamate "tetra-μ3-sulfido-tetrairon to
     <-> ec_2_6_1_55 [2.6.1.55] +akg -glutamate
     sulfonatoacetaldehyde
   }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_94 [2.6.1.94] +2_deamino_2_hydroxyneamine +akg
+    2_deamino_2_hydroxy_6_dehydroparomamine
+  }
 }

@@ -15,4 +15,28 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
     <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     methymycin
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_105 [2.1.1.105] +n_benzoyl_4_hydroxyanthranilate +sam +hplus
+    n_benzoyl_4_methoxyanthranilate
+  }
+
+  branch from 10_deoxymethymycin side right {
+    10_deoxymethymycin
+    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    neomethymycin
+  }
+
+  branch from dtdp side left {
+    dtdp
+    <-> ec_2_4_1_322 [2.4.1.322] +dtdp_l_vancosamine +devancoaminyl_vancomycin +hplus
+    vancomycin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_3_7_12 [1.3.7.12] +primary_fluorescent_chlorophyll_catabolite +di_sulfido_diiron +hplus
+    red_chlorophyll_catabolite
+  }
 }

@@ -15,4 +15,10 @@ pathway aldehydo-d-mannose-to-diphosphate "aldehydo-D-mannose… to diphosphate"
     <-> ec_2_7_7_92 [2.7.7.92] +ctp -ppi
     cmp_3_deoxy_d_glycero_d_galacto_nonulosonate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_30 [4.2.3.30] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_pimara_8_14_15_diene
+  }
 }

@@ -15,4 +15,16 @@ pathway 2-trans-6-trans-10-trans-to-fmn-20912 "2-trans,6-trans,10-trans-… to F
     <-> ec_1_14_14_106 [1.14.14.106] +fmnh2 +o2 -fmn -h2o -hplus
     taxa_4_20_11_dien_5_13_diol
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_91 [4.2.3.91] +fpp +h2o
+    cubebol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_71 [1.14.14.71] +cucurbitadienol +fmnh2 +o2 +h2o +hplus
+    11_oxocucurbitadienol
+  }
 }

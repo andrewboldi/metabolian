@@ -15,4 +15,28 @@ pathway 3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli "3-(1-hydroxyethyl)bact
     <-> ec_1_3_1_75 [1.3.1.75] +nadp -nadph -hplus
     divinyl_chlorophyllide_a
   }
+
+  branch from 3_1_hydroxyethyl_chlorophyllide_a side left {
+    3_1_hydroxyethyl_chlorophyllide_a
+    <-> ec_1_1_1_396 [1.1.1.396] +nad +nadh +hplus
+    3_acetylchlorophyllide_a
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_21 [1.14.15.21] +zeaxanthin +o2 +hplus +di_sulfido_diiron +h2o
+    all_trans_violaxanthin
+  }
+
+  branch from chlorophyllide_a side left {
+    chlorophyllide_a
+    <-> ec_3_1_1_100 [3.1.1.100] +h2o +hplus +methanol +co2
+    3_vinylbacteriochlorophyllide_d
+  }
+
+  branch from divinyl_chlorophyllide_a side right {
+    divinyl_chlorophyllide_a
+    <-> ec_1_3_7_14 [1.3.7.14] +di_sulfido_diiron +adp +pi +di_sulfido_diiron +atp +h2o +hplus
+    bacteriochlorophyllide_g
+  }
 }

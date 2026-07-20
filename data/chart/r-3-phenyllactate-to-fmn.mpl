@@ -15,4 +15,16 @@ pathway r-3-phenyllactate-to-fmn "(R)-3-phenyllactate to FMN" {
     <-> ec_1_14_14_195 [1.14.14.195] +fmnh2 +o2 -fmn -h2o -hplus
     hyoscyamine_aldehyde
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_220 [3.2.1.220] +ipecoside +h2o
+    ipecoside_aglycone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_116 [1.14.14.116] +s_averantin +fmnh2 +o2 +h2o
+    1_s_5_r_5_hydroxyaverantin
+  }
 }

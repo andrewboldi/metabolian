@@ -21,4 +21,28 @@ pathway phloretin-to-aureusidin-6-o-glucoside "phloretin to aureusidin 6-O-β-gl
     <-> ec_1_21_3_6 [1.21.3.6] +o2 -h2o
     aureusidin_6_o_glucoside
   }
+
+  branch from phloroglucinol side left {
+    phloroglucinol
+    <-> ec_1_3_1_57 [1.3.1.57] +nadp +nadph
+    dihydrophloroglucinol
+  }
+
+  branch from trans_4_coumarate side right {
+    trans_4_coumarate
+    <-> ec_2_8_3_17 [2.8.3.17] +r_3_4_hydroxyphenyl_lactate +trans_4_coumaroyl_coa
+    r_3_4_hydroxyphenyl_lactoyl_coa
+  }
+
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> ec_2_3_1_219 [2.3.1.219] +trans_feruloylacetyl_coa +h2o +co2 +coa
+    demethoxycurcumin
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_38 [2.7.7.38] +3_deoxy_d_manno_oct_2_ulosonate +ctp
+    cmp_3_deoxy_d_manno_octulosonate
+  }
 }

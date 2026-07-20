@@ -126,6 +126,25 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "barbatene",
+      "name": "(+)-α-barbatene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61690"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +167,13 @@
       "name": "(+)-sabinol dehydrogenase",
       "ec": [
         "1.1.1.228"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_69",
+      "name": "(+)-alpha-barbatene synthase",
+      "ec": [
+        "4.2.3.69"
       ]
     }
   ],
@@ -295,6 +321,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:18329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(+)-alpha-barbatene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-alpha-barbatene + diphosphate",
+      "ec": "4.2.3.69",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "barbatene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:29499"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29499"
           }
         ]
       }

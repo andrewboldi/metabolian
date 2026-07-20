@@ -152,6 +152,89 @@
       "xrefs": {
         "chebi": "CHEBI:58672"
       }
+    },
+    {
+      "id": "phenol",
+      "name": "phenol",
+      "formula": "C6H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15882"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "2_4_dinitrotoluene",
+      "name": "2,4-dinitrotoluene",
+      "formula": "C7H6N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:920"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "4_methyl_5_nitrocatechol",
+      "name": "4-methyl-5-nitrocatechol",
+      "short": "4-methyl-5-nitrocat…",
+      "formula": "C7H7NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81666"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "streptomycin",
+      "name": "streptomycin",
+      "formula": "C21H42N7O12",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:58007"
+      }
+    },
+    {
+      "id": "3_adenylylstreptomycin",
+      "name": "3''-adenylylstreptomycin",
+      "short": "3''-adenylylstrepto…",
+      "formula": "C31H53N12O18P",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58605"
+      }
     }
   ],
   "enzymes": [
@@ -174,6 +257,27 @@
       "name": "L-2-aminoadipate reductase",
       "ec": [
         "1.2.1.95"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_20",
+      "name": "phenol 2-monooxygenase (FADH2)",
+      "ec": [
+        "1.14.14.20"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_24",
+      "name": "2,4-dinitrotoluene dioxygenase",
+      "ec": [
+        "1.14.12.24"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_47",
+      "name": "streptomycin 3''-adenylyltransferase",
+      "ec": [
+        "2.7.7.47"
       ]
     }
   ],
@@ -357,6 +461,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:46936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phenol 2-monooxygenase (FADH2)",
+      "equation": "phenol + FADH2 + O2 = catechol + FAD + H2O + H(+)",
+      "ec": "1.14.14.20",
+      "substrates": [
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2,4-dinitrotoluene dioxygenase",
+      "equation": "2,4-dinitrotoluene + NADH + O2 = 4-methyl-5-nitrocatechol + nitrite + NAD(+)",
+      "ec": "1.14.12.24",
+      "substrates": [
+        {
+          "metabolite": "2_4_dinitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methyl_5_nitrocatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "streptomycin 3''-adenylyltransferase",
+      "equation": "streptomycin + ATP = 3''-O-adenylylstreptomycin + diphosphate",
+      "ec": "2.7.7.47",
+      "substrates": [
+        {
+          "metabolite": "streptomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_adenylylstreptomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20245"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20245"
           }
         ]
       }

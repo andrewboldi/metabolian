@@ -17,4 +17,22 @@ pathway d-argininium-to-aminobutyric-acid "D-argininium to γ-aminobutyric acid"
     <-> ec_3_5_3_7 [3.5.3.7] +h2o -gaba
     urea
   }
+
+  branch from 5_guanidino_2_oxopentanoic_acid side left {
+    5_guanidino_2_oxopentanoic_acid
+    <-> ec_2_1_1_243 [2.1.1.243] +sam +sah +hplus
+    3r_5_guanidino_3_methyl_2_oxopentanoic_acid
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    mycobilin_a
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_38 [3.5.4.38] +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
+    dump
+  }
 }

@@ -150,6 +150,44 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "gdp_n_n_diacetylbacillosamine",
+      "name": "GDP-N,N'-diacetylbacillosamine",
+      "short": "GDP-N,N'-diacetylba…",
+      "formula": "C20H29N7O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:86016"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "sibirene",
+      "name": "sibirene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49231"
+      }
     }
   ],
   "enzymes": [
@@ -179,6 +217,13 @@
       "name": "CMP-N,N'-diacetyllegionaminic acid synthase",
       "ec": [
         "2.7.7.82"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_56",
+      "name": "gamma-humulene synthase",
+      "ec": [
+        "4.2.3.56"
       ]
     }
   ],
@@ -371,6 +416,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:34675"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "UDP-N,N'-diacetylbacillosamine 2-epimerase (hydrolyzing)",
+      "equation": "GDP-N,N'-diacetylbacillosamine + H2O = 2,4-diacetamido-2,4,6-trideoxy-alpha-D-mannopyranose + GDP + H(+)",
+      "ec": "3.2.1.184",
+      "substrates": [
+        {
+          "metabolite": "gdp_n_n_diacetylbacillosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_184"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "gamma-humulene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = sibirene + diphosphate",
+      "ec": "4.2.3.56",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sibirene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25460"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25460"
           }
         ]
       }

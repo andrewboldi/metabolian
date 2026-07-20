@@ -109,6 +109,108 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "o_s_l_aminoacyl_pantetheine_4_phosphoryl_serine",
+      "name": "O-[S-(L-α-aminoacyl)pantetheine-4'-phosphoryl]serine zwitterionic",
+      "short": "O-[S-(L-α-aminoacyl…",
+      "formula": "C16H28N4O9PSR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138175"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18005"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "3_d_aminoacyl_adenylyl_zwitterionic_group",
+      "name": "3'-(D-α-aminoacyl)adenylyl zwitterionic group",
+      "short": "3'-(D-α-aminoacyl)a…",
+      "formula": "C12H15N6O7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:79333"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +233,27 @@
       "name": "D-amino-acid N-acetyltransferase",
       "ec": [
         "2.3.1.36"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_n2",
+      "name": "amino acid--[acyl-carrier-protein] ligase",
+      "ec": [
+        "6.2.1.n2"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_20",
+      "name": "phenylalanine dehydrogenase",
+      "ec": [
+        "1.4.1.20"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_96",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "ec": [
+        "3.1.1.96"
       ]
     }
   ],
@@ -270,6 +393,165 @@
           {
             "db": "Rhea",
             "id": "RHEA:20704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "amino acid--[acyl-carrier-protein] ligase",
+      "equation": "an L-alpha-amino acid + holo-[ACP] + ATP = an L-alpha-aminoacyl-[ACP] + AMP + diphosphate",
+      "ec": "6.2.1.n2",
+      "substrates": [
+        {
+          "metabolite": "l_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_l_aminoacyl_pantetheine_4_phosphoryl_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_n2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phenylalanine dehydrogenase",
+      "equation": "L-phenylalanine + NAD(+) + H2O = 3-phenylpyruvate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.20",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "equation": "a D-aminoacyl-tRNA + H2O = a tRNA + a D-alpha-amino acid + H(+)",
+      "ec": "3.1.1.96",
+      "substrates": [
+        {
+          "metabolite": "3_d_aminoacyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:13953"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13953"
           }
         ]
       }

@@ -19,4 +19,28 @@ pathway 5-androstane-3-17-diol-to-adenosine-3-5-bismonop "5α-androstane-3β,17�
     <-> ec_2_8_2_4 [2.8.2.4] +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     estrone_3_sulfate
   }
+
+  branch from 17_hydroxy_5_androstan_3_one side left {
+    17_hydroxy_5_androstan_3_one
+    <-> ec_1_1_1_53 [1.1.1.53] +nad +nadh +hplus
+    5_androstane_3_17_diol
+  }
+
+  branch from testosterone side right {
+    testosterone
+    <-> ec_1_14_14_14 [1.14.14.14] +fmnh2 +o2 +formate +fmn +h2o +hplus
+    17_estradiol
+  }
+
+  branch from estrone side left {
+    estrone
+    <-> ec_1_1_1_148 [1.1.1.148] +nad +nadh +hplus
+    17_estradiol
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_4_1_2_36 [4.1.2.36] +lactate
+    acetaldehyde
+  }
 }

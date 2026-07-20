@@ -25,4 +25,28 @@ pathway pyridin-2-ol-to-l-glutamate "pyridin-2-ol to L-glutamate" {
     <-> ec_2_6_1_52 [2.6.1.52] +akg -glutamate
     php
   }
+
+  branch from pyridine_2_5_diol side left {
+    pyridine_2_5_diol
+    <-> ec_1_14_13_114 [1.14.13.114] +nadh +o2 +hplus +co2 +nad +h2o
+    6_hydroxynicotinate
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_14_99_35 [1.14.99.35] +thiophene_2_carbonyl_coa +hydrogen_donor +o2 +h2o +hplus
+    5_hydroxythiophene_2_carbonyl_coa
+  }
+
+  branch from maleamate side left {
+    maleamate
+    <-> ec_3_5_2_16 [3.5.2.16] +h2o +hplus
+    maleimide
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_4_1_99_5 [4.1.99.5] +long_chain_fatty_aldehyde +nadph +o2 +hplus +nadp +h2o
+    long_chain_alkane
+  }
 }

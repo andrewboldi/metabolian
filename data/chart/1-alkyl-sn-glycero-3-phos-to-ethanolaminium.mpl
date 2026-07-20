@@ -15,4 +15,16 @@ pathway 1-alkyl-sn-glycero-3-phos-to-ethanolaminium "1-alkyl-sn-glycero-3-phosâ€
     <-> ec_3_1_3_75 [3.1.3.75] +h2o -pi
     ethanolaminium
   }
+
+  branch from ethanolaminium side left {
+    ethanolaminium
+    <-> ec_3_1_4_39 [3.1.4.39] +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_z_alk_1_enyl_sn_glycero_3_phosphate
+  }
+
+  branch from phosphoethanolamine side right {
+    phosphoethanolamine
+    <-> ec_3_6_1_53 [3.6.1.53] +cdp_ethanolamine +h2o +hplus
+    cytidine_5_monophosphate
+  }
 }

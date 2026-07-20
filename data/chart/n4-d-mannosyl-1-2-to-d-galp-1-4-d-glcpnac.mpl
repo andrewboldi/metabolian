@@ -15,4 +15,10 @@ pathway n4-d-mannosyl-1-2-to-d-galp-1-4-d-glcpnac "N4-[α-D-mannosyl-(1→2)-α-
     <-> ec_2_4_1_90 [2.4.1.90] +n_acetyl_d_glucosamine +udp_d_galactose -udp -hplus
     d_galp_1_4_d_glcpnac
   }
+
+  branch from ump side left {
+    ump
+    <-> ec_3_6_1_54 [3.6.1.54] +udp_2_3_bis_3r_3_hydroxytetradecanoyl_d_glucosam +h2o +hplus
+    lipid_x
+  }
 }

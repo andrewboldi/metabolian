@@ -15,4 +15,22 @@ pathway n-phosphonato-l-histidine-to-s-adenosyl-l-homocy "Nπ-phosphonato-L-hist
     <-> ec_2_1_1_98 [2.1.1.98] +sam -sah -hplus
     diphthine_betaine
   }
+
+  branch from 2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter side left {
+    2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter
+    <-> ec_2_1_1_314 [2.1.1.314] +sam +sah +hplus
+    diphthine_methyl_ester
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +sam +hplus
+    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
+    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+  }
 }

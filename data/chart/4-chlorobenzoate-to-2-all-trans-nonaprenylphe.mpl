@@ -15,4 +15,16 @@ pathway 4-chlorobenzoate-to-2-all-trans-nonaprenylphe "4-chlorobenzoate to 2-all
     <-> ec_4_1_1_98 [4.1.1.98] +hplus -co2
     2_all_trans_nonaprenylphenol
   }
+
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> ec_2_5_1_39 [2.5.1.39] +all_trans_heptaprenyl_diphosphate +ppi
+    4_hydroxy_3_all_trans_heptaprenylbenzoate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_17 [6.1.1.17] +amp_3_end_1 +glutamate +atp +amp
+    3_l_glutamate_adenylyl_1_group
+  }
 }

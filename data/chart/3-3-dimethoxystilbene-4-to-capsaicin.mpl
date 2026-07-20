@@ -15,4 +15,10 @@ pathway 3-3-dimethoxystilbene-4-to-capsaicin "3,3'-dimethoxystilbene-4,… to ca
     <-> ec_2_3_2_35 [2.3.2.35] +6e_8_methylnon_6_enoyl_coa -coa -hplus
     capsaicin
   }
+
+  branch from vanillin side left {
+    vanillin
+    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
+    trans_feruloyl_coa
+  }
 }

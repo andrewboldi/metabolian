@@ -142,6 +142,17 @@ for (const [i, r] of reactions.entries()) {
 const HUB = 25;
 const used = new Set();
 
+// Every reaction touching a given metabolite, either side. Spine growth only
+// follows substrate->product; a BRANCH may hang off a spine metabolite in either
+// direction, which is how the poster shows what else a compound does.
+const touching = new Map();
+for (const [i, r] of reactions.entries()) {
+  for (const c of new Set([...mainsOf(r, "substrates"), ...mainsOf(r, "products")])) {
+    if (!touching.has(c)) touching.set(c, []);
+    touching.get(c).push(i);
+  }
+}
+
 /** Walk forward from a reaction, following its main product into the next step. */
 function growSpine(startIdx) {
   const chain = [startIdx];
@@ -189,8 +200,41 @@ const nameOf = (c) => chebi.get(c)?.name || `CHEBI:${c}`;
 let written = 0, reactionsWritten = 0;
 const index = [];
 
+/** Reactions to hang off a spine. Spine extraction leaves most of the corpus
+ *  unused — a reaction only joins a spine if it continues one — and those are
+ *  real, cited chemistry on compounds already drawn. Attaching a few per sheet
+ *  is what the poster does with a branch, and it raises the information on the
+ *  sheet without inventing a new one. Capped per sheet and per anchor so a hub
+ *  compound cannot bury its own spine. */
+const MAX_BRANCH_PER_SHEET = Number(process.env.MAX_BRANCH || 4);
+function pickBranches(chain) {
+  const onSpine = new Set(chain.flatMap((i) => [...mainsOf(reactions[i], "substrates"), ...mainsOf(reactions[i], "products")]));
+  const out = [];
+  for (const i of chain) {
+    for (const anchor of mainsOf(reactions[i], "products")) {
+      if (out.length >= MAX_BRANCH_PER_SHEET) return out;
+      if (out.some((b) => b.anchor === anchor)) continue;      // one branch per anchor
+      const cand = (touching.get(anchor) || []).filter((j) => !used.has(j) && !chain.includes(j));
+      for (const j of cand) {
+        const r = reactions[j];
+        // The far end must be a compound the sheet does not already draw, or the
+        // branch loops back on itself and reads as a duplicate edge.
+        const far = [...mainsOf(r, "products"), ...mainsOf(r, "substrates")].find((c) => c !== anchor && !onSpine.has(c));
+        if (!far) continue;
+        out.push({ anchor, far, rxnIdx: j });
+        used.add(j);
+        onSpine.add(far);
+        break;
+      }
+    }
+  }
+  return out;
+}
+
 for (const chain of sheets) {
+  const branches = pickBranches(chain);
   const rxns = chain.map((i) => reactions[i]);
+  const branchRxns = branches.map((b) => reactions[b.rxnIdx]);
   const first = mainsOf(rxns[0], "substrates")[0];
   const last = mainsOf(rxns[rxns.length - 1], "products").slice(-1)[0] || mainsOf(rxns[rxns.length - 1], "products")[0];
   if (!first || !last) continue;
@@ -213,7 +257,7 @@ for (const chain of sheets) {
   // participants
   const metIds = new Map();
   const metabolites = [];
-  for (const r of rxns) {
+  for (const r of [...rxns, ...branchRxns]) {
     for (const p of [...r.substrates, ...r.products]) {
       if (metIds.has(p.chebi)) continue;
       const info = chebi.get(p.chebi);
@@ -245,7 +289,7 @@ for (const chain of sheets) {
   // one enzyme per distinct EC on the chain
   const enzymes = [];
   const ecSeen = new Map();
-  for (const r of rxns) {
+  for (const r of [...rxns, ...branchRxns]) {
     for (const ec of r.ec) {
       if (ecSeen.has(ec)) continue;
       const enzId = `ec_${ec.replace(/\./g, "_")}`;
@@ -268,7 +312,7 @@ for (const chain of sheets) {
     },
     metabolites,
     enzymes,
-    reactions: rxns.map((r, k) => ({
+    reactions: [...rxns, ...branchRxns].map((r, k) => ({
       id: `r${k + 1}`,
       name: (r.ec[0] && ecNames.get(r.ec[0])) || (r.equation.length > 90 ? `${r.equation.slice(0, 87)}...` : r.equation),
       equation: r.equation,
@@ -325,11 +369,29 @@ for (const chain of sheets) {
     carry = nextMain;
   }
   lines.push("  }");
+
+  // Branches alternate sides so a sheet does not grow lopsided, and each is a
+  // single step: anchor, reaction, far compound.
+  branches.forEach((b, bi) => {
+    const r = reactions[b.rxnIdx];
+    const enz = r.ec[0] ? ecSeen.get(r.ec[0]) : null;
+    if (!enz || !metIds.get(b.anchor) || !metIds.get(b.far)) return;
+    const cof = [...r.substrates, ...r.products]
+      .map((pp) => pp.chebi)
+      .filter((c) => c !== b.anchor && c !== b.far);
+    const side = cof.map((c) => `+${metIds.get(c)}`).join(" ");
+    lines.push("");
+    lines.push(`  branch from ${metIds.get(b.anchor)} side ${bi % 2 ? "right" : "left"} {`);
+    lines.push(`    ${metIds.get(b.anchor)}`);
+    lines.push(`    <-> ${enz} [${r.ec[0]}]${side ? ` ${side}` : ""}`);
+    lines.push(`    ${metIds.get(b.far)}`);
+    lines.push("  }");
+  });
   lines.push("}");
   writeFileSync(join(ROOT, "data", "chart", `${id}.mpl`), `${lines.join("\n")}\n`);
   index.push({ id, steps: rxns.length, chebiChain: [first, last] });
   written++;
-  reactionsWritten += rxns.length;
+  reactionsWritten += rxns.length + branchRxns.length;
 }
 
 console.log(`Wrote ${written} module(s), ${reactionsWritten} reactions -> data/pathways/`);

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "formamide-to-di-sulfido-diiron",
   "name": "formamide to di-μ-sulfido-diiron",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from formamide to di-μ-sulfido-diiron(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -98,6 +98,74 @@
       "xrefs": {
         "chebi": "CHEBI:33738"
       }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "inosine_5_phosphate_1",
+      "name": "inosine 5'-phosphate(1−)",
+      "short": "inosine 5'-P(1−)",
+      "formula": "C10H10N4O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82852"
+      }
+    },
+    {
+      "id": "methanophenazine",
+      "name": "methanophenazine",
+      "formula": "C37H50N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29118"
+      }
+    },
+    {
+      "id": "dihydromethanophenazine",
+      "name": "dihydromethanophenazine",
+      "short": "dihydromethanophena…",
+      "formula": "C37H52N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50375"
+      }
+    },
+    {
+      "id": "oleoyl_containing_glycerolipid",
+      "name": "oleoyl-containing glycerolipid",
+      "short": "oleoyl-containing…",
+      "formula": "C18H33OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88240"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "linoleoyl_containing_glycerolipid",
+      "name": "linoleoyl-containing glycerolipid",
+      "short": "linoleoyl-containin…",
+      "formula": "C18H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88351"
+      }
     }
   ],
   "enzymes": [
@@ -120,6 +188,27 @@
       "name": "ferredoxin hydrogenase",
       "ec": [
         "1.12.7.2"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_33",
+      "name": "tRNA(adenine(34)) deaminase",
+      "ec": [
+        "3.5.4.33"
+      ]
+    },
+    {
+      "id": "ec_1_12_98_3",
+      "name": "Methanosarcina-phenazine hydrogenase",
+      "ec": [
+        "1.12.98.3"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_23",
+      "name": "acyl-lipid (n+3)-(Z)-desaturase (ferredoxin)",
+      "ec": [
+        "1.14.19.23"
       ]
     }
   ],
@@ -255,6 +344,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:17445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tRNA(adenine(34)) deaminase",
+      "equation": "adenosine(34) in tRNA + H2O + H(+) = inosine(34) in tRNA + NH4(+)",
+      "ec": "3.5.4.33",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "inosine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:43168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Methanosarcina-phenazine hydrogenase",
+      "equation": "methanophenazine + H2 = dihydromethanophenazine",
+      "ec": "1.12.98.3",
+      "substrates": [
+        {
+          "metabolite": "methanophenazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydromethanophenazine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_12_98_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "acyl-lipid (n+3)-(Z)-desaturase (ferredoxin)",
+      "equation": "a (9Z)-octadecenoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.23",
+      "substrates": [
+        {
+          "metabolite": "oleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "linoleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:46376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46376"
           }
         ]
       }

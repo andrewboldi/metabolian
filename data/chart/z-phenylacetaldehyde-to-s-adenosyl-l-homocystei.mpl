@@ -19,4 +19,28 @@ pathway z-phenylacetaldehyde-to-s-adenosyl-l-homocystei "(Z)-phenylacetaldehydeâ
     <-> ec_2_1_1_273 [2.1.1.273] +sam -sah
     methyl_benzoate
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_57 [1.14.14.57] +lithocholate +fmnh2 +o2 +h2o +hplus
+    hyodeoxycholate
+  }
+
+  branch from benzaldehyde side right {
+    benzaldehyde
+    <-> ec_4_1_2_26 [4.1.2.26] +l_threo_3_phenylserine
+    glycine
+  }
+
+  branch from hydrogen_cyanide side left {
+    hydrogen_cyanide
+    <-> ec_4_1_2_11 [4.1.2.11] +s_4_hydroxymandelonitrile
+    4_hydroxybenzaldehyde
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
 }

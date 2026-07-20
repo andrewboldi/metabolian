@@ -15,4 +15,16 @@ pathway 1-6-anhydro-n-acetyl-mu-to-n-acetyl-d-mannosamin "1,6-anhydro-N-acetyl-Î
     <-> ec_5_1_3_9 [5.1.3.9]
     n_acetyl_d_mannosamine_6_phosphate
   }
+
+  branch from n_acetylmuramate_6_phosphate side left {
+    n_acetylmuramate_6_phosphate
+    <-> ec_3_1_3_105 [3.1.3.105] +h2o +pi
+    2_acetamido_3_o_1r_1_carboxylatoethyl_2_deoxy_d
+  }
+
+  branch from dlactate side right {
+    dlactate
+    <-> ec_6_1_2_1 [6.1.2.1] +d_alanine +atp +adp +pi
+    d_alanyl_r_lactic_acid
+  }
 }

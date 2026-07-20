@@ -17,4 +17,10 @@ pathway udp-n-acetyl-d-glucosam-to-dtdp "UDP-N-acetyl-α-D-glucosam… to dTDP" 
     <-> ec_2_4_1_325 [2.4.1.325] +dtdp_4_acetamido_4_6_dideoxy_d_galactose -dtdp -hplus
     d_fucnac4_1_4_d_mannaca_1_4_d_glcnac_undecapren
   }
+
+  branch from dtdp side left {
+    dtdp
+    <-> ec_2_4_1_327 [2.4.1.327] +dtdp_2_deoxy_l_fucose +aclacinomycin_s +hplus
+    2_deoxy_l_fucosylaclacinomycin_s
+  }
 }

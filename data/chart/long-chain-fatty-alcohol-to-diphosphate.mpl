@@ -15,4 +15,22 @@ pathway long-chain-fatty-alcohol-to-diphosphate "long-chain fatty alcohol to dip
     <-> ec_6_2_1_59 [6.2.1.59] +holo-acp +long_chain_fatty_acid_anion +atp -amp -ppi
     o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
   }
+
+  branch from long_chain_fatty_alcohol side left {
+    long_chain_fatty_alcohol
+    <-> ec_1_14_14_28 [1.14.14.28] +long_chain_alkane +fmnh2 +o2 +h2o +hplus
+    fmn
+  }
+
+  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side right {
+    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+    <-> ec_1_2_1_80 [1.2.1.80] +holo-acp +nad +nadh +hplus
+    long_chain_fatty_aldehyde
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_120 [4.2.3.120] +gpp
+    pinene
+  }
 }

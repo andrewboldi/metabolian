@@ -111,6 +111,144 @@
       "xrefs": {
         "chebi": "CHEBI:28938"
       }
+    },
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "queuine",
+      "name": "queuine",
+      "formula": "C12H15N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17433"
+      }
+    },
+    {
+      "id": "queuosine_5_phosphate_1",
+      "name": "queuosine 5'-phosphate(1−)",
+      "short": "queuosine 5'-P(1−)",
+      "formula": "C17H21N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194431"
+      }
+    },
+    {
+      "id": "3_methyl_7h_xanthine",
+      "name": "3-methyl-7H-xanthine",
+      "formula": "C6H6N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62208"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "4_aminoimidazole",
+      "name": "4-aminoimidazole",
+      "formula": "C3H5N3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16607"
+      }
+    },
+    {
+      "id": "3_5_dihydro_4h_imidazol_4_one",
+      "name": "3,5-dihydro-4H-imidazol-4-one",
+      "short": "3,5-dihydro-4H-imid…",
+      "formula": "C3H4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28470"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +271,34 @@
       "name": "guanine deaminase",
       "ec": [
         "3.5.4.3"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_15",
+      "name": "arachidonate--CoA ligase",
+      "ec": [
+        "6.2.1.15"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_64",
+      "name": "tRNA-guanosine(34) queuine transglycosylase",
+      "ec": [
+        "2.4.2.64"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_179",
+      "name": "methylxanthine N(3)-demethylase",
+      "ec": [
+        "1.14.13.179"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_8",
+      "name": "aminoimidazolase",
+      "ec": [
+        "3.5.4.8"
       ]
     }
   ],
@@ -268,6 +434,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:14665"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "arachidonate--CoA ligase",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + ATP + CoA = (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.15",
+      "substrates": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arachidonoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19713"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19713"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tRNA-guanosine(34) queuine transglycosylase",
+      "equation": "guanosine(34) in tRNA + queuine = queuosine(34) in tRNA + guanine",
+      "ec": "2.4.2.64",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "queuine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "queuosine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:16633"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16633"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "methylxanthine N(3)-demethylase",
+      "equation": "3-methylxanthine + NADH + O2 + H(+) = xanthine + formaldehyde + NAD(+) + H2O",
+      "ec": "1.14.13.179",
+      "substrates": [
+        {
+          "metabolite": "3_methyl_7h_xanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_179"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:30447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "aminoimidazolase",
+      "equation": "4-aminoimidazole + H2O + H(+) = imidazol-4-one + NH4(+)",
+      "ec": "3.5.4.8",
+      "substrates": [
+        {
+          "metabolite": "4_aminoimidazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dihydro_4h_imidazol_4_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:22348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22348"
           }
         ]
       }

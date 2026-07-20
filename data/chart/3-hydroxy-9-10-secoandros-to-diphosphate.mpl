@@ -17,4 +17,22 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
     <-> ec_6_2_1_41 [6.2.1.41] +atp +coa -amp -ppi
     9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oyl
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_134 [1.14.14.134] +amyrin +fmnh2 +o2 +h2o +hplus
+    24_hydroxy_amyrin
+  }
+
+  branch from 2z_4z_2_hydroxyhexa_2_4_dienoate side right {
+    2z_4z_2_hydroxyhexa_2_4_dienoate
+    <-> ec_4_2_1_132 [4.2.1.132] +h2o
+    4_hydroxy_2_oxohexanoate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_37 [6.2.1.37] +3_hydroxybenzoate +atp +coa +amp
+    3_hydroxybenzoyl_coa
+  }
 }

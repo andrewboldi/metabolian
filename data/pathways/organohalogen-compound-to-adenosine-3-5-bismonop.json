@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "organohalogen-compound-to-adenosine-3-5-bismonop",
   "name": "organohalogen compound to adenosine 3',5'-bismonoph…",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from organohalogen compound to adenosine 3',5'-bismonophosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -169,6 +169,92 @@
       "xrefs": {
         "chebi": "CHEBI:58343"
       }
+    },
+    {
+      "id": "s_substituted_glutamyl_l_cysteine",
+      "name": "S-substituted γ-glutamyl-L-cysteine",
+      "short": "S-substituted…",
+      "formula": "C8H12N2O5SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143789"
+      }
+    },
+    {
+      "id": "d_4_hydroxyphenylglycine",
+      "name": "D-4-hydroxyphenylglycine",
+      "short": "D-4-hydroxyphenylgl…",
+      "formula": "C8H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57475"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "4_hydroxyphenylglyoxylate",
+      "name": "4-hydroxyphenylglyoxylate",
+      "short": "4-hydroxyphenylglyo…",
+      "formula": "C8H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58586"
+      }
+    },
+    {
+      "id": "d_threonine",
+      "name": "D-threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57757"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "methyl_sulfide",
+      "name": "methyl sulfide",
+      "formula": "CH3SR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86315"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
     }
   ],
   "enzymes": [
@@ -205,6 +291,34 @@
       "name": "thiol sulfotransferase",
       "ec": [
         "2.8.2.16"
+      ]
+    },
+    {
+      "id": "ec_3_4_17_25",
+      "name": "glutathione-S-conjugate glycine hydrolase",
+      "ec": [
+        "3.4.17.25"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_72",
+      "name": "D-4-hydroxyphenylglycine transaminase",
+      "ec": [
+        "2.6.1.72"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_42",
+      "name": "D-threonine aldolase",
+      "ec": [
+        "4.1.2.42"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_9",
+      "name": "thiol S-methyltransferase",
+      "ec": [
+        "2.1.1.9"
       ]
     }
   ],
@@ -442,6 +556,186 @@
           {
             "db": "Rhea",
             "id": "RHEA:14637"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "glutathione-S-conjugate glycine hydrolase",
+      "equation": "an S-substituted glutathione + H2O = S-substituted gamma-glutamyl-L-cysteine + glycine",
+      "ec": "3.4.17.25",
+      "substrates": [
+        {
+          "metabolite": "s_substituted_glutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_substituted_glutamyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_17_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:60448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "D-4-hydroxyphenylglycine transaminase",
+      "equation": "D-4-hydroxyphenylglycine + 2-oxoglutarate = 4-hydroxyphenylglyoxylate + L-glutamate",
+      "ec": "2.6.1.72",
+      "substrates": [
+        {
+          "metabolite": "d_4_hydroxyphenylglycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenylglyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:15589"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15589"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "D-threonine aldolase",
+      "equation": "D-threonine = acetaldehyde + glycine",
+      "ec": "4.1.2.42",
+      "substrates": [
+        {
+          "metabolite": "d_threonine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:15257"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15257"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "thiol S-methyltransferase",
+      "equation": "a thiol + S-adenosyl-L-methionine = a methyl thioether + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.9",
+      "substrates": [
+        {
+          "metabolite": "thiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:18277"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18277"
           }
         ]
       }

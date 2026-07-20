@@ -194,6 +194,82 @@
       "xrefs": {
         "chebi": "CHEBI:59879"
       }
+    },
+    {
+      "id": "2_unsubstituted_isoflavones",
+      "name": "2'-unsubstituted isoflavones",
+      "short": "2'-unsubstituted…",
+      "formula": "C15HO2R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136891"
+      }
+    },
+    {
+      "id": "2_hydroxyisoflavones",
+      "name": "2'-hydroxyisoflavones",
+      "short": "2'-hydroxyisoflavon…",
+      "formula": "C15HO3R9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28206"
+      }
+    },
+    {
+      "id": "steroid",
+      "name": "steroid",
+      "formula": "C19H31R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35341"
+      }
+    },
+    {
+      "id": "11_hydroxy_steroid",
+      "name": "11β-hydroxy steroid",
+      "formula": "C19H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35346"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "pentalenene",
+      "name": "pentalenene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17251"
+      }
+    },
+    {
+      "id": "3_hydroxybenzoate",
+      "name": "3-hydroxybenzoate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16193"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
     }
   ],
   "enzymes": [
@@ -230,6 +306,34 @@
       "name": "3alpha,7alpha,12alpha-trihydroxy-5beta-cholest-24-enoyl-CoA hydratase",
       "ec": [
         "4.2.1.107"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_90",
+      "name": "isoflavone 2'-hydroxylase",
+      "ec": [
+        "1.14.14.90"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_4",
+      "name": "steroid 11beta-monooxygenase",
+      "ec": [
+        "1.14.15.4"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_7",
+      "name": "pentalenene synthase",
+      "ec": [
+        "4.2.3.7"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_23",
+      "name": "3-hydroxybenzoate 2-monooxygenase",
+      "ec": [
+        "1.14.99.23"
       ]
     }
   ],
@@ -487,6 +591,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:18933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "isoflavone 2'-hydroxylase",
+      "equation": "a 2'-unsubstituted isoflavone + reduced [NADPH--hemoprotein reductase] + O2 = a 2'-hydroxyisoflavone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.90",
+      "substrates": [
+        {
+          "metabolite": "2_unsubstituted_isoflavones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyisoflavones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:18849"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18849"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "steroid 11beta-monooxygenase",
+      "equation": "a steroid + 2 reduced [adrenodoxin] + O2 + 2 H(+) = an 11beta-hydroxysteroid + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.4",
+      "substrates": [
+        {
+          "metabolite": "steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_hydroxy_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:15629"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "pentalenene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = pentalenene + diphosphate",
+      "ec": "4.2.3.7",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentalenene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:18081"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "3-hydroxybenzoate 2-monooxygenase",
+      "equation": "3-hydroxybenzoate + AH2 + O2 = 2,3-dihydroxybenzoate + A + H2O",
+      "ec": "1.14.99.23",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:14193"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14193"
           }
         ]
       }

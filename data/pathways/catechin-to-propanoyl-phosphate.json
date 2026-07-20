@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "catechin-to-propanoyl-phosphate",
   "name": "(+)-catechin to propanoyl phosphate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from (+)-catechin to propanoyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -172,6 +172,52 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "2_deoxymugineate",
+      "name": "2'-deoxymugineate",
+      "formula": "C12H19N2O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58487"
+      }
+    },
+    {
+      "id": "mugineate",
+      "name": "mugineate",
+      "formula": "C12H19N2O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77826"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    },
+    {
+      "id": "n2_3_carboxylatopropionyl_l_arginine",
+      "name": "N2-(3-carboxylatopropionyl)-L-arginine",
+      "short": "N2-(3-carboxylatopr…",
+      "formula": "C10H17N4O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58241"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -201,6 +247,20 @@
       "name": "propionate kinase",
       "ec": [
         "2.7.2.15"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_24",
+      "name": "2'-deoxymugineic-acid 2'-dioxygenase",
+      "ec": [
+        "1.14.11.24"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_109",
+      "name": "arginine N-succinyltransferase",
+      "ec": [
+        "2.3.1.109"
       ]
     }
   ],
@@ -405,6 +465,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:23148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2'-deoxymugineic-acid 2'-dioxygenase",
+      "equation": "2'-deoxymugineate + 2-oxoglutarate + O2 = mugineate + succinate + CO2",
+      "ec": "1.14.11.24",
+      "substrates": [
+        {
+          "metabolite": "2_deoxymugineate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mugineate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "arginine N-succinyltransferase",
+      "equation": "succinyl-CoA + L-arginine = N(2)-succinyl-L-arginine + CoA + H(+)",
+      "ec": "2.3.1.109",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_3_carboxylatopropionyl_l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:15185"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15185"
           }
         ]
       }

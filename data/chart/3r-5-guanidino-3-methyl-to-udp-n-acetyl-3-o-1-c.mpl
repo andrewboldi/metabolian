@@ -15,4 +15,10 @@ pathway 3r-5-guanidino-3-methyl-to-udp-n-acetyl-3-o-1-c "(3R)-5-guanidino-3-meth
     <-> ec_2_5_1_7 [2.5.1.7] +udpglcnac -pi
     udp_n_acetyl_3_o_1_carboxylatovinyl_d_glucosamin
   }
+
+  branch from phosphonatoenolpyruvate side left {
+    phosphonatoenolpyruvate
+    <-> ec_2_7_1_40 [2.7.1.40] +pyruvate +udp +hplus
+    utp
+  }
 }

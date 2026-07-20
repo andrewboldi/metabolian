@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-z-alk-1-enyl-sn-glyce-to-3-hydroxy-2-4-dioxope",
   "name": "1-(Z)-alk-1-enyl-sn-glyce… to 3-hydroxy-2,4-dioxopentyl…",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 4-step route from 1-(Z)-alk-1-enyl-sn-glycero-3-phosphocholine to 3-hydroxy-2,4-dioxopentyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -139,6 +139,102 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-(Z)-alk-1-enyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(Z)-alk-1-enyl-sn…",
+      "formula": "C7H15NO6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77288"
+      }
+    },
+    {
+      "id": "2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate",
+      "name": "2-ammonioethyl (2R)-2,3-dihydroxypropyl phosphate",
+      "short": "2-ammonioethyl…",
+      "formula": "C5H14NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143890"
+      }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "1_d_galactosyl_sn_glycerol_3_phosphate",
+      "name": "1-α-D-galactosyl-sn-glycerol 3-phosphate",
+      "short": "1-α-D-galactosyl-sn…",
+      "formula": "C9H17O11P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58330"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "choline_sulfate",
+      "name": "choline sulfate",
+      "formula": "C5H13NO4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16822"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "4_o_phosphonato_d_erythronate",
+      "name": "4-O-phosphonato-D-erythronate",
+      "short": "4-O-phosphonato-D-e…",
+      "formula": "C4H6O8P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58766"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -175,6 +271,27 @@
       "name": "3-hydroxy-5-phosphooxypentane-2,4-dione thiolase",
       "ec": [
         "2.3.1.245"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_96",
+      "name": "sn-glycerol-3-phosphate 1-galactosyltransferase",
+      "ec": [
+        "2.4.1.96"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_6",
+      "name": "choline sulfotransferase",
+      "ec": [
+        "2.8.2.6"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_409",
+      "name": "4-phospho-D-erythronate 3-dehydrogenase",
+      "ec": [
+        "1.1.1.409"
       ]
     }
   ],
@@ -363,6 +480,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:44736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lysoplasmalogenase",
+      "equation": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + H2O = a 2,3-saturated aldehyde + sn-glycero-3-phosphoethanolamine",
+      "ec": "3.3.2.2",
+      "substrates": [
+        {
+          "metabolite": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ch2_containing_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:16905"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16905"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "sn-glycerol-3-phosphate 1-galactosyltransferase",
+      "equation": "sn-glycerol 3-phosphate + UDP-alpha-D-galactose = 1-O-alpha-D-galactosyl-sn-glycerol 3-phosphate + UDP + H(+)",
+      "ec": "2.4.1.96",
+      "substrates": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_d_galactosyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20341"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20341"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "choline sulfotransferase",
+      "equation": "choline + 3'-phosphoadenylyl sulfate = choline sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.6",
+      "substrates": [
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "choline_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:21984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21984"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "4-phospho-D-erythronate 3-dehydrogenase",
+      "equation": "4-phospho-D-erythronate + NAD(+) = dihydroxyacetone phosphate + CO2 + NADH",
+      "ec": "1.1.1.409",
+      "substrates": [
+        {
+          "metabolite": "4_o_phosphonato_d_erythronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_409"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:52408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52408"
           }
         ]
       }

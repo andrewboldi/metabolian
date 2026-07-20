@@ -111,6 +111,90 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "fatty_acyl_coa",
+      "name": "fatty acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77636"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "2_acyl_sn_glycero_3_phosphate",
+      "name": "2-acyl-sn-glycero-3-phosphate",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C4H6O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64982"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
+      }
+    },
+    {
+      "id": "ketosphinganine",
+      "name": "3-Ketodihydrosphingosine",
+      "short": "3-Ketodihydrosphing…",
+      "formula": "C18H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58299"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "5_deoxy_d_ribulose_1_phosphate",
+      "name": "5-deoxy-D-ribulose 1-phosphate",
+      "short": "5-deoxy-D-ribulose…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:144504"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +217,34 @@
       "name": "glycerol-3-phosphate dehydrogenase [NAD(P)(+)]",
       "ec": [
         "1.1.1.94"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_20",
+      "name": "acyl-CoA hydrolase",
+      "ec": [
+        "3.1.2.20"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_198",
+      "name": "glycerol-3-phosphate 2-O-acyltransferase",
+      "ec": [
+        "2.3.1.198"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_50",
+      "name": "serine C-palmitoyltransferase",
+      "ec": [
+        "2.3.1.50"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_62",
+      "name": "5-deoxyribulose 1-phosphate aldolase",
+      "ec": [
+        "4.1.2.62"
       ]
     }
   ],
@@ -280,6 +392,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:11096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acyl-CoA hydrolase",
+      "equation": "a fatty acyl-CoA + H2O = a fatty acid + CoA + H(+)",
+      "ec": "3.1.2.20",
+      "substrates": [
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16781"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glycerol-3-phosphate 2-O-acyltransferase",
+      "equation": "sn-glycerol 3-phosphate + an acyl-CoA = a 2-acyl-sn-glycerol 3-phosphate + CoA",
+      "ec": "2.3.1.198",
+      "substrates": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_198"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "serine C-palmitoyltransferase",
+      "equation": "L-serine + hexadecanoyl-CoA + H(+) = 3-oxosphinganine + CO2 + CoA",
+      "ec": "2.3.1.50",
+      "substrates": [
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ketosphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:14761"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "5-deoxyribulose 1-phosphate aldolase",
+      "equation": "5-deoxy-D-ribulose 1-phosphate = dihydroxyacetone phosphate + acetaldehyde",
+      "ec": "4.1.2.62",
+      "substrates": [
+        {
+          "metabolite": "5_deoxy_d_ribulose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:61300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61300"
           }
         ]
       }

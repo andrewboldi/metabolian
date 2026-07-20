@@ -15,4 +15,28 @@ pathway cellobionate-to-6-phospho-2-dehydro-d-glu "cellobionate to 6-phospho-2-d
     <-> ec_2_7_1_13 [2.7.1.13] +atp -adp -hplus
     6_phospho_2_dehydro_d_gluconate
   }
+
+  branch from d_gluconate side left {
+    d_gluconate
+    <-> ec_2_7_1_12 [2.7.1.12] +atp +adp +hplus
+    6pgc
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> ec_2_4_1_20 [2.4.1.20] +cellobiose +pi
+    glucose
+  }
+
+  branch from 2_dehydro_d_gluconate side left {
+    2_dehydro_d_gluconate
+    <-> ec_1_1_1_274 [1.1.1.274] +nadp +nadph +hplus
+    2_5_didehydro_d_gluconate
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_4 [1.14.99.4] +progesterone +o2 +hydrogen_acceptor +h2o
+    testosterone_acetate
+  }
 }

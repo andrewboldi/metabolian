@@ -103,6 +103,42 @@
       "xrefs": {
         "chebi": "CHEBI:68483"
       }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
     }
   ],
   "enzymes": [
@@ -125,6 +161,13 @@
       "name": "UDP-N-acetylglucosamine 1-carboxyvinyltransferase",
       "ec": [
         "2.5.1.7"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_40",
+      "name": "pyruvate kinase",
+      "ec": [
+        "2.7.1.40"
       ]
     }
   ],
@@ -260,6 +303,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:18681"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pyruvate kinase",
+      "equation": "UTP + pyruvate = phosphoenolpyruvate + UDP + H(+)",
+      "ec": "2.7.1.40",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56948"
           }
         ]
       }

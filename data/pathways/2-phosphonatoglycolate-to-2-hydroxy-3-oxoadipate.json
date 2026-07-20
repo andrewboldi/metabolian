@@ -118,6 +118,88 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "s_1_hydroxy_2_oxoethyl_l_cysteine",
+      "name": "S-(1-hydroxy-2-oxoethyl)-L-cysteine",
+      "short": "S-(1-hydroxy-2-oxoe…",
+      "formula": "C5H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141555"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29950"
+      }
+    },
+    {
+      "id": "nitrilotriacetate",
+      "name": "nitrilotriacetate",
+      "formula": "C6H6NO6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:25548"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "ammoniodiacetate",
+      "name": "ammoniodiacetate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62745"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "ecdysone",
+      "name": "ecdysone",
+      "formula": "C27H44O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16688"
+      }
+    },
+    {
+      "id": "20_hydroxyecdysone",
+      "name": "20-hydroxyecdysone",
+      "formula": "C27H44O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16587"
+      }
     }
   ],
   "enzymes": [
@@ -140,6 +222,27 @@
       "name": "2-hydroxy-3-oxoadipate synthase",
       "ec": [
         "2.2.1.5"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_124",
+      "name": "protein deglycase",
+      "ec": [
+        "3.5.1.124"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_10",
+      "name": "nitrilotriacetate monooxygenase",
+      "ec": [
+        "1.14.14.10"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_22",
+      "name": "ecdysone 20-monooxygenase",
+      "ec": [
+        "1.14.99.22"
       ]
     }
   ],
@@ -279,6 +382,165 @@
           {
             "db": "Rhea",
             "id": "RHEA:14341"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protein deglycase",
+      "equation": "S-(1-hydroxy-2-oxoethyl)-L-cysteinyl-[protein] + H2O = glycolate + L-cysteinyl-[protein] + H(+)",
+      "ec": "3.5.1.124",
+      "substrates": [
+        {
+          "metabolite": "s_1_hydroxy_2_oxoethyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:57196"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57196"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "nitrilotriacetate monooxygenase",
+      "equation": "nitrilotriacetate + FMNH2 + O2 = aminodiacetate + FMN + glyoxylate + H2O",
+      "ec": "1.14.14.10",
+      "substrates": [
+        {
+          "metabolite": "nitrilotriacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ammoniodiacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31359"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "ecdysone 20-monooxygenase",
+      "equation": "ecdysone + AH2 + O2 = 20-hydroxyecdysone + A + H2O",
+      "ec": "1.14.99.22",
+      "substrates": [
+        {
+          "metabolite": "ecdysone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxyecdysone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:14021"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14021"
           }
         ]
       }

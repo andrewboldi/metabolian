@@ -134,6 +134,74 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "squalene",
+      "name": "Squalene",
+      "formula": "C30H50",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15440"
+      }
+    },
+    {
+      "id": "epoxysqualene",
+      "name": "(S)-2,3-Epoxysqualene (2,3-oxidosqualene)",
+      "short": "2,3-Epoxysqualene…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15441"
+      }
+    },
+    {
+      "id": "6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero",
+      "name": "(6aS,11aS)-2-dimethylallyl-3,6a,9-trihydroxypterocarpan",
+      "short": "(6aS,11aS)-2-dimeth…",
+      "formula": "C20H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50118"
+      }
+    },
+    {
+      "id": "glyceollin_iii",
+      "name": "glyceollin III",
+      "formula": "C20H18O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52086"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +224,27 @@
       "name": "indigoidine synthase",
       "ec": [
         "4.3.3.9"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_17",
+      "name": "squalene monooxygenase",
+      "ec": [
+        "1.14.14.17"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_135",
+      "name": "glyceollin synthase",
+      "ec": [
+        "1.14.14.135"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_68",
+      "name": "(2Z,6E)-farnesyl diphosphate synthase",
+      "ec": [
+        "2.5.1.68"
       ]
     }
   ],
@@ -335,6 +424,165 @@
           {
             "db": "Rhea",
             "id": "RHEA:81499"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "squalene monooxygenase",
+      "equation": "squalene + reduced [NADPH--hemoprotein reductase] + O2 = (S)-2,3-epoxysqualene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.17",
+      "substrates": [
+        {
+          "metabolite": "squalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25282"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25282"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glyceollin synthase",
+      "equation": "(6aS,11aS)-2-dimethylallyl-3,6a,9-trihydroxypterocarpan + reduced [NADPH--hemoprotein reductase] + O2 = glyceollin III + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.135",
+      "substrates": [
+        {
+          "metabolite": "6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyceollin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_135"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26051"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(2Z,6E)-farnesyl diphosphate synthase",
+      "equation": "isopentenyl diphosphate + (2E)-geranyl diphosphate = (2Z,6E)-farnesyl diphosphate + diphosphate",
+      "ec": "2.5.1.68",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23300"
           }
         ]
       }

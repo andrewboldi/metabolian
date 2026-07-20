@@ -122,6 +122,16 @@
       "xrefs": {
         "chebi": "CHEBI:58456"
       }
+    },
+    {
+      "id": "1_phosphatidyl_1d_myo_inositol_4_phosphate",
+      "name": "1-phosphatidyl-1D-myo-inositol 4-phosphate",
+      "short": "1-phosphatidyl-1D-m…",
+      "formula": "C11H15O16P2R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58178"
+      }
     }
   ],
   "enzymes": [
@@ -165,6 +175,13 @@
       "name": "phosphatidylinositol-4,5-bisphosphate 3-kinase",
       "ec": [
         "2.7.1.153"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_154",
+      "name": "phosphatidylinositol-4-phosphate 3-kinase",
+      "ec": [
+        "2.7.1.154"
       ]
     }
   ],
@@ -447,6 +464,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:21292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "phosphatidylinositol-4-phosphate 3-kinase",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol 4-phosphate) + ATP = a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol-3,4-bisphosphate) + ADP + H(+)",
+      "ec": "2.7.1.154",
+      "substrates": [
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol_4_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol_3_4_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_154"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:18373"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18373"
           }
         ]
       }

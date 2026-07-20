@@ -15,4 +15,10 @@ pathway l-leucine-to-3s-1-2-diazinane-3-carb "L-leucine to (3S)-1,2-diazinane-3-
     <-> ec_4_8_1_1 [4.8.1.1] -h2o -hplus
     3s_1_2_diazinane_3_carboxylate
   }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_2_1_4_4 [2.1.4.4] +isoleucine +arginine
+    n_amidino_l_isoleucine
+  }
 }

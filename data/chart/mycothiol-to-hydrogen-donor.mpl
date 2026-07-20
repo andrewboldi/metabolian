@@ -15,4 +15,10 @@ pathway mycothiol-to-hydrogen-donor "mycothiol to hydrogen donor" {
     <-> ec_1_20_99_1 [1.20.99.1] +arsenite +hydrogen_acceptor +h2o -hydrogen_donor -hplus
     arsenate
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_5_99_4 [1.5.99.4] +r_nicotinium +hydrogen_acceptor +h2o
+    r_6_hydroxynicotinium
+  }
 }

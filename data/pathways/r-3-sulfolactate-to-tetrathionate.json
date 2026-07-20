@@ -118,6 +118,71 @@
       "xrefs": {
         "chebi": "CHEBI:15226"
       }
+    },
+    {
+      "id": "3_disulfanyl_l_alanine",
+      "name": "3-disulfanyl-L-alanine",
+      "short": "3-disulfanyl-L-alan…",
+      "formula": "C3H5NOS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61963"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "s_2_sulfodisulfanyl_l_cysteine_1",
+      "name": "S-(2-sulfodisulfanyl)-L-cysteine(1−)",
+      "short": "S-(2-sulfodisulfany…",
+      "formula": "C3H4NO4S4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140664"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "selenite",
+      "name": "selenite",
+      "formula": "O3Se",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:18212"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "selenate",
+      "name": "selenate",
+      "formula": "O4Se",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15075"
+      }
     }
   ],
   "enzymes": [
@@ -140,6 +205,20 @@
       "name": "thiosulfate dehydrogenase (quinone)",
       "ec": [
         "1.8.5.2"
+      ]
+    },
+    {
+      "id": "ec_2_8_5_2",
+      "name": "L-cysteine S-thiosulfotransferase",
+      "ec": [
+        "2.8.5.2"
+      ]
+    },
+    {
+      "id": "ec_1_97_1_14",
+      "name": "selenate reductase (quinol)",
+      "ec": [
+        "1.97.1.14"
       ]
     }
   ],
@@ -283,6 +362,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:10936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-cysteine S-thiosulfotransferase",
+      "equation": "S-sulfanyl-L-cysteinyl-[SoxY protein] + thiosulfate + 2 Fe(III)-[cytochrome c] = S-(2-sulfodisulfanyl)-L-cysteinyl-[SoxY protein] + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "2.8.5.2",
+      "substrates": [
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trioxidosulfanidosulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_sulfodisulfanyl_l_cysteine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:51224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51224"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "selenate reductase (quinol)",
+      "equation": "selenite + a quinone + H2O = selenate + a quinol",
+      "ec": "1.97.1.14",
+      "substrates": [
+        {
+          "metabolite": "selenite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_97_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:51636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51636"
           }
         ]
       }

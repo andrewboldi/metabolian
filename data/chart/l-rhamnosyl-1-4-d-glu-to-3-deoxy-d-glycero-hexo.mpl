@@ -15,4 +15,22 @@ pathway l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo "α-L-rhamnosyl-(1→4)-
     <-> ec_5_3_1_17 [5.3.1.17]
     3_deoxy_d_glycero_hexo_2_5_diulosonate
   }
+
+  branch from l_rhamnopyranose side left {
+    l_rhamnopyranose
+    <-> ec_4_2_2_28 [4.2.2.28] +l_rhamnosyl_1_4_d_glucuronide
+    4_deoxy_l_threo_hex_4_enopyranuronoside
+  }
+
+  branch from 5_dehydro_4_deoxy_d_glucuronate side right {
+    5_dehydro_4_deoxy_d_glucuronate
+    <-> ec_4_2_2_6 [4.2.2.6]
+    4_4_deoxy_d_gluc_4_enosyluronic_acid_d_galacturo
+  }
+
+  branch from 3_deoxy_d_glycero_hexo_2_5_diulosonate side left {
+    3_deoxy_d_glycero_hexo_2_5_diulosonate
+    <-> ec_1_1_1_127 [1.1.1.127] +nad +nadh +hplus
+    2_dehydro_3_deoxy_d_gluconate
+  }
 }

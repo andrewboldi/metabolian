@@ -122,6 +122,45 @@
       "xrefs": {
         "chebi": "CHEBI:84531"
       }
+    },
+    {
+      "id": "3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone",
+      "name": "3',4',5,6-tetrahydroxy-3,7-dimethoxyflavone",
+      "short": "3',4',5,6-tetrahydr…",
+      "formula": "C17H13O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77769"
+      }
+    },
+    {
+      "id": "3_4_5_trihydroxy_3_6_7_trimethoxyflavone",
+      "name": "3',4',5-trihydroxy-3,6,7-trimethoxyflavone",
+      "short": "3',4',5-trihydroxy-…",
+      "formula": "C18H16O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18016"
+      }
+    },
+    {
+      "id": "flaviolin_2_olate",
+      "name": "flaviolin-2-olate",
+      "formula": "C10H5O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58696"
+      }
+    },
+    {
+      "id": "3_8_biflaviolin_2_7_2_triolate",
+      "name": "3,8'-biflaviolin 2,7,2'-triolate",
+      "short": "3,8'-biflaviolin…",
+      "formula": "C20H7O10",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:77840"
+      }
     }
   ],
   "enzymes": [
@@ -144,6 +183,20 @@
       "name": "2-methoxy-6-polyprenyl-1,4-benzoquinol methylase",
       "ec": [
         "2.1.1.201"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_84",
+      "name": "methylquercetagetin 6-O-methyltransferase",
+      "ec": [
+        "2.1.1.84"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_69",
+      "name": "biflaviolin synthase",
+      "ec": [
+        "1.14.19.69"
       ]
     }
   ],
@@ -299,6 +352,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:44760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "methylquercetagetin 6-O-methyltransferase",
+      "equation": "3',4',5,6-tetrahydroxy-3,7-dimethoxyflavone + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,6,7-trimethoxyflavone + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.84",
+      "substrates": [
+        {
+          "metabolite": "3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_5_trihydroxy_3_6_7_trimethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18717"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18717"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "biflaviolin synthase",
+      "equation": "2 flaviolin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + H(+) = 3,8'-biflaviolin + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.69",
+      "substrates": [
+        {
+          "metabolite": "flaviolin_2_olate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_8_biflaviolin_2_7_2_triolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26035"
           }
         ]
       }

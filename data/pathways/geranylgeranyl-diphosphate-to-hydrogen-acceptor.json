@@ -100,6 +100,70 @@
       "xrefs": {
         "chebi": "CHEBI:78370"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "chamigrene",
+      "name": "(+)-β-chamigrene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61746"
+      }
+    },
+    {
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60344"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "biliverdin",
+      "name": "biliverdin δ",
+      "formula": "C33H33N4O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136510"
+      }
+    },
+    {
+      "id": "carbon_monoxide",
+      "name": "carbon monoxide",
+      "formula": "CO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17245"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
     }
   ],
   "enzymes": [
@@ -122,6 +186,20 @@
       "name": "cyclooctatin synthase",
       "ec": [
         "1.14.99.62"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_78",
+      "name": "beta-chamigrene synthase",
+      "ec": [
+        "4.2.3.78"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_58",
+      "name": "heme oxygenase (biliverdin-IX-beta and delta-forming)",
+      "ec": [
+        "1.14.99.58"
       ]
     }
   ],
@@ -273,6 +351,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:56824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-chamigrene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-chamigrene + diphosphate",
+      "ec": "4.2.3.78",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chamigrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30379"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30379"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "heme oxygenase (biliverdin-IX-beta and delta-forming)",
+      "equation": "heme b + 3 AH2 + 3 O2 + 3 H(+) = biliverdin IXdelta + CO + Fe(2+) + 3 A + 3 H2O",
+      "ec": "1.14.99.58",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biliverdin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbon_monoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:52224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52224"
           }
         ]
       }

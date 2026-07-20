@@ -17,4 +17,28 @@ pathway leukotriene-c4-to-fmnh2 "leukotriene C4 to FMNH2" {
     <-> ec_1_2_8_1 [1.2.8.1] +fmn +pyruvate +coa +hplus -acetyl_coa -co2
     fmnh2
   }
+
+  branch from leukotriene_a4 side left {
+    leukotriene_a4
+    <-> ec_1_13_11_34 [1.13.11.34] +o2 +h2o
+    arachidonate
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> ec_1_8_1_10 [1.8.1.10] +nadp +coa +nadph +hplus
+    coa_glutathione
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_19_65 [1.14.19.65] +s_scoulerine +fmnh2 +o2 +h2o +hplus
+    s_cheilanthifoline
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_18 [1.14.14.18] +ferroheme_b +o2 +carbon_monoxide +fe2 +fmn +h2o +hplus
+    biliverdin
+  }
 }

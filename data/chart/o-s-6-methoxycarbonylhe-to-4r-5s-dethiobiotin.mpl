@@ -17,4 +17,28 @@ pathway o-s-6-methoxycarbonylhe-to-4r-5s-dethiobiotin "O-[S-(6-methoxycarbonylhe
     <-> ec_6_3_3_3 [6.3.3.3] +7r_8s_7_8_diammoniononanoate +co2 +atp -adp -pi -hplus
     4r_5s_dethiobiotin
   }
+
+  branch from o_s_pimeloylpantetheine_4_phosphoryl_serine_2 side left {
+    o_s_pimeloylpantetheine_4_phosphoryl_serine_2
+    <-> ec_1_14_14_46 [1.14.14.46] +c2_c8_saturated_long_chain_fatty_acyl_pantethein +fmnh2 +o2 +fmn +h2o +hplus
+    fatty_aldehyde
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_97 [3.1.1.97] +diphthine_methyl_ester +h2o +hplus
+    diphthine_betaine
+  }
+
+  branch from 8s_8_amino_7_oxononanoic_acid side left {
+    8s_8_amino_7_oxononanoic_acid
+    <-> ec_2_6_1_121 [2.6.1.121] +l_lysinium +co2 +l_allysine +hplus
+    7r_8s_8_ammonio_7_carboxylatoamino_nonanoate
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_241 [2.3.1.241] +dodecanoyl_pantetheine_4_phosphorylserine_1 +kdo_2_lipid_iva
+    kdo_2_lauroyl_lipid_iva
+  }
 }

@@ -145,6 +145,44 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "amorpha_4_11_diene",
+      "name": "amorpha-4,11-diene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52026"
+      }
+    },
+    {
+      "id": "artemisinate",
+      "name": "(+)-artemisinate",
+      "formula": "C15H21O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64782"
+      }
+    },
+    {
+      "id": "24_methylidenelophenol",
+      "name": "24-methylidenelophenol",
+      "short": "24-methylidenelophe…",
+      "formula": "C29H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29107"
+      }
+    },
+    {
+      "id": "z_24_ethylidenelophenol",
+      "name": "(Z)-24-ethylidenelophenol",
+      "short": "24-ethylidenelophen…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33203"
+      }
     }
   ],
   "enzymes": [
@@ -174,6 +212,20 @@
       "name": "loganate O-methyltransferase",
       "ec": [
         "2.1.1.50"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_114",
+      "name": "amorpha-4,11-diene 12 monooxygenase",
+      "ec": [
+        "1.14.14.114"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_143",
+      "name": "24-methylenesterol C-methyltransferase",
+      "ec": [
+        "2.1.1.143"
       ]
     }
   ],
@@ -382,6 +434,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:12508"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "amorpha-4,11-diene 12 monooxygenase",
+      "equation": "(+)-amorpha-4,11-diene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = (+)-artemisinate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.114",
+      "substrates": [
+        {
+          "metabolite": "amorpha_4_11_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "artemisinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32999"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "24-methylenesterol C-methyltransferase",
+      "equation": "24-methylidenelophenol + S-adenosyl-L-methionine = (Z)-24-ethylidenelophenol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.143",
+      "substrates": [
+        {
+          "metabolite": "24_methylidenelophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_24_ethylidenelophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_143"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21044"
           }
         ]
       }

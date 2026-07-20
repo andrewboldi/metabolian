@@ -15,4 +15,22 @@ pathway formononetin-to-diphosphate "formononetin to diphosphate" {
     <-> ec_4_3_3_9 [4.3.3.9] +fmn +glutamine +atp +o2 -fmnh2 -amp -ppi -h2o
     indigoidine
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_17 [1.14.14.17] +squalene +fmnh2 +o2 +h2o +hplus
+    epoxysqualene
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +o2 +fmn +h2o +hplus
+    glyceollin_iii
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_68 [2.5.1.68] +ipp +gpp
+    2_cis_6_trans_farnesyl_diphosphate
+  }
 }

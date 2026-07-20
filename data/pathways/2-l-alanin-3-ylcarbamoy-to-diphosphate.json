@@ -119,6 +119,25 @@
       "xrefs": {
         "chebi": "CHEBI:136993"
       }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "2_epi_prezizaene",
+      "name": "(+)-2-epi-prezizaene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62762"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +160,13 @@
       "name": "staphyloferrin B synthase",
       "ec": [
         "6.3.2.56"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_226",
+      "name": "(+)-2-epi-prezizaene synthase",
+      "ec": [
+        "4.2.3.226"
       ]
     }
   ],
@@ -296,6 +322,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:59132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(+)-2-epi-prezizaene synthase",
+      "equation": "(2Z,6E)-farnesyl diphosphate = (+)-2-epi-prezizaene + diphosphate",
+      "ec": "4.2.3.226",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_epi_prezizaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_226"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31415"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31415"
           }
         ]
       }

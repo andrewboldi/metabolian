@@ -158,6 +158,25 @@
       "xrefs": {
         "chebi": "CHEBI:83905"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "drimenol",
+      "name": "drimenol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61148"
+      }
     }
   ],
   "enzymes": [
@@ -187,6 +206,13 @@
       "name": "UDP-N-acetylmuramoyl-L-alanyl-D-glutamate--2,6-diaminopimelate ligase",
       "ec": [
         "6.3.2.13"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_194",
+      "name": "(-)-drimenol synthase",
+      "ec": [
+        "4.2.3.194"
       ]
     }
   ],
@@ -415,6 +441,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:23676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(-)-drimenol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (5S,9S,10S)-drim-7-en-11-ol + diphosphate",
+      "ec": "4.2.3.194",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "drimenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_194"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28290"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28290"
           }
         ]
       }

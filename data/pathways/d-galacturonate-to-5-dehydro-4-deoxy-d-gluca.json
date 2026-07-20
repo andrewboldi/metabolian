@@ -83,6 +83,24 @@
       "xrefs": {
         "chebi": "CHEBI:42819"
       }
+    },
+    {
+      "id": "l_altrarate",
+      "name": "L-altrarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:37547"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
@@ -105,6 +123,13 @@
       "name": "D-galactarolactone cycloisomerase",
       "ec": [
         "5.5.1.27"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_156",
+      "name": "L-talarate dehydratase",
+      "ec": [
+        "4.2.1.156"
       ]
     }
   ],
@@ -232,6 +257,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:45600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-talarate dehydratase",
+      "equation": "L-altrarate = 5-dehydro-4-deoxy-D-glucarate + H2O",
+      "ec": "4.2.1.156",
+      "substrates": [
+        {
+          "metabolite": "l_altrarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_4_deoxy_d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_156"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44028"
           }
         ]
       }

@@ -119,6 +119,44 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "ecgoninium_methyl_ester",
+      "name": "ecgoninium methyl ester",
+      "short": "ecgoninium methyl…",
+      "formula": "C10H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59908"
+      }
+    },
+    {
+      "id": "cocaine",
+      "name": "cocaine",
+      "formula": "C17H22NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:60056"
+      }
+    },
+    {
+      "id": "l_homoserine",
+      "name": "L-homoserine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57476"
+      }
+    },
+    {
+      "id": "o_succinyl_l_homoserinate",
+      "name": "O-succinyl-L-homoserinate",
+      "short": "O-succinyl-L-homose…",
+      "formula": "C8H12NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57661"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +179,20 @@
       "name": "3,5-dihydroxybiphenyl synthase",
       "ec": [
         "2.3.1.177"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_334",
+      "name": "cocaine synthase",
+      "ec": [
+        "2.3.1.334"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_46",
+      "name": "homoserine O-succinyltransferase",
+      "ec": [
+        "2.3.1.46"
       ]
     }
   ],
@@ -288,6 +340,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:22292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cocaine synthase",
+      "equation": "ecgonine methyl ester + benzoyl-CoA = cocaine + CoA",
+      "ec": "2.3.1.334",
+      "substrates": [
+        {
+          "metabolite": "ecgoninium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cocaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_334"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "homoserine O-succinyltransferase",
+      "equation": "L-homoserine + succinyl-CoA = O-succinyl-L-homoserine + CoA",
+      "ec": "2.3.1.46",
+      "substrates": [
+        {
+          "metabolite": "l_homoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_succinyl_l_homoserinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22008"
           }
         ]
       }

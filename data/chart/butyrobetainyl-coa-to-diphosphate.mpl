@@ -17,4 +17,10 @@ pathway butyrobetainyl-coa-to-diphosphate "γ-butyrobetainyl-CoA to diphosphate"
     <-> ec_6_2_1_48 [6.2.1.48] +atp +coa -amp -ppi
     e_4_trimethylammonio_but_2_enoyl_coa
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_63 [4.2.3.63] +fpp
+    cubenene
+  }
 }

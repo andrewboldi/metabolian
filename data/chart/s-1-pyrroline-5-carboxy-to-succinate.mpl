@@ -15,4 +15,16 @@ pathway s-1-pyrroline-5-carboxy-to-succinate "(S)-1-pyrroline-5-carboxy… to su
     <-> ec_1_14_20_3 [1.14.20.3] +akg +o2 -succinate -co2 -h2o
     5r_carbapenem_3_carboxylate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_101 [4.2.3.101] +fpp
+    7_epi_sesquithujene
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_73 [1.14.11.73] +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
+  }
 }

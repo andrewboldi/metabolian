@@ -25,4 +25,28 @@ pathway lipid-a-4-e-coli-to-n-acylsphingosine "lipid A(4−) (E. coli) to N-acyl
     <-> ec_2_7_1_138 [2.7.1.138] +n_acylsphingosine +atp -adp -hplus
     n_acylsphingosine_1_phosphate
   }
+
+  branch from 2_acyl_sn_glycero_3_phosphocholine side left {
+    2_acyl_sn_glycero_3_phosphocholine
+    <-> ec_5_4_1_1 [5.4.1.1]
+    1_o_acyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from phosphatidylcholine side right {
+    phosphatidylcholine
+    <-> ec_2_3_1_251 [2.3.1.251] +a_lipid_iva +2_acyl_sn_glycero_3_phosphocholine
+    a_lipid_ivb
+  }
+
+  branch from choline side left {
+    choline
+    <-> ec_3_1_4_4 [3.1.4.4] +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_acyl_sn_glycerol_3_phosphate
+  }
+
+  branch from phosphocholine side right {
+    phosphocholine
+    <-> ec_2_1_1_103 [2.1.1.103] +n_n_dimethylethanolamine_phosphate +sam +hplus
+    sah
+  }
 }

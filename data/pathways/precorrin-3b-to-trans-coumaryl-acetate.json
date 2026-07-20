@@ -137,6 +137,35 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "2_o_methylguanosine_5_monophosphate_1",
+      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
+      "short": "2'-O-methylguanosin…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74445"
+      }
+    },
+    {
+      "id": "precorrin_6y",
+      "name": "precorrin-6Y",
+      "formula": "C44H50N4O16",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:58532"
+      }
     }
   ],
   "enzymes": [
@@ -166,6 +195,20 @@
       "name": "isoeugenol synthase",
       "ec": [
         "1.1.1.319"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_185",
+      "name": "23S rRNA (guanosine(2251)-2'-O)-methyltransferase",
+      "ec": [
+        "2.1.1.185"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_54",
+      "name": "precorrin-6A reductase",
+      "ec": [
+        "1.3.1.54"
       ]
     }
   ],
@@ -366,6 +409,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:36243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "23S rRNA (guanosine(2251)-2'-O)-methyltransferase",
+      "equation": "guanosine(2251) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(2251) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.185",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_185"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24140"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "precorrin-6A reductase",
+      "equation": "precorrin-6B + NADP(+) = precorrin-6A + NADPH + 2 H(+)",
+      "ec": "1.3.1.54",
+      "substrates": [
+        {
+          "metabolite": "precorrin_6y",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precorrin_6a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23408"
           }
         ]
       }

@@ -164,6 +164,83 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "lithocholate",
+      "name": "lithocholate",
+      "formula": "C24H39O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29744"
+      }
+    },
+    {
+      "id": "hyodeoxycholate",
+      "name": "hyodeoxycholate",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58875"
+      }
+    },
+    {
+      "id": "l_threo_3_phenylserine",
+      "name": "L-threo-3-phenylserine",
+      "short": "L-threo-3-phenylser…",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57901"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "s_4_hydroxymandelonitrile",
+      "name": "(S)-4-hydroxymandelonitrile",
+      "short": "4-hydroxymandelonit…",
+      "formula": "C8H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16660"
+      }
+    },
+    {
+      "id": "4_hydroxybenzaldehyde",
+      "name": "4-hydroxybenzaldehyde",
+      "short": "4-hydroxybenzaldehy…",
+      "formula": "C7H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17597"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "n6_methyladenosine_5_monophosphate_1",
+      "name": "N6-methyladenosine 5'-monophosphate(1−)",
+      "short": "N6-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74449"
+      }
     }
   ],
   "enzymes": [
@@ -200,6 +277,34 @@
       "name": "benzoate O-methyltransferase",
       "ec": [
         "2.1.1.273"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_57",
+      "name": "taurochenodeoxycholate 6alpha-hydroxylase",
+      "ec": [
+        "1.14.14.57"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_26",
+      "name": "phenylserine aldolase",
+      "ec": [
+        "4.1.2.26"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_11",
+      "name": "hydroxymandelonitrile lyase",
+      "ec": [
+        "4.1.2.11"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_181",
+      "name": "23S rRNA (adenine(1618)-N(6))-methyltransferase",
+      "ec": [
+        "2.1.1.181"
       ]
     }
   ],
@@ -437,6 +542,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:36099"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "taurochenodeoxycholate 6alpha-hydroxylase",
+      "equation": "lithocholate + reduced [NADPH--hemoprotein reductase] + O2 = hyodeoxycholate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.57",
+      "substrates": [
+        {
+          "metabolite": "lithocholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hyodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23644"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "phenylserine aldolase",
+      "equation": "L-threo-3-phenylserine = benzaldehyde + glycine",
+      "ec": "4.1.2.26",
+      "substrates": [
+        {
+          "metabolite": "l_threo_3_phenylserine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:21712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "hydroxymandelonitrile lyase",
+      "equation": "(S)-4-hydroxymandelonitrile = 4-hydroxybenzaldehyde + hydrogen cyanide",
+      "ec": "4.1.2.11",
+      "substrates": [
+        {
+          "metabolite": "s_4_hydroxymandelonitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:15977"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "23S rRNA (adenine(1618)-N(6))-methyltransferase",
+      "equation": "adenosine(1618) in 23S rRNA + S-adenosyl-L-methionine = N(6)-methyladenosine(1618) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.181",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyladenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_181"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:16497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16497"
           }
         ]
       }

@@ -144,6 +144,33 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "c_di_gmp",
+      "name": "c-di-GMP",
+      "formula": "C20H22N10O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58805"
+      }
+    },
+    {
+      "id": "adenosine",
+      "name": "Adenosine",
+      "formula": "C10H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16335"
+      }
     }
   ],
   "enzymes": [
@@ -187,6 +214,20 @@
       "name": "ADP--thymidine kinase",
       "ec": [
         "2.7.1.118"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_65",
+      "name": "diguanylate cyclase",
+      "ec": [
+        "2.7.7.65"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_114",
+      "name": "AMP--thymidine kinase",
+      "ec": [
+        "2.7.1.114"
       ]
     }
   ],
@@ -420,6 +461,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:13413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "diguanylate cyclase",
+      "equation": "2 GTP = 3',3'-c-di-GMP + 2 diphosphate",
+      "ec": "2.7.7.65",
+      "substrates": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_di_gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24898"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "AMP--thymidine kinase",
+      "equation": "thymidine + AMP = dTMP + adenosine",
+      "ec": "2.7.1.114",
+      "substrates": [
+        {
+          "metabolite": "thymidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:14913"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14913"
           }
         ]
       }

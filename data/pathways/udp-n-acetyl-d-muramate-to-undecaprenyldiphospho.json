@@ -161,6 +161,51 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "uridine_5_aldehyde",
+      "name": "uridine-5'-aldehyde",
+      "formula": "C9H10N2O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86258"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -190,6 +235,13 @@
       "name": "undecaprenyldiphospho-muramoylpentapeptide beta-N-",
       "ec": [
         "2.4.1.227"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_49",
+      "name": "uridine-5'-phosphate dioxygenase",
+      "ec": [
+        "1.14.11.49"
       ]
     }
   ],
@@ -398,6 +450,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:31227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "uridine-5'-phosphate dioxygenase",
+      "equation": "UMP + 2-oxoglutarate + O2 = uridine-5'-aldehyde + succinate + CO2 + phosphate",
+      "ec": "1.14.11.49",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine_5_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46500"
           }
         ]
       }

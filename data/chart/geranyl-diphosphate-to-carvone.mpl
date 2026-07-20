@@ -15,4 +15,28 @@ pathway geranyl-diphosphate-to-carvone "geranyl diphosphate to (+)-carvone" {
     <-> ec_1_1_1_275 [1.1.1.275] +nad -nadh -hplus
     carvone
   }
+
+  branch from 4r_limonene side left {
+    4r_limonene
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +o2 +hplus +nad +h2o
+    limonene_1_2_epoxide
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
+    2_trans_6_trans_farnesol
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_79 [1.14.14.79] +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat
+  }
+
+  branch from carvone side right {
+    carvone
+    <-> ec_1_1_1_n4 [1.1.1.n4] +nad +nadh +hplus
+    cis_carveol
+  }
 }

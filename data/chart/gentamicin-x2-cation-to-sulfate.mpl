@@ -19,4 +19,28 @@ pathway gentamicin-x2-cation-to-sulfate "gentamicin X2 cation to sulfate" {
     <-> ec_1_8_2_1 [1.8.2.1] +iron +h2o -fe2 -hplus
     sulfate
   }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_3_99_30 [1.3.99.30] +15_cis_phytoene +hydrogen_donor
+    all_trans_3_4_didehydrolycopene
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_49 [2.1.1.49] +primary_ammonium_ion +sam +hplus
+    methylated_primary_amine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_99_3 [4.3.99.3] +5_6_7_8_tetrahydropterin_6_carboxylate +hplus
+    7_carboxylato_7_deazaguanine
+  }
+
+  branch from h2s side right {
+    h2s
+    <-> ec_1_8_5_8 [1.8.5.8] +1_4_benzoquinones +gsh +hplus +hydroquinones
+    s_sulfanylglutathionate
+  }
 }

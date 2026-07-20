@@ -129,6 +129,81 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "n4_acetylcytosine",
+      "name": "N4-acetylcytosine",
+      "formula": "C6H7N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146134"
+      }
+    },
+    {
+      "id": "cytosine",
+      "name": "cytosine",
+      "formula": "C4H5N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16040"
+      }
+    },
+    {
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78449"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57533"
+      }
+    },
+    {
+      "id": "fusicocca_2_10_14_diene",
+      "name": "fusicocca-2,10(14)-diene",
+      "short": "fusicocca-2,10(14)-…",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52463"
+      }
+    },
+    {
+      "id": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
+      "name": "O-(S-hexadecanoylpantetheine-4'-phosphoryl)serine(1−)",
+      "short": "O-(S-hexadecanoylpa…",
+      "formula": "C30H55N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78483"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
     }
   ],
   "enzymes": [
@@ -151,6 +226,41 @@
       "name": "3-carboxymethyl-3-hydroxy-acyl-[ACP] synthase",
       "ec": [
         "2.3.3.22"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_135",
+      "name": "N(4)-acetylcytidine amidohydrolase",
+      "ec": [
+        "3.5.1.135"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_87",
+      "name": "malonyl-[malonate decarboxylase] decarboxylase",
+      "ec": [
+        "4.1.1.87"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_124",
+      "name": "malonyl-[acp] decarboxylase",
+      "ec": [
+        "4.1.1.124"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_43",
+      "name": "fusicocca-2,10(14)-diene synthase",
+      "ec": [
+        "4.2.3.43"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_14",
+      "name": "oleoyl-[acyl-carrier-protein] hydrolase",
+      "ec": [
+        "3.1.2.14"
       ]
     }
   ],
@@ -302,6 +412,190 @@
           {
             "db": "Rhea",
             "id": "RHEA:78795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N(4)-acetylcytidine amidohydrolase",
+      "equation": "N(4)-acetylcytosine + H2O = cytosine + acetate + H(+)",
+      "ec": "3.5.1.135",
+      "substrates": [
+        {
+          "metabolite": "n4_acetylcytosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_135"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62940"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "malonyl-[malonate decarboxylase] decarboxylase",
+      "equation": "malonyl-[ACP] + H(+) = acetyl-[ACP] + CO2",
+      "ec": "4.1.1.87",
+      "substrates": [
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24460"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "fusicocca-2,10(14)-diene synthase",
+      "equation": "geranylgeranyl diphosphate = fusicocca-2,10(14)-diene + diphosphate",
+      "ec": "4.2.3.43",
+      "substrates": [
+        {
+          "metabolite": "geranylgeranyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fusicocca_2_10_14_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:26245"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "oleoyl-[acyl-carrier-protein] hydrolase",
+      "equation": "hexadecanoyl-[ACP] + H2O = hexadecanoate + holo-[ACP] + H(+)",
+      "ec": "3.1.2.14",
+      "substrates": [
+        {
+          "metabolite": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:41932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41932"
           }
         ]
       }

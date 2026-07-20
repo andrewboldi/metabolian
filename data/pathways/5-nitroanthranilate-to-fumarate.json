@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-nitroanthranilate-to-fumarate",
   "name": "5-nitroanthranilate to fumarate",
-  "category": "energy-metabolism",
+  "category": "redox-detox",
   "summary": "A 5-step route from 5-nitroanthranilate to fumarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -126,6 +126,71 @@
       "xrefs": {
         "chebi": "CHEBI:15361"
       }
+    },
+    {
+      "id": "2_phenylethanaminium",
+      "name": "2-phenylethanaminium",
+      "formula": "C8H12N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:225237"
+      }
+    },
+    {
+      "id": "phenylacetaldehyde",
+      "name": "phenylacetaldehyde",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16424"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "4_methyl_5_nitrocatechol",
+      "name": "4-methyl-5-nitrocatechol",
+      "short": "4-methyl-5-nitrocat…",
+      "formula": "C7H7NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81666"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "2_oxido_5_methylquinone",
+      "name": "2-oxido-5-methylquinone",
+      "short": "2-oxido-5-methylqui…",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:88190"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
     }
   ],
   "enzymes": [
@@ -162,6 +227,20 @@
       "name": "3-fumarylpyruvate hydrolase",
       "ec": [
         "3.7.1.20"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_21",
+      "name": "primary-amine oxidase",
+      "ec": [
+        "1.4.3.21"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_210",
+      "name": "4-methyl-5-nitrocatechol 5-monooxygenase",
+      "ec": [
+        "1.14.13.210"
       ]
     }
   ],
@@ -391,6 +470,120 @@
           {
             "db": "Rhea",
             "id": "RHEA:26168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "primary-amine oxidase",
+      "equation": "2-phenylethylamine + O2 + H2O = 2-phenylacetaldehyde + H2O2 + NH4(+)",
+      "ec": "1.4.3.21",
+      "substrates": [
+        {
+          "metabolite": "2_phenylethanaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25265"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "4-methyl-5-nitrocatechol 5-monooxygenase",
+      "equation": "4-methyl-5-nitrocatechol + NADH + O2 = 2-hydroxy-5-methylquinone + nitrite + NAD(+) + H2O + H(+)",
+      "ec": "1.14.13.210",
+      "substrates": [
+        {
+          "metabolite": "4_methyl_5_nitrocatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxido_5_methylquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_210"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:48016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48016"
           }
         ]
       }

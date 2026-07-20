@@ -17,4 +17,28 @@ pathway 2-oxo-aldehyde-to-ammonium "2-oxo aldehyde to ammonium" {
     <-> ec_3_5_1_3 [3.5.1.3] +h2o -nh3
     akg
   }
+
+  branch from 2_oxo_monocarboxylic_acid_anion side left {
+    2_oxo_monocarboxylic_acid_anion
+    <-> ec_1_1_1_272 [1.1.1.272] +nadp +nadph +hplus
+    2r_2_hydroxy_monocarboxylic_acid_anion
+  }
+
+  branch from l_amino_acid side right {
+    l_amino_acid
+    <-> ec_6_3_2_52 [6.3.2.52] +jasmonic_acid_anion +atp +amp +ppi +hplus
+    n_jasmonyl_l_amino_acid_anion
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_2_1_1_280 [2.1.1.280] +s_methyl_l_methionine +l_selenocysteine +hplus
+    se_methyl_l_selenocysteine
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_2_6_1_54 [2.6.1.54] +pyridoxamine_5_phosphate +plp
+    d_glutamate
+  }
 }

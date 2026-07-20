@@ -15,4 +15,16 @@ pathway n5-phospho-l-glutamine-to-cytidine-3-phospho-5-d "N5-phospho-L-glutamine
     <-> ec_2_7_1_224 [2.7.1.224] +atp -adp -hplus
     cytidine_3_phospho_5_diphosphoramidate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_85 [4.2.3.85] +fpp +h2o
+    eudesmol
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_95 [2.6.1.95] +neomycin_c +akg
+    6_oxoneomycin_c
+  }
 }

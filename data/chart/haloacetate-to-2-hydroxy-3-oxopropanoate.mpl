@@ -15,4 +15,28 @@ pathway haloacetate-to-2-hydroxy-3-oxopropanoate "haloacetate to 2-hydroxy-3-oxo
     <-> ec_4_1_1_47 [4.1.1.47] +hplus -co2
     2_hydroxy_3_oxopropanoate
   }
+
+  branch from halide_anion side left {
+    halide_anion
+    <-> ec_3_8_1_9 [3.8.1.9] +r_2_halocarboxylic_acid_anion +h2o +hplus
+    2s_2_hydroxy_monocarboxylic_acid_anion
+  }
+
+  branch from glycolate side right {
+    glycolate
+    <-> ec_3_8_1_3 [3.8.1.3] +h2o +chloride +hplus
+    chloroacetate
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_4_1_3_1 [4.1.3.1] +d_threo_isocitrate
+    succinate
+  }
+
+  branch from 2_hydroxy_3_oxopropanoate side right {
+    2_hydroxy_3_oxopropanoate
+    <-> ec_4_1_2_20 [4.1.2.20] +pyruvate
+    2_dehydro_3_deoxy_d_glucarate
+  }
 }

@@ -131,6 +131,45 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-5-hexenoylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-5-hexenoylpant…",
+      "formula": "C20H33N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86298"
+      }
+    },
+    {
+      "id": "o_s_5_hexynoylpantetheine_4_phosphoryl_serine_1",
+      "name": "O-[S-5-hexynoylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-5-hexynoylpant…",
+      "formula": "C20H31N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86299"
+      }
+    },
+    {
+      "id": "tricetin",
+      "name": "tricetin",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60045"
+      }
+    },
+    {
+      "id": "3_4_5_o_trimethyltricetin",
+      "name": "3',4',5'-O-trimethyltricetin",
+      "short": "3',4',5'-O-trimethy…",
+      "formula": "C18H15O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60020"
+      }
     }
   ],
   "enzymes": [
@@ -153,6 +192,20 @@
       "name": "4-hydroxy-3-methoxy-5-polyprenylbenzoate decarboxylase",
       "ec": [
         "4.1.1.130"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_40",
+      "name": "hex-5-enoyl-[acyl-carrier protein] acetylenase",
+      "ec": [
+        "1.14.19.40"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_169",
+      "name": "tricetin 3',4',5'-O-trimethyltransferase",
+      "ec": [
+        "2.1.1.169"
       ]
     }
   ],
@@ -304,6 +357,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:81263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hex-5-enoyl-[acyl-carrier protein] acetylenase",
+      "equation": "5-hexenoyl-[ACP] + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 5-hexynoyl-[ACP] + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.40",
+      "substrates": [
+        {
+          "metabolite": "o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_5_hexynoylpantetheine_4_phosphoryl_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tricetin 3',4',5'-O-trimethyltransferase",
+      "equation": "tricetin + 3 S-adenosyl-L-methionine = 3',4',5'-O-trimethyltricetin + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.169",
+      "substrates": [
+        {
+          "metabolite": "tricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_5_o_trimethyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_169"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32351"
           }
         ]
       }

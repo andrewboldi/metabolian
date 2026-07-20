@@ -27,4 +27,28 @@ pathway 6s-5-formyltetrahydrofo-to-3-hydroxy-2-4-dioxop "(6S)-5-formyltetrahydro
     <-> ec_5_3_1_32 [5.3.1.32]
     3_hydroxy_2_4_dioxopentyl_phosphate
   }
+
+  branch from methenyl_thf side left {
+    methenyl_thf
+    <-> ec_4_3_1_4 [4.3.1.4] +5_formimidoyltetrahydrofolate +hplus
+    nh3
+  }
+
+  branch from thf side right {
+    thf
+    <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +methylene_thf +nadh +hplus +nad
+    5_methyluridine_5_monophosphate_1
+  }
+
+  branch from dimethyl_sulfide side left {
+    dimethyl_sulfide
+    <-> ec_1_14_13_245 [1.14.13.245] +nadh +o2 +hplus +nad +h2o
+    dimethyl_sulfoxide
+  }
+
+  branch from 6s_5_methyltetrahydrofolate side right {
+    6s_5_methyltetrahydrofolate
+    <-> ec_1_5_1_20 [1.5.1.20] +nad +nadh +hplus
+    methylene_thf
+  }
 }

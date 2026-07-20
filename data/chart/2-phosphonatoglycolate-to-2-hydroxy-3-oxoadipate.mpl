@@ -15,4 +15,22 @@ pathway 2-phosphonatoglycolate-to-2-hydroxy-3-oxoadipate "2-phosphonatoglycolate
     <-> ec_2_2_1_5 [2.2.1.5] +akg +hplus -co2
     2_hydroxy_3_oxoadipate
   }
+
+  branch from glycolate side left {
+    glycolate
+    <-> ec_3_5_1_124 [3.5.1.124] +s_1_hydroxy_2_oxoethyl_l_cysteine +h2o +hplus
+    l_cysteine
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_1_14_14_10 [1.14.14.10] +nitrilotriacetate +fmnh2 +o2 +fmn +h2o
+    ammoniodiacetate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_14_99_22 [1.14.99.22] +ecdysone +o2 +hydrogen_acceptor +h2o
+    20_hydroxyecdysone
+  }
 }

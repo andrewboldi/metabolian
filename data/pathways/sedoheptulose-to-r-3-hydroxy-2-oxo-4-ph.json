@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sedoheptulose-to-r-3-hydroxy-2-oxo-4-ph",
   "name": "sedoheptulose… to (R)-3-hydroxy-2-oxo-4-(ph…",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from sedoheptulose 1,7-bisphosphate(4−) to (R)-3-hydroxy-2-oxo-4-(phosphonatoooxy)butanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -132,6 +132,99 @@
       "xrefs": {
         "chebi": "CHEBI:58538"
       }
+    },
+    {
+      "id": "r_demethyl_4_deoxygadusol",
+      "name": "(R)-demethyl-4-deoxygadusol",
+      "short": "demethyl-4-deoxygad…",
+      "formula": "C7H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132139"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "d_fructofuranosyl_d_mannopyranoside_6f_phosphat",
+      "name": "β-D-fructofuranosyl α-D-mannopyranoside 6F-phosphate",
+      "short": "β-D-fructofuranosyl…",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58870"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "d_erythronate",
+      "name": "D-erythronate",
+      "formula": "C4H7O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136591"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "4_phosphonatooxy_l_threonine",
+      "name": "4-(phosphonatooxy)-L-threonine",
+      "short": "4-(phosphonatooxy)-…",
+      "formula": "C4H8NO7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58452"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
     }
   ],
   "enzymes": [
@@ -161,6 +254,34 @@
       "name": "4-phosphoerythronate dehydrogenase",
       "ec": [
         "1.1.1.290"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_154",
+      "name": "demethyl-4-deoxygadusol synthase",
+      "ec": [
+        "4.2.3.154"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_246",
+      "name": "mannosylfructose-phosphate synthase",
+      "ec": [
+        "2.4.1.246"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_220",
+      "name": "D-erythronate 4-kinase",
+      "ec": [
+        "2.7.1.220"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_52",
+      "name": "phosphoserine transaminase",
+      "ec": [
+        "2.6.1.52"
       ]
     }
   ],
@@ -353,6 +474,198 @@
           {
             "db": "Rhea",
             "id": "RHEA:18829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "demethyl-4-deoxygadusol synthase",
+      "equation": "D-sedoheptulose 7-phosphate = (R)-demethyl-4-deoxygadusol + phosphate + H2O + H(+)",
+      "ec": "4.2.3.154",
+      "substrates": [
+        {
+          "metabolite": "s7p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_demethyl_4_deoxygadusol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_154"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "mannosylfructose-phosphate synthase",
+      "equation": "beta-D-fructose 6-phosphate + GDP-alpha-D-mannose = beta-D-fructofuranosyl alpha-D-mannopyranoside 6(F)-phosphate + GDP + H(+)",
+      "ec": "2.4.1.246",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranosyl_d_mannopyranoside_6f_phosphat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_246"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:26039"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26039"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "D-erythronate 4-kinase",
+      "equation": "D-erythronate + ATP = 4-phospho-D-erythronate + ADP + H(+)",
+      "ec": "2.7.1.220",
+      "substrates": [
+        {
+          "metabolite": "d_erythronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_phosphonato_d_erythronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:52392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "phosphoserine transaminase",
+      "equation": "4-(phosphooxy)-L-threonine + 2-oxoglutarate = (R)-3-hydroxy-2-oxo-4-phosphooxybutanoate + L-glutamate",
+      "ec": "2.6.1.52",
+      "substrates": [
+        {
+          "metabolite": "4_phosphonatooxy_l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_52"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:16573"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16573"
           }
         ]
       }

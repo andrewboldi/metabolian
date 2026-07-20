@@ -25,4 +25,28 @@ pathway n2-acetyl-l-ornithine-to-aromatic-carboxylate "N2-acetyl-L-ornithine to 
     <-> ec_1_2_1_30 [1.2.1.30] +arenecarbaldehyde +amp +ppi +nadp -atp -nadph -hplus
     aromatic_carboxylate
   }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_3_5_3_1 [3.5.3.1] +arginine +h2o
+    urea
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_3 [2.8.3.3] +malonate +acetyl_coa
+    malonyl-coa
+  }
+
+  branch from d_ornithinium side left {
+    d_ornithinium
+    <-> ec_6_3_2_58 [6.3.2.58] +citrate +atp +amp +ppi +hplus
+    n5_s_citryl_d_ornithine
+  }
+
+  branch from r_2_amino_4_oxopentanoic_acid side right {
+    r_2_amino_4_oxopentanoic_acid
+    <-> ec_2_3_1_263 [2.3.1.263] +acetyl_coa +coa
+    d_alanine
+  }
 }

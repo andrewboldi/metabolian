@@ -242,6 +242,100 @@
       "xrefs": {
         "chebi": "CHEBI:15740"
       }
+    },
+    {
+      "id": "3_hydroxypropanal",
+      "name": "3-hydroxypropanal",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17871"
+      }
+    },
+    {
+      "id": "2_azaniumyl_4_5_dihydroxy_6_oxo_7_phosphonatooxy",
+      "name": "2-azaniumyl-4,5-dihydroxy-6-oxo-7-(phosphonatooxy)heptanoate",
+      "short": "2-azaniumyl-4,5-dih…",
+      "formula": "C7H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58898"
+      }
+    },
+    {
+      "id": "l_aspartic_acid_4_semialdehyde",
+      "name": "L-aspartic acid 4-semialdehyde",
+      "short": "L-aspartic acid…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:537519"
+      }
+    },
+    {
+      "id": "arsenate",
+      "name": "arsenate",
+      "formula": "HAsO4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:48597"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "1_arsono_3_phospho_d_glycerate",
+      "name": "1-arsono-3-phospho-D-glycerate",
+      "short": "1-arsono-3-phospho-…",
+      "formula": "C3H4AsO10P",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:176523"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "acetoin",
+      "name": "acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15688"
+      }
+    },
+    {
+      "id": "1_deoxy_d_altro_heptulose_7_phosphate",
+      "name": "1-deoxy-D-altro-heptulose 7-phosphate",
+      "short": "1-deoxy-D-altro-hep…",
+      "formula": "C7H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57764"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
     }
   ],
   "enzymes": [
@@ -306,6 +400,34 @@
       "name": "3,4-dihydroxy-2-butanone-4-phosphate synthase",
       "ec": [
         "4.1.99.12"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_30",
+      "name": "glycerol dehydratase",
+      "ec": [
+        "4.2.1.30"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_56",
+      "name": "2-amino-4,5-dihydroxy-6-oxo-7-(phosphonooxy)heptanoate synthase",
+      "ec": [
+        "4.1.2.56"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_107",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (arsenate-transferring)",
+      "ec": [
+        "1.2.1.107"
+      ]
+    },
+    {
+      "id": "ec_2_2_1_4",
+      "name": "acetoin--ribose-5-phosphate transaldolase",
+      "ec": [
+        "2.2.1.4"
       ]
     }
   ],
@@ -707,6 +829,186 @@
           {
             "db": "Rhea",
             "id": "RHEA:18457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "glycerol dehydratase",
+      "equation": "glycerol = 3-hydroxypropanal + H2O",
+      "ec": "4.2.1.30",
+      "substrates": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxypropanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:19765"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19765"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "2-amino-4,5-dihydroxy-6-oxo-7-(phosphonooxy)heptanoate synthase",
+      "equation": "2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate = L-aspartate 4-semialdehyde + dihydroxyacetone phosphate",
+      "ec": "4.1.2.56",
+      "substrates": [
+        {
+          "metabolite": "2_azaniumyl_4_5_dihydroxy_6_oxo_7_phosphonatooxy",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_aspartic_acid_4_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:26313"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26313"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (arsenate-transferring)",
+      "equation": "arsenate + D-glyceraldehyde 3-phosphate + NAD(+) = 1-arsono-3-phospho-D-glycerate + NADH + H(+)",
+      "ec": "1.2.1.107",
+      "substrates": [
+        {
+          "metabolite": "arsenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_arsono_3_phospho_d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_107"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:68560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "acetoin--ribose-5-phosphate transaldolase",
+      "equation": "aldehydo-D-ribose 5-phosphate + acetoin = 1-deoxy-D-altro-heptulose 7-phosphate + acetaldehyde",
+      "ec": "2.2.1.4",
+      "substrates": [
+        {
+          "metabolite": "r5p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_deoxy_d_altro_heptulose_7_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:21504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21504"
           }
         ]
       }

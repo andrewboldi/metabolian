@@ -117,6 +117,87 @@
       "xrefs": {
         "chebi": "CHEBI:57722"
       }
+    },
+    {
+      "id": "r_mandelamide",
+      "name": "(R)-mandelamide",
+      "formula": "C8H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17352"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_hydroxybenzoyl_coa",
+      "name": "3-hydroxybenzoyl-CoA",
+      "formula": "C28H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57342"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
     }
   ],
   "enzymes": [
@@ -146,6 +227,27 @@
       "name": "ornithine N-benzoyltransferase",
       "ec": [
         "2.3.1.127"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_86",
+      "name": "mandelamide amidase",
+      "ec": [
+        "3.5.1.86"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_31",
+      "name": "(S)-mandelate dehydrogenase",
+      "ec": [
+        "1.1.99.31"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_58",
+      "name": "benzoyl-CoA 3-monooxygenase",
+      "ec": [
+        "1.14.13.58"
       ]
     }
   ],
@@ -334,6 +436,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:16929"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "mandelamide amidase",
+      "equation": "(R)-mandelamide + H2O = (R)-mandelate + NH4(+)",
+      "ec": "3.5.1.86",
+      "substrates": [
+        {
+          "metabolite": "r_mandelamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_mandelate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_86"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22876"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22876"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(S)-mandelate dehydrogenase",
+      "equation": "(S)-mandelate + A = phenylglyoxylate + AH2",
+      "ec": "1.1.99.31",
+      "substrates": [
+        {
+          "metabolite": "s_mandelate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylglyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:15749"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "benzoyl-CoA 3-monooxygenase",
+      "equation": "benzoyl-CoA + NADPH + O2 + H(+) = 3-hydroxybenzoyl-CoA + NADP(+) + H2O",
+      "ec": "1.14.13.58",
+      "substrates": [
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:23216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23216"
           }
         ]
       }

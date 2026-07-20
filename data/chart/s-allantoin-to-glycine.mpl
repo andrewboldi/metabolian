@@ -17,4 +17,22 @@ pathway s-allantoin-to-glycine "(S)-(+)-allantoin to glycine" {
     <-> ec_2_6_1_44 [2.6.1.44] +glyoxylate +alanine -pyruvate
     glycine
   }
+
+  branch from allantoate side left {
+    allantoate
+    <-> ec_2_1_3_16 [2.1.3.16] +carbamoyl_p +pi +hplus
+    s_2_ureidoglycine
+  }
+
+  branch from ureidoglycolate side right {
+    ureidoglycolate
+    <-> ec_1_1_1_154 [1.1.1.154] +nadp +nadph +hplus
+    oxalurate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_3_1_1_96 [3.1.1.96] +3_glycyladenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
+  }
 }

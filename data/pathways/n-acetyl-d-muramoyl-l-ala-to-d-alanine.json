@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acetyl-d-muramoyl-l-ala-to-d-alanine",
   "name": "N-acetyl-D-muramoyl-L-ala… to D-alanine",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from N-acetyl-D-muramoyl-L-alanyl-γ-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine(2−) to D-alanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -110,6 +110,24 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "dserine",
+      "name": "D-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35247"
+      }
+    },
+    {
+      "id": "d_alanyl_d_serine",
+      "name": "D-alanyl-D-serine",
+      "formula": "C6H12N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60390"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +157,13 @@
       "name": "D-Ala-D-Ala dipeptidase",
       "ec": [
         "3.4.13.22"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_35",
+      "name": "D-alanine--D-serine ligase",
+      "ec": [
+        "6.3.2.35"
       ]
     }
   ],
@@ -323,6 +348,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:20661"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "D-alanine--D-serine ligase",
+      "equation": "D-serine + D-alanine + ATP = D-alanyl-D-serine + ADP + phosphate + H(+)",
+      "ec": "6.3.2.35",
+      "substrates": [
+        {
+          "metabolite": "dserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_alanyl_d_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27706"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27706"
           }
         ]
       }

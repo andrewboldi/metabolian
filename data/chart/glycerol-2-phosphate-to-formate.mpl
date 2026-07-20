@@ -27,4 +27,28 @@ pathway glycerol-2-phosphate-to-formate "glycerol 2-phosphate to formate" {
     <-> ec_4_1_99_12 [4.1.99.12] -formate -hplus
     2s_2_hydroxy_3_oxobutyl_phosphate
   }
+
+  branch from glycerol side left {
+    glycerol
+    <-> ec_4_2_1_30 [4.2.1.30] +h2o
+    3_hydroxypropanal
+  }
+
+  branch from dhap side right {
+    dhap
+    <-> ec_4_1_2_56 [4.1.2.56] +2_azaniumyl_4_5_dihydroxy_6_oxo_7_phosphonatooxy
+    l_aspartic_acid_4_semialdehyde
+  }
+
+  branch from g3p side left {
+    g3p
+    <-> ec_1_2_1_107 [1.2.1.107] +arsenate +nad +nadh +hplus
+    1_arsono_3_phospho_d_glycerate
+  }
+
+  branch from r5p side right {
+    r5p
+    <-> ec_2_2_1_4 [2.2.1.4] +acetoin +acetaldehyde
+    1_deoxy_d_altro_heptulose_7_phosphate
+  }
 }

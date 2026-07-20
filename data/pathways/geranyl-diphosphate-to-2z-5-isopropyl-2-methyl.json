@@ -109,6 +109,25 @@
       "xrefs": {
         "chebi": "CHEBI:17546"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "germacrene_c",
+      "name": "germacrene C",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61478"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +150,13 @@
       "name": "alpha-pinene-oxide decyclase",
       "ec": [
         "5.5.1.10"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_60",
+      "name": "germacrene C synthase",
+      "ec": [
+        "4.2.3.60"
       ]
     }
   ],
@@ -266,6 +292,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:16693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "germacrene C synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = germacrene C + diphosphate",
+      "ec": "4.2.3.60",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germacrene_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28302"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28302"
           }
         ]
       }

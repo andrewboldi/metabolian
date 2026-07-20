@@ -17,4 +17,28 @@ pathway 3-s-strictosidinium-to-s-adenosyl-l-homocysteine "3α(S)-strictosidinium
     <-> ec_2_1_1_345 [2.1.1.345] +sam -sah -hplus
     psilocybin
   }
+
+  branch from tryptaminium side left {
+    tryptaminium
+    <-> ec_4_1_1_28 [4.1.1.28] +hplus +co2
+    l_tryptophan
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_14_99_29 [1.14.99.29] +deoxyhypusine_2 +hydrogen_donor +o2 +h2o
+    hypusine_2
+  }
+
+  branch from psilocybin side left {
+    psilocybin
+    <-> ec_2_7_1_222 [2.7.1.222] +atp +adp +hplus
+    psilocinium
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_301 [2.1.1.301] +l_alaniniumyl_group +sam +hplus
+    n_n_dimethyl_l_alanyl_group
+  }
 }

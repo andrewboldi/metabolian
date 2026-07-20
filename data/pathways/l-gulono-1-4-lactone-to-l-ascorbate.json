@@ -101,6 +101,62 @@
       "xrefs": {
         "chebi": "CHEBI:58297"
       }
+    },
+    {
+      "id": "mdha",
+      "name": "Monodehydroascorbate (ascorbate radical)",
+      "short": "Monodehydroascorbat…",
+      "formula": "C6H6O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59513"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "l_galactono_1_4_lactone",
+      "name": "L-galactono-1,4-lactone",
+      "short": "L-galactono-1,4-lac…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17464"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +179,20 @@
       "name": "glutathione dehydrogenase (ascorbate)",
       "ec": [
         "1.8.5.1"
+      ]
+    },
+    {
+      "id": "ec_1_6_5_4",
+      "name": "monodehydroascorbate reductase (NADH)",
+      "ec": [
+        "1.6.5.4"
+      ]
+    },
+    {
+      "id": "ec_1_3_2_3",
+      "name": "L-galactonolactone dehydrogenase",
+      "ec": [
+        "1.3.2.3"
       ]
     }
   ],
@@ -262,6 +332,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:24424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "monodehydroascorbate reductase (NADH)",
+      "equation": "2 monodehydro-L-ascorbate radical + NADH + H(+) = 2 L-ascorbate + NAD(+)",
+      "ec": "1.6.5.4",
+      "substrates": [
+        {
+          "metabolite": "mdha",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ascorbate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_6_5_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:14581"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14581"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-galactonolactone dehydrogenase",
+      "equation": "L-galactono-1,4-lactone + 4 Fe(III)-[cytochrome c] = L-dehydroascorbate + 4 Fe(II)-[cytochrome c] + 5 H(+)",
+      "ec": "1.3.2.3",
+      "substrates": [
+        {
+          "metabolite": "l_galactono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_dehydroascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32367"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32367"
           }
         ]
       }

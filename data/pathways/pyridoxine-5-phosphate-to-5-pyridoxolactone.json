@@ -117,6 +117,62 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "pyridoxal",
+      "name": "pyridoxal",
+      "formula": "C8H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17310"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "5_pyridoxate",
+      "name": "5-pyridoxate",
+      "formula": "C8H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30960"
+      }
+    },
+    {
+      "id": "carotenoid_end_derivative",
+      "name": "carotenoid β-end derivative",
+      "short": "carotenoid β-end…",
+      "formula": "C19H27R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139120"
+      }
+    },
+    {
+      "id": "carotenoid_end_group",
+      "name": "carotenoid χ-end group",
+      "short": "carotenoid χ-end…",
+      "formula": "C19H23R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139130"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +195,27 @@
       "name": "isopyridoxal dehydrogenase (5-pyridoxolactone-forming)",
       "ec": [
         "1.1.1.416"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_65",
+      "name": "pyridoxine 4-dehydrogenase",
+      "ec": [
+        "1.1.1.65"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_102",
+      "name": "isopyridoxal dehydrogenase (5-pyridoxate-forming)",
+      "ec": [
+        "1.2.1.102"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_40",
+      "name": "carotenoid chi-ring synthase",
+      "ec": [
+        "1.3.99.40"
       ]
     }
   ],
@@ -278,6 +355,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:51588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pyridoxine 4-dehydrogenase",
+      "equation": "pyridoxine + NADP(+) = pyridoxal + NADPH + H(+)",
+      "ec": "1.1.1.65",
+      "substrates": [
+        {
+          "metabolite": "pyridoxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16129"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "isopyridoxal dehydrogenase (5-pyridoxate-forming)",
+      "equation": "isopyridoxal + NAD(+) + H2O = 5-pyridoxate + NADH + 2 H(+)",
+      "ec": "1.2.1.102",
+      "substrates": [
+        {
+          "metabolite": "isopyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pyridoxate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:57936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "carotenoid chi-ring synthase",
+      "equation": "a carotenoid beta-end derivative + 2 A = a carotenoid chi-end derivative + 2 AH2",
+      "ec": "1.3.99.40",
+      "substrates": [
+        {
+          "metabolite": "carotenoid_end_derivative",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carotenoid_end_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:55656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55656"
           }
         ]
       }

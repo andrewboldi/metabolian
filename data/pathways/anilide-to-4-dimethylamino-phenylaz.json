@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "anilide-to-4-dimethylamino-phenylaz",
   "name": "anilide to 4-(dimethylamino)phenylaz…",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from anilide to 4-(dimethylamino)phenylazoxybenzene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -111,6 +111,44 @@
       "xrefs": {
         "chebi": "CHEBI:17467"
       }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "n_acyl_aromatic_l_amino_acid_anion",
+      "name": "N-acyl-aromatic L-α-amino-acid anion",
+      "short": "N-acyl-aromatic…",
+      "formula": "C3H2NO3R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138093"
+      }
+    },
+    {
+      "id": "aromatic_l_amino_acid",
+      "name": "aromatic L-α-amino acid",
+      "short": "aromatic L-α-amino…",
+      "formula": "C2H4NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84824"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +171,20 @@
       "name": "4-(dimethylamino)phenylazoxybenzene reductase",
       "ec": [
         "1.7.1.11"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_24",
+      "name": "aminobenzoate decarboxylase",
+      "ec": [
+        "4.1.1.24"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_114",
+      "name": "N-acyl-aromatic-L-amino acid amidohydrolase",
+      "ec": [
+        "3.5.1.114"
       ]
     }
   ],
@@ -288,6 +340,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:19789"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aminobenzoate decarboxylase",
+      "equation": "anthranilate + H(+) = aniline + CO2",
+      "ec": "4.1.1.24",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24730"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24730"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-acyl-aromatic-L-amino acid amidohydrolase",
+      "equation": "an N-acyl-aromatic L-alpha-amino acid + H2O = an aromatic L-alpha-amino acid + a carboxylate",
+      "ec": "3.5.1.114",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_aromatic_l_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aromatic_l_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:54184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54184"
           }
         ]
       }

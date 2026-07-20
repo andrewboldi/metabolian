@@ -19,4 +19,28 @@ pathway l-valine-to-o-s-4-5-dichloropyrrole "L-valine to O-[S-(4,5-dichloropyrro
     <-> ec_1_14_19_56 [1.14.19.56] +fadh2 +chloride +o2 -fad -h2o
     o_s_4_5_dichloropyrrole_2_carbonyl_pantetheine_4
   }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_2_1_4_5 [2.1.4.5] +arginine
+    n_amidino_l_arginine
+  }
+
+  branch from l_proline side right {
+    l_proline
+    <-> ec_1_5_1_2 [1.5.1.2] +nadp +nadph +hplus
+    s_1_pyrroline_5_carboxylate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_4 [3.5.4.4] +2_deoxyadenosine +h2o +hplus
+    2_deoxyinosine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_2_1_36 [6.2.1.36] +3_hydroxypropionate +atp +coa +amp
+    3_hydroxypropanoyl_coa
+  }
 }

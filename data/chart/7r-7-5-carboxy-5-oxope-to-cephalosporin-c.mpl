@@ -15,4 +15,16 @@ pathway 7r-7-5-carboxy-5-oxope-to-cephalosporin-c "(7R)-7-(5-carboxy-5-oxope… 
     <-> ec_2_3_1_175 [2.3.1.175] +acetyl_coa -coa
     cephalosporin_c
   }
+
+  branch from akg side left {
+    akg
+    <-> ec_1_5_1_7 [1.5.1.7] +l_saccharopinate +nad +h2o +nadh +hplus
+    l_lysinium
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_1_1_66 [3.1.1.66] +5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene +h2o +hplus
+    5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene
+  }
 }

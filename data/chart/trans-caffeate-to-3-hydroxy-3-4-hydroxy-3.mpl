@@ -15,4 +15,22 @@ pathway trans-caffeate-to-3-hydroxy-3-4-hydroxy-3 "trans-caffeate to 3-hydroxy-3
     <-> ec_4_1_2_61 [4.1.2.61] +h2o
     3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoyl
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_n7 [2.1.1.n7] +5_pentadeca_8_11_14_trien_1_yl_resorcinol +sam +hplus
+    5_pentadeca_8_11_14_trien_1_yl_resorcinol_monome
+  }
+
+  branch from trans_feruloyl_coa side right {
+    trans_feruloyl_coa
+    <-> ec_2_3_1_218 [2.3.1.218] +malonyl-coa +hplus +co2 +coa
+    trans_feruloylacetyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_92 [2.5.1.92] +ipp +dmapp
+    2_cis_6_cis_farnesyl_diphosphate
+  }
 }

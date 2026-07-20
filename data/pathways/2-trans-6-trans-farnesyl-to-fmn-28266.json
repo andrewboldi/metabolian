@@ -108,6 +108,43 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "tuberculosinyl_diphosphate",
+      "name": "tuberculosinyl diphosphate",
+      "short": "tuberculosinyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58822"
+      }
+    },
+    {
+      "id": "tuberculosinol",
+      "name": "tuberculosinol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50387"
+      }
+    },
+    {
+      "id": "ferruginol",
+      "name": "ferruginol",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78274"
+      }
+    },
+    {
+      "id": "sugiol",
+      "name": "sugiol",
+      "formula": "C20H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138961"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +167,20 @@
       "name": "zealexin A1 synthase",
       "ec": [
         "1.14.14.160"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_153",
+      "name": "adenosine tuberculosinyltransferase",
+      "ec": [
+        "2.5.1.153"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_65",
+      "name": "sugiol synthase",
+      "ec": [
+        "1.14.14.65"
       ]
     }
   ],
@@ -265,6 +316,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:57544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "adenosine tuberculosinyltransferase",
+      "equation": "tuberculosinyl diphosphate + H2O = tuberculosinol + diphosphate",
+      "ec": "2.5.1.153",
+      "substrates": [
+        {
+          "metabolite": "tuberculosinyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tuberculosinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31783"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sugiol synthase",
+      "equation": "ferruginol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = sugiol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.65",
+      "substrates": [
+        {
+          "metabolite": "ferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sugiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55456"
           }
         ]
       }

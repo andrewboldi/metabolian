@@ -85,6 +85,24 @@
       "xrefs": {
         "chebi": "CHEBI:77770"
       }
+    },
+    {
+      "id": "myricetin",
+      "name": "myricetin",
+      "formula": "C15H9O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58395"
+      }
+    },
+    {
+      "id": "laricitrin",
+      "name": "laricitrin",
+      "formula": "C16H11O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60006"
+      }
     }
   ],
   "enzymes": [
@@ -107,6 +125,13 @@
       "name": "3,7-dimethylquercetin 4'-O-methyltransferase",
       "ec": [
         "2.1.1.83"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_267",
+      "name": "flavonoid 3',5'-methyltransferase",
+      "ec": [
+        "2.1.1.267"
       ]
     }
   ],
@@ -254,6 +279,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:21832"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "flavonoid 3',5'-methyltransferase",
+      "equation": "myricetin + S-adenosyl-L-methionine = laricitrin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.267",
+      "substrates": [
+        {
+          "metabolite": "myricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "laricitrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_267"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25629"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25629"
           }
         ]
       }

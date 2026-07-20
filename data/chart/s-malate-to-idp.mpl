@@ -17,4 +17,10 @@ pathway s-malate-to-idp "(S)-malate to IDP" {
     <-> ec_3_6_1_73 [3.6.1.73] +h2o -pi -hplus
     idp
   }
+
+  branch from phosphonatoenolpyruvate side left {
+    phosphonatoenolpyruvate
+    <-> ec_2_7_1_40 [2.7.1.40] +ctp +pyruvate +hplus
+    cdp
+  }
 }

@@ -120,6 +120,43 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "1_aminocyclopropanecarboxylic_acid",
+      "name": "1-aminocyclopropanecarboxylic acid",
+      "short": "1-aminocyclopropane…",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58360"
+      }
+    },
+    {
+      "id": "isonocardicin_a",
+      "name": "isonocardicin A",
+      "formula": "C23H22N4O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77633"
+      }
+    },
+    {
+      "id": "spheroidene",
+      "name": "spheroidene",
+      "formula": "C41H60O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35330"
+      }
+    },
+    {
+      "id": "spheroiden_2_one",
+      "name": "spheroiden-2-one",
+      "formula": "C41H58O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62480"
+      }
     }
   ],
   "enzymes": [
@@ -142,6 +179,20 @@
       "name": "nocardicin C N-oxygenase",
       "ec": [
         "1.14.15.43"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_14",
+      "name": "1-aminocyclopropane-1-carboxylate synthase",
+      "ec": [
+        "4.4.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_9",
+      "name": "spheroidene monooxygenase",
+      "ec": [
+        "1.14.15.9"
       ]
     }
   ],
@@ -285,6 +336,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:82031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "1-aminocyclopropane-1-carboxylate synthase",
+      "equation": "S-adenosyl-L-methionine = 1-aminocyclopropane-1-carboxylate + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "4.4.1.14",
+      "substrates": [
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_aminocyclopropanecarboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "nocardicin-A epimerase",
+      "equation": "isonocardicin A = nocardicin A",
+      "ec": "5.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "isonocardicin_a",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nocardicin_a",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22792"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "spheroidene monooxygenase",
+      "equation": "spheroidene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = spheroiden-2-one + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.9",
+      "substrates": [
+        {
+          "metabolite": "spheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spheroiden_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:33027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33027"
           }
         ]
       }

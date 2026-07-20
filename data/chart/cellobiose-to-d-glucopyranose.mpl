@@ -17,4 +17,28 @@ pathway cellobiose-to-d-glucopyranose "cellobiose to D-glucopyranose…" {
     <-> ec_2_4_1_216 [2.4.1.216] +pi -g6p
     d_glucose_1_phosphate
   }
+
+  branch from 6_phosphonato_d_glucosyl_1_4_d_glucose side left {
+    6_phosphonato_d_glucosyl_1_4_d_glucose
+    <-> ec_2_7_1_205 [2.7.1.205] +cellobiose +n_phosphonato_l_histidine
+    l_histidine
+  }
+
+  branch from g6p side right {
+    g6p
+    <-> ec_2_4_1_347 [2.4.1.347] +trehalose_6_phosphate +adp +hplus
+    adp_d_glucoside
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_182 [3.2.1.182] +diboa_d_glucoside +h2o
+    diboa
+  }
+
+  branch from d_glucose_1_phosphate side right {
+    d_glucose_1_phosphate
+    <-> ec_2_4_1_282 [2.4.1.282] +d_glcp_1_3_l_rhap +pi
+    l_rhamnopyranose
+  }
 }

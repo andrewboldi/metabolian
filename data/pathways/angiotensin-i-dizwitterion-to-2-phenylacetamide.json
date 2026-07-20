@@ -101,6 +101,43 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_l_phenylalaninate",
+      "name": "N-acetyl-L-phenylalaninate",
+      "short": "N-acetyl-L-phenylal…",
+      "formula": "C11H12NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57702"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +160,13 @@
       "name": "phenylalanine 2-monooxygenase",
       "ec": [
         "1.13.12.9"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_53",
+      "name": "phenylalanine N-acetyltransferase",
+      "ec": [
+        "2.3.1.53"
       ]
     }
   ],
@@ -262,6 +306,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:10712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phenylalanine N-acetyltransferase",
+      "equation": "L-phenylalanine + acetyl-CoA = N-acetyl-L-phenylalanine + CoA + H(+)",
+      "ec": "2.3.1.53",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_phenylalaninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17801"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17801"
           }
         ]
       }

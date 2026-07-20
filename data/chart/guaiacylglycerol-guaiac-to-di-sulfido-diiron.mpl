@@ -19,4 +19,28 @@ pathway guaiacylglycerol-guaiac-to-di-sulfido-diiron "guaiacylglycerol-β-guaiac
     <-> ec_1_2_7_4 [1.2.7.4] +carbon_monoxide +di_sulfido_diiron +h2o -co2 -hplus
     di_sulfido_diiron
   }
+
+  branch from guaiacol side left {
+    guaiacol
+    <-> ec_1_11_1_14 [1.11.1.14] +veratrylglycerol_guaiacyl_ether +h2o2 +glycolaldehyde +h2o
+    veratraldehyde
+  }
+
+  branch from vanillin side right {
+    vanillin
+    <-> ec_4_1_2_65 [4.1.2.65] +trans_ferulate +h2o
+    acetate
+  }
+
+  branch from catechol side left {
+    catechol
+    <-> ec_1_14_13_244 [1.14.13.244] +nadh +o2 +hplus +nad +h2o
+    phenol
+  }
+
+  branch from carbon_monoxide side right {
+    carbon_monoxide
+    <-> ec_1_13_11_24 [1.13.11.24] +quercetin_7_olate +o2
+    2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate
+  }
 }

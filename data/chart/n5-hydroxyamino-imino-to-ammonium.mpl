@@ -17,4 +17,22 @@ pathway n5-hydroxyamino-imino-to-ammonium "N5-[(hydroxyamino)(imino)… to ammon
     <-> ec_6_3_3_5 [6.3.3.5] +atp +h2o +hplus -nh3 -adp -co2 -pi
     d_cycloserine
   }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_6_3_2_11 [6.3.2.11] +alanine +atp +adp +pi +hplus
+    alanyl_l_ornithine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_85 [3.5.1.85] +s_n_acetyl_1_phenylethylamine +h2o
+    1s_1_phenylethanaminium
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_13_12_15 [1.13.12.15] +ldopa +o2
+    3_4_dihydroxyphenylpyruvate
+  }
 }

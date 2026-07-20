@@ -19,4 +19,16 @@ pathway aceneuramate-to-s-adenosyl-l-homocysteine "aceneuramate to S-adenosyl-L-
     <-> ec_2_1_1_402 [2.1.1.402] +sam -sah -hplus
     n_acetyl_8_o_methylneuraminate
   }
+
+  branch from aldehydo_n_acetyl_d_mannosamine side left {
+    aldehydo_n_acetyl_d_mannosamine
+    <-> ec_3_2_1_183 [3.2.1.183] +h2o +udp +hplus
+    udpglcnac
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_87 [2.1.1.87] +pyridine +sam
+    n_methylpyridinium
+  }
 }

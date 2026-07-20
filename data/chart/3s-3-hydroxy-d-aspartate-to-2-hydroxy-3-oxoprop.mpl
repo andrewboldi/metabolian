@@ -15,4 +15,22 @@ pathway 3s-3-hydroxy-d-aspartate-to-2-hydroxy-3-oxoprop "(3S)-3-hydroxy-D-aspart
     <-> ec_5_3_1_22 [5.3.1.22]
     2_hydroxy_3_oxopropanoate
   }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_1_14_14_33 [1.14.14.33] +edta +fmnh2 +o2 +fmn +h2o +hplus
+    ethylenediaminediacetate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_2_3_1_29 [2.3.1.29] +acetyl_coa +coa
+    amino_oxobutanoate
+  }
+
+  branch from 2_hydroxy_3_oxopropanoate side left {
+    2_hydroxy_3_oxopropanoate
+    <-> ec_4_1_1_54 [4.1.1.54] +hplus +co2
+    dihydroxyfumarate
+  }
 }

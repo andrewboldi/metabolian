@@ -138,6 +138,25 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "3_sulfinopropionyl_coa",
+      "name": "3-sulfinopropionyl-CoA",
+      "short": "3-sulfinopropionyl-…",
+      "formula": "C24H35N7O19P3S2",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:78349"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57392"
+      }
     }
   ],
   "enzymes": [
@@ -167,6 +186,13 @@
       "name": "gallate 1-beta-glucosyltransferase",
       "ec": [
         "2.4.1.136"
+      ]
+    },
+    {
+      "id": "ec_3_13_1_4",
+      "name": "3-sulfinopropanoyl-CoA desulfinase",
+      "ec": [
+        "3.13.1.4"
       ]
     }
   ],
@@ -367,6 +393,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:52844"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "3-sulfinopropanoyl-CoA desulfinase",
+      "equation": "3-sulfinopropanoyl-CoA + H2O = propanoyl-CoA + sulfite + H(+)",
+      "ec": "3.13.1.4",
+      "substrates": [
+        {
+          "metabolite": "3_sulfinopropionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_13_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41624"
           }
         ]
       }

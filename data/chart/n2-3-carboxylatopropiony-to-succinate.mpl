@@ -17,4 +17,28 @@ pathway n2-3-carboxylatopropiony-to-succinate "N2-(3-carboxylatopropiony… to s
     <-> ec_3_5_1_96 [3.5.1.96] +h2o -succinate
     glutamate
   }
+
+  branch from n2_succinyl_l_ornithinate side left {
+    n2_succinyl_l_ornithinate
+    <-> ec_2_1_3_11 [2.1.3.11] +carbamoyl_p +pi +hplus
+    n2_3_carboxylatopropionyl_l_citrullinate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_31 [4.3.1.31] +l_tryptophan
+    e_3_indol_3_yl_acrylate
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_1_2_1_88 [1.2.1.88] +nadp +h2o +nadph +hplus
+    s_1_pyrroline_5_carboxylate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_29 [1.14.11.29] +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
+  }
 }

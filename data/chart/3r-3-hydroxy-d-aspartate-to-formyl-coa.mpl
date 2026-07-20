@@ -15,4 +15,16 @@ pathway 3r-3-hydroxy-d-aspartate-to-formyl-coa "(3R)-3-hydroxy-D-aspartate to fo
     <-> ec_4_1_1_8 [4.1.1.8] +hplus -co2
     formyl_coa
   }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_1_5_3_23 [1.5.3.23] +glyphosate +o2 +hplus
+    aminomethyl_phosphonate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_3_5_1_58 [3.5.1.58] +n_benzyloxycarbonylglycinate +h2o +hplus +co2
+    benzyl_alcohol
+  }
 }

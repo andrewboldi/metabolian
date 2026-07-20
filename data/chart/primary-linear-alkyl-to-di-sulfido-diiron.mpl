@@ -15,4 +15,28 @@ pathway primary-linear-alkyl-to-di-sulfido-diiron "primary linear alkyl… to di
     <-> ec_1_2_7_5 [1.2.7.5] +di_sulfido_diiron +h2o -di_sulfido_diiron -hplus
     carboxylic_acid_anion
   }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +pentyl_sulfate +akg +o2 +succinate +co2 +hplus
+    pentanal
+  }
+
+  branch from aldehyde side right {
+    aldehyde
+    <-> ec_1_4_3_4 [1.4.3.4] +secondary_aliphatic_ammonium_ion +o2 +h2o +h2o2
+    primary_ammonium_ion
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_27 [1.3.99.27] +rhodopin +hydrogen_acceptor
+    3e_3_4_didehydrorhodopin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_11 [1.14.19.11] +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +o2 +hplus +di_sulfido_diiron +h2o
+    o_s_4z_hexadecenoylpantetheine_4_phosphoryl_seri
+  }
 }

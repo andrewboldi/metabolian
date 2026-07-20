@@ -147,6 +147,83 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "d_ribitol_5_phosphate",
+      "name": "D-ribitol 5-phosphate",
+      "short": "D-ribitol 5-P",
+      "formula": "C5H11O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57695"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "4_e_2_isocyanoethenyl_phenol",
+      "name": "4-[(E)-2-isocyanoethenyl]phenol",
+      "short": "4-[(E)-2-isocyanoet…",
+      "formula": "C9H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140650"
+      }
+    },
+    {
+      "id": "n6_methyl_2_deoxyadenosine_5_monophosphate_1",
+      "name": "N6-methyl-2'-deoxyadenosine 5'-monophosphate(1−)",
+      "short": "N6-methyl-2'-deoxya…",
+      "formula": "C11H13N5O5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90616"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine_5_monophosphate_1",
+      "name": "2'-deoxyadenosine 5'-monophosphate(1−)",
+      "short": "2'-deoxyadenosine…",
+      "formula": "C10H11N5O5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90615"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60039"
+      }
+    },
+    {
+      "id": "trans_4_hydroxy_l_proline",
+      "name": "trans-4-hydroxy-L-proline",
+      "short": "trans-4-hydroxy-L-p…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58375"
+      }
     }
   ],
   "enzymes": [
@@ -169,6 +246,34 @@
       "name": "tyrosine isonitrile desaturase",
       "ec": [
         "1.14.20.9"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_137",
+      "name": "ribitol-5-phosphate 2-dehydrogenase",
+      "ec": [
+        "1.1.1.137"
+      ]
+    },
+    {
+      "id": "ec_1_14_20_10",
+      "name": "tyrosine isonitrile desaturase/decarboxylase",
+      "ec": [
+        "1.14.20.10"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_51",
+      "name": "DNA N(6)-methyladenine demethylase",
+      "ec": [
+        "1.14.11.51"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_57",
+      "name": "L-proline trans-4-hydroxylase",
+      "ec": [
+        "1.14.11.57"
       ]
     }
   ],
@@ -324,6 +429,226 @@
           {
             "db": "Rhea",
             "id": "RHEA:56688"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ribitol-5-phosphate 2-dehydrogenase",
+      "equation": "D-ribitol 5-phosphate + NAD(+) = D-ribulose 5-phosphate + NADH + H(+)",
+      "ec": "1.1.1.137",
+      "substrates": [
+        {
+          "metabolite": "d_ribitol_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ru5p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_137"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19925"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19925"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tyrosine isonitrile desaturase/decarboxylase",
+      "equation": "(2S)-3-(4-hydroxyphenyl)-2-isocyanopropanoate + 2-oxoglutarate + O2 + H(+) = 4-[(E)-2-isocyanoethenyl]phenol + succinate + 2 CO2 + H2O",
+      "ec": "1.14.20.10",
+      "substrates": [
+        {
+          "metabolite": "2s_3_4_hydroxyphenyl_2_isocyanopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_e_2_isocyanoethenyl_phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_20_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56692"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "DNA N(6)-methyladenine demethylase",
+      "equation": "an N(6)-methyl-2'-deoxyadenosine in DNA + 2-oxoglutarate + O2 = a 2'-deoxyadenosine in DNA + formaldehyde + succinate + CO2",
+      "ec": "1.14.11.51",
+      "substrates": [
+        {
+          "metabolite": "n6_methyl_2_deoxyadenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:49524"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-proline trans-4-hydroxylase",
+      "equation": "L-proline + 2-oxoglutarate + O2 = trans-4-hydroxy-L-proline + succinate + CO2",
+      "ec": "1.14.11.57",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:51508"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51508"
           }
         ]
       }

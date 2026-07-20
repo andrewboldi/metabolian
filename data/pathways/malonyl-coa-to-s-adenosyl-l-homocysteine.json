@@ -148,6 +148,25 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "gibberellin_a4",
+      "name": "gibberellin A4",
+      "formula": "C19H23O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73251"
+      }
+    },
+    {
+      "id": "gibberellin_a4_methyl_ester",
+      "name": "gibberellin A4 methyl ester",
+      "short": "gibberellin A4…",
+      "formula": "C20H26O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73252"
+      }
     }
   ],
   "enzymes": [
@@ -170,6 +189,20 @@
       "name": "3-hydroxy-5-methyl-1-naphthoate 3-O-methyltransferase",
       "ec": [
         "2.1.1.302"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_275",
+      "name": "gibberellin A9 O-methyltransferase",
+      "ec": [
+        "2.1.1.275"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_276",
+      "name": "gibberellin A4 carboxyl methyltransferase",
+      "ec": [
+        "2.1.1.276"
       ]
     }
   ],
@@ -341,6 +374,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:18577"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "gibberellin A9 O-methyltransferase",
+      "equation": "gibberellin A4 + S-adenosyl-L-methionine = O-methyl gibberellin A4 + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.275",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a4_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_275"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:36107"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36107"
           }
         ]
       }

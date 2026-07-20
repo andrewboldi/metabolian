@@ -19,4 +19,28 @@ pathway 5-end-n2-n2-n7-trimethy-to-7-methylguanosine "5'-end (N2,N2,N7-trimethyâ
     <-> ec_3_1_3_91 [3.1.3.91] +7_methylguanosine_5_phosphate +h2o -pi
     7_methylguanosine
   }
+
+  branch from 5_end_ribonucleoside_5_diphosphate_3 side left {
+    5_end_ribonucleoside_5_diphosphate_3
+    <-> ec_3_6_1_74 [3.6.1.74] +h2o +pi +hplus
+    5_end_ribonucleotide_5_triphosphate_4
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_42 [4.2.3.42] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    aphidicolan_16_ol
+  }
+
+  branch from 5_n7_methyl_5_triphosphoguanosine_ribonucleoside side left {
+    5_n7_methyl_5_triphosphoguanosine_ribonucleoside
+    <-> ec_2_1_1_57 [2.1.1.57] +sam +sah +hplus
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_100 [2.1.1.100] +s_2e_6e_farnesyl_l_cysteinate +sam
+    s_2e_6e_farnesyl_l_cysteine_methyl_ester
+  }
 }

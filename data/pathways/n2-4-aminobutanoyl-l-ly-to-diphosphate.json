@@ -146,6 +146,80 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_ammoniopentanamide",
+      "name": "5-ammoniopentanamide",
+      "formula": "C5H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58382"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_l_histidinate",
+      "name": "N-acetyl-L-histidinate",
+      "short": "N-acetyl-L-histidin…",
+      "formula": "C8H10N3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57772"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "epi_isozizaene",
+      "name": "(+)-epi-isozizaene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51458"
+      }
     }
   ],
   "enzymes": [
@@ -182,6 +256,27 @@
       "name": "histidine--tRNA ligase",
       "ec": [
         "6.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_13_12_2",
+      "name": "lysine 2-monooxygenase",
+      "ec": [
+        "1.13.12.2"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_33",
+      "name": "histidine N-acetyltransferase",
+      "ec": [
+        "2.3.1.33"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_37",
+      "name": "epi-isozizaene synthase",
+      "ec": [
+        "4.2.3.37"
       ]
     }
   ],
@@ -386,6 +481,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:17313"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lysine 2-monooxygenase",
+      "equation": "L-lysine + O2 = 5-aminopentanamide + CO2 + H2O",
+      "ec": "1.13.12.2",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_ammoniopentanamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:14601"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14601"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "histidine N-acetyltransferase",
+      "equation": "L-histidine + acetyl-CoA = N(alpha)-acetyl-L-histidine + CoA + H(+)",
+      "ec": "2.3.1.33",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_histidinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "epi-isozizaene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-epi-isozizaene + diphosphate",
+      "ec": "4.2.3.37",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epi_isozizaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:25992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25992"
           }
         ]
       }

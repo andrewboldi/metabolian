@@ -15,4 +15,16 @@ pathway anthranilate-to-diphosphate "anthranilate to diphosphate" {
     <-> ec_2_7_7_97 [2.7.7.97] +atp +hplus -ppi
     2_amino_3_hydroxy_4_methylbenzoyl_amp
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_110 [2.1.1.110] +dihydrosterigmatocystin +sam +hplus
+    8_o_methyldihydrosterigmatocystin
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_100 [4.2.3.100] +fpp
+    bicyclogermacrene
+  }
 }

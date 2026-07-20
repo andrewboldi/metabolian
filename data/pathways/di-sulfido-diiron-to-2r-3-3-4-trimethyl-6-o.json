@@ -221,6 +221,62 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "narbomycin",
+      "name": "narbomycin",
+      "formula": "C28H48NO7",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76801"
+      }
+    },
+    {
+      "id": "novapikromycin",
+      "name": "novapikromycin",
+      "formula": "C28H48NO9",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:77351"
+      }
+    },
+    {
+      "id": "phylloquinone",
+      "name": "phylloquinone",
+      "formula": "C31H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18067"
+      }
+    },
+    {
+      "id": "hydroxyphylloquinone",
+      "name": "ω-hydroxyphylloquinone",
+      "short": "ω-hydroxyphylloquin…",
+      "formula": "C31H46O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78276"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "3r_6e_nerolidol",
+      "name": "(3R,6E)-nerolidol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59959"
+      }
     }
   ],
   "enzymes": [
@@ -257,6 +313,27 @@
       "name": "(2,2,3-trimethyl-5-oxocyclopent-3-enyl)acetyl-CoA 1,5-monooxygenase",
       "ec": [
         "1.14.13.160"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_33",
+      "name": "pikromycin synthase",
+      "ec": [
+        "1.14.15.33"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_78",
+      "name": "phylloquinone omega-hydroxylase",
+      "ec": [
+        "1.14.14.78"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_49",
+      "name": "(3R,6E)-nerolidol synthase",
+      "ec": [
+        "4.2.3.49"
       ]
     }
   ],
@@ -571,6 +648,165 @@
           {
             "db": "Rhea",
             "id": "RHEA:33015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "pikromycin synthase",
+      "equation": "narbomycin + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = novapikromycin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.15.33",
+      "substrates": [
+        {
+          "metabolite": "narbomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "novapikromycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:40535"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "phylloquinone omega-hydroxylase",
+      "equation": "phylloquinone + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxyphylloquinone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.78",
+      "substrates": [
+        {
+          "metabolite": "phylloquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyphylloquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:41516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "(3R,6E)-nerolidol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (3R,6E)-nerolidol + diphosphate",
+      "ec": "4.2.3.49",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_6e_nerolidol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:27534"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27534"
           }
         ]
       }

@@ -15,4 +15,16 @@ pathway androsterone-to-di-sulfido-diiron "androsterone to di-μ-sulfido-diiron"
     <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     1_hydroxyandrost_4_ene_3_17_dione
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_8 [1.3.99.8] +2_furoyl_coa +hydrogen_acceptor +h2o +hplus
+    5_hydroxy_2_furoyl_coa
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_17_7_4 [1.17.7.4] +ipp +h2o +di_sulfido_diiron +hplus
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+  }
 }

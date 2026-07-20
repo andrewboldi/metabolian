@@ -175,6 +175,90 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "dithioerythritol",
+      "name": "dithioerythritol",
+      "formula": "C4H10O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17456"
+      }
+    },
+    {
+      "id": "trioxidosulfanidosulfate",
+      "name": "trioxidosulfanidosulfate",
+      "short": "trioxidosulfanidosu…",
+      "formula": "HO3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33542"
+      }
+    },
+    {
+      "id": "cis_1_2_dithiane_4_5_diol",
+      "name": "cis-1,2-dithiane-4,5-diol",
+      "short": "cis-1,2-dithiane-4,…",
+      "formula": "C4H8O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28059"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    },
+    {
+      "id": "isoquinoline",
+      "name": "isoquinoline",
+      "formula": "C9H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16092"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "isoquinolin_1_2h_one",
+      "name": "isoquinolin-1(2H)-one",
+      "short": "isoquinolin-1(2H)-o…",
+      "formula": "C9H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18350"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_sulfino_l_alanine",
+      "name": "3-sulfino-L-alanine",
+      "formula": "C3H6NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61085"
+      }
     }
   ],
   "enzymes": [
@@ -204,6 +288,27 @@
       "name": "bis-gamma-glutamylcystine reductase",
       "ec": [
         "1.8.1.13"
+      ]
+    },
+    {
+      "id": "ec_2_8_1_5",
+      "name": "thiosulfate--dithiol sulfurtransferase",
+      "ec": [
+        "2.8.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_16",
+      "name": "isoquinoline 1-oxidoreductase",
+      "ec": [
+        "1.3.99.16"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_20",
+      "name": "cysteine dioxygenase",
+      "ec": [
+        "1.13.11.20"
       ]
     }
   ],
@@ -412,6 +517,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:11980"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "thiosulfate--dithiol sulfurtransferase",
+      "equation": "dithioerythritol + thiosulfate = cis-1,2-dithiane-4,5-diol + hydrogen sulfide + sulfite + 2 H(+)",
+      "ec": "2.8.1.5",
+      "substrates": [
+        {
+          "metabolite": "dithioerythritol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trioxidosulfanidosulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_1_2_dithiane_4_5_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15121"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "isoquinoline 1-oxidoreductase",
+      "equation": "isoquinoline + A + H2O = isoquinolin-1(2H)-one + AH2",
+      "ec": "1.3.99.16",
+      "substrates": [
+        {
+          "metabolite": "isoquinoline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoquinolin_1_2h_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:11588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "cysteine dioxygenase",
+      "equation": "L-cysteine + O2 = 3-sulfino-L-alanine + H(+)",
+      "ec": "1.13.11.20",
+      "substrates": [
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_sulfino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:20441"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20441"
           }
         ]
       }

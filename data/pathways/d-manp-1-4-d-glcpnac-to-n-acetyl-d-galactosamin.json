@@ -161,6 +161,109 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "gdp_d_glucose",
+      "name": "GDP-α-D-glucose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62230"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosamine_1_phosphate",
+      "name": "N-acetyl-α-D-glucosamine 1-phosphate",
+      "short": "N-acetyl-α-D-glucos…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57776"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "d_mannopyranose",
+      "name": "D-mannopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4208"
+      }
+    },
+    {
+      "id": "n_phosphonato_l_histidine",
+      "name": "Nπ-phosphonato-L-histidine",
+      "short": "Nπ-phosphonato-L-hi…",
+      "formula": "C6H6N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64837"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "2_ammonio_2_deoxy_d_glucopyranose",
+      "name": "2-ammonio-2-deoxy-D-glucopyranose",
+      "short": "2-ammonio-2-deoxy-D…",
+      "formula": "C6H14NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58723"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
     }
   ],
   "enzymes": [
@@ -211,6 +314,34 @@
       "name": "galactosamine-1-phosphate N-acetyltransferase",
       "ec": [
         "2.3.1.276"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_69",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "ec": [
+        "2.7.7.69"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_162",
+      "name": "N-acetylhexosamine 1-kinase",
+      "ec": [
+        "2.7.1.162"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_191",
+      "name": "protein-N(pi)-phosphohistidine--D-mannose phosphotransferase",
+      "ec": [
+        "2.7.1.191"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_147",
+      "name": "ADP-specific glucose/glucosamine kinase",
+      "ec": [
+        "2.7.1.147"
       ]
     }
   ],
@@ -498,6 +629,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "equation": "GDP-alpha-D-glucose + alpha-D-mannose 1-phosphate = alpha-D-glucose 1-phosphate + GDP-alpha-D-mannose",
+      "ec": "2.7.7.69",
+      "substrates": [
+        {
+          "metabolite": "gdp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_mannose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:66032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "N-acetylhexosamine 1-kinase",
+      "equation": "N-acetyl-D-glucosamine + ATP = N-acetyl-alpha-D-glucosamine 1-phosphate + ADP + H(+)",
+      "ec": "2.7.1.162",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_162"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:53724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "protein-N(pi)-phosphohistidine--D-mannose phosphotransferase",
+      "equation": "D-mannose(out) + N(pros)-phospho-L-histidyl-[protein] = D-mannose 6-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.191",
+      "substrates": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:49232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "ADP-specific glucose/glucosamine kinase",
+      "equation": "D-glucosamine + ADP = D-glucosamine 6-phosphate + AMP + H(+)",
+      "ec": "2.7.1.147",
+      "substrates": [
+        {
+          "metabolite": "2_ammonio_2_deoxy_d_glucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucosamine6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_147"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:62084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62084"
           }
         ]
       }

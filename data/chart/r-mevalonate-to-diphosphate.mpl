@@ -19,4 +19,28 @@ pathway r-mevalonate-to-diphosphate "(R)-mevalonate to diphosphate" {
     <-> ec_2_5_1_29 [2.5.1.29] +fpp -ppi
     2_trans_6_trans_10_trans_geranylgeranyl_diphosph
   }
+
+  branch from isopentenyl_phosphate side left {
+    isopentenyl_phosphate
+    <-> ec_4_1_1_126 [4.1.1.126] +hplus +co2
+    2e_3_methylpent_2_enoate_5_phosphate
+  }
+
+  branch from ipp side right {
+    ipp
+    <-> ec_5_3_3_2 [5.3.3.2]
+    dmapp
+  }
+
+  branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side left {
+    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    <-> ec_5_5_1_12 [5.5.1.12]
+    5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_113 [4.2.3.113] +gpp
+    terpinolene
+  }
 }

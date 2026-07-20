@@ -15,4 +15,10 @@ pathway quercetin-7-olate-to-s-adenosyl-l-homocysteine "quercetin-7-olate to S-a
     <-> ec_2_1_1_83 [2.1.1.83] +sam -sah -hplus
     3_5_dihydroxy_3_4_7_trimethoxyflavone
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_267 [2.1.1.267] +myricetin +sam +hplus
+    laricitrin
+  }
 }

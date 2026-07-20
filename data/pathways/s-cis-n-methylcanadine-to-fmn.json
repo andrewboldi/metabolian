@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-cis-n-methylcanadine-to-fmn",
   "name": "(S)-cis-N-methylcanadine to FMN",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from (S)-cis-N-methylcanadine to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -130,6 +130,26 @@
       "xrefs": {
         "chebi": "CHEBI:141642"
       }
+    },
+    {
+      "id": "n_12_hydroxyjasmonyl_l_amino_acid_anion",
+      "name": "N-(12-hydroxyjasmonyl)-L-α-amino acid anion",
+      "short": "N-(12-hydroxyjasmon…",
+      "formula": "C14H19NO5R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138374"
+      }
+    },
+    {
+      "id": "n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion",
+      "name": "N-(12-hydroxy-12-oxojasmonyl)-L-α-amino acid dianion",
+      "short": "N-(12-hydroxy-12-ox…",
+      "formula": "C14H16NO6R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:138464"
+      }
     }
   ],
   "enzymes": [
@@ -159,6 +179,13 @@
       "name": "(13S,14R)-13-O-acetyl-1-hydroxy-N-methylcanadine 8-hydroxylase",
       "ec": [
         "1.14.14.167"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_49",
+      "name": "12-hydroxyjasmonoyl-L-amino acid 12-hydroxylase",
+      "ec": [
+        "1.14.14.49"
       ]
     }
   ],
@@ -375,6 +402,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:57388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "12-hydroxyjasmonoyl-L-amino acid 12-hydroxylase",
+      "equation": "a 12-hydroxyjasmonyl-L-alpha-amino acid + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = a 12-hydroxy-12-oxojasmonyl-L-alpha-amino acid + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 3 H(+)",
+      "ec": "1.14.14.49",
+      "substrates": [
+        {
+          "metabolite": "n_12_hydroxyjasmonyl_l_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55056"
           }
         ]
       }

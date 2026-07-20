@@ -23,4 +23,28 @@ pathway r-3-4-hydroxyphenyl-la-to-acetoacetate "(R)-3-(4-hydroxyphenyl)la… to 
     <-> ec_3_1_2_11 [3.1.2.11] +h2o -coa -hplus
     acetoacetate
   }
+
+  branch from 3_4_hydroxyphenyl_pyruvate side left {
+    3_4_hydroxyphenyl_pyruvate
+    <-> ec_6_4_1_10 [6.4.1.10] +atp +amp +ppi +hplus
+    atromentin
+  }
+
+  branch from homogentisate side right {
+    homogentisate
+    <-> ec_1_14_13_63 [1.14.13.63] +nadh +o2 +hplus +nad +h2o
+    3_hydroxyphenylacetate
+  }
+
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_4_1_3_4 [4.1.3.4] +acetyl_coa
+    hmg_coa
+  }
+
+  branch from fumarate side right {
+    fumarate
+    <-> ec_4_3_99_5 [4.3.99.5] +2_nitrobutanedioate +hplus
+    nitrite
+  }
 }

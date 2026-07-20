@@ -15,4 +15,10 @@ pathway 1e-4s-5e-7r-germacra-1-to-acetate "(1E,4S,5E,7R)-germacra-1(… to aceta
     <-> ec_3_1_1_114 [3.1.1.114] +h2o -acetate -hplus
     methanol
   }
+
+  branch from methanol side left {
+    methanol
+    <-> ec_3_1_1_59 [3.1.1.59] +juvenile_hormone_i +h2o +hplus
+    juvenile_hormone_i_carboxylate
+  }
 }

@@ -15,4 +15,10 @@ pathway 2-l-alanin-3-ylcarbamoy-to-diphosphate "2-[(L-alanin-3-ylcarbamoy… to 
     <-> ec_6_3_2_56 [6.3.2.56] +akg +atp -amp -ppi -hplus
     staphyloferrin_b
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_226 [4.2.3.226] +2_cis_6_trans_farnesyl_diphosphate
+    2_epi_prezizaene
+  }
 }

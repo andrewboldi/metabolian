@@ -17,4 +17,28 @@ pathway o-carbamoyl-l-serine-to-di-sulfido-diiron "O-carbamoyl-L-serine to di-μ
     <-> ec_1_7_7_2 [1.7.7.2] +di_sulfido_diiron +h2o -di_sulfido_diiron -hplus
     nitrate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_2_5_1_44 [2.5.1.44] +1_4_butanediammonium
+    sym_homospermidinium
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_21_99_1 [1.21.99.1] +3z_5s_3_1_oxidoethylidene_5_4_3_methylbut_2_en +hydrogen_acceptor
+    cyclopiazonate
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> ec_1_7_3_1 [1.7.3.1] +secondary_nitroalkane +o2 +h2o +h2o2 +hplus
+    ketone
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_3_7_4 [1.3.7.4] +3z_phytochromobilin +di_sulfido_diiron +hplus
+    biliverdin
+  }
 }

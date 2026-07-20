@@ -19,4 +19,22 @@ pathway n-acetyl-d-galactosamine-to-cytidine-5-monophosp "N-acetyl-α-D-galactos
     <-> ec_2_4_3_2 [2.4.3.2] +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
+
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> ec_2_4_1_244 [2.4.1.244] +n_acetyl_d_glucosaminide +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_d_glucosa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_72 [2.7.7.72] +3_end_ribonucleotide_1 +ctp +atp
+    trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_6 [2.4.3.6] +d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_n_ace
+  }
 }

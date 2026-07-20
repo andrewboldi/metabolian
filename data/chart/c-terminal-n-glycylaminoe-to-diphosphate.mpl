@@ -15,4 +15,16 @@ pathway c-terminal-n-glycylaminoe-to-diphosphate "C-terminal N-glycylaminoe… t
     <-> ec_2_7_7_80 [2.7.7.80] +atp +hplus -ppi
     c_terminal_gly_gly_amp_1_group
   }
+
+  branch from cysteine side left {
+    cysteine
+    <-> ec_6_2_1_69 [6.2.1.69] +holo-acp +atp +amp +ppi
+    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_53 [4.2.3.53] +2_cis_6_cis_farnesyl_diphosphate
+    endo_bergamotene
+  }
 }

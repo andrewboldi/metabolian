@@ -15,4 +15,16 @@ pathway 4-hydroxy-3-octaprenylben-to-2-methoxy-6-all-tra "4-hydroxy-3-octaprenyl
     <-> ec_4_1_1_130 [4.1.1.130] +hplus -co2
     2_methoxy_6_all_trans_octaprenyl_phenol
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_19_40 [1.14.19.40] +o_s_hexanoylpantetheine_4_phosphoryl_serine_1 +di_sulfido_diiron +o2 +hplus +h2o
+    o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_255 [2.1.1.255] +gpp +sam +hplus
+    e_2_methylgeranyl_diphosphate
+  }
 }

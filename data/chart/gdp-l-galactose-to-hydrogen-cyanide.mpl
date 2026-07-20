@@ -19,4 +19,28 @@ pathway gdp-l-galactose-to-hydrogen-cyanide "GDP-β-L-galactose to hydrogen cyan
     <-> ec_1_14_17_4 [1.14.17.4] +1_aminocyclopropanecarboxylic_acid +o2 -l_dehydroascorbate -hydrogen_cyanide -co2 -h2o
     ethene
   }
+
+  branch from l_galactopyranose side left {
+    l_galactopyranose
+    <-> ec_1_1_1_122 [1.1.1.122] +nad +nadh +hplus
+    l_galactono_1_5_lactone
+  }
+
+  branch from l_galactono_1_4_lactone side right {
+    l_galactono_1_4_lactone
+    <-> ec_3_1_1_120 [3.1.1.120] +h2o +hplus
+    l_galactonate
+  }
+
+  branch from ascorbate side left {
+    ascorbate
+    <-> ec_1_10_3_3 [1.10.3.3] +o2 +h2o
+    mdha
+  }
+
+  branch from ethene side right {
+    ethene
+    <-> ec_1_13_12_19 [1.13.12.19] +o2 +hplus +co2 +h2o
+    akg
+  }
 }

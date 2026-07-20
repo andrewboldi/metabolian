@@ -15,4 +15,16 @@ pathway gibberellin-a20-to-succinyl-coa "gibberellin A20 to succinyl-CoA" {
     <-> ec_6_2_1_5 [6.2.1.5] +succinate +atp +coa -adp -pi
     succinyl_coa
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_6 [1.14.11.6] +thymine +akg +o2 +co2
+    5_hydroxymethyluracil
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_2_3_1_37 [2.3.1.37] +glycine +hplus +co2 +coa
+    ala
+  }
 }

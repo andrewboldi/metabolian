@@ -17,4 +17,16 @@ pathway o-phosphonato-l-serine-to-3-l-selenocysteinyl-ad "O-phosphonato-L-serine
     <-> ec_2_9_1_2 [2.9.1.2] +selenophosphate +h2o -pi
     3_l_selenocysteinyl_adenylyl_1_group
   }
+
+  branch from serine side left {
+    serine
+    <-> ec_4_2_1_122 [4.2.1.122] +1h_indole +h2o
+    l_tryptophan
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_92 [4.2.3.92] +fpp
+    cadinene
+  }
 }

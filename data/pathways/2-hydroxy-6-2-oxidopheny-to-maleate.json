@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-hydroxy-6-2-oxidopheny-to-maleate",
   "name": "2-hydroxy-6-(2-oxidopheny… to maleate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from 2-hydroxy-6-(2-oxidophenyl)-6-oxo-cis,cis-hexa-2,4-dienoate(2−) to maleate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -127,6 +127,62 @@
       "xrefs": {
         "chebi": "CHEBI:15361"
       }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s",
+      "name": "O-(S-2-hydroxybenzoylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-2-hydroxybenzo…",
+      "formula": "C21H29N3O10PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86464"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "r_malate",
+      "name": "(R)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15588"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +212,20 @@
       "name": "maleylpyruvate hydrolase",
       "ec": [
         "3.7.1.23"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_61",
+      "name": "salicylate--[aryl-carrier protein] ligase",
+      "ec": [
+        "6.2.1.61"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_31",
+      "name": "maleate hydratase",
+      "ec": [
+        "4.2.1.31"
       ]
     }
   ],
@@ -352,6 +422,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:47956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "salicylate--[aryl-carrier protein] ligase",
+      "equation": "salicylate + holo-[ACP] + ATP = salicyl-[ACP] + AMP + diphosphate",
+      "ec": "6.2.1.61",
+      "substrates": [
+        {
+          "metabolite": "salicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "maleate hydratase",
+      "equation": "(R)-malate = maleate + H2O",
+      "ec": "4.2.1.31",
+      "substrates": [
+        {
+          "metabolite": "r_malate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23692"
           }
         ]
       }

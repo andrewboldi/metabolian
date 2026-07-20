@@ -145,6 +145,80 @@
       "xrefs": {
         "chebi": "CHEBI:57288"
       }
+    },
+    {
+      "id": "trans_4_coumarate",
+      "name": "trans-4-coumarate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:12876"
+      }
+    },
+    {
+      "id": "4_hydroxybenzaldehyde",
+      "name": "4-hydroxybenzaldehyde",
+      "short": "4-hydroxybenzaldehy…",
+      "formula": "C7H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17597"
+      }
+    },
+    {
+      "id": "valine",
+      "name": "L-Valine",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57762"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "kiv",
+      "name": "3-Methyl-2-oxobutanoate",
+      "short": "3-Methyl-2-oxobutan…",
+      "formula": "C5H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11851"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "l_citramalate",
+      "name": "L-citramalate",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30936"
+      }
+    },
+    {
+      "id": "3s_citramalyl_coa",
+      "name": "(3S)-citramalyl-CoA",
+      "formula": "C26H37N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:58668"
+      }
     }
   ],
   "enzymes": [
@@ -167,6 +241,27 @@
       "name": "succinyl-CoA:acetate CoA-transferase",
       "ec": [
         "2.8.3.18"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_66",
+      "name": "4-coumarate hydratase/lyase",
+      "ec": [
+        "4.1.2.66"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_23",
+      "name": "valine dehydrogenase (NAD(+))",
+      "ec": [
+        "1.4.1.23"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_22",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "ec": [
+        "2.8.3.22"
       ]
     }
   ],
@@ -318,6 +413,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:35711"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4-coumarate hydratase/lyase",
+      "equation": "(E)-4-coumarate + H2O = 4-hydroxybenzaldehyde + acetate",
+      "ec": "4.1.2.66",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "valine dehydrogenase (NAD(+))",
+      "equation": "L-valine + NAD(+) + H2O = 3-methyl-2-oxobutanoate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.23",
+      "substrates": [
+        {
+          "metabolite": "valine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30763"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30763"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "equation": "(3S)-citramalate + succinyl-CoA = (3S)-citramalyl-CoA + succinate",
+      "ec": "2.8.3.22",
+      "substrates": [
+        {
+          "metabolite": "l_citramalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_citramalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:38287"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38287"
           }
         ]
       }

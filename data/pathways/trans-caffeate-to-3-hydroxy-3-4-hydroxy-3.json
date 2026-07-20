@@ -128,6 +128,84 @@
       "xrefs": {
         "chebi": "CHEBI:58004"
       }
+    },
+    {
+      "id": "5_pentadeca_8_11_14_trien_1_yl_resorcinol",
+      "name": "5-(pentadeca-8,11,14-trien-1-yl)resorcinol",
+      "short": "5-(pentadeca-8,11,1…",
+      "formula": "C21H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52680"
+      }
+    },
+    {
+      "id": "5_pentadeca_8_11_14_trien_1_yl_resorcinol_monome",
+      "name": "5-(pentadeca-8,11,14-trien-1-yl)resorcinol monomethyl ether",
+      "short": "5-(pentadeca-8,11,1…",
+      "formula": "C22H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52681"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "trans_feruloylacetyl_coa",
+      "name": "trans-feruloylacetyl-CoA",
+      "short": "trans-feruloylacety…",
+      "formula": "C33H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:142389"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
     }
   ],
   "enzymes": [
@@ -150,6 +228,27 @@
       "name": "feruloyl-CoA hydratase/lyase",
       "ec": [
         "4.1.2.61"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_n7",
+      "name": "5-pentadecatrienyl resorcinol O-methyltransferase",
+      "ec": [
+        "2.1.1.n7"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_218",
+      "name": "phenylpropanoylacetyl-CoA synthase",
+      "ec": [
+        "2.3.1.218"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_92",
+      "name": "(2Z,6Z)-farnesyl diphosphate synthase",
+      "ec": [
+        "2.5.1.92"
       ]
     }
   ],
@@ -293,6 +392,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:14517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "5-pentadecatrienyl resorcinol O-methyltransferase",
+      "equation": "(8Z,11Z)-5-(pentadeca-8,11,14-trien-1-yl)resorcinol + S-adenosyl-L-methionine = (8Z,11Z)-5-(pentadeca- 8,11,14-trien-1-yl)resorcinol-3-methyl ether + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.n7",
+      "substrates": [
+        {
+          "metabolite": "5_pentadeca_8_11_14_trien_1_yl_resorcinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pentadeca_8_11_14_trien_1_yl_resorcinol_monome",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_n7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26325"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phenylpropanoylacetyl-CoA synthase",
+      "equation": "(E)-feruloyl-CoA + malonyl-CoA + H(+) = (E)-feruloylacetyl-CoA + CO2 + CoA",
+      "ec": "2.3.1.218",
+      "substrates": [
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_feruloylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_218"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(2Z,6Z)-farnesyl diphosphate synthase",
+      "equation": "2 isopentenyl diphosphate + dimethylallyl diphosphate = (2Z,6Z)-farnesyl diphosphate + 2 diphosphate",
+      "ec": "2.5.1.92",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:27810"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27810"
           }
         ]
       }

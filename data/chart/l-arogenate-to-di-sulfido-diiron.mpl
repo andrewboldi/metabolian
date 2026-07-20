@@ -17,4 +17,28 @@ pathway l-arogenate-to-di-sulfido-diiron "L-arogenate to di-μ-sulfido-diiron" {
     <-> ec_1_14_19_70 [1.14.19.70] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     mycocyclosin
   }
+
+  branch from tyrosine side left {
+    tyrosine
+    <-> ec_6_3_2_24 [6.3.2.24] +arginine +atp +amp +ppi +hplus
+    l_tyrosiniumyl_l_arginine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_34 [2.5.1.34] +dmapp +l_tryptophan
+    4_3_methylbut_2_enyl_l_tryptophan
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_2_3_2_6 [2.3.2.6] +l_lysiniumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    l_leucyl_l_lysyl_2_group
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_2_7_8 [1.2.7.8] +3_indol_3_yl_pyruvate +coa +di_sulfido_diiron +co2 +hplus
+    indol_3_ylacetyl_coa
+  }
 }

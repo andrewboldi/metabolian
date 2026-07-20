@@ -17,4 +17,16 @@ pathway udp-2-acetamido-4-azanium-to-diphosphate "UDP-2-acetamido-4-azanium… t
     <-> ec_2_7_7_82 [2.7.7.82] +ctp -ppi
     cmp_n_n_diacetyllegionaminate
   }
+
+  branch from 2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose side left {
+    2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose
+    <-> ec_3_2_1_184 [3.2.1.184] +h2o +gdp +hplus
+    gdp_n_n_diacetylbacillosamine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    sibirene
+  }
 }

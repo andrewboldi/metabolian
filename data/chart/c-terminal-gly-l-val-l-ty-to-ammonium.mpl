@@ -17,4 +17,28 @@ pathway c-terminal-gly-l-val-l-ty-to-ammonium "C-terminal Gly-L-Val-L-Ty… to a
     <-> ec_1_4_3_26 [1.4.3.26] +3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr +o2 +h2o -h2o2 -nh3
     premycofactocin
   }
+
+  branch from 5_deoxyadenosine side left {
+    5_deoxyadenosine
+    <-> ec_1_21_98_5 [1.21.98.5] +2_3_di_o_phytanyl_sn_glycero_1_phospho_3_sn_glyc +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
+    glycerol_dibiphytanyl_glycerol_tetraether_glycer
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_5_3_99_13 [5.3.99.13] +2_deoxyadenosine_5_monophosphate +sam +5_deoxyadenosine +hplus
+    4_phospho_dehydrooxetanocin
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_3_99_17 [1.3.99.17] +8_chloroquinoline +h2o +hydrogen_donor
+    8_chloroquinolin_2_1h_one
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_100 [3.5.1.100] +r_nipecotamide +h2o
+    r_nipecotic_acid
+  }
 }

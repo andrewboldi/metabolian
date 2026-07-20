@@ -27,4 +27,28 @@ pathway l-5-carboxylatomethylhyda-to-d-ribose-1-5-bispho "L-5-carboxylatomethylh
     <-> ec_2_4_2_57 [2.4.2.57] +cytidine_5_monophosphate +pi -d_ribose_1_5_bisphosphate
     cytosine
   }
+
+  branch from carbamoyl-aspartate side left {
+    carbamoyl-aspartate
+    <-> ec_2_1_3_2 [2.1.3.2] +aspartate +pi +hplus
+    carbamoyl_p
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_6_1_1_23 [6.1.1.23] +amp_3_end_1 +atp +amp +ppi
+    3_l_aspartate_adenylyl_1_group
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_2 [1.4.1.2] +glutamate +nad +h2o +nadh +hplus
+    akg
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_4_2_1_32 [4.2.1.32] +h2o
+    l_tartrate
+  }
 }

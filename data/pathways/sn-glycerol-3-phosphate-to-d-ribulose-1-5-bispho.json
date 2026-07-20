@@ -120,6 +120,42 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "dihydrocaffeoyl_coa",
+      "name": "dihydrocaffeoyl-CoA",
+      "formula": "C30H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87137"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -142,6 +178,13 @@
       "name": "ribulose-bisphosphate carboxylase",
       "ec": [
         "4.1.1.39"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_108",
+      "name": "caffeoyl-CoA reductase",
+      "ec": [
+        "1.3.1.108"
       ]
     }
   ],
@@ -293,6 +336,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:23124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "caffeoyl-CoA reductase",
+      "equation": "hydrocaffeoyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + 2 NAD(+) = (E)-caffeoyl-CoA + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 NADH",
+      "ec": "1.3.1.108",
+      "substrates": [
+        {
+          "metabolite": "dihydrocaffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_108"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46956"
           }
         ]
       }

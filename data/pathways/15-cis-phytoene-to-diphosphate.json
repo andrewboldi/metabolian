@@ -108,6 +108,45 @@
       "xrefs": {
         "chebi": "CHEBI:139515"
       }
+    },
+    {
+      "id": "5_6_7_8_tetrahydromethanopterin",
+      "name": "5,6,7,8-tetrahydromethanopterin",
+      "short": "5,6,7,8-tetrahydrom…",
+      "formula": "C30H42N6O16P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58103"
+      }
+    },
+    {
+      "id": "7_8_dihydromethanopterin",
+      "name": "7,8-dihydromethanopterin",
+      "short": "7,8-dihydromethanop…",
+      "formula": "C30H40N6O16P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:72788"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "selinene",
+      "name": "(+)-β-selinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10443"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +169,27 @@
       "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
       "ec": [
         "2.5.1.149"
+      ]
+    },
+    {
+      "id": "ec_1_5_99_15",
+      "name": "dihydromethanopterin reductase (acceptor)",
+      "ec": [
+        "1.5.99.15"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_66",
+      "name": "beta-selinene cyclase",
+      "ec": [
+        "4.2.3.66"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_198",
+      "name": "alpha-selinene synthase",
+      "ec": [
+        "4.2.3.198"
       ]
     }
   ],
@@ -334,6 +394,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:56128"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dihydromethanopterin reductase (acceptor)",
+      "equation": "5,6,7,8-tetrahydromethanopterin + A = 7,8-dihydromethanopterin + AH2",
+      "ec": "1.5.99.15",
+      "substrates": [
+        {
+          "metabolite": "5_6_7_8_tetrahydromethanopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydromethanopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "beta-selinene cyclase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-selinene + diphosphate",
+      "ec": "4.2.3.66",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:29483"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29483"
           }
         ]
       }

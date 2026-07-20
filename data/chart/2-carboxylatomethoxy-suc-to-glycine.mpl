@@ -15,4 +15,28 @@ pathway 2-carboxylatomethoxy-suc-to-glycine "2-(carboxylatomethoxy)suc… to gly
     <-> ec_2_6_1_60 [2.6.1.60] +aromatic_l_amino_acid -glycine
     aromatic_2_oxo_monocarboxylic_acid_anion
   }
+
+  branch from glycolate side left {
+    glycolate
+    <-> ec_3_5_1_124 [3.5.1.124] +n6_1_hydroxy_2_oxoethyl_l_lysinium +h2o +hplus
+    l_lysinium
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_2_6_1_4 [2.6.1.4] +glycine +akg
+    glutamate
+  }
+
+  branch from aromatic_2_oxo_monocarboxylic_acid_anion side left {
+    aromatic_2_oxo_monocarboxylic_acid_anion
+    <-> ec_2_6_1_57 [2.6.1.57] +aromatic_l_amino_acid +glutamate
+    akg
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_2_1_4_1 [2.1.4.1] +arginine +ornithine
+    guanidinoacetic_acid
+  }
 }

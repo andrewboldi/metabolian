@@ -15,4 +15,22 @@ pathway n-acyl-d-aspartate-to-2s-3s-2-hydroxytridecan "N-acyl-D-aspartate to (2S
     <-> ec_2_3_3_2 [2.3.3.2] +lauroyl_coa +h2o -coa -hplus
     2s_3s_2_hydroxytridecane_1_2_3_tricarboxylate
   }
+
+  branch from d_aspartate side left {
+    d_aspartate
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_aspartyl_adenylyl_1_group +h2o +hplus
+    amp_3_end_1
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_11 [3.5.1.11] +penicillinate_anion +h2o
+    6_aminopenicillanic_acid
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_36 [3.5.4.36] +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
+  }
 }

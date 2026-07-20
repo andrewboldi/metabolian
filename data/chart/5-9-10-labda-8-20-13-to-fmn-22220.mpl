@@ -15,4 +15,16 @@ pathway 5-9-10-labda-8-20-13-to-fmn-22220 "5β,9α,10α-labda-8(20),13-… to FM
     <-> ec_1_14_14_107 [1.14.14.107] +fmnh2 +o2 -fmn -h2o -hplus
     gibberellin_a12
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_74 [4.2.3.74] +fpp +h2o
+    presilphiperfolan_8_ol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_132 [1.14.14.132] +4_demethyldeoxypodophyllotoxin +fmnh2 +o2 +h2o +hplus
+    4_demethylepipodophyllotoxin
+  }
 }

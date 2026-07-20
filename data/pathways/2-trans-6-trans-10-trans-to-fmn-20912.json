@@ -110,6 +110,44 @@
       "xrefs": {
         "chebi": "CHEBI:30041"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cubebol",
+      "name": "(−)-cubebol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63446"
+      }
+    },
+    {
+      "id": "cucurbitadienol",
+      "name": "cucurbitadienol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62456"
+      }
+    },
+    {
+      "id": "11_oxocucurbitadienol",
+      "name": "11-oxocucurbitadienol",
+      "short": "11-oxocucurbitadien…",
+      "formula": "C30H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138973"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +170,20 @@
       "name": "taxane 13alpha-hydroxylase",
       "ec": [
         "1.14.14.106"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_91",
+      "name": "cubebol synthase",
+      "ec": [
+        "4.2.3.91"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_71",
+      "name": "cucurbitadienol 11-hydroxylase",
+      "ec": [
+        "1.14.14.71"
       ]
     }
   ],
@@ -287,6 +339,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:18949"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cubebol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = cubebol + diphosphate",
+      "ec": "4.2.3.91",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cubebol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31823"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31823"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cucurbitadienol 11-hydroxylase",
+      "equation": "cucurbitadienol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxocucurbitadienol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.71",
+      "substrates": [
+        {
+          "metabolite": "cucurbitadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_oxocucurbitadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55508"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55508"
           }
         ]
       }

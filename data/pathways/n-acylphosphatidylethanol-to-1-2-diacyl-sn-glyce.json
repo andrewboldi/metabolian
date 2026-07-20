@@ -101,6 +101,24 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "o_acyl_l_carnitine",
+      "name": "O-acyl-L-carnitine",
+      "formula": "C8H14NO4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75659"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +141,13 @@
       "name": "2-acylglycerol-3-phosphate O-acyltransferase",
       "ec": [
         "2.3.1.52"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_28",
+      "name": "acylcarnitine hydrolase",
+      "ec": [
+        "3.1.1.28"
       ]
     }
   ],
@@ -266,6 +291,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:14233"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acylcarnitine hydrolase",
+      "equation": "an O-acyl-(R)-carnitine + H2O = (R)-carnitine + a fatty acid + H(+)",
+      "ec": "3.1.1.28",
+      "substrates": [
+        {
+          "metabolite": "o_acyl_l_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17101"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17101"
           }
         ]
       }

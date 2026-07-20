@@ -127,6 +127,98 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "thiocyanate",
+      "name": "thiocyanate",
+      "formula": "CNS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18022"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "cyanate",
+      "name": "cyanate",
+      "formula": "CNO",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29195"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "s_2_sulfodisulfanyl_l_cysteine_1",
+      "name": "S-(2-sulfodisulfanyl)-L-cysteine(1−)",
+      "short": "S-(2-sulfodisulfany…",
+      "formula": "C3H4NO4S4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140664"
+      }
+    },
+    {
+      "id": "3_trisulfanyl_l_alanine",
+      "name": "3-trisulfanyl-L-alanine",
+      "short": "3-trisulfanyl-L-ala…",
+      "formula": "C3H5NOS3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139319"
+      }
+    },
+    {
+      "id": "carbon_disulfide",
+      "name": "carbon disulfide",
+      "formula": "CS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23012"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "isethionate",
+      "name": "isethionate",
+      "formula": "C2H5O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61904"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +241,34 @@
       "name": "hydrogen-sulfide S-acetyltransferase",
       "ec": [
         "2.3.1.10"
+      ]
+    },
+    {
+      "id": "ec_1_8_2_7",
+      "name": "thiocyanate desulfurase",
+      "ec": [
+        "1.8.2.7"
+      ]
+    },
+    {
+      "id": "ec_3_1_6_20",
+      "name": "S-sulfosulfanyl-L-cysteine sulfohydrolase",
+      "ec": [
+        "3.1.6.20"
+      ]
+    },
+    {
+      "id": "ec_3_13_1_5",
+      "name": "carbon disulfide hydrolase",
+      "ec": [
+        "3.13.1.5"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_38",
+      "name": "isethionate sulfite-lyase",
+      "ec": [
+        "4.4.1.38"
       ]
     }
   ],
@@ -292,6 +412,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:16625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "thiocyanate desulfurase",
+      "equation": "thiocyanate + 2 Fe(III)-[cytochrome c] + H2O = cyanate + sulfur + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "1.8.2.7",
+      "substrates": [
+        {
+          "metabolite": "thiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "S-sulfosulfanyl-L-cysteine sulfohydrolase",
+      "equation": "S-(2-sulfodisulfanyl)-L-cysteinyl-[SoxY protein] + H2O = S-disulfanyl-L-cysteinyl-[SoxY protein] + sulfate + H(+)",
+      "ec": "3.1.6.20",
+      "substrates": [
+        {
+          "metabolite": "s_2_sulfodisulfanyl_l_cysteine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_trisulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_6_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "carbon disulfide hydrolase",
+      "equation": "carbon disulfide + 2 H2O = 2 hydrogen sulfide + CO2 + 2 H(+)",
+      "ec": "3.13.1.5",
+      "substrates": [
+        {
+          "metabolite": "carbon_disulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_13_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:38143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "isethionate sulfite-lyase",
+      "equation": "2-hydroxyethane-1-sulfonate = acetaldehyde + sulfite + H(+)",
+      "ec": "4.4.1.38",
+      "substrates": [
+        {
+          "metabolite": "isethionate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:60452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60452"
           }
         ]
       }

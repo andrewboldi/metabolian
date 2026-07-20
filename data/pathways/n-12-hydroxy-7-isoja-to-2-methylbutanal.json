@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-12-hydroxy-7-isoja-to-2-methylbutanal",
   "name": "N-[(+)-12-hydroxy-7-isoja… to 2-methylbutanal",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N-[(+)-12-hydroxy-7-isojasmonyl]-L-isoleucinate to 2-methylbutanal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -109,6 +109,82 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "n3_fumaramoyl_s_2_3_diaminopropanoic_acid",
+      "name": "N3-fumaramoyl-(S)-2,3-diaminopropanoic acid",
+      "short": "N3-fumaramoyl-(S)-2…",
+      "formula": "C7H11N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84331"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "dapdiamide_b",
+      "name": "dapdiamide B",
+      "formula": "C13H22N4O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84321"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2r_3r_2_3_dihydroxy_3_methylpentanoate",
+      "name": "(2R,3R)-2,3-dihydroxy-3-methylpentanoate",
+      "short": "(2R,3R)-2,3-dihydro…",
+      "formula": "C6H11O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:49258"
+      }
+    },
+    {
+      "id": "udp_4_amino_4_deoxy_l_arabinopyranose",
+      "name": "UDP-4-amino-4-deoxy-β-L-arabinopyranose",
+      "short": "UDP-4-amino-4-deoxy…",
+      "formula": "C14H22N3O15P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58708"
+      }
+    },
+    {
+      "id": "udp_l_threo_pentopyranos_4_ulose",
+      "name": "UDP-β-L-threo-pentopyranos-4-ulose",
+      "short": "UDP-β-L-threo-pento…",
+      "formula": "C14H18N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58710"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +207,34 @@
       "name": "branched-chain-2-oxoacid decarboxylase",
       "ec": [
         "4.1.1.72"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_47",
+      "name": "dapdiamide synthase",
+      "ec": [
+        "6.3.2.47"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_9",
+      "name": "dihydroxy-acid dehydratase",
+      "ec": [
+        "4.2.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_87",
+      "name": "UDP-4-amino-4-deoxy-L-arabinose aminotransferase",
+      "ec": [
+        "2.6.1.87"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_92",
+      "name": "UDP-4-amino-4,6-dideoxy-N-acetyl-beta-L-altrosamine transaminase",
+      "ec": [
+        "2.6.1.92"
       ]
     }
   ],
@@ -266,6 +370,149 @@
           {
             "db": "Rhea",
             "id": "RHEA:21108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dapdiamide synthase",
+      "equation": "N(3)-fumaramoyl-(S)-2,3-diaminopropanoate + L-isoleucine + ATP = dapdiamide B + ADP + phosphate + H(+)",
+      "ec": "6.3.2.47",
+      "substrates": [
+        {
+          "metabolite": "n3_fumaramoyl_s_2_3_diaminopropanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dapdiamide_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dihydroxy-acid dehydratase",
+      "equation": "(2R,3R)-2,3-dihydroxy-3-methylpentanoate = (S)-3-methyl-2-oxopentanoate + H2O",
+      "ec": "4.2.1.9",
+      "substrates": [
+        {
+          "metabolite": "2r_3r_2_3_dihydroxy_3_methylpentanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kmv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27694"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27694"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "UDP-4-amino-4-deoxy-L-arabinose aminotransferase",
+      "equation": "UDP-4-amino-4-deoxy-beta-L-arabinose + 2-oxoglutarate = UDP-beta-L-threo-pentopyranos-4-ulose + L-glutamate",
+      "ec": "2.6.1.87",
+      "substrates": [
+        {
+          "metabolite": "udp_4_amino_4_deoxy_l_arabinopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_l_threo_pentopyranos_4_ulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24710"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24710"
           }
         ]
       }

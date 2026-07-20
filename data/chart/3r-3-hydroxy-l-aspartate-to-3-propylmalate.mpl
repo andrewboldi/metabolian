@@ -15,4 +15,22 @@ pathway 3r-3-hydroxy-l-aspartate-to-3-propylmalate "(3R)-3-hydroxy-L-aspartate t
     <-> ec_2_3_3_12 [2.3.3.12] +pentanoyl_coa +h2o -coa -hplus
     3_propylmalate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_13 [3.5.4.13] +dctp +h2o +hplus
+    dutp
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_1_2_3_15 [1.2.3.15] +o2 +h2o +h2o2 +hplus
+    glyoxal
+  }
+
+  branch from aspartate side left {
+    aspartate
+    <-> ec_2_7_2_4 [2.7.2.4] +atp +adp
+    4_phosphonato_l_aspartic_acid
+  }
 }

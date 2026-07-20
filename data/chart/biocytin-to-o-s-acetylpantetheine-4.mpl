@@ -15,4 +15,16 @@ pathway biocytin-to-o-s-acetylpantetheine-4 "biocytin to O-(S-acetylpantetheine-
     <-> ec_2_1_3_10 [2.1.3.10] +malonyl-acp -acetyl-acp
     carboxybiotinyl_l_lysine_1
   }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_4_3_2_8 [4.3.2.8] +glutamyl_lysine_dizwitterion
+    5_oxo_l_prolinate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_45 [4.2.3.45] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    phyllocladan_16_ol
+  }
 }

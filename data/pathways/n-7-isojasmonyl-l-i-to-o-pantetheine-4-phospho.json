@@ -156,6 +156,109 @@
       "xrefs": {
         "chebi": "CHEBI:64479"
       }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4s_4_hydroxy_l_isoleucine",
+      "name": "(4S)-4-hydroxy-L-isoleucine",
+      "short": "4-hydroxy-L-isoleuc…",
+      "formula": "C6H13NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78247"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "terpentedienyl_diphosphate",
+      "name": "terpentedienyl diphosphate",
+      "short": "terpentedienyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58821"
+      }
+    },
+    {
+      "id": "terpentetriene",
+      "name": "terpentetriene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50302"
+      }
+    },
+    {
+      "id": "3_d_tyrosyl_adenylyl_1_group",
+      "name": "3'-(D-tyrosyl)adenylyl(1−) group",
+      "short": "3'-(D-tyrosyl)adeny…",
+      "formula": "C19H21N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78723"
+      }
+    },
+    {
+      "id": "d_tyrosine",
+      "name": "D-tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58570"
+      }
+    },
+    {
+      "id": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+      "name": "dodecanoyl-pantetheine-4-phosphorylserine(1−)",
+      "short": "dodecanoyl-pantethe…",
+      "formula": "C26H47N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65264"
+      }
+    },
+    {
+      "id": "dodecanoate",
+      "name": "dodecanoate",
+      "formula": "C12H23O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18262"
+      }
     }
   ],
   "enzymes": [
@@ -185,6 +288,34 @@
       "name": "(sulfonamide-N)(L-isoleucyl)altemicidin (3R)-3-methyl-L-phenylalanyl-",
       "ec": [
         "2.3.2.38"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_45",
+      "name": "L-isoleucine 4-hydroxylase",
+      "ec": [
+        "1.14.11.45"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_36",
+      "name": "terpentetriene synthase",
+      "ec": [
+        "4.2.3.36"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_96",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "ec": [
+        "3.1.1.96"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_21",
+      "name": "dodecanoyl-[acyl-carrier-protein] hydrolase",
+      "ec": [
+        "3.1.2.21"
       ]
     }
   ],
@@ -377,6 +508,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:82299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-isoleucine 4-hydroxylase",
+      "equation": "L-isoleucine + 2-oxoglutarate + O2 = (4S)-4-hydroxy-L-isoleucine + succinate + CO2",
+      "ec": "1.14.11.45",
+      "substrates": [
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_hydroxy_l_isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "terpentetriene synthase",
+      "equation": "terpentedienyl diphosphate = terpentetriene + diphosphate",
+      "ec": "4.2.3.36",
+      "substrates": [
+        {
+          "metabolite": "terpentedienyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "terpentetriene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25617"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "equation": "D-tyrosyl-tRNA(Tyr) + H2O = D-tyrosine + tRNA(Tyr)",
+      "ec": "3.1.1.96",
+      "substrates": [
+        {
+          "metabolite": "3_d_tyrosyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:25347"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "dodecanoyl-[acyl-carrier-protein] hydrolase",
+      "equation": "dodecanoyl-[ACP] + H2O = dodecanoate + holo-[ACP] + H(+)",
+      "ec": "3.1.2.21",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:30119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30119"
           }
         ]
       }

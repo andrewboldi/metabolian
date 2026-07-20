@@ -27,4 +27,28 @@ pathway 2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-manno-oct "2-amino-2-deoxy-D-gluc
     <-> ec_3_1_3_45 [3.1.3.45] +h2o -pi
     3_deoxy_d_manno_oct_2_ulosonate
   }
+
+  branch from 2_dehydro_3_deoxy_d_gluconate side left {
+    2_dehydro_3_deoxy_d_gluconate
+    <-> ec_1_1_1_126 [1.1.1.126] +nadp +nadph +hplus
+    4s_5s_4_5_dihydroxy_2_6_dioxohexanoate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_5 [1.4.3.5] +o2 +h2o +plp +h2o2
+    pyridoxamine_5_phosphate
+  }
+
+  branch from 2_dehydro_3_deoxy_6_phosphonato_d_gluconate side left {
+    2_dehydro_3_deoxy_6_phosphonato_d_gluconate
+    <-> ec_4_2_1_12 [4.2.1.12] +h2o
+    6pgc
+  }
+
+  branch from g3p side right {
+    g3p
+    <-> ec_1_2_1_90 [1.2.1.90] +nad +h2o +nadh +hplus
+    pg3
+  }
 }

@@ -17,4 +17,28 @@ pathway l-threonate-to-o-pantetheine-4-phospho "L-threonate to O-(pantetheine-4'
     <-> ec_2_3_1_277 [2.3.1.277] +o_s_3_oxo_medium_chain_acyl_pantetheine_4_phosph -holo-acp -h2o
     4_alkanoyl_5_oxo_2_5_dihydrofuran_3_yl_methyl_p
   }
+
+  branch from r_2_4_dihydroxy_3_oxobutanoate side left {
+    r_2_4_dihydroxy_3_oxobutanoate
+    <-> ec_5_3_1_35 [5.3.1.35]
+    r_3_4_dihydroxy_2_oxobutanoate
+  }
+
+  branch from dhap side right {
+    dhap
+    <-> ec_4_1_2_62 [4.1.2.62] +s_methyl_5_thio_d_ribulose_1_phosphate
+    methylsulfanyl_acetaldehyde
+  }
+
+  branch from 4_alkanoyl_5_oxo_2_5_dihydrofuran_3_yl_methyl_p side left {
+    4_alkanoyl_5_oxo_2_5_dihydrofuran_3_yl_methyl_p
+    <-> ec_1_3_1_113 [1.3.1.113] +nadp +nadph +hplus
+    3s_4r_4_alkanoyl_5_oxooxolan_3_yl_methyl_phosph
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_161 [2.3.1.161] +malonyl-coa +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
+    o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
+  }
 }

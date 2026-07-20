@@ -99,6 +99,44 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "galactarate",
+      "name": "galactarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16537"
+      }
+    },
+    {
+      "id": "ldopa",
+      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
+      "short": "3,4-Dihydroxy-L-phe…",
+      "formula": "C9H11NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57504"
+      }
+    },
+    {
+      "id": "3_4_dihydroxyphenylpyruvate",
+      "name": "3,4-dihydroxyphenylpyruvate",
+      "short": "3,4-dihydroxyphenyl…",
+      "formula": "C9H7O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29055"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +159,20 @@
       "name": "2,5-dioxovalerate dehydrogenase",
       "ec": [
         "1.2.1.26"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_42",
+      "name": "galactarate dehydratase",
+      "ec": [
+        "4.2.1.42"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_49",
+      "name": "dihydroxyphenylalanine transaminase",
+      "ec": [
+        "2.6.1.49"
       ]
     }
   ],
@@ -264,6 +316,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:11296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "galactarate dehydratase",
+      "equation": "galactarate = 5-dehydro-4-deoxy-D-glucarate + H2O",
+      "ec": "4.2.1.42",
+      "substrates": [
+        {
+          "metabolite": "galactarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_4_deoxy_d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16005"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dihydroxyphenylalanine transaminase",
+      "equation": "L-dopa + 2-oxoglutarate = 3-(3,4-dihydroxyphenyl)pyruvate + L-glutamate",
+      "ec": "2.6.1.49",
+      "substrates": [
+        {
+          "metabolite": "ldopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxyphenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15273"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15273"
           }
         ]
       }

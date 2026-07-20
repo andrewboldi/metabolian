@@ -17,4 +17,28 @@ pathway n-iminiumylmethyl-l-aspar-to-enol-oxaloacetate "N-iminiumylmethyl-L-aspa
     <-> ec_5_3_2_2 [5.3.2.2]
     enol_oxaloacetate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_3_15 [3.5.3.15] +l_argininium +h2o
+    l_citrulline
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_4_1_1_11 [4.1.1.11] +hplus +co2
+    alanine
+  }
+
+  branch from formate side left {
+    formate
+    <-> ec_3_5_1_31 [3.5.1.31] +n_formyl_l_methioninate +h2o
+    methionine
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_1_1_5_4 [1.1.5.4] +malate +1_4_benzoquinones
+    hydroquinones
+  }
 }

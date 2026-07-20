@@ -19,4 +19,22 @@ pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihyd
     <-> ec_1_14_13_10 [1.14.13.10] +nadh +o2 +hplus -nad -h2o
     2_3_6_trihydroxypyridine
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_97_1_9 [1.97.1.9] +selenite +hydrogen_acceptor +h2o
+    selenate
+  }
+
+  branch from 6_hydroxypseudooxynicotinium side right {
+    6_hydroxypseudooxynicotinium
+    <-> ec_1_5_3_6 [1.5.3.6] +o2 +h2o +h2o2
+    r_6_hydroxynicotinium
+  }
+
+  branch from 4_methylamino_butyric_acid side left {
+    4_methylamino_butyric_acid
+    <-> ec_1_5_3_19 [1.5.3.19] +o2 +h2o +formaldehyde +h2o2
+    gaba
+  }
 }

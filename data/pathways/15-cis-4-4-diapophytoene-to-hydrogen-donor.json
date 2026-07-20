@@ -119,6 +119,46 @@
       "xrefs": {
         "chebi": "CHEBI:79063"
       }
+    },
+    {
+      "id": "4_4_diapolycopen_4_al",
+      "name": "4,4'-diapolycopen-4-al",
+      "short": "4,4'-diapolycopen-4…",
+      "formula": "C30H38O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138599"
+      }
+    },
+    {
+      "id": "4_4_diapolycopen_4_oate",
+      "name": "4,4'-diapolycopen-4-oate",
+      "short": "4,4'-diapolycopen-4…",
+      "formula": "C30H37O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138600"
+      }
+    },
+    {
+      "id": "linoleoyl_containing_glycerolipid",
+      "name": "linoleoyl-containing glycerolipid",
+      "short": "linoleoyl-containin…",
+      "formula": "C18H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88351"
+      }
+    },
+    {
+      "id": "8e_10e_12z_octadecatrienoyl_containing_glycerol",
+      "name": "(8E,10E,12Z)-octadecatrienoyl-containing glycerolipid",
+      "short": "(8E,10E,12Z)-octade…",
+      "formula": "C18H29OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88257"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +181,13 @@
       "name": "4,4'-diapolycopenoate synthase",
       "ec": [
         "1.2.99.10"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_14",
+      "name": "linoleoyl-lipid Delta(9) conjugase",
+      "ec": [
+        "1.14.19.14"
       ]
     }
   ],
@@ -296,6 +343,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:42380"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4,4'-diapolycopenoate synthase",
+      "equation": "all-trans-4,4'-diapolycopen-4-al + A + H2O = all-trans-4,4'-diapolycopen-4-oate + AH2 + H(+)",
+      "ec": "1.2.99.10",
+      "substrates": [
+        {
+          "metabolite": "4_4_diapolycopen_4_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_diapolycopen_4_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_99_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "linoleoyl-lipid Delta(9) conjugase",
+      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + AH2 + O2 = a (8E,10E,12Z)-octadecatrienoyl-containing glycerolipid + A + 2 H2O",
+      "ec": "1.14.19.14",
+      "substrates": [
+        {
+          "metabolite": "linoleoyl_containing_glycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8e_10e_12z_octadecatrienoyl_containing_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46440"
           }
         ]
       }

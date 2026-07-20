@@ -17,4 +17,16 @@ pathway 1-stearoyl-2-acylglycerol-to-di-sulfido-diiron "1-stearoyl 2-acylglycero
     <-> ec_1_14_19_36 [1.14.19.36] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     1_6z_9z_12z_15z_octadec_6_9_12_15_tetraenoyl_2_a
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_32 [1.14.15.32] +pentalenene +di_sulfido_diiron +o2 +hplus +h2o
+    pentalen_13_al
+  }
+
+  branch from 1_linoleoyl_2_acylglycerolipid side right {
+    1_linoleoyl_2_acylglycerolipid
+    <-> ec_1_14_19_36 [1.14.19.36] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    1_linolenoyl_2_acylglycerolipid
+  }
 }

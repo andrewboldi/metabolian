@@ -15,4 +15,16 @@ pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-c
     <-> ec_2_1_1_329 [2.1.1.329] +sam -sah -hplus
     phyllohydroquinone
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_109 [4.2.3.109] +gpp
+    sabinene
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_136 [2.1.1.136] +2_4_6_trichlorophenolate +sam
+    2_4_6_trichloroanisole
+  }
 }

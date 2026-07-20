@@ -108,6 +108,53 @@
       "xrefs": {
         "chebi": "CHEBI:28938"
       }
+    },
+    {
+      "id": "2_deoxycytidine",
+      "name": "2'-deoxycytidine",
+      "formula": "C9H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15698"
+      }
+    },
+    {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "cadinene",
+      "name": "(−)-γ-cadinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63203"
+      }
+    },
+    {
+      "id": "l_asparaginyl_group",
+      "name": "L-asparaginyl group",
+      "formula": "C4H7N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50348"
+      }
+    },
+    {
+      "id": "l_aspartyl_zwitterionic_group",
+      "name": "L-α-aspartyl zwitterionic group",
+      "short": "L-α-aspartyl…",
+      "formula": "C4H6NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64720"
+      }
     }
   ],
   "enzymes": [
@@ -144,6 +191,34 @@
       "name": "dCMP deaminase",
       "ec": [
         "3.5.4.12"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_74",
+      "name": "deoxycytidine kinase",
+      "ec": [
+        "2.7.1.74"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_145",
+      "name": "deoxynucleoside kinase",
+      "ec": [
+        "2.7.1.145"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_62",
+      "name": "(-)-gamma-cadinene synthase [(2Z,6E)-farnesyl diphosphate cyclizing]",
+      "ec": [
+        "4.2.3.62"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_121",
+      "name": "protein N-terminal asparagine amidohydrolase",
+      "ec": [
+        "3.5.1.121"
       ]
     }
   ],
@@ -287,6 +362,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:22924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "deoxycytidine kinase",
+      "equation": "2'-deoxycytidine + ATP = dCMP + ADP + H(+)",
+      "ec": "2.7.1.74",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(-)-gamma-cadinene synthase [(2Z,6E)-farnesyl diphosphate cyclizing]",
+      "equation": "(2Z,6E)-farnesyl diphosphate = (-)-gamma-cadinene + diphosphate",
+      "ec": "4.2.3.62",
+      "substrates": [
+        {
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28639"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "protein N-terminal asparagine amidohydrolase",
+      "equation": "N-terminal L-asparaginyl-[protein] + H2O + H(+) = N-terminal L-aspartyl-[protein] + NH4(+)",
+      "ec": "3.5.1.121",
+      "substrates": [
+        {
+          "metabolite": "l_asparaginyl_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_aspartyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_121"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:50676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50676"
           }
         ]
       }

@@ -129,6 +129,53 @@
       "xrefs": {
         "chebi": "CHEBI:140440"
       }
+    },
+    {
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50347"
+      }
+    },
+    {
+      "id": "3s_3_hydroxy_l_asparagine",
+      "name": "(3S)-3-hydroxy-L-asparagine",
+      "short": "3-hydroxy-L-asparag…",
+      "formula": "C4H6N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138107"
+      }
+    },
+    {
+      "id": "12_epi_hapalindole_u",
+      "name": "12-epi-hapalindole U",
+      "formula": "C21H24N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140441"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "10_epi_eudesmol",
+      "name": "10-epi-γ-eudesmol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62514"
+      }
     }
   ],
   "enzymes": [
@@ -151,6 +198,27 @@
       "name": "hapalindole H synthase",
       "ec": [
         "5.5.1.31"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_n4",
+      "name": "ankyrin-repeat-histidine dioxagenase",
+      "ec": [
+        "1.14.11.n4"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_32",
+      "name": "12-epi-hapalindole U synthase",
+      "ec": [
+        "5.5.1.32"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_84",
+      "name": "10-epi-gamma-eudesmol synthase",
+      "ec": [
+        "4.2.3.84"
       ]
     }
   ],
@@ -294,6 +362,141 @@
           {
             "db": "Rhea",
             "id": "RHEA:30663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ankyrin-repeat-histidine dioxagenase",
+      "equation": "L-asparaginyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-asparaginyl-[ankyrin-repeat domain protein] + succinate + CO2",
+      "ec": "1.14.11.n4",
+      "substrates": [
+        {
+          "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_hydroxy_l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_n4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "12-epi-hapalindole U synthase",
+      "equation": "3-geranyl-3-[(Z)-2-isocyanoethenyl]-1H-indole = 12-epi-hapalindole U",
+      "ec": "5.5.1.32",
+      "substrates": [
+        {
+          "metabolite": "3_geranyl_3_z_2_isocyanovinyl_3h_indole",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_epi_hapalindole_u",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "10-epi-gamma-eudesmol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-gamma-eudesmol + diphosphate",
+      "ec": "4.2.3.84",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10_epi_eudesmol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:30947"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30947"
           }
         ]
       }

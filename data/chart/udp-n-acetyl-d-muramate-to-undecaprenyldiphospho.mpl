@@ -17,4 +17,10 @@ pathway udp-n-acetyl-d-muramate-to-undecaprenyldiphospho "UDP-N-acetyl-α-D-mura
     <-> ec_2_4_1_227 [2.4.1.227] +udpglcnac -udp -hplus
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
   }
+
+  branch from ump side left {
+    ump
+    <-> ec_1_14_11_49 [1.14.11.49] +akg +o2 +succinate +co2 +pi
+    uridine_5_aldehyde
+  }
 }

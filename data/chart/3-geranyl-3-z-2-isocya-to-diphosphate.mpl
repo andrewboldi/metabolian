@@ -15,4 +15,22 @@ pathway 3-geranyl-3-z-2-isocya-to-diphosphate "3-geranyl-3-[(Z)-2-isocya… to d
     <-> ec_2_5_1_159 [2.5.1.159] +dmapp -ppi
     ambiguine_a
   }
+
+  branch from hapalindole_u side left {
+    hapalindole_u
+    <-> ec_2_5_1_159 [2.5.1.159] +dmapp +hplus +ppi
+    ambiguine_h
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_20_4 [1.14.20.4] +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o
+    4_unsubstituted_3_hydroxyanthocyanidin_betaine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_81 [4.2.3.81] +fpp
+    exo_bergamotene
+  }
 }

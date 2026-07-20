@@ -17,4 +17,16 @@ pathway enterobactin-to-n-c-5-deoxy-d-glucos "enterobactin to [N-(C-5-[deoxy-β-
     <-> ec_3_1_1_107 [3.1.1.107] +h2o -hplus
     n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzoyl_l_s
   }
+
+  branch from monoglucosyl_enterobactin side left {
+    monoglucosyl_enterobactin
+    <-> ec_3_1_1_107 [3.1.1.107] +h2o +hplus
+    n_2_3_dihydroxybenzoyl_l_seryl_2_n_c_5_deoxy_d
+  }
+
+  branch from diglucosyl_enterobactin side right {
+    diglucosyl_enterobactin
+    <-> ec_3_1_1_107 [3.1.1.107] +h2o +hplus
+    n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deoxy_d_glu
+  }
 }

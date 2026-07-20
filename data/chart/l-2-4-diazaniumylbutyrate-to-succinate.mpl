@@ -15,4 +15,16 @@ pathway l-2-4-diazaniumylbutyrate-to-succinate "L-2,4-diazaniumylbutyrate to suc
     <-> ec_1_14_11_55 [1.14.11.55] +akg +o2 -succinate -co2
     5_hydroxyectoine
   }
+
+  branch from ectoine side left {
+    ectoine
+    <-> ec_3_5_4_44 [3.5.4.44] +h2o
+    2s_2_acetamido_4_aminobutanoic_acid
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_46 [1.14.11.46] +2_aminoethyl_phosphonic_acid +akg +o2 +co2
+    1r_2_amino_1_hydroxyethyl_phosphonate
+  }
 }

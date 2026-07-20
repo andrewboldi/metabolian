@@ -174,6 +174,63 @@
       "xrefs": {
         "chebi": "CHEBI:183054"
       }
+    },
+    {
+      "id": "3_hydroxy_2_methyl_3_phytyl_2_3_dihydro_1_4_naph",
+      "name": "3-hydroxy-2-methyl-3-phytyl-2,3-dihydro-1,4-naphthoquinone",
+      "short": "3-hydroxy-2-methyl-…",
+      "formula": "C31H48O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18298"
+      }
+    },
+    {
+      "id": "4s_5s_1_2_dithiane_4_5_diol",
+      "name": "(4S,5S)-1,2-dithiane-4,5-diol",
+      "short": "(4S,5S)-1,2-dithian…",
+      "formula": "C4H8O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41837"
+      }
+    },
+    {
+      "id": "1_4_dithiothreitol",
+      "name": "1,4-dithiothreitol",
+      "formula": "C4H10O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18320"
+      }
+    },
+    {
+      "id": "3_3_5_triiodo_l_thyronine",
+      "name": "3,3',5'-triiodo-L-thyronine",
+      "short": "3,3',5'-triiodo-L-t…",
+      "formula": "C15H12I3NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57261"
+      }
+    },
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "l_thyroxine",
+      "name": "L-thyroxine",
+      "formula": "C15H11I4NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58448"
+      }
     }
   ],
   "enzymes": [
@@ -196,6 +253,20 @@
       "name": "tubulin-glutamate ligase",
       "ec": [
         "6.3.2.61"
+      ]
+    },
+    {
+      "id": "ec_1_17_4_5",
+      "name": "vitamin-K-epoxide reductase (warfarin-insensitive)",
+      "ec": [
+        "1.17.4.5"
+      ]
+    },
+    {
+      "id": "ec_1_21_99_3",
+      "name": "thyroxine 5-deiodinase",
+      "ec": [
+        "1.21.99.3"
       ]
     }
   ],
@@ -424,6 +495,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:69200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "vitamin-K-epoxide reductase (warfarin-insensitive)",
+      "equation": "3-hydroxy-2-methyl-3-phytyl-2,3-dihydro-1,4-naphthoquinone + oxidized dithiothreitol = 1,4-dithiothreitol + 2,3-epoxyphylloquinone",
+      "ec": "1.17.4.5",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_2_methyl_3_phytyl_2_3_dihydro_1_4_naph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4s_5s_1_2_dithiane_4_5_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_dithiothreitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_3_epoxyphylloquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_4_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "thyroxine 5-deiodinase",
+      "equation": "3,3',5'-triiodo-L-thyronine + iodide + A + H(+) = L-thyroxine + AH2",
+      "ec": "1.21.99.3",
+      "substrates": [
+        {
+          "metabolite": "3_3_5_triiodo_l_thyronine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_thyroxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_99_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:18897"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18897"
           }
         ]
       }

@@ -172,6 +172,125 @@
       "xrefs": {
         "chebi": "CHEBI:16842"
       }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "cyclopeptine",
+      "name": "cyclopeptine",
+      "formula": "C17H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71320"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "11_hydroxyferruginol",
+      "name": "11-hydroxyferruginol",
+      "formula": "C20H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138942"
+      }
+    },
+    {
+      "id": "11_20_dihydroxyferruginol",
+      "name": "11,20-dihydroxyferruginol",
+      "short": "11,20-dihydroxyferr…",
+      "formula": "C20H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138965"
+      }
+    },
+    {
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61961"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -201,6 +320,27 @@
       "name": "dimethylsulfone monooxygenase",
       "ec": [
         "1.14.14.35"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_40",
+      "name": "cyclopeptine synthase",
+      "ec": [
+        "6.3.2.40"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_67",
+      "name": "11-hydroxysugiol 20-monooxygenase",
+      "ec": [
+        "1.14.14.67"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_69",
+      "name": "[histone H3]-trimethyl-L-lysine(36) demethylase",
+      "ec": [
+        "1.14.11.69"
       ]
     }
   ],
@@ -417,6 +557,185 @@
           {
             "db": "Rhea",
             "id": "RHEA:50716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cyclopeptine synthase",
+      "equation": "anthranilate + L-phenylalanine + S-adenosyl-L-methionine + 2 ATP = cyclopeptine + 2 AMP + S-adenosyl-L-homocysteine + 2 diphosphate + 2 H(+)",
+      "ec": "6.3.2.40",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclopeptine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35091"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35091"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "11-hydroxysugiol 20-monooxygenase",
+      "equation": "11-hydroxyferruginol + reduced [NADPH--hemoprotein reductase] + O2 = 11,20-dihydroxyferruginol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.67",
+      "substrates": [
+        {
+          "metabolite": "11_hydroxyferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_20_dihydroxyferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:55468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "[histone H3]-trimethyl-L-lysine(36) demethylase",
+      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 2 2-oxoglutarate + 2 O2 = N(6)-methyl-L-lysyl(36)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
+      "ec": "1.14.11.69",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:60236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60236"
           }
         ]
       }

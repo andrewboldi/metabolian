@@ -158,6 +158,52 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10352"
+      }
+    },
+    {
+      "id": "24_hydroxy_amyrin",
+      "name": "24-hydroxy-β-amyrin",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62459"
+      }
+    },
+    {
+      "id": "4_hydroxy_2_oxohexanoate",
+      "name": "4-hydroxy-2-oxohexanoate",
+      "short": "4-hydroxy-2-oxohexa…",
+      "formula": "C6H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:53800"
+      }
+    },
+    {
+      "id": "3_hydroxybenzoate",
+      "name": "3-hydroxybenzoate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16193"
+      }
+    },
+    {
+      "id": "3_hydroxybenzoyl_coa",
+      "name": "3-hydroxybenzoyl-CoA",
+      "formula": "C28H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57342"
+      }
     }
   ],
   "enzymes": [
@@ -187,6 +233,27 @@
       "name": "3-[(3aS,4S,7aS)-7a-methyl-1,5-dioxo-octahydro-1H-inden-4-yl]propanoate-",
       "ec": [
         "6.2.1.41"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_134",
+      "name": "beta-amyrin 24-hydroxylase",
+      "ec": [
+        "1.14.14.134"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_132",
+      "name": "2-hydroxyhexa-2,4-dienoate hydratase",
+      "ec": [
+        "4.2.1.132"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_37",
+      "name": "3-hydroxybenzoate--CoA ligase",
+      "ec": [
+        "6.2.1.37"
       ]
     }
   ],
@@ -391,6 +458,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:41640"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-amyrin 24-hydroxylase",
+      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 24-hydroxy-beta-amyrin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.134",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24_hydroxy_amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_134"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30991"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2-hydroxyhexa-2,4-dienoate hydratase",
+      "equation": "(2Z,4Z)-2-hydroxyhexa-2,4-dienoate + H2O = 4-hydroxy-2-oxohexanoate",
+      "ec": "4.2.1.132",
+      "substrates": [
+        {
+          "metabolite": "2z_4z_2_hydroxyhexa_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_2_oxohexanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_132"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:32535"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "3-hydroxybenzoate--CoA ligase",
+      "equation": "3-hydroxybenzoate + ATP + CoA = 3-hydroxybenzoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.37",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:25070"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25070"
           }
         ]
       }

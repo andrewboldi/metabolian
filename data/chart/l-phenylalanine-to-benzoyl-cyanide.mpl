@@ -15,4 +15,10 @@ pathway l-phenylalanine-to-benzoyl-cyanide "L-phenylalanine to benzoyl cyanide" 
     <-> ec_1_1_3_49 [1.1.3.49] +o2 -h2o2
     benzoyl_cyanide
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_74 [1.14.14.74] +albendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyalbendazole
+  }
 }

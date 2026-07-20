@@ -256,6 +256,101 @@
       "xrefs": {
         "chebi": "CHEBI:58069"
       }
+    },
+    {
+      "id": "kdo_2_lipid_a_6_e_coli",
+      "name": "(Kdo)2-lipid A(6−) (E. coli)",
+      "short": "(Kdo)2-lipid A(6−)…",
+      "formula": "C110H196N2O39P2",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:58540"
+      }
+    },
+    {
+      "id": "l_ara4n_2_kdo_2_lipid_a",
+      "name": "(β-L-Ara4N)2-(KDO)2-lipid A",
+      "short": "(β-L-Ara4N)2-(KDO)2…",
+      "formula": "C120H218N4O45P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:71399"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "d_glucosyl_ditrans_polycis_undecaprenyl_diphosp",
+      "name": "α-D-glucosyl ditrans,polycis-undecaprenyl diphosphate",
+      "short": "α-D-glucosyl…",
+      "formula": "C61H100O12P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61254"
+      }
+    },
+    {
+      "id": "d_manp_1_3_d_manp",
+      "name": "α-D-Manp-(1→3)-α-D-Manp",
+      "short": "α-D-Manp-(1→3)-α-D-…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61663"
+      }
+    },
+    {
+      "id": "udp_d_xylose",
+      "name": "UDP-α-D-xylose",
+      "formula": "C14H20N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57632"
+      }
+    },
+    {
+      "id": "3_o_6_o_d_xylosylphospho_d_mannopyranosyl_d_mann",
+      "name": "3-O-(6-O-α-D-xylosylphospho-α-D-mannopyranosyl)-α-D-mannopyranose",
+      "short": "3-O-(6-O-α-D-xylosy…",
+      "formula": "C17H30O18P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61665"
+      }
     }
   ],
   "enzymes": [
@@ -313,6 +408,27 @@
       "name": "CDP-abequose:alpha-D-Man-(1->4)-alpha-L-Rha-(1->3)-alpha-D-Gal-PP-Und",
       "ec": [
         "2.4.1.60"
+      ]
+    },
+    {
+      "id": "ec_1_17_5_3",
+      "name": "formate dehydrogenase-N",
+      "ec": [
+        "1.17.5.3"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_31",
+      "name": "undecaprenyl-phosphate glucose phosphotransferase",
+      "ec": [
+        "2.7.8.31"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_32",
+      "name": "3-O-alpha-D-mannopyranosyl-alpha-D-mannopyranose",
+      "ec": [
+        "2.7.8.32"
       ]
     }
   ],
@@ -689,6 +805,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:34183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "lipid IVA 4-amino-4-deoxy-L-arabinosyltransferase",
+      "equation": "2 4-amino-4-deoxy-alpha-L-arabinopyranosyl di-trans,octa-cis-undecaprenyl phosphate + alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) = (beta-L-Ara4N)2-(Kdo)2-lipid A + 2 di-trans,octa-cis-undecaprenyl phosphate",
+      "ec": "2.4.2.43",
+      "substrates": [
+        {
+          "metabolite": "4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "kdo_2_lipid_a_6_e_coli",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_ara4n_2_kdo_2_lipid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_phosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:35371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "formate dehydrogenase-N",
+      "equation": "a quinone + formate + H(+) = a quinol + CO2",
+      "ec": "1.17.5.3",
+      "substrates": [
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_5_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:48592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "undecaprenyl-phosphate glucose phosphotransferase",
+      "equation": "di-trans,octa-cis-undecaprenyl phosphate + UDP-alpha-D-glucose = alpha-D-glucosyl di-trans,octa-cis-undecaprenyl diphosphate + UMP",
+      "ec": "2.7.8.31",
+      "substrates": [
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosyl_ditrans_polycis_undecaprenyl_diphosp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:28126"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "3-O-alpha-D-mannopyranosyl-alpha-D-mannopyranose",
+      "equation": "3-alpha-D-mannopyranosyl-alpha-D-mannopyranose + UDP-alpha-D-xylose = 3-O-(6-O-alpha-D-xylosylphospho-alpha-D-mannopyranosyl)-alpha-D-mannopyranose + UMP + H(+)",
+      "ec": "2.7.8.32",
+      "substrates": [
+        {
+          "metabolite": "d_manp_1_3_d_manp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_6_o_d_xylosylphospho_d_mannopyranosyl_d_mann",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:28262"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28262"
           }
         ]
       }

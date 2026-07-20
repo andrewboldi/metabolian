@@ -15,4 +15,10 @@ pathway 2-deoxycytidine-to-5-methyldeoxycytidine "2'-deoxycytidine to 5-methylde
     <-> ec_2_7_4_19 [2.7.4.19] +atp -adp
     5_methyldeoxycytidine_5_diphosphate
   }
+
+  branch from 2_deoxycytosine_5_monophosphate side left {
+    2_deoxycytosine_5_monophosphate
+    <-> ec_2_7_4_14 [2.7.4.14] +atp +adp
+    dcdp
+  }
 }

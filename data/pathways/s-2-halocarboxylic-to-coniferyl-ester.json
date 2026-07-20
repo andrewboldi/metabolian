@@ -156,6 +156,87 @@
       "xrefs": {
         "chebi": "CHEBI:64292"
       }
+    },
+    {
+      "id": "2_halobenzoate",
+      "name": "2-halobenzoate",
+      "formula": "C7H4O2X",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:70856"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "catechol",
+      "name": "catechol",
+      "formula": "C6H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18135"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_oxo_aldehyde",
+      "name": "2-oxo aldehyde",
+      "formula": "C2HO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27659"
+      }
+    },
+    {
+      "id": "quinate",
+      "name": "(−)-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29751"
+      }
+    },
+    {
+      "id": "3_dehydroquinate",
+      "name": "3-dehydroquinate",
+      "formula": "C7H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32364"
+      }
+    },
+    {
+      "id": "primary_alcohol",
+      "name": "primary alcohol",
+      "formula": "CH3OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15734"
+      }
     }
   ],
   "enzymes": [
@@ -206,6 +287,41 @@
       "name": "eugenol synthase",
       "ec": [
         "1.1.1.318"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_13",
+      "name": "2-halobenzoate 1,2-dioxygenase",
+      "ec": [
+        "1.14.12.13"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_23",
+      "name": "2-oxoaldehyde dehydrogenase (NAD(+))",
+      "ec": [
+        "1.2.1.23"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_8",
+      "name": "quinate/shikimate dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.8"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_2",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
       ]
     }
   ],
@@ -447,6 +563,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:32655"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2-halobenzoate 1,2-dioxygenase",
+      "equation": "a 2-halobenzoate + NADH + O2 + H(+) = a halide anion + catechol + CO2 + NAD(+)",
+      "ec": "1.14.12.13",
+      "substrates": [
+        {
+          "metabolite": "2_halobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "halide_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:53736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "2-oxoaldehyde dehydrogenase (NAD(+))",
+      "equation": "2-oxoaldehyde + NAD(+) + H2O = a 2-oxocarboxylate + NADH + 2 H(+)",
+      "ec": "1.2.1.23",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:22276"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "quinate/shikimate dehydrogenase (quinone)",
+      "equation": "L-quinate + a quinone = 3-dehydroquinate + a quinol",
+      "ec": "1.1.5.8",
+      "substrates": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydroquinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:23672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "equation": "a primary alcohol + NADP(+) = an aldehyde + NADPH + H(+)",
+      "ec": "1.1.1.2",
+      "substrates": [
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:15937"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15937"
           }
         ]
       }

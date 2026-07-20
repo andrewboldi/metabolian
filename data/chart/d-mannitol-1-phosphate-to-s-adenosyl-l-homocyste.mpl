@@ -17,4 +17,16 @@ pathway d-mannitol-1-phosphate-to-s-adenosyl-l-homocyste "D-mannitol 1-phosphate
     <-> ec_2_1_1_85 [2.1.1.85] +l_histidine +sam -sah -hplus
     n_methyl_l_histidine
   }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> ec_2_7_1_200 [2.7.1.200] +galactitol +n_phosphonato_l_histidine
+    galactitol_1_phosphate
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_267 [2.1.1.267] +laricitrin +sam +hplus
+    syringetin
+  }
 }

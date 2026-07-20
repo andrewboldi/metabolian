@@ -125,6 +125,90 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "cocaine",
+      "name": "cocaine",
+      "formula": "C17H22NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:60056"
+      }
+    },
+    {
+      "id": "ecgoninium_methyl_ester",
+      "name": "ecgoninium methyl ester",
+      "short": "ecgoninium methyl…",
+      "formula": "C10H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59908"
+      }
+    },
+    {
+      "id": "4_coumaroyl_coa",
+      "name": "4-coumaroyl-CoA",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57355"
+      }
+    },
+    {
+      "id": "p_coumaroylagmatine",
+      "name": "p-coumaroylagmatine",
+      "formula": "C14H21N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58644"
+      }
+    },
+    {
+      "id": "benzyl_alcohol",
+      "name": "benzyl alcohol",
+      "formula": "C7H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17987"
+      }
+    },
+    {
+      "id": "benzyl_benzoate",
+      "name": "benzyl benzoate",
+      "formula": "C14H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41237"
+      }
+    },
+    {
+      "id": "flaviolin_2_olate",
+      "name": "flaviolin-2-olate",
+      "formula": "C10H5O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58696"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "3_linalylflaviolin_2_olate",
+      "name": "3-linalylflaviolin-2-olate",
+      "short": "3-linalylflaviolin-…",
+      "formula": "C20H21O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78347"
+      }
     }
   ],
   "enzymes": [
@@ -154,6 +238,34 @@
       "name": "hippurate hydrolase",
       "ec": [
         "3.5.1.32"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_84",
+      "name": "cocaine esterase",
+      "ec": [
+        "3.1.1.84"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_64",
+      "name": "agmatine N(4)-coumaroyltransferase",
+      "ec": [
+        "2.3.1.64"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_196",
+      "name": "benzyl alcohol O-benzoyltransferase",
+      "ec": [
+        "2.3.1.196"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_123",
+      "name": "flaviolin linalyltransferase",
+      "ec": [
+        "2.5.1.123"
       ]
     }
   ],
@@ -346,6 +458,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:10424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cocaine esterase",
+      "equation": "cocaine + H2O = ecgonine methyl ester + benzoate + H(+)",
+      "ec": "3.1.1.84",
+      "substrates": [
+        {
+          "metabolite": "cocaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ecgoninium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27506"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27506"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "agmatine N(4)-coumaroyltransferase",
+      "equation": "4-coumaroyl-CoA + agmatine = N-(4-guanidinobutyl)-4-hydroxycinnamamide + CoA + H(+)",
+      "ec": "2.3.1.64",
+      "substrates": [
+        {
+          "metabolite": "4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p_coumaroylagmatine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:13405"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "benzyl alcohol O-benzoyltransferase",
+      "equation": "benzyl alcohol + benzoyl-CoA = benzyl benzoate + CoA",
+      "ec": "2.3.1.196",
+      "substrates": [
+        {
+          "metabolite": "benzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzyl_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_196"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:30411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "flaviolin linalyltransferase",
+      "equation": "flaviolin + (2E)-geranyl diphosphate = 3-linalylflaviolin + diphosphate",
+      "ec": "2.5.1.123",
+      "substrates": [
+        {
+          "metabolite": "flaviolin_2_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_linalylflaviolin_2_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_123"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:17449"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17449"
           }
         ]
       }

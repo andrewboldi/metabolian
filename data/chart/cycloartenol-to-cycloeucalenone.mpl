@@ -15,4 +15,10 @@ pathway cycloartenol-to-cycloeucalenone "cycloartenol to cycloeucalenone" {
     <-> ec_1_1_1_418 [1.1.1.418] +nad -co2 -nadh
     cycloeucalenone
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_231 [2.1.1.231] +4_hydroxyflavanones +sam +hplus
+    4_methoxyflavanones
+  }
 }

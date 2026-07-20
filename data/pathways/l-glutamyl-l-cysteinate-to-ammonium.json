@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-glutamyl-l-cysteinate-to-ammonium",
   "name": "L-γ-glutamyl-L-cysteinate to ammonium",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from L-γ-glutamyl-L-cysteinate(1−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,6 +138,108 @@
       "xrefs": {
         "chebi": "CHEBI:28938"
       }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "dtdp_3_amino_3_6_dideoxy_d_galactopyranose",
+      "name": "dTDP-3-amino-3,6-dideoxy-α-D-galactopyranose",
+      "short": "dTDP-3-amino-3,6-di…",
+      "formula": "C16H26N3O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:63305"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "dtdp_3_dehydro_6_deoxy_d_galactose",
+      "name": "dTDP-3-dehydro-6-deoxy-α-D-galactose",
+      "short": "dTDP-3-dehydro-6-de…",
+      "formula": "C16H22N2O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63303"
+      }
+    },
+    {
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60344"
+      }
+    },
+    {
+      "id": "biliverdin",
+      "name": "biliverdin β",
+      "formula": "C33H32N4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136509"
+      }
+    },
+    {
+      "id": "carbon_monoxide",
+      "name": "carbon monoxide",
+      "formula": "CO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17245"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "2_iminio_3_indol_3_yl_propanoate",
+      "name": "2-iminio-3-(indol-3-yl)propanoate",
+      "short": "2-iminio-3-(indol-3…",
+      "formula": "C11H10N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59193"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "chromopyrrolate",
+      "name": "chromopyrrolate",
+      "formula": "C22H13N3O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:133898"
+      }
     }
   ],
   "enzymes": [
@@ -160,6 +262,34 @@
       "name": "hercynylcysteine S-oxide lyase",
       "ec": [
         "4.4.1.36"
+      ]
+    },
+    {
+      "id": "ec_1_21_3_10",
+      "name": "hercynylcysteine S-oxide synthase",
+      "ec": [
+        "1.21.3.10"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_90",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-galactopyranose transaminase",
+      "ec": [
+        "2.6.1.90"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_58",
+      "name": "heme oxygenase (biliverdin-IX-beta and delta-forming)",
+      "ec": [
+        "1.14.99.58"
+      ]
+    },
+    {
+      "id": "ec_1_21_98_2",
+      "name": "dichlorochromopyrrolate synthase",
+      "ec": [
+        "1.21.98.2"
       ]
     }
   ],
@@ -311,6 +441,218 @@
           {
             "db": "Rhea",
             "id": "RHEA:42688"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hercynylcysteine S-oxide synthase",
+      "equation": "hercynine + L-cysteine + O2 = S-(hercyn-2-yl)-L-cysteine S-oxide + H2O",
+      "ec": "1.21.3.10",
+      "substrates": [
+        {
+          "metabolite": "n_n_n_trimethyl_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hercynylcysteine_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:42704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-galactopyranose transaminase",
+      "equation": "dTDP-3-amino-3,6-dideoxy-alpha-D-galactopyranose + 2-oxoglutarate = dTDP-3-dehydro-6-deoxy-alpha-D-galactose + L-glutamate",
+      "ec": "2.6.1.90",
+      "substrates": [
+        {
+          "metabolite": "dtdp_3_amino_3_6_dideoxy_d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_3_dehydro_6_deoxy_d_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "heme oxygenase (biliverdin-IX-beta and delta-forming)",
+      "equation": "heme b + 3 AH2 + 3 O2 + 2 H(+) = biliverdin IXbeta + CO + Fe(2+) + 3 A + 3 H2O",
+      "ec": "1.14.99.58",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biliverdin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbon_monoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:52228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52228"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "dichlorochromopyrrolate synthase",
+      "equation": "2 2-iminio-3-(indol-3-yl)propanoate + H2O2 = chromopyrrolate + NH4(+) + 2 H2O + H(+)",
+      "ec": "1.21.98.2",
+      "substrates": [
+        {
+          "metabolite": "2_iminio_3_indol_3_yl_propanoate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chromopyrrolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_98_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:50920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50920"
           }
         ]
       }

@@ -120,6 +120,83 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "gdp_l_colitose",
+      "name": "GDP-β-L-colitose",
+      "formula": "C16H23N5O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:73932"
+      }
+    },
+    {
+      "id": "l_colitosyl_1_2_d_galactosyl_1_3_n_acetyl_d_glu",
+      "name": "α-L-colitosyl-(1→2)-β-D-galactosyl-(1→3)-N-acetyl-D-glucosamine",
+      "short": "α-L-colitosyl-(1→2)…",
+      "formula": "C20H35NO14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:111509"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_4_n_acetyl_d_glucosaminide",
+      "name": "β-D-galactosyl-(1→4)-N-acetyl-β-D-glucosaminide",
+      "short": "β-D-galactosyl-(1→4…",
+      "formula": "C14H24NO11R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133507"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_3_d_galactosyl_1_4_n_acetyl_d_gl",
+      "name": "α-D-galactosyl-(1→3)-β-D-galactosyl-(1→4)-N-acetyl-β-D-glucosaminide",
+      "short": "α-D-galactosyl-(1→3…",
+      "formula": "C20H34NO16R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138024"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "r_lavandulyl_diphosphate",
+      "name": "(R)-lavandulyl diphosphate",
+      "short": "lavandulyl PP",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:143949"
+      }
     }
   ],
   "enzymes": [
@@ -142,6 +219,27 @@
       "name": "UTP--hexose-1-phosphate uridylyltransferase",
       "ec": [
         "2.7.7.10"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_341",
+      "name": "alpha-1,2-colitosyltransferase",
+      "ec": [
+        "2.4.1.341"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_87",
+      "name": "N-acetyllactosaminide 3-alpha-galactosyltransferase",
+      "ec": [
+        "2.4.1.87"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_69",
+      "name": "lavandulyl diphosphate synthase",
+      "ec": [
+        "2.5.1.69"
       ]
     }
   ],
@@ -281,6 +379,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:14209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alpha-1,2-colitosyltransferase",
+      "equation": "GDP-beta-L-colitose + beta-D-galactosyl-(1->3)-N-acetyl-D-glucosamine = alpha-L-colitosyl-(1->2)-beta-D-galactosyl-(1->3)-N-acetyl-D-glucosamine + GDP + H(+)",
+      "ec": "2.4.1.341",
+      "substrates": [
+        {
+          "metabolite": "gdp_l_colitose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_galp_1_3_d_glcpnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_colitosyl_1_2_d_galactosyl_1_3_n_acetyl_d_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_341"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49412"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49412"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-acetyllactosaminide 3-alpha-galactosyltransferase",
+      "equation": "a beta-D-galactosyl-(1->4)-N-acetyl-beta-D-glucosaminyl derivative + UDP-alpha-D-galactose = an alpha-D-galactosyl-(1->3)-beta-D-galactosyl-(1->4)-N-acetyl-beta-D-glucosaminyl derivative + UDP + H(+)",
+      "ec": "2.4.1.87",
+      "substrates": [
+        {
+          "metabolite": "d_galactosyl_1_4_n_acetyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactosyl_1_3_d_galactosyl_1_4_n_acetyl_d_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:13013"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "lavandulyl diphosphate synthase",
+      "equation": "2 dimethylallyl diphosphate = (R)-lavandulyl diphosphate + diphosphate",
+      "ec": "2.5.1.69",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_lavandulyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21676"
           }
         ]
       }

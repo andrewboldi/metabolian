@@ -17,4 +17,22 @@ pathway 4-nitrophenyl-phosphate-to-diphosphate "4-nitrophenyl phosphate to dipho
     <-> ec_6_7_1_2 [6.7.1.2] +3_amino_4_hydroxybenzoate +nitrite +atp +hplus -amp -ppi -h2o
     3_diazo_4_hydroxybenzoate
   }
+
+  branch from 2_hydroxy_4_nitrophenolate side left {
+    2_hydroxy_4_nitrophenolate
+    <-> ec_1_14_12_23 [1.14.12.23] +nadh +o2 +nitrite +nad +hplus
+    1_3_dinitrobenzene
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_14_13_210 [1.14.13.210] +4_methyl_5_nitrocatechol +nadph +o2 +nadp +h2o +hplus
+    2_oxido_5_methylquinone
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_1 [2.5.1.1] +ipp +dmapp
+    gpp
+  }
 }

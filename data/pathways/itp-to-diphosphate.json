@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "itp-to-diphosphate",
   "name": "ITP to diphosphate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from ITP(4−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,6 +137,72 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
+    },
+    {
+      "id": "inosine",
+      "name": "Inosine",
+      "formula": "C10H12N4O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17596"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "tuberculosinyl_diphosphate",
+      "name": "tuberculosinyl diphosphate",
+      "short": "tuberculosinyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58822"
+      }
+    },
+    {
+      "id": "13r_edaxadiene",
+      "name": "(13R)-edaxadiene",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63178"
+      }
+    },
+    {
+      "id": "gdp_4_amino_4_6_dideoxy_d_mannose",
+      "name": "GDP-4-amino-4,6-dideoxy-α-D-mannose",
+      "short": "GDP-4-amino-4,6-did…",
+      "formula": "C16H25N6O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73996"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "gdp_4_dehydro_6_deoxy_d_mannose",
+      "name": "GDP-4-dehydro-6-deoxy-α-D-mannose",
+      "short": "GDP-4-dehydro-6-deo…",
+      "formula": "C16H21N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57964"
+      }
     }
   ],
   "enzymes": [
@@ -173,6 +239,27 @@
       "name": "GMP synthase (glutamine-hydrolyzing)",
       "ec": [
         "6.3.5.2"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_99",
+      "name": "IMP-specific 5'-nucleotidase",
+      "ec": [
+        "3.1.3.99"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_153",
+      "name": "adenosine tuberculosinyltransferase",
+      "ec": [
+        "2.5.1.153"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_102",
+      "name": "GDP-perosamine synthase",
+      "ec": [
+        "2.6.1.102"
       ]
     }
   ],
@@ -340,6 +427,141 @@
           {
             "db": "Rhea",
             "id": "RHEA:11680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "IMP-specific 5'-nucleotidase",
+      "equation": "IMP + H2O = inosine + phosphate",
+      "ec": "3.1.3.99",
+      "substrates": [
+        {
+          "metabolite": "imp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "inosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27718"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "adenosine tuberculosinyltransferase",
+      "equation": "tuberculosinyl diphosphate + H2O = (13R)-edaxadiene + diphosphate",
+      "ec": "2.5.1.153",
+      "substrates": [
+        {
+          "metabolite": "tuberculosinyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13r_edaxadiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31787"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "GDP-perosamine synthase",
+      "equation": "GDP-alpha-D-perosamine + 2-oxoglutarate = GDP-4-dehydro-alpha-D-rhamnose + L-glutamate",
+      "ec": "2.6.1.102",
+      "substrates": [
+        {
+          "metabolite": "gdp_4_amino_4_6_dideoxy_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_4_dehydro_6_deoxy_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:36779"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36779"
           }
         ]
       }

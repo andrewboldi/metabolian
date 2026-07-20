@@ -17,4 +17,28 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     <-> ec_2_5_1_58 [2.5.1.58] +fpp -ppi
     s_2e_6e_farnesyl_l_cysteine
   }
+
+  branch from s_sulfosulfanyl_l_cysteine_1 side left {
+    s_sulfosulfanyl_l_cysteine_1
+    <-> ec_2_8_5_2 [2.8.5.2] +l_cysteine +iron +fe2 +hplus
+    trioxidosulfanidosulfate
+  }
+
+  branch from 3_disulfanyl_l_alanine side right {
+    3_disulfanyl_l_alanine
+    <-> ec_2_8_1_13 [2.8.1.13] +uridine_5_monophosphate_1 +hydrogen_donor +atp +l_cysteine +hydrogen_acceptor +amp +ppi +hplus
+    2_thiouridine_5_phosphate_1
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +hexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    hexanal
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
+    3e_phycocyanobilin
+  }
 }

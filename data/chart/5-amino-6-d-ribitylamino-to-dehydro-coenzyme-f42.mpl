@@ -15,4 +15,16 @@ pathway 5-amino-6-d-ribitylamino-to-dehydro-coenzyme-f42 "5-amino-6-(D-ribitylam
     <-> ec_2_7_8_28 [2.7.8.28] +enolpyruvoyl_2_diphospho_5_guanosine -gmp -hplus
     dehydro_coenzyme_f420_0
   }
+
+  branch from 7_8_didemethyl_8_hydroxy_5_deazariboflavin side left {
+    7_8_didemethyl_8_hydroxy_5_deazariboflavin
+    <-> ec_2_7_8_28 [2.7.8.28] +3_r_glyceryl_diphospho_5_guanosine +gmp +hplus
+    3pg_factor420_0
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_25 [1.4.3.25] +arginine +o2 +h2o +h2o2
+    5_guanidino_2_oxopentanoic_acid
+  }
 }

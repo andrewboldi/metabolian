@@ -17,4 +17,16 @@ pathway d-manp-1-2-d-manp-to-gdp-d-mannuronate "β-D-Manp-(1→2)-β-D-Manp-(…
     <-> ec_1_1_1_132 [1.1.1.132] +nad +h2o -nadh -hplus
     gdp_d_mannuronate
   }
+
+  branch from gdp_d_mannose side left {
+    gdp_d_mannose
+    <-> ec_2_4_1_348 [2.4.1.348] +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +gdp +hplus
+    d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_31 [4.2.3.31] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_pimara_9_11_15_diene
+  }
 }

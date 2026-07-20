@@ -17,4 +17,22 @@ pathway s-mandelate-to-n2-n5-dibenzoyl-l-ornithi "(S)-mandelate to N2,N5-dibenzo
     <-> ec_2_3_1_127 [2.3.1.127] +ornithine -coa -hplus
     n2_n5_dibenzoyl_l_ornithinate
   }
+
+  branch from r_mandelate side left {
+    r_mandelate
+    <-> ec_3_5_1_86 [3.5.1.86] +r_mandelamide +h2o
+    nh3
+  }
+
+  branch from phenylglyoxylate side right {
+    phenylglyoxylate
+    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
+    hydrogen_donor
+  }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> ec_1_14_13_58 [1.14.13.58] +nadph +o2 +hplus +nadp +h2o
+    3_hydroxybenzoyl_coa
+  }
 }

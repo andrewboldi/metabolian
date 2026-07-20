@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "aliphatic-aldoxime-to-ammonium",
   "name": "aliphatic aldoxime to ammonium",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 4-step route from aliphatic aldoxime to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,6 +119,70 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "d_hexose",
+      "name": "D-hexose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4194"
+      }
+    },
+    {
+      "id": "acyl_monophosphate",
+      "name": "acyl monophosphate",
+      "formula": "CO5PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59918"
+      }
+    },
+    {
+      "id": "d_hexose_phosphate",
+      "name": "D-hexose phosphate",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:140159"
+      }
+    },
+    {
+      "id": "alanyl_coa",
+      "name": "β-alanyl-CoA",
+      "formula": "C24H38N8O17P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57362"
+      }
+    },
+    {
+      "id": "acryloyl_coa",
+      "name": "Acryloyl-CoA (propenoyl-CoA)",
+      "short": "Acryloyl-CoA…",
+      "formula": "C24H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57367"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "3_5_cyclic_gmp",
+      "name": "3',5'-cyclic GMP",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57746"
+      }
     }
   ],
   "enzymes": [
@@ -148,6 +212,27 @@
       "name": "4-methyleneglutaminase",
       "ec": [
         "3.5.1.67"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_61",
+      "name": "acyl-phosphate--hexose phosphotransferase",
+      "ec": [
+        "2.7.1.61"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_6",
+      "name": "beta-alanyl-CoA ammonia-lyase",
+      "ec": [
+        "4.3.1.6"
+      ]
+    },
+    {
+      "id": "ec_4_6_1_2",
+      "name": "guanylate cyclase",
+      "ec": [
+        "4.6.1.2"
       ]
     }
   ],
@@ -336,6 +421,137 @@
           {
             "db": "Rhea",
             "id": "RHEA:14741"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "acyl-phosphate--hexose phosphotransferase",
+      "equation": "a D-hexose + an acyl phosphate = a D-hexose phosphate + a carboxylate + H(+)",
+      "ec": "2.7.1.61",
+      "substrates": [
+        {
+          "metabolite": "d_hexose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_monophosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_hexose_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:13077"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "beta-alanyl-CoA ammonia-lyase",
+      "equation": "beta-alanyl-CoA = acryloyl-CoA + NH4(+)",
+      "ec": "4.3.1.6",
+      "substrates": [
+        {
+          "metabolite": "alanyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acryloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:12416"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "guanylate cyclase",
+      "equation": "GTP = 3',5'-cyclic GMP + diphosphate",
+      "ec": "4.6.1.2",
+      "substrates": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_cyclic_gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_6_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:13665"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13665"
           }
         ]
       }

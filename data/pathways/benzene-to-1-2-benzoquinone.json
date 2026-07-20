@@ -99,6 +99,25 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +140,13 @@
       "name": "catechol oxidase",
       "ec": [
         "1.10.3.1"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_46",
+      "name": "o-pyrocatechuate decarboxylase",
+      "ec": [
+        "4.1.1.46"
       ]
     }
   ],
@@ -268,6 +294,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:21632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "o-pyrocatechuate decarboxylase",
+      "equation": "2,3-dihydroxybenzoate + H(+) = catechol + CO2",
+      "ec": "4.1.1.46",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21492"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21492"
           }
         ]
       }

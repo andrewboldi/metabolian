@@ -17,4 +17,16 @@ pathway l-fucose-to-n4-d-glcnac-1-2-d "α-L-fucose to N4-{β-D-GlcNAc-(1→2)-α
     <-> ec_2_4_1_68 [2.4.1.68] +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 -gdp -hplus
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
   }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> ec_2_4_1_152 [2.4.1.152] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +gdp +hplus
+    d_galactosyl_1_4_l_fucosyl_1_3_n_acetyl_d_gluco
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_5_1_4 [6.5.1.4] +3_end_ribonucleotide_3_phosphate_3 +atp +amp
+    3_end_ribonucleotide_2_3_cyclic_phosphate_2
+  }
 }

@@ -17,4 +17,28 @@ pathway o-phosphonatoethanaminium-to-cdp "O-phosphonatoethanaminium to CDP" {
     <-> ec_2_7_1_174 [2.7.1.174] +dag +ctp -cdp -hplus
     1_2_diacyl_sn_glycerol_3_phosphate
   }
+
+  branch from cdp_ethanolamine side left {
+    cdp_ethanolamine
+    <-> ec_2_7_8_48 [2.7.8.48] +n_acylsphingoid +cytidine_5_monophosphate +hplus
+    ceramide_phosphoethanolamine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_80 [4.2.3.80] +fpp
+    longipinene
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_39 [2.7.8.39] +cdp_2_3_bis_o_phytanyl_sn_glycerol +1d_myo_inositol_3_phosphate +hplus
+    1_archaetidyl_1d_myo_inositol_3_phosphate
+  }
+
+  branch from cdp side right {
+    cdp
+    <-> ec_2_7_4_32 [2.7.4.32] +2e_6e_farnesyl_monophosphate +ctp
+    fpp
+  }
 }

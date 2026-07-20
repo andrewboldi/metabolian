@@ -19,4 +19,10 @@ pathway 1-2-diacyl-3-d-6-sulfo-to-glycerone-phosphate "1,2-diacyl-3-(α-D-6-sulf
     <-> ec_4_1_2_57 [4.1.2.57] -dhap
     l_3_sulfolactaldehyde
   }
+
+  branch from 6_sulfo_d_quinovose side left {
+    6_sulfo_d_quinovose
+    <-> ec_5_3_1_31 [5.3.1.31]
+    6_sulfo_d_rhamnose
+  }
 }

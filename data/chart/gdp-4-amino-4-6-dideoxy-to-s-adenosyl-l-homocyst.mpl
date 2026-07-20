@@ -15,4 +15,16 @@ pathway gdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocyst "GDP-4-amino-4,6-dideox
     <-> ec_2_1_1_157 [2.1.1.157] +sam -sah -hplus
     betaine
   }
+
+  branch from methylene_thf side left {
+    methylene_thf
+    <-> ec_1_5_1_15 [1.5.1.15] +nad +nadh
+    methenyl_thf
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_145 [2.1.1.145] +trans_aconitate +sam
+    2e_2_methoxycarbonylmethyl_but_2_enedioate
+  }
 }

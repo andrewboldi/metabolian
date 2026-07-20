@@ -23,4 +23,28 @@ pathway 2-trimethylamino-ethyl-to-hydrogen-donor "[2-(trimethylamino)ethyl]… t
     <-> ec_1_1_99_37 [1.1.99.37] +hydrogen_acceptor -hydrogen_donor
     formaldehyde
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_20_13 [1.14.20.13] +6s_6_hydroxyhyoscyaminium +akg +o2 +co2 +h2o +hplus
+    scopolamine
+  }
+
+  branch from betaine side right {
+    betaine
+    <-> ec_2_1_1_162 [2.1.1.162] +glycine +sam +hplus
+    sah
+  }
+
+  branch from dmglycine side left {
+    dmglycine
+    <-> ec_2_1_1_156 [2.1.1.156] +glycine +sah +hplus
+    sam
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_4_1_2_24 [4.1.2.24] +n_n_dimethylaniline_n_oxide
+    n_methylaniline
+  }
 }

@@ -15,4 +15,16 @@ pathway l-phenylalanine-to-trans-d-glucosyl-2-hydr "L-phenylalanine to trans-β-
     <-> ec_2_4_1_114 [2.4.1.114] +udp_d_glucose -udp -hplus
     trans_d_glucosyl_2_hydroxycinnamate
   }
+
+  branch from trans_cinnamate side left {
+    trans_cinnamate
+    <-> ec_4_1_1_102 [4.1.1.102] +hplus +co2
+    styrene
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nad +h2o +nadh +hplus
+    ketone
+  }
 }

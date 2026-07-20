@@ -15,4 +15,10 @@ pathway udp-n-acetylmuramoyl-l-al-to-ammonium "UDP-N-acetylmuramoyl-L-al… to a
     <-> ec_1_4_3_19 [1.4.3.19] +d_alanine +o2 +h2o -pyruvate -h2o2
     nh3
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_35 [3.5.4.35] +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
+  }
 }

@@ -127,6 +127,44 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "tuberculosinyl_diphosphate",
+      "name": "tuberculosinyl diphosphate",
+      "short": "tuberculosinyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58822"
+      }
+    },
+    {
+      "id": "13s_edaxadiene",
+      "name": "(13S)-edaxadiene",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63180"
+      }
+    },
+    {
+      "id": "11_hydroxysugiol",
+      "name": "11-hydroxysugiol",
+      "formula": "C20H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138962"
+      }
+    },
+    {
+      "id": "11_20_dihydroxysugiol",
+      "name": "11,20-dihydroxysugiol",
+      "short": "11,20-dihydroxysugi…",
+      "formula": "C20H28O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138963"
+      }
     }
   ],
   "enzymes": [
@@ -149,6 +187,20 @@
       "name": "zerumbone synthase",
       "ec": [
         "1.1.1.326"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_153",
+      "name": "adenosine tuberculosinyltransferase",
+      "ec": [
+        "2.5.1.153"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_67",
+      "name": "11-hydroxysugiol 20-monooxygenase",
+      "ec": [
+        "1.14.14.67"
       ]
     }
   ],
@@ -296,6 +348,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:32327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "adenosine tuberculosinyltransferase",
+      "equation": "tuberculosinyl diphosphate + H2O = (13S)-edaxadiene + diphosphate",
+      "ec": "2.5.1.153",
+      "substrates": [
+        {
+          "metabolite": "tuberculosinyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13s_edaxadiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31791"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "11-hydroxysugiol 20-monooxygenase",
+      "equation": "11-hydroxysugiol + reduced [NADPH--hemoprotein reductase] + O2 = 11,20-dihydroxysugiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.67",
+      "substrates": [
+        {
+          "metabolite": "11_hydroxysugiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_20_dihydroxysugiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55464"
           }
         ]
       }

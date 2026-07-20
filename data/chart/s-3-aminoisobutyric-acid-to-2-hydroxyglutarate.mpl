@@ -15,4 +15,22 @@ pathway s-3-aminoisobutyric-acid-to-2-hydroxyglutarate "(S)-3-aminoisobutyric ac
     <-> ec_2_3_3_11 [2.3.3.11] +glyoxylate +h2o -coa -hplus
     2_hydroxyglutarate
   }
+
+  branch from 2_methyl_3_oxopropanoate side left {
+    2_methyl_3_oxopropanoate
+    <-> ec_1_1_1_31 [1.1.1.31] +nad +nadh +hplus
+    3_hydroxyisobutyrate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_1_4_1_14 [1.4.1.14] +nad +akg +nadh +hplus
+    glutamine
+  }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> ec_6_2_1_13 [6.2.1.13] +atp +coa +adp +pi
+    propionate
+  }
 }

@@ -15,4 +15,22 @@ pathway arachidonate-to-15-dehydro-prostaglandin "arachidonate to 15-dehydro-pro
     <-> ec_1_1_1_196 [1.1.1.196] +nadp -nadph -hplus
     15_dehydro_prostaglandin_d2
   }
+
+  branch from prostaglandin_h2 side left {
+    prostaglandin_h2
+    <-> ec_5_3_99_3 [5.3.99.3]
+    prostaglandin_e2
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_1_99_18 [1.1.99.18] +cellobiose +hydrogen_donor
+    cellobiono_1_5_lactone
+  }
+
+  branch from prostaglandin_d2 side left {
+    prostaglandin_d2
+    <-> ec_1_1_1_188 [1.1.1.188] +nadp +nadph +hplus
+    prostaglandin_f2
+  }
 }

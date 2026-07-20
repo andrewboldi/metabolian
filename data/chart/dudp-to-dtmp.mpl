@@ -19,4 +19,16 @@ pathway dudp-to-dtmp "dUDP to dTMP" {
     <-> ec_2_7_1_118 [2.7.1.118] +adp -amp -hplus
     dtmp
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_65 [2.7.7.65] +gtp
+    c_di_gmp
+  }
+
+  branch from dtmp side right {
+    dtmp
+    <-> ec_2_7_1_114 [2.7.1.114] +thymidine +amp
+    adenosine
+  }
 }

@@ -91,6 +91,73 @@
       "xrefs": {
         "chebi": "CHEBI:59863"
       }
+    },
+    {
+      "id": "d_glcp_1_3_d_galp",
+      "name": "β-D-Glcp-(1→3)-D-Galp",
+      "short": "β-D-Glcp-(1→3)-D-Ga…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:155139"
+      }
+    },
+    {
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4139"
+      }
+    },
+    {
+      "id": "wogonin_7_o_d_glucuronate",
+      "name": "wogonin 7-O-β-D-glucuronate",
+      "short": "wogonin 7-O-β-D-glu…",
+      "formula": "C22H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61285"
+      }
+    },
+    {
+      "id": "wogonin",
+      "name": "wogonin",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78338"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "6_o_d_xylopyranosyl_d_glucopyranoside",
+      "name": "6-O-(β-D-xylopyranosyl)-β-D-glucopyranoside",
+      "short": "6-O-(β-D-xylopyrano…",
+      "formula": "C11H19O10R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2220"
+      }
+    },
+    {
+      "id": "d_xylp_1_6_d_glcp",
+      "name": "β-D-Xylp-(1→6)-β-D-Glcp",
+      "short": "β-D-Xylp-(1→6)-β-D-…",
+      "formula": "C11H20O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16405"
+      }
     }
   ],
   "enzymes": [
@@ -113,6 +180,27 @@
       "name": "glucuronate isomerase",
       "ec": [
         "5.3.1.12"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_389",
+      "name": "solabiose phosphorylase",
+      "ec": [
+        "2.4.1.389"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_167",
+      "name": "baicalin-beta-D-glucuronidase",
+      "ec": [
+        "3.2.1.167"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_149",
+      "name": "beta-primeverosidase",
+      "ec": [
+        "3.2.1.149"
       ]
     }
   ],
@@ -240,6 +328,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:13049"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "solabiose phosphorylase",
+      "equation": "solabiose + phosphate = D-galactose + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.389",
+      "substrates": [
+        {
+          "metabolite": "d_glcp_1_3_d_galp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_389"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "baicalin-beta-D-glucuronidase",
+      "equation": "wogonin 7-O-beta-D-glucuronate + H2O = wogonin + D-glucuronate + H(+)",
+      "ec": "3.2.1.167",
+      "substrates": [
+        {
+          "metabolite": "wogonin_7_o_d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "wogonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_167"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28326"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28326"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "beta-primeverosidase",
+      "equation": "a 6-O-(beta-D-xylopyranosyl)-beta-D-glucopyranoside + H2O = a 6-O-(beta-D-xylopyranosyl)-beta-D-glucopyranose + an alcohol",
+      "ec": "3.2.1.149",
+      "substrates": [
+        {
+          "metabolite": "6_o_d_xylopyranosyl_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylp_1_6_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alcohol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_149"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24480"
           }
         ]
       }

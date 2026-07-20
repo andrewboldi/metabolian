@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "deamido-nad-to-diphosphate",
   "name": "deamido-NAD to diphosphate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from deamido-NAD(2−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,6 +119,53 @@
       "xrefs": {
         "chebi": "CHEBI:137372"
       }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "enterobactin",
+      "name": "enterobactin",
+      "formula": "C30H26N3O15",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77805"
+      }
+    },
+    {
+      "id": "ni_ii_pyridinium_3_5_bisthiocarboxylate_mononucl",
+      "name": "Ni(II)-pyridinium-3,5-bisthiocarboxylate mononucleotide",
+      "short": "Ni(II)-pyridinium-3…",
+      "formula": "C12H11NNiO9PS2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137373"
+      }
+    },
+    {
+      "id": "nickel",
+      "name": "nickel",
+      "formula": "Ni",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:49786"
+      }
     }
   ],
   "enzymes": [
@@ -134,6 +181,20 @@
       "name": "intrinsic cysteine-dependent pyridinium-3,5-bisthiocarboxylic acid",
       "ec": [
         "4.4.1.37"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_14",
+      "name": "enterobactin synthase",
+      "ec": [
+        "6.3.2.14"
+      ]
+    },
+    {
+      "id": "ec_4_99_1_12",
+      "name": "pyridinium-3,5-bisthiocarboxylic acid mononucleotide nickel chelatase",
+      "ec": [
+        "4.99.1.12"
       ]
     }
   ],
@@ -305,6 +366,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:54892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "enterobactin synthase",
+      "equation": "3 2,3-dihydroxybenzoate + 3 L-serine + 6 ATP = enterobactin + 6 AMP + 6 diphosphate + 4 H(+)",
+      "ec": "6.3.2.14",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 6
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "pyridinium-3,5-bisthiocarboxylic acid mononucleotide nickel chelatase",
+      "equation": "Ni(II)-pyridinium-3,5-bisthiocarboxylate mononucleotide = pyridinium-3,5-bisthiocarboxylate mononucleotide + Ni(2+)",
+      "ec": "4.99.1.12",
+      "substrates": [
+        {
+          "metabolite": "ni_ii_pyridinium_3_5_bisthiocarboxylate_mononucl",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridinium_3_5_bisthiocarboxylate_mononucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nickel",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_99_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:54784"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54784"
           }
         ]
       }

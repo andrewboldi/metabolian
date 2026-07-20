@@ -17,4 +17,28 @@ pathway vanillyl-alcohol-to-3-carboxy-cis-cis-muconate "vanillyl alcohol to 3-ca
     <-> ec_1_13_11_3 [1.13.11.3] +o2 -hplus
     3_carboxy_cis_cis_muconate
   }
+
+  branch from vanillin side left {
+    vanillin
+    <-> ec_1_13_11_88 [1.13.11.88] +trans_isoeugenol +o2
+    acetaldehyde
+  }
+
+  branch from vanillate side right {
+    vanillate
+    <-> ec_2_4_1_300 [2.4.1.300] +1_o_vanilloyl_d_glucose +cyanidin_3_o_d_glucoside
+    cyanidin_3_7_di_o_d_glucoside_betaine
+  }
+
+  branch from 3_4_dihydroxybenzoate side left {
+    3_4_dihydroxybenzoate
+    <-> ec_1_14_13_23 [1.14.13.23] +nadph +o2 +hplus +nadp +h2o
+    3_hydroxybenzoate
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_4_5_1_3 [4.5.1.3] +h2o +chloride +hplus
+    dichloromethane
+  }
 }

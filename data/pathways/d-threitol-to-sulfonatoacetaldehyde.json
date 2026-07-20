@@ -195,6 +195,43 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "2s_3_sulfopropanediol",
+      "name": "(2S)-3-sulfopropanediol",
+      "short": "3-sulfopropanediol",
+      "formula": "C3H7O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:176527"
+      }
+    },
+    {
+      "id": "2_epi_valiolone",
+      "name": "2-epi-valiolone",
+      "formula": "C7H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131717"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "r_3_sulfolactate",
+      "name": "(R)-3-sulfolactate",
+      "formula": "C3H4O6S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58738"
+      }
     }
   ],
   "enzymes": [
@@ -245,6 +282,27 @@
       "name": "sulfopyruvate decarboxylase",
       "ec": [
         "4.1.1.79"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_373",
+      "name": "sulfolactaldehyde 3-reductase",
+      "ec": [
+        "1.1.1.373"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_155",
+      "name": "2-epi-valiolone synthase",
+      "ec": [
+        "4.2.3.155"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_337",
+      "name": "L-2-hydroxycarboxylate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.337"
       ]
     }
   ],
@@ -572,6 +630,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:20948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "sulfolactaldehyde 3-reductase",
+      "equation": "(2S)-3-sulfopropanediol + NAD(+) = (2S)-3-sulfolactaldehyde + NADH + H(+)",
+      "ec": "1.1.1.373",
+      "substrates": [
+        {
+          "metabolite": "2s_3_sulfopropanediol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_3_sulfolactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_373"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:40511"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40511"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "2-epi-valiolone synthase",
+      "equation": "D-sedoheptulose 7-phosphate = 2-epi-valiolone + phosphate",
+      "ec": "4.2.3.155",
+      "substrates": [
+        {
+          "metabolite": "s7p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_epi_valiolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_155"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:49564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "L-2-hydroxycarboxylate dehydrogenase (NAD(+))",
+      "equation": "(2R)-3-sulfolactate + NAD(+) = 3-sulfopyruvate + NADH + H(+)",
+      "ec": "1.1.1.337",
+      "substrates": [
+        {
+          "metabolite": "r_3_sulfolactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_sulfonatopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_337"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:15533"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15533"
           }
         ]
       }

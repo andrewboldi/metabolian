@@ -15,4 +15,10 @@ pathway 6-tuliposide-b-to-d-glucopyranose "6-tuliposide B to D-glucopyranose" {
     <-> ec_2_4_1_64 [2.4.1.64] +pi -glucose
     d_glucose_1_phosphate
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_191 [3.2.1.191] +ginsenoside_rb1 +h2o
+    gypenoside_lxxv
+  }
 }

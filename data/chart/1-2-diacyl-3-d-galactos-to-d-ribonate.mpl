@@ -19,4 +19,28 @@ pathway 1-2-diacyl-3-d-galactos-to-d-ribonate "1,2-diacyl-3-β-D-galactos… to 
     <-> ec_1_1_1_115 [1.1.1.115] +nadp +h2o -nadph -hplus
     d_ribonate
   }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_8 [2.7.8.8] +cdp_diacylglycerol +serine +hplus
+    3_sn_phosphatidyl_l_serine
+  }
+
+  branch from cytidine side right {
+    cytidine
+    <-> ec_3_2_2_8 [3.2.2.8] +h2o +d_ribofuranose
+    cytosine
+  }
+
+  branch from uridine side left {
+    uridine
+    <-> ec_2_4_2_2 [2.4.2.2] +pi +uracil
+    r1p
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_14 [1.4.3.14] +l_lysinium +o2 +h2o +h2o2
+    6_amino_2_oxohexanoic_acid
+  }
 }

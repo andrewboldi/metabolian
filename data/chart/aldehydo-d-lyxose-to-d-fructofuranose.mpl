@@ -19,4 +19,22 @@ pathway aldehydo-d-lyxose-to-d-fructofuranose "aldehydo-D-lyxose to β-D-fructof
     <-> ec_3_1_3_54 [3.1.3.54] +h2o -pi
     d_fructofuranose_2_phosphate
   }
+
+  branch from d_xylulose side left {
+    d_xylulose
+    <-> ec_1_1_1_11 [1.1.1.11] +nad +nadh +hplus
+    d_arabinitol
+  }
+
+  branch from x5p side right {
+    x5p
+    <-> ec_1_1_1_301 [1.1.1.301] +nad +nadh +hplus
+    d_arabinitol_1_phosphate
+  }
+
+  branch from d_fructofuranose_6_phosphate side left {
+    d_fructofuranose_6_phosphate
+    <-> ec_1_1_1_17 [1.1.1.17] +nad +nadh +hplus
+    d_mannitol_1_phosphate
+  }
 }

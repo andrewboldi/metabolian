@@ -21,4 +21,28 @@ pathway lipid-a-4-e-coli-to-fatty-acid-anion "lipid A(4−) (E. coli) to fatty a
     <-> ec_3_1_1_4 [3.1.1.4] +h2o -fatty-acid -hplus
     1_o_acyl_sn_glycero_3_phosphocholine
   }
+
+  branch from dag side left {
+    dag
+    <-> ec_2_4_1_337 [2.4.1.337] +udp_d_glucose +udp +hplus
+    1_2_diacyl_3_o_d_glucosyl_sn_glycerol
+  }
+
+  branch from 1_acyl_sn_glycerol side right {
+    1_acyl_sn_glycerol
+    <-> ec_3_1_3_106 [3.1.3.106] +h2o +pi
+    1_acyl_sn_glycerol_3_phosphate
+  }
+
+  branch from sterol side left {
+    sterol
+    <-> ec_2_4_1_173 [2.4.1.173] +udp_d_glucose +udp +hplus
+    sterol_3_d_glucoside
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> ec_3_1_1_118 [3.1.1.118] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
+  }
 }

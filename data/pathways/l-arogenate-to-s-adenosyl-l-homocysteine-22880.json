@@ -272,6 +272,93 @@
       "xrefs": {
         "chebi": "CHEBI:73955"
       }
+    },
+    {
+      "id": "leucine",
+      "name": "L-Leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57427"
+      }
+    },
+    {
+      "id": "kic",
+      "name": "4-Methyl-2-oxopentanoate",
+      "short": "4-Methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17865"
+      }
+    },
+    {
+      "id": "3_6_9_trihydroxypterocarpan",
+      "name": "3,6,9-trihydroxypterocarpan",
+      "short": "3,6,9-trihydroxypte…",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15649"
+      }
+    },
+    {
+      "id": "6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero",
+      "name": "(6aS,11aS)-4-dimethylallyl-3,6a,9-trihydroxypterocarpan",
+      "short": "(6aS,11aS)-4-dimeth…",
+      "formula": "C20H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50036"
+      }
+    },
+    {
+      "id": "2_deoxycytidine_5_monophosphate_1",
+      "name": "2'-deoxycytidine 5'-monophosphate(1−)",
+      "short": "2'-deoxycytidine…",
+      "formula": "C9H11N3O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85452"
+      }
+    },
+    {
+      "id": "n4_methyl_dcmp_1",
+      "name": "N4-methyl-dCMP(1−)",
+      "formula": "C10H13N3O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137933"
+      }
+    },
+    {
+      "id": "dtdp_l_4_epi_vancosamine",
+      "name": "dTDP-β-L-4-epi-vancosamine",
+      "short": "dTDP-β-L-4-epi-vanc…",
+      "formula": "C17H28N3O13P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75957"
+      }
+    },
+    {
+      "id": "devancoaminyl_vancomycin",
+      "name": "devancoaminyl vancomycin",
+      "short": "devancoaminyl…",
+      "formula": "C59H62Cl2N8O22",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75953"
+      }
+    },
+    {
+      "id": "chloroorienticin_b",
+      "name": "chloroorienticin B",
+      "formula": "C66H76Cl2N9O24",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:75963"
+      }
     }
   ],
   "enzymes": [
@@ -336,6 +423,41 @@
       "name": "demethyldecarbamoylnovobiocin O-methyltransferase",
       "ec": [
         "2.1.1.285"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_6",
+      "name": "leucine transaminase",
+      "ec": [
+        "2.6.1.6"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_42",
+      "name": "branched-chain-amino-acid transaminase",
+      "ec": [
+        "2.6.1.42"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_36",
+      "name": "trihydroxypterocarpan dimethylallyltransferase",
+      "ec": [
+        "2.5.1.36"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_113",
+      "name": "site-specific DNA-methyltransferase (cytosine-N(4)-specific)",
+      "ec": [
+        "2.1.1.113"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_311",
+      "name": "dTDP-epi-vancosaminyltransferase",
+      "ec": [
+        "2.4.1.311"
       ]
     }
   ],
@@ -769,6 +891,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:36655"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "leucine transaminase",
+      "equation": "L-leucine + 2-oxoglutarate = 4-methyl-2-oxopentanoate + L-glutamate",
+      "ec": "2.6.1.6",
+      "substrates": [
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kic",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:18321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "trihydroxypterocarpan dimethylallyltransferase",
+      "equation": "(6aS,11aS)-3,6a,9-trihydroxypterocarpan + dimethylallyl diphosphate = (6aS,11aS)-4-dimethylallyl-3,6a,9-trihydroxypterocarpan + diphosphate",
+      "ec": "2.5.1.36",
+      "substrates": [
+        {
+          "metabolite": "3_6_9_trihydroxypterocarpan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:23184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "site-specific DNA-methyltransferase (cytosine-N(4)-specific)",
+      "equation": "a 2'-deoxycytidine in DNA + S-adenosyl-L-methionine = an N(4)-methyl-2'-deoxycytidine in DNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.113",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n4_methyl_dcmp_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_113"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:16857"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16857"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "dTDP-epi-vancosaminyltransferase",
+      "equation": "dTDP-beta-L-4-epi-vancosamine + devancoaminyl-vancomycin = chloroorienticin B + dTDP + H(+)",
+      "ec": "2.4.1.311",
+      "substrates": [
+        {
+          "metabolite": "dtdp_l_4_epi_vancosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "devancoaminyl_vancomycin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chloroorienticin_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_311"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:38591"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38591"
           }
         ]
       }

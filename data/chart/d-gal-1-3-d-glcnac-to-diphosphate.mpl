@@ -15,4 +15,22 @@ pathway d-gal-1-3-d-glcnac-to-diphosphate "β-D-Gal-(1→3)-β-D-GlcNAc-… to d
     <-> ec_2_7_7_10 [2.7.7.10] +utp +hplus -ppi
     udp_d_galactose
   }
+
+  branch from d_galp_1_3_d_glcpnac side left {
+    d_galp_1_3_d_glcpnac
+    <-> ec_2_4_1_341 [2.4.1.341] +gdp_l_colitose +gdp +hplus
+    l_colitosyl_1_2_d_galactosyl_1_3_n_acetyl_d_glu
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> ec_2_4_1_87 [2.4.1.87] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +udp +hplus
+    d_galactosyl_1_3_d_galactosyl_1_4_n_acetyl_d_gl
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_69 [2.5.1.69] +dmapp
+    r_lavandulyl_diphosphate
+  }
 }

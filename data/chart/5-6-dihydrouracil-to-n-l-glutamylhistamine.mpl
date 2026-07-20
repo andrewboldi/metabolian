@@ -21,4 +21,22 @@ pathway 5-6-dihydrouracil-to-n-l-glutamylhistamine "5,6-dihydrouracil to Nα-γ-
     <-> ec_6_3_2_18 [6.3.2.18] +glutamate +atp -adp -pi -hplus
     n_l_glutamylhistamine
   }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_6_3_2_11 [6.3.2.11] +l_lysinium +atp +adp +pi +hplus
+    alanyl_l_lysinium
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_29 [4.3.1.29] +d_glucosaminic_acid_6_phosphate
+    2_dehydro_3_deoxy_6_phosphonato_d_gluconate
+  }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> ec_2_1_1_44 [2.1.1.44] +sam +sah +hplus
+    n_n_n_trimethyl_l_histidine
+  }
 }

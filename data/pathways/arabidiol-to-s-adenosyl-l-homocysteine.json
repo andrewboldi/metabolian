@@ -92,6 +92,34 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "taraxerol",
+      "name": "taraxerol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9402"
+      }
+    },
+    {
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78449"
+      }
+    },
+    {
+      "id": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
+      "name": "O-[S-(methoxycarbonylacetyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(methoxycarbon…",
+      "formula": "C18H29N3O11PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78845"
+      }
     }
   ],
   "enzymes": [
@@ -114,6 +142,20 @@
       "name": "cycloartenol 24-C-methyltransferase",
       "ec": [
         "2.1.1.142"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_35",
+      "name": "taraxerol synthase",
+      "ec": [
+        "5.4.99.35"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_197",
+      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
+      "ec": [
+        "2.1.1.197"
       ]
     }
   ],
@@ -241,6 +283,88 @@
           {
             "db": "Rhea",
             "id": "RHEA:13137"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "taraxerol synthase",
+      "equation": "(S)-2,3-epoxysqualene = taraxerol",
+      "ec": "5.4.99.35",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taraxerol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
+      "equation": "malonyl-[ACP] + S-adenosyl-L-methionine = malonyl-[ACP] methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.197",
+      "substrates": [
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_197"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17105"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17105"
           }
         ]
       }

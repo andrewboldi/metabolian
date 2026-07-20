@@ -119,6 +119,99 @@
       "xrefs": {
         "chebi": "CHEBI:28938"
       }
+    },
+    {
+      "id": "2s_3_sulfopropanediol",
+      "name": "(2S)-3-sulfopropanediol",
+      "short": "3-sulfopropanediol",
+      "formula": "C3H7O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:176527"
+      }
+    },
+    {
+      "id": "hydroxyacetone",
+      "name": "hydroxyacetone",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27957"
+      }
+    },
+    {
+      "id": "gssg",
+      "name": "Glutathione disulfide (oxidized, GSSG)",
+      "short": "Glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58297"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "adp_5_ethyl_4_methylthiazole_2_carboxylate",
+      "name": "ADP-5-ethyl-4-methylthiazole-2-carboxylate",
+      "short": "ADP-5-ethyl-4-methy…",
+      "formula": "C17H19N6O12P2S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:139151"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "l_pipecolic_acid",
+      "name": "L-pipecolic acid",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61185"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +234,34 @@
       "name": "L-cysteate sulfo-lyase",
       "ec": [
         "4.4.1.25"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_41",
+      "name": "(2S)-3-sulfopropanediol sulfolyase",
+      "ec": [
+        "4.4.1.41"
+      ]
+    },
+    {
+      "id": "ec_1_8_3_3",
+      "name": "glutathione oxidase",
+      "ec": [
+        "1.8.3.3"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_59",
+      "name": "sulfide-dependent adenosine diphosphate thiazole synthase",
+      "ec": [
+        "2.4.2.59"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_28",
+      "name": "L-lysine cyclodeaminase",
+      "ec": [
+        "4.3.1.28"
       ]
     }
   ],
@@ -292,6 +413,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:13441"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(2S)-3-sulfopropanediol sulfolyase",
+      "equation": "(2S)-3-sulfopropanediol = hydroxyacetone + sulfite + H(+)",
+      "ec": "4.4.1.41",
+      "substrates": [
+        {
+          "metabolite": "2s_3_sulfopropanediol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:68604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glutathione oxidase",
+      "equation": "2 glutathione + O2 = glutathione disulfide + H2O2",
+      "ec": "1.8.3.3",
+      "substrates": [
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_3_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "sulfide-dependent adenosine diphosphate thiazole synthase",
+      "equation": "hydrogen sulfide + glycine + NAD(+) = ADP-5-ethyl-4-methylthiazole-2-carboxylate + nicotinamide + 3 H2O + H(+)",
+      "ec": "2.4.2.59",
+      "substrates": [
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp_5_ethyl_4_methylthiazole_2_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:55704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-lysine cyclodeaminase",
+      "equation": "L-lysine = L-pipecolate + NH4(+)",
+      "ec": "4.3.1.28",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_pipecolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:34303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34303"
           }
         ]
       }

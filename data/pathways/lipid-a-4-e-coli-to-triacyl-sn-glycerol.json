@@ -103,6 +103,35 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "1_phosphatidyl_1d_myo_inositol_4_5_bisphosphate",
+      "name": "1-phosphatidyl-1D-myo-inositol 4,5-bisphosphate",
+      "short": "1-phosphatidyl-1D-m…",
+      "formula": "C11H14O19P3R2",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:58456"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_1_4_5_trisphosphate",
+      "name": "1D-myo-inositol 1,4,5-trisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H9O15P3",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:203600"
+      }
     }
   ],
   "enzymes": [
@@ -118,6 +147,13 @@
       "name": "diacylglycerol O-acyltransferase",
       "ec": [
         "2.3.1.20"
+      ]
+    },
+    {
+      "id": "ec_3_1_4_11",
+      "name": "phosphoinositide phospholipase C",
+      "ec": [
+        "3.1.4.11"
       ]
     }
   ],
@@ -261,6 +297,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:10868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phosphoinositide phospholipase C",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol-4,5-bisphosphate) + H2O = 1D-myo-inositol 1,4,5-trisphosphate + a 1,2-diacyl-sn-glycerol + H(+)",
+      "ec": "3.1.4.11",
+      "substrates": [
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol_4_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_1_4_5_trisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:33179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33179"
           }
         ]
       }

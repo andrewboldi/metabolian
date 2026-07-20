@@ -108,6 +108,25 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
+    },
+    {
+      "id": "r_nicotinium",
+      "name": "(R)-nicotinium",
+      "formula": "C10H15N2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:79008"
+      }
+    },
+    {
+      "id": "r_6_hydroxynicotinium",
+      "name": "(R)-6-hydroxynicotinium",
+      "short": "6-hydroxynicotinium",
+      "formula": "C10H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58413"
+      }
     }
   ],
   "enzymes": [
@@ -130,6 +149,13 @@
       "name": "arsenate reductase (donor)",
       "ec": [
         "1.20.99.1"
+      ]
+    },
+    {
+      "id": "ec_1_5_99_4",
+      "name": "nicotine 6-hydroxylase",
+      "ec": [
+        "1.5.99.4"
       ]
     }
   ],
@@ -277,6 +303,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:18449"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nicotine 6-hydroxylase",
+      "equation": "(R)-nicotine + A + H2O = (R)-6-hydroxynicotine + AH2",
+      "ec": "1.5.99.4",
+      "substrates": [
+        {
+          "metabolite": "r_nicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_6_hydroxynicotinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:42352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42352"
           }
         ]
       }

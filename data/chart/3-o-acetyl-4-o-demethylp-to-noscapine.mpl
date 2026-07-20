@@ -15,4 +15,16 @@ pathway 3-o-acetyl-4-o-demethylp-to-noscapine "3-O-acetyl-4'-O-demethylp… to (
     <-> ec_1_1_1_415 [1.1.1.415] +nad -nadh -hplus
     noscapine
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_344 [2.1.1.344] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +sam +hplus
+    n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_7_1_24 [3.7.1.24] +2_4_diacetylphloroglucinol +h2o
+    2_4_6_trihydroxyacetophenone
+  }
 }

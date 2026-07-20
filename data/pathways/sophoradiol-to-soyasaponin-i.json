@@ -144,6 +144,26 @@
       "xrefs": {
         "chebi": "CHEBI:62916"
       }
+    },
+    {
+      "id": "1e_2s_2_methylbutanal_oxime",
+      "name": "(1E,2S)-2-methylbutanal oxime",
+      "short": "(1E,2S)-2-methylbut…",
+      "formula": "C5H11NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134628"
+      }
+    },
+    {
+      "id": "2_hydroxy_2_methylbutanenitrile",
+      "name": "2-hydroxy-2-methylbutanenitrile",
+      "short": "2-hydroxy-2-methylb…",
+      "formula": "C5H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60954"
+      }
     }
   ],
   "enzymes": [
@@ -173,6 +193,13 @@
       "name": "soyasaponin III rhamnosyltransferase",
       "ec": [
         "2.4.1.273"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_41",
+      "name": "(E)-2-methylbutanal oxime monooxygenase",
+      "ec": [
+        "1.14.14.41"
       ]
     }
   ],
@@ -377,6 +404,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:31491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(E)-2-methylbutanal oxime monooxygenase",
+      "equation": "(1E,2S)-2-methylbutanal oxime + reduced [NADPH--hemoprotein reductase] + O2 = 2-hydroxy-2-methylbutanenitrile + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.41",
+      "substrates": [
+        {
+          "metabolite": "1e_2s_2_methylbutanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_2_methylbutanenitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28422"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28422"
           }
         ]
       }

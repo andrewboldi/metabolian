@@ -15,4 +15,10 @@ pathway geranyl-diphosphate-to-sabinone "geranyl diphosphate to (+)-sabinone" {
     <-> ec_1_1_1_228 [1.1.1.228] +nad -nadh -hplus
     sabinone
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_69 [4.2.3.69] +fpp
+    barbatene
+  }
 }

@@ -17,4 +17,28 @@ pathway n-indole-3-acetyl-l-asp-to-indol-3-ylacetyl-myo "N-(indole-3-acetyl)-L-a
     <-> ec_2_4_2_34 [2.4.2.34] +udp_l_arabinopyranose -udp -hplus
     indol_3_ylacetyl_myo_inositol_3_l_arabinoside
   }
+
+  branch from indole_3_acetate side left {
+    indole_3_acetate
+    <-> ec_1_14_13_168 [1.14.13.168] +nadph +o2 +hplus +co2 +nadp +h2o
+    3_indol_3_yl_pyruvate
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_6_3_4_25 [6.3.4.25] +2_deoxyguanosine_5_monophosphate +atp +adp +pi +hplus
+    2s_2_amino_2_deoxyadenylo_succinate
+  }
+
+  branch from 1d_1_o_indol_3_yl_acetyl_myo_inositol side left {
+    1d_1_o_indol_3_yl_acetyl_myo_inositol
+    <-> ec_2_4_1_156 [2.4.1.156] +udp_d_galactose +udp +hplus
+    5_o_indol_3_ylacetyl_myo_inositol_d_galactoside
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_104 [3.2.1.104] +daucosterol +h2o
+    sitosterol
+  }
 }

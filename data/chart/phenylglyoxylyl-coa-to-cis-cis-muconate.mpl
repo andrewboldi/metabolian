@@ -21,4 +21,22 @@ pathway phenylglyoxylyl-coa-to-cis-cis-muconate "phenylglyoxylyl-CoA to cis,cis-
     <-> ec_1_13_11_1 [1.13.11.1] +o2 -hplus
     cis_cis_muconate
   }
+
+  branch from benzaldehyde side left {
+    benzaldehyde
+    <-> ec_4_1_2_38 [4.1.2.38]
+    benzoin
+  }
+
+  branch from catechol side right {
+    catechol
+    <-> ec_1_14_12_13 [1.14.12.13] +nadh +o2 +hplus +chloride +co2 +nad
+    2_chlorobenzoate
+  }
+
+  branch from cis_cis_muconate side left {
+    cis_cis_muconate
+    <-> ec_5_5_1_1 [5.5.1.1] +hplus
+    s_5_oxo_2_5_dihydro_2_furylacetate
+  }
 }

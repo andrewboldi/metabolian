@@ -15,4 +15,16 @@ pathway amp-3-end-1-to-diphosphate "AMP 3'-end(1−) to diphosphate" {
     <-> ec_6_3_4_8 [6.3.4.8] +imidazol_4_ylacetate +prpp +atp +h2o -adp -pi -ppi -hplus
     1_5_phosphonatoribosyl_imidazol_4_yl_acetate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_75 [4.2.3.75] +fpp
+    germacrene_d
+  }
+
+  branch from orotate side right {
+    orotate
+    <-> ec_1_3_1_14 [1.3.1.14] +nad +nadh +hplus
+    dihydroorotate
+  }
 }

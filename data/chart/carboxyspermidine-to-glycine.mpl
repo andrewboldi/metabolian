@@ -17,4 +17,28 @@ pathway carboxyspermidine-to-glycine "carboxyspermidine to glycine" {
     <-> ec_2_6_1_96 [2.6.1.96] +glyoxylate -glycine
     4_oxobutanoate
   }
+
+  branch from spermidine side left {
+    spermidine
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
+    n8_acetylspermidinium
+  }
+
+  branch from 4_ammoniobutanal side right {
+    4_ammoniobutanal
+    <-> ec_2_6_1_113 [2.6.1.113] +1_4_butanediammonium +pyruvate
+    alanine
+  }
+
+  branch from trimethylenediaminium side left {
+    trimethylenediaminium
+    <-> ec_1_5_3_14 [1.5.3.14] +spermine +o2 +h2o +h2o2
+    n_3_ammoniopropyl_4_ammoniobutanal
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_n1 [1.3.99.n1] +3_hydroxybenzoyl_coa +atp +h2o +hydrogen_acceptor +adp +pi +hplus
+    3_hydroxycyclohexa_1_5_diene_1_carbonyl_coa
+  }
 }

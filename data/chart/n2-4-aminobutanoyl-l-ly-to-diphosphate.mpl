@@ -17,4 +17,22 @@ pathway n2-4-aminobutanoyl-l-ly-to-diphosphate "N2-(4-aminobutanoyl)-L-ly… to 
     <-> ec_6_1_1_21 [6.1.1.21] +amp_3_end_1 +l_histidine +atp -amp -ppi -hplus
     3_l_histidyl_adenylyl_1_group
   }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_1_13_12_2 [1.13.12.2] +o2 +co2 +h2o
+    5_ammoniopentanamide
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> ec_2_3_1_33 [2.3.1.33] +acetyl_coa +coa +hplus
+    n_acetyl_l_histidinate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_37 [4.2.3.37] +fpp
+    epi_isozizaene
+  }
 }

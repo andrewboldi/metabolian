@@ -19,4 +19,22 @@ pathway calciol-to-di-sulfido-diiron "calciol to di-μ-sulfido-diiron" {
     <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     1s_1_23_25_trihydroxy_24_oxocalciol
   }
+
+  branch from calcidiol side left {
+    calcidiol
+    <-> ec_1_17_99_10 [1.17.99.10] +calciol +hydrogen_acceptor +h2o
+    hydrogen_donor
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_99_46 [1.14.99.46] +thymine +fmnh2 +nadh +o2 +nad +h2o +hplus
+    z_2_methylureidoacrylate
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_17_7_4 [1.17.7.4] +dmapp +h2o +di_sulfido_diiron +hplus
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+  }
 }

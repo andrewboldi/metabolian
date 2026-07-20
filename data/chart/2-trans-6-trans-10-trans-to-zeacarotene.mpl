@@ -15,4 +15,16 @@ pathway 2-trans-6-trans-10-trans-to-zeacarotene "2-trans,6-trans,10-trans-… to
     <-> ec_5_5_1_19 [5.5.1.19]
     zeacarotene
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_93 [4.2.3.93] +fpp
+    guaiene
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_64 [1.14.99.64] +adonixanthin +o2 +hydrogen_acceptor +h2o
+    astaxanthin
+  }
 }

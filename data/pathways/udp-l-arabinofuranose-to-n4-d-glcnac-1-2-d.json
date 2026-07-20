@@ -84,6 +84,24 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "zeatin",
+      "name": "zeatin",
+      "formula": "C10H13N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15333"
+      }
+    },
+    {
+      "id": "o_d_xylosylzeatin",
+      "name": "O-β-D-xylosylzeatin",
+      "formula": "C15H21N5O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17438"
+      }
     }
   ],
   "enzymes": [
@@ -106,6 +124,13 @@
       "name": "glycoprotein 2-beta-D-xylosyltransferase",
       "ec": [
         "2.4.2.38"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_40",
+      "name": "zeatin O-beta-D-xylosyltransferase",
+      "ec": [
+        "2.4.2.40"
       ]
     }
   ],
@@ -229,6 +254,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:10612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "zeatin O-beta-D-xylosyltransferase",
+      "equation": "zeatin + UDP-alpha-D-xylose = O-beta-D-xylosylzeatin + UDP + H(+)",
+      "ec": "2.4.2.40",
+      "substrates": [
+        {
+          "metabolite": "zeatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_d_xylosylzeatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:14721"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14721"
           }
         ]
       }

@@ -15,4 +15,10 @@ pathway 3-phenylpropionitrile-to-3-2-3-dihydroxyphenyl-p "3-phenylpropionitrile 
     <-> ec_1_3_1_87 [1.3.1.87] +nad -nadh -hplus
     3_2_3_dihydroxyphenyl_propanoate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_99 [3.5.1.99] +oleamide +h2o
+    oleate
+  }
 }

@@ -15,4 +15,22 @@ pathway n1-n12-diacetylsperminium-to-l-glutamate "N1,N12-diacetylsperminium to L
     <-> ec_2_6_1_82 [2.6.1.82] +akg -glutamate -h2o
     1_pyrrolinium
   }
+
+  branch from n1_acetylspermidinium side left {
+    n1_acetylspermidinium
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
+    spermidine
+  }
+
+  branch from 1_4_butanediammonium side right {
+    1_4_butanediammonium
+    <-> ec_2_6_1_82 [2.6.1.82] +akg +glutamate
+    4_ammoniobutanal
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_24 [2.6.1.24] +3_5_diiodo_l_tyrosinate +akg
+    3_5_diiodo_4_oxidophenyl_pyruvate
+  }
 }

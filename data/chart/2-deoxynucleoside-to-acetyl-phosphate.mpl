@@ -27,4 +27,28 @@ pathway 2-deoxynucleoside-to-acetyl-phosphate "2'-deoxynucleoside… to acetyl p
     <-> ec_2_7_2_1 [2.7.2.1] +acetate +atp -adp
     acetyl_phosphate
   }
+
+  branch from 2_deoxyribonucleoside_5_triphosphate side left {
+    2_deoxyribonucleoside_5_triphosphate
+    <-> ec_1_1_98_6 [1.1.98.6] +formate +hplus +co2 +h2o
+    nucleoside_5_triphoshate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_21 [4.2.3.21] +fpp
+    premnaspirodiene
+  }
+
+  branch from uracil side left {
+    uracil
+    <-> ec_2_4_2_2 [2.4.2.2] +2_deoxyuridine +pi
+    2_deoxy_d_ribose_1_phosphate
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_1_1_54 [3.1.1.54] +5_4_acetoxybut_1_ynyl_2_2_bithiophene +h2o +hplus
+    5_4_hydroxybut_1_ynyl_2_2_bithiophene
+  }
 }

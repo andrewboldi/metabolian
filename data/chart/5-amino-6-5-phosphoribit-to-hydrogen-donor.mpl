@@ -23,4 +23,28 @@ pathway 5-amino-6-5-phosphoribit-to-hydrogen-donor "5-amino-6-(5-phosphoribit…
     <-> ec_1_1_99_12 [1.1.99.12] +hydrogen_acceptor -hydrogen_donor
     5_dehydro_d_fructose
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_5_1_38 [1.5.1.38] +nadp +nadph +hplus
+    fmnh2
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_189 [3.2.1.189] +dioscin +h2o +l_rhamnopyranose
+    diosgenin
+  }
+
+  branch from d_glucitol side left {
+    d_glucitol
+    <-> ec_1_1_3_40 [1.1.3.40] +o2 +h2o2
+    d_sorbopyranose
+  }
+
+  branch from keto_l_sorbose side right {
+    keto_l_sorbose
+    <-> ec_1_1_1_14 [1.1.1.14] +nad +nadh +hplus
+    l_iditol
+  }
 }

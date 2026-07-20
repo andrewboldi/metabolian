@@ -129,6 +129,42 @@
       "xrefs": {
         "chebi": "CHEBI:57540"
       }
+    },
+    {
+      "id": "hydrazine",
+      "name": "hydrazine",
+      "formula": "H4N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15571"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "no",
+      "name": "Nitric oxide (NO)",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16480"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
     }
   ],
   "enzymes": [
@@ -151,6 +187,13 @@
       "name": "dichloroarcyriaflavin A synthase",
       "ec": [
         "1.13.12.17"
+      ]
+    },
+    {
+      "id": "ec_1_7_2_7",
+      "name": "hydrazine synthase",
+      "ec": [
+        "1.7.2.7"
       ]
     }
   ],
@@ -310,6 +353,63 @@
           {
             "db": "Rhea",
             "id": "RHEA:27314"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hydrazine synthase",
+      "equation": "hydrazine + 3 Fe(III)-[cytochrome c] + H2O = nitric oxide + 3 Fe(II)-[cytochrome c] + NH4(+) + 2 H(+)",
+      "ec": "1.7.2.7",
+      "substrates": [
+        {
+          "metabolite": "hydrazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49816"
           }
         ]
       }

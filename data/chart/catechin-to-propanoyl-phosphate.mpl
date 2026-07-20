@@ -17,4 +17,16 @@ pathway catechin-to-propanoyl-phosphate "(+)-catechin to propanoyl phosphate" {
     <-> ec_2_7_2_15 [2.7.2.15] +atp -adp
     propanoyl_phosphate
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_24 [1.14.11.24] +2_deoxymugineate +akg +o2 +co2
+    mugineate
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_2_3_1_109 [2.3.1.109] +arginine +coa +hplus
+    n2_3_carboxylatopropionyl_l_arginine
+  }
 }

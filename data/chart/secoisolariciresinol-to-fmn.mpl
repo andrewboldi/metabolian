@@ -17,4 +17,10 @@ pathway secoisolariciresinol-to-fmn "(−)-secoisolariciresinol to FMN" {
     <-> ec_1_14_19_74 [1.14.19.74] +fmnh2 +o2 -fmn -h2o -hplus
     sesamin
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
+    indolin_2_one
+  }
 }

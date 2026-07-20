@@ -140,6 +140,53 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "methenyl_thf",
+      "name": "5,10-Methenyltetrahydrofolate",
+      "short": "5,10-Methenyltetrah…",
+      "formula": "C20H20N7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57455"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "trans_aconitate",
+      "name": "trans-aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15708"
+      }
+    },
+    {
+      "id": "2e_2_methoxycarbonylmethyl_but_2_enedioate",
+      "name": "(2E)-2-(methoxycarbonylmethyl)but-2-enedioate",
+      "short": "2-(methoxycarbonylm…",
+      "formula": "C7H6O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57469"
+      }
     }
   ],
   "enzymes": [
@@ -162,6 +209,20 @@
       "name": "sarcosine/dimethylglycine N-methyltransferase",
       "ec": [
         "2.1.1.157"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_15",
+      "name": "methylenetetrahydrofolate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.5.1.15"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_145",
+      "name": "trans-aconitate 3-methyltransferase",
+      "ec": [
+        "2.1.1.145"
       ]
     }
   ],
@@ -313,6 +374,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:32467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "methylenetetrahydrofolate dehydrogenase (NAD(+))",
+      "equation": "(6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NAD(+) = (6R)-5,10-methenyltetrahydrofolate + NADH",
+      "ec": "1.5.1.15",
+      "substrates": [
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methenyl_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "trans-aconitate 3-methyltransferase",
+      "equation": "trans-aconitate + S-adenosyl-L-methionine = (E)-2-(methoxycarbonylmethyl)but-2-enedioate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.145",
+      "substrates": [
+        {
+          "metabolite": "trans_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_2_methoxycarbonylmethyl_but_2_enedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_145"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22200"
           }
         ]
       }

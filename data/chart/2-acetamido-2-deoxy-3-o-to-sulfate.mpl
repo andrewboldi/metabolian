@@ -15,4 +15,16 @@ pathway 2-acetamido-2-deoxy-3-o-to-sulfate "2-acetamido-2-deoxy-3-O-(… to sulf
     <-> ec_3_6_2_1 [3.6.2.1] +h2o -amp -hplus
     sulfate
   }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_3_6_2_2 [3.6.2.2] +3_phosphonato_5_adenylyl_sulfate +h2o +hplus
+    adenosine_3_5_bismonophosphate
+  }
+
+  branch from 5_adenylyl_sulfate side right {
+    5_adenylyl_sulfate
+    <-> ec_3_1_3_7 [3.1.3.7] +h2o +pi
+    3_phosphonato_5_adenylyl_sulfate
+  }
 }

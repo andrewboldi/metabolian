@@ -15,4 +15,28 @@ pathway liquiritigenin-to-fmn "liquiritigenin to FMN" {
     <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 -fmn -h2o -hplus
     2_hydroxydaidzein
   }
+
+  branch from 2r_3s_2_4_7_trihydroxyisoflavanone side left {
+    2r_3s_2_4_7_trihydroxyisoflavanone
+    <-> ec_2_1_1_212 [2.1.1.212] +sam +sah +hplus
+    2r_3s_2_7_dihydroxy_4_methoxyisoflavanone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_158 [1.14.14.158] +carotene +fmnh2 +o2 +h2o +hplus
+    cryptoxanthin
+  }
+
+  branch from daidzein side left {
+    daidzein
+    <-> ec_2_4_1_170 [2.4.1.170] +udp_d_glucose +udp
+    daidzein_7_o_d_glucoside
+  }
+
+  branch from 2_hydroxydaidzein side right {
+    2_hydroxydaidzein
+    <-> ec_1_3_1_51 [1.3.1.51] +nadp +nadph +hplus
+    2_hydroxy_2_3_dihydrodaidzein
+  }
 }

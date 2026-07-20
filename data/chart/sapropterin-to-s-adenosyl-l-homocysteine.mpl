@@ -17,4 +17,28 @@ pathway sapropterin-to-s-adenosyl-l-homocysteine "sapropterin to S-adenosyl-L-ho
     <-> ec_2_1_1_4 [2.1.1.4] +sam -sah -hplus
     melatonin
   }
+
+  branch from 5_hydroxy_l_tryptophan side left {
+    5_hydroxy_l_tryptophan
+    <-> ec_1_11_2_8 [1.11.2.8] +ascorbate +l_tryptophan +o2 +h2o
+    l_dehydroascorbate
+  }
+
+  branch from 4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin side right {
+    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
+    <-> ec_4_2_1_96 [4.2.1.96] +h2o
+    bh2
+  }
+
+  branch from serotonin side left {
+    serotonin
+    <-> ec_1_14_14_186 [1.14.14.186] +tryptaminium +fmnh2 +o2 +h2o +hplus
+    fmn
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_155 [2.1.1.155] +kaempferol_oxoanion +sam +hplus
+    kaempferide
+  }
 }

@@ -15,4 +15,10 @@ pathway cholesterol-to-fmn "cholesterol to FMN" {
     <-> ec_1_14_14_139 [1.14.14.139] +fmnh2 +o2 -fmn -h2o -hplus
     dihydroxy_4_cholesten_3_one_7a12a
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_64 [1.14.14.64] +amyrin +fmnh2 +o2 +h2o +hplus
+    daturadiol
+  }
 }

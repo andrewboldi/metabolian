@@ -17,4 +17,28 @@ pathway s-4-amino-5-oxopentanoi-to-amp-3-end-1 "(S)-4-amino-5-oxopentanoi… to 
     <-> ec_2_3_2_10 [2.3.2.10] +udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly -amp_3_end_1 -hplus
     udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_n6_l_al
   }
+
+  branch from ala side left {
+    ala
+    <-> ec_4_2_1_24 [4.2.1.24] +h2o +hplus
+    pbg
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_4_1_1_64 [4.1.1.64] +2_2_dialkylglycine +pyruvate +hplus +co2
+    dialkyl_ketone
+  }
+
+  branch from 3_l_alanyl_adenylyl_zwitterionic_group side left {
+    3_l_alanyl_adenylyl_zwitterionic_group
+    <-> ec_2_3_2_11 [2.3.2.11] +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +amp_3_end_1
+    1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_26 [4.2.3.26] +gpp +h2o
+    r_linalool
+  }
 }

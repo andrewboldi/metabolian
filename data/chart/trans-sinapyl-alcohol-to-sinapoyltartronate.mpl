@@ -15,4 +15,10 @@ pathway trans-sinapyl-alcohol-to-sinapoyltartronate "trans-sinapyl alcohol to si
     <-> ec_2_3_1_106 [2.3.1.106] +hydroxymalonate -coa
     sinapoyltartronate
   }
+
+  branch from sinapoyl_coa side left {
+    sinapoyl_coa
+    <-> ec_2_3_1_131 [2.3.1.131] +d_glucarate +coa
+    2_o_sinapoyl_d_glucarate
+  }
 }

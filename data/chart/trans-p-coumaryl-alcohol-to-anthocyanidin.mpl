@@ -15,4 +15,10 @@ pathway trans-p-coumaryl-alcohol-to-anthocyanidin "trans-p-coumaryl alcohol to a
     <-> ec_2_3_1_153 [2.3.1.153] +anthocyanidin_3_5_di_o_d_glucoside_betaine -coa
     anthocyanidin_3_o_d_glucoside_5_o_d_6_o_e_4_coum
   }
+
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> ec_2_3_1_215 [2.3.1.215] +anthocyanidin_3_o_d_glucoside +coa +hplus
+    anthocyanidin_3_o_6_o_4_hydroxycinnamoyl_d_gluco
+  }
 }

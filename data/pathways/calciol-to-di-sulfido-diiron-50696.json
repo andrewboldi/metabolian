@@ -99,6 +99,33 @@
       "xrefs": {
         "chebi": "CHEBI:47799"
       }
+    },
+    {
+      "id": "calcitriol",
+      "name": "calcitriol",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17823"
+      }
+    },
+    {
+      "id": "spirilloxanthin",
+      "name": "spirilloxanthin",
+      "formula": "C42H60O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35328"
+      }
+    },
+    {
+      "id": "2_oxospirilloxanthin",
+      "name": "2-oxospirilloxanthin",
+      "formula": "C42H58O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64792"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +148,13 @@
       "name": "calcidiol 1-monooxygenase",
       "ec": [
         "1.14.15.18"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_9",
+      "name": "spheroidene monooxygenase",
+      "ec": [
+        "1.14.15.9"
       ]
     }
   ],
@@ -292,6 +326,120 @@
           {
             "db": "Rhea",
             "id": "RHEA:49064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "vitamin D 1,25-hydroxylase",
+      "equation": "calcidiol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = calcitriol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.22",
+      "substrates": [
+        {
+          "metabolite": "calcidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcitriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "spheroidene monooxygenase",
+      "equation": "spirilloxanthin + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = 2-oxospirilloxanthin + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.9",
+      "substrates": [
+        {
+          "metabolite": "spirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33039"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33039"
           }
         ]
       }

@@ -148,6 +148,97 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "keto_d_tagatose",
+      "name": "keto-D-tagatose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47693"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "dialurate",
+      "name": "dialurate",
+      "formula": "C4H3N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140629"
+      }
+    },
+    {
+      "id": "5_6_dimethylbenzimidazole",
+      "name": "5,6-dimethylbenzimidazole",
+      "short": "5,6-dimethylbenzimi…",
+      "formula": "C9H10N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15890"
+      }
+    },
+    {
+      "id": "isethionate",
+      "name": "isethionate",
+      "formula": "C2H5O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61904"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -184,6 +275,27 @@
       "name": "sulfoacetaldehyde dehydrogenase (acylating)",
       "ec": [
         "1.2.1.81"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_101",
+      "name": "tagatose kinase",
+      "ec": [
+        "2.7.1.101"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_79",
+      "name": "aerobic 5,6-dimethylbenzimidazole synthase",
+      "ec": [
+        "1.13.11.79"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_433",
+      "name": "sulfoacetaldehyde reductase (NADH)",
+      "ec": [
+        "1.1.1.433"
       ]
     }
   ],
@@ -409,6 +521,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:29595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "tagatose kinase",
+      "equation": "keto-D-tagatose + ATP = keto-D-tagatose 6-phosphate + ADP + H(+)",
+      "ec": "2.7.1.101",
+      "substrates": [
+        {
+          "metabolite": "keto_d_tagatose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_tagatose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_101"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:15513"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "aerobic 5,6-dimethylbenzimidazole synthase",
+      "equation": "FMNH2 + O2 = dialurate + 5,6-dimethylbenzimidazole + D-erythrose 4-phosphate + H(+)",
+      "ec": "1.13.11.79",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dialurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_6_dimethylbenzimidazole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e4p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:27345"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "sulfoacetaldehyde reductase (NADH)",
+      "equation": "2-hydroxyethane-1-sulfonate + NAD(+) = sulfoacetaldehyde + NADH + H(+)",
+      "ec": "1.1.1.433",
+      "substrates": [
+        {
+          "metabolite": "isethionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_433"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:64516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64516"
           }
         ]
       }

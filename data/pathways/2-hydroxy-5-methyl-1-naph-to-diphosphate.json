@@ -158,6 +158,63 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
+      "name": "O-(S-hexadecanoylpantetheine-4'-phosphoryl)serine(1−)",
+      "short": "O-(S-hexadecanoylpa…",
+      "formula": "C30H55N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78483"
+      }
+    },
+    {
+      "id": "o_s_6z_hexadecenoylpantetheine_4_phosphoryl_seri",
+      "name": "O-[S-(6Z)-hexadecenoylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(6Z)-hexadecen…",
+      "formula": "C30H53N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86110"
+      }
+    },
+    {
+      "id": "mycinamicin_vi",
+      "name": "mycinamicin VI",
+      "formula": "C35H58NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63311"
+      }
+    },
+    {
+      "id": "mycinamicin_iii",
+      "name": "mycinamicin III",
+      "formula": "C36H60NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63308"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "7_epi_selinene",
+      "name": "(−)-7-epi-α-selinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62224"
+      }
     }
   ],
   "enzymes": [
@@ -180,6 +237,27 @@
       "name": "2-hydroxy-7-methoxy-5-methyl-1-naphthoate--CoA ligase",
       "ec": [
         "6.2.1.43"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_26",
+      "name": "acyl-[acyl-carrier-protein] 6-desaturase",
+      "ec": [
+        "1.14.19.26"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_238",
+      "name": "mycinamicin VI 2''-O-methyltransferase",
+      "ec": [
+        "2.1.1.238"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_86",
+      "name": "7-epi-alpha-selinene synthase",
+      "ec": [
+        "4.2.3.86"
       ]
     }
   ],
@@ -339,6 +417,153 @@
           {
             "db": "Rhea",
             "id": "RHEA:41644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acyl-[acyl-carrier-protein] 6-desaturase",
+      "equation": "hexadecanoyl-[ACP] + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (6Z)-hexadecenoyl-[ACP] + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.26",
+      "substrates": [
+        {
+          "metabolite": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_6z_hexadecenoylpantetheine_4_phosphoryl_seri",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46416"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "mycinamicin VI 2''-O-methyltransferase",
+      "equation": "mycinamicin VI + S-adenosyl-L-methionine = mycinamicin III + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.238",
+      "substrates": [
+        {
+          "metabolite": "mycinamicin_vi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycinamicin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_238"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31643"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31643"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "7-epi-alpha-selinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-7-epi-alpha-selinene + diphosphate",
+      "ec": "4.2.3.86",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_epi_selinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_86"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:30383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30383"
           }
         ]
       }

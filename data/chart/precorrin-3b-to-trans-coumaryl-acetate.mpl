@@ -17,4 +17,16 @@ pathway precorrin-3b-to-trans-coumaryl-acetate "precorrin-3B to trans-coumaryl a
     <-> ec_1_1_1_319 [1.1.1.319] +trans_anol +acetate +nadp -nadph
     trans_coumaryl_acetate
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_185 [2.1.1.185] +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
+  }
+
+  branch from precorrin_6a side right {
+    precorrin_6a
+    <-> ec_1_3_1_54 [1.3.1.54] +nadp +nadph +hplus
+    precorrin_6y
+  }
 }

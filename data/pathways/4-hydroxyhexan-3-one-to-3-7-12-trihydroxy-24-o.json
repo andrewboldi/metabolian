@@ -99,6 +99,42 @@
       "xrefs": {
         "chebi": "CHEBI:58507"
       }
+    },
+    {
+      "id": "propane_1_2_diol",
+      "name": "propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16997"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "propanoyl_phosphate",
+      "name": "propanoyl phosphate",
+      "formula": "C3H5O5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58933"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +157,20 @@
       "name": "propanoyl-CoA C-acyltransferase",
       "ec": [
         "2.3.1.176"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_28",
+      "name": "propanediol dehydratase",
+      "ec": [
+        "4.2.1.28"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_222",
+      "name": "phosphate propanoyltransferase",
+      "ec": [
+        "2.3.1.222"
       ]
     }
   ],
@@ -256,6 +306,92 @@
           {
             "db": "Rhea",
             "id": "RHEA:16865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "propanediol dehydratase",
+      "equation": "propane-1,2-diol = propanal + H2O",
+      "ec": "4.2.1.28",
+      "substrates": [
+        {
+          "metabolite": "propane_1_2_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:14569"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phosphate propanoyltransferase",
+      "equation": "propanoyl-CoA + phosphate = propanoyl phosphate + CoA",
+      "ec": "2.3.1.222",
+      "substrates": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanoyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_222"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28046"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28046"
           }
         ]
       }

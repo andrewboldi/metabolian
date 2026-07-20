@@ -134,6 +134,60 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "3_oxoadipate",
+      "name": "3-oxoadipate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15775"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "4_hydroxybenzoate",
+      "name": "4-hydroxybenzoate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17879"
+      }
+    },
+    {
+      "id": "4_hydroxybenzoyl_coa",
+      "name": "4-hydroxybenzoyl-CoA",
+      "formula": "C28H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57356"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +210,27 @@
       "name": "tenuazonic acid synthetase",
       "ec": [
         "6.3.2.50"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_194",
+      "name": "acetoacetyl-CoA synthase",
+      "ec": [
+        "2.3.1.194"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_318",
+      "name": "3-oxoadipate:acetyl-CoA acetyltransferase",
+      "ec": [
+        "2.3.1.318"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_27",
+      "name": "4-hydroxybenzoate--CoA ligase",
+      "ec": [
+        "6.2.1.27"
       ]
     }
   ],
@@ -307,6 +382,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:52800"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acetoacetyl-CoA synthase",
+      "equation": "malonyl-CoA + acetyl-CoA + H(+) = acetoacetyl-CoA + CO2 + CoA",
+      "ec": "2.3.1.194",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_194"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28250"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "3-oxoadipate:acetyl-CoA acetyltransferase",
+      "equation": "3-oxoadipate + acetyl-CoA = acetoacetate + succinyl-CoA",
+      "ec": "2.3.1.318",
+      "substrates": [
+        {
+          "metabolite": "3_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_318"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:79651"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4-hydroxybenzoate--CoA ligase",
+      "equation": "4-hydroxybenzoate + ATP + CoA = 4-hydroxybenzoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.27",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23116"
           }
         ]
       }

@@ -15,4 +15,28 @@ pathway 3-hydroxyphenylacetate-to-s-adenosyl-l-homocyste "3-hydroxyphenylacetate
     <-> ec_2_1_1_295 [2.1.1.295] +sam -sah -hplus
     2_3_dimethyl_6_geranylgeranyl_1_4_benzoquinol
   }
+
+  branch from 2_methyl_6_geranylgeranyl_1_4_benzoquinol side left {
+    2_methyl_6_geranylgeranyl_1_4_benzoquinol
+    <-> ec_5_5_1_24 [5.5.1.24]
+    tocotrienol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_3_1 [6.1.3.1] +2r_3s_2_alkyl_3_hydroxyalkanoate +atp +amp
+    cis_3_4_dialkyloxetan_2_one
+  }
+
+  branch from 2_3_dimethyl_6_geranylgeranyl_1_4_benzoquinol side left {
+    2_3_dimethyl_6_geranylgeranyl_1_4_benzoquinol
+    <-> ec_5_5_1_24 [5.5.1.24]
+    tocotrienol
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_55 [2.1.1.55] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
 }

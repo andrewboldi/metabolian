@@ -122,6 +122,55 @@
       "xrefs": {
         "chebi": "CHEBI:60377"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "himachalene",
+      "name": "α-himachalene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49214"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_3_n_acetyl_d_galactosaminide",
+      "name": "β-D-galactosyl-(1→3)-N-acetyl-α-D-galactosaminide",
+      "short": "β-D-galactosyl-(1→3…",
+      "formula": "C14H24NO11R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133470"
+      }
+    },
+    {
+      "id": "cmp_n_acetyl_neuraminate",
+      "name": "CMP-N-acetyl-β-neuraminate",
+      "short": "CMP-N-acetyl-β-neur…",
+      "formula": "C20H29N4O16P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57812"
+      }
+    },
+    {
+      "id": "n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety",
+      "name": "N-acetyl-α-neuraminyl-(2→3)-β-D-galactosyl-(1→3)-N-acetyl-α-D-galactosaminide",
+      "short": "N-acetyl-α-neuramin…",
+      "formula": "C25H40N2O19R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:139596"
+      }
     }
   ],
   "enzymes": [
@@ -144,6 +193,20 @@
       "name": "archaetidylserine synthase",
       "ec": [
         "2.7.8.38"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_56",
+      "name": "gamma-humulene synthase",
+      "ec": [
+        "4.2.3.56"
+      ]
+    },
+    {
+      "id": "ec_2_4_3_4",
+      "name": "beta-galactoside alpha-2,3-sialyltransferase",
+      "ec": [
+        "2.4.3.4"
       ]
     }
   ],
@@ -291,6 +354,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:35439"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "gamma-humulene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = alpha-himachalene + diphosphate",
+      "ec": "4.2.3.56",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "himachalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25476"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-galactoside alpha-2,3-sialyltransferase",
+      "equation": "a beta-D-galactosyl-(1->3)-N-acetyl-alpha-D-galactosaminyl derivative + CMP-N-acetyl-beta-neuraminate = an N-acetyl-alpha-neuraminyl-(2->3)-beta-D-galactosyl-(1->3)-N-acetyl-alpha-D-galactosaminyl derivative + CMP + H(+)",
+      "ec": "2.4.3.4",
+      "substrates": [
+        {
+          "metabolite": "d_galactosyl_1_3_n_acetyl_d_galactosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_3_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21616"
           }
         ]
       }

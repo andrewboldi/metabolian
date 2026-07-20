@@ -23,4 +23,28 @@ pathway 2-6-dihydroxybenzoate-to-formaldehyde "2,6-dihydroxybenzoate to formalde
     <-> ec_1_14_13_238 [1.14.13.238] +nadph +o2 +hplus -formaldehyde -nadp -h2o
     methylamine
   }
+
+  branch from resorcinol side left {
+    resorcinol
+    <-> ec_1_14_13_220 [1.14.13.220] +nadh +o2 +hplus +nad +h2o
+    benzene_1_2_4_triol
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_128 [2.1.1.128] +rs_norcoclaurinium +sam +hplus
+    rs_coclaurinium
+  }
+
+  branch from trimethylammonium side left {
+    trimethylammonium
+    <-> ec_1_7_2_3 [1.7.2.3] +iron +h2o +fe2 +hplus
+    trimethylamine_n_oxide
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    5_oxo_bilirubin
+  }
 }

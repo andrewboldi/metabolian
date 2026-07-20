@@ -17,4 +17,16 @@ pathway erythritol-to-formaldehyde "erythritol to formaldehyde" {
     <-> ec_4_1_2_2 [4.1.2.2] -formaldehyde
     dhap
   }
+
+  branch from l_erythrulose_1_phosphate side left {
+    l_erythrulose_1_phosphate
+    <-> ec_4_1_1_121 [4.1.1.121] +hplus +co2
+    3_oxoisoapionate_4_phosphate
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    15_oxo_bilirubin
+  }
 }

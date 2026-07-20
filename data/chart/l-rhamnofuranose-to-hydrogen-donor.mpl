@@ -23,4 +23,28 @@ pathway l-rhamnofuranose-to-hydrogen-donor "L-rhamnofuranose to hydrogen donor" 
     <-> ec_1_1_99_6 [1.1.99.6] +hydrogen_acceptor -pyruvate
     hydrogen_donor
   }
+
+  branch from 2_dehydro_3_deoxy_l_rhamnonate side left {
+    2_dehydro_3_deoxy_l_rhamnonate
+    <-> ec_1_1_1_401 [1.1.1.401] +nad +nadh +hplus
+    2_4_didehydro_3_deoxy_l_rhamnonate
+  }
+
+  branch from s_lactaldehyde side right {
+    s_lactaldehyde
+    <-> ec_1_1_1_77 [1.1.1.77] +nad +nadh +hplus
+    s_propane_1_2_diol
+  }
+
+  branch from methylglyoxal side left {
+    methylglyoxal
+    <-> ec_4_4_1_5 [4.4.1.5] +lactoylglutathione
+    gsh
+  }
+
+  branch from dlactate side right {
+    dlactate
+    <-> ec_3_1_2_6 [3.1.2.6] +h2o +gsh +hplus
+    lactoylglutathione
+  }
 }

@@ -15,4 +15,10 @@ pathway 2-monoglyceride-to-fatty-acid-anion "2-monoglyceride to fatty acid anion
     <-> ec_3_1_1_3 [3.1.1.3] +triglyceride +h2o -fatty-acid -hplus
     diglyceride
   }
+
+  branch from diglyceride side left {
+    diglyceride
+    <-> ec_2_3_1_296 [2.3.1.296] +n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin
+  }
 }

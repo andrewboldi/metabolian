@@ -111,6 +111,62 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "ent_atiserene",
+      "name": "ent-atiserene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138219"
+      }
+    },
+    {
+      "id": "ent_3_hydroxycassa_12_15_dien_2_one",
+      "name": "ent-3β-hydroxycassa-12,15-dien-2-one",
+      "short": "ent-3β-hydroxycassa…",
+      "formula": "C20H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138970"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "5_epi_selinene",
+      "name": "5-epi-α-selinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63445"
+      }
+    },
+    {
+      "id": "drimenol",
+      "name": "drimenol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61148"
+      }
+    },
+    {
+      "id": "drimendiol",
+      "name": "drimendiol",
+      "formula": "C15H26O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138971"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +189,34 @@
       "name": "ent-cassa-12,15-diene 11-hydroxylase",
       "ec": [
         "1.14.14.112"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_185",
+      "name": "ent-atiserene synthase",
+      "ec": [
+        "4.2.3.185"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_69",
+      "name": "ent-cassadiene hydroxylase",
+      "ec": [
+        "1.14.14.69"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_90",
+      "name": "5-epi-alpha-selinene synthase",
+      "ec": [
+        "4.2.3.90"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_72",
+      "name": "drimenol monooxygenase",
+      "ec": [
+        "1.14.14.72"
       ]
     }
   ],
@@ -268,6 +352,202 @@
           {
             "db": "Rhea",
             "id": "RHEA:31967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ent-atiserene synthase",
+      "equation": "ent-copalyl diphosphate = ent-atiserene + diphosphate",
+      "ec": "4.2.3.185",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_atiserene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_185"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ent-cassadiene hydroxylase",
+      "equation": "ent-cassa-12,15-diene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = ent-3beta-hydroxycassa-12,15-dien-2-one + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 3 H(+)",
+      "ec": "1.14.14.69",
+      "substrates": [
+        {
+          "metabolite": "ent_cassa_12_15_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_3_hydroxycassa_12_15_dien_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "5-epi-alpha-selinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = 5-epi-alpha-selinene + diphosphate",
+      "ec": "4.2.3.90",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_epi_selinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:31819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "drimenol monooxygenase",
+      "equation": "(5S,9S,10S)-drim-7-en-11-ol + reduced [NADPH--hemoprotein reductase] + O2 = (5S,10S)-(9R)-7-drimene-11,12-diol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.72",
+      "substrates": [
+        {
+          "metabolite": "drimenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "drimendiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:55504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55504"
           }
         ]
       }

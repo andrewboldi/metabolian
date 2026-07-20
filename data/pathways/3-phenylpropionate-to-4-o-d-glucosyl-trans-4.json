@@ -135,6 +135,52 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr",
+      "name": "(E)-3-[(5S,6R)-5,6-dihydroxycyclohexa-1,3-dienyl]acrylate",
+      "short": "3-[(5S,6R)-5,6-dihy…",
+      "formula": "C9H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61451"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10352"
+      }
+    },
+    {
+      "id": "maniladiol",
+      "name": "maniladiol",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138945"
+      }
     }
   ],
   "enzymes": [
@@ -157,6 +203,20 @@
       "name": "hydroxycinnamate 4-beta-glucosyltransferase",
       "ec": [
         "2.4.1.126"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_19",
+      "name": "3-phenylpropanoate dioxygenase",
+      "ec": [
+        "1.14.12.19"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_63",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "ec": [
+        "1.14.14.63"
       ]
     }
   ],
@@ -312,6 +372,116 @@
           {
             "db": "Rhea",
             "id": "RHEA:21636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-phenylpropanoate dioxygenase",
+      "equation": "(E)-cinnamate + NADH + O2 + H(+) = (2E)-3-(cis-5,6-dihydroxycyclohexa-1,3-dien-1-yl)prop-2-enoate + NAD(+)",
+      "ec": "1.14.12.19",
+      "substrates": [
+        {
+          "metabolite": "trans_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25058"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = maniladiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.63",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maniladiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55440"
           }
         ]
       }

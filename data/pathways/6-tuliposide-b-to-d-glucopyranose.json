@@ -99,6 +99,33 @@
       "xrefs": {
         "chebi": "CHEBI:57684"
       }
+    },
+    {
+      "id": "ginsenoside_rb1",
+      "name": "ginsenoside Rb1",
+      "formula": "C54H92O23",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67989"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gypenoside_lxxv",
+      "name": "gypenoside LXXV",
+      "formula": "C42H72O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77156"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +148,13 @@
       "name": "alpha,alpha-trehalose phosphorylase",
       "ec": [
         "2.4.1.64"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_191",
+      "name": "ginsenosidase type III",
+      "ec": [
+        "3.2.1.191"
       ]
     }
   ],
@@ -256,6 +290,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:23512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ginsenosidase type III",
+      "equation": "(20S)-ginsenoside Rb1 + 2 H2O = gypenoside LXXV + 2 D-glucose",
+      "ec": "3.2.1.191",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rb1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gypenoside_lxxv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:40735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40735"
           }
         ]
       }

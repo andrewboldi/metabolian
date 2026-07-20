@@ -119,6 +119,90 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61961"
+      }
+    },
+    {
+      "id": "4_3_methylbut_2_enyl_l_tryptophan",
+      "name": "4-(3-methylbut-2-enyl)-L-tryptophan",
+      "short": "4-(3-methylbut-2-en…",
+      "formula": "C16H20N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58209"
+      }
+    },
+    {
+      "id": "4_3_methylbut_2_enyl_l_abrine",
+      "name": "4-(3-methylbut-2-enyl)-L-abrine",
+      "short": "4-(3-methylbut-2-en…",
+      "formula": "C17H22N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67248"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n6_acetyl_l_lysine",
+      "name": "N6-acetyl-L-lysine",
+      "formula": "C8H14N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61930"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +225,34 @@
       "name": "[histone H3]-dimethyl-L-lysine(36) demethylase",
       "ec": [
         "1.14.11.27"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_66",
+      "name": "[histone H3]-trimethyl-L-lysine(9) demethylase",
+      "ec": [
+        "1.14.11.66"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_261",
+      "name": "4-dimethylallyltryptophan N-methyltransferase",
+      "ec": [
+        "2.1.1.261"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_66",
+      "name": "[histone-H3]-N(6),N(6)-dimethyl-L-lysine(4) FAD-dependent demethylase",
+      "ec": [
+        "1.14.99.66"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_48",
+      "name": "histone acetyltransferase",
+      "ec": [
+        "2.3.1.48"
       ]
     }
   ],
@@ -296,6 +408,214 @@
           {
             "db": "Rhea",
             "id": "RHEA:42032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "[histone H3]-trimethyl-L-lysine(9) demethylase",
+      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(9)-[histone H3] + 2 2-oxoglutarate + 2 O2 = N(6)-methyl-L-lysyl(9)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
+      "ec": "1.14.11.66",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:60200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "4-dimethylallyltryptophan N-methyltransferase",
+      "equation": "4-(3-methylbut-2-enyl)-L-tryptophan + S-adenosyl-L-methionine = 4-(3-methylbut-2-enyl)-L-abrine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.261",
+      "substrates": [
+        {
+          "metabolite": "4_3_methylbut_2_enyl_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_3_methylbut_2_enyl_l_abrine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_261"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:34435"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "[histone-H3]-N(6),N(6)-dimethyl-L-lysine(4) FAD-dependent demethylase",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(4)-[histone H3] + 2 A + 2 H2O = L-lysyl(4)-[histone H3] + 2 formaldehyde + 2 AH2",
+      "ec": "1.14.99.66",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:60244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "histone acetyltransferase",
+      "equation": "L-lysyl-[histone] + acetyl-CoA = N(6)-acetyl-L-lysyl-[histone] + CoA + H(+)",
+      "ec": "2.3.1.48",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_acetyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:21992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21992"
           }
         ]
       }

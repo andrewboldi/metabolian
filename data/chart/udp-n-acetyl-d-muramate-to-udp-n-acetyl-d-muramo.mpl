@@ -17,4 +17,10 @@ pathway udp-n-acetyl-d-muramate-to-udp-n-acetyl-d-muramo "UDP-N-acetyl-α-D-mura
     <-> ec_6_3_2_13 [6.3.2.13] +meso_2_6_diaminopimelic_acid_dizwitterion +atp -adp -pi -hplus
     udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_194 [4.2.3.194] +fpp +h2o
+    drimenol
+  }
 }

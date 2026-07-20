@@ -15,4 +15,10 @@ pathway 3-6-anhydro-l-galactopy-to-l-glyceraldehyde "3,6-anhydro-Î±-L-galactopyâ
     <-> ec_4_1_2_54 [4.1.2.54] -pyruvate
     l_glyceraldehyde
   }
+
+  branch from 2_keto_3_deoxy_l_galactonate side left {
+    2_keto_3_deoxy_l_galactonate
+    <-> ec_4_2_1_146 [4.2.1.146] +h2o
+    l_galactonate
+  }
 }

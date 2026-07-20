@@ -111,6 +111,25 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "xtp",
+      "name": "XTP",
+      "formula": "C10H11N4O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61314"
+      }
+    },
+    {
+      "id": "xmp",
+      "name": "Xanthosine 5'-monophosphate (XMP)",
+      "short": "Xanthosine 5'-MP…",
+      "formula": "C10H11N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57464"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +152,20 @@
       "name": "D-glycero-beta-D-manno-heptose 1-phosphate adenylyltransferase",
       "ec": [
         "2.7.7.70"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_66",
+      "name": "XTP/dITP diphosphatase",
+      "ec": [
+        "3.6.1.66"
       ]
     }
   ],
@@ -276,6 +309,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:27465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nucleotide diphosphatase",
+      "equation": "XTP + H2O = XMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "xtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28610"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28610"
           }
         ]
       }

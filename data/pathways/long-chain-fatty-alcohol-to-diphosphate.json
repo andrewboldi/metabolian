@@ -130,6 +130,89 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "long_chain_alkane",
+      "name": "long-chain alkane",
+      "formula": "HR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83563"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "long_chain_fatty_aldehyde",
+      "name": "long-chain fatty aldehyde",
+      "short": "long-chain fatty…",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17176"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "pinene",
+      "name": "(−)-β-pinene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28359"
+      }
     }
   ],
   "enzymes": [
@@ -152,6 +235,27 @@
       "name": "long-chain fatty acid adenylase/transferase FadD26",
       "ec": [
         "6.2.1.59"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_28",
+      "name": "long-chain alkane monooxygenase",
+      "ec": [
+        "1.14.14.28"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_80",
+      "name": "long-chain acyl-[acyl-carrier-protein] reductase",
+      "ec": [
+        "1.2.1.80"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_120",
+      "name": "(-)-beta-pinene synthase",
+      "ec": [
+        "4.2.3.120"
       ]
     }
   ],
@@ -299,6 +403,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:64660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "long-chain alkane monooxygenase",
+      "equation": "a long-chain alkane + FMNH2 + O2 = a long chain fatty alcohol + FMN + H2O + H(+)",
+      "ec": "1.14.14.28",
+      "substrates": [
+        {
+          "metabolite": "long_chain_alkane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "long_chain_fatty_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "long-chain acyl-[acyl-carrier-protein] reductase",
+      "equation": "a long-chain fatty aldehyde + holo-[ACP] + NAD(+) = a long-chain fatty acyl-[ACP] + NADH + H(+)",
+      "ec": "1.2.1.80",
+      "substrates": [
+        {
+          "metabolite": "long_chain_fatty_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:54180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(-)-beta-pinene synthase",
+      "equation": "(2E)-geranyl diphosphate = (1S,5S)-beta-pinene + diphosphate",
+      "ec": "4.2.3.120",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_120"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:25496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25496"
           }
         ]
       }

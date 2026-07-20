@@ -121,6 +121,52 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "eudesmol",
+      "name": "α-eudesmol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10278"
+      }
+    },
+    {
+      "id": "neomycin_c",
+      "name": "neomycin C",
+      "formula": "C23H52N6O13",
+      "charge": 6,
+      "xrefs": {
+        "chebi": "CHEBI:65077"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "6_oxoneomycin_c",
+      "name": "6'''-oxoneomycin C",
+      "formula": "C23H48N5O14",
+      "charge": 5,
+      "xrefs": {
+        "chebi": "CHEBI:65068"
+      }
     }
   ],
   "enzymes": [
@@ -143,6 +189,20 @@
       "name": "cytidine diphosphoramidate kinase",
       "ec": [
         "2.7.1.224"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_85",
+      "name": "alpha-eudesmol synthase",
+      "ec": [
+        "4.2.3.85"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_95",
+      "name": "neomycin C transaminase",
+      "ec": [
+        "2.6.1.95"
       ]
     }
   ],
@@ -290,6 +350,96 @@
           {
             "db": "Rhea",
             "id": "RHEA:57316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alpha-eudesmol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = alpha-eudesmol + diphosphate",
+      "ec": "4.2.3.85",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "eudesmol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "neomycin C transaminase",
+      "equation": "neomycin C + 2-oxoglutarate = 6'''-deamino-6'''-oxoneomycin C + L-glutamate",
+      "ec": "2.6.1.95",
+      "substrates": [
+        {
+          "metabolite": "neomycin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_oxoneomycin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_95"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:33959"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33959"
           }
         ]
       }

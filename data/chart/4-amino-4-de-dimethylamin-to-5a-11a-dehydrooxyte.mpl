@@ -17,4 +17,10 @@ pathway 4-amino-4-de-dimethylamin-to-5a-11a-dehydrooxyte "4-amino-4-de(dimethyla
     <-> ec_1_14_13_234 [1.14.13.234] +nadph +o2 +hplus -nadp -h2o
     5a_11a_dehydrooxytetracycline
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_75 [2.1.1.75] +apigenin_7_olate +sam +hplus
+    5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o
+  }
 }

@@ -27,4 +27,28 @@ pathway xylitol-to-fumarate "xylitol to fumarate" {
     <-> ec_4_2_1_2 [4.2.1.2] -h2o
     fumarate
   }
+
+  branch from d_xylopyranose side left {
+    d_xylopyranose
+    <-> ec_3_2_1_194 [3.2.1.194] +notoginsenoside_r1 +h2o
+    ginsenoside_rg1
+  }
+
+  branch from d_xylonate side right {
+    d_xylonate
+    <-> ec_3_1_1_68 [3.1.1.68] +h2o +hplus
+    d_xylono_1_4_lactone
+  }
+
+  branch from 2_dehydro_3_deoxy_d_arabinonate side left {
+    2_dehydro_3_deoxy_d_arabinonate
+    <-> ec_1_1_1_434 [1.1.1.434] +nad +nadh +hplus
+    5_hydroxy_2_4_dioxopentanoate
+  }
+
+  branch from glycolaldehyde side right {
+    glycolaldehyde
+    <-> ec_1_13_11_81 [1.13.11.81] +7_8_dihydroneopterin +o2 +formate +hplus
+    7_8_dihydroxanthopterin
+  }
 }

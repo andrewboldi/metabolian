@@ -15,4 +15,16 @@ pathway 4-hydroxy-3-all-trans-dec-to-2-decaprenyl-6-meth "4-hydroxy-3-all-trans-
     <-> ec_4_1_1_130 [4.1.1.130] +hplus -co2
     2_decaprenyl_6_methoxyphenol
   }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_19_43 [1.14.19.43] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    1_acyl_2_3e_hexadec_3_enoyl_glycerolipid
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
+  }
 }

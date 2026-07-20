@@ -15,4 +15,16 @@ pathway 4-nitrobenzoyl-coa-to-di-sulfido-diiron "4-nitrobenzoyl-CoA to di-μ-sul
     <-> ec_1_14_15_37 [1.14.15.37] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     aureothin
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
+    8_methoxyfurocoumarin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +di_sulfido_diiron +o2 +hplus +h2o
+    pulcherriminate
+  }
 }

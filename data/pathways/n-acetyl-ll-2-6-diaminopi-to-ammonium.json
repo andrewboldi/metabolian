@@ -111,6 +111,61 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "n_acetyl_alaninate",
+      "name": "N-acetyl-β-alaninate",
+      "formula": "C5H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57857"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "β-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57966"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "camp",
+      "name": "3',5'-Cyclic AMP (cAMP)",
+      "short": "3',5'-Cyclic AMP…",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58165"
+      }
+    },
+    {
+      "id": "3_5_cyclic_imp",
+      "name": "3',5'-cyclic IMP",
+      "formula": "C10H10N4O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134197"
+      }
     }
   ],
   "enzymes": [
@@ -133,6 +188,27 @@
       "name": "diaminopimelate dehydrogenase",
       "ec": [
         "1.4.1.16"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_21",
+      "name": "N-acetyl-beta-alanine deacetylase",
+      "ec": [
+        "3.5.1.21"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_20",
+      "name": "diaminopimelate decarboxylase",
+      "ec": [
+        "4.1.1.20"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_46",
+      "name": "cAMP deaminase",
+      "ec": [
+        "3.5.4.46"
       ]
     }
   ],
@@ -272,6 +348,145 @@
           {
             "db": "Rhea",
             "id": "RHEA:13561"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-acetyl-beta-alanine deacetylase",
+      "equation": "N-acetyl-beta-alanine + H2O = beta-alanine + acetate",
+      "ec": "3.5.1.21",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_alaninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:23212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "diaminopimelate decarboxylase",
+      "equation": "meso-2,6-diaminopimelate + H(+) = L-lysine + CO2",
+      "ec": "4.1.1.20",
+      "substrates": [
+        {
+          "metabolite": "meso_2_6_diaminopimelic_acid_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:15101"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "cAMP deaminase",
+      "equation": "3',5'-cyclic AMP + H2O + H(+) = 3',5'-cyclic IMP + NH4(+)",
+      "ec": "3.5.4.46",
+      "substrates": [
+        {
+          "metabolite": "camp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_cyclic_imp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:22908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22908"
           }
         ]
       }

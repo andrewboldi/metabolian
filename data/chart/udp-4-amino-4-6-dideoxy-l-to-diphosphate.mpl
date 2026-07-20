@@ -17,4 +17,10 @@ pathway udp-4-amino-4-6-dideoxy-l-to-diphosphate "UDP-4-amino-4,6-dideoxy-L… t
     <-> ec_2_7_7_81 [2.7.7.81] +ctp -ppi
     cmp_pseudaminate
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    humulene
+  }
 }

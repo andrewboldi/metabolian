@@ -15,4 +15,16 @@ pathway o3-d-galactosyl-1-3-to-l-threonine "O3-(β-D-galactosyl-(1→3)-… to L
     <-> ec_3_1_3_16 [3.1.3.16] +h2o -pi
     l_threonine
   }
+
+  branch from d_galp_1_3_d_galpnac side left {
+    d_galp_1_3_d_galpnac
+    <-> ec_3_2_1_97 [3.2.1.97] +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +h2o
+    l_serine
+  }
+
+  branch from l_threonine side right {
+    l_threonine
+    <-> ec_2_7_1_180 [2.7.1.180] +fad +amp +hplus
+    fmn_l_threonine_2
+  }
 }

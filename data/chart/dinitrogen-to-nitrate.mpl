@@ -15,4 +15,10 @@ pathway dinitrogen-to-nitrate "dinitrogen to nitrate" {
     <-> ec_1_14_12_17 [1.14.12.17] +nadh +o2 -nad -hplus
     nitrate
   }
+
+  branch from no side left {
+    no
+    <-> ec_1_14_15_41 [1.14.15.41] +l_tryptophan +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    4_nitro_l_tryptophan
+  }
 }

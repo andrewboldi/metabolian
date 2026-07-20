@@ -17,4 +17,22 @@ pathway 3-s-strictosidinium-to-1d-myo-inositol "3α(S)-strictosidinium to 1D-myo
     <-> ec_2_4_1_250 [2.4.1.250] +udpglcnac -udp -hplus
     1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
   }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_1_1_33 [3.1.1.33] +6_o_acetyl_d_glucose +h2o +hplus
+    acetate
+  }
+
+  branch from g6p side right {
+    g6p
+    <-> ec_1_1_1_363 [1.1.1.363] +nad +nadh +hplus
+    6pgl
+  }
+
+  branch from 1d_myo_inositol_3_phosphate side left {
+    1d_myo_inositol_3_phosphate
+    <-> ec_3_1_3_25 [3.1.3.25] +h2o +pi
+    myo_inositol
+  }
 }

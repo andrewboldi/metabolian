@@ -131,6 +131,25 @@
       "xrefs": {
         "chebi": "CHEBI:133012"
       }
+    },
+    {
+      "id": "apigenin_7_olate",
+      "name": "apigenin-7-olate",
+      "formula": "C15H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58470"
+      }
+    },
+    {
+      "id": "5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o",
+      "name": "5-hydroxy-2-(4-methoxyphenyl)-4-oxo-4H-chromen-7-olate",
+      "short": "5-hydroxy-2-(4-meth…",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57284"
+      }
     }
   ],
   "enzymes": [
@@ -153,6 +172,13 @@
       "name": "12-dehydrotetracycline 5-monooxygenase",
       "ec": [
         "1.14.13.234"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_75",
+      "name": "apigenin 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.75"
       ]
     }
   ],
@@ -365,6 +391,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:50388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "apigenin 4'-O-methyltransferase",
+      "equation": "apigenin + S-adenosyl-L-methionine = acacetin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.75",
+      "substrates": [
+        {
+          "metabolite": "apigenin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20429"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20429"
           }
         ]
       }

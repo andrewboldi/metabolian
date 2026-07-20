@@ -249,6 +249,62 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "2_amino_4_hydroxypteridine",
+      "name": "2-amino-4-hydroxypteridine",
+      "short": "2-amino-4-hydroxypt…",
+      "formula": "C6H3N5OR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73184"
+      }
+    },
+    {
+      "id": "2_4_dihydroxypteridine",
+      "name": "2,4-dihydroxypteridine",
+      "short": "2,4-dihydroxypterid…",
+      "formula": "C6H2N4O2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73186"
+      }
+    },
+    {
+      "id": "precorrin_2",
+      "name": "precorrin-2",
+      "formula": "C42H41N4O16",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:58827"
+      }
+    },
+    {
+      "id": "coproporphyrin_iii",
+      "name": "coproporphyrin III",
+      "formula": "C36H34N4O8",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:131725"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
     }
   ],
   "enzymes": [
@@ -306,6 +362,34 @@
       "name": "magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase",
       "ec": [
         "1.14.13.81"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_11",
+      "name": "pterin deaminase",
+      "ec": [
+        "3.5.4.11"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_107",
+      "name": "uroporphyrinogen-III C-methyltransferase",
+      "ec": [
+        "2.1.1.107"
+      ]
+    },
+    {
+      "id": "ec_1_3_3_15",
+      "name": "coproporphyrinogen III oxidase (coproporphyrin-forming)",
+      "ec": [
+        "1.3.3.15"
+      ]
+    },
+    {
+      "id": "ec_1_3_5_3",
+      "name": "protoporphyrinogen IX dehydrogenase (quinone)",
+      "ec": [
+        "1.3.5.3"
       ]
     }
   ],
@@ -698,6 +782,194 @@
           {
             "db": "Rhea",
             "id": "RHEA:33235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "pterin deaminase",
+      "equation": "a 2-amino-4-hydroxypteridine + H2O + H(+) = a 2,4-dihydroxypteridine + NH4(+)",
+      "ec": "3.5.4.11",
+      "substrates": [
+        {
+          "metabolite": "2_amino_4_hydroxypteridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_dihydroxypteridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:36055"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "uroporphyrinogen-III C-methyltransferase",
+      "equation": "uroporphyrinogen III + 2 S-adenosyl-L-methionine = precorrin-2 + 2 S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.107",
+      "substrates": [
+        {
+          "metabolite": "uroporphyrinogen3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precorrin_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_107"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:32459"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32459"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "coproporphyrinogen III oxidase (coproporphyrin-forming)",
+      "equation": "coproporphyrinogen III + 3 O2 = coproporphyrin III + 3 H2O2",
+      "ec": "1.3.3.15",
+      "substrates": [
+        {
+          "metabolite": "coproporphyrinogen3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coproporphyrin_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:43436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "protoporphyrinogen IX dehydrogenase (quinone)",
+      "equation": "protoporphyrinogen IX + 3 a quinone = protoporphyrin IX + 3 a quinol",
+      "ec": "1.3.5.3",
+      "substrates": [
+        {
+          "metabolite": "protoporphyrinogen9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "protoporphyrin9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_5_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:65032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65032"
           }
         ]
       }

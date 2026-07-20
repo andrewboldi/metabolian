@@ -15,4 +15,16 @@ pathway ribonucleotide-ribonucleo-to-3-end-ribonucleotid "ribonucleotide-ribonuc
     <-> ec_3_1_4_58 [3.1.4.58] +h2o -hplus
     3_end_ribonucleotide_2_phosphate_3
   }
+
+  branch from 5_end_ribonucleoside side left {
+    5_end_ribonucleoside
+    <-> ec_2_7_1_78 [2.7.1.78] +atp +adp +hplus
+    5_end_ribonucleotide_2
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_89 [4.2.3.89] +fpp
+    caryophyllene
+  }
 }

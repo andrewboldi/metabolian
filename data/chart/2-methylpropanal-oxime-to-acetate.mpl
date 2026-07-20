@@ -27,4 +27,28 @@ pathway 2-methylpropanal-oxime-to-acetate "2-methylpropanal oxime to acetate" {
     <-> ec_3_5_1_113 [3.5.1.113] +h2o -acetate
     6_hydroxyneomycin_c
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_79 [2.1.1.79] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
+    1_acyl_2_9_10_methyleneacyl_sn_glycero_3_phospho
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_28 [2.1.1.28] +phenylethanolaminium +sah +hplus
+    n_methylphenylethanolaminium
+  }
+
+  branch from triphosphate side left {
+    triphosphate
+    <-> ec_3_6_1_2 [3.6.1.2] +h2o +hplus
+    cyclotriphosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_166 [4.2.3.166] +fpp +h2o
+    1_10_e_4e_6s_7r_germacradien_6_ol
+  }
 }

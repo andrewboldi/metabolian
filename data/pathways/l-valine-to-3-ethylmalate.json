@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-valine-to-3-ethylmalate",
   "name": "L-valine to 3-ethylmalate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from L-valine zwitterion to 3-ethylmalate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -154,6 +154,91 @@
       "xrefs": {
         "chebi": "CHEBI:57425"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "2s_2_isopropylmalate",
+      "name": "(2S)-2-isopropylmalate",
+      "short": "2-isopropylmalate",
+      "formula": "C7H10O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:1178"
+      }
+    },
+    {
+      "id": "2_aminopteridin_4_ol",
+      "name": "2-aminopteridin-4-ol",
+      "formula": "C6H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18265"
+      }
+    },
+    {
+      "id": "lumazine",
+      "name": "lumazine",
+      "formula": "C6H4N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16489"
+      }
+    },
+    {
+      "id": "n6_r_dihydrolipoyl_l_lysine",
+      "name": "N6-[(R)-dihydrolipoyl]-L-lysine",
+      "short": "N6-[(R)-dihydrolipo…",
+      "formula": "C14H26N2O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83100"
+      }
+    },
+    {
+      "id": "n6_r_s8_isobutyryldihydrolipoyl_l_lysine",
+      "name": "N6-[(R)-S8-isobutyryldihydrolipoyl]-L-lysine",
+      "short": "N6-[(R)-S8-isobutyr…",
+      "formula": "C18H32N2O3S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83142"
+      }
+    },
+    {
+      "id": "corticosterone",
+      "name": "corticosterone",
+      "formula": "C21H30O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16827"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "18_hydroxycorticosterone",
+      "name": "18-hydroxycorticosterone",
+      "short": "18-hydroxycorticost…",
+      "formula": "C21H30O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16485"
+      }
     }
   ],
   "enzymes": [
@@ -183,6 +268,34 @@
       "name": "3-ethylmalate synthase",
       "ec": [
         "2.3.3.7"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_13",
+      "name": "2-isopropylmalate synthase",
+      "ec": [
+        "2.3.3.13"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_11",
+      "name": "pterin deaminase",
+      "ec": [
+        "3.5.4.11"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_168",
+      "name": "dihydrolipoyllysine-residue (2-methylpropanoyl)transferase",
+      "ec": [
+        "2.3.1.168"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_5",
+      "name": "corticosterone 18-monooxygenase",
+      "ec": [
+        "1.14.15.5"
       ]
     }
   ],
@@ -387,6 +500,210 @@
           {
             "db": "Rhea",
             "id": "RHEA:10500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-isopropylmalate synthase",
+      "equation": "3-methyl-2-oxobutanoate + acetyl-CoA + H2O = (2S)-2-isopropylmalate + CoA + H(+)",
+      "ec": "2.3.3.13",
+      "substrates": [
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_isopropylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21524"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "pterin deaminase",
+      "equation": "2-amino-4-hydroxypteridine + H2O + H(+) = 2,4-dihydroxypteridine + NH4(+)",
+      "ec": "3.5.4.11",
+      "substrates": [
+        {
+          "metabolite": "2_aminopteridin_4_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lumazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:11904"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11904"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "dihydrolipoyllysine-residue (2-methylpropanoyl)transferase",
+      "equation": "N(6)-[(R)-dihydrolipoyl]-L-lysyl-[protein] + 2-methylpropanoyl-CoA = N(6)-[(R)-S(8)-2-methylpropanoyldihydrolipoyl]-L-lysyl-[protein] + CoA",
+      "ec": "2.3.1.168",
+      "substrates": [
+        {
+          "metabolite": "n6_r_dihydrolipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isobutyryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_s8_isobutyryldihydrolipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_168"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:18865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "corticosterone 18-monooxygenase",
+      "equation": "corticosterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-hydroxycorticosterone + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.5",
+      "substrates": [
+        {
+          "metabolite": "corticosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "18_hydroxycorticosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:11872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11872"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "r-2-hydroxy-4-methylpen-to-trans-3-methylglutac",
   "name": "(R)-2-hydroxy-4-methylpen… to trans-3-methylglutaconyl-…",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from (R)-2-hydroxy-4-methylpentanoate to trans-3-methylglutaconyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -164,6 +164,73 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "leucine",
+      "name": "L-Leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57427"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_isovaleryl_l_homoserine_lactone",
+      "name": "N-isovaleryl-L-homoserine lactone",
+      "short": "N-isovaleryl-L-homo…",
+      "formula": "C9H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74958"
+      }
+    },
+    {
+      "id": "5_s_methyl_5_thioadenosine",
+      "name": "5'-S-methyl-5'-thioadenosine",
+      "short": "5'-S-methyl-5'-thio…",
+      "formula": "C11H15N5O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17509"
+      }
+    },
+    {
+      "id": "hmg_coa",
+      "name": "(S)-3-Hydroxy-3-methylglutaryl-CoA",
+      "short": "3-Hydroxy-3-methylg…",
+      "formula": "C27H39N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:43074"
+      }
     }
   ],
   "enzymes": [
@@ -193,6 +260,27 @@
       "name": "methylcrotonoyl-CoA carboxylase",
       "ec": [
         "6.4.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_4_1_9",
+      "name": "leucine dehydrogenase",
+      "ec": [
+        "1.4.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_228",
+      "name": "isovaleryl-homoserine lactone synthase",
+      "ec": [
+        "2.3.1.228"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_18",
+      "name": "methylglutaconyl-CoA hydratase",
+      "ec": [
+        "4.2.1.18"
       ]
     }
   ],
@@ -401,6 +489,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:13589"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "leucine dehydrogenase",
+      "equation": "L-leucine + NAD(+) + H2O = 4-methyl-2-oxopentanoate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.9",
+      "substrates": [
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kic",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12220"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "isovaleryl-homoserine lactone synthase",
+      "equation": "3-methylbutanoyl-CoA + S-adenosyl-L-methionine = N-isovaleryl-L-homoserine lactone + S-methyl-5'-thioadenosine + CoA + H(+)",
+      "ec": "2.3.1.228",
+      "substrates": [
+        {
+          "metabolite": "isovaleryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_isovaleryl_l_homoserine_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_228"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:37471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "methylglutaconyl-CoA hydratase",
+      "equation": "(3S)-3-hydroxy-3-methylglutaryl-CoA = 3-methyl-(2E)-glutaconyl-CoA + H2O",
+      "ec": "4.2.1.18",
+      "substrates": [
+        {
+          "metabolite": "hmg_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylglutaconyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:21536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21536"
           }
         ]
       }

@@ -19,4 +19,10 @@ pathway 2-phosphonato-l-lactate-to-coenzyme-f420-3 "2-phosphonato-L-lactate to c
     <-> ec_6_3_2_32 [6.3.2.32] +glutamate +atp -adp -pi -hplus
     coenzyme_f420_3
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_44 [4.2.3.44] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_7_15_diene
+  }
 }

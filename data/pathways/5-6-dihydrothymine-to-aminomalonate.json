@@ -127,6 +127,71 @@
       "xrefs": {
         "chebi": "CHEBI:58158"
       }
+    },
+    {
+      "id": "melamine",
+      "name": "melamine",
+      "formula": "C3H7N6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:77798"
+      }
+    },
+    {
+      "id": "ammeline",
+      "name": "ammeline",
+      "formula": "C3H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28646"
+      }
+    },
+    {
+      "id": "mo_vi_o2_oh_molybdopterin_cofactor",
+      "name": "Mo(VI)O2(OH)-molybdopterin cofactor",
+      "short": "Mo(VI)O2(OH)-molybd…",
+      "formula": "C10H10MoN5O9PS2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71302"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "mo_vi_o_s_oh_molybdopterin_cofactor",
+      "name": "Mo(VI)(=O)(=S)(OH)-molybdopterin cofactor",
+      "short": "Mo(VI)(=O)(=S)(OH)-…",
+      "formula": "C10H10MoN5O8PS3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:82685"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +221,20 @@
       "name": "alanine--oxomalonate transaminase",
       "ec": [
         "2.6.1.47"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_45",
+      "name": "melamine deaminase",
+      "ec": [
+        "3.5.4.45"
+      ]
+    },
+    {
+      "id": "ec_2_8_1_9",
+      "name": "molybdenum cofactor sulfurtransferase",
+      "ec": [
+        "2.8.1.9"
       ]
     }
   ],
@@ -344,6 +423,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:18809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "melamine deaminase",
+      "equation": "melamine + H2O = ammeline + NH4(+)",
+      "ec": "3.5.4.45",
+      "substrates": [
+        {
+          "metabolite": "melamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ammeline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26197"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26197"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "molybdenum cofactor sulfurtransferase",
+      "equation": "Mo-molybdopterin + L-cysteine + AH2 = thio-Mo-molybdopterin + L-alanine + A + H2O",
+      "ec": "2.8.1.9",
+      "substrates": [
+        {
+          "metabolite": "mo_vi_o2_oh_molybdopterin_cofactor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mo_vi_o_s_oh_molybdopterin_cofactor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:42636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42636"
           }
         ]
       }

@@ -15,4 +15,22 @@ pathway n-1-hydroxy-2-oxoethyl-to-adp-d-ribose "Nω-(1-hydroxy-2-oxoethyl)… to
     <-> ec_3_2_2_24 [3.2.2.24] +h2o -adp_d_ribose
     l_argininium
   }
+
+  branch from l_argininium side left {
+    l_argininium
+    <-> ec_2_4_2_31 [2.4.2.31] +nad +nicotinamide +hplus
+    n_adp_d_ribosyl_l_argininium_1
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> ec_2_7_1_160 [2.7.1.160] +2_phospho_nucleotide_5_phosphate_3 +nad +adp_d_ribose_1_2_cyclic_phosphate
+    nucleotide_5_phosphate_1
+  }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> ec_3_2_2_19 [3.2.2.19] +n_adp_d_ribosyl_l_arginine +h2o
+    arginine
+  }
 }

@@ -19,4 +19,28 @@ pathway coniferin-to-formaldehyde "coniferin to formaldehyde" {
     <-> ec_1_13_11_94 [1.13.11.94] +o2 -formaldehyde
     vanillin
   }
+
+  branch from coniferol side left {
+    coniferol
+    <-> ec_2_4_1_111 [2.4.1.111] +coniferin +udp +hplus
+    udp_d_glucose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_220 [3.2.1.220] +deacetylipecoside +h2o
+    deacetylipecoside_aglycone
+  }
+
+  branch from coniferyl_aldehyde side left {
+    coniferyl_aldehyde
+    <-> ec_1_2_1_44 [1.2.1.44] +nadp +coa +nadph +hplus
+    trans_feruloyl_coa
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_11_54 [1.14.11.54] +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
+  }
 }

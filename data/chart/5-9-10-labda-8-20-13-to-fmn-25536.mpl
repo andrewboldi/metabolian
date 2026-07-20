@@ -15,4 +15,16 @@ pathway 5-9-10-labda-8-20-13-to-fmn-25536 "5β,9α,10α-labda-8(20),13-… to FM
     <-> ec_1_14_14_122 [1.14.14.122] +fmnh2 +o2 -fmn -h2o -hplus
     oryzalexin_e
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_6_1_9 [3.6.1.9] +ditp +h2o +hplus
+    2_deoxyinosine_5_phosphate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_177 [1.14.14.177] +triacontanoate +fmnh2 +o2 +h2o +hplus
+    hydroxytriacontanoate
+  }
 }

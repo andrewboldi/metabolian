@@ -15,4 +15,10 @@ pathway allantoate-to-oxalurate "allantoate to oxalurate" {
     <-> ec_1_1_1_154 [1.1.1.154] +nad -nadh -hplus
     oxalurate
   }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_34 [3.5.4.34] +adenosine_5_monophosphate_1 +h2o +hplus
+    inosine_5_phosphate_1
+  }
 }

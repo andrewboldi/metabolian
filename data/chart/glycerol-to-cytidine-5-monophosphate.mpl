@@ -15,4 +15,22 @@ pathway glycerol-to-cytidine-5-monophosphate "glycerol to cytidine 5'-monophosph
     <-> ec_3_6_1_16 [3.6.1.16] +h2o -cytidine_5_monophosphate -hplus
     sn_glycerol_3_phosphate
   }
+
+  branch from sn_glycerol_3_phosphate side left {
+    sn_glycerol_3_phosphate
+    <-> ec_2_3_1_275 [2.3.1.275] +acyl_monophosphate +pi
+    1_acyl_sn_glycerol_3_phosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_97 [4.2.3.97] +fpp
+    cadinene
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_38 [2.7.8.38] +cdp_2_3_bis_o_phytanyl_sn_glycerol +serine +hplus
+    2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
+  }
 }

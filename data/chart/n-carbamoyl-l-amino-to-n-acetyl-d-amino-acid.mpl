@@ -15,4 +15,22 @@ pathway n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid "N-carbamoyl-L-α-amino… 
     <-> ec_2_3_1_36 [2.3.1.36] +acetyl_coa -coa -hplus
     n_acetyl_d_amino_acid_anion
   }
+
+  branch from l_amino_acid side left {
+    l_amino_acid
+    <-> ec_6_2_1_n2 [6.2.1.n2] +holo-acp +atp +amp +ppi
+    o_s_l_aminoacyl_pantetheine_4_phosphoryl_serine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_20 [1.4.1.20] +l_phenylalanine +nad +h2o +nadh +hplus
+    keto_phenylpyruvate
+  }
+
+  branch from d_amino_acid side left {
+    d_amino_acid
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_aminoacyl_adenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
+  }
 }

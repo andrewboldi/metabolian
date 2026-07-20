@@ -229,6 +229,90 @@
       "xrefs": {
         "chebi": "CHEBI:72766"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "himachalene",
+      "name": "γ-himachalene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49224"
+      }
+    },
+    {
+      "id": "taxusin",
+      "name": "taxusin",
+      "formula": "C28H40O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63664"
+      }
+    },
+    {
+      "id": "7_hydroxytaxusin",
+      "name": "7β-hydroxytaxusin",
+      "formula": "C28H40O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63665"
+      }
+    },
+    {
+      "id": "catechols",
+      "name": "catechols",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33566"
+      }
+    },
+    {
+      "id": "guaiacols",
+      "name": "guaiacols",
+      "formula": "C7H4O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134251"
+      }
+    },
+    {
+      "id": "r_2_4_chloro_2_methylphenoxy_propanoate",
+      "name": "(R)-2-(4-chloro-2-methylphenoxy)propanoate",
+      "short": "2-(4-chloro-2-methy…",
+      "formula": "C10H10ClO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75284"
+      }
+    },
+    {
+      "id": "4_chloro_2_methylphenol",
+      "name": "4-chloro-2-methylphenol",
+      "short": "4-chloro-2-methylph…",
+      "formula": "C7H7ClO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1800"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
     }
   ],
   "enzymes": [
@@ -286,6 +370,34 @@
       "name": "verruculogen prenyltransferase",
       "ec": [
         "2.5.1.107"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_56",
+      "name": "gamma-humulene synthase",
+      "ec": [
+        "4.2.3.56"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_182",
+      "name": "taxoid 7beta-hydroxylase",
+      "ec": [
+        "1.14.14.182"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_6",
+      "name": "catechol O-methyltransferase",
+      "ec": [
+        "2.1.1.6"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_44",
+      "name": "(R)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "ec": [
+        "1.14.11.44"
       ]
     }
   ],
@@ -706,6 +818,210 @@
           {
             "db": "Rhea",
             "id": "RHEA:35979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "gamma-humulene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = gamma-himachalene + diphosphate",
+      "ec": "4.2.3.56",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "himachalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:25472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "taxoid 7beta-hydroxylase",
+      "equation": "taxusin + reduced [NADPH--hemoprotein reductase] + O2 = 7beta-hydroxytaxusin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.182",
+      "substrates": [
+        {
+          "metabolite": "taxusin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_hydroxytaxusin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_182"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:31975"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31975"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "catechol O-methyltransferase",
+      "equation": "a catechol + S-adenosyl-L-methionine = a guaiacol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.6",
+      "substrates": [
+        {
+          "metabolite": "catechols",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guaiacols",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:17877"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "(R)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "equation": "(R)-2-(4-chloro-2-methylphenoxy)propanoate + 2-oxoglutarate + O2 = 2-methyl-4-chlorophenol + pyruvate + succinate + CO2",
+      "ec": "1.14.11.44",
+      "substrates": [
+        {
+          "metabolite": "r_2_4_chloro_2_methylphenoxy_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_chloro_2_methylphenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:37815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37815"
           }
         ]
       }

@@ -148,6 +148,25 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "humulene",
+      "name": "γ-humulene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49290"
+      }
     }
   ],
   "enzymes": [
@@ -177,6 +196,13 @@
       "name": "pseudaminic acid cytidylyltransferase",
       "ec": [
         "2.7.7.81"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_56",
+      "name": "gamma-humulene synthase",
+      "ec": [
+        "4.2.3.56"
       ]
     }
   ],
@@ -369,6 +395,47 @@
           {
             "db": "Rhea",
             "id": "RHEA:32083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "gamma-humulene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = gamma-humulene + diphosphate",
+      "ec": "4.2.3.56",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "humulene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:25456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25456"
           }
         ]
       }

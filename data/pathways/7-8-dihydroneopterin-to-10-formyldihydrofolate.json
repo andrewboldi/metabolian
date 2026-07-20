@@ -164,6 +164,73 @@
       "xrefs": {
         "chebi": "CHEBI:57452"
       }
+    },
+    {
+      "id": "7_8_dihydroneopterin_3_triphosphate",
+      "name": "7,8-dihydroneopterin 3'-triphosphate",
+      "short": "7,8-dihydroneopteri…",
+      "formula": "C9H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58462"
+      }
+    },
+    {
+      "id": "glycolaldehyde_triphosphate",
+      "name": "glycolaldehyde triphosphate",
+      "short": "glycolaldehyde TP",
+      "formula": "C2H3O11P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:136833"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_l_arabinonate",
+      "name": "2-dehydro-3-deoxy-L-arabinonate",
+      "short": "2-dehydro-3-deoxy-L…",
+      "formula": "C5H7O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35173"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "leucine",
+      "name": "L-Leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57427"
+      }
+    },
+    {
+      "id": "3_l_leucyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-leucyl)adenylyl zwitterionic group",
+      "short": "3'-(L-leucyl)adenyl…",
+      "formula": "C16H24N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78494"
+      }
     }
   ],
   "enzymes": [
@@ -200,6 +267,27 @@
       "name": "formate--dihydrofolate ligase",
       "ec": [
         "6.3.4.17"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_60",
+      "name": "dihydroneopterin triphosphate aldolase",
+      "ec": [
+        "4.1.2.60"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_18",
+      "name": "2-dehydro-3-deoxy-L-pentonate aldolase",
+      "ec": [
+        "4.1.2.18"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_4",
+      "name": "leucine--tRNA ligase",
+      "ec": [
+        "6.1.1.4"
       ]
     }
   ],
@@ -445,6 +533,141 @@
           {
             "db": "Rhea",
             "id": "RHEA:24328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "dihydroneopterin triphosphate aldolase",
+      "equation": "7,8-dihydroneopterin 3'-triphosphate = glycolaldehyde triphosphate + 6-hydroxymethyl-7,8-dihydropterin",
+      "ec": "4.1.2.60",
+      "substrates": [
+        {
+          "metabolite": "7_8_dihydroneopterin_3_triphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_amino_6_hydroxymethyl_7_8_dihydropteridin_4_on",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:52772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "2-dehydro-3-deoxy-L-pentonate aldolase",
+      "equation": "2-dehydro-3-deoxy-L-arabinonate = glycolaldehyde + pyruvate",
+      "ec": "4.1.2.18",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_l_arabinonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:18545"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "leucine--tRNA ligase",
+      "equation": "tRNA(Leu) + L-leucine + ATP = L-leucyl-tRNA(Leu) + AMP + diphosphate",
+      "ec": "6.1.1.4",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_leucyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:11688"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11688"
           }
         ]
       }

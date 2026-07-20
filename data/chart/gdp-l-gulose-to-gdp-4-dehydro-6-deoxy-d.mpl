@@ -15,4 +15,16 @@ pathway gdp-l-gulose-to-gdp-4-dehydro-6-deoxy-d "GDP-β-L-gulose to GDP-4-dehydr
     <-> ec_4_2_1_47 [4.2.1.47] +gdp_d_mannose -h2o
     gdp_4_dehydro_6_deoxy_d_mannose
   }
+
+  branch from gdp_d_mannose side left {
+    gdp_d_mannose
+    <-> ec_2_4_1_349 [2.4.1.349] +d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos +gdp +hplus
+    d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n
+  }
+
+  branch from gdp_4_dehydro_6_deoxy_d_mannose side right {
+    gdp_4_dehydro_6_deoxy_d_mannose
+    <-> ec_1_1_1_135 [1.1.1.135] +nad +nadh +hplus
+    gdp_6_deoxy_d_talose
+  }
 }

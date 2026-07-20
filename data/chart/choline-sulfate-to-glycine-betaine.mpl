@@ -15,4 +15,16 @@ pathway choline-sulfate-to-glycine-betaine "choline sulfate to glycine betaine" 
     <-> ec_1_2_1_8 [1.2.1.8] +nad +h2o -nadh -hplus
     betaine
   }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +heptyl_sulfate +akg +o2 +succinate +co2 +hplus
+    heptanal
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_19_13 [1.14.19.13] +9z_12z_hexadecadienoyl_coa +o2 +hydrogen_acceptor +h2o
+    9z_12z_hexadeca_9_12_15_trienoyl_coa
+  }
 }

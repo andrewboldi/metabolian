@@ -15,4 +15,28 @@ pathway o-s-fatty-acylpantethein-to-acyl-coa "O-(S-fatty acylpantethein… to ac
     <-> ec_6_2_1_10 [6.2.1.10] +carboxylic_acid_anion +gtp +coa -gdp -pi
     acyl_coa
   }
+
+  branch from n_acyl_l_homoserine_lactone side left {
+    n_acyl_l_homoserine_lactone
+    <-> ec_3_1_1_81 [3.1.1.81] +h2o +hplus
+    n_acyl_l_homoserinate
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +sam +hplus
+    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_2_7_8_7 [2.7.8.7] +l_serine +coa +hplus
+    adenosine_3_5_bismonophosphate
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_15 [3.5.1.15] +n_acyl_l_aspartate +h2o
+    aspartate
+  }
 }

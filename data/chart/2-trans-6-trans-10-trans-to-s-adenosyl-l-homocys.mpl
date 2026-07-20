@@ -15,4 +15,16 @@ pathway 2-trans-6-trans-10-trans-to-s-adenosyl-l-homocys "2-trans,6-trans,10-tra
     <-> ec_2_1_1_347 [2.1.1.347] +sam -sah -hplus
     o_methylkolavelool
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_102 [4.2.3.102] +fpp
+    sesquithujene
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_270 [2.1.1.270] +6a_hydroxymaackiain +sam +hplus
+    pisatin
+  }
 }

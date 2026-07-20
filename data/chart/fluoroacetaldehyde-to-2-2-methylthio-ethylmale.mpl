@@ -23,4 +23,28 @@ pathway fluoroacetaldehyde-to-2-2-methylthio-ethylmale "fluoroacetaldehyde to 2-
     <-> ec_4_2_1_170 [4.2.1.170] -h2o
     2_2_methylthio_ethylmaleate
   }
+
+  branch from fluoroacetate side left {
+    fluoroacetate
+    <-> ec_3_1_2_29 [3.1.2.29] +h2o +coa +hplus
+    fluoroacetyl_coa
+  }
+
+  branch from fluoride side right {
+    fluoride
+    <-> ec_3_8_2_2 [3.8.2.2] +diisopropyl_fluorophosphate +h2o +hplus
+    diisopropyl_phosphate
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_1_1_98_7 [1.1.98.7] +l_serine +sam +5_deoxyadenosine +hplus
+    l_3_oxoalanine
+  }
+
+  branch from 4_methylthio_2_oxobutanoate side right {
+    4_methylthio_2_oxobutanoate
+    <-> ec_1_1_1_428 [1.1.1.428] +nad +nadh +hplus
+    2r_2_hydroxy_4_methylsulfanyl_butanoate
+  }
 }

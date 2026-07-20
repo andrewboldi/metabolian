@@ -17,4 +17,22 @@ pathway quinaldate-to-5-3-carboxylato-3-oxopro "quinaldate to 5-(3-carboxylato-3
     <-> ec_1_13_11_10 [1.13.11.10] +o2 -hplus
     5_3_carboxylato_3_oxoprop_1_en_1_yl_4_6_dihydrox
   }
+
+  branch from kynurenate side left {
+    kynurenate
+    <-> ec_2_6_1_7 [2.6.1.7] +l_kynurenine +akg +h2o
+    glutamate
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_acceptor +h2o
+    chlorite
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_3_99_17 [1.3.99.17] +quinoline +h2o +hydrogen_donor
+    quinolin_2_1h_one
+  }
 }

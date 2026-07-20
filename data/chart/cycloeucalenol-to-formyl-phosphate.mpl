@@ -15,4 +15,16 @@ pathway cycloeucalenol-to-formyl-phosphate "cycloeucalenol to formyl phosphate" 
     <-> ec_2_7_2_6 [2.7.2.6] +formate +atp -adp
     formyl_phosphate
   }
+
+  branch from formate side left {
+    formate
+    <-> ec_4_1_99_5 [4.1.99.5] +octadecanal +nadph +o2 +hplus +nadp +h2o
+    heptadecane
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_29 [1.14.14.29] +25_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    7_25_dihydroxycholesterol
+  }
 }

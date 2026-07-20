@@ -102,6 +102,25 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "luteolin_7_olate",
+      "name": "luteolin-7-olate",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57545"
+      }
+    },
+    {
+      "id": "4_5_dihydroxy_3_methoxyflavon_7_olate",
+      "name": "4',5-dihydroxy-3'-methoxyflavon-7-olate",
+      "short": "4',5-dihydroxy-3'-m…",
+      "formula": "C16H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57799"
+      }
     }
   ],
   "enzymes": [
@@ -124,6 +143,13 @@
       "name": "sterol 24-C-methyltransferase",
       "ec": [
         "2.1.1.41"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_398",
+      "name": "isoflavone 3'-O-methyltransferase",
+      "ec": [
+        "2.1.1.398"
       ]
     }
   ],
@@ -259,6 +285,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:21128"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "isoflavone 3'-O-methyltransferase",
+      "equation": "luteolin + S-adenosyl-L-methionine = chrysoeriol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.398",
+      "substrates": [
+        {
+          "metabolite": "luteolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_5_dihydroxy_3_methoxyflavon_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_398"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:14589"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14589"
           }
         ]
       }

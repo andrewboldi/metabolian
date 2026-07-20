@@ -165,6 +165,120 @@
       "xrefs": {
         "chebi": "CHEBI:16708"
       }
+    },
+    {
+      "id": "protoporphyrin9",
+      "name": "Protoporphyrin IX",
+      "formula": "C34H32N4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57306"
+      }
+    },
+    {
+      "id": "5_22s_24r_22_hydroxyergostan_3_one",
+      "name": "(5α,22S,24R)-22-hydroxyergostan-3-one",
+      "short": "(5α,22S,24R)-22-hyd…",
+      "formula": "C28H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59411"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_dehydro_6_deoxoteasterone",
+      "name": "3-dehydro-6-deoxoteasterone",
+      "short": "3-dehydro-6-deoxote…",
+      "formula": "C28H48O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20710"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxy_scyllo_inosamine",
+      "name": "2-deoxy-scyllo-inosamine",
+      "short": "2-deoxy-scyllo-inos…",
+      "formula": "C6H14NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65003"
+      }
+    },
+    {
+      "id": "3_ammonio_2_3_dideoxy_scyllo_inosose",
+      "name": "3-ammonio-2,3-dideoxy-scyllo-inosose",
+      "short": "3-ammonio-2,3-dideo…",
+      "formula": "C6H12NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65002"
+      }
+    },
+    {
+      "id": "dtdp_4_amino_4_6_dideoxy_d_glucose",
+      "name": "dTDP-4-amino-4,6-dideoxy-α-D-glucose",
+      "short": "dTDP-4-amino-4,6-di…",
+      "formula": "C16H26N3O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:68501"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "dtdp_3_dehydro_4_6_dideoxy_d_glucose",
+      "name": "dTDP-3-dehydro-4,6-dideoxy-α-D-glucose",
+      "short": "dTDP-3-dehydro-4,6-…",
+      "formula": "C16H22N2O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:76280"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
     }
   ],
   "enzymes": [
@@ -187,6 +301,34 @@
       "name": "S-methyl-5'-thioadenosine phosphorylase",
       "ec": [
         "2.4.2.28"
+      ]
+    },
+    {
+      "id": "ec_4_98_1_1",
+      "name": "protoporphyrin ferrochelatase",
+      "ec": [
+        "4.98.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_147",
+      "name": "22alpha-hydroxysteroid 23-monooxygenase",
+      "ec": [
+        "1.14.14.147"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_38",
+      "name": "2-deoxy-scyllo-inosamine dehydrogenase (AdoMet-dependent)",
+      "ec": [
+        "1.1.99.38"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_30",
+      "name": "dTDP-4-amino-4,6-dideoxy-D-glucose ammonia-lyase",
+      "ec": [
+        "4.3.1.30"
       ]
     }
   ],
@@ -346,6 +488,226 @@
           {
             "db": "Rhea",
             "id": "RHEA:24869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protoporphyrin ferrochelatase",
+      "equation": "heme b + 2 H(+) = protoporphyrin IX + Fe(2+)",
+      "ec": "4.98.1.1",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "protoporphyrin9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_98_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22584"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "22alpha-hydroxysteroid 23-monooxygenase",
+      "equation": "(22S,24R)-22-hydroxy-5alpha-ergostan-3-one + reduced [NADPH--hemoprotein reductase] + O2 = 3-dehydro-6-deoxoteasterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.147",
+      "substrates": [
+        {
+          "metabolite": "5_22s_24r_22_hydroxyergostan_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydro_6_deoxoteasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_147"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27325"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2-deoxy-scyllo-inosamine dehydrogenase (AdoMet-dependent)",
+      "equation": "2-deoxy-scyllo-inosamine + S-adenosyl-L-methionine = 3-amino-2,3-dideoxy-scyllo-inosose + 5'-deoxyadenosine + L-methionine + H(+)",
+      "ec": "1.1.99.38",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_scyllo_inosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_ammonio_2_3_dideoxy_scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34275"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "dTDP-4-amino-4,6-dideoxy-D-glucose ammonia-lyase",
+      "equation": "dTDP-4-amino-4,6-dideoxy-alpha-D-glucose + AH2 + S-adenosyl-L-methionine = dTDP-3-dehydro-4,6-dideoxy-alpha-D-glucose + 5'-deoxyadenosine + L-methionine + A + NH4(+) + H(+)",
+      "ec": "4.3.1.30",
+      "substrates": [
+        {
+          "metabolite": "dtdp_4_amino_4_6_dideoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_3_dehydro_4_6_dideoxy_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:39647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39647"
           }
         ]
       }

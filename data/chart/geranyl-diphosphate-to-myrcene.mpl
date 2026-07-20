@@ -15,4 +15,16 @@ pathway geranyl-diphosphate-to-myrcene "geranyl diphosphate to β-myrcene" {
     <-> ec_4_2_1_127 [4.2.1.127] -h2o
     myrcene
   }
+
+  branch from geraniol side left {
+    geraniol
+    <-> ec_1_1_1_347 [1.1.1.347] +nad +nadh +hplus
+    geranial
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_70 [4.2.3.70] +fpp +h2o
+    patchouli_alcohol
+  }
 }

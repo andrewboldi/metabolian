@@ -153,6 +153,80 @@
       "xrefs": {
         "chebi": "CHEBI:58307"
       }
+    },
+    {
+      "id": "primary_linear_alkyl_sulfate_ester",
+      "name": "primary linear alkyl sulfate ester",
+      "short": "primary linear…",
+      "formula": "CH2O4SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:157685"
+      }
+    },
+    {
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17478"
+      }
+    },
+    {
+      "id": "s_dichlorprop",
+      "name": "(S)-dichlorprop",
+      "formula": "C9H7Cl2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75287"
+      }
+    },
+    {
+      "id": "2_4_dichlorophenol",
+      "name": "2,4-dichlorophenol",
+      "formula": "C6H4Cl2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16738"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "s_ethylmalonyl_coa",
+      "name": "(S)-ethylmalonyl-CoA",
+      "formula": "C26H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:60909"
+      }
+    },
+    {
+      "id": "r_3_hydroxybutanoyl_coa",
+      "name": "(R)-3-hydroxybutanoyl-CoA",
+      "short": "3-hydroxybutanoyl-C…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57315"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
@@ -175,6 +249,27 @@
       "name": "short-chain acyl-CoA dehydrogenase",
       "ec": [
         "1.3.8.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_43",
+      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "ec": [
+        "1.14.11.43"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_94",
+      "name": "ethylmalonyl-CoA decarboxylase",
+      "ec": [
+        "4.1.1.94"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_55",
+      "name": "3-hydroxybutyryl-CoA dehydratase",
+      "ec": [
+        "4.2.1.55"
       ]
     }
   ],
@@ -338,6 +433,210 @@
           {
             "db": "Rhea",
             "id": "RHEA:24004"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alkyl sulfatase",
+      "equation": "a primary linear alkyl sulfate ester + 2-oxoglutarate + O2 = an aldehyde + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
+      "substrates": [
+        {
+          "metabolite": "primary_linear_alkyl_sulfate_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
+      "equation": "(S)-(2,4-dichlorophenoxy)propanoate + 2-oxoglutarate + O2 = 2,4-dichlorophenol + pyruvate + succinate + CO2",
+      "ec": "1.14.11.43",
+      "substrates": [
+        {
+          "metabolite": "s_dichlorprop",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_dichlorophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:37827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "ethylmalonyl-CoA decarboxylase",
+      "equation": "(2S)-ethylmalonyl-CoA + H(+) = butanoyl-CoA + CO2",
+      "ec": "4.1.1.94",
+      "substrates": [
+        {
+          "metabolite": "s_ethylmalonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:32131"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32131"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "3-hydroxybutyryl-CoA dehydratase",
+      "equation": "(3R)-3-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
+      "ec": "4.2.1.55",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxybutanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "crotonoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:17849"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17849"
           }
         ]
       }

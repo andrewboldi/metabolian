@@ -177,6 +177,61 @@
       "xrefs": {
         "chebi": "CHEBI:57642"
       }
+    },
+    {
+      "id": "galactitol",
+      "name": "galactitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16813"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "gdp_l_galactose",
+      "name": "GDP-β-L-galactose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61454"
+      }
+    },
+    {
+      "id": "l_galactose_1_phosphate",
+      "name": "β-L-galactose 1-phosphate",
+      "short": "β-L-galactose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75522"
+      }
+    },
+    {
+      "id": "gdp_d_glucose",
+      "name": "GDP-α-D-glucose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62230"
+      }
     }
   ],
   "enzymes": [
@@ -248,6 +303,20 @@
       "name": "triose-phosphate isomerase",
       "ec": [
         "5.3.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_69",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "ec": [
+        "2.7.7.69"
       ]
     }
   ],
@@ -555,6 +624,100 @@
           {
             "db": "Rhea",
             "id": "RHEA:18585"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "aldose reductase",
+      "equation": "galactitol + NADP(+) = D-galactose + NADPH + H(+)",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:37967"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "equation": "GDP-beta-L-galactose + alpha-D-glucose 1-phosphate = beta-L-galactose 1-phosphate + GDP-alpha-D-glucose",
+      "ec": "2.7.7.69",
+      "substrates": [
+        {
+          "metabolite": "gdp_l_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_galactose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:65712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65712"
           }
         ]
       }

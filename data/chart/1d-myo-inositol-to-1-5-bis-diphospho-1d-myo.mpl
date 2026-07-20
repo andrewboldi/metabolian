@@ -21,4 +21,16 @@ pathway 1d-myo-inositol-to-1-5-bis-diphospho-1d-myo "1D-myo-inositol… to 1,5-b
     <-> ec_2_7_4_21 [2.7.4.21] +atp +hplus -adp
     1_5_bis_diphospho_1d_myo_inositol_2_3_4_6_tetrak
   }
+
+  branch from myo_inositol_1_3_4_5_6_pentakisphosphate side left {
+    myo_inositol_1_3_4_5_6_pentakisphosphate
+    <-> ec_2_7_1_140 [2.7.1.140] +atp +adp +hplus
+    myo_inositol_1_3_4_6_tetrakisphosphate
+  }
+
+  branch from myo_inositol_hexakisphosphate side right {
+    myo_inositol_hexakisphosphate
+    <-> ec_3_1_3_72 [3.1.3.72] +h2o +pi
+    1l_myo_inositol_1_2_3_4_6_pentakisphosphate
+  }
 }

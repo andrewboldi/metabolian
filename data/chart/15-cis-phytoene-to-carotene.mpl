@@ -15,4 +15,10 @@ pathway 15-cis-phytoene-to-carotene "15-cis-phytoene to ε-carotene" {
     <-> ec_5_5_1_18 [5.5.1.18]
     carotene
   }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_25 [1.3.99.25] +isodihydrocarvone +hydrogen_acceptor
+    carvone
+  }
 }

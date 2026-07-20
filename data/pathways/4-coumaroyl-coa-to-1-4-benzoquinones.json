@@ -233,6 +233,89 @@
       "xrefs": {
         "chebi": "CHEBI:17790"
       }
+    },
+    {
+      "id": "nocardicin_e",
+      "name": "nocardicin E",
+      "formula": "C19H15N3O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77885"
+      }
+    },
+    {
+      "id": "isonocardicin_a",
+      "name": "isonocardicin A",
+      "formula": "C23H22N4O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77633"
+      }
+    },
+    {
+      "id": "1_methylthio_d_xylulose_5_phosphate",
+      "name": "1-methylthio-D-xylulose 5-phosphate",
+      "short": "1-methylthio-D-xylu…",
+      "formula": "C6H11O7PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:141466"
+      }
+    },
+    {
+      "id": "3_hydroxyquinolin_4_1h_one",
+      "name": "3-hydroxyquinolin-4(1H)-one",
+      "short": "3-hydroxyquinolin-4…",
+      "formula": "C9H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16569"
+      }
+    },
+    {
+      "id": "n_formylanthranilate",
+      "name": "N-formylanthranilate",
+      "formula": "C8H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18410"
+      }
+    },
+    {
+      "id": "19e_geissoschizine",
+      "name": "(19E)-geissoschizine",
+      "formula": "C21H24N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17037"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "akuammicine",
+      "name": "akuammicine",
+      "formula": "C20H23N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142754"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
     }
   ],
   "enzymes": [
@@ -297,6 +380,34 @@
       "name": "methane monooxygenase (particulate)",
       "ec": [
         "1.14.18.3"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_38",
+      "name": "isonocardicin synthase",
+      "ec": [
+        "2.5.1.38"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_23",
+      "name": "S-methyl-5-thioribulose 1-phosphate isomerase",
+      "ec": [
+        "5.3.3.23"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_47",
+      "name": "3-hydroxy-4-oxoquinoline 2,4-dioxygenase",
+      "ec": [
+        "1.13.11.47"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_80",
+      "name": "(19E)-geissoschizine oxidase",
+      "ec": [
+        "1.14.19.80"
       ]
     }
   ],
@@ -710,6 +821,202 @@
           {
             "db": "Rhea",
             "id": "RHEA:30355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "isonocardicin synthase",
+      "equation": "nocardicin E + S-adenosyl-L-methionine = isonocardicin A + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.38",
+      "substrates": [
+        {
+          "metabolite": "nocardicin_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isonocardicin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:19845"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "S-methyl-5-thioribulose 1-phosphate isomerase",
+      "equation": "5-(methylsulfanyl)-D-ribulose 1-phosphate = S-methyl-1-thio-D-xylulose 5-phosphate",
+      "ec": "5.3.3.23",
+      "substrates": [
+        {
+          "metabolite": "s_methyl_5_thio_d_ribulose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_methylthio_d_xylulose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:57100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "3-hydroxy-4-oxoquinoline 2,4-dioxygenase",
+      "equation": "3-hydroxy-1H-quinolin-4-one + O2 = N-formylanthranilate + CO + H(+)",
+      "ec": "1.13.11.47",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyquinolin_4_1h_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_formylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbon_monoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:17949"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17949"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "(19E)-geissoschizine oxidase",
+      "equation": "(19E)-geissoschizine + reduced [NADPH--hemoprotein reductase] + O2 = akuammicine + formate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.19.80",
+      "substrates": [
+        {
+          "metabolite": "19e_geissoschizine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "akuammicine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:58520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58520"
           }
         ]
       }

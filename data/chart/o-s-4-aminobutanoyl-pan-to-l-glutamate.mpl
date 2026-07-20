@@ -19,4 +19,22 @@ pathway o-s-4-aminobutanoyl-pan-to-l-glutamate "O-[S-4-(aminobutanoyl)pan… to 
     <-> ec_3_5_2_9 [3.5.2.9] +5_oxo_l_prolinate +atp +h2o -adp -pi -hplus
     glutamate
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_48 [1.14.14.48] +n_jasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
+    n_12_hydroxyjasmonyl_l_amino_acid_anion
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_n5 [2.3.1.n5] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +sn_glycerol_3_phosphate
+    1_acyl_sn_glycerol_3_phosphate
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_89 [2.6.1.89] +dtdp_3_azaniumyl_3_6_dideoxy_d_glucose +akg
+    dtdp_3_dehydro_6_deoxy_d_glucose
+  }
 }

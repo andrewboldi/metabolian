@@ -117,6 +117,34 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "n_dichloroacetyl_p_aminophenylserinol",
+      "name": "α-N-dichloroacetyl-p-aminophenylserinol",
+      "short": "α-N-dichloroacetyl-…",
+      "formula": "C11H14Cl2N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47325"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "chloramphenicol",
+      "name": "chloramphenicol",
+      "formula": "C11H12Cl2N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17698"
+      }
     }
   ],
   "enzymes": [
@@ -139,6 +167,13 @@
       "name": "hydroxypyruvate reductase",
       "ec": [
         "1.1.1.81"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_67",
+      "name": "alpha-N-dichloroacetyl-p-aminophenylserinol N-oxygenase",
+      "ec": [
+        "1.14.99.67"
       ]
     }
   ],
@@ -282,6 +317,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:18657"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alpha-N-dichloroacetyl-p-aminophenylserinol N-oxygenase",
+      "equation": "alpha-N-dichloroacetyl-p-aminophenylserinol + AH2 + 2 O2 = chloramphenicol + A + 2 H2O",
+      "ec": "1.14.99.67",
+      "substrates": [
+        {
+          "metabolite": "n_dichloroacetyl_p_aminophenylserinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chloramphenicol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:58884"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58884"
           }
         ]
       }

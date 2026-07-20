@@ -21,4 +21,28 @@ pathway uracil-5-carboxylate-to-o-s-acetoacetylpantethei "uracil-5-carboxylate t
     <-> ec_2_3_1_180 [2.3.1.180] +acetyl_coa +hplus -co2 -coa
     acetoacetyl-acp
   }
+
+  branch from uracil side left {
+    uracil
+    <-> ec_1_14_11_10 [1.14.11.10] +2_deoxyuridine +akg +o2 +succinate +co2
+    2_deoxy_d_ribono_1_4_lactone
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_24 [1.14.99.24] +pregna_4_9_11_diene_3_20_dione +o2 +hydrogen_acceptor +h2o
+    9_11_epoxypregn_4_ene_3_20_dione
+  }
+
+  branch from malonate side left {
+    malonate
+    <-> ec_1_2_1_15 [1.2.1.15] +nadp +h2o +nadph +hplus
+    3_oxopropanoate
+  }
+
+  branch from urea side right {
+    urea
+    <-> ec_3_5_3_2 [3.5.3.2] +guanidinoacetic_acid +h2o
+    glycine
+  }
 }

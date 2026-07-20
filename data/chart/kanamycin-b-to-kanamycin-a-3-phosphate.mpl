@@ -15,4 +15,22 @@ pathway kanamycin-b-to-kanamycin-a-3-phosphate "kanamycin B to kanamycin A 3'-ph
     <-> ec_2_7_1_95 [2.7.1.95] +atp -adp -hplus
     kanamycin_a_3_phosphate
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_n4 [1.14.11.n4] +l_histidine +akg +o2 +co2
+    3s_3_hydroxy_l_histidine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_122 [3.5.1.122] +l_glutaminiumyl_group +h2o
+    l_glutamyl_zwitterionic_group
+  }
+
+  branch from kanamycin_a side left {
+    kanamycin_a
+    <-> ec_2_4_1_301 [2.4.1.301] +udp_d_kanosamine +udp +hplus
+    2_deamino_2_hydroxyneamine
+  }
 }

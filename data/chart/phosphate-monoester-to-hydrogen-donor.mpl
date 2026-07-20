@@ -21,4 +21,28 @@ pathway phosphate-monoester-to-hydrogen-donor "phosphate monoester… to hydroge
     <-> ec_1_1_99_4 [1.1.99.4] +hydrogen_acceptor -hydrogen_donor
     2_5_didehydro_d_gluconate
   }
+
+  branch from alcohol side left {
+    alcohol
+    <-> ec_3_1_1_48 [3.1.1.48] +n5_acyl_l_ornithine_ester +h2o +hplus
+    n5_acyl_l_ornithine
+  }
+
+  branch from d_glucose side right {
+    d_glucose
+    <-> ec_4_3_3_5 [4.3.3.5] +4_demethylrebeccamycin +h2o
+    dichloroarcyriaflavin_a
+  }
+
+  branch from d_gluconate side left {
+    d_gluconate
+    <-> ec_4_2_1_39 [4.2.1.39] +h2o
+    2_dehydro_3_deoxy_d_gluconate
+  }
+
+  branch from 2_5_didehydro_d_gluconate side right {
+    2_5_didehydro_d_gluconate
+    <-> ec_1_1_1_346 [1.1.1.346] +nadp +nadph +hplus
+    2_dehydro_l_idonate
+  }
 }

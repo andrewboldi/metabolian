@@ -155,6 +155,51 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
+    },
+    {
+      "id": "xanthotoxol",
+      "name": "xanthotoxol",
+      "formula": "C11H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15709"
+      }
+    },
+    {
+      "id": "methoxsalen",
+      "name": "methoxsalen",
+      "formula": "C12H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18358"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "nag",
+      "name": "N-Acetyl-L-glutamate",
+      "formula": "C7H9NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:44337"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -184,6 +229,20 @@
       "name": "cobyrinate a,c-diamide synthase (glutamine-hydrolyzing)",
       "ec": [
         "6.3.5.11"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_70",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "ec": [
+        "2.1.1.70"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_1",
+      "name": "amino-acid N-acetyltransferase",
+      "ec": [
+        "2.3.1.1"
       ]
     }
   ],
@@ -384,6 +443,104 @@
           {
             "db": "Rhea",
             "id": "RHEA:26289"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "equation": "xanthotoxol + S-adenosyl-L-methionine = xanthotoxin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.70",
+      "substrates": [
+        {
+          "metabolite": "xanthotoxol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methoxsalen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17901"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17901"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "amino-acid N-acetyltransferase",
+      "equation": "L-glutamate + acetyl-CoA = N-acetyl-L-glutamate + CoA + H(+)",
+      "ec": "2.3.1.1",
+      "substrates": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nag",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24292"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24292"
           }
         ]
       }

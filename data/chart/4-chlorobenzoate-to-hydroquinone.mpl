@@ -19,4 +19,28 @@ pathway 4-chlorobenzoate-to-hydroquinone "4-chlorobenzoate to hydroquinone…" {
     <-> ec_2_4_1_218 [2.4.1.218] +udp_d_glucose -udp -hplus
     hydroquinone_o_d_glucopyranoside
   }
+
+  branch from 4_chlorobenzoyl_coa side left {
+    4_chlorobenzoyl_coa
+    <-> ec_1_21_1_2 [1.21.1.2] +chloride +nadp +nadph
+    2_4_dichlorobenzoyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_41 [2.5.1.41] +sn_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    sn_3_o_geranylgeranyl_glycerol_1_phosphate
+  }
+
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> ec_2_5_1_93 [2.5.1.93] +gpp +ppi
+    3_geranyl_4_hydroxybenzoate
+  }
+
+  branch from quinol side right {
+    quinol
+    <-> ec_1_6_5_6 [1.6.5.6] +nadph +hplus +nadp
+    quinone
+  }
 }

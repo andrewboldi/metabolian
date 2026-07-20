@@ -15,4 +15,22 @@ pathway s-3-carboxylatopropanoyl-to-glutathionate "S-(3-carboxylatopropanoyl… 
     <-> ec_1_8_4_3 [1.8.4.3] +coa -gsh
     coa_glutathione
   }
+
+  branch from gsh side left {
+    gsh
+    <-> ec_1_20_4_1 [1.20.4.1] +l_cysteine +arsenate +hplus +arsenite +h2o
+    s_s_glutathionyl_l_cysteine_1
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_2 [1.14.11.2] +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
+  }
+
+  branch from gssg side left {
+    gssg
+    <-> ec_1_8_5_7 [1.8.5.7] +2_glutathion_s_yl_1_4_hydroquinone +gsh
+    quinol
+  }
 }

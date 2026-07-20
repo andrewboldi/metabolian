@@ -17,4 +17,16 @@ pathway s-cheilanthifoline-to-fmn "(S)-cheilanthifoline to FMN" {
     <-> ec_1_14_14_98 [1.14.14.98] +fmnh2 +o2 -fmn -h2o -hplus
     6_hydroxyprotopine
   }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_78 [1.14.14.78] +menaquinone_4 +fmnh2 +o2 +h2o +hplus
+    hydroxymenaquinone_4
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_59 [2.1.1.59] +l_lysinium +sam +hplus
+    n6_methyl_l_lysinium
+  }
 }

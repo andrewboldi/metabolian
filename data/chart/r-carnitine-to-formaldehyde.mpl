@@ -15,4 +15,10 @@ pathway r-carnitine-to-formaldehyde "(R)-carnitine to formaldehyde" {
     <-> ec_4_1_2_32 [4.1.2.32] +hplus -formaldehyde
     dimethylaminium
   }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_14_13_247 [1.14.13.247] +l_proline_betaine +nadh +o2 +hplus +nad +h2o
+    n_methylproline
+  }
 }

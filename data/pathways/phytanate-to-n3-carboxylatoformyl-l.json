@@ -181,6 +181,81 @@
       "xrefs": {
         "chebi": "CHEBI:57758"
       }
+    },
+    {
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57533"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29950"
+      }
+    },
+    {
+      "id": "s_geranylgeranyl_l_cysteine",
+      "name": "S-geranylgeranyl-L-cysteine",
+      "short": "S-geranylgeranyl-L-…",
+      "formula": "C23H37NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86021"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "2_hydroxy_3_methylhexadecanoyl_coa",
+      "name": "2-hydroxy-3-methylhexadecanoyl-CoA",
+      "short": "2-hydroxy-3-methylh…",
+      "formula": "C38H64N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58784"
+      }
+    },
+    {
+      "id": "2_methylpentadecanal",
+      "name": "2-methylpentadecanal",
+      "formula": "C16H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49190"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
     }
   ],
   "enzymes": [
@@ -217,6 +292,34 @@
       "name": "2,3-diaminopropionate N-oxalyltransferase",
       "ec": [
         "2.3.1.58"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_59",
+      "name": "protein geranylgeranyltransferase type I",
+      "ec": [
+        "2.5.1.59"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_60",
+      "name": "protein geranylgeranyltransferase type II",
+      "ec": [
+        "2.5.1.60"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_2",
+      "name": "oxalate CoA-transferase",
+      "ec": [
+        "2.8.3.2"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_19",
+      "name": "CoA:oxalate CoA-transferase",
+      "ec": [
+        "2.8.3.19"
       ]
     }
   ],
@@ -454,6 +557,182 @@
           {
             "db": "Rhea",
             "id": "RHEA:13465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "protein geranylgeranyltransferase type I",
+      "equation": "geranylgeranyl diphosphate + L-cysteinyl-[protein] = S-geranylgeranyl-L-cysteinyl-[protein] + diphosphate",
+      "ec": "2.5.1.59",
+      "substrates": [
+        {
+          "metabolite": "geranylgeranyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_geranylgeranyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:21240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "oxalate CoA-transferase",
+      "equation": "oxalate + succinyl-CoA = oxalyl-CoA + succinate",
+      "ec": "2.8.3.2",
+      "substrates": [
+        {
+          "metabolite": "oxalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:23588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "2-hydroxyacyl-CoA lyase",
+      "equation": "2-hydroxy-3-methylhexadecanoyl-CoA = 2-methylpentadecanal + formyl-CoA",
+      "ec": "4.1.2.63",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_3_methylhexadecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylpentadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:25379"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25379"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "CoA:oxalate CoA-transferase",
+      "equation": "oxalate + acetyl-CoA = oxalyl-CoA + acetate",
+      "ec": "2.8.3.19",
+      "substrates": [
+        {
+          "metabolite": "oxalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:37883"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37883"
           }
         ]
       }

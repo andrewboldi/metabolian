@@ -27,4 +27,28 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-5-kdo "UDP-3-O-[(3R)-hydroxyacylâ
     <-> ec_2_4_99_23 [2.4.99.23] +adp_l_glycero_d_manno_heptose -adp -hplus
     an_l_d_hep_1_5_kdo_2_4_kdo_2_6_lipid_a
   }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_2_3_1_221 [2.3.1.221] +o_s_hexanoylpantetheine_4_phosphoryl_serine_1 +malonyl-coa +hplus +co2 +coa +h2o
+    norsolorinic_acid_anthrone
+  }
+
+  branch from a_kdo_lipid_iva side right {
+    a_kdo_lipid_iva
+    <-> ec_2_7_1_166 [2.7.1.166] +atp +adp +hplus
+    a_4_o_phospho_kdo_2_6_lipid_iva
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_3_6_1_8 [3.6.1.8] +ctp +h2o +hplus
+    ppi
+  }
+
+  branch from a_kdo_2_lipid_iva side right {
+    a_kdo_2_lipid_iva
+    <-> ec_2_4_99_14 [2.4.99.14] +cmp_3_deoxy_d_manno_octulosonate +cytidine_5_monophosphate +hplus
+    a_kdo_3_lipid_iva
+  }
 }

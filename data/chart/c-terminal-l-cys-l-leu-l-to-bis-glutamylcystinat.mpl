@@ -17,4 +17,22 @@ pathway c-terminal-l-cys-l-leu-l-to-bis-glutamylcystinat "C-terminal L-Cys-L-Leu
     <-> ec_1_8_1_13 [1.8.1.13] +nadp -nadph -hplus
     bis_glutamylcystinate
   }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_2_8_1_5 [2.8.1.5] +dithioerythritol +trioxidosulfanidosulfate +sulfite +hplus
+    cis_1_2_dithiane_4_5_diol
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_16 [1.3.99.16] +isoquinoline +hydrogen_acceptor +h2o
+    isoquinolin_1_2h_one
+  }
+
+  branch from cysteine side left {
+    cysteine
+    <-> ec_1_13_11_20 [1.13.11.20] +o2 +hplus
+    3_sulfino_l_alanine
+  }
 }

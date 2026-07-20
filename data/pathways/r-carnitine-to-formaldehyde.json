@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "r-carnitine-to-formaldehyde",
   "name": "(R)-carnitine to formaldehyde",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (R)-carnitine to formaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -136,6 +136,24 @@
       "xrefs": {
         "chebi": "CHEBI:16842"
       }
+    },
+    {
+      "id": "l_proline_betaine",
+      "name": "L-proline betaine",
+      "formula": "C7H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35280"
+      }
+    },
+    {
+      "id": "n_methylproline",
+      "name": "N-methylproline",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133743"
+      }
     }
   ],
   "enzymes": [
@@ -158,6 +176,13 @@
       "name": "trimethylamine-oxide aldolase",
       "ec": [
         "4.1.2.32"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_247",
+      "name": "stachydrine N-demethylase",
+      "ec": [
+        "1.14.13.247"
       ]
     }
   ],
@@ -317,6 +342,67 @@
           {
             "db": "Rhea",
             "id": "RHEA:20217"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "stachydrine N-demethylase",
+      "equation": "L-proline betaine + NADH + O2 + H(+) = N-methyl-L-proline + formaldehyde + NAD(+) + H2O",
+      "ec": "1.14.13.247",
+      "substrates": [
+        {
+          "metabolite": "l_proline_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylproline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_247"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61616"
           }
         ]
       }

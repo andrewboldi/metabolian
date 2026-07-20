@@ -15,4 +15,16 @@ pathway 2-4-dihydroxyacetophenone-to-3-5-dibromocatechol "2,4'-dihydroxyacetophe
     <-> ec_1_14_19_55 [1.14.19.55] +bromide +nadph +o2 +hplus -co2 -nadp -h2o
     3_5_dibromocatechol
   }
+
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> ec_1_14_19_55 [1.14.19.55] +bromide +nadph +o2 +hplus +co2 +nadp +h2o
+    2_4_dibromophenol
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_1_17_1_11 [1.17.1.11] +di_sulfido_diiron +nad +co2 +nadh +hplus
+    di_sulfido_diiron
+  }
 }

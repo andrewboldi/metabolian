@@ -194,6 +194,92 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "n_acetyl_d_glucosamine_6_phosphate",
+      "name": "N-acetyl-D-glucosamine 6-phosphate",
+      "short": "N-acetyl-D-glucosam…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57513"
+      }
+    },
+    {
+      "id": "d_manp_1_3_d_manp_1_2_d_manp_1_2_d_manp",
+      "name": "α-D-Manp-(1→3)-α-D-Manp-(1→2)-α-D-Manp-(1→2)-D-Manp",
+      "short": "α-D-Manp-(1→3)-α-D-…",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17631"
+      }
+    },
+    {
+      "id": "d_glcpnac_1_2_d_manp_1_3_d_manp_1_2_d_manp_1_2",
+      "name": "α-D-GlcpNAc-(1→2)-[α-D-Manp-(1→3)]-α-D-Manp-(1→2)-α-D-Manp-(1→2)-D-Manp",
+      "short": "α-D-GlcpNAc-(1→2)-[…",
+      "formula": "C32H55NO26",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29111"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "camp",
+      "name": "3',5'-Cyclic AMP (cAMP)",
+      "short": "3',5'-Cyclic AMP…",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58165"
+      }
+    },
+    {
+      "id": "inosine",
+      "name": "Inosine",
+      "formula": "C10H12N4O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17596"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "r1p",
+      "name": "alpha-D-Ribose 1-phosphate",
+      "short": "alpha-D-Ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57720"
+      }
     }
   ],
   "enzymes": [
@@ -230,6 +316,34 @@
       "name": "xanthine dioxygenase",
       "ec": [
         "1.14.11.48"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_3",
+      "name": "phosphoacetylglucosamine mutase",
+      "ec": [
+        "5.4.2.3"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_138",
+      "name": "mannotetraose 2-alpha-N-acetylglucosaminyltransferase",
+      "ec": [
+        "2.4.1.138"
+      ]
+    },
+    {
+      "id": "ec_4_6_1_1",
+      "name": "adenylate cyclase",
+      "ec": [
+        "4.6.1.1"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
       ]
     }
   ],
@@ -475,6 +589,178 @@
           {
             "db": "Rhea",
             "id": "RHEA:43120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "phosphoacetylglucosamine mutase",
+      "equation": "N-acetyl-alpha-D-glucosamine 1-phosphate = N-acetyl-D-glucosamine 6-phosphate",
+      "ec": "5.4.2.3",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "mannotetraose 2-alpha-N-acetylglucosaminyltransferase",
+      "equation": "alpha-D-Man-(1->3)-alpha-D-Man-(1->2)-alpha-D-Man-(1->2)-D-Man + UDP-N-acetyl-alpha-D-glucosamine = alpha-D-Man-(1->3)-[alpha-D-GlcNAc-(1->2)]-alpha-D-Man-(1->2)-alpha-D-Man-(1->2)-D-Man + UDP + H(+)",
+      "ec": "2.4.1.138",
+      "substrates": [
+        {
+          "metabolite": "d_manp_1_3_d_manp_1_2_d_manp_1_2_d_manp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glcpnac_1_2_d_manp_1_3_d_manp_1_2_d_manp_1_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_138"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:13705"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13705"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "adenylate cyclase",
+      "equation": "ATP = 3',5'-cyclic AMP + diphosphate",
+      "ec": "4.6.1.1",
+      "substrates": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "camp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_6_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:15389"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15389"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "inosine + phosphate = alpha-D-ribose 1-phosphate + hypoxanthine",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "inosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hypoxanthine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:27646"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27646"
           }
         ]
       }

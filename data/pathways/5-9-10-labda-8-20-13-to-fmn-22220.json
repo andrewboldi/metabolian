@@ -109,6 +109,46 @@
       "xrefs": {
         "chebi": "CHEBI:58627"
       }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "presilphiperfolan_8_ol",
+      "name": "presilphiperfolan-8β-ol",
+      "short": "presilphiperfolan-8…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60968"
+      }
+    },
+    {
+      "id": "4_demethyldeoxypodophyllotoxin",
+      "name": "4'-demethyldeoxypodophyllotoxin",
+      "short": "4'-demethyldeoxypod…",
+      "formula": "C21H20O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1729"
+      }
+    },
+    {
+      "id": "4_demethylepipodophyllotoxin",
+      "name": "4'-demethylepipodophyllotoxin",
+      "short": "4'-demethylepipodop…",
+      "formula": "C21H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74422"
+      }
     }
   ],
   "enzymes": [
@@ -131,6 +171,20 @@
       "name": "ent-kaurenoic acid monooxygenase",
       "ec": [
         "1.14.14.107"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_74",
+      "name": "presilphiperfolanol synthase",
+      "ec": [
+        "4.2.3.74"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_132",
+      "name": "(-)-4'-demethyl-deoxypodophyllotoxin 4-hydroxylase",
+      "ec": [
+        "1.14.14.132"
       ]
     }
   ],
@@ -286,6 +340,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:33219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "presilphiperfolanol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = presilphiperfolan-8beta-ol + diphosphate",
+      "ec": "4.2.3.74",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "presilphiperfolan_8_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27954"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27954"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(-)-4'-demethyl-deoxypodophyllotoxin 4-hydroxylase",
+      "equation": "(-)-4'-desmethyl-deoxypodophyllotoxin + reduced [NADPH--hemoprotein reductase] + O2 = 4'-demethylepipodophyllotoxin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.132",
+      "substrates": [
+        {
+          "metabolite": "4_demethyldeoxypodophyllotoxin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_demethylepipodophyllotoxin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_132"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49032"
           }
         ]
       }

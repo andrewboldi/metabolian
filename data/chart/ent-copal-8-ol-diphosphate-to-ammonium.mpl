@@ -15,4 +15,28 @@ pathway ent-copal-8-ol-diphosphate-to-ammonium "ent-copal-8-ol diphosphate to am
     <-> ec_3_5_4_3 [3.5.4.3] +h2o +hplus -nh3
     xanthine
   }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_15 [6.2.1.15] +arachidonate +atp +coa +amp
+    arachidonoyl_coa
+  }
+
+  branch from guanine side right {
+    guanine
+    <-> ec_2_4_2_64 [2.4.2.64] +guanosine_5_monophosphate_1 +queuine
+    queuosine_5_phosphate_1
+  }
+
+  branch from xanthine side left {
+    xanthine
+    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadh +o2 +hplus +nad +h2o
+    formaldehyde
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_8 [3.5.4.8] +4_aminoimidazole +h2o +hplus
+    3_5_dihydro_4h_imidazol_4_one
+  }
 }

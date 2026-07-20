@@ -15,4 +15,16 @@ pathway 3-all-trans-heptaprenyl-to-s-adenosyl-l-homocyst "3-(all-trans-heptapren
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     6_methoxy_3_methyl_2_all_trans_heptaprenylhydroq
   }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_65 [2.1.1.65] +licodione +sam +hplus
+    2_o_methyllicodione
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +di_sulfido_diiron +o2 +hplus +h2o
+    3_3_biflaviolin
+  }
 }

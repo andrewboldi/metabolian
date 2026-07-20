@@ -110,6 +110,62 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "n2_succinyl_l_ornithinate",
+      "name": "N2-succinyl-L-ornithinate",
+      "short": "N2-succinyl-L-ornit…",
+      "formula": "C9H15N2O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58514"
+      }
+    },
+    {
+      "id": "carboxyspermidine",
+      "name": "carboxyspermidine",
+      "formula": "C8H21N3O2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:65072"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "l_aspartic_acid_4_semialdehyde",
+      "name": "L-aspartic acid 4-semialdehyde",
+      "short": "L-aspartic acid…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:537519"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
     }
   ],
   "enzymes": [
@@ -132,6 +188,20 @@
       "name": "putrescine N-hydroxycinnamoyltransferase",
       "ec": [
         "2.3.1.138"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_109",
+      "name": "arginine N-succinyltransferase",
+      "ec": [
+        "2.3.1.109"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_43",
+      "name": "carboxynorspermidine synthase",
+      "ec": [
+        "1.5.1.43"
       ]
     }
   ],
@@ -271,6 +341,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:12436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "arginine N-succinyltransferase",
+      "equation": "succinyl-CoA + L-ornithine = N(2)-succinyl-L-ornithine + CoA + H(+)",
+      "ec": "2.3.1.109",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_succinyl_l_ornithinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65020"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "carboxynorspermidine synthase",
+      "equation": "carboxyspermidine + NADP(+) + H2O = L-aspartate 4-semialdehyde + putrescine + NADPH + H(+)",
+      "ec": "1.5.1.43",
+      "substrates": [
+        {
+          "metabolite": "carboxyspermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_aspartic_acid_4_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:34111"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34111"
           }
         ]
       }

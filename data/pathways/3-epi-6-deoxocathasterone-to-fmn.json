@@ -99,6 +99,33 @@
       "xrefs": {
         "chebi": "CHEBI:185407"
       }
+    },
+    {
+      "id": "s_columbianetin",
+      "name": "(S)-columbianetin",
+      "formula": "C14H14O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:437678"
+      }
+    },
+    {
+      "id": "angelicin",
+      "name": "angelicin",
+      "formula": "C11H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28928"
+      }
+    },
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15347"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +148,13 @@
       "name": "brassinolide synthase",
       "ec": [
         "1.14.14.180"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_148",
+      "name": "angelicin synthase",
+      "ec": [
+        "1.14.14.148"
       ]
     }
   ],
@@ -292,6 +326,67 @@
           {
             "db": "Rhea",
             "id": "RHEA:70019"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "angelicin synthase",
+      "equation": "(S)-columbianetin + reduced [NADPH--hemoprotein reductase] + O2 = angelicin + acetone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.148",
+      "substrates": [
+        {
+          "metabolite": "s_columbianetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "angelicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_148"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27481"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27481"
           }
         ]
       }

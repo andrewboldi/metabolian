@@ -25,4 +25,28 @@ pathway pyrimidine-ribonucleoside-to-5-hydroxyisouric-ac "pyrimidine ribonucleos
     <-> ec_1_14_13_113 [1.14.13.113] +nadh +o2 +hplus -nad -h2o
     5_hydroxyisouric_acid
   }
+
+  branch from pyrimidine_nucleobase side left {
+    pyrimidine_nucleobase
+    <-> ec_3_2_2_8 [3.2.2.8] +a_pyrimidine_ribonucleoside +h2o
+    d_ribofuranose
+  }
+
+  branch from d_ribofuranose_5_phosphate side right {
+    d_ribofuranose_5_phosphate
+    <-> ec_3_2_2_14 [3.2.2.14] +nmn +h2o +hplus
+    nicotinamide
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_6_1_6 [4.6.1.6] +ctp
+    3_5_cyclic_cmp
+  }
+
+  branch from adenine side right {
+    adenine
+    <-> ec_2_4_2_1 [2.4.2.1] +adenosine +pi
+    r1p
+  }
 }

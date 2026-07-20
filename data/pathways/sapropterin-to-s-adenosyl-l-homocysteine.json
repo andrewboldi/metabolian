@@ -147,6 +147,89 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
+    },
+    {
+      "id": "ascorbate",
+      "name": "L-Ascorbate (vitamin C)",
+      "short": "L-Ascorbate…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38290"
+      }
+    },
+    {
+      "id": "l_dehydroascorbate",
+      "name": "L-dehydroascorbate",
+      "formula": "C6H5O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58539"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "bh2",
+      "name": "Dihydrobiopterin (BH2)",
+      "short": "Dihydrobiopterin…",
+      "formula": "C9H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43120"
+      }
+    },
+    {
+      "id": "tryptaminium",
+      "name": "tryptaminium",
+      "formula": "C10H13N2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57887"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58573"
+      }
+    },
+    {
+      "id": "kaempferide",
+      "name": "kaempferide",
+      "formula": "C16H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58925"
+      }
     }
   ],
   "enzymes": [
@@ -176,6 +259,34 @@
       "name": "acetylserotonin O-methyltransferase",
       "ec": [
         "2.1.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_11_2_8",
+      "name": "L-tryptophan 5-peroxygenase",
+      "ec": [
+        "1.11.2.8"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_96",
+      "name": "4a-hydroxytetrahydrobiopterin dehydratase",
+      "ec": [
+        "4.2.1.96"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_186",
+      "name": "tryptamine 5-hydroxylase",
+      "ec": [
+        "1.14.14.186"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_155",
+      "name": "kaempferol 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.155"
       ]
     }
   ],
@@ -368,6 +479,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:15573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-tryptophan 5-peroxygenase",
+      "equation": "L-ascorbate + L-tryptophan + O2 = 5-hydroxy-L-tryptophan + L-dehydroascorbate + H2O",
+      "ec": "1.11.2.8",
+      "substrates": [
+        {
+          "metabolite": "ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxy_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_dehydroascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:84775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4a-hydroxytetrahydrobiopterin dehydratase",
+      "equation": "(4aS,6R)-4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin = (6R)-L-erythro-6,7-dihydrobiopterin + H2O",
+      "ec": "4.2.1.96",
+      "substrates": [
+        {
+          "metabolite": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:11920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11920"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "tryptamine 5-hydroxylase",
+      "equation": "tryptamine + reduced [NADPH--hemoprotein reductase] + O2 = serotonin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.186",
+      "substrates": [
+        {
+          "metabolite": "tryptaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "serotonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_186"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:52320"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "kaempferol 4'-O-methyltransferase",
+      "equation": "kaempferol + S-adenosyl-L-methionine = kaempferide + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.155",
+      "substrates": [
+        {
+          "metabolite": "kaempferol_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kaempferide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_155"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:15105"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15105"
           }
         ]
       }

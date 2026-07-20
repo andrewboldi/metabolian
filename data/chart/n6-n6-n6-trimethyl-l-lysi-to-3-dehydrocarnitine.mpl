@@ -19,4 +19,28 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-3-dehydrocarnitine "N6,N6,N6-trimethyl-L-ly
     <-> ec_1_1_1_108 [1.1.1.108] +nad -nadh -hplus
     3_dehydrocarnitine
   }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_70 [1.14.11.70] +deoxycylindrospermopsin +akg +o2 +co2
+    cylindrospermopsin
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_1_5_1_22 [1.5.1.22] +nad +h2o +pyruvate +nadh +hplus
+    n_carboxylatomethyl_d_alanine
+  }
+
+  branch from 4_trimethylammonio_butanoate side left {
+    4_trimethylammonio_butanoate
+    <-> ec_6_2_1_48 [6.2.1.48] +atp +coa +amp +ppi
+    butyrobetainyl_coa
+  }
+
+  branch from carnitine side right {
+    carnitine
+    <-> ec_4_1_1_42 [4.1.1.42] +hplus +co2
+    2_methylcholine
+  }
 }

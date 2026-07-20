@@ -15,4 +15,16 @@ pathway anilide-to-4-dimethylamino-phenylaz "anilide to 4-(dimethylamino)phenyla
     <-> ec_1_7_1_11 [1.7.1.11] +nadp +h2o -nadph -hplus
     4_dimethylamino_phenylazoxybenzene
   }
+
+  branch from aniline side left {
+    aniline
+    <-> ec_4_1_1_24 [4.1.1.24] +hplus +co2
+    anthranilate
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_114 [3.5.1.114] +n_acyl_aromatic_l_amino_acid_anion +h2o
+    aromatic_l_amino_acid
+  }
 }

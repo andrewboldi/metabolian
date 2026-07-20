@@ -98,6 +98,24 @@
       "xrefs": {
         "chebi": "CHEBI:17490"
       }
+    },
+    {
+      "id": "ecdysone",
+      "name": "ecdysone",
+      "formula": "C27H44O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16688"
+      }
+    },
+    {
+      "id": "ecdysone_palmitate",
+      "name": "ecdysone palmitate",
+      "formula": "C43H74O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17551"
+      }
     }
   ],
   "enzymes": [
@@ -120,6 +138,13 @@
       "name": "carnitine O-palmitoyltransferase",
       "ec": [
         "2.3.1.21"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_139",
+      "name": "ecdysone O-acyltransferase",
+      "ec": [
+        "2.3.1.139"
       ]
     }
   ],
@@ -267,6 +292,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:12661"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ecdysone O-acyltransferase",
+      "equation": "ecdysone + hexadecanoyl-CoA = ecdysone hexadecanoate + CoA",
+      "ec": "2.3.1.139",
+      "substrates": [
+        {
+          "metabolite": "ecdysone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ecdysone_palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_139"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15217"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15217"
           }
         ]
       }

@@ -27,4 +27,28 @@ pathway gdp-6-deoxy-d-talose-to-s-allantoin "GDP-6-deoxy-α-D-talose to (S)-(+)-
     <-> ec_4_1_1_97 [4.1.1.97] +hplus -co2
     s_allantoin
   }
+
+  branch from gdp_4_dehydro_6_deoxy_d_mannose side left {
+    gdp_4_dehydro_6_deoxy_d_mannose
+    <-> ec_1_1_1_187 [1.1.1.187] +nad +nadh +hplus
+    gdp_6_deoxy_d_mannose
+  }
+
+  branch from gdp_4_dehydro_3_6_dideoxy_d_mannose side right {
+    gdp_4_dehydro_3_6_dideoxy_d_mannose
+    <-> ec_1_1_1_356 [1.1.1.356] +nadp +nadph +hplus
+    gdp_l_colitose
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_2_3_3_4 [2.3.3.4] +lauroyl_coa +h2o +coa +hplus
+    3s_4s_3_hydroxytetradecane_1_3_4_tricarboxylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_5_1_4 [4.5.1.4] +l_2_amino_4_chloropent_4_enoic_acid +h2o +chloride +hplus
+    2_oxopent_4_enoate
+  }
 }

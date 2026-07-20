@@ -17,4 +17,22 @@ pathway 3r-5s-1-pyrroline-3-hyd-to-glycine "(3R,5S)-1-pyrroline-3-hyd… to glyc
     <-> ec_2_6_1_112 [2.6.1.112] +s_2_ureidoglycine -glycine
     oxalurate
   }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_1_5_3_18 [1.5.3.18] +l_saccharopinate +o2 +h2o +h2o2
+    l_allysine
+  }
+
+  branch from oxalurate side right {
+    oxalurate
+    <-> ec_2_1_3_5 [2.1.3.5] +carbamoyl_p +pi
+    oxamate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_6_2_1_66 [6.2.1.66] +holo-acp +atp +amp +ppi
+    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
+  }
 }

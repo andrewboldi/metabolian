@@ -98,6 +98,78 @@
       "xrefs": {
         "chebi": "CHEBI:15563"
       }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3s_citryl_coa",
+      "name": "(3S)-citryl-CoA",
+      "formula": "C27H36N7O22P3S",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:57321"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +213,20 @@
       "name": "isocitrate epimerase",
       "ec": [
         "5.1.2.6"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_18",
+      "name": "citrate--CoA ligase",
+      "ec": [
+        "6.2.1.18"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_42",
+      "name": "isocitrate dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.42"
       ]
     }
   ],
@@ -309,6 +395,108 @@
           {
             "db": "Rhea",
             "id": "RHEA:10820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "citrate--CoA ligase",
+      "equation": "citrate + ATP + CoA = (3S)-citryl-CoA + ADP + phosphate",
+      "ec": "6.2.1.18",
+      "substrates": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_citryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "isocitrate dehydrogenase (NADP(+))",
+      "equation": "D-threo-isocitrate + NADP(+) = 2-oxoglutarate + CO2 + NADPH",
+      "ec": "1.1.1.42",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:19629"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19629"
           }
         ]
       }

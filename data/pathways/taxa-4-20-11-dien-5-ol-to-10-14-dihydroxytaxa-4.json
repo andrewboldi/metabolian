@@ -138,6 +138,35 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
+    },
+    {
+      "id": "5_20_epoxytaxa_11_en_4_yl_acetate",
+      "name": "5,20-epoxytaxa-11-en-4α-yl acetate",
+      "short": "5,20-epoxytaxa-11-e…",
+      "formula": "C22H34O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233991"
+      }
+    },
+    {
+      "id": "octadecanoate",
+      "name": "octadecanoate",
+      "formula": "C18H35O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:25629"
+      }
+    },
+    {
+      "id": "18_hydroxyoctadecanoate",
+      "name": "18-hydroxyoctadecanoate",
+      "short": "18-hydroxyoctadecan…",
+      "formula": "C18H35O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86046"
+      }
     }
   ],
   "enzymes": [
@@ -160,6 +189,20 @@
       "name": "taxoid 14beta-hydroxylase",
       "ec": [
         "1.14.13.146"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_191",
+      "name": "taxane oxetanase 1",
+      "ec": [
+        "1.14.14.191"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_80",
+      "name": "long-chain fatty acid omega-monooxygenase",
+      "ec": [
+        "1.14.14.80"
       ]
     }
   ],
@@ -319,6 +362,120 @@
           {
             "db": "Rhea",
             "id": "RHEA:31971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "taxane oxetanase 1",
+      "equation": "taxa-4(20),11-dien-5alpha-yl acetate + reduced [NADPH--hemoprotein reductase] + O2 = 5,20-epoxytaxa-11-en-4alpha-yl acetate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.191",
+      "substrates": [
+        {
+          "metabolite": "taxa_4_20_11_dien_5_yl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_20_epoxytaxa_11_en_4_yl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:84799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "long-chain fatty acid omega-monooxygenase",
+      "equation": "octadecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxyoctadecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.80",
+      "substrates": [
+        {
+          "metabolite": "octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "18_hydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46356"
           }
         ]
       }
